@@ -1,28 +1,28 @@
 ---
-title: "Literały XML i specyfikacja XML 1.0 (Visual Basic)"
-ms.custom: 
+title: Literały XML i specyfikacja XML 1.0 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c020d94e09eb255ac03df15b519b3dfa78e8e367
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b939fdbc0c60d84cfc51a36043e9c59dc82b241
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Literały XML i specyfikacja XML 1.0 (Visual Basic)
-Składnia literału XML w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obsługuje większość specyfikacji języka XML (Extensible Markup) 1.0. Aby uzyskać szczegółowe informacje o Specyfikacja XML 1.0, zobacz [języka XML (Extensible Markup) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) w witrynie sieci Web W3C.  
+Składnia literału XML w Visual Basic obsługuje większość specyfikacji języka XML (Extensible Markup) 1.0. Aby uzyskać szczegółowe informacje o Specyfikacja XML 1.0, zobacz [języka XML (Extensible Markup) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) w witrynie sieci Web W3C.  
   
 ## <a name="what-visual-basic-does-not-support"></a>Co Visual Basic nie obsługuje  
   

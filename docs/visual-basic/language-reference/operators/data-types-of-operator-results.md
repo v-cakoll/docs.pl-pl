@@ -1,10 +1,11 @@
 ---
-title: "Typy danych wyników operatora (Visual Basic)"
+title: Typy danych wyników operatora (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - data types [Visual Basic], operator result data types
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61e8fb785830152acfd7e8e2e1784294053ac66e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 508329894758436158970760ba0d13a7780f83db
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Typy danych wyników operatora (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Określa typ danych wyniku na podstawie typów danych z argumentów operacji. W niektórych przypadkach może to być typ dane z większego zakresu niż którykolwiek argument operacji.  
+Visual Basic Określa typ danych wyniku na podstawie typów danych z argumentów operacji. W niektórych przypadkach może to być typ dane z większego zakresu niż którykolwiek argument operacji.  
   
 ## <a name="data-type-ranges"></a>Zakresy typu danych  
  Zakresy typów danych w kolejności od wartości najmniejszej do największej, są następujące:  
@@ -45,20 +46,20 @@ ms.lasthandoff: 11/21/2017
   
 -   [Podwójna](../../../visual-basic/language-reference/data-types/double-data-type.md) — maksymalny zakres 1.7 w... E + 308 (wartość bezwzględna)  
   
- Aby uzyskać więcej informacji na temat [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , zobacz [typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Aby uzyskać więcej informacji na typy danych Visual Basic, zobacz [typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
- Jeśli argument operacji daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] operatorów arytmetycznych traktować go jako zero.  
+ Jeśli argument operacji daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md), operatory arytmetyczne w Visual Basic traktować go jako zero.  
   
 ## <a name="decimal-arithmetic"></a>Decimal arytmetyczne  
  Należy pamiętać, że [dziesiętną](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — typ danych nie jest zmiennoprzecinkowe ani liczby całkowitej.  
   
- Jeśli którykolwiek argument operacji z `+`, `–`, `*`, `/`, lub `Mod` operacji `Decimal` , a drugi nie `Single` lub `Double`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] rozszerzenie argument operacji do `Decimal`. Wykonuje operację w `Decimal`, i jest typu danych `Decimal`.  
+ Jeśli którykolwiek argument operacji z `+`, `–`, `*`, `/`, lub `Mod` operacja jest `Decimal` , a drugi nie `Single` lub `Double`, Visual Basic rozszerzenie argument operacji do `Decimal`. Wykonuje operację w `Decimal`, i jest typu danych `Decimal`.  
   
 ## <a name="floating-point-arithmetic"></a>Zmiennoprzecinkowe operacje arytmetyczne  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]wykonuje większość zmiennoprzecinkowe operacje arytmetyczne w [podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md), który jest najbardziej wydajnym danych typu dla takich operacji. Jednak jeśli jest jeden operand [pojedynczego](../../../visual-basic/language-reference/data-types/single-data-type.md) , a drugi nie `Double`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wykonuje operację w `Single`. Rozszerzenie go każdy argument odpowiednio do typu odpowiednie dane przed operacją, a wynik zawiera tego typu danych.  
+ Visual Basic wykonuje większość zmiennoprzecinkowe operacje arytmetyczne w [podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md), który jest najbardziej wydajnym danych typu dla takich operacji. Jednak jeśli jest jeden operand [pojedynczego](../../../visual-basic/language-reference/data-types/single-data-type.md) , a drugi nie `Double`, Visual Basic wykonuje operację w `Single`. Rozszerzenie go każdy argument odpowiednio do typu odpowiednie dane przed operacją, a wynik zawiera tego typu danych.  
   
 ### <a name="-and--operators"></a>/ i ^ operatory  
- `/` Operator jest zdefiniowana tylko dla [dziesiętną](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [pojedynczego](../../../visual-basic/language-reference/data-types/single-data-type.md), i [podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md) typów danych. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]rozszerzenie każdy argument odpowiednio do typu odpowiednie dane przed operacji, a wynik jest tego typu danych.  
+ `/` Operator jest zdefiniowana tylko dla [dziesiętną](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [pojedynczego](../../../visual-basic/language-reference/data-types/single-data-type.md), i [podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md) typów danych. Każdy argument odpowiednio do typu odpowiednie dane przed operacją rozszerzenie języka Visual Basic, a wynik zawiera tego typu danych.  
   
  W poniższej tabeli przedstawiono wyniki typów danych `/` operatora. Należy pamiętać, że ta tabela symetrycznego; dla danego kombinację typów danych argumentu operacji typu danych jest taka sama niezależnie od Kolejność argumentów operacji.  
   
@@ -70,10 +71,10 @@ ms.lasthandoff: 11/21/2017
 |`Double`|Double|Double|Double|Double|  
 |Dowolnego typu Liczba całkowita|Wartość dziesiętna|Single|Double|Double|  
   
- `^` Operator jest zdefiniowana tylko dla `Double` — typ danych. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]rozszerzenie każdy argument operacji niezbędny do `Double` przed operacji, a wynik jest zawsze typu danych `Double`.  
+ `^` Operator jest zdefiniowana tylko dla `Double` — typ danych. Każdy argument operacji niezbędny do rozszerzenie Visual Basic `Double` przed operacji, a wynik jest zawsze typu danych `Double`.  
   
 ## <a name="integer-arithmetic"></a>Operacja arytmetyczna liczba całkowita  
- Typ danych wyniku operacji na wartościach całkowitych zależy od argumenty typów danych. Ogólnie rzecz biorąc [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] korzysta z następujących zasad określania typu danych:  
+ Typ danych wyniku operacji na wartościach całkowitych zależy od argumenty typów danych. Ogólnie rzecz biorąc Visual Basic korzysta z następujących zasad określania typu danych:  
   
 -   Jeśli obydwa argumenty operacji operatora binarnego mają taki sam typ danych, wynik zawiera tego typu danych. Wyjątkiem jest `Boolean`, która wymusza na `Short`.  
   
@@ -92,18 +93,18 @@ ms.lasthandoff: 11/21/2017
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|Jednoargumentowe`+`|krótki|SByte|Byte|krótki|UShort|Liczba całkowita|Uinteger —|długa|ULong|  
-|Jednoargumentowe`–`|krótki|SByte|krótki|krótki|Liczba całkowita|Liczba całkowita|długa|długa|Wartość dziesiętna|  
+|Jednoargumentowe `+`|krótki|SByte|Byte|krótki|UShort|Liczba całkowita|Uinteger —|długa|ULong|  
+|Jednoargumentowe `–`|krótki|SByte|krótki|krótki|Liczba całkowita|Liczba całkowita|długa|długa|Wartość dziesiętna|  
   
-### <a name="-and--operators"></a><\<i >> operatorów  
- W poniższej tabeli przedstawiono wyniki typy danych dla dwóch operatory przesunięcia bitowego, `<<` i `>>`. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]traktuje każdy bit-shift operatora jako operatora jednoargumentowego na jego lewy operand (wzorca bitowego lekkie).  
+### <a name="-and--operators"></a><\< i >> operatorów  
+ W poniższej tabeli przedstawiono wyniki typy danych dla dwóch operatory przesunięcia bitowego, `<<` i `>>`. Visual Basic traktuje każdy operator przesunięcia bitowego jako operator jednoargumentowy na jego lewy operand (wzorca bitowego lekkie).  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |`<<`, `>>`|krótki|SByte|Byte|krótki|UShort|Liczba całkowita|Uinteger —|długa|ULong|  
   
- Jeśli lewy operand jest `Decimal`, `Single`, `Double`, lub `String`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] próbuje przekonwertować go na `Long` przed operacji i wynikiem jest typ danych `Long`. Prawy argument operacji (liczba pozycji bitowe przesunięcie) musi być `Integer` lub typ rozszerzająca do `Integer`.  
+ Jeśli lewy operand jest `Decimal`, `Single`, `Double`, lub `String`, Visual Basic próbuje przekonwertować go na `Long` przed operacji i wynikiem jest typ danych `Long`. Prawy argument operacji (liczba pozycji bitowe przesunięcie) musi być `Integer` lub typ rozszerzająca do `Integer`.  
   
 ### <a name="binary----and-mod-operators"></a>Binarny +, -, * i operatory Mod  
  W poniższej tabeli przedstawiono wyniki typów dla pliku binarnego `+` i `–` operatory i `*` i `Mod` operatorów. Należy pamiętać, że ta tabela symetrycznego; dla danego kombinację typów danych argumentu operacji typu danych jest taka sama niezależnie od Kolejność argumentów operacji.  
@@ -137,15 +138,15 @@ ms.lasthandoff: 11/21/2017
 |`Long`|długa|długa|długa|długa|długa|długa|długa|długa|długa|  
 |`ULong`|długa|długa|ULong|długa|ULong|długa|ULong|długa|ULong|  
   
- Jeśli którykolwiek argument operacji z `\` operator jest [dziesiętną](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [pojedynczego](../../../visual-basic/language-reference/data-types/single-data-type.md), lub [podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] próbuje przekonwertować go na [Long](../../../visual-basic/language-reference/data-types/long-data-type.md) przed operacji i wynikiem jest typ danych `Long`.  
+ Jeśli którykolwiek argument operacji z `\` operator jest [dziesiętną](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [pojedynczego](../../../visual-basic/language-reference/data-types/single-data-type.md), lub [podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md), próbuje przekonwertować go do języka Visual Basic [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)przed operacji i wynikiem jest typ danych `Long`.  
   
 ## <a name="relational-and-bitwise-comparisons"></a>Relacyjnych i operatory porównania  
  Typ wyniku danych relacyjnych operacji (`=`, `<>`, `<`, `>`, `<=`, `>=`) jest zawsze `Boolean` [— typ danych logicznych](../../../visual-basic/language-reference/data-types/boolean-data-type.md). To samo dotyczy operacji logicznych (`And`, `AndAlso`, `Not`, `Or`, `OrElse`, `Xor`) na `Boolean` argumentów operacji.  
   
- Typ danych wynik operacji logicznych zależy od argumenty typów danych. Należy pamiętać, że `AndAlso` i `OrElse` są definiowane tylko w przypadku `Boolean`, i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konwertuje każdy argument operacji niezbędny do `Boolean` przed wykonaniem tej operacji.  
+ Typ danych wynik operacji logicznych zależy od argumenty typów danych. Należy pamiętać, że `AndAlso` i `OrElse` są definiowane tylko w przypadku `Boolean`, i Visual Basic konwertuje każdy argument operacji niezbędny do `Boolean` przed wykonaniem tej operacji.  
   
 ### <a name="-----and--operators"></a>= <>, \<, >, \<=, a > = operatory  
- Jeśli oba argumenty operacji są `Boolean`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uwzględnia `True` za mniej niż `False`. Jeśli typ liczbowy jest porównywana z `String`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] próbuje przekonwertować `String` do `Double` przed operacją. A `Char` lub `Date` argument można porównać tylko z innego operand typu danych. Typ danych wyniku jest zawsze `Boolean`.  
+ Jeśli obydwa argumenty operacji są `Boolean`, Visual Basic uwzględnia `True` za mniej niż `False`. Jeśli typ liczbowy jest porównywana z `String`, Visual Basic próbuje przekonwertować `String` do `Double` przed operacją. A `Char` lub `Date` argument można porównać tylko z innego operand typu danych. Typ danych wyniku jest zawsze `Boolean`.  
   
 ### <a name="bitwise-not-operator"></a>Operator Not — Operator  
  W poniższej tabeli przedstawiono wyniki typów danych dla operatora testu koniunkcji `Not` operatora.  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |`Not`|Boolean|SByte|Byte|krótki|UShort|Liczba całkowita|Uinteger —|długa|ULong|  
   
- Jeśli argument jest `Decimal`, `Single`, `Double`, lub `String`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] próbuje przekonwertować go na `Long` przed operacji i wynikiem jest typ danych `Long`.  
+ Jeśli argument jest `Decimal`, `Single`, `Double`, lub `String`, Visual Basic próbuje przekonwertować go na `Long` przed operacji i wynikiem jest typ danych `Long`.  
   
 ### <a name="bitwise-and-or-and-xor-operators"></a>Operator i, lub i operatory Xor  
  W poniższej tabeli przedstawiono wyniki typów danych dla operatora testu koniunkcji `And`, `Or`, i `Xor` operatorów. Należy pamiętać, że ta tabela symetrycznego; dla danego kombinację typów danych argumentu operacji typu danych jest taka sama niezależnie od Kolejność argumentów operacji.  
@@ -173,14 +174,14 @@ ms.lasthandoff: 11/21/2017
 |`Long`|długa|długa|długa|długa|długa|długa|długa|długa|długa|  
 |`ULong`|długa|długa|ULong|długa|ULong|długa|ULong|długa|ULong|  
   
- Jeśli argument operacji jest `Decimal`, `Single`, `Double`, lub `String`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] próbuje przekonwertować go na `Long` przed operacji, a dane wynikowe typ jest taki sam tak, jakby już tym argumentem `Long`.  
+ Jeśli argument operacji jest `Decimal`, `Single`, `Double`, lub `String`, Visual Basic próbuje przekonwertować go na `Long` przed operacji, a dane wynikowe typ jest taki sam tak, jakby już tym argumentem `Long`.  
   
 ## <a name="miscellaneous-operators"></a>Różne operatory  
- `&` Operator jest zdefiniowana tylko dla łączenia z `String` argumentów operacji. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Konwertuje każdy argument operacji niezbędny do `String` przed operacji, a wynik jest zawsze typu danych `String`. Na potrzeby `&` operator, wszystkie konwersje do `String` są uważane za rozszerzenia, nawet jeśli `Option Strict` jest `On`.  
+ `&` Operator jest zdefiniowana tylko dla łączenia z `String` argumentów operacji. Visual Basic konwertuje każdy argument operacji niezbędny do `String` przed operacji, a wynik jest zawsze typu danych `String`. Na potrzeby `&` operator, wszystkie konwersje do `String` są uważane za rozszerzenia, nawet jeśli `Option Strict` jest `On`.  
   
  `Is` i `IsNot` operatory wymagają oba argumenty typu odwołania. `TypeOf`... `Is` wyrażenie wymaga pierwszy argument typu odwołania, a drugi operand Nazwa typu danych. We wszystkich tych przypadkach dane wynikowe jest typu `Boolean`.  
   
- `Like` Zdefiniowano operator tylko do dopasowywania do wzorca z `String` argumentów operacji. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]próbuje przekonwertować każdy argument operacji niezbędny do `String` przed operacją. Typ danych wyniku jest zawsze `Boolean`.  
+ `Like` Zdefiniowano operator tylko do dopasowywania do wzorca z `String` argumentów operacji. Próbuje przekonwertować każdy argument odpowiednio do języka Visual Basic `String` przed operacją. Typ danych wyniku jest zawsze `Boolean`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
@@ -192,4 +193,4 @@ ms.lasthandoff: 11/21/2017
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)

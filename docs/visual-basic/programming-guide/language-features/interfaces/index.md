@@ -14,11 +14,11 @@ ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 558eae39b38161d01d599bba6c3121839560884b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interfaces-visual-basic"></a>Interfejsy (Visual Studio)
 *Interfejsy* Definiowanie właściwości, metod i zdarzeń, które można zaimplementować klasy. Interfejsy umożliwiają definiowanie funkcji jako małych grup ściśle powiązane właściwości, metod i zdarzeń; Zmniejsza to problemy ze zgodnością, ponieważ możesz utworzyć rozszerzoną implementacje interfejsów sieci bez narażenia istniejącego kodu. Możesz dodać nowe funkcje w dowolnym momencie przez tworzenie implementacji i dodatkowe interfejsy.  
@@ -39,20 +39,20 @@ ms.lasthandoff: 10/22/2017
  W przypadku przestrzeni nazw są instrukcje interfejsu `Friend` domyślnie, ale one mogą również być jawnie deklarowane jako `Public` lub `Friend`. Interfejsy zdefiniowane w obrębie klasy, modułów, interfejsów i struktury są `Public` domyślnie, ale one mogą również być jawnie deklarowane jako `Public`, `Friend`, `Protected`, lub `Private`.  
   
 > [!NOTE]
->  `Shadows` — Słowo kluczowe może odnosić się do wszystkich członków interfejsu. `Overloads` — Słowo kluczowe może odnosić się do `Sub`, `Function`, i `Property` instrukcje zadeklarowany w definicji interfejsu. Ponadto `Property` instrukcje mogą mieć `Default`, `ReadOnly`, lub `WriteOnly` modyfikatorów. Brak innych modyfikatorów —`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, lub `Overridable`— są dozwolone. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+>  `Shadows` — Słowo kluczowe może odnosić się do wszystkich członków interfejsu. `Overloads` — Słowo kluczowe może odnosić się do `Sub`, `Function`, i `Property` instrukcje zadeklarowany w definicji interfejsu. Ponadto `Property` instrukcje mogą mieć `Default`, `ReadOnly`, lub `WriteOnly` modyfikatorów. Brak innych modyfikatorów —`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, lub `Overridable`— są dozwolone. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
  Na przykład poniższy kod definiuje interfejs z jednej funkcji, jednej właściwości i jedno zdarzenie.  
   
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## <a name="implementing-interfaces"></a>Implementowanie interfejsów  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Słowa zarezerwowanego `Implements` jest używany na dwa sposoby. `Implements` Instrukcji oznacza, że klasy lub struktury implementuje interfejs. `Implements` — Słowo kluczowe oznacza, że element członkowski klasy lub struktury element członkowski implementuje członkiem określonego interfejsu.  
+ Słowa zarezerwowanego Visual Basic `Implements` jest używany na dwa sposoby. `Implements` Instrukcji oznacza, że klasy lub struktury implementuje interfejs. `Implements` — Słowo kluczowe oznacza, że element członkowski klasy lub struktury element członkowski implementuje członkiem określonego interfejsu.  
   
 ### <a name="implements-statement"></a>Implements — Instrukcja  
  Jeśli klasy lub struktury implementuje jeden lub więcej interfejsów, musi on zawierać `Implements` instrukcji natychmiast po `Class` lub `Structure` instrukcji. `Implements` Instrukcja wymaga rozdzielana przecinkami lista interfejsy do zaimplementowania przez klasę. Klasy lub struktury musi implementować wszystkie elementy członkowskie interfejsu za pomocą `Implements` — słowo kluczowe.  
   
 ### <a name="implements-keyword"></a>Implements — słowo kluczowe  
- `Implements` — Słowo kluczowe wymaga rozdzielana przecinkami lista członków interfejsu do zaimplementowania. Ogólnie rzecz biorąc tylko członek jeden interfejs jest określony, ale można określić wiele elementów członkowskich. Specyfikacja elementu członkowskiego interfejsu, który składa się z nazwy interfejsu, która musi zostać określona w instrukcji implementuje w obrębie klasy; okres; i nazwa funkcji członkowskiej, właściwość lub zdarzenie, które mają zostać wdrożone. Nazwa elementu członkowskiego, który implementuje element członkowski można użyć dowolnego poprawnego identyfikatora i nie jest ograniczona do `InterfaceName_MethodName` Konwencji używany w starszych wersjach [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ `Implements` — Słowo kluczowe wymaga rozdzielana przecinkami lista członków interfejsu do zaimplementowania. Ogólnie rzecz biorąc tylko członek jeden interfejs jest określony, ale można określić wiele elementów członkowskich. Specyfikacja elementu członkowskiego interfejsu, który składa się z nazwy interfejsu, która musi zostać określona w instrukcji implementuje w obrębie klasy; okres; i nazwa funkcji członkowskiej, właściwość lub zdarzenie, które mają zostać wdrożone. Nazwa elementu członkowskiego, który implementuje element członkowski można użyć dowolnego poprawnego identyfikatora i nie jest ograniczona do `InterfaceName_MethodName` Konwencji używany w starszych wersjach programu Visual Basic.  
   
  Na przykład poniższy kod przedstawia sposób Zadeklaruj procedury o nazwie `Sub1` implementującej metody interfejsu:  
   
@@ -89,5 +89,5 @@ ms.lasthandoff: 10/22/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wskazówki: Tworzenie i wdrażanie interfejsów](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Zawiera szczegółowe procedury, która przeprowadza użytkownika przez proces definiowanie i wdrażanie własnego interfejsu.|  
-|[Wariancje w interfejsach](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Zawiera omówienie Kowariancja i kontrawariancja w interfejsach, a także listę interfejsów ogólnych typu variant w programie .NET Framework.|
+|[Przewodnik: tworzenie i wdrażanie interfejsów](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Zawiera szczegółowe procedury, która przeprowadza użytkownika przez proces definiowanie i wdrażanie własnego interfejsu.|  
+|[Wariancje w interfejsach ogólnych](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Zawiera omówienie Kowariancja i kontrawariancja w interfejsach, a także listę interfejsów ogólnych typu variant w programie .NET Framework.|

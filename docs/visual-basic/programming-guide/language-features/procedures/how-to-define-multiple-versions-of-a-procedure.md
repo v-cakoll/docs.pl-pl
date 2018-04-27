@@ -1,11 +1,12 @@
 ---
 title: 'Porady: definiowanie wielu wersji procedury (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Porady: definiowanie wielu wersji procedury (Visual Basic)
 Procedurę można zdefiniować w różnych wersjach przez *przeładowanie* go przy użyciu takiej samej nazwie, ale inną listą parametrów dla każdej wersji. Przeciążanie służy do definiowania kilka wersji blisko związane procedury bez konieczności odróżnić je według nazwy.  
@@ -34,7 +35,7 @@ Procedurę można zdefiniować w różnych wersjach przez *przeładowanie* go pr
   
 2.  Należy poprzedzić `Sub` lub `Function` — słowo kluczowe w każdej deklaracji z [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe. Opcjonalnie można pominąć `Overloads` w deklaracjach, ale jeśli należy uwzględnić w deklaracji, należy go dołączyć w każdej deklaracji.  
   
-3.  Po każdej instrukcji deklaracji napisać kod procedury obsługi konkretnego przypadku, gdy kod wywołujący dostarcza argumentów dopasowania listy parametrów w tej wersji. Nie masz do testowania dla parametrów, które dostarczył kodu wywołującego. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]formant przechodzi do tej samej wersji procedury.  
+3.  Po każdej instrukcji deklaracji napisać kod procedury obsługi konkretnego przypadku, gdy kod wywołujący dostarcza argumentów dopasowania listy parametrów w tej wersji. Nie masz do testowania dla parametrów, które dostarczył kodu wywołującego. Visual Basic przejmuje kontrolę zgodną wersję procedury.  
   
 4.  Zakończenie każdej wersji procedury z `End Sub` lub `End Function` oświadczenie zależnie od potrzeb.  
   
@@ -53,8 +54,8 @@ Procedurę można zdefiniować w różnych wersjach przez *przeładowanie* go pr
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Procedury rozwiązywania problemów](./troubleshooting-procedures.md)  
- [Porady: przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
  [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)  
  [Rozpoznanie przeciążenia](./overload-resolution.md)

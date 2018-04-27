@@ -1,12 +1,12 @@
 ---
-title: "System typu wspólnego"
-ms.custom: 
+title: System typu wspólnego
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4660e8764c429f526e05e8e7b6c44bd30c4172c1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządzane przez środowisko uruchomieniowe języka wspólnego, a także jest ważnym elementem obsługi środowiska uruchomieniowego integracji między językami. Wspólny system typów wykonuje następujące funkcje:  
@@ -331,6 +331,6 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
 -   Typ pochodny można zastąpić dziedziczonej metody wirtualnej. Metodę zastępującą udostępnia nową definicję metody, która będzie wywoływana na podstawie typu wartości w czasie wykonywania, a nie typu zmienną znane w czasie kompilacji. Metodę można przesłonić metody wirtualnej tylko wtedy, gdy metoda wirtualna nie jest oznaczony jako `final` i nowa metoda jest co najmniej jako dostępne jako metoda wirtualna.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka klas programu .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [Przeglądarka interfejs API .NET](/dotnet/api)  
  [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)  
  [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)

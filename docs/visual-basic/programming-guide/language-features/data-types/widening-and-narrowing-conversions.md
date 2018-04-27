@@ -1,11 +1,12 @@
 ---
-title: "Rozszerzanie i zwężanie konwersji (Visual Basic)"
-ms.custom: 
+title: Rozszerzanie i zwężanie konwersji (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Rozszerzanie i zwężanie konwersji (Visual Basic)
 Ważną kwestią konwersji typu to, czy wynik konwersji jest spoza zakresu docelowego typu danych.  
@@ -46,20 +47,20 @@ Ważną kwestią konwersji typu to, czy wynik konwersji jest spoza zakresu docel
   
 |Typ danych|Rozszerzenie do typów danych <sup>1</sup>|  
 |---|---|  
-|[Sbyte —](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
-|[Bajtów](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
-|[Krótki](../../../../visual-basic/language-reference/data-types/short-data-type.md)|`Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
+|[SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
+|[Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
+|[krótki](../../../../visual-basic/language-reference/data-types/short-data-type.md)|`Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|`UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
 |[Liczba całkowita](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|`Integer`, `Long`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Uinteger —](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|`UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
-|[Długa](../../../../visual-basic/language-reference/data-types/long-data-type.md)|`Long`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
+|[długa](../../../../visual-basic/language-reference/data-types/long-data-type.md)|`Long`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|`ULong`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Pojedynczy](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
-|[O podwójnej precyzji](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
+|[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |Wszelkie typ wyliczeniowy ([wyliczenia](../../../../visual-basic/language-reference/statements/enum-statement.md))|Jego podstawowym typem całkowitym i dowolnego typu, do którego rozszerzenie typu bazowego.|  
-|[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char`Tablica|`Char`Tablica,`String`|  
+|[char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
+|`Char` Tablica|`Char` Tablica, `String`|  
 |Dowolnego typu|[Obiekt](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Dowolnego typu pochodnego|Podstawowa dowolnego typu, z którego pochodzi <sup>3</sup>.|  
 |Dowolnego typu|Interfejs, który implementuje.|  
@@ -97,11 +98,11 @@ Ważną kwestią konwersji typu to, czy wynik konwersji jest spoza zakresu docel
 ## <a name="exceptions-during-conversion"></a>Wyjątki podczas konwertowania  
  Rozszerzanie konwersji zawsze powiedzie się, nie zgłaszają wyjątki. Zawężanie konwersji, gdy się one zakończyć niepowodzeniem, throw najczęściej następujące wyjątki:  
   
--   <xref:System.InvalidCastException>— Jeśli zdefiniowano brak konwersji między tymi dwoma typami  
+-   <xref:System.InvalidCastException> — Jeśli zdefiniowano brak konwersji między tymi dwoma typami  
   
--   <xref:System.OverflowException>— (tylko w całkowitym typy) Jeśli skonwertowana wartość jest za duża dla typu docelowego  
+-   <xref:System.OverflowException> — (tylko w całkowitym typy) Jeśli skonwertowana wartość jest za duża dla typu docelowego  
   
- Jeśli definiuje klasę lub strukturę [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) jako operator konwersji na lub z tej klasy lub struktury, która `CType` może zgłosić wszelkie wyjątki, które uzna za stosowne. Ponadto, który `CType` może wywołać [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] funkcji lub [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody, które z kolei może wywoływać różnych wyjątków.  
+ Jeśli definiuje klasę lub strukturę [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) jako operator konwersji na lub z tej klasy lub struktury, która `CType` może zgłosić wszelkie wyjątki, które uzna za stosowne. Ponadto, który `CType` może wywoływać funkcje języka Visual Basic lub [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody, które z kolei może wywoływać różnych wyjątków.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Zmian podczas konwersji typu odwołania  
  Konwersja z *zawierają odwołania do typu* kopiuje tylko wskaźnik do wartości. Samą wartość nie jest kopiowany ani zmienione w dowolny sposób. Jedyną operacją, które można zmienić ma typ danych zmiennej zawierający wskaźnika. W poniższym przykładzie typ danych jest konwertowana z klasy pochodnej na jej klasa podstawowa, ale obie zmienne teraz wskaż obiekt jest bez zmian.  
@@ -119,7 +120,7 @@ shape = square
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Konwertowanie pomiędzy ciągami a innymi typami](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Porady: konwertowanie obiektu do innego typu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  

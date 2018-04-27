@@ -1,10 +1,11 @@
 ---
-title: "Option Strict — Instrukcja"
+title: Option Strict — Instrukcja
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict — Instrukcja
 Ogranicza niejawne konwersje typów danych można tylko rozszerzanie konwersji, uniemożliwia późne wiązanie i nie zezwala na niejawne wpisanie, który daje w `Object` typu.  
@@ -38,8 +39,8 @@ Option Strict { On | Off }
   
 |Termin|Definicja|  
 |---|---|  
-|`On`|Opcjonalny. Włącza `Option Strict` sprawdzania.|  
-|`Off`|Opcjonalny. Wyłącza `Option Strict` sprawdzania.|  
+|`On`|Opcjonalna. Włącza `Option Strict` sprawdzania.|  
+|`Off`|Opcjonalna. Wyłącza `Option Strict` sprawdzania.|  
   
 ## <a name="remarks"></a>Uwagi  
  Gdy `Option Strict On` lub `Option Strict` pojawia się w pliku, błąd kompilacji powodują następujące warunki:  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>Niejawne błędy konwersji zawężającej  
  Niejawne błędy konwersji zawężającej wystąpić, gdy istnieje konwersja typu danych niejawne, który jest konwersji zawężającej.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]można przekonwertować wiele typów danych na inne typy danych. Może wystąpić utrata danych, gdy wartość jednego typu danych jest konwertowana na typ danych, który ma mniej precyzję lub mniejszą pojemność. Błąd czasu wykonywania występuje, jeśli konwersji zawężającej nie powiedzie się. `Option Strict`zapewnia powiadomień kompilacji tych konwersji zawężającej, dzięki czemu można uniknąć. Aby uzyskać więcej informacji, zobacz [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) i [rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Inne typy danych Visual Basic można przekonwertować wiele typów danych. Może wystąpić utrata danych, gdy wartość jednego typu danych jest konwertowana na typ danych, który ma mniej precyzję lub mniejszą pojemność. Błąd czasu wykonywania występuje, jeśli konwersji zawężającej nie powiedzie się. `Option Strict` zapewnia powiadomień kompilacji tych konwersji zawężającej, dzięki czemu można uniknąć. Aby uzyskać więcej informacji, zobacz [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) i [rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Konwersje, które mogą powodować błędy obejmują niejawne konwersje, które występują w wyrażeniach. Więcej informacji znajduje się w następujących tematach:  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  Na **skompilować** ustaw wartość **Option Strict** pole.  
   
-###  <a name="conditions"></a>Aby ustawić konfiguracje ostrzeżenie w środowisku IDE  
+###  <a name="conditions"></a> Aby ustawić konfiguracje ostrzeżenie w środowisku IDE  
  Jeśli używasz [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) zamiast `Option Strict` instrukcji, masz dodatkową kontrolę nad warunki, które generują błędy. **Konfiguracje ostrzeżenie** sekcji **skompilować strony** zawiera ustawienia, które odpowiadają trzy warunki, które spowodować błąd kompilacji podczas `Option Strict` znajduje się na. Te ustawienia są następujące:  
   
 -   **Niejawna konwersja**  

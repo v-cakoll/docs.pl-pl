@@ -1,11 +1,12 @@
 ---
-title: "Złożone typy danych (Visual Basic)"
-ms.custom: 
+title: Złożone typy danych (Visual Basic)
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>Złożone typy danych (Visual Basic)
-Oprócz podstawowe typy danych [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dostaw, można również grupować elementy różnych typów, aby utworzyć *złożone typy danych* takich jak klasy, tablic i struktury. Złożone typy danych można tworzyć z typów podstawowych i innych typów złożonych. Na przykład można zdefiniować tablicę elementów struktury lub struktura z tablicy elementów członkowskich.  
+Oprócz dostaw Visual Basic typy podstawowe dane, można złożyć elementów różnego typu, aby utworzyć *złożone typy danych* takich jak klasy, tablic i struktury. Złożone typy danych można tworzyć z typów podstawowych i innych typów złożonych. Na przykład można zdefiniować tablicę elementów struktury lub struktura z tablicy elementów członkowskich.  
   
 ## <a name="data-types"></a>Typy danych  
  Typ złożony jest inny niż typ danych dowolnego z jego składników. Na przykład tablicę `Integer` nie ma elementów `Integer` typu danych.  
@@ -35,7 +36,7 @@ Oprócz podstawowe typy danych [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dosta
  Typ tablicy danych zwykle odpowiada za pomocą typu elementu, nawiasy i przecinkami w razie potrzeby. Na przykład tablicą jednowymiarową z `String` elementów jest reprezentowany jako `String()`i jest tablicą dwuwymiarową z `Boolean` elementów jest reprezentowany jako `Boolean(,)`.  
   
 ## <a name="structure-types"></a>Typy struktur  
- Nie ma typu danych jednego obejmujące wszystkie struktury. Zamiast tego każdej definicji struktury reprezentuje typ unikatowy danych, nawet jeśli dwie struktury zdefiniować identyczne elementy w tej samej kolejności. Jednak, w przypadku utworzenia dwóch lub więcej wystąpień tej samej struktury [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] traktuje je tego samego typu danych.  
+ Nie ma typu danych jednego obejmujące wszystkie struktury. Zamiast tego każdej definicji struktury reprezentuje typ unikatowy danych, nawet jeśli dwie struktury zdefiniować identyczne elementy w tej samej kolejności. Jednak po utworzeniu co najmniej dwa wystąpienia tej samej struktury języka Visual Basic traktuje je tego samego typu danych.  
   
 ## <a name="tuples"></a>Krotki
 
@@ -71,10 +72,10 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Podstawowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Typy wartości i typy referencyjne](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Porady: utrzymywanie więcej niż jedną wartość w zmiennej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Instrukcje: utrzymywanie więcej niż jednej wartości w zmiennej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

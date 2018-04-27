@@ -1,12 +1,12 @@
 ---
 title: Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, and TAP
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3eddf8899863b7f1c59950c9cd4fa4d42f7acdb7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb1b73af4ccdc22e811988450824123c0055d9e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 Gdy używasz opartego na zadaniach asynchronicznej wzorca (TAP) do pracy z operacji asynchronicznych służy wywołań zwrotnych do osiągnięcia oczekiwania bez blokowania.  W przypadku zadań to odbywa się za pośrednictwem metody takie jak <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Obsługa komunikacji asynchronicznej opartych na języku ukrywa wywołania zwrotne zezwalając operacji asynchronicznych do dokumentów, w ramach przepływu sterowania normalne i kod wygenerowany przez kompilator obsługuje ten sam poziom interfejsu API.  
@@ -736,7 +736,7 @@ public class AsyncCache<TKey, TValue>
 }  
 ```  
   
- [AsyncCache\<TKey, TValue >](http://go.microsoft.com/fwlink/p/?LinkId=251941) klasy akceptuje jak obiekt delegowany dla jego konstruktora funkcję, która przyjmuje `TKey` i zwraca <xref:System.Threading.Tasks.Task%601>.  Wszelkie wartości wcześniej używanych z pamięci podręcznej są przechowywane w słowniku wewnętrzny i `AsyncCache` gwarantuje, że tylko jedno zadanie jest generowany na klucz, nawet wtedy, gdy pamięć podręczna jest jednocześnie dostępny.  
+ [AsyncCache\<TKey, TValue >](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) klasy akceptuje jak obiekt delegowany dla jego konstruktora funkcję, która przyjmuje `TKey` i zwraca <xref:System.Threading.Tasks.Task%601>.  Wszelkie wartości wcześniej używanych z pamięci podręcznej są przechowywane w słowniku wewnętrzny i `AsyncCache` gwarantuje, że tylko jedno zadanie jest generowany na klucz, nawet wtedy, gdy pamięć podręczna jest jednocześnie dostępny.  
   
  Można na przykład tworzenie pamięci podręcznej dla pobranego stron sieci web:  
   

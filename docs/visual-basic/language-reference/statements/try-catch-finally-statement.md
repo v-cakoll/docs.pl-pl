@@ -1,10 +1,11 @@
 ---
-title: "Try...Catch...Finally — Instrukcja (Visual Basic)"
+title: Try...Catch...Finally — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally — Instrukcja (Visual Basic)
 Zapewnia sposób obsługi niektórych lub wszystkich możliwych błędów, które mogą wystąpić w danym bloku kodu, w trakcie wykonywania kodu.  
@@ -55,32 +56,32 @@ End Try
   
 |Termin|Definicja|  
 |---|---|  
-|`tryStatements`|Opcjonalny. Instrukcji, w których może wystąpić błąd. Może być złożonej instrukcji.|  
-|`Catch`|Opcjonalny. Wiele `Catch` bloki dozwolone. Jeśli wystąpi wyjątek podczas przetwarzania `Try` zablokować każdego `Catch` instrukcji jest sprawdzany w kolejności tekstowej w celu ustalenia, czy obsługuje wyjątek, z `exception` reprezentujący wyjątek, który został wygenerowany.|  
-|`exception`|Opcjonalny. Dowolna nazwa zmiennej. Początkowa wartość `exception` jest wartością zgłoszenia błędu. Używane z `Catch` do określenia błąd przechwycony. Pominięcie `Catch` instrukcji przechwytuje żadnych wyjątków.|  
-|`type`|Opcjonalny. Określa typ klasy filtru. Jeśli wartość `exception` jest typu określonego przez `type` lub typu pochodnego identyfikator staje się powiązany obiekt wyjątku.|  
-|`When`|Opcjonalny. A `Catch` instrukcji z `When` klauzula przechwytuje wyjątków tylko wtedy, gdy `expression` daje w wyniku `True`. A `When` tylko po sprawdzanie typu wyjątku, stosowana jest klauzula i `expression` mogą odwoływać się do identyfikatora reprezentujący wyjątek.|  
-|`expression`|Opcjonalny. Musi istnieć możliwość niejawnego przekonwertowania na `Boolean`. Dowolne wyrażenie filtru ogólnego. Zwykle używane do filtrowania według numer błędu. Używane z `When` — słowo kluczowe, aby określić okoliczności, w których zostanie przechwycony błąd.|  
-|`catchStatements`|Opcjonalny. Instrukcji do obsługi błędów występujących w skojarzonym `Try` bloku. Może być złożonej instrukcji.|  
-|`Exit Try`|Opcjonalny. Słowo kluczowe, która dzieli poza `Try...Catch...Finally` struktury. Wznawia wykonywanie kodu bezpośrednio po `End Try` instrukcji. `Finally` Nadal będzie można wykonać instrukcji. Nie są dozwolone w `Finally` bloków.|  
-|`Finally`|Opcjonalny. A `Finally` bloku jest zawsze wykonywana podczas wykonywania pozostawia dowolną część `Try...Catch` instrukcji.|  
-|`finallyStatements`|Opcjonalny. Instrukcji, które są wykonywane po zakończeniu wszystkich innych wystąpił błąd podczas przetwarzania.|  
+|`tryStatements`|Opcjonalna. Instrukcji, w których może wystąpić błąd. Może być złożonej instrukcji.|  
+|`Catch`|Opcjonalna. Wiele `Catch` bloki dozwolone. Jeśli wystąpi wyjątek podczas przetwarzania `Try` zablokować każdego `Catch` instrukcji jest sprawdzany w kolejności tekstowej w celu ustalenia, czy obsługuje wyjątek, z `exception` reprezentujący wyjątek, który został wygenerowany.|  
+|`exception`|Opcjonalna. Dowolna nazwa zmiennej. Początkowa wartość `exception` jest wartością zgłoszenia błędu. Używane z `Catch` do określenia błąd przechwycony. Pominięcie `Catch` instrukcji przechwytuje żadnych wyjątków.|  
+|`type`|Opcjonalna. Określa typ klasy filtru. Jeśli wartość `exception` jest typu określonego przez `type` lub typu pochodnego identyfikator staje się powiązany obiekt wyjątku.|  
+|`When`|Opcjonalna. A `Catch` instrukcji z `When` klauzula przechwytuje wyjątków tylko wtedy, gdy `expression` daje w wyniku `True`. A `When` tylko po sprawdzanie typu wyjątku, stosowana jest klauzula i `expression` mogą odwoływać się do identyfikatora reprezentujący wyjątek.|  
+|`expression`|Opcjonalna. Musi istnieć możliwość niejawnego przekonwertowania na `Boolean`. Dowolne wyrażenie filtru ogólnego. Zwykle używane do filtrowania według numer błędu. Używane z `When` — słowo kluczowe, aby określić okoliczności, w których zostanie przechwycony błąd.|  
+|`catchStatements`|Opcjonalna. Instrukcji do obsługi błędów występujących w skojarzonym `Try` bloku. Może być złożonej instrukcji.|  
+|`Exit Try`|Opcjonalna. Słowo kluczowe, która dzieli poza `Try...Catch...Finally` struktury. Wznawia wykonywanie kodu bezpośrednio po `End Try` instrukcji. `Finally` Nadal będzie można wykonać instrukcji. Nie są dozwolone w `Finally` bloków.|  
+|`Finally`|Opcjonalna. A `Finally` bloku jest zawsze wykonywana podczas wykonywania pozostawia dowolną część `Try...Catch` instrukcji.|  
+|`finallyStatements`|Opcjonalna. Instrukcji, które są wykonywane po zakończeniu wszystkich innych wystąpił błąd podczas przetwarzania.|  
 |`End Try`|Kończy `Try...Catch...Finally` struktury.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli przypuszczasz, że określonego wyjątku mogą wystąpić w określonej sekcji kodu, umieść kod `Try` blokować i użyj `Catch` bloku, aby zachować kontrolę i obsłużyć wyjątek, jeśli występuje.  
   
- A `Try…Catch` instrukcji składa się z `Try` bloku, po której następuje co najmniej jeden `Catch` postanowienia Określ obsługę różne wyjątki. Jeśli wyjątek jest zgłaszany `Try` bloku, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] szuka `Catch` instrukcji, która obsługuje wyjątek. Jeśli odpowiadającego mu `Catch` instrukcja nie zostanie znaleziony, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sprawdza metodę, która wywołuje bieżącej metody i tak dalej górę stosu wywołań. Jeśli nie `Catch` bloku zostanie znaleziony, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest wyświetlany komunikat nieobsługiwany wyjątek i zatrzymuje wykonywanie programu.  
+ A `Try…Catch` instrukcji składa się z `Try` bloku, po której następuje co najmniej jeden `Catch` postanowienia Określ obsługę różne wyjątki. Jeśli wyjątek jest zgłaszany `Try` zablokować, Visual Basic szuka `Catch` instrukcji, która obsługuje wyjątek. Jeśli odpowiadającego mu `Catch` instrukcji nie można odnaleźć, Visual Basic sprawdza metodę, która wywołuje bieżącej metody i tak dalej górę stosu wywołań. Jeśli nie `Catch` bloku zostanie znaleziony, Visual Basic, jest wyświetlany komunikat nieobsługiwany wyjątek i zatrzymuje wykonywanie programu.  
   
  Można użyć więcej niż jednej `Catch` instrukcji w `Try…Catch` instrukcji. Jeśli to zrobisz, kolejność `Catch` klauzule jest ważna, ponieważ są one sprawdzane w kolejności. CATCH bardziej szczegółowe wyjątki przed mniej określonych zadań.  
   
  Następujące `Catch` warunków instrukcji najmniej specyficznych i będzie przechwytywać wszystkie wyjątki pochodzące z <xref:System.Exception> klasy. Zwykle należy użyć jednej z tych zmian ostatnio `Catch` blok w `Try...Catch...Finally` struktury po Przechwytywanie wszystkich wyjątków szczególne spodziewasz się. Przepływ sterowania, nigdy nie może nawiązać połączenie `Catch` bloku poniżej jedną z tych zmian.  
   
--   `type` Jest `Exception`, na przykład:`Catch ex As Exception`  
+-   `type` Jest `Exception`, na przykład: `Catch ex As Exception`  
   
--   Wykonywanie instrukcji nie ma `exception` zmiennej, na przykład:`Catch`  
+-   Wykonywanie instrukcji nie ma `exception` zmiennej, na przykład: `Catch`  
   
- Gdy `Try…Catch…Finally` instrukcji jest zagnieżdżony w innym `Try` bloku, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] najpierw sprawdza każdego `Catch` instrukcji w najbardziej wewnętrzną funkcją `Try` bloku. Jeśli pasujących `Catch` instrukcji zostanie znaleziony, wyszukiwanie będzie kontynuowane do `Catch` instrukcje zewnętrznego `Try…Catch…Finally` bloku.  
+ Gdy `Try…Catch…Finally` instrukcji jest zagnieżdżony w innym `Try` bloku, Visual Basic najpierw sprawdza, czy każdy `Catch` instrukcji w najbardziej wewnętrzną funkcją `Try` bloku. Jeśli pasujących `Catch` instrukcji zostanie znaleziony, wyszukiwanie będzie kontynuowane do `Catch` instrukcje zewnętrznego `Try…Catch…Finally` bloku.  
   
  Zmienne lokalne z `Try` nie są dostępne w bloku `Catch` zablokować, ponieważ są one oddzielne bloków. Jeśli chcesz użyć zmiennej w bloku więcej niż jeden, należy zadeklarować zmienną poza `Try...Catch...Finally` struktury.  
   
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>Argument wyjątku  
  `Catch` Bloku `exception` argument jest wystąpieniem <xref:System.Exception> klasy lub klasą pochodzącą z `Exception` klasy. `Exception` Wystąpienie klasy odpowiada błędu, który wystąpił w `Try` bloku.  
   
- Właściwości `Exception` obiekt pomoc, aby zidentyfikować przyczynę i lokalizacji wyjątku. Na przykład <xref:System.Exception.StackTrace%2A> listy właściwości wywoływane metody, które doprowadziły do wyjątku, pomaga znaleźć, w którym wystąpił błąd w kodzie. <xref:System.Exception.Message%2A>Zwraca komunikat opisujący wyjątek. <xref:System.Exception.HelpLink%2A>Zwraca łącze do skojarzony plik pomocy. <xref:System.Exception.InnerException%2A>Zwraca `Exception` zwraca obiekt, który spowodował bieżącego wyjątku lub `Nothing` przypadku nie oryginału `Exception`.  
+ Właściwości `Exception` obiekt pomoc, aby zidentyfikować przyczynę i lokalizacji wyjątku. Na przykład <xref:System.Exception.StackTrace%2A> listy właściwości wywoływane metody, które doprowadziły do wyjątku, pomaga znaleźć, w którym wystąpił błąd w kodzie. <xref:System.Exception.Message%2A> Zwraca komunikat opisujący wyjątek. <xref:System.Exception.HelpLink%2A> Zwraca łącze do skojarzony plik pomocy. <xref:System.Exception.InnerException%2A> Zwraca `Exception` zwraca obiekt, który spowodował bieżącego wyjątku lub `Nothing` przypadku nie oryginału `Exception`.  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>Uwagi dotyczące korzystania z bloku Try... CATCH — instrukcja  
  Użyj `Try…Catch` oświadczenie tylko w celu zasygnalizowania wystąpienia zdarzeń nietypowe lub nieprzewidziane programu. Dostępne są następujące przyczyny to:  

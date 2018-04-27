@@ -1,11 +1,12 @@
 ---
-title: "Rozpoznanie przeciążenia (Visual Basic)"
-ms.custom: 
+title: Rozpoznanie przeciążenia (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e62560d853c95bc4bba6ba829d8579ee4388858e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overload-resolution-visual-basic"></a>Rozpoznanie przeciążenia (Visual Basic)
-Gdy [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora napotka wywołaniu procedury, która jest zdefiniowana w kilku wersji przeciążone, kompilator należy zdecydować, które z przeciążeń do wywołania. Dzieje się tak, wykonując następujące czynności:  
+Gdy kompilator Visual Basic napotka wywołaniu procedury, która jest zdefiniowana w kilku wersji przeciążona, kompilator należy zdecydować, które przeciążeń do wywołania. Dzieje się tak, wykonując następujące czynności:  
   
 1.  **Ułatwienia dostępu.** Eliminuje wszystkie przeciążenia z poziomu dostępu, uniemożliwiający wywoływanie jej kod wywołujący.  
   
@@ -71,11 +72,11 @@ Rozpoznawanie między zastąpionej wersji
  [Parametry opcjonalne](./optional-parameters.md)  
  [Tablice parametrów](./parameter-arrays.md)  
  [Przeciążanie procedury](./procedure-overloading.md)  
- [Procedury rozwiązywania problemów](./troubleshooting-procedures.md)  
- [Porady: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Porady: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
- [Porady: przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)  
+ [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
  [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)  
- [Przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md)  
- [Metody rozszerzenia](./extension-methods.md)
+ [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Metody rozszerzeń](./extension-methods.md)

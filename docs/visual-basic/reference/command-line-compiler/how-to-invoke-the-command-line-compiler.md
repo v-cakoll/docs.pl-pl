@@ -1,10 +1,11 @@
 ---
-title: "Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)"
+title: 'Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)
 Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wykonywalnego do wiersza polecenia, znanej także jako polecenia systemu MS-DOS. Jeśli kompilacja z domyślnego wiersza polecenia systemu Windows, należy wpisać w pełni kwalifikowana ścieżka do pliku wykonywalnego. Aby zmienić to zachowanie domyślne, można użyć [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] wiersz polecenia lub zmodyfikować zmiennej środowiskowej PATH. Umożliwiają zarówno skompilować z dowolnego katalogu, wpisując nazwę kompilatora.  
@@ -54,7 +55,7 @@ Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wyko
   
 6.  Kliknij przycisk **OK** aby potwierdzić zmiany i zamknąć okno dialogowe.  
   
-     Po zmianie zmiennej środowiskowej PATH, można uruchomić [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilator w wierszu polecenia systemu Windows z dowolnego katalogu na komputerze.  
+     Po zmianie zmiennej środowiskowej PATH, można uruchomić kompilator Visual Basic w wierszu polecenia systemu Windows z dowolnego katalogu na komputerze.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Aby wywołać kompilatora przy użyciu wiersza polecenia systemu Windows  
   

@@ -1,11 +1,12 @@
 ---
-title: "Konwersje plików w Visual Basic"
-ms.custom: 
+title: Konwersje plików w Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b46d813b4fcadd975d87b235e9f3350a365949fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: f1487d98f37e7ef00982de365d0d164435f84567
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-conversions-in-visual-basic"></a>Konwersje plików w Visual Basic
 Proces zmiany wartości z jednego typu danych do innego typu, jest nazywany *konwersji*. Konwersje są albo *rozszerzanie* lub *zawężanie*, w zależności od możliwości typy danych. Są one również *niejawne* lub *jawne*w oparciu o składni w kodzie źródłowym.  
@@ -33,9 +34,9 @@ Proces zmiany wartości z jednego typu danych do innego typu, jest nazywany *kon
  W tym artykule wyjaśniono konwersje sklasyfikowanych według tego, czy typ docelowy może przechowywać dane.  
   
  [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- W tym artykule omówiono konwersje sklasyfikowane przez czy [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wykonuje je automatycznie.  
+ W tym artykule omówiono konwersje sklasyfikowane przez czy Visual Basic wykonuje je automatycznie.  
   
- [Konwertowanie pomiędzy ciągami a innymi typami](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Przedstawia Konwertowanie pomiędzy ciągami a liczbowe, `Boolean`, lub wartości daty i godziny.  
   
  [Porady: konwertowanie obiektu do innego typu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
@@ -46,10 +47,10 @@ Proces zmiany wartości z jednego typu danych do innego typu, jest nazywany *kon
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Wprowadza [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] typów danych, a w tym artykule opisano sposób ich użycia.  
+ Wprowadzono typy danych Visual Basic i zawiera opis sposobu ich używania.  
   
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Wyświetla listę typów podstawowych danych dostarczonych przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Wyświetla listę typów podstawowych danych dostarczane przez program Visual Basic.  
   
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  W tym artykule omówiono niektóre typowe problemy, które mogą wystąpić podczas pracy z typów danych.

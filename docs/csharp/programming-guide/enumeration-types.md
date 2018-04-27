@@ -1,8 +1,9 @@
 ---
-title: "Typy wyliczeniowe (C# przewodnik programowania w języku)"
+title: Typy wyliczeniowe (C# przewodnik programowania w języku)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cdaa609acfa34f3b0b3073d88f09fe735d48e9a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Typy wyliczeniowe (C# przewodnik programowania w języku)
 
@@ -47,7 +48,7 @@ Zalety korzystania z wyliczeniem zamiast typu liczbowego są następujące:
 
 - Wyraźnie określ wartości, które są prawidłowe dla zmiennej kodu klienta.
 
-- W [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], IntelliSense wyświetla zdefiniowanymi wartościami.
+- W programie Visual Studio IntelliSense wyświetla zdefiniowanymi wartościami.
 
 Jeśli nie określisz wartości elementów na liście modułu wyliczającego, wartości są automatycznie zwiększana o 1. W poprzednim przykładzie `Day.Sunday` ma wartość 0, `Day.Monday` ma wartość 1 i tak dalej. Podczas tworzenia nowego `Day` obiektu, będzie mieć wartość domyślną równą `Day.Sunday` (0), jeśli nie zostanie jawnie przypisany jej wartość. Podczas tworzenia wyliczenia wybierz najbardziej logicznym wartość domyślną i nadaj mu wartość zero. Który spowoduje, że wszystkie typy wyliczeniowe za tę wartość domyślną, jeśli nie są one jawnie przypisywane wartość po ich utworzeniu.
 
@@ -68,7 +69,7 @@ Typem wyliczenia można użyć do definiowania flagi bitów, co włącza wystąp
 
 Utwórz nieco wyliczenia flag, stosując <xref:System.FlagsAttribute?displayProperty=nameWithType> atrybut i odpowiednio definiowanie wartości, aby `AND`, `OR`, `NOT` i `XOR` Operacje bitowe mogą być wykonywane na nich. W nieco wyliczenia flag obejmują nazwanej stałej o wartości zero oznacza "nie flagi są ustawione." Nie ma flagi wartość równą zero, jeśli nie oznacza to "nie flagi są ustawiane".
 
-W poniższym przykładzie inna wersja `Day` wyliczenia, które nosi nazwę `Days`, jest zdefiniowany. `Days`ma `Flags` atrybutów i wartości jest przypisany następny większy potęgą liczby 2. Dzięki temu można utworzyć `Days` zmiennej, którego wartość jest `Days.Tuesday | Days.Thursday`.
+W poniższym przykładzie inna wersja `Day` wyliczenia, które nosi nazwę `Days`, jest zdefiniowany. `Days` ma `Flags` atrybutów i wartości jest przypisany następny większy potęgą liczby 2. Dzięki temu można utworzyć `Days` zmiennej, którego wartość jest `Days.Tuesday | Days.Thursday`.
 
 [!code-csharp[csProgGuideEnums#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#2)]
 
@@ -95,4 +96,4 @@ Można również utworzenie nowej metody dla wyliczenia za pomocą metody rozsze
 ## <a name="see-also"></a>Zobacz także
  <xref:System.Enum?displayProperty=nameWithType>  
  [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)  
- [wyliczenia](../../csharp/language-reference/keywords/enum.md)
+ [enum](../../csharp/language-reference/keywords/enum.md)

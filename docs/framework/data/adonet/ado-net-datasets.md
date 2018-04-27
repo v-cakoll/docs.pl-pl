@@ -1,24 +1,26 @@
 ---
 title: Zestawy danych ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adonet-datasets"></a>Zestawy danych ADO.NET
 <xref:System.Data.DataSet> Obiektu jest podstawą do obsługi odłączony, rozproszonych scenariuszy danych z [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **DataSet** jest rezydentny reprezentację danych, który zapewnia spójne relacyjne model programowania niezależnie od tego źródła danych. Mogą być używane w wielu i różnych źródeł danych z danych XML lub zarządzać dane lokalne aplikacji. **DataSet** reprezentuje kompletny zestaw danych, w tym powiązane tabele, ograniczenia i relacje między tabelami. Na poniższej ilustracji pokazano **DataSet** obiektu modelu.  
@@ -52,7 +54,7 @@ Model obiektów DataSet
  **DataSet**, **DataTable**, i **DataColumn** mieć **właściwości rozszerzone** właściwości. **Właściwości rozszerzone** jest **propertycollection klasy** umieszczane informacje niestandardowe, takie jak instrukcji SELECT, które zostało użyte do wygenerowania zestawu wyników lub czasu wygenerowania danych. **Właściwości ExtendedProperties** kolekcji jest trwały z informacji o schemacie dla **zestawu danych**.  
   
 ## <a name="linq-to-dataset"></a>LINQ do DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]zapewnia zintegrowane języka podczas badania możliwości odłączonego danych przechowywanych w zestawie danych. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]używa standardu [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] składni i zapewnia sprawdzanie składni kompilacji, wpisując statyczne i obsługę funkcji IntelliSense, gdy używasz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapewnia zintegrowane języka podczas badania możliwości odłączonego danych przechowywanych w zestawie danych. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] używa standardu [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] składni i zapewnia sprawdzanie składni kompilacji, wpisując statyczne i obsługę funkcji IntelliSense, korzystając z programu Visual Studio IDE.  
   
  Aby uzyskać więcej informacji, zobacz [LINQ do DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

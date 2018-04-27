@@ -1,11 +1,12 @@
 ---
-title: "Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)"
-ms.custom: 
+title: Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - data type conversion [Visual Basic], string
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 71ece18d4ce33b7b637410110e825b389affcd67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 82473d59d6b6aac21f2d7f2a0c9748217a61985f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)
 Możesz przekształcić liczbową, `Boolean`, lub wartości daty/godziny `String`. Można również przeprowadzić konwersję w kierunku odwrotnym — z wartości ciągu na liczbowe, `Boolean`, lub `Date` — pod warunkiem zawartość ciąg może zostać zinterpretowany jako prawidłowa wartość docelowego typu danych. Jeśli nie, występuje błąd w czasie wykonywania.  
@@ -32,7 +33,7 @@ Możesz przekształcić liczbową, `Boolean`, lub wartości daty/godziny `String
  Jeśli zdefiniowano klasę lub strukturę można zdefiniować typu operatory konwersji między `String` i typu klasy lub struktury. Aby uzyskać więcej informacji, zobacz [porady: Definiowanie operatora konwersji](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="conversion-of-numbers-to-strings"></a>Konwersja liczb znajdujących się na ciągi  
- Można użyć `Format` funkcja Konwertuj liczbę na ciąg formatowania, może zawierać nie tylko odpowiednie cyfr, ale również formatowanie symbole, takie jak znak waluty (takich jak `$`), tysięcy separatorów lub *grupowania cyfr symbole* (takich jak `,`) i separator dziesiętny (takie jak `.`). `Format`automatycznie wykorzystuje odpowiednie symbole zgodnie z **Opcje regionalne** ustawienia określone w oknach **Panelu sterowania**.  
+ Można użyć `Format` funkcja Konwertuj liczbę na ciąg formatowania, może zawierać nie tylko odpowiednie cyfr, ale również formatowanie symbole, takie jak znak waluty (takich jak `$`), tysięcy separatorów lub *grupowania cyfr symbole* (takich jak `,`) i separator dziesiętny (takie jak `.`). `Format` automatycznie wykorzystuje odpowiednie symbole zgodnie z **Opcje regionalne** ustawienia określone w oknach **Panelu sterowania**.  
   
  Należy pamiętać, że połączenie (`&`) — operator może konwertowanie liczby na ciąg niejawnie w poniższym przykładzie pokazano.  
   
@@ -42,11 +43,11 @@ Str = "The total count is " & count
 ```  
   
 ## <a name="conversion-of-strings-to-numbers"></a>Konwersja ciągów na liczby  
- Można użyć `Val` funkcji, aby jawnie przekonwertować na liczbę cyfr w ciągu. `Val`odczytuje ciąg, aż do napotkania znaków innych niż cyfry, miejsca, karta, wysuwu wiersza lub okres. Sekwencje "&" i "& H" alter podstawą układzie i zakończenie skanowania. Do jej zamknięcia czytania, `Val` konwertuje wszystkie znaki odpowiednią wartość liczbowa. Na przykład następująca instrukcja zwraca wartość `141.825`.  
+ Można użyć `Val` funkcji, aby jawnie przekonwertować na liczbę cyfr w ciągu. `Val` odczytuje ciąg, aż do napotkania znaków innych niż cyfry, miejsca, karta, wysuwu wiersza lub okres. Sekwencje "&" i "& H" alter podstawą układzie i zakończenie skanowania. Do jej zamknięcia czytania, `Val` konwertuje wszystkie znaki odpowiednią wartość liczbowa. Na przykład następująca instrukcja zwraca wartość `141.825`.  
   
  `Val("   14   1.825 miles")`  
   
- Gdy [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konwertuje ciąg na wartość numeryczną, używa **Opcje regionalne** ustawienia określone w oknach **Panelu sterowania** interpretować tysięcy separator, separator dziesiętny i symbol waluty. Oznacza to, że konwersja może się powieść w jednej ustawienie, ale nie inna. Na przykład `"$14.20"` jest akceptowalne z ustawieniami regionalnymi Angielski (Stany Zjednoczone), ale nie w dowolnych francuskim ustawień regionalnych.  
+ Gdy Visual Basic konwertuje ciąg na wartość numeryczną, używa **Opcje regionalne** ustawienia określone w oknach **Panelu sterowania** interpretować tysięcy separator, separator dziesiętny, i symbol waluty. Oznacza to, że konwersja może się powieść w jednej ustawienie, ale nie inna. Na przykład `"$14.20"` jest akceptowalne z ustawieniami regionalnymi Angielski (Stany Zjednoczone), ale nie w dowolnych francuskim ustawień regionalnych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
@@ -56,4 +57,4 @@ Str = "The total count is " & count
  [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Wprowadzenie do aplikacji międzynarodowych oparte na programie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+ [Wprowadzenie do aplikacji międzynarodowych opartych na programie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

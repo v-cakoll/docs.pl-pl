@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>Delegaty (Visual Basic)
-Obiekty delegowane są obiekty, które odwołują się do metody. One nazywane *wskaźników funkcji bezpieczny* ponieważ są one podobne do wskaźników funkcji używane w innych językach programowania. Jednak w przeciwieństwie do wskaźników funkcji [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obiektów delegowanych jest typem referencyjnym, oparty na klasie <xref:System.Delegate?displayProperty=nameWithType>. Delegatów mogą odwoływać się obu metod udostępnionych — metody, które można wywołać bez określonego wystąpienia klasy — wystąpienie metody.  
+Obiekty delegowane są obiekty, które odwołują się do metody. One nazywane *wskaźników funkcji bezpieczny* ponieważ są one podobne do wskaźników funkcji używane w innych językach programowania. Ale w przeciwieństwie do wskaźników funkcji delegatów Visual Basic są typu odwołania, oparty na klasie <xref:System.Delegate?displayProperty=nameWithType>. Delegatów mogą odwoływać się obu metod udostępnionych — metody, które można wywołać bez określonego wystąpienia klasy — wystąpienie metody.  
   
 ## <a name="delegates-and-events"></a>Delegaci i zdarzenia  
- Obiekty delegowane są przydatne w sytuacjach konieczne pośredniczący między wywołanie procedury i procedury wywoływanej. Na przykład może być obiekt, który informuje o zdarzeniach, aby można było wywołać programów obsługi zdarzeń w różnych okolicznościach. Niestety obiekt wywoływanie zdarzeń nie może znać wcześniejsze obsługi zdarzeń, które obsługuje określone zdarzenie. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Umożliwia obsługę zdarzeń dynamicznie Powiąż ze zdarzeniami, tworząc delegowanego dla Ciebie, korzystając z `AddHandler` instrukcji. W czasie wykonywania delegat przekazuje wywołań obsługi zdarzeń odpowiednie.  
+ Obiekty delegowane są przydatne w sytuacjach konieczne pośredniczący między wywołanie procedury i procedury wywoływanej. Na przykład może być obiekt, który informuje o zdarzeniach, aby można było wywołać programów obsługi zdarzeń w różnych okolicznościach. Niestety obiekt wywoływanie zdarzeń nie może znać wcześniejsze obsługi zdarzeń, które obsługuje określone zdarzenie. Visual Basic umożliwia obsługę zdarzeń dynamicznie Powiąż ze zdarzeniami, tworząc delegowanego dla Ciebie, korzystając z `AddHandler` instrukcji. W czasie wykonywania delegat przekazuje wywołań obsługi zdarzeń odpowiednie.  
   
- Chociaż można tworzyć własne delegatów w większości przypadków [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tworzy delegata i zajmuje się szczegóły dla Ciebie. Na przykład `Event` instrukcji niejawnie definiuje klasę delegata o nazwie `<EventName>EventHandler` jako klasa zagnieżdżona zawierających klasy `Event` instrukcji i z takiego samego podpisu jak zdarzenia. `AddressOf` Instrukcja niejawnie tworzy wystąpienia delegata, który odwołuje się do określonej procedury. Następujące dwa wiersze kodu są równoważne. W pierwszym wierszu, zobacz jawne utworzenie wystąpienia `Eventhandler`, z odwołaniem do metody `Button1_Click` wysyłane jako argument. Drugi wiersz jest wygodny sposób, aby zrobić to samo.  
+ Mimo że można tworzyć własne delegatów, w większości przypadków Visual Basic tworzy delegata i zajmuje się szczegóły dla Ciebie. Na przykład `Event` instrukcji niejawnie definiuje klasę delegata o nazwie `<EventName>EventHandler` jako klasa zagnieżdżona zawierających klasy `Event` instrukcji i z takiego samego podpisu jak zdarzenia. `AddressOf` Instrukcja niejawnie tworzy wystąpienia delegata, który odwołuje się do określonej procedury. Następujące dwa wiersze kodu są równoważne. W pierwszym wierszu, zobacz jawne utworzenie wystąpienia `Eventhandler`, z odwołaniem do metody `Button1_Click` wysyłane jako argument. Drugi wiersz jest wygodny sposób, aby zrobić to samo.  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   
@@ -58,7 +58,7 @@ Obiekty delegowane są obiekty, które odwołują się do metody. One nazywane *
   
  Aby określić wyrażenie lambda, użyj następującej składni:  
   
- `Function`([`parm` Jako `type`, `parm2` jako `type2`,...])`expression`  
+ `Function` ([`parm` Jako `type`, `parm2` jako `type2`,...]) `expression`  
   
  W poniższym przykładzie przedstawiono oba `AddressOf` i wyrażenia lambda, można określić odwołania do delegata.  
   
@@ -70,7 +70,7 @@ Obiekty delegowane są obiekty, które odwołują się do metody. One nazywane *
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: wywoływanie metody delegata](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Przykład pokazujący sposób skojarzyć metodę z delegata, a następnie wywołać tej metody za pomocą obiektu delegowanego.|  
+|[Instrukcje: wywoływanie metody delegata](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Przykład pokazujący sposób skojarzyć metodę z delegata, a następnie wywołać tej metody za pomocą obiektu delegowanego.|  
 |[Porady: przekazywanie procedur do innej procedury w Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Pokazuje, jak używać delegatów do przekazania jednej procedury do innej procedury.|  
 |[Swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|W tym artykule opisano, jak można przypisać typu Sub i funkcji do delegatów lub obsługi nawet wtedy, gdy ich podpisów nie są identyczne|  
 |[Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)|Zawiera omówienie zdarzeń w języku Visual Basic.|

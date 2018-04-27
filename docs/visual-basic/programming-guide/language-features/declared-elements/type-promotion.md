@@ -1,11 +1,12 @@
 ---
 title: Promocja typu (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3a55c023afe7afe96f862f0b3cbbdb03a15b902
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-promotion-visual-basic"></a>Promocja typu (Visual Basic)
-Deklaracja elementu programistycznego w module, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wspiera jego zakresu przestrzeni nazw zawierającej modułu. Jest to nazywane *wpisz podwyższania poziomu*.  
+Deklaracja elementu programistycznego w module języka Visual Basic zamienia jego zakresu przestrzeni nazw zawierającej modułu. Jest to nazywane *wpisz podwyższania poziomu*.  
   
  W poniższym przykładzie przedstawiono definicję szkielet modułu i dwa elementy członkowskie tego modułu.  
   
@@ -46,7 +47,7 @@ Deklaracja elementu programistycznego w module, [!INCLUDE[vbprvb](~/includes/vbp
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- W powyższym przykładzie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nie można podwyższyć poziomu klasy `abc` do `thisNameSpace` , ponieważ istnieje już wyliczenie o tej samej nazwie na poziomie przestrzeni nazw. Aby uzyskać dostęp do `abcSub`, należy użyć ciągu pełnej kwalifikacji `thisNamespace.thisModule.abc.abcSub`. Jednak klasy `xyz` nadal jest podwyższany, uzyskasz dostęp do `xyzSub` z krótszego ciągu kwalifikacji `thisNamespace.xyz.xyzSub`.  
+ W powyższym przykładzie Visual Basic nie można podwyższyć poziomu klasy `abc` do `thisNameSpace` , ponieważ istnieje już wyliczenie o tej samej nazwie na poziomie przestrzeni nazw. Aby uzyskać dostęp do `abcSub`, należy użyć ciągu pełnej kwalifikacji `thisNamespace.thisModule.abc.abcSub`. Jednak klasy `xyz` nadal jest podwyższany, uzyskasz dostęp do `xyzSub` z krótszego ciągu kwalifikacji `thisNamespace.xyz.xyzSub`.  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>Sprawność promocja typu dla typów częściowych  
  Jeśli korzysta z klasy lub struktury wewnątrz modułu [częściowe](../../../../visual-basic/language-reference/modifiers/partial.md) — słowo kluczowe, promocja typu jest automatycznie bezcelowe dla tej klasy lub struktury, czy przestrzeń nazw ma element członkowski o takiej samej nazwie. Inne elementy w module nadal kwalifikują się do typu podwyższania poziomu.  
@@ -67,9 +68,9 @@ Deklaracja elementu programistycznego w module, [!INCLUDE[vbprvb](~/includes/vbp
 -   **Pełnej kwalifikacji.** Podczas pracy z modułów i inne elementy w tej samej przestrzeni nazw najbezpieczniejszym rozwiązaniem jest zawsze użycie pełnej kwalifikacji dla wszystkich elementów programowania. Promocja typu jest bezcelowe dla elementu członkowskiego moduł, możesz nie pełni kwalifikuje się ten element członkowski może przypadkowo uzyskać dostępu do innego elementu programowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Module — instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Namespace — instrukcja](../../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Częściowe](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [Module, instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Namespace, instrukcja](../../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
  [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Porady: kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [Instrukcje: kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
  [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

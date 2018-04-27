@@ -1,12 +1,13 @@
 ---
-title: "Wskazówki: emitowanie kodu w scenariuszach częściowo zaufanych"
-ms.custom: 
+title: 'Wskazówki: emitowanie kodu w scenariuszach częściowo zaufanych'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Wskazówki: emitowanie kodu w scenariuszach częściowo zaufanych
 Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają szczególnych uprawnień w częściowo zaufany kod. Ponadto emisja odbicia ma funkcji hostowanej anonimowo metody dynamicznej, który jest przeznaczony do użycia z częściowa relacja zaufania i zestawy przezroczystym poziomie bezpieczeństwa.  
@@ -144,7 +146,7 @@ Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej rela
      <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> Metoda tworzy obiekt w docelowej domenie aplikacji i zwraca serwera proxy, który może służyć do wywołania, właściwości i metody obiektu.  
   
     > [!NOTE]
-    >  Jeśli używasz tego kodu w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], należy zmienić nazwę klasy, aby uwzględnić przestrzeni nazw. Domyślnie przestrzeń nazw jest nazwa projektu. Na przykład jeśli projekt jest "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
+    >  Jeśli używasz tego kodu w programie Visual Studio, należy zmienić nazwę klasy, aby uwzględnić przestrzeni nazw. Domyślnie przestrzeń nazw jest nazwa projektu. Na przykład jeśli projekt jest "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
   
 6.  Dodaj kod, aby wywołać `SimpleEmitDemo` metody. Wywołanie jest organizowanego między granicami domeny aplikacji i kod jest wykonywany w domenie aplikacji piaskownicy.  
   
@@ -178,7 +180,7 @@ Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej rela
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     Ograniczenie to, że hostowanej anonimowo metody dynamicznej mają dostęp do danych prywatnych tylko w zestawach z poziomami zaufania równa lub mniejsza niż poziom zaufania emisji zestawu. Na przykład, jeśli wykonanie metody dynamicznej z Internetu zaufania, można uzyskać dostępu do danych prywatnych w innych zestawów, które także są wykonywane z zaufaniem Internet, ale nie ma dostępu do danych prywatnych od [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]zestawy są zainstalowane w globalnej pamięci podręcznej zestawów i są zawsze w pełni zaufany.  
+     Ograniczenie to, że hostowanej anonimowo metody dynamicznej mają dostęp do danych prywatnych tylko w zestawach z poziomami zaufania równa lub mniejsza niż poziom zaufania emisji zestawu. Na przykład, jeśli wykonanie metody dynamicznej z Internetu zaufania, można uzyskać dostępu do danych prywatnych w innych zestawów, które także są wykonywane z zaufaniem Internet, ale nie ma dostępu do danych prywatnych od [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawy są zainstalowane w globalnej pamięci podręcznej zestawów i są zawsze w pełni zaufany.  
   
      Hostowanej anonimowo metody dynamicznej można pominąć JIT widoczność kontroli tylko wtedy, gdy aplikacja hosta udziela za pomocą tej funkcji ograniczeniami <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi. Żądanie w celu uzyskania tego uprawnienia następuje po wywołaniu metody.  
   
@@ -218,7 +220,7 @@ Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej rela
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   W przypadku tworzenia tym przykładzie kodu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], należy zmienić nazwę klasy do dołączenia przestrzeni nazw, gdy przekaż go do <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> metody. Domyślnie przestrzeń nazw jest nazwa projektu. Na przykład jeśli projekt jest "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
+-   Jeśli w tym przykładzie kodu w programie Visual Studio, należy zmienić nazwę klasy do dołączenia przestrzeni nazw, gdy przekaż go do <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> metody. Domyślnie przestrzeń nazw jest nazwa projektu. Na przykład jeśli projekt jest "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Zobacz też  
  [Problemy związane z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

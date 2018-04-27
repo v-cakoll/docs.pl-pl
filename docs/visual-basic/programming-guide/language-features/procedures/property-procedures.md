@@ -1,11 +1,12 @@
 ---
-title: "Procedury własności (Visual Basic)"
-ms.custom: 
+title: Procedury własności (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbdf49d5c3eb5ef71b25a060d62f55f19098f445
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d9df6f381c89263aa16315fb06a2b3b0d645bbf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-procedures-visual-basic"></a>Procedury własności (Visual Basic)
-Procedury właściwości to zbiór [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrukcji, które modyfikowania właściwości niestandardowych dla modułu, klasy lub struktury. Procedury własności są również znane jako *metod dostępu do właściwości*.  
+Procedury właściwości jest szereg instrukcji, które modyfikowania właściwości niestandardowych dla modułu, klasy lub struktury. Procedury własności są również znane jako *metod dostępu do właściwości*.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]zawiera poniższe procedury właściwości:  
+ Visual Basic zawiera następujące procedury właściwości:  
   
 -   A `Get` procedury zwraca wartość właściwości. Jest ona wywoływana, gdy uzyskujesz dostęp do właściwości w wyrażeniu.  
   
@@ -119,8 +120,8 @@ End Property
  [Procedury operatorów](./operator-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
  [Różnice pomiędzy właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)  
- [Porady: Tworzenie właściwości](./how-to-create-a-property.md)  
- [Porady: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
+ [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)  
+ [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
  [Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Porady: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
- [Porady: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+ [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
+ [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

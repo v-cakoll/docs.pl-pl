@@ -1,11 +1,12 @@
 ---
-title: "Procedury rozwiązywania problemów (Visual Basic)"
-ms.custom: 
+title: Procedury rozwiązywania problemów (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Procedury rozwiązywania problemów (Visual Basic)
 Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pracy z procedury.  
@@ -83,11 +84,11 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pr
   
  Następujące elementy, mimo że odnoszą się do listy parametrów nie są składniki podpis procedury:  
   
--   Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i`Static`  
+-   Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i `Static`  
   
 -   Nazwy parametrów  
   
--   Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i`Optional`  
+-   Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i `Optional`  
   
 -   Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)  
   
@@ -99,7 +100,7 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pr
  Jeśli są przeciążanie procedury z jednym lub kilkoma [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametrów lub [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru, możesz należy unikać duplikowania żadnego z *niejawne przeładowania*. Aby uzyskać informacje, zobacz [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Wywoływanie procedury przeciążenia Nieprawidłowa wersja  
- Jeśli procedura ma kilka zastąpionej wersji, należy zapoznać się z ich listy parametrów i zrozumieć, jak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] rozpoznaje wywołania między przeciążeń. W przeciwnym razie można wywoływać przeciążenia innego niż zamierzone.  
+ Jeśli procedura ma kilka zastąpionej wersji, należy należy zapoznać się z ich listy parametrów i zrozumieć, jak Visual Basic rozpoznaje wywołania między przeciążeń. W przeciwnym razie można wywoływać przeciążenia innego niż zamierzone.  
   
  Po określeniu przeciążenia, które chcesz się połączyć, należy zachować ostrożność zgodna z poniższymi regułami:  
   
@@ -133,9 +134,9 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pr
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Sub — procedury](./sub-procedures.md)  
+ [Sub, procedury](./sub-procedures.md)  
  [Procedury funkcji](./function-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Procedury operatorów](./operator-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
  [Przeciążanie procedury](./procedure-overloading.md)  

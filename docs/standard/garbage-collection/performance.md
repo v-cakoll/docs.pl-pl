@@ -1,32 +1,32 @@
 ---
-title: "Odzyskiwanie pamięci i wydajność"
-ms.custom: 
+title: Odzyskiwanie pamięci i wydajność
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
-<a name="top"></a>W tym temacie opisano problemy związane z użycia pamięci kolekcji i pamięci. Rozwiązuje problemy, które odnoszą się do sterty zarządzanej, a wyjaśniono sposób zminimalizować wpływ operacji wyrzucania elementów bezużytecznych w aplikacji. Każde wydanie zawiera łącza do procedur, które służy do badania problemów.  
+<a name="top"></a> W tym temacie opisano problemy związane z użycia pamięci kolekcji i pamięci. Rozwiązuje problemy, które odnoszą się do sterty zarządzanej, a wyjaśniono sposób zminimalizować wpływ operacji wyrzucania elementów bezużytecznych w aplikacji. Każde wydanie zawiera łącza do procedur, które służy do badania problemów.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Debugowanie za pomocą SOS  
- Można użyć [debugera systemu Windows (WinDbg)](/windows-hardware/drivers/debugger/index) do zbadania obiektów na stercie zarządzanej.  
-  
- Aby zainstalować WinDbg, zainstalować narzędzi debugowania dla systemu Windows z [WDK i Developer Tools w sieci Web](http://go.microsoft.com/fwlink/?LinkID=103787).  
+ Można użyć [debugera systemu Windows (WinDbg)](/windows-hardware/drivers/debugger/index) do zbadania obiektów na stercie zarządzanej.
+ 
+ Aby zainstalować WinDbg, zainstalować narzędzi debugowania dla systemu Windows z [pobieranie narzędzi debugowania dla systemu Windows](/windows-hardware/drivers/debugger/debugger-download-tools) strony.
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci  

@@ -1,32 +1,33 @@
 ---
-title: "Odwołania do elementów zadeklarowanych (Visual Basic)"
-ms.custom: 
+title: Odwołania do elementów zadeklarowanych (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Odwołania do elementów zadeklarowanych (Visual Basic)
-Gdy kod odwołuje się do elementu zadeklarowane [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora jest zgodna z nazwą w odwołania do odpowiednich deklaracja o takiej nazwie. Jeśli więcej niż jeden element jest zadeklarowany jako o takiej samej nazwie, można kontrolować, które z tych elementów jest wykorzystanie przez *kwalifikującego* jego nazwy.  
+Gdy kod odwołuje się do elementu zadeklarowane, kompilator Visual Basic jest zgodna z nazwą w odwołania do odpowiednich deklaracja o takiej nazwie. Jeśli więcej niż jeden element jest zadeklarowany jako o takiej samej nazwie, można kontrolować, które z tych elementów jest wykorzystanie przez *kwalifikującego* jego nazwy.  
   
  Kompilator próbuje dopasować nazwę odwołania do nazwy deklaracji z *najwęższy zakres*. Oznacza to, rozpoczyna się od kodu odniesienia i działa na zewnątrz przez kolejne poziomy zawierający elementy.  
   
- W poniższym przykładzie przedstawiono odwołania do dwóch zmiennych o takiej samej nazwie. Przykład deklaruje dwie zmienne, każdy o nazwie `totalCount`, na różnych poziomach zakresu w module `container`. Podczas procedury `showCount` Wyświetla `totalCount` bez kwalifikacji, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora Usuwa odwołanie do deklaracja o zakresie najwęższym, czyli deklaracji lokalnej wewnątrz `showCount`. Gdy kwalifikuje się `totalCount` z modułem zawierającego `container`, kompilator usuwa odwołanie do deklaracji w szerszym zakresie.  
+ W poniższym przykładzie przedstawiono odwołania do dwóch zmiennych o takiej samej nazwie. Przykład deklaruje dwie zmienne, każdy o nazwie `totalCount`, na różnych poziomach zakresu w module `container`. Jeśli procedura `showCount` Wyświetla `totalCount` bez kwalifikacji, kompilator Visual Basic Usuwa odwołanie do deklaracja o zakresie najwęższym, czyli deklaracji lokalnej wewnątrz `showCount`. Gdy kwalifikuje się `totalCount` z modułem zawierającego `container`, kompilator usuwa odwołanie do deklaracji w szerszym zakresie.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,13 +200,13 @@ Dim xDoc As xD.XmlDocument
  Można uniknąć niejednoznaczności, zapewniając wszystkich elementów unikatowe nazwy. Następnie możesz wprowadzić odwołanie do każdego elementu bez konieczności jego nazwy z przestrzeni nazw, modułu lub klasy. Można także zmniejszyć ryzyko przypadkowego odwołujące się do niewłaściwego elementu.  
   
 ## <a name="shadowing"></a>Przesłanianie  
- Gdy dwa elementy programowania o tej samej nazwie, jeden z nich można ukryć, lub *tle*, jeden z nich. Zasłonięty element jest niedostępny dla odwołania; Zamiast tego po kodzie używa nazwy elementu zasłonięty [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora rozpoznaje ją do elementu przesłaniania. Aby uzyskać bardziej szczegółowy opis wraz z przykładami, zobacz [przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Gdy dwa elementy programowania o tej samej nazwie, jeden z nich można ukryć, lub *tle*, jeden z nich. Zasłonięty element jest niedostępny dla odwołania; Zamiast tego po kodzie używa nazwy elementu zasłonięty, kompilator Visual Basic rozpoznaje ją do przesłaniania elementu. Aby uzyskać bardziej szczegółowy opis wraz z przykładami, zobacz [przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zadeklarowane nazwy elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Zadeklarowana Charakterystyka elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)  
+ [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)  
  [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Imports — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [New — Operator](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Publiczna](../../../../visual-basic/language-reference/modifiers/public.md)
+ [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Public](../../../../visual-basic/language-reference/modifiers/public.md)

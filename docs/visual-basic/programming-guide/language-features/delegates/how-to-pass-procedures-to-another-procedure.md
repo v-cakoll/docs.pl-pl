@@ -1,29 +1,30 @@
 ---
 title: 'Porady: przekazywanie procedur do innej procedury w Visual Basic'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e8e205f5238aab39aa92574bc5c680e68cc8a81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30264e0480b603b21f8f71893af0fd742af40286
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Porady: przekazywanie procedur do innej procedury w Visual Basic
 Ten przykład przedstawia sposób użycia delegatów do przekazania procedurę do innej procedury.  
   
- Delegat jest typem, który można użyć innych typów w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. `AddressOf` Operator zwraca obiektu delegowanego, po zastosowaniu na nazwę procedury.  
+ Delegat jest typem, który można użyć innych typów w języku Visual Basic. `AddressOf` Operator zwraca obiektu delegowanego, po zastosowaniu na nazwę procedury.  
   
  W tym przykładzie ma procedury z parametru delegata, który może zająć odwołanie do innej procedury uzyskany z `AddressOf` operatora.  
   
@@ -54,7 +55,7 @@ Ten przykład przedstawia sposób użycia delegatów do przekazania procedurę d
      Gdy `Test` jest wywoływana, najpierw wyświetla wynik `AddNumbers` działające na `5` i `3`, czyli 8. Następnie wynik `SubtractNumbers` na `9` i `3` jest wyświetlany, który jest 6.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obiekty delegowane](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [AddressOf — Operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Delegate — instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Porady: wywoływanie metody delegata](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+ [Delegaci](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [AddressOf, operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Delegate, instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Instrukcje: wywoływanie metody delegata](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 32aab8ae875158fed62c70cbc2d7506ba6c8d3c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Śledzenie za pomocą pliku tekstowego
-W tym przykładzie pokazano, jak rozszerzyć śledzenia [!INCLUDE[wf](../../../../includes/wf-md.md)] tworząc niestandardowe śledzenia uczestnika. Klasy .NET Framework, które odbierają rekordy śledzenia z środowiska uruchomieniowego, ponieważ są one emitowane się uczestników śledzenia. Można utworzyć uczestnika śledzenia do transportu zdarzenia śledzenia do niezależnie od docelowego jest wymagane dla danego scenariusza. Na przykład uczestnika śledzenia funkcji ETW (zdarzenia śledzenia dla systemu Windows) jest dostarczana jako część [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Uczestnik śledzenia w tym przykładzie zapisuje rekordy w formacie XML w pliku tekstowym.  
+W tym przykładzie pokazano, jak rozszerzyć śledzenia w systemie Windows Workflow Foundation (WF) przez utworzenie uczestnika śledzenia niestandardowych. Klasy .NET Framework, które odbierają rekordy śledzenia z środowiska uruchomieniowego, ponieważ są one emitowane się uczestników śledzenia. Można utworzyć uczestnika śledzenia do transportu zdarzenia śledzenia do niezależnie od docelowego jest wymagane dla danego scenariusza. Na przykład uczestnika śledzenia funkcji ETW (zdarzenia śledzenia dla systemu Windows) jest dostarczana jako część [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Uczestnik śledzenia w tym przykładzie zapisuje rekordy w formacie XML w pliku tekstowym.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  Aby zoptymalizować użyteczność i niezawodność sieci uczestnika śledzenia, dodatkowe kroki musi zostać wypełniony prawidłowo okablować uczestnika śledzenia do środowiska wykonawczego. W poniższej tabeli opisano klasy używane w tym przykładzie do tworzenia uczestnika śledzenia, który jest zgodny z najlepszymi rozwiązaniami.  
@@ -66,7 +66,7 @@ W tym przykładzie pokazano, jak rozszerzyć śledzenia [!INCLUDE[wf](../../../.
   
 5.  Wyświetla przeglądarki **StockPriceService** strony, która zawiera adres wsdl Usługa lokalna. Skopiuj ten adres.  
   
-     Przykładem adresu wsdl Usługa lokalna jest http://localhost:53797/StockPriceService.xamlx?wsdl.  
+     Na przykład adres wsdl Usługa lokalna http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  Przy użyciu [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], przejdź do Twojej [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] folder (%SystemDrive%\Program Files\Microsoft Visual Studio 10.0 domyślny folder instalacji to). Następnie odszukaj podfolder Common7\IDE\.  
   

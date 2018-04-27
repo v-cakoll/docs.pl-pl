@@ -1,6 +1,6 @@
 ---
 title: Opcje kompilatora Visual Basic w porządku alfabetycznym
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opcje kompilatora Visual Basic w porządku alfabetycznym
-Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie programów z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Poniżej znajduje się lista sortowana alfabetycznie opcje wiersza polecenia kompilatora Visual Basic.  
+Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie programów z programu Visual Studio zintegrowane środowisko programistyczne (IDE). Poniżej znajduje się lista sortowana alfabetycznie opcje wiersza polecenia kompilatora Visual Basic.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -37,6 +37,7 @@ Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie p
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Generuje informacje o debugowaniu.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Definiuje symbole kompilacji warunkowej.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.|  
+|[-deterministyczna](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Powoduje, że kompilator output zestawu, którego zawartość binarna jest identyczna w kompilacji, jeśli dane wejściowe są identyczne.|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Przetwarza komentarzy do dokumentacji do pliku XML.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Określa, jak kompilator Visual Basic powinien zgłosić wewnętrzne błędy kompilatora.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Określa lokalizację były wyrównane w sekcjach pliku wyjściowego.|  

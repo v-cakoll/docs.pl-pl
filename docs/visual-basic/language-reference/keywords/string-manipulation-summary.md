@@ -1,26 +1,27 @@
 ---
-title: "Manipulowanie ciągami — Podsumowanie (Visual Basic)"
+title: Manipulowanie ciągami — Podsumowanie (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - string functions
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8e8367c11e6b7900a721a0b083833249c000d326
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53cfaba03ed3616ef17af96d389fd65715bed678
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Manipulowanie ciągami — Podsumowanie (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]słowa kluczowe języka i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  
+Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  
   
 |Akcja|Element języka|  
 |------------|----------------------|  
@@ -40,4 +41,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
- [Elementy członkowskie biblioteki wykonawczej języka Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+ [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

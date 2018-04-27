@@ -1,11 +1,12 @@
 ---
-title: "Porady: wywoływanie programu do obsługi zdarzeń w Visual Basic"
-ms.custom: 
+title: 'Porady: wywoływanie programu do obsługi zdarzeń w Visual Basic'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,21 +15,21 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 52b4b6ca8b03d8301535d6aeedc3bd0190d8527f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b8a35459fdeb7cce0b494a9b3024a79bd4173cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Porady: wywoływanie programu do obsługi zdarzeń w Visual Basic
 *Zdarzeń* jest akcji lub wystąpienie — takie jak myszy przekroczony kliknij lub limit kredytu — który jest rozpoznawany przez inny składnik programu i dla którego można napisać kod do odpowiedzi. *Obsługi zdarzeń* jest zapisywany kod, aby odpowiadać na zdarzenie.  
   
- Program obsługi zdarzeń w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest `Sub` procedury. Jednak możesz nie zwykle wywołują go taki sam sposób jak inne `Sub` procedury. Zamiast tego należy zidentyfikować procedury obsługi dla zdarzenia. Można to zrobić za pomocą [obsługuje](../../../../visual-basic/language-reference/statements/handles-clause.md) klauzuli i [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) zmiennej lub [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Przy użyciu `Handles` klauzula jest domyślną metodą Aby zadeklarować program obsługi zdarzeń w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Jest to sposób obsługi zdarzeń są zapisywane przez projektantów podczas programowania zintegrowane środowisko programistyczne (IDE). `AddHandler` Instrukcja jest odpowiedni dla wywoływanie zdarzeń dynamicznie w czasie wykonywania.  
+ Program obsługi zdarzeń w języku Visual Basic jest `Sub` procedury. Jednak możesz nie zwykle wywołują go taki sam sposób jak inne `Sub` procedury. Zamiast tego należy zidentyfikować procedury obsługi dla zdarzenia. Można to zrobić za pomocą [obsługuje](../../../../visual-basic/language-reference/statements/handles-clause.md) klauzuli i [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) zmiennej lub [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Przy użyciu `Handles` klauzula jest domyślną metodą Aby zadeklarować program obsługi zdarzeń w języku Visual Basic. Jest to sposób obsługi zdarzeń są zapisywane przez projektantów podczas programowania zintegrowane środowisko programistyczne (IDE). `AddHandler` Instrukcja jest odpowiedni dla wywoływanie zdarzeń dynamicznie w czasie wykonywania.  
   
- Po wystąpieniu zdarzenia, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatycznie wywołuje procedurę obsługi zdarzeń. Wszelki kod, który ma dostęp do zdarzenia mogą spowodować on wystąpić, wykonując [RaiseEvent — instrukcja](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
+ Po wystąpieniu zdarzenia, Visual Basic automatycznie wywołuje procedurę obsługi zdarzenia. Wszelki kod, który ma dostęp do zdarzenia mogą spowodować on wystąpić, wykonując [RaiseEvent — instrukcja](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
   
  Z tego samego zdarzenia można skojarzyć więcej niż jeden program obsługi zdarzeń. W niektórych przypadkach można skojarzenie obsługi z zdarzenia. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  W deklaracji obsługi zdarzeń `Sub` procedury dodawania [obsługuje](../../../../visual-basic/language-reference/statements/handles-clause.md) klauzuli, która określa `WithEvents` zmienną i nazwa zdarzenia.  
   
-4.  Po wystąpieniu zdarzenia, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatycznie wywołuje `Sub` procedury. Można użyć kodu `RaiseEvent` oświadczenie wystąpić zdarzenie.  
+4.  Po wystąpieniu zdarzenia, Visual Basic automatycznie wywołuje `Sub` procedury. Można użyć kodu `RaiseEvent` oświadczenie wystąpić zdarzenie.  
   
      W poniższym przykładzie zdefiniowano zdarzenia i `WithEvents` zmiennej, która odwołuje się do klasy, która wywołuje zdarzenie. Obsługa zdarzeń `Sub` używa procedury `Handles` klauzuli, aby określić klasę i obsługi zdarzeń.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Wykonanie [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) nawiązać dynamicznie obsługi zdarzeń `Sub` procedury ze zdarzeniem.  
   
-3.  Po wystąpieniu zdarzenia, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatycznie wywołuje `Sub` procedury. Można użyć kodu `RaiseEvent` oświadczenie wystąpić zdarzenie.  
+3.  Po wystąpieniu zdarzenia, Visual Basic automatycznie wywołuje `Sub` procedury. Można użyć kodu `RaiseEvent` oświadczenie wystąpić zdarzenie.  
   
      W poniższym przykładzie zdefiniowano `Sub` procedury obsługi <xref:System.Windows.Forms.Form.Closing> zdarzeń formularza. Następnie używa [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) do skojarzenia `catchClose` procedury obsługi zdarzeń dla <xref:System.Windows.Forms.Form.Closing>.  
   
@@ -62,8 +63,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Sub — procedury](./sub-procedures.md)  
- [Sub — instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [AddressOf — Operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Porady: Tworzenie procedury](./how-to-create-a-procedure.md)  
- [Porady: wywoływanie procedury, która nie zwraca wartości](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+ [Sub, procedury](./sub-procedures.md)  
+ [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [AddressOf, operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Instrukcje: tworzenie procedury](./how-to-create-a-procedure.md)  
+ [Instrukcje: wywoływanie procedury, która nie zwraca wartości](./how-to-call-a-procedure-that-does-not-return-a-value.md)

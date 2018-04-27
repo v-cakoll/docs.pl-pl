@@ -1,9 +1,9 @@
 ---
-title: "Właściwość indeksatora rozszerzenia (Visual Basic)"
+title: Właściwość indeksatora rozszerzenia (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99d14b6e54a59ffc904a9e786c22498d23ee8ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6bcb19388a9449a76eed5689b12fb95c5a4fb8de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Właściwość indeksatora rozszerzenia (Visual Basic)
 Zapewnia dostęp do poszczególnych elementów w kolekcji.  
@@ -37,10 +37,10 @@ object(index)
   
 |Termin|Definicja|  
 |---|---|  
-|`object`|Wymagany. Kolekcja z obsługą zapytań. Oznacza to, że kolekcja, która implementuje <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601>.|  
-|(|Wymagany. Oznacza początek właściwości indeksatora.|  
-|`index`|Wymagany. Wyrażenie liczba całkowita określająca liczona od zera pozycja elementu kolekcji.|  
-|)|Wymagany. Oznacza koniec właściwości indeksatora.|  
+|`object`|Wymagana. Kolekcja z obsługą zapytań. Oznacza to, że kolekcja, która implementuje <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601>.|  
+|(|Wymagana. Oznacza początek właściwości indeksatora.|  
+|`index`|Wymagana. Wyrażenie liczba całkowita określająca liczona od zera pozycja elementu kolekcji.|  
+|)|Wymagana. Oznacza koniec właściwości indeksatora.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Obiekt z określonej lokalizacji w kolekcji lub `Nothing` Jeśli indeks jest poza zakresem.  
@@ -48,7 +48,7 @@ object(index)
 ## <a name="remarks"></a>Uwagi  
  Właściwość indeksatora rozszerzenia służy do dostęp do poszczególnych elementów w kolekcji. Ta właściwość indeksatora jest zwykle używana w danych wyjściowych właściwości osi XML. Elementu podrzędnego XML i właściwości osi descendant XML zwracają kolekcje <xref:System.Xml.Linq.XElement> obiektów lub wartość atrybutu.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora konwertuje właściwości indeksatora rozszerzenia wywołań `ElementAtOrDefault` metody. W przeciwieństwie do indeksatora tablicy `ElementAtOrDefault` metoda zwraca `Nothing` Jeśli indeks jest poza zakresem. To zachowanie jest przydatne, gdy nie można określić, że liczba elementów w kolekcji.  
+ Kompilator Visual Basic konwertuje właściwości indeksatora rozszerzenia wywołań `ElementAtOrDefault` metody. W przeciwieństwie do indeksatora tablicy `ElementAtOrDefault` metoda zwraca `Nothing` Jeśli indeks jest poza zakresem. To zachowanie jest przydatne, gdy nie można określić, że liczba elementów w kolekcji.  
   
  Ta właściwość indeksatora przypomina właściwość rozszerzenia dla kolekcji, które implementują <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601>: jest używany tylko wtedy, gdy kolekcja nie ma indeksatora lub domyślnej właściwości.  
   

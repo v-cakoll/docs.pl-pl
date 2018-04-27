@@ -1,11 +1,12 @@
 ---
 title: Znaki specjalne w Code (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Znaki specjalne w Code (Visual Basic)
-Czasami trzeba użyć znaków specjalnych w kodzie, oznacza to, znaki, które nie są alfabetycznej lub liczbowe. Interpunkcja i znaki specjalne w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] różnych zastosowań z organizowanie tekst programu do określenia zadań, które wykonuje kompilatora lub skompilowany program ma zestaw znaków. Nie należy określać operacji do wykonania.  
+Czasami trzeba użyć znaków specjalnych w kodzie, oznacza to, znaki, które nie są alfabetycznej lub liczbowe. Interpunkcja i znaki specjalne w zestawie znaków języka Visual Basic mają różnych zastosowań z organizowanie tekst programu do określenia zadań, które wykonuje kompilatora lub skompilowany program. Nie należy określać operacji do wykonania.  
   
 ## <a name="parentheses"></a>Nawiasów  
  Użyj nawiasów w przypadku zdefiniowania procedury, takich jak `Sub` lub `Function`. Wszystkie listy argumentów procedury należy ująć w nawias. Również Użyj nawiasów wprowadzenia zmienne lub argumenty w grupy logiczne, szczególnie w celu zastąpienia domyślna kolejność pierwszeństwa operatora w wyrażenie złożone. Ilustruje to poniższy przykład.  
@@ -56,7 +57,7 @@ Czasami trzeba użyć znaków specjalnych w kodzie, oznacza to, znaki, które ni
  Po realizacji poprzedniego kodu, wartość `d` 8.225 i wartość `e` to 3. Obliczanie `d` korzysta z domyślnego pierwszeństwo `/` za pośrednictwem `+` i stanowi odpowiednik `d = b + (c / a)`. Nawiasy w obliczaniu `e` zastąpić domyślny priorytet.  
   
 ## <a name="separators"></a>Separatorach  
- Separatory czy ich nazwy sugeruje: oddzielają fragmentów kodu. W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], znak separatora jest dwukropkiem (`:`). Użyj separatorów, jeśli chcesz dołączyć wiele instrukcji w jednym wierszu, a nie oddzielnych wierszach. To pozwala zaoszczędzić miejsce i poprawia czytelność kodu. W poniższym przykładzie przedstawiono trzy instrukcje oddzielone dwukropkiem.  
+ Separatory czy ich nazwy sugeruje: oddzielają fragmentów kodu. W języku Visual Basic znak separatora jest dwukropkiem (`:`). Użyj separatorów, jeśli chcesz dołączyć wiele instrukcji w jednym wierszu, a nie oddzielnych wierszach. To pozwala zaoszczędzić miejsce i poprawia czytelność kodu. W poniższym przykładzie przedstawiono trzy instrukcje oddzielone dwukropkiem.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

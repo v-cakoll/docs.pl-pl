@@ -1,27 +1,29 @@
 ---
-title: "Wskazówki dotyczące WPF"
-ms.custom: 
+title: Wskazówki dotyczące WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF
 Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy. Z tego powodu najlepiej rozpocząć zapoznawanie produktu lub obszar poszczególnych funkcji.  
@@ -52,7 +54,7 @@ Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy. Z tego 
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Przewodnik: hosting kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Pokazuje, jak udostępniać formularze systemu Windows <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> formantu w aplikacji WPF.|  
-|[Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Pokazuje, jak udostępniać [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] wprowadzania danych złożonych kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.|  
+|[Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Pokazuje, jak udostępniać formantu złożonego wprowadzania danych formularzy systemu Windows w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.|  
 |[Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Pokazuje, jak udostępniać WPF formantu złożonego wprowadzania danych w aplikacji formularzy systemu Windows.|  
 |[Przewodnik: rozmieszczanie kontrolek formularzy Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Demonstracja rozmieszczanie formantów formularzy systemu Windows w aplikacji hybrydowych przy użyciu funkcji układu WPF.|  
 |[Przewodnik: powiązanie z danymi w aplikacjach hybrydowych](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Pokazuje, jak używać powiązania danych w aplikacji hybrydowych, które obejmują zarówno formularzy systemu Windows, jak i WPF formantów.|  

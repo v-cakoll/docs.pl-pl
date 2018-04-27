@@ -1,24 +1,26 @@
 ---
-title: "Zabezpieczenia komunikatów w ramach kolejkowania komunikatów"
-ms.custom: 
+title: Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a63c89e969f7a245dcf14d87872b8d629f1ee846
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aeb0e66c5bad2b2d03a08560e1021b57e793ad55
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-over-message-queuing"></a>Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
 W tym przykładzie pokazano, jak wdrożyć aplikację, która używa WS-Security przy użyciu uwierzytelniania certyfikatu X.509v3 klienta i wymaga uwierzytelniania serwera za pomocą certyfikatu X.509v3 serwera za pośrednictwem usługi MSMQ. Komunikat zabezpieczeń jest czasami więcej pożądane, aby upewnić się, że komunikaty w magazynie usługi MSMQ pozostaną zaszyfrowane i aplikacji, można wykonać uwierzytelniania wiadomości.  
@@ -105,8 +107,8 @@ W tym przykładzie pokazano, jak wdrożyć aplikację, która używa WS-Security
   
 ## <a name="description"></a>Opis  
  Przykładowy kod klienta i usługi są takie same jak [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki z jedną różnicą. Kontrakt operacji jest oznaczony za pomocą poziomu ochrony, które sugeruje, że wiadomości muszą być podpisane i zaszyfrowane.  
-  
-```  
+
+```csharp
 // Define a service contract.   
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
@@ -114,8 +116,8 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, ProtectionLevel=ProtectionLevel.EncryptAndSign)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Aby upewnić się, że wiadomość jest zabezpieczona przy użyciu wymaganego tokenu do identyfikowania usługi i klienta, App.config zawiera informacji o poświadczeniach.  
   
  Konfiguracja klienta Określa certyfikat usługi do uwierzytelniania usługi. Używa magazynie LocalMachine jako zaufanego magazynu polegać na ważności usługi. Określa również certyfikat klienta, który jest dołączony komunikat dla usługi uwierzytelniania klienta.  
@@ -256,29 +258,29 @@ public interface IOrderProcessor
   
  W przykładzie pokazano kontrolowanie uwierzytelniania przy użyciu konfiguracji i uzyskiwania tożsamości elementu wywołującego z kontekstu zabezpieczeń, jak pokazano w poniższym kodzie próbki:  
   
-```  
-    // Service class which implements the service contract.  
-    // Added code to write output to the console window.  
-    public class OrderProcessorService : IOrderProcessor  
+```csharp
+// Service class which implements the service contract.  
+// Added code to write output to the console window.  
+public class OrderProcessorService : IOrderProcessor  
+{  
+    private string GetCallerIdentity()  
     {  
-        private string GetCallerIdentity()  
-        {  
-            // The client certificate is not mapped to a Windows identity by default.  
-            // ServiceSecurityContext.PrimaryIdentity is populated based on the information  
-            // in the certificate that the client used to authenticate itself to the service.  
-            return ServiceSecurityContext.Current.PrimaryIdentity.Name;  
-        }  
-  
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
-        public void SubmitPurchaseOrder(PurchaseOrder po)  
-        {  
-            Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());  
-            Orders.Add(po);  
-            Console.WriteLine("Processing {0} ", po);  
-        }  
+        // The client certificate is not mapped to a Windows identity by default.  
+        // ServiceSecurityContext.PrimaryIdentity is populated based on the information  
+        // in the certificate that the client used to authenticate itself to the service.  
+        return ServiceSecurityContext.Current.PrimaryIdentity.Name;  
+    }  
+
+    [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
+    public void SubmitPurchaseOrder(PurchaseOrder po)  
+    {  
+        Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());  
+        Orders.Add(po);  
+        Console.WriteLine("Processing {0} ", po);  
+    }  
   //…  
 }  
-```  
+```
   
  Po uruchomieniu kodu usługi Wyświetla identyfikator klienta. Oto przykładowe dane wyjściowe z kodem usługi:  
   
@@ -302,7 +304,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      Następujący wiersz w pliku wsadowym tworzy certyfikat klienta. Podana nazwa klienta jest używany w nazwie podmiotu certyfikatu utworzony. Certyfikat jest przechowywany w `My` przechowywać `CurrentUser` lokalizacji magazynu.  
   
-    ```  
+    ```bat
     echo ************  
     echo making client cert  
     echo ************  
@@ -313,7 +315,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      Certyfikat klienta do serwera TrustedPeople następujący wiersz w kopii pliku wsadowym należy przechowywać, dzięki czemu odpowiednie zaufanie lub decyzje zaufania nie mogą być serwera. Certyfikat zainstalowany w magazynie TrustedPeople, aby być uważany za zaufany przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi, tryb walidacji certyfikatu klienta musi mieć ustawioną `PeerOrChainTrust` lub `PeerTrust` wartość. Zobacz poprzedni przykład konfiguracji usługi, aby dowiedzieć się, jak to zrobić przy użyciu pliku konfiguracji.  
   
-    ```  
+    ```bat
     echo ************  
     echo copying client cert to server's LocalMachine store  
     echo ************  
@@ -324,7 +326,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      Następujące wiersze z pliku wsadowego pliku Setup.bat utworzenie certyfikatu serwera do użycia:  
   
-    ```  
+    ```bat  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  

@@ -1,28 +1,29 @@
 ---
-title: "Podstawowe informacje o ciągach w Visual Basic"
-ms.custom: 
+title: Podstawowe informacje o ciągach w Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8881ad6ab7f28689019463abdab3b867e010d51e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a40435b76b0eee4f4eca15d5ba1a31cc58698ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-basics-in-visual-basic"></a>Podstawowe informacje o ciągach w Visual Basic
-`String` — Typ danych reprezentuje ciąg znaków (każdy reprezentuje z kolei wystąpienia `Char` typu danych). W tym temacie wprowadzono podstawowe pojęcia ciągów w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+`String` — Typ danych reprezentuje ciąg znaków (każdy reprezentuje z kolei wystąpienia `Char` typu danych). W tym temacie wprowadzono podstawowe pojęcia ciągów w Visual Basic.  
   
 ## <a name="string-variables"></a>Zmiennych ciągu  
  Wystąpienie ciągu można przypisać wartość literału, która reprezentuje ciąg znaków. Na przykład:  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- Ten kod powoduje błąd, ponieważ ciąg kompilator kończy się po drugim znaku cudzysłowu, a w pozostałej części ciąg jest interpretowany jako kod. Aby rozwiązać ten problem, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] będą interpretowane przez dwa znaki cudzysłowu w ciągu literałów jako jeden znak cudzysłowu w ciągu. W poniższym przykładzie pokazano prawidłowy sposób, aby uwzględnić znak cudzysłowu w ciągu:  
+ Ten kod powoduje błąd, ponieważ ciąg kompilator kończy się po drugim znaku cudzysłowu, a w pozostałej części ciąg jest interpretowany jako kod. Aby rozwiązać ten problem, Visual Basic interpretuje dwa znaki cudzysłowu w ciągu literałów jako jeden znak cudzysłowu w ciągu. W poniższym przykładzie pokazano prawidłowy sposób, aby uwzględnić znak cudzysłowu w ciągu:  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -81,6 +82,6 @@ World]]></xml>.Value
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [CHAR — typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
+ [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
+ [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
  [Podstawowe operacje na ciągach](../../../../standard/base-types/basic-string-operations.md)

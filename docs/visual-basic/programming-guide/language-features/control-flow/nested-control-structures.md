@@ -1,11 +1,12 @@
 ---
-title: "Zagnieżdżone struktury sterujące (Visual Basic)"
-ms.custom: 
+title: Zagnieżdżone struktury sterujące (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>Zagnieżdżone struktury sterujące (Visual Basic)
 Możesz na przykład umieścić instrukcji sterowania wewnątrz innych instrukcji sterowania `If...Then...Else` zablokować w `For...Next` pętli. Instrukcji sterowania umieszczony wewnątrz innego instrukcji sterowania jest określany jako *zagnieżdżonych*.  
   
 ## <a name="nesting-levels"></a>Poziomów zagnieżdżenia  
- Kontrolowanie struktury w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] można zagnieżdżać dowolną liczbę poziomów. Jest powszechną praktyką było odczytywać struktury zagnieżdżone przez wcięcia treści każdego z nich. Edytor środowiska (IDE) zintegrowanego rozwoju automatycznie robi to.  
+ Struktury sterujące w języku Visual Basic można zagnieżdżać dowolną liczbę poziomów. Jest powszechną praktyką było odczytywać struktury zagnieżdżone przez wcięcia treści każdego z nich. Edytor środowiska (IDE) zintegrowanego rozwoju automatycznie robi to.  
   
  W poniższym przykładzie procedura `sumRows` dodaje razem dodatnią elementy każdego wiersza w macierzy.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![Graficzny diagram nieprawidłowego zagnieżdżenia](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Nieprawidłowy zagnieżdżanie do i z struktury  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora wykrywa takiej kontroli nakładające się struktury i sygnalizuje błąd kompilacji.  
+ Kompilator Visual Basic wykrywa takie nakładające się struktury sterujące i sygnalizuje błąd kompilacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

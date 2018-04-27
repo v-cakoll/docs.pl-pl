@@ -1,11 +1,12 @@
 ---
-title: "Porady: przekazywanie argumentów do procedury (Visual Basic)"
-ms.custom: 
+title: 'Porady: przekazywanie argumentów do procedury (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Porady: przekazywanie argumentów do procedury (Visual Basic)
 Po wywołaniu procedury, możesz po nazwie procedury z listą argumentów w nawiasach. Poddaj argument odpowiadający każdego wymaganego parametru definiuje procedurę i opcjonalnie możesz podać argumenty `Optional` parametrów. Jeśli nie podasz `Optional` parametr w wywołaniu musi zawierać przecinka, aby oznaczyć jego miejsce na liście argumentów, jeśli są dostarczanie wszystkie pozostałe argumenty.  
@@ -45,7 +46,7 @@ Po wywołaniu procedury, możesz po nazwie procedury z listą argumentów w nawi
   
 5.  Jeśli zostanie pominięty argument `Optional` parametru i inny parametr po występuje on na liście parametrów, możesz oznaczyć miejsca pominięty argument przez dodatkowy przecinek na liście argumentów.  
   
-     Następujące przykładowe wywołania [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> funkcji.  
+     Poniższy przykład wywołuje Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> funkcji.  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,14 +54,15 @@ Po wywołaniu procedury, możesz po nazwie procedury z listą argumentów w nawi
   
      Drugi przecinek w liście argumentów oznacza miejsca pominięcia drugi argument, a ostatni ciąg jest przekazywana do opcjonalny trzeci parametr funkcji `MsgBox`, która jest tekst, który ma być wyświetlany w pasku tytułu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Sub — procedury](./sub-procedures.md)  
+## <a name="see-also"></a>Zobacz także
+
+ [Sub, procedury](./sub-procedures.md)  
  [Procedury funkcji](./function-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Procedury operatorów](./operator-procedures.md)  
- [Porady: Definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Instrukcje: definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)  
  [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
- [Procedury cykliczne](./recursive-procedures.md)  
+ [Procedury rekursywne](./recursive-procedures.md)  
  [Przeciążanie procedury](./procedure-overloading.md)  
  [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Programowanie zorientowane obiektowo](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [Programowanie zorientowane obiektowo (Visual Basic)](../../concepts/object-oriented-programming.md)  

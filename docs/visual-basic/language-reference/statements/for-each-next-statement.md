@@ -1,10 +1,11 @@
 ---
-title: "For Each...Next — Instrukcja (Visual Basic)"
+title: For Each...Next — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next — Instrukcja (Visual Basic)
 Powtarza grupę instrukcji dla każdego elementu w kolekcji.  
@@ -57,11 +58,11 @@ Next [ element ]
 |---|---|  
 |`element`|Wymagane w `For Each` instrukcji. Opcjonalnie w `Next` instrukcji. Zmienna. Używany do iterowania po elementach kolekcji.|  
 |`datatype`|Jeśli wymagane `element` nie jest już zadeklarowany. Typ danych `element`.|  
-|`group`|Wymagany. Zmienna z typem jest typ kolekcji lub obiektu. Odwołuje się do kolekcji, w którym `statements` mają być powtarzany.|  
-|`statements`|Opcjonalny. Co najmniej jeden instrukcji między `For Each` i `Next` uruchomionymi na każdym z elementów `group`.|  
-|`Continue For`|Opcjonalny. Przekazuje sterowanie do początku `For Each` pętli.|  
-|`Exit For`|Opcjonalny. Przekazuje sterowanie poza `For Each` pętli.|  
-|`Next`|Wymagany. Kończy definicję `For Each` pętli.|  
+|`group`|Wymagana. Zmienna z typem jest typ kolekcji lub obiektu. Odwołuje się do kolekcji, w którym `statements` mają być powtarzany.|  
+|`statements`|Opcjonalna. Co najmniej jeden instrukcji między `For Each` i `Next` uruchomionymi na każdym z elementów `group`.|  
+|`Continue For`|Opcjonalna. Przekazuje sterowanie do początku `For Each` pętli.|  
+|`Exit For`|Opcjonalna. Przekazuje sterowanie poza `For Each` pętli.|  
+|`Next`|Wymagana. Kończy definicję `For Each` pętli.|  
   
 ## <a name="simple-example"></a>Prosty przykład  
  Użyj `For Each`... `Next` pętli, gdy ma zostać powtórzony zestaw instrukcji dla każdego elementu w kolekcji lub tablicy.  
@@ -97,7 +98,7 @@ Next [ element ]
   
  Można wprowadzić dowolną liczbę `Exit For` instrukcje w `For Each` pętli. Gdy jest używany w zagnieżdżonych `For Each` pętle, `Exit For` powoduje wykonanie zakończyć najbardziej kontroli pętli i przesyłania dalej wyższy poziom zagnieżdżenia.  
   
- `Exit For`często używane po dokonaniu oceny spełnienia określonego warunku, na przykład w `If`... `Then`... `Else` struktury. Możesz chcieć użyć `Exit For` następujące warunki:  
+ `Exit For` często używane po dokonaniu oceny spełnienia określonego warunku, na przykład w `If`... `Then`... `Else` struktury. Możesz chcieć użyć `Exit For` następujące warunki:  
   
 -   Kontynuowanie wykonania iteracji jest niepotrzebne lub niemożliwe. Może to być spowodowane Błędna wartość lub zakończenia żądania.  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  Typ danych miary `element` musi być w taki sposób, że typ danych elementów `group` mogą być konwertowane do niego.  
   
- Typ danych miary `group` musi być typem referencyjnym, odnoszący się do kolekcji lub tablicy, która jest wyliczalny. Oznacza to, że najczęściej `group` odwołuje się do obiektu, który implementuje <xref:System.Collections.IEnumerable> interfejsu `System.Collections` przestrzeni nazw lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu `System.Collections.Generic` przestrzeni nazw. `System.Collections.IEnumerable`definiuje <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody, która zwraca obiekt modułu wyliczającego dla kolekcji. Obiekt modułu wyliczającego implementuje `System.Collections.IEnumerator` interfejsu `System.Collections` przestrzeni nazw i udostępnia <xref:System.Collections.IEnumerator.Current%2A> właściwości i <xref:System.Collections.IEnumerator.Reset%2A> i <xref:System.Collections.IEnumerator.MoveNext%2A> metody. Visual Basic wykorzystuje te przechodzenie kolekcji.  
+ Typ danych miary `group` musi być typem referencyjnym, odnoszący się do kolekcji lub tablicy, która jest wyliczalny. Oznacza to, że najczęściej `group` odwołuje się do obiektu, który implementuje <xref:System.Collections.IEnumerable> interfejsu `System.Collections` przestrzeni nazw lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu `System.Collections.Generic` przestrzeni nazw. `System.Collections.IEnumerable` definiuje <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody, która zwraca obiekt modułu wyliczającego dla kolekcji. Obiekt modułu wyliczającego implementuje `System.Collections.IEnumerator` interfejsu `System.Collections` przestrzeni nazw i udostępnia <xref:System.Collections.IEnumerator.Current%2A> właściwości i <xref:System.Collections.IEnumerator.Reset%2A> i <xref:System.Collections.IEnumerator.MoveNext%2A> metody. Visual Basic wykorzystuje te przechodzenie kolekcji.  
   
 ### <a name="narrowing-conversions"></a>Zawężanie konwersji  
  Gdy `Option Strict` ma ustawioną wartość `On`, konwersji zawężającej zazwyczaj powodują błędy kompilatora. W `For Each` instrukcji, jednak konwersje z elementów w `group` do `element` są oceniane i wykonywane w czasie wykonywania i błędy kompilatora spowodowane zawężanie konwersji są pomijane.  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **Modyfikowanie kolekcji.** Obiekt modułu wyliczającego zwrócony przez <xref:System.Collections.IEnumerable.GetEnumerator%2A> zwykle pozwala zmienić kolekcji przez dodawanie, usuwanie, zastępowanie lub zmianę kolejności elementów. W przypadku zmiany kolekcji po zainicjowaniu `For Each`... `Next` pętli, obiekt modułu wyliczającego staje się nieprawidłowa i powoduje, że następnej próbie uzyskania dostępu do elementu <xref:System.InvalidOperationException> wyjątku.  
   
- Jednak to blokowanie modyfikacji nie jest określana przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], ale raczej przez implementację <xref:System.Collections.IEnumerable> interfejsu. Istnieje możliwość wykonania `IEnumerable` w sposób umożliwiający modyfikacji podczas iteracji. Planując wykonywania takich dynamicznych zmian, upewnij się, że rozumiesz właściwości `IEnumerable` implementacji na poziomie kolekcji używasz.  
+ Jednak to blokowanie modyfikacji nie jest określany przez program Visual Basic, ale raczej przez implementację <xref:System.Collections.IEnumerable> interfejsu. Istnieje możliwość wykonania `IEnumerable` w sposób umożliwiający modyfikacji podczas iteracji. Planując wykonywania takich dynamicznych zmian, upewnij się, że rozumiesz właściwości `IEnumerable` implementacji na poziomie kolekcji używasz.  
   
  **Modyfikacja kolekcji elementów.** <xref:System.Collections.IEnumerator.Current%2A> Obiektu modułu wyliczającego jest [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md), i zwraca lokalną kopię każdego elementu w kolekcji. Oznacza to, że nie można zmodyfikować ze sobą elementy w `For Each`... `Next` pętli. Wszelkie zmiany wprowadzone wpływa na kopii lokalnej z `Current` i nie zostanie wprowadzona do kolekcji źródłowej. Jednak jeśli element jest typem referencyjnym, można zmodyfikować elementów członkowskich wystąpienia, na którą wskazuje. Poniższy przykład modyfikuje `BackColor` z każdej `thisControl` elementu. Nie można jednak zmienić `thisControl` samej siebie.  
   

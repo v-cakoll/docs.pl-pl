@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1cc114c2882aa82787f94a271dd7684c716b01
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 195d4b8f8e88d22e63c29ab9152399eb5c4a19df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-recurse"></a>-recurse
 Kompiluje pliki kodu źródłowego we wszystkich katalogach podrzędnych katalogu określonego lub katalogu projektu.  
@@ -30,10 +30,10 @@ Kompiluje pliki kodu źródłowego we wszystkich katalogach podrzędnych katalog
   
 ## <a name="arguments"></a>Argumenty  
  `dir`  
- Opcjonalny. Katalog, w którym ma rozpocząć wyszukiwanie. Jeśli nie zostanie określony, wyszukiwanie rozpoczyna się w katalogu projektu.  
+ Opcjonalna. Katalog, w którym ma rozpocząć wyszukiwanie. Jeśli nie zostanie określony, wyszukiwanie rozpoczyna się w katalogu projektu.  
   
  `file`  
- Wymagany. Pliki do wyszukania. Symbole wieloznaczne są dozwolone.  
+ Wymagana. Pliki do wyszukania. Symbole wieloznaczne są dozwolone.  
   
 ## <a name="remarks"></a>Uwagi  
  Symbole wieloznaczne w nazwie pliku służy do Kompiluj wszystkie zgodne pliki w katalogu projektu bez użycia `-recurse`. Jeśli nazwa pliku wyjściowego, nie zostanie określona, kompilator Określa nazwę pliku wyjściowego na pierwszy plik wejściowy przetworzone. Zwykle jest to pierwszy plik listy plików skompilowanych widzianego alfabetycznie. Z tego powodu najlepiej określić plik danych wyjściowych za pomocą `-out` opcji.  
@@ -42,13 +42,13 @@ Kompiluje pliki kodu źródłowego we wszystkich katalogach podrzędnych katalog
 >  `-recurse` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższe polecenie kompiluje wszystkie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] plików w bieżącym katalogu.  
+ Poniższe polecenie kompiluje wszystkie pliki Visual Basic w bieżącym katalogu.  
   
 ```console
 vbc *.vb  
 ```  
   
- Poniższe polecenie kompiluje wszystkie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] plików `Test\ABC` katalogu i wszystkie jego katalogów, a następnie generuje `Test.ABC.dll`.  
+ Poniższe polecenie kompiluje wszystkie pliki Visual Basic w `Test\ABC` katalogu i wszystkie jego katalogów, a następnie generuje `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

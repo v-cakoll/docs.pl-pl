@@ -1,11 +1,12 @@
 ---
 title: Okres istnienia w Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Okres istnienia w Visual Basic
 *Okres istnienia* elementu zadeklarowane jest okres, w którym jest dostępny do użytku. Zmienne są tylko elementy, które mają cykl życia. W tym celu kompilator traktuje parametry procedury i funkcja zwraca jako szczególnych przypadkach zmiennych. Okres istnienia zmiennej, która reprezentuje okres, w którym można zapisać wartości. Wartość można zmienić jego okresu istnienia, ale zawsze zawiera niektóre wartości.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  Zmienne zadeklarowane w bloku wewnątrz procedury (takie jak `For` pętli) są inicjowane przy wejściu do procedury. Te inicjalizacji zaczynają obowiązywać, czy kod kiedykolwiek wykonuje bloku.  
   
 ## <a name="end-of-lifetime"></a>Koniec okresu istnienia  
- Podczas procedury składowanej, nie są zachowywane wartości jego zmienne lokalne, i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zwraca ich pamięci. Podczas następnego wywołania tej procedury, jego zmiennych lokalnych są nowo utworzone i zainicjowane ponownie.  
+ Podczas procedury składowanej, wartości jego zmiennych lokalnych nie są zachowywane, a ich pamięci zwraca Visual Basic. Podczas następnego wywołania tej procedury, jego zmiennych lokalnych są nowo utworzone i zainicjowane ponownie.  
   
  Gdy zakończenie wystąpienia klasy lub struktury, udostępniana zmienne utratę ich pamięci i ich wartości. Każde nowe wystąpienie klasy lub struktury, tworzy i ponownie inicjuje udostępniana zmienne. Jednak `Shared` zmienne są zachowywane, dopóki aplikacja przestanie działać.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 |W wystąpieniu klasy nie `Shared` (procedura jest elementu członkowskiego wystąpienia)|Po raz pierwszy procedura jest wywoływana w ramach określonego wystąpienia|Po zwolnieniu wystąpienie dla wyrzucanie elementów bezużytecznych (GC)|  
   
 ## <a name="static-variables-of-the-same-name"></a>Zmienne statyczne o takiej samej nazwie  
- Można deklarować statycznych zmiennych o takiej samej nazwie w więcej niż jednej procedury. Jeśli to zrobisz, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] każdej takie zmiennej jako oddzielny element uwzględnia kompilatora. Inicjowanie jednej z tych zmiennych nie ma wpływu na inne wartości. Takie same w przypadku zdefiniowania procedury z zestawem przeciążenia ani deklarować statyczna zmienna o takiej samej nazwie w każdym przeciążenia.  
+ Można deklarować statycznych zmiennych o takiej samej nazwie w więcej niż jednej procedury. Jeśli to zrobisz, kompilator Visual Basic uwzględnia każdej takie zmiennej jako oddzielny element. Inicjowanie jednej z tych zmiennych nie ma wpływu na inne wartości. Takie same w przypadku zdefiniowania procedury z zestawem przeciążenia ani deklarować statyczna zmienna o takiej samej nazwie w każdym przeciążenia.  
   
 ## <a name="containing-elements-for-static-variables"></a>Zawierający elementy zmienne statyczne  
  Statyczna zmienna lokalna w obrębie klasy, mogą zadeklarować oznacza to, wewnątrz procedury w tej klasie. Jednak statyczna zmienna lokalna w strukturze nie można zadeklarować jako element członkowski struktury lub jako zmienną lokalną, procedura w tej struktury.  
@@ -80,13 +81,13 @@ ms.lasthandoff: 11/21/2017
  W poprzednim przykładzie, można utworzyć sam cykl życia przez zadeklarowanie `applesSold` na poziomie modułu. Po zmianie zakresu zmiennej w ten sposób jednak procedura będzie już wyłączny dostęp do niego. Ponieważ można uzyskać dostępu do innych procedur `applesSold` i zmień jego wartość, sumę bieżącą może być zawodne i kod może być bardziej trudne w utrzymaniu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Udostępnione](../../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)  
- [Zadeklarowane nazwy elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
  [Poziomy dostępu w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
  [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Statyczne](../../../../visual-basic/language-reference/modifiers/static.md)
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Static](../../../../visual-basic/language-reference/modifiers/static.md)

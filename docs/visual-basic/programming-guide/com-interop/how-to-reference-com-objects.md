@@ -1,11 +1,12 @@
 ---
-title: "Porady: odwołania do obiektów COM z Visual Basic"
-ms.custom: 
+title: 'Porady: odwołania do obiektów COM z Visual Basic'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -14,21 +15,21 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a8ac167b40688b1d1116f148d0d5fd6afdcaada8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0f6f7b4887e2cfba65da7a7a890b78c3d6a8508f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Porady: odwołania do obiektów COM z Visual Basic
-W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], dodawanie odwołań do obiektów COM, które mają bibliotek typów wymaga utworzenia zestaw międzyoperacyjny dla biblioteki COM. Odwołania do elementów członkowskich obiektu COM są kierowane do zestawu międzyoperacyjnego, a następnie przekazywane do rzeczywistego obiektu COM. Odpowiedzi z obiektu COM są kierowane do zestawu międzyoperacyjnego i przekazywane do Twojej [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji.  
+W języku Visual Basic Dodawanie odwołań do obiektów COM, które mają bibliotek typów wymaga utworzenia zestawu międzyoperacyjnego dla biblioteki COM. Odwołania do elementów członkowskich obiektu COM są kierowane do zestawu międzyoperacyjnego, a następnie przekazywane do rzeczywistego obiektu COM. Odpowiedzi z obiektu COM są kierowane do zestawu międzyoperacyjnego i przekazywane do Twojej [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji.  
   
  Obiekt COM można odwoływać się bez użycia zestawu międzyoperacyjnego osadzanie informacji o typie dla obiekt COM w ramach zestawu .NET. Osadzanie informacji o typie, ustaw `Embed Interop Types` właściwości `True` dla odwołania do obiektu COM. Jeśli kompilacja przy użyciu kompilatora wiersza polecenia, użyj `/link` opcję, aby odwołać biblioteki COM. Aby uzyskać więcej informacji, zobacz [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]automatycznie tworzy zestawy międzyoperacyjne podczas dodawania odwołania do biblioteki typów z zintegrowane środowisko programistyczne (IDE). Podczas pracy z poziomu wiersza polecenia, można użyć narzędzia Tlbimp ręcznie utworzyć zestawy międzyoperacyjne.  
+ Visual Basic automatycznie tworzy zestawy międzyoperacyjne podczas dodawania odwołania do biblioteki typów z zintegrowane środowisko programistyczne (IDE). Podczas pracy z poziomu wiersza polecenia, można użyć narzędzia Tlbimp ręcznie utworzyć zestawy międzyoperacyjne.  
   
 ### <a name="to-add-references-to-com-objects"></a>Aby dodać odwołania do obiektów COM  
   

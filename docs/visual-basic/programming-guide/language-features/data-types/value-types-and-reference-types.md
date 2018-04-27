@@ -1,11 +1,12 @@
 ---
-title: "Typy wartości i odwołań"
-ms.custom: 
+title: Typy wartości i odwołań
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - reference data types [Visual Basic]
@@ -16,28 +17,28 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cbab25e4af6b96ae22fe18d0b8a8fdbc7a7c7a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="value-types-and-reference-types"></a>Typy wartości i odwołań
-W języku Visual Basic typy danych są wdrażane na podstawie ich klasyfikacji. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Typy danych mogą być klasyfikowane w zależności od tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnikiem do danych. Jeśli przechowuje własnych danych jest *typu wartości*; jeśli posiada wskaźnik do danych w pamięci jest *zawierają odwołania do typu*.  
+W języku Visual Basic typy danych są wdrażane na podstawie ich klasyfikacji. Typy danych Visual Basic mogą być klasyfikowane w zależności od tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnikiem do danych. Jeśli przechowuje własnych danych jest *typu wartości*; jeśli posiada wskaźnik do danych w pamięci jest *zawierają odwołania do typu*.  
   
 ## <a name="value-types"></a>Typy wartości  
  Typ danych jest *typu wartości* Jeśli przechowuje dane w obrębie własnej alokacji pamięci. Typy wartości są następujące:  
   
 -   Wszystkie typy danych numerycznych  
   
--   `Boolean`, `Char`, i`Date`  
+-   `Boolean`, `Char`, i `Date`  
   
 -   Wszystkie struktury, nawet jeśli ich elementy członkowskie są typy odwołań  
   
--   Wyliczenia, ponieważ jego typ podstawowy jest zawsze `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, lub`ULong`  
+-   Wyliczenia, ponieważ jego typ podstawowy jest zawsze `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, lub `ULong`  
   
  Co struktura jest typem wartości, nawet wtedy, gdy zawiera on elementy członkowskie typu odwołania. Z tego powodu wartość typy takich jak `Char` i `Integer` są implementowane przez struktury .NET Framework.  
   
@@ -50,7 +51,7 @@ W języku Visual Basic typy danych są wdrażane na podstawie ich klasyfikacji. 
   
 -   Wszystkie tablice, nawet jeśli ich elementy są typy wartości  
   
--   Typy klas, takich jak<xref:System.Windows.Forms.Form>  
+-   Typy klas, takich jak <xref:System.Windows.Forms.Form>  
   
 -   Delegaty  
   
@@ -78,12 +79,12 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="working-with-the-object-data-type"></a>Praca z typem danych obiektu  
  Można przypisać typu odwołania lub typu wartości do zmiennej `Object` typu danych. `Object` Zmienna zawsze przechowuje wskaźnikiem do danych, a nie dane. Jednak jeśli przypisać do typu wartość `Object` zmiennej, działa tak, jakby posiada własnych danych. Aby uzyskać więcej informacji, zobacz [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Można sprawdzić, czy `Object` zmiennej działa jako typu odwołania lub typu wartościowego, przekazując go do <xref:Microsoft.VisualBasic.Information.IsReference%2A> metody w <xref:Microsoft.VisualBasic.Information> klasy <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>Zwraca `True` Jeśli zawartość `Object` zmienna reprezentuje typ referencyjny.  
+ Można sprawdzić, czy `Object` zmiennej działa jako typu odwołania lub typu wartościowego, przekazując go do <xref:Microsoft.VisualBasic.Information.IsReference%2A> metody w <xref:Microsoft.VisualBasic.Information> klasy <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Zwraca `True` Jeśli zawartość `Object` zmienna reprezentuje typ referencyjny.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typy dopuszczające wartości zerowe wartości](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [Typy wartości dopuszczających wartości null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)  
  [Skuteczne stosowanie typów danych](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

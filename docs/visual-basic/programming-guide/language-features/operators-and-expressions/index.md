@@ -20,11 +20,11 @@ ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dae47988e27ed4b1a714943ce1fbffe3b815066b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c32ce34dc7d6cb662ebdb42a3d3431f8107687f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operatory i wyrażenia w Visual Basic
 *Operator* jest element kodu, który wykonuje operacje na elementy kodu, które zawierają wartości. Wartość elementów obejmują zmienne, stałe, literały, właściwości, zwraca z `Function` i `Operator` procedur i wyrażenia.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  *Wyrażenie* jest szereg elementów wartość w połączeniu z operatorami, która daje w wyniku nową wartość. Operatory działa w przypadku elementów wartość wykonując obliczenia, porównania lub innych operacji.  
   
 ## <a name="types-of-operators"></a>Typy operatorów  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]udostępnia następujące operatory:  
+ Visual Basic zapewnia następujące operatory:  
   
 -   [Operatory arytmetyczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) obliczeń znanych na wartości liczbowe, łącznie z ich wzorców bitowe przesunięcie.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- W powyższym przykładzie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wykonuje operacje w wyrażeniu po prawej stronie operatora przypisania (`=`), następnie przypisuje wynikowej wartości do zmiennej `x` po lewej stronie. Nie ma żadnego limitu praktyczne liczby operatory, które mogą być połączone w wyrażeniu, ale zrozumienia [kolejność wykonywania w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) jest niezbędne mieć pewność, że wyniki spodziewasz się.  
+ W powyższym przykładzie Visual Basic wykonuje operacje w wyrażeniu po prawej stronie operatora przypisania (`=`), następnie przypisuje wynikowej wartości do zmiennej `x` po lewej stronie. Nie ma żadnego limitu praktyczne liczby operatory, które mogą być połączone w wyrażeniu, ale zrozumienia [kolejność wykonywania w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) jest niezbędne mieć pewność, że wyniki spodziewasz się.  
   
  Aby uzyskać dodatkowe informacje i przykłady, zobacz [przeciążanie operatora w Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

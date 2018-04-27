@@ -1,11 +1,12 @@
 ---
-title: "Przesłanianie w Visual Basic"
-ms.custom: 
+title: Przesłanianie w Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -24,17 +25,17 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbfce3edc122ca875552b2d41ba876fe5cfcfc4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Przesłanianie w Visual Basic
-Gdy dwa elementy programowania o tej samej nazwie, jeden z nich można ukryć, lub *tle*, jeden z nich. W takiej sytuacji zasłonięty element nie jest dostępna dla odwołania; Zamiast tego po kodzie używa nazwy elementu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora rozpoznaje ją do elementu przesłaniania.  
+Gdy dwa elementy programowania o tej samej nazwie, jeden z nich można ukryć, lub *tle*, jeden z nich. W takiej sytuacji zasłonięty element nie jest dostępna dla odwołania; Zamiast tego po kodzie używa nazwy elementu, kompilator Visual Basic rozpoznaje ją do przesłaniania elementu.  
   
 ## <a name="purpose"></a>Cel  
  Głównym celem przesłanianie ma chronić definicji członkowie klasy. Klasa podstawowa mogą być zmiany, która tworzy element o takiej samej nazwie jako jeden, który został już zdefiniowany. W takim przypadku `Shadows` wymusza modyfikator odwołuje się do klasy mają zostać rozwiązane do elementu członkowskiego zdefiniowane, a nie nowy element klasy podstawowej.  
@@ -152,6 +153,6 @@ End Class
  [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
  [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Zastąpienia](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
  [Me, My, MyBase i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

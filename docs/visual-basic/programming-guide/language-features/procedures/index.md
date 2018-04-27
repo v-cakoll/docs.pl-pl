@@ -18,14 +18,14 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92cb2dd3f356acf89cbe62b5f3f5dc81fce271fc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="procedures-in-visual-basic"></a>Procedury w Visual Basic
-A *procedury* to blok [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrukcje ujęty w instrukcji deklaracji (`Function`, `Sub`, `Operator`, `Get`, `Set`) i odpowiadający mu `End` Deklaracja. Wszystkie instrukcje wykonywalne w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] musi znajdować się w niektórych procedury.  
+A *procedury* jest blok instrukcji języka Visual Basic ujęty w instrukcji deklaracji (`Function`, `Sub`, `Operator`, `Get`, `Set`) i odpowiadający mu `End` deklaracji. Wszystkie instrukcje wykonywalne w języku Visual Basic musi znajdować się w niektórych procedury.  
   
 ## <a name="calling-a-procedure"></a>Wywołanie procedury  
  Wywołuje procedurę w innym miejscu w kodzie. Jest to nazywane *wywołania procedury*. Po zakończeniu procedury uruchomiona, zwraca sterowania do kodu, która wywołana, i nosi nazwę *wywołanie kodu*. Kod wywołujący jest instrukcja lub wyrażenie w instrukcji, określa nazwę procedury i przekazuje sterowanie do niego.  
@@ -43,7 +43,7 @@ A *procedury* to blok [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrukcje uj�
  W większości przypadków musi działać na różnych danych zawsze należy wywołać procedurę. Informacje te można przekazać do procedury jako część wywołania procedury. Definiuje procedurę zero lub więcej *parametry*, każdy z których reprezentuje wartość oczekuje, że do przekazywania do niej. Odpowiadający każdego parametru w definicji procedura jest *argument* w wywołaniu procedury. Argument reprezentuje wartość, którą można przekazać do odpowiadającego mu parametru w wywołaniu procedury danego.  
   
 ## <a name="types-of-procedures"></a>Rodzaje procedur  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]używa kilku typów procedur:  
+ Visual Basic korzysta kilka typów procedur:  
   
 -   [Procedury Sub](./sub-procedures.md) wykonywać działania, ale nie zwracać wartości do wywołującego kodu.  
   
@@ -71,13 +71,13 @@ A *procedury* to blok [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrukcje uj�
 -   Po należy opracować procedury do użycia w jednym programie, można używać ich w innych programów, często z żadnych modyfikacji. Dzięki temu można uniknąć zduplikowania kodu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Tworzenie procedury](./how-to-create-a-procedure.md)  
- [Sub — procedury](./sub-procedures.md)  
+ [Instrukcje: tworzenie procedury](./how-to-create-a-procedure.md)  
+ [Sub, procedury](./sub-procedures.md)  
  [Procedury funkcji](./function-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Procedury operatorów](./operator-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Procedury cykliczne](./recursive-procedures.md)  
+ [Procedury rekursywne](./recursive-procedures.md)  
  [Przeciążanie procedury](./procedure-overloading.md)  
  [Procedury ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -22,18 +22,18 @@ ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 51f8fd063449c072a69cdffd9f6ce2a96cc3f68c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="module-statement"></a>Module — Instrukcja
 Deklaruje nazwę modułu i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, z których składa się moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb 
 [ <attributelist> ] [ accessmodifier ]  Module name  
     [ statements ]  
 End Module  
@@ -105,9 +105,9 @@ End Module
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Namespace — instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Interface — instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Namespace, instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
  [Promocja typu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

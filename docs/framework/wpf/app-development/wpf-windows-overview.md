@@ -1,13 +1,13 @@
 ---
-title: "Przegląd Okna WPF"
-ms.custom: 
+title: Przegląd Okna WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji autonomicznych przy użyciu systemu windows. Głównym celem okna jest zawartość hosta, wizualizuje danych, które umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemu windows w autonomicznej aplikacji.  
@@ -282,7 +282,7 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
  Gdy okno może zostać jawnie zamknięty przy użyciu mechanizmów udostępnianych w obszarach-klient i klient, okno również można niejawnie zamknięty wyniku zachowanie w innych częściach aplikacji lub [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], takie jak:  
   
--   Użytkownik wyloguje się lub wyłączania [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Użytkownik wyloguje się lub zamyka system Windows.  
   
 -   Zamyka okno właściciela (zobacz <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Jeśli lokalizacja uruchamiania jest określana jako <xref:System.Windows.WindowStartupLocation.Manual>i <xref:System.Windows.Window.Left%2A> i <xref:System.Windows.Window.Top%2A> nie ustawiono właściwości <xref:System.Windows.Window> poprosi [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] pojawią się w lokalizacji.  
+ Jeśli lokalizacja uruchamiania jest określana jako <xref:System.Windows.WindowStartupLocation.Manual>i <xref:System.Windows.Window.Left%2A> i <xref:System.Windows.Window.Top%2A> nie ustawiono właściwości <xref:System.Windows.Window> pojawi się monit z systemu Windows dla lokalizacji w wynikach.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>Windows najwyższego poziomu i porządek osi z  

@@ -2,8 +2,9 @@
 title: Podsumowanie matematyczne (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - math functions, summary
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 330ea0616da11ab5ccb02f5ee91c406f51de5893
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 45d682dffe699f12a7d58418d332dc05d5822209
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="math-summary-visual-basic"></a>Podsumowanie matematyczne (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]słowa kluczowe języka i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  
+Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  
   
 |Akcja|Element języka|  
 |------------|----------------------|  
@@ -35,4 +36,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  [Pochodne funkcje matematyczne](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
- [Elementy członkowskie biblioteki wykonawczej języka Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+ [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -1,11 +1,12 @@
 ---
-title: "Porady: zmienianie wartości argumentu procedury (Visual Basic)"
-ms.custom: 
+title: 'Porady: zmienianie wartości argumentu procedury (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Porady: zmienianie wartości argumentu procedury (Visual Basic)
 Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z parametrów zdefiniowanych w procedurze. W niektórych przypadkach kodu procedury można zmienić wartości podstawowej argumentu w wywoływanym kodzie. W pozostałych przypadkach procedura można zmienić tylko w swojej lokalnej kopii argumentu.  
   
- Po wywołaniu procedury, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tworzy kopię lokalnych każdy argument, który jest przekazywany [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Dla każdego argumentu przekazany [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] daje kodu procedury bezpośrednie odwołanie do elementu programistycznego bazowy argumentu w wywoływanym kodzie.  
+ Po wywołaniu procedury, Visual Basic tworzy kopię lokalnych każdy argument, który jest przekazywany [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Dla każdego argumentu przekazany [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic daje kodu procedury bezpośrednie odwołanie do elementu programistycznego bazowy argumentu w wywoływanym kodzie.  
   
  Jeśli odpowiedniego elementu kodu wywołującego jest elementem można modyfikować, a argument jest przekazywany `ByRef`, kod procedury użyć odwołanie bezpośrednie tak, aby zmienić wartości elementu w wywoływanym kodzie.  
   
@@ -58,7 +59,7 @@ Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z
   
      —lub—  
   
-     W wywoływanym kodzie ujmij argument w nawiasach na liście argumentów. Dzięki temu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] do przekazywania argumentu przez wartość, nawet jeśli określa odpowiadającego mu parametru `ByRef`.  
+     W wywoływanym kodzie ujmij argument w nawiasach na liście argumentów. To zmusza Visual Basic do przekazywania argumentu przez wartość, nawet jeśli określa odpowiadającego mu parametru `ByRef`.  
   
 2.  W kodzie procedury umożliwia przypisywanie wartości do lokalnej kopii argument nazwę parametru. Odpowiednia wartość w wywoływanym kodzie nie ulega zmianie.  
   
@@ -80,7 +81,7 @@ Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Jeśli zmienna przez odwołanie, należy użyć `ByRef` — słowo kluczowe, aby określić, ten mechanizm.  
   
- Domyślnie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ma argument jest przekazywany przez wartość. Jednak jest dobre rozwiązanie to dołączenie albo programowania [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe z każdym zadeklarowany parametr. Ułatwia to kodu do odczytu.  
+ Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości. Jednak jest dobre rozwiązanie to dołączenie albo programowania [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe z każdym zadeklarowany parametr. Ułatwia to kodu do odczytu.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Istnieje potencjalne ryzyko z umożliwieniem procedury zmienić wartość argumentu w wywoływanym kodzie podstawowy. Upewnij się, że oczekiwane tę wartość można zmienić, i jest gotowy do Sprawdź poprawność, przed jego użyciem.  
@@ -88,11 +89,11 @@ Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Porady: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
+ [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
  [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
- [Różnice pomiędzy argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
- [Różnice pomiędzy przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
- [Porady: chronienie argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)  
- [Porady: Wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)  
+ [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
+ [Różnice między przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
+ [Instrukcje: ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)  
+ [Instrukcje: wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)  
  [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)  
- [Typy wartości i typy referencyjne](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+ [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

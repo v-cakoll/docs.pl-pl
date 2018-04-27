@@ -1,11 +1,12 @@
 ---
-title: "Rozwiązywanie problemów związanych z typami danych (Visual Basic)"
-ms.custom: 
+title: Rozwiązywanie problemów związanych z typami danych (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f34e7bc50a51032387cf01db3fae17ef44b8b4d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Rozwiązywanie problemów związanych z typami danych (Visual Basic)
 Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas wykonywania operacji na typy danych wewnętrznych.  
@@ -74,7 +75,7 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas wy
  Należy pamiętać, że nie jest wystarczające, aby zadeklarować `decimalRemainder` jako `Decimal`. Należy też wymusić literały do `Decimal`, lub wykorzystują `Double` domyślnie i `decimalRemainder` odbiera tę samą wartość niedokładne jako `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Typ Boolean nie konwertować na typ liczbowy dokładnie  
- [Boolean — typ danych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartości nie są przechowywane jako liczby i przechowywane wartości nie są przeznaczone do równoważne cyfry. Zgodność z wcześniejszymi wersjami [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zawiera słowa kluczowe konwersji ([CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`i tak dalej) umożliwia konwersję pomiędzy `Boolean` typy liczbowe. Jednak inne języki czasem wykonywania tych konwersji inaczej, tak jak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody.  
+ [Boolean — typ danych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartości nie są przechowywane jako liczby i przechowywane wartości nie są przeznaczone do równoważne cyfry. Dla zachowania zgodności z wcześniejszymi wersjami programu Visual Basic zawiera słowa kluczowe konwersji ([CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`i tak dalej) umożliwia konwersję pomiędzy `Boolean` typy liczbowe. Jednak inne języki czasem wykonywania tych konwersji inaczej, tak jak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody.  
   
  Nigdy nie powinien pisania kodu, który polega na równoważne wartości numerycznych `True` i `False`. Jeśli to możliwe, należy ograniczyć użycie `Boolean` zmienne do wartości logiczne, dla których są przeznaczone. Jeśli musisz mieszać `Boolean` i wartości liczbowe, upewnij się, że rozumiesz wybranej metody konwersji.  
   
@@ -87,7 +88,7 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas wy
  Jeśli trzeba przekonwertować `Boolean` wartości na dane typu liczbowego, należy zachować ostrożność o wyborze metody konwersji używasz.  
   
 ## <a name="character-literal-generates-compiler-error"></a>Literał znaku generuje błąd kompilatora  
- W przypadku braku znaków typu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zakłada domyślne typy danych dla literałów. Domyślny typ literał znakowy — ujęta w znaki cudzysłowu (`" "`) — jest `String`.  
+ W przypadku braku znaków typu Visual Basic zakłada domyślne typy danych dla literałów. Domyślny typ literał znakowy — ujęta w znaki cudzysłowu (`" "`) — jest `String`.  
   
  `String` — Typ danych nie są rozszerzane [Char — typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md). Oznacza to, że jeśli chcesz przypisać literał do `Char` zmiennej, należy dokonać konwersji zawężającej lub wymusić literał do `Char` typu.  
 
@@ -102,7 +103,7 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas wy
  Istnieje ryzyko za pomocą konwersji zawężającej, ponieważ może zakończyć się niepowodzeniem w czasie wykonywania. Na przykład konwersji `String` do `Char` może zakończyć się niepowodzeniem, jeśli `String` wartość zawiera więcej niż jeden znak. W związku z tym lepiej jest programowania do użycia `C` znaku typu.  
   
 ## <a name="string-conversion-fails-at-run-time"></a>Konwersja ciągu nie powiedzie się w czasie wykonywania  
- [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) uczestniczy w bardzo mało poszerzanie konwersji. `String`rozszerzenie tylko do samego siebie i `Object`i tylko `Char` i `Char()` ( `Char` tablicy) rozszerzane `String`. Jest to spowodowane `String` zmiennych i stałych może zawierać wartości, które nie mogą zawierać inne typy danych.  
+ [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) uczestniczy w bardzo mało poszerzanie konwersji. `String` rozszerzenie tylko do samego siebie i `Object`i tylko `Char` i `Char()` ( `Char` tablicy) rozszerzane `String`. Jest to spowodowane `String` zmiennych i stałych może zawierać wartości, które nie mogą zawierać inne typy danych.  
   
  Podczas sprawdzania typu przełącznika ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On`, kompilator nie zezwala na wszystkich niejawnej konwersji zawężającej. Obejmuje to te obejmujące `String`. Kod można nadal używać słowa kluczowe konwersji takich jak `CStr` i [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md), które bezpośrednio [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] próby konwersji.  
   
@@ -123,7 +124,7 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas wy
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Typy wartości i typy referencyjne](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

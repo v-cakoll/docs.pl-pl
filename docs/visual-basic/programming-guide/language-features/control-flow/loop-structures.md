@@ -1,11 +1,12 @@
 ---
-title: "Struktury pętli (Visual Basic)"
-ms.custom: 
+title: Struktury pętli (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic], loops
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2f813a555677e3828297c9c360b7a47217c39524
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8c13f2cc6546a652f0967bd83369d8af5998f7e2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loop-structures-visual-basic"></a>Struktury pętli (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]struktury pętli zezwalają na uruchamianie kilkukrotnie jeden lub więcej wierszy kodu. Instrukcje w struktury pętli można powtórzyć, dopóki nie zostanie warunek `True`, dopóki nie zostanie warunek `False`, określona liczba razy lub raz dla każdego elementu w kolekcji.  
+Struktury pętli Visual Basic zezwalają na uruchamianie kilkukrotnie jeden lub więcej wierszy kodu. Instrukcje w struktury pętli można powtórzyć, dopóki nie zostanie warunek `True`, dopóki nie zostanie warunek `False`, określona liczba razy lub raz dla każdego elementu w kolekcji.  
   
  Na poniższej ilustracji przedstawiono struktury pętli, który uruchamia zestaw instrukcji, dopóki nie zostanie spełniony warunek.  
   

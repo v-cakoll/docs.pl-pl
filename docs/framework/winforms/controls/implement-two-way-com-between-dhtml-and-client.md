@@ -28,11 +28,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3847e6bdc368c16634f089ab58adcaa6e3dc4901
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f449d026cb3205081fba79e0db87fb04ea3b7211
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Porady: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta
 Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejące dynamiczny kod aplikacji sieci Web HTML (DHTML) aplikacjom klienckim formularzy systemu Windows. Jest to przydatne, gdy zainwestowały czasu znaczących programowania do tworzenia opartych na DHTML — formanty i chcesz korzystać z funkcji interfejsu użytkownika sformatowanego formularzy systemu Windows bez konieczności ponownego zapisania istniejącego kodu.  
@@ -118,7 +118,7 @@ Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istnie
   
 -   Odwołania do zestawów systemu i System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.WebBrowser>  

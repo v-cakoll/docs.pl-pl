@@ -1,12 +1,13 @@
 ---
-title: "Zabezpieczenie częściowej relacji zaufania WPF"
-ms.custom: 
+title: Zabezpieczenie częściowej relacji zaufania WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
-<a name="introduction"></a>Ogólnie rzecz biorąc można ograniczyć aplikacji internetowych, z mające bezpośredni dostęp do zasobów systemowych krytyczne, aby zapobiec uszkodzeniu złośliwe. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] i języki skryptów po stronie klienta nie będą mogli uzyskiwać dostęp do zasobów systemu. Ponieważ [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce może być uruchamiany z przeglądarki, powinny odpowiadać podobny zestaw ograniczeń. Aby wymusić ograniczenia te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na obu [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] i [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (zobacz [strategii zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Domyślnie aplikacje obsługiwane w przeglądarce żądań strefy internetowej [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zestaw uprawnień, niezależnie od tego, czy są one uruchamiane z Internetu, lokalnego intranetu lub komputera lokalnego. Aplikacje uruchamiane przy użyciu innych mniej niż pełny zestaw uprawnień są określane jako działać z częściowa relacja zaufania.  
+<a name="introduction"></a> Ogólnie rzecz biorąc można ograniczyć aplikacji internetowych, z mające bezpośredni dostęp do zasobów systemowych krytyczne, aby zapobiec uszkodzeniu złośliwe. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] i języki skryptów po stronie klienta nie będą mogli uzyskiwać dostęp do zasobów systemu. Ponieważ [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce może być uruchamiany z przeglądarki, powinny odpowiadać podobny zestaw ograniczeń. Aby wymusić ograniczenia te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na obu [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] i [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (zobacz [strategii zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Domyślnie aplikacje obsługiwane w przeglądarce żądań strefy internetowej [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zestaw uprawnień, niezależnie od tego, czy są one uruchamiane z Internetu, lokalnego intranetu lub komputera lokalnego. Aplikacje uruchamiane przy użyciu innych mniej niż pełny zestaw uprawnień są określane jako działać z częściowa relacja zaufania.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]oferuje szeroką gamę pomocy technicznej, aby upewnić się, że tylu funkcji, jak to możliwe może być używany w częściowej relacji zaufania, wraz z [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], zapewnia dodatkowe obsługę programowania częściowej relacji zaufania.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oferuje szeroką gamę pomocy technicznej, aby upewnić się, że tylu funkcji, jak to możliwe może być używany w częściowej relacji zaufania, wraz z [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], zapewnia dodatkowe obsługę programowania częściowej relacji zaufania.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  Ta tabela zawiera [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] funkcje na wysokim poziomie. Aby uzyskać szczegółowe informacje, [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] omówiono uprawnienia, które są wymagane przez każdy element członkowski w [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Ponadto następujące funkcje uzyskać bardziej szczegółowe informacje dotyczące wykonywania częściowej relacji zaufania, w tym uwagi.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](zobacz [omówienie XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (zobacz [omówienie XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
   
 -   Wyskakujące okienka (zobacz <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
@@ -100,18 +102,18 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Zachowanie opisane w poprzedniej tabeli dotyczy pełne zaufanie XBAP, które nie są zgodne z modelu wdrażania zaufanych ClickOnce.  
   
- Ogólnie rzecz biorąc kodu, która przekracza dozwolone uprawnienia jest prawdopodobnie typowy kod współużytkowanych zarówno autonomiczne, jak i aplikacje obsługiwane w przeglądarce. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]i [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oferuje kilka technik do zarządzania tym scenariuszu.  
+ Ogólnie rzecz biorąc kodu, która przekracza dozwolone uprawnienia jest prawdopodobnie typowy kod współużytkowanych zarówno autonomiczne, jak i aplikacje obsługiwane w przeglądarce. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] i [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oferuje kilka technik do zarządzania tym scenariuszu.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Wykrywanie uprawnień urzędy certyfikacji  
- W niektórych sytuacjach jest możliwe w dla udostępnionego kodu w zestawach biblioteki ma być używany przez obie aplikacje autonomiczne i [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. W takich przypadkach kodu mogą realizować funkcje, które może wymagać więcej uprawnień niż zestaw uprawnień udzielonych aplikacji. Aplikacja może wykryć, czy ma określone uprawnienia za pomocą [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] zabezpieczeń. W szczególności można sprawdzić, czy ma określone uprawnienia, wywołując <xref:System.Security.CodeAccessPermission.Demand%2A> metody w wystąpieniu odpowiednie uprawnienia. Przedstawiono to w poniższym przykładzie ma kod tego zapytania dotyczące tego, czy ma możliwość zapisania pliku na dysku lokalnym:  
+ W niektórych sytuacjach jest możliwe w dla udostępnionego kodu w zestawach biblioteki ma być używany przez obie aplikacje autonomiczne i [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. W takich przypadkach kodu mogą realizować funkcje, które może wymagać więcej uprawnień niż zestaw uprawnień udzielonych aplikacji. Aplikacja może wykryć, czy ma określone uprawnienia za pomocą zabezpieczeń systemu Microsoft .NET Framework. W szczególności można sprawdzić, czy ma określone uprawnienia, wywołując <xref:System.Security.CodeAccessPermission.Demand%2A> metody w wystąpieniu odpowiednie uprawnienia. Przedstawiono to w poniższym przykładzie ma kod tego zapytania dotyczące tego, czy ma możliwość zapisania pliku na dysku lokalnym:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Jeśli aplikacja nie ma odpowiednie uprawnienia, wywołanie <xref:System.Security.CodeAccessPermission.Demand%2A> zgłosi wyjątek zabezpieczeń. W przeciwnym razie udzielono uprawnień. `IsPermissionGranted`hermetyzuje to zachowanie i zwraca `true` lub `false` odpowiednio.  
+ Jeśli aplikacja nie ma odpowiednie uprawnienia, wywołanie <xref:System.Security.CodeAccessPermission.Demand%2A> zgłosi wyjątek zabezpieczeń. W przeciwnym razie udzielono uprawnień. `IsPermissionGranted` hermetyzuje to zachowanie i zwraca `true` lub `false` odpowiednio.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>Bezpieczne spadek funkcjonalności  
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
  Przy użyciu [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] do sprawdzania uprawnień to technika odpowiednie, gdy trzeba sprawdzić na podstawie na uprawnienia. Mimo że ta metoda jest zależna od połowowe wyjątków w ramach normalnego przetwarzania, co nie jest zalecane, ogólnie rzecz biorąc i może mieć problemy z wydajnością. Zamiast tego Jeśli Twoje [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] działa tylko w piaskownicy strefy Internetu, można użyć <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> właściwość, która zwraca wartość true dla [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>tylko odróżnia, czy aplikacja jest uruchomiona w przeglądarce nie który zestaw uprawnień aplikacji został uruchomiony z.  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> tylko odróżnia, czy aplikacja jest uruchomiona w przeglądarce nie który zestaw uprawnień aplikacji został uruchomiony z.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Zarządzanie uprawnieniami  

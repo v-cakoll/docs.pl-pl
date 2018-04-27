@@ -13,14 +13,14 @@ ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16079ad7854630f68ecb6fd9fb3b640a440fe69b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a4bfab2f6f06cbe1ac971fc21d53a7336ad03c58
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-specification"></a>Specyfikacja języka Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Specyfikacja języka jest wiarygodne źródło odpowiedzi na wszystkie pytania o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gramatyki i składni. Zawiera szczegółowe informacje na temat języka, w tym liczba punktów nie obejmuje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] odwołania dokumentacji.  
+Specyfikacja języka Visual Basic jest wiarygodne źródło odpowiedzi na wszystkie pytania o gramatyki języka Visual Basic i składni. Zawiera szczegółowe informacje na temat języka, w tym wiele punktów nieuwzględnione w dokumentacji referencyjnej Visual Basic.  
   
  Jest dostępna w specyfikacji [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=188623).  
   
@@ -32,4 +32,4 @@ Problemy na specyfikacji powinny zostać utworzone w [dotnet/vblang](https://git
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
-[Dalej](../../../../_vblang/spec/introduction.md)
+[Next](../../../../_vblang/spec/introduction.md)

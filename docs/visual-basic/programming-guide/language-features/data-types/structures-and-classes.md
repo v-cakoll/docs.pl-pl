@@ -1,11 +1,12 @@
 ---
 title: Struktury i klasy (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Struktury i klasy (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]łączy składnia struktury i klasy, z wynikami, że obie te jednostki obsługuje większość tej samej funkcji. Istnieją również istotne różnice między struktury i klasy.  
+Visual Basic łączy składnia struktury i klasy, z wynikami, że obie te jednostki obsługuje większość tej samej funkcji. Istnieją również istotne różnice między struktury i klasy.  
   
  Klasy mają prowadzoną typy referencyjne — przekazywaniem odwołań do jest skuteczniejsza niż przekazywanie zmiennej struktury z jego dane. Z drugiej strony struktur nie wymagają alokacji pamięci sterty globalnej.  
   
@@ -92,13 +93,13 @@ ms.lasthandoff: 11/21/2017
   
      Elementy struktury, jednak są odizolowane w własne wystąpienie. Zmiany wartości nie są widoczne w wszelkie inne zmienne struktury, nawet w przypadku innych wystąpień tego samego `Structure` deklaracji.  
   
--   **Równości.** Dwa struktur sprawdzaniem równości można wykonać z testem element po elemencie. Dwie zmienne obiektu można porównać przy użyciu <xref:System.Object.Equals%2A> metody. <xref:System.Object.Equals%2A>Wskazuje, czy dwie zmienne punktu w tym samym wystąpieniu.  
+-   **Równości.** Dwa struktur sprawdzaniem równości można wykonać z testem element po elemencie. Dwie zmienne obiektu można porównać przy użyciu <xref:System.Object.Equals%2A> metody. <xref:System.Object.Equals%2A> Wskazuje, czy dwie zmienne punktu w tym samym wystąpieniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Typy wartości i typy referencyjne](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Struktury oraz inne elementy programowania](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
  [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

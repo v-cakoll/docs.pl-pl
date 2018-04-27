@@ -1,11 +1,12 @@
 ---
-title: "Porady: obliczanie wartości liczbowych (Visual Basic)"
-ms.custom: 
+title: 'Porady: obliczanie wartości liczbowych (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Porady: obliczanie wartości liczbowych (Visual Basic)
 Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyrażenia liczbowego* jest wyrażenie, które zawiera literały, stałe i zmienne reprezentujący wartości liczbowych i operatory, które działają na tych wartości.  
@@ -45,7 +46,7 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
   
      Pierwsze trzy wiersze zawierają literałem stałej i zmiennej. Każda z nich stanowi prawidłowe wyrażenie liczbowe samodzielnie. Końcowe wiersz zawiera kombinację zmiennej z dwóch literały.  
   
-     Należy pamiętać, że wyrażenie liczbowe nie tworzą pełnego [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrukcji samodzielnie. Należy użyć wyrażenia jako część pełną instrukcję.  
+     Należy pamiętać, że wyrażenie liczbowe nie tworzą pełną instrukcję języka Visual Basic samodzielnie. Należy użyć wyrażenia jako część pełną instrukcję.  
   
 #### <a name="to-store-a-numeric-value"></a>Do przechowywania wartości numerycznej  
   

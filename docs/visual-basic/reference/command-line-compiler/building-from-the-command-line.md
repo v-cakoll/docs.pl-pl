@@ -19,19 +19,19 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
-ms.translationtype: MT
+ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Tworzenie z wiersza polecenia (Visual Basic)
-A [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projekt składa się z jednego lub więcej plików oddzielne źródło. W trakcie znany jako kompilacji te pliki zostaną połączone razem w jednym pakiecie — pojedynczy plik wykonywalny, który może działać jako aplikacja.  
+Projekt Visual Basic składa się z jednego lub więcej plików oddzielne źródło. W trakcie znany jako kompilacji te pliki zostaną połączone razem w jednym pakiecie — pojedynczy plik wykonywalny, który może działać jako aplikacja.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] udostępnia zamiast kompilowanie programów z poziomu wiersza polecenia kompilatora [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Kompilator wiersza polecenia jest przeznaczony do sytuacji, w których nie wymagają pełnego zestawu funkcji w środowisku IDE — na przykład po są przy użyciu lub zapisywania w przypadku komputerów z ograniczoną systemu pamięć lub miejsce do magazynowania.  
+ Visual Basic zapewnia kompilatora wiersza polecenia zamiast kompilowanie programów z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Kompilator wiersza polecenia jest przeznaczony do sytuacji, w których nie wymagają pełnego zestawu funkcji w środowisku IDE — na przykład po są przy użyciu lub zapisywania w przypadku komputerów z ograniczoną systemu pamięć lub miejsce do magazynowania.  
   
   Aby skompilować plików źródłowych z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, wybierz **kompilacji** polecenie **kompilacji** menu.  
   

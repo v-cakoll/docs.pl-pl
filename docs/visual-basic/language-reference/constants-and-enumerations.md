@@ -13,11 +13,11 @@ ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bffbb8dabdd2463633c9d2ca8de3ef120850be3f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Stałe i wyliczenia (Visual Basic)
 Visual Basic dostarcza szereg wstępnie zdefiniowanych stałe i wyliczenia dla deweloperów. Stałe przechowywać wartości, które pozostają stałe w trakcie wykonywania aplikacji. Wyliczenia oferują wygodny do pracy z zestawów powiązanych stałych i do skojarzenia z nazwami wartości stałych.  
@@ -31,7 +31,7 @@ Visual Basic dostarcza szereg wstępnie zdefiniowanych stałe i wyliczenia dla d
 |---|---|  
 |`CONFIG`|Ciąg, który odpowiada bieżącej ustawienia **aktywną konfigurację rozwiązania** polu **programu Configuration Manager**.|  
 |`DEBUG`|A `Boolean` wartość, która może być ustawiona w **właściwości projektu** okno dialogowe. Domyślnie definiuje z konfiguracji debugowania dla projektu `DEBUG`. Gdy `DEBUG` jest zdefiniowany, <xref:System.Diagnostics.Debug> metod klasy Generowanie danych wyjściowych do **dane wyjściowe** okna. Jeśli nie jest zdefiniowana, <xref:System.Diagnostics.Debug> metod klasy nie są kompilowane i są generowane nie dane wyjściowe debugowania.|  
-|`TARGET`|Ciąg reprezentujący typ danych wyjściowych dla projektu lub ustawienia wiersza polecenia **/target** opcji. Możliwe wartości `TARGET` są:<br /><br /> -"winexe" dla aplikacji systemu Windows.<br />-"exe" dla aplikacji konsoli.<br />-"library" potrzeby biblioteki klas.<br />-"module" dla modułu.<br />- **/Target** opcja może być ustawiona w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko deweloperskie. Aby uzyskać więcej informacji, zobacz [/TARGET (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TARGET`|Ciąg reprezentujący typ danych wyjściowych dla projektu lub ustawienia wiersza polecenia **/target** opcji. Możliwe wartości `TARGET` są:<br /><br /> -"winexe" dla aplikacji systemu Windows.<br />-"exe" dla aplikacji konsoli.<br />-"library" potrzeby biblioteki klas.<br />-"module" dla modułu.<br />- **/Target** opcja może być ustawiona w Visual Studio zintegrowane środowisko programistyczne. Aby uzyskać więcej informacji, zobacz [/TARGET (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|A `Boolean` wartość, która może być ustawiona w **właściwości projektu** okno dialogowe. Domyślnie wszystkie konfiguracje dla projektu Zdefiniuj `TRACE`. Gdy `TRACE` jest zdefiniowany, <xref:System.Diagnostics.Trace> metod klasy Generowanie danych wyjściowych do **dane wyjściowe** okna. Jeśli nie jest zdefiniowana, <xref:System.Diagnostics.Trace> klasy metody nie jest skompilowany i nie `Trace` generowane dane wyjściowe.|  
 |`VBC_VER`|Liczba reprezentująca wersji Visual Basic w *głównych*. *drobne* format. Numer wersji [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] jest 8.0.|  
   

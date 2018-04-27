@@ -1,12 +1,13 @@
 ---
-title: "Relacje typu w operacjach zapytań (Visual Basic)"
-ms.custom: 
+title: Relacje typu w operacjach zapytań (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacje typu w operacjach zapytań (Visual Basic)
 Zmienne używane w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zapytania operacje są silnie typizowane i muszą być zgodne ze sobą. Silne wpisywanie jest używany w źródle danych, samą kwerendę i do wykonywania zapytania. Poniższa ilustracja identyfikuje terminów używanych w celu opisania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Aby uzyskać więcej informacji na temat części zapytania, zobacz [podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -35,7 +36,7 @@ Części zapytania LINQ
   
  Typ zmiennej zakresu w zapytaniu musi być zgodny z typem elementów w źródle danych. Typu zmienną zapytania musi być zgodny z elementem sekwencji zdefiniowane w `Select` klauzuli. Na koniec typ elementów sekwencji również musi być zgodny z typem zmienna sterująca pętli, który jest używany w `For Each` instrukcji, która wykonuje zapytania. Silne wpisywanie ułatwia identyfikację typu błędy w czasie kompilacji.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]powoduje, że silne wpisywanie wygodne zaimplementowanie wnioskowanie o typie lokalnym, znanej także jako *niejawne wpisując*. Funkcja jest używana w poprzednim przykładzie, czy pojawi się on w całym [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przykłady i dokumentacja. W języku Visual Basic wnioskowanie o typie lokalnym odbywa się przy użyciu `Dim` instrukcję bez `As` klauzuli. W poniższym przykładzie `city` jest silnie typizowane jako ciąg.  
+ Visual Basic powoduje, że silne wpisywanie wygodne zaimplementowanie wnioskowanie o typie lokalnym, znanej także jako *niejawne wpisując*. Funkcja jest używana w poprzednim przykładzie, czy pojawi się on w całym [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przykłady i dokumentacja. W języku Visual Basic wnioskowanie o typie lokalnym odbywa się przy użyciu `Dim` instrukcję bez `As` klauzuli. W poniższym przykładzie `city` jest silnie typizowane jako ciąg.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   

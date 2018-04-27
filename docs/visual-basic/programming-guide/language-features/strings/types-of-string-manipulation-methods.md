@@ -1,30 +1,31 @@
 ---
-title: "Typy metod manipulowania ciągami w Visual Basic"
-ms.custom: 
+title: Typy metod manipulowania ciągami w Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b437be4a6f4a0cc9d5a4d21291a80c9cb8fffcd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3677c8a23e956716af4357fe79041fc96f4014f2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Typy metod manipulowania ciągami w Visual Basic
-Istnieje kilka różnych sposobów do analizowania i manipulowania z ciągów. Niektóre metody są częścią [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] język, a inne są związane z `String` klasy.  
+Istnieje kilka różnych sposobów do analizowania i manipulowania z ciągów. Niektóre metody są częścią języka Visual Basic, a inne są związane z `String` klasy.  
   
 ## <a name="visual-basic-language-and-the-net-framework"></a>Język Visual Basic i .NET Framework  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]metody są używane jako funkcje związanego z używaniem języka. Mogą one używane, bez kwalifikacji w kodzie. W poniższym przykładzie przedstawiono typowy sposób użycia protokołu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] manipulowanie ciągami polecenia:  
+ Metody języka Visual Basic są używane jako funkcje związanego z używaniem języka. Mogą one używane, bez kwalifikacji w kodzie. W poniższym przykładzie przedstawiono typowy sposób użycia polecenia manipulowanie ciągami Visual Basic:  
   
  [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   

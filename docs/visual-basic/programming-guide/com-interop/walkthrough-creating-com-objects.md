@@ -1,11 +1,12 @@
 ---
-title: "Wskazówki: tworzenie obiektów COM z Visual Basic"
-ms.custom: 
+title: 'Wskazówki: tworzenie obiektów COM z Visual Basic'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff7d3868a2e3ddaba06ebc6f98c8eacfc7299366
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e660d672fc32455cee349dc44ad20c3244c087b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Wskazówki: tworzenie obiektów COM z Visual Basic
-Podczas tworzenia nowej aplikacji i składników, najlepiej utworzyć zestawy .NET Framework. Jednak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] również ułatwia udostępnianie składników .NET Framework modelowi COM. Umożliwia podanie nowych składników starszych pakietów aplikacji wymagających składników COM. W tym przewodniku przedstawiono sposób użycia [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] do udostępnienia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] obiekty jako obiekty COM, zarówno z i bez szablonu klasy COM.  
+Podczas tworzenia nowej aplikacji i składników, najlepiej utworzyć zestawy .NET Framework. Jednak Visual Basic również ułatwia udostępnianie składników .NET Framework modelowi COM. Umożliwia podanie nowych składników starszych pakietów aplikacji wymagających składników COM. W tym przewodniku przedstawiono sposób użycia języka Visual Basic do udostępnienia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] obiekty jako obiekty COM, zarówno z i bez szablonu klasy COM.  
   
  Najłatwiejszym sposobem na uwidocznienie obiektów COM jest przy użyciu szablonu klasy COM. Szablon klasy COM tworzy nową klasę, a następnie konfiguruje projektu do generowania klasy i współdziałanie warstwy jako obiekt COM i zarejestrowanie go za pomocą systemu operacyjnego.  
   
 > [!NOTE]
->  Mimo że można również ujawniać klasy utworzonej w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jako obiektu COM dla niezarządzanego kodu do użycia, nie jest obiektem COM. wartość true i nie może być używany przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Aby uzyskać więcej informacji, zobacz [współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+>  Mimo że można również ujawniać klasy utworzonej w języku Visual Basic, jak dla obiektu COM dla niezarządzanego kodu do użycia, nie jest obiektem COM. wartość true i nie można użyć w języku Visual Basic. Aby uzyskać więcej informacji, zobacz [współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -41,11 +42,11 @@ Podczas tworzenia nowej aplikacji i składników, najlepiej utworzyć zestawy .N
   
 3.  Wybierz **Dodaj nowy element** z **projektu** menu. **Dodaj nowy element** zostanie wyświetlone okno dialogowe.  
   
-4.  Wybierz **klasy COM** z **szablony** , a następnie kliknij przycisk **Dodaj**. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Dodaje nową klasę i konfiguruje nowy projekt dla modelu COM interop.  
+4.  Wybierz **klasy COM** z **szablony** , a następnie kliknij przycisk **Dodaj**. Visual Basic dodaje nową klasę i konfiguruje nowy projekt dla modelu COM interop.  
   
 5.  Dodaj kod, takie jak właściwości, metod i zdarzeń do klasy COM.  
   
-6.  Wybierz **kompilacji ClassLibrary1** z **kompilacji** menu. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Tworzy zestaw i rejestruje obiektu modelu COM w systemie operacyjnym.  
+6.  Wybierz **kompilacji ClassLibrary1** z **kompilacji** menu. Visual Basic kompilacji zestawu i rejestruje obiektu modelu COM w systemie operacyjnym.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>Tworzenie obiektów COM bez szablonu klasy COM  
  Można również utworzyć ręcznie, zamiast używać szablonu klasy COM klasy COM. Ta procedura jest przydatne podczas pracy z poziomu wiersza polecenia lub gdy chcesz mieć większą kontrolę nad sposób definiowania obiektów COM.  
@@ -93,15 +94,15 @@ Podczas tworzenia nowej aplikacji i składników, najlepiej utworzyć zestawy .N
   
      [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
-9. Dodaj właściwości, metod i zdarzeń do klasy, kończy je z `End Class` instrukcji. Wybierz **Kompiluj rozwiązanie** z **kompilacji** menu. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Tworzy zestaw i rejestruje obiektu modelu COM w systemie operacyjnym.  
+9. Dodaj właściwości, metod i zdarzeń do klasy, kończy je z `End Class` instrukcji. Wybierz **Kompiluj rozwiązanie** z **kompilacji** menu. Visual Basic kompilacji zestawu i rejestruje obiektu modelu COM w systemie operacyjnym.  
   
     > [!NOTE]
-    >  Obiekty COM Generowanie z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nie można używać w innych [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aplikacji, ponieważ nie mają wartość true, obiekty COM. Próby dodania odwołania do takich obiektów COM zgłosi błąd. Aby uzyskać więcej informacji, zobacz [współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Obiekty COM, które można wygenerować za pomocą Visual Basic nie można użyć przez inne aplikacje Visual Basic, ponieważ nie mają wartość true, obiekty COM. Próby dodania odwołania do takich obiektów COM zgłosi błąd. Aby uzyskać więcej informacji, zobacz [współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.ComClassAttribute>  
- [Współdziałanie z COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Wskazówki: Wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [#Region — dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md)  
+ [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Przewodnik: wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [#Region, dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md)  
  [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Problemów związanych ze współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+ [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

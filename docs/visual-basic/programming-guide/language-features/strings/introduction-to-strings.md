@@ -1,27 +1,27 @@
 ---
-title: "Wprowadzenie do ciągów w Visual Basic"
-ms.custom: 
+title: Wprowadzenie do ciągów w Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ce1cbd375af1c1d34eeaada4024da269af4d9e57
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f7eebce572717f38aa185942b263070e8b51753
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Wprowadzenie do ciągów w Visual Basic
-W tej sekcji opisano podstawowe pojęcia dotyczące używania ciągów w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+W tej sekcji opisano podstawowe pojęcia dotyczące używania ciągów w Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Podstawowe informacje o ciągach](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
@@ -31,7 +31,7 @@ W tej sekcji opisano podstawowe pojęcia dotyczące używania ciągów w [!INCLU
  Wprowadzono kilka różnych sposobów do analizowania i manipulowania ciągami.  
   
  [Wpływ kultury na ciągi w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- W tym artykule omówiono sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] używa kultury informacji na temat wykonywania konwersji ciągów i porównania.  
+ W tym artykule omówiono sposób Visual Basic używa informacji o kulturze do wykonywania konwersji ciągów i porównania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Ciągi](../../../../visual-basic/programming-guide/language-features/strings/index.md)

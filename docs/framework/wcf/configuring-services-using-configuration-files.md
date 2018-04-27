@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy użyciu pliku konfiguracji zapewnia elastyczność udostępniania punktu końcowego i Usługa danych zachowanie w punkcie wdrożenia, a nie w czasie projektowania. W tym temacie przedstawiono podstawowe metody dostępne.  
@@ -37,9 +37,9 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Plik Web.config i App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] używa systemu konfiguracji System.Configuration [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Podczas konfigurowania usługi [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], użyj pliku Web.config lub pliku App.config, aby określić ustawienia. Wybór nazwy pliku konfiguracji jest określana przez środowisko macierzyste, wybranych dla usługi. Jeśli używane są usługi IIS do obsługi usługi, należy użyć pliku Web.config. Jeśli używane są inne środowiska macierzystego, należy użyć pliku App.config.  
+ Podczas konfigurowania usługi w programie Visual Studio, użyj pliku Web.config lub pliku App.config, aby określić ustawienia. Wybór nazwy pliku konfiguracji jest określana przez środowisko macierzyste, wybranych dla usługi. Jeśli używane są usługi IIS do obsługi usługi, należy użyć pliku Web.config. Jeśli używane są inne środowiska macierzystego, należy użyć pliku App.config.  
   
- W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], plik o nazwie App.config służy do tworzenia pliku konfiguracji końcowej. Nazwa końcowej faktycznie używana dla konfiguracji zależy od nazwy zestawu. Na przykład zestaw o nazwie "Cohowinery.exe" ma nazwę konfiguracji końcowej "Cohowinery.exe.config". Jednak tylko musisz zmodyfikować plik App.config. Zmiany wprowadzone w tym pliku zostaną zastosowane do pliku konfiguracji aplikacji końcowego automatycznie w czasie kompilacji.  
+ W programie Visual Studio plik o nazwie App.config służy do tworzenia pliku konfiguracji końcowej. Nazwa końcowej faktycznie używana dla konfiguracji zależy od nazwy zestawu. Na przykład zestaw o nazwie "Cohowinery.exe" ma nazwę konfiguracji końcowej "Cohowinery.exe.config". Jednak tylko musisz zmodyfikować plik App.config. Zmiany wprowadzone w tym pliku zostaną zastosowane do pliku konfiguracji aplikacji końcowego automatycznie w czasie kompilacji.  
   
  Korzystając z pliku App.config, pliku system konfiguracji scala pliku App.config z zawartością pliku Machine.config podczas uruchamiania aplikacji i konfiguracja zostanie zastosowana. Mechanizm ten umożliwia ustawień komputera, które zostały określone w pliku Machine.config. Plik App.config może służyć do zastąpienia ustawień pliku Machine.config. można również zablokować w ustawieniach w pliku Machine.config, aby mogły uzyskać używane. W przypadku pliku Web.config system konfiguracji scala plików Web.config we wszystkich katalogach prowadzących do katalogu aplikacji do konfiguracji, który zostanie zastosowany. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Konfiguracja i ustawienia priorytetów, zobacz Tematy w <xref:System.Configuration> przestrzeni nazw.  
   

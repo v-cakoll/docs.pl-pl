@@ -1,31 +1,32 @@
 ---
-title: "Używanie wyrażeń regularnych z formantem MaskedTextBox w Visual Basic"
-ms.custom: 
+title: Używanie wyrażeń regularnych z formantem MaskedTextBox w Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Używanie wyrażeń regularnych z formantem MaskedTextBox w Visual Basic
 W tym przykładzie pokazano, jak przekonwertować prostych wyrażeń regularnych do pracy z <xref:System.Windows.Forms.MaskedTextBox> formantu.  
   
 ## <a name="description-of-the-masking-language"></a>Opis języka maskowania  
- Standardowe <xref:System.Windows.Forms.MaskedTextBox> maskowania języka jest oparta na używany przez `Masked Edit` kontroli w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 i należy znać użytkownikom migrację z tej platformy.  
+ Standardowe <xref:System.Windows.Forms.MaskedTextBox> maskowania języka jest oparta na używany przez `Masked Edit` kontroli w Visual Basic 6.0 i należy znać użytkownikom migrację z tej platformy.  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Właściwość <xref:System.Windows.Forms.MaskedTextBox> kontroli określa, jakie maska wprowadzania do użycia. Maska musi być ciągiem składa się z co najmniej jeden z elementów maskowania z poniższej tabeli.  
   
@@ -68,4 +69,4 @@ W tym przykładzie pokazano, jak przekonwertować prostych wyrażeń regularnych
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
  <xref:System.Windows.Forms.MaskedTextBox>  
  [Sprawdzanie poprawności ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [Maskedtextbox — formant](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+ [MaskedTextBox, kontrolka](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

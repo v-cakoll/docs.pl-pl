@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-operators"></a>Operatory C#
 C# zawiera wielu operatorów, które są symbole, które określają, jakie operacje (matematyczne, indeksowania, wywołanie funkcji itp.) w celu wykonania w wyrażeniu. Możesz [przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) wielu operatorów, aby zmienić ich znaczenia w przypadku zastosowania do typu zdefiniowanego przez użytkownika.  
@@ -63,7 +63,7 @@ C# zawiera wielu operatorów, które są symbole, które określają, jakie oper
   
  [Zaznaczenie opcji](../../../csharp/language-reference/keywords/unchecked.md) — wyłącza przepełnienie sprawdzanie operacji liczby całkowitej. Jest to domyślne zachowanie kompilatora.  
   
- [Default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) — zwraca wartość domyślna typu T: `null` dla typów odwołań zera na typy liczbowe i zero /`null` wypełnione elementy członkowskie dla typów struktury.  
+ [Default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) — tworzy domyślną wartość typu T.  
   
  [Delegowanie](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) — deklaruje i zwraca wystąpienie obiektu delegowanego.  
   

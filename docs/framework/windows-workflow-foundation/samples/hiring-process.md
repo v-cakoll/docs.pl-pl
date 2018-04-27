@@ -1,23 +1,24 @@
 ---
 title: Zatrudniania procesu
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>Zatrudniania procesu
 W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu działań obsługi wiadomości i dwóch przepływów pracy hostowany jako usługi przepływu pracy. Te przepływy pracy są częścią infrastruktury IT fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -28,7 +29,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
  W tym przykładzie pokazano poniższe funkcje [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart>i <xref:System.Activities.Statements.Sequence> przepływy pracy dla modelowania procesów biznesowych.  
+-   <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence> przepływy pracy dla modelowania procesów biznesowych.  
   
 -   Usługi przepływu pracy.  
   
@@ -48,9 +49,9 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
 -   Skład działań.  
   
--   <xref:System.Activities.Statements.Parallel>działania.  
+-   <xref:System.Activities.Statements.Parallel> działania.  
   
--   <xref:System.Activities.Statements.CancellationScope>działanie.  
+-   <xref:System.Activities.Statements.CancellationScope> działanie.  
   
 -   Czasomierze trwałe (<xref:System.Activities.Statements.Delay> działania).  
   
@@ -129,25 +130,25 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
 |Niestandardowe śledzenia|Przykład obejmuje uczestnika niestandardowych śledzenia, który zapisuje historię `HiringRequestProcess` (to rejestruje czynności zostały wykonane, kto i kiedy). Kod źródłowy jest w folderze śledzenia HiringRequestService.|HiringRequestService|  
 |Śledzenie zdarzeń systemu Windows|Dostarczane przez system śledzenia zdarzeń systemu Windows jest skonfigurowany w pliku App.config w usłudze HiringRequestService.|HiringRequestService|  
 |Kompozycja działań|Definicja proces używa wolnego skład <xref:System.Activities.Activity>. Schemat blokowy zawiera kilka sekwencji i działania równoległe, które jednocześnie zawierać innych działań (i tak dalej).|HiringRequestService|  
-|Działania równoległe|-   <xref:System.Activities.Statements.ParallelForEach%601>Służy do rejestrowania w skrzynce odbiorczej Prezes i menedżerów HR równoległe (oczekiwanie na menedżerów dwóch HR zatwierdzenia kroku).<br />-   <xref:System.Activities.Statements.Parallel>Służy do wykonywania niektórych zadań oczyszczania w krokach ukończone i odrzucone|HiringRequestService|  
+|Działania równoległe|-   <xref:System.Activities.Statements.ParallelForEach%601> Służy do rejestrowania w skrzynce odbiorczej Prezes i menedżerów HR równoległe (oczekiwanie na menedżerów dwóch HR zatwierdzenia kroku).<br />-   <xref:System.Activities.Statements.Parallel> Służy do wykonywania niektórych zadań oczyszczania w krokach ukończone i odrzucone|HiringRequestService|  
 |Anulowanie modelu|Schemat blokowy używa <xref:System.Activities.Statements.CancellationScope> można utworzyć zachowania anulowania (w tym przypadku nie niektórych oczyszczania.)|HiringRequestService|  
-|Uczestnika trwałości klienta|`HiringRequestPersistenceParticipant`zapisuje dane z zmiennej przepływu pracy do tabeli w bazie danych Contoso HR.|HiringRequestService|  
-|Usługi przepływu pracy|`ResumeRequestService`zaimplementowano przy użyciu usługi przepływu pracy. Informacje o definicji i usługi przepływu pracy znajduje się w ResumeRequestService.xamlx. Usługa jest skonfigurowana do używania trwałości i śledzenia.|ResumeRequestService|  
-|Czasomierze trwałych|`ResumeRequestService`używa czasomierze trwałe, aby zdefiniować czas trwania księgowej zlecenia (po przekroczeniu limitu czasu, księgowanie zadania jest zamknięty).|ResumeRequestService|  
-|Transakcje|<xref:System.Activities.Statements.TransactionScope>Służy do zapewnienia spójności danych w ramach wykonania kilku czynności (po odebraniu nowego resume).|ResumeRequestService|  
+|Uczestnika trwałości klienta|`HiringRequestPersistenceParticipant` zapisuje dane z zmiennej przepływu pracy do tabeli w bazie danych Contoso HR.|HiringRequestService|  
+|Usługi przepływu pracy|`ResumeRequestService` zaimplementowano przy użyciu usługi przepływu pracy. Informacje o definicji i usługi przepływu pracy znajduje się w ResumeRequestService.xamlx. Usługa jest skonfigurowana do używania trwałości i śledzenia.|ResumeRequestService|  
+|Czasomierze trwałych|`ResumeRequestService` używa czasomierze trwałe, aby zdefiniować czas trwania księgowej zlecenia (po przekroczeniu limitu czasu, księgowanie zadania jest zamknięty).|ResumeRequestService|  
+|Transakcje|<xref:System.Activities.Statements.TransactionScope> Służy do zapewnienia spójności danych w ramach wykonania kilku czynności (po odebraniu nowego resume).|ResumeRequestService|  
 |Transakcje|Uczestnika trwałości niestandardowe (`HiringRequestPersistenceParticipant`) i uczestnika niestandardowych śledzenia (`HistoryFileTrackingParticipant`) Użyj tej samej transakcji.|HiringRequestService|  
 |Przy użyciu [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|Przepływy pracy są dostępne z dwóch [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Magazyn danych  
  Dane są przechowywane w bazie danych programu SQL Server o nazwie `ContosoHR` (skrypt służący do tworzenia tej bazy danych znajduje się w `DbSetup` folderu). Wystąpienia przepływu pracy są przechowywane w bazie danych programu SQL Server o nazwie `InstanceStore` (skrypty służące do tworzenia w magazynie wystąpień są częścią [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dystrybucji).  
   
- Obie bazy danych są tworzone przez uruchomienie skryptu Setup.cmd z [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] wiersza polecenia.  
+ Obie bazy danych są tworzone przez uruchomienie skryptu Setup.cmd z wiersza polecenia programu Visual Studio.  
   
 ## <a name="running-the-sample"></a>Uruchomiona próbki  
   
 #### <a name="to-create-the-databases"></a>Do tworzenia baz danych  
   
-1.  Otwórz [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] wiersza polecenia.  
+1.  Otwórz wiersz polecenia programu Visual Studio.  
   
 2.  Przejdź do folderu próbki.  
   
@@ -157,7 +158,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Aby skonfigurować rozwiązanie do wykonania  
   
-1.  Uruchom [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] jako administrator. Otwórz HiringRequest.sln.  
+1.  Uruchom program Visual Studio jako administrator. Otwórz HiringRequest.sln.  
   
 2.  Kliknij prawym przyciskiem myszy rozwiązanie w **Eksploratora rozwiązań** i wybierz **właściwości**.  
   
@@ -221,7 +222,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
   
-1.  Upewnij się, że uruchamiasz [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] z uprawnieniami administratora.  
+1.  Upewnij się, że używasz programu Visual Studio z uprawnieniami administratora.  
   
 2.  W przypadku niepowodzenia rozwiązania do tworzenia sprawdzić następujące kwestie:  
   
@@ -237,7 +238,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
         2.  Kliknij prawym przyciskiem myszy **Contoso** i wybierz **odwołania sieci Web/usługa aktualizacji**.  
   
-        3.  Ponownie skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+        3.  Ponownie skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B w programie Visual Studio.  
   
 ## <a name="uninstalling"></a>Odinstalowanie  
   

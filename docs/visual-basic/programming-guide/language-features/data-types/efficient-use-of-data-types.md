@@ -1,11 +1,12 @@
 ---
-title: "Skuteczne stosowanie typów danych (Visual Basic)"
-ms.custom: 
+title: Skuteczne stosowanie typów danych (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - performance, data type efficiency
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0e13a1d61aacb06eb336c39aab969847127dfc67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4cac585cdc3072d595d2446e1937678f9ab03335
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Skuteczne stosowanie typów danych (Visual Basic)
 Niezadeklarowany zmiennych i zmiennych zadeklarowanych bez typu danych są przypisane `Object` — typ danych. To ułatwia szybkie pisania programów, ale może to spowodować ich do wykonania wolniej.  
@@ -41,7 +42,7 @@ Niezadeklarowany zmiennych i zmiennych zadeklarowanych bez typu danych są przyp
 -   Wynikiem szybsze wykonywanie kodu.  
   
 ## <a name="most-efficient-data-types"></a>Najbardziej efektywne typy danych  
- Zmienne, które nigdy nie zawierają ułamków typy całkowite danych są bardziej wydajne niż nonintegral typów. W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Integer` i `UInteger` są najbardziej efektywny typy liczbowe.  
+ Zmienne, które nigdy nie zawierają ułamków typy całkowite danych są bardziej wydajne niż nonintegral typów. W języku Visual Basic `Integer` i `UInteger` są najbardziej efektywny typy liczbowe.  
   
  Liczb ułamkowych `Double` jest najbardziej wydajnym typu danych, ponieważ procesorów na platformach bieżącego wykonywania operacji zmiennoprzecinkowych w podwójnej precyzji. Jednak operacje przy użyciu `Double` nie są tak szybko, jak w przypadku typów całkowitych, takich jak `Integer`.  
   
@@ -62,6 +63,6 @@ Protected s As String
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
  <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Numeryczne typy danych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
+ [Typy danych liczbowych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
  [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Korzystanie z IntelliSense](/visualstudio/ide/using-intellisense)
+ [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)

@@ -1,11 +1,12 @@
 ---
-title: "Stała i typy literałów (Visual Basic)"
-ms.custom: 
+title: Stała i typy literałów (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declaring constants [Visual Basic], literal data types
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 554753e26d185593ce43b741b3b2f9e3cb1ad6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58fa1e8c6c659c80cd7998a88d07849ea223750f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Stała i typy literałów (Visual Basic)
 Literał jest wartość, która jest wyrażona jako samej siebie, a nie wartość zmiennej lub wynik wyrażenia, takich jak numer 3 lub ciąg "Hello". Stała jest znaczącą nazwę, która ma miejsce literału i zachowuje tej samej wartości w programie, w przeciwieństwie do zmiennej, którego wartość może zmienić.  
@@ -53,7 +54,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- Otaczający znaków i wpisz znaki dostępne w poniższej tabeli [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Poniższej tabeli otaczającego znaków i znaki typu są dostępne w języku Visual Basic.  
   
 |Typ danych|Znak otaczającego|Znak typu dołączany|  
 |---|---|---|  
@@ -71,12 +72,12 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
 ## <a name="see-also"></a>Zobacz też  
  [Stałe zdefiniowane przez użytkownika](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
- [Porady: deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
- [Stałe — Przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Option Explicit — instrukcja](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Enumerations — Przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
+ [Instrukcje: deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
+ [Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Explicit, instrukcja](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
  [Porady: deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
- [Wyliczenie i kwantyfikacja nazwy](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)

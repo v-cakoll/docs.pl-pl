@@ -1,11 +1,12 @@
 ---
-title: "Przekazywanie argumentów według wartości i według odwołania (Visual Basic)"
-ms.custom: 
+title: Przekazywanie argumentów według wartości i według odwołania (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Przekazywanie argumentów według wartości i według odwołania (Visual Basic)
-W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], argument można przekazać do procedury *przez wartość* lub *przez odwołanie*. Jest to nazywane *przekazywanie mechanizm*, i określa, czy procedurę można zmodyfikować elementu programistycznego bazowy argumentu w wywoływanym kodzie. Deklaracja procedury określa mechanizm przekazywania dla każdego parametru, określając [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe.  
+W języku Visual Basic, argument można przekazać do procedury *przez wartość* lub *przez odwołanie*. Jest to nazywane *przekazywanie mechanizm*, i określa, czy procedurę można zmodyfikować elementu programistycznego bazowy argumentu w wywoływanym kodzie. Deklaracja procedury określa mechanizm przekazywania dla każdego parametru, określając [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe.  
   
 ## <a name="distinctions"></a>Różnice  
  Podczas przekazywania argumentów do procedury, należy pamiętać o kilka różnych różnice, które współdziałają ze sobą:  
@@ -45,7 +46,7 @@ W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], argument można przekazać do pro
   
 -   **Ochrona**. Wybierając między mechanizmy dwóch przekazywania, najważniejszych kryterium jest narażenia wywoływania zmienne można zmienić. Zaletą przekazywaniem argumentu `ByRef` jest procedura może zwracać wartości do wywołującego kodu za pomocą tego argumentu. Zaletą przekazywaniem argumentu `ByVal` jest chroni zmienną, zmianie przez procedurę.  
   
--   **Wydajność**. Mimo że mechanizm przekazywania może wpływać na wydajność kodu, różnica polega na tym zazwyczaj nieistotne. Jedynym wyjątkiem jest to typ wartości przekazane `ByVal`. W takim przypadku [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kopiuje zawartość danych argumentu. W związku z tym dla typu duża wartość przykład struktury, może być skuteczniejsza przekazywany `ByRef`.  
+-   **Wydajność**. Mimo że mechanizm przekazywania może wpływać na wydajność kodu, różnica polega na tym zazwyczaj nieistotne. Jedynym wyjątkiem jest to typ wartości przekazane `ByVal`. W takim przypadku Visual Basic kopiuje zawartość danych argumentu. W związku z tym dla typu duża wartość przykład struktury, może być skuteczniejsza przekazywany `ByRef`.  
   
      Dla typów odwołań tylko wskaźnik do danych jest skopiowany (cztery bajtów na 32-bitowych platform ośmiu bajtów na platformach 64-bitowe). W związku z tym można przekazywać argumenty typu `String` lub `Object` przez wartość bez szkody wydajności.  
   
@@ -54,7 +55,7 @@ W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], argument można przekazać do pro
   
  Jeśli parametr jest zadeklarowany za pomocą `ByRef`, kod wywołujący może wymusić mechanizm `ByVal` umieszczając Nazwa argumentu w nawiasach w wywołaniu. Aby uzyskać więcej informacji, zobacz [porady: Wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- Domyślnie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ma argument jest przekazywany przez wartość.  
+ Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości.  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Kiedy do przekazywania argumentu przez wartość  
   
@@ -79,9 +80,9 @@ W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], argument można przekazać do pro
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Porady: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
- [Porady: Zmienianie wartości argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)  
- [Porady: chronienie argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)  
- [Porady: Wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)  
+ [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
+ [Instrukcje: zmiana wartości argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)  
+ [Instrukcje: ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)  
+ [Instrukcje: wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)  
  [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)  
- [Typy wartości i typy referencyjne](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+ [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

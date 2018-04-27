@@ -1,11 +1,12 @@
 ---
-title: "Rozwiązywanie problemów związanych z tablicami (Visual Basic)"
-ms.custom: 
+title: Rozwiązywanie problemów związanych z tablicami (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting arrays
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e5c00c2b531dd019a207b16ffcac95424bfe450
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Rozwiązywanie problemów związanych z tablicami (Visual Basic)
 Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pracy z tablicami.  
@@ -60,10 +61,10 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pr
  Proces inicjowania tablicy przypisuje górną i dolną granicę każdego wymiaru. Nieprawidłowy indeks lub indeks, dla każdego wymiaru, należy określić co dostępu do elementu tablicy. W przypadku indeksu poniżej dolna lub powyżej górnej granicy, <xref:System.IndexOutOfRangeException> wyników wyjątku. Kompilator nie może wykryć wystąpił błąd, więc wystąpi błąd w czasie wykonywania.  
   
 ### <a name="determining-bounds"></a>Określanie granic  
- Jeśli inny składnik przekazuje tablicy do kodu, na przykład jako argument procedury nie znasz rozmiaru tablicy lub długości jej wymiarów. Zawsze należy określić górną granicę każdego wymiaru tablicy można było uzyskać dostępu do żadnych elementów. Jeśli tablica został utworzony w sposób inny niż [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` klauzuli, dolna granica może być inną niż 0 i jest najbezpieczniejszy określić, że dolna granica również.  
+ Jeśli inny składnik przekazuje tablicy do kodu, na przykład jako argument procedury nie znasz rozmiaru tablicy lub długości jej wymiarów. Zawsze należy określić górną granicę każdego wymiaru tablicy można było uzyskać dostępu do żadnych elementów. Jeśli tablica został utworzony za pomocą środków innych niż języka Visual Basic `New` klauzuli, dolna granica może być inną niż 0 i jest najbezpieczniejszy określić, że dolna granica również.  
   
 ### <a name="specifying-the-dimension"></a>Określanie wymiaru  
- Podczas określania granice tablicy wielowymiarowej, należy zadbać określania wymiaru. `dimension` Parametry <xref:System.Array.GetLowerBound%2A> i <xref:System.Array.GetUpperBound%2A> metody są oparte na 0, podczas `Rank` parametry [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> i <xref:Microsoft.VisualBasic.Information.UBound%2A> funkcje są oparte na 1.  
+ Podczas określania granice tablicy wielowymiarowej, należy zadbać określania wymiaru. `dimension` Parametry <xref:System.Array.GetLowerBound%2A> i <xref:System.Array.GetUpperBound%2A> metody są oparte na 0, podczas `Rank` parametry Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> i <xref:Microsoft.VisualBasic.Information.UBound%2A> funkcje są oparte na 1.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  

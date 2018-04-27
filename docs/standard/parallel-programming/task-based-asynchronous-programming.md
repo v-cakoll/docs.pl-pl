@@ -1,12 +1,12 @@
 ---
 title: Programowanie asynchroniczne opartego na zadaniach
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e5367c8a786d720cdf3394922527020f8d4d47a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne opartego na zadaniach
 Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, który reprezentuje operację asynchroniczną. W pewnym sensie zadania jest podobny wątku lub <xref:System.Threading.ThreadPool> pracy elementu, ale na wyższym poziomie abstrakcji. Termin *równoległość zadań* odwołuje się do jednego lub więcej zadań niezależnie od uruchomione jednocześnie. Zadania zapewniają dwie podstawowe korzyści:  
@@ -74,7 +74,7 @@ Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, któr
  [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
  [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
   
- <xref:System.Threading.Tasks.Task>i <xref:System.Threading.Tasks.Task%601> każdy ujawnia statycznego <xref:System.Threading.Tasks.Task.Factory%2A> właściwość, która zwraca wystąpienie domyślne <xref:System.Threading.Tasks.TaskFactory>, dzięki czemu można wywołać metodę jako `Task.Factory.StartNew()`. Ponadto w poniższym przykładzie ponieważ zadania są typu <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, każdy z nich ma publiczny <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> właściwość, która zawiera wynikiem obliczenia. Zadania są wykonywane asynchroniczne i mogą być kończone w dowolnej kolejności. Jeśli <xref:System.Threading.Tasks.Task%601.Result%2A> przed zakończeniem obliczenia dostępu do właściwości, właściwość blokuje wątek wywołujący, dopóki wartość jest dostępna.  
+ <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> każdy ujawnia statycznego <xref:System.Threading.Tasks.Task.Factory%2A> właściwość, która zwraca wystąpienie domyślne <xref:System.Threading.Tasks.TaskFactory>, dzięki czemu można wywołać metodę jako `Task.Factory.StartNew()`. Ponadto w poniższym przykładzie ponieważ zadania są typu <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, każdy z nich ma publiczny <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> właściwość, która zawiera wynikiem obliczenia. Zadania są wykonywane asynchroniczne i mogą być kończone w dowolnej kolejności. Jeśli <xref:System.Threading.Tasks.Task%601.Result%2A> przed zakończeniem obliczenia dostępu do właściwości, właściwość blokuje wątek wywołujący, dopóki wartość jest dostępna.  
   
  [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
  [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]  
@@ -102,7 +102,7 @@ Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, któr
 ## <a name="task-creation-options"></a>Opcje tworzenia zadań  
  Większość interfejsów API, które tworzenie zadań podać przeciążenia, które akceptują <xref:System.Threading.Tasks.TaskCreationOptions> parametru. Określając jedną z poniższych opcji, możesz wskazać harmonogramowi zadań, jak zaplanować zadanie w puli wątków. Poniższa tabela zawiera różne opcje tworzenia zadania.  
   
-|<xref:System.Threading.Tasks.TaskCreationOptions>wartość parametru|Opis|  
+|<xref:System.Threading.Tasks.TaskCreationOptions> Wartość parametru|Opis|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Domyślna, gdy nie określono żadnej opcji. Harmonogram używa domyślnej heurystyki do zaplanowania zadania.|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Określa, że zadanie powinno zostać zaplanowane tak, aby zadania utworzone wcześniej były wykonywane wcześniej, a zadania utworzone później były wykonywane później.|  
@@ -138,7 +138,7 @@ Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, któr
 ## <a name="creating-task-continuations"></a>Tworzenie zadań kontynuacje  
  <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> metody umożliwiają określenie zadania w celu uruchomienia, gdy *poprzedzających zadań* zakończeniu. Delegat zadania kontynuacji jest przekazywany odwołanie do zadania poprzedzających, dzięki czemu można zbadać stanu zadania poprzedzających i, pobierając zaletą <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> właściwości, można użyć danych wyjściowych Antecedent jako dane wejściowe dla kontynuacji.  
   
- W poniższym przykładzie `getData` zadanie zostało uruchomione przez wywołanie do <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> metody. `processData` Zadanie zostało uruchomione automatycznie po `getData` zakończeniu i `displayData` po uruchomieniu `processData` zakończeniu. `getData`Tworzy tablicy liczba całkowita, która jest dostępna do `processData` zadań za pomocą `getData` zadania <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> właściwości. `processData` Zadanie przetwarza tablicy i zwraca wynik, którego typ jest wywnioskowany z zwracany typ wyrażenia lambda przekazany do <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> metody. `displayData` Zadanie wykonywane automatycznie po `processData` zakończeniu i <xref:System.Tuple%603> obiektu zwróconego przez `processData` Wyrażenie lambda jest dostępny dla `displayData` zadań za pomocą `processData` zadania <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> Właściwość. `displayData` Zadanie trwa wynik `processData` zadań i daje wyniki o typie jest wywnioskowany w podobny sposób i który ma zostać udostępnione programu w <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości.  
+ W poniższym przykładzie `getData` zadanie zostało uruchomione przez wywołanie do <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> metody. `processData` Zadanie zostało uruchomione automatycznie po `getData` zakończeniu i `displayData` po uruchomieniu `processData` zakończeniu. `getData` Tworzy tablicy liczba całkowita, która jest dostępna do `processData` zadań za pomocą `getData` zadania <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> właściwości. `processData` Zadanie przetwarza tablicy i zwraca wynik, którego typ jest wywnioskowany z zwracany typ wyrażenia lambda przekazany do <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> metody. `displayData` Zadanie wykonywane automatycznie po `processData` zakończeniu i <xref:System.Tuple%603> obiektu zwróconego przez `processData` Wyrażenie lambda jest dostępny dla `displayData` zadań za pomocą `processData` zadania <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> Właściwość. `displayData` Zadanie trwa wynik `processData` zadań i daje wyniki o typie jest wywnioskowany w podobny sposób i który ma zostać udostępnione programu w <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości.  
   
  [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
  [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]  
@@ -188,10 +188,10 @@ Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, któr
   
  Niektóre przeciążenia pozwalają określić limit czasu i inne wykorzystują dodatkowe <xref:System.Threading.CancellationToken> jako parametr wejściowy, dzięki czemu można anulować sam czas oczekiwania albo programowo lub w odpowiedzi na użytkownika danych wejściowych.  
   
- Jeśli po odczekaniu zadania można niejawnie czekać, aż wszystkie elementy podrzędne danego zadania, które zostały utworzone przy użyciu <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcji. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>Zwraca natychmiast, jeśli zadanie zostało już ukończone. Wszelkie wyjątki zgłoszone przez zadanie zostanie zgłoszony przez <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> metody, nawet jeśli <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> wywołano metodę po zadanie zostało zakończone.  
+ Jeśli po odczekaniu zadania można niejawnie czekać, aż wszystkie elementy podrzędne danego zadania, które zostały utworzone przy użyciu <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcji. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> Zwraca natychmiast, jeśli zadanie zostało już ukończone. Wszelkie wyjątki zgłoszone przez zadanie zostanie zgłoszony przez <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> metody, nawet jeśli <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> wywołano metodę po zadanie zostało zakończone.  
   
 ## <a name="composing-tasks"></a>Tworzenie zadań  
- <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> klasy podać kilka metod, które mogą ułatwić utworzenie wielu zadań do zaimplementowania typowych wzorców i na lepsze wykorzystanie funkcji asynchronicznych języka, które znajdują się w języku C# [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]i F #. W tej sekcji opisano <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, i <xref:System.Threading.Tasks.Task.FromResult%2A> metody.  
+ <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> klasy podać kilka metod, które mogą ułatwić utworzenie wielu zadań, aby zaimplementować typowe wzorce i na lepsze wykorzystanie funkcji asynchronicznych języka, które są udostępniane przez C#, VB i F #. W tej sekcji opisano <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, i <xref:System.Threading.Tasks.Task.FromResult%2A> metody.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> Metody asynchronicznie oczekuje na wielu <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektów, aby zakończyć. Zapewnia przeciążone wersje, które umożliwiają czekanie na niejednolite zestawy zadań. Na przykład możesz poczekać na wielu <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty z jednej metody wywołania.  
@@ -279,4 +279,4 @@ Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, któr
   
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
- [Programowanie równoległe w środowisku .NET Framework — przykłady](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [Programowanie równoległe w środowisku .NET Framework — przykłady](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

@@ -1,11 +1,12 @@
 ---
-title: "Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów (Visual Basic)"
-ms.custom: 
+title: 'Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37d5b47f06bad1c2a8871168c5642663aedcccf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów (Visual Basic)
 Jeśli procedura ma [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametr, nie można zdefiniować przeciążonego wersji biorąc tablicą jednowymiarową dla tablicy parametrów. Aby uzyskać więcej informacji, zobacz "Niejawne Overloads dla parametru ParamArray" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
@@ -53,7 +54,7 @@ Jeśli procedura ma [ParamArray](../../../../visual-basic/language-reference/mod
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- Kod w wersjach przeciążone nie ma do sprawdzenia, czy kod wywołujący dostarczonych wartości co najmniej jeden `ParamArray` parametr, lub jeśli tak, jak wiele. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Formant przekazuje do wersji pasujących do wywoływania listy argumentów.  
+ Kod w wersjach przeciążone nie ma do sprawdzenia, czy kod wywołujący dostarczonych wartości co najmniej jeden `ParamArray` parametr, lub jeśli tak, jak wiele. Visual Basic przejmuje kontrolę wersji pasujących do wywoływania listy argumentów.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ponieważ procedura o `ParamArray` parametru jest odpowiednikiem zestaw zastąpionej wersji, nie mogą przeciążać takiej procedury z listą parametrów odpowiadający żadnego z tych niejawne przeładowania. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
@@ -67,8 +68,8 @@ Jeśli procedura ma [ParamArray](../../../../visual-basic/language-reference/mod
  [Parametry opcjonalne](./optional-parameters.md)  
  [Tablice parametrów](./parameter-arrays.md)  
  [Przeciążanie procedury](./procedure-overloading.md)  
- [Procedury rozwiązywania problemów](./troubleshooting-procedures.md)  
- [Porady: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Porady: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
- [Porady: przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)  
+ [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
  [Rozpoznanie przeciążenia](./overload-resolution.md)

@@ -1,12 +1,13 @@
 ---
-title: "Przegląd Dane wejściowe"
-ms.custom: 
+title: Przegląd Dane wejściowe
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,19 +32,20 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b10890cc433e1adf72b7e26c91e919bd239942b8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
-<a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu udostępnia zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] uzyskiwania danych wejściowych z różnych urządzeń, w tym myszy, klawiatury, touch i pióra. W tym temacie opisano usług świadczonych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę wejściowych systemów.  
+<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu udostępnia zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] uzyskiwania danych wejściowych z różnych urządzeń, w tym myszy, klawiatury, touch i pióra. W tym temacie opisano usług świadczonych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę wejściowych systemów.  
   
   
 <a name="input_api"></a>   
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Input.Mouse> i <xref:System.Windows.Input.Keyboard> klasy są opisane bardziej szczegółowo w tym omówieniu.  
   
 ### <a name="stylus-input"></a>Wprowadzania danych piórem  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ma zintegrowanej obsłudze <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Jest piórem, wprowadzone popularnych przez [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje można traktować pióro jako myszy za pomocą myszy [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], ale [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia również pióro abstrakcji urządzenia, które korzystają z modelu, które są podobne do klawiatury i myszy.  Wszystkie powiązane pióro [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zawiera wyrazu "Pióro".  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma zintegrowanej obsłudze <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Jest piórem, wprowadzone popularnych przez [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje można traktować pióro jako myszy za pomocą myszy [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], ale [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia również pióro abstrakcji urządzenia, które korzystają z modelu, które są podobne do klawiatury i myszy.  Wszystkie powiązane pióro [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zawiera wyrazu "Pióro".  
   
  Ponieważ pióro może działać jako myszy, aplikacje, które obsługują tylko myszą można wciąż uzyskać pewnego poziomu wsparcia pióro automatycznie. Gdy pióro jest używany w taki sposób, aplikacja ma możliwość obsługi zdarzenia odpowiednie pióro i obsługuje odpowiednie zdarzenie myszy. Ponadto wyższego poziomu usług, takich jak odręczne są również dostępne za pośrednictwem abstrakcji urządzenia pióra.  Aby uzyskać więcej informacji na temat jako dane wejściowe, zobacz [wprowadzenie odręczne](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).  
   
@@ -80,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
  Zdarzenia routing jest proces przesyłania zdarzeń do wielu elementów, dzięki czemu określonego obiektu lub element marszruty możliwość oferuje znaczne odpowiedzi (za pośrednictwem obsługę) na zdarzenie, które mogą mieć zostały kwerendą źródłową inny element.  Kierowane zdarzenia, użyj jednej z trzech mechanizmów routingu: bezpośrednie, propagacji i tunelowania.  W routingu bezpośredniego elementu źródła jest jedynym elementem powiadomiony i zdarzenie nie jest kierowany do innych elementów. Jednak bezpośredniego kierowanego zdarzenia nadal ma pewne dodatkowe możliwości, które występują tylko dla kierowane zdarzenia w przeciwieństwie do standardowego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzenia. Propagacji działa w górę drzewa elementu przez pierwszy powiadomienie element, który następnie powierzając jej ich konserwację zdarzenia, elementu nadrzędnego i tak dalej.  Tunelowanie rozpoczyna się od katalogu głównego drzewa elementu i działa, kończąc oryginalny element źródła.  Aby uzyskać więcej informacji na temat kierowane zdarzenia, zobacz [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zdarzenia wejściowe są zazwyczaj dostępne w parach, które składa się z tunelowania zdarzeń i zdarzeń propagacji.  Tunelowania zdarzenia są odróżniane ze zdarzeń propagacji z prefiksem "W wersji zapoznawczej".  Na przykład <xref:System.Windows.Input.Mouse.PreviewMouseMove> jest wersja tunelowania zdarzenie przesunięcia kursora myszy i <xref:System.Windows.Input.Mouse.MouseMove> jest propagacji wersji tego zdarzenia. To zdarzenie parowanie jest Konwencji jest zaimplementowana na poziomie elementu, który nie jest możliwość dostępu do właściwych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń systemu. Aby uzyskać więcej informacji, zobacz sekcję zdarzeń wprowadzania WPF w [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia wejściowe są zazwyczaj dostępne w parach, które składa się z tunelowania zdarzeń i zdarzeń propagacji.  Tunelowania zdarzenia są odróżniane ze zdarzeń propagacji z prefiksem "W wersji zapoznawczej".  Na przykład <xref:System.Windows.Input.Mouse.PreviewMouseMove> jest wersja tunelowania zdarzenie przesunięcia kursora myszy i <xref:System.Windows.Input.Mouse.MouseMove> jest propagacji wersji tego zdarzenia. To zdarzenie parowanie jest Konwencji jest zaimplementowana na poziomie elementu, który nie jest możliwość dostępu do właściwych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń systemu. Aby uzyskać więcej informacji, zobacz sekcję zdarzeń wprowadzania WPF w [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
 <a name="handling_input_events"></a>   
 ## <a name="handling-input-events"></a>Obsługa zdarzeń wejściowych  
- Dla danych wejściowych w elemencie, program obsługi zdarzeń musi być skojarzony z danego zdarzenia.  W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest bezpośrednie: odwoływać się do nazwy zdarzenia jako atrybut elementu nasłuchiwania dla tego zdarzenia.  Następnie należy ustawić wartość atrybutu nazwę zdefiniowanego, na podstawie obiektu delegowanego obsługi zdarzeń.  Program obsługi zdarzeń musi być napisana w kodzie takich jak [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] i może być uwzględniony w pliku CodeBehind.  
+ Dla danych wejściowych w elemencie, program obsługi zdarzeń musi być skojarzony z danego zdarzenia.  W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest bezpośrednie: odwoływać się do nazwy zdarzenia jako atrybut elementu nasłuchiwania dla tego zdarzenia.  Następnie należy ustawić wartość atrybutu nazwę zdefiniowanego, na podstawie obiektu delegowanego obsługi zdarzeń.  Program obsługi zdarzeń musi być napisana w kodzie, takich jak C# i może być uwzględniony w pliku CodeBehind.  
   
  Zdarzenia klawiatury występują, gdy system operacyjny zgłasza klucza akcje, które są wykonywane, gdy fokus klawiatury znajduje się na element. Myszy i Pióro zdarzenia każdego można podzielić na dwie kategorie: zdarzenia, które zmienia raportu w pozycję wskaźnika względem elementu i zdarzenia, których raport zmienia się w stanie przycisków urządzenia.  
   
@@ -149,14 +151,14 @@ ms.lasthandoff: 12/22/2017
   
 <a name="touch_and_manipulation"></a>   
 ## <a name="touch-and-manipulation"></a>Manipulowanie i dotykiem  
- Nowy sprzęt i interfejsu API w systemie operacyjnym Windows 7 umożliwiają aplikacji na odbieranie danych wejściowych z wielu poprawek jednocześnie. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Umożliwia aplikacjom wykrywanie i reagowanie na touch w sposób podobny do reagowania na innych danych wejściowych, takich jak mysz lub klawiatura, przez wywoływanie zdarzeń po wystąpieniu touch.  
+ Nowy sprzęt i interfejsu API w systemie operacyjnym Windows 7 umożliwiają aplikacji na odbieranie danych wejściowych z wielu poprawek jednocześnie. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia aplikacjom wykrywanie i reagowanie na touch w sposób podobny do reagowania na innych danych wejściowych, takich jak mysz lub klawiatura, przez wywoływanie zdarzeń po wystąpieniu touch.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia dwa typy zdarzeń, gdy wystąpi touch: touch zdarzenia i manipulowania nimi. Zdarzenia Touch udostępniają nieprzetworzone dane dotyczące poszczególnych palca na ekran dotykowy i jego ruchu. Manipulowanie zdarzenia interpretowanie danych wejściowych jako pewne akcje. W tej sekcji omówiono obu typów zdarzeń.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia dwa typy zdarzeń, gdy wystąpi touch: touch zdarzenia i manipulowania nimi. Zdarzenia Touch udostępniają nieprzetworzone dane dotyczące poszczególnych palca na ekran dotykowy i jego ruchu. Manipulowanie zdarzenia interpretowanie danych wejściowych jako pewne akcje. W tej sekcji omówiono obu typów zdarzeń.  
   
 ### <a name="prerequisites"></a>Wymagania wstępne  
  Potrzebne są następujące składniki umożliwiające tworzenie aplikacji, która odpowiada touch.  
   
--   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].,  
+-   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
   
 -   Windows 7.  
   
@@ -253,7 +255,7 @@ Touch zdarzenia
   
  Jednocześnie może występować więcej niż jeden typ manipulacji.  
   
- Gdy powoduje, że obiekty odpowiedzieć na manipulacje, może mieć obiektu ma bezwładności. Ułatwia to symulować świecie obiektów. Na przykład po naciśnięciu książkę w tabeli, jeśli wypychanych twarde wystarczająco książki będzie można przenieść po zwolnieniu go. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]można symulować to zachowanie przez wywoływanie zdarzeń manipulowania po palców użytkownika zwalnia obiekt.  
+ Gdy powoduje, że obiekty odpowiedzieć na manipulacje, może mieć obiektu ma bezwładności. Ułatwia to symulować świecie obiektów. Na przykład po naciśnięciu książkę w tabeli, jeśli wypychanych twarde wystarczająco książki będzie można przenieść po zwolnieniu go. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można symulować to zachowanie przez wywoływanie zdarzeń manipulowania po palców użytkownika zwalnia obiekt.  
   
  Aby uzyskać informacje o sposobie tworzenia aplikacji, która umożliwia użytkownikowi przenoszenie, zmienianie rozmiaru i obrót obiektu, zobacz [wskazówki: tworzenie swój pierwszy Touch aplikacji](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
   
@@ -301,9 +303,9 @@ Manipulowanie zdarzenia
   
 |Zdarzenia, które jest wywoływany Anuluj|Zdarzenia myszy występujących na dane wejściowe, który już wystąpił|  
 |----------------------------------------|-----------------------------------------------------------------|  
-|<xref:System.Windows.UIElement.ManipulationStarting>i<xref:System.Windows.UIElement.ManipulationStarted>|Wskaźnik myszy w dół zdarzenia.|  
+|<xref:System.Windows.UIElement.ManipulationStarting> I <xref:System.Windows.UIElement.ManipulationStarted>|Wskaźnik myszy w dół zdarzenia.|  
 |<xref:System.Windows.UIElement.ManipulationDelta>|Zdarzenia przenoszenia myszy i naciśnięcia przycisku myszy.|  
-|<xref:System.Windows.UIElement.ManipulationInertiaStarting>i<xref:System.Windows.UIElement.ManipulationCompleted>|Wskaźnik myszy w dół, przenieś wskaźnik myszy i mysz zdarzeń.|  
+|<xref:System.Windows.UIElement.ManipulationInertiaStarting> I <xref:System.Windows.UIElement.ManipulationCompleted>|Wskaźnik myszy w dół, przenieś wskaźnik myszy i mysz zdarzeń.|  
   
  Należy pamiętać, że jeśli wywołujesz <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> kiedy operowanie bezwładności, metoda zwraca `false` i dane wejściowe nie wygenerował zdarzeń myszy.  
   
@@ -330,7 +332,7 @@ Touch i manipulowania nimi zdarzenia
 ### <a name="keyboard-focus"></a>Fokus klawiatury  
  Fokus klawiatury odwołuje się do elementu, który otrzymuje klawiatury.  Może istnieć tylko jeden element na całej pulpitu, który ma fokus klawiatury.  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ma element, który ma fokus klawiatury <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> ustawioną `true`.  Statycznych <xref:System.Windows.Input.Keyboard> metoda <xref:System.Windows.Input.Keyboard.FocusedElement%2A> zwraca element, który aktualnie ma fokus klawiatury.  
   
- Fokus klawiatury można uzyskać, przechodząc do elementu lub przez kliknięcie przycisku myszy w przypadku niektórych elementów, takich jak <xref:System.Windows.Controls.TextBox>.  Fokus klawiatury również można uzyskać programistycznie przy użyciu <xref:System.Windows.Input.Keyboard.Focus%2A> metoda <xref:System.Windows.Input.Keyboard> klasy.  <xref:System.Windows.Input.Keyboard.Focus%2A>podejmuje próbę przekazania fokus klawiatury określonego elementu.  Zwrócony przez element <xref:System.Windows.Input.Keyboard.Focus%2A> jest element, który aktualnie ma fokus klawiatury.  
+ Fokus klawiatury można uzyskać, przechodząc do elementu lub przez kliknięcie przycisku myszy w przypadku niektórych elementów, takich jak <xref:System.Windows.Controls.TextBox>.  Fokus klawiatury również można uzyskać programistycznie przy użyciu <xref:System.Windows.Input.Keyboard.Focus%2A> metoda <xref:System.Windows.Input.Keyboard> klasy.  <xref:System.Windows.Input.Keyboard.Focus%2A> podejmuje próbę przekazania fokus klawiatury określonego elementu.  Zwrócony przez element <xref:System.Windows.Input.Keyboard.Focus%2A> jest element, który aktualnie ma fokus klawiatury.  
   
  Aby element, aby uzyskać fokus klawiatury <xref:System.Windows.UIElement.Focusable%2A> właściwości i <xref:System.Windows.UIElement.IsVisible%2A> musi mieć wartość właściwości **true**.  Niektóre klasy, takich jak <xref:System.Windows.Controls.Panel>, ma <xref:System.Windows.UIElement.Focusable%2A> ustawioną `false` domyślnie; w związku z tym należy ustawić tę właściwość na `true` Jeśli chcesz, aby ten element, aby można było uzyskać fokusu.  
   
@@ -375,11 +377,11 @@ Touch i manipulowania nimi zdarzenia
 ## <a name="commands"></a>Polecenia  
  Polecenia włączenia obsługi danych wejściowych na poziomie semantycznego więcej niż dane wejściowe urządzenia.  Polecenia są proste dyrektywy `Cut`, `Copy`, `Paste`, lub `Open`.  Polecenia są przydatne w przypadku scentralizowany logiki polecenia.  Tego samego polecenia mogą być używane z <xref:System.Windows.Controls.Menu>na <xref:System.Windows.Controls.ToolBar>, lub za pomocą skrótów klawiaturowych. Polecenia udostępniają mechanizm wyłączenie formantów, gdy polecenie staje się niedostępny.  
   
- <xref:System.Windows.Input.RoutedCommand>jest [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacja <xref:System.Windows.Input.ICommand>.  Gdy <xref:System.Windows.Input.RoutedCommand> jest wykonywane, <xref:System.Windows.Input.CommandManager.PreviewExecuted> i <xref:System.Windows.Input.CommandManager.Executed> zdarzenie jest zgłaszane w elemencie docelowym polecenia, które tunelu i bąbelków za pośrednictwem elementu drzewa, takich jak innych danych wejściowych.  Jeśli element docelowy polecenia nie jest ustawiona, element z fokusem klawiatury będzie elemencie docelowym polecenia.  Logika, który wykonuje polecenie jest dołączony do <xref:System.Windows.Input.CommandBinding>.  Gdy <xref:System.Windows.Input.CommandManager.Executed> zdarzeń osiągnie <xref:System.Windows.Input.CommandBinding> dla określonego polecenia <xref:System.Windows.Input.ExecutedRoutedEventHandler> na <xref:System.Windows.Input.CommandBinding> jest wywoływana.  Ten program obsługi wykonuje akcję polecenia.  
+ <xref:System.Windows.Input.RoutedCommand> jest [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacja <xref:System.Windows.Input.ICommand>.  Gdy <xref:System.Windows.Input.RoutedCommand> jest wykonywane, <xref:System.Windows.Input.CommandManager.PreviewExecuted> i <xref:System.Windows.Input.CommandManager.Executed> zdarzenie jest zgłaszane w elemencie docelowym polecenia, które tunelu i bąbelków za pośrednictwem elementu drzewa, takich jak innych danych wejściowych.  Jeśli element docelowy polecenia nie jest ustawiona, element z fokusem klawiatury będzie elemencie docelowym polecenia.  Logika, który wykonuje polecenie jest dołączony do <xref:System.Windows.Input.CommandBinding>.  Gdy <xref:System.Windows.Input.CommandManager.Executed> zdarzeń osiągnie <xref:System.Windows.Input.CommandBinding> dla określonego polecenia <xref:System.Windows.Input.ExecutedRoutedEventHandler> na <xref:System.Windows.Input.CommandBinding> jest wywoływana.  Ten program obsługi wykonuje akcję polecenia.  
   
  Aby uzyskać więcej informacji na wydawanie poleceń, zobacz [droższe omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia bibliotekę używanych poleceń, które składa się z <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, i <xref:System.Windows.Documents.EditingCommands>, lub można definiować własnych.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia bibliotekę używanych poleceń, które składa się z <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, i <xref:System.Windows.Documents.EditingCommands>, lub można definiować własnych.  
   
  Poniższy przykład przedstawia sposób konfigurowania <xref:System.Windows.Controls.MenuItem> tak, aby po kliknięciu wywoła <xref:System.Windows.Input.ApplicationCommands.Paste%2A> na <xref:System.Windows.Controls.TextBox>, przyjmuje <xref:System.Windows.Controls.TextBox> ma fokus klawiatury.  
   

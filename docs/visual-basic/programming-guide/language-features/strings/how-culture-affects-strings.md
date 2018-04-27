@@ -1,27 +1,28 @@
 ---
-title: "Wpływ kultury na ciągi w Visual Basic"
-ms.custom: 
+title: Wpływ kultury na ciągi w Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b61f008edc446445fd5873b6138b64f29e0b8b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c95dcc8d04725f7a072e8c8bc7fe058e53a95c05
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Wpływ kultury na ciągi w Visual Basic
-Ta strona pomocy opisano sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] używa kultury informacji na temat wykonywania konwersji ciągów i porównania.  
+Ta strona pomocy opisano, jak Visual Basic używa informacji o kulturze do wykonywania konwersji ciągów i porównania.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>Kiedy należy używać ciągów specyficzne dla kultury  
  Zazwyczaj powinien Użyj parametrów specyficzne dla kultury dla wszystkich danych, przedstawione i odczytywać użytkowników, użyj parametrów niezmiennej kultury dla danych wewnętrznych aplikacji.  
@@ -31,7 +32,7 @@ Ta strona pomocy opisano sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uż
  Jednak jeśli aplikacja prześle daty do centralnego serwera, należy sformatować ciągu zgodnie z jedną określoną kulturę, aby uniknąć pomylenia formaty daty innej.  
   
 ## <a name="culture-sensitive-functions"></a>Funkcje zależne od kultury  
- Wszystkie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] funkcji konwersji ciągów (z wyjątkiem `Str` i `Val` funkcje) informacji o kulturze aplikacji umożliwia upewnienie się, że konwersje i porównania są odpowiednie dla kultury użytkownik aplikacji.  
+ Wszystkie funkcje Konwersja ciągu języka Visual Basic (z wyjątkiem `Str` i `Val` funkcje) umożliwia upewnienie się, że konwersje i porównania są odpowiednie dla kultury aplikacji informacje o ustawieniach kulturowych aplikacji użytkownik.  
   
  Aby pomyślnie przy użyciu funkcji konwersji ciągów na aplikacje, które działają na komputerach z ustawieniami inną kulturę należy zrozumieć, jakie funkcje ustawienie określoną kulturę, a które wykorzystują bieżące ustawienie kultury. Zwróć uwagę, że aplikacja, ustawienia kultury domyślnie dziedziczone z ustawienia kultury, system operacyjny. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, i [funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
@@ -64,7 +65,7 @@ Ta strona pomocy opisano sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uż
   
 -   **Określanie, czy dwa ciągi wewnętrznych aplikacji dokładnie odpowiadać (zazwyczaj ze względów bezpieczeństwa).** Użyj operacji, które pominąć bieżącej kultury.  
   
- Można wykonać porównania z obu typów [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Strings.StrComp%2A> funkcji. Określ opcjonalny `Compare` argumentu, aby kontrolować typ porównania: `Text` dla większości danych wejściowych i wyjściowych `Binary` określania dokładne dopasowania.  
+ Można wykonać oba typy porównania z programem Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> funkcji. Określ opcjonalny `Compare` argumentu, aby kontrolować typ porównania: `Text` dla większości danych wejściowych i wyjściowych `Binary` określania dokładne dopasowania.  
   
  `StrComp` Funkcja zwróci liczbę całkowitą wskazującą relacji między dwa ciągi porównaniu na podstawie kolejności sortowania. Wartość dodatnią dla wyniku wskazuje, że pierwszy ciąg jest większy niż drugi ciąg. Wynik negatywny wskazuje pierwszy ciąg jest mniejszy, a następnie zero oznacza równość ciągi.  
   
@@ -79,9 +80,9 @@ Ta strona pomocy opisano sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uż
 |Wartość `comparisonType` argumentu|Typ porównania|Kiedy używać|  
 |---|---|---|  
 |`Ordinal`|Porównanie w bajtach składnika ciągów.|Użyj tej wartości, podczas porównywania: identyfikatory z uwzględnieniem wielkości liter, ustawienia zabezpieczeń lub innych identyfikatorów językowe, gdzie bajtów muszą być zgodne.|  
-|`OrdinalIgnoreCase`|Porównanie w bajtach składnika ciągów.<br /><br /> `OrdinalIgnoreCase`Niezmienna kultura informacje są używane do określania, kiedy dwa znaki różnią się tylko wielkością liter.|Użyj tej wartości, podczas porównywania: identyfikatorów bez uwzględniania wielkości liter, ustawień zabezpieczeń i danych przechowywanych w systemie Windows.|  
-|`CurrentCulture`lub`CurrentCultureIgnoreCase`|Porównań opartych na ciągi są interpretacji w bieżącej kultury.|Użyj tych wartości, podczas porównywania: dane wyświetlane dla użytkownika, większość danych wejściowych użytkownika i inne dane, które wymaga interpretacji językowe.|  
-|`InvariantCulture`lub`InvariantCultureIgnoreCase`|Porównań opartych na ciągi są interpretacji w Niezmienna kultura.<br /><br /> Ta lokalizacja jest inna niż `Ordinal` i `OrdinalIgnoreCase`, ponieważ Niezmienna kultura traktuje znaki poza zakresem akceptowane jako równoważne niezmiennej znaków.|Tylko przy porównywaniu danych trwałych lub wyświetlania zależnej odpowiednie dane, które wymaga stałej sortowania, należy użyć tych wartości.|  
+|`OrdinalIgnoreCase`|Porównanie w bajtach składnika ciągów.<br /><br /> `OrdinalIgnoreCase` Niezmienna kultura informacje są używane do określania, kiedy dwa znaki różnią się tylko wielkością liter.|Użyj tej wartości, podczas porównywania: identyfikatorów bez uwzględniania wielkości liter, ustawień zabezpieczeń i danych przechowywanych w systemie Windows.|  
+|`CurrentCulture` lub `CurrentCultureIgnoreCase`|Porównań opartych na ciągi są interpretacji w bieżącej kultury.|Użyj tych wartości, podczas porównywania: dane wyświetlane dla użytkownika, większość danych wejściowych użytkownika i inne dane, które wymaga interpretacji językowe.|  
+|`InvariantCulture` lub `InvariantCultureIgnoreCase`|Porównań opartych na ciągi są interpretacji w Niezmienna kultura.<br /><br /> Ta lokalizacja jest inna niż `Ordinal` i `OrdinalIgnoreCase`, ponieważ Niezmienna kultura traktuje znaki poza zakresem akceptowane jako równoważne niezmiennej znaków.|Tylko przy porównywaniu danych trwałych lub wyświetlania zależnej odpowiednie dane, które wymaga stałej sortowania, należy użyć tych wartości.|  
   
 ### <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
  Jeśli aplikacji podejmowania decyzji w procesie zabezpieczeń na podstawie wyniku porównania lub operacji w przypadku zmiany, a następnie należy użyć operacji <xref:System.String.Compare%2A?displayProperty=nameWithType> — metoda i przekazać `Ordinal` lub `OrdinalIgnoreCase` dla `comparisonType` argumentu.  

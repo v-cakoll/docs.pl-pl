@@ -1,37 +1,38 @@
 ---
-title: "LINQ do XML-Przegląd (Visual Basic)"
-ms.custom: 
+title: LINQ do XML-Przegląd (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 41dd5818dc33a690c7abe4c33aa7a7becfde2123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4ccc81f1f7b875c7388dc09cc45521c6257c00d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ do XML-Przegląd (Visual Basic)
 Powszechnie przyjęto XML jako sposób do formatowania danych w wielu sytuacjach. Na przykład XML można znaleźć w sieci Web, w plikach konfiguracji, pliki programu Microsoft Office Word i baz danych.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]jest aktualne, zmienioną podejście do programowania w języku XML. Udostępnia dokument w pamięci możliwości modyfikacji z modelu DOM (Document Object) i obsługuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenia zapytań. Chociaż tych wyrażeń zapytania składniowo różnią się od wyrażenia XPath, zapewniają podobne funkcje.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest aktualne, zmienioną podejście do programowania w języku XML. Udostępnia dokument w pamięci możliwości modyfikacji z modelu DOM (Document Object) i obsługuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenia zapytań. Chociaż tych wyrażeń zapytania składniowo różnią się od wyrażenia XPath, zapewniają podobne funkcje.  
   
 ## <a name="linq-to-xml-developers"></a>LINQ do XML deweloperów  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Celem odmiany deweloperów. Dla średniej developer, który właśnie chce coś zrobić [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ułatwia XML, udostępniając środowisko zapytania, która jest podobna do bazy danych SQL. Tylko bit badań programistów dowiedzieć się do pisania zwięzły i zaawansowanych zapytań w języku programowania wyboru.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Celem odmiany deweloperów. Dla średniej developer, który właśnie chce coś zrobić [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ułatwia XML, udostępniając środowisko zapytania, która jest podobna do bazy danych SQL. Tylko bit badań programistów dowiedzieć się do pisania zwięzły i zaawansowanych zapytań w języku programowania wyboru.  
   
  Professional deweloperzy mogą używać [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] znacznie zwiększyć ich wydajność. Z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], mogą zapisywać mniej kodu, który jest bardziej obszerne mniejszych i bardziej zaawansowanych. Wyrażenia zapytań z wielu domen danych użyciem w tym samym czasie.  
   
 ## <a name="what-is-linq-to-xml"></a>Co to jest LINQ do XML?  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]to włączone LINQ, w pamięci XML programowania interfejs, który umożliwia pracę z językiem XML z poziomu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] języków programowania.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to włączone LINQ, w pamięci XML programowania interfejs, który umożliwia pracę z językiem XML z poziomu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] języków programowania.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]ma takie jak modelu DOM (Document Object) stwarza dokumentu XML do pamięci. Możesz zbadać i modyfikowanie dokumentu, a po jego modyfikacji można zapisać w pliku lub go serializować i wysłać go przez Internet. Jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różni się od DOM: zapewnia nowy model, która jest mniejsza waga i łatwiejsze do pracy z, i który korzysta z funkcji języka w języku Visual Basic.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ma takie jak modelu DOM (Document Object) stwarza dokumentu XML do pamięci. Możesz zbadać i modyfikowanie dokumentu, a po jego modyfikacji można zapisać w pliku lub go serializować i wysłać go przez Internet. Jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różni się od DOM: zapewnia nowy model, która jest mniejsza waga i łatwiejsze do pracy z, i który korzysta z funkcji języka w języku Visual Basic.  
   
  Najważniejszą korzyścią z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest integracji z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Integracja ta umożliwia pisanie zapytań w dokumencie XML w pamięci można pobrać kolekcji elementów i atrybutów. Możliwości zapytania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można porównywać pod względem funkcji (ale nie w składni) XPath i XQuery. Integracja [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] w języku Visual Basic zapewnia silniejsze pisowni, kompilacji sprawdzanie i ulepszona obsługa debugera.  
   
@@ -92,12 +93,12 @@ Dim contacts = _
 </Contacts>  
 ```  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora tłumaczy literałów XML do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wywołania metody.  
+ Kompilator Visual Basic tłumaczy literałów XML do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wywołania metody.  
   
  Aby uzyskać więcej informacji, zobacz [tworzenia drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Linq>  
- [Wprowadzenie (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  [Przegląd LINQ do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

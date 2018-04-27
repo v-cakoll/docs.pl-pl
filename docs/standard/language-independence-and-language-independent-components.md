@@ -1,12 +1,12 @@
 ---
-title: "Niezależność od języka i elementy niezależne od języka"
-ms.custom: 
+title: Niezależność od języka i elementy niezależne od języka
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1d588768f53bf5850a0fa7cc825c5ffa1114ec6f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
 .NET Framework jest niezależny od języka. Oznacza to, że deweloper, można tworzyć w jednym z wielu języków, które odnoszą się do programu .NET Framework, takich jak C#, C + +/ CLI, Eiffel F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i środowiska Windows PowerShell. Dostępne typy i składniki bibliotek klas utworzonych dla programu .NET Framework, bez konieczności znajomości języka, w której zostały pierwotnie zapisany i bez konieczności postępuj zgodnie z oryginalnego języka Konwencji. Jeśli jesteś deweloperem składnika składnika jest dostępna przez dowolną aplikację .NET Framework, niezależnie od języka.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/19/2018
 > [!NOTE]
 >  To pierwsza część w tym artykule omówiono tworzenie niezależny od języka składników — czyli składników, które mogą być używane przez aplikacje, które są zapisywane w dowolnym języku. Można również utworzyć pojedynczy składnik lub aplikacji z kodu źródłowego w wielu językach; zobacz [współdziałanie między językami](#CrossLang) w drugiej części tego artykułu.  
   
- Pełni interakcję z innymi obiektami w dowolnym języku, obiektów musi ujawniać dotyczące obiektów wywołujących te funkcje, które są wspólne dla wszystkich języków. Ten zestaw typowych funkcji jest zdefiniowany przez wspólnej specyfikacji języka (CLS), który jest zestaw reguł stosowanych do zestawów wygenerowanych. Specyfikacja języka wspólnego jest zdefiniowany w partycji I klauzule 7 do 11 [ECMA-335 standardowe: wspólną infrastrukturę języka](http://go.microsoft.com/fwlink/?LinkID=116487).  
+ Pełni interakcję z innymi obiektami w dowolnym języku, obiektów musi ujawniać dotyczące obiektów wywołujących te funkcje, które są wspólne dla wszystkich języków. Ten zestaw typowych funkcji jest zdefiniowany przez wspólnej specyfikacji języka (CLS), który jest zestaw reguł stosowanych do zestawów wygenerowanych. Specyfikacja języka wspólnego jest zdefiniowany w partycji I klauzule 7 do 11 [ECMA-335 standardowe: wspólną infrastrukturę języka](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Jeśli składnik spełnia specyfikacja języka wspólnego, może być zgodne ze specyfikacją CLS i są dostępne z kodu w zestawach napisane w języku programowania, który obsługuje ze specyfikacją CLS. Można określić, czy składnik jest zgodny ze specyfikacja języka wspólnego w czasie kompilacji, stosując <xref:System.CLSCompliantAttribute> atrybutu do kodu źródłowego. Aby uzyskać więcej informacji, zobacz [atrybut CLSCompliantAttribute](#CLSAttribute).  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/19/2018
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>Zasady zgodności ze specyfikacją CLS  
- W tej sekcji omówiono reguł do tworzenia składnika zgodne ze specyfikacją CLS. Pełną listę zasad, zobacz partycji I 11 klauzuli [ECMA-335 standardowe: wspólną infrastrukturę języka](http://go.microsoft.com/fwlink/?LinkID=116487).  
+ W tej sekcji omówiono reguł do tworzenia składnika zgodne ze specyfikacją CLS. Pełną listę zasad, zobacz partycji I 11 klauzuli [ECMA-335 standardowe: wspólną infrastrukturę języka](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 > [!NOTE]
 >  Specyfikacja języka wspólnego omówiono każdej reguły zgodności ze specyfikacją CLS, zastosowanie w przypadku użytkowników (deweloperów, którzy są uzyskiwania dostępu do składnika, który jest zgodny ze specyfikacją CLS), platformy (deweloperów, którzy korzystają z kompilatora języka Aby utworzyć CLS-compliant biblioteki) i rozszerzeń (deweloperów, którzy tworzą narzędzia, takiego jak kompilatora języka lub analizator kodu tworzącego składniki zgodne ze specyfikacją CLS). Ten artykuł dotyczy reguł odnoszących się do struktur. Należy pamiętać, że niektóre reguły, które dotyczą Extender mogą również dotyczyć zestawy, które są tworzone przy użyciu Reflection.Emit.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 02/19/2018
   
 -   Parametry i zwracane typy metod publicznych klas publicznych i parametrów i zwracanych typów metod dostępne dla klas pochodnych.  
   
- W poniższej tabeli wymieniono zasady zgodności ze specyfikacją CLS. Tekst reguły jest zajęta dosłownego wyrażenia z [ECMA-335 standardowe: wspólną infrastrukturę języka](http://go.microsoft.com/fwlink/?LinkID=116487), czyli Copyright 2012 międzynarodowej Ecma. W poniższych sekcjach znajduje się bardziej szczegółowe informacje o tych reguł.  
+ W poniższej tabeli wymieniono zasady zgodności ze specyfikacją CLS. Tekst reguły jest zajęta dosłownego wyrażenia z [ECMA-335 standardowe: wspólną infrastrukturę języka](https://www.ecma-international.org/publications/standards/Ecma-335.htm), czyli Copyright 2012 międzynarodowej Ecma. W poniższych sekcjach znajduje się bardziej szczegółowe informacje o tych reguł.  
   
 |Kategoria|Zobacz|Reguła|Numer reguły|  
 |--------------|---------|----------|-----------------|  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/19/2018
 |Elementy członkowskie|[Ogólnie rzecz biorąc wpisz elementy członkowskie](#members)|Globalne pola statyczne i metod nie są zgodne ze specyfikacją CLS.|36|  
 |Elementy członkowskie|--|Przy użyciu metadanych inicjowania pola określona jest wartość literału statycznego. Literał zgodne ze specyfikacją CLS muszą mieć określoną wartość w polu inicjowania metadanych, które jest taki sam typ, jak literał (lub podstawowego typu, jeśli ten literał `enum`).|13|  
 |Elementy członkowskie|[Ogólnie rzecz biorąc wpisz elementy członkowskie](#members)|Ograniczenie vararg nie jest częścią ze specyfikacją CLS, a tylko Konwencja wywoływania obsługiwane przez ze specyfikacją CLS jest standardowego zarządzanych konwencję wywołania.|15|  
-|Konwencje nazewnictwa|[Konwencje nazewnictwa](#naming)|Zestawy następuje załącznika 7 z techniczne raportu 15 Unicode Standard3.0 regulujące zestaw znaków mogą uruchomić i uwzględniane w identyfikatorach, http://www.unicode.org/unicode/reports/tr15/tr15-18.html onlineat dostępne. Identyfikatory powinien być w formacie thecanonical zdefiniowane przez Unicode normalizacji formularza C. Do celów ze specyfikacją CLS, identifiersare dwa takie same, jeśli ich mapowania małe litery (określone mapowania toonelowercase jednego z ustawień regionalnych niewrażliwe, Unicode) są takie same. Oznacza to, że dla dwóch identyfikatorów wziąć pod uwagę differentunder ze specyfikacją CLS są różnią się tylko w ich przypadku. Jednak aby można było zastąpić aninherited definicji interfejsu wiersza polecenia wymaga dokładne kodowanie oryginalnej deklaracji.|4|  
+|Konwencje nazewnictwa|[Konwencje nazewnictwa](#naming)|Zestawy zachowuje załącznika 7 z techniczne raportu 15 Unicode Standard3.0 regulujące zestaw znaków mogą uruchomić i uwzględniane w identyfikatorach, dostępne onlineat http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Identyfikatory powinien być w formacie thecanonical zdefiniowane przez Unicode normalizacji formularza C. Do celów ze specyfikacją CLS, identifiersare dwa takie same, jeśli ich mapowania małe litery (określone mapowania toonelowercase jednego z ustawień regionalnych niewrażliwe, Unicode) są takie same. Oznacza to, że dla dwóch identyfikatorów wziąć pod uwagę differentunder ze specyfikacją CLS są różnią się tylko w ich przypadku. Jednak aby można było zastąpić aninherited definicji interfejsu wiersza polecenia wymaga dokładne kodowanie oryginalnej deklaracji.|4|  
 |Przeciążenie|[Konwencje nazewnictwa](#naming)|Nazwy wszystkich wprowadzonych w zakresie zgodne ze specyfikacją CLS są różne ofkind niezależne, z wyjątkiem przypadków, w których nazwy są identyczne i rozwiązane za pomocą przeciążenia. Oznacza to, że podczas CTSallows jednego typu, aby użyć takiej samej nazwy metody i pole ze specyfikacją CLS nie.|5|  
 |Przeciążenie|[Konwencje nazewnictwa](#naming)|Pola i typy zagnieżdżone powinna różnić się przez porównanie identyfikator samodzielnie, eventhough CTS pozwala odrębnych podpisów rozróżnienie. Metody, właściwości i eventsthat mają takie same nazwy (porównanie identyfikator) może różnić się nie tylko typem zwracanym, z wyjątkiem zgodnie ze specyfikacją CLS 39 reguły.|6|  
 |Przeciążenie|[Overloads](#overloads)|Tylko właściwości i metody może być przeciążony.|37|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 02/19/2018
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- Programowanie identyfikatorów języka, takich jak nazwy przestrzeni nazw, typów i członków, musi być zgodna z [Unicode Standard 3.0, techniczne 15 raportu, załącznik 7](http://www.unicode.org/reports/tr15/tr15-18.html). Oznacza to, że:  
+ Programowanie identyfikatorów języka, takich jak nazwy przestrzeni nazw, typów i członków, musi być zgodna z [Unicode Standard 3.0, techniczne 15 raportu, załącznik 7](https://www.unicode.org/reports/tr15/tr15-18.html). Oznacza to, że:  
   
 -   Pierwszy znak identyfikatora mogą być dowolnej Unicode wielkie litery, małe litery, tytuł wielkość list, litera modyfikatora, innego litery lub list numer. Aby uzyskać informacje na kategorie znaków Unicode, zobacz <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> wyliczenia.  
   
@@ -372,7 +372,7 @@ ms.lasthandoff: 02/19/2018
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- Nazwy typu ogólnego są zakodowane w postaci *nazwa\`n*, gdzie *nazwa* jest nazwą typu \` jest znak jest literałem, i  *n*  jest liczba parametrów zadeklarowana w typie lub dla zagnieżdżone ogólnych typów, liczba parametrów typu nowo wprowadzonych. To kodowanie nazwy typu ogólnego jest głównie deweloperom, którzy zgodne ze specyfikacją CLS typy ogólne w bibliotece dostęp do za pomocą odbicia.  
+ Nazwy typu ogólnego są zakodowane w postaci *nazwa\`n*, gdzie *nazwa* jest nazwą typu \` jest znakiem literału, i *n* jest liczbą parametrami zadeklarowanymi jako w typie lub, w przypadku zagnieżdżonych typów ogólnych liczbę nowo wprowadzonych parametrów typu. To kodowanie nazwy typu ogólnego jest głównie deweloperom, którzy zgodne ze specyfikacją CLS typy ogólne w bibliotece dostęp do za pomocą odbicia.  
   
  Jeśli ograniczenia są stosowane do ogólnego typu żadnych typów, używany jako ograniczenia również musi być zgodne ze specyfikacją CLS. W poniższym przykładzie zdefiniowano klasę o nazwie `BaseClass` czyli nie zgodne ze specyfikacją CLS i rodzajowy klasę o nazwie `BaseCollection` których parametru typu muszą pochodzić od `BaseClass`. Jednak ponieważ `BaseClass` nie jest zgodny z CLS, kompilator emituje ostrzeżenie.  
   
@@ -572,7 +572,7 @@ csc /t:module NumberUtil.cs
   
  Aby uzyskać więcej informacji na temat składni wiersza polecenia kompilatora C#, zobacz [budynku wiersza polecenia z csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Następnie należy użyć [Link-narzędzie (Link.exe)](http://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) do skompilowania w zespół dwa moduły:  
+ Następnie należy użyć [Link-narzędzie (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) do skompilowania w zespół dwa moduły:  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   

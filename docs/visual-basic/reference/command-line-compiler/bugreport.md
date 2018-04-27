@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 766a4252fd77be95e2641239cba53a4d90e0cb1d
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 097435a3d8acda6325b27abaf3ca0fd2839d344e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-bugreport"></a>-bugreport
 Tworzy plik, który można używać podczas pliku raport o usterce.  
@@ -32,7 +32,7 @@ Tworzy plik, który można używać podczas pliku raport o usterce.
   
 |Termin|Definicja|  
 |---|---|  
-|`file`|Wymagany. Nazwa pliku, który będzie zawierać raport o usterce. Nazwę pliku należy ująć w cudzysłów (""), jeśli nazwa zawiera spację.|  
+|`file`|Wymagana. Nazwa pliku, który będzie zawierać raport o usterce. Nazwę pliku należy ująć w cudzysłów (""), jeśli nazwa zawiera spację.|  
   
 ## <a name="remarks"></a>Uwagi  
  Następujące informacje są dodawane do `file`:  
@@ -54,7 +54,7 @@ Tworzy plik, który można używać podczas pliku raport o usterce.
 > [!IMPORTANT]
 >  `-bugreport` Opcja tworzy plik zawierający potencjalnie wrażliwe informacje. Obejmuje to bieżący czas, wersja kompilatora [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wersji, wersja systemu operacyjnego, nazwa użytkownika, argumenty wiersza polecenia, z którymi uruchamiania kompilatora, całego kodu źródłowego i forma binarna wszelkie odwołania do zestawu. Ta opcja jest dostępny przez określenie opcji wiersza polecenia w pliku Web.config po stronie serwera zbiór [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplikacji. Aby tego uniknąć, należy zmodyfikować plik Machine.config, aby uniemożliwić użytkownikom kompilowanie na serwerze.  
   
- Jeśli ta opcja jest używana z `-errorreport:prompt`, `-errorreport:queue`, lub `-errorreport:send`, a aplikacja napotka błąd wewnętrzny kompilatora, informacje w `file` są wysyłane do firmy Microsoft Corporation. Informacje te pomogą zidentyfikować przyczynę błędu pracownicy firmy Microsoft i może zwiększyć kolejnej wersji programu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Domyślnie żadne informacje nie są wysyłane do firmy Microsoft. Jednak gdy aplikacja jest skompilować przy użyciu `-errorreport:queue`aplikacji zbiera jego raporty o błędach, które jest domyślnie włączone. Następnie gdy administrator komputera loguje, system raportowania błędów wyświetla okno podręczne, które umożliwia administratorowi przekazywać do firmy Microsoft raporty wszelkie błędy, że od czasu logowania.  
+ Jeśli ta opcja jest używana z `-errorreport:prompt`, `-errorreport:queue`, lub `-errorreport:send`, a aplikacja napotka błąd wewnętrzny kompilatora, informacje w `file` są wysyłane do firmy Microsoft Corporation. Te informacje pomagają zidentyfikować przyczynę błędu pracownicy firmy Microsoft i może zwiększyć kolejnej wersji programu Visual Basic. Domyślnie żadne informacje nie są wysyłane do firmy Microsoft. Jednak gdy aplikacja jest skompilować przy użyciu `-errorreport:queue`aplikacji zbiera jego raporty o błędach, które jest domyślnie włączone. Następnie gdy administrator komputera loguje, system raportowania błędów wyświetla okno podręczne, które umożliwia administratorowi przekazywać do firmy Microsoft raporty wszelkie błędy, że od czasu logowania.  
   
 > [!NOTE]
 >  `/bugreport` Opcja nie jest dostępne w środowisku programowania Visual Studio; będzie dostępna tylko podczas kompilowania z wiersza polecenia.  

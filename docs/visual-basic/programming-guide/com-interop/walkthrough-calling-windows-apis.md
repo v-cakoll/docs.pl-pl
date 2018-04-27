@@ -1,11 +1,12 @@
 ---
-title: "Wskazówki: wywoływanie Windows API (Visual Basic)"
-ms.custom: 
+title: 'Wskazówki: wywoływanie Windows API (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - DLLs, calling
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d494ad0f8bd4eb0dac57de214064fd2d208011ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34bfb732e2d99b259811573a427ae66628c7fc3a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Wskazówki: wywoływanie Windows API (Visual Basic)
 Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), które są częścią systemu operacyjnego Windows. Użyj ich do wykonywania zadań, gdy jest trudne do zapisania równoważnych procedur własny. Na przykład system Windows udostępnia funkcję o nazwie `FlashWindowEx` która pozwala na pasku tytułu aplikacji alternatywny między jasnym i ciemnym.  
   
  Zaletą używania interfejsów API systemu Windows w kodzie jest, aby móc zapisać czasie opracowywania ponieważ zawierają one dziesiątki przydatne funkcje, które są już zapisane i poczekać do użycia. Wadą jest to, że interfejsów API systemu Windows może być trudne do pracy z i unforgiving, w przypadku wystąpienia problemów.  
   
- Interfejsy API systemu Windows reprezentują kategorii specjalnej współdziałania. Interfejsy API systemu Windows nie korzystają z kodu zarządzanego, nie mają wbudowanej biblioteki typów, a następnie użyj typów danych, które są inne niż te używane z programem Visual Studio. Z powodu różnic a ponieważ interfejsów API systemu Windows nie są obiekty COM, współdziałanie z interfejsów API systemu Windows i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] odbywa się przy użyciu platformy invoke, lub funkcji PInvoke. Wywołanie platformy to usługa, że umożliwia zarządzanego kodu wywoływanie niezarządzanych funkcji zaimplementowana w bibliotekach DLL. Aby uzyskać więcej informacji, zobacz [wykorzystywanie niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md). Można użyć funkcji PInvoke w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] za pomocą `Declare` instrukcji lub stosowania `DllImport` atrybutu pustej procedury.  
+ Interfejsy API systemu Windows reprezentują kategorii specjalnej współdziałania. Interfejsy API systemu Windows nie korzystają z kodu zarządzanego, nie mają wbudowanej biblioteki typów, a następnie użyj typów danych, które są inne niż te używane z programem Visual Studio. Z powodu różnic a ponieważ interfejsów API systemu Windows nie są obiekty COM, współdziałanie z interfejsów API systemu Windows i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] odbywa się przy użyciu platformy invoke, lub funkcji PInvoke. Wywołanie platformy to usługa, że umożliwia zarządzanego kodu wywoływanie niezarządzanych funkcji zaimplementowana w bibliotekach DLL. Aby uzyskać więcej informacji, zobacz [wykorzystywanie niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md). Można użyć funkcji PInvoke w języku Visual Basic, za pomocą `Declare` instrukcji lub stosowania `DllImport` atrybutu pustej procedury.  
   
- Wywołania interfejsu API systemu Windows zostały ważnym elementem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programowanie w przeszłości, ale są rzadko niezbędne wraz z programem Visual Basic .NET. Jeśli to możliwe, należy użyć kodu zarządzanego z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] do wykonywania zadań, zamiast wywołania interfejsu API systemu Windows. Ten przewodnik zawiera informacje dotyczące tych sytuacji, w których przy użyciu interfejsów API systemu Windows jest to konieczne.  
+ Wywołania interfejsu API systemu Windows były ważnym elementem programowania w przeszłości Visual Basic, ale są rzadko niezbędne wraz z programem Visual Basic .NET. Jeśli to możliwe, należy użyć kodu zarządzanego z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] do wykonywania zadań, zamiast wywołania interfejsu API systemu Windows. Ten przewodnik zawiera informacje dotyczące tych sytuacji, w których przy użyciu interfejsów API systemu Windows jest to konieczne.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -49,7 +50,7 @@ Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), kt
   
 2.  Otwórz nowy projekt aplikacji systemu Windows, klikając przycisk **nowy** na **pliku** menu, a następnie klikając pozycję **projektu**. **Nowy projekt** zostanie wyświetlone okno dialogowe.  
   
-3.  Wybierz **aplikacji systemu Windows** z listy [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] szablony projektu. Zostanie wyświetlony nowy projekt.  
+3.  Wybierz **aplikacji systemu Windows** na liście szablony projektu Visual Basic. Zostanie wyświetlony nowy projekt.  
   
 4.  Dodaj następujące `Declare` działać na klasę lub moduł, w której chcesz użyć biblioteki DLL:  
   
@@ -66,13 +67,13 @@ Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), kt
   
  Określ `Lib` — słowo kluczowe, a po nim nazwę i lokalizację biblioteki dll, która zawiera funkcję wywoływania. Nie trzeba określić ścieżkę do plików znajdujących się w katalogach systemu Windows.  
   
- Użyj `Alias` — słowo kluczowe, jeśli nie jest prawidłową nazwą funkcji wywoływania [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nazwę procedury lub powoduje konflikt z nazwą innych elementów w aplikacji. `Alias`Wskazuje wartość true, nazwę wywoływanej funkcji.  
+ Użyj `Alias` — słowo kluczowe, jeśli nazwa funkcji wywołanie nie jest prawidłową nazwą procedury języka Visual Basic lub powoduje konflikt z nazwą innych elementów w aplikacji. `Alias` Wskazuje wartość true, nazwę wywoływanej funkcji.  
   
 #### <a name="argument-and-data-type-declarations"></a>Argument i deklaracje typu danych  
- Deklaruje argumentów i ich typów danych. Ta część może być wyzwaniem, ponieważ typy danych, które korzysta z systemu Windows nie są zgodne typy danych Visual Studio. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]jak dużo pracy, w przypadku można konwertując argumenty kompatybilne typy danych, w procesie nazywanym *marshaling*. Można jawnie kontrolować sposób argumenty są przekazywane za pomocą <xref:System.Runtime.InteropServices.MarshalAsAttribute> zdefiniowanych w atrybucie <xref:System.Runtime.InteropServices> przestrzeni nazw.  
+ Deklaruje argumentów i ich typów danych. Ta część może być wyzwaniem, ponieważ typy danych, które korzysta z systemu Windows nie są zgodne typy danych Visual Studio. Visual Basic jest dużo pracy dla Ciebie konwertując argumenty kompatybilne typy danych, w procesie nazywanym *marshaling*. Można jawnie kontrolować sposób argumenty są przekazywane za pomocą <xref:System.Runtime.InteropServices.MarshalAsAttribute> zdefiniowanych w atrybucie <xref:System.Runtime.InteropServices> przestrzeni nazw.  
   
 > [!NOTE]
->  Poprzednie wersje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umożliwiająca deklarować parametrów `As Any`, co oznacza danych wszelkich danych typu można użyć. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]wymaga, aby używać typu danych określonego dla wszystkich `Declare` instrukcje.  
+>  Poprzednie wersje programu Visual Basic można deklarować parametrów `As Any`, co oznacza danych wszelkich danych typu można użyć. Visual Basic wymaga użycia typu danych określonego dla wszystkich `Declare` instrukcje.  
   
 #### <a name="windows-api-constants"></a>Stałe Windows API  
  Niektóre argumenty są kombinację stałych. Na przykład `MessageBox` interfejsu API wyświetlane w tym przewodniku akceptuje argument liczby całkowitej o nazwie `Typ` steruje sposób wyświetlania pola wiadomości. Można określić wartość liczbowa te stałe, sprawdzając `#define` instrukcje w pliku WinUser.h. Wartości numeryczne zazwyczaj są wyświetlane w formacie szesnastkowym, więc możesz je dodać, a następnie wykonać konwersję dziesiętnych przy użyciu kalkulatora. Na przykład, jeśli chcesz połączyć stałe stylu wykrzyknika `MB_ICONEXCLAMATION` 0x00000030 i tak/nie styl `MB_YESNO` 0x00000004, możesz dodać liczb i uzyskanie wyniku 0x00000034 lub 52 dziesiętną. Chociaż można używać bezpośrednio wynik decimal, zaleca się Zadeklaruj te wartości jako stałe w aplikacji, a następnie ich łączenie za pomocą `Or` operatora.  
@@ -100,7 +101,7 @@ Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), kt
 3.  Uruchom projekt, naciskając klawisz F5. Komunikat jest wyświetlany zarówno **tak** i **nr** przyciski odpowiedzi. Kliknij dowolny.  
   
 #### <a name="data-marshaling"></a>Przekazywanie danych  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]automatycznie konwertuje typów danych parametrów i wartości zwracane dla wywołania interfejsu API systemu Windows, ale można użyć `MarshalAs` atrybutu, aby jawnie określić typy niezarządzanych danych, które oczekuje interfejsu API. Aby uzyskać więcej informacji na temat marshaling międzyoperacyjny zobacz [organizowanie międzyoperacyjne](../../../framework/interop/interop-marshaling.md).  
+ Visual Basic powoduje automatyczną konwersję typów danych parametrów i wartości zwracane dla wywołania interfejsu API systemu Windows, ale może użyć `MarshalAs` atrybutu, aby jawnie określić typy niezarządzanych danych, które oczekuje interfejsu API. Aby uzyskać więcej informacji na temat marshaling międzyoperacyjny zobacz [organizowanie międzyoperacyjne](../../../framework/interop/interop-marshaling.md).  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Aby użyć Declare i MarshalAs w wywołaniu interfejsu API  
   
@@ -115,7 +116,7 @@ Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), kt
      [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## <a name="api-calls-using-dllimport"></a>Wywołania API przy użyciu atrybutu DllImport  
- `DllImport` Atrybutu zawiera drugi sposób wywołania funkcji w bibliotekach DLL bez biblioteki typów. `DllImport`jest w przybliżeniu przy użyciu `Declare` instrukcji, ale zapewnia większą kontrolę nad jak noszą nazwę funkcji.  
+ `DllImport` Atrybutu zawiera drugi sposób wywołania funkcji w bibliotekach DLL bez biblioteki typów. `DllImport` jest w przybliżeniu przy użyciu `Declare` instrukcji, ale zapewnia większą kontrolę nad jak noszą nazwę funkcji.  
   
  Można użyć `DllImport` z większości interfejsu API systemu Windows wywołuje tak długo, jak wywołanie odwołuje się do udostępnionej (nazywane również *statycznych*) — metoda. Nie można użyć metody, które wymagają wystąpienia klasy. W odróżnieniu od `Declare` instrukcji `DllImport` nie mogą używać wywołania `MarshalAs` atrybutu.  
   
@@ -123,7 +124,7 @@ Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), kt
   
 1.  Otwórz nowy projekt aplikacji systemu Windows, klikając przycisk **nowy** na **pliku** menu, a następnie klikając pozycję **projektu**. **Nowy projekt** zostanie wyświetlone okno dialogowe.  
   
-2.  Wybierz **aplikacji systemu Windows** z listy [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] szablony projektu. Zostanie wyświetlony nowy projekt.  
+2.  Wybierz **aplikacji systemu Windows** na liście szablony projektu Visual Basic. Zostanie wyświetlony nowy projekt.  
   
 3.  Dodawanie przycisku o nazwie `Button2` się formularz startowy.  
   
@@ -158,9 +159,9 @@ Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), kt
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.InteropServices.DllImportAttribute>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [DECLARE — instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Automatycznie](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [Współdziałanie z COM](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Tworzenie prototypów w kodzie zarządzanym](../../../framework/interop/creating-prototypes-in-managed-code.md)  
  [Marshaling delegata jako metoda wywołania zwrotnego](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

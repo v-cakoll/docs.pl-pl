@@ -1,12 +1,13 @@
 ---
-title: "Porady: dynamiczne dodawanie elementów ToolStrip"
-ms.custom: 
+title: 'Porady: dynamiczne dodawanie elementów ToolStrip'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,42 +17,43 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6aa995643d4b7a00e4d7663a9ce1b8b519250074
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9017de2912057cfb833fc522982ff3aca643895d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-add-toolstrip-items-dynamically"></a><span data-ttu-id="f7bc2-102">Porady: dynamiczne dodawanie elementów ToolStrip</span><span class="sxs-lookup"><span data-stu-id="f7bc2-102">How to: Add ToolStrip Items Dynamically</span></span>
-<span data-ttu-id="f7bc2-103">Dynamiczne można wypełnić kolekcji elementów menu z <xref:System.Windows.Forms.ToolStrip> kontroli, gdy zostanie otwarte menu.</span><span class="sxs-lookup"><span data-stu-id="f7bc2-103">You can dynamically populate the menu item collection of a <xref:System.Windows.Forms.ToolStrip> control when the menu opens.</span></span>  
+# <a name="how-to-add-toolstrip-items-dynamically"></a><span data-ttu-id="13e23-102">Porady: dynamiczne dodawanie elementów ToolStrip</span><span class="sxs-lookup"><span data-stu-id="13e23-102">How to: Add ToolStrip Items Dynamically</span></span>
+<span data-ttu-id="13e23-103">Dynamiczne można wypełnić kolekcji elementów menu z <xref:System.Windows.Forms.ToolStrip> kontroli, gdy zostanie otwarte menu.</span><span class="sxs-lookup"><span data-stu-id="13e23-103">You can dynamically populate the menu item collection of a <xref:System.Windows.Forms.ToolStrip> control when the menu opens.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7bc2-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="f7bc2-104">Example</span></span>  
- <span data-ttu-id="f7bc2-105">W poniższym przykładzie pokazano, jak dynamiczne dodawanie elementów do <xref:System.Windows.Forms.ContextMenuStrip> formantu.</span><span class="sxs-lookup"><span data-stu-id="f7bc2-105">The following code example demonstrates how to dynamically add items to a <xref:System.Windows.Forms.ContextMenuStrip> control.</span></span> <span data-ttu-id="f7bc2-106">W przykładzie przedstawiono również sposób ponownie użyj tego samego <xref:System.Windows.Forms.ContextMenuStrip> dla trzech różnych kontrolek w formularzu.</span><span class="sxs-lookup"><span data-stu-id="f7bc2-106">The example also shows how to reuse the same <xref:System.Windows.Forms.ContextMenuStrip> for three different controls on the form.</span></span>  
+## <a name="example"></a><span data-ttu-id="13e23-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="13e23-104">Example</span></span>  
+ <span data-ttu-id="13e23-105">W poniższym przykładzie pokazano, jak dynamiczne dodawanie elementów do <xref:System.Windows.Forms.ContextMenuStrip> formantu.</span><span class="sxs-lookup"><span data-stu-id="13e23-105">The following code example demonstrates how to dynamically add items to a <xref:System.Windows.Forms.ContextMenuStrip> control.</span></span> <span data-ttu-id="13e23-106">W przykładzie przedstawiono również sposób ponownie użyj tego samego <xref:System.Windows.Forms.ContextMenuStrip> dla trzech różnych kontrolek w formularzu.</span><span class="sxs-lookup"><span data-stu-id="13e23-106">The example also shows how to reuse the same <xref:System.Windows.Forms.ContextMenuStrip> for three different controls on the form.</span></span>  
   
- <span data-ttu-id="f7bc2-107">W tym przykładzie <xref:System.Windows.Forms.ToolStripDropDown.Opening> obsługi zdarzenia wypełnia kolekcję elementów menu.</span><span class="sxs-lookup"><span data-stu-id="f7bc2-107">In the example, an <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler populates the menu item collection.</span></span> <span data-ttu-id="f7bc2-108"><xref:System.Windows.Forms.ToolStripDropDown.Opening> Sprawdza, czy program obsługi zdarzeń <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> właściwości i dodaje <xref:System.Windows.Forms.ToolStripItem> opisujące kontroli źródła.</span><span class="sxs-lookup"><span data-stu-id="f7bc2-108">The <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler examines the <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> properties and adds a <xref:System.Windows.Forms.ToolStripItem> describing the source control.</span></span>  
+ <span data-ttu-id="13e23-107">W tym przykładzie <xref:System.Windows.Forms.ToolStripDropDown.Opening> obsługi zdarzenia wypełnia kolekcję elementów menu.</span><span class="sxs-lookup"><span data-stu-id="13e23-107">In the example, an <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler populates the menu item collection.</span></span> <span data-ttu-id="13e23-108"><xref:System.Windows.Forms.ToolStripDropDown.Opening> Sprawdza, czy program obsługi zdarzeń <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> właściwości i dodaje <xref:System.Windows.Forms.ToolStripItem> opisujące kontroli źródła.</span><span class="sxs-lookup"><span data-stu-id="13e23-108">The <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler examines the <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> properties and adds a <xref:System.Windows.Forms.ToolStripItem> describing the source control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
 [!code-csharp[System.Windows.Forms.ToolStrip.Misc#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#40)]
 [!code-vb[System.Windows.Forms.ToolStrip.Misc#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#40)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f7bc2-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="f7bc2-109">Compiling the Code</span></span>  
- <span data-ttu-id="f7bc2-110">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="f7bc2-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="13e23-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="13e23-109">Compiling the Code</span></span>  
+ <span data-ttu-id="13e23-110">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="13e23-110">This example requires:</span></span>  
   
--   <span data-ttu-id="f7bc2-111">Odwołania do zestawów System.Drawing i System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="f7bc2-111">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="13e23-111">Odwołania do zestawów System.Drawing i System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="13e23-111">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="f7bc2-112">Informacji dotyczących tworzenia tego przykładu z wiersza polecenia dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="f7bc2-112">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="f7bc2-113">Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="f7bc2-113">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="13e23-112">Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="13e23-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="13e23-113">Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="13e23-113">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7bc2-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f7bc2-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="13e23-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="13e23-114">See Also</span></span>  
  <xref:System.Windows.Forms.ContextMenuStrip>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripItem>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  <xref:System.Windows.Forms.ToolStripDropDownButton>  
- [<span data-ttu-id="f7bc2-115">ToolStrip, kontrolka</span><span class="sxs-lookup"><span data-stu-id="f7bc2-115">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [<span data-ttu-id="13e23-115">ToolStrip, kontrolka</span><span class="sxs-lookup"><span data-stu-id="13e23-115">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

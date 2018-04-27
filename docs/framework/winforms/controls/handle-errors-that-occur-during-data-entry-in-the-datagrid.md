@@ -1,12 +1,13 @@
 ---
-title: "Porady: obsługa błędów występujących podczas wprowadzania danych w formancie DataGridView formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: obsługa błędów występujących podczas wprowadzania danych w formancie DataGridView formularzy systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,40 +19,41 @@ helpviewer_keywords:
 - data entry [Windows Forms], error handling
 - error handling [Windows Forms], data entry
 ms.assetid: 9004e72f-fdec-4264-a37d-2c99764efc13
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bde845fb2946b27bc224072b341df1523b1eab64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd095d272c07727490df235328827f5ee9907b49
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="3eedf-102">Porady: obsługa błędów występujących podczas wprowadzania danych w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="3eedf-102">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="3eedf-103">Poniższy przykład kodu pokazuje sposób użycia <xref:System.Windows.Forms.DataGridView> formantu błędy wpisu danych raportu dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="3eedf-103">The following code example demonstrates how to use the <xref:System.Windows.Forms.DataGridView> control to report data entry errors to the user.</span></span>  
+# <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="f7a88-102">Porady: obsługa błędów występujących podczas wprowadzania danych w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f7a88-102">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="f7a88-103">Poniższy przykład kodu pokazuje sposób użycia <xref:System.Windows.Forms.DataGridView> formantu błędy wpisu danych raportu dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="f7a88-103">The following code example demonstrates how to use the <xref:System.Windows.Forms.DataGridView> control to report data entry errors to the user.</span></span>  
   
- <span data-ttu-id="3eedf-104">Pełny opis w tym przykładzie kodu, zobacz [wskazówki: obsługa błędów tego Occur podczas wprowadzania danych w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="3eedf-104">For a complete explanation of this code example, see [Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>  
+ <span data-ttu-id="f7a88-104">Pełny opis w tym przykładzie kodu, zobacz [wskazówki: obsługa błędów tego Occur podczas wprowadzania danych w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="f7a88-104">For a complete explanation of this code example, see [Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3eedf-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="3eedf-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f7a88-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="f7a88-105">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridView.DataError#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridView.DataError#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#00)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3eedf-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="3eedf-106">Compiling the Code</span></span>  
- <span data-ttu-id="3eedf-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="3eedf-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f7a88-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="f7a88-106">Compiling the Code</span></span>  
+ <span data-ttu-id="f7a88-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="f7a88-107">This example requires:</span></span>  
   
--   <span data-ttu-id="3eedf-108">Odwołania do zestawów systemu, dane systemowe System.Windows.Forms i zestawów System.XML.</span><span class="sxs-lookup"><span data-stu-id="3eedf-108">References to the System, System.Data, System.Windows.Forms, and System.XML assemblies.</span></span>  
+-   <span data-ttu-id="f7a88-108">Odwołania do zestawów systemu, dane systemowe System.Windows.Forms i zestawów System.XML.</span><span class="sxs-lookup"><span data-stu-id="f7a88-108">References to the System, System.Data, System.Windows.Forms, and System.XML assemblies.</span></span>  
   
- <span data-ttu-id="3eedf-109">Informacji dotyczących tworzenia tego przykładu z wiersza polecenia dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="3eedf-109">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="3eedf-110">Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="3eedf-110">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="3eedf-111">Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="3eedf-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="f7a88-109">Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="f7a88-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="f7a88-110">Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="f7a88-110">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="f7a88-111">Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="f7a88-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="3eedf-112">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="3eedf-112">.NET Framework Security</span></span>  
- <span data-ttu-id="3eedf-113">Przechowywanie poufne informacje, takie jak hasła, w ciągu połączenia może mieć wpływ na bezpieczeństwo aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3eedf-113">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="3eedf-114">Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych.</span><span class="sxs-lookup"><span data-stu-id="3eedf-114">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="3eedf-115">Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span><span class="sxs-lookup"><span data-stu-id="3eedf-115">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="f7a88-112">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="f7a88-112">.NET Framework Security</span></span>  
+ <span data-ttu-id="f7a88-113">Przechowywanie poufne informacje, takie jak hasła, w ciągu połączenia może mieć wpływ na bezpieczeństwo aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f7a88-113">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="f7a88-114">Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych.</span><span class="sxs-lookup"><span data-stu-id="f7a88-114">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="f7a88-115">Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span><span class="sxs-lookup"><span data-stu-id="f7a88-115">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3eedf-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3eedf-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f7a88-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f7a88-116">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [<span data-ttu-id="3eedf-117">Przewodnik: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3eedf-117">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
- [<span data-ttu-id="3eedf-118">Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3eedf-118">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="3eedf-119">Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3eedf-119">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="3eedf-120">Ochrona informacji o połączeniu</span><span class="sxs-lookup"><span data-stu-id="3eedf-120">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+ [<span data-ttu-id="f7a88-117">Przewodnik: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f7a88-117">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ [<span data-ttu-id="f7a88-118">Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f7a88-118">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="f7a88-119">Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f7a88-119">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="f7a88-120">Ochrona informacji o połączeniu</span><span class="sxs-lookup"><span data-stu-id="f7a88-120">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)

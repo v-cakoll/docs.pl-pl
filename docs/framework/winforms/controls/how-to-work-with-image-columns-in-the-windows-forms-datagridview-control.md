@@ -1,12 +1,13 @@
 ---
-title: "Porady: praca z kolumnami obrazów w formancie DataGridView formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: praca z kolumnami obrazów w formancie DataGridView formularzy systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,34 +18,35 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b10b2a0ec38a84aa281debf9a091689cac83dd8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfebc2ae7e7ea59836bd9216f1d62676f7b6e1da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="d30ec-102">Porady: praca z kolumnami obrazów w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="d30ec-102">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="d30ec-103">Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Windows.Forms.DataGridView> obrazu kolumn w interaktywnego interfejsu użytkownika (UI).</span><span class="sxs-lookup"><span data-stu-id="d30ec-103">The following code example shows how to use the <xref:System.Windows.Forms.DataGridView> image columns in an interactive user interface (UI).</span></span> <span data-ttu-id="d30ec-104">W przykładzie pokazano również możliwości zmiany rozmiaru i Układ obrazu z <xref:System.Windows.Forms.DataGridViewImageColumn>.</span><span class="sxs-lookup"><span data-stu-id="d30ec-104">The example also demonstrates image sizing and layout possibilities with the <xref:System.Windows.Forms.DataGridViewImageColumn>.</span></span>  
+# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="c2b6f-102">Porady: praca z kolumnami obrazów w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c2b6f-102">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="c2b6f-103">Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Windows.Forms.DataGridView> obrazu kolumn w interaktywnego interfejsu użytkownika (UI).</span><span class="sxs-lookup"><span data-stu-id="c2b6f-103">The following code example shows how to use the <xref:System.Windows.Forms.DataGridView> image columns in an interactive user interface (UI).</span></span> <span data-ttu-id="c2b6f-104">W przykładzie pokazano również możliwości zmiany rozmiaru i Układ obrazu z <xref:System.Windows.Forms.DataGridViewImageColumn>.</span><span class="sxs-lookup"><span data-stu-id="c2b6f-104">The example also demonstrates image sizing and layout possibilities with the <xref:System.Windows.Forms.DataGridViewImageColumn>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d30ec-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="d30ec-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c2b6f-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="c2b6f-105">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#0)]
  [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#0)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d30ec-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="d30ec-106">Compiling the Code</span></span>  
- <span data-ttu-id="d30ec-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="d30ec-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c2b6f-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="c2b6f-106">Compiling the Code</span></span>  
+ <span data-ttu-id="c2b6f-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="c2b6f-107">This example requires:</span></span>  
   
--   <span data-ttu-id="d30ec-108">Odwołania do zestawów systemu i System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="d30ec-108">References to the System and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="c2b6f-108">Odwołania do zestawów systemu i System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="c2b6f-108">References to the System and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="d30ec-109">Informacji dotyczących tworzenia tego przykładu z wiersza polecenia dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="d30ec-109">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="d30ec-110">Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="d30ec-110">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="d30ec-111">Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="d30ec-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="c2b6f-109">Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="c2b6f-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="c2b6f-110">Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="c2b6f-110">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="c2b6f-111">Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="c2b6f-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d30ec-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d30ec-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c2b6f-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c2b6f-112">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewImageColumn>  
- [<span data-ttu-id="d30ec-113">Programowanie przy użyciu komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d30ec-113">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- [<span data-ttu-id="d30ec-114">Instrukcje: wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d30ec-114">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+ [<span data-ttu-id="c2b6f-113">Programowanie przy użyciu komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c2b6f-113">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [<span data-ttu-id="c2b6f-114">Instrukcje: wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c2b6f-114">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

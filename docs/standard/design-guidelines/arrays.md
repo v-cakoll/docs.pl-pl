@@ -1,45 +1,45 @@
 ---
 title: Tablice
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], arrays
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2e634cdcff0b1b2968a3b64d8d05cb57feeddb51
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54f5d68a343f473c67484e9e806551eb115bac36
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="arrays"></a><span data-ttu-id="b5741-102">Tablice</span><span class="sxs-lookup"><span data-stu-id="b5741-102">Arrays</span></span>
-<span data-ttu-id="b5741-103">**CZY ✓** preferowane przy użyciu kolekcji za pośrednictwem tablic w publicznych interfejsach API.</span><span class="sxs-lookup"><span data-stu-id="b5741-103">**✓ DO** prefer using collections over arrays in public APIs.</span></span> <span data-ttu-id="b5741-104">[Kolekcje](../../../docs/standard/design-guidelines/guidelines-for-collections.md) sekcja zawiera szczegółowe informacje o tym, jak wybranie kolekcji i tablic.</span><span class="sxs-lookup"><span data-stu-id="b5741-104">The [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section provides details about how to choose between collections and arrays.</span></span>  
+# <a name="arrays"></a><span data-ttu-id="8b12c-102">Tablice</span><span class="sxs-lookup"><span data-stu-id="8b12c-102">Arrays</span></span>
+<span data-ttu-id="8b12c-103">**CZY ✓** preferowane przy użyciu kolekcji za pośrednictwem tablic w publicznych interfejsach API.</span><span class="sxs-lookup"><span data-stu-id="8b12c-103">**✓ DO** prefer using collections over arrays in public APIs.</span></span> <span data-ttu-id="8b12c-104">[Kolekcje](../../../docs/standard/design-guidelines/guidelines-for-collections.md) sekcja zawiera szczegółowe informacje o tym, jak wybranie kolekcji i tablic.</span><span class="sxs-lookup"><span data-stu-id="8b12c-104">The [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section provides details about how to choose between collections and arrays.</span></span>  
   
- <span data-ttu-id="b5741-105">**X nie** użyć pola tablicy tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="b5741-105">**X DO NOT** use read-only array fields.</span></span> <span data-ttu-id="b5741-106">Samo pole jest tylko do odczytu i nie można zmienić, ale można zmienić elementów w tablicy.</span><span class="sxs-lookup"><span data-stu-id="b5741-106">The field itself is read-only and can't be changed, but elements in the array can be changed.</span></span>  
+ <span data-ttu-id="8b12c-105">**X nie** użyć pola tablicy tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="8b12c-105">**X DO NOT** use read-only array fields.</span></span> <span data-ttu-id="8b12c-106">Samo pole jest tylko do odczytu i nie można zmienić, ale można zmienić elementów w tablicy.</span><span class="sxs-lookup"><span data-stu-id="8b12c-106">The field itself is read-only and can't be changed, but elements in the array can be changed.</span></span>  
   
- <span data-ttu-id="b5741-107">**ROZWAŻ ✓** za pomocą Tablice nieregularne zamiast wielowymiarowych tablic.</span><span class="sxs-lookup"><span data-stu-id="b5741-107">**✓ CONSIDER** using jagged arrays instead of multidimensional arrays.</span></span>  
+ <span data-ttu-id="8b12c-107">**ROZWAŻ ✓** za pomocą Tablice nieregularne zamiast wielowymiarowych tablic.</span><span class="sxs-lookup"><span data-stu-id="8b12c-107">**✓ CONSIDER** using jagged arrays instead of multidimensional arrays.</span></span>  
   
- <span data-ttu-id="b5741-108">Nieregularna tablica jest tablicą z elementami, które są również tablic.</span><span class="sxs-lookup"><span data-stu-id="b5741-108">A jagged array is an array with elements that are also arrays.</span></span> <span data-ttu-id="b5741-109">Tablice, które tworzą elementów może mieć różne rozmiary, co może prowadzić do mniej utracona dla niektórych zestawów danych (np. macierz rozrzedzone) w porównaniu do tablic wielowymiarowych.</span><span class="sxs-lookup"><span data-stu-id="b5741-109">The arrays that make up the elements can be of different sizes, leading to less wasted space for some sets of data (e.g., sparse matrix) compared to multidimensional arrays.</span></span> <span data-ttu-id="b5741-110">Ponadto CLR optymalizuje operacje na indeksie na Tablice nieregularne tak może charakteryzują się lepszą wydajność środowiska uruchomieniowego w niektórych scenariuszach.</span><span class="sxs-lookup"><span data-stu-id="b5741-110">Furthermore, the CLR optimizes index operations on jagged arrays, so they might exhibit better runtime performance in some scenarios.</span></span>  
+ <span data-ttu-id="8b12c-108">Nieregularna tablica jest tablicą z elementami, które są również tablic.</span><span class="sxs-lookup"><span data-stu-id="8b12c-108">A jagged array is an array with elements that are also arrays.</span></span> <span data-ttu-id="8b12c-109">Tablice, które tworzą elementów może mieć różne rozmiary, co może prowadzić do mniej utracona dla niektórych zestawów danych (np. macierz rozrzedzone) w porównaniu do tablic wielowymiarowych.</span><span class="sxs-lookup"><span data-stu-id="8b12c-109">The arrays that make up the elements can be of different sizes, leading to less wasted space for some sets of data (e.g., sparse matrix) compared to multidimensional arrays.</span></span> <span data-ttu-id="8b12c-110">Ponadto CLR optymalizuje operacje na indeksie na Tablice nieregularne tak może charakteryzują się lepszą wydajność środowiska uruchomieniowego w niektórych scenariuszach.</span><span class="sxs-lookup"><span data-stu-id="8b12c-110">Furthermore, the CLR optimizes index operations on jagged arrays, so they might exhibit better runtime performance in some scenarios.</span></span>  
   
- <span data-ttu-id="b5741-111">*Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="b5741-111">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="8b12c-111">*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="8b12c-111">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="b5741-112">*Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="b5741-112">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="8b12c-112">*Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="8b12c-112">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5741-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="b5741-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8b12c-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8b12c-113">See Also</span></span>  
  <xref:System.Array>  
- [<span data-ttu-id="b5741-114">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="b5741-114">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
- [<span data-ttu-id="b5741-115">Zalecenia dotyczące użytkowania</span><span class="sxs-lookup"><span data-stu-id="b5741-115">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)
+ [<span data-ttu-id="8b12c-114">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="8b12c-114">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="8b12c-115">Zalecenia dotyczące użytkowania</span><span class="sxs-lookup"><span data-stu-id="8b12c-115">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)

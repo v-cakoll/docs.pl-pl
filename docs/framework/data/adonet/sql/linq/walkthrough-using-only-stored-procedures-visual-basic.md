@@ -1,209 +1,209 @@
 ---
-title: "Wskazówki: Tylko przy użyciu przechowywanych procedur (Visual Basic)"
-ms.custom: 
+title: 'Wskazówki: Tylko przy użyciu przechowywanych procedur (Visual Basic)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 800cc7d6a1e4aa836ebe75afcbe29a3532ee173a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c04fe5e81f19b89de7204ed2430c9acf08ce1647
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a><span data-ttu-id="5ca96-102">Wskazówki: Tylko przy użyciu przechowywanych procedur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ca96-102">Walkthrough: Using Only Stored Procedures (Visual Basic)</span></span>
-<span data-ttu-id="5ca96-103">Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tylko procedury składowane scenariusz do uzyskiwania dostępu do danych za pomocą.</span><span class="sxs-lookup"><span data-stu-id="5ca96-103">This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by using stored procedures only.</span></span> <span data-ttu-id="5ca96-104">Ta metoda jest często używane przez administratorów bazy danych do ograniczenia, jak jest uzyskiwany dostęp do magazynu danych.</span><span class="sxs-lookup"><span data-stu-id="5ca96-104">This approach is often used by database administrators to limit how the datastore is accessed.</span></span>  
+# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a><span data-ttu-id="dd6e5-102">Wskazówki: Tylko przy użyciu przechowywanych procedur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd6e5-102">Walkthrough: Using Only Stored Procedures (Visual Basic)</span></span>
+<span data-ttu-id="dd6e5-103">Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tylko procedury składowane scenariusz do uzyskiwania dostępu do danych za pomocą.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-103">This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by using stored procedures only.</span></span> <span data-ttu-id="dd6e5-104">Ta metoda jest często używane przez administratorów bazy danych do ograniczenia, jak jest uzyskiwany dostęp do magazynu danych.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-104">This approach is often used by database administrators to limit how the datastore is accessed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5ca96-105">Można również użyć procedur składowanych w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, aby zastąpić zachowanie domyślne, szczególnie w przypadku `Create`, `Update`, i `Delete` procesów.</span><span class="sxs-lookup"><span data-stu-id="5ca96-105">You can also use stored procedures in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications to override default behavior, especially for `Create`, `Update`, and `Delete` processes.</span></span> <span data-ttu-id="5ca96-106">Aby uzyskać więcej informacji, zobacz [Dostosowywanie Insert, Update i operacji usunięcia](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span><span class="sxs-lookup"><span data-stu-id="5ca96-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>  
+>  <span data-ttu-id="dd6e5-105">Można również użyć procedur składowanych w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, aby zastąpić zachowanie domyślne, szczególnie w przypadku `Create`, `Update`, i `Delete` procesów.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-105">You can also use stored procedures in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications to override default behavior, especially for `Create`, `Update`, and `Delete` processes.</span></span> <span data-ttu-id="dd6e5-106">Aby uzyskać więcej informacji, zobacz [Dostosowywanie Insert, Update i operacji usunięcia](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span><span class="sxs-lookup"><span data-stu-id="dd6e5-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>  
   
- <span data-ttu-id="5ca96-107">Do celów tego przewodnika, korzystasz z dwóch metod, które zostały zamapowane do procedur przechowywanych w bazie danych Northwind: CustOrdersDetail i CustOrderHist.</span><span class="sxs-lookup"><span data-stu-id="5ca96-107">For purposes of this walkthrough, you will use two methods that have been mapped to stored procedures in the Northwind sample database: CustOrdersDetail and CustOrderHist.</span></span> <span data-ttu-id="5ca96-108">Mapowanie występuje podczas uruchamiania narzędzia wiersza polecenia SqlMetal, aby wygenerować [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] pliku.</span><span class="sxs-lookup"><span data-stu-id="5ca96-108">The mapping occurs when you run the SqlMetal command-line tool to generate a [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] file.</span></span> <span data-ttu-id="5ca96-109">Aby uzyskać więcej informacji zobacz sekcję wymagań wstępnych w dalszej części tego przewodnika.</span><span class="sxs-lookup"><span data-stu-id="5ca96-109">For more information, see the Prerequisites section later in this walkthrough.</span></span>  
+ <span data-ttu-id="dd6e5-107">Do celów tego przewodnika, korzystasz z dwóch metod, które zostały zamapowane do procedur przechowywanych w bazie danych Northwind: CustOrdersDetail i CustOrderHist.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-107">For purposes of this walkthrough, you will use two methods that have been mapped to stored procedures in the Northwind sample database: CustOrdersDetail and CustOrderHist.</span></span> <span data-ttu-id="dd6e5-108">Mapowanie występuje podczas uruchamiania narzędzia wiersza polecenia SqlMetal, aby wygenerować plik języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-108">The mapping occurs when you run the SqlMetal command-line tool to generate a Visual Basic file.</span></span> <span data-ttu-id="dd6e5-109">Aby uzyskać więcej informacji zobacz sekcję wymagań wstępnych w dalszej części tego przewodnika.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-109">For more information, see the Prerequisites section later in this walkthrough.</span></span>  
   
- <span data-ttu-id="5ca96-110">Ten przewodnik nie bazuje na [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5ca96-110">This walkthrough does not rely on the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span></span> <span data-ttu-id="5ca96-111">Deweloperzy przy użyciu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] także [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] do implementowania procedury składowanej.</span><span class="sxs-lookup"><span data-stu-id="5ca96-111">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can also use the [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] to implement stored procedure functionality.</span></span> <span data-ttu-id="5ca96-112">Zobacz [składnika LINQ to SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="5ca96-112">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
+ <span data-ttu-id="dd6e5-110">Ten przewodnik nie bazuje na [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dd6e5-110">This walkthrough does not rely on the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span></span> <span data-ttu-id="dd6e5-111">Za pomocą programu Visual Studio programiści mogą również wykorzystać [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] do implementowania procedury składowanej.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-111">Developers using Visual Studio can also use the [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] to implement stored procedure functionality.</span></span> <span data-ttu-id="dd6e5-112">Zobacz [składnika LINQ to SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="dd6e5-112">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- <span data-ttu-id="5ca96-113">W tym przewodniku została napisana przy użyciu ustawienia środowiska deweloperskiego Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5ca96-113">This walkthrough was written by using Visual Basic Development Settings.</span></span>  
+ <span data-ttu-id="dd6e5-113">W tym przewodniku została napisana przy użyciu ustawienia środowiska deweloperskiego Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-113">This walkthrough was written by using Visual Basic Development Settings.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="5ca96-114">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="5ca96-114">Prerequisites</span></span>  
- <span data-ttu-id="5ca96-115">W tym przewodniku wymaga następujących elementów:</span><span class="sxs-lookup"><span data-stu-id="5ca96-115">This walkthrough requires the following:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="dd6e5-114">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="dd6e5-114">Prerequisites</span></span>  
+ <span data-ttu-id="dd6e5-115">W tym przewodniku wymaga następujących elementów:</span><span class="sxs-lookup"><span data-stu-id="dd6e5-115">This walkthrough requires the following:</span></span>  
   
--   <span data-ttu-id="5ca96-116">W tym przewodniku zastosowano dedykowanych folderów ("c:\linqtest3") do przechowywania plików.</span><span class="sxs-lookup"><span data-stu-id="5ca96-116">This walkthrough uses a dedicated folder ("c:\linqtest3") to hold files.</span></span> <span data-ttu-id="5ca96-117">Utwórz ten folder przed rozpoczęciem przewodnika.</span><span class="sxs-lookup"><span data-stu-id="5ca96-117">Create this folder before you begin the walkthrough.</span></span>  
+-   <span data-ttu-id="dd6e5-116">W tym przewodniku zastosowano dedykowanych folderów ("c:\linqtest3") do przechowywania plików.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-116">This walkthrough uses a dedicated folder ("c:\linqtest3") to hold files.</span></span> <span data-ttu-id="dd6e5-117">Utwórz ten folder przed rozpoczęciem przewodnika.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-117">Create this folder before you begin the walkthrough.</span></span>  
   
--   <span data-ttu-id="5ca96-118">Przykładowa bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="5ca96-118">The Northwind sample database.</span></span>  
+-   <span data-ttu-id="dd6e5-118">Przykładowa bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-118">The Northwind sample database.</span></span>  
   
-     <span data-ttu-id="5ca96-119">Jeśli nie ma tej bazy danych na komputerze deweloperskim, można go pobrać z witryny pobierania firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="5ca96-119">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="5ca96-120">Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="5ca96-120">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="5ca96-121">Po pobraniu bazy danych, skopiuj plik northwnd.mdf do folderu c:\linqtest3.</span><span class="sxs-lookup"><span data-stu-id="5ca96-121">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest3 folder.</span></span>  
+     <span data-ttu-id="dd6e5-119">Jeśli nie ma tej bazy danych na komputerze deweloperskim, można go pobrać z witryny pobierania firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-119">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="dd6e5-120">Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="dd6e5-120">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="dd6e5-121">Po pobraniu bazy danych, skopiuj plik northwnd.mdf do folderu c:\linqtest3.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-121">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest3 folder.</span></span>  
   
--   <span data-ttu-id="5ca96-122">A [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] wygenerowane z bazy danych Northwind pliku kodu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-122">A [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] code file generated from the Northwind database.</span></span>  
+-   <span data-ttu-id="dd6e5-122">Plik kodu języka Visual Basic wygenerowany z bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-122">A Visual Basic code file generated from the Northwind database.</span></span>  
   
-     <span data-ttu-id="5ca96-123">W tym przewodniku została napisana przy użyciu narzędzia SqlMetal z następującego polecenia:</span><span class="sxs-lookup"><span data-stu-id="5ca96-123">This walkthrough was written by using the SqlMetal tool with the following command line:</span></span>  
+     <span data-ttu-id="dd6e5-123">W tym przewodniku została napisana przy użyciu narzędzia SqlMetal z następującego polecenia:</span><span class="sxs-lookup"><span data-stu-id="dd6e5-123">This walkthrough was written by using the SqlMetal tool with the following command line:</span></span>  
   
-     <span data-ttu-id="5ca96-124">**sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions / pluralize**</span><span class="sxs-lookup"><span data-stu-id="5ca96-124">**sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**</span></span>  
+     <span data-ttu-id="dd6e5-124">**sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions / pluralize**</span><span class="sxs-lookup"><span data-stu-id="dd6e5-124">**sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**</span></span>  
   
-     <span data-ttu-id="5ca96-125">Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="5ca96-125">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
+     <span data-ttu-id="dd6e5-125">Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="dd6e5-125">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="5ca96-126">Omówienie</span><span class="sxs-lookup"><span data-stu-id="5ca96-126">Overview</span></span>  
- <span data-ttu-id="5ca96-127">Ten przewodnik obejmuje sześć głównych zadań:</span><span class="sxs-lookup"><span data-stu-id="5ca96-127">This walkthrough consists of six main tasks:</span></span>  
+## <a name="overview"></a><span data-ttu-id="dd6e5-126">Omówienie</span><span class="sxs-lookup"><span data-stu-id="dd6e5-126">Overview</span></span>  
+ <span data-ttu-id="dd6e5-127">Ten przewodnik obejmuje sześć głównych zadań:</span><span class="sxs-lookup"><span data-stu-id="dd6e5-127">This walkthrough consists of six main tasks:</span></span>  
   
--   <span data-ttu-id="5ca96-128">Konfigurowanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5ca96-128">Setting up the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span></span>  
+-   <span data-ttu-id="dd6e5-128">Konfigurowanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-128">Setting up the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>  
   
--   <span data-ttu-id="5ca96-129">Dodawanie zestawu System.Data.Linq do projektu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-129">Adding the System.Data.Linq assembly to the project.</span></span>  
+-   <span data-ttu-id="dd6e5-129">Dodawanie zestawu System.Data.Linq do projektu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-129">Adding the System.Data.Linq assembly to the project.</span></span>  
   
--   <span data-ttu-id="5ca96-130">Dodawanie plików kodu bazy danych do projektu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-130">Adding the database code file to the project.</span></span>  
+-   <span data-ttu-id="dd6e5-130">Dodawanie plików kodu bazy danych do projektu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-130">Adding the database code file to the project.</span></span>  
   
--   <span data-ttu-id="5ca96-131">Tworzenie połączenia z bazą danych.</span><span class="sxs-lookup"><span data-stu-id="5ca96-131">Creating a connection to the database.</span></span>  
+-   <span data-ttu-id="dd6e5-131">Tworzenie połączenia z bazą danych.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-131">Creating a connection to the database.</span></span>  
   
--   <span data-ttu-id="5ca96-132">Konfigurowanie interfejsu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="5ca96-132">Setting up the user interface.</span></span>  
+-   <span data-ttu-id="dd6e5-132">Konfigurowanie interfejsu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-132">Setting up the user interface.</span></span>  
   
--   <span data-ttu-id="5ca96-133">Działa i testowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="5ca96-133">Running and testing the application.</span></span>  
+-   <span data-ttu-id="dd6e5-133">Działa i testowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-133">Running and testing the application.</span></span>  
   
-## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="5ca96-134">Tworzenie składnika LINQ to SQL rozwiązania</span><span class="sxs-lookup"><span data-stu-id="5ca96-134">Creating a LINQ to SQL Solution</span></span>  
- <span data-ttu-id="5ca96-135">W tym zadaniu pierwszym utworzeniu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] rozwiązania zawierającego niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-135">In this first task, you create a [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="dd6e5-134">Tworzenie składnika LINQ to SQL rozwiązania</span><span class="sxs-lookup"><span data-stu-id="dd6e5-134">Creating a LINQ to SQL Solution</span></span>  
+ <span data-ttu-id="dd6e5-135">W tym zadaniu pierwszego tworzenia rozwiązania Visual Studio, który zawiera niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-135">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="5ca96-136">Aby utworzyć składnika LINQ to SQL rozwiązania</span><span class="sxs-lookup"><span data-stu-id="5ca96-136">To create a LINQ to SQL solution</span></span>  
+#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="dd6e5-136">Aby utworzyć składnika LINQ to SQL rozwiązania</span><span class="sxs-lookup"><span data-stu-id="dd6e5-136">To create a LINQ to SQL solution</span></span>  
   
-1.  <span data-ttu-id="5ca96-137">Na [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **pliku** menu, kliknij przycisk **nowy projekt**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-137">On the [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **File** menu, click **New Project**.</span></span>  
+1.  <span data-ttu-id="dd6e5-137">W programie Visual Studio **pliku** menu, kliknij przycisk **nowy projekt**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-137">On the Visual Studio **File** menu, click **New Project**.</span></span>  
   
-2.  <span data-ttu-id="5ca96-138">W **typy projektów** okienka w **nowy projekt** okna dialogowego rozwiń **Visual Basic**, a następnie kliknij przycisk **Windows**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-138">In the **Project types** pane in the **New Project** dialog box, expand **Visual Basic**, and then click **Windows**.</span></span>  
+2.  <span data-ttu-id="dd6e5-138">W **typy projektów** okienka w **nowy projekt** okna dialogowego rozwiń **Visual Basic**, a następnie kliknij przycisk **Windows**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-138">In the **Project types** pane in the **New Project** dialog box, expand **Visual Basic**, and then click **Windows**.</span></span>  
   
-3.  <span data-ttu-id="5ca96-139">W **szablony** okienku, kliknij przycisk **aplikacji Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-139">In the **Templates** pane, click **Windows Forms Application**.</span></span>  
+3.  <span data-ttu-id="dd6e5-139">W **szablony** okienku, kliknij przycisk **aplikacji Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-139">In the **Templates** pane, click **Windows Forms Application**.</span></span>  
   
-4.  <span data-ttu-id="5ca96-140">W **nazwa** wpisz **SprocOnlyApp**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-140">In the **Name** box, type **SprocOnlyApp**.</span></span>  
+4.  <span data-ttu-id="dd6e5-140">W **nazwa** wpisz **SprocOnlyApp**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-140">In the **Name** box, type **SprocOnlyApp**.</span></span>  
   
-5.  <span data-ttu-id="5ca96-141">Kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-141">Click **OK**.</span></span>  
+5.  <span data-ttu-id="dd6e5-141">Kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-141">Click **OK**.</span></span>  
   
-     <span data-ttu-id="5ca96-142">Zostanie otwarty projektant formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="5ca96-142">The Windows Forms Designer opens.</span></span>  
+     <span data-ttu-id="dd6e5-142">Zostanie otwarty projektant formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-142">The Windows Forms Designer opens.</span></span>  
   
-## <a name="adding-the-linq-to-sql-assembly-reference"></a><span data-ttu-id="5ca96-143">Dodawanie LINQ do SQL odwołanie do zestawu</span><span class="sxs-lookup"><span data-stu-id="5ca96-143">Adding the LINQ to SQL Assembly Reference</span></span>  
- <span data-ttu-id="5ca96-144">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Zestaw nie jest dołączony do standardowego szablonu aplikacji formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="5ca96-144">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly is not included in the standard Windows Forms Application template.</span></span> <span data-ttu-id="5ca96-145">Należy dodać zestaw samodzielnie, zgodnie z objaśnieniem w poniższych krokach:</span><span class="sxs-lookup"><span data-stu-id="5ca96-145">You will have to add the assembly yourself, as explained in the following steps:</span></span>  
+## <a name="adding-the-linq-to-sql-assembly-reference"></a><span data-ttu-id="dd6e5-143">Dodawanie LINQ do SQL odwołanie do zestawu</span><span class="sxs-lookup"><span data-stu-id="dd6e5-143">Adding the LINQ to SQL Assembly Reference</span></span>  
+ <span data-ttu-id="dd6e5-144">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Zestaw nie jest dołączony do standardowego szablonu aplikacji formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-144">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly is not included in the standard Windows Forms Application template.</span></span> <span data-ttu-id="dd6e5-145">Należy dodać zestaw samodzielnie, zgodnie z objaśnieniem w poniższych krokach:</span><span class="sxs-lookup"><span data-stu-id="dd6e5-145">You will have to add the assembly yourself, as explained in the following steps:</span></span>  
   
-#### <a name="to-add-systemdatalinqdll"></a><span data-ttu-id="5ca96-146">To add System.Data.Linq.dll</span><span class="sxs-lookup"><span data-stu-id="5ca96-146">To add System.Data.Linq.dll</span></span>  
+#### <a name="to-add-systemdatalinqdll"></a><span data-ttu-id="dd6e5-146">To add System.Data.Linq.dll</span><span class="sxs-lookup"><span data-stu-id="dd6e5-146">To add System.Data.Linq.dll</span></span>  
   
-1.  <span data-ttu-id="5ca96-147">W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-147">In **Solution Explorer**, click **Show All Files**.</span></span>  
+1.  <span data-ttu-id="dd6e5-147">W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-147">In **Solution Explorer**, click **Show All Files**.</span></span>  
   
-2.  <span data-ttu-id="5ca96-148">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-148">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
+2.  <span data-ttu-id="dd6e5-148">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-148">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
   
-3.  <span data-ttu-id="5ca96-149">W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-149">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
+3.  <span data-ttu-id="dd6e5-149">W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-149">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
   
-     <span data-ttu-id="5ca96-150">Zestaw został dodany do projektu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-150">The assembly is added to the project.</span></span>  
+     <span data-ttu-id="dd6e5-150">Zestaw został dodany do projektu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-150">The assembly is added to the project.</span></span>  
   
-## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="5ca96-151">Dodawanie plików kodu Northwind do projektu</span><span class="sxs-lookup"><span data-stu-id="5ca96-151">Adding the Northwind Code File to the Project</span></span>  
- <span data-ttu-id="5ca96-152">W tym kroku przyjęto założenie, użycie narzędzia SqlMetal do wygenerowania pliku kodu z przykładowej bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="5ca96-152">This step assumes that you have used the SqlMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="5ca96-153">Aby uzyskać więcej informacji zobacz sekcję wymagań wstępnych we wcześniejszej części tego przewodnika.</span><span class="sxs-lookup"><span data-stu-id="5ca96-153">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
+## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="dd6e5-151">Dodawanie plików kodu Northwind do projektu</span><span class="sxs-lookup"><span data-stu-id="dd6e5-151">Adding the Northwind Code File to the Project</span></span>  
+ <span data-ttu-id="dd6e5-152">W tym kroku przyjęto założenie, użycie narzędzia SqlMetal do wygenerowania pliku kodu z przykładowej bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-152">This step assumes that you have used the SqlMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="dd6e5-153">Aby uzyskać więcej informacji zobacz sekcję wymagań wstępnych we wcześniejszej części tego przewodnika.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-153">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="5ca96-154">Aby dodać plik kodu northwind do projektu</span><span class="sxs-lookup"><span data-stu-id="5ca96-154">To add the northwind code file to the project</span></span>  
+#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="dd6e5-154">Aby dodać plik kodu northwind do projektu</span><span class="sxs-lookup"><span data-stu-id="dd6e5-154">To add the northwind code file to the project</span></span>  
   
-1.  <span data-ttu-id="5ca96-155">Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-155">On the **Project** menu, click **Add Existing Item**.</span></span>  
+1.  <span data-ttu-id="dd6e5-155">Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-155">On the **Project** menu, click **Add Existing Item**.</span></span>  
   
-2.  <span data-ttu-id="5ca96-156">W **Dodaj istniejący element** okno dialogowe, Przenieś do c:\linqtest3\northwind.vb, a następnie kliknij przycisk **Dodaj**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-156">In the **Add Existing Item** dialog box, move to c:\linqtest3\northwind.vb, and then click **Add**.</span></span>  
+2.  <span data-ttu-id="dd6e5-156">W **Dodaj istniejący element** okno dialogowe, Przenieś do c:\linqtest3\northwind.vb, a następnie kliknij przycisk **Dodaj**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-156">In the **Add Existing Item** dialog box, move to c:\linqtest3\northwind.vb, and then click **Add**.</span></span>  
   
-     <span data-ttu-id="5ca96-157">Plik northwind.vb zostanie dodany do projektu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-157">The northwind.vb file is added to the project.</span></span>  
+     <span data-ttu-id="dd6e5-157">Plik northwind.vb zostanie dodany do projektu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-157">The northwind.vb file is added to the project.</span></span>  
   
-## <a name="creating-a-database-connection"></a><span data-ttu-id="5ca96-158">Tworzenie połączenia z bazą danych</span><span class="sxs-lookup"><span data-stu-id="5ca96-158">Creating a Database Connection</span></span>  
- <span data-ttu-id="5ca96-159">W tym kroku definiowane połączenie z przykładowej bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="5ca96-159">In this step, you define the connection to the Northwind sample database.</span></span> <span data-ttu-id="5ca96-160">W tym przewodniku zastosowano "c:\linqtest3\northwnd.mdf" jako ścieżka.</span><span class="sxs-lookup"><span data-stu-id="5ca96-160">This walkthrough uses "c:\linqtest3\northwnd.mdf" as the path.</span></span>  
+## <a name="creating-a-database-connection"></a><span data-ttu-id="dd6e5-158">Tworzenie połączenia z bazą danych</span><span class="sxs-lookup"><span data-stu-id="dd6e5-158">Creating a Database Connection</span></span>  
+ <span data-ttu-id="dd6e5-159">W tym kroku definiowane połączenie z przykładowej bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-159">In this step, you define the connection to the Northwind sample database.</span></span> <span data-ttu-id="dd6e5-160">W tym przewodniku zastosowano "c:\linqtest3\northwnd.mdf" jako ścieżka.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-160">This walkthrough uses "c:\linqtest3\northwnd.mdf" as the path.</span></span>  
   
-#### <a name="to-create-the-database-connection"></a><span data-ttu-id="5ca96-161">Aby utworzyć połączenie z bazą danych</span><span class="sxs-lookup"><span data-stu-id="5ca96-161">To create the database connection</span></span>  
+#### <a name="to-create-the-database-connection"></a><span data-ttu-id="dd6e5-161">Aby utworzyć połączenie z bazą danych</span><span class="sxs-lookup"><span data-stu-id="dd6e5-161">To create the database connection</span></span>  
   
-1.  <span data-ttu-id="5ca96-162">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.vb**, a następnie kliknij przycisk **kod widoku**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-162">In **Solution Explorer**, right-click **Form1.vb**, and then click **View Code**.</span></span>  
+1.  <span data-ttu-id="dd6e5-162">W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.vb**, a następnie kliknij przycisk **kod widoku**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-162">In **Solution Explorer**, right-click **Form1.vb**, and then click **View Code**.</span></span>  
   
-     <span data-ttu-id="5ca96-163">`Class Form1`zostanie wyświetlony w edytorze kodu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-163">`Class Form1` appears in the code editor.</span></span>  
+     <span data-ttu-id="dd6e5-163">`Class Form1` zostanie wyświetlony w edytorze kodu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-163">`Class Form1` appears in the code editor.</span></span>  
   
-2.  <span data-ttu-id="5ca96-164">Wpisz następujący kod do `Form1` blok kodu:</span><span class="sxs-lookup"><span data-stu-id="5ca96-164">Type the following code into the `Form1` code block:</span></span>  
+2.  <span data-ttu-id="dd6e5-164">Wpisz następujący kod do `Form1` blok kodu:</span><span class="sxs-lookup"><span data-stu-id="dd6e5-164">Type the following code into the `Form1` code block:</span></span>  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
-## <a name="setting-up-the-user-interface"></a><span data-ttu-id="5ca96-165">Konfigurowanie interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="5ca96-165">Setting up the User Interface</span></span>  
- <span data-ttu-id="5ca96-166">W tym zadaniu tworzenia interfejsu, aby użytkownicy można wykonać procedur składowanych dostępu do danych w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="5ca96-166">In this task you create an interface so that users can execute stored procedures to access data in the database.</span></span> <span data-ttu-id="5ca96-167">W aplikacji, który tworzysz z tym przewodnikiem użytkownicy mogą korzystać tylko za pomocą procedur składowanych osadzone w aplikacji, w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="5ca96-167">In the application that you are developing with this walkthrough, users can access data in the database only by using the stored procedures embedded in the application.</span></span>  
+## <a name="setting-up-the-user-interface"></a><span data-ttu-id="dd6e5-165">Konfigurowanie interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="dd6e5-165">Setting up the User Interface</span></span>  
+ <span data-ttu-id="dd6e5-166">W tym zadaniu tworzenia interfejsu, aby użytkownicy można wykonać procedur składowanych dostępu do danych w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-166">In this task you create an interface so that users can execute stored procedures to access data in the database.</span></span> <span data-ttu-id="dd6e5-167">W aplikacji, który tworzysz z tym przewodnikiem użytkownicy mogą korzystać tylko za pomocą procedur składowanych osadzone w aplikacji, w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-167">In the application that you are developing with this walkthrough, users can access data in the database only by using the stored procedures embedded in the application.</span></span>  
   
-#### <a name="to-set-up-the-user-interface"></a><span data-ttu-id="5ca96-168">Aby skonfigurować interfejs użytkownika</span><span class="sxs-lookup"><span data-stu-id="5ca96-168">To set up the user interface</span></span>  
+#### <a name="to-set-up-the-user-interface"></a><span data-ttu-id="dd6e5-168">Aby skonfigurować interfejs użytkownika</span><span class="sxs-lookup"><span data-stu-id="dd6e5-168">To set up the user interface</span></span>  
   
-1.  <span data-ttu-id="5ca96-169">Projektant Forms powrotu do systemu Windows (**Form1.vb[Design]**).</span><span class="sxs-lookup"><span data-stu-id="5ca96-169">Return to the Windows Forms Designer (**Form1.vb[Design]**).</span></span>  
+1.  <span data-ttu-id="dd6e5-169">Projektant Forms powrotu do systemu Windows (**Form1.vb[Design]**).</span><span class="sxs-lookup"><span data-stu-id="dd6e5-169">Return to the Windows Forms Designer (**Form1.vb[Design]**).</span></span>  
   
-2.  <span data-ttu-id="5ca96-170">Na **widoku** menu, kliknij przycisk **przybornika**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-170">On the **View** menu, click **Toolbox**.</span></span>  
+2.  <span data-ttu-id="dd6e5-170">Na **widoku** menu, kliknij przycisk **przybornika**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-170">On the **View** menu, click **Toolbox**.</span></span>  
   
-     <span data-ttu-id="5ca96-171">Otwiera przybornika.</span><span class="sxs-lookup"><span data-stu-id="5ca96-171">The toolbox opens.</span></span>  
+     <span data-ttu-id="dd6e5-171">Otwiera przybornika.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-171">The toolbox opens.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="5ca96-172">Kliknij przycisk **autohide —** pinezki, aby utrzymać otwarte przybornika podczas przeprowadzania pozostałe kroki w tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="5ca96-172">Click the **AutoHide** pushpin to keep the toolbox open while you perform the remaining steps in this section.</span></span>  
+    >  <span data-ttu-id="dd6e5-172">Kliknij przycisk **autohide —** pinezki, aby utrzymać otwarte przybornika podczas przeprowadzania pozostałe kroki w tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-172">Click the **AutoHide** pushpin to keep the toolbox open while you perform the remaining steps in this section.</span></span>  
   
-3.  <span data-ttu-id="5ca96-173">Przeciągnij z przybornika do dwóch przycisków, dwa pola tekstowe i dwie etykiety **Form1**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-173">Drag two buttons, two text boxes, and two labels from the toolbox onto **Form1**.</span></span>  
+3.  <span data-ttu-id="dd6e5-173">Przeciągnij z przybornika do dwóch przycisków, dwa pola tekstowe i dwie etykiety **Form1**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-173">Drag two buttons, two text boxes, and two labels from the toolbox onto **Form1**.</span></span>  
   
-     <span data-ttu-id="5ca96-174">Rozmieszczanie formantów jak towarzyszący ilustracji.</span><span class="sxs-lookup"><span data-stu-id="5ca96-174">Arrange the controls as in the accompanying illustration.</span></span> <span data-ttu-id="5ca96-175">Rozwiń węzeł **Form1** tak, aby formanty łatwo Dopasuj.</span><span class="sxs-lookup"><span data-stu-id="5ca96-175">Expand **Form1** so that the controls fit easily.</span></span>  
+     <span data-ttu-id="dd6e5-174">Rozmieszczanie formantów jak towarzyszący ilustracji.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-174">Arrange the controls as in the accompanying illustration.</span></span> <span data-ttu-id="dd6e5-175">Rozwiń węzeł **Form1** tak, aby formanty łatwo Dopasuj.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-175">Expand **Form1** so that the controls fit easily.</span></span>  
   
-4.  <span data-ttu-id="5ca96-176">Kliknij prawym przyciskiem myszy **Label1**, a następnie kliknij przycisk **właściwości**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-176">Right-click **Label1**, and then click **Properties**.</span></span>  
+4.  <span data-ttu-id="dd6e5-176">Kliknij prawym przyciskiem myszy **Label1**, a następnie kliknij przycisk **właściwości**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-176">Right-click **Label1**, and then click **Properties**.</span></span>  
   
-5.  <span data-ttu-id="5ca96-177">Zmień **tekst** właściwość z **Label1** do **wprowadź OrderID:**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-177">Change the **Text** property from **Label1** to **Enter OrderID:**.</span></span>  
+5.  <span data-ttu-id="dd6e5-177">Zmień **tekst** właściwość z **Label1** do **wprowadź OrderID:**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-177">Change the **Text** property from **Label1** to **Enter OrderID:**.</span></span>  
   
-6.  <span data-ttu-id="5ca96-178">W ten sam sposób dla **Label2**, zmień **tekst** właściwość z **Label2** do **wprowadź CustomerID:**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-178">In the same way for **Label2**, change the **Text** property from **Label2** to **Enter CustomerID:**.</span></span>  
+6.  <span data-ttu-id="dd6e5-178">W ten sam sposób dla **Label2**, zmień **tekst** właściwość z **Label2** do **wprowadź CustomerID:**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-178">In the same way for **Label2**, change the **Text** property from **Label2** to **Enter CustomerID:**.</span></span>  
   
-7.  <span data-ttu-id="5ca96-179">W ten sam sposób, zmień **tekst** właściwość **Button1** do **szczegółów zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-179">In the same way, change the **Text** property for **Button1** to **Order Details**.</span></span>  
+7.  <span data-ttu-id="dd6e5-179">W ten sam sposób, zmień **tekst** właściwość **Button1** do **szczegółów zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-179">In the same way, change the **Text** property for **Button1** to **Order Details**.</span></span>  
   
-8.  <span data-ttu-id="5ca96-180">Zmień **tekst** właściwość **Button2** do **historii zamówień**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-180">Change the **Text** property for **Button2** to **Order History**.</span></span>  
+8.  <span data-ttu-id="dd6e5-180">Zmień **tekst** właściwość **Button2** do **historii zamówień**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-180">Change the **Text** property for **Button2** to **Order History**.</span></span>  
   
-     <span data-ttu-id="5ca96-181">Rozszerzenia kontrolki przycisku, dzięki czemu cały tekst jest widoczny.</span><span class="sxs-lookup"><span data-stu-id="5ca96-181">Widen the button controls so that all the text is visible.</span></span>  
+     <span data-ttu-id="dd6e5-181">Rozszerzenia kontrolki przycisku, dzięki czemu cały tekst jest widoczny.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-181">Widen the button controls so that all the text is visible.</span></span>  
   
-#### <a name="to-handle-button-clicks"></a><span data-ttu-id="5ca96-182">Do obsługi kliknięcia przycisków</span><span class="sxs-lookup"><span data-stu-id="5ca96-182">To handle button clicks</span></span>  
+#### <a name="to-handle-button-clicks"></a><span data-ttu-id="dd6e5-182">Do obsługi kliknięcia przycisków</span><span class="sxs-lookup"><span data-stu-id="dd6e5-182">To handle button clicks</span></span>  
   
-1.  <span data-ttu-id="5ca96-183">Kliknij dwukrotnie **szczegółów zamówienia** na **Form1** utworzyć `Button1` obsługi zdarzeń i otworzyć edytora kodu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-183">Double-click **Order Details** on **Form1** to create the `Button1` event handler and open the code editor.</span></span>  
+1.  <span data-ttu-id="dd6e5-183">Kliknij dwukrotnie **szczegółów zamówienia** na **Form1** utworzyć `Button1` obsługi zdarzeń i otworzyć edytora kodu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-183">Double-click **Order Details** on **Form1** to create the `Button1` event handler and open the code editor.</span></span>  
   
-2.  <span data-ttu-id="5ca96-184">Wpisz następujący kod do `Button1` obsługi:</span><span class="sxs-lookup"><span data-stu-id="5ca96-184">Type the following code into the `Button1` handler:</span></span>  
+2.  <span data-ttu-id="dd6e5-184">Wpisz następujący kod do `Button1` obsługi:</span><span class="sxs-lookup"><span data-stu-id="dd6e5-184">Type the following code into the `Button1` handler:</span></span>  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3.  <span data-ttu-id="5ca96-185">Teraz kliknij dwukrotnie **Button2** na Form1 utworzyć `Button2` obsługi zdarzeń i otworzyć edytora kodu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-185">Now double-click **Button2** on Form1 to create the `Button2` event handler and open the code editor.</span></span>  
+3.  <span data-ttu-id="dd6e5-185">Teraz kliknij dwukrotnie **Button2** na Form1 utworzyć `Button2` obsługi zdarzeń i otworzyć edytora kodu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-185">Now double-click **Button2** on Form1 to create the `Button2` event handler and open the code editor.</span></span>  
   
-4.  <span data-ttu-id="5ca96-186">Wpisz następujący kod do `Button2` obsługi:</span><span class="sxs-lookup"><span data-stu-id="5ca96-186">Type the following code into the `Button2` handler:</span></span>  
+4.  <span data-ttu-id="dd6e5-186">Wpisz następujący kod do `Button2` obsługi:</span><span class="sxs-lookup"><span data-stu-id="dd6e5-186">Type the following code into the `Button2` handler:</span></span>  
   
      [!code-vb[DLinqWalk4VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#3)]  
   
-## <a name="testing-the-application"></a><span data-ttu-id="5ca96-187">Testowanie aplikacji</span><span class="sxs-lookup"><span data-stu-id="5ca96-187">Testing the Application</span></span>  
- <span data-ttu-id="5ca96-188">Teraz nadszedł czas, aby przetestować aplikację.</span><span class="sxs-lookup"><span data-stu-id="5ca96-188">Now it is time to test your application.</span></span> <span data-ttu-id="5ca96-189">Należy pamiętać, że kontakt z magazynu danych jest ograniczona do dowolnej akcji może zająć dwie procedury składowanej.</span><span class="sxs-lookup"><span data-stu-id="5ca96-189">Note that your contact with the datastore is limited to whatever actions the two stored procedures can take.</span></span> <span data-ttu-id="5ca96-190">Te akcje są do zwrócenia produkty uwzględnione wszelkie orderID wprowadzona lub do zwrócenia historii produktów, uporządkowany w celu żadnych CustomerID wprowadzasz.</span><span class="sxs-lookup"><span data-stu-id="5ca96-190">Those actions are to return the products included for any orderID you enter, or to return a history of products ordered for any CustomerID you enter.</span></span>  
+## <a name="testing-the-application"></a><span data-ttu-id="dd6e5-187">Testowanie aplikacji</span><span class="sxs-lookup"><span data-stu-id="dd6e5-187">Testing the Application</span></span>  
+ <span data-ttu-id="dd6e5-188">Teraz nadszedł czas, aby przetestować aplikację.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-188">Now it is time to test your application.</span></span> <span data-ttu-id="dd6e5-189">Należy pamiętać, że kontakt z magazynu danych jest ograniczona do dowolnej akcji może zająć dwie procedury składowanej.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-189">Note that your contact with the datastore is limited to whatever actions the two stored procedures can take.</span></span> <span data-ttu-id="dd6e5-190">Te akcje są do zwrócenia produkty uwzględnione wszelkie orderID wprowadzona lub do zwrócenia historii produktów, uporządkowany w celu żadnych CustomerID wprowadzasz.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-190">Those actions are to return the products included for any orderID you enter, or to return a history of products ordered for any CustomerID you enter.</span></span>  
   
-#### <a name="to-test-the-application"></a><span data-ttu-id="5ca96-191">Aby przetestować aplikację</span><span class="sxs-lookup"><span data-stu-id="5ca96-191">To test the application</span></span>  
+#### <a name="to-test-the-application"></a><span data-ttu-id="dd6e5-191">Aby przetestować aplikację</span><span class="sxs-lookup"><span data-stu-id="dd6e5-191">To test the application</span></span>  
   
-1.  <span data-ttu-id="5ca96-192">Naciśnij klawisz F5, aby rozpocząć debugowania.</span><span class="sxs-lookup"><span data-stu-id="5ca96-192">Press F5 to start debugging.</span></span>  
+1.  <span data-ttu-id="dd6e5-192">Naciśnij klawisz F5, aby rozpocząć debugowania.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-192">Press F5 to start debugging.</span></span>  
   
-     <span data-ttu-id="5ca96-193">Zostanie wyświetlone Form1.</span><span class="sxs-lookup"><span data-stu-id="5ca96-193">Form1 appears.</span></span>  
+     <span data-ttu-id="dd6e5-193">Zostanie wyświetlone Form1.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-193">Form1 appears.</span></span>  
   
-2.  <span data-ttu-id="5ca96-194">W **wprowadź OrderID** wpisz **10249** , a następnie kliknij przycisk **szczegółów zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-194">In the **Enter OrderID** box, type **10249** and then click **Order Details**.</span></span>  
+2.  <span data-ttu-id="dd6e5-194">W **wprowadź OrderID** wpisz **10249** , a następnie kliknij przycisk **szczegółów zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-194">In the **Enter OrderID** box, type **10249** and then click **Order Details**.</span></span>  
   
-     <span data-ttu-id="5ca96-195">Okno komunikatu wymieniono produkty uwzględnione w kolejności 10249.</span><span class="sxs-lookup"><span data-stu-id="5ca96-195">A message box lists the products included in order 10249.</span></span>  
+     <span data-ttu-id="dd6e5-195">Okno komunikatu wymieniono produkty uwzględnione w kolejności 10249.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-195">A message box lists the products included in order 10249.</span></span>  
   
-     <span data-ttu-id="5ca96-196">Kliknij przycisk **OK** aby zamknąć okno komunikatu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-196">Click **OK** to close the message box.</span></span>  
+     <span data-ttu-id="dd6e5-196">Kliknij przycisk **OK** aby zamknąć okno komunikatu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-196">Click **OK** to close the message box.</span></span>  
   
-3.  <span data-ttu-id="5ca96-197">W **wprowadź CustomerID** wpisz `ALFKI`, a następnie kliknij przycisk **historii zamówień**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-197">In the **Enter CustomerID** box, type `ALFKI`, and then click **Order History**.</span></span>  
+3.  <span data-ttu-id="dd6e5-197">W **wprowadź CustomerID** wpisz `ALFKI`, a następnie kliknij przycisk **historii zamówień**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-197">In the **Enter CustomerID** box, type `ALFKI`, and then click **Order History**.</span></span>  
   
-     <span data-ttu-id="5ca96-198">Okno komunikatu listy historii zamówień klienta ALFKI.</span><span class="sxs-lookup"><span data-stu-id="5ca96-198">A message box lists the order history for customer ALFKI.</span></span>  
+     <span data-ttu-id="dd6e5-198">Okno komunikatu listy historii zamówień klienta ALFKI.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-198">A message box lists the order history for customer ALFKI.</span></span>  
   
-     <span data-ttu-id="5ca96-199">Kliknij przycisk **OK** aby zamknąć okno komunikatu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-199">Click **OK** to close the message box.</span></span>  
+     <span data-ttu-id="dd6e5-199">Kliknij przycisk **OK** aby zamknąć okno komunikatu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-199">Click **OK** to close the message box.</span></span>  
   
-4.  <span data-ttu-id="5ca96-200">W **wprowadź OrderID** wpisz `123`, a następnie kliknij przycisk **szczegółów zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-200">In the **Enter OrderID** box, type `123`, and then click **Order Details**.</span></span>  
+4.  <span data-ttu-id="dd6e5-200">W **wprowadź OrderID** wpisz `123`, a następnie kliknij przycisk **szczegółów zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-200">In the **Enter OrderID** box, type `123`, and then click **Order Details**.</span></span>  
   
-     <span data-ttu-id="5ca96-201">Okno komunikatu Wyświetla "Żadne wyniki".</span><span class="sxs-lookup"><span data-stu-id="5ca96-201">A message box displays "No results."</span></span>  
+     <span data-ttu-id="dd6e5-201">Okno komunikatu Wyświetla "Żadne wyniki".</span><span class="sxs-lookup"><span data-stu-id="dd6e5-201">A message box displays "No results."</span></span>  
   
-     <span data-ttu-id="5ca96-202">Kliknij przycisk **OK** aby zamknąć okno komunikatu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-202">Click **OK** to close the message box.</span></span>  
+     <span data-ttu-id="dd6e5-202">Kliknij przycisk **OK** aby zamknąć okno komunikatu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-202">Click **OK** to close the message box.</span></span>  
   
-5.  <span data-ttu-id="5ca96-203">Na **debugowania** menu, kliknij przycisk **Zatrzymaj debugowanie**.</span><span class="sxs-lookup"><span data-stu-id="5ca96-203">On the **Debug** menu, click **Stop debugging**.</span></span>  
+5.  <span data-ttu-id="dd6e5-203">Na **debugowania** menu, kliknij przycisk **Zatrzymaj debugowanie**.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-203">On the **Debug** menu, click **Stop debugging**.</span></span>  
   
-     <span data-ttu-id="5ca96-204">Powoduje zamknięcie sesji debugowania.</span><span class="sxs-lookup"><span data-stu-id="5ca96-204">The debug session closes.</span></span>  
+     <span data-ttu-id="dd6e5-204">Powoduje zamknięcie sesji debugowania.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-204">The debug session closes.</span></span>  
   
-6.  <span data-ttu-id="5ca96-205">Jeśli zakończysz eksperymentowanie, możesz kliknąć **Zamknij projekt** na **pliku** menu i zapisać projekt po wyświetleniu monitu.</span><span class="sxs-lookup"><span data-stu-id="5ca96-205">If you have finished experimenting, you can click **Close Project** on the **File** menu, and save your project when you are prompted.</span></span>  
+6.  <span data-ttu-id="dd6e5-205">Jeśli zakończysz eksperymentowanie, możesz kliknąć **Zamknij projekt** na **pliku** menu i zapisać projekt po wyświetleniu monitu.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-205">If you have finished experimenting, you can click **Close Project** on the **File** menu, and save your project when you are prompted.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="5ca96-206">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="5ca96-206">Next Steps</span></span>  
- <span data-ttu-id="5ca96-207">Wprowadzenie pewnych zmian można zwiększyć ten projekt.</span><span class="sxs-lookup"><span data-stu-id="5ca96-207">You can enhance this project by making some changes.</span></span> <span data-ttu-id="5ca96-208">Na przykład możesz wyświetlić listę dostępnych procedur składowanych w polu listy i użytkownik powinien wybrać, które procedury musisz wykonać.</span><span class="sxs-lookup"><span data-stu-id="5ca96-208">For example, you could list available stored procedures in a list box and have the user select which procedures to execute.</span></span> <span data-ttu-id="5ca96-209">Można również strumienia wyjściowego raportów do pliku tekstowego.</span><span class="sxs-lookup"><span data-stu-id="5ca96-209">You could also stream the output of the reports to a text file.</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="dd6e5-206">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="dd6e5-206">Next Steps</span></span>  
+ <span data-ttu-id="dd6e5-207">Wprowadzenie pewnych zmian można zwiększyć ten projekt.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-207">You can enhance this project by making some changes.</span></span> <span data-ttu-id="dd6e5-208">Na przykład możesz wyświetlić listę dostępnych procedur składowanych w polu listy i użytkownik powinien wybrać, które procedury musisz wykonać.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-208">For example, you could list available stored procedures in a list box and have the user select which procedures to execute.</span></span> <span data-ttu-id="dd6e5-209">Można również strumienia wyjściowego raportów do pliku tekstowego.</span><span class="sxs-lookup"><span data-stu-id="dd6e5-209">You could also stream the output of the reports to a text file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ca96-210">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5ca96-210">See Also</span></span>  
- [<span data-ttu-id="5ca96-211">Nauka przez przewodniki</span><span class="sxs-lookup"><span data-stu-id="5ca96-211">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [<span data-ttu-id="5ca96-212">Procedury składowane</span><span class="sxs-lookup"><span data-stu-id="5ca96-212">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a><span data-ttu-id="dd6e5-210">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="dd6e5-210">See Also</span></span>  
+ [<span data-ttu-id="dd6e5-211">Nauka przez przewodniki</span><span class="sxs-lookup"><span data-stu-id="dd6e5-211">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
+ [<span data-ttu-id="dd6e5-212">Procedury składowane</span><span class="sxs-lookup"><span data-stu-id="dd6e5-212">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

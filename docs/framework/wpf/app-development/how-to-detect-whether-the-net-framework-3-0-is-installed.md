@@ -1,38 +1,40 @@
 ---
-title: "Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana"
-ms.custom: 
+title: Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6990ca4bff7c8756f8d7f25ff0153b3a5d41a4f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="9f0bd-102">Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="9f0bd-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="9f0bd-103">Przed Administratorzy mogą wdrożyć [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] aplikacji w systemie, ich najpierw upewnić się, że [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] środowiska uruchomieniowego jest obecny.</span><span class="sxs-lookup"><span data-stu-id="9f0bd-103">Before administrators can deploy [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] applications on a system, they must first confirm that the [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] runtime is present.</span></span> <span data-ttu-id="9f0bd-104">Ten temat zawiera skrypt napisany w HTML/JavaScript, które Administratorzy mogą używać, aby określić, czy [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] jest obecny w systemie.</span><span class="sxs-lookup"><span data-stu-id="9f0bd-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="f570a-102">Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="f570a-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="f570a-103">Przed Administratorzy mogą wdrożyć [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] aplikacji w systemie, ich najpierw upewnić się, że [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] środowiska uruchomieniowego jest obecny.</span><span class="sxs-lookup"><span data-stu-id="f570a-103">Before administrators can deploy [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] applications on a system, they must first confirm that the [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] runtime is present.</span></span> <span data-ttu-id="f570a-104">Ten temat zawiera skrypt napisany w HTML/JavaScript, które Administratorzy mogą używać, aby określić, czy [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] jest obecny w systemie.</span><span class="sxs-lookup"><span data-stu-id="f570a-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9f0bd-105">Aby uzyskać szczegółowe informacje dotyczące instalowania, wdrażanie i wykrywanie [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], można znaleźć w omówieniu w [wdrażania programu Microsoft .NET Framework w wersji 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="9f0bd-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], see the discussion in [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+>  <span data-ttu-id="f570a-105">Aby uzyskać szczegółowe informacje na temat instalowania, wdrażanie i wykrywanie programu Microsoft .NET Framework, można znaleźć w omówieniu w [wdrażania programu Microsoft .NET Framework w wersji 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="f570a-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="9f0bd-106">Wykryj ciąg agenta użytkownika ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="9f0bd-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="9f0bd-107">Gdy [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] jest zainstalowany, MSI dodaje ".NET CLR" oraz numer wersji na ciąg agenta użytkownika.</span><span class="sxs-lookup"><span data-stu-id="9f0bd-107">When [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="9f0bd-108">W poniższym przykładzie przedstawiono skrypt osadzony w to prosta strona HTML.</span><span class="sxs-lookup"><span data-stu-id="9f0bd-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="9f0bd-109">Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] jest zainstalowany, a następnie wyświetla komunikat o stanie w wynikach wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="9f0bd-109">The script searches the UserAgent string to determine whether [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="f570a-106">Wykryj ciąg agenta użytkownika ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="f570a-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="f570a-107">Gdy [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] jest zainstalowany, MSI dodaje ".NET CLR" oraz numer wersji na ciąg agenta użytkownika.</span><span class="sxs-lookup"><span data-stu-id="f570a-107">When [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="f570a-108">W poniższym przykładzie przedstawiono skrypt osadzony w to prosta strona HTML.</span><span class="sxs-lookup"><span data-stu-id="f570a-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="f570a-109">Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] jest zainstalowany, a następnie wyświetla komunikat o stanie w wynikach wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="f570a-109">The script searches the UserAgent string to determine whether [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
   
 ```  
 <HTML>  
@@ -124,13 +126,13 @@ ms.lasthandoff: 12/22/2017
 </HTML>  
 ```  
   
- <span data-ttu-id="9f0bd-110">Jeśli wyszukiwania dla wersji ".NET CLR" zakończy się pomyślnie, zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="9f0bd-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="f570a-110">Jeśli wyszukiwania dla wersji ".NET CLR" zakończy się pomyślnie, zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="f570a-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="9f0bd-111">W przeciwnym razie zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="9f0bd-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="f570a-111">W przeciwnym razie zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="f570a-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

@@ -1,6 +1,6 @@
 ---
 title: Typy wskaźników (Przewodnik programowania w języku C#)
-ms.date: 07/20/2015
+ms.date: 04/20/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -8,138 +8,98 @@ ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1dce99af2f0f5fdab28058c7f56e79625af84500
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="pointer-types-c-programming-guide"></a><span data-ttu-id="9c15b-102">Typy wskaźników (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="9c15b-102">Pointer types (C# Programming Guide)</span></span>
-<span data-ttu-id="9c15b-103">W kontekście słowa kluczowego „unsafe” typ może być typem wskaźnika, typem wartości lub typem referencyjnym.</span><span class="sxs-lookup"><span data-stu-id="9c15b-103">In an unsafe context, a type may be a pointer type, a value type, or a reference type.</span></span> <span data-ttu-id="9c15b-104">Deklaracja typu wskaźnika ma jedną z następujących form:</span><span class="sxs-lookup"><span data-stu-id="9c15b-104">A pointer type declaration takes one of the following forms:</span></span>  
-  
-```  
-type* identifier;  
-void* identifier; //allowed but not recommended  
-```  
-  
- <span data-ttu-id="9c15b-105">Dowolny z następujących typów może być typem wskaźnika:</span><span class="sxs-lookup"><span data-stu-id="9c15b-105">Any of the following types may be a pointer type:</span></span>  
-  
--   <span data-ttu-id="9c15b-106">[SByte —](../../../csharp/language-reference/keywords/sbyte.md), [bajtów](../../../csharp/language-reference/keywords/byte.md), [krótki](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [ długie](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [char](../../../csharp/language-reference/keywords/char.md), [float](../../../csharp/language-reference/keywords/float.md), [podwójne](../../../csharp/language-reference/keywords/double.md), [dziesiętną](../../../csharp/language-reference/keywords/decimal.md), lub [bool](../../../csharp/language-reference/keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="9c15b-106">[sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [char](../../../csharp/language-reference/keywords/char.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), [decimal](../../../csharp/language-reference/keywords/decimal.md), or [bool](../../../csharp/language-reference/keywords/bool.md).</span></span>  
-  
--   <span data-ttu-id="9c15b-107">Wszelkie [wyliczenia](../../../csharp/language-reference/keywords/enum.md) typu.</span><span class="sxs-lookup"><span data-stu-id="9c15b-107">Any [enum](../../../csharp/language-reference/keywords/enum.md) type.</span></span>  
-  
--   <span data-ttu-id="9c15b-108">Dowolny typ wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="9c15b-108">Any pointer type.</span></span>  
-  
--   <span data-ttu-id="9c15b-109">Dowolny typ struktury zdefiniowany przez użytkownika, który zawiera tylko pola niezarządzanych typów.</span><span class="sxs-lookup"><span data-stu-id="9c15b-109">Any user-defined struct type that contains fields of unmanaged types only.</span></span>  
-  
- <span data-ttu-id="9c15b-110">Typy wskaźników dziedziczy [obiektu](../../../csharp/language-reference/keywords/object.md) i konwersji między typami wskaźników i `object`.</span><span class="sxs-lookup"><span data-stu-id="9c15b-110">Pointer types do not inherit from [object](../../../csharp/language-reference/keywords/object.md) and no conversions exist between pointer types and `object`.</span></span> <span data-ttu-id="9c15b-111">Ponadto wskaźniki nie są obsługiwane w przypadku opakowywania i rozpakowywania.</span><span class="sxs-lookup"><span data-stu-id="9c15b-111">Also, boxing and unboxing do not support pointers.</span></span> <span data-ttu-id="9c15b-112">Można jednak wykonywać konwersje między różnymi typami wskaźnika oraz między typami wskaźnika a typami całkowitymi.</span><span class="sxs-lookup"><span data-stu-id="9c15b-112">However, you can convert between different pointer types and between pointer types and integral types.</span></span>  
-  
- <span data-ttu-id="9c15b-113">W przypadku deklarowania wielu wskaźników w jednej deklaracji gwiazdka (\*) jest pisana razem tylko z typem podstawowym; nie jest używana jako prefiks każdej nazwy wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="9c15b-113">When you declare multiple pointers in the same declaration, the asterisk (\*) is written together with the underlying type only; it is not used as a prefix to each pointer name.</span></span> <span data-ttu-id="9c15b-114">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="9c15b-114">For example:</span></span>  
-  
-```  
-int* p1, p2, p3;   // Ok  
-int *p1, *p2, *p3;   // Invalid in C#  
-```  
-  
- <span data-ttu-id="9c15b-115">Wskaźnik nie może wskazywać na odwołania lub do [struktury](../../../csharp/language-reference/keywords/struct.md) zawierający odwołań, ponieważ odwołanie do obiektu może być bezużytecznych nawet wtedy, gdy wskaźnik wskazuje go.</span><span class="sxs-lookup"><span data-stu-id="9c15b-115">A pointer cannot point to a reference or to a [struct](../../../csharp/language-reference/keywords/struct.md) that contains references, because an object reference can be garbage collected even if a pointer is pointing to it.</span></span> <span data-ttu-id="9c15b-116">Moduł odśmiecania pamięci nie sprawdza, czy obiekt jest wskazywany przez jakiś wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="9c15b-116">The garbage collector does not keep track of whether an object is being pointed to by any pointer types.</span></span>  
-  
- <span data-ttu-id="9c15b-117">Wartość zmiennej wskaźnika typu `myType*` adres zmiennej typu `myType`.</span><span class="sxs-lookup"><span data-stu-id="9c15b-117">The value of the pointer variable of type `myType*` is the address of a variable of type `myType`.</span></span> <span data-ttu-id="9c15b-118">Poniżej przedstawiono przykłady deklaracji typów wskaźnika:</span><span class="sxs-lookup"><span data-stu-id="9c15b-118">The following are examples of pointer type declarations:</span></span>  
-  
-|<span data-ttu-id="9c15b-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="9c15b-119">Example</span></span>|<span data-ttu-id="9c15b-120">Opis</span><span class="sxs-lookup"><span data-stu-id="9c15b-120">Description</span></span>|  
-|-------------|-----------------|  
-|`int* p`|<span data-ttu-id="9c15b-121">`p` jest wskaźnik do wartości całkowitej.</span><span class="sxs-lookup"><span data-stu-id="9c15b-121">`p` is a pointer to an integer.</span></span>|  
-|`int** p`|<span data-ttu-id="9c15b-122">`p` jest wskaźnik na wskaźnik do wartości całkowitej.</span><span class="sxs-lookup"><span data-stu-id="9c15b-122">`p` is a pointer to a pointer to an integer.</span></span>|  
-|`int*[] p`|<span data-ttu-id="9c15b-123">`p` jest jednowymiarowej tablicy wskaźników do liczb całkowitych.</span><span class="sxs-lookup"><span data-stu-id="9c15b-123">`p` is a single-dimensional array of pointers to integers.</span></span>|  
-|`char* p`|<span data-ttu-id="9c15b-124">`p` jest wskaźnik do znaku.</span><span class="sxs-lookup"><span data-stu-id="9c15b-124">`p` is a pointer to a char.</span></span>|  
-|`void* p`|<span data-ttu-id="9c15b-125">`p` jest wskaźnik do nieznanego typu.</span><span class="sxs-lookup"><span data-stu-id="9c15b-125">`p` is a pointer to an unknown type.</span></span>|  
-  
- <span data-ttu-id="9c15b-126">Operatora pośredniego wskaźnika \* można użyć w celu uzyskania dostępu do zawartości znajdującej się w lokalizacji wskazywanej przez zmienną wskaźnikową.</span><span class="sxs-lookup"><span data-stu-id="9c15b-126">The pointer indirection operator \* can be used to access the contents at the location pointed to by the pointer variable.</span></span> <span data-ttu-id="9c15b-127">Na przykład przeanalizujmy następującą deklarację:</span><span class="sxs-lookup"><span data-stu-id="9c15b-127">For example, consider the following declaration:</span></span>  
-  
-```  
-int* myVariable;  
-```  
-  
- <span data-ttu-id="9c15b-128">Wyrażenie `*myVariable` oznacza `int` znaleziono pod adresem zawarte w zmiennej `myVariable`.</span><span class="sxs-lookup"><span data-stu-id="9c15b-128">The expression `*myVariable` denotes the `int` variable found at the address contained in `myVariable`.</span></span>  
-  
- <span data-ttu-id="9c15b-129">Istnieje kilka przykładów wskaźniki w tematach [stałej instrukcji](../../../csharp/language-reference/keywords/fixed-statement.md) i [konwersje wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="9c15b-129">There are several examples of pointers in the topics [fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) and [Pointer Conversions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md).</span></span>  <span data-ttu-id="9c15b-130">W poniższym przykładzie przedstawiono potrzebę `unsafe` — słowo kluczowe i `fixed` instrukcji i jak zwiększać wskaźnik wewnętrzny.</span><span class="sxs-lookup"><span data-stu-id="9c15b-130">The following example shows the need for the `unsafe` keyword and the `fixed` statement, and how to increment an interior pointer.</span></span>  <span data-ttu-id="9c15b-131">Ten kod można wkleić do funkcji Main aplikacji konsoli, aby go uruchomić.</span><span class="sxs-lookup"><span data-stu-id="9c15b-131">You can paste this code into the Main function of a console application to run it.</span></span> <span data-ttu-id="9c15b-132">(Należy pamiętać o włączeniu niebezpieczny kod w **projektanta projektu**; wybierz **projektu**, **właściwości** menu, a następnie wybierz opcję **niebezpiecznego kodu** w **kompilacji** kartę.)</span><span class="sxs-lookup"><span data-stu-id="9c15b-132">(Remember to enable unsafe code in the **Project Designer**; choose **Project**, **Properties** on the menu bar, and then select **Allow unsafe code** in the **Build** tab.)</span></span>  
-  
-```  
-// Normal pointer to an object.  
-int[] a = new int[5] {10, 20, 30, 40, 50};  
-// Must be in unsafe code to use interior pointers.  
-unsafe  
-{  
-    // Must pin object on heap so that it doesn't move while using interior pointers.  
-    fixed (int* p = &a[0])  
-    {  
-        // p is pinned as well as object, so create another pointer to show incrementing it.  
-        int* p2 = p;  
-        Console.WriteLine(*p2);  
-        // Incrementing p2 bumps the pointer by four bytes due to its type ...  
-        p2 += 1;  
-        Console.WriteLine(*p2);  
-        p2 += 1;  
-        Console.WriteLine(*p2);  
-        Console.WriteLine("--------");  
-        Console.WriteLine(*p);  
-        // Deferencing p and incrementing changes the value of a[0] ...  
-        *p += 1;  
-        Console.WriteLine(*p);  
-        *p += 1;  
-        Console.WriteLine(*p);  
-    }  
-}  
-  
-Console.WriteLine("--------");  
-Console.WriteLine(a[0]);  
-Console.ReadLine();  
-  
-// Output:  
-//10  
-//20  
-//30  
-//--------  
-//10  
-//11  
-//12  
-//--------  
-//12  
-```  
-  
- <span data-ttu-id="9c15b-133">Nie można zastosować operator pośredni wskaźnik typu `void*`.</span><span class="sxs-lookup"><span data-stu-id="9c15b-133">You cannot apply the indirection operator to a pointer of type `void*`.</span></span> <span data-ttu-id="9c15b-134">Można jednak użyć rzutowania, aby przekonwertować wskaźnik typu void na wskaźnik dowolnego innego typu i odwrotnie.</span><span class="sxs-lookup"><span data-stu-id="9c15b-134">However, you can use a cast to convert a void pointer to any other pointer type, and vice versa.</span></span>  
-  
- <span data-ttu-id="9c15b-135">Wskaźnik może być `null`.</span><span class="sxs-lookup"><span data-stu-id="9c15b-135">A pointer can be `null`.</span></span> <span data-ttu-id="9c15b-136">Zastosowanie operatora pośredniego do wskaźnika o wartości null powoduje użycie zachowania zdefiniowanego w implementacji.</span><span class="sxs-lookup"><span data-stu-id="9c15b-136">Applying the indirection operator to a null pointer causes an implementation-defined behavior.</span></span>  
-  
- <span data-ttu-id="9c15b-137">Należy pamiętać, że przekazywanie wskaźników między metodami może spowodować niezdefiniowane zachowanie.</span><span class="sxs-lookup"><span data-stu-id="9c15b-137">Be aware that passing pointers between methods can cause undefined behavior.</span></span> <span data-ttu-id="9c15b-138">Należy wziąć pod uwagę metodę, która zwraca wskaźnik do zmiennej lokalnej za pośrednictwem `in`, `out` lub `ref` parametru lub w wyniku funkcji.</span><span class="sxs-lookup"><span data-stu-id="9c15b-138">Consider a method that returns a pointer to a local variable through an `in`, `out` or `ref` parameter or as the function result.</span></span> <span data-ttu-id="9c15b-139">Jeśli wskaźnik został ustawiony w stałym bloku, wskazywana przez niego zmienna może już nie być stała.</span><span class="sxs-lookup"><span data-stu-id="9c15b-139">If the pointer was set in a fixed block, the variable to which it points may no longer be fixed.</span></span>  
-  
- <span data-ttu-id="9c15b-140">W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać operacje na wskaźnikach w kontekście słowa kluczowego „unsafe”:</span><span class="sxs-lookup"><span data-stu-id="9c15b-140">The following table lists the operators and statements that can operate on pointers in an unsafe context:</span></span>  
-  
-|<span data-ttu-id="9c15b-141">Operator/instrukcja</span><span class="sxs-lookup"><span data-stu-id="9c15b-141">Operator/Statement</span></span>|<span data-ttu-id="9c15b-142">Zastosowanie</span><span class="sxs-lookup"><span data-stu-id="9c15b-142">Use</span></span>|  
-|-------------------------|---------|  
-|*|<span data-ttu-id="9c15b-143">Wykonuje operację wskaźnika pośredniego.</span><span class="sxs-lookup"><span data-stu-id="9c15b-143">Performs pointer indirection.</span></span>|  
-|->|<span data-ttu-id="9c15b-144">Uzyskuje dostęp do elementu członkowskiego struktury za pomocą wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="9c15b-144">Accesses a member of a struct through a pointer.</span></span>|  
-|<span data-ttu-id="9c15b-145">[]</span><span class="sxs-lookup"><span data-stu-id="9c15b-145">[]</span></span>|<span data-ttu-id="9c15b-146">Indeksuje wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="9c15b-146">Indexes a pointer.</span></span>|  
-|`&`|<span data-ttu-id="9c15b-147">Uzyskuje adres zmiennej.</span><span class="sxs-lookup"><span data-stu-id="9c15b-147">Obtains the address of a variable.</span></span>|  
-|<span data-ttu-id="9c15b-148">++ oraz --</span><span class="sxs-lookup"><span data-stu-id="9c15b-148">++ and --</span></span>|<span data-ttu-id="9c15b-149">Zwiększa i zmniejsza wartość wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="9c15b-149">Increments and decrements pointers.</span></span>|  
-|<span data-ttu-id="9c15b-150">+ oraz -</span><span class="sxs-lookup"><span data-stu-id="9c15b-150">+ and -</span></span>|<span data-ttu-id="9c15b-151">Wykonuje operacje arytmetyczne na wskaźniku.</span><span class="sxs-lookup"><span data-stu-id="9c15b-151">Performs pointer arithmetic.</span></span>|  
-|<span data-ttu-id="9c15b-152">==,! =, \<, >, \<=, a > =</span><span class="sxs-lookup"><span data-stu-id="9c15b-152">==, !=, \<, >, \<=, and >=</span></span>|<span data-ttu-id="9c15b-153">Porównuje wskaźniki.</span><span class="sxs-lookup"><span data-stu-id="9c15b-153">Compares pointers.</span></span>|  
-|`stackalloc`|<span data-ttu-id="9c15b-154">Przydziela pamięć na stosie.</span><span class="sxs-lookup"><span data-stu-id="9c15b-154">Allocates memory on the stack.</span></span>|  
-|<span data-ttu-id="9c15b-155">`fixed` — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="9c15b-155">`fixed` statement</span></span>|<span data-ttu-id="9c15b-156">Tymczasowo ustala zmienną, dzięki czemu można znaleźć ten adres.</span><span class="sxs-lookup"><span data-stu-id="9c15b-156">Temporarily fixes a variable so that its address may be found.</span></span>|  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="9c15b-157">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="9c15b-157">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="9c15b-158">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9c15b-158">See Also</span></span>  
- [<span data-ttu-id="9c15b-159">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="9c15b-159">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="9c15b-160">Niebezpieczny kod i wskaźniki</span><span class="sxs-lookup"><span data-stu-id="9c15b-160">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [<span data-ttu-id="9c15b-161">Konwersje wskaźników</span><span class="sxs-lookup"><span data-stu-id="9c15b-161">Pointer Conversions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
- [<span data-ttu-id="9c15b-162">Wyrażenia wskaźników</span><span class="sxs-lookup"><span data-stu-id="9c15b-162">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [<span data-ttu-id="9c15b-163">Typy</span><span class="sxs-lookup"><span data-stu-id="9c15b-163">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
- [<span data-ttu-id="9c15b-164">unsafe</span><span class="sxs-lookup"><span data-stu-id="9c15b-164">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
- [<span data-ttu-id="9c15b-165">fixed, instrukcja</span><span class="sxs-lookup"><span data-stu-id="9c15b-165">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [<span data-ttu-id="9c15b-166">stackalloc</span><span class="sxs-lookup"><span data-stu-id="9c15b-166">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)  
- [<span data-ttu-id="9c15b-167">Konwersja boxing i konwersja unboxing</span><span class="sxs-lookup"><span data-stu-id="9c15b-167">Boxing and Unboxing</span></span>](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+# <a name="pointer-types-c-programming-guide"></a><span data-ttu-id="3b159-102">Typy wskaźników (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="3b159-102">Pointer types (C# Programming Guide)</span></span>
+
+<span data-ttu-id="3b159-103">W kontekście słowa kluczowego „unsafe” typ może być typem wskaźnika, typem wartości lub typem referencyjnym.</span><span class="sxs-lookup"><span data-stu-id="3b159-103">In an unsafe context, a type may be a pointer type, a value type, or a reference type.</span></span> <span data-ttu-id="3b159-104">Deklaracja typu wskaźnika ma jedną z następujących form:</span><span class="sxs-lookup"><span data-stu-id="3b159-104">A pointer type declaration takes one of the following forms:</span></span>
+
+``` csharp
+type* identifier;
+void* identifier; //allowed but not recommended
+```
+
+<span data-ttu-id="3b159-105">Typ określony przed `*` w wskaźnik typu jest nazywana **referrent typu**.</span><span class="sxs-lookup"><span data-stu-id="3b159-105">The type specified before the `*` in a pointer type is called the **referrent type**.</span></span> <span data-ttu-id="3b159-106">Żadnego z następujących typów może być typem referrent:</span><span class="sxs-lookup"><span data-stu-id="3b159-106">Any of the following types may be a referrent type:</span></span>
+
+- <span data-ttu-id="3b159-107">Dowolnego typu całkowitego: [sbyte](../../language-reference/keywords/sbyte.md), [bajtów](../../language-reference/keywords/byte.md), [krótki](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [długi](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).</span><span class="sxs-lookup"><span data-stu-id="3b159-107">Any integral type: [sbyte](../../language-reference/keywords/sbyte.md), [byte](../../language-reference/keywords/byte.md), [short](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [long](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).</span></span>
+- <span data-ttu-id="3b159-108">Wszelkie zmiennoprzecinkowa typu: [float](../../language-reference/keywords/float.md), [podwójne](../../language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="3b159-108">Any floating point type: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).</span></span>
+- <span data-ttu-id="3b159-109">[CHAR](../../language-reference/keywords/char.md).</span><span class="sxs-lookup"><span data-stu-id="3b159-109">[char](../../language-reference/keywords/char.md).</span></span>
+- <span data-ttu-id="3b159-110">[wartość logiczna](../../language-reference/keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="3b159-110">[bool](../../language-reference/keywords/bool.md).</span></span>
+- <span data-ttu-id="3b159-111">[decimal](../../language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="3b159-111">[decimal](../../language-reference/keywords/decimal.md).</span></span>
+- <span data-ttu-id="3b159-112">Wszelkie [wyliczenia](../../language-reference/keywords/enum.md) typu.</span><span class="sxs-lookup"><span data-stu-id="3b159-112">Any [enum](../../language-reference/keywords/enum.md) type.</span></span>
+- <span data-ttu-id="3b159-113">Dowolny typ wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="3b159-113">Any pointer type.</span></span> <span data-ttu-id="3b159-114">Dzięki temu wyrażenia takie jak `void**`.</span><span class="sxs-lookup"><span data-stu-id="3b159-114">This allows expressions such as `void**`.</span></span>
+- <span data-ttu-id="3b159-115">Dowolny typ struktury zdefiniowany przez użytkownika, który zawiera tylko pola niezarządzanych typów.</span><span class="sxs-lookup"><span data-stu-id="3b159-115">Any user-defined struct type that contains fields of unmanaged types only.</span></span>
+
+<span data-ttu-id="3b159-116">Typy wskaźników dziedziczy [obiektu](../../language-reference/keywords/object.md) i konwersji między typami wskaźników i `object`.</span><span class="sxs-lookup"><span data-stu-id="3b159-116">Pointer types do not inherit from [object](../../language-reference/keywords/object.md) and no conversions exist between pointer types and `object`.</span></span> <span data-ttu-id="3b159-117">Ponadto wskaźniki nie są obsługiwane w przypadku opakowywania i rozpakowywania.</span><span class="sxs-lookup"><span data-stu-id="3b159-117">Also, boxing and unboxing do not support pointers.</span></span> <span data-ttu-id="3b159-118">Można jednak wykonywać konwersje między różnymi typami wskaźnika oraz między typami wskaźnika a typami całkowitymi.</span><span class="sxs-lookup"><span data-stu-id="3b159-118">However, you can convert between different pointer types and between pointer types and integral types.</span></span>
+
+<span data-ttu-id="3b159-119">W przypadku deklarowania wielu wskaźników w jednej deklaracji gwiazdka (\*) jest pisana razem tylko z typem podstawowym; nie jest używana jako prefiks każdej nazwy wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="3b159-119">When you declare multiple pointers in the same declaration, the asterisk (\*) is written together with the underlying type only; it is not used as a prefix to each pointer name.</span></span> <span data-ttu-id="3b159-120">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="3b159-120">For example:</span></span>
+
+```csharp
+int* p1, p2, p3;   // Ok
+int *p1, *p2, *p3;   // Invalid in C#
+```
+
+<span data-ttu-id="3b159-121">Wskaźnik nie może wskazywać na odwołania lub do [struktury](../../language-reference/keywords/struct.md) zawierający odwołań, ponieważ odwołanie do obiektu może być bezużytecznych nawet wtedy, gdy wskaźnik wskazuje go.</span><span class="sxs-lookup"><span data-stu-id="3b159-121">A pointer cannot point to a reference or to a [struct](../../language-reference/keywords/struct.md) that contains references, because an object reference can be garbage collected even if a pointer is pointing to it.</span></span> <span data-ttu-id="3b159-122">Moduł odśmiecania pamięci nie sprawdza, czy obiekt jest wskazywany przez jakiś wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="3b159-122">The garbage collector does not keep track of whether an object is being pointed to by any pointer types.</span></span>
+
+<span data-ttu-id="3b159-123">Wartość zmiennej wskaźnika typu `myType*` adres zmiennej typu `myType`.</span><span class="sxs-lookup"><span data-stu-id="3b159-123">The value of the pointer variable of type `myType*` is the address of a variable of type `myType`.</span></span> <span data-ttu-id="3b159-124">Poniżej przedstawiono przykłady deklaracji typów wskaźnika:</span><span class="sxs-lookup"><span data-stu-id="3b159-124">The following are examples of pointer type declarations:</span></span>
+
+|<span data-ttu-id="3b159-125">Przykład</span><span class="sxs-lookup"><span data-stu-id="3b159-125">Example</span></span>|<span data-ttu-id="3b159-126">Opis</span><span class="sxs-lookup"><span data-stu-id="3b159-126">Description</span></span>|
+|-------------|-----------------|
+|`int* p`|<span data-ttu-id="3b159-127">`p` jest wskaźnik do wartości całkowitej.</span><span class="sxs-lookup"><span data-stu-id="3b159-127">`p` is a pointer to an integer.</span></span>|
+|`int** p`|<span data-ttu-id="3b159-128">`p` jest wskaźnik na wskaźnik do wartości całkowitej.</span><span class="sxs-lookup"><span data-stu-id="3b159-128">`p` is a pointer to a pointer to an integer.</span></span>|
+|`int*[] p`|<span data-ttu-id="3b159-129">`p` jest jednowymiarowej tablicy wskaźników do liczb całkowitych.</span><span class="sxs-lookup"><span data-stu-id="3b159-129">`p` is a single-dimensional array of pointers to integers.</span></span>|
+|`char* p`|<span data-ttu-id="3b159-130">`p` jest wskaźnik do znaku.</span><span class="sxs-lookup"><span data-stu-id="3b159-130">`p` is a pointer to a char.</span></span>|
+|`void* p`|<span data-ttu-id="3b159-131">`p` jest wskaźnik do nieznanego typu.</span><span class="sxs-lookup"><span data-stu-id="3b159-131">`p` is a pointer to an unknown type.</span></span>|
+
+<span data-ttu-id="3b159-132">Operatora pośredniego wskaźnika \* można użyć w celu uzyskania dostępu do zawartości znajdującej się w lokalizacji wskazywanej przez zmienną wskaźnikową.</span><span class="sxs-lookup"><span data-stu-id="3b159-132">The pointer indirection operator \* can be used to access the contents at the location pointed to by the pointer variable.</span></span> <span data-ttu-id="3b159-133">Na przykład przeanalizujmy następującą deklarację:</span><span class="sxs-lookup"><span data-stu-id="3b159-133">For example, consider the following declaration:</span></span>
+
+```csharp
+int* myVariable;
+```
+
+<span data-ttu-id="3b159-134">Wyrażenie `*myVariable` oznacza `int` znaleziono pod adresem zawarte w zmiennej `myVariable`.</span><span class="sxs-lookup"><span data-stu-id="3b159-134">The expression `*myVariable` denotes the `int` variable found at the address contained in `myVariable`.</span></span>
+
+<span data-ttu-id="3b159-135">Istnieje kilka przykładów wskaźniki w tematach [stałej instrukcji](../../language-reference/keywords/fixed-statement.md) i [konwersje wskaźników](../../programming-guide/unsafe-code-pointers/pointer-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="3b159-135">There are several examples of pointers in the topics [fixed Statement](../../language-reference/keywords/fixed-statement.md) and [Pointer Conversions](../../programming-guide/unsafe-code-pointers/pointer-conversions.md).</span></span> <span data-ttu-id="3b159-136">W poniższym przykładzie użyto `unsafe` — słowo kluczowe i `fixed` instrukcji i pokazuje, jak zwiększyć wskaźnik wewnętrzny.</span><span class="sxs-lookup"><span data-stu-id="3b159-136">The following example uses the `unsafe` keyword and the `fixed` statement, and shows how to increment an interior pointer.</span></span>  <span data-ttu-id="3b159-137">Ten kod można wkleić do funkcji Main aplikacji konsoli, aby go uruchomić.</span><span class="sxs-lookup"><span data-stu-id="3b159-137">You can paste this code into the Main function of a console application to run it.</span></span> <span data-ttu-id="3b159-138">Przykłady te muszą być skompilowane z [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) zestaw opcji kompilatora.</span><span class="sxs-lookup"><span data-stu-id="3b159-138">These examples must be compiled with the [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option set.</span></span>
+
+[!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
+
+<span data-ttu-id="3b159-139">Nie można zastosować operator pośredni wskaźnik typu `void*`.</span><span class="sxs-lookup"><span data-stu-id="3b159-139">You cannot apply the indirection operator to a pointer of type `void*`.</span></span> <span data-ttu-id="3b159-140">Można jednak użyć rzutowania, aby przekonwertować wskaźnik typu void na wskaźnik dowolnego innego typu i odwrotnie.</span><span class="sxs-lookup"><span data-stu-id="3b159-140">However, you can use a cast to convert a void pointer to any other pointer type, and vice versa.</span></span>
+
+<span data-ttu-id="3b159-141">Wskaźnik może być `null`.</span><span class="sxs-lookup"><span data-stu-id="3b159-141">A pointer can be `null`.</span></span> <span data-ttu-id="3b159-142">Zastosowanie operatora pośredniego do wskaźnika o wartości null powoduje użycie zachowania zdefiniowanego w implementacji.</span><span class="sxs-lookup"><span data-stu-id="3b159-142">Applying the indirection operator to a null pointer causes an implementation-defined behavior.</span></span>
+
+<span data-ttu-id="3b159-143">Przekazywanie wskaźniki między metodami może spowodować niezdefiniowane zachowanie.</span><span class="sxs-lookup"><span data-stu-id="3b159-143">Passing pointers between methods can cause undefined behavior.</span></span> <span data-ttu-id="3b159-144">Należy wziąć pod uwagę metodę, która zwraca wskaźnik do zmiennej lokalnej za pośrednictwem `in`, `out`, lub `ref` parametru lub w wyniku funkcji.</span><span class="sxs-lookup"><span data-stu-id="3b159-144">Consider a method that returns a pointer to a local variable through an `in`, `out`, or `ref` parameter or as the function result.</span></span> <span data-ttu-id="3b159-145">Jeśli wskaźnik został ustawiony w stałym bloku, wskazywana przez niego zmienna może już nie być stała.</span><span class="sxs-lookup"><span data-stu-id="3b159-145">If the pointer was set in a fixed block, the variable to which it points may no longer be fixed.</span></span>
+
+<span data-ttu-id="3b159-146">W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać operacje na wskaźnikach w kontekście słowa kluczowego „unsafe”:</span><span class="sxs-lookup"><span data-stu-id="3b159-146">The following table lists the operators and statements that can operate on pointers in an unsafe context:</span></span>
+
+|<span data-ttu-id="3b159-147">Operator/instrukcja</span><span class="sxs-lookup"><span data-stu-id="3b159-147">Operator/Statement</span></span>|<span data-ttu-id="3b159-148">Zastosowanie</span><span class="sxs-lookup"><span data-stu-id="3b159-148">Use</span></span>|
+|-------------------------|---------|
+|*|<span data-ttu-id="3b159-149">Wykonuje operację wskaźnika pośredniego.</span><span class="sxs-lookup"><span data-stu-id="3b159-149">Performs pointer indirection.</span></span>|
+|->|<span data-ttu-id="3b159-150">Uzyskuje dostęp do elementu członkowskiego struktury za pomocą wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="3b159-150">Accesses a member of a struct through a pointer.</span></span>|
+|<span data-ttu-id="3b159-151">[]</span><span class="sxs-lookup"><span data-stu-id="3b159-151">[]</span></span>|<span data-ttu-id="3b159-152">Indeksuje wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="3b159-152">Indexes a pointer.</span></span>|
+|`&`|<span data-ttu-id="3b159-153">Uzyskuje adres zmiennej.</span><span class="sxs-lookup"><span data-stu-id="3b159-153">Obtains the address of a variable.</span></span>|
+|<span data-ttu-id="3b159-154">++ oraz --</span><span class="sxs-lookup"><span data-stu-id="3b159-154">++ and --</span></span>|<span data-ttu-id="3b159-155">Zwiększa i zmniejsza wartość wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="3b159-155">Increments and decrements pointers.</span></span>|
+|<span data-ttu-id="3b159-156">+ oraz -</span><span class="sxs-lookup"><span data-stu-id="3b159-156">+ and -</span></span>|<span data-ttu-id="3b159-157">Wykonuje operacje arytmetyczne na wskaźniku.</span><span class="sxs-lookup"><span data-stu-id="3b159-157">Performs pointer arithmetic.</span></span>|
+|<span data-ttu-id="3b159-158">==,! =, \<, >, \<=, a > =</span><span class="sxs-lookup"><span data-stu-id="3b159-158">==, !=, \<, >, \<=, and >=</span></span>|<span data-ttu-id="3b159-159">Porównuje wskaźniki.</span><span class="sxs-lookup"><span data-stu-id="3b159-159">Compares pointers.</span></span>|
+|`stackalloc`|<span data-ttu-id="3b159-160">Przydziela pamięć na stosie.</span><span class="sxs-lookup"><span data-stu-id="3b159-160">Allocates memory on the stack.</span></span>|
+|<span data-ttu-id="3b159-161">`fixed` — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="3b159-161">`fixed` statement</span></span>|<span data-ttu-id="3b159-162">Tymczasowo ustala zmienną, dzięki czemu można znaleźć ten adres.</span><span class="sxs-lookup"><span data-stu-id="3b159-162">Temporarily fixes a variable so that its address may be found.</span></span>|
+
+## <a name="c-language-specification"></a><span data-ttu-id="3b159-163">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3b159-163">C# Language Specification</span></span>
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="3b159-164">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3b159-164">See Also</span></span>
+ [<span data-ttu-id="3b159-165">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3b159-165">C# Programming Guide</span></span>](../index.md)  
+ [<span data-ttu-id="3b159-166">Niebezpieczny kod i wskaźniki</span><span class="sxs-lookup"><span data-stu-id="3b159-166">Unsafe Code and Pointers</span></span>](index.md)  
+ [<span data-ttu-id="3b159-167">Konwersje wskaźników</span><span class="sxs-lookup"><span data-stu-id="3b159-167">Pointer Conversions</span></span>](pointer-conversions.md)  
+ [<span data-ttu-id="3b159-168">Wyrażenia wskaźników</span><span class="sxs-lookup"><span data-stu-id="3b159-168">Pointer Expressions</span></span>](pointer-expressions.md)  
+ [<span data-ttu-id="3b159-169">Typy</span><span class="sxs-lookup"><span data-stu-id="3b159-169">Types</span></span>](../../language-reference/keywords/types.md)  
+ [<span data-ttu-id="3b159-170">unsafe</span><span class="sxs-lookup"><span data-stu-id="3b159-170">unsafe</span></span>](../../language-reference/keywords/unsafe.md)  
+ [<span data-ttu-id="3b159-171">fixed, instrukcja</span><span class="sxs-lookup"><span data-stu-id="3b159-171">fixed Statement</span></span>](../../language-reference/keywords/fixed-statement.md)  
+ [<span data-ttu-id="3b159-172">stackalloc</span><span class="sxs-lookup"><span data-stu-id="3b159-172">stackalloc</span></span>](../../language-reference/keywords/stackalloc.md)  
+ [<span data-ttu-id="3b159-173">Konwersja boxing i konwersja unboxing</span><span class="sxs-lookup"><span data-stu-id="3b159-173">Boxing and Unboxing</span></span>](../types/boxing-and-unboxing.md)

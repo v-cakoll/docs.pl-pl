@@ -25,8 +25,8 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/09/2018
 ---
-# <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. i? warunkowe null [] operatory (C# i Visual Basic)
-Wykorzystywane do testowania dla wartości null przed wykonaniem dostępu elementu członkowskiego (`?.`) lub indeks (`?[]`) operacji.  Tych operatorów pomóc zapisu sprawdza mniej kod obsługujący wartości null, szczególnie w przypadku malejącej do struktur danych.  
+# <a name="-and--null-conditional-operators-c-and-visual-basic"></a>Operatory warunkowe null ?. oraz ? []  (C# i Visual Basic)
+Wykorzystywane do testowania wystąpienia wartości null przed wykonaniem dostępu elementu członkowskiego (`?.`) lub odwołaniem do indeksu (`?[]`). Pomagają one w ograniczeniu ilości kodu potrzebnego do sprawdzenia wystąpień wartości null, zwłaszcza dla przypadków zstępujących do struktur danych. 
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -40,7 +40,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- Operatory warunku wartości null są short-circuiting.  Jeśli jedna operacja w łańcuchu operacji dostępu i indeksu warunkowy element członkowski zwraca wartość null, pozostałe wykonywania łańcucha zatrzymuje.  W poniższym przykładzie `E` nie jest wykonywana Jeśli `A`, `B`, lub `C` obliczane do wartości null.
+ Operatory warunkowe wartości null są krótkoobiegowe. Jeśli jedna z operacji w łańcuchu dostępu zwraca wartość null, dalsze wykonanie łańcucha zostaje przerwane. W poniższym przykładzie „E” nie jest wykonywane, jeśli „A”, „B” lub „C” zwraca wartość null.
   
 ```csharp
 A?.B?.C?.Do(E);
@@ -52,7 +52,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
- Użyj innego dostępu element członkowski warunku wartości null jest powoływanie delegatów w sposób obsługującej wielowątkowość ze znacznie mniejsza ilość kodu.  Stary sposób wymaga kodu podobne do poniższych:  
+ Inne użycie operatorów warunkowych null polega na „wątkowo bezpiecznym” wywołaniu delegatów z mniejszą ilością kodu. Stary sposób wymaga kodu podobnego do poniższego:
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -66,7 +66,7 @@ If handler IsNot Nothing
     Call handler(…)  
 ```  
   
- Nowy sposób jest znacznie prostsza:  
+ Nowy sposób jest znacznie prostszy: 
   
 ```csharp
 PropertyChanged?.Invoke(e)  
@@ -76,9 +76,9 @@ PropertyChanged?.Invoke(e)
 PropertyChanged?.Invoke(e)
 ```  
   
- Nowy sposób jest bezpieczne wątkowo, ponieważ kompilator generuje kod, aby ocenić `PropertyChanged` tylko jeden raz, zachowania wynik w zmiennej tymczasowej.  
+ Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby ocenić „PropertyChanged” tylko jeden raz, przechowując wynik w zmiennej tymczasowej.
   
- Należy jawnie wywołać `Invoke` metody ponieważ nie istnieje żadna Składnia wywołania delegata warunkowe null `PropertyChanged?(e)`.  
+ Należy jawnie wywołać metodę „Invoke”, ponieważ nie istnieje możliwość wywołania delegata warunkowego null za pomocą żadnej z dostępnych składni „PropertyChanged?(e)”.
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

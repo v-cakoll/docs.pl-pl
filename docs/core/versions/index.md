@@ -4,17 +4,16 @@ description: Dowiedz się, jak działa przechowywanie wersji platformy .NET Core
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 437bea33f26c9ae445cf412657f4d23fcce18873
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-versioning"></a>Przechowywanie wersji platformy .NET core
 
@@ -68,8 +67,8 @@ Wszystkie opisy witryny sieci web i ciągi interfejsu użytkownika w instalator�
 
 | Instalator | Tytuł okna                          | Inną zawartość w Instalatorze | Co to jest zainstalowany                               |
 | :--       | :--                                   | :--                        | :--                                             |
-| SDK       | Instalator programu .NET core 2.0 SDK (x 64)     | .NET Core 2.0.4 SDK        | .NET Core 2.0.4 Tools + .NET Core 2.0.4 Runtime |
-| Środowisko uruchomieniowe   | .NET Core 2.0 Runtime (x64) Installer | .NET Core 2.0.4 Runtime    | .NET Core 2.0.4 Runtime                         |
+| SDK       | Instalator programu .NET core 2.0 SDK (x 64)     | Oprogramowanie .NET core 2.0.4 zestawu SDK        | .NET Core 2.0.4 Tools + .NET Core 2.0.4 Runtime |
+| Środowisko uruchomieniowe   | Środowisko uruchomieniowe (x64) Instalatora programu .NET core 2.0 | .NET Core 2.0.4 Runtime    | .NET Core 2.0.4 Runtime                         |
 
 Wersje zapoznawcze różnią się tylko nieznacznie:
 
@@ -82,7 +81,7 @@ Może się zdarzyć, że wersja zestawu SDK zawiera więcej niż jedną wersję 
 
 | Instalator | Tytuł okna                      | Inną zawartość w Instalatorze                                   | Co to jest zainstalowany                                                         |
 | :--       | :--                               | :--                                                          | :--                                                                       |
-| SDK       | Instalator programu .NET core 2.1 zestawu SDK (x 64) | .NET Core 2.1.1 SDK <br> .NET Core 2.1.1 Runtime <br> .NET Core 2.0.6 Runtime | Narzędzia .NET core 2.1.1 + środowisko uruchomieniowe platformy .NET Core 2.1.1 środowisko uruchomieniowe platformy .NET Core 2.0.6 |
+| SDK       | Instalator programu .NET core 2.1 zestawu SDK (x 64) | .NET Core 2.1.1 SDK <br> .NET Core 2.1.1 Runtime <br> Środowisko uruchomieniowe platformy .NET core 2.0.6 | Narzędzia .NET core 2.1.1 + środowisko uruchomieniowe platformy .NET Core 2.1.1 środowisko uruchomieniowe platformy .NET Core 2.0.6 |
 
 Istnieje również możliwość, że narzędzia .NET Core muszą zostać zaktualizowane, bez zmiany środowiska uruchomieniowego. W takim przypadku zwiększa się wersja zestawu SDK (na przykład, aby 2.1.2), a następnie środowiska uruchomieniowego przechwytuje następnym razem go (na przykład środowiska uruchomieniowego i zestawu SDK wysłać przy następnym jako 2.1.3) jest dostarczany.
 

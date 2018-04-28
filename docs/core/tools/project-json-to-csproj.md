@@ -1,21 +1,20 @@
 ---
-title: "Porównanie pliku Project.JSON i csproj - .NET Core"
-description: "Zobacz mapowania między elementami pliku project.json i csproj."
-keywords: Plik Project.JSON lub csproj, .NET Core, programu MSBuild
+title: Porównanie pliku Project.JSON i csproj - .NET Core
+description: Zobacz mapowania między elementami pliku project.json i csproj.
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.workload: dotnetcore
-ms.openlocfilehash: 655f74def4d6163959d7dbbe605f7322fb0573c8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c5753d73f062aa107d7afbec6146ea3452901fb1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapowanie między właściwości pliku project.json i csproj
 
@@ -351,7 +350,7 @@ Aby uzyskać więcej informacji, zobacz [niezależne wdrożeń (SCD)](../deployi
 ```
 
 > [!NOTE]
-> `imports`narzędzia nie są obsługiwane w csproj. Narzędzia, które wymagają importów nie będzie działać z nowym `Microsoft.NET.Sdk`.
+> `imports` narzędzia nie są obsługiwane w csproj. Narzędzia, które wymagają importów nie będzie działać z nowym `Microsoft.NET.Sdk`.
 
 ## <a name="buildoptions"></a>buildOptions
 
@@ -619,9 +618,9 @@ Wszystkie MSBuild `ItemGroup` elementy obsługują `Include`, `Exclude`, i `Remo
 
 Układ pakietu wewnątrz .nupkg można modyfikować przy `PackagePath="path"`.
 
-Z wyjątkiem `Content`, większość grup elementów wymagają jawnie Dodawanie `Pack="true"` do uwzględnienia w pakiecie. `Content`będą umieszczane w *zawartości* folderu w pakiecie, ponieważ program MSBuild `<IncludeContentInPack>` właściwość jest ustawiona na `true` domyślnie. Aby uzyskać więcej informacji, zobacz [tym do zawartości w pakiecie](/nuget/schema/msbuild-targets#including-content-in-a-package).
+Z wyjątkiem `Content`, większość grup elementów wymagają jawnie Dodawanie `Pack="true"` do uwzględnienia w pakiecie. `Content` będą umieszczane w *zawartości* folderu w pakiecie, ponieważ program MSBuild `<IncludeContentInPack>` właściwość jest ustawiona na `true` domyślnie. Aby uzyskać więcej informacji, zobacz [tym do zawartości w pakiecie](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
-`PackagePath="%(Identity)"`to krótkie sposób ustawienia do ścieżki pliku projektu względna ścieżka pakietu.
+`PackagePath="%(Identity)"` to krótkie sposób ustawienia do ścieżki pliku projektu względna ścieżka pakietu.
 
 ## <a name="testrunner"></a>testRunner
 

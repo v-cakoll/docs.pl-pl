@@ -4,15 +4,15 @@ description: Dowiedz się pojęcia testu jednostki w języku C# i .NET Core za p
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 382b5b5e8bafccbcaaa5ef247d894506c1b0b172
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 8d04f7217d3861cdfc73075c3bb4c9485bf99e7b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Badanie C# .NET Core za pomocą testu dotnet i xUnit jednostki
 

@@ -1,22 +1,21 @@
 ---
 title: Tworzenie aplikacji Hello World z platformy .NET Core i Visual Basic w programie Visual Studio 2017 r.
 description: Sposób tworzenia prostej aplikacji konsoli .NET Core za pomocą Visual Basic przy użyciu programu Visual Studio 2017 r.
-keywords: Oprogramowanie .NET core aplikacji konsoli .NET Core, programu Visual Studio 2017 r.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-vb
 dev_langs:
 - vb
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: c3775fccf8d6e7c544cbd0b05df7043752e8bef9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: a72af4bc391b39a38018ce1c383a87ab36bd2109
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Tworzenie aplikacji Visual Basic Hello World z platformą .NET Core w Visual Studio 2017 r.
 
@@ -32,7 +31,7 @@ Aby uzyskać więcej informacji, zobacz [wymagania wstępne dotyczące .NET Core
 
 Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj następujące kroki:
 
-1. Launch Visual Studio 2017. Wybierz **pliku** > **nowy** > **projektu** na pasku menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual Basic** węzła następuje **.NET Core** węzła. Następnie wybierz **aplikacji konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "HelloWorld". Wybierz **OK** przycisku.
+1. Uruchom program Visual Studio 2017 r. Wybierz **pliku** > **nowy** > **projektu** na pasku menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual Basic** węzła następuje **.NET Core** węzła. Następnie wybierz **aplikacji konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "HelloWorld". Wybierz **OK** przycisku.
 
    ![Okno dialogowe nowego projektu z aplikacji konsoli wybrane](./media/vb-with-visual-studio/new-project.png)
    

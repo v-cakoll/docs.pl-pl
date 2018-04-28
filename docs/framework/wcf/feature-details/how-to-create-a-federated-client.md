@@ -1,12 +1,13 @@
 ---
 title: 'Instrukcje: Tworzenie klienta federacyjnego'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>Instrukcje: Tworzenie klienta federacyjnego
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *usługa* składa się z trzech głównych kroków:  
   
-1.  Skonfiguruj [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub podobne niestandardowego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie powiązanie odpowiednie zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Można również uruchomić [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) wobec usługi federacyjnej, aby wygenerować plik konfiguracji do komunikowania się z usługi federacyjnej i co najmniej jeden punkt końcowy metadanych usługi tokenu zabezpieczeń.  
+1.  Skonfiguruj [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub podobne niestandardowego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie powiązanie odpowiednie zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Można również uruchomić [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) wobec usługi federacyjnej, aby wygenerować plik konfiguracji do komunikowania się z usługi federacyjnej i co najmniej jeden punkt końcowy metadanych usługi tokenu zabezpieczeń.  
   
 2.  Ustawianie właściwości <xref:System.ServiceModel.Security.IssuedTokenClientCredential> steruje różnych aspektów interakcji klienta z usługi tokenu zabezpieczającego.  
   
@@ -38,7 +40,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *u
 > [!NOTE]
 >  A <xref:System.Security.Cryptography.CryptographicException> może zostać zgłoszony, gdy klient użyje poświadczeń personifikowanej <xref:System.ServiceModel.WSFederationHttpBinding> powiązanie lub token wystawiony niestandardowe i klucze asymetryczne. Klucze asymetryczne są używane z <xref:System.ServiceModel.WSFederationHttpBinding> powiązania i wydane niestandardowe tokenów gdy <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> i <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> właściwości, są odpowiednio ustawione na <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>. <xref:System.Security.Cryptography.CryptographicException> Jest generowany, gdy klient próbuje wysłać wiadomość i profilu użytkownika nie istnieje dla tożsamości, która jest personifikacji klienta. Aby zminimalizować ten problem, zaloguj się na komputerze klienckim lub wywołanie `LoadUserProfile` przed wysłaniem wiadomości.  
   
- Ten temat zawiera szczegółowe informacje na temat tych procedur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie powiązanie odpowiednie zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sposób działania usługi federacyjnej, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Ten temat zawiera szczegółowe informacje na temat tych procedur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie powiązanie odpowiednie zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sposób działania usługi federacyjnej, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Aby wygenerować i sprawdzić jego konfigurację usługi federacyjnej  
   
@@ -69,7 +71,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *u
      [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
      [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
   
-4.  Opcjonalny. Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> na wartość procentową. Wartość domyślna to 60 (w procentach). Właściwość określa procent okresu ważności tokenu. Na przykład, jeśli wystawiony token jest ważny przez 10 godzin i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> ma wartość 80, a następnie token jest odnawiany po ośmiu godzinach. Poniższy przykład ustawia wartość do 80 procent.  
+4.  Opcjonalna. Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> na wartość procentową. Wartość domyślna to 60 (w procentach). Właściwość określa procent okresu ważności tokenu. Na przykład, jeśli wystawiony token jest ważny przez 10 godzin i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> ma wartość 80, a następnie token jest odnawiany po ośmiu godzinach. Poniższy przykład ustawia wartość do 80 procent.  
   
      [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
      [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
@@ -110,7 +112,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *u
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6.  Opcjonalny. Skonfiguruj jakiekolwiek zachowanie punktu końcowego niestandardowych specyficzne dla wystawcy, tworząc <`issuerChannelBehaviors`> element jako element podrzędny <`issuedToken`> elementu. Dla każdego zachowanie, należy utworzyć <`add`> element jako element podrzędny <`issuerChannelBehaviors`> elementu. Określ adres wystawcy zachowania, ustawiając `issuerAddress` atrybutu <`add`> elementu. Określ zachowanie się przez ustawienie `behaviorConfiguration` atrybutu <`add`> elementu.  
+6.  Opcjonalna. Skonfiguruj jakiekolwiek zachowanie punktu końcowego niestandardowych specyficzne dla wystawcy, tworząc <`issuerChannelBehaviors`> element jako element podrzędny <`issuedToken`> elementu. Dla każdego zachowanie, należy utworzyć <`add`> element jako element podrzędny <`issuerChannelBehaviors`> elementu. Określ adres wystawcy zachowania, ustawiając `issuerAddress` atrybutu <`add`> elementu. Określ zachowanie się przez ustawienie `behaviorConfiguration` atrybutu <`add`> elementu.  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -163,13 +165,13 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *u
 ## <a name="localissuer-required"></a>LocalIssuer wymagane  
  Jeśli klienci powinni zawsze używaj wystawcy lokalnego, należy uwzględnić następujące informacje: domyślnego wyjścia Svcutil.exe skutkuje wystawcy lokalnego nie są używane, jeśli usługi tokenu zabezpieczeń na sekundę do ostatniego w łańcuchu Określa adres wystawcy lub adres metadanych Wystawca.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ustawienie <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości <xref:System.ServiceModel.Security.IssuedTokenClientCredential> , zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ustawienie <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości <xref:System.ServiceModel.Security.IssuedTokenClientCredential> , zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Certyfikaty zakresami  
  Jeśli certyfikaty usługi musi być określona dla komunikacji z dowolnej usługi tokenu zabezpieczeń, zwykle ponieważ negocjowanie certyfikatu nie jest używany, ich można określić za pomocą <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> właściwość <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> klasy. <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> Ma metodę <xref:System.Uri> i <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> jako parametry. Określony certyfikat jest używany podczas komunikacji z punktami końcowymi na określony identyfikator URI. Alternatywnie można użyć <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> metody, aby dodać certyfikat do kolekcji zwróconej przez <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> właściwości.  
   
 > [!NOTE]
->  Pomysł klienta certyfikatów, które należą do danego identyfikatora URI zakresu dotyczy tylko aplikacji, które wychodzących połączeń do usług, które udostępniają punkty końcowe w tych identyfikatorów URI. Nie ma zastosowania do certyfikatów, które są używane do podpisywania wystawionych tokenów, takich jak zasoby konfigurowane na serwerze w kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasy. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+>  Pomysł klienta certyfikatów, które należą do danego identyfikatora URI zakresu dotyczy tylko aplikacji, które wychodzących połączeń do usług, które udostępniają punkty końcowe w tych identyfikatorów URI. Nie ma zastosowania do certyfikatów, które są używane do podpisywania wystawionych tokenów, takich jak zasoby konfigurowane na serwerze w kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasy. Aby uzyskać więcej informacji, zobacz [porady: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md)  

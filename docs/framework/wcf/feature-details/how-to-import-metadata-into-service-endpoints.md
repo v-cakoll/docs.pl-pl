@@ -1,24 +1,26 @@
 ---
-title: "Instrukcje: Importowanie metadanych do punktów końcowych usług"
-ms.custom: 
+title: 'Instrukcje: Importowanie metadanych do punktów końcowych usług'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fa1831885eb24effc5f4267c208b8bffa9f0b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b86f31217812767b0fbbd785a0f3ff96c2948854
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Instrukcje: Importowanie metadanych do punktów końcowych usług
 W tym temacie wyjaśniono, jak zaimportować metadane do kolekcji punktów końcowych usługi i korzystać z usługi zdefiniowane w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym temacie przedstawiają sposób tworzenia aplikacji klienckiej, który importuje metadane z usługi, a następnie wywołania `Add` metody dla usługi.  
@@ -38,7 +40,7 @@ W tym temacie wyjaśniono, jak zaimportować metadane do kolekcji punktów końc
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  Po zaimportowaniu metadanych, nie można utworzyć kanału klienta lub wyeksportować metadane. Jest to spowodowane typu informacje są niedostępne w tym momencie. Informacje o typie jest wymagany do faktycznie interakcji z usługą lub wyeksportować metadane. Aby wygenerować informacje o typie, należy wygenerować kod wyświetlany w kroku 4 i 5. Alternatywnie można użyć <xref:System.ServiceModel.Description.MetadataResolver> Klasa pomocy. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: uzyskiwanie metadanych powiązania przy użyciu klasy MetadataResolver](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
+    >  Po zaimportowaniu metadanych, nie można utworzyć kanału klienta lub wyeksportować metadane. Jest to spowodowane typu informacje są niedostępne w tym momencie. Informacje o typie jest wymagany do faktycznie interakcji z usługą lub wyeksportować metadane. Aby wygenerować informacje o typie, należy wygenerować kod wyświetlany w kroku 4 i 5. Alternatywnie można użyć <xref:System.ServiceModel.Description.MetadataResolver> Klasa pomocy. Aby uzyskać więcej informacji, zobacz [porady: MetadataResolver używana do uzyskania powiązanie dynamicznie metadanych](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
   
 4.  Generowanie informacji o typie dla każdej umowy.  
   

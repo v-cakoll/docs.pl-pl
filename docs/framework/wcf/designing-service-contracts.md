@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-service-contracts"></a>Projektowanie kontraktów usług
 W tym temacie opisano, jakie usługi kontraktów są, jak są zdefiniowane, jakie operacje są dostępne (i wpływem na podstawowym wymiany komunikatów), jakie typy danych są używane i inne problemy, które ułatwiają projektowanie operacje, które spełniają wymagania danego scenariusza.  
@@ -65,7 +65,7 @@ W tym temacie opisano, jakie usługi kontraktów są, jak są zdefiniowane, jaki
   
  Przykład użycia interfejsu, aby utworzyć kontrakt usługi, zobacz [porady: Tworzenie usługi przy użyciu interfejsu kontraktu](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
   
- Można jednak używać klasy definiowanie kontraktu usługi i implementacji tego kontraktu w tym samym czasie. Zaletą tworzenia usług, stosując <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> bezpośrednio do klasy i metody w klasie, odpowiednio jest szybkość i prostota. Wady są zarządzanych klas nie obsługują dziedziczenie wielokrotne, czy w związku z tym ich można tylko zaimplementować jeden kontrakt usługi naraz. Ponadto wszelkie modyfikacje podpisów klasa lub metoda modyfikuje publicznego kontraktu dla tej usługi, co może uniemożliwić klientom zostały zmodyfikowane za pomocą usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md).  
+ Można jednak używać klasy definiowanie kontraktu usługi i implementacji tego kontraktu w tym samym czasie. Zaletą tworzenia usług, stosując <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> bezpośrednio do klasy i metody w klasie, odpowiednio jest szybkość i prostota. Wady są zarządzanych klas nie obsługują dziedziczenie wielokrotne, czy w związku z tym ich można tylko zaimplementować jeden kontrakt usługi naraz. Ponadto wszelkie modyfikacje podpisów klasa lub metoda modyfikuje publicznego kontraktu dla tej usługi, co może uniemożliwić klientom zostały zmodyfikowane za pomocą usługi. Aby uzyskać więcej informacji, zobacz [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
  Na przykład, używa klasy w celu utworzenia kontraktu usługi, który implementuje go w tym samym czasie, zobacz [porady: Tworzenie usługi za pomocą klasy kontraktu](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
   
@@ -193,7 +193,7 @@ End Interface
  Poziom ochrony jest wartość, która określa, czy wiadomości (lub części wiadomości) obsługujące usługi są podpisywane, podpisane i szyfrowane lub wysyłane bez podpisy i szyfrowania. Można ustawić poziom ochrony w różnych zakresów: na poziomie usługi dla określonej operacji, wiadomości w tej operacji lub części komunikatu. Wartości ustawione w jednym zakresie staje się wartością domyślną dla mniejszych zakresach, chyba że jawnie przesłonięte. Jeśli Konfiguracja powiązania nie zapewnia poziom ochrony minimalne wymagane dla kontraktu, jest zwracany wyjątek. I kontraktu jawnie ustawione wartości poziomu ochrony, Konfiguracja powiązania określa poziom ochrony dla wszystkich wiadomości, jeśli wiązanie zabezpieczeń komunikatów. Jest to zachowanie domyślne.  
   
 > [!IMPORTANT]
->  Podjęcie decyzji o jawnie ustaw różne zakresy kontraktu na wartość mniejszą niż poziom pełnej ochrony <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> jest zazwyczaj decyzji, które zajmują pewnym stopniu zabezpieczeń w celu zwiększenia wydajności. W takich przypadkach swoje decyzje dotyczące muszą obracać wokół działania i wartości danych, które wymieniają. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md).  
+>  Podjęcie decyzji o jawnie ustaw różne zakresy kontraktu na wartość mniejszą niż poziom pełnej ochrony <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> jest zazwyczaj decyzji, które zajmują pewnym stopniu zabezpieczeń w celu zwiększenia wydajności. W takich przypadkach swoje decyzje dotyczące muszą obracać wokół działania i wartości danych, które wymieniają. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
   
  Na przykład w poniższym przykładzie kodu nie ustawia albo <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> lub <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> właściwości kontraktu.  
   
@@ -273,7 +273,7 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)] poziomy ochrony i korzystania z nich, zobacz [poziom ochrony opis](../../../docs/framework/wcf/understanding-protection-level.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] zabezpieczenia, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Wymagania dotyczące innych operacji podpisu  
- Niektóre funkcje aplikacji wymagają określonego rodzaju operacji podpisu. Na przykład <xref:System.ServiceModel.NetMsmqBinding> powiązanie obsługuje trwałe usług i klientów, w których aplikację można uruchomić ponownie w trakcie komunikacji i uruchomienia instalacji którym ją przerwał pracę bez Brak komunikaty. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Jednak operacje trwałe należy wykonać tylko jedną `in` parametrów i nie zwraca wartości.  
+ Niektóre funkcje aplikacji wymagają określonego rodzaju operacji podpisu. Na przykład <xref:System.ServiceModel.NetMsmqBinding> powiązanie obsługuje trwałe usług i klientów, w których aplikację można uruchomić ponownie w trakcie komunikacji i uruchomienia instalacji którym ją przerwał pracę bez Brak komunikaty. (Aby uzyskać więcej informacji, zobacz [kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Jednak operacje trwałe należy wykonać tylko jedną `in` parametrów i nie zwraca wartości.  
   
  Innym przykładem jest użycie <xref:System.IO.Stream> typów podczas wykonywania operacji. Ponieważ <xref:System.IO.Stream> parametr zawiera treść cały komunikat, jeśli danych wejściowych lub wyjściowych (oznacza to, `ref` parametru `out` parametrów lub wartości zwracanej) jest typu <xref:System.IO.Stream>, to musi być tylko danych wejściowych lub wyjściowych określone w sieci Operacja. Ponadto, parametr lub typ zwracany musi być równa albo <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>, lub <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] strumienie, zobacz [duże ilości danych i przesyłania strumieniowego](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   

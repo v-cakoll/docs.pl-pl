@@ -1,13 +1,13 @@
 ---
-title: "Programowanie zabezpieczeń WCF"
-ms.custom: 
+title: Programowanie zabezpieczeń WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 
+caps.latest.revision: 25
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
 W tym temacie opisano podstawowe zadania programowania, używany do tworzenia bezpiecznego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji. W tym temacie omówiono tylko uwierzytelnianie, poufność i integralność, nazywanych zbiorczo *transferu zabezpieczeń*. W tym temacie nie opisano autoryzacji (kontrola dostępu do zasobów lub usług); informacje dotyczące autoryzacji znajdują się w temacie [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,26 +48,26 @@ W tym temacie opisano podstawowe zadania programowania, używany do tworzenia be
   
     1.  `Transport`  
   
-         Zabezpieczenia transportu zależy od mechanizm, który używa wybranego powiązania. Na przykład, jeśli używasz `WSHttpBinding` mechanizm zabezpieczeń jest Secure Sockets Layer (SSL) (również mechanizm dla protokołu HTTPS). Główną zaletą zabezpieczeń transportu jest ogólnie rzecz biorąc, zapewnia dobre przepływności, niezależnie od tego, które transportu są używane. Jednak mieć dwa ograniczenia: pierwsza to, że mechanizm transportu nakazują typ poświadczenia używane do uwierzytelnienia użytkownika. Wadą jest tylko wtedy, gdy usługa musi współdziałać z innymi usługami, które wymagają różnych rodzajów poświadczeń. Drugim jest, ponieważ nie zastosowano zabezpieczenia na poziomie komunikatu, zabezpieczeń jest zaimplementowana w sposób przeskoku przeskoku zamiast end-to-end. To ograniczenie ostatnie jest problem tylko, jeśli ścieżka wiadomości między klientem a usługą zawiera pośredników. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]które transportu do użycia, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą zabezpieczeń transportu, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Zabezpieczenia transportu zależy od mechanizm, który używa wybranego powiązania. Na przykład, jeśli używasz `WSHttpBinding` mechanizm zabezpieczeń jest Secure Sockets Layer (SSL) (również mechanizm dla protokołu HTTPS). Główną zaletą zabezpieczeń transportu jest ogólnie rzecz biorąc, zapewnia dobre przepływności, niezależnie od tego, które transportu są używane. Jednak mieć dwa ograniczenia: pierwsza to, że mechanizm transportu nakazują typ poświadczenia używane do uwierzytelnienia użytkownika. Wadą jest tylko wtedy, gdy usługa musi współdziałać z innymi usługami, które wymagają różnych rodzajów poświadczeń. Drugim jest, ponieważ nie zastosowano zabezpieczenia na poziomie komunikatu, zabezpieczeń jest zaimplementowana w sposób przeskoku przeskoku zamiast end-to-end. To ograniczenie ostatnie jest problem tylko, jeśli ścieżka wiadomości między klientem a usługą zawiera pośredników. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] które transportu do użycia, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą zabezpieczeń transportu, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   
          Zabezpieczenia komunikatów oznacza, że każdy komunikat zawiera niezbędne nagłówki i bezpieczeństwo danych, aby zachować wiadomości. Ponieważ kompozycji nagłówki różni się może zawierać dowolną liczbę poświadczeń. To staje się czynnikiem, czy możesz są współdziałanie z innymi usługami tego żądanie typu poświadczenie mechanizm transportu nie może dostarczyć, czy wiadomości musi być używany z więcej niż jedna usługa, gdzie każda usługa wymaga typu różnych poświadczeń.  
   
-         [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zabezpieczenia wiadomości](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+         Aby uzyskać więcej informacji, zobacz [zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
     3.  `TransportWithMessageCredential`  
   
          Ten wybór używa Warstwa transportu do bezpiecznego transferu komunikatów, podczas każdej wiadomości zawiera bogaty poświadczenia muszą innych usług. Łączy wydajności zaletą zabezpieczeń transportu i zalety zaawansowanych poświadczenia zabezpieczeń wiadomości. To ustawienie jest dostępne z powiązaniami następujących: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, i <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Jeśli zdecydujesz się użyć zabezpieczeń transportu dla protokołu HTTP (innymi słowy, HTTPS), należy również skonfigurować hosta za pomocą certyfikatu SSL i Włącz protokół SSL na porcie. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3.  Jeśli zdecydujesz się użyć zabezpieczeń transportu dla protokołu HTTP (innymi słowy, HTTPS), należy również skonfigurować hosta za pomocą certyfikatu SSL i Włącz protokół SSL na porcie. Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
 4.  Jeśli używasz <xref:System.ServiceModel.WSHttpBinding> i nie ma potrzeby nawiązywania bezpiecznej sesji, należy ustawić <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwości `false`.  
   
      Bezpieczna sesja występuje, gdy klient i usługa utworzyć kanał za pomocą klucza symetrycznego (klient i serwer używać tego samego klucza długości konwersację, do czasu zamknięcia okna dialogowego).  
   
 ## <a name="setting-the-client-credential-type"></a>Ustawienie typu poświadczeń klienta  
- Wybierz typ poświadczeń klienta zgodnie z potrzebami. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Dostępne są następujące typy poświadczeń klienta:  
+ Wybierz typ poświadczeń klienta zgodnie z potrzebami. Aby uzyskać więcej informacji, zobacz [Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Dostępne są następujące typy poświadczeń klienta:  
   
 -   `Windows`  
   

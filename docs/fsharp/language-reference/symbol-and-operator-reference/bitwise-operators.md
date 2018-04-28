@@ -1,20 +1,17 @@
 ---
 title: Operatory bitowe (F#)
-description: "Więcej informacji na temat operatory bitowe, które są dostępne w języku programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Więcej informacji na temat operatory bitowe, które są dostępne w języku programowania w języku F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8a2c87f5-b4c7-47fe-8580-82c956f605e5
-ms.openlocfilehash: 61a8e6bafe97a229480c967a4afb5d2a256474c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4d5abff564a5d1dcbe52b99edf431ca10e442061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bitwise-operators"></a>Operatory bitowe
 
@@ -35,7 +32,7 @@ W poniższej tabeli opisano operatory bitowe, które są obsługiwane w przypadk
 Następujące typy mogą być używane z bitowego operatory: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, i `unativeint`.
 
 ## <a name="see-also"></a>Zobacz też
-[Operator odwołanie do symbolu i](index.md)
+[Odwołanie do symboli i operatorów](index.md)
 
 [Operatory arytmetyczne](arithmetic-operators.md)
 

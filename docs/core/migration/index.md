@@ -1,21 +1,19 @@
 ---
 title: Oprogramowanie .NET core migracji do formatu csproj
 description: Oprogramowanie .NET core project.json csproj migracji
-keywords: Migracja .NET Core .NET i .NET core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/19/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 46373d1d100a71cbc43fcdfe6ce16a7ecd796573
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 102b875072ed77a328bdb6a62ed6cc98612ff059
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>Migrowanie projektów .NET Core do formatu .csproj
 
@@ -28,7 +26,7 @@ Ten dokument opisano scenariusze migracji dla projektów .NET Core i będą prze
 ## <a name="migration-from-projectjson-to-csproj"></a>Migracja z project.json do csproj
 Migracja z *project.json* do *.csproj* może odbywać się przy użyciu jednej z następujących metod:
 
-- [Visual Studio 2017 r.](#visual-studio-2017)
+- [Visual Studio 2017](#visual-studio-2017)
 - [Narzędzie wiersza polecenia migracji DotNet](#dotnet-migrate)
  
 Obie metody umożliwia migrację projektów, więc wyniki będą takie same dla tego samego silnika podstawowej. W większości przypadków przy użyciu jednej z tych metod, aby przeprowadzić migrację *project.json* do *csproj* jest jedynym elementem, który jest wymagany i niezbędne jest dalsze ręcznej edycji pliku projektu. Powstałe w ten sposób *.csproj* pliku będzie miała nazwę taka sama jak nazwa katalogu zawierającego.
@@ -61,7 +59,7 @@ Zobacz [mapowania między właściwości pliku project.json i csproj](../tools/p
 
 - Jeśli wystąpi błąd: "nie pliku wykonywalnego odnaleźć pasującego dotnet polecenia-migracji":
 
-Uruchom `dotnet --version` aby zobaczyć, której używasz wersji. [`dotnet migrate`](../tools/dotnet-migrate.md)wymaga programu .NET Core CLI RC3 lub nowszej.
+Uruchom `dotnet --version` aby zobaczyć, której używasz wersji. [`dotnet migrate`](../tools/dotnet-migrate.md) wymaga programu .NET Core CLI RC3 lub nowszej.
 Zostanie wyświetlony ten błąd, jeśli masz *global.json* pliku w bieżącej lub katalog nadrzędny i `sdk` ustawiono wersji na starszą wersję.
 
 ## <a name="migration-from-dnx-to-csproj"></a>Migracja z DNX do csproj
@@ -78,7 +76,7 @@ Zmiana format csproj .NET Core i rozwijającymi z każdego nowego wstępną wers
 
 * Usuń właściwość wersji narzędzi z `<Project>` elementu, jeśli istnieje. 
 * Usuń obszar nazw XML (`xmlns`) z `<Project>` elementu.
-* Jeśli nie istnieje, Dodaj `Sdk` atrybutu `<Project>` element i ustaw ją na `Microsoft.NET.Sdk` lub `Microsoft.NET.Sdk.Web`. Ten atrybut określa, że projekt korzysta z zestawu SDK do użycia. `Microsoft.NET.Sdk.Web`Służy do aplikacji sieci web.
+* Jeśli nie istnieje, Dodaj `Sdk` atrybutu `<Project>` element i ustaw ją na `Microsoft.NET.Sdk` lub `Microsoft.NET.Sdk.Web`. Ten atrybut określa, że projekt korzysta z zestawu SDK do użycia. `Microsoft.NET.Sdk.Web` Służy do aplikacji sieci web.
 * Usuń `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` i `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` instrukcje od góry i u dołu projektu. Import, te instrukcje są implikowana przez zestaw SDK, więc nie istnieje potrzeba do nich w projekcie. 
 * Jeśli masz `Microsoft.NETCore.App` lub `NETStandard.Library` `<PackageReference>` elementów w projekcie, należy usunąć je. Te odwołania do pakietu są [niejawnego przez zestaw SDK](https://aka.ms/sdkimplicitrefs). 
 * Usuń `Microsoft.NET.Sdk` `<PackageReference>` elementu, jeśli istnieje. Odwołanie do zestawu SDK jest dostarczany za pomocą `Sdk` atrybutu `<Project>` elementu. 

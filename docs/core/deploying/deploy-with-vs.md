@@ -1,20 +1,19 @@
 ---
-title: "Wdrażanie aplikacji .NET core z programem Visual Studio"
-description: "Dowiedz się, wdrażanie aplikacji .NET Core z programem Visual Studio"
-keywords: "Wdrożenie .NET Core .NET i .NET core"
+title: Wdrażanie aplikacji .NET core z programem Visual Studio
+description: Dowiedz się, wdrażanie aplikacji .NET Core z programem Visual Studio
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
-ms.workload: dotnetcore
-ms.openlocfilehash: a2706aecb80f079e6e735310b09c1062a6953901
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 238e43149eebb59ecbb25dfc3976f912e0ae8b01
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Wdrażanie .NET Core aplikacji za pomocą programu Visual Studio
 
@@ -79,7 +78,7 @@ Wdrażanie wdrożenie zależne od framework z co najmniej jeden zależności inn
 
 Należy pamiętać, że wdrożenie framework zależne zależności innych firm tylko jako przenośne jako jego zależności innych firm. Na przykład jeśli biblioteka innych firm obsługuje tylko macOS, aplikacja nie jest przenośne z systemami Windows. Dzieje się tak, jeśli zależności innych firm, sama zależy od kodu natywnego. Dobrym przykładem jest [serwera Kestrel](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), co wymaga natywnego zależności na [libuv](https://github.com/libuv/libuv). Podczas tworzenia Dyskietki dla aplikacji z tego rodzaju zależności innych firm publikowanych danych wyjściowych zawiera folder dla każdej [identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md) obsługującego natywnego zależności (i znajdujące się w pakiecie NuGet).
 
-## <a name="simpleSelf"></a>Samodzielne wdrożenia bez zależności innych firm
+## <a name="simpleSelf"></a> Samodzielne wdrożenia bez zależności innych firm
 
 Wdrażanie niezależne wdrożenia bez zależności innych firm obejmuje utworzenie projektu, modyfikując *csproj* plików, tworzenie, testowanie i publikowanie aplikacji. Prosty przykład napisane w języku C# przedstawiono proces. 
 

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6cf6910dd370c32120487681829e72ad2681efbe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowania kodu modelu usługi z dokumentów metadanych i dokumentów metadanych z kodu modelu usługi.  
@@ -74,7 +74,7 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
 ### <a name="code-generation"></a>Generowanie kodu  
  Svcutil.exe można wygenerować kodu dla usługi kontrakty, klientów i typy danych z dokumentów metadanych. Te dokumenty metadane mogą znajdować się na trwałe magazynu lub pobierana w trybie online. Pobieranie online następuje protokołu WS-Metadata Exchange lub protokołu DISCO (szczegółowe informacje można znaleźć w sekcji pobierania metadanych).  
   
- Można użyć narzędzia SvcUtil.exe do generowania kontraktów usług i danych na podstawie wstępnie zdefiniowanej dokumentu WSDL. Użyj przełącznika /serviceContract i określ lokalizację pliku lub adres URL, którym dokument WSDL, można pobrać lub znaleziono. Spowoduje to wygenerowanie kontraktów usług i danych, zdefiniowana w dokumencie WSDL, który następnie może służyć do implementacji usługi zgodne. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Porady: Pobieranie metadanych i implementacji usługi zgodne](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ Można użyć narzędzia SvcUtil.exe do generowania kontraktów usług i danych na podstawie wstępnie zdefiniowanej dokumentu WSDL. Użyj przełącznika /serviceContract i określ lokalizację pliku lub adres URL, którym dokument WSDL, można pobrać lub znaleziono. Spowoduje to wygenerowanie kontraktów usług i danych, zdefiniowana w dokumencie WSDL, który następnie może służyć do implementacji usługi zgodne. Aby uzyskać więcej informacji, zobacz [porady: Pobieranie metadanych i wdrożenie usługi zgodne](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
   
  Usługi z punktem końcowym obiekt BasicHttpContextbinding Svcutil.exe generuje BasicHttpBinding z `allowCookies` ustawić atrybutu `true` zamiast tego. Pliki cookie są używane dla kontekstu na serwerze. Jeśli chcesz zarządzać kontekstu na kliencie, gdy usługa używa plików cookie, można ręcznie zmodyfikować konfigurację, aby użyć kontekstu powiązania.  
   
@@ -93,10 +93,10 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
 |------------|-----------------|  
 |/async|Generuje zarówno podpisy metod synchroniczne i asynchroniczne.<br /><br /> Wartość domyślna: generowanie tylko metoda synchroniczna podpisów.<br /><br /> Krótka forma: `/a`|  
 |/collectionType:\<typu >|Określa typ kolekcji listy dla klienta programu WCF.<br/><br /> Wartość domyślna: typ kolekcji jest System.Array. <br /><br /> Krótka forma: `/ct`|  
-|/config:\<configFile>|Określa nazwę pliku dla pliku konfiguracji wygenerowany.<br /><br /> Domyślne: output.config|  
+|/ config:\<configFile >|Określa nazwę pliku dla pliku konfiguracji wygenerowany.<br /><br /> Domyślne: output.config|  
 |/dataContractOnly|Generuje kod dla tylko typy kontraktu danych. Nie zostały wygenerowane typy kontraktu usługi.<br /><br /> Należy określić tylko pliki lokalne metadanych dla tej opcji.<br /><br /> Krótka forma: `/dconly`|  
 |/enableDataBinding|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu na wszystkich typach kontraktu danych, aby umożliwić wiązanie danych.<br /><br /> Krótka forma: `/edb`|  
-|/excludeType:\<type>|Określa nazwę typu w pełni kwalifikowaną lub kwalifikowaną dla zestawu mają być wykluczone z typów, do którego istnieje odwołanie kontraktu.<br /><br /> Korzystając z tego przełącznika razem z `/r` z oddzielnych bibliotek DLL, odwołuje się pełna nazwa klasy XSD.<br /><br /> Krótka forma: `/et`|  
+|/excludeType:\<typu >|Określa nazwę typu w pełni kwalifikowaną lub kwalifikowaną dla zestawu mają być wykluczone z typów, do którego istnieje odwołanie kontraktu.<br /><br /> Korzystając z tego przełącznika razem z `/r` z oddzielnych bibliotek DLL, odwołuje się pełna nazwa klasy XSD.<br /><br /> Krótka forma: `/et`|  
 |/importXmlTypes|Konfiguruje serializator kontraktu danych do importowania typów kontraktu danych jako typów IXmlSerializable.|  
 |/ wewnętrzny|Generuje klasy, które są oznaczone jako wewnętrzne. Wartość domyślna: generowanie tylko klas publicznych.<br /><br /> Krótka forma: `/i`|  
 |/Language:\<języka >|Określa język programowania do użycia podczas generowania kodu. Należy podać nazwę języka zarejestrowanego w pliku Machine.config lub pełni kwalifikowaną nazwę klasy, która dziedziczy po <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Wartości: c#, cs, csharp, vb, języka Visual Basic, c ++, cpp<br /><br /> Domyślne: csharp<br /><br /> Skrócona forma: `/l` **Uwaga:** Przełącznik obsługuje tylko C++ dostawcy kodu, który jest dostarczany z programu Visual Studio 2005 z dodatkiem SP1.|  
@@ -132,7 +132,7 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
 |/serviceName:\<serviceConfigName>|Określa nazwę konfiguracji usługi do wyeksportowania. Jeśli ta opcja jest używana, zestaw pliku wykonywalnego o skojarzony plik konfiguracji musi zostać przekazany jako dane wejściowe. Svcutil.exe przeszukuje wszystkie skojarzone pliki konfiguracji dla konfiguracji usługi. Jeśli pliki konfiguracji zawierają wszystkie typy rozszerzeń, zestawy, które zawierają te typy muszą być w pamięci GAC lub jawnie realizowane przy użyciu `/reference` opcji.|  
 |/ reference:\<ścieżka pliku >|Dodaje określony zestaw do zestawu zestawów użyć w celu usunięcia odwołania do typu. Jeśli podczas eksportowania lub sprawdzania poprawności usługi, która używa rozszerzeń 3rd firm (zachowania, powiązania i elementy BindingElements) zarejestrowany w konfiguracji, użyj tej opcji, aby zlokalizować zestawów rozszerzenia, które nie znajdują się w pamięci GAC.<br /><br /> Krótka forma: `/r`|  
 |/dataContractOnly|Działa na danych tylko dla typów kontraktu. Kontrakty usług nie są przetwarzane.<br /><br /> Należy określić tylko pliki lokalne metadanych dla tej opcji.<br /><br /> Krótka forma: `/dconly`|  
-|/excludeType:\<type>|Określa pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z eksportu. Ta opcja może być używana podczas eksportowania metadanych dla usługi lub zbiór usług umów do wykluczyć typy są eksportowane. Nie można użyć tej opcji wraz z `/dconly` opcji.<br /><br /> Gdy masz jednym zestawie zawierający wiele usług, a każda używa osobnych klas o takiej samej nazwie XSD, należy określić nazwę usługi, zamiast nazwy klasy XSD dla tego przełącznika.<br /><br /> Typy kontraktu danych lub XSD są nieobsługiwane.<br /><br /> Krótka forma: `/et`|  
+|/excludeType:\<typu >|Określa pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z eksportu. Ta opcja może być używana podczas eksportowania metadanych dla usługi lub zbiór usług umów do wykluczyć typy są eksportowane. Nie można użyć tej opcji wraz z `/dconly` opcji.<br /><br /> Gdy masz jednym zestawie zawierający wiele usług, a każda używa osobnych klas o takiej samej nazwie XSD, należy określić nazwę usługi, zamiast nazwy klasy XSD dla tego przełącznika.<br /><br /> Typy kontraktu danych lub XSD są nieobsługiwane.<br /><br /> Krótka forma: `/et`|  
   
 ### <a name="service-validation"></a>Weryfikacja usług  
  Sprawdzanie poprawności może służyć do wykrywania błędów w implementacji usługi bez obsługującego usługę. Należy użyć `/serviceName` opcję, aby wskazać usługi chcesz zweryfikować.  
@@ -149,7 +149,7 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
 |/serviceName:\<serviceConfigName>|Określa nazwę konfiguracji usługi do sprawdzenia poprawności. Svcutil.exe przeszukuje wszystkie pliki konfiguracji skojarzone z zestawów wejściowych wszystkie dla konfiguracji usługi. Jeśli pliki konfiguracji zawierają wszystkie typy rozszerzeń, zestawy, które zawiera następujące typy muszą być w pamięci GAC lub jawnie realizowane przy użyciu `/reference` opcji.|  
 |/ reference:\<ścieżka pliku >|Dodaje określony zestaw do zestawu zestawów użyć w celu usunięcia odwołania do typu. Jeśli podczas eksportowania lub sprawdzania poprawności usługi, która używa rozszerzeń 3rd firm (zachowania, powiązania i elementy BindingElements) zarejestrowany w konfiguracji, użyj tej opcji, aby zlokalizować zestawów rozszerzenia, które nie znajdują się w pamięci GAC.<br /><br /> Krótka forma: `/r`|  
 |/dataContractOnly|Działa na danych tylko dla typów kontraktu. Kontrakty usług nie są przetwarzane.<br /><br /> Należy określić tylko pliki lokalne metadanych dla tej opcji.<br /><br /> Krótka forma: `/dconly`|  
-|/excludeType:\<type>|Określa pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z weryfikacji.<br /><br /> Krótka forma: `/et`|  
+|/excludeType:\<typu >|Określa pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z weryfikacji.<br /><br /> Krótka forma: `/et`|  
   
 ### <a name="metadata-download"></a>Pobieranie metadanych  
  Svcutil.exe może służyć do pobierania metadanych z uruchomionymi usługami i zapisywania metadanych do plików lokalnych. Aby pobrać metadane, należy określić `/t:metadata` opcji. W przeciwnym razie generowania kodu klienta. Schematy HTTP i HTTPS URL Svcutil.exe próbuje pobrać metadanych za pomocą usługi WS-Metadata Exchange i DISCO. Inne schematy adresów URL Svcutil.exe używa tylko WS-Metadata Exchange.  
@@ -191,7 +191,7 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
 |Opcja|Opis|  
 |------------|-----------------|  
 |/ reference:\<ścieżka pliku >|Dodaje określony zestaw do zestawu zestawów użyć w celu usunięcia odwołania do typu.<br /><br /> Krótka forma: `/r`|  
-|/excludeType:\<type>|Określa pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z weryfikacji lub eksportu.<br /><br /> Krótka forma: `/et`|  
+|/excludeType:\<typu >|Określa pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z weryfikacji lub eksportu.<br /><br /> Krótka forma: `/et`|  
 |/ out:\<pliku >|Określa nazwę pliku dla wygenerowanego kodu. Ta opcja jest ignorowana, jeśli wiele zestawów są przekazywane jako dane wejściowe do narzędzia.<br /><br /> Wartość domyślna: Pochodzi od nazwy zestawu.<br /><br /> Krótka forma: `/o`|  
 |/ UseSerializerForFaults|Określa, że <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` powinna być używana do odczytywania i zapisywania błędów, zamiast domyślnej <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
@@ -235,7 +235,7 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
 ## <a name="maximum-nametable-character-count-quota"></a>Niepowtarzającymi maksymalny przydział liczby znaków  
  Generowanie metadanych dla usługi za pomocą narzędzia svcutil, mogą pojawić się następujący komunikat:  
   
- Błąd: Nie można uzyskać metadanych z http://localhost: 8000/somesservice/mex, który podczas odczytywania danych XML został przekroczony maksymalny przydział liczby znaków (16384). Tabela nazw jest strukturą danych używaną do przechowywania ciągów napotkanych podczas przetwarzania XML — długie dokumenty XML z niepowtarzającymi nazwy elementów, nazwami atrybutów i wartościami atrybutów mogą spowodować przekroczenie tego przydziału. Tę można zwiększyć, zmieniając właściwość MaxNameTableCharCount obiektu XmlDictionaryReaderQuotas użytego podczas tworzenia modułu odczytującego XML.  
+ Błąd: Nie można uzyskać metadanych z http://localhost:8000/somesservice/mex podczas odczytywania danych XML został przekroczony maksymalny przydział liczby znaków (16384). Tabela nazw jest strukturą danych używaną do przechowywania ciągów napotkanych podczas przetwarzania XML — długie dokumenty XML z niepowtarzającymi nazwy elementów, nazwami atrybutów i wartościami atrybutów mogą spowodować przekroczenie tego przydziału. Tę można zwiększyć, zmieniając właściwość MaxNameTableCharCount obiektu XmlDictionaryReaderQuotas użytego podczas tworzenia modułu odczytującego XML.  
   
  Ten błąd może być spowodowany przez usługę, która zwraca dużego pliku WSDL, w przypadku żądania metadanych. Problem polega na przekroczenie przydziału znak z narzędzia svcutil.exe. Ta wartość jest równa pomagać w zapobieganiu atakom DOS (dos). Określając następującego pliku konfiguracji dla narzędzia svcutil, można zwiększyć ten limit przydziału.  
   

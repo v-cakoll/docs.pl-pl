@@ -1,27 +1,29 @@
 ---
-title: "Podniesienie uprawnień"
-ms.custom: 
+title: Podniesienie uprawnień
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="elevation-of-privilege"></a>Podniesienie uprawnień
 *Podniesienie uprawnień* wynikiem nadanie uprawnień poza tymi początkowo nadanego pozwolenia osoby atakującej. Na przykład osoba atakująca z zestawem uprawnień uprawnienia "tylko do odczytu" jakiś sposób eksponuje zestaw "odczytu i zapisu."  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Zaufane STS Utwórz oświadczeń tokenu SAML  
  Token zabezpieczeń potwierdzenia Markup Language (SAML) jest ogólny tokenu XML, który jest domyślnym typem dla wystawionych tokenów. Można utworzyć tokenu SAML przez zabezpieczeń tokenu usługi (STS), która końcowy usługi sieci Web zaufania w typowych programu exchange. Tokeny SAML zawierają oświadczeń w instrukcjach. Osoba atakująca może skopiować oświadczenia z prawidłowym tokenem, Utwórz nowy token SAML i podpisz go za pomocą różnych wystawcy. Celem jest określić, czy serwer jest sprawdzania poprawności wystawcy i, jeśli nie, wykorzystania słabe do utworzenia tokenów SAML, zezwalających na uprawnienia poza tych przeznaczonych przez zaufany STS.  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> Klasy weryfikuje podpis cyfrowy zawartych w tokenie SAML i domyślnie <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> tokeny SAML musi być zarejestrowany przez certyfikatu X.509, który jest prawidłowa, gdy <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasa ma ustawioną wartość <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust`Tryb samego jest za mało, aby ustalić, czy Wystawca tokenu SAML jest zaufany. Usługi, które wymagają bardziej szczegółowego model zaufania można albo użyć zasad autoryzacji i wymuszania aby wystawcę zestawów oświadczeń, utworzonego przez wystawionego tokenu uwierzytelniania lub ustawienia weryfikacji X.509 na <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> ograniczyć zestaw dozwolone certyfikaty podpisywania. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) i [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ <xref:System.IdentityModel.Tokens.SamlAssertion> Klasy weryfikuje podpis cyfrowy zawartych w tokenie SAML i domyślnie <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> tokeny SAML musi być zarejestrowany przez certyfikatu X.509, który jest prawidłowa, gdy <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasa ma ustawioną wartość <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` Tryb samego jest za mało, aby ustalić, czy Wystawca tokenu SAML jest zaufany. Usługi, które wymagają bardziej szczegółowego model zaufania można albo użyć zasad autoryzacji i wymuszania aby wystawcę zestawów oświadczeń, utworzonego przez wystawionego tokenu uwierzytelniania lub ustawienia weryfikacji X.509 na <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> ograniczyć zestaw dozwolone certyfikaty podpisywania. Aby uzyskać więcej informacji, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) i [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Przełączanie tożsamości bez kontekstu zabezpieczeń  
  Następujące dotyczą tylko [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -57,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 >  Korzystając z `BeginOpen` metody, nie można zagwarantować poświadczenia przechwycone się poświadczenia proces, który wywołuje metodę.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Zezwalaj na tokenu pamięć podręczną powtarzania przy użyciu danych przestarzałe  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa urzędu zabezpieczeń lokalnych (LSA) `LogonUser` funkcji do uwierzytelniania użytkowników według nazwy użytkownika i hasła. Ponieważ funkcja logowania jest kosztowna operacja, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pozwala na tokeny pamięci podręcznej, które reprezentują uwierzytelnionych użytkowników w celu zwiększenia wydajności. Mechanizm buforowania zapisuje wyniki z `LogonUser` dla kolejnych zastosowań. Ten mechanizm jest domyślnie wyłączona; Aby go włączyć, ustaw <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> właściwości `true`, lub użyj `cacheLogonTokens` atrybutu [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa urzędu zabezpieczeń lokalnych (LSA) `LogonUser` funkcji do uwierzytelniania użytkowników według nazwy użytkownika i hasła. Ponieważ funkcja logowania jest kosztowna operacja, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pozwala na tokeny pamięci podręcznej, które reprezentują uwierzytelnionych użytkowników w celu zwiększenia wydajności. Mechanizm buforowania zapisuje wyniki z `LogonUser` dla kolejnych zastosowań. Ten mechanizm jest domyślnie wyłączona; Aby go włączyć, ustaw <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> właściwości `true`, lub użyj `cacheLogonTokens` atrybutu [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
  Można ustawić czas wygaśnięcia (TTL) dla pamięci podręcznej tokenów przez ustawienie <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> właściwości <xref:System.TimeSpan>, lub użyj `cachedLogonTokenLifetime` atrybutu `userNameAuthentication` element; wartość domyślna to 15 minut. Należy pamiętać, że podczas tokenu są buforowane, każdy klient, który przedstawia informacje o tej samej nazwy użytkownika i hasła można użyć tokenu, nawet jeśli konto użytkownika zostanie usunięte z systemu Windows lub jego hasło zostało zmienione. Dopiero po wygaśnięciu czas wygaśnięcia i token zostanie usunięty z pamięci podręcznej, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umożliwia uwierzytelnienia użytkownika (potencjalnie szkodliwymi).  
   

@@ -1,23 +1,22 @@
 ---
-title: "Dowiedz się podstawy Docker z platformą .NET Core"
+title: Dowiedz się podstawy Docker z platformą .NET Core
 description: Docker i .NET Core podstawowy samouczek
-keywords: .NET, .NET core, Docker, samouczek
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: 79ded2ce5de5100c18301127a2654f8791b8ed76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 085ddb58aae78737fae642e7334e7f0139f0cfec
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="learn-docker-basics-with-net-core"></a>Dowiedz się podstawy Docker z platformą .NET Core
 
@@ -71,7 +70,7 @@ Klient Docker można zainstalować w:
 
    * [Ubuntu](https://www.docker.com/docker-ubuntu)
 
-* [System macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/)
 
 * [Windows](https://docs.docker.com/docker-for-windows/).
 
@@ -88,7 +87,7 @@ Poznajmy Szybkie wskazówki:
 
 1. `$ dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md)Tworzy aktualne `Hello.csproj` pliku projektu z zależnościami, które są niezbędne do tworzenia aplikacji konsoli.  Tworzy również `Program.cs`, podstawowe plik zawierający punkt wejścia dla aplikacji.
+   [`dotnet new`](../tools/dotnet-new.md) Tworzy aktualne `Hello.csproj` pliku projektu z zależnościami, które są niezbędne do tworzenia aplikacji konsoli.  Tworzy również `Program.cs`, podstawowe plik zawierający punkt wejścia dla aplikacji.
    
    `Hello.csproj`:
 
@@ -118,7 +117,7 @@ Poznajmy Szybkie wskazówki:
    
 3. `$ dotnet run`
 
-   [`dotnet run`](../tools/dotnet-run.md)wywołania [ `dotnet build` ](../tools/dotnet-build.md) o potwierdzenie pomyślnego utworzenia kompilacji, a następnie wywołania `dotnet <assembly.dll>` do uruchomienia aplikacji.
+   [`dotnet run`](../tools/dotnet-run.md) wywołania [ `dotnet build` ](../tools/dotnet-build.md) o potwierdzenie pomyślnego utworzenia kompilacji, a następnie wywołania `dotnet <assembly.dll>` do uruchomienia aplikacji.
    
     ```console
     $ dotnet run

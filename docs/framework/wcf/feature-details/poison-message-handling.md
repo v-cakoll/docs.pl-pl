@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja kolejki nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty w ramach transakcji. Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, tak, aby komunikat zostanie ponowiony w nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może zostać zablokowane w pętli otrzymywanie i przerywanie tę samą wiadomość do czasu przekroczyła maksymalną liczbę prób dostarczenia i wyniki Trująca wiadomość.  
@@ -75,7 +75,7 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Najlepsze rozwiązanie: Msmqpoisonmessageexception — Obsługa  
  Gdy usługa określa, że wiadomość jest skażone, transport z kolejką zgłasza <xref:System.ServiceModel.MsmqPoisonMessageException> zawierający `LookupId` skażone wiadomości.  
   
- Aplikację można wdrożyć <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejs do obsługi błędów wymagane przez tę aplikację. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Rozszerzanie kontroli obsługi i raportowania błędów](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Aplikację można wdrożyć <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejs do obsługi błędów wymagane przez tę aplikację. Aby uzyskać więcej informacji, zobacz [rozszerzanie kontroli nad błąd obsługi i raportowania](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  Aplikacja może wymagać określonego rodzaju automatycznych Obsługa skażone wiadomości, który przenosi skażone wiadomości do kolejki Trująca wiadomość, dzięki czemu usługa dostęp pozostałej części wiadomości w kolejce. Jest to tylko scenariusz przy użyciu mechanizmu obsługi błędów do nasłuchiwania wyjątki poison wiadomości, gdy <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> mają ustawioną wartość <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Przykładowy komunikat poison dla wersji 3.0 pokazano to zachowanie. Poniżej opisano czynności wymagane do obsługi skażone komunikaty, w tym najlepsze rozwiązania:  
   

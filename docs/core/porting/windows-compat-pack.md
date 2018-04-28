@@ -1,18 +1,18 @@
 ---
-title: "Eksportowanie do platformy .NET Core - przy użyciu pakietu zgodności systemu Windows"
-description: "Więcej informacji na temat pakietu zgodności systemu Windows i jak można go używać do portu istniejącego kodu .NET Framework do platformy .NET Core"
-keywords: ".NET, .NET core, system Windows, zgodności"
+title: Eksportowanie do platformy .NET Core - przy użyciu pakietu zgodności systemu Windows
+description: Więcej informacji na temat pakietu zgodności systemu Windows i jak można go używać do portu istniejącego kodu .NET Framework do platformy .NET Core
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 3b1fe02aad4f78499158ecb7fa9b8521cb7d992e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 4ef7d9c847d48ae7bbb2d553b1c05cb90a1c5a7a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-windows-compatibility-pack"></a>Przy użyciu pakietu zgodności systemu Windows
 

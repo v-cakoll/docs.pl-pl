@@ -4,16 +4,16 @@ description: Informacje o poleceniu dotnet (ogólnego sterownik narzędzi interf
 author: mairaw
 ms.author: mairaw
 ms.date: 03/20/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2d22124cb613152df402046541650f3262e7e202
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: bf69be7eb8dfe454823236012113fa53ed39f2f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-command"></a>polecenie DotNet
 

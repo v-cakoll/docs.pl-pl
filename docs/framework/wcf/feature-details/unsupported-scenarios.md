@@ -1,24 +1,26 @@
 ---
-title: "Nieobsługiwane scenariusze"
-ms.custom: 
+title: Nieobsługiwane scenariusze
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie obsługuje protokoły uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Innych mechanizmów uwierzytelniania, takich jak nazwy użytkownika i hasła i zintegrowane uwierzytelnianie HTTP i HTTPS są obsługiwane podczas uruchamiania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w systemie Windows XP Home Edition.  
@@ -29,7 +31,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
  Jeśli klient WCF wywołań asynchronicznych z usługą WCF za pomocą uwierzytelniania systemu Windows w ramach personifikacji, uwierzytelniania mogą wystąpić przy użyciu tożsamości procesu klienta zamiast personifikowanej tożsamości.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP i tokenu pliku Cookie bezpiecznym kontekście włączone  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie obsługuje personifikacji i <xref:System.InvalidOperationException> jest generowany, gdy istnieją następujące warunki:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje personifikacji i <xref:System.InvalidOperationException> jest generowany, gdy istnieją następujące warunki:  
   
 -   System operacyjny jest [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -39,7 +41,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
   
 -   Utworzono token kontekstu zabezpieczeń oparte na stanie (SCT) (domyślnie tworzenie zostało wyłączone).  
   
- Oparte na stanie SCT można tworzyć tylko za pomocą niestandardowego powiązania. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Jak: utworzyć kontekstu zabezpieczeń dla bezpiecznej sesji tokenu](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) W kodzie, token jest włączona, tworząc elementu powiązania zabezpieczeń (albo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) przy użyciu <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> lub <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> — metoda i ustawienie `requireCancellation` parametr `false`. Parametr odwołuje się do buforowania SCT. Ustawienie wartości `false` włącza funkcję SCT oparte na stanie.  
+ Oparte na stanie SCT można tworzyć tylko za pomocą niestandardowego powiązania. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpieczną sesję](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) W kodzie, token jest włączona, tworząc elementu powiązania zabezpieczeń (albo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) przy użyciu <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> lub <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> — metoda i ustawienie `requireCancellation` parametr `false`. Parametr odwołuje się do buforowania SCT. Ustawienie wartości `false` włącza funkcję SCT oparte na stanie.  
   
  Alternatywnie w konfiguracji, token jest włączona, tworząc <`customBinding`>, następnie dodając <`security`> elementu i ustawienie `authenticationMode` atrybutu SecureConversation i `requireSecurityContextCancellation` atrybutu `true`.  
   
@@ -47,24 +49,24 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
 >  Specyficznych powyższych wymagań. Na przykład <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> tworzy element powiązania, który powoduje tożsamości systemu Windows, ale nie wprowadza SCT. W związku z tym użytkownik może być używany z `Required` opcja [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Możliwe konflikt ASP.NET  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jednocześnie włączyć lub wyłączyć personifikację. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hostów [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, może istnieć konflikt między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ustawienia konfiguracji. W przypadku konfliktu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ustawienie ma pierwszeństwo, chyba że <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość jest ustawiona na <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, w którym to przypadku [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pierwszeństwo ma ustawienie personifikacji.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jednocześnie włączyć lub wyłączyć personifikację. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hostów [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, może istnieć konflikt między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ustawienia konfiguracji. W przypadku konfliktu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ustawienie ma pierwszeństwo, chyba że <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość jest ustawiona na <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, w którym to przypadku [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pierwszeństwo ma ustawienie personifikacji.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Ładunki zestaw może zakończyć się niepowodzeniem w ramach personifikacji  
  Jeśli spersonifikowanym kontekście nie ma praw dostępu do załadowania zestawu, a jeśli po raz pierwszy środowisko uruchomieniowe języka wspólnego (CLR) próbuje załadować zestawu dla tego elementu AppDomain, <xref:System.AppDomain> buforuje awarii. Niepowodzenie kolejnych prób załadować tego zestawu (lub zestawy), nawet po przywróceniu personifikacji, a nawet wtedy, gdy kontekst przywróconego ma prawa dostępu do ładowania zestawu. Jest to spowodowane CLR nie ponów próbę obciążenia po zmianie kontekstu użytkownika. Domeny aplikacji do odzyskiwania danych po awarii, należy ponownie.  
   
 > [!NOTE]
->  Wartość domyślna dla <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> jest klasa <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. W większości przypadków kontekstu identyfikacji poziom personifikacji nie ma praw do załadowania dowolnych dodatkowych zestawów. Wartością domyślną jest więc jest to bardzo powszechne pod uwagę. Identyfikator poziomu personifikacji występuje także, gdy proces personifikacji nie ma `SeImpersonate` uprawnień. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+>  Wartość domyślna dla <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> jest klasa <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. W większości przypadków kontekstu identyfikacji poziom personifikacji nie ma praw do załadowania dowolnych dodatkowych zestawów. Wartością domyślną jest więc jest to bardzo powszechne pod uwagę. Identyfikator poziomu personifikacji występuje także, gdy proces personifikacji nie ma `SeImpersonate` uprawnień. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>Delegowanie wymaga negocjowania poświadczeń  
- Aby używać protokołu uwierzytelniania Kerberos z delegowania, musi implementować protokołu Kerberos z negocjowania poświadczeń (nazywane również wieloetapowego lub wieloetapowych protokołu Kerberos). Uwierzytelnianie Kerberos w przypadku zastosowania bez negocjowania poświadczeń (nazywane również jednorazowej lub jeden etap protokołu Kerberos), jest zwracany wyjątek. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak zaimplementować negocjowania poświadczeń, zobacz [Debugowanie błędów uwierzytelniania systemu Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Aby używać protokołu uwierzytelniania Kerberos z delegowania, musi implementować protokołu Kerberos z negocjowania poświadczeń (nazywane również wieloetapowego lub wieloetapowych protokołu Kerberos). Uwierzytelnianie Kerberos w przypadku zastosowania bez negocjowania poświadczeń (nazywane również jednorazowej lub jeden etap protokołu Kerberos), jest zwracany wyjątek. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak zaimplementować negocjowania poświadczeń, zobacz [Debugowanie błędów uwierzytelniania systemu Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Kryptografia  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>Algorytm SHA-256 jest obsługiwane tylko w przypadku użycia klucza symetrycznego  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje wiele algorytmów szyfrowania i podpis szyfrowanego tworzenia, które można określić przy użyciu pakietu algorytmów powiązania dostarczane przez system. Ze względów bezpieczeństwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje algorytmy Secure Hash Algorithm (SHA) 2, w szczególności algorytmu SHA-256, służący do tworzenia skrótów skrótu podpisu. Ta wersja obsługuje algorytm SHA-256, tylko w przypadku użycia klucza symetrycznego, takie jak klucze Kerberos i których certyfikat X.509 nie jest używany do podpisywania wiadomości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie obsługuje podpisów RSA (używane w certyfikatach X.509) przy użyciu skrótu SHA-256 ze względu na Brak bieżącej obsługi RSA-SHA256 w [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje wiele algorytmów szyfrowania i podpis szyfrowanego tworzenia, które można określić przy użyciu pakietu algorytmów powiązania dostarczane przez system. Ze względów bezpieczeństwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje algorytmy Secure Hash Algorithm (SHA) 2, w szczególności algorytmu SHA-256, służący do tworzenia skrótów skrótu podpisu. Ta wersja obsługuje algorytm SHA-256, tylko w przypadku użycia klucza symetrycznego, takie jak klucze Kerberos i których certyfikat X.509 nie jest używany do podpisywania wiadomości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje podpisów RSA (używane w certyfikatach X.509) przy użyciu skrótu SHA-256 ze względu na Brak bieżącej obsługi RSA-SHA256 w [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>Zgodne ze standardem FIPS skrótów algorytmu SHA-256, nie jest obsługiwane  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie algorytmu SHA-256 zgodne ze standardem FIPS obsługuje skróty, więc mechanizmów algorytmu, które korzystają z algorytmu SHA-256 nie są obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w systemach, w którym wymagany jest Użyj zgodnych algorytmów FIPS.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie algorytmu SHA-256 zgodne ze standardem FIPS obsługuje skróty, więc mechanizmów algorytmu, które korzystają z algorytmu SHA-256 nie są obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w systemach, w którym wymagany jest Użyj zgodnych algorytmów FIPS.  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Zgodnych algorytmów FIPS może zakończyć się niepowodzeniem w przypadku modyfikacji rejestru  
  Można włączyć i wyłączyć przetwarzania standardami FIPS (Federal Information) - algorytmów za pomocą przystawki lokalnych zabezpieczeń ustawienia programu Microsoft Management Console (MMC) - w. Można także przejść ustawienie w rejestrze. Zauważ, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje używania zresetować ustawienie rejestru. Jeśli wartość jest ustawiona na inny niż 1 lub 0, pomiędzy środowiska CLR i systemu operacyjnego mogą występować niespójne wyniki.  
@@ -81,18 +83,18 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
   
 -   Czy `p/invoke` z `CertGetCertificateContextProperty`i sprawdzić `dwProvType` w zwróconym `CertGetCertificateContextProperty`.  
   
--   Użyj `certutil` polecenie w wierszu polecenia na potrzeby zapytań certyfikatów. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zadania narzędzia Certutil dotyczące rozwiązywania problemów z certyfikatami](http://go.microsoft.com/fwlink/?LinkId=120056).  
+-   Użyj `certutil` polecenie w wierszu polecenia na potrzeby zapytań certyfikatów. Aby uzyskać więcej informacji, zobacz [zadania narzędzia Certutil dotyczące rozwiązywania problemów z certyfikatami](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Komunikat zabezpieczeń kończy się niepowodzeniem użycie personifikacji aplikacji ASP.NET i zgodności z platformą ASP.NET jest wymagana  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie obsługuje następujących kombinacji ustawień, ponieważ ich może uniemożliwić uwierzytelnienie klienta występowaniu:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje następujących kombinacji ustawień, ponieważ ich może uniemożliwić uwierzytelnienie klienta występowaniu:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Personifikacja jest włączona. Odbywa się w pliku Web.config przez ustawienie `impersonate` atrybut <`identity`> elementu `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Personifikacja jest włączona. Odbywa się w pliku Web.config przez ustawienie `impersonate` atrybut <`identity`> elementu `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Tryb zgodności jest włączony, ustawiając `aspNetCompatibilityEnabled` atrybutu [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) do `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Tryb zgodności jest włączony, ustawiając `aspNetCompatibilityEnabled` atrybutu [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) do `true`.  
   
 -   Zabezpieczenia komunikatów tryb jest używany.  
   
- Obejście jest wyłączyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w trybie zgodności. Lub, jeśli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] wymagany jest w trybie zgodności, wyłącz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcja personifikacji i użyj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— zamiast tego podane personifikacji. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Obejście jest wyłączyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w trybie zgodności. Lub, jeśli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] wymagany jest w trybie zgodności, wyłącz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcja personifikacji i użyj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— zamiast tego podane personifikacji. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Błąd literału adres IPv6  
  Żądania zabezpieczeń zakończyć się niepowodzeniem, gdy klient i usługa są na tym samym komputerze, i literału adresy IPv6 są używane przez usługę.  
@@ -100,15 +102,15 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
  Literał IPv6 rozwiązuje pracy, jeśli usługa i klient znajdują się na różnych komputerach.  
   
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Błędy pobierania WSDL z zaufaniem federacyjnym  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]wymaga dokładnie jednego dokumentu WSDL dla każdego węzła w łańcuchu zaufania federacji. Nie można więc skonfigurować pętlę w przypadku określania punktów końcowych. Jeden sposób, w którym mogą wystąpić pętle używa pobieranie WSDL łańcuchów zaufania federacyjnego z co najmniej dwóch łączy, w tym samym dokumencie WSDL. Typowy scenariusz, który może utworzyć ten problem jest usługi federacyjnej, gdzie serwer tokenu zabezpieczeń i usługi znajdują się wewnątrz tego samego elementu ServiceHost.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga dokładnie jednego dokumentu WSDL dla każdego węzła w łańcuchu zaufania federacji. Nie można więc skonfigurować pętlę w przypadku określania punktów końcowych. Jeden sposób, w którym mogą wystąpić pętle używa pobieranie WSDL łańcuchów zaufania federacyjnego z co najmniej dwóch łączy, w tym samym dokumencie WSDL. Typowy scenariusz, który może utworzyć ten problem jest usługi federacyjnej, gdzie serwer tokenu zabezpieczeń i usługi znajdują się wewnątrz tego samego elementu ServiceHost.  
   
  Przykładem takiej sytuacji jest usługi za pomocą następujących trzech adresy punktów końcowych:  
   
--   http://localhost/CalculatorService/Service (usługi)  
+-   http://localhost/CalculatorService/service (usługa)  
   
 -   http://localhost/CalculatorService/issue_ticket (STS)  
   
--   http://localhost/CalculatorService/MEX (punkt końcowy metadanych)  
+-   http://localhost/CalculatorService/mex (punkt końcowy metadanych)  
   
  To zgłasza wyjątek.  
   

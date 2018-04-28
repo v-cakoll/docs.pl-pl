@@ -19,19 +19,19 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beb8ee0869384f9f453023fe549b2339c126898
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bf92f12e415b937c36dfc518af4a4c1795c8b789
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
-Po [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] są tworzone aplikacje, muszą one zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] obejmują kilka technologii wdrażania. Technologia wdrożenia, która służy do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji zależy od typu aplikacji. Ten temat zawiera krótkie omówienie tych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami wdrożenia każdego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typu aplikacji.  
+Po [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] są tworzone aplikacje, muszą one zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i .NET Framework obejmuje kilka technologii wdrażania. Technologia wdrożenia, która służy do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji zależy od typu aplikacji. Ten temat zawiera krótkie omówienie tych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami wdrożenia każdego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typu aplikacji.  
   
    
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] obejmują kilka technologii wdrażania, w tym:  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i .NET Framework obejmują kilka technologii wdrażania, w tym:  
   
 -   XCopy wdrożenia.  
   
@@ -126,13 +126,13 @@ Po [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] są tworz
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Instalowanie programu .NET Framework  
- Aby uruchomić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji Microsoft .NET Framework należy zainstalować na kliencie. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] automatycznie wykrywa, czy klienci są instalowane z [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] podczas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce są wyświetlane. Jeśli [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nie jest zainstalowany, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] monituje użytkowników, aby go zainstalować.  
+ Aby uruchomić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji Microsoft .NET Framework należy zainstalować na kliencie. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] automatycznie wykrywa, czy klienci zostali zainstalowani platformy .NET Framework podczas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce są wyświetlane. Jeśli nie zainstalowano programu .NET Framework, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] monituje użytkowników, aby go zainstalować.  
   
- Aby wykryć czy [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] jest zainstalowany, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] obejmuje aplikacji programu inicjującego, który jest zarejestrowany jako metody rezerwowej [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] obsługi plików zawartości z następującymi rozszerzeniami: .xaml, XPS .xbap i .application. Jeśli przejdziesz do tych typów plików i [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nie jest zainstalowany na komputerze klienckim, aplikacja programu inicjującego żąda uprawnienia do jej zainstalowania. Jeśli uprawnienia nie zostanie podany, ani [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] ani aplikacja jest zainstalowana.  
+ Aby wykryć, czy programu .NET Framework są zainstalowane, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] obejmuje aplikacji programu inicjującego, który jest zarejestrowany jako metody rezerwowej [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] obsługi plików zawartości z następującymi rozszerzeniami: .xaml, XPS .xbap i .application. Jeśli przejdziesz do tych typów plików i .NET Framework nie jest zainstalowany na komputerze klienckim, aplikacji programu inicjującego żąda uprawnienia do jej zainstalowania. Jeśli uprawnienia nie zostanie podany, aplikacji ani programu .NET Framework jest zainstalowana.  
   
- Jeśli uprawnienie zostanie udzielone, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pobiera i instaluje [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] przy użyciu [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]. Po pomyślnej instalacji [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], pierwotnie żądany plik jest otwarty w nowym oknie przeglądarki.  
+ Jeśli uprawnienie zostanie udzielone, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pobierana i instalowana za pomocą .NET Framework [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]. Po pomyślnej instalacji programu .NET Framework pierwotnie żądany plik jest otwarty w nowym oknie przeglądarki.  
   
- [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] Autowykrywanie jest dostępna w [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], i [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] klientów, którzy mają [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] lub nowszy.  
+ Automatyczne wykrywanie .NET framework jest dostępna w [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], i [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] klientów, którzy mają [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] lub nowszy.  
   
  Aby uzyskać więcej informacji, zobacz [wdrażania aplikacji i .NET Framework](../../../../docs/framework/deployment/index.md).  
   

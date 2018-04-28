@@ -1,20 +1,17 @@
 ---
 title: Typy elastyczne (F#)
-description: "Dowiedz się, jak używać F # elastycznym typem adnotacji, co oznacza, że parametr, zmiennej lub wartość ma typ, który jest zgodny z określonym typem."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak używać F # elastycznym typem adnotacji, co oznacza, że parametr, zmiennej lub wartość ma typ, który jest zgodny z określonym typem.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c8b510f2-3405-4cc9-b55b-e47b35e2b15b
-ms.openlocfilehash: 7c5e4eb97791b9c6c56fe2847755866e8240e038
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: bee2364a6c30b1fbdc09aa0aac2249e3f0c295e8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="flexible-types"></a>Typy elastyczne
 
@@ -76,6 +73,6 @@ W języku F # jak w innych językach zorientowane obiektowo istnieją kontekstó
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Typy ogólne](generics/index.md)

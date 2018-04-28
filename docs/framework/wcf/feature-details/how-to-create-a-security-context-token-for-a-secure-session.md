@@ -1,27 +1,29 @@
 ---
-title: "Instrukcje: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji"
-ms.custom: 
+title: 'Instrukcje: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 3dc0e44e7f561e39128e32d3af5fbd495316fdd3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579a980d8d71b5fe3e21e49e84a602b3be37eff1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Instrukcje: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji
 Przy użyciu tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej sesji, sesja może wytrzymać odtwarzane usługi. Na przykład gdy bezstanowych SCT jest używany w ramach bezpiecznej sesji i Internet Information Services (IIS) jest resetowany, następnie dane sesji, który jest skojarzony z usługą zostaną utracone. Te dane sesji obejmuje pamięci podręcznej SCT tokenu. Tak przy następnym klient wyśle usługi bezstanowej SCT, zwracany jest błąd, ponieważ nie można pobrać klucza, który jest skojarzony z SCT. Jeśli jednak stanowe SCT jest używany, klucz, który jest skojarzony z SCT jest zawarty w SCT. Ponieważ klucz jest zawarty w SCT i w związku z tym zawarte w wiadomości, bezpiecznej sesji nie ma wpływu na usługi odtwarzane. Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa bezstanowych SCTs w ramach bezpiecznej sesji. W tym temacie zawiera szczegóły dotyczące sposobu używania stanowe SCTs w ramach bezpiecznej sesji.  
@@ -33,7 +35,7 @@ Przy użyciu tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej 
 >  Dla aplikacji używających stanowe SCTs w ramach bezpiecznej sesji tożsamości wątku dla usługi musi być kontem użytkownika mającą profil użytkownika skojarzony. Po uruchomieniu usługi przy użyciu konta, który nie ma profilu użytkownika, takich jak `Local Service`, może zostać zgłoszony wyjątek.  
   
 > [!NOTE]
->  Podczas personifikacji jest wymagane w systemie Windows XP, należy użyć bezpiecznej sesji bez SCT stanowych. Gdy stanowe SCTs są używane z personifikacji, <xref:System.InvalidOperationException> jest generowany. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nieobsługiwanych scenariuszy](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  Podczas personifikacji jest wymagane w systemie Windows XP, należy użyć bezpiecznej sesji bez SCT stanowych. Gdy stanowe SCTs są używane z personifikacji, <xref:System.InvalidOperationException> jest generowany. Aby uzyskać więcej informacji, zobacz [nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>Aby użyć stanowe SCTs w ramach bezpiecznej sesji  
   
@@ -121,4 +123,4 @@ Przy użyciu tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej 
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

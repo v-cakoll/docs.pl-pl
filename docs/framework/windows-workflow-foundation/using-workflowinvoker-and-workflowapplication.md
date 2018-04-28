@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication
 Windows Workflow Foundation (WF) zapewnia kilka metod obsługi przepływów pracy. <xref:System.Activities.WorkflowInvoker> zapewnia prostą metodę do wywoływania przepływu pracy, tak, jakby były wywołanie metody i można używać tylko w przypadku przepływów pracy, które nie korzystają z trwałości. <xref:System.Activities.WorkflowApplication> zapewnia bardziej rozbudowane model do wykonywania przepływów pracy, które zawiera powiadomienia o zdarzenia cyklu życia, kontrola wykonywania wznowienie zakładek i trwałości. <xref:System.ServiceModel.Activities.WorkflowServiceHost> zapewnia obsługę działań dotyczących komunikatów i jest używany głównie z usług przepływu pracy. Ten temat stanowi wprowadzenie do przepływu pracy obsługującego z <xref:System.Activities.WorkflowInvoker> i <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] hosting przepływy pracy z <xref:System.ServiceModel.Activities.WorkflowServiceHost>, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md) i [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) zapewnia kilka metod obsługi przepływów prac
 > [!NOTE]
 >  <xref:System.TimeoutException> Jest tylko element zgłaszany, gdy upłynie limit czasu, a przepływ pracy przestanie być bezczynne podczas wykonywania. Przepływ pracy, który będzie trwało dłużej niż interwał określony limit czasu, aby ukończyć zakończy się pomyślnie, jeśli przepływ pracy przejdzie w stan bezczynności.  
   
- <xref:System.Activities.WorkflowInvoker> udostępnia asynchroniczne wersje metody invoke. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> i <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> udostępnia asynchroniczne wersje metody invoke. Aby uzyskać więcej informacji, zobacz <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> i <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Ustawienia argumentów wejściowych przepływu pracy  
  Dane mogą być przekazywane do przepływu pracy za pomocą słownika parametrów wejściowych, wyznaczaną przez Nazwa argumentu mapowane na argumenty wejściowe przepływu pracy. W tym przykładzie <xref:System.Activities.Statements.WriteLine> jest wywoływany i wartości dla jego <xref:System.Activities.Statements.WriteLine.Text%2A> argument zostanie określony, używając słownika parametrów wejściowych.  

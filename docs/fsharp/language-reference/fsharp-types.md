@@ -1,20 +1,17 @@
 ---
 title: Typy F#
-description: "Informacje o typach, które są używane w F # oraz jak o nazwie i opisem typów F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Informacje o typach, które są używane w F # oraz jak o nazwie i opisem typów F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>Typy F#
 
@@ -51,12 +48,12 @@ W poniższej tabeli przedstawiono aspektów Składnia typu typów F #.
 |tablica|*Nazwa typu*[] lub<br /><br />*Nazwa typu* tablicy|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |tablicą dwuwymiarową|*Nazwa typu*[,]|`int[,]`<br /><br />`float[,]`|
 |tablicą trójwymiarową|*Nazwa typu*[,]|`float[,,]`|
-|krotki|*Typ Nazwa1* &#42; *Nazwa2 typu* ...|Na przykład `(1,'b',3)` ma typ`int * char * int`|
+|krotki|*Typ Nazwa1* &#42; *Nazwa2 typu* ...|Na przykład `(1,'b',3)` ma typ `int * char * int`|
 |Typ ogólny|*Parametr typu* *nazwy typu ogólnego*<br /><br />lub<br /><br />*Nazwa typu ogólnego*&lt;*listy parametrów typu*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |tworzony typ (ogólny typ zawierający podany argument określonego typu)|*argument typu* *nazwy typu ogólnego*<br /><br />lub<br /><br />*Nazwa typu ogólnego*&lt;*listy argumentów typu*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|Typ funkcji, która ma jeden parametr|*Parametr type1*  - &gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i zwraca `string` ma typ`int -> string`|
-|Typ funkcji, który ma wiele parametrów|*Parametr type1*  - &gt; *type2 parametru*  - &gt; ... -&gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i `float` i zwraca `string` ma typ`int -> float -> string`|
-|wyższy funkcji order jako parametr|(*typu funkcji*)|`List.map`zawiera typ`('a -> 'b) -> 'a list -> 'b list`|
+|Typ funkcji, która ma jeden parametr|*Parametr type1*  - &gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i zwraca `string` ma typ `int -> string`|
+|Typ funkcji, który ma wiele parametrów|*Parametr type1*  - &gt; *type2 parametru*  - &gt; ... -&gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i `float` i zwraca `string` ma typ `int -> float -> string`|
+|wyższy funkcji order jako parametr|(*typu funkcji*)|`List.map` zawiera typ `('a -> 'b) -> 'a list -> 'b list`|
 |delegate|Delegowanie z *typu funkcji*|`delegate of unit -> int`|
 |elastyczne typu|#*Nazwa typu*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
@@ -69,7 +66,7 @@ W poniższej tabeli przedstawiono aspektów Składnia typu typów F #.
 |[Typ jednostki](unit-type.md)|W tym artykule opisano `unit` typu, typu jedną wartością i która jest wskazywana przez (); równoważna `void` w języku C# i `Nothing` w języku Visual Basic.|
 |[Krotki](tuples.md)|Opisuje typ krotki typu, który składa się z powiązanymi wartościami typu są pogrupowane w pary, triples quadruples i tak dalej.|
 |[Opcje](options.md)|W tym artykule opisano typu opcji typu, które mogą mieć wartość lub być pusta.|
-|[Wyświetla listę](lists.md)|W tym artykule opisano list, które są uporządkowane, niezmienne serii elementów wszystkie tego samego typu.|
+|[Listy](lists.md)|W tym artykule opisano list, które są uporządkowane, niezmienne serii elementów wszystkie tego samego typu.|
 |[Tablice](arrays.md)|W tym artykule opisano tablice, które są uporządkowane zestawy modyfikowalne elementy tego samego typu, które zajmują ciągłego bloku pamięci i mają stały rozmiar.|
 |[Sekwencje](sequences.md)|Opisuje typ sekwencji, który reprezentuje szereg logiczne wartości. poszczególne wartości są obliczane tylko w razie potrzeby.|
 |[Rekordy](records.md)|Opisuje typ rekordu, mała agregacji nazwanych wartości.|
@@ -78,7 +75,7 @@ W poniższej tabeli przedstawiono aspektów Składnia typu typów F #.
 |[Klasy](classes.md)|Opisuje typ klasy, typ obiektu odpowiadający typowi odwołanie .NET. Typy klasy mogą zawierać elementów członkowskich, właściwości zaimplementowanych interfejsów i typu podstawowego.|
 |[Struktury](structures.md)|W tym artykule opisano `struct` typ, typ obiektu odpowiadający typowi wartości .NET. `struct` Typ zazwyczaj reprezentuje małych agregacji danych.|
 |[Interfejsy](interfaces.md)|W tym artykule opisano typy interfejsu, do których są typy, które reprezentują zestaw elementów członkowskich, które zapewniają niektórych funkcji, ale które nie zawierają danych. Typ interfejsu musi być implementowana przez typ obiektu użyteczne.|
-|[Obiekty delegowane](delegates.md)|Opisuje typ delegata, który reprezentuje funkcję jako obiekt.|
+|[Delegaci](delegates.md)|Opisuje typ delegata, który reprezentuje funkcję jako obiekt.|
 |[Wyliczenia](enumerations.md)|W tym artykule opisano typy wyliczeniowe, w której wartości należą do zestawu o nazwie wartości.|
 |[Atrybuty](attributes.md)|W tym artykule opisano atrybuty, które są używane do określania metadanych dla innego typu.|
 |[Typy wyjątków](exception-handling/exception-types.md)|W tym artykule opisano wyjątki, które określają informacje o błędzie.|

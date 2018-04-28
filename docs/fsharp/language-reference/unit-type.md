@@ -1,20 +1,17 @@
 ---
 title: Typ jednostki (F#)
-description: "Dowiedz się, jak typu \"unit\" F # jest często używane do przechowywania w miejscu, gdzie wartość jest wymagana przez składni języka żadnej wartości jest wymagane lub pożądane."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak typu "unit" F # jest często używane do przechowywania w miejscu, gdzie wartość jest wymagana przez składni języka żadnej wartości jest wymagane lub pożądane.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: eabbb6d7-80f3-4fa5-80b4-0f48982466a7
-ms.openlocfilehash: 60ac08c0e3f8380a8f9dec7a083ede93c68bb0e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1a8c8f74e31c5426a9fb6a7143e9d2ac9a7104c0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-type"></a>Typ jednostki
 
@@ -44,4 +41,4 @@ To ostrzeżenie jest to cecha programowanie funkcjonalne; nie ma w innych .NET j
 ## <a name="see-also"></a>Zobacz też
 [Pierwotne](primitive-types.md)
 
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)

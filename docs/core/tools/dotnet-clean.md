@@ -1,18 +1,19 @@
 ---
 title: polecenie - .NET Core interfejsu wiersza polecenia czyszczenia DotNet
-description: "Polecenie Wyczyść dotnet czyści bieżącego katalogu."
+description: Polecenie Wyczyść dotnet czyści bieżącego katalogu.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: f56ccc485884114262cd1364cf9398e302f2c48a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 92db35df770b1e1d2438127c4b529d4cb480c8df
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-clean"></a>Wyczyść DotNet
 
@@ -20,16 +21,16 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet clean`-Czyści dane wyjściowe projektu.
+`dotnet clean` -Czyści dane wyjściowe projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-v|--verbosity]
 dotnet clean [-h|--help]
@@ -48,7 +49,7 @@ Aby wyczyścić projektu MSBuild. Jeśli nie określono pliku projektu, MSBuild 
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -74,7 +75,7 @@ Czyści folderze wyjściowym określonym środowiska uruchomieniowego. Ten eleme
 
 Ustawia poziom szczegółowości polecenia. Dozwolone poziomy są q [uiet], [najmniej] m, n [ormal], d [egółowy] i diag [nostic].
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 

@@ -1,21 +1,20 @@
 ---
-title: "Tworzenie pakietu NuGet z wielu narzędzi platformy"
-description: "Dowiedz się, jak utworzyć pakiet NuGet przy użyciu polecenia \"dotnet pack\"."
-keywords: .NET, .NET core NuGet
+title: Tworzenie pakietu NuGet z wielu narzędzi platformy
+description: Dowiedz się, jak utworzyć pakiet NuGet przy użyciu polecenia "dotnet pack".
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-ms.workload: dotnetcore
-ms.openlocfilehash: 92f950be3efb203fbe8bbc07a83bfb0f1fd11a45
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: b85f6d53787cb513ae4c1e8147a066188b0e56c6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Jak utworzyć pakiet NuGet z wielu narzędzi platformy
 
@@ -65,6 +64,6 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 I teraz masz pliki niezbędne do publikowania pakietu NuGet!
 
-## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Nie należy mylić `dotnet pack` z`dotnet publish`
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Nie należy mylić `dotnet pack` z `dotnet publish`
 
 Należy pamiętać, że w żadnym punkcie `dotnet publish` polecenia wykonywane.  `dotnet publish` Polecenie jest do wdrażania aplikacji za pomocą wszystkie zależności w tym samym pakiecie — nie w celu wygenerowania pakietu NuGet w celu można dystrybuować i używane za pośrednictwem pakietu NuGet.

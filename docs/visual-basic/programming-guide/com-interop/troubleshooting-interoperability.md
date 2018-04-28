@@ -26,11 +26,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3ff175a0f8d152febf2d50c294d401b12285fc7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 1fae8215543c50484dc5ea7fc24f292ba84e2699
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Rozwiązywanie problemów związanych z współdziałaniem (Visual Basic)
 Gdy współpraca między COM i kod zarządzany [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], mogą wystąpić co najmniej jeden z następujących typowych problemów.  
@@ -107,7 +107,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  Informacje, takie jak opis błędu HRESULT i źródła COM błędów można znaleźć, sprawdzając zawartość obiektu wyjątku.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> Problemy z formantu ActiveX  
- Większość formantów ActiveX, które współpracują z Visual Basic 6.0 pracować z Visual Basic .NET bez problemów. Główne wyjątki są kontrole kontenerów lub kontrolki, które wizualnie zawierają inne formanty. Przykłady starsze formantów, które nie działają prawidłowo [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] są następujące:  
+ Większość formantów ActiveX, które współpracują z Visual Basic 6.0 pracować z Visual Basic .NET bez problemów. Główne wyjątki są kontrole kontenerów lub kontrolki, które wizualnie zawierają inne formanty. Przykłady starsze formantów, które nie działają prawidłowo z programem Visual Studio są następujące:  
   
 -   Formant Microsoft Forms 2.0 ramki  
   
@@ -115,7 +115,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Sheridan formantu karty  
   
- Istnieje tylko kilka obejścia nieobsługiwany problemów formantu ActiveX. Można przeprowadzić migrację istniejących formantów do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Jeśli oryginalny kod źródłowy. W przeciwnym razie możesz skontaktować się z dostawcami oprogramowania dla aktualizacji. NET zgodnej wersji formantów, aby zastąpić nieobsługiwane formantów ActiveX.  
+ Istnieje tylko kilka obejścia nieobsługiwany problemów formantu ActiveX. Można przeprowadzić migrację istniejących formantów do programu Visual Studio, jeśli oryginalny kod źródłowy. W przeciwnym razie możesz skontaktować się z dostawcami oprogramowania dla aktualizacji. NET zgodnej wersji formantów, aby zastąpić nieobsługiwane formantów ActiveX.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> Właściwości tylko do odczytu przekazywanie ByRef formantów  
  Visual Basic .NET czasami zgłasza błędy COM, takie jak "CTL_E_SETNOTSUPPORTED 0x800A017F błąd", podczas przekazywania `ReadOnly` właściwości niektóre starsze formantów ActiveX jako `ByRef` parametrów do innych procedur. Podobne wywołań procedur w języku Visual Basic 6.0 Nie wywołuj błąd, a parametry są traktowane jako przekazany przez wartość. Komunikat o błędzie w języku Visual Basic .NET wskazuje, czy chcesz zmienić właściwość, która nie ma właściwości `Set` procedury.  

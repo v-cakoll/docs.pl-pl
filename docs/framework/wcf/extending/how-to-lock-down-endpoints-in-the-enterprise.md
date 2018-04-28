@@ -1,29 +1,31 @@
 ---
-title: "Porady: blokowanie punktów końcowych w przedsiębiorstwie"
-ms.custom: 
+title: 'Porady: blokowanie punktów końcowych w przedsiębiorstwie'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b6fa36a269dec4a191417813ec9c4ee26b699ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Porady: blokowanie punktów końcowych w przedsiębiorstwie
 Duże przedsiębiorstwa często wymagają, że aplikacje są tworzone zgodnie z zasadami zabezpieczeń organizacji. Następującym temacie omówiono sposób rozwijać i zainstalować moduł weryfikacji punktu końcowego klienta używany do sprawdzania poprawności wszystkich [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacje klienckie instalowane na komputerach.  
   
- W takim przypadku modułu sprawdzania poprawności jest moduł weryfikacji klienta, ponieważ to zachowanie punktu końcowego zostanie dodany do klienta [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji w pliku machine.config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ładuje wspólnego zachowania punktu końcowego tylko dla aplikacji klienckich i ładuje wspólnego zachowania usługi tylko dla aplikacji usługi. Aby zainstalować tego samego modułu weryfikacji dla aplikacji usług, modułu sprawdzania poprawności musi być zachowanie usługi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji.  
+ W takim przypadku modułu sprawdzania poprawności jest moduł weryfikacji klienta, ponieważ to zachowanie punktu końcowego zostanie dodany do klienta [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji w pliku machine.config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ładuje wspólnego zachowania punktu końcowego tylko dla aplikacji klienckich i ładuje wspólnego zachowania usługi tylko dla aplikacji usługi. Aby zainstalować tego samego modułu weryfikacji dla aplikacji usług, modułu sprawdzania poprawności musi być zachowanie usługi. Aby uzyskać więcej informacji, zobacz [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji.  
   
 > [!IMPORTANT]
 >  Zachowania usługi lub punkt końcowy nie jest oznaczony atrybutem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu (APTCA), które są dodawane do [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji pliku konfiguracji nie są uruchamiane, gdy aplikacja działa w częściowej relacji zaufania środowisko i żaden wyjątek jest zgłaszany w takiej sytuacji. Aby wymusić uruchamianie zachowań wspólnych, takie jak moduły weryfikacji, należy:  

@@ -1,23 +1,24 @@
 ---
-title: "Za pomocą działania Interop w przepływie pracy .NET Framework 4"
-ms.custom: 
+title: Za pomocą działania Interop w przepływie pracy .NET Framework 4
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Za pomocą działania Interop w przepływie pracy .NET Framework 4
 Działania utworzone przy użyciu [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] lub [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] mogą być używane w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy przy użyciu <xref:System.Activities.Statements.Interop> działania. Ten temat zawiera omówienie sposobu użycia <xref:System.Activities.Statements.Interop> działania.  
@@ -256,7 +257,7 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
     > [!NOTE]
-    >  `Subtotal`, `DiscountPercent`, I `Total` właściwości `DiscountCalculator` działania są udostępniane jako argumenty <xref:System.Activities.Statements.Interop> działania i zmienne powiązane z lokalnego przepływu pracy w <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityProperties%2A> Kolekcja. `Subtotal`zostanie dodany jako <xref:System.Activities.ArgumentDirection.In> argument ponieważ `Subtotal` dane przepływają w <xref:System.Activities.Statements.Interop> działania, i `DiscountPercent` i `Total` są dodawane jako <xref:System.Activities.ArgumentDirection.Out> argumenty ponieważ ich dane przepływają poza <xref:System.Activities.Statements.Interop> działania. Należy pamiętać, że dwa <xref:System.Activities.ArgumentDirection.Out> argumenty są dodawane z nazwami `DiscountPercentOut` i `TotalOut` aby wskazać, że reprezentują <xref:System.Activities.ArgumentDirection.Out> argumentów. `DiscountCalculator` Typ jest określony jako <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
+    >  `Subtotal`, `DiscountPercent`, I `Total` właściwości `DiscountCalculator` działania są udostępniane jako argumenty <xref:System.Activities.Statements.Interop> działania i zmienne powiązane z lokalnego przepływu pracy w <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityProperties%2A> Kolekcja. `Subtotal` zostanie dodany jako <xref:System.Activities.ArgumentDirection.In> argument ponieważ `Subtotal` dane przepływają w <xref:System.Activities.Statements.Interop> działania, i `DiscountPercent` i `Total` są dodawane jako <xref:System.Activities.ArgumentDirection.Out> argumenty ponieważ ich dane przepływają poza <xref:System.Activities.Statements.Interop> działania. Należy pamiętać, że dwa <xref:System.Activities.ArgumentDirection.Out> argumenty są dodawane z nazwami `DiscountPercentOut` i `TotalOut` aby wskazać, że reprezentują <xref:System.Activities.ArgumentDirection.Out> argumentów. `DiscountCalculator` Typ jest określony jako <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
   
 5.  Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić aplikację. Zastąp różnych wartości `Subtotal` wartość przetestować poziomy różnych rabat pochodzącymi `DiscountCalculator` działania.  
   
@@ -370,10 +371,10 @@ Rule3: IF this.DiscountPercent > 0
 |Funkcja reguł|Dokumentacja|  
 |-------------------|-------------------|  
 |Przegląd zasad|[Wprowadzenie do aparatu reguł systemu Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|Zestaw reguł|[Używanie zestawów reguł w przepływach pracy](http://go.microsoft.com/fwlink/?LinkId=178516) i<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|Zestaw reguł|[Używanie zestawów reguł w przepływach pracy](http://go.microsoft.com/fwlink/?LinkId=178516) i <xref:System.Workflow.Activities.Rules.RuleSet>|  
 |Ocena zasad|[Zasady oceny w zestawy reguł](http://go.microsoft.com/fwlink/?LinkId=178517)|  
 |Reguły łańcucha|[Przekazuj łańcucha kontroli](http://go.microsoft.com/fwlink/?LinkId=178518) i [do przodu łańcucha zasad](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |Przetwarzanie kolekcje reguł|[Przetwarzanie kolekcje reguł](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|Za pomocą działania PolicyActivity|[Za pomocą działania działania PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) i<xref:System.Workflow.Activities.PolicyActivity>|  
+|Za pomocą działania PolicyActivity|[Za pomocą działania działania PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) i <xref:System.Workflow.Activities.PolicyActivity>|  
   
- Przepływy pracy utworzone w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] nie korzystać ze wszystkich funkcji zasad udostępnionych przez [!INCLUDE[wf1](../../../includes/wf1-md.md)], takie jak warunki deklaratywne działania i warunkowego działań, takich jak <xref:System.Workflow.Activities.ConditionedActivityGroup> i <xref:System.Workflow.Activities.ReplicatorActivity>. Jeśli jest to wymagane, ta funkcja jest dostępna dla przepływów pracy utworzony za pomocą [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ Przepływy pracy utworzone w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] nie korzystać ze wszystkich funkcji zasad udostępnionych przez [!INCLUDE[wf1](../../../includes/wf1-md.md)], takie jak warunki deklaratywne działania i warunkowego działań, takich jak <xref:System.Workflow.Activities.ConditionedActivityGroup> i <xref:System.Workflow.Activities.ReplicatorActivity>. Jeśli jest to wymagane, ta funkcja jest dostępna dla przepływów pracy utworzony za pomocą [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

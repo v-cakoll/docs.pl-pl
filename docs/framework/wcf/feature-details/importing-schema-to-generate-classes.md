@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importowanie schematu w celu generowania klas
 Aby wygenerować klasy na podstawie schematów, której można używać z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], użyj <xref:System.Runtime.Serialization.XsdDataContractImporter> klasy. W tym temacie opisano proces i zmian.  
@@ -114,7 +114,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Skojarzeń można również uwzględnić listy. Na przykład można wyświetlić poprzedniego skojarzenie jako listę złożone `city` obiektów, które mają dwa pola (polem ciągu i pole Liczba całkowita). Oba wzorce ma reprezentacji w postaci w schematu XSD. Nie istnieje sposób w celu rozróżnienia listy i skojarzenia, więc tych wzorców zawsze są traktowane jako list, chyba że adnotację specjalne specyficzne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Skojarzeń można również uwzględnić listy. Na przykład można wyświetlić poprzedniego skojarzenie jako listę złożone `city` obiektów, które mają dwa pola (polem ciągu i pole Liczba całkowita). Oba wzorce ma reprezentacji w postaci w schematu XSD. Nie istnieje sposób w celu rozróżnienia listy i skojarzenia, więc tych wzorców zawsze są traktowane jako list, chyba że adnotację specjalne specyficzne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. Aby uzyskać więcej informacji, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Zwykle listy jest importowany jako kontraktu danych kolekcji, która pochodzi z listy ogólnej lub jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablicy, w zależności od tego, czy schemat następuje standardowy wzorzec nazewnictwa dla kolekcji. To jest opisany bardziej szczegółowo w [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Skojarzenia są zwykle zaimportowany jako <xref:System.Collections.Generic.Dictionary%602> lub kontraktu danych kolekcji, która pochodzi z obiektu słownika. Na przykład należy wziąć pod uwagę następujące schematu.  
   
@@ -161,7 +161,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
   
 ##### <a name="design-considerations"></a>Zagadnienia dotyczące projektowania  
   
--   Może być trudne do pracy bezpośrednio z lekko maszynowy reprezentacji XML. Należy wziąć pod uwagę przy użyciu aparatu serializacji alternatywnych, takich jak <xref:System.Xml.Serialization.XmlSerializer>, aby pracować ze schematem nie jest zgodne z danymi kontraktów w jednoznaczny sposób. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Może być trudne do pracy bezpośrednio z lekko maszynowy reprezentacji XML. Należy wziąć pod uwagę przy użyciu aparatu serializacji alternatywnych, takich jak <xref:System.Xml.Serialization.XmlSerializer>, aby pracować ze schematem nie jest zgodne z danymi kontraktów w jednoznaczny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Niektóre konstrukcje schematu nie mogą być importowane przez <xref:System.Runtime.Serialization.XsdDataContractImporter> nawet wtedy, gdy <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> właściwość jest ustawiona na `true`. Ponownie, należy rozważyć użycie <xref:System.Xml.Serialization.XmlSerializer> w takich przypadkach.  
   
@@ -190,7 +190,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> Właściwość. Określ <xref:System.CodeDom.Compiler.CodeDomProvider> używany do generowania kodu dla wygenerowanego klas. Funkcje prób mechanizmu importu, aby uniknąć <xref:System.CodeDom.Compiler.CodeDomProvider> nie obsługuje. Jeśli <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nie jest ustawiona, pełny zestaw [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] funkcji jest używana bez ograniczeń.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> Właściwość. <xref:System.Runtime.Serialization.IDataContractSurrogate> Za pomocą tej właściwości można określić implementacji. <xref:System.Runtime.Serialization.IDataContractSurrogate> Dostosowuje proces importowania. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Części znaku dwuskładnikowego kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie surogat nie jest używany.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> Właściwość. <xref:System.Runtime.Serialization.IDataContractSurrogate> Za pomocą tej właściwości można określić implementacji. <xref:System.Runtime.Serialization.IDataContractSurrogate> Dostosowuje proces importowania. Aby uzyskać więcej informacji, zobacz [surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie surogat nie jest używany.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

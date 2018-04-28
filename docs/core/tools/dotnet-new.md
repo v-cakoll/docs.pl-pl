@@ -4,16 +4,16 @@ description: Nowe polecenie dotnet tworzy nowe projekty .NET Core na podstawie o
 author: mairaw
 ms.author: mairaw
 ms.date: 03/26/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 4432587c0015c353a34816eee4206dc53cdefba9
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: ab8d6f779a428aab7bd2739105dcf08b51d14ab9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-new"></a>nowe DotNet
 

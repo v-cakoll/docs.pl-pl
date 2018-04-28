@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37e06d97b082ba6de75d8efa81723442403e39be
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
 Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -33,10 +33,10 @@ Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stro
  Nazwa pliku, który wymaga monitorowania na zmiany lub aktualizacji.  
   
  `"{guid}"`  
- Globalnie unikatowy identyfikator (GUID) dla pliku.  
+ Globalnie unikatowy identyfikator (GUID) dla algorytmu wyznaczania wartości skrótu.  
   
  `"checksum_bytes"`  
- Ciąg cyfr szesnastkowych reprezentujący liczbę bajtów sumy kontrolnej. Musi być parzystą liczbą cyfr szesnastkowych. Nieparzysta liczba cyfr powoduje wygenerowanie ostrzeżenia podczas kompilacji i zignorowanie dyrektywy.  
+ Ciąg cyfr szesnastkowych reprezentujący liczbę bajtów sumy kontrolnej. Musi być parzystą liczbą cyfr szesnastkowych. Nieparzysta liczba cyfr powoduje ostrzeżenie kompilacji i dyrektywy są ignorowane.  
   
 ## <a name="remarks"></a>Uwagi  
  Debuger programu Visual Studio używa sumy kontrolnej do sprawdzania, czy użyte zostało prawidłowe źródło. Kompilator oblicza sumę kontrolną pliku źródłowego, a następnie przesyła dane wyjściowe do pliku bazy danych programu (PDB). Następnie debuger używa pliku PDB do porównania sumy kontrolnej obliczanej dla pliku źródłowego.  
@@ -54,7 +54,7 @@ class TestClass
 {  
     static int Main()  
     {  
-        #pragma checksum "file.cs" "{3673e4ca-6098-4ec1-890f-8fceb2a794a2}" "{012345678AB}" // New checksum  
+        #pragma checksum "file.cs" "{406EA660-64CF-4C82-B6F0-42D48172A799}" "ab007f1d23d9" // New checksum  
     }  
 }  
 ```  

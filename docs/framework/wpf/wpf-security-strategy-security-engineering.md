@@ -1,12 +1,13 @@
 ---
-title: "Strategia zabezpieczeń WPF - projekt zabezpieczeń"
-ms.custom: 
+title: Strategia zabezpieczeń WPF - projekt zabezpieczeń
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [WPF], testing techniques
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f5b26e63b7671e3ea37c150055f9aa646ec8293c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79ab5b1a86ad94913750cfb3ec4fdc765db40282
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia zabezpieczeń WPF - projekt zabezpieczeń
 Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft dla zapewnienia produkcji bezpiecznego kodu. Jest kluczowym elementem inicjatywy wiarygodne technologie komputerowe [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Engineering rozwiązaniem, używany w połączeniu z standardowe inżynieryjnym do ułatwienia dostarczania bezpiecznego kodu. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Składa się z 10 fazy, które łączą najlepsze rozwiązania z ujęcie w formalne ramy, measurability i dodatkowe struktury, w tym:  
@@ -86,7 +88,7 @@ Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft dla zapewnienia
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Techniki testowania  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]używa różnorodnych narzędzi zabezpieczeń testowania techniki, które obejmują:  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] używa różnorodnych narzędzi zabezpieczeń testowania techniki, które obejmują:  
   
 -   **Testowanie Whitebox**: testerów wyświetlić kodu źródłowego i późniejszego kompilowania wykorzystać testów  
   
@@ -98,7 +100,7 @@ Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft dla zapewnienia
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Kod krytyczny dla zarządzania  
- Dla [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] tworzy piaskownicy zabezpieczeń przy użyciu [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] obsługę oznaczenie i śledzenia kod krytyczny dla zabezpieczeń, który zostanie uprawnień (zobacz **krytyczny dla zabezpieczeń metodologii** w [ Strategia zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Taki kod na kod krytyczny dla zabezpieczeń ze względu na wymagania jakości wysokiego poziomu zabezpieczeń, otrzymuje dodatkowego poziomu inspekcji zabezpieczeń i kontroli zarządzania źródła. Około 5 – 10% z [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kod krytyczny dla zabezpieczeń, który jest rozpatrywana przez dedykowany zespół recenzowania. Kod źródłowy i sprawdzanie w trakcie zarządza śledzenia kodu krytycznego dla zabezpieczeń i mapowanie każdej jednostki krytyczne (np. metody, która zawiera kod krytyczny) do jego Zaloguj się w stanie wyłączonym. Zaloguj się w stanie wyłączonym zawiera nazwy jednego lub więcej recenzentów. Każdy codzienne kompilacji [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny w tym w wcześniejsze kompilacje, aby sprawdzić niezatwierdzone zmiany. Jeżeli inżyniera modyfikuje kodu krytycznego bez zatwierdzenia od zespołu recenzowania, zidentyfikowane i natychmiast stałej. Ten proces umożliwia aplikacji i konserwacji szczególnie wysoki poziom kontroli nad [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kodu piaskownicy.  
+ Dla [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] tworzy piaskownicy zabezpieczeń przy użyciu platformy .NET Framework — Obsługa oznaczenie i śledzenia kod krytyczny dla zabezpieczeń, który zostanie uprawnień (zobacz **krytyczny dla zabezpieczeń metodologii** w [WPF Strategia zabezpieczeń - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Taki kod na kod krytyczny dla zabezpieczeń ze względu na wymagania jakości wysokiego poziomu zabezpieczeń, otrzymuje dodatkowego poziomu inspekcji zabezpieczeń i kontroli zarządzania źródła. Około 5 – 10% z [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kod krytyczny dla zabezpieczeń, który jest rozpatrywana przez dedykowany zespół recenzowania. Kod źródłowy i sprawdzanie w trakcie zarządza śledzenia kodu krytycznego dla zabezpieczeń i mapowanie każdej jednostki krytyczne (np. metody, która zawiera kod krytyczny) do jego Zaloguj się w stanie wyłączonym. Zaloguj się w stanie wyłączonym zawiera nazwy jednego lub więcej recenzentów. Każdy codzienne kompilacji [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny w tym w wcześniejsze kompilacje, aby sprawdzić niezatwierdzone zmiany. Jeżeli inżyniera modyfikuje kodu krytycznego bez zatwierdzenia od zespołu recenzowania, zidentyfikowane i natychmiast stałej. Ten proces umożliwia aplikacji i konserwacji szczególnie wysoki poziom kontroli nad [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kodu piaskownicy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia](../../../docs/framework/wpf/security-wpf.md)  

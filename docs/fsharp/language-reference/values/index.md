@@ -1,20 +1,17 @@
 ---
 title: Wartości (F#)
 description: 'Dowiedz się, jak wartości w języku F # to ilości, które mają określonego typu.'
-keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b40e4a0409a9161a4ef48c8d4ad82b4da346538e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="values"></a>Wartości
 
@@ -49,10 +46,10 @@ Wartość początkowa można przypisać do modyfikowalnej zmiennej, za pomocą `
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Let — powiązania](../functions/let-bindings.md)|Zawiera informacje dotyczące używania `let` — słowo kluczowe można powiązać nazwy wartości i funkcje.|
+|[Powiązania „let”](../functions/let-bindings.md)|Zawiera informacje dotyczące używania `let` — słowo kluczowe można powiązać nazwy wartości i funkcje.|
 |[Funkcje](../functions/index.md)|Zawiera omówienie funkcji w języku F #.|
 
 ## <a name="see-also"></a>Zobacz też
-[Wartości zerowe](null-Values.md)
+[Wartości null](null-Values.md)
 
-[Dokumentacja języka F #](../index.md)
+[Dokumentacja języka F#](../index.md)

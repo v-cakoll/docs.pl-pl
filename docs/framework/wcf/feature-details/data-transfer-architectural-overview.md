@@ -1,13 +1,13 @@
 ---
-title: "Omówienie architektury transferu danych"
-ms.custom: 
+title: Omówienie architektury transferu danych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb64b871b8e4ba3036d70f3b84e2fde1667f4529
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-transfer-architectural-overview"></a>Omówienie architektury transferu danych
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]można traktować jako infrastruktury obsługi wiadomości. Można odbierać komunikaty, ich przetwarzania i wysyłania ich do kodu użytkownika dla dalszego działania lub można utworzyć wiadomości z danych przez kod użytkownika i dostarczania ich do miejsca docelowego. W tym temacie, który jest przeznaczony dla zaawansowanych programistów, w tym artykule opisano architekturę obsługi wiadomości i danych zawartych w niej. Dla widoku prostszy, zorientowane na zadania sposobu wysyłania i odbierania danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] można traktować jako infrastruktury obsługi wiadomości. Można odbierać komunikaty, ich przetwarzania i wysyłania ich do kodu użytkownika dla dalszego działania lub można utworzyć wiadomości z danych przez kod użytkownika i dostarczania ich do miejsca docelowego. W tym temacie, który jest przeznaczony dla zaawansowanych programistów, w tym artykule opisano architekturę obsługi wiadomości i danych zawartych w niej. Dla widoku prostszy, zorientowane na zadania sposobu wysyłania i odbierania danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
 > [!NOTE]
 >  W tym temacie omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szczegóły implementacji, które nie są widoczne, sprawdzając [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu modelu. Są dwa wyrazy ostrożność w kolejności, w odniesieniu do szczegóły implementacji udokumentowane. Po pierwsze opisy są uproszczone; Rzeczywista implementacja może być bardziej złożone z powodu optymalizacji lub z innych powodów. Po drugie, nigdy nie będą miały szczegóły konkretnej implementacji, nawet udokumentowane, ponieważ te może ulec zmianie bez uprzedzenia z wersji do wersji lub nawet w przypadku obsługi wersji.  
@@ -94,17 +94,17 @@ ms.lasthandoff: 12/22/2017
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |Wychodzące utworzone na podstawie nonstreamed model programowania|Dane wymagane do zapisywania wiadomości (na przykład obiekt i <xref:System.Runtime.Serialization.DataContractSerializer> wystąpienia potrzebne do serializacji go) *|Niestandardowa logika do zapisywania wiadomości na podstawie przechowywanych danych (na przykład wywołać `WriteObject` na `DataContractSerializer` jeżeli jest to element serializujący używany) *|Wywołanie `OnWriteBodyContents`, buforować wyniki, zwracać modułu odczytującego XML w buforze|  
 |Wychodzące utworzone na podstawie strumienia model programowania|`Stream` z danymi do zapisania *|Zapisz dane z przechowywanych stream przy użyciu <xref:System.Xml.IStreamProvider> mechanizmu *|Wywołanie `OnWriteBodyContents`, buforować wyniki, zwracać modułu odczytującego XML w buforze|  
-|Przychodzące z przesyłania strumieniowego stosu kanału|A `Stream` obiekt, który reprezentuje danych przesyłanych sieci z <xref:System.Xml.XmlReader> nad nim|Zapisać zawartość z przechowywanych `XmlReader` przy użyciu`WriteNode`|Zwraca zapisana`XmlReader`|  
-|Przychodzące z kanału nonstreaming stosu|Buforu, który zawiera treść danych za pomocą `XmlReader` nad nim|Zapisuje się zawartość z przechowywanych `XmlReader` przy użyciu`WriteNode`|Zwraca język przechowywane|  
+|Przychodzące z przesyłania strumieniowego stosu kanału|A `Stream` obiekt, który reprezentuje danych przesyłanych sieci z <xref:System.Xml.XmlReader> nad nim|Zapisać zawartość z przechowywanych `XmlReader` przy użyciu `WriteNode`|Zwraca zapisana `XmlReader`|  
+|Przychodzące z kanału nonstreaming stosu|Buforu, który zawiera treść danych za pomocą `XmlReader` nad nim|Zapisuje się zawartość z przechowywanych `XmlReader` przy użyciu `WriteNode`|Zwraca język przechowywane|  
   
- \*Te elementy nie zostały zaimplementowane bezpośrednio w `Message` podklasy, ale w podklasy <xref:System.ServiceModel.Channels.BodyWriter> klasy. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.BodyWriter>, zobacz [używanie klasy Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ \* Te elementy nie zostały zaimplementowane bezpośrednio w `Message` podklasy, ale w podklasy <xref:System.ServiceModel.Channels.BodyWriter> klasy. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.BodyWriter>, zobacz [używanie klasy Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-headers"></a>Nagłówki komunikatów  
  Komunikat może zawierać nagłówki. Nagłówek logicznie składa się z typu infoset sprawdzonych XML, który jest skojarzony z nazwą przestrzeni nazw i kilka innych właściwości. Nagłówki komunikatów są dostępne przy użyciu `Headers` właściwość <xref:System.ServiceModel.Channels.Message>. Każdy nagłówek jest reprezentowany przez <xref:System.ServiceModel.Channels.MessageHeader> klasy. Zwykle nagłówki komunikatów są mapowane na nagłówkach wiadomości SOAP przy użyciu stosu kanału skonfigurowane do pracy z komunikatami SOAP.  
   
  Umieszczanie informacji w nagłówku wiadomości i wyodrębniania informacji z niego jest podobne do korzystania z treści wiadomości. Proces nieco jest uproszczone, ponieważ przesyłania strumieniowego nie jest obsługiwane. Istnieje możliwość dostępu do zawartości tego samego nagłówka więcej niż raz, a nagłówki można uzyskać w kolejności dowolnego, wymuszanie nagłówków, aby zawsze można buforować. Nie istnieje mechanizm ogólnego przeznaczenia, można uzyskać za pośrednictwem nagłówka modułu odczytującego XML, ale `MessageHeader` podklasy wewnętrzne [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reprezentujący można odczytać nagłówka takiej możliwości. Ten typ `MessageHeader` jest tworzony przez stos kanału, gdy wiadomość z nagłówków niestandardowych aplikacji. Dzięki temu w ramach usługi na korzystanie z aparatu deserializacji, takich jak <xref:System.Runtime.Serialization.DataContractSerializer>, aby zinterpretować tych nagłówków.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Używanie klasy Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Aby uzyskać więcej informacji, zobacz [używanie klasy Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-properties"></a>Właściwości wiadomości  
  Komunikat może zawierać właściwości. A *właściwości* dowolnego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiekt, który jest skojarzony z nazwą ciągu. Właściwości są dostępne za pośrednictwem `Properties` właściwość `Message`.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  Na przykład HTTP transport kanału wchodzącego w skład [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest w stanie tworzenie różnych kodów stanu HTTP, takie jak "404 (nie znaleziono)" i "500 (wewnętrzny błąd serwera)," podczas wysyłania odpowiedzi do klientów. Przed wysłaniem wiadomości odpowiedzi, sprawdza, czy `Properties` z `Message` zawiera właściwość o nazwie "httpResponse", która zawiera obiekt typu <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>. Jeśli zostanie znaleziony takich właściwości, zostanie ona wyszukana w <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> właściwości i użyj tego kodu stanu. Jeśli go nie zostanie znaleziony, wartość domyślna "200 (OK)" używany jest kod.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Używanie klasy Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Aby uzyskać więcej informacji, zobacz [używanie klasy Message](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ### <a name="the-message-as-a-whole"></a>Komunikat jako całość  
  Do tej pory Omówiliśmy metod dostępu do poszczególnych części komunikatu w izolacji. Jednak <xref:System.ServiceModel.Channels.Message> klasy udostępnia również metody służące do pracy z cały komunikat jako całość. Na przykład `WriteMessage` metoda zapisuje się cały komunikat do edytora XML.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/22/2017
   
  Jak wspomniano wcześniej, może być zmieniona akcje: wysyłanie lub odbieranie pakietów sieciowych za pośrednictwem różnych protokołów, odczytu lub zapisu komunikatu w bazie danych usługi kolejkowania lub usuwania komunikatów w kolejki usługi kolejkowania komunikatów, aby zapewnić, ale kilka przykładów. Te akcje są wspólne rzecz: wymagają przekształceń między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Message` wystąpienia i rzeczywistego grupy bajtów, które mogą być wysyłane, odebrany, odczytu, zapisana, Zakolejkowane lub usuniętej. Proces konwersji `Message` do grupy bajtów jest nazywany *kodowanie*i procesu tworzenia `Message` z grupy bajtów jest nazywany *dekodowania*.  
   
- Większość kanały transportu używanie składnika o nazwie *komunikatu koderów* kodowania i dekodowania pracy. Koder komunikatów jest podklasą <xref:System.ServiceModel.Channels.MessageEncoder> klasy. `MessageEncoder`zawiera różne `ReadMessage` i `WriteMessage` przeciążenia metody, które umożliwia konwersję pomiędzy `Message` i grup bajtów.  
+ Większość kanały transportu używanie składnika o nazwie *komunikatu koderów* kodowania i dekodowania pracy. Koder komunikatów jest podklasą <xref:System.ServiceModel.Channels.MessageEncoder> klasy. `MessageEncoder` zawiera różne `ReadMessage` i `WriteMessage` przeciążenia metody, które umożliwia konwersję pomiędzy `Message` i grup bajtów.  
   
  Po stronie wysyłającej przekazuje buforowania kanał transportu `Message` obiekt, który otrzymał od kanału powyżej `WriteMessage`. Ponownie pobiera tablicę bajtów, które używa następnie wykonać jego operacji (np. pakowania tych bajtów jako prawidłowy pakiety TCP i wysyłania ich do poprawny docelowy). Najpierw tworzy przesyłania strumieniowego kanał transportu `Stream` (na przykład za pośrednictwem wychodzące połączenie TCP) i następnie przekazuje zarówno `Stream` i `Message` należy wysłać do odpowiedniego `WriteMessage` przeciążenia, które zapisuje się komunikat .  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
  Kodery można wykonywać również inne funkcje. Na przykład koderów może utworzyć pulę czytniki XML i modułów zapisujących. Jest kosztowna do utworzenia nowego modułu odczytującego XML lub zapisywania za każdym razem, gdy jest ono wymagane. W związku z tym koderów zwykle Obsługa puli czytelników i składników zapisywania można skonfigurować rozmiaru puli. W opisach operacji kodera opisanych powyżej po każdej zmianie frazę "Utwórz czytnika/składnika zapisywania XML" jest używana, zwykle oznacza to "wykonać jedną z puli, lub stworzyć, jeśli nie jest dostępny." Koder (i `Message` podklasy tworzy podczas dekodowania) zawiera logikę do zwrócenia czytelników i zapisywania do pul, gdy nie są już potrzebne (na przykład, gdy `Message` jest zamknięty).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia trzy koderów wiadomości, mimo że można tworzyć dodatkowe niestandardowych typów. Podane typy tekstu, dane binarne i mechanizmu optymalizacji transmisji wiadomości (MTOM). Te ustawienia zostały opisane szczegółowo w [Wybieranie kodera komunikatów](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia trzy koderów wiadomości, mimo że można tworzyć dodatkowe niestandardowych typów. Podane typy tekstu, dane binarne i mechanizmu optymalizacji transmisji wiadomości (MTOM). Te ustawienia zostały opisane szczegółowo w [Wybieranie kodera komunikatów](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md).  
   
 ### <a name="the-istreamprovider-interface"></a>Element IStreamProvider interfejsu  
  Podczas zapisywania wysyłanej wiadomości zawiera treść przesyłany strumieniowo do edytora XML <xref:System.ServiceModel.Channels.Message> używa sekwencję wywołań podobne do następujących w jego <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> implementacji:  
@@ -231,7 +231,7 @@ ms.lasthandoff: 12/22/2017
  Akcja = "*" wiersz skutecznie wyłącza potrzeby rozsyłania komunikatów i zapewnia, że wszystkie wiadomości wysyłane do `IForwardingService` kontraktu należy ich sposobem `ForwardMessage` operacji. (Zazwyczaj Dyspozytor zbada nagłówka "Akcja" wiadomości do operacji, które jest przeznaczone do określenia. Akcja = "\*" oznacza "wszystkie możliwe wartości nagłówka Action".) Kombinacja akcji = "\*" i za pomocą komunikatu jako parametr nosi nazwę "universal kontraktu", ponieważ jest w stanie wszystkie komunikaty możliwe. Aby móc wysyłać komunikaty możliwe, należy użyć komunikatu jako wartości zwracane i ustawić `ReplyAction` do "\*". Uniemożliwi to struktura usługi Dodawanie nagłówka własnego działania, dzięki któremu można kontrolować przy użyciu tego nagłówka `Message` obiekt powrocie.  
   
 ### <a name="3-message-contracts"></a>3. Kontrakty komunikatów  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia model programowania deklaratywne opisujące wiadomości, nazywane *komunikatu kontrakty*. Ten model jest szczegółowo opisane w [za pomocą kontraktów komunikatu](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Zasadniczo cały komunikat jest reprezentowane przez jeden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu, który używa atrybutów, takich jak <xref:System.ServiceModel.MessageBodyMemberAttribute> i <xref:System.ServiceModel.MessageHeaderAttribute> do opisywania części klasy kontraktu komunikatu, które powinny być mapowane na której części wiadomości.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia model programowania deklaratywne opisujące wiadomości, nazywane *komunikatu kontrakty*. Ten model jest szczegółowo opisane w [za pomocą kontraktów komunikatu](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Zasadniczo cały komunikat jest reprezentowane przez jeden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu, który używa atrybutów, takich jak <xref:System.ServiceModel.MessageBodyMemberAttribute> i <xref:System.ServiceModel.MessageHeaderAttribute> do opisywania części klasy kontraktu komunikatu, które powinny być mapowane na której części wiadomości.  
   
  Kontrakty komunikatu zapewniają dużą kontrolę nad powstałe w ten sposób `Message` wystąpień (chociaż oczywiście nie tak formantu przy użyciu `Message` bezpośrednio klasa). Na przykład treści wiadomości często składają się z wielu rodzajów informacji, każdy jest reprezentowany przez jego własnej — element XML. Te elementy albo mogą występować bezpośrednio w treści (*systemu od zera* tryb) lub może być *opakowana* w tym elemencie XML. Za pomocą kontraktu komunikatu, model programowania umożliwia podjęcie decyzji bez systemu operacyjnego i opakowana i nazwa przestrzeni nazw i nazwa otoki formantu.  
   
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- Elementy oznaczony do serializacji (z <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, lub innych powiązanych atrybutów) muszą mieć możliwość serializowania uczestniczyć w kontrakcie komunikatu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]w sekcji "Serializacji" w dalszej części tego tematu.  
+ Elementy oznaczony do serializacji (z <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, lub innych powiązanych atrybutów) muszą mieć możliwość serializowania uczestniczyć w kontrakcie komunikatu. Aby uzyskać więcej informacji zobacz sekcję "Serializacji" w dalszej części tego tematu.  
   
 ### <a name="4-parameters"></a>4. Parametry  
  Często deweloperze, który chce opisuje operację, która działa na wielu fragmentów danych nie jest konieczne stopień kontroli, które zapewniają kontraktów komunikatu. Na przykład podczas tworzenia nowych usług, co nie zwykle chce podjąć decyzję dotyczącą bez systemu operacyjnego i opakowana i zdecydować, nazwa elementu otoki. Podejmowanie tych decyzji często wymaga dokładnego wiedzę na temat usługi sieci Web i SOAP.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 12/22/2017
  Informacje, które mają być wysyłane lub odbierane to prosta lista parametrów kontrakt operacji jest zalecane podejście, jeśli nie istnieją specjalne przyczyny można przenieść do kontraktu komunikatu bardziej skomplikowane opisujące lub `Message`— na podstawie modele programowania.  
   
 ### <a name="5-stream"></a>5. Strumień  
- Przy użyciu `Stream` lub jednej z jego podklas w kontrakt operacji lub w ramach treści wiadomości wyłącznie w kontrakcie komunikatu jest uznawana za oddzielne model programowania z opisane powyżej. Przy użyciu `Stream` w ten sposób jest jedynym sposobem zagwarantowania, że Umowa będzie można używać w sposób przesyłany strumieniowo, jest zbyt mała pisanie własnych przesyłania strumieniowego zgodnego `Message` podklasy. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Dużej ilości danych i przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Przy użyciu `Stream` lub jednej z jego podklas w kontrakt operacji lub w ramach treści wiadomości wyłącznie w kontrakcie komunikatu jest uznawana za oddzielne model programowania z opisane powyżej. Przy użyciu `Stream` w ten sposób jest jedynym sposobem zagwarantowania, że Umowa będzie można używać w sposób przesyłany strumieniowo, jest zbyt mała pisanie własnych przesyłania strumieniowego zgodnego `Message` podklasy. Aby uzyskać więcej informacji, zobacz [duże ilości danych i przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
  Gdy `Stream` lub jednej z jego podklas jest używany w ten sposób, nie zostanie wywołany element serializujący. Dla komunikatów wychodzących, specjalne przesyłania strumieniowego `Message` podklasy jest tworzony i strumień jest zapisywany limit zgodnie z opisem w sekcji na <xref:System.Xml.IStreamProvider> interfejsu. Dla komunikatów przychodzących, tworzy struktura usługi `Stream` podklasy za pośrednictwem wiadomości przychodzącej i udostępnia go wykonać operację.  
   
@@ -279,11 +279,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="serialization"></a>Serializacja  
  Zawsze, gdy używasz kontraktów komunikatu lub parametrów do opisywania treść wiadomości, należy użyć serializacji w celu konwersji między [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy i reprezentacji XML typu Infoset. Serializacja jest używana w innych miejscach w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], na przykład <xref:System.ServiceModel.Channels.Message> ma ogólnego <xref:System.ServiceModel.Channels.Message.GetBody%2A> metodę, która służy do odczytu treści cały komunikat deserializacji do obiektu.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje dwie technologie serializacji "fabrycznej" serializację i deserializację parametrów i części wiadomości: <xref:System.Runtime.Serialization.DataContractSerializer> i `XmlSerializer`. Ponadto można pisać niestandardowe serializatorów. Jednak inne części [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (takich jak ogólnego `GetBody` metody lub protokołu SOAP fault serializacji) może być ograniczony do użycia tylko <xref:System.Runtime.Serialization.XmlObjectSerializer> podklasy (<xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer>, ale nie <xref:System.Xml.Serialization.XmlSerializer>), lub może być ustalony używana będzie tylko <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje dwie technologie serializacji "fabrycznej" serializację i deserializację parametrów i części wiadomości: <xref:System.Runtime.Serialization.DataContractSerializer> i `XmlSerializer`. Ponadto można pisać niestandardowe serializatorów. Jednak inne części [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (takich jak ogólnego `GetBody` metody lub protokołu SOAP fault serializacji) może być ograniczony do użycia tylko <xref:System.Runtime.Serialization.XmlObjectSerializer> podklasy (<xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer>, ale nie <xref:System.Xml.Serialization.XmlSerializer>), lub może być ustalony używana będzie tylko <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- `XmlSerializer` Jest używany mechanizm serializacji w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web. `DataContractSerializer` Jest nowy aparat serializacji, która obsługuje usługę nowy model programowania kontraktu danych. `DataContractSerializer`wybór domyślny i decyzja o korzystaniu z `XmlSerializer` można wprowadzić na podstawie na operację przy użyciu <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> atrybutu.  
+ `XmlSerializer` Jest używany mechanizm serializacji w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web. `DataContractSerializer` Jest nowy aparat serializacji, która obsługuje usługę nowy model programowania kontraktu danych. `DataContractSerializer` wybór domyślny i decyzja o korzystaniu z `XmlSerializer` można wprowadzić na podstawie na operację przy użyciu <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> atrybutu.  
   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>i <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> są zobowiązani do podłączania elementy formatujące komunikaty dla zachowania operacji `DataContractSerializer` i `XmlSerializer`odpowiednio. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Zachowanie faktycznie mogą pracować z dowolnego serializator, która pochodzi z <xref:System.Runtime.Serialization.XmlObjectSerializer>, takie jak <xref:System.Runtime.Serialization.NetDataContractSerializer> (opisano szczegółowo w za pomocą serializacji autonomicznego). Jeden z wywołuje `CreateSerializer` przeciążenia metody wirtualnej uzyskanie serializatora. Aby dołączyć innego serializatora, Utwórz nową <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> podklasy i zastąpienie `CreateSerializer` przeciążenia.  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> i <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> są zobowiązani do podłączania elementy formatujące komunikaty dla zachowania operacji `DataContractSerializer` i `XmlSerializer`odpowiednio. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Zachowanie faktycznie mogą pracować z dowolnego serializator, która pochodzi z <xref:System.Runtime.Serialization.XmlObjectSerializer>, takie jak <xref:System.Runtime.Serialization.NetDataContractSerializer> (opisano szczegółowo w za pomocą serializacji autonomicznego). Jeden z wywołuje `CreateSerializer` przeciążenia metody wirtualnej uzyskanie serializatora. Aby dołączyć innego serializatora, Utwórz nową <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> podklasy i zastąpienie `CreateSerializer` przeciążenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

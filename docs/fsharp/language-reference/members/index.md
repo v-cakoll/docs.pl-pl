@@ -1,20 +1,17 @@
 ---
 title: Członkowie (F#)
 description: 'Informacje o elementach członkowskich obiektu w języku programowania w języku F #.'
-keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a37f14d138cc017cf78e3a0ff1d5b5bba2f09020
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="members"></a>Elementy członkowskie
 
@@ -34,12 +31,12 @@ Pól prywatnych i `do` powiązania, które są używane tylko z klasami, nie są
 
 |Temat|Opis|
 |-----|-----------|
-|[`let`Powiązania w klasach](let-bindings-in-classes.md)|Zawiera opis definicji pól prywatnych i funkcje w klasach.|
-|[`do`Powiązania w klasach](do-bindings-in-classes.md)|W tym artykule opisano specyfikację kod inicjujący obiektu.|
+|[`let` Powiązania w klasach](let-bindings-in-classes.md)|Zawiera opis definicji pól prywatnych i funkcje w klasach.|
+|[`do` Powiązania w klasach](do-bindings-in-classes.md)|W tym artykule opisano specyfikację kod inicjujący obiektu.|
 |[Właściwości](properties.md)|Opisuje właściwości członków klasy i innych typów.|
 |[Właściwości indeksowane](indexed-properties.md)|Opisuje właściwości tablicy w klasami i innymi typami.|
 |[Metody](methods.md)|W tym artykule opisano funkcje, które są elementami członkowskimi typu.|
 |[Konstruktory](constructors.md)|Opisuje specjalne funkcje, które Inicjowanie obiektów typu.|
 |[Przeładowanie operatora](../operator-overloading.md)|Zawiera opis definicji operatorów niestandardowe dla typów.|
 |[Zdarzenia](events.md)|Zawiera opis definicji zdarzenia i zdarzeń w języku F #.|
-|[Pola jawne: `val` — słowo kluczowe](explicit-fields-the-val-keyword.md)|Zawiera opis definicji niezainicjowanej pól w typie.|
+|[Pola jawne: słowo kluczowe `val`](explicit-fields-the-val-keyword.md)|Zawiera opis definicji niezainicjowanej pól w typie.|

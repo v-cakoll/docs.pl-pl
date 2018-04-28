@@ -1,13 +1,13 @@
 ---
-title: "Określanie zachowania klienta w czasie wykonywania"
-ms.custom: 
+title: Określanie zachowania klienta w czasie wykonywania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb6ba82af23f51e43da57adb0e65c77ee3436676
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Określanie zachowania klienta w czasie wykonywania
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]klientów, takie jak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usług, można skonfigurować do modyfikowania zachowania w czasie wykonywania do własnych aplikacji klienckich. Atrybuty trzy są dostępne do określania zachowania klienta w czasie wykonywania. Obiekty klienta dwustronnego wywołania zwrotnego można użyć <xref:System.ServiceModel.CallbackBehaviorAttribute> i <xref:System.ServiceModel.Description.CallbackDebugBehavior> atrybuty do modyfikowania zachowania w czasie wykonywania. Ten atrybut <xref:System.ServiceModel.Description.ClientViaBehavior>, może służyć do rozdzielania logicznej docelowej z docelowego bezpośredniej sieci. Ponadto klienta dwustronnego wywołania zwrotnego typów mogą korzystać z niektórych zachowań po stronie serwera. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] klientów, takie jak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usług, można skonfigurować do modyfikowania zachowania w czasie wykonywania do własnych aplikacji klienckich. Atrybuty trzy są dostępne do określania zachowania klienta w czasie wykonywania. Obiekty klienta dwustronnego wywołania zwrotnego można użyć <xref:System.ServiceModel.CallbackBehaviorAttribute> i <xref:System.ServiceModel.Description.CallbackDebugBehavior> atrybuty do modyfikowania zachowania w czasie wykonywania. Ten atrybut <xref:System.ServiceModel.Description.ClientViaBehavior>, może służyć do rozdzielania logicznej docelowej z docelowego bezpośredniej sieci. Ponadto klienta dwustronnego wywołania zwrotnego typów mogą korzystać z niektórych zachowań po stronie serwera. Aby uzyskać więcej informacji, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Przy użyciu CallbackBehaviorAttribute  
  Możesz skonfigurować lub rozszerzyć sposób wykonywania realizacji kontrakt wywołania zwrotnego w aplikacji klienta przy użyciu <xref:System.ServiceModel.CallbackBehaviorAttribute> klasy. Ten atrybut pełni podobną funkcję wywołania zwrotnego klasy jako <xref:System.ServiceModel.ServiceBehaviorAttribute> klasy, z wyjątkiem wystąpień ustawienia zachowania i transakcji.  

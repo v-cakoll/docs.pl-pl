@@ -1,20 +1,19 @@
 ---
-title: "Tworzenie kompletnego rozwiązania .NET Core w systemie Windows, przy użyciu programu Visual Studio 2017 r."
-description: "Dowiedz się, jak tworzyć kompletne rozwiązanie .NET Core w Visual Studio 2017 w systemie Windows."
-keywords: .NET, .NET core
+title: Tworzenie kompletnego rozwiązania .NET Core w systemie Windows, przy użyciu programu Visual Studio 2017 r.
+description: Dowiedz się, jak tworzyć kompletne rozwiązanie .NET Core w Visual Studio 2017 w systemie Windows.
 author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
-ms.workload: dotnetcore
-ms.openlocfilehash: e922a2c91fab5c513f5c560920d37d77da2d6f84
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8e37eb578f9c4ac63fbc120e6227098ea69d169d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie Windows, przy użyciu programu Visual Studio 2017 r.
 
@@ -36,7 +35,7 @@ Postępuj zgodnie z instrukcjami [naszą stronę wymagania wstępne](../windows-
 
 4. Wybierz polecenie "nuget.org" jako **źródła pakietu**i wybierz polecenie **Przeglądaj** kartę. Przeglądaj w poszukiwaniu **Newtonsoft.Json**. Kliknij przycisk **zainstalować**i zaakceptuj umowę licencyjną. Pakiet powinien zostać wyświetlony w obszarze **zależności/NuGet** i automatycznie go przywrócić.
 
-5. Zmień nazwę `Class1.cs` pliku `Thing.cs`. Zaakceptuj zmiany nazwy klasy. Dodaj metodę:`public int Get(int number) => Newtonsoft.Json.JsonConvert.DeserializeObject<int>($"{number}");`
+5. Zmień nazwę `Class1.cs` pliku `Thing.cs`. Zaakceptuj zmiany nazwy klasy. Dodaj metodę: `public int Get(int number) => Newtonsoft.Json.JsonConvert.DeserializeObject<int>($"{number}");`
 
 7. Na **kompilacji** menu, wybierz **Kompiluj rozwiązanie**.
 

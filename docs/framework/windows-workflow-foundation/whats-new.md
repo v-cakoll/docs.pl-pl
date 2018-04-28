@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Co&#39;s nowe w programie Windows Workflow Foundation
 Windows Workflow Foundation (WF) w [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zmienia kilka wzorcami programowanie z poprzednich wersji. Przepływy pracy są teraz łatwiejsze do tworzenia, zostanie wykonane, obsługi i wdrożenie hosta funkcji. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrowanie .NET 3.0 i .NET 3.5 przepływu pracy aplikacji do korzystania z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) w [!INCLUDE[netfx40_long](../../../includes/net
 -   Nowych działań dotyczących komunikatów takich jak <xref:System.ServiceModel.Activities.SendContent> i <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Jawne działania modelu danych  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] zawiera nowe opcje przechowywania lub przenoszenia danych. Dane mogą być przechowywane w działania przy użyciu <xref:System.Activities.Variable>. Podczas przenoszenia danych do i z działania, typy argumentów specjalne są używane do określenia porusza się dane, które kierunku. Te typy są <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>, i <xref:System.Activities.OutArgument>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Systemu Windows Workflow Foundation danych modelu](../../../docs/framework/windows-workflow-foundation/data-model.md).  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] zawiera nowe opcje przechowywania lub przenoszenia danych. Dane mogą być przechowywane w działania przy użyciu <xref:System.Activities.Variable>. Podczas przenoszenia danych do i z działania, typy argumentów specjalne są używane do określenia porusza się dane, które kierunku. Te typy są <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>, i <xref:System.Activities.OutArgument>. Aby uzyskać więcej informacji, zobacz [systemu Windows Workflow Foundation danych modelu](../../../docs/framework/windows-workflow-foundation/data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Ulepszone Hosting trwałości, opcje i śledzenia  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] zawiera ulepszenia trwałości, takie jak następujące:  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) w [!INCLUDE[netfx40_long](../../../includes/net
 -   Wznawianie działania oczekującej przepływu pracy jest teraz zarządzane za pomocą <xref:System.Activities.Bookmark> obiektu.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Łatwiejsze możliwości rozszerzania projektanta WF środowisko  
- Nowy Designer WF jest oparty na systemie Windows Presentation Foundation (WPF) i udostępnia model łatwiejsze do użycia podczas rehosting projektanta WF poza Visual Studio i udostępnia także mechanizmy łatwiejsze do tworzenia projektantów działań niestandardowych. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Dostosowywanie projektu przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Nowy Designer WF jest oparty na systemie Windows Presentation Foundation (WPF) i udostępnia model łatwiejsze do użycia podczas rehosting projektanta WF poza Visual Studio i udostępnia także mechanizmy łatwiejsze do tworzenia projektantów działań niestandardowych. Aby uzyskać więcej informacji, zobacz [Dostosowywanie projektu przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

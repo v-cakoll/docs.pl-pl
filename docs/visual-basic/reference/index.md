@@ -12,11 +12,11 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 15d71f039223b464a3b5affb9ba7b37886b93200
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="reference-visual-basic"></a>Odwołanie (Visual Basic)
 Ta sekcja zawiera linki do informacji o różnych aspektach programowania w języku Visual Basic.  
@@ -43,10 +43,10 @@ Ta sekcja zawiera linki do informacji o różnych aspektach programowania w jęz
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Ogólne elementy interfejsu użytkownika (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Zawiera tematy dotyczące okien dialogowych i systemu windows używane w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Zawiera tematy dotyczące okien dialogowych i systemu windows używane w programie Visual Studio.  
   
  [Narzędzia XML w Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Łącza do tematów w różnych narzędzi XML [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Zawiera łącza do tematów w różnych narzędzi XML dostępne w programie Visual Studio.  
   
  [Automatyzacja i dokumentacja rozszerzalności](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- Zawiera łącza do tematów obejmujących automatyzacji i rozszerzalność w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], składników udostępnionego i specyficzny dla języka.
+ Zawiera łącza do tematów obejmujących automatyzacji i rozszerzenia programu Visual Studio dla składników udostępnionego i specyficzny dla języka.

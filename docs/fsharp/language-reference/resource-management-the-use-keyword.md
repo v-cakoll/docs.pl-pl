@@ -1,26 +1,23 @@
 ---
-title: "Zarządzanie zasobami: use — Słowo kluczowe (F#)"
-description: "Więcej informacji na temat języka F # — słowo kluczowe \"use\" i \"przy użyciu\" funkcji, która może kontrolować inicjowania i zwolnienia zasobów."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Zarządzanie zasobami: use — Słowo kluczowe (F#)'
+description: 'Więcej informacji na temat języka F # — słowo kluczowe "use" i "przy użyciu" funkcji, która może kontrolować inicjowania i zwolnienia zasobów.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>Zarządzanie zasobami: use — Słowo kluczowe
 
 W tym temacie opisano kluczowego `use` i `using` funkcji, która może kontrolować inicjowania i zwolnienia zasobów.
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>Zasoby
 Termin *zasobów* są używane w więcej niż jeden sposób. Tak, zasoby mogą być danych przy użyciu aplikacji, takich jak ciągów, grafiki i podobne, ale w tym kontekście *zasobów* odwołuje się do zasobów oprogramowania lub systemu operacyjnego, takie jak konteksty urządzenia grafiki, dojścia do plików w sieci i bazy danych połączenia, współbieżności obiekty, takie jak uchwyty oczekiwania i tak dalej. Korzystanie z tych zasobów przez aplikacje obejmuje nabywania zasobów z system operacyjny lub inne dostawcy zasobów, a następnie w nowszej wersji zasobu do puli, dzięki czemu może zostać dostarczona do innej aplikacji. Problemy występują, jeśli aplikacje nie zwalnia wspólnej puli zasobów.
 
 ## <a name="managing-resources"></a>Zarządzanie zasobami
@@ -44,7 +41,7 @@ Można użyć `use` w wyrażeniach obliczeń, w którym to przypadku dostosowan�
 ## <a name="using-function"></a>przy użyciu funkcji
 `using` Funkcja ma następujący format:
 
-`using`(*wyrażenie1*) *funkcji lub lambda*
+`using` (*wyrażenie1*) *funkcji lub lambda*
 
 W `using` wyrażenie *wyrażenie1* tworzy obiekt, który musi zostać usunięty. Wynik *wyrażenie1* (obiekt, który musi zostać usunięty) staje się argument *wartość*, do *funkcji lub lambda*, która jest funkcja, która oczekuje pojedynczy pozostały argumentu typu, która jest zgodna z wartością utworzonego przez *wyrażenie1*, lub wyrażenie lambda, które oczekuje argumentu typu. Po zakończeniu wykonywania funkcji wymaga środowiska uruchomieniowego `Dispose` i zwalnia zasoby (chyba, że wartość jest `null`, w którym to przypadku nie jest wykonywane wywołanie metody Dispose).
 
@@ -64,4 +61,4 @@ Należy pamiętać, że funkcja może być funkcję, która zawiera niektóre ar
 
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)

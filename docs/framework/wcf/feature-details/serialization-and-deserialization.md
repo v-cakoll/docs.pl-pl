@@ -1,36 +1,38 @@
 ---
 title: Serializacja i deserializacja
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serializacja i deserializacja
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML w obu kierunkach. W tym temacie wyjaśniono, jak działa serializatora.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML w obu kierunkach. W tym temacie wyjaśniono, jak działa serializatora.  
   
  Podczas serializowania [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów, serializator zrozumienie różnych serializacji programowania modeli, w tym nowe *kontraktu danych* modelu. Aby uzyskać pełną listę obsługiwanych typów, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Aby obejrzeć wprowadzenie do kontraktów danych, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Podczas deserializacji XML, używa serializator <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> klasy. Obsługuje ona również <xref:System.Xml.XmlDictionaryReader> i <xref:System.Xml.XmlDictionaryWriter> klasy, aby włączyć go do produkcji zoptymalizowanych pod kątem XML w niektórych przypadkach, takich jak przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] binarny format XML.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zawiera również element serializujący Pomocnika <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Jest podobny do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializatorów ponieważ również emituje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wpisz nazwy w ramach danych serializacji. Jest używany, gdy te same typy są udostępniane na serializacja i deserializacja zakończenia. Zarówno <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer> pochodzi od wspólna klasa podstawowa <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera również element serializujący Pomocnika <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Jest podobny do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializatorów ponieważ również emituje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wpisz nazwy w ramach danych serializacji. Jest używany, gdy te same typy są udostępniane na serializacja i deserializacja zakończenia. Zarówno <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer> pochodzi od wspólna klasa podstawowa <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> Serializuje ciągi zawierające znaki kontrolne o wartości szesnastkowej poniżej 20 jako jednostki XML. Może to spowodować problem z klienta z systemem innym niż WCF podczas wysyłania tych danych do usługi WCF.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>Określanie znanych typów  
- Jeśli polimorfizm uczestniczy w typach serializowana, które nie jest już obsługiwana za pomocą <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybutu lub innych mechanizmu listę możliwych znane typy muszą być przekazywane do konstruktora serializatora za pomocą `knownTypes` parametru. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Jeśli polimorfizm uczestniczy w typach serializowana, które nie jest już obsługiwana za pomocą <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybutu lub innych mechanizmu listę możliwych znane typy muszą być przekazywane do konstruktora serializatora za pomocą `knownTypes` parametru. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  W poniższym przykładzie przedstawiono klasę, `LibraryPatron`, który zawiera kolekcję określonego typu `LibraryItem`. Definiuje klasę sekundę `LibraryItem` typu. Trzeci i cztery klasy (`Book` i `Newspaper`) dziedziczyć `LibraryItem` klasy.  
   
@@ -85,12 +87,12 @@ ms.lasthandoff: 12/22/2017
  Te wartości mogą być przekazywane jako parametry lub wystąpień <xref:System.Xml.XmlDictionaryString> klasy, aby umożliwić ich Optymalizacja za pomocą binarny format XML.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>Ustawienie limitu przydziału maksymalnej obiektów  
- Niektóre `DataContractSerializer` mają przeciążenia konstruktora `maxItemsInObjectGraph` parametru. Ten parametr określa maksymalną liczbę obiektów serializator serializuje i deserializuje w jednej <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> wywołania metody. (Metoda odczytuje zawsze jednego obiektu głównego, ale ten obiekt może mieć inne obiekty w jej elementów członkowskich danych. Te obiekty mogą mieć inne obiekty itd.) Wartość domyślna to 65536. Należy pamiętać, że podczas serializacji lub deserializacji tablic, każdy wpis tablicy jest traktowana jako oddzielny obiekt. Należy również zauważyć, że niektóre obiekty mogą ma reprezentacji w postaci dużej ilości pamięci, a więc tego samego przydziału nie może być wystarczające, aby zapobiec typu "odmowa usługi". [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Jeśli potrzebujesz zwiększyć ten przydział ponad wartość domyślną, należy to zrobić zarówno na wysyłanie (serializację) i odbieranie strony (deserializacji), ponieważ dotyczy zarówno podczas odczytywania i zapisywania danych.  
+ Niektóre `DataContractSerializer` mają przeciążenia konstruktora `maxItemsInObjectGraph` parametru. Ten parametr określa maksymalną liczbę obiektów serializator serializuje i deserializuje w jednej <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> wywołania metody. (Metoda odczytuje zawsze jednego obiektu głównego, ale ten obiekt może mieć inne obiekty w jej elementów członkowskich danych. Te obiekty mogą mieć inne obiekty itd.) Wartość domyślna to 65536. Należy pamiętać, że podczas serializacji lub deserializacji tablic, każdy wpis tablicy jest traktowana jako oddzielny obiekt. Należy również zauważyć, że niektóre obiekty mogą ma reprezentacji w postaci dużej ilości pamięci, a więc tego samego przydziału nie może być wystarczające, aby zapobiec typu "odmowa usługi". Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Jeśli potrzebujesz zwiększyć ten przydział ponad wartość domyślną, należy to zrobić zarówno na wysyłanie (serializację) i odbieranie strony (deserializacji), ponieważ dotyczy zarówno podczas odczytywania i zapisywania danych.  
   
 ### <a name="round-trips"></a>Rund  
  A *Rundy* występuje, gdy obiekt jest zdeserializować i ponownie zserializowane w jednej operacji. W związku z tym z pliku XML do wystąpienia obiektu i z powrotem ponownie umieszczanej w kodzie to strumień XML.  
   
- Niektóre `DataContractSerializer` mają przeciążenia konstruktora `ignoreExtensionDataObject` parametr, który ma ustawioną wartość `false` domyślnie. W tym trybie domyślne można wysyłać dane na podróż z nowszej wersji kontraktu danych za pomocą starszej wersji i z powrotem do nowszej wersji bez utraty, jak długo implementuje kontraktu danych <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Na przykład, załóżmy, że wersja 1 `Person` zawiera kontrakt danych `Name` i `PhoneNumber` elementów członkowskich danych i w wersji 2 dodaje `Nickname` elementu członkowskiego. Jeśli `IExtensibleDataObject` zaimplementowano podczas wysyłania informacji z wersji 2 do wersji 1, `Nickname` dane są przechowywane i następnie ponownie wysyłanego, gdy dane są serializowane ponownie; w związku z tym nie dane zostaną utracone w obiegu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) i [wersji kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Niektóre `DataContractSerializer` mają przeciążenia konstruktora `ignoreExtensionDataObject` parametr, który ma ustawioną wartość `false` domyślnie. W tym trybie domyślne można wysyłać dane na podróż z nowszej wersji kontraktu danych za pomocą starszej wersji i z powrotem do nowszej wersji bez utraty, jak długo implementuje kontraktu danych <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Na przykład, załóżmy, że wersja 1 `Person` zawiera kontrakt danych `Name` i `PhoneNumber` elementów członkowskich danych i w wersji 2 dodaje `Nickname` elementu członkowskiego. Jeśli `IExtensibleDataObject` zaimplementowano podczas wysyłania informacji z wersji 2 do wersji 1, `Nickname` dane są przechowywane i następnie ponownie wysyłanego, gdy dane są serializowane ponownie; w związku z tym nie dane zostaną utracone w obiegu. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) i [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Zabezpieczenia i problemy ważności schematu z wystąpień komunikacji dwustronnej  
  Rund może mieć wpływ na bezpieczeństwo. Na przykład podczas deserializacji i przechowywania dużych ilości danych nadmiarowe może stanowić zagrożenie bezpieczeństwa. Może być ponownie emitowanie te dane, że nie istnieje sposób, aby sprawdzić, zwłaszcza jeśli podpisy cyfrowe są związane z punktu widzenia bezpieczeństwa. Na przykład w poprzednim scenariuszu punkt końcowy w wersji 1 można podpisać `Nickname` wartość, która zawiera dane złośliwe. Ponadto może być zastrzeżenia co do poprawności schematu: punkt końcowy może być zawsze Emituj danych zgodną ściśle jej podane kontrakt i nie wszystkie dodatkowe wartości. W poprzednim przykładzie kontraktu punktu końcowego w wersji 1 mówi tylko emituje `Name` i `PhoneNumber`i jeśli sprawdzanie poprawności schematu jest używana, emitowanie nadmiarowe `Nickname` wartość powoduje niepowodzenie sprawdzania poprawności.  
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 >  Gdy `preserveObjectReferences` jest włączony tryb, jest szczególnie ważne, aby ustawić `maxItemsInObjectGraph` wartość przydziału poprawne. Ze względu na sposób tablice są obsługiwane w tym trybie jest łatwe osobie atakującej do skonstruowania małych niebezpieczną wiadomość, która powoduje zużycie pamięci dużych ograniczone tylko przez `maxItemsInObjectGraph` przydziału.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Określanie Surogat kontraktu danych  
- Niektóre `DataContractSerializer` mają przeciążenia konstruktora `dataContractSurrogate` parametr, który może być ustawiony na `null`. W przeciwnym razie go użyć do określenia *Surogat kontraktu danych*, który jest typem, który implementuje <xref:System.Runtime.Serialization.IDataContractSurrogate> interfejsu. Interfejs umożliwia następnie dostosować serializacji i deserializacji procesu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Surogatów kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
+ Niektóre `DataContractSerializer` mają przeciążenia konstruktora `dataContractSurrogate` parametr, który może być ustawiony na `null`. W przeciwnym razie go użyć do określenia *Surogat kontraktu danych*, który jest typem, który implementuje <xref:System.Runtime.Serialization.IDataContractSurrogate> interfejsu. Interfejs umożliwia następnie dostosować serializacji i deserializacji procesu. Aby uzyskać więcej informacji, zobacz [surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
 ## <a name="serialization"></a>Serializacja  
  Poniższe informacje dotyczą dowolnej klasy, która dziedziczy <xref:System.Runtime.Serialization.XmlObjectSerializer>, takie jak <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer> klasy.  
@@ -265,7 +267,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> i <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> metody są aliasami <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> i <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> metody. Istnieją one w celu zapewnienia bardziej spójny model programowania z pliku binarnego lub serializacji SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]te funkcje, zobacz [szeregowanie binarne](../../../../docs/standard/serialization/binary-serialization.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] te funkcje, zobacz [szeregowanie binarne](../../../../docs/standard/serialization/binary-serialization.md).  
   
  Formatów XML, który `NetDataContractSerializer` i `DataContractSerializer` użycia zazwyczaj nie są zgodne. Oznacza to, że próby serializacji jednego z tych serializatorów i deserializacji z innym nie jest obsługiwanym scenariuszem.  
   

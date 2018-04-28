@@ -1,20 +1,17 @@
 ---
-title: "Komórki odwołań (F#)"
-description: "Dowiedz się, jak F # odwołanie do komórki są lokalizacje magazynu, które umożliwiają tworzenie wartości modyfikowalne z semantykę odwołania."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Komórki odwołań (F#)
+description: 'Dowiedz się, jak F # odwołanie do komórki są lokalizacje magazynu, które umożliwiają tworzenie wartości modyfikowalne z semantykę odwołania.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 09a0b221-ea21-45c4-bae8-5e4a339750c4
-ms.openlocfilehash: c7470c9a36cf2cd24dd89ceffcf6e90c6dc4d2dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e017adb2a031dff996892e2bb6585fc95f644ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="reference-cells"></a>Komórki odwołań
 
@@ -58,11 +55,11 @@ W poniższej tabeli przedstawiono funkcje, które są dostępne w komórce odwo�
 
 |Operator, element członkowski lub pole|Opis|Typ|Definicja|
 |--------------------------|-----------|----|----------|
-|`!`(operatora anulowania odwołania do)|Zwraca podstawową wartość.|`'a ref -> 'a`|`let (!) r = r.contents`|
-|`:=`(operator przypisania)|Zmienia podstawową wartość.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`(operator)|Hermetyzuje wartość do nowej komórki odwołania.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value`(właściwości)|Pobiera lub ustawia podstawową wartość.|`unit -> 'a`|`member x.Value = x.contents`|
-|`contents`(pola rekordu)|Pobiera lub ustawia podstawową wartość.|`'a`|`let ref x = { contents = x }`|
+|`!` (operatora anulowania odwołania do)|Zwraca podstawową wartość.|`'a ref -> 'a`|`let (!) r = r.contents`|
+|`:=` (operator przypisania)|Zmienia podstawową wartość.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
+|`ref` (operator)|Hermetyzuje wartość do nowej komórki odwołania.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value` (właściwości)|Pobiera lub ustawia podstawową wartość.|`unit -> 'a`|`member x.Value = x.contents`|
+|`contents` (pola rekordu)|Pobiera lub ustawia podstawową wartość.|`'a`|`let ref x = { contents = x }`|
 Istnieje kilka sposobów dostępu do podstawowej wartości. Wartość zwracana przez dereference operator (`!`) nie jest możliwa do przypisania wartości. W związku z tym jeśli modyfikujesz odpowiednia wartość, należy użyć operatora przypisania (`:=`) zamiast tego.
 
 Zarówno `Value` właściwości i `contents` pola są można przypisać wartości. W związku z tym można za ich pomocą uzyskać dostęp do podstawowej wartości albo ją zmienić, jak pokazano w poniższym kodzie.
@@ -135,8 +132,8 @@ let f (x: byref<int>) = &x
 Obecnie nie istnieje sposób do generowania `ref` zwracany w języku F #, który może być używana w języku C#.
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Parametry i argumenty](parameters-and-arguments.md)
 
-[Operator odwołanie do symbolu i](symbol-and-operator-reference/index.md)
+[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)

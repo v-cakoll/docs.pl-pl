@@ -1,33 +1,35 @@
 ---
-title: "Zagadnienia dotyczące zabezpieczeń obejmujące metadane"
-ms.custom: 
+title: Zagadnienia dotyczące zabezpieczeń obejmujące metadane
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Zagadnienia dotyczące zabezpieczeń obejmujące metadane
 Jeśli przy użyciu metadanych funkcji w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], należy wziąć pod uwagę ryzyko związane z publikowania, pobieranie i przy użyciu usługi metadanych.  
   
 ## <a name="when-to-publish-metadata"></a>Podczas publikowania metadanych  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usługi nie Publikowanie metadanych domyślnie. Publikowanie metadanych dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, musisz jawnie włączyć publikowanie metadanych przez dodanie punkty końcowe metadanych z usługą (zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Pozostawienie Publikowanie metadanych wyłączone zmniejsza możliwości ataku usługi i zmniejsza ryzyko ujawnienia informacji przypadkowe. Nie wszystkie usługi należy opublikować metadanych. Jeśli nie masz Publikowanie metadanych, należy wziąć pod uwagę pozostawić go wyłączyć. Należy pamiętać, że istnieje możliwość wygenerowania kodu metadanych i klient nadal bezpośrednio z z zestawów usługi przy użyciu [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]przy użyciu Svcutil.exe, aby wyeksportować metadane, zobacz [porady: użycie Svcutil.exe Eksportowanie metadanych ze skompilowanego kodu usługi](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi nie Publikowanie metadanych domyślnie. Publikowanie metadanych dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, musisz jawnie włączyć publikowanie metadanych przez dodanie punkty końcowe metadanych z usługą (zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Pozostawienie Publikowanie metadanych wyłączone zmniejsza możliwości ataku usługi i zmniejsza ryzyko ujawnienia informacji przypadkowe. Nie wszystkie usługi należy opublikować metadanych. Jeśli nie masz Publikowanie metadanych, należy wziąć pod uwagę pozostawić go wyłączyć. Należy pamiętać, że istnieje możliwość wygenerowania kodu metadanych i klient nadal bezpośrednio z z zestawów usługi przy użyciu [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] przy użyciu Svcutil.exe, aby wyeksportować metadane, zobacz [porady: użycie Svcutil.exe Eksportowanie metadanych ze skompilowanego kodu usługi](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Publikowanie metadanych za pomocą bezpiecznego powiązania  
- Powiązania metadanych domyślne który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia nie zabezpieczyć i zezwalają na dostęp anonimowy do metadanych. Metadane usługi który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi zawiera szczegółowy opis dotyczących usługi i mogą celowo lub przypadkowo zawierać informacje poufne. Na przykład metadane usługi mogą zawierać informacje o operacjach infrastruktury, która nie ma to być publicznie emisji. Aby chronić metadanych usługi przed nieautoryzowanym dostępem, można użyć bezpiecznego powiązania dla punktu końcowego metadanych. Punkty końcowe metadanych odpowiadać na żądania HTTP/GET, które umożliwiają Secure Sockets Layer (SSL) do zabezpieczania metadanych. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: bezpieczne punkty końcowe metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Powiązania metadanych domyślne który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia nie zabezpieczyć i zezwalają na dostęp anonimowy do metadanych. Metadane usługi który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi zawiera szczegółowy opis dotyczących usługi i mogą celowo lub przypadkowo zawierać informacje poufne. Na przykład metadane usługi mogą zawierać informacje o operacjach infrastruktury, która nie ma to być publicznie emisji. Aby chronić metadanych usługi przed nieautoryzowanym dostępem, można użyć bezpiecznego powiązania dla punktu końcowego metadanych. Punkty końcowe metadanych odpowiadać na żądania HTTP/GET, które umożliwiają Secure Sockets Layer (SSL) do zabezpieczania metadanych. Aby uzyskać więcej informacji, zobacz [porady: Zabezpieczanie punktów końcowych metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  Zabezpieczanie punktów końcowych metadanych także sposób dla jednostek żądających bezpieczne pobieranie metadanych usługi bez ryzyka naruszeniu lub fałszowania.  
   

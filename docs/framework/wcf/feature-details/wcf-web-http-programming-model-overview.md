@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: ''
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Model programowania protokołu HTTP sieci WEB udostępnia podstawowe elementy wymagane do tworzenia usług HTTP w sieci WEB za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Usługi sieci WEB HTTP można uzyskać dostęp przez szeroki zakres możliwości klientów, w tym przeglądarki sieci Web i ma następujące wymagania:  
@@ -33,13 +33,13 @@ ms.lasthandoff: 03/26/2018
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania protokołu HTTP sieci WEB rozszerza zasięg [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do stylu sieci Web obejmują scenariusze, w które obejmują usług HTTP sieci WEB, usług AJAX i JSON i źródła zespolonym (ATOM/RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Usługi interfejsu AJAX i JSON, zobacz [integracji AJAX i obsługi JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Syndykacja, zobacz [omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Nie ma żadnych dodatkowych ograniczeń typów danych, które mogą być zwrócone z usługi sieci WEB HTTP. Dowolny typ możliwy do serializacji mogą być zwracane z operacji usługi sieci WEB HTTP. Ponieważ operacje usługi sieci WEB HTTP można wywołać przez przeglądarkę sieci web, który istnieje ograniczenie na temat danych, można określić typy w adresie URL. Aby uzyskać więcej informacji o tym, jakie typy są obsługiwane domyślnie zobacz **adresy URL i parametrów ciągu zapytania elementu UriTemplate** poniższej sekcji. Domyślne zachowanie można zmienić, podając własne implementacji T:System.ServiceModel.Dispatcher.QueryStringConverter, który określa sposób konwertowania określone w adresie URL do typu rzeczywistego parametru parametry. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ Nie ma żadnych dodatkowych ograniczeń typów danych, które mogą być zwrócone z usługi sieci WEB HTTP. Dowolny typ możliwy do serializacji mogą być zwracane z operacji usługi sieci WEB HTTP. Ponieważ operacje usługi sieci WEB HTTP można wywołać przez przeglądarkę sieci web, który istnieje ograniczenie na temat danych, można określić typy w adresie URL. Aby uzyskać więcej informacji o tym, jakie typy są obsługiwane domyślnie zobacz **adresy URL i parametrów ciągu zapytania elementu UriTemplate** poniższej sekcji. Domyślne zachowanie można zmienić, podając własne implementacji T:System.ServiceModel.Dispatcher.QueryStringConverter, który określa sposób konwertowania określone w adresie URL do typu rzeczywistego parametru parametry. Aby uzyskać więcej informacji zobacz <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  Napisany za pomocą usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania protokołu HTTP sieci WEB nie należy używać protokołu SOAP wiadomości. Ponieważ protokołu SOAP nie są używane, zabezpieczenia udostępniane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie można użyć. Można jednak używać zabezpieczenia na poziomie transportu, udostępniając usługi z protokołu HTTPS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia, zobacz [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  Instalowanie usług IIS rozszerzenie WebDAV może spowodować usług HTTP sieci Web zwraca błąd HTTP 405 jako WebDAV rozszerzenia próbuje obsługuje wszystkie żądania PUT. Aby obejść ten problem, można odinstalować rozszerzenie WebDAV lub wyłączyć rozszerzenie WebDAV dla witryny sieci web. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Usługi IIS i WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  Instalowanie usług IIS rozszerzenie WebDAV może spowodować usług HTTP sieci Web zwraca błąd HTTP 405 jako WebDAV rozszerzenia próbuje obsługuje wszystkie żądania PUT. Aby obejść ten problem, można odinstalować rozszerzenie WebDAV lub wyłączyć rozszerzenie WebDAV dla witryny sieci web. Aby uzyskać więcej informacji, zobacz [usług IIS i WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>Identyfikator URI przetwarzania za pomocą klasy UriTemplate i UriTemplateTable  
  Identyfikator URI Szablony stanowią wydajne składni wyrażenia dużych zestawów strukturę podobną identyfikatorów URI. Na przykład następujący szablon wyraża zestaw identyfikatorów URI wszystkie trzy segmentu zaczynać się od ciągu "" i kończyć się "c" niezależnie wartość segmentu pośredniego: / {segment} /c  

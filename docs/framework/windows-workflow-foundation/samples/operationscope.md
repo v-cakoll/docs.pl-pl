@@ -1,32 +1,33 @@
 ---
 title: OperationScope
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3bf92d7a726a53c5d625f31b0386e11c941cdde9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operationscope"></a>OperationScope
 W przykładzie pokazano sposób działania, do obsługi komunikatów <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> można użyć do udostępnienia istniejących działań niestandardowych jako operacji w usłudze przepływu pracy. Ten przykład zawiera nowe niestandardowe działanie o nazwie `OperationScope`. Jest on przeznaczony do jej obsługi ułatwiają tworzenie usługi przepływu pracy zezwolenie użytkownikom na tworzenie treści prace oddzielnie jako działań niestandardowych, a następnie łatwe udostępnianie je jako operacje usługi przy użyciu `OperationScope` działania. Na przykład niestandardowy `Add` działania, która przyjmuje dwa `in` argumentów i zwraca jedną `out` argument może być udostępniany jako `Add` operacji w usłudze przepływu pracy, przeciągając go do `OperationScope`.  
   
  Zakres działa sprawdzając działania w jego treści. Wszelkie niepowiązane `in` argumenty są uważane za dane wejściowe z komunikatu przychodzącego. Wszystkie `out` argumentów, niezależnie od tego, czy są powiązane są uważane za dane wyjściowe w kolejnych odpowiedzi. Nazwa operacji narażonych jest pobierana z nazwę wyświetlaną `OperationScope` działania. W rezultacie jest, że działanie treści jest ujęte w <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> z parametrami z wiadomości powiązany z argumentów działania.  
   
- Ten przykład przedstawia usługi przepływu pracy przy użyciu punktów końcowych HTTP. Do uruchomienia, muszą zostać dodane odpowiednie listy ACL adresu URL. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Konfigurowanie protokołów HTTP i HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Wykonując następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień dodaje odpowiednich list ACL (Upewnij się, że Twoje domena i nazwa użytkownika są zastępowane dla domeny %\\% UserName %).  
+ Ten przykład przedstawia usługi przepływu pracy przy użyciu punktów końcowych HTTP. Do uruchomienia, muszą zostać dodane odpowiednie listy ACL adresu URL. Aby uzyskać więcej informacji, zobacz [Konfigurowanie protokołów HTTP i HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Wykonując następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień dodaje odpowiednich list ACL (Upewnij się, że Twoje domena i nazwa użytkownika są zastępowane dla domeny %\\% UserName %).  
   
- **netsh http Dodaj adres url urlacl = http: / / +: 8000 / użytkownika domeny % =\\% UserName %**  
+ **netsh http Dodaj adres url urlacl =http://+:8000/ użytkownika domeny % =\\% UserName %**  
   
 ### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
   

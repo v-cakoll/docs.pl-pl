@@ -1,0 +1,11 @@
+### <a name="blockingcollectionlttgttrytakefromany-does-not-throw-anymore"></a>Kolekcji BlockingCollection&lt;T&gt;. TryTakeFromAny nie zgłasza już
+
+|   |   |
+|---|---|
+|Szczegóły|Jeśli jedna z kolekcji wejściowy jest oznaczona Ukończono <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)> już zwraca -1 i <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)> już zgłasza wyjątek. Ta zmiana umożliwia pracę z wykorzystaniem kolekcji, kiedy jedna z kolekcji jest pusta lub ukończona, ale inna kolekcja ma elementy, które mogą zostać pobrane.|
+|Sugestia|Jeśli TryTakeFromAny zwraca -1 lub TakeFromAny zgłaszanie zostały użyte do celów przepływu sterowania w przypadku blokowania kolekcji kończone, teraz można zmienić takie kodu do użycia <code>.Any(b =&gt; b.IsCompleted)</code> wykryć tego warunku.|
+|Zakres|Pomocnicza|
+|Wersja|4.5|
+|Typ|Środowisko uruchomieniowe|
+|Dotyczy interfejsów API|<ul><li><xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.TimeSpan)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.TimeSpan)?displayProperty=nameWithType></li></ul>|
+

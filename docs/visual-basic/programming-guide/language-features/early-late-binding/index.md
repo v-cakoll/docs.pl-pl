@@ -23,11 +23,11 @@ ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10ecc965fb6d728454b3af33a6e93b2d7dbc327d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: fa63a250ce6bdf4a8a34d9f1c0284a9d04e75f38
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Wczesne i późne powiązania (Visual Basic)
 Kompilator Visual Basic wykonuje w procesie nazywanym `binding` gdy obiekt jest przypisany do zmiennej obiektu. Obiekt *z wczesnym wiązaniem* zadeklarowany gdy jest przypisany do zmiennej typu określonego obiektu. Wczesne obiektów powiązanych Zezwalaj kompilatora można przydzielić pamięci i wykonywać inne optymalizacje przed wykonaniem aplikacji. Na przykład poniższy fragment kodu deklaruje zmienną typu <xref:System.IO.FileStream>:  
@@ -41,7 +41,7 @@ Kompilator Visual Basic wykonuje w procesie nazywanym `binding` gdy obiekt jest 
  [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_2.vb)]  
   
 ## <a name="advantages-of-early-binding"></a>Zalety wczesne powiązania  
- Obiekty z wczesnym wiązaniem, jeśli to możliwe, należy użyć, ponieważ umożliwiają one kompilator w celu optymalizacji ważne, które zwracają większą wydajność aplikacji. Z wczesnym wiązaniem obiekty są znacznie szybsze niż obiekty z późnym wiązaniem i upewnij kodu łatwiej odczytywać i obsługa poprzez podanie dokładnie jakiego rodzaju obiektów są używane. Inną zaletą do wczesnego wiązania jest przydatne funkcje, takie jak uzupełnianie kodu automatyczne i Pomoc dynamiczna ponieważ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE) można określić dokładnie typ obiektu pracujesz w trakcie edycji Kod. Wczesne powiązania ogranicza liczbę i ważność błędów czasu wykonywania, ponieważ umożliwia kompilatorowi przesłania raportów o błędach, gdy program ma być kompilowana.  
+ Obiekty z wczesnym wiązaniem, jeśli to możliwe, należy użyć, ponieważ umożliwiają one kompilator w celu optymalizacji ważne, które zwracają większą wydajność aplikacji. Z wczesnym wiązaniem obiekty są znacznie szybsze niż obiekty z późnym wiązaniem i upewnij kodu łatwiej odczytywać i obsługa poprzez podanie dokładnie jakiego rodzaju obiektów są używane. Inną zaletą do wczesnego wiązania jest przydatne funkcje, takie jak uzupełnianie kodu automatyczne i Pomoc dynamiczna ponieważ Visual Studio zintegrowane środowisko programistyczne (IDE) można określić dokładnie typ obiektu pracujesz w trakcie edycji Kod. Wczesne powiązania ogranicza liczbę i ważność błędów czasu wykonywania, ponieważ umożliwia kompilatorowi przesłania raportów o błędach, gdy program ma być kompilowana.  
   
 > [!NOTE]
 >  Późne wiązanie tylko umożliwia dostęp do elementów członkowskich typu, które są zadeklarowane jako `Public`. Uzyskiwanie dostępu do elementów członkowskich zadeklarowany jako `Friend` lub `Protected Friend` powoduje błąd w czasie wykonywania.  

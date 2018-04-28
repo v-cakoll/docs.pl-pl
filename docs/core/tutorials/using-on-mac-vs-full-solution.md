@@ -1,21 +1,19 @@
 ---
 title: Kompilowanie kompletnego rozwiązania .NET Core na macOS przy użyciu programu Visual Studio dla komputerów Mac
 description: W tym temacie przedstawiono tworzenie rozwiązania .NET Core biblioteki do ponownego wykorzystania i testowania jednostek.
-keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6d8f89af14167e57b7f1b3b1d6ddce5cae8f6446
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 01b73fb3ec815440aaf6225f6e7c2894db3d24f2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Kompilowanie kompletnego rozwiązania .NET Core na macOS przy użyciu programu Visual Studio dla komputerów Mac
 
@@ -32,7 +30,7 @@ Ten samouczek pokazuje, jak utworzyć aplikację, która akceptuje word wyszukiw
 
 - Biblioteki OpenSSL (jeśli jest uruchomiony program .NET Core 1.1): zobacz [wymagania wstępne dotyczące .NET Core w systemie Mac](../macos-prerequisites.md) tematu.
 - [Oprogramowanie .NET core SDK 1.1 lub nowszej](https://www.microsoft.com/net/core#macos)
-- [Visual Studio 2017 for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 dla komputerów Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
 Aby uzyskać więcej informacji dotyczących wymagań wstępnych, zobacz [wymagania wstępne dotyczące .NET Core w systemie Mac](../../core/macos-prerequisites.md). Aby uzyskać pełne wymagania systemowe programu Visual Studio 2017 dla komputerów Mac, zobacz [programu Visual Studio 2017 wymagania systemowe rodziny produktów Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 

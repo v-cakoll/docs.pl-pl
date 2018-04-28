@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] to platforma do tworzenia aplikacji korzystających z usług. Przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], możesz wysłać dane jako asynchroniczne komunikaty z punktu końcowego jednej usługi do innego. Punkt końcowy usługi mogą być częścią stale dostępna usługa hostowana przez usługi IIS, lub można ją z usługą hostowaną w aplikacji. Punkt końcowy może być klienta usługi, która wysyła żądanie danych z punktu końcowego usługi. Komunikaty może być tak proste, jak pojedynczy znak lub słowo wysyłane w formacie XML lub złożonym, strumień danych binarnych. Kilka przykładowych scenariuszy obejmują:  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
  Podczas tworzenia takich aplikacji było możliwe przed istnienie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ułatwia programowanie punktów końcowych niż kiedykolwiek wcześniej. Podsumowując [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferuje proste w zarządzaniu podejście do tworzenia usług sieci Web i klientami usługi sieci Web.  
   
 ## <a name="features-of-wcf"></a>Funkcje programu WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera następujący zestaw funkcji. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera następujący zestaw funkcji. Aby uzyskać więcej informacji, zobacz [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Orientacji usługi**  
   
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/27/2018
   
 -   **Metadane usługi**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Obsługa publikowania metadanych usługi formatu określonego w standardy branżowe, takie jak WSDL, schemat XML i WS-Policy. Te metadane, można automatycznie wygenerować i skonfigurować klientów do uzyskiwania dostępu do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług. Metadane mogą być publikowane za pośrednictwem protokołu HTTP i HTTPS lub przy użyciu standardu wymiany metadanych usługi sieci Web. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadane](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Obsługa publikowania metadanych usługi formatu określonego w standardy branżowe, takie jak WSDL, schemat XML i WS-Policy. Te metadane, można automatycznie wygenerować i skonfigurować klientów do uzyskiwania dostępu do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług. Metadane mogą być publikowane za pośrednictwem protokołu HTTP i HTTPS lub przy użyciu standardu wymiany metadanych usługi sieci Web. Aby uzyskać więcej informacji, zobacz [metadanych](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Kontrakty danych**  
   
-     Ponieważ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest utworzony przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], zawiera także kod przyjaznego metod podawania kontrakty mają zostać wymuszone. Jeden z uniwersalnych typów kontraktów jest kontraktu danych. W zasadzie jak kodu usługi za pomocą Visual C# lub Visual Basic, najprostszym sposobem obsługi danych jest przez utworzenie klas reprezentujących jednostki danych z właściwościami, które należą do obiektu danych. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Zawiera kompleksowe system do pracy z danymi w ten sposób łatwe. Po utworzeniu klasy, które przedstawiają dane z usługą automatycznie generuje metadanych, które umożliwia klientom są zgodne z typami danych, które zostały zaprojektowane. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Używanie kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Ponieważ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest utworzony przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], zawiera także kod przyjaznego metod podawania kontrakty mają zostać wymuszone. Jeden z uniwersalnych typów kontraktów jest kontraktu danych. W zasadzie jak kodu usługi za pomocą Visual C# lub Visual Basic, najprostszym sposobem obsługi danych jest przez utworzenie klas reprezentujących jednostki danych z właściwościami, które należą do obiektu danych. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Zawiera kompleksowe system do pracy z danymi w ten sposób łatwe. Po utworzeniu klasy, które przedstawiają dane z usługą automatycznie generuje metadanych, które umożliwia klientom są zgodne z typami danych, które zostały zaprojektowane. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Zabezpieczenia**  
   
-     Komunikaty mogą być szyfrowane, aby chronić prywatność i można wymagać od użytkowników uwierzytelnić się przed uzyskaniem dostępu do odbierania wiadomości. Za pomocą dobrze znanych standardy, takie jak protokół SSL lub WS-SecureConversation można zaimplementować zabezpieczeń. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md).  
+     Komunikaty mogą być szyfrowane, aby chronić prywatność i można wymagać od użytkowników uwierzytelnić się przed uzyskaniem dostępu do odbierania wiadomości. Za pomocą dobrze znanych standardy, takie jak protokół SSL lub WS-SecureConversation można zaimplementować zabezpieczeń. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../../../docs/framework/wcf/feature-details/security.md).  
   
 -   **Wiele transport i kodowanie**  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/27/2018
   
 -   **Trwałe wiadomości**  
   
-     Trwałe komunikatu to taki, który nigdy nie zostaną utracone z powodu przerw w działaniu w komunikacie. Wiadomości we wzorcu komunikatów trwałe zawsze są zapisywane w bazie danych. W przypadku zakłóceń bazy danych umożliwia wznowienie wymiany wiadomości po przywróceniu połączenia. Można również utworzyć trwałe wiadomości przy użyciu systemu Windows Workflow Foundation (WF). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Usługi przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Trwałe komunikatu to taki, który nigdy nie zostaną utracone z powodu przerw w działaniu w komunikacie. Wiadomości we wzorcu komunikatów trwałe zawsze są zapisywane w bazie danych. W przypadku zakłóceń bazy danych umożliwia wznowienie wymiany wiadomości po przywróceniu połączenia. Można również utworzyć trwałe wiadomości przy użyciu systemu Windows Workflow Foundation (WF). Aby uzyskać więcej informacji, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transakcje**  
   

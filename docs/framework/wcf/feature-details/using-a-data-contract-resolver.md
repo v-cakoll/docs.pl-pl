@@ -1,27 +1,29 @@
 ---
-title: "Używanie mechanizmu rozpoznawania kontraktów danych"
-ms.custom: 
+title: Używanie mechanizmu rozpoznawania kontraktów danych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Używanie mechanizmu rozpoznawania kontraktów danych
-Mechanizmu rozpoznawania kontraktów danych umożliwia konfigurowanie znane typy dynamicznie. Znane typy są wymagane w przypadku serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać wszystkie możliwe typy operacji może pojawić się podczas wykonania operacji. Brak scenariuszy, w których nie dotyczy ważne jest możliwość dynamicznie Określ znanych typów.  
+Mechanizmu rozpoznawania kontraktów danych umożliwia konfigurowanie znane typy dynamicznie. Znane typy są wymagane w przypadku serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać wszystkie możliwe typy operacji może pojawić się podczas wykonania operacji. Brak scenariuszy, w których nie dotyczy ważne jest możliwość dynamicznie Określ znanych typów.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Tworzenie mechanizmu rozpoznawania kontraktów danych  
  Tworzenie mechanizmu rozpoznawania kontraktów danych wymaga wykonania dwóch metod <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> i <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Te dwie metody wdrożenia wywołania zwrotne, które są używane podczas serializacji i deserializacji, odpowiednio. <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> Metoda jest wywoływana podczas serializacji i pobiera typu kontraktu danych i go do mapy `xsi:type` nazwę i przestrzeń nazw. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> Metoda jest wywoływana podczas deserializacji i przyjmuje `xsi:type` nazwę i przestrzeń nazw i jest rozpoznawany jako typ kontraktu danych. Obie te metody mają `knownTypeResolver` parametr, który może służyć do korzysta z domyślnego znany typ programu rozpoznawania nazw w implementacji.  
@@ -96,7 +98,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Mechanizmu rozpoznawania kontraktów danych można określić deklaratywnie zaimplementowanie atrybut, który może odnosić się do usługi.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) próbki. W tym przykładzie implementuje atrybutu o nazwie "KnownAssembly" dodaje program rozpoznawania nazw kontraktu danych niestandardowych do zachowania usługi.  
+ Mechanizmu rozpoznawania kontraktów danych można określić deklaratywnie zaimplementowanie atrybut, który może odnosić się do usługi.  Aby uzyskać więcej informacji, zobacz [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) próbki. W tym przykładzie implementuje atrybutu o nazwie "KnownAssembly" dodaje program rozpoznawania nazw kontraktu danych niestandardowych do zachowania usługi.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Znane typy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  

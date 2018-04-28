@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: df596093333aa35b89f8d7ed36f817a457e48fda
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Zagadnienia dotyczące LINQ (usługi danych WCF)
 Ten temat zawiera informacje o sposobie, w których LINQ składa się i wykonywać, gdy używasz zapytania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta i ograniczenia dotyczące korzystania z LINQ do badania Usługa danych, która implementuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie i wykonywanie zapytań dotyczących [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie danych usługi, zobacz [zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -36,7 +36,7 @@ Ten temat zawiera informacje o sposobie, w których LINQ składa się i wykonywa
  LINQ umożliwia tworzenia zapytań dotyczących kolekcji obiektów, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Zarówno **Dodaj odwołanie do usługi** okno dialogowe w programie Visual Studio i narzędzi DataSvcUtil.exe są używane do generowania reprezentację [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi jako klasy kontenera jednostka, która dziedziczy <xref:System.Data.Services.Client.DataServiceContext>, a także obiekty, które reprezentują zwróconych w źródłach. Narzędzia te również generować właściwości klasy kontenera jednostki dla kolekcji, które są dostępne jako źródła danych przez usługę. Każdej z tych właściwości klasy, która hermetyzuje usługę danych zwracany <xref:System.Data.Services.Client.DataServiceQuery%601>. Ponieważ <xref:System.Data.Services.Client.DataServiceQuery%601> klasa implementuje <xref:System.Linq.IQueryable%601> interfejs zdefiniowany przez składnik LINQ, można utworzyć zapytania LINQ względem źródła danych udostępnianych przez usługę danych, które przetłumaczyć przez bibliotekę klienta żądania identyfikator URI, który jest przesyłany do usługi danych wykonanie.  
   
 > [!IMPORTANT]
->  Zestaw kwerendy można wyrazić w składni LINQ jest szerszy niż włączone w składni identyfikatora URI, który jest używany przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usług danych. A <xref:System.NotSupportedException> jest wywoływane, gdy nie można zamapować zapytania do identyfikatora URI w usłudze danych docelowych. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [nieobsługiwanej metody LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) w tym temacie.  
+>  Zestaw kwerendy można wyrazić w składni LINQ jest szerszy niż włączone w składni identyfikatora URI, który jest używany przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usług danych. A <xref:System.NotSupportedException> jest wywoływane, gdy nie można zamapować zapytania do identyfikatora URI w usłudze danych docelowych. Aby uzyskać więcej informacji, zobacz [nieobsługiwanej metody LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) w tym temacie.  
   
  Poniższy przykład jest zapytań LINQ, która zwraca `Orders` koszt transport, ponad 30 $ i sortujące wyniki według daty wysyłki, począwszy od najnowszej daty:  
   

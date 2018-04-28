@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)
-Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wykonywalnego do wiersza polecenia, znanej także jako polecenia systemu MS-DOS. Jeśli kompilacja z domyślnego wiersza polecenia systemu Windows, należy wpisać w pełni kwalifikowana ścieżka do pliku wykonywalnego. Aby zmienić to zachowanie domyślne, można użyć [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] wiersz polecenia lub zmodyfikować zmiennej środowiskowej PATH. Umożliwiają zarówno skompilować z dowolnego katalogu, wpisując nazwę kompilatora.  
+Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wykonywalnego do wiersza polecenia, znanej także jako polecenia systemu MS-DOS. Jeśli kompilacja z domyślnego wiersza polecenia systemu Windows, należy wpisać w pełni kwalifikowana ścieżka do pliku wykonywalnego. Aby zmienić to zachowanie domyślne, możesz Użyj wiersz polecenia programu Visual Studio lub zmodyfikuj zmiennej środowiskowej PATH. Umożliwiają zarówno skompilować z dowolnego katalogu, wpisując nazwę kompilatora.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wyko
   
 1.  Otwórz folder programu Visual Studio Tools w obrębie grupy programu Microsoft Visual Studio.  
   
-2.  Można użyć [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] wiersza polecenia, aby uzyskać dostęp do kompilatora z dowolnego katalogu na komputerze, jeśli jest zainstalowany program Visual Studio.  
+2.  Wiersz polecenia programu Visual Studio służy do uzyskania dostępu przez kompilator z dowolnego katalogu na komputerze, po zainstalowaniu programu Visual Studio.  
   
-3.  Wywołanie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] wiersza polecenia.  
+3.  Należy wywołać wiersz polecenia programu Visual Studio.  
   
 4.  W wierszu polecenia wpisz `vbc.exe` *sourceFileName* , a następnie naciśnij klawisz ENTER.  
   

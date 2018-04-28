@@ -1,24 +1,26 @@
 ---
-title: "Korzystanie z zabezpieczeń komunikatów"
-ms.custom: 
+title: Korzystanie z zabezpieczeń komunikatów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
 W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia wiadomości, korzystając z <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -36,7 +38,7 @@ W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z
   
  Kluczowe pojęcia zabezpieczenia komunikatów jest, czy klient zabezpiecza wiadomości do aplikacji odbierającej (usługa), w przeciwieństwie do zabezpieczeń transportu, w którym klient zabezpiecza wiadomości do kolejki docelowej. W efekcie MSMQ odgrywa bez części zabezpieczania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości przy użyciu zabezpieczeń wiadomości.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zabezpieczenia komunikatów dodaje nagłówek zabezpieczeń w celu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości, które integrują się z istniejącej infrastruktury zabezpieczeń, takie jak certyfikat lub protokołu Kerberos.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia komunikatów dodaje nagłówek zabezpieczeń w celu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości, które integrują się z istniejącej infrastruktury zabezpieczeń, takie jak certyfikat lub protokołu Kerberos.  
   
 ## <a name="message-credential-type"></a>Typ poświadczeń komunikatu  
  Korzystanie z zabezpieczeń komunikatów, usługa i klient może stanowić poświadczenia umożliwiające uwierzytelnianie w każdym innym. Wybierz opcję zabezpieczenia komunikatów przez ustawienie <xref:System.ServiceModel.NetMsmqBinding.Security%2A> tryb `Message` lub `Both` (oznacza to, używają zarówno zabezpieczeń transportu i zabezpieczenia komunikatów).  
@@ -52,7 +54,7 @@ W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z
   
  Rozłączona charakter kolejek, klient i usługa nie może być online w tym samym czasie. Tak klient i usługa trzeba wymienić certyfikaty poza pasmem. W szczególności klienta, na podstawie przechowywania w magazynie zaufanych certyfikatów usługi, (które można powiązać do urzędu certyfikacji) musi ufać jest podczas komunikacji z usługą poprawne. W celu uwierzytelniania klienta, używane przez usługę certyfikatu X.509, dołączone do wiadomości dopasowuje je przy użyciu certyfikatu w magazynie w celu sprawdzenia autentyczności klienta. Ponownie certyfikat musi być powiązany łańcuchem zależności urzędu certyfikacji.  
   
- Na komputerze z systemem Windows certyfikaty są przechowywane w kilku rodzajów magazynów. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz różnych sklepów [magazyny certyfikatów](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Na komputerze z systemem Windows certyfikaty są przechowywane w kilku rodzajów magazynów. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz różnych sklepów [magazyny certyfikatów](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Typ poświadczeń komunikatu systemu Windows używa protokołu Kerberos.  
@@ -63,7 +65,7 @@ W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z
   
  Należy pamiętać, że gdy przy użyciu tego typu poświadczeń, usługa musi działać na koncie usługi.  
   
- Protokół Kerberos jest używany domyślnie w przypadku wybrania poświadczeniami komunikatu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Eksploracji protokołu Kerberos, protokół dla rozproszonych zabezpieczeń w systemie Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Protokół Kerberos jest używany domyślnie w przypadku wybrania poświadczeniami komunikatu. Aby uzyskać więcej informacji, zobacz [eksploracji protokołu Kerberos, protokół dla rozproszonych zabezpieczeń w systemie Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Hasło nazwy użytkownika  
  Za pomocą tej właściwości, klient może uwierzytelnić się na serwerze przy użyciu nazwy użytkownika hasła w nagłówku zabezpieczeń wiadomości.  

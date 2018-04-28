@@ -1,33 +1,33 @@
 ---
-title: "Wybieranie typu poświadczeń"
-ms.custom: 
+title: Wybieranie typu poświadczeń
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>Wybieranie typu poświadczeń
 *Poświadczenia* są dane [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa w celu ustalenia tożsamości lub funkcji. Na przykład usługi passport jest poświadczenia, który wystawia Rząd potwierdzenie możliwości dostępnych w kraju lub regionie. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczeń, jak są używane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oraz sposobu wybierania prawo poświadczeń dla aplikacji.  
   
  W wielu innych krajów i regionów prawa jazdy jest przykładem poświadczenie. Licencji zawiera dane, które reprezentują tożsamość osoby i możliwości. Zawiera ona dowodu posiadania w formie obrazu właściciel. Licencji wystawiony przez zaufany urząd zwykle rządowych działu licencjonowania. Licencja jest zapieczętowany i może zawierać hologram, pokazujący, że nie został zmieniony przez niepowołane lub podrobić.  
   
- Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Na przykład, należy wziąć pod uwagę dwa typy obsługiwanych w poświadczeń [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: nazwa użytkownika oraz (X.509) certyfikatu poświadczeń.  
+ Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Na przykład, należy wziąć pod uwagę dwa typy obsługiwanych w poświadczeń [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: nazwa użytkownika oraz (X.509) certyfikatu poświadczeń.  
   
  Dla poświadczenie nazwy użytkownika tożsamości reprezentuje nazwę użytkownika i hasło zawiera dowodu posiadania. Zaufany urząd to w takim przypadku system, który sprawdza poprawność nazwy użytkownika i hasła.  
   
@@ -53,9 +53,9 @@ ms.lasthandoff: 02/01/2018
 |-------------|-----------------|  
 |Brak|Określa, że klient musi przedstawiać poświadczeń. Umożliwia to anonimowym klientem.|  
 |Windows|Umożliwia wymianę wiadomości SOAP występuje w kontekście zabezpieczeń ustanowione za pomocą poświadczeń systemu Windows.|  
-|Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta z poświadczenie nazwy użytkownika. Należy pamiętać, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie zezwala na wszystkie operacje kryptograficzne z nazwami użytkowników, takich jak generowania podpis i szyfrowanie danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia, że transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
+|Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta z poświadczenie nazwy użytkownika. Należy pamiętać, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie zezwala na wszystkie operacje kryptograficzne z nazwami użytkowników, takich jak generowania podpis i szyfrowanie danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia, że transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
 |certyfikat|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu X.509.|  
-|Wystawiony Token|Niestandardowy typ tokenu skonfigurowane zgodnie z zasadami zabezpieczeń. Domyślny typ tokenu to zabezpieczeń potwierdzenia Markup Language (SAML). Bezpieczne usługi tokenu wystawiła token. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Wystawiony Token|Niestandardowy typ tokenu skonfigurowane zgodnie z zasadami zabezpieczeń. Domyślny typ tokenu to zabezpieczeń potwierdzenia Markup Language (SAML). Bezpieczne usługi tokenu wystawiła token. Aby uzyskać więcej informacji, zobacz [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Model negocjacji poświadczenia usługi  
  *Negocjowanie* to proces ustanawiania relacji zaufania między klientem a usługą poprzez wymianę poświadczeń. Proces jest wykonywany wielokrotnie powtarzane między klientem i usługi, aby ujawnić tylko te informacje, które są niezbędne do następnego kroku w procesie negocjacji. W praktyce wynik końcowy jest dostarczanie poświadczeń usługi do klienta, który ma być używana podczas kolejnych operacji.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  W zależności od tego, czy są programowania usługi lub klienta Metoda ustawiania wartości poświadczeń różni się nieznacznie.  
   
 ### <a name="setting-service-credentials"></a>Ustawienie poświadczeń usługi  
- Jeśli używasz trybu transportu i są przy użyciu protokołu HTTP jako transportu, możesz użyć albo Internet Information Services (IIS), lub konfigurowanie portu z certyfikatem. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) i [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Jeśli używasz trybu transportu i są przy użyciu protokołu HTTP jako transportu, możesz użyć albo Internet Information Services (IIS), lub konfigurowanie portu z certyfikatem. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) i [zabezpieczeń transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Aby udostępnić usługi za pomocą poświadczeń w kodzie, Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> klasy i określ odpowiednie poświadczenia, za pomocą <xref:System.ServiceModel.Description.ServiceCredentials> klasy dostępne za pośrednictwem <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości.  
   

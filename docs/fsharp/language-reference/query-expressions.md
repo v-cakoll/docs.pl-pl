@@ -1,20 +1,17 @@
 ---
-title: "Wyrażenia zapytań (F#)"
-description: "Więcej informacji na temat obsługi wyrażenia zapytań LINQ w języku programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Wyrażenia zapytań (F#)
+description: 'Więcej informacji na temat obsługi wyrażenia zapytań LINQ w języku programowania w języku F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: 81b81d25b8c0d8656dedffd2f8ec7a8297ef7191
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="query-expressions"></a>Wyrażenia zapytań
 
@@ -680,7 +677,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>zestaw określonych wartości<br/>
+<code>IN</code> zestaw określonych wartości<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -703,7 +700,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>i <code>TOP</code>.<br/>
+<code>LIKE</code> i <code>TOP</code>.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -721,7 +718,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>z wzorcem odpowiada zestaw.<br/>
+<code>LIKE</code> z wzorcem odpowiada zestaw.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +735,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>zestaw wykluczeń wzorca.<br/>
+<code>LIKE</code> zestaw wykluczeń wzorca.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +754,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>na jednym polu, ale wybierz inne pole.<br/>
+<code>LIKE</code> na jednym polu, ale wybierz inne pole.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -807,7 +804,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>z dwóch tabel.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> z dwóch tabel.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +823,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>z<code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> Z <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -909,7 +906,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>z kolejności<br/>
+</td></tr><tr><td><code>OR</code> z kolejności<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -949,7 +946,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>dwa zapytań.<br/>
+</td></tr><tr><td><code>UNION</code> dwa zapytań.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +995,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>warunek.<br/>
+</td></tr><tr><td><code>CASE</code> warunek.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2434,7 +2431,7 @@ end
 ```
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [LINQ.querybuilder — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 

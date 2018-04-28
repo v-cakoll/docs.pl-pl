@@ -1,24 +1,26 @@
 ---
-title: "Instrukcje: Tworzenie usługi transakcyjnej"
-ms.custom: 
+title: 'Instrukcje: Tworzenie usługi transakcyjnej'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Instrukcje: Tworzenie usługi transakcyjnej
 W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej i użycie transakcji inicjowanych przez klienta do koordynowania operacji usługi.  
@@ -76,7 +78,7 @@ W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej
     }  
     ```  
   
-3.  Skonfiguruj powiązania w pliku konfiguracji, określając, że powinien przepływ kontekstu transakcji i protokołów do użycia w tym celu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Konfiguracja transakcji modelu ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). W szczególności w elementu punktu końcowego określono typ powiązania `binding` atrybutu. [ \<Punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie `transactionalOleTransactionsTcpBinding`, jak pokazano w poniższych Przykładowa konfiguracja.  
+3.  Skonfiguruj powiązania w pliku konfiguracji, określając, że powinien przepływ kontekstu transakcji i protokołów do użycia w tym celu. Aby uzyskać więcej informacji, zobacz [Konfiguracja transakcji modelu ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). W szczególności w elementu punktu końcowego określono typ powiązania `binding` atrybutu. [ \<Punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie `transactionalOleTransactionsTcpBinding`, jak pokazano w poniższych Przykładowa konfiguracja.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -193,7 +195,7 @@ W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Kontrolowanie okres istnienia wystąpienia usługi transakcyjnej  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości w celu określenia, czy źródłowy wystąpienie usługi jest zwolnione po zakończeniu transakcji. Od tej wartości domyślnie przyjmowana `true`, chyba że zostaną skonfigurowane, w przeciwnym razie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] spowoduje zachowanie wydajne i przewidywalne aktywacji "just-in-time". Zapewni nowego wystąpienia usługi z nie wszystkie elementy poprzedniej transakcji Państwo wywołań usługi kolejnych transakcji. Często jest to przydatne, czasami można do zarządzania stanem w wystąpieniu usługi, po zakończeniu transakcji. Przykładem tego może dochodzić do stanu wymagane lub dojść do zasobów jest dość kosztowna można pobrać lub odtworzenia. Można to zrobić przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości `false`. Z tego ustawienia, wystąpienia i każdy stan skojarzony będą dostępne w kolejnych wywołaniach. Korzystając z tego, rozważyć zachować ostrożność podczas i jak stanu i transakcji zostanie wyczyszczona i zakończone. W poniższym przykładzie pokazano, jak to zrobić przez wystąpienie o zachowaniu `runningTotal` zmiennej.  
+1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości w celu określenia, czy źródłowy wystąpienie usługi jest zwolnione po zakończeniu transakcji. Od tej wartości domyślnie przyjmowana `true`, chyba że zostaną skonfigurowane, w przeciwnym razie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] spowoduje zachowanie wydajne i przewidywalne aktywacji "just-in-time". Zapewni nowego wystąpienia usługi z nie wszystkie elementy poprzedniej transakcji Państwo wywołań usługi kolejnych transakcji. Często jest to przydatne, czasami można do zarządzania stanem w wystąpieniu usługi, po zakończeniu transakcji. Przykładem tego może dochodzić do stanu wymagane lub dojść do zasobów jest dość kosztowna można pobrać lub odtworzenia. Można to zrobić przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości `false`. Z tego ustawienia, wystąpienia i każdy stan skojarzony będą dostępne w kolejnych wywołaniach. Korzystając z tego, rozważyć zachować ostrożność podczas i jak stanu i transakcji zostanie wyczyszczona i zakończone. W poniższym przykładzie pokazano, jak to zrobić przez wystąpienie o zachowaniu `runningTotal` zmiennej.  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

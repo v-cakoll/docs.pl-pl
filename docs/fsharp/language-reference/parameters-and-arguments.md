@@ -1,20 +1,17 @@
 ---
 title: Parametry i argumenty (F#)
-description: "Więcej informacji o obsługę języka F # do definiowania parametrów i przekazywanie argumentów do funkcji, właściwości i metod."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Więcej informacji o obsługę języka F # do definiowania parametrów i przekazywanie argumentów do funkcji, właściwości i metod.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9b37a5c4-9263-4513-822a-fbb0d1004254
-ms.openlocfilehash: 50f54bacd9ba7ec20a7151794734f93200df9f2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e146ec4e877bb89f10e2f3daad2d8356c29fa81f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 

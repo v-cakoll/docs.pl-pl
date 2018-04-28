@@ -1,13 +1,13 @@
 ---
-title: "Używanie kontraktów komunikatu"
-ms.custom: 
+title: Używanie kontraktów komunikatu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>Używanie kontraktów komunikatu
-Zwykle podczas kompilowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji, deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy serializacji i nie trzeba zajmować się struktury wiadomości, w których odbywa się dane. W przypadku tych aplikacji prostego jest utworzenie kontraktów danych do parametrów lub zwracanych wartości. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Zwykle podczas kompilowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji, deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy serializacji i nie trzeba zajmować się struktury wiadomości, w których odbywa się dane. W przypadku tych aplikacji prostego jest utworzenie kontraktów danych do parametrów lub zwracanych wartości. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  Jednak czasami pełną kontrolę nad struktury wiadomości SOAP jest równie ważne co kontrolę nad jego zawartość. Dotyczy to szczególnie ważne jest współdziałanie, lub aby specjalnie kontroli zabezpieczeń problemy na poziomie komunikatu lub części komunikatu. W takich przypadkach można utworzyć *kontraktu komunikatu* , umożliwia określenie struktury dokładne komunikatu protokołu SOAP wymagane.  
   
  W tym temacie omówiono tworzenie kontraktu określonego komunikatu dla operacji przy użyciu różnych atrybutów kontraktu komunikatu.  
   
 ## <a name="using-message-contracts-in-operations"></a>Używanie kontraktów komunikatu w operacji  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje operacje uformowany albo *zdalnego wywoływania (procedur RPC) styl* lub *wiadomości styl*. W przypadku operacji stylu wywołania RPC, można użyć dowolnego typu do serializacji i masz dostęp do funkcji, które są dostępne dla połączeń lokalnych, takich jak wiele parametrów i `ref` i `out` parametrów. W tym stylu formę serializacji wybrane formanty struktury danych w podstawowej komunikaty i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska uruchomieniowego tworzy komunikaty do obsługi operacji. Dzięki temu deweloperzy, którzy nie są jeszcze znane z protokołu SOAP i SOAP komunikatów szybkie i łatwe tworzenie i korzystanie z usługi aplikacji.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje operacje uformowany albo *zdalnego wywoływania (procedur RPC) styl* lub *wiadomości styl*. W przypadku operacji stylu wywołania RPC, można użyć dowolnego typu do serializacji i masz dostęp do funkcji, które są dostępne dla połączeń lokalnych, takich jak wiele parametrów i `ref` i `out` parametrów. W tym stylu formę serializacji wybrane formanty struktury danych w podstawowej komunikaty i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska uruchomieniowego tworzy komunikaty do obsługi operacji. Dzięki temu deweloperzy, którzy nie są jeszcze znane z protokołu SOAP i SOAP komunikatów szybkie i łatwe tworzenie i korzystanie z usługi aplikacji.  
   
  Poniższy przykład kodu pokazuje operacji usługi zgodnie z modelem w stylu wywołania RPC.  
   
@@ -44,7 +44,7 @@ Zwykle podczas kompilowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Zwykle kontrakt danych jest wystarczająca do definiowania schematu dla wiadomości. Na przykład w poprzednim przykładzie jest wystarczające dla większości aplikacji Jeśli `BankingTransaction` i `BankingTransactionResponse` ma kontraktów danych do definiowania zawartości źródłowej wiadomości protokołu SOAP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kontrakty danych, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Zwykle kontrakt danych jest wystarczająca do definiowania schematu dla wiadomości. Na przykład w poprzednim przykładzie jest wystarczające dla większości aplikacji Jeśli `BankingTransaction` i `BankingTransactionResponse` ma kontraktów danych do definiowania zawartości źródłowej wiadomości protokołu SOAP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] kontrakty danych, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Jednak czasami zachodzi konieczność precyzyjne sterowanie jak struktury wiadomości SOAP są przesyłane przez sieć. Najbardziej typowym scenariuszem dla tego wstawia niestandardowe nagłówki SOAP. Inny typowy scenariusz polega do definiowania właściwości zabezpieczeń w nagłówkach wiadomości i treści, oznacza to, aby zdecydować, czy te elementy są cyfrowo podpisane i zaszyfrowane. Ponadto niektóre stosy SOAP innych firm wymagają wiadomości w określonym formacie. Styl wiadomości operacji Podaj tego formantu.  
   
@@ -118,7 +118,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> Pozwala określić atrybuty WrapperName i WrapperNamespace, które kontrolują nazwa elementu otoki w treści komunikatu protokołu SOAP. Domyślnie nazwa kontraktu komunikatu typu służy do otoka i przestrzeni nazw, w którym jest zdefiniowany kontraktu komunikatu `HYPERLINK "http://tempuri.org/" http://tempuri.org/` jest używana jako domyślna przestrzeń nazw.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute>atrybuty są ignorowane w kontraktach wiadomości. Jeśli <xref:System.Runtime.Serialization.KnownTypeAttribute> jest wymagane, umieść ją na operację, której używa kontraktu komunikatu zagrożona.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybuty są ignorowane w kontraktach wiadomości. Jeśli <xref:System.Runtime.Serialization.KnownTypeAttribute> jest wymagane, umieść ją na operację, której używa kontraktu komunikatu zagrożona.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrolowanie nagłówek i treść części nazwy i przestrzenie nazw  
  Każda część nagłówek i treść mapowanie w SOAP reprezentację kontraktu komunikatu do elementu XML, który zawiera nazwę i przestrzeń nazw.  
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  Mając więcej niż jedną część treści wiadomości w wiadomości, które nie zostały opakowane nie jest zgodne z WS-I Basic Profile 1.1 i nie jest zalecane podczas projektowania nowego kontraktów komunikatu. Jednak może być konieczne więcej niż jedną część treści wiadomości bez otoki w niektórych scenariuszach określonych współdziałania. Ma przesyłać więcej niż jednego elementu danych w treści wiadomości, zalecane jest w trybie domyślne (opakowana). Mając więcej niż jeden nagłówek komunikatu w komunikaty bez otoki jest całkowicie dopuszczalne.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Używanie niestandardowych typów wewnątrz kontraktów komunikatu  
- Każdy nagłówek poszczególnych komunikatów i część treści wiadomości jest serializowany (zamieniło XML) używany aparat wybrany serializacji dla kontraktu usługi których komunikat jest używany. Domyślny aparat serializacji `XmlFormatter`, może obsługiwać dowolnego typu, który ma kontraktu danych, albo jawnie (dzięki użyciu <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) albo niejawnie (poprzez jest typem pierwotnym, o <xref:System.SerializableAttribute?displayProperty=nameWithType>i tak dalej). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Każdy nagłówek poszczególnych komunikatów i część treści wiadomości jest serializowany (zamieniło XML) używany aparat wybrany serializacji dla kontraktu usługi których komunikat jest używany. Domyślny aparat serializacji `XmlFormatter`, może obsługiwać dowolnego typu, który ma kontraktu danych, albo jawnie (dzięki użyciu <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) albo niejawnie (poprzez jest typem pierwotnym, o <xref:System.SerializableAttribute?displayProperty=nameWithType>i tak dalej). Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  W powyższym przykładzie `Operation` i `BankingTransactionData` typy muszą mieć kontrakt danych i `transactionDate` można serializować ponieważ <xref:System.DateTime> jest właściwością pierwotną (i dlatego ma niejawnych danych kontraktu).  
   
@@ -257,13 +257,13 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Atrybuty nagłówka SOAP  
  SOAP standard definiuje następujące atrybuty, które mogą wystąpić w nagłówku:  
   
--   `Actor/Role`(`Actor` w SOAP 1.1, `Role` w SOAP 1.2)  
+-   `Actor/Role` (`Actor` w SOAP 1.1, `Role` w SOAP 1.2)  
   
 -   `MustUnderstand`  
   
 -   `Relay`  
   
- `Actor` Lub `Role` atrybut określa jednolity identyfikator zasobów (URI) węzła, dla którego ma określony nagłówek. `MustUnderstand` Atrybut określa, czy węzeł przetwarzania nagłówka musi go zrozumieć. `Relay` Atrybut określa, czy nagłówek jest przekazywanie węzły podrzędne. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie wykonuje żadnych przetwarzania tych atrybutów w komunikatach przychodzących, z wyjątkiem `MustUnderstand` atrybutu, jak określono w sekcji "Przechowywanie wersji kontraktów komunikatu" w dalszej części tego tematu. Jednak umożliwia odczytywanie i zapisywanie tych atrybutów, w razie potrzeby, tak jak następujący opis.  
+ `Actor` Lub `Role` atrybut określa jednolity identyfikator zasobów (URI) węzła, dla którego ma określony nagłówek. `MustUnderstand` Atrybut określa, czy węzeł przetwarzania nagłówka musi go zrozumieć. `Relay` Atrybut określa, czy nagłówek jest przekazywanie węzły podrzędne. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie wykonuje żadnych przetwarzania tych atrybutów w komunikatach przychodzących, z wyjątkiem `MustUnderstand` atrybutu, jak określono w sekcji "Przechowywanie wersji kontraktów komunikatu" w dalszej części tego tematu. Jednak umożliwia odczytywanie i zapisywanie tych atrybutów, w razie potrzeby, tak jak następujący opis.  
   
  Podczas wysyłania wiadomości, te atrybuty nie są emitowane domyślnie. Można to zmienić na dwa sposoby. Najpierw, użytkownik może statycznie Ustaw atrybuty wszystkie odpowiednie wartości, zmieniając <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, i <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> właściwości, jak pokazano w poniższym przykładzie kodu. (Należy pamiętać, że ma nie `Role` właściwości; ustawienie <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> emituje właściwości `Role` atrybut, jeśli używasz protokołu SOAP 1.2).  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Gdy komunikat jest odbierany i następnie odesłał, ustawienia atrybutu SOAP postępować tylko obustronne dla nagłówków <xref:System.ServiceModel.MessageHeader%601> typu.  
   
 ## <a name="order-of-soap-body-parts"></a>Kolejność części treści protokołu SOAP  
- W niektórych sytuacjach może być konieczne sterować kolejnością części treści. Kolejność elementów treści jest alfabetycznej domyślnie, ale mogą być kontrolowane na podstawie <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości. Ta właściwość nie ma tej samej semantyki jako <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości, z wyjątkiem zachowanie w scenariuszach dziedziczenia (w kontraktów komunikatu, elementy członkowskie nie są sortowane przed członków treści typu pochodnego treści typu podstawowego). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ W niektórych sytuacjach może być konieczne sterować kolejnością części treści. Kolejność elementów treści jest alfabetycznej domyślnie, ale mogą być kontrolowane na podstawie <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości. Ta właściwość nie ma tej samej semantyki jako <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości, z wyjątkiem zachowanie w scenariuszach dziedziczenia (w kontraktów komunikatu, elementy członkowskie nie są sortowane przed członków treści typu pochodnego treści typu podstawowego). Aby uzyskać więcej informacji, zobacz [kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  W poniższym przykładzie `amount` zwykle przybyły, najpierw ponieważ pierwszy jest alfabetycznie. Jednak <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> właściwości umieszcza je w trzecim pozycji.  
   
@@ -336,9 +336,9 @@ public class BankingTransaction
   
  Przechowywanie wersji nagłówków mają zastosowanie następujące reguły:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie object Brak nagłówków — odpowiednie elementy członkowskie są pozostawiane w wartości domyślnych.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie object Brak nagłówków — odpowiednie elementy członkowskie są pozostawiane w wartości domyślnych.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ignoruje także nieoczekiwany dodatkowych nagłówków. Jedynym wyjątkiem od tej reguły jest dodatkowy nagłówek zawiera `MustUnderstand` ustawić atrybutu `true` przychodzących wiadomości SOAP — w tym przypadku jest zwracany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozpatrywana.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoruje także nieoczekiwany dodatkowych nagłówków. Jedynym wyjątkiem od tej reguły jest dodatkowy nagłówek zawiera `MustUnderstand` ustawić atrybutu `true` przychodzących wiadomości SOAP — w tym przypadku jest zwracany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozpatrywana.  
   
  Komunikat treści mają podobne reguły kontroli wersji — zarówno brak i dodatkowe części treści wiadomości są ignorowane.  
   
@@ -383,7 +383,7 @@ public class PatientRecord : PersonRecord
 -   Gdy za pomocą tego samego komunikatu kontraktu w wielu operacjach, wiele typów wiadomości są generowane w dokumencie WSDL. Przez dodanie liczby "2", "3" i tak dalej do celów kolejnych składają unikatowe nazwy. Podczas importowania ponownie WSDL, wiele typów kontraktu komunikatu są tworzone i są identyczne z wyjątkiem ich nazw.  
   
 ## <a name="soap-encoding-considerations"></a>Uwagi dotyczące kodowania protokołu SOAP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Umożliwia przy użyciu starszej wersji styl XML, kodowania SOAP, jego użycie nie jest zalecane. Korzystając z tym stylem (przez ustawienie `Use` właściwości `Encoded` na <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> stosowane do kontraktu usługi), zastosuj następujące dodatkowe zagadnienia:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia przy użyciu starszej wersji styl XML, kodowania SOAP, jego użycie nie jest zalecane. Korzystając z tym stylem (przez ustawienie `Use` właściwości `Encoded` na <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> stosowane do kontraktu usługi), zastosuj następujące dodatkowe zagadnienia:  
   
 -   Nagłówki komunikatów są nieobsługiwane. oznacza to, że atrybut <xref:System.ServiceModel.MessageHeaderAttribute> i atrybut tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute> są niezgodne z kodowaniem protokołu SOAP.  
   

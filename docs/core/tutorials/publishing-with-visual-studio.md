@@ -1,21 +1,20 @@
 ---
 title: Publikowanie aplikacji Hello World z programu Visual Studio 2017 r.
-description: "Publikowanie tworzy zestaw plików, które są wymagane do uruchamiania aplikacji."
-keywords: "Aplikacji konsoli .NET i .NET core publikacji wdrożenia"
+description: Publikowanie tworzy zestaw plików, które są wymagane do uruchamiania aplikacji.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.workload: dotnetcore
-ms.openlocfilehash: 40479d85f9b31fcc80e3d12537126941878a09a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: f3cecbd39ee557a620cd779bdff6b630642e7f56
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publikowanie aplikacji Hello World z programu Visual Studio 2017 r.
 

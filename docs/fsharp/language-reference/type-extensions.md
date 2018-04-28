@@ -1,20 +1,17 @@
 ---
 title: Rozszerzenia typu (F#)
-description: "Dowiedz się, jak rozszerzenia typu F # zezwala na dodawanie nowych elementów członkowskich do typu wcześniej zdefiniowanego obiektu."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak rozszerzenia typu F # zezwala na dodawanie nowych elementów członkowskich do typu wcześniej zdefiniowanego obiektu.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c9d7ce27-f5ad-4766-b9e9-34187da5bc24
-ms.openlocfilehash: f78f8689e95fc1547f1a2b17c615592c00051f7c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3399778799fbf0f8eee56e332135656150918a60
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
@@ -107,6 +104,6 @@ W tym kodzie ten sam kod arytmetyczne ogólnego jest stosowany do listy dwa typy
 
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Elementy członkowskie](members/index.md)

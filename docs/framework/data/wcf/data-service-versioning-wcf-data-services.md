@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d795008e014deaa126dac1bb978ac825f2536208
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e6d800b35a69c08ab9f7bd90165691eab7d8743f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (usługi danych WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Umożliwia tworzenie usług danych, dzięki czemu klienci mają dostęp do danych jako zasoby przy użyciu identyfikatorów URI, które są oparte na modelu danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje również definicji operacji usługi. Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia tych usług danych może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub w celu rozwiązania innych problemów. Po wprowadzeniu zmian w istniejącej usłudze danych, należy rozważyć możliwość definiowania nowej wersji danych usługi i jak najlepiej zminimalizować wpływ na istniejące aplikacje klienckie. W tym temacie znajdują się wskazówki dotyczące kiedy i jak utworzyć nową wersję usługi danych. Opisano również sposób [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje wymiany między klientami a usług danych, które obsługują różne wersje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/26/2018
 |W wersji 3|— Można pobrać i zainstalować wersję wstępną, która obsługuje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] w wersji 3 z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Wersje metadanych  
- Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa wersji 1.1 CSDL reprezentujące model danych. Jest to zawsze w przypadku modeli danych, które są oparte na dostawcy odbicia lub dostawcy usług danych niestandardowych. Jednak gdy model danych jest definiowana za pomocą [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], wersja pliku CSDL zwracane jest taka sama jak wersja używanego przez [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. Wersja pliku CSDL jest określany przez obszar nazw [elementu schematu](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Specyfikacja [ \[MC CSDL\]: koncepcyjny formatu pliku definicji schematu](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa wersji 1.1 CSDL reprezentujące model danych. Jest to zawsze w przypadku modeli danych, które są oparte na dostawcy odbicia lub dostawcy usług danych niestandardowych. Jednak gdy model danych jest definiowana za pomocą [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], wersja pliku CSDL zwracane jest taka sama jak wersja używanego przez [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. Wersja pliku CSDL jest określany przez obszar nazw [elementu schematu](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). Aby uzyskać więcej informacji, zobacz specyfikację [ \[MC CSDL\]: koncepcyjny formatu pliku definicji schematu](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
  `DataServices` Zawiera również element metadane zwrócony `DataServiceVersion` atrybut, który ma taką samą wartość jak `DataServiceVersion` nagłówka w komunikacie odpowiedzi. Aplikacje klienckie, takie jak **Dodaj odwołanie do usługi** okno dialogowe w programie Visual Studio, użyj tych informacji do wygenerowania klienta usługi danych klasy pracy poprawnie z wersją [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] który hosta usługi danych. Aby uzyskać więcej informacji, zobacz [OData: przechowywanie wersji protokołu](http://go.microsoft.com/fwlink/?LinkId=186071).  
   

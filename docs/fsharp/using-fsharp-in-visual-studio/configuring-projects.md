@@ -1,20 +1,17 @@
 ---
-title: "Konfigurowanie projektów (F #)"
-description: "Dowiedz się, jak podczas pracy z projektów F # w programie Visual Studio za pomocą projektanta projektu."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Konfigurowanie projektów (F #)'
+description: 'Dowiedz się, jak podczas pracy z projektów F # w programie Visual Studio za pomocą projektanta projektu.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Konfigurowanie projektów programu Visual Studio
 
@@ -28,9 +25,9 @@ Ten temat zawiera informacje o sposobie używania **projektanta projektu** podcz
 
 |Strony projektanta projektu|Linki pokrewne|Opis|
 |---------------------|-------------|-----------|
-|`Application`|[Strona aplikacji, Projektant projektu &#40; K & 35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Można określić ustawienia na poziomie aplikacji i właściwości, takich jak czy tworzenie biblioteki lub pliku wykonywalnego, jakiej wersji programu .NET Framework jest element docelowy aplikacji i informacje o którym zasobu pliki aplikacji używane są przechowywane.|
-|`Build`|[Tworzenie strony, Projektant projektu &#40; K & 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Umożliwia kontrolowanie sposobu kompilowania kodu.|
-|`Build Events`|[Tworzenie strony zdarzenia, Projektant projektu &#40; K & 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Można określić polecenie do uruchomienia przed lub po kompilacji.|
+|`Application`|[Strona aplikacji, Projektant projektu &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Można określić ustawienia na poziomie aplikacji i właściwości, takich jak czy tworzenie biblioteki lub pliku wykonywalnego, jakiej wersji programu .NET Framework jest element docelowy aplikacji i informacje o którym zasobu pliki aplikacji używane są przechowywane.|
+|`Build`|[Strona kompilacji, Projektant projektu &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Umożliwia kontrolowanie sposobu kompilowania kodu.|
+|`Build Events`|[Strona zdarzenia kompilacji, Projektant projektu &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Można określić polecenie do uruchomienia przed lub po kompilacji.|
 |`Debug`|[Strona debugowania, Projektant projektu](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Umożliwia sterowanie, jak aplikacja zostanie uruchomiona podczas debugowania. Obejmuje to co wiersza polecenia oraz katalog początkowy aplikacji jest i specjalne debugowania tryby, które chcesz włączyć, takich jak SQL i kodu natywnego.|
 |`Reference Paths`|[Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)|Pozwala określić, gdzie do wyszukiwania zestawów, która zależy od kodu.|
 

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI).  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- Zapewnia to identyfikator SID bieżącego użytkownika, ale nie można użyć tej metody można pobrać identyfikatora SID dla dowolnego użytkownika. Innej metody, aby uzyskać identyfikator SID jest użycie [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) narzędzia z [narzędzi systemu Windows 2000 Resource Kit dla zadań administracyjnych](http://go.microsoft.com/fwlink/?LinkId=178660). To narzędzie porównuje SID dwóch użytkowników (lokalnego lub domeny), a po stronie efekt drukuje dwa identyfikatory SID do wiersza polecenia. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Dobrze znane identyfikatory SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Zapewnia to identyfikator SID bieżącego użytkownika, ale nie można użyć tej metody można pobrać identyfikatora SID dla dowolnego użytkownika. Innej metody, aby uzyskać identyfikator SID jest użycie [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) narzędzia z [narzędzi systemu Windows 2000 Resource Kit dla zadań administracyjnych](http://go.microsoft.com/fwlink/?LinkId=178660). To narzędzie porównuje SID dwóch użytkowników (lokalnego lub domeny), a po stronie efekt drukuje dwa identyfikatory SID do wiersza polecenia. Aby uzyskać więcej informacji, zobacz [dobrze znanych identyfikatorów SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzyskiwanie dostępu do wystąpienia obiektu zdalną usługę WMI  
  Jeśli chcesz uzyskać dostęp do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] wystąpienia usługi WMI na komputerze zdalnym, należy włączyć prywatność pakietów narzędzia używane dla dostępu. W poniższej sekcji opisano jak to osiągnąć przy użyciu usługi WMI CIM Studio, Tester oprzyrządowania Instrumentacji zarządzania Windows, jak również .NET SDK 2.0.  

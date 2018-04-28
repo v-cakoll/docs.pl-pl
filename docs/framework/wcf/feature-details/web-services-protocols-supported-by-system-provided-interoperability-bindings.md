@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest oparty na potrzeby współdziałania z usługami sieci Web, które obsługuje zestaw specyfikacji znany jako specyfikacje usług sieci Web. Aby uprościć konfigurację usługi współdziałanie najważniejsze wskazówki dotyczące [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przedstawiono trzy interoperacyjne powiązania dostarczane przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Współdziałanie z organizacji standardów przejścia z Structured Information Standards (OASIS) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera jeden interoperacyjne powiązanie dostarczane przez system: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Dla publikacji metadanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera dwa interoperacyjne powiązania dostarczane przez system: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) i [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). W tym temacie wymieniono specyfikacje obsługujących powiązania interoperacyjne dostarczane przez system.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 03/26/2018
 |Zabezpieczenia|Profil Token protokołu Kerberos zabezpieczeń wiadomości programu WSS SOAP 1.1|[Profil Token protokołu Kerberos zabezpieczeń wiadomości programu WSS SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> Używany do uwierzytelniania i komunikat ochrony po `wsSecurity` elementu `authenticationMode` atrybut ma wartość "Windows".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
 |Zabezpieczenia|WS-SecureConversation|[WS-SecureConversation](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Służy do zapewnienia bezpiecznej sesji podczas `security/@mode` atrybut jest ustawiony na "Komunikat" i `message/@establishSecurityContext` atrybut ma ustawioną wartość "prawda" (ustawienie domyślne).|  
 |Zabezpieczenia|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Używane przez usługi WS-SecureConversation (zobacz powyżej).|  
-|Niezawodna obsługa komunikatów|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Użyj, jeśli powiązanie jest skonfigurowane do używania `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
+|Niezawodna obsługa komunikatów|WS-ReliableMessaging.|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Użyj, jeśli powiązanie jest skonfigurowane do używania `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
 |Transakcje|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> Używany do komunikacji między menedżerami transakcji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Klienci i usługi zawsze używać menedżerowie transakcji lokalnej.|  
 |Transakcje|WS-Coordination|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Użyj przepływ kontekstu transakcji po `flowTransactions` atrybut jest ustawiony na "Dozwolone" lub "Wymagane".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/26/2018
 </wsFederationHttpBinding>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federacyjna](../../../../docs/framework/wcf/feature-details/federation.md) .  
+ Aby uzyskać więcej informacji, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md) .  
   
 ## <a name="system-provided-metadata-bindings"></a>Powiązania dostarczane przez system metadanych  
  W poniższych tabelach opisano protokoły obsługiwane przez wiązania dostarczane przez system interoperacyjne metadanych udostępnianych przez <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> klasy.  
@@ -123,8 +123,8 @@ ms.lasthandoff: 03/26/2018
   
 ## <a name="see-also"></a>Zobacz też  
  [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
+ [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
  [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
+ [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
  [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
  [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

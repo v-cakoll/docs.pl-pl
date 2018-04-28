@@ -1,12 +1,13 @@
 ---
-title: "Przechowywanie wersji kontraktów danych"
-ms.custom: 
+title: Przechowywanie wersji kontraktów danych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
 Jak aplikacje rozwijać, może również trzeba zmienić użycia usług kontraktów danych. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy kontroli wersji kontraktu danych. Pełny przegląd i wskazówki przetestowanego przechowywania wersji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -114,16 +116,16 @@ Jak aplikacje rozwijać, może również trzeba zmienić użycia usług kontrakt
   
  Wiele zmian uważane za nierozdzielających są faktycznie krytyczne, jeśli wymagana jest ścisłego przestrzegania schematu. W powyższym przykładzie `CarV1` wystąpienia z tylko `Model` element czy sprawdzania poprawności `CarV2` schematu (który ma zarówno atrybut `Model` i `Horsepower`, oba warunki są opcjonalne, ale). Jednak odwrotnej nie jest prawdziwe: `CarV2` wystąpienia spowoduje niepowodzenie weryfikacji względem `CarV1` schematu.  
   
- Dwustronną komunikację wymaga także pewne dodatkowe kwestie. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]w sekcji "Zagadnienia schematu" [kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Dwustronną komunikację wymaga także pewne dodatkowe kwestie. Aby uzyskać więcej informacji, zobacz sekcję "Zagadnienia dotyczące schematu" w [kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Inne dozwolone zmiany  
- Implementowanie <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejs jest nierozdzielający zmiany. Jednak obsługa dwustronną komunikację nie istnieje dla wersje poprzedzające wersję, w którym typ <xref:System.Runtime.Serialization.IExtensibleDataObject> została zaimplementowana. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Implementowanie <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejs jest nierozdzielający zmiany. Jednak obsługa dwustronną komunikację nie istnieje dla wersje poprzedzające wersję, w którym typ <xref:System.Runtime.Serialization.IExtensibleDataObject> została zaimplementowana. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Wyliczenia  
- Dodawanie lub usuwanie elementu członkowskiego wyliczenia jest istotne zmiany. Zmiana nazwy elementu członkowskiego wyliczenia jest krytyczne, chyba że jego nazwa kontraktu pozostaje taki sam jak stara wersja przy użyciu `EnumMemberAtttribute` atrybutu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Dodawanie lub usuwanie elementu członkowskiego wyliczenia jest istotne zmiany. Zmiana nazwy elementu członkowskiego wyliczenia jest krytyczne, chyba że jego nazwa kontraktu pozostaje taki sam jak stara wersja przy użyciu `EnumMemberAtttribute` atrybutu. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Kolekcje  
- Większość zmian w kolekcji są nierozdzielający ponieważ większość typów kolekcji są wymienne ze sobą w modelu kontraktu danych. Jednak dokonywanie noncustomized kolekcji dostosowane lub odwrotnie jest istotne zmiany. Zmiana ustawień dostosowania kolekcji jest również istotne zmiany; oznacza to, że zmiana jego nazwie kontraktu danych i przestrzeni nazw, powtarzające się nazwy elementu, nazwa elementu klucza i wartość nazwy elementu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Dostosowywanie kolekcji, zobacz [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Większość zmian w kolekcji są nierozdzielający ponieważ większość typów kolekcji są wymienne ze sobą w modelu kontraktu danych. Jednak dokonywanie noncustomized kolekcji dostosowane lub odwrotnie jest istotne zmiany. Zmiana ustawień dostosowania kolekcji jest również istotne zmiany; oznacza to, że zmiana jego nazwie kontraktu danych i przestrzeni nazw, powtarzające się nazwy elementu, nazwa elementu klucza i wartość nazwy elementu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Dostosowywanie kolekcji, zobacz [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Oczywiście zmiana z kontraktem danych zawartość kolekcji (np. zmiana z listy liczb całkowitych na listę ciągów) jest istotne zmiany.  
   
 ## <a name="see-also"></a>Zobacz też  

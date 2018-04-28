@@ -1,22 +1,20 @@
 ---
 title: Tworzenie aplikacji Hello World z platformy .NET Core i C# w programie Visual Studio 2017 r.
 description: Sposób tworzenia prostej aplikacji konsoli .NET Core za pomocą C# za pomocą programu Visual Studio 2017 r.
-keywords: Oprogramowanie .NET core aplikacji konsoli .NET Core, programu Visual Studio 2017 r.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 7abc0cc087553e2cac10c8cc1da560a048b8e323
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Tworzenie aplikacji C# Hello World z platformą .NET Core w Visual Studio 2017 r.
 
@@ -32,7 +30,7 @@ Aby uzyskać więcej informacji, zobacz [wymagania wstępne dotyczące .NET Core
 
 Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj następujące kroki:
 
-1. Launch Visual Studio 2017. Wybierz **pliku** > **nowy** > **projektu** na pasku menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **.NET Core** węzła. Następnie wybierz **aplikacji konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "HelloWorld". Wybierz **OK** przycisku.
+1. Uruchom program Visual Studio 2017 r. Wybierz **pliku** > **nowy** > **projektu** na pasku menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **.NET Core** węzła. Następnie wybierz **aplikacji konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "HelloWorld". Wybierz **OK** przycisku.
 
    ![Okno dialogowe nowego projektu z aplikacji konsoli wybrane](./media/with-visual-studio/newproject.png)
    

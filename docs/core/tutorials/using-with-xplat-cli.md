@@ -1,22 +1,20 @@
 ---
 title: Rozpoczynanie pracy z platformą .NET Core za pomocą interfejsu wiersza polecenia
 description: Samouczek krok po kroku, pokazujący sposób rozpocząć pracę z platformą .NET Core w systemie Windows, Linux lub macOS przy użyciu interfejsu wiersza polecenia (CLI) platformy .NET Core.
-keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
 ms.topic: get-started-article
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: c5082806c907a6c6d4f51bf77e54deee08de3d8b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 23aec1b951c4b65d62bd4da4b4c94043b1411cf3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
 

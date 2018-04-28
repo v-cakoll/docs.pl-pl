@@ -1,33 +1,28 @@
 ---
 title: Programowanie równoległe w .NET
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
-ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 679ffe40e525884070ee62662b7a7e5acd7e58ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="parallel-programming-in-net"></a>Programowanie równoległe w .NET
-Wiele komputerów osobistych i stacji roboczych ma dwa lub cztery rdzenie (czyli procesorów), które umożliwiają jednoczesne wykonywane wielu wątków. Komputery w najbliższej przyszłości powinny mieć znacznie więcej rdzeni. Aby skorzystać z możliwości dzisiejszego i jutrzejszego sprzętu, można zrównoleglić kod w celu rozłożenia pracy na wiele procesorów. W przeszłości przetwarzanie równoległe wymagało operowania wątkami i blokadami na niskim poziomie. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] i [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rozszerzają obsługę programowania równoległego, podając nowe środowisko uruchomieniowe, nowe typy biblioteki klas i nowe narzędzia diagnostyczne. Te funkcje upraszczają równoległe programowanie, dzięki czemu można tworzyć wydajny, precyzyjny i skalowalny kod przetwarzania równoległego w języku naturalnym bez konieczności bezpośredniej pracy z wątkami lub pulą wątków. Następująca ilustracja przedstawia ogólne omówienie architektury programowania równoległego w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+
+Wiele komputerów osobistych i stacje robocze ma kilka rdzeni Procesora, które umożliwiają wielu wątków, aby być wykonywane jednocześnie. Komputery w najbliższej przyszłości powinny mieć znacznie więcej rdzeni. Aby skorzystać z możliwości dzisiejszego i jutrzejszego sprzętu, można zrównoleglić kod w celu rozłożenia pracy na wiele procesorów. W przeszłości przetwarzanie równoległe wymagało operowania wątkami i blokadami na niskim poziomie. Visual Studio 2010 oraz programu .NET Framework 4 należy poprawić obsługę programowania równoległego podając nowe środowisko uruchomieniowe, nowe typy biblioteki klas i nowe narzędzia diagnostyczne. Te funkcje upraszczają równoległe programowanie, dzięki czemu można tworzyć wydajny, precyzyjny i skalowalny kod przetwarzania równoległego w języku naturalnym bez konieczności bezpośredniej pracy z wątkami lub pulą wątków. Następująca ilustracja przedstawia ogólne omówienie programowania architektura równoległa w .NET Framework 4.
   
- ![Architektura programowania równoległego .NET](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
+ ![Architektura programowania równoległego .NET](./media/tpl-architecture.png "TPL_Architecture")  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
@@ -40,8 +35,8 @@ Wiele komputerów osobistych i stacji roboczych ma dwa lub cztery rdzenie (czyli
 |[Niestandardowe partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|W tym artykule opisano, jak działają moduły partycjonowania i jak konfigurować domyślne moduły partycjonowania lub tworzyć nowe.|  
 |[Planiści zadań](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Opisano, jak działa harmonogram zadań i jak można konfigurować domyślny harmonogram.|  
 |[Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|Zawiera krótki przegląd wyrażeń lambda w języku C# i Visual Basic i przedstawia, jak są używane w PLINQ i w bibliotece zadań równoległych.|  
-|[Dalsze informacje](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Zawiera łącza do dodatkowej dokumentacji i przykładowych zasobów do programowania równoległego w .NET Framework.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wzorce programowania równoległego: opis i stosowanie równoległe wzorce za pomocą programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
- [Programowanie równoległe w środowisku .NET Framework — przykłady](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+|[Dalsze informacje](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Łącza do dodatkowych informacji i przykładowych zasobów Programowanie równoległe w .NET.|  
+
+## <a name="see-also"></a>Zobacz także  
+ [Async — omówienie](../async.md)  
+ [Zarządzana wątkowość](../threading/index.md)  

@@ -1,20 +1,17 @@
 ---
 title: Dokumentacja XML (F#)
-description: "Informacje o pomocy technicznej w języku F # generowania dokumentacji z komentarzy."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Informacje o pomocy technicznej w języku F # generowania dokumentacji z komentarzy.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: d99ab1b6-e170-4ec2-a543-43ea7ab15bb2
-ms.openlocfilehash: 20768a7d4ea17c926318043f658691819a3d7d2f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c9514532904f81030752bf7a4044f70a18222cab
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xml-documentation"></a>Dokumentacja XML
 
@@ -24,7 +21,7 @@ Dokumentacja z triple ukośnika (/ / /) można utworzyć kod komentarzy w język
 ## <a name="generating-documentation-from-comments"></a>Generowanie dokumentacji z komentarzy
 Obsługa w języku F # Generowanie dokumentacji z komentarzy jest takie samo jak w innych językach .NET Framework. Jak w innych językach .NET Framework [-doc — opcja kompilatora](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) pozwala utworzyć plik XML, który zawiera informacje, które można przekształcić w dokumentacji przy użyciu narzędzia, takiego jak Sandcastle. Dokumentacja wygenerowanych przy użyciu narzędzia, które są przeznaczone do użytku z zestawów, które są zwykle zapisywane w innych językach .NET Framework utworzyć widok interfejsów API, które jest oparta na formularzu skompilowanych konstrukcji F #. O ile w szczególności obsługi narzędzi F #, dokumentacji generowane przez te narzędzia pasuje do widoku F # interfejsu API.
 
-Aby uzyskać więcej informacji na temat generowania dokumentacji z pliku XML, zobacz [komentarze dokumentacji XML &#40; K & 35; Przewodnik programowania w języku &#41; ](https://msdn.microsoft.com/library/b2s063f7).
+Aby uzyskać więcej informacji na temat generowania dokumentacji z pliku XML, zobacz [komentarze dokumentacji XML &#40;C&#35; przewodnik programowania w języku&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
 
 ## <a name="recommended-tags"></a>Zalecane tagi
@@ -35,13 +32,13 @@ Istnieją dwa sposoby zapisu komentarze dokumentacji XML. Jeden jest tylko zapis
 |Składnia znacznika|Opis|
 |----------|-----------|
 |**&lt;c&gt;***tekst***&lt;/c&gt;**|Określa, że *tekst* jest kod. Ten tag mogą posłużyć generatory dokumentacji do wyświetlania tekstu w czcionki, który jest odpowiedni dla kodu.|
-|**&lt;Podsumowanie&gt;***tekst* **&lt; /summary&gt;**|Określa, że *tekst* znajduje się krótki opis elementu programu. Opis jest zwykle jeden lub dwa zdania.|
-|**&lt;Uwagi&gt;***tekst* **&lt; /uwagi&gt;**|Określa, że *tekst* zawiera dodatkowe informacje dotyczące elementu programu.|
+|**&lt;Podsumowanie&gt;***tekst*** &lt; /summary&gt;**|Określa, że *tekst* znajduje się krótki opis elementu programu. Opis jest zwykle jeden lub dwa zdania.|
+|**&lt;Uwagi&gt;***tekst*** &lt; /uwagi&gt;**|Określa, że *tekst* zawiera dodatkowe informacje dotyczące elementu programu.|
 |**&lt;param name = "***nazwa***"&gt;***opis***&lt;/param&gt;**|Określa nazwę i opis dla parametru metody lub funkcji.|
 |**&lt;typeparam name = "***nazwa***"&gt;***opis***&lt;/typeparam&gt;**|Określa nazwę i opis dla parametru typu.|
-|**&lt;Zwraca&gt;***tekst* **&lt; /zwraca&gt;**|Określa, że *tekst* opisuje wartość zwracaną metody lub funkcji.|
+|**&lt;Zwraca&gt;***tekst*** &lt; /zwraca&gt;**|Określa, że *tekst* opisuje wartość zwracaną metody lub funkcji.|
 |**&lt;wyjątek cref = "***typu***"&gt;***opis***&lt;/exception&gt;**|Określa typ wyjątku, który można wygenerować oraz okoliczności, w których jest generowany.|
-|**&lt;patrz cref = "***odwołania***"&gt;***tekst* **&lt; /zobacz&gt;**|Określa wbudowany link do innego elementu programu. *Odwołania* to nazwa, która jest wyświetlana w pliku dokumentacji XML. *Tekst* jest tekst wyświetlany w łączu.|
+|**&lt;patrz cref = "***odwołania***"&gt;***tekst*** &lt; /zobacz&gt;**|Określa wbudowany link do innego elementu programu. *Odwołania* to nazwa, która jest wyświetlana w pliku dokumentacji XML. *Tekst* jest tekst wyświetlany w łączu.|
 |**&lt;SeeAlso cref = "***odwołania***" /&gt;**|Określa łącze Zobacz też w dokumentacji innego typu. *Odwołania* to nazwa, która jest wyświetlana w pliku dokumentacji XML. Zobacz też łącza są zwykle widoczne w dolnej części strony dokumentacji.|
 |**&lt;para&gt;***tekst***&lt;/para&gt;**|Określa akapit tekstu. Służy do oddzielania tekst wewnątrz **uwagi** tagu.|
 
@@ -64,6 +61,6 @@ Poniższy przykład przedstawia alternatywną metodą, bez tagów XML. W tym prz
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
     
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Opcje kompilatora](compiler-options.md)

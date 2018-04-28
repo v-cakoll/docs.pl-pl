@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b1f85d4cc45075f82035fa5b8c0c95341ba142d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3025eec9c01d325d7d00a7355ff908eb1e19e410
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 Bezpieczne i interoperacyjne powiązanie, która jest pochodną [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i obsługuje zabezpieczeń.  
@@ -92,7 +92,7 @@ Bezpieczne i interoperacyjne powiązanie, która jest pochodną [ \<wsFederation
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiadomości. Ten element jest typu <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiadomości. Ten element jest typu <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|  
 |[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Określa, czy między punktami końcowymi kanału ustanowiono niezawodnej sesji.|  
   
@@ -103,7 +103,7 @@ Bezpieczne i interoperacyjne powiązanie, która jest pochodną [ \<wsFederation
 |[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Federacja znajduje się możliwość udostępniania tożsamości wielu przedsiębiorstw lub zaufania domen do uwierzytelniania i autoryzacji. Używa protokołu WS-Trust do reprezentacji tożsamości z jednej relacji zaufania domeny do innego mapowania. Powiązania federacyjnego HTTP obsługuje zabezpieczeń SOAP, a także trybu mieszanego zabezpieczeń, ale nie obsługuje zabezpieczeń transportu. Usługi skonfigurowane dla tego wiązania należy korzystać z transportu HTTP. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ Federacja znajduje się możliwość udostępniania tożsamości wielu przedsiębiorstw lub zaufania domen do uwierzytelniania i autoryzacji. Używa protokołu WS-Trust do reprezentacji tożsamości z jednej relacji zaufania domeny do innego mapowania. Powiązania federacyjnego HTTP obsługuje zabezpieczeń SOAP, a także trybu mieszanego zabezpieczeń, ale nie obsługuje zabezpieczeń transportu. Usługi skonfigurowane dla tego wiązania należy korzystać z transportu HTTP. Aby uzyskać więcej informacji, zobacz [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
 ## <a name="example"></a>Przykład  
   

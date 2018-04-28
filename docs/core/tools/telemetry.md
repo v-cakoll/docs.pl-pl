@@ -1,22 +1,20 @@
 ---
-title: "Dane telemetryczne narzędzi interfejsu wiersza polecenia programu .NET core"
-description: "Odkryj funkcje telemetrii .NET Core narzędzia, które zbierają informacje o użyciu do analizy, które dane są zbierane i jak go wyłączyć."
-keywords: Dane telemetryczne .NET i .NET core
+title: Dane telemetryczne narzędzi interfejsu wiersza polecenia programu .NET core
+description: Odkryj funkcje telemetrii .NET Core narzędzia, które zbierają informacje o użyciu do analizy, które dane są zbierane i jak go wyłączyć.
 author: richlander
 ms.author: mairaw
 ms.date: 08/04/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: b3da69a7fc8de095b3845428af742870e7e737ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>Dane telemetryczne narzędzi interfejsu wiersza polecenia programu .NET core
 
@@ -49,20 +47,20 @@ Funkcja telemetrii .NET Core interfejsu wiersza polecenia narzędzia jest domyś
 
 Funkcja zbiera następujące dane:
 
-- Sygnatura czasowa wywołania &#8224;
-- Polecenie wywoływane (na przykład "kompilacji") &#8224;
-- Oktet trzy adres IP używany do określenia lokalizacji geograficznej &#8224;
-- `ExitCode`polecenie
+- Sygnatura czasowa wywołania&#8224;
+- Polecenie wywoływane (na przykład "kompilacji")&#8224;
+- Adres IP trzy octet umożliwia określenie lokalizacji geograficznych&#8224;
+- `ExitCode` polecenie
 - Test runner (do projekty testowe)
-- &#8224; systemu operacyjnego i wersji
+- Wersja systemu operacyjnego i&#8224;
 - Określa, czy znajdują się w węźle środowisk uruchomieniowych identyfikatorów środowiska wykonawczego
-- Wersja zestawu SDK programu .NET core &#8224;
+- Wersja zestawu SDK programu .NET core&#8224;
 
-&#8224; Ta metryka jest opublikowana.
+&#8224;Ta metryka jest opublikowana.
 
 Począwszy od programu .NET Core SDK 2.0, nowe punkty danych są zbierane:
 
-- `dotnet`polecenie Opcje i argumenty: tylko znane opcje i argumenty są zbierane (nie dowolne ciągi).
+- `dotnet` polecenie Opcje i argumenty: tylko znane opcje i argumenty są zbierane (nie dowolne ciągi).
 - Określa, czy zestaw SDK jest uruchomiona w kontenerze.
 - Docelowych platform.
 - Wartość skrótu adresów MAC: kryptograficznie (SHA256) anonimowych, jak i unikatowy identyfikator dla maszyny. Ta metryka nie został opublikowany.
@@ -84,9 +82,9 @@ Dane publikowane jest dostępna co kwartał i znajduje się w [dane użycia zest
 - OSVersion
 - Wersjazestawusdk
 
-&#8224; *Wystąpień* kolumny Wyświetla łączna liczba Użyj tego polecenia dla tego wiersza metryki danego dnia. 
+&#8224;*Wystąpień* kolumny Wyświetla łączna liczba Użyj tego polecenia dla tego wiersza metryki danego dnia. 
 
-&#8225; Zazwyczaj *geograficzne* kolumnie jest wyświetlana nazwa kraju. W niektórych przypadkach kontynencie z Antarktyka pojawia się w tej kolumnie, albo z powodu pracowników naukowo-badawczych przy użyciu platformy .NET Core Antarktyka lub nieprawidłowej lokalizacji dane.
+&#8225;Zazwyczaj *geograficzne* kolumnie jest wyświetlana nazwa kraju. W niektórych przypadkach kontynencie z Antarktyka pojawia się w tej kolumnie, albo z powodu pracowników naukowo-badawczych przy użyciu platformy .NET Core Antarktyka lub nieprawidłowej lokalizacji dane.
 
 ### <a name="example"></a>Przykład
 
@@ -113,7 +111,7 @@ Rozkład Microsoft .NET Core jest licencjonowana z [MICROSOFT .NET LIBRARY EULA]
 
 [Pakietów NuGet programu .NET](https://www.nuget.org/profiles/dotnetframework) użyć tego samego licencji, ale nie włączysz telemetrii (zobacz [zakres](#scope)).
 
-> 2. DATA. Oprogramowanie może zbierać informacje o Tobie i korzystanie z oprogramowania i wysyłać do firmy Microsoft. Firma Microsoft może używać tych informacji do poprawy naszych produktów i usług. Można dowiedzieć się więcej o zbieraniu danych i używać w dokumentacji pomocy i poufności informacji w http://go.microsoft.com/fwlink/?LinkId=528096. Korzystanie z oprogramowania działa jako Twojej zgody na nich.
+> 2. DATA. Oprogramowanie może zbierać informacje o Tobie i korzystanie z oprogramowania i wysyłać do firmy Microsoft. Firma Microsoft może używać tych informacji do poprawy naszych produktów i usług. Możesz dowiedzieć się więcej o zbieraniu danych i użyć w dokumentacji pomocy i poufności informacji w http://go.microsoft.com/fwlink/?LinkId=528096. Korzystanie z oprogramowania działa jako Twojej zgody na nich.
 
 ## <a name="disclosure"></a>Ujawnienie
 

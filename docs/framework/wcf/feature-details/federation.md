@@ -1,12 +1,13 @@
 ---
 title: Federacja
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>Federacja
 Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Opisano również [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługę wdrażania architektury zabezpieczeń. Przykładową aplikację prezentującą federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -32,7 +34,7 @@ Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Opisano również [
 ## <a name="definition-of-federated-security"></a>Definicja zabezpieczeń  
  Zabezpieczeń umożliwia czyste rozdzielenie klient uzyskuje dostęp do usługi i skojarzone procedury uwierzytelniania i autoryzacji. Zabezpieczeń umożliwia także współpracy w wielu systemów, sieci i organizacji w obszarach różnych zaufania.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Umożliwia tworzenie i wdrażanie systemów rozproszonych, korzystających z federacyjnego zabezpieczenia.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia tworzenie i wdrażanie systemów rozproszonych, korzystających z federacyjnego zabezpieczenia.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Elementy architektury zabezpieczeń  
  Architektura zabezpieczeń ma trzy kluczowe elementy, zgodnie z opisem w poniższej tabeli.  
@@ -71,14 +73,14 @@ Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Opisano również [
   
  W architekturze zabezpieczeń użytkownicy z organizacji A pamiętać, że jeśli chcą, aby uzyskać dostęp do usługi sieci Web w organizacji B, który muszą prezentować tokenu zabezpieczającego prawidłowe z STS w organizacji B, który uwierzytelnia i autoryzuje dostępu do określonej usługi.  
   
- Na skontaktowanie się z STS B, użytkownicy otrzymują inny poziom pośredników od zasady skojarzone z usługi STS. Podmioty zabezpieczeń muszą prezentować tokenu z STS A (to znaczy obszar zaufania klienta), przed STS B mogą wystawiać ich tokenu zabezpieczającego. To jest następstwem relacji zaufania między dwiema organizacjami i oznacza organizacji B nie musi zarządzać tożsamościami użytkowników z organizacji A. W praktyce STS B zazwyczaj ma wartość null `issuerAddress` i `issuerMetadataAddress`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). W takim przypadku klient sprawdza zasad lokalnych można znaleźć usługi STS A. Ta konfiguracja jest nazywana *home federacyjnego obszaru* i lepiej skaluje ponieważ STS B nie ma do przechowywania informacji o STS A.  
+ Na skontaktowanie się z STS B, użytkownicy otrzymują inny poziom pośredników od zasady skojarzone z usługi STS. Podmioty zabezpieczeń muszą prezentować tokenu z STS A (to znaczy obszar zaufania klienta), przed STS B mogą wystawiać ich tokenu zabezpieczającego. To jest następstwem relacji zaufania między dwiema organizacjami i oznacza organizacji B nie musi zarządzać tożsamościami użytkowników z organizacji A. W praktyce STS B zazwyczaj ma wartość null `issuerAddress` i `issuerMetadataAddress`. Aby uzyskać więcej informacji, zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). W takim przypadku klient sprawdza zasad lokalnych można znaleźć usługi STS A. Ta konfiguracja jest nazywana *home federacyjnego obszaru* i lepiej skaluje ponieważ STS B nie ma do przechowywania informacji o STS A.  
   
  Następnie skontaktuj się z STS w organizacji, A użytkownicy i uzyskania tokenu zabezpieczającego z uwzględnieniem poświadczenia uwierzytelniania, które zazwyczaj używają do uzyskiwania dostępu do innych zasobów organizacji A. Eliminuje to również problem użytkownicy muszą obsługiwać wiele zestawów poświadczeń lub w wielu lokacjach usługi przy użyciu tego samego zestawu poświadczeń.  
   
  Gdy użytkownicy uzyskują tokenu zabezpieczającego z STS A, ich obecny token do usługi STS B. organizacji B będzie kontynuowane do wykonania autoryzację żądań użytkowników i wystawia token zabezpieczający dla użytkowników z własny zestaw tokenów zabezpieczających. Użytkownicy można prezentować swoje token do zasobu w organizacji B i uzyskania dostępu do usługi.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Obsługa zabezpieczeń w programie WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia obsługę gotowe do wdrożenia architektury zabezpieczeń za pomocą [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia obsługę gotowe do wdrożenia architektury zabezpieczeń za pomocą [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element zapewnia bezpieczne, niezawodne i interoperacyjne powiązanie, które powoduje użycie protokołu HTTP jako podstawowy mechanizm transportu dla stylu komunikacji "żądanie-odpowiedź" wykorzystujące tekst i kodu XML, ponieważ format kodowania danych przesyłanych w sieci.  
   
@@ -159,7 +161,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Niewielkie punktu należy zauważyć, dotyczących oświadczeń wymagane przez `MyService`. Druga liczba wskazuje, że `MyService` wymaga tokenu SAML z `accessAuthorized` oświadczeń. Mówiąc ściślej, określa typ oświadczenia, które `MyService` wymaga. Pełna nazwa tego typu oświadczenia jest http://tempuri.org:accessAuthorized (wraz z skojarzona przestrzeń nazw), który jest używany w pliku konfiguracji usługi. Wartość tego oświadczenia wskazuje na obecność tego oświadczenia i przyjęto, że można ustawić `true` przez usługę STS B.  
+>  Niewielkie punktu należy zauważyć, dotyczących oświadczeń wymagane przez `MyService`. Druga liczba wskazuje, że `MyService` wymaga tokenu SAML z `accessAuthorized` oświadczeń. Mówiąc ściślej, określa typ oświadczenia, które `MyService` wymaga. Jest w pełni kwalifikowaną nazwę tego typu oświadczenia http://tempuri.org:accessAuthorized (wraz z skojarzona przestrzeń nazw), która jest używana w pliku konfiguracji usługi. Wartość tego oświadczenia wskazuje na obecność tego oświadczenia i przyjęto, że można ustawić `true` przez usługę STS B.  
   
  W czasie wykonywania, te zasady są wymuszane przez `MyServiceOperationRequirement` klasy, która jest zaimplementowany jako część `MyService`.  
   
@@ -218,7 +220,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Ponownie `userAuthenticated` oświadczenia jest typ oświadczenia, który jest wymagany przez usługę STS B. Pełna nazwa tego typu oświadczenia jest http://tempuri.org:userAuthenticated (wraz z skojarzona przestrzeń nazw), który jest używany w pliku konfiguracji usługi STS. Wartość tego oświadczenia wskazuje na obecność tego oświadczenia i przyjęto, że można ustawić `true` przez usługę STS A.  
+>  Ponownie `userAuthenticated` oświadczenia jest typ oświadczenia, który jest wymagany przez usługę STS B. Jest w pełni kwalifikowaną nazwę tego typu oświadczenia http://tempuri.org:userAuthenticated (wraz z skojarzona przestrzeń nazw), która jest używana w pliku konfiguracji usługi STS. Wartość tego oświadczenia wskazuje na obecność tego oświadczenia i przyjęto, że można ustawić `true` przez usługę STS A.  
   
  W czasie wykonywania `STS_B_OperationRequirement` klasy wymusza tych zasad, które zostało zaimplementowane jako część usługi STS B.  
   

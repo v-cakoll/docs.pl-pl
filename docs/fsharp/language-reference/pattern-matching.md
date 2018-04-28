@@ -1,20 +1,17 @@
 ---
 title: Dopasowanie wzorca (F#)
-description: "Dowiedz się, jak wzorce są używane w języku F # do porównywania danych o strukturze logicznej Rozłóż danych na elementów składowych i wyodrębnienia informacji z danych."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak wzorce są używane w języku F # do porównywania danych o strukturze logicznej Rozłóż danych na elementów składowych i wyodrębnienia informacji z danych.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
@@ -41,7 +38,7 @@ W poniższej tabeli przedstawiono obsługiwane wzorce. W czasie wykonywania dany
 |Stałe wzorzec|Wszelkie liczbowe, znak, lub literału ciągu, stała wyliczenia lub identyfikatora literału zdefiniowanego|`1.0`, `"test"`, `30`, `Color.Red`|
 |Identyfikator — wzorzec|Wartość działania case rozróżnianą Unię, etykiety wyjątków lub w przypadku — aktywny wzorzec|`Some(x)`<br /><br />`Failure(msg)`|
 |Variable — wzorzec|*Identyfikator*|`a`|
-|`as`wzorzec|*wzorzec* jako *identyfikator*|`(a, b) as tuple1`|
+|`as` wzorzec|*wzorzec* jako *identyfikator*|`(a, b) as tuple1`|
 |LUB wzorca|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |I wzorzec|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Cons — wzorzec|*Identyfikator* :: *identyfikator listy*|`h :: t`|
@@ -199,4 +196,4 @@ W poniższym przykładzie użyto wzoru null i zmiennej.
 
 [Wzorce aktywne](active-patterns.md)
 
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)

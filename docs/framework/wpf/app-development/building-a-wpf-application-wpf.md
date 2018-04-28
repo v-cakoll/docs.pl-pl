@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b7003756e5c805c21fc5f4013deccf64b5ba8811
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacje mogą być wbudowane jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), bibliotekach (dll) lub kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki procesu kompilacji.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="pre-build-initializations"></a>Inicjowanie wstępnej kompilacji  
  Przed rozpoczęciem budowania, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] Określa lokalizację ważne narzędzia i biblioteki, w tym następujące:  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  
+-   .NET Framework.  
   
 -   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Katalogów.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>Rozpoznawanie odwołania  
- Proces kompilacji lokalizuje i wiąże zestawy wymagane do utworzenia projektu aplikacji. Istotą takiej logiki jest zawarta w `ResolveAssemblyReference` zadań. Wszystkie zestawy zadeklarowany jako `Reference` w pliku projektu są dostarczane do danego zadania oraz informacje na temat ścieżek wyszukiwania i metadanych dla zestawów już zainstalowane w systemie. Zadanie odwołuje się do zestawów i używa zainstalowanego zestawu metadanych do odfiltrowania tych podstawowych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawy, które należy pokazuj się w manifestach danych wyjściowych. Można to zrobić, aby uniknąć nadmiarowych w manifestów ClickOnce. Na przykład, ponieważ PresentationFramework.dll jest uznawana za przedstawiciela aplikacji wbudowanych oraz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , a ponadto wszystkie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawy istnieje w tej samej lokalizacji, na każdym komputerze, który ma [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] zainstalowany, nie jest konieczne uwzględnienie wszystkich informacji na temat wszystkich [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] odwołuje się do zestawów w manifestach.  
+ Proces kompilacji lokalizuje i wiąże zestawy wymagane do utworzenia projektu aplikacji. Istotą takiej logiki jest zawarta w `ResolveAssemblyReference` zadań. Wszystkie zestawy zadeklarowany jako `Reference` w pliku projektu są dostarczane do danego zadania oraz informacje na temat ścieżek wyszukiwania i metadanych dla zestawów już zainstalowane w systemie. Zadanie odwołuje się do zestawów i używa zainstalowanego zestawu metadanych do odfiltrowania tych podstawowych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawy, które należy pokazuj się w manifestach danych wyjściowych. Można to zrobić, aby uniknąć nadmiarowych w manifestów ClickOnce. Na przykład, ponieważ PresentationFramework.dll jest uznawana za przedstawiciela aplikacji wbudowanych oraz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , a ponadto wszystkie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawy istnieje w tej samej lokalizacji, na każdym komputerze, który ma programu .NET Framework zainstalowany, nie istnieje potrzeba aby uwzględnić wszystkie informacje dotyczące wszystkich zestawów odwołań .NET Framework w manifestach.  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>Kompilację znaczników — przebieg 1  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94eca5c2aad919fe46fa75626954e10bb68f1110
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 wydajności
 Dustin Metzgar  
@@ -27,7 +27,7 @@ Dustin Metzgar
   
  We wrześniu 2010 Microsoft Corporation  
   
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] obejmuje znaczne zmiany z [!INCLUDE[wf](../../../includes/wf-md.md)] o dużych inwestycji w wydajności.  Ta nowa wersja wprowadza znaczących zmian z poprzednich wersji [!INCLUDE[wf1](../../../includes/wf1-md.md)] dostarczonego w ramach programu .NET Framework 3.0 i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Została zmieniona z rdzenia modelu programowania, środowiska uruchomieniowego i narzędzi, aby znacznie zwiększyć wydajność i użyteczność. W tym temacie przedstawiono ważne charakterystyki tych zmian i porównuje je z tych funkcji w poprzedniej wersji.  
+ Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zawiera znaczne zmiany z systemu Windows Workflow Foundation (WF) z dużych inwestycji w wydajności.  Ta nowa wersja wprowadza znaczących zmian z poprzednich wersji [!INCLUDE[wf1](../../../includes/wf1-md.md)] dostarczonego w ramach programu .NET Framework 3.0 i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Została zmieniona z rdzenia modelu programowania, środowiska uruchomieniowego i narzędzi, aby znacznie zwiększyć wydajność i użyteczność. W tym temacie przedstawiono ważne charakterystyki tych zmian i porównuje je z tych funkcji w poprzedniej wersji.  
   
  Zwiększa wydajność składników przepływu pracy o rzędów między WF3 i WF4.  To pozostawia odstęp między kodowane ręcznie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usług i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług przepływu pracy będzie bardzo mała.  Opóźnienie przepływu pracy została znacząco zmniejszona w WF4.  Zwiększa wydajność trwałości przez współczynnik 2.5 3.0.  Monitorowanie kondycji za pomocą śledzenia przepływu pracy ma znacznie mniejsze koszty.  Są one istotne powody migrację do lub przyjąć WF4 w aplikacji.  
   
@@ -192,7 +192,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Opisane w poprzedniej sekcji "składnika poziom wydajności porównania" wprowadzono znaczące zmniejszenie obciążenia między WF3 i WF4.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi przepływu pracy teraz może dopasować prawie wydajność kodowane ręcznie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, ale nadal mają korzystać z [!INCLUDE[wf1](../../../includes/wf1-md.md)] środowiska wykonawczego.  Ten scenariusz testu porównuje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi przed [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi przepływu pracy w WF4.  
   
 ### <a name="online-store-service"></a>Usługi online magazynu  
- Jedną z możliwości [!INCLUDE[wf2](../../../includes/wf2-md.md)] jest możliwość tworzenia procesy korzystające z kilku usług.  W tym przykładzie jest usługą sklepu, która organizuje zakup dwóch wywołania usługi.  Pierwszym krokiem jest do sprawdzania poprawności kolejności przy użyciu usługi sprawdzania poprawności zamówienia.  Drugim krokiem jest do wypełnienia kolejności przy użyciu usługi magazynu.  
+ Jedną z możliwości programu Windows Workflow Foundation jest możliwość tworzenia procesy korzystające z kilku usług.  W tym przykładzie jest usługą sklepu, która organizuje zakup dwóch wywołania usługi.  Pierwszym krokiem jest do sprawdzania poprawności kolejności przy użyciu usługi sprawdzania poprawności zamówienia.  Drugim krokiem jest do wypełnienia kolejności przy użyciu usługi magazynu.  
   
  Te dwie usługi wewnętrznej bazy danych usługi sprawdzania poprawności kolejności i magazynu, pozostają takie same, w obu.  Element, który zmienia jest Online usługi magazynu, który wykonuje orchestration.  W przypadku jednego, usługa jest ręcznie zakodowane jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi.  W przypadku usługi są zapisywane jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi przepływu pracy w WF4. [!INCLUDE[wf1](../../../includes/wf1-md.md)]-określone funkcje, takie jak śledzenie i trwałości są wyłączone dla tego testu.  
   
@@ -448,7 +448,7 @@ public class Workflow1 : Activity
  Monitorowanie kondycji ma około 3% wpływ na wydajność.  Koszt profilu podstawowego wynosi około 8%.  
   
 ## <a name="interop"></a>Współdziałanie  
- WF4 jest prawie pełna poprawione [!INCLUDE[wf1](../../../includes/wf1-md.md)] i w związku z tym WF3 przepływów pracy i działań nie są bezpośrednio zgodne z WF4.  Wielu klientów, które są przyjęte [!INCLUDE[wf2](../../../includes/wf2-md.md)] wczesne będzie mieć wewnętrznych lub innych firm definicji przepływu pracy i działań niestandardowych do WF3.  Jednym ze sposobów ułatwić przejście WF4 ma użyć działania Interop, które można wykonywać działania WF3 z WF4 przepływu pracy.  Zalecane jest <xref:System.Activities.Statements.Interop> działania można używać tylko gdy jest to konieczne. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrowanie do wyewidencjonowania WF4 [wskazówki dotyczące migracji WF4](http://go.microsoft.com/fwlink/?LinkID=153313).  
+ WF4 jest prawie pełna poprawione [!INCLUDE[wf1](../../../includes/wf1-md.md)] i w związku z tym WF3 przepływów pracy i działań nie są bezpośrednio zgodne z WF4.  Wielu klientów, które wcześniej przyjęte Windows Workflow Foundation ma wewnętrznych lub innych firm definicji przepływu pracy i działań niestandardowych do WF3.  Jednym ze sposobów ułatwić przejście WF4 ma użyć działania Interop, które można wykonywać działania WF3 z WF4 przepływu pracy.  Zalecane jest <xref:System.Activities.Statements.Interop> działania można używać tylko gdy jest to konieczne. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrowanie do wyewidencjonowania WF4 [wskazówki dotyczące migracji WF4](http://go.microsoft.com/fwlink/?LinkID=153313).  
   
 ### <a name="environment-setup"></a>Konfigurowanie środowiska  
  ![Środowisko testowania wydajności przepływu pracy](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  

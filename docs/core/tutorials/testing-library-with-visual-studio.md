@@ -1,24 +1,23 @@
 ---
-title: "Testowanie biblioteki klas z platformą .NET Core w Visual Studio 2017 r."
-description: "Dowiedz się, jak przetestować biblioteki klas napisane w języku C# za pomocą programu Visual Studio 2017 r."
-keywords: Oprogramowanie .NET core, testy jednostkowe biblioteki, program Visual Studio 2017 r. klasy .NET Standard
+title: Testowanie biblioteki klas z platformą .NET Core w Visual Studio 2017 r.
+description: Dowiedz się, jak przetestować biblioteki klas napisane w języku C# za pomocą programu Visual Studio 2017 r.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 dev_langs:
 - csharp
 - vb
-ms.workload: dotnetcore
-ms.openlocfilehash: fb5a23ccdcacadd70a58ec6c9a35fbee86af667b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0356ea286238f4b722a42795c9456f7532766f7d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testowanie biblioteki klas z platformą .NET Core w Visual Studio 2017 r.
 

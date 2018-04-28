@@ -1,20 +1,17 @@
 ---
 title: Sekwencje (F#)
-description: "Dowiedz się, jak używać F #, gdy masz duży, uporządkowanych zbierania danych, ale nie zawsze powinien korzystać ze wszystkich elementów."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak używać F #, gdy masz duży, uporządkowanych zbierania danych, ale nie zawsze powinien korzystać ze wszystkich elementów.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 23dc7d75-cd26-4df2-9be3-9d1aba5c4443
-ms.openlocfilehash: b0562a6efbd2398cd8730bb835a1833955fee1c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sequences"></a>Sekwencje
 
@@ -90,7 +87,7 @@ Dane wyjściowe
 0 10 20 30 40
 ```
 
-Za pomocą [SEQ.ofarray —](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) i [SEQ.oflist — &#60; " T &#62; Funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), można tworzyć sekwencje z tablicami i listami. Jednak możesz również przekonwertować tablicami i listami sekwencji za pomocą operatora rzutowania. Obie techniki przedstawiono w poniższym kodzie.
+Za pomocą [SEQ.ofarray —](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) i [SEQ.oflist —&#60;'T&#62; funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), można tworzyć sekwencje z tablicami i listami. Jednak możesz również przekonwertować tablicami i listami sekwencji za pomocą operatora rzutowania. Obie techniki przedstawiono w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet11.fs)]
 
@@ -102,7 +99,7 @@ Nieskończone sekwencji można zdefiniować za pomocą [SEQ.initinfinite —](ht
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[SEQ.unfold —](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) generuje sekwencję z funkcji obliczeń, która przyjmuje stanie i przekształceniu go do produkcji każdego kolejnego elementu w sekwencji. Stan jest tylko wartość, która jest używana do obliczania każdy element i można zmienić, ponieważ każdy element jest obliczana. Drugi argument `Seq.unfold` jest to wartość początkowa, który służy do uruchomienia sekwencji. `Seq.unfold`używa typu opcji dla stanu, co pozwala na zakończenie sekwencji zwracając `None` wartość. Poniższy kod przedstawia dwa przykłady sekwencji, `seq1` i `fib`, które są generowane przez `unfold` operacji. Pierwsza strona, `seq1`, jest tylko proste sekwencja z cyfr liczącą do 100. Druga Strona, `fib`, używa `unfold` do obliczenia Fibonacci sekwencji. Ponieważ każdy element w sekwencji Fibonacci to suma poprzednich dwóch liczb Fibonacci, wartość stanu jest krotka składająca się z poprzednich dwóch liczb w sekwencji. Jest to wartość początkowa `(1,1)`, najpierw dwóch liczb w sekwencji.
+[SEQ.unfold —](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) generuje sekwencję z funkcji obliczeń, która przyjmuje stanie i przekształceniu go do produkcji każdego kolejnego elementu w sekwencji. Stan jest tylko wartość, która jest używana do obliczania każdy element i można zmienić, ponieważ każdy element jest obliczana. Drugi argument `Seq.unfold` jest to wartość początkowa, który służy do uruchomienia sekwencji. `Seq.unfold` używa typu opcji dla stanu, co pozwala na zakończenie sekwencji zwracając `None` wartość. Poniższy kod przedstawia dwa przykłady sekwencji, `seq1` i `fib`, które są generowane przez `unfold` operacji. Pierwsza strona, `seq1`, jest tylko proste sekwencja z cyfr liczącą do 100. Druga Strona, `fib`, używa `unfold` do obliczenia Fibonacci sekwencji. Ponieważ każdy element w sekwencji Fibonacci to suma poprzednich dwóch liczb Fibonacci, wartość stanu jest krotka składająca się z poprzednich dwóch liczb w sekwencji. Jest to wartość początkowa `(1,1)`, najpierw dwóch liczb w sekwencji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -198,7 +195,7 @@ Poniższy kod przedstawia użycie `Seq.compareWith`.
 
 W poprzednim kodzie tylko pierwszy element jest obliczana i zbadane, a wynikiem jest wartość -1.
 
-[SEQ.countby —](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) przyjmuje funkcję, która generuje wartość o nazwie *klucza* dla każdego elementu. Klucz jest generowany dla każdego elementu przez wywołanie tej funkcji na każdym elemencie. `Seq.countBy`Zwraca sekwencję, która zawiera wartości klucza, a liczba Liczba elementów wygenerowanych każdej wartości klucza.
+[SEQ.countby —](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) przyjmuje funkcję, która generuje wartość o nazwie *klucza* dla każdego elementu. Klucz jest generowany dla każdego elementu przez wywołanie tej funkcji na każdym elemencie. `Seq.countBy` Zwraca sekwencję, która zawiera wartości klucza, a liczba Liczba elementów wygenerowanych każdej wartości klucza.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -210,7 +207,7 @@ Dane wyjściowe są następujące:
 
 Dane wyjściowe poprzedniego pokazuje wystąpiły 34 elementy oryginalnej sekwencji wytworzonego klucz 1, 33 wartości, które tworzone klucz 2 i 33 wartości, które tworzone klucza 0.
 
-W przypadku grupowania elementów sekwencji przez wywołanie metody [SEQ.groupby —](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy`pobiera sekwencję i funkcję, która generuje klucz w elemencie. Funkcja jest wykonywane dla każdego elementu w sekwencji. `Seq.groupBy`Zwraca sekwencję krotek, gdzie pierwszy element poszczególne krotki jest kluczem, a drugą jest wartość sekwencję elementów, które powodują powstanie tego klucza.
+W przypadku grupowania elementów sekwencji przez wywołanie metody [SEQ.groupby —](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy` pobiera sekwencję i funkcję, która generuje klucz w elemencie. Funkcja jest wykonywane dla każdego elementu w sekwencji. `Seq.groupBy` Zwraca sekwencję krotek, gdzie pierwszy element poszczególne krotki jest kluczem, a drugą jest wartość sekwencję elementów, które powodują powstanie tego klucza.
 
 W poniższym przykładzie pokazano sposób użycia `Seq.groupBy` do partycjonowania sekwencji liczb od 1 do 100 na trzy grupy, które mają różne wartości klucza, 0, 1 i 2.
 
@@ -224,7 +221,7 @@ Dane wyjściowe są następujące:
 
 Można utworzyć sekwencji, która eliminuje zduplikowane elementy przez wywołanie metody [SEQ.DISTINCT —](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401). Możesz też użyć [SEQ.distinctby —](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75), który przyjmuje generowania klucza funkcję można wywołać dla każdego elementu. Wynikowa sekwencja zawiera elementy oryginalnej sekwencji, które miały unikatowe klucze; nowsze elementy, które tworzy zduplikowany klucz do elementu wcześniejszych zostaną odrzucone.
 
-W poniższym przykładzie przedstawiono użycie `Seq.distinct`. `Seq.distinct`przedstawiono generowania sekwencji, które reprezentują binarne wartości, a następnie wskazującą, że tylko odrębnych elementach 0 i 1.
+W poniższym przykładzie przedstawiono użycie `Seq.distinct`. `Seq.distinct` przedstawiono generowania sekwencji, które reprezentują binarne wartości, a następnie wskazującą, że tylko odrębnych elementach 0 i 1.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -233,7 +230,7 @@ Poniższy kod przedstawia `Seq.distinctBy` przez uruchomienie z sekwencją liczb
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet23.fs)]
     
 ## <a name="readonly-and-cached-sequences"></a>Tylko do odczytu i pamięci podręcznej sekwencji
-[SEQ.ReadOnly —](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) tworzy kopię tylko do odczytu w sekwencji. `Seq.readonly`jest przydatne, gdy masz kolekcję odczytu i zapisu, takich jak tablicy, i nie chcesz zmodyfikować oryginalnej kolekcji. Ta funkcja umożliwia zachowanie hermetyzacji danych. W poniższym przykładzie jest tworzony typ zawierający tablicę. Właściwość udostępnia tablicy, ale zamiast zwracać tablicy, zwraca sekwencję, która jest tworzona na podstawie tablicy przy użyciu `Seq.readonly`.
+[SEQ.ReadOnly —](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) tworzy kopię tylko do odczytu w sekwencji. `Seq.readonly` jest przydatne, gdy masz kolekcję odczytu i zapisu, takich jak tablicy, i nie chcesz zmodyfikować oryginalnej kolekcji. Ta funkcja umożliwia zachowanie hermetyzacji danych. W poniższym przykładzie jest tworzony typ zawierający tablicę. Właściwość udostępnia tablicy, ale zamiast zwracać tablicy, zwraca sekwencję, która jest tworzona na podstawie tablicy przy użyciu `Seq.readonly`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet24.fs)]
 
@@ -246,6 +243,6 @@ Proste operacje arytmetyczne są podobne do tych list, takich jak [SEQ.AVERAGE �
 [SEQ.fold —](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3), [SEQ.Reduce —](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9), i [SEQ.Scan —](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e) są takie jak odpowiednie funkcje, które są dostępne dla listy. Sekwencje obsługuje podzestawie pełnego odchylenia tych funkcji, który zawiera obsługiwane. Aby uzyskać dodatkowe informacje i przykłady, zobacz [wymieniono](lists.md).
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
-[Typy F #](fsharp-types.md)
+[Typy F#](fsharp-types.md)

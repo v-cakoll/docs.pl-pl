@@ -1,12 +1,13 @@
 ---
 title: 'Porady: tworzenie WSFederationHttpBinding'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Porady: tworzenie WSFederationHttpBinding
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> klasy ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) w konfiguracji) zapewnia mechanizm udostępnianie usługi federacyjnej. Oznacza to, że usługa, która wymaga od klientów uwierzytelniania za pomocą tokenu zabezpieczającego wydanego przez usługę tokenu zabezpieczającego. W tym temacie przedstawiono sposób konfigurowania <xref:System.ServiceModel.WSFederationHttpBinding> w kodzie i konfiguracji. Po utworzeniu powiązania punktu końcowego można skonfigurować do używania tego powiązania.  
@@ -36,17 +38,17 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceM
     > [!NOTE]
     >  <xref:System.ServiceModel.WSFederationHttpBinding> Obsługuje również `None` jako tryb zabezpieczeń. Ten tryb nie jest bezpieczna i jest dostępne tylko do celów debugowania. Jeśli punkt końcowy usługi jest wdrażany z <xref:System.ServiceModel.WSFederationHttpBinding> z jej ustawić tryb zabezpieczeń `None`, wynikowy klienta powiązania (generowane przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) jest <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> z tryb zabezpieczeń `None`.  
   
-     W przeciwieństwie do innych powiązania dostarczane przez system nie jest konieczne wybieranie typu poświadczeń klienta przy użyciu `WSFederationHttpBinding`. Jest tak, ponieważ typ poświadczeń klienta jest zawsze wystawionego tokenu. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uzyskuje token z określonego wystawcę i przedstawia tokenu usługi do uwierzytelniania klienta.  
+     W przeciwieństwie do innych powiązania dostarczane przez system nie jest konieczne wybieranie typu poświadczeń klienta przy użyciu `WSFederationHttpBinding`. Jest tak, ponieważ typ poświadczeń klienta jest zawsze wystawionego tokenu. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uzyskuje token z określonego wystawcę i przedstawia tokenu usługi do uwierzytelniania klienta.  
   
 2.  Na klientach federacyjnych, należy ustawić <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> właściwość adres URL usługi tokenu zabezpieczającego. Ustaw <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> do powiązania w celu użycia do komunikowania się z usługi tokenu zabezpieczającego.  
   
-3.  Opcjonalny. Ustaw <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> właściwości do jednolity identyfikator zasobów (URI) typu tokenu. Na usług federacyjnych Określ typ tokenu, który oczekuje usługi. Na klientach federacyjnych Określ typ tokenu żądania klienta z usługi tokenu zabezpieczającego.  
+3.  Opcjonalna. Ustaw <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> właściwości do jednolity identyfikator zasobów (URI) typu tokenu. Na usług federacyjnych Określ typ tokenu, który oczekuje usługi. Na klientach federacyjnych Określ typ tokenu żądania klienta z usługi tokenu zabezpieczającego.  
   
      Jeśli nie tokenu określono typu, klientów generuje tokeny zabezpieczające żądania WS-Trust (RSTs) bez tokenu typu identyfikatora URI i usług spodziewać się uwierzytelnianie klientów za pomocą tokenu zabezpieczeń potwierdzenia Markup Language (SAML) 1.1 domyślnie.  
   
      Identyfikator URI dla tokenu SAML 1.1 jest "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  Opcjonalny. W usługach federacyjnych, należy ustawić <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> właściwość adres URL metadanych usługi tokenu zabezpieczającego. Punkt końcowy metadanych umożliwia klientom usługi wybierz para powiązanie odpowiednie/punktu końcowego, jeśli usługa jest skonfigurowana do publikowania metadanych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Publikowanie metadanych, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Opcjonalna. W usługach federacyjnych, należy ustawić <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> właściwość adres URL metadanych usługi tokenu zabezpieczającego. Punkt końcowy metadanych umożliwia klientom usługi wybierz para powiązanie odpowiednie/punktu końcowego, jeśli usługa jest skonfigurowana do publikowania metadanych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Publikowanie metadanych, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Można również ustawić inne właściwości, takich jak typ klucz używany jako dowód klucza wystawionego tokenu, pakiet algorytmów do użycia między klientem a usługą, czy do negocjowania lub jawnie określ poświadczenia usługi, szczególne oświadczeń usługi oczekuje wystawiony token zawierał i wszelkie dodatkowe elementy XML dodane do żądania, które klient wysyła do usługi tokenu zabezpieczającego.  
   
@@ -63,7 +65,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceM
   
 4.  Ustaw <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> właściwości <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` lub.`AsymmetricKey` co jest wymagane.  
   
-5.  Ustaw <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> na odpowiednią wartość. Jeśli wartość nie jest ustawiona, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wartość domyślna to "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", które wskazuje tokeny SAML 1.1.  
+5.  Ustaw <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> na odpowiednią wartość. Jeśli wartość nie jest ustawiona, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] domyślnie "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", która wskazuje tokeny SAML 1.1.  
   
 6.  Wymagany na kliencie, jeśli określono nie wystawcy lokalnego; Opcjonalnie w usłudze. Utwórz <xref:System.ServiceModel.EndpointAddress> zawierający informacje o adres i tożsamość usługi tokenu zabezpieczającego i przypisz <xref:System.ServiceModel.EndpointAddress> wystąpienie do <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> właściwości.  
   
@@ -87,21 +89,21 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceM
   
 5.  Utwórz `<message>` element jako element podrzędny `<security>` elementu.  
   
-6.  Opcjonalny. Ustaw `algorithmSuite` atrybutu `<message>` element odpowiednią wartość. Wartość domyślna to `Basic256`.  
+6.  Opcjonalna. Ustaw `algorithmSuite` atrybutu `<message>` element odpowiednią wartość. Wartość domyślna to `Basic256`.  
   
-7.  Opcjonalny. Jeśli klucz asymetryczny potwierdzającego jest wymagane, ustaw `issuedKeyType` atrybutu `<message>` elementu `AsymmetricKey`. Wartość domyślna to `SymmetricKey`.  
+7.  Opcjonalna. Jeśli klucz asymetryczny potwierdzającego jest wymagane, ustaw `issuedKeyType` atrybutu `<message>` elementu `AsymmetricKey`. Wartość domyślna to `SymmetricKey`.  
   
-8.  Opcjonalny. Ustaw `issuedTokenType` atrybutu `<message>` elementu.  
+8.  Opcjonalna. Ustaw `issuedTokenType` atrybutu `<message>` elementu.  
   
 9. Wymagany na kliencie, jeśli określono nie wystawcy lokalnego; Opcjonalnie w usłudze. Utwórz `<issuer>` element jako element podrzędny `<message>` elementu.  
   
 10. Ustaw `address` atrybutu `<issuer>` element i określ adres, pod którym usługa tokenu zabezpieczającego akceptuje żądania tokenu.  
   
-11. Opcjonalny. Dodaj `<identity>` element podrzędny i określ tożsamość usługi tokenu zabezpieczeń  
+11. Opcjonalna. Dodaj `<identity>` element podrzędny i określ tożsamość usługi tokenu zabezpieczeń  
   
-12. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usługi uwierzytelnianie i tożsamość](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+12. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Wymagany na kliencie, jeśli określono nie wystawcy lokalnego; nie są używane w usłudze. Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) w sekcji powiązania, który może służyć do komunikacji z usługą tokenu zabezpieczeń. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie powiązania, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Wymagany na kliencie, jeśli określono nie wystawcy lokalnego; nie są używane w usłudze. Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) w sekcji powiązania, który może służyć do komunikacji z usługą tokenu zabezpieczeń. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie powiązania, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Określanie powiązania utworzony w poprzednim kroku, ustawiając `binding` i `bindingConfiguration` atrybuty `<issuer>` elementu.  
   

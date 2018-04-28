@@ -1,23 +1,24 @@
 ---
-title: "Najlepsze rozwiązania w zakresie trwałości"
-ms.custom: 
+title: Najlepsze rozwiązania w zakresie trwałości
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Najlepsze rozwiązania w zakresie trwałości
 W tym dokumencie opisano najważniejsze wskazówki dotyczące projektowania przepływu pracy i konfiguracji związane z trwałości przepływu pracy.  
@@ -31,7 +32,7 @@ W tym dokumencie opisano najważniejsze wskazówki dotyczące projektowania prze
   
  Jeśli przepływ pracy jest zajęta przez długi czas, firma Microsoft zaleca, aby utrwalić wystąpienia przepływu pracy regularnie przez cały okres jej zajęty. Można to zrobić przez dodanie <xref:System.Activities.Statements.Persist> działań w całej sekwencji działań, które przechowują zajęty wystąpienia przepływu pracy. W ten sposób domeny aplikacji odtwarzania, awarii hosta lub komputera błędy nie powodują systemu go z powrotem obniżyć na początek okresu zajęty. Należy pamiętać, że dodawanie <xref:System.Activities.Statements.Persist> działań do przepływu pracy może prowadzić do pogorszenia wydajności.  
   
- Windows Server AppFabric znacząco upraszcza konfigurację i użyj trwałości. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Systemu Windows Server AppFabric trwałości](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric znacząco upraszcza konfigurację i użyj trwałości. Aby uzyskać więcej informacji, zobacz [trwałości sieci szkieletowej aplikacji serwera systemu Windows](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Konfiguracja parametrów skalowalności  
  Skalowalność i wydajność wymagania określają ustawienia następujące parametry:  

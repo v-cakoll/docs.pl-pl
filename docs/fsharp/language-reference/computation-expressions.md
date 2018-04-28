@@ -1,20 +1,17 @@
 ---
-title: "Wyrażenia obliczeń (F#)"
-description: "Dowiedz się, jak utworzyć wygodny składnię pisanie obliczenia w F # można sekwencjonowania i łączyć, używając konstrukcji przepływu sterowania i powiązania."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Wyrażenia obliczeń (F#)
+description: 'Dowiedz się, jak utworzyć wygodny składnię pisanie obliczenia w F # można sekwencjonowania i łączyć, używając konstrukcji przepływu sterowania i powiązania.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: acabbf5d-fbb8-479f-894c-7251bf16c8c3
-ms.openlocfilehash: c4ff998c65f3a5c458f36312f6887d869569d814
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 990ea509e4fef84d3e3ee37471b28e2b8d019fad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -69,7 +66,7 @@ W kodzie powyżej wywołań `Run` i `Delay` są pomijane, jeśli nie są zdefini
 
 
 
-|Wyrażenie|Translacja|
+|Wyrażenie|{1&gt;Translacja&lt;1}|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{&#124; let! pattern = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|

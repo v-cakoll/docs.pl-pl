@@ -1,24 +1,26 @@
 ---
-title: "Transport: Współdziałanie protokołu TCP z usługami WSE 3.0"
-ms.custom: 
+title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
 Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplementować sesji dupleksowej TCP jako niestandardowego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transportu. Przedstawiono również, jak używasz rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. W następujących krokach przedstawiono sposób tworzenia tej niestandardowej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportu:  
@@ -31,10 +33,10 @@ Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplemento
   
 4.  Upewnij się, że wszelkie wyjątki dotyczące sieci są znormalizowane do odpowiedniej klasy pochodnej z <xref:System.ServiceModel.CommunicationException>.  
   
-5.  Dodaj element powiązania, który dodaje niestandardowy transportu do stosu kanału. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Dodawanie elementu powiązania].  
+5.  Dodaj element powiązania, który dodaje niestandardowy transportu do stosu kanału. Aby uzyskać więcej informacji zobacz [Dodawanie elementu powiązania].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Tworzenie IDuplexSessionChannel  
- Pierwszą czynnością przy tworzeniu transportu współdziałanie programu WSE 3.0 protokołu TCP jest utworzenie implementacja <xref:System.ServiceModel.Channels.IDuplexSessionChannel> nad <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel`pochodną <xref:System.ServiceModel.Channels.ChannelBase>. Logika wysyłania wiadomości składa się z dwóch głównych elementów: (1) Kodowanie komunikatu na bajty oraz (2) framing tych bajtów i wysyłania ich przesyłania.  
+ Pierwszą czynnością przy tworzeniu transportu współdziałanie programu WSE 3.0 protokołu TCP jest utworzenie implementacja <xref:System.ServiceModel.Channels.IDuplexSessionChannel> nad <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` pochodną <xref:System.ServiceModel.Channels.ChannelBase>. Logika wysyłania wiadomości składa się z dwóch głównych elementów: (1) Kodowanie komunikatu na bajty oraz (2) framing tych bajtów i wysyłania ich przesyłania.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -42,13 +44,13 @@ Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplemento
   
  Ponadto blokady jest zajęty, aby wywołania Send() zachować gwarancji w kolejności IDuplexSessionChannel i tak, aby wywołania do gniazda podstawowej są poprawnie synchronizowane.  
   
- `WseTcpDuplexSessionChannel`używa <xref:System.ServiceModel.Channels.MessageEncoder> do tłumaczenia <xref:System.ServiceModel.Channels.Message> do i z byte []. Ponieważ istnieje transportu, `WseTcpDuplexSessionChannel` również jest odpowiedzialna za stosowanie zdalny adres, który kanał został skonfigurowany z. `EncodeMessage`hermetyzuje logikę do konwersji.  
+ `WseTcpDuplexSessionChannel` używa <xref:System.ServiceModel.Channels.MessageEncoder> do tłumaczenia <xref:System.ServiceModel.Channels.Message> do i z byte []. Ponieważ istnieje transportu, `WseTcpDuplexSessionChannel` również jest odpowiedzialna za stosowanie zdalny adres, który kanał został skonfigurowany z. `EncodeMessage` hermetyzuje logikę do konwersji.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Raz <xref:System.ServiceModel.Channels.Message> jest zakodowany w bajtach, muszą być przekazywane w sieci. Wymaga to systemu do definiowania granice wiadomości. WSE 3.0 używa wersji [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) jako protokół ramek. `WriteData`hermetyzuje logiki ramek do opakowywania byte [] w zestawie rekordów DIME.  
+ Raz <xref:System.ServiceModel.Channels.Message> jest zakodowany w bajtach, muszą być przekazywane w sieci. Wymaga to systemu do definiowania granice wiadomości. WSE 3.0 używa wersji [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) jako protokół ramek. `WriteData` hermetyzuje logiki ramek do opakowywania byte [] w zestawie rekordów DIME.  
   
  Logika do odbierania wiadomości jest bardzo podobne. Główne złożoności obsługuje fakt, że gniazda do odczytu mogą zwracać mniej bajtów niż żądano. Aby otrzymywać wiadomość, `WseTcpDuplexSessionChannel` odczytuje bajtów poza przewodowo, dekoduje ramek DIME, a następnie używa <xref:System.ServiceModel.Channels.MessageEncoder> służący do włączania byte [] do <xref:System.ServiceModel.Channels.Message>.  
   
@@ -63,7 +65,7 @@ Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplemento
 ## <a name="channel-factory"></a>Fabryka kanałów  
  Następnym krokiem w pisaniu transportu TCP jest utworzenie implementacja <xref:System.ServiceModel.Channels.IChannelFactory> kanałów klienta.  
   
--   `WseTcpChannelFactory`pochodną <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Fabryka, która zastępuje jest `OnCreateChannel` do tworzenia kanałów klienta.  
+-   `WseTcpChannelFactory` pochodną <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Fabryka, która zastępuje jest `OnCreateChannel` do tworzenia kanałów klienta.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -73,7 +75,7 @@ Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplemento
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`dodaje logikę do podstawy `WseTcpDuplexSessionChannel` do nawiązania połączenia z serwerem TCP `channel.Open` czasu. Nazwa hosta jest najpierw rozpoznana jako adres IP, jak pokazano w poniższym kodzie.  
+-   `ClientWseTcpDuplexSessionChannel` dodaje logikę do podstawy `WseTcpDuplexSessionChannel` do nawiązania połączenia z serwerem TCP `channel.Open` czasu. Nazwa hosta jest najpierw rozpoznana jako adres IP, jak pokazano w poniższym kodzie.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -90,7 +92,7 @@ Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplemento
 ## <a name="channel-listener"></a>Odbiornik kanału  
  Następnym krokiem w pisaniu transportu TCP jest utworzenie implementacja <xref:System.ServiceModel.Channels.IChannelListener> akceptowania kanały serwera.  
   
--   `WseTcpChannelListener`pochodną <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > i zastąpienia na otwieranie [Begin] i [Begin] Zamknij, aby kontrolować okres istnienia jego gniazdo. W zdarzenia gniazda jest tworzony do nasłuchiwania IP_ANY. Implementacje bardziej zaawansowanych można utworzyć drugi gniazda do nasłuchiwania protokołu IPv6, jak również. Umożliwiają one również adres IP, należy określić w nazwie hosta.  
+-   `WseTcpChannelListener` pochodną <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > i zastąpienia na otwieranie [Begin] i [Begin] Zamknij, aby kontrolować okres istnienia jego gniazdo. W zdarzenia gniazda jest tworzony do nasłuchiwania IP_ANY. Implementacje bardziej zaawansowanych można utworzyć drugi gniazda do nasłuchiwania protokołu IPv6, jak również. Umożliwiają one również adres IP, należy określić w nazwie hosta.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   

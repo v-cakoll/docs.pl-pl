@@ -1,13 +1,13 @@
 ---
-title: "Określanie adresu punktu końcowego"
-ms.custom: 
+title: Określanie adresu punktu końcowego
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
 Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi odbywa się przez jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą, a adres Określa, gdzie można znaleźć usługi. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowana przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera zasób identyfikator URI (Uniform) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, reprezentuje tożsamości zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają bardziej szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Na przykład nagłówków można wskazać sposobu przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania komunikat przychodzący z konkretnego użytkownika, jeśli dostępnych jest wiele wystąpień.  
@@ -33,7 +33,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
 ## <a name="definition-of-an-endpoint-address"></a>Definicja adresu punktu końcowego  
  W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], <xref:System.ServiceModel.EndpointAddress> modele odwołanie do punktu końcowego (EPR) zgodnie z definicją w standardzie WS-Addressing.  
   
- Adres URI dla transportu większości ma cztery części. Na przykład "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" tego identyfikatora URI ma następujące cztery części:  
+ Adres URI dla transportu większości ma cztery części. Na przykład ten identyfikator URI, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" zawiera następujące cztery części:  
   
 -   Schemat: http:  
   
@@ -49,7 +49,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
   
  Istnieją dwa sposoby, aby określić adres punktu końcowego usługi w programie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Można określić jako adres bezwzględny dla każdego punktu końcowego związane z usługą lub możesz podać adres podstawowy <xref:System.ServiceModel.ServiceHost> usługi, a następnie określ adres dla każdego punktu końcowego skojarzone z tą usługą, która jest zdefiniowana względem tej bazy adres. Aby określić adres punktu końcowego usługi w konfiguracji lub kod, można użyć każdego z tych procedur. Jeśli nie określisz adresu względnego, usługa używa adres podstawowy. Może istnieć wiele adresami podstawowymi dla usługi, ale każda usługa jest dozwolony tylko jeden adres podstawowy dla każdego transportu. Jeśli masz wiele punktów końcowych, z których każdy ma skonfigurowane inne powiązanie, adresy muszą być unikatowe. Punkty końcowe, które używać tego samego powiązania, ale różnymi umowami można użyć tego samego adresu.  
   
- Jeśli obsługa za pomocą usług IIS, nie jest zarządzana <xref:System.ServiceModel.ServiceHost> wystąpienie samodzielnie. Adres podstawowy jest zawsze adresem określonym w pliku svc usługi odnośnie do hostowania w usługach IIS. Dlatego należy użyć adresy punktów końcowych względną dla punktów końcowych usług hostowanych przez usługi IIS. Podając w pełni kwalifikowany adres punktu końcowego może prowadzić do błędów w ramach wdrożenia usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Wdrażanie usługi WCF hostowanej usługi informacyjne Internet](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ Jeśli obsługa za pomocą usług IIS, nie jest zarządzana <xref:System.ServiceModel.ServiceHost> wystąpienie samodzielnie. Adres podstawowy jest zawsze adresem określonym w pliku svc usługi odnośnie do hostowania w usługach IIS. Dlatego należy użyć adresy punktów końcowych względną dla punktów końcowych usług hostowanych przez usługi IIS. Podając w pełni kwalifikowany adres punktu końcowego może prowadzić do błędów w ramach wdrożenia usługi. Aby uzyskać więcej informacji, zobacz [wdrażanie usługi WCF Internet Information Services-Hosted](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definiowanie adresy punktów końcowych w konfiguracji  
  Aby zdefiniować punkt końcowy w pliku konfiguracji, należy użyć [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
@@ -58,7 +58,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
   
  Gdy <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> metoda jest wywoływana (Jeśli aplikacja macierzysta podejmowana jest próba uruchomienia usługi), system wyszukuje [ \<usługi >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) element z atrybutem nazwy, która określa "UE. Samples.HelloService". Jeśli [ \<usługi >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) element zostanie znaleziony, system ładuje określonej klasy i tworzy punktów końcowych przy użyciu definicji punktu końcowego zawarty w pliku konfiguracji. Mechanizm ten umożliwia obciążenia i uruchomić usługę przy użyciu dwóch wierszy kodu podczas aktualizowania powiązania i adresowanie poza swój kod. Zaletą tej metody jest, że te zmiany mogą być wprowadzane bez konieczności ponowne skompilowanie lub ponownego wdrażania aplikacji.  
   
- Opcjonalne nagłówki są zadeklarowane w [ \<nagłówki >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Poniżej przedstawiono przykład elementów używany do określenia punktów końcowych dla usługi w pliku konfiguracji, która odróżnia między dwa nagłówki: "Złota" klientom http://tempuri1.org/ i "Standardowy" klientów z http://tempuri2.org/. Wywoływanie tej usługi Klient musi mieć odpowiednie [ \<nagłówki >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) w pliku konfiguracji.  
+ Opcjonalne nagłówki są zadeklarowane w [ \<nagłówki >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Poniżej przedstawiono przykład elementów używany do określenia punktów końcowych dla usługi w pliku konfiguracji, która odróżnia między dwa nagłówki: "Złota" klientów z http://tempuri1.org/ i "Standardowy" klientów z http://tempuri2.org/. Wywoływanie tej usługi Klient musi mieć odpowiednie [ \<nagłówki >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) w pliku konfiguracji.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -93,7 +93,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
 ## <a name="using-default-endpoints"></a>Przy użyciu domyślnych punktów końcowych  
  Jeśli nie określono żadnych punktów końcowych w kodzie, lub w konfiguracji następnie środowiska uruchomieniowego zawiera domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej zaimplementowanych przez usługę. Adres podstawowy można określić w kodzie, lub w konfiguracji i domyślne punkty końcowe są dodawane, gdy <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> jest wywoływana na <xref:System.ServiceModel.ServiceHost>.  
   
- W przypadku punktów końcowych są jawnie, nadal można dodać domyślne punkty końcowe przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ W przypadku punktów końcowych są jawnie, nadal można dodać domyślne punkty końcowe przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.EndpointAddress>  

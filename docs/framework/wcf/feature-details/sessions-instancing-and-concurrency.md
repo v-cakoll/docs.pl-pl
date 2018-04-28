@@ -1,24 +1,26 @@
 ---
-title: "Sesje, tworzenie wystąpień i współbieżność"
-ms.custom: 
+title: Sesje, tworzenie wystąpień i współbieżność
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesje, tworzenie wystąpień i współbieżność
 A *sesji* jest korelacji wszystkich wiadomości wysłanych między dwoma punktami końcowymi. *Tworzenie wystąpienia* odwołuje się do kontrolowania okres istnienia obiektów zdefiniowanych przez użytkownika usług i ich powiązane <xref:System.ServiceModel.InstanceContext> obiektów. *Współbieżność* jest terminu podanego do formantu liczbę wątków działających w <xref:System.ServiceModel.InstanceContext> w tym samym czasie.  
@@ -28,7 +30,7 @@ A *sesji* jest korelacji wszystkich wiadomości wysłanych między dwoma punktam
 ## <a name="sessions"></a>Kategoria Sessions  
  Gdy kontrakt usługi Określa <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> właściwości <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, że kontrakt jest informujący o tym, że wszystkie wywołania (to znaczy podstawowej wymiany komunikatów obsługujących wywołania) musi być częścią ta sama konwersacja. Jeśli kontrakt Określa czy umożliwia sesji, ale nie wymaga jednego, mogą łączyć się klienci, a albo ustanowić sesję, czy nie. Jeśli sesja zakończy się oraz wiadomości przesyłane z tego samego opartymi na sesji jest zgłaszany wyjątek kanału.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]sesje mają następujące funkcje koncepcyjnej główne:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesje mają następujące funkcje koncepcyjnej główne:  
   
 -   Jawnie są inicjowane i został przerwany przez wywołanie aplikacji.  
   
@@ -40,11 +42,11 @@ A *sesji* jest korelacji wszystkich wiadomości wysłanych między dwoma punktam
   
  Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji i funkcji umożliwia, można zauważyć następujące różnice między tego rodzaju sesji i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesji:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]sesje są zawsze inicjowanych przez serwer.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są zawsze inicjowanych przez serwer.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]sesje są niejawnie nieuporządkowaną.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są niejawnie nieuporządkowaną.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]sesje udostępniają mechanizm magazynu danych ogólnych żądań.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje udostępniają mechanizm magazynu danych ogólnych żądań.  
   
  Aplikacje klienckie i aplikacje usług interakcji z sesji na różne sposoby. Aplikacje klienckie zainicjować sesji i następnie odbierania i przetwarzania wiadomości wysyłane w ramach sesji. Aplikacje usługi mogą używać sesji jako punkt rozszerzeń można dodać dodatkowe zachowanie. W tym celu praca bezpośrednio z <xref:System.ServiceModel.InstanceContext> lub implementowanie dostawcy kontekstu niestandardowego wystąpienia.  
   
@@ -93,7 +95,7 @@ public class CalculatorService : ICalculatorInstance
 -   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Każde wystąpienie usługi przetwarza jeden komunikat w czasie, ale akceptuje wywołań wielobieżnej operacji. Usługa akceptuje tylko te wywołania, gdy wywołuje za pośrednictwem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu klienta.  
   
 > [!NOTE]
->  Opis i tworzenia kodu korzystającego z bezpiecznie więcej niż jeden wątek może być trudne do zapisania pomyślnie. Przed użyciem <xref:System.ServiceModel.ConcurrencyMode.Multiple> lub <xref:System.ServiceModel.ConcurrencyMode.Reentrant> wartości, upewnij się, że usługa prawidłowo jest przeznaczony dla tych trybów. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+>  Opis i tworzenia kodu korzystającego z bezpiecznie więcej niż jeden wątek może być trudne do zapisania pomyślnie. Przed użyciem <xref:System.ServiceModel.ConcurrencyMode.Multiple> lub <xref:System.ServiceModel.ConcurrencyMode.Reentrant> wartości, upewnij się, że usługa prawidłowo jest przeznaczony dla tych trybów. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
  Użycie współbieżności jest powiązany z trybu tworzenia. W <xref:System.ServiceModel.InstanceContextMode.PerCall> wystąpień, współbieżności nie jest ważna, ponieważ każdy komunikat jest przetwarzany przez nowy <xref:System.ServiceModel.InstanceContext> i w związku z tym jest aktywny w nie więcej niż jeden wątek <xref:System.ServiceModel.InstanceContext>.  
   

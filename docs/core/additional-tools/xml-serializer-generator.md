@@ -1,18 +1,20 @@
 ---
-title: "Za pomocą generatora serializatora XML programu Microsoft .NET Core"
-description: "Przegląd generatora serializatora XML firmy Microsoft."
+title: Za pomocą generatora serializatora XML programu Microsoft .NET Core
+description: Przegląd generatora serializatora XML firmy Microsoft.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.custom: mvc
-ms.openlocfilehash: b2f52a068d128b2eb978c9e086508bd87e103ebc
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d7332546cf7643ff808a29c83d13050571447666
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Za pomocą generatora serializatora XML programu Microsoft .NET Core
 
@@ -112,7 +114,7 @@ Wpisz następujące polecenie w oknie konsoli:
  $ dotnet run
  ```
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)wywołania [ `dotnet build` ](../tools/dotnet-build.md) do upewnij się, że kompilacji są wbudowane elementy docelowe, a następnie wywołania `dotnet <assembly.dll>` do uruchomienia aplikacji docelowej.
+> [`dotnet run`](../tools/dotnet-run.md) wywołania [ `dotnet build` ](../tools/dotnet-build.md) do upewnij się, że kompilacji są wbudowane elementy docelowe, a następnie wywołania `dotnet <assembly.dll>` do uruchomienia aplikacji docelowej.
 
 > [!IMPORTANT]
 > Polecenia i kroki opisane w tym samouczku do uruchamiania aplikacji są używane tylko w czasie tworzenia. Gdy wszystko jest gotowe do wdrożenia aplikacji, zapoznaj się z różnych [strategii wdrażania](../deploying/index.md) dla aplikacji .NET Core i [ `dotnet publish` ](../tools/dotnet-publish.md) polecenia.

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0af083ba1d97fcf07eab6f9d789f023a9194070c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="information-disclosure"></a>Ujawnianie informacji
 Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji na temat systemu. W związku z tym zawsze należy wziąć pod uwagę jakie informacje są ujawniania i czy mogą być używane przez złośliwego użytkownika. Poniżej przedstawiono informacje o możliwych ataków ujawnienie i zapewnia środki zaradcze dla każdego.  
@@ -32,7 +32,7 @@ Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji
  Dzięki bezpieczna zasad jest ważne, szczególnie w scenariuszach Federacji, gdzie informacje wystawcy tokenu lub poufnych wymagania wystawiony token jest widoczna w zasadach. W takich przypadkach zaleca się bezpieczny punkt końcowy zasad usługi federacyjnej, aby uniemożliwić osobom atakującym uzyskania informacji na temat usługi, takie jak typ oświadczenia, które mają zostać umieszczone w wystawionego tokenu lub przekierowanie klientów do złośliwego wystawcy tokenu. Na przykład osoba atakująca może odnaleźć pary nazwa/hasło użytkownika przez ponowne skonfigurowanie łańcuch zaufania federacyjnego zakończenie w wystawcę wykonywania ataku typu man-in--middle. Zalecane jest również federacyjnych klientów, którzy uzyskać ich powiązania za pośrednictwem pobieranie zasad Sprawdź, zaufanych wystawców w łańcuchu zaufania federacyjnego uzyskany. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz scenariuszach Federacji [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Zrzuty pamięci mogą zawierać informacje o  
- W przypadku awarii aplikacji pliki dzienników, takich jak te utworzone przez odzyskiwania po awarii. Watson, mogą zawierać informacje oświadczeń. Te informacje nie powinny być eksportowany do inne jednostki, na przykład zespoły pomocy technicznej; w przeciwnym razie informacje oświadczenia, które zawiera dane prywatne, również są eksportowane. Można to zagrożenie, wysyłając nie pliki dziennika na nieznany jednostki. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
+ W przypadku awarii aplikacji pliki dzienników, takich jak te utworzone przez odzyskiwania po awarii. Watson, mogą zawierać informacje oświadczeń. Te informacje nie powinny być eksportowany do inne jednostki, na przykład zespoły pomocy technicznej; w przeciwnym razie informacje oświadczenia, które zawiera dane prywatne, również są eksportowane. Można to zagrożenie, wysyłając nie pliki dziennika na nieznany jednostki. Aby uzyskać więcej informacji, zobacz [systemu Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
   
 ## <a name="endpoint-addresses"></a>Adresy punktów końcowych  
  Adres punktu końcowego zawiera informacje potrzebne do komunikowania się z punktem końcowym. Zabezpieczeń SOAP musi zawierać adres w całości w wiadomości negocjacji zabezpieczeń, które są wymieniane w celu negocjowania klucza symetrycznego między klientem serwerem. Ponieważ proces ładowania początkowego negocjacji zabezpieczeń, nagłówki adresów nie mogą być szyfrowane w trakcie tego procesu. W związku z tym adres nie powinna zawierać żadnych poufnych danych; w przeciwnym razie prowadzi do ataków ujawnienie informacji.  

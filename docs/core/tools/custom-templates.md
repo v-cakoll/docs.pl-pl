@@ -1,20 +1,20 @@
 ---
 title: Szablony niestandardowe dla nowego dotnet
-description: "Więcej informacji na temat szablonów niestandardowych dla dowolnego typu .NET projektu lub plików."
-keywords: "DotNet nowe, interfejsu wiersza polecenia, interfejsu wiersza polecenia polecenia .NET Core, szablon, tworzenia szablonów"
+description: Więcej informacji na temat szablonów niestandardowych dla dowolnego typu .NET projektu lub plików.
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.workload: dotnetcore
-ms.openlocfilehash: f2b712f1b8b7800f2f02c9529114e92f77e32286
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 1915c2609391d0aa1ff32ea9ebb011cf0f925aa8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Szablony niestandardowe dla nowego dotnet
 
@@ -90,8 +90,8 @@ Zawartość folderu projektu, wraz z jego *.template.config/template.json* plik�
 | ------------------ | ------ | ----------- |
 | **\<Autorzy >**     | string | Rozdzielana przecinkami lista autorzy pakietów, zgodne z nazwami profilu na nuget.org. Autorzy są wyświetlane w galerii NuGet w nuget.org i są odwoływania się do pakietów przez tego samego autorów. |
 | **\<Opis elementu >** | string | Długi opis pakietu do wyświetlenia interfejsu użytkownika. |
-| **\<Identyfikator >**          | string | Identyfikator pakietu bez uwzględniania wielkości liter, który musi być unikatowa w nuget.org lub niezależnie od pakietu będą znajdować się w galerii. Identyfikatory nie może zawierać spacji ani znaków, które nie są prawidłowe dla danego adresu URL i ogólnie zgodne reguły obszaru nazw .NET. Zobacz [wybranie identyfikator unikatowy pakiet i ustawianie numeru wersji](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) orientacji. |
-| **\<packageType >** | string | Umieść ten element wewnątrz  **\<packageTypes >** element między  **\<metadanych >** elementów. Ustaw `name` atrybutu  **\<packageType >** elementu `Template`. |
+| **\<id>**          | string | Identyfikator pakietu bez uwzględniania wielkości liter, który musi być unikatowa w nuget.org lub niezależnie od pakietu będą znajdować się w galerii. Identyfikatory nie może zawierać spacji ani znaków, które nie są prawidłowe dla danego adresu URL i ogólnie zgodne reguły obszaru nazw .NET. Zobacz [wybranie identyfikator unikatowy pakiet i ustawianie numeru wersji](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) orientacji. |
+| **\<packageType>** | string | Umieść ten element wewnątrz  **\<packageTypes >** element między  **\<metadanych >** elementów. Ustaw `name` atrybutu  **\<packageType >** elementu `Template`. |
 | **\<Wersja >**     | string | Wersja pakietu, następujące wzorzec Wersja_główna.WERSJA_POMOCNICZA.poprawka. Numery wersji może zawierać sufiks wersji wstępnej, zgodnie z opisem w [wersje wstępne](/nuget/create-packages/prerelease-packages#semantic-versioning) tematu. |
 
 Zobacz [odwołania .nuspec](/nuget/schema/nuspec) dla pełnej *nuspec* pliku schematu. Przykład *nuspec* plik szablonu jest wyświetlana w [Utwórz nowy szablon niestandardowy dla platformy dotnet](~/docs/core/tutorials/create-custom-template.md) samouczka.

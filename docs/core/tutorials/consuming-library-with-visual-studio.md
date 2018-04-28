@@ -1,20 +1,21 @@
 ---
-title: "Korzystanie z biblioteki klas z platformą .NET Core w Visual Studio 2017 r."
-description: "Dowiedz się, jak wywołać elementów członkowskich w bibliotece klas z programu Visual Studio 2017 r."
+title: Korzystanie z biblioteki klas z platformą .NET Core w Visual Studio 2017 r.
+description: Dowiedz się, jak wywołać elementów członkowskich w bibliotece klas z programu Visual Studio 2017 r.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 dev_langs:
 - csharp
 - vb
-ms.workload: dotnetcore
-ms.openlocfilehash: 1525bd3f9d249fe39fd65b53bc8d1e8eddb09ab9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 7364f9a4dadf7c4a28dab0cff2fca80d0f3af62c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Korzystanie z biblioteki klas z platformą .NET Core w Visual Studio 2017 r.
 
@@ -61,7 +62,7 @@ Tak samo, jak testy jednostkowe są dołączane do tego samego rozwiązania co b
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. Otwórz `ClassLibraryProjects` rozwiązania utworzone w [Tworzenie klasy biblioteki z Visual Basic i .NET Core w Visual Studio 2017](vb-library-with-visual-studio.md) tematu. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ClassLibraryProjects** rozwiązania i wybierz **Dodaj** > **nowy projekt** z menu kontekstowe.
 
-1. W **Dodawanie nowego projektu** okna dialogowego, rozwiń węzeł **Visual Basic** a następnie wybierz węzeł **.NET Core** węzła następuje **aplikacji konsoli (.NET Core)**szablonu projektu. W **nazwa** polu tekstowym, wpisz "Pokazy" i wybierz **OK** przycisku.
+1. W **Dodawanie nowego projektu** okna dialogowego, rozwiń węzeł **Visual Basic** a następnie wybierz węzeł **.NET Core** węzła następuje **aplikacji konsoli (.NET Core)** szablonu projektu. W **nazwa** polu tekstowym, wpisz "Pokazy" i wybierz **OK** przycisku.
 
    ![Dodaj okno dialogowe Nowy projekt](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
 

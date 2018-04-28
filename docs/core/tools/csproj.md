@@ -1,21 +1,19 @@
 ---
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Więcej informacji na temat różnic między istniejących i pliki csproj .NET Core
-keywords: odwołanie, csproj, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: fdf91bdb24819c2d92b708e5937980ac2fb0d5fc
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: ed1a25337ac1594d4ca748d0c6f79bdcc038a1e8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -203,7 +201,7 @@ Rozdzielana średnikami lista autorzy pakietów, zgodne z nazwami profilu na nug
 ### <a name="description"></a>Opis
 Długi opis pakietu do wyświetlenia interfejsu użytkownika.
 
-### <a name="copyright"></a>Copyright
+### <a name="copyright"></a>Prawa autorskie
 Praw autorskich szczegóły pakietu.
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance

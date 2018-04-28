@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6fbfd28931f484c5b643dad278b358e7ac2a2945
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Tworzenie i wdrażanie usług danych WCF
 Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby uzyskać więcej ogólnych informacji o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], zobacz [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) i [omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -89,7 +89,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
 -   Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.  
   
--   Podczas debugowania usługi danych można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwości w <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu dla klasy usługi danych do `true`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] wpis [debugowania usługi danych WCF](http://go.microsoft.com/fwlink/?LinkId=201868). Można również włączyć śledzenie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do wyświetlania wyjątków zgłoszonych w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+-   Podczas debugowania usługi danych można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwości w <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu dla klasy usługi danych do `true`. Aby uzyskać więcej informacji, zobacz wpis [debugowania usługi danych WCF](http://go.microsoft.com/fwlink/?LinkId=201868). Można również włączyć śledzenie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do wyświetlania wyjątków zgłoszonych w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Usługi danych jest zwykle opracowany jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt aplikacji, ale można również utworzyć należy Usługa danych jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt witryny sieci Web w programie Visual Studio. Informacje o różnicach między tymi dwoma typami projektów, zobacz [NIB: projekty aplikacji sieci Web i projektów witryny sieci Web w programie Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   

@@ -1,19 +1,18 @@
 ---
-title: "Eksportowanie .NET Core - analizowanie zależności innych firm"
-description: "Dowiedz się, jak analizować zależności innych firm w celu portu projekty w programie .NET Framework do platformy .NET Core."
+title: Eksportowanie .NET Core - analizowanie zależności innych firm
+description: Dowiedz się, jak analizować zależności innych firm w celu portu projekty w programie .NET Framework do platformy .NET Core.
 author: cartermp
 ms.author: mairaw
 ms.date: 02/15/2018
-ms.topic: article
-ms.prod: .net-core
-ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 365aff32de75d0658027c35675ed58a2b23691c5
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: be8d5a60977c7863136a1661a60e3bf23c0eb93e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analyze-your-third-party-dependencies"></a>Analizowanie zależności innych firm
 

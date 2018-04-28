@@ -1,31 +1,32 @@
 ---
-title: "Porady: Włącz trwałość SQL dla przepływów pracy i usług przepływu pracy"
-ms.custom: 
+title: 'Porady: Włącz trwałość SQL dla przepływów pracy i usług przepływu pracy'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Porady: Włącz trwałość SQL dla przepływów pracy i usług przepływu pracy
 W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przepływu pracy SQL do włączenia trwałości dla przepływów pracy i przepływ pracy usługi programowo i za pomocą pliku konfiguracji.  
   
- Windows Server AppFabric upraszcza proces konfigurowania trwałości. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Konfiguracji trwałości aplikacji sieci szkieletowej](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server AppFabric upraszcza proces konfigurowania trwałości. Aby uzyskać więcej informacji, zobacz [aplikacji sieci szkieletowej trwałości konfiguracji](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  Przed użyciem funkcji magazynu wystąpienia przepływu pracy SQL, należy utworzyć bazę danych, która używa funkcji, aby utrwalić wystąpienia przepływu pracy. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Konfiguracji jest kopiowana skojarzony z funkcją magazynu wystąpienia przepływu pracy SQL do folderu %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN plików skryptów SQL. Uruchom te pliki skryptów na bazie danych programu SQL Server 2005 lub SQL Server 2008, które mają w magazynie wystąpień przepływu pracy SQL do użycia, aby utrwalić wystąpienia przepływu pracy. Uruchom plik SqlWorkflowInstanceStoreSchema.sql najpierw, a następnie uruchom plik SqlWorkflowInstanceStoreLogic.sql.  
   
@@ -40,7 +41,7 @@ W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przep
 >   
 >  System.Data.SqlClient.SqlException: Nie można odnaleźć procedury składowanej "System.Activities.DurableInstancing.CreateLockOwner"  
   
- W poniższych sekcjach opisano sposób włączania trwałości dla przepływów pracy i usług przepływu pracy przy użyciu magazynu wystąpienia przepływu pracy SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)]właściwości magazynu wystąpienia przepływu pracy SQL, zobacz [właściwości z przepływu pracy wystąpienia magazynu SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ W poniższych sekcjach opisano sposób włączania trwałości dla przepływów pracy i usług przepływu pracy przy użyciu magazynu wystąpienia przepływu pracy SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] właściwości magazynu wystąpienia przepływu pracy SQL, zobacz [właściwości z przepływu pracy wystąpienia magazynu SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Włączenie trwałości dla przepływów pracy Self-Hosted, używanego przez obiekt WorkflowApplication  
  Można włączyć trwałości dla siebie przepływy pracy używające <xref:System.Activities.WorkflowApplication> programowo przy użyciu <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> obiektu modelu. Poniższa procedura zawiera kroki, aby to zrobić.  

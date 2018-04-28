@@ -1,12 +1,13 @@
 ---
-title: "Przegląd Aplikacje przeglądarek WPF XAML"
-ms.custom: 
+title: Przegląd Aplikacje przeglądarek WPF XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]łączy funkcje aplikacji sieci Web i aplikacje wzbogaconego klienta. Takich jak aplikacje sieci Web XBAP można wdrożyć na serwerze sieci Web i uruchomiona z programu Internet Explorer lub przeglądarki Firefox. Jak aplikacje wzbogaconego klienta XBAP mogą wykorzystać możliwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tworzenie aplikacji XBAP również jest podobny do rozwoju wzbogaconego klienta. W tym temacie przedstawia proste, wysokiego poziomu wprowadzenie do rozwoju XBAP oraz gdy programowanie XBAP różni się od standardowego programowanie wzbogaconego klienta.  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] łączy funkcje aplikacji sieci Web i aplikacje wzbogaconego klienta. Takich jak aplikacje sieci Web XBAP można wdrożyć na serwerze sieci Web i uruchomiona z programu Internet Explorer lub przeglądarki Firefox. Jak aplikacje wzbogaconego klienta XBAP mogą wykorzystać możliwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tworzenie aplikacji XBAP również jest podobny do rozwoju wzbogaconego klienta. W tym temacie przedstawia proste, wysokiego poziomu wprowadzenie do rozwoju XBAP oraz gdy programowanie XBAP różni się od standardowego programowanie wzbogaconego klienta.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |Manifest aplikacji (manifest)|Zawiera metadane skojarzone z aplikacją i ma rozszerzenie ".manifest".|  
 |Manifest rozmieszczenia (.xbap)|Ten plik zawiera informacje o który [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] używa do wdrażania aplikacji i ma rozszerzenie .xbap.|  
   
- Na serwerze sieci Web wdrażanie na przykład XBAP [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub nowszy. Nie trzeba instalować [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] w sieci Web serwera, ale jest zarejestrowanie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] typów i nazwę pliku rozszerzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług IIS w wersji 5.0 i usług IIS 6.0, aby wdrożyć aplikacje WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Na serwerze sieci Web wdrażanie na przykład XBAP [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] lub nowszy. Nie masz do zainstalowania programu .NET Framework na serwerze sieci Web, ale należy zarejestrować [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] typów i nazwę pliku rozszerzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług IIS w wersji 5.0 i usług IIS 6.0, aby wdrożyć aplikacje WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Do Twojej XBAP przygotowania do wdrożenia, skopiuj .exe i manifestów skojarzone z serwerem sieci Web. Utwórz stronę HTML, który zawiera hiperłącza do Otwórz plik manifestu wdrożenia, który jest plik z rozszerzeniem .xbap. Gdy użytkownik kliknie łącze do pliku .xbap [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] automatycznie obsługuje sposobu pobierania i uruchamiania aplikacji. Poniższy przykład kodu pokazuje stronę HTML, który zawiera hiperłącze wskazujące XBAP.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Niestandardowe kontrolki ActiveX może mieć problemy z komunikacją, ponieważ aplikacji WPF działa w oddzielnym wątku.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>nie pobrać zgłoszone, ponieważ <xref:System.Windows.Interop.HwndHost> nie podklasy okna uruchomiona w innym wątku lub procesu.  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> nie pobrać zgłoszone, ponieważ <xref:System.Windows.Interop.HwndHost> nie podklasy okna uruchomiona w innym wątku lub procesu.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Tworzenie XBAP pełnego zaufania  
  Jeśli Twoje XBAP wymaga pełnego zaufania, można zmienić projekt tak, aby włączyć te uprawnienia. W poniższych krokach opisano sposób włączania pełnego zaufania:  

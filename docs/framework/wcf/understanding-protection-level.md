@@ -1,12 +1,13 @@
 ---
-title: "Omówienie poziomów ochrony"
-ms.custom: 
+title: Omówienie poziomów ochrony
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-protection-level"></a>Omówienie poziomów ochrony
 `ProtectionLevel` Właściwości znajduje się na wiele różnych klas, takich jak <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> klasy. Właściwość określa, jak chronione części (lub całego) wiadomości. W tym temacie opisano [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] funkcji i jej działania.  
@@ -39,11 +41,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Istnieją trzy podstawowe poziomy ochrony dla dowolnej części wiadomości. Właściwość (wszędzie tam, gdzie występuje) jest ustawiona na jeden z <xref:System.Net.Security.ProtectionLevel> wartości wyliczenia. Rosnąco ochrony, obejmują:  
   
-    -   `None`.,  
+    -   `None`.  
   
-    -   `Sign`., Element chroniony jest podpisany cyfrowo. Dzięki temu wykrywanie wszelkie manipulowanie części chronionej wiadomości.  
+    -   `Sign`. Element chroniony jest podpisany cyfrowo. Dzięki temu wykrywanie wszelkie manipulowanie części chronionej wiadomości.  
   
-    -   `EncryptAndSign`., Część wiadomości są szyfrowane, aby zapewnić poufność, zanim jest podpisany.  
+    -   `EncryptAndSign`. Część wiadomości są szyfrowane, aby zapewnić poufność, zanim jest podpisany.  
   
 -   Można ustawić wymagania ochrony tylko w przypadku *danych aplikacji* przy użyciu tej funkcji. Na przykład WS-Addressing nagłówki są infrastruktury danych i, w związku z tym nie dotyczy `ProtectionLevel`.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
  Aby program `ProtectionLevel` w dowolnym momencie w hierarchii, po prostu ustaw właściwość do odpowiedniej wartości podczas stosowania atrybutu. Aby uzyskać przykłady, zobacz [porady: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
 > [!NOTE]
->  Ustawianie właściwości usterek i kontrakty wymaga zrozumienia, jak działają funkcje do wiadomości. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Porady: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) i [używanie kontraktów komunikatu](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+>  Ustawianie właściwości usterek i kontrakty wymaga zrozumienia, jak działają funkcje do wiadomości. Aby uzyskać więcej informacji, zobacz [porady: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) i [za pomocą kontraktów komunikatu](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 ## <a name="ws-addressing-dependency"></a>Protokół WS-Addressing zależności  
  W większości przypadków przy użyciu [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania klient gwarantuje, że zamówień klienta i usługi są identyczne. Pozornie identyczne kontrakty może jednak spowodować zgłoszenie wyjątku przez klienta. Dzieje się tak, gdy powiązanie nie obsługuje specyfikacji WS-Addressing i różnych poziomów ochrony są określone w umowie. Na przykład <xref:System.ServiceModel.BasicHttpBinding> klasa nie obsługuje specyfikacji lub w przypadku utworzenia niestandardowego powiązania, które nie obsługuje protokół WS-Addressing. `ProtectionLevel` Funkcji zależy od specyfikacji WS-Addressing umożliwiające różnych poziomów ochrony na pojedynczy kontrakt. Jeśli powiązanie nie obsługuje specyfikacji WS-Addressing, wszystkie poziomy zostanie ustawiona do tego samego poziomu ochrony. Poziom skuteczną ochronę dla wszystkich zakresów na kontrakt ustawi najwyższy poziom ochrony używany kontraktu.  

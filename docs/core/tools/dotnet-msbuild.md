@@ -1,18 +1,19 @@
 ---
 title: polecenie msbuild DotNet - .NET Core interfejsu wiersza polecenia
-description: "Polecenie msbuild dotnet zapewnia dostęp do wiersza polecenia programu MSBuild."
+description: Polecenie msbuild dotnet zapewnia dostęp do wiersza polecenia programu MSBuild.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 682b49d44c0fb8242eeb3cb8bf4d158f73b4b9a5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9e6f8b3063b4cd2a3a36cae8839d6f83e0466e03
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-msbuild"></a>DotNet msbuild
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet msbuild`-Tworzy projekt i wszystkie jego zależności.
+`dotnet msbuild` -Tworzy projekt i wszystkie jego zależności.
 
 ## <a name="synopsis"></a>Streszczenie
 

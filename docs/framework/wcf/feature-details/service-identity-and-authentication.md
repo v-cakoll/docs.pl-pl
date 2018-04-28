@@ -1,13 +1,13 @@
 ---
-title: "Uwierzytelnianie i tożsamość usług"
-ms.custom: 
+title: Uwierzytelnianie i tożsamość usług
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a0229ce5c6b7081ae493af22b0daeee444736783
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usługę sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po inicjowania przez klienta komunikatu do punktu końcowego i usługa samodzielnie przeprowadza uwierzytelnianie klienta, klient porównuje wartości tożsamości punktu końcowego z wartością rzeczywistą zwrócił procesu uwierzytelniania punktu końcowego. Jeśli są zgodne, klient jest pewność, że ma nawiązać kontaktu z punktem końcowym usługi oczekiwanego. Funkcja ta działa jako ochrony przed *phishing* zapobiegając nastąpi przekierowanie do punktu końcowego hostowanej przez usługę złośliwego klienta.  
@@ -48,7 +48,7 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
  <xref:System.ServiceModel.EndpointAddress.Identity%2A> Właściwość <xref:System.ServiceModel.EndpointAddress> klasa reprezentuje tożsamość usługi o nazwie przez klienta. Opis usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> w metadanych. Jeśli jest uruchomiony deweloperowi klienta [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego usługi wygenerowanego konfiguracji zawiera wartość usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Infrastruktury (jeśli jest skonfigurowane z zabezpieczeniami) sprawdza, czy usługa posiada określono tożsamości.  
   
 > [!IMPORTANT]
->  Metadane zawiera oczekiwaną tożsamość usługi, w związku z czym zaleca się uwidaczniać metadane usługi w sposób bezpieczny, na przykład, tworząc punkt końcowy HTTPS dla usługi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Porady: bezpieczne punkty końcowe metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  Metadane zawiera oczekiwaną tożsamość usługi, w związku z czym zaleca się uwidaczniać metadane usługi w sposób bezpieczny, na przykład, tworząc punkt końcowy HTTPS dla usługi. Aby uzyskać więcej informacji, zobacz [porady: Zabezpieczanie punktów końcowych metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Typów tożsamości  
  Usługa może zapewnić sześć typów tożsamości. Każdy typ tożsamości odnosi się do elementu, który może zostać umieszczony w `<identity>` element w konfiguracji. Typ użyty, zależy od scenariusza i wymagań dotyczących zabezpieczeń usługi. W poniższej tabeli opisano każdy typ tożsamości.  

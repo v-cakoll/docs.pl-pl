@@ -1,20 +1,17 @@
 ---
 title: Obliczenia powolne (F#)
-description: "Dowiedz się, jak poprawić wydajność aplikacji i bibliotek obliczenia powolne F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak poprawić wydajność aplikacji i bibliotek obliczenia powolne F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>Obliczenia powolne
 
@@ -32,7 +29,7 @@ W poprzednich składni *wyrażenie* jest kod, który jest oceniane tylko wtedy, 
 
 Obliczenia powolne pozwalają poprawić wydajność przez ograniczenie wykonywania obliczeń w sytuacjach, w których wynikiem jest wymagana.
 
-Aby wymusić obliczeń do wykonania, należy wywołać metodę `Force`. `Force`powoduje wykonanie zostać wykonana tylko raz. Kolejne wywołania `Force` zwracać taki sam wyniku, ale nie wykonuje żadnego kodu.
+Aby wymusić obliczeń do wykonania, należy wywołać metodę `Force`. `Force` powoduje wykonanie zostać wykonana tylko raz. Kolejne wywołania `Force` zwracać taki sam wyniku, ale nie wykonuje żadnego kodu.
 
 Poniższy kod ilustruje korzystanie z opóźnieniem obliczania i stosowania `Force`. W tym kodzie typ `result` jest `Lazy<int>`i `Force` metoda zwraca `int`.
 
@@ -42,6 +39,6 @@ Obliczanie leniwe, ale nie `Lazy` wpisz, służy także do sekwencji. Aby uzyska
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Lazyextensions — moduł](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)

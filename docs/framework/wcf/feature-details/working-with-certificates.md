@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczeń, X.509 certyfikaty cyfrowe są często używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. Ten temat zawiera krótkie opisy X.509 certyfikatu cyfrowego funkcji i sposobie korzystania z nich w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oraz linki do tematów, które opisano te pojęcia dalsze lub które pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i certyfikatów.  
@@ -37,7 +37,7 @@ Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpiecze�
  Certyfikaty muszą być wystawiane przez urząd certyfikacji, który jest często wystawcy certyfikatów innych firm. W domenie systemu Windows jest dołączony urząd certyfikacji który może służyć do wystawiania certyfikatów dla komputerów w domenie.  
   
 ## <a name="viewing-certificates"></a>Wyświetlanie certyfikatów  
- Aby pracować z certyfikatów, często jest niezbędne do ich wyświetlania i sprawdź, czy ich właściwości. Łatwo to zrobić za pomocą narzędzia przystawki programu Microsoft Management Console (MMC). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Aby pracować z certyfikatów, często jest niezbędne do ich wyświetlania i sprawdź, czy ich właściwości. Łatwo to zrobić za pomocą narzędzia przystawki programu Microsoft Management Console (MMC). Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie certyfikatów w przystawce MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Magazyny certyfikatów  
  Znaleziono w magazynach certyfikatów. Istnieją dwóch lokalizacji magazynu głównych, które są podzielone na magazyny podrzędne. Jeśli jesteś administratorem na komputerze, za pomocą przystawki programu MMC narzędzia można wyświetlić zarówno magazynów głównych. Użytkownicy inni niż administratorzy mogą wyświetlać tylko bieżący magazyn użytkownika.  
@@ -89,14 +89,14 @@ Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpiecze�
   
 -   [\<Uwierzytelnianie >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+-   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
 -   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Niestandardowe uwierzytelnianie  
  `CertificateValidationMode` Właściwości umożliwia również dostosować sposób uwierzytelniania certyfikatów. Domyślnie po ustawieniu poziomu `ChainTrust`. Aby użyć <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> wartości, należy także ustawić `CustomCertificateValidatorType` atrybutu zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć niestandardowego modułu weryfikacji, musi dziedziczyć z klasy abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.  
   
- Podczas tworzenia niestandardowego wystawcy uwierzytelnienia, najważniejsze metody do przesłonięcia jest <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Na przykład niestandardowe uwierzytelnianie Zobacz [moduł weryfikacji certyfikatów X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) próbki. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Niestandardowe poświadczenia i weryfikacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Podczas tworzenia niestandardowego wystawcy uwierzytelnienia, najważniejsze metody do przesłonięcia jest <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Na przykład niestandardowe uwierzytelnianie Zobacz [moduł weryfikacji certyfikatów X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) próbki. Aby uzyskać więcej informacji, zobacz [niestandardowe poświadczenia i Walidacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Przy użyciu Makecert.exe można utworzyć łańcucha certyfikatu  
  Narzędzie tworzenia certyfikatów (Makecert.exe) tworzy certyfikaty X.509 i prywatnego klucza publicznego i pary kluczy. Można zapisać klucza prywatnego na dysku, a następnie użyć go do wystawiania i zarejestrować nowe certyfikaty, w związku z tym symulując hierarchii certyfikatów łańcuchowych. To narzędzie jest przeznaczone do użytku wyłącznie jako pomoc podczas opracowywania usługi i nie mogą być używane w celu utworzenia certyfikatów do rzeczywistego wdrożenia. Podczas tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, wykonaj następujące kroki, aby utworzyć łańcuch zaufania z Makecert.exe.  

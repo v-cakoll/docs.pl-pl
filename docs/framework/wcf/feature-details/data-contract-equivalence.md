@@ -1,13 +1,13 @@
 ---
-title: "Równoważność kontraktów danych"
-ms.custom: 
+title: Równoważność kontraktów danych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4059fa401d082f4408080cf5fd13f1331314a2d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-equivalence"></a>Równoważność kontraktów danych
 Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyślnie wysyłać dane do klienta wysłane typu nie zawsze musi istnieje po stronie odbiorczej. Jedynym wymaganiem jest równoważne kontraktów danych obu typów. (Czasami strict równoważność nie jest wymagana, zgodnie z opisem w [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyśl
 > [!NOTE]
 >  Należy pamiętać, że kontraktu danych, nazwy i przestrzeni nazw, jak również nazwy elementów członkowskich danych, jest rozróżniana wielkość liter.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]nazwy kontraktów danych i przestrzenie nazw, jak również nazwy elementów członkowskich danych, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nazwy kontraktów danych i przestrzenie nazw, jak również nazwy elementów członkowskich danych, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Jeśli istnieją dwa typy na tej samej stronie (nadawcy i adresata) i ich kontraktów danych nie są równoważne (na przykład użytkownicy mają elementy członkowskie danych różnych), nie należy nadawać je taką samą nazwę i przestrzeń nazw. W ten sposób może spowodować wyjątki zostanie wygenerowany.  
   
@@ -47,7 +47,7 @@ Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyśl
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
 ## <a name="data-member-order-and-data-contract-equivalence"></a>Równoważność kolejność elementów członkowskich danych i kontraktu danych  
- Przy użyciu <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> klasy może mieć wpływ na równoważność kontraktów danych. Kontrakty danych musi mieć elementy członkowskie, które pojawiają się w tej samej kolejności równoważne. Domyślna kolejność to alfabetycznym. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ Przy użyciu <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> klasy może mieć wpływ na równoważność kontraktów danych. Kontrakty danych musi mieć elementy członkowskie, które pojawiają się w tej samej kolejności równoważne. Domyślna kolejność to alfabetycznym. Aby uzyskać więcej informacji, zobacz [kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Na przykład następujący kod powoduje kontraktów danych równoważne.  
   
@@ -60,7 +60,7 @@ Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyśl
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
 ## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Dziedziczenie, interfejsów i równoważność kontraktów danych  
- Podczas określania równoważność, kontraktu danych, która dziedziczy inny kontrakt danych jest traktowana tak, jakby była tylko jeden kontrakt danych obejmuje wszystkie elementy członkowskie danych z typu podstawowego. Należy pamiętać, że kolejność elementów członkowskich danych muszą być zgodne oraz że poprzedzają elementów członkowskich typu podstawowego uzyskane elementy członkowskie typu w kolejności. Ponadto jeśli jak w poniższym przykładzie kodu, elementy członkowskie danych dwa mają taką samą wartość kolejności, kolejność elementów członkowskich tych danych jest alfabetycznym. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ Podczas określania równoważność, kontraktu danych, która dziedziczy inny kontrakt danych jest traktowana tak, jakby była tylko jeden kontrakt danych obejmuje wszystkie elementy członkowskie danych z typu podstawowego. Należy pamiętać, że kolejność elementów członkowskich danych muszą być zgodne oraz że poprzedzają elementów członkowskich typu podstawowego uzyskane elementy członkowskie typu w kolejności. Ponadto jeśli jak w poniższym przykładzie kodu, elementy członkowskie danych dwa mają taką samą wartość kolejności, kolejność elementów członkowskich tych danych jest alfabetycznym. Aby uzyskać więcej informacji, zobacz [kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  W poniższym przykładzie dla typu kontraktu danych `Employee` jest odpowiednikiem kontraktu danych dla typu `Worker`.  
   
@@ -69,7 +69,7 @@ Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyśl
   
  Podczas przekazywania parametrów i zwracanych wartości między klientem a usługą, kontrakt danych z klasy podstawowej nie można wysłać podczas odbierania punkt końcowy oczekuje kontraktu danych z klasy pochodnej. Jest to zgodne z zorientowane obiektowo programowania rozwiązań. W poprzednim przykładzie, typu obiektu `Person` nie mogą być wysyłane podczas `Employee` jest oczekiwany.  
   
- Kontrakt danych z klasy pochodnej mogą być wysyłane, gdy kontrakt danych z klasy podstawowej jest oczekiwany, ale tylko w przypadku odbierania punktu końcowego "wie" użycia typu pochodnego <xref:System.Runtime.Serialization.KnownTypeAttribute>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). W poprzednim przykładzie, typu obiektu `Employee` mogą być wysyłane podczas `Person` jest oczekiwany, ale tylko wtedy, gdy kod odbiornika wykorzystuje <xref:System.Runtime.Serialization.KnownTypeAttribute> należeć listy znanych typów.  
+ Kontrakt danych z klasy pochodnej mogą być wysyłane, gdy kontrakt danych z klasy podstawowej jest oczekiwany, ale tylko w przypadku odbierania punktu końcowego "wie" użycia typu pochodnego <xref:System.Runtime.Serialization.KnownTypeAttribute>. Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). W poprzednim przykładzie, typu obiektu `Employee` mogą być wysyłane podczas `Person` jest oczekiwany, ale tylko wtedy, gdy kod odbiornika wykorzystuje <xref:System.Runtime.Serialization.KnownTypeAttribute> należeć listy znanych typów.  
   
  Podczas przekazywania parametrów i zwracanych wartości między aplikacjami, jeśli oczekiwany typ to interfejs, jest odpowiednikiem oczekiwanym typem jest typu <xref:System.Object>. Ponieważ każdy typ ostatecznie pochodną <xref:System.Object>, kontrakt danych, co ostatecznie pochodną kontraktu danych dla <xref:System.Object>. W związku z tym dowolnego typu kontraktu danych mogą być przekazywane, gdy interfejs. Dodatkowe kroki są wymagane do pomyślnie pracy z interfejsami; Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   

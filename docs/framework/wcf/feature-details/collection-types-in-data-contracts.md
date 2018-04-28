@@ -17,17 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
 A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tych list można przedstawić przy użyciu tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może utrzymywać listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
@@ -40,7 +40,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
   
  Dodatkowe wymagania dla typów kolekcji, takie jak o metodę o nazwie `Add` i konstruktora domyślnego opisano szczegółowo w poniższych sekcjach. Dzięki temu, że typy kolekcji można zarówno serializacji i deserializacji. Oznacza to, że niektóre kolekcje nie są bezpośrednio obsługiwane, takie jak ogólnego <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (ponieważ go nie ma konstruktora domyślnego). Jednak uzyskać informacji o tych ograniczeń obejścia, zobacz sekcję "Przy użyciu kolekcji interfejsu typów i tylko do odczytu kolekcji" w dalszej części tego tematu.  
   
- Typy zawarte w kolekcji musi być typy kontraktu danych, lub w inny sposób możliwy do serializacji. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Typy zawarte w kolekcji musi być typy kontraktu danych, lub w inny sposób możliwy do serializacji. Aby uzyskać więcej informacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Co to jest i co to jest uznawane za prawidłowe kolekcji, jak również informacje jak kolekcje są serializowane, zapoznaj się z informacjami o serializowanie kolekcji w sekcji "Zaawansowane zasady kolekcji" tego tematu.  
   
@@ -152,7 +152,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] w sekcji "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
+ Aby uzyskać więcej informacji zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Dostosowywanie identycznych nazwa elementu w kolekcji listy  
  Lista kolekcje zawierają identycznych wpisów. Zazwyczaj każdy wpis identycznych jest reprezentowany jako element o nazwie zgodnie z nazwą kontraktu danych typu zawartego w kolekcji.  

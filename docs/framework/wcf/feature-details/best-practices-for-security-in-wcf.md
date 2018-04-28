@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
 W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę podczas tworzenia bezpiecznego aplikacji przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zabezpieczenia, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -60,7 +60,7 @@ W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę p
  Upewnij się zaufania do źródła metadanych i upewnij się, że nikt nie został zmieniony przez niepowołane metadanych. Metadane pobrany przy użyciu protokołu HTTP są wysyłane w postaci zwykłego tekstu i może zostać naruszone. Jeśli usługa używa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> i <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> właściwości, użyj adresu URL dostarczony przez autora usługi podczas pobierania danych przy użyciu protokołu HTTPS.  
   
 ## <a name="publish-metadata-using-security"></a>Publikowanie metadanych przy użyciu zabezpieczeń  
- Aby zapobiec modyfikowaniu z metadanymi opublikowane usługi, bezpieczny punkt końcowy wymiany metadanych z transportu lub zabezpieczenia na poziomie wiadomości. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Publikowanie punktów końcowych metadanych](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) i [porady: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Aby zapobiec modyfikowaniu z metadanymi opublikowane usługi, bezpieczny punkt końcowy wymiany metadanych z transportu lub zabezpieczenia na poziomie wiadomości. Aby uzyskać więcej informacji, zobacz [publikowanie punktów końcowych metadanych](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) i [porady: Publikowanie metadanych dla kodu przy użyciu usługi](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Upewnij się, Użyj wystawcy lokalnego  
  Jeśli adres wystawcy i powiązanie zostały określone dla danego powiązania, wystawcy lokalnego nie jest używany dla punktów końcowych, które używają tego powiązania. Klienci, którzy oczekują, że zawsze używaj wystawcy lokalnego powinien upewnij się, że nie używaj takiego powiązania lub ich zmodyfikuj powiązanie w taki sposób, że adres wystawcy jest pusta.  

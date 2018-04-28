@@ -1,29 +1,30 @@
 ---
-title: "Projektowanie i implementowanie niestandardowych działań"
-ms.custom: 
+title: Projektowanie i implementowanie niestandardowych działań
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d162635a82027d1aaa46545dabad3e103d0f339c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bafa54764ba8b02dd05cadd65c3f3cbc64c4b081
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Projektowanie i implementowanie niestandardowych działań
 Niestandardowe działania w [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] są tworzone przez albo montaż działania dostarczane przez system do działań złożonych lub tworząc nowe typy, które pochodzą z <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, lub <xref:System.Activities.NativeActivity>. W tej sekcji opisano sposób tworzenia działań niestandardowych z jednej z metod.  
   
 > [!IMPORTANT]
->  Działania niestandardowe, które domyślnie są wyświetlane w Projektancie przepływów pracy jako prosty prostokąt o nazwie działania. Zapewnienie niestandardowych wizualną reprezentację działanie w przepływie pracy projektanta należy również utworzyć designer niestandardowych. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Przy użyciu projektantów działań niestandardowych i szablonów](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
+>  Działania niestandardowe, które domyślnie są wyświetlane w Projektancie przepływów pracy jako prosty prostokąt o nazwie działania. Zapewnienie niestandardowych wizualną reprezentację działanie w przepływie pracy projektanta należy również utworzyć designer niestandardowych. Aby uzyskać więcej informacji, zobacz [przy użyciu projektantów działań niestandardowych i szablony](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Opcje tworzenia działań](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  

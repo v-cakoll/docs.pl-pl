@@ -1,17 +1,18 @@
 ---
 title: Testowanie C# .NET Core i NUnit jednostki
 description: Dowiedz się pojęcia testu jednostki w języku C# i .NET Core za pośrednictwem interaktywnego środowisko tworzenia przykładowe rozwiązanie krok po kroku przy użyciu platformy dotnet testu i NUnit.
-keywords: NUnit, .NET, .NET Core
 author: rprouse
 ms.date: 12/01/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.openlocfilehash: b29912a58511305202a18e8da4ae57700605867a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: db11adf265b2a08456a1bd42bc8a6847ba70a2ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testowanie C# .NET Core i NUnit jednostki
 

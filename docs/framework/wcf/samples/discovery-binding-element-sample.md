@@ -1,24 +1,26 @@
 ---
-title: "Przykład elementu powiązania odnajdywania"
-ms.custom: 
+title: Przykład elementu powiązania odnajdywania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Przykład elementu powiązania odnajdywania
 W tym przykładzie pokazano, jak element powiązania klienta odnajdywania umożliwia odnajdywanie usługi. Ta funkcja umożliwia deweloperom dodać kanałem klienta odnajdywania do ich istniejącego stosu kanału klienta, tworzenie bardzo intuicyjne modelu programowania. Po otwarciu kanału skojarzony adres usługi został rozwiązany za pomocą odnajdywania. W tym przykładzie składa się z następujących projektów:  
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- Po <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> jest uruchomiony, deweloper określa kryteria służące do wyszukiwania dla usługi. W takim przypadku kryterium wyszukiwania odnajdywania jest `ICalculatorService` typu. Ponadto określa dewelopera <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> co powoduje zwrócenie <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> Określa, gdzie szukać usług. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> Zwraca nową <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> wystąpienia. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Używanie wiązania niestandardowego z kanałem klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ Po <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> jest uruchomiony, deweloper określa kryteria służące do wyszukiwania dla usługi. W takim przypadku kryterium wyszukiwania odnajdywania jest `ICalculatorService` typu. Ponadto określa dewelopera <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> co powoduje zwrócenie <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> Określa, gdzie szukać usług. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> Zwraca nową <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> wystąpienia. Aby uzyskać więcej informacji, zobacz [za pomocą powiązania niestandardowego z kanałem klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

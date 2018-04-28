@@ -1,20 +1,17 @@
 ---
-title: "Fixed — słowo kluczowe (F #)"
-description: "Dowiedz się, jak można \"przypiąć\" lokalnie na stosie zapobiegające kolekcji F # \"fixed\" — słowo kluczowe."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Fixed — słowo kluczowe (F #)'
+description: 'Dowiedz się, jak można "przypiąć" lokalnie na stosie zapobiegające kolekcji F # "fixed" — słowo kluczowe.'
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>Fixed — słowo kluczowe
 
@@ -30,7 +27,7 @@ use ptr = fixed expression
 
 Spowoduje to rozszerzenie składni wyrażeń umożliwia wyodrębnianie wskaźnik i powiązania jej nazwę, który uniemożliwił zebrane lub przenieść podczas wyrzucania elementów bezużytecznych.  
 
-Wskaźnik z wyrażenia został rozwiązany za pomocą `fixed` — słowo kluczowe jest powiązana z identyfikatorem za pośrednictwem `use` — słowo kluczowe.  Semantyka tego są podobne do zarządzania zasobami za pośrednictwem `use` — słowo kluczowe.  Wskaźnik myszy zostanie rozwiązany, gdy znajduje się w zakresie, a po jest spoza zakresu, nie zostanie rozwiązany.  `fixed`Nie można użyć poza kontekstem `use` powiązania.  Wskaźnik musi powiązać nazwę zawierającą `use`.
+Wskaźnik z wyrażenia został rozwiązany za pomocą `fixed` — słowo kluczowe jest powiązana z identyfikatorem za pośrednictwem `use` — słowo kluczowe.  Semantyka tego są podobne do zarządzania zasobami za pośrednictwem `use` — słowo kluczowe.  Wskaźnik myszy zostanie rozwiązany, gdy znajduje się w zakresie, a po jest spoza zakresu, nie zostanie rozwiązany.  `fixed` Nie można użyć poza kontekstem `use` powiązania.  Wskaźnik musi powiązać nazwę zawierającą `use`.
 
 Użycie `fixed` musi wystąpić w wyrażeniu w funkcji lub metody.  Nie można używać w zakresie poziomu skryptów lub poziom modułu.
 
@@ -70,4 +67,4 @@ doPointerWork()
 
 ## <a name="see-also"></a>Zobacz też
 
-[NativePtr Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+[Nativeptr — moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

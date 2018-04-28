@@ -1,24 +1,26 @@
 ---
 title: Tworzenie kolejek w programie WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>Tworzenie kolejek w programie WCF
 W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -49,19 +51,19 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
   
  Kolejki usługi MSMQ mogą również chronione, za pomocą tożsamości systemu Windows, w zarejestrowany w usłudze katalogowej Active Directory. Podczas instalowania usługi MSMQ, należy zainstalować integracji usługi Active Directory, która wymaga komputera, jako część sieci domeny systemu Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Usługa MSMQ, zobacz [usługi kolejkowania komunikatów instalowanie (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Usługa MSMQ, zobacz [usługi kolejkowania komunikatów instalowanie (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) jest Zakolejkowane powiązanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia dwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych do komunikowania się przy użyciu usługi MSMQ. Wiązanie, w związku z tym udostępnia właściwości, które są specyficzne dla usługi MSMQ. Jednak nie wszystkie funkcje usługi MSMQ i właściwości są widoczne w `NetMsmqBinding`. CD `NetMsmqBinding` zaprojektowano z optymalny zestaw funkcji, które większość klientów stwierdzi, że wystarczające.  
   
- `NetMsmqBinding` Manifesty podstawowe koncepcje kolejkowania omówione w związku z tym daleko w formie właściwości na powiązania. Te właściwości, komunikują się z usługi MSMQ z kolei, jak przenieść i dostarczania komunikatów. Omówienie kategorii właściwości jest w poniższych sekcjach. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Tematy dotyczące pojęć opisujących właściwości specyficzne dla bardziej całkowicie.  
+ `NetMsmqBinding` Manifesty podstawowe koncepcje kolejkowania omówione w związku z tym daleko w formie właściwości na powiązania. Te właściwości, komunikują się z usługi MSMQ z kolei, jak przenieść i dostarczania komunikatów. Omówienie kategorii właściwości jest w poniższych sekcjach. Aby uzyskać więcej informacji zobacz tematy dotyczące pojęć, opisujących właściwości specyficzne dla bardziej całkowicie.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce i trwałe właściwości  
  `ExactlyOnce` i `Durable` właściwości mają wpływ na sposób wiadomości są przesyłane między kolejki:  
   
 -   `ExactlyOnce`: Jeśli równa `true` (domyślnie) umieszczonych w kolejce kanał zapewnia, że komunikat, jeśli dostarczane, nie jest zduplikowany. Gwarantuje również, że komunikat nie zostaną utracone. Jeśli nie można dostarczyć wiadomości lub wiadomości do czasu wygaśnięcia wygasa przed wiadomości mogą być dostarczane, wiadomości nie powiodło się wraz z przyczyną niepowodzenia dostarczenia jest rejestrowana w kolejki utraconych wiadomości. Jeśli wartość `false`, zwrócony sprawia, że ramach działań zmierzających do transferowania wiadomości. W takim przypadku można opcjonalnie kolejki utraconych wiadomości.  
   
--   `Durable:`Jeśli wartość `true` (ustawienie domyślne), umieszczonych w kolejce kanał zapewnia, że usługa MSMQ przechowuje wiadomości trwale na dysku. W związku z tym jeżeli zatrzymać i uruchomić ponownie usługę MSMQ, wiadomości na dysku jest przenoszona do kolejki docelowej lub dostarczone do usługi. Jeśli wartość `false`, komunikaty są przechowywane w magazynie nietrwałe i zostaną utracone na zatrzymując i uruchamiając ponownie usługę MSMQ.  
+-   `Durable:` Jeśli wartość `true` (ustawienie domyślne), umieszczonych w kolejce kanał zapewnia, że usługa MSMQ przechowuje wiadomości trwale na dysku. W związku z tym jeżeli zatrzymać i uruchomić ponownie usługę MSMQ, wiadomości na dysku jest przenoszona do kolejki docelowej lub dostarczone do usługi. Jeśli wartość `false`, komunikaty są przechowywane w magazynie nietrwałe i zostaną utracone na zatrzymując i uruchamiając ponownie usługę MSMQ.  
   
  Aby uzyskać `ExactlyOnce` niezawodnej transfer MSMQ wymaga kolejki transakcyjnej. Ponadto usługi MSMQ wymaga transakcji można odczytać z kolejką transakcyjną. Tak, jeśli używasz `NetMsmqBinding`, należy pamiętać, że transakcja jest wymagana do wysyłania i odbierania wiadomości gdy `ExactlyOnce` ma ustawioną wartość `true`. Podobnie, MSMQ wymaga kolejki z systemem innym niż transakcyjnej dla zapewnienia optymalnych, takie jak kiedy `ExactlyOnce` jest `false` i nietrwałe obsługi wiadomości. W związku z tym podczas ustawiania `ExactlyOnce` do `false` lub trwałe do `false`, nie można wysyłać ani odbierać przy użyciu transakcji.  
   
@@ -77,19 +79,19 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
   
  Powiązanie ma dwie właściwości odsetek:  
   
--   `DeadLetterQueue`: Ta właściwość jest wyliczeniem, która wskazuje, czy kolejka utraconych wiadomości jest wymagane. Wyliczenie zawiera także rodzaj kolejki utraconych wiadomości, jeśli wymagane jest jeden. Wartości są `None`, `System`, i `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Interpretacja te właściwości, zobacz [przy użyciu kolejki utraconych wiadomości do obsługi błędów transferu](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: Ta właściwość jest wyliczeniem, która wskazuje, czy kolejka utraconych wiadomości jest wymagane. Wyliczenie zawiera także rodzaj kolejki utraconych wiadomości, jeśli wymagane jest jeden. Wartości są `None`, `System`, i `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Interpretacja te właściwości, zobacz [przy użyciu kolejki utraconych wiadomości do obsługi błędów transferu](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: Ta właściwość jest adresem identyfikator URI (Uniform Resource) specyficzne dla aplikacji kolejki utraconych wiadomości. Jest to wymagane, jeśli `DeadLetterQueue`.`Custom` zostanie wybrany.  
   
 #### <a name="poison-message-handling-properties"></a>Właściwości Obsługa komunikatów zanieczyszczonych  
- Usługa odczytuje wiadomości z kolejki docelowej, w ramach transakcji, usługa może zakończyć się niepowodzeniem przetworzyć komunikatu z różnych przyczyn. Komunikat jest następnie przywracane do kolejki, aby ponownie odczytać. Na wypadek wiadomości, które nie są często zestaw poison komunikat — Obsługa właściwości można skonfigurować w powiązaniu. Istnieją cztery właściwości: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, i `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]te właściwości, zobacz [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Usługa odczytuje wiadomości z kolejki docelowej, w ramach transakcji, usługa może zakończyć się niepowodzeniem przetworzyć komunikatu z różnych przyczyn. Komunikat jest następnie przywracane do kolejki, aby ponownie odczytać. Na wypadek wiadomości, które nie są często zestaw poison komunikat — Obsługa właściwości można skonfigurować w powiązaniu. Istnieją cztery właściwości: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, i `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] te właściwości, zobacz [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Właściwości zabezpieczeń  
- MSMQ udostępnia własny model zabezpieczeń, takie jak listy kontroli dostępu (ACL) w kolejce lub wysyłania uwierzytelnione komunikaty. `NetMsmqBinding` Opisuje te właściwości zabezpieczeń jako część jej ustawienia zabezpieczeń transportu. Istnieją dwie właściwości powiązanie dla zabezpieczeń transportu: `MsmqAuthenticationMode` i `MsmqProtectionLevel`. Ustawienia te właściwości są zależne od konfiguracji usługi MSMQ. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ MSMQ udostępnia własny model zabezpieczeń, takie jak listy kontroli dostępu (ACL) w kolejce lub wysyłania uwierzytelnione komunikaty. `NetMsmqBinding` Opisuje te właściwości zabezpieczeń jako część jej ustawienia zabezpieczeń transportu. Istnieją dwie właściwości powiązanie dla zabezpieczeń transportu: `MsmqAuthenticationMode` i `MsmqProtectionLevel`. Ustawienia te właściwości są zależne od konfiguracji usługi MSMQ. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
- Oprócz zabezpieczeń transportu korzystanie z zabezpieczeń komunikatów być zabezpieczona rzeczywiste samej wiadomości SOAP. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Korzystanie z zabezpieczeń wiadomości](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
+ Oprócz zabezpieczeń transportu korzystanie z zabezpieczeń komunikatów być zabezpieczona rzeczywiste samej wiadomości SOAP. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komunikatów za pomocą komunikatów zabezpieczeń](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
- `MsmqTransportSecurity`udostępnia również dwie właściwości `MsmqEncryptionAlgorithm` i `MsmqHashAlgorithm`. Są to wyliczenia różne algorytmy, aby wybrać szyfrowania transferu kolejki do kolejki komunikatów i tworzenia skrótów podpisów.  
+ `MsmqTransportSecurity` udostępnia również dwie właściwości `MsmqEncryptionAlgorithm` i `MsmqHashAlgorithm`. Są to wyliczenia różne algorytmy, aby wybrać szyfrowania transferu kolejki do kolejki komunikatów i tworzenia skrótów podpisów.  
   
 #### <a name="other-properties"></a>Inne właściwości  
  Oprócz powyższych właściwości innych właściwości specyficzne dla usługi MSMQ w include powiązania:  
@@ -100,7 +102,7 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
   
 -   `QueueTransferProtocol`: Wyliczenie protokół do użycia podczas transferu wiadomości do kolejki do kolejki. Usługa MSMQ implementuje protokół transmisji w trybie macierzystym kolejki do kolejki i opartego na protokole SOAP protokołu SOAP Reliable Messaging Protocol (SRMP). SRMP jest używany podczas transferów kolejki do kolejki przy użyciu transportu HTTP. Bezpieczne SRMP jest używany podczas transferów kolejki do kolejki przy użyciu protokołu HTTPS.  
   
--   `UseActiveDirectory`: Wartość logiczna wskazująca, czy usługi Active Directory muszą być używane do rozpoznawania adresów kolejki. Domyślnie jest wyłączona. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Punktów końcowych i adresowanie kolejki usługi service](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: Wartość logiczna wskazująca, czy usługi Active Directory muszą być używane do rozpoznawania adresów kolejki. Domyślnie jest wyłączona. Aby uzyskać więcej informacji, zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding` Jest używany, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktu końcowego do komunikowania się z istniejącej aplikacji usługi MSMQ napisana C, C++, COM lub System.Messaging interfejsów API.  

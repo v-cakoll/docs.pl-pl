@@ -1,23 +1,24 @@
 ---
-title: "Windows podstawowych koncepcji przepływu pracy"
-ms.custom: 
+title: Windows podstawowych koncepcji przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows podstawowych koncepcji przepływu pracy
 Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] używa pojęcia, które mogą być nowe dla niektórych deweloperów. W tym temacie opisano niektóre z pojęć i ich implementacji.  
@@ -35,7 +36,7 @@ Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes
 |Wyrażenie|Działanie z podwyższonym poziomem uprawnień, zwracając wartość używana w powiązaniach argumentu.|  
   
 ## <a name="workflow-runtime"></a>Środowiska uruchomieniowego przepływu pracy  
- Środowisko wykonawcze przepływu pracy jest środowisko, w którym wykonania przepływów pracy. <xref:System.Activities.WorkflowInvoker>to najprostszy sposób wykonania przepływu pracy. Host używa <xref:System.Activities.WorkflowInvoker> dla następujących:  
+ Środowisko wykonawcze przepływu pracy jest środowisko, w którym wykonania przepływów pracy. <xref:System.Activities.WorkflowInvoker> to najprostszy sposób wykonania przepływu pracy. Host używa <xref:System.Activities.WorkflowInvoker> dla następujących:  
   
 -   Aby wywołać synchronicznie przepływ pracy.  
   
@@ -43,7 +44,7 @@ Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes
   
 -   Aby dodać rozszerzenia do użycia przez działania.  
   
- <xref:System.Activities.ActivityInstance>to proxy wątkowo, który hostów można użyć do interakcji z środowiska uruchomieniowego. Host używa <xref:System.Activities.ActivityInstance> dla następujących:  
+ <xref:System.Activities.ActivityInstance> to proxy wątkowo, który hostów można użyć do interakcji z środowiska uruchomieniowego. Host używa <xref:System.Activities.ActivityInstance> dla następujących:  
   
 -   Uzyskanie wystąpienia przez go utworzyć lub załadować go ze sklepu wystąpienia.  
   
@@ -62,7 +63,7 @@ Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes
  Działania uzyskania dostępu do środowiska uruchomieniowego przepływu pracy przy użyciu odpowiednich <xref:System.Activities.ActivityContext> pochodnej klasy, takich jak <xref:System.Activities.NativeActivityContext> lub <xref:System.Activities.CodeActivityContext>. Używają to rozpoznawania argumentów i zmienne, do planowania działań podrzędnych i do innych celów.  
   
 ## <a name="services"></a>Usługi  
- Przepływy pracy umożliwiają fizyczne do wdrożenia i uzyskiwać dostęp do usług luźno połączonych, przy użyciu działań komunikacji. Działania obsługi komunikatów są tworzone [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] i to podstawowy mechanizm używany do pobierania danych do i z przepływu pracy. Można utworzyć działania obsługi wiadomości ze sobą w celu modelowania dowolnego rodzaju wymiany komunikatów, które mają. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]zobacz [wiadomości działania](../../../docs/framework/wcf/feature-details/messaging-activities.md). Usługi przepływu pracy są obsługiwane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Hosting przepływu pracy usługi — omówienie](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]przepływ pracy usług zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Przepływy pracy umożliwiają fizyczne do wdrożenia i uzyskiwać dostęp do usług luźno połączonych, przy użyciu działań komunikacji. Działania obsługi komunikatów są tworzone [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] i to podstawowy mechanizm używany do pobierania danych do i z przepływu pracy. Można utworzyć działania obsługi wiadomości ze sobą w celu modelowania dowolnego rodzaju wymiany komunikatów, które mają. Aby uzyskać więcej informacji, zobacz zobacz [wiadomości działania](../../../docs/framework/wcf/feature-details/messaging-activities.md). Usługi przepływu pracy są obsługiwane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. Aby uzyskać więcej informacji, zobacz [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] przepływ pracy usług zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Przepływy pracy zwalniania i długotrwałe trwałości,  
  Windows Workflow upraszcza tworzenie programów czynnych długotrwałe zapewniając:  
@@ -73,4 +74,4 @@ Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes
   
 -   Zdolność do utrwalenia danych przepływu pracy i zwolnienia przepływu pracy, Załaduj ponownie i Uaktywnij ponownie przepływu pracy w odpowiedzi na wznowienie <xref:System.Activities.Bookmark> obiektów w szczególności przepływu pracy.  
   
- Przepływ pracy stale wykonuje działania, dopóki nie ma żadnych więcej działań do wykonania lub aż wszystkie aktualnie wykonywanego działania oczekuje na dane wejściowe. W tym ostatnim stanie przepływu pracy jest w stanie bezczynności. Często hosta można zwolnić przepływów pracy, które przeszły bezczynności i załadować ponownie je, aby kontynuować wykonywanie, gdy komunikat dociera. <xref:System.ServiceModel.Activities.WorkflowServiceHost>zapewnia funkcje dla tej funkcji i zawiera zasady rozszerzonego, zwolnienia. Dla bloków wykonywania korzystających z danych o stanie volatile lub innych danych, która nie może zostać utrwalona, działanie może wskazywać na hoście że nie należy go utrwalone przy użyciu <xref:System.Activities.NoPersistHandle>. Przepływ pracy można również jawnie utrwalić danych jego średni magazynu trwałego za pomocą <xref:System.Activities.Statements.Persist> działania.
+ Przepływ pracy stale wykonuje działania, dopóki nie ma żadnych więcej działań do wykonania lub aż wszystkie aktualnie wykonywanego działania oczekuje na dane wejściowe. W tym ostatnim stanie przepływu pracy jest w stanie bezczynności. Często hosta można zwolnić przepływów pracy, które przeszły bezczynności i załadować ponownie je, aby kontynuować wykonywanie, gdy komunikat dociera. <xref:System.ServiceModel.Activities.WorkflowServiceHost> zapewnia funkcje dla tej funkcji i zawiera zasady rozszerzonego, zwolnienia. Dla bloków wykonywania korzystających z danych o stanie volatile lub innych danych, która nie może zostać utrwalona, działanie może wskazywać na hoście że nie należy go utrwalone przy użyciu <xref:System.Activities.NoPersistHandle>. Przepływ pracy można również jawnie utrwalić danych jego średni magazynu trwałego za pomocą <xref:System.Activities.Statements.Persist> działania.

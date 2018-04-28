@@ -1,20 +1,17 @@
 ---
 title: Obsługa wyjątków (F#)
 description: 'Poznaj podstawy obsługi wyjątków w F # i łącza do obsługi wyrażeń i funkcji wyjątków.'
-keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: ad475c4a-d94e-47d9-b27b-3ff000b65f8e
-ms.openlocfilehash: b61af66e0a70fdf9b86df37418c0284957d1f99e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 37b33f9387956ee462ff4977dd4ba34a82e89ec6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exception-handling"></a>Obsługa wyjątków
 

@@ -1,27 +1,24 @@
 ---
-title: "Ciągi (F#)"
-description: "Dowiedz się, jak typ \"string\" języka F # reprezentuje niezmienne tekst sekwencję znaków Unicode."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Ciągi (F#)
+description: 'Dowiedz się, jak typ "string" języka F # reprezentuje niezmienne tekst sekwencję znaków Unicode.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: df7624e5-ca6c-4e77-9e2b-87ca7e5e6f52
-ms.openlocfilehash: 96a398ebcd53681481b10d1a2bee5f1e5442a5cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bf3c15db43c6419222dc3e5b32ac8947a53982f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="strings"></a>Ciągi
 
 > [!NOTE]
 Interfejs API łącza odwołań w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
 
-`string` Typu reprezentuje niezmienne tekst sekwencję znaków Unicode. `string`alias jest `System.String` w programie .NET Framework.
+`string` Typu reprezentuje niezmienne tekst sekwencję znaków Unicode. `string` alias jest `System.String` w programie .NET Framework.
 
 ## <a name="remarks"></a>Uwagi
 Literały ciągu są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego (\) jest używany do kodowania niektórych znaków specjalnych. Ukośniku odwrotnym i znakiem następnym razem są nazywane *sekwencja unikowa*. Sekwencje obsługiwane w F # ciąg, który w poniższej tabeli przedstawiono literały specjalne.
@@ -92,4 +89,4 @@ Za pomocą `Chars` właściwość `System.String`, dostęp do poszczególnych zn
 Dodatkowe funkcje obsługi ciągu znajduje się w `String` modułu w `FSharp.Core` przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Core.String — moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)

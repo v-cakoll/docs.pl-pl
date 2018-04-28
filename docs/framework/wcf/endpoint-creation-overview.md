@@ -1,13 +1,13 @@
 ---
-title: "Przegląd tworzenia punktów końcowych"
-ms.custom: 
+title: Przegląd tworzenia punktów końcowych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa20edd8fa43fb1e6a28f7b1ec18f83fedd96bca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f7e12f3a6c5d722b2eda1eaaeb390ee3284a70e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="endpoint-creation-overview"></a>Przegląd tworzenia punktów końcowych
 Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferty usługi. W tej sekcji opisano strukturę punktu końcowego i opisano sposób definiowania punkt końcowy w konfiguracji i w kodzie.  
@@ -33,11 +33,11 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
 ## <a name="the-structure-of-an-endpoint"></a>Struktura punktu końcowego  
  Każdy punkt końcowy zawiera adres, który wskazuje, gdzie można znaleźć punktu końcowego, powiązanie, które określa, jak klient może komunikować się z punktem końcowym i kontraktu, który identyfikuje dostępne metody.  
   
--   **Adres**. Adres unikatowo identyfikuje punkt końcowy i informuje potencjalnych klientów, w którym znajduje się usługa. Jest reprezentowana w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] model obiektów przez <xref:System.ServiceModel.EndpointAddress> adresu, który zawiera jednolity identyfikator zasobów (URI) i właściwości adresów, które obejmują tożsamości, niektóre elementy sieci Web Services Description Language (WSDL) i kolekcję opcjonalne nagłówki. Opcjonalne nagłówki zawierają dodatkowe szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Adres**. Adres unikatowo identyfikuje punkt końcowy i informuje potencjalnych klientów, w którym znajduje się usługa. Jest reprezentowana w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] model obiektów przez <xref:System.ServiceModel.EndpointAddress> adresu, który zawiera jednolity identyfikator zasobów (URI) i właściwości adresów, które obejmują tożsamości, niektóre elementy sieci Web Services Description Language (WSDL) i kolekcję opcjonalne nagłówki. Opcjonalne nagłówki zawierają dodatkowe szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Powiązanie**. Powiązanie określa sposób komunikowania się z punktem końcowym. Określa powiązanie, jak punkt końcowy komunikuje się innym osobom, które protokół transportu do użycia w tym (np. TCP lub HTTP), które kodowanie do użycia dla wiadomości (na przykład tekst lub binarny) i wymagania zabezpieczeń, które są niezbędne (dla przykład protokołu Secure Sockets Layer [SSL] lub zabezpieczenia komunikatów SOAP). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Konfigurowanie usług i klientów za pomocą powiązania](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+-   **Powiązanie**. Powiązanie określa sposób komunikowania się z punktem końcowym. Określa powiązanie, jak punkt końcowy komunikuje się innym osobom, które protokół transportu do użycia w tym (np. TCP lub HTTP), które kodowanie do użycia dla wiadomości (na przykład tekst lub binarny) i wymagania zabezpieczeń, które są niezbędne (dla przykład protokołu Secure Sockets Layer [SSL] lub zabezpieczenia komunikatów SOAP). Aby uzyskać więcej informacji, zobacz [za pomocą powiązania do konfigurowania usług i klientów](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Kontrakt usługi**. Kontrakt usługi przedstawiono funkcje punktu końcowego udostępnia do klienta. Kontrakt określa operacje, które klient może wywoływać, formularz wiadomości i typ parametrów wejściowych lub danych wymaganych do wywołania operacji i rodzaj przetwarzania lub komunikat odpowiedzi, który klient może spodziewać się. Trzy podstawowe typy kontraktów odpowiadają wzorce wymiany wiadomości podstawowe (MEPs): (jednokierunkowe), protokół datagram żądań i odpowiedzi oraz dupleks (dwukierunkowe). Kontrakt usługi można również użyć kontraktów danych i wiadomości wymaga konkretnych typów danych i formaty wiadomości, gdy uzyskiwany. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Definiowanie kontraktu usługi, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md). Należy pamiętać, że klient może również konieczne przeprowadzenie Implementowanie kontraktu usługa zdefiniowana, o nazwie kontrakt wywołania zwrotnego do odbierania wiadomości z usługi w MEP dupleksowych. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+-   **Kontrakt usługi**. Kontrakt usługi przedstawiono funkcje punktu końcowego udostępnia do klienta. Kontrakt określa operacje, które klient może wywoływać, formularz wiadomości i typ parametrów wejściowych lub danych wymaganych do wywołania operacji i rodzaj przetwarzania lub komunikat odpowiedzi, który klient może spodziewać się. Trzy podstawowe typy kontraktów odpowiadają wzorce wymiany wiadomości podstawowe (MEPs): (jednokierunkowe), protokół datagram żądań i odpowiedzi oraz dupleks (dwukierunkowe). Kontrakt usługi można również użyć kontraktów danych i wiadomości wymaga konkretnych typów danych i formaty wiadomości, gdy uzyskiwany. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Definiowanie kontraktu usługi, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md). Należy pamiętać, że klient może również konieczne przeprowadzenie Implementowanie kontraktu usługa zdefiniowana, o nazwie kontrakt wywołania zwrotnego do odbierania wiadomości z usługi w MEP dupleksowych. Aby uzyskać więcej informacji, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  Imperatively przy użyciu kodu lub deklaratywnie przy użyciu konfiguracji można określić punktu końcowego usługi. Jeśli nie określono żadnych punktów końcowych następnie środowiska uruchomieniowego zawiera domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej zaimplementowanych przez usługę. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie opracowywane. Ogólnie rzecz biorąc lepiej jest punkty końcowe usługi przy użyciu konfiguracji zamiast kodu. Utrzymywanie powiązania i adresowanie poza kod pozwala na zmianę bez konieczności ponowne skompilowanie i wdrożenie aplikacji.  
   
@@ -51,7 +51,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
   
 -   Implementowanie `Echo` usługi określone przez `IEcho` kontraktu.  
   
--   Podaj adres punktu końcowego http://localhost: 8000/Echo dla usługi.  
+-   Podaj adres punktu końcowego http://localhost:8000/Echo dla usługi.  
   
 -   Skonfiguruj `Echo` usługi przy użyciu <xref:System.ServiceModel.WSHttpBinding> powiązania.  
   
@@ -209,7 +209,7 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()  
 ```  
   
- W przypadku punktów końcowych są jawnie, nadal można dodać domyślne punkty końcowe przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]domyślne punkty końcowe, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ W przypadku punktów końcowych są jawnie, nadal można dodać domyślne punkty końcowe przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] domyślne punkty końcowe, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)

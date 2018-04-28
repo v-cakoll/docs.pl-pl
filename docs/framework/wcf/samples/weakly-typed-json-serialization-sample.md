@@ -1,24 +1,26 @@
 ---
-title: "Przykład serializacji kodu JSON ze słabą kontrolą typów"
-ms.custom: 
+title: Przykład serializacji kodu JSON ze słabą kontrolą typów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dedf1188afd886c44d897aa1d93ffa226e906ada
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Przykład serializacji kodu JSON ze słabą kontrolą typów
 Podczas serializowania typu zdefiniowane przez użytkownika format podanego podczas transmisji lub deserializacji formacie łańcuchowym do typu zdefiniowanego przez użytkownika, danego typu zdefiniowane przez użytkownika muszą być dostępne zarówno usługi, jak i na kliencie. Zwykle w tym celu, <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany do ich elementy członkowskie. Ten mechanizm ma również zastosowanie podczas pracy z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w temacie [porady: serializacji i deserializacji danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -69,7 +71,7 @@ Podczas serializowania typu zdefiniowane przez użytkownika format podanego podc
   
  Może to być skomplikowane, szczególnie w przypadku, gdy klient musi obsługiwać więcej niż jeden typ obiektów JSON.  
   
- `JsonObject` Typem dostarczonym w tym przykładzie przedstawiono słabą kontrolą reprezentacja zdeserializowany obiekt JSON. `JsonObject`polega na fizyczne mapowanie między obiektami JSON i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] słowniki i mapowanie pomiędzy tablicami JSON i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablic. Poniższy kod przedstawia `JsonObject` typu.  
+ `JsonObject` Typem dostarczonym w tym przykładzie przedstawiono słabą kontrolą reprezentacja zdeserializowany obiekt JSON. `JsonObject` polega na fizyczne mapowanie między obiektami JSON i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] słowniki i mapowanie pomiędzy tablicami JSON i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablic. Poniższy kod przedstawia `JsonObject` typu.  
   
 ```  
 // Instantiation of JsonObject json omitted  
@@ -121,7 +123,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` Konstruktor pobiera <xref:System.Xml.XmlDictionaryReader>, jest uzyskiwany za pośrednictwem <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> metody. Czytnik zawiera reprezentację XML JSON komunikat przez klienta. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]temat [mapowanie między formatami JSON i XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
+ `JsonObject` Konstruktor pobiera <xref:System.Xml.XmlDictionaryReader>, jest uzyskiwany za pośrednictwem <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> metody. Czytnik zawiera reprezentację XML JSON komunikat przez klienta. Aby uzyskać więcej informacji, zobacz temat [mapowanie między formatami JSON i XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
  Program tworzy następujące dane wyjściowe:  
   

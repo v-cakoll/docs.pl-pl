@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Wykorzystywanie OData źródeł danych z przepływu pracy
 Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , umożliwia tworzenie usług korzystających z protokołu Open Data Protocol (OData) do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantyki representational stanu transfer (REST). OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Wszelkie aplikacje mogą współdziałać z usługi OData na podstawie danych jeśli umożliwia wysyłanie żądania HTTP i przetworzyć źródła strumieniowego OData zwracanych usługi danych. Usługi danych WCF zawiera ponadto biblioteki klienta, które zapewniają bardziej rozbudowane środowisko programowania po używać źródła danych OData z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji. Ten temat zawiera omówienie używania OData podawania w przepływie pracy z użyciem biblioteki klienta i bez.  
@@ -37,13 +37,13 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  Należy pamiętać, że nie ma żadnych operacji usługi udostępniane przez usługę, a następnie w **usług** listy są elementy reprezentujące jednostek udostępnianych przez usługę danych Northwind. Dodanie odwołania do usługi klasy zostanie wygenerowany dla tych obiektów i ich użyciem w kodzie klienta. Przykłady w tym temacie używać tych klas i `NorthwindEntities` klasy do wykonania zapytania.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Generowanie biblioteki klienta usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
+>  Aby uzyskać więcej informacji, zobacz [generowania biblioteki klienta usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
   
 ### <a name="using-asynchronous-methods"></a>Używanie metod asynchronicznych  
  Do rozwiązywania problemów możliwe opóźnienia, które mogą wystąpić podczas uzyskiwania dostępu do zasobów za pośrednictwem sieci Web, zaleca się asynchronicznie podczas uzyskiwania dostępu do usługi danych WCF. Biblioteki klienta usługi danych WCF obejmują metod asynchronicznych do wywoływania zapytania, a także Windows Workflow Foundation (WF) <xref:System.Activities.AsyncCodeActivity> klasa do tworzenia działań asynchronicznego. <xref:System.Activities.AsyncCodeActivity> mogą być zapisywane pochodzące od działania, aby móc korzystać z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] klas, metod asynchronicznych lub kod wykonany asynchronicznie mogą być wprowadzane do metody i wywoływane przy użyciu delegata. Ta sekcja zawiera dwa przykłady <xref:System.Activities.AsyncCodeActivity> pochodnej działanie; który korzysta z biblioteki klienta usługi danych WCF metod asynchronicznych i korzystającą delegata.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Operacje asynchroniczne (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) i [tworzenia działań asynchroniczne](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+>  Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) i [tworzenia działań asynchroniczne](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
   
 ### <a name="using-client-library-asynchronous-methods"></a>Używanie metod asynchronicznych biblioteki klienta  
  <xref:System.Data.Services.Client.DataServiceQuery%601> Klasa udostępnia <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> i <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> metody asynchronicznie podczas badania usługi OData. Te metody mogą być wywoływane z <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> i <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> zastąpień o <xref:System.Activities.AsyncCodeActivity> klasy. Gdy <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zwraca zastąpienie, przepływ pracy można go bezczynności (ale nie będą się powtarzać), a po zakończeniu pracy asynchroniczne <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> jest wywołana w czasie wykonywania.  

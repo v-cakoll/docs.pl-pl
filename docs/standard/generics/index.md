@@ -1,12 +1,8 @@
 ---
-title: Typy ogólne w oprogramowaniu .NET Framework
-ms.custom: ''
+title: Typy ogólne w .NET
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -39,16 +35,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ba9149da420b7b7bdad01e1376793c64adaf1c8d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="generics-in-the-net-framework"></a>Typy ogólne w oprogramowaniu .NET Framework
-<a name="top"></a>Typy ogólne pozwalają dostosować metody, klasy, struktury lub interfejsu do typu dokładne dane, który działa na. Na przykład zamiast <xref:System.Collections.Hashtable> klasy, dzięki czemu klucze i wartości do być dowolnego typu, możesz użyć <xref:System.Collections.Generic.Dictionary%602> ogólne klasy i określ typu dozwolone dla klucza i dozwolona wartość. Zalety typów ogólnych należą od kodu zwiększenie bezpieczeństwa możliwość ponownego wykorzystania i typu.  
+# <a name="generics-in-net"></a>Typy ogólne w .NET
+
+<a name="top"></a> Typy ogólne pozwalają dostosować metody, klasy, struktury lub interfejsu do typu dokładne dane, który działa na. Na przykład zamiast <xref:System.Collections.Hashtable> klasy, dzięki czemu klucze i wartości do być dowolnego typu, możesz użyć <xref:System.Collections.Generic.Dictionary%602> ogólne klasy i określ typu dozwolone dla klucza i dozwolona wartość. Zalety typów ogólnych należą od kodu zwiększenie bezpieczeństwa możliwość ponownego wykorzystania i typu.  
   
- Ten temat zawiera przegląd typów ogólnych w programie .NET Framework oraz podsumowanie typów ogólnych lub metody. Ten temat zawiera następujące sekcje:  
+ Ten temat zawiera przegląd typów ogólnych w .NET oraz podsumowanie typów ogólnych lub metody. Ten temat zawiera następujące sekcje:  
   
 -   [Definiowanie i użycie typów ogólnych](#defining_and_using_generics)  
   
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Terminologia ogólne  
- Poniższe terminy są używane w celu omówienia ogólne w programie .NET Framework:  
+ Poniższe terminy są używane w celu omówienia typy ogólne w .NET:  
   
 -   A *definicji typu ogólnego* jest klasą, strukturą lub deklaracji interfejsu, który działa jako szablon, z symbole zastępcze dla typów, które mogą zawierać, lub użyj. Na przykład <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> klasy może zawierać dwa typy: klucze i wartości. Ponieważ w definicji typu ogólnego jest tylko szablon, nie można utworzyć wystąpienia klasy, struktury lub interfejsu, który jest definicją typu ogólnego.  
   
@@ -145,11 +142,11 @@ ms.lasthandoff: 12/23/2017
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>Biblioteka klas i obsługa języków  
- .NET Framework udostępnia wiele kolekcji ogólnej klasy w następujących przestrzeni nazw:  
+ .NET oferuje następujące klasy rodzajowej kolekcji w następujących przestrzeni nazw:  
   
--   <xref:System.Collections.Generic> Przestrzeni nazw kataloguje większość typy kolekcji ogólnych dostarczane przez program .NET Framework, takich jak <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.Dictionary%602> klas rodzajowych.  
+-   <xref:System.Collections.Generic> Przestrzeń nazw zawiera większość typy kolekcji ogólnych udostępniane przez .NET, takie jak <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.Dictionary%602> klas rodzajowych.  
   
--   <xref:System.Collections.ObjectModel> Przestrzeni nazw kataloguje typy kolekcji ogólnych dodatkowe, takie jak <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> klasy ogólnej, które są przydatne w przypadku udostępnianie modeli obiektów użytkownikom klas.  
+-   <xref:System.Collections.ObjectModel> Przestrzeń nazw zawiera typy kolekcji ogólnych dodatkowe, takie jak <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> klasy ogólnej, które są przydatne w przypadku udostępnianie modeli obiektów użytkownikom klas.  
   
  Interfejsy ogólne wykonania porównania sortowania i o równość znajdują się w <xref:System> przestrzeni nazw, wraz z ogólnych typów delegata obsługi zdarzeń, konwersje i predykatów wyszukiwania.  
   
@@ -172,11 +169,11 @@ ms.lasthandoff: 12/23/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)|W tym artykule opisano klasy rodzajowej kolekcji i innych typów ogólnych w programie .NET Framework.|  
+|[Kolekcje ogólne w .NET](../../../docs/standard/generics/collections.md)|W tym artykule opisano klasy rodzajowej kolekcji i innych typów ogólnych w .NET.|  
 |[Delegaci ogólni do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|W tym artykule opisano delegatów konwersje, predykatów wyszukiwania i działań podejmowanych w przypadku elementów tablicy lub kolekcji.|  
 |[Interfejsy ogólne](../../../docs/standard/generics/interfaces.md)|W tym artykule opisano interfejsach zapewniające często używane funkcje w rodzin typów ogólnych.|  
 |[Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)|Opisuje Kowariancja i kontrawariancja w parametrach typu ogólnego.|  
-|[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|Zawiera informacje podsumowania scenariuszy użycia typów kolekcji w programie .NET Framework, w tym typy ogólne i właściwości.|  
+|[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|Zawiera informacje podsumowania scenariusze użycia typów kolekcji w programie .NET, w tym typy ogólne i właściwości.|  
 |[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|W tym artykule opisano ogólne reguły do określania, kiedy należy używać kolekcji ogólnych typów.|  
 |[Instrukcje: definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Wyjaśniono, jak można wygenerować zestawów dynamicznych, które obejmują typy ogólne i metody.|  
 |[Typy ogólne w Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Zawiera opis funkcji ogólne dla użytkowników programu Visual Basic, w tym — tematy porad dotyczących korzystania oraz definiowanie typów ogólnych.|  

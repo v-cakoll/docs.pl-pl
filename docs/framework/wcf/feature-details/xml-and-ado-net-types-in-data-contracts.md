@@ -1,27 +1,29 @@
 ---
 title: Typy XML i ADO.NET w kontraktach danych
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3a1fceb1017c5225b4e1de6891d6609c9ad5062e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Typy XML i ADO.NET w kontraktach danych
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Modelu kontraktu danych obsługuje pewnych typów, które reprezentują XML bezpośrednio. Gdy te typy są serializowane do pliku XML, serializator zapisuje poza zawartość XML w typach bez dalszego przetwarzania. Obsługiwane typy to <xref:System.Xml.XmlElement>, tablic <xref:System.Xml.XmlNode> (, ale nie `XmlNode` samego typu), a także jako typy które implementują <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> i <xref:System.Data.DataTable> typu, a także typizowane zbiory danych, są często używane w programowania bazy danych. Implementuje te typy `IXmlSerializable` interfejsu i dlatego możliwy do serializacji w danych są kontraktu modelu. Niektóre uwagi dotyczące tych typów są wyświetlane na końcu tego tematu.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
  Upewnij się, że XML fragment, która jest zdeserializowany do `XmlElement` definiuje wszystkie prefiksy, które używa i nie zależą inne definicje prefiks z elementów nadrzędnych. Jest to niepożądane tylko w przypadku używania `DataContractSerializer` dostępu do XML z inną (z systemem innym niż`DataContractSerializer`) źródła.  
   
- W przypadku użycia z `DataContractSerializer`, `XmlElement` mogły zostać przypisane polymorphically, ale tylko do elementu członkowskiego danych typu <xref:System.Object>. Mimo że implementuje <xref:System.Collections.IEnumerable>, `XmlElement` nie może być używany jako typ kolekcji i nie można przypisać do <xref:System.Collections.IEnumerable> element członkowski danych. Podobnie jak w przypadku wszystkich przypisań polimorficznych, `DataContractSerializer` emituje nazwie kontraktu danych XML wynikowy — w tym przypadku jest "XmlElement" w przestrzeni nazw "http://schemas.datacontract.org/2004/07/System.Xml".  
+ W przypadku użycia z `DataContractSerializer`, `XmlElement` mogły zostać przypisane polymorphically, ale tylko do elementu członkowskiego danych typu <xref:System.Object>. Mimo że implementuje <xref:System.Collections.IEnumerable>, `XmlElement` nie może być używany jako typ kolekcji i nie można przypisać do <xref:System.Collections.IEnumerable> element członkowski danych. Podobnie jak w przypadku wszystkich przypisań polimorficznym, `DataContractSerializer` emituje nazwie kontraktu danych XML wynikowy — w tym przypadku jest "XmlElement" w "http://schemas.datacontract.org/2004/07/System.Xml" przestrzeni nazw.  
   
  Z `NetDataContractSerializer`, wszystkie prawidłowe przypisanie polimorficznym `XmlElement` (do `Object` lub `IEnumerable`) jest obsługiwana.  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  Podczas wypełniania elementu członkowskiego danych typu <xref:System.Array> z `Object` lub `Array` z `IEnumerable` z `XmlNode` wystąpień nie powoduje, są traktowane jako element członkowski danych `Array` z `XmlNode` wystąpień. Każdy element członkowski tablicy jest serializowany oddzielnie.  
   
- W przypadku użycia z `DataContractSerializer`, tablic `XmlNode` można przypisać polymorphically, ale tylko do elementu członkowskiego danych typu `Object`. Mimo że implementuje `IEnumerable`, tablicę `XmlNode` nie może być używany jako typ kolekcji, a następnie przypisać do `IEnumerable` element członkowski danych. Podobnie jak w przypadku wszystkich przypisań polimorficznych, `DataContractSerializer` emituje nazwie kontraktu danych XML wynikowy — w tym przypadku jest "ArrayOfXmlNode" w przestrzeni nazw "http://schemas.datacontract.org/2004/07/System.Xml". W przypadku użycia z `NetDataContractSerializer`, wszystkie prawidłowe przypisanie `XmlNode` tablica jest obsługiwana.  
+ W przypadku użycia z `DataContractSerializer`, tablic `XmlNode` można przypisać polymorphically, ale tylko do elementu członkowskiego danych typu `Object`. Mimo że implementuje `IEnumerable`, tablicę `XmlNode` nie może być używany jako typ kolekcji, a następnie przypisać do `IEnumerable` element członkowski danych. Podobnie jak w przypadku wszystkich przypisań polimorficznym, `DataContractSerializer` emituje nazwie kontraktu danych XML wynikowy — w tym przypadku jest "ArrayOfXmlNode" w "http://schemas.datacontract.org/2004/07/System.Xml" przestrzeni nazw. W przypadku użycia z `NetDataContractSerializer`, wszystkie prawidłowe przypisanie `XmlNode` tablica jest obsługiwana.  
   
 ### <a name="schema-considerations"></a>Zagadnienia dotyczące schematu  
  Aby uzyskać szczegółowe informacje dotyczące mapowania schematu typów danych XML, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Ta sekcja zawiera podsumowanie ważnych punktów.  
@@ -148,16 +150,16 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>Zagadnienia dotyczące schematu dla typów IXmlSerializable zawartości  
  Podczas eksportowania schematu `IXmlSerializable` typu zawartości, wywoływana jest metoda dostawcy schematu. <xref:System.Xml.Schema.XmlSchemaSet> Jest przekazywany do metody dostawcy schematu. Metoda można dodać żadnych prawidłowego schematu do zestawu schematów. Zestaw schematu zawiera schemat, który został już określony w momencie, gdy wystąpi eksportowania schematu. Gdy metoda dostawcy schematu należy dodać element do zestawu schematów, musi ustalić w przypadku <xref:System.Xml.Schema.XmlSchema> z odpowiedni obszar nazw już istnieje w zestawie. Jeśli tak, metody dostawcy schematu należy dodać nowy element do istniejącej `XmlSchema`. W przeciwnym razie należy utworzyć nowy `XmlSchema` wystąpienia. Jest to ważne, jeśli tablice `IXmlSerializable` typy są używane. Na przykład, jeśli masz `IXmlSerializable` typu, który pobiera wyeksportowany jako typu "A" w przestrzeni nazw "B", możliwe, że do czasu wywołania metody dostawcy schematu schematu już ustawione zawiera schemat "B" typu "ArrayOfA".  
   
- Oprócz dodania typów do <xref:System.Xml.Schema.XmlSchemaSet>, metody dostawcy schematu dla typów zawartości musi zwracać wartość inną niż null. Może on zwrócić <xref:System.Xml.XmlQualifiedName> , który określa nazwę typu schematu dla podanego `IXmlSerializable` typu. Ta nazwa kwalifikowana służy również jako dane umowy, nazwę i przestrzeń nazw dla typu. Dozwolone jest zwracany typ, który nie istnieje w zestawie natychmiast, gdy metoda dostawcy schematu zwraca schematów. Jednak oczekuje się, że w czasie wszystkie powiązane typy są eksportowane ( <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> metoda jest wywoływana dla wszystkich odpowiednich typów na <xref:System.Runtime.Serialization.XsdDataContractExporter> i <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> dostępu do właściwości), typ istnieje w zestawie schematów. Uzyskiwanie dostępu do `Schemas` właściwości przed wszystkimi odpowiednimi `Export` wprowadzono wywołania może spowodować <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]w ramach procesu eksportu zobacz [eksportowanie schematów z klas](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Oprócz dodania typów do <xref:System.Xml.Schema.XmlSchemaSet>, metody dostawcy schematu dla typów zawartości musi zwracać wartość inną niż null. Może on zwrócić <xref:System.Xml.XmlQualifiedName> , który określa nazwę typu schematu dla podanego `IXmlSerializable` typu. Ta nazwa kwalifikowana służy również jako dane umowy, nazwę i przestrzeń nazw dla typu. Dozwolone jest zwracany typ, który nie istnieje w zestawie natychmiast, gdy metoda dostawcy schematu zwraca schematów. Jednak oczekuje się, że w czasie wszystkie powiązane typy są eksportowane ( <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> metoda jest wywoływana dla wszystkich odpowiednich typów na <xref:System.Runtime.Serialization.XsdDataContractExporter> i <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> dostępu do właściwości), typ istnieje w zestawie schematów. Uzyskiwanie dostępu do `Schemas` właściwości przed wszystkimi odpowiednimi `Export` wprowadzono wywołania może spowodować <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] w ramach procesu eksportu zobacz [eksportowanie schematów z klas](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
  Metoda dostawcy schematu może także zwracać <xref:System.Xml.Schema.XmlSchemaType> do użycia. Tego typu może lub nie może być anonimowy. Jeśli jest anonimowy, schemat `IXmlSerializable` typu jest eksportowane jako typu anonimowego zawsze `IXmlSerializable` typ jest używany jako element członkowski danych. `IXmlSerializable` Typ ma nadal nazwie kontraktu danych i przestrzeni nazw. (Jest to określane zgodnie z opisem w [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md) z tą różnicą, że <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu nie można dostosować nazwę.) Jeśli nie jest anonimowy, musi być jednego z typów w `XmlSchemaSet`. Ten przypadek jest odpowiednikiem zwracanie `XmlQualifiedName` typu.  
   
- Ponadto deklaracji element globalny są eksportowane dla typu. Jeśli typ nie ma <xref:System.Xml.Serialization.XmlRootAttribute> atrybut zastosowany do niego element ma taką samą nazwę i przestrzeń nazw jako kontraktu danych i jego właściwość "nillable" ma wartość true. Jedynym wyjątkiem jest przestrzeń nazw schematu ("http://www.w3.org/2001/XMLSchema") — Jeśli jest typu kontraktu danych w tej przestrzeni nazw, odpowiedni element globalny jest w przestrzeni nazw puste, ponieważ jest zabroniony Dodawanie nowych elementów do schematu przestrzeń nazw. Jeśli typ ma `XmlRootAttribute` atrybut zastosowany do jego deklaracji element globalny został wyeksportowany z następującym: <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> i <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> właściwości. Wartości domyślne z `XmlRootAttribute` stosowane są nazwie kontraktu danych, pustą przestrzeń nazw i "nillable" o wartości true.  
+ Ponadto deklaracji element globalny są eksportowane dla typu. Jeśli typ nie ma <xref:System.Xml.Serialization.XmlRootAttribute> atrybut zastosowany do niego element ma taką samą nazwę i przestrzeń nazw jako kontraktu danych i jego właściwość "nillable" ma wartość true. Jedynym wyjątkiem jest przestrzeń nazw schematu ("http://www.w3.org/2001/XMLSchema") — w przypadku typu kontraktu danych w tej przestrzeni nazw, jest odpowiedni element globalny w przestrzeni nazw puste, ponieważ dodawanie nowych elementów do przestrzeni nazw schematu jest zabronione. Jeśli typ ma `XmlRootAttribute` atrybut zastosowany do jego deklaracji element globalny został wyeksportowany z następującym: <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> i <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> właściwości. Wartości domyślne z `XmlRootAttribute` stosowane są nazwie kontraktu danych, pustą przestrzeń nazw i "nillable" o wartości true.  
   
  Te same zasady deklaracji element globalny dotyczą typów starszej wersji zestawu danych. Należy pamiętać, że `XmlRootAttribute` nie może zastąpić element globalny deklaracje dodane za pomocą kodu niestandardowego, albo dodać do `XmlSchemaSet` przy użyciu metody dostawcy schematu lub za pomocą `GetSchema` dla typów starszej wersji zestawu danych.  
   
 ### <a name="ixmlserializable-element-types"></a>Typy elementów interfejsu IXmlSerializable  
- `IXmlSerializable`Element typów ma albo `IsAny` ustawioną właściwość `true` lub ma ich zwracać metoda dostawcy schematu `null`.  
+ `IXmlSerializable` Element typów ma albo `IsAny` ustawioną właściwość `true` lub ma ich zwracać metoda dostawcy schematu `null`.  
   
  Serializację i deserializację typu elementu jest bardzo podobny do serializację i deserializację typu zawartości. Istnieje jednak kilka istotnych różnic:  
   
@@ -165,11 +167,11 @@ ms.lasthandoff: 12/22/2017
   
 -   `ReadXml` Implementacji element otoki nie powinny do odczytu. Oczekuje się, aby przeczytać jeden element który `WriteXml` tworzy.  
   
--   Podczas serializowania typu elementu regularnie (na przykład jako element członkowski danych kontraktu danych), serializator danych wyjściowych element otoki przed wywołaniem `WriteXml`, podobnie jak w przypadku typów zawartości. Jednak podczas serializacji typu elementu najwyższego poziomu, Serializator nie zwykle wyprowadza element otoki cały wokół elementu który `WriteXml` zapisuje, chyba że podczas konstruowania serializator jawnie określono nazwę głównej i przestrzeni nazw w `DataContractSerializer` lub `NetDataContractSerializer` konstruktorów. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Podczas serializowania typu elementu regularnie (na przykład jako element członkowski danych kontraktu danych), serializator danych wyjściowych element otoki przed wywołaniem `WriteXml`, podobnie jak w przypadku typów zawartości. Jednak podczas serializacji typu elementu najwyższego poziomu, Serializator nie zwykle wyprowadza element otoki cały wokół elementu który `WriteXml` zapisuje, chyba że podczas konstruowania serializator jawnie określono nazwę głównej i przestrzeni nazw w `DataContractSerializer` lub `NetDataContractSerializer` konstruktorów. Aby uzyskać więcej informacji, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 -   Podczas serializowania typu elementu na najwyższym poziomie bez określania nazwy głównego i przestrzeni nazw podczas konstruowania <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> i <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> zasadniczo nie działa i <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> wywołania `WriteXml`. W tym trybie obiektu poddawanego serializacji nie może mieć wartości null i nie można przypisać polymorphically. Ponadto zachowywania wykres obiektu nie może być włączone i `NetDataContractSerializer` nie można użyć.  
   
--   Podczas deserializacji typu elementu na najwyższym poziomie bez określania nazwy głównego i przestrzeni nazw podczas konstruowania <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> zwraca `true` Jeśli można znaleźć uruchomienia dowolnego elementu. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>z `verifyObjectName` ustawiona `true` działa w taki sam sposób jak `IsStartObject` przed faktycznie czytania obiektu. `ReadObject`następnie przekazuje formantu `ReadXml` metody.  
+-   Podczas deserializacji typu elementu na najwyższym poziomie bez określania nazwy głównego i przestrzeni nazw podczas konstruowania <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> zwraca `true` Jeśli można znaleźć uruchomienia dowolnego elementu. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> z `verifyObjectName` ustawiona `true` działa w taki sam sposób jak `IsStartObject` przed faktycznie czytania obiektu. `ReadObject` następnie przekazuje formantu `ReadXml` metody.  
   
  Schemat wyeksportowane dla typów elementów jest taka sama, jak w przypadku `XmlElement` wpisz zgodnie z opisem w sekcji wcześniej, z wyjątkiem tego, że metoda dostawcy schematu można dodać dodatkowe schematu w celu <xref:System.Xml.Schema.XmlSchemaSet> jako z typami zawartości. Przy użyciu `XmlRootAttribute` atrybutu z typem elementu jest niedozwolone, a element globalny deklaracje nigdy nie są emitowane w przypadku tych typów.  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Wszystkie składniki zapisywania XML dostarczony wraz z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Odrzuć instrukcji przetwarzania XML (\<? … ? >) i zarządzania dokumentami definicje typów (\<! … >), ponieważ nie są dozwolone w wiadomości SOAP. Ponownie można użyć własnych kodowania mechanizmu Aby uniknąć problemów tego ograniczenia. Jeśli należy uwzględnić je w wynikowy kod XML, można napisać niestandardowego kodera, który używa zapisywania XML, które je obsługują.  
   
--   Podczas implementowania `WriteXml`, należy unikać wywoływania <xref:System.Xml.XmlWriter.WriteRaw%2A> metoda edytora XML. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa różnych kodowań XML (takie jak dane binarne), jest bardzo trudne lub niemożliwe do użycia `WriteRaw` tak, aby można go użyć w kodowanie był wynik.  
+-   Podczas implementowania `WriteXml`, należy unikać wywoływania <xref:System.Xml.XmlWriter.WriteRaw%2A> metoda edytora XML. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa różnych kodowań XML (takie jak dane binarne), jest bardzo trudne lub niemożliwe do użycia `WriteRaw` tak, aby można go użyć w kodowanie był wynik.  
   
 -   Podczas implementowania `WriteXml`, należy unikać <xref:System.Xml.XmlWriter.WriteEntityRef%2A> i <xref:System.Xml.XmlWriter.WriteNmToken%2A> metod, które nie są obsługiwane na zapisywania XML dostarczony wraz z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
@@ -209,7 +211,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Schemat dla typu (szczególnie <xref:System.Data.DataSet> i jego typu klasy pochodne) nie może być współdziała z niektórych z systemem innym niż[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] platformy, lub mogą skutkować niską użyteczność, gdy jest używany z tych platform. Ponadto przy użyciu `DataSet` typ może mieć wpływ na wydajność. Na koniec go może utrudnić automatycznie do wersji aplikacji w przyszłości. Należy rozważyć użycie jawnie zdefiniowanych typów kontraktu zamiast `DataSet` typy w kontraktach użytkownika.  
   
--   Podczas importowania `DataSet` lub `DataTable` schematu, ważne jest, aby te typy referencyjne. Za pomocą narzędzia wiersza polecenia Svcutil.exe, można to zrobić przez przekazanie nazwę zestawu System.Data.dll `/reference` przełącznika. W przypadku importowania schematu typizowanego obiektu dataset musi odwoływać się typ typizowanego obiektu dataset. Z Svcutil.exe, Przekaż lokalizacji zestawu typizowany zestaw danych do `/reference` przełącznika. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Odwoływanie do typów, zobacz [Importowanie schematu do generowania klasy](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+-   Podczas importowania `DataSet` lub `DataTable` schematu, ważne jest, aby te typy referencyjne. Za pomocą narzędzia wiersza polecenia Svcutil.exe, można to zrobić przez przekazanie nazwę zestawu System.Data.dll `/reference` przełącznika. W przypadku importowania schematu typizowanego obiektu dataset musi odwoływać się typ typizowanego obiektu dataset. Z Svcutil.exe, Przekaż lokalizacji zestawu typizowany zestaw danych do `/reference` przełącznika. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Odwoływanie do typów, zobacz [Importowanie schematu do generowania klasy](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
  Obsługa typizowane zbiory danych w modelu kontraktu danych jest ograniczona. Typizowane zbiory danych może być Zserializowany deserializacji i wyeksportować schematu. Jednak kontraktu danych importowania schematu nie może wygenerować nowe wpisane typy zestawu danych ze schematu, jak tylko można użyć ponownie już istniejących. Możesz wskazać istniejący zestaw danych typu przy użyciu `/r` Włącz Svcutil.exe. Jeśli próba użycia Svcutil.exe bez `/r` przełącznika od usługi, która używa typizowanego obiektu dataset, alternatywne serializator (XmlSerializer) jest automatycznie wybierany. Jeśli należy użyć elementu DataContractSerializer i należy wygenerować zestawów danych ze schematu, można użyć poniższej procedury: generowania typizowanych typów zestawu danych (za pomocą narzędzia Xsd.exe z `/d` Włącz usługę), skompilować typów, a następnie wskaż pozycję je przy użyciu `/r` Włącz Svcutil.exe.  
   

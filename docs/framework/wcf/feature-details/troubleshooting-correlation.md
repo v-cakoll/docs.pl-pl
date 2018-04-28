@@ -1,24 +1,26 @@
 ---
-title: "Korelacja rozwiązywania problemów"
-ms.custom: 
+title: Korelacja rozwiązywania problemów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76b6178d3190165e711f46af60a6541a82ad0bd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bdf111e6802692aef893cf9dcae88f0f51aa467
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-correlation"></a>Korelacja rozwiązywania problemów
 Korelacji jest używany do tworzenia powiązań komunikatów usługi przepływu pracy i wystąpienia przepływu pracy poprawny, ale jeśli nie jest prawidłowo skonfigurowany, nie będzie można odbierać wiadomości i aplikacje nie będą działać poprawnie. W tym temacie omówiono kilka metod do rozwiązywania problemów korelacji, a także przedstawiono kilka typowych problemów, które mogą wystąpić, gdy używasz korelacji.  
@@ -89,7 +91,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
   
  Uczestnika śledzenia, takich jak ConsoleTrackingParticipant jest przydatne w przypadku usług hostowanie Samoobsługowe przepływu pracy, które mają okna konsoli. Dla usługi hostowanej w sieci Web, która rejestruje informacje o śledzeniu do magazynu trwałego uczestnika śledzenia powinny być używane takie jak wbudowana <xref:System.Activities.Tracking.EtwTrackingParticipant>, lub uczestnika niestandardowych śledzenia, która rejestruje informacje w pliku, na przykład `TextWriterTrackingParticpant` z [ Śledzenie za pomocą pliku tekstowego](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) próbki.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Śledzenie i konfigurowania śledzenia dla usługi sieci Web hostowanych przepływu pracy, zobacz [przepływu pracy śledzenia i śledzenia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Konfigurowanie śledzenia przepływu pracy](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)i [śledzenia &#91; WF — przykłady &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) próbek.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Śledzenie i konfigurowania śledzenia dla usługi sieci Web hostowanych przepływu pracy, zobacz [przepływu pracy śledzenia i śledzenia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Konfigurowanie śledzenia przepływu pracy](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)i [śledzenia &#91;WF Przykłady&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) próbek.  
   
 ## <a name="use-wcf-tracing"></a>Użyj śledzenia WCF  
  Śledzenie WCF umożliwia śledzenie przepływu wiadomości do i z usługi przepływu pracy. Te informacje śledzenia jest przydatne podczas rozwiązywania problemów korelacji, szczególnie w przypadku korelacji na podstawie zawartości. Aby włączyć śledzenie, określ odbiorniki śledzenia żądaną w `system.diagnostics` sekcji `web.config` plik, jeśli usługi przepływu pracy jest oparta na sieci Web lub `app.config` plik, jeśli jest samodzielnie hostowana usługa przepływu pracy. Aby dołączyć zawartość wiadomości w pliku śledzenia, należy określić `true` dla `logEntireMessage` w `messageLogging` element `diagnostics` części `system.serviceModel`. W poniższym przykładzie informacje śledzenia, łącznie z zawartości wiadomości, jest skonfigurowany do zapisania pliku o nazwie `service.svclog`.  
@@ -127,7 +129,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>  
 ```  
   
- Aby wyświetlić informacje o śledzeniu, który jest zawarty w `service.svclog`, [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) jest używany. Jest to szczególnie przydatne podczas rozwiązywania problemów na podstawie zawartości korelacji problemy, ponieważ można wyświetlać zawartość wiadomości i dokładnie co to jest przekazywany i czy jest on zgodny <xref:System.ServiceModel.CorrelationQuery> dla korelacji na podstawie zawartości. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Usługi WCF śledzenia, zobacz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), i [przy użyciu śledzenie, aby rozwiązać Twoja aplikacja](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Aby wyświetlić informacje o śledzeniu, który jest zawarty w `service.svclog`, [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) jest używany. Jest to szczególnie przydatne podczas rozwiązywania problemów na podstawie zawartości korelacji problemy, ponieważ można wyświetlać zawartość wiadomości i dokładnie co to jest przekazywany i czy jest on zgodny <xref:System.ServiceModel.CorrelationQuery> dla korelacji na podstawie zawartości. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Usługi WCF śledzenia, zobacz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), i [przy użyciu śledzenie, aby rozwiązać Twoja aplikacja](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="common-context-exchange-correlation-issues"></a>Typowe problemy korelacja wymiany kontekstu  
  Niektóre rodzaje korelacji wymagają, czy określony typ powiązania jest używany przez korelację działała prawidłowo. Przykłady obejmują korelacja żądań i odpowiedzi, który wymaga dwukierunkowego powiązania w takich jak <xref:System.ServiceModel.BasicHttpBinding>i korelacja wymiany kontekstu, co wymaga na podstawie kontekstu wiązania takich jak <xref:System.ServiceModel.BasicHttpContextBinding>. Większość powiązań obsługuje dwukierunkowe operacji tak nie jest typowym problemem dla korelacja żądań i odpowiedzi, ale istnieje tylko niewielki podzbiór na podstawie kontekstu wiązania w tym <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, i <xref:System.ServiceModel.NetTcpContextBinding>. Jeśli jeden z tych powiązań nie jest używany, powiedzie się początkowej wywołanie usługi przepływu pracy, ale wezwań zakończy się niepowodzeniem z następującymi <xref:System.ServiceModel.FaultException>.  
@@ -141,7 +143,7 @@ supports the context protocol and has a valid context initialized.
   
  Informacje kontekstu, które są używane do korelacji kontekstu może być zwracany przez <xref:System.ServiceModel.Activities.SendReply> do <xref:System.ServiceModel.Activities.Receive> działanie, które inicjuje korelację kontekstu, gdy za pomocą operacji dwukierunkowe, lub można określić przez obiekt wywołujący, gdy operacja jest jednokierunkowe. Jeśli kontekst nie jest wysyłane przez obiekt wywołujący lub zwrócony przez usługę przepływu pracy, a następnie takie same <xref:System.ServiceModel.FaultException> opisanego wcześniej zostanie zwrócona po wywołaniu kolejnych operacji.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Wymiana kontekstu](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+ Aby uzyskać więcej informacji, zobacz [wymiana kontekstu](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>Typowe problemy korelacji "żądanie-odpowiedź"  
  Korelacja żądań i odpowiedzi jest używany z <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary do zaimplementowania dwukierunkowe operacji w usłudze przepływu pracy oraz <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary, który wywołuje operację dwukierunkowe w innej sieci Web Usługa. Podczas wywoływania dwukierunkowe operacji usługi WCF, usługa może być albo tradycyjnych imperatywne opartej na kodzie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługę albo mogą być usługi przepływu pracy. Umożliwia powiązanie dwustronne muszą być stosowane, takich jak korelacja żądań i odpowiedzi <xref:System.ServiceModel.BasicHttpBinding>, i działania muszą być dwukierunkowe.  
@@ -176,7 +178,7 @@ SendReply ReplyToStartOrder = new SendReply
   
  Trwałości nie jest dozwolone między <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary lub <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary. Tworzona jest strefa no-persist będzie trwać do obu czynności zostały wykonane. Jeśli działania, takie jak działania opóźnienia, znajduje się w tej strefie no-persist i powoduje, że przepływ pracy w stan bezczynności, przepływ pracy nie zachowa nawet wtedy, gdy host jest skonfigurowany do utrwalenia przepływy pracy, gdy stanie się on w stanie bezczynności. Jeśli działania, takie jak działania będzie nadal występować, próbuje jawnie pozostają w strefie nie utrwalanie, krytyczny jest zwracany wyjątek, przerwanie przepływu pracy i <xref:System.ServiceModel.FaultException> jest zwracany do obiektu wywołującego. Komunikat o wyjątku krytycznego "System.InvalidOperationException: utrwalić działania nie mogą być zawarte w blokach nietrwałości.". Ten wyjątek nie są zwracane do obiektu wywołującego, ale można obserwować, czy śledzenie jest włączone. W komunikacie <xref:System.ServiceModel.FaultException> zwracany do obiektu wywołującego jest "nie można wykonać operacji, ponieważ działanie obiektu WorkflowInstance"5836145b-7da2 - 49 d 0-a052-a49162adeab6"została ukończona".  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Korelacja żądań i odpowiedzi, zobacz [żądanie-odpowiedź](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Korelacja żądań i odpowiedzi, zobacz [żądanie-odpowiedź](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
   
 ## <a name="common-content-correlation-issues"></a>Typowe problemy zawartości korelacji  
  Korelacja na podstawie zawartości jest używana, gdy wiele komunikatów odbiera usługi przepływu pracy i element danych w ramach wymiany wiadomości identyfikuje odpowiednie wystąpienie. Na podstawie zawartości korelacji używa tych danych w komunikacie, takie jak liczba lub kolejność ID klienta do wyznaczania tras wiadomościom do wystąpienia przepływu pracy poprawne. W tej sekcji opisano kilka typowych problemów, które mogą wystąpić podczas korzystania na podstawie zawartości korelacji.  
@@ -261,4 +263,4 @@ sm:header()/tempuri:CartId
 </Receive>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Korelacja na podstawie zawartości, zobacz [na podstawie zawartości](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) i [skorelowane Kalkulator](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) próbki.
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Korelacja na podstawie zawartości, zobacz [na podstawie zawartości](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) i [skorelowane Kalkulator](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) próbki.

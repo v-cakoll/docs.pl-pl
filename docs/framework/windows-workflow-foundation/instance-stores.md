@@ -1,26 +1,27 @@
 ---
-title: "Wystąpienie magazynów"
-ms.custom: 
+title: Wystąpienie magazynów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63cfe130e841ce073f794db6494fa8e97364d476
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a41c25dc3c664715bd9e811d6a21a6e3600aa8a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="instance-stores"></a>Wystąpienie magazynów
-Magazyn wystąpienia jest kontenerem logicznym wystąpień. Jest to miejsce, gdzie są przechowywane dane wystąpienia i metadanych. Magazyn wystąpienia nie oznacza dedykowanych dla magazynu fizycznego. Magazyn wystąpienia mogą zawierać informacje o stanie nietrwałe w pamięci lub trwałe informacji z bazy danych programu SQL Server. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z magazynu wystąpienia SQL przepływu pracy, czyli konkretną implementację magazynu wystąpienia, który umożliwia przepływy pracy, aby zachować dane wystąpienia i metadane do bazy danych programu SQL Server 2005 lub SQL Server 2008. Ponadto AppFabric w systemie Windows Server udostępnia konkretną implementację magazynu wystąpienia. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sklepu wystąpienia sieci szkieletowej dla systemu Windows Server, zapytań i dostawców kontroli](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+Magazyn wystąpienia jest kontenerem logicznym wystąpień. Jest to miejsce, gdzie są przechowywane dane wystąpienia i metadanych. Magazyn wystąpienia nie oznacza dedykowanych dla magazynu fizycznego. Magazyn wystąpienia mogą zawierać informacje o stanie nietrwałe w pamięci lub trwałe informacji z bazy danych programu SQL Server. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z magazynu wystąpienia SQL przepływu pracy, czyli konkretną implementację magazynu wystąpienia, który umożliwia przepływy pracy, aby zachować dane wystąpienia i metadane do bazy danych programu SQL Server 2005 lub SQL Server 2008. Ponadto AppFabric w systemie Windows Server udostępnia konkretną implementację magazynu wystąpienia. Aby uzyskać więcej informacji, zobacz [sklepu wystąpienia sieci szkieletowej dla systemu Windows Server, zapytań i dostawców kontroli](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
  Trwałość interfejsu API jest interfejs między hostem i wystąpienie magazynu, umożliwiająca hosta do wysyłania żądań polecenia (na przykład <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> i <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) w magazynie wystąpień. Konkretną implementację tego interfejsu API nosi nazwę dostawcy trwałości. Dostawca trwałości odbiera żądania od hosta i modyfikuje w magazynie wystąpień.  
   

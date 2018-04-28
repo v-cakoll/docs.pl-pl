@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: edc4bc985f7117dc66d29053d62a283d67b01a85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Jak skonfigurować IS 5.0 oraz IIS 6.0, aby wdrożyć aplikacje WPF
 Można wdrożyć [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji z większości serwerów sieci Web, tak długo, jak są one skojarzone z odpowiednim [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] typów. Domyślnie [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] jest skonfigurowany z tych [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] typów, ale [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] i [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] nie są.  
@@ -40,7 +40,7 @@ Można wdrożyć [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
   
   
 > [!NOTE]
->  Możesz sprawdzić *agenta użytkownika* ciągu w rejestrze, aby ustalić, czy system ma [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] zainstalowane. Szczegółowe informacje i skrypt, który sprawdza *agenta użytkownika* ciąg, aby określić, czy [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] jest zainstalowany na komputerze, zobacz [wykryć, czy .NET Framework 3.0 jest zainstalowana](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
+>  Możesz sprawdzić *agenta użytkownika* ciągu w rejestrze, aby ustalić, czy system ma zainstalowania środowiska .NET Framework. Szczegółowe informacje i skrypt, który sprawdza *agenta użytkownika* ciąg, aby ustalić, czy .NET Framework jest zainstalowana w systemie, zobacz temat [wykryć, czy .NET Framework 3.0 jest zainstalowana](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
   
 <a name="content_expiration"></a>   
 ## <a name="adjust-the-content-expiration-setting"></a>Dostosuj ustawienia wygaśnięcia zawartości  

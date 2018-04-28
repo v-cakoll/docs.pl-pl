@@ -1,20 +1,17 @@
 ---
-title: "Funkcje jako wartości pierwszej klasy (F#)"
-description: "Dowiedz się, jak funkcje zostaną podniesione do najwyższej jakości stan w języku programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Funkcje jako wartości pierwszej klasy (F#)
+description: 'Dowiedz się, jak funkcje zostaną podniesione do najwyższej jakości stan w języku programowania w języku F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6b76b93b-a141-40f4-976c-7f0c558d6d09
-ms.openlocfilehash: bca0e09edbe0aa86f0db746282acd4f4b3237a03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7db99aa23211ce4a7af5cdfcc809017fafb1d5a1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions-as-first-class-values"></a>Funkcje jako wartości pierwszej klasy
 
@@ -200,12 +197,12 @@ Poniższy kod zawiera wszystkie przykłady w tym temacie.
     
 ## <a name="see-also"></a>Zobacz też
 
-[Wyświetla listę](../language-reference/lists.md)
+[Listy](../language-reference/lists.md)
 
 [Krotki](../language-reference/tuples.md)
 
 [Funkcje](../language-reference/functions/index.md)
 
-[`let`Powiązania](../language-reference/functions/let-bindings.md)
+[`let` Powiązania](../language-reference/functions/let-bindings.md)
 
 [Wyrażenia lambda: `fun` — słowo kluczowe](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

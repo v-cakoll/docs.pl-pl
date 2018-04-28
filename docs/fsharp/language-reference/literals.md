@@ -1,20 +1,17 @@
 ---
-title: "Literały (F#)"
-description: "Poznaj typy literału w języku programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Literały (F#)
+description: 'Poznaj typy literału w języku programowania w języku F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Literały
 
@@ -32,22 +29,22 @@ W poniższej tabeli przedstawiono typy literału w języku F #. Znaki, które re
 |byte|bez znaku 8-bitową liczbą naturalnych|UY|`86uy`<br /><br />`0b00000101uy`|
 |Int16|16-bitową liczbę całkowitą ze znakiem|s|`86s`|
 |UInt16|niepodpisane 16-bitową liczbę naturalnych|US|`86us`|
-|int<br /><br />Int32|32-bitowa liczba całkowita|l lub Brak|`86`<br /><br />`86l`|
-|uint<br /><br />UInt32|niepodpisane 32-bitową liczbą naturalnych|u lub ul|`86u`<br /><br />`86ul`|
+|int<br /><br />int32|32-bitowa liczba całkowita|l lub Brak|`86`<br /><br />`86l`|
+|uint<br /><br />uint32|niepodpisane 32-bitową liczbą naturalnych|u lub ul|`86u`<br /><br />`86ul`|
 |unativeint —|wskaźnik natywny jako wartość bez znaku naturalnych|Wyrejestruj|`0x00002D3Fun`|
-|Int64|64-bitowa liczba całkowita|L|`86L`|
-|UInt64 —|Liczba naturalnego 64-bitowa bez znaku|UL|`86UL`|
-|pojedynczy, float32|32-bitowych liczb zmiennoprzecinkowych|F lub f|`4.14F`lub`4.14f`|
+|int64|64-bitowa liczba całkowita|L|`86L`|
+|uint64|Liczba naturalnego 64-bitowa bez znaku|UL|`86UL`|
+|pojedynczy, float32|32-bitowych liczb zmiennoprzecinkowych|F lub f|`4.14F` lub `4.14f`|
 |||LF|`0x00000000lf`|
-|float; podwójne|64-bitowych liczb zmiennoprzecinkowych|brak|`4.14`lub `2.3E+32` lub`2.3e+32`|
+|float; podwójne|64-bitowych liczb zmiennoprzecinkowych|brak|`4.14` lub `2.3E+32` lub `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|innymi reprezentacja 64-bitowa liczba całkowita|I|`9999999999999999999999999999I`|
-|decimal|liczbę ułamkową reprezentowane jako punkt stałym lub Liczba wymierna|M lub m|`0.7833M`lub`0.7833m`|
+|decimal|liczbę ułamkową reprezentowane jako punkt stałym lub Liczba wymierna|M lub m|`0.7833M` lub `0.7833m`|
 |Char|znak Unicode|brak|`'a'`|
 |String|Ciąg w formacie Unicode|brak|`"text\n"`<br /><br />lub<br /><br />`@"c:\filename"`<br /><br />lub<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />lub<br /><br />`"string1" + "string2"`<br /><br />Zobacz też [ciągów](Strings.md).|
 |byte|Znaków ASCII|B|`'a'B`|
-|Byte]|Ciąg ASCII|B|`"text"B`|
-|String lub byte]|ciągu dosłownego wyrażenia|@ prefiksu|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|byte[]|Ciąg ASCII|B|`"text"B`|
+|String lub byte]|ciągu dosłownego wyrażenia|@ prefiksu|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Uwagi
 Ciągów Unicode może zawierać jawnych kodowania, którą można określić za pomocą `\u` następuje szesnastkowy kod 16-bitowy lub kodowania UTF-32, którą można określić za pomocą `\U` następuje 32-bitowy kod szesnastkowe, który reprezentuje Unicode Para zastępcza.

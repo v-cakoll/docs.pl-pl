@@ -1,20 +1,17 @@
 ---
 title: Zdarzenia (F#)
-description: "Dowiedz się, jak zdarzenia F # umożliwiają skojarzyć wywołania funkcji z akcje użytkownika, które są ważne w programowaniu graficznego interfejsu użytkownika."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak zdarzenia F # umożliwiają skojarzyć wywołania funkcji z akcje użytkownika, które są ważne w programowaniu graficznego interfejsu użytkownika.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 28b588f2-0c9e-4c0d-babf-901ed934638a
-ms.openlocfilehash: 9465f33bac6fa8234f684ddefe24cbe4d6c71028
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5c5f152830d4d91a25c79a09800263cdd85ed8b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="events"></a>Zdarzenia
 
@@ -33,7 +30,7 @@ Typ `Add` jest metoda `('a -> unit) -> unit`. W związku z tym metoda obsługi z
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
     
 ## <a name="creating-custom-events"></a>Tworzenie zdarzeń niestandardowych
-F # zdarzenia są reprezentowane przez język F # [zdarzeń](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) klasy, która implementuje [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfejsu. `IEvent`jest elementem interfejsu, który łączy funkcje dwa inne interfejsy `System.IObservable<'T>` i [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). W związku z tym `Event`są równoważne funkcje delegatów w innych językach, a także dodatkowe funkcje z `IObservable`, co oznacza, że zdarzenia F # obsługuje filtrowanie zdarzeń i przy użyciu funkcji najwyższej jakości F # i wyrażenia lambda jako procedury obsługi zdarzeń. Ta funkcja jest udostępniany w [modułu zdarzeń](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F # zdarzenia są reprezentowane przez język F # [zdarzeń](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) klasy, która implementuje [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfejsu. `IEvent` jest elementem interfejsu, który łączy funkcje dwa inne interfejsy `System.IObservable<'T>` i [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). W związku z tym `Event`są równoważne funkcje delegatów w innych językach, a także dodatkowe funkcje z `IObservable`, co oznacza, że zdarzenia F # obsługuje filtrowanie zdarzeń i przy użyciu funkcji najwyższej jakości F # i wyrażenia lambda jako procedury obsługi zdarzeń. Ta funkcja jest udostępniany w [modułu zdarzeń](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Aby utworzyć zdarzenia dla klasy, która działa tak samo jak inne zdarzenia .NET Framework, Dodaj do klasy `let` powiązania, który definiuje `Event` jako pole w klasie. Odpowiedni typ argumentu zdarzenia można określić jako argument typu, ale można też pozostawić ten typu pusty, co spowoduje, że kompilator wywnioskuje odpowiedni typ. Należy także zdefiniować element członkowski zdarzenia, który będzie uwidaczniał zdarzenie jako zdarzenie CLI. Ten element członkowski powinien mieć [clievent —](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) atrybutu. Jest on zadeklarowany jako jak właściwości, oraz jego implementacji tylko wywołania [publikowania](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) właściwości zdarzenia. Klasy umożliwia `Add` metody opublikowanych zdarzenia w celu dodania programu obsługi. Argument `Add` metoda może być wyrażenie lambda. Można użyć `Trigger` właściwości zdarzenia, aby zgłosić zdarzenie, przekazywanie argumentów do funkcji programu obsługi. Pokazano to w poniższym przykładzie kodu. W tym przykładzie wywnioskowany argument typu dla zdarzenia to spójna kolekcja, która reprezentuje argumenty wyrażenia lambda.
 
@@ -188,6 +185,6 @@ Application.Run(appForm)
 
 [Control.Event — moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 
-[Control.Event — &#60; " T &#62; Klasy](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+[Control.Event —&#60;'T&#62; — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 
-[Control.Event — &#60; " Delegat,'Args &#62; Klasy](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+[Control.Event —&#60;"Delegate", argumentów&#62; — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

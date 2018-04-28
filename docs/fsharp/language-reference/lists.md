@@ -1,20 +1,17 @@
 ---
 title: Listy (F#)
-description: "Dowiedz się więcej na temat języka F # list, uporządkowany i modyfikować szereg elementów tego samego typu."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się więcej na temat języka F # list, uporządkowany i modyfikować szereg elementów tego samego typu.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a1a6075f-064d-4aee-8222-2b59ff16cc12
-ms.openlocfilehash: 5802a5a1c48ad05c1765c4c0fa2e8a81a92dee8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29dbdac5e920c009bf7758fd2cc1ad486041cad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lists"></a>Listy
 
@@ -71,10 +68,10 @@ Typ listy obsługuje następujące właściwości:
 |Właściwość|Typ|Opis|
 |--------|----|-----------|
 |[HEAD](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Pierwszy element.|
-|[Pusty](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Właściwości statyczne, która zwraca pustą listę odpowiedniego typu.|
-|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true`Jeśli na liście nie ma żadnych elementów.|
+|[pusty](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Właściwości statyczne, która zwraca pustą listę odpowiedniego typu.|
+|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` Jeśli na liście nie ma żadnych elementów.|
 |[Element](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Element pod określony indeks (liczony od zera).|
-|[Długość](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Liczba elementów.|
+|[długość](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Liczba elementów.|
 |[Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Lista bez pierwszego elementu.|
 Poniżej przedstawiono kilka przykładów użycia tych właściwości.
 
@@ -109,7 +106,7 @@ Primes Up To 100:
 ```
 
 ## <a name="module-functions"></a>Moduł funkcji
-[Modułu listy](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) udostępnia funkcje, które uzyskują dostęp do elementów listy. Head element jest najszybszym i najprostszym dostępu do. Użyj właściwości [Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) lub funkcji modułu [list.HEAD —](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Tail listy mogą korzystać za pomocą [Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) właściwości lub [list.tail —](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) funkcji. Aby znaleźć element przez indeks, użyj [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) funkcji. `List.nth`listy są przesyłane za pośrednictwem. Dlatego jest O (*n*). Jeśli używa Twój kod `List.nth` często, warto rozważyć użycie tablicy zamiast listy. Dostęp do elementu w tablicach jest O(1).
+[Modułu listy](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) udostępnia funkcje, które uzyskują dostęp do elementów listy. Head element jest najszybszym i najprostszym dostępu do. Użyj właściwości [Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) lub funkcji modułu [list.HEAD —](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Tail listy mogą korzystać za pomocą [Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) właściwości lub [list.tail —](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) funkcji. Aby znaleźć element przez indeks, użyj [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) funkcji. `List.nth` listy są przesyłane za pośrednictwem. Dlatego jest O (*n*). Jeśli używa Twój kod `List.nth` często, warto rozważyć użycie tablicy zamiast listy. Dostęp do elementu w tablicach jest O(1).
 
 
 ### <a name="boolean-operations-on-lists"></a>Operacji logicznych na listach
@@ -160,9 +157,9 @@ false
 ```
 
 ### <a name="sort-operations-on-lists"></a>Sortowanie na listach
-[List.sort —](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [list.sortby —](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359), i [list.sortwith —](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) funkcje sortować listy. Funkcja sortowania określa, która z tych trzech funkcji do użycia. `List.sort`korzysta z domyślnego ogólnego porównania. Porównanie ogólnego używa operatorów globalnych na podstawie ogólnego porównanie funkcji do porównywania wartości. Działa wydajnie wiele różnych typów elementów, takich jak proste typy liczbowe, krotek rekordów, rozłączne, list, tablic i dowolnego typu, który implementuje `System.IComparable`. Dla typów które implementują `System.IComparable`, używa standardowego porównania `System.IComparable.CompareTo()` funkcji. Porównanie ogólnego również działa z ciągów, ale używa sortowania niezależne od kultury. Porównanie ogólnych nie powinien być używany w nieobsługiwanych typów, takie jak typy funkcji. Ponadto wydajność domyślnym porównaniem ogólnego jest najlepsze dla małych typów strukturalnych. dla większych strukturalnych typów, które muszą być porównywane i sortowane często, rozważ zaimplementowanie `System.IComparable` i wydajne implementacja `System.IComparable.CompareTo()` metody.
+[List.sort —](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [list.sortby —](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359), i [list.sortwith —](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) funkcje sortować listy. Funkcja sortowania określa, która z tych trzech funkcji do użycia. `List.sort` korzysta z domyślnego ogólnego porównania. Porównanie ogólnego używa operatorów globalnych na podstawie ogólnego porównanie funkcji do porównywania wartości. Działa wydajnie wiele różnych typów elementów, takich jak proste typy liczbowe, krotek rekordów, rozłączne, list, tablic i dowolnego typu, który implementuje `System.IComparable`. Dla typów które implementują `System.IComparable`, używa standardowego porównania `System.IComparable.CompareTo()` funkcji. Porównanie ogólnego również działa z ciągów, ale używa sortowania niezależne od kultury. Porównanie ogólnych nie powinien być używany w nieobsługiwanych typów, takie jak typy funkcji. Ponadto wydajność domyślnym porównaniem ogólnego jest najlepsze dla małych typów strukturalnych. dla większych strukturalnych typów, które muszą być porównywane i sortowane często, rozważ zaimplementowanie `System.IComparable` i wydajne implementacja `System.IComparable.CompareTo()` metody.
 
-`List.sortBy`pobiera funkcję, która zwraca wartość, która jest używana jako kryterium sortowania i `List.sortWith` przyjmuje jako argument funkcji porównania. Te dwie funkcje te ostatnie są przydatne podczas pracy z typami, które nie obsługują porównywania lub kiedy porównanie wymaga bardziej złożonej semantykę porównania, tak jak w przypadku ciągi kultury aware.
+`List.sortBy` pobiera funkcję, która zwraca wartość, która jest używana jako kryterium sortowania i `List.sortWith` przyjmuje jako argument funkcji porównania. Te dwie funkcje te ostatnie są przydatne podczas pracy z typami, które nie obsługują porównywania lub kiedy porównanie wymaga bardziej złożonej semantykę porównania, tak jak w przypadku ciągi kultury aware.
 
 W poniższym przykładzie pokazano użycie `List.sort`.
 
@@ -377,7 +374,7 @@ Można również użyć [list.filter —](https://msdn.microsoft.com/library/11a
 
 Wynikowa lista jest `[2; 4; 6]`.
 
-Kombinację mapy i Filtruj [list.Choose —](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) pozwala na przekształcanie i wybierz elementy w tym samym czasie. `List.choose`stosuje funkcję, która zwraca opcji do każdego elementu listy i zwraca nową listę wyników dla elementów, gdy funkcja zwraca wartość opcji `Some`.
+Kombinację mapy i Filtruj [list.Choose —](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) pozwala na przekształcanie i wybierz elementy w tym samym czasie. `List.choose` stosuje funkcję, która zwraca opcji do każdego elementu listy i zwraca nową listę wyników dla elementów, gdy funkcja zwraca wartość opcji `Some`.
 
 Poniższy kod przedstawia użycie `List.choose` aby zaznaczyć pisanymi wielkimi literami wyrazy poza listę słów.
 
@@ -411,7 +408,7 @@ W poniższym przykładzie pokazano użycie `List.fold2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`i [list.Scan —](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) różnią się w tym `List.fold` zwraca końcowa wartość dodatkowy parametr, ale `List.scan` zwraca listę wartości pośrednich (wraz z końcowej) z dodatkowym parametrem.
+`List.fold` i [list.Scan —](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) różnią się w tym `List.fold` zwraca końcowa wartość dodatkowy parametr, ale `List.scan` zwraca listę wartości pośrednich (wraz z końcowej) z dodatkowym parametrem.
 
 Każda z tych funkcji obejmuje odwrotnej zmiany, na przykład [list.foldback —](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), który różni się w kolejności, w której przecina listy i kolejność argumentów. Ponadto `List.fold` i `List.foldBack` ma zmian, [list.fold2 —](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) i [list.foldback2 —](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), które wymagają dwie listy o równej długości. Funkcja wykonująca na każdym elemencie może być wykonanie akcji odpowiednie elementy obu list. Typy elementu dwie listy mogą być różne, jak w poniższym przykładzie, w której jedna lista zawiera kwoty transakcji dla konta bankowego, i inne lista zawiera typ transakcji: złożenia lub wycofania.
 
@@ -425,7 +422,7 @@ Poniższy przykład zwraca przykład konta bankowego. Teraz zostanie dodany nowy
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
 
-Funkcja [list.Reduce —](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) jest nieco jak `List.fold` i `List.scan`, ale zamiast przekazywanie wokół oddzielne akumulatora, `List.reduce` przyjmuje funkcję, która przyjmuje dwa argumenty typu zamiast elementu tylko jeden, a jeden z tych argumentów działa jako akumulatora, co oznacza przechowuje pośredni wynikiem obliczenia. `List.reduce`rozpoczyna się od działających na pierwszych dwóch listy elementów, a następnie używa wynik operacji wraz z następnym elementem. Ponieważ nie jest osobnym akumulatora, który ma swój własny typ `List.reduce` można użyć zamiast `List.fold` tylko gdy akumulatora i typ elementu być tego samego typu. Poniższy kod przedstawia użycie `List.reduce`. `List.reduce`zgłasza wyjątek, jeśli nie ma żadnych elementów listy.
+Funkcja [list.Reduce —](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) jest nieco jak `List.fold` i `List.scan`, ale zamiast przekazywanie wokół oddzielne akumulatora, `List.reduce` przyjmuje funkcję, która przyjmuje dwa argumenty typu zamiast elementu tylko jeden, a jeden z tych argumentów działa jako akumulatora, co oznacza przechowuje pośredni wynikiem obliczenia. `List.reduce` rozpoczyna się od działających na pierwszych dwóch listy elementów, a następnie używa wynik operacji wraz z następnym elementem. Ponieważ nie jest osobnym akumulatora, który ma swój własny typ `List.reduce` można użyć zamiast `List.fold` tylko gdy akumulatora i typ elementu być tego samego typu. Poniższy kod przedstawia użycie `List.reduce`. `List.reduce` zgłasza wyjątek, jeśli nie ma żadnych elementów listy.
 
 W poniższym kodzie pierwsze wywołanie w celu wyrażenia lambda podano argumenty 2 i 4 i zwraca 6 i następnego wywołania podano argumenty, 6, 10, dlatego 16.
 
@@ -440,9 +437,9 @@ Informacje dodatkowe operacje na listach, zobacz temat odwołanie do biblioteki 
 
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
-[Typy F #](fsharp-types.md)
+[Typy F#](fsharp-types.md)
 
 [Sekwencje](sequences.md)
 

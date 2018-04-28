@@ -1,18 +1,19 @@
 ---
 title: polecenie zmiennych lokalnych nuget DotNet - .NET Core interfejsu wiersza polecenia
-description: "Polecenie zmiennych lokalnych nuget dotnet czyści lub wyświetla ich listę zasobów lokalnych NuGet np. pamięci podręcznej żądania http, tymczasowego pamięci podręcznej lub folderu packages globalne dla komputera."
+description: Polecenie zmiennych lokalnych nuget dotnet czyści lub wyświetla ich listę zasobów lokalnych NuGet np. pamięci podręcznej żądania http, tymczasowego pamięci podręcznej lub folderu packages globalne dla komputera.
 author: karann-msft
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 9c8df8e457a9883b86abd0505c0c682d849bc7b1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 1dfa50ff0971a82b3f6aafd86492fd57d8cf6a82
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-nuget-locals"></a>Zmienne lokalne nuget DotNet
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet nuget locals`— Usuwa lub wyświetla ich listę zasobów lokalnych NuGet.
+`dotnet nuget locals` — Usuwa lub wyświetla ich listę zasobów lokalnych NuGet.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -36,10 +37,10 @@ ms.lasthandoff: 12/23/2017
 
 Jedna z następujących wartości:
 
-* `all`— Wskazuje, że określona operacja jest stosowane do wszystkich typów pamięci podręcznej: pamięci podręcznej żądania http, pakiety globalnej pamięci podręcznej i tymczasowego pamięci podręcznej.
-* `http-cache`— Wskazuje, że określona operacja jest stosowane tylko do pamięci podręcznej żądania http. Nie dotyczy innych lokalizacji pamięci podręcznej.
-* `global-packages`— Wskazuje, że określona operacja jest stosowane tylko do pakietów globalnej pamięci podręcznej. Nie dotyczy innych lokalizacji pamięci podręcznej.
-* `temp`— Wskazuje, że określona operacja jest stosowane tylko do tymczasowego pamięci podręcznej. Nie dotyczy innych lokalizacji pamięci podręcznej.
+* `all` — Wskazuje, że określona operacja jest stosowane do wszystkich typów pamięci podręcznej: pamięci podręcznej żądania http, pakiety globalnej pamięci podręcznej i tymczasowego pamięci podręcznej.
+* `http-cache` — Wskazuje, że określona operacja jest stosowane tylko do pamięci podręcznej żądania http. Nie dotyczy innych lokalizacji pamięci podręcznej.
+* `global-packages` — Wskazuje, że określona operacja jest stosowane tylko do pakietów globalnej pamięci podręcznej. Nie dotyczy innych lokalizacji pamięci podręcznej.
+* `temp` — Wskazuje, że określona operacja jest stosowane tylko do tymczasowego pamięci podręcznej. Nie dotyczy innych lokalizacji pamięci podręcznej.
 
 ## <a name="options"></a>Opcje
 

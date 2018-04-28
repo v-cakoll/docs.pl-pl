@@ -1,10 +1,7 @@
 ---
 title: Znaki — Typy danych (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dca9cde0af08c4113ea9a4644efa40a721b4d9b1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: afd368c00444f136c6d69b02a733c82f0c8eafe0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="character-data-types-visual-basic"></a>Znaki — Typy danych (Visual Basic)
 Visual Basic zapewnia *znakowe typy danych* radzenia sobie z znaków drukowalnych i którą można wyświetlić. Gdy oba postępowania w przypadku znaków Unicode, `Char` przechowuje pojedynczym znakiem, podczas gdy `String` zawiera nieokreśloną liczbę znaków.  
@@ -32,7 +28,7 @@ Visual Basic zapewnia *znakowe typy danych* radzenia sobie z znaków drukowalnyc
 ## <a name="char-type"></a>CHAR — typ  
  `Char` Typ danych to pojedynczy znak Unicode dwubajtowych (16-bitowe). Jeśli zmienna przechowuje zawsze dokładnie jeden znak, Zadeklaruj ją jako `Char`. Na przykład:  
   
- [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
+ [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
  Każdej możliwej wartości w `Char` lub `String` zmienna jest *punktem kodu*, lub kod znaku w zestawie znaków Unicode. Znaków Unicode należą do zestawu znaków ASCII, różnych innych litery alfabetu, akcentów, symbol waluty, ułamków, znaków diakrytycznych i symbole matematyczne i technicznych.  
   
@@ -44,7 +40,7 @@ Visual Basic zapewnia *znakowe typy danych* radzenia sobie z znaków drukowalnyc
 ## <a name="string-type"></a>String — typ  
  `String` — Typ danych jest sekwencją zero lub więcej znaków Unicode (16-bitowy) dwubajtowych. Jeśli zmienna może zawierać dowolną liczbę znaków, Zadeklaruj ją jako `String`. Na przykład:  
   
- [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
+ [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
  Aby uzyskać więcej informacji, zobacz [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   

@@ -1,28 +1,28 @@
 ---
-title: "Konfigurowanie protokołów HTTP i HTTPS"
-ms.custom: 
+title: Konfigurowanie protokołów HTTP i HTTPS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-http-and-https"></a>Konfigurowanie protokołów HTTP i HTTPS
 Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołu HTTP i HTTPS. Ustawienia HTTP i HTTPS są skonfigurowane przy użyciu usługi Internet Information Services (IIS) lub za pomocą narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w ustawieniach usług IIS HTTP lub HTTPS można skonfigurować w ramach usług IIS (przy użyciu narzędzia inetmgr.exe). Jeśli usługa WCF jest samodzielnie hostowana, ustawienia protokołu HTTP lub HTTPS są konfigurowane za pomocą narzędzia wiersza polecenia.  
@@ -31,7 +31,7 @@ Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołu HTTP 
   
  Narzędzie używane do konfigurowania ustawień protokołu HTTP, zależy od systemu operacyjnego na komputerze jest zainstalowany.  
   
- Podczas uruchamiania [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]automatycznie zainstaluje to narzędzie. Podczas uruchamiania [!INCLUDE[wxp](../../../../includes/wxp-md.md)], możesz pobrać narzędzia z [narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Omówienie tak](http://go.microsoft.com/fwlink/?LinkId=88605).  
+ Podczas uruchamiania [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] automatycznie zainstaluje to narzędzie. Podczas uruchamiania [!INCLUDE[wxp](../../../../includes/wxp-md.md)], możesz pobrać narzędzia z [narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [omówienie tak](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
  Podczas uruchamiania [!INCLUDE[wv](../../../../includes/wv-md.md)]lub Windows 7, te ustawienia można skonfigurować za pomocą narzędzia Netsh.exe.  
   

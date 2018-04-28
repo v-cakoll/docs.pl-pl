@@ -1,20 +1,17 @@
 ---
-title: "Deklaracje importowania: open — Słowo kluczowe (F#)"
-description: "Dowiedz się więcej o deklaracje importowania F # oraz jak określić modułu lub przestrzeni nazw elementów, których można odwoływać się bez korzystania z w pełni kwalifikowaną nazwę."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Deklaracje importowania: open — Słowo kluczowe (F#)'
+description: 'Dowiedz się więcej o deklaracje importowania F # oraz jak określić modułu lub przestrzeni nazw elementów, których można odwoływać się bez korzystania z w pełni kwalifikowaną nazwę.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1e98e48c-52e9-4314-8954-85d5583125f0
-ms.openlocfilehash: a6d79bed3dd202657d06956edf9499a9b21a5f03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ddbc1086e2adbe8dae408f4d39fd5af888d7fd5e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="import-declarations-the-open-keyword"></a>Deklaracje importowania: `open` — słowo kluczowe
 

@@ -1,30 +1,32 @@
 ---
-title: "Instrukcje: Tworzenie podstawowego kanału informacyjnego RSS"
-ms.custom: 
+title: 'Instrukcje: Tworzenie podstawowego kanału informacyjnego RSS'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79e5bc1bedbe6fd0911931c83878ed20bc4bd17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a730bb0087ecfa396442dedf48fb64b1ab3ac512
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Instrukcje: Tworzenie podstawowego kanału informacyjnego RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługa syndykacji ujawniający źródła zespolonego RSS.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługa syndykacji ujawniający źródła zespolonego RSS.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Aby utworzyć usługę zespolonego podstawowe  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Wszystkie operacje usługi, które są stosowane <xref:System.ServiceModel.Web.WebGetAttribute> atrybutu są mapowane na żądania HTTP GET. Aby mapować operację na innej metody HTTP, należy użyć <xref:System.ServiceModel.Web.WebInvokeAttribute> zamiast tego. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Tworzenie usługi HTTP sieci Web WCF podstawowe](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Wszystkie operacje usługi, które są stosowane <xref:System.ServiceModel.Web.WebGetAttribute> atrybutu są mapowane na żądania HTTP GET. Aby mapować operację na innej metody HTTP, należy użyć <xref:System.ServiceModel.Web.WebInvokeAttribute> zamiast tego. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie podstawowej usługi HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implementowanie kontraktu usługi.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-host-a-service"></a>Do hosta usługi  
   
-1.  Utwórz <xref:System.ServiceModel.Web.WebServiceHost> obiektu.  
+1.  Tworzy obiekt <xref:System.ServiceModel.Web.WebServiceHost>.  
   
      [!code-csharp[htRssBasic#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#6)]
      [!code-vb[htRssBasic#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#6)]  
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Aby wywołać GetBlog() z HTTP GET  
   
-1.  Otwórz program Internet Explorer, wpisz następujący adres URL, a następnie naciśnij klawisz ENTER: http://localhost: 8000/BlogService/GetBlog. Adres URL zawiera adres podstawowy usługi (http://localhost: 8000/BlogService), względny adres punktu końcowego i do wywołania operacji usługi.  
+1.  Otwórz program Internet Explorer, wpisz następujący adres URL, a następnie naciśnij klawisz ENTER: http://localhost:8000/BlogService/GetBlog. Adres URL zawiera adres podstawowy usługi (http://localhost:8000/BlogService), względny adres punktu końcowego i do wywołania operacji usługi.  
   
 ### <a name="to-call-getblog-from-code"></a>Aby wywołać GetBlog() z kodu  
   

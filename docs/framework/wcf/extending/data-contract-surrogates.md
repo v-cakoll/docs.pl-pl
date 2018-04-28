@@ -1,28 +1,28 @@
 ---
 title: Surogaty kontraktu danych
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>Surogaty kontraktu danych
 Kontrakt danych *Surogat* jest funkcją zaawansowaną oparty na modelu kontraktu danych. Ta funkcja służy do zastosowania w przypadku dostosowania typu i podstawienia w sytuacjach, w którym użytkownicy chcesz zmienić, jak serializacji typu zdeserializowany lub planowane w metadanych. Sytuacje, w którym mogą być używane surogatu jest gdy kontrakt danych nie został określony dla typów, pól i właściwości nie są oznaczone ikoną z <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu lub użytkownicy mają być dynamicznie utworzyć zmian schematu.  
@@ -75,7 +75,7 @@ Kontrakt danych *Surogat* jest funkcją zaawansowaną oparty na modelu kontraktu
   
  `targetType` Parametr odnosi się do zadeklarowanym typem elementu członkowskiego. Ten parametr jest surrogated typem zwracanym przez <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> metody. Serializator nie obsługuje wymuszania czy obiektu zwróconego jest możliwa do przypisania do tego typu. `obj` Parametr jest obiekt do zserializowania i zostanie skonwertowana do jego Surogat, jeśli to konieczne. Ta metoda musi zwracać obiekt wejściowy, jeśli surrogated nie obsługuje obiektu. W przeciwnym razie nowy obiekt Surogat zostaną zwrócone. Surogatu nie jest wywoływana, gdy obiekt ma wartość null. Wiele mapowań dwuskładnikowego dla innych wystąpień może zostać zdefiniowany w ramach tej metody.  
   
- Podczas tworzenia <xref:System.Runtime.Serialization.DataContractSerializer>, można zmodyfikować go, aby zachować odwołania do obiektów. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Odbywa się przez ustawienie `preserveObjectReferences` parametru w jego konstruktora `true`. W takim przypadku surogatu zostanie wywołana tylko raz dla obiektu, ponieważ wszystkie kolejne serializations zapisu tylko odwołanie do strumienia. Jeśli `preserveObjectReferences` ma ustawioną wartość `false`, a następnie surogatu jest wywoływana za każdym razem, gdy napotkano wystąpienia.  
+ Podczas tworzenia <xref:System.Runtime.Serialization.DataContractSerializer>, można zmodyfikować go, aby zachować odwołania do obiektów. (Aby uzyskać więcej informacji, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Odbywa się przez ustawienie `preserveObjectReferences` parametru w jego konstruktora `true`. W takim przypadku surogatu zostanie wywołana tylko raz dla obiektu, ponieważ wszystkie kolejne serializations zapisu tylko odwołanie do strumienia. Jeśli `preserveObjectReferences` ma ustawioną wartość `false`, a następnie surogatu jest wywoływana za każdym razem, gdy napotkano wystąpienia.  
   
  Jeśli typ serializacji wystąpienia różni się od deklarowanego typu, typu informacje są zapisywane do strumienia, na przykład `xsi:type` umożliwia wystąpienia można deserializować na drugim końcu. Ten proces, czy obiekt jest element zastępczy lub nie.  
   
@@ -144,7 +144,7 @@ Kontrakt danych *Surogat* jest funkcją zaawansowaną oparty na modelu kontraktu
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes — metoda  
  Ta metoda uzyskuje niestandardowe typy danych zdefiniowane w schemacie. Metoda jest opcjonalny w przypadku import schematu.  
   
- Metoda jest wywoływana na początku schematu eksportu i importu. Metoda zwraca niestandardowe typy danych używany w schemacie wyeksportowane i zaimportowane. Metoda jest przekazywana <xref:System.Collections.ObjectModel.Collection%601> ( `customDataTypes` parametru), która jest kolekcją typów. Metoda należy dodać dodatkowe znanych typów do tej kolekcji. Znane niestandardowe typy danych są wymagane do włączenia serializacji i deserializacji niestandardowych danych przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Metoda jest wywoływana na początku schematu eksportu i importu. Metoda zwraca niestandardowe typy danych używany w schemacie wyeksportowane i zaimportowane. Metoda jest przekazywana <xref:System.Collections.ObjectModel.Collection%601> ( `customDataTypes` parametru), która jest kolekcją typów. Metoda należy dodać dodatkowe znanych typów do tej kolekcji. Znane niestandardowe typy danych są wymagane do włączenia serializacji i deserializacji niestandardowych danych przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>. Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementowanie surogatu  
  Umożliwia surogatu kontraktu danych w ramach [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], należy wykonać kilka specjalnych procedur.  

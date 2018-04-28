@@ -1,33 +1,35 @@
 ---
 title: '&lt;httpDigest&gt;, element'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75579a583b774896f43099d3cc30f1679b10a889
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt;, element
 Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta do usługi.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<httpDigest >  
   
 ## <a name="syntax"></a>Składnia  
@@ -52,12 +54,12 @@ Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
  Skrót jest skrót ustalić przy użyciu algorytmu i zestaw danych wejściowych. Wystawca uwierzytelnienia uwierzytelniony uzgodnić algorytm i wymiany danych używane jako dane wejściowe. Klienta można obliczyć skrótu i wysłać go do usługi. Usługa również oblicza skrót i porównuje wartości. Dopasowanie weryfikuje klienta.  
   
- Ta funkcja musi być włączona w usłudze Active Directory w systemach Windows i usługi Internet Information Services (IIS). [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Szyfrowanego uwierzytelniania w usługach IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Ta funkcja musi być włączona w usłudze Active Directory w systemach Windows i usługi Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

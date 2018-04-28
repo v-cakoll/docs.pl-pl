@@ -1,28 +1,28 @@
 ---
-title: "Odmowa usługi"
-ms.custom: 
+title: Odmowa usługi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d5f67790abad5dcf6311de1817b4ea093e703d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości, lub są przetwarzane bardzo wolno.  
@@ -57,12 +57,12 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="auditing-event-log-can-be-filled"></a>Dziennik zdarzeń inspekcji mogą być wypełnione  
  Jeśli złośliwy użytkownik rozumie, że inspekcja jest włączona, niepowołana może wysyłać nieprawidłowe komunikaty, powodujących wpisy inspekcji do zapisania. Dziennik inspekcji jest wypełniony w ten sposób, inspekcji systemu nie powiedzie się.  
   
- Aby temu zaradzić, ustaw <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwości `true` i użyj właściwości podglądu zdarzeń w celu kontrolowania zachowania inspekcji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Wyświetlanie i zarządzanie dziennikami zdarzeń za pomocą Podglądu zdarzeń zobacz [Podgląd zdarzeń](http://go.microsoft.com/fwlink/?LinkId=186123). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Aby temu zaradzić, ustaw <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwości `true` i użyj właściwości podglądu zdarzeń w celu kontrolowania zachowania inspekcji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Wyświetlanie i zarządzanie dziennikami zdarzeń za pomocą Podglądu zdarzeń zobacz [Podgląd zdarzeń](http://go.microsoft.com/fwlink/?LinkId=186123). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Nieprawidłowy implementacje zawiesza się usługa Przyczyna może IAuthorizationPolicy  
  Wywoływanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metody na błędną implementację elementu <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejs może spowodować, że usługa zawieszenie.  
   
- Ograniczenie: Użyj tylko zaufanego kodu. Oznacza to, używają tylko kod, który został zapisany i przetestowane lub która pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń zastosowany w implementacji usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie daje żadnej różnicy między kodem aplikacji i obcego kodu, który jest podłączony za pomocą punkty rozszerzeń.  
+ Ograniczenie: Użyj tylko zaufanego kodu. Oznacza to, używają tylko kod, który został zapisany i przetestowane lub która pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń zastosowany w implementacji usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie daje żadnej różnicy między kodem aplikacji i obcego kodu, który jest podłączony za pomocą punkty rozszerzeń.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Może być konieczne Kerberos maksymalny rozmiar tokenu zmiana rozmiaru  
  Jeśli klient należy do dużej liczby grup (około 900, mimo że rzeczywista liczba może być różna w zależności od grup), problem może wystąpić, gdy blok Nagłówek wiadomości przekroczy 64 kilobajtów. W takim przypadku można zwiększyć maksymalny rozmiar tokenu protokołu Kerberos, zgodnie z opisem w artykule firmy Microsoft Support "[uwierzytelniania protokołu Kerberos programu Internet Explorer nie działa z powodu Niewystarczający bufor łączący się z IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Może również należy zwiększyć maksymalną [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] komunikatu rozmiar, aby obsłużyć większą token protokołu Kerberos.  
@@ -74,7 +74,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
   
  Aby temu zaradzić, odwoływać się dokładnie certyfikat do użycia przy użyciu kryterium wyszukiwania dokładniejsze na [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Na przykład użyć <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> opcji, a następnie określ certyfikat przez jego unikatowy odcisk palca (skrót).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Funkcja automatycznego rejestrowania, zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Funkcja automatycznego rejestrowania, zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Ostatnie wielu nazwy alternatywnej podmiotu używane na potrzeby autoryzacji  
  W rzadkich przypadkach, kiedy certyfikat X.509 zawiera wiele nazwy alternatywnej podmiotu i autoryzacji, przy użyciu ustawienia alternatywnej nazwy podmiotu, autoryzacji może zakończyć się niepowodzeniem.  
@@ -82,13 +82,13 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="protect-configuration-files-with-acls"></a>Chroń pliki konfiguracji za pomocą listy kontroli dostępu  
  Można określić wymaganych i opcjonalnych oświadczeń w plikach kod i konfiguracja dla [!INCLUDE[infocard](../../../../includes/infocard-md.md)] wystawionych tokenów. Powoduje to odpowiednie elementy, które są emitowane w `RequestSecurityToken` wiadomości, które są wysyłane do zabezpieczenia tokenu usługi. Osoba atakująca można zmodyfikować kod lub konfigurację, aby usunąć wymaganego lub opcjonalnego roszczenia, potencjalnie pobierania usługi tokenu zabezpieczeń można wystawić tokenu, który nie zezwala na dostęp do usługi docelowej.  
   
- Aby ograniczyć: wymagają dostępu do komputera, aby zmodyfikować pliku konfiguracji. Korzystanie z pliku kontroli dostępu zawiera listę (kontroli dostępu ACL) do zabezpieczania plików konfiguracyjnych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]wymaga, aby kod w katalogu aplikacji lub w globalnej pamięci podręcznej zestawów, zanim umożliwi taki kod, aby być ładowane z konfiguracji. Użyj listy ACL w katalogu, aby zabezpieczyć katalogi.  
+ Aby ograniczyć: wymagają dostępu do komputera, aby zmodyfikować pliku konfiguracji. Korzystanie z pliku kontroli dostępu zawiera listę (kontroli dostępu ACL) do zabezpieczania plików konfiguracyjnych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga, aby kod w katalogu aplikacji lub w globalnej pamięci podręcznej zestawów, zanim umożliwi taki kod, aby być ładowane z konfiguracji. Użyj listy ACL w katalogu, aby zabezpieczyć katalogi.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Osiągnięto maksymalną liczbę bezpiecznej sesji dla usługi  
  Gdy klient zostanie pomyślnie uwierzytelniony przez usługę i bezpieczne ustanowiono połączenie z usługą, Usługa przechowuje informacje o sesji, dopóki klient anuluje go lub wygaśnięcia sesji. Każdy ustanowienie sesji jest za mała limit maksymalnej liczby aktywnych sesji jednoczesnych z usługą. Po osiągnięciu tego limitu klientów, które próbują utworzyć nowej sesji z tą usługą są odrzucane, dopóki jedna lub więcej aktywnych sesji wygaśnięcia lub anulowania przez klienta. Klient może mieć wiele sesji z usługą, a limit liczony w każdej z nich tymi sesjami.  
   
 > [!NOTE]
->  Korzystając z sesji stanowe, powyżej nie ma zastosowania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]stanowe sesje, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpieczną sesję](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Korzystając z sesji stanowe, powyżej nie ma zastosowania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] stanowe sesje, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpieczną sesję](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Aby temu zaradzić, Ustaw limit maksymalnej liczby aktywnych sesji i maksymalny okres istnienia sesji przez ustawienie <xref:System.ServiceModel.Channels.SecurityBindingElement> właściwość <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
   

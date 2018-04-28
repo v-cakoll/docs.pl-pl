@@ -1,31 +1,31 @@
 ---
-title: "Określanie i obsługa błędów w kontraktach i usługach"
-ms.custom: 
+title: Określanie i obsługa błędów w kontraktach i usługach
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Określanie i obsługa błędów w kontraktach i usługach
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]aplikacje obsługują sytuacjach błędu przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, jak zwrócić takie błędy jako część implementacji usługi i jak klienci catch takie błędy.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacje obsługują sytuacjach błędu przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, jak zwrócić takie błędy jako część implementacji usługi i jak klienci catch takie błędy.  
   
 ## <a name="error-handling-overview"></a>Omówienie obsługi błędów  
  We wszystkich aplikacjach zarządzanych błędy przetwarzania są reprezentowane przez <xref:System.Exception> obiektów. W aplikacjach opartego na protokole SOAP, takich jak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] komunikacji metody usług aplikacji, przetwarzania przy użyciu protokołu SOAP komunikatów "fault" informacje o błędzie. Błędach SOAP są typy wiadomości, które są zawarte w metadanych dla operacji usługi i dlatego utworzyć kontrakt błędu, której klienci mogą używać, aby ich operacja bardziej niezawodne lub interaktywnego. Ponadto, ponieważ błędach SOAP są wyrażane klientom w postaci XML, jest to bardzo interoperacyjne typu system używany przez klientów na dowolnej platformie SOAP można zwiększyć zasięg Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.  
@@ -47,12 +47,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="map-exceptions-to-soap-faults"></a>Mapowanie wyjątków do błędach SOAP  
  Pierwszym krokiem tworzenia obsługującego błędy operacji jest podjęcie pod jakimi warunkami aplikacja kliencka powinna informowany o błędach. Niektóre operacje mają błędy specyficzne dla ich funkcje. Na przykład `PurchaseOrder` operacji może zwrócić określone informacje do klientów, którzy nie mogą inicjować zamówienia zakupu. W pozostałych przypadkach takich jak `Calculator` usługi bardziej ogólnym `MathFault` błędu protokołu SOAP mogą mieć możliwość opisano wszystkie błędy w całej usługi. Po zidentyfikowaniu warunków błędów klientów usługi można utworzyć niestandardowego błędu protokołu SOAP i operacji może być oznaczony jako zwracanie tego błędu protokołu SOAP, gdy wystąpi jego odpowiedniego warunku błędu.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Ten krok w rozwoju usługi lub klienta, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Ten krok w rozwoju usługi lub klienta, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Klienci i usługi obsługi błędów SOAP jako wyjątki  
  Identyfikacji operacji błędów, definiowania niestandardowych błędach SOAP i oznaczenie te operacje jako zwracanie te błędy są pierwsze kroki w pomyślnym obsługi błędów w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji. Następnym krokiem jest prawidłowo zaimplementować wysyłania i odbierania tych błędów. Zwykle usług wysłać błędy poinformowanie aplikacji klienckich o warunkach błędów, ale dupleksu klientów można również wysłać błędach SOAP usług.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Aby uzyskać więcej informacji, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>Niezadeklarowany SOAP błędów i debugowanie  
  Zadeklarowane błędach SOAP są bardzo przydatne w przypadku tworzenia niezawodne, współpraca, rozproszonych aplikacji. Jednak w niektórych przypadkach jest przydatne w przypadku usługi (lub dupleks klienta) do wysyłania niezadeklarowany błędu protokołu SOAP, który nie jest wymieniony w sieci Web Services Description Language (WSDL) dla tej operacji. Na przykład podczas tworzenia usługi, nieoczekiwany sytuacjach może wystąpić, w których jest przydatne w przypadku debugowania do wysyłania informacji do klienta. Ponadto można ustawić <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> właściwości lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> właściwości `true` umożliwiające [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów, aby uzyskać informacje o wyjątki operacji wewnętrznych usług. Zarówno wysyłania poszczególnych błędów i ustawienie właściwości zachowanie debugowania są opisane w [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md).  

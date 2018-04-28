@@ -1,24 +1,26 @@
 ---
 title: Konfiguracja klienta
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75b594d01c8a9297f3383c2648b3853c2c024b9b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 19d1f7630c96f557791f0682fbc0c5d7286c7eb7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="client-configuration"></a>Konfiguracja klienta
 Można użyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] konfiguracji klienta, aby określić adres powiązania zachowania i kontraktu, właściwości "ABC" punktu końcowego klienta, której klienci używają do nawiązywania punktów końcowych usługi. [ \<Klienta >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) element ma [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu, którego atrybuty służą do konfigurowania punktu końcowego podstaw. W sekcji "Konfigurowanie punktów końcowych" w tym temacie omówiono te atrybuty.  
@@ -93,16 +95,16 @@ Można użyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] konfigurac
   
  Opcjonalny `name` atrybutu unikatowo identyfikuje punkt końcowy dla danego kontraktu. Jest on używany przez <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> lub <xref:System.ServiceModel.ClientBase%601.%23ctor%2A> do określenia, które punkt końcowy w konfiguracji klienta docelowej i musi być załadowany po utworzeniu kanału do usługi. Nazwy konfiguracji punktu końcowego symbol wieloznaczny "*" jest dostępny i wskazuje <xref:System.ServiceModel.ChannelFactory.ApplyConfiguration%2A> metody, czy należy go załadować żadnej konfiguracji punktu końcowego w pliku, pod warunkiem, że dokładnie jeden dostępny, a w przeciwnym razie zwraca wyjątek. W przypadku pominięcia tego atrybutu odpowiedniego punkt końcowy jest używany jako domyślny punkt końcowy skojarzone z typem określonym kontraktu. Wartość domyślna dla `name` atrybut jest pusty ciąg, który jest takie samo jak dowolnej innej nazwy.  
   
- Każdy punkt końcowy musi mieć adres skojarzony z nim do lokalizowania i identyfikowania punktu końcowego. `address` Atrybut może służyć do określenia adresu URL, który określa lokalizację punktu końcowego. Jednak adres punktu końcowego usługi można również określić w kodzie, tworząc jednolity identyfikator zasobów (URI) i jest dodawany do <xref:System.ServiceModel.ServiceHost> przy użyciu jednej z <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metody. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Jak wskazuje wprowadzenie, [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) i [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementy są częścią <xref:System.ServiceModel.EndpointAddress> i omówiono także w [ Adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) tematu.  
+ Każdy punkt końcowy musi mieć adres skojarzony z nim do lokalizowania i identyfikowania punktu końcowego. `address` Atrybut może służyć do określenia adresu URL, który określa lokalizację punktu końcowego. Jednak adres punktu końcowego usługi można również określić w kodzie, tworząc jednolity identyfikator zasobów (URI) i jest dodawany do <xref:System.ServiceModel.ServiceHost> przy użyciu jednej z <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metody. Aby uzyskać więcej informacji, zobacz [adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Jak wskazuje wprowadzenie, [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) i [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementy są częścią <xref:System.ServiceModel.EndpointAddress> i omówiono także w [ Adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) tematu.  
   
- `binding` Atrybut wskazuje typ powiązania punktu końcowego oczekuje do użycia podczas połączenia z usługą. Typ musi mieć sekcję konfiguracji zarejestrowane, aby odwoływać się. W poprzednim przykładzie jest to [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) sekcję, co oznacza, że punkt końcowy używa <xref:System.ServiceModel.WSHttpBinding>. Mogą jednak istnieć więcej niż jedno powiązanie danego typu punktu końcowego można użyć. Każdy z nich ma własną [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu w elemencie type (powiązanie). `bindingconfiguration` Atrybut służy do rozróżnienia powiązania tego samego typu. Wartość jest dopasowywany `name` atrybutu [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak skonfigurować klienta powiązania za pomocą konfiguracji, zobacz [porady: Określanie wiązania klienta w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
+ `binding` Atrybut wskazuje typ powiązania punktu końcowego oczekuje do użycia podczas połączenia z usługą. Typ musi mieć sekcję konfiguracji zarejestrowane, aby odwoływać się. W poprzednim przykładzie jest to [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) sekcję, co oznacza, że punkt końcowy używa <xref:System.ServiceModel.WSHttpBinding>. Mogą jednak istnieć więcej niż jedno powiązanie danego typu punktu końcowego można użyć. Każdy z nich ma własną [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu w elemencie type (powiązanie). `bindingconfiguration` Atrybut służy do rozróżnienia powiązania tego samego typu. Wartość jest dopasowywany `name` atrybutu [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak skonfigurować klienta powiązania za pomocą konfiguracji, zobacz [porady: Określanie wiązania klienta w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
   
  `behaviorConfiguration` Atrybut służy do określania, które [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) z [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) należy używać punktu końcowego. Wartość jest dopasowywany `name` atrybutu [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elementu. Na przykład za pomocą konfiguracji do określania zachowania klienta, zobacz [Konfigurowanie zachowań klienta](../../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
  `contract` Określa atrybut, który kontrakt jest ujawniany przez punkt końcowy. Ta wartość jest mapowany na <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> z <xref:System.ServiceModel.ServiceContractAttribute>. Wartość domyślna to pełna nazwa typu klasy, która implementuje usługę.  
   
 ### <a name="configuring-metadata"></a>Konfigurowanie metadanych  
- [ \<Metadanych >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) element jest używany do określenia, ustawienia używane do rejestrowania metadanych zaimportować rozszerzenia. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]rozszerzanie systemu metadanych, zobacz[rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ [ \<Metadanych >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) element jest używany do określenia, ustawienia używane do rejestrowania metadanych zaimportować rozszerzenia. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] rozszerzanie systemu metadanych, zobacz[rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Punkty końcowe: adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

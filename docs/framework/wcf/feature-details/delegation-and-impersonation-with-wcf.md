@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 885faab43b620cf347c1780d445a72361cb5cdb4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* to technika wspólnego, która usługi umożliwia ograniczenie dostępu klienta do domeny usługi zasobów. Zasoby domeny usługi może być maszyny zasoby, takie jak pliki lokalne (Personifikacja) lub zasobów na innym komputerze, na przykład do udziału plików (delegowanie uprawnień). Przykładową aplikację, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Na przykład sposobu użycia personifikacji zobacz [porady: personifikowania klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/26/2018
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Infrastruktury można personifikują wywołującego tylko wtedy, gdy obiekt wywołujący jest uwierzytelniany przy użyciu poświadczeń, które mogą być mapowane na konto użytkownika systemu Windows. Jeśli usługa jest skonfigurowana do uwierzytelniania przy użyciu poświadczeń, które nie mogą być mapowane na konta systemu Windows, metody usługi nie została wykonana.  
   
 > [!NOTE]
->  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)], personifikacja nie powiedzie się, jeśli stanowego SCT jest tworzony, co powoduje <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)], personifikacja nie powiedzie się, jeśli stanowego SCT jest tworzony, co powoduje <xref:System.InvalidOperationException>. Aby uzyskać więcej informacji, zobacz [nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Personifikacja w metodzie usługi: Model Imperatywne  
  Czasami obiekt wywołujący nie musi personifikować metody całej usługi, funkcji, ale tylko części z nich. W takim przypadku uzyskiwania tożsamości wywołującego wewnątrz metody usługi systemu Windows i imperatively wykonania personifikacji. To zrobić przy użyciu <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> właściwość <xref:System.ServiceModel.ServiceSecurityContext> do zwrócenia wystąpienia klasy <xref:System.Security.Principal.WindowsIdentity> klasy i wywoływania <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> metody, aby można było używać wystąpienia.  

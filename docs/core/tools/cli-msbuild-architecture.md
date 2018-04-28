@@ -1,19 +1,19 @@
 ---
-title: "Architektura narzędzi wiersza polecenia programu .NET core"
-description: "Więcej informacji na temat platformy .NET Core narzędzi warstwy i co się zmieniło w nowszych wersjach."
-keywords: Architektura .NET core MSBuild,
+title: Architektura narzędzi wiersza polecenia programu .NET core
+description: Więcej informacji na temat platformy .NET Core narzędzi warstwy i co się zmieniło w nowszych wersjach.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
-ms.openlocfilehash: ad34faa0c2577bd5e3a0ba339b19a9ad387e015a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 909e3ba088a3eabededf008fa07a51ac7d677fa2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Ogólne omówienie zmian w narzędziach .NET Core
 

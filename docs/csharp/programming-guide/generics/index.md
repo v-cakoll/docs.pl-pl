@@ -12,11 +12,11 @@ ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
 caps.latest.revision: 23
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0804ca0fcefcc53e06352accf9a2db19edb31037
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 026b8350a75794cf1101bef69d1bf15f474f103d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generics-c-programming-guide"></a>Typy ogólne (Przewodnik programowania w języku C#)
 Typy ogólne zostały dodane do wersji 2.0 języka C# i środowisko uruchomieniowe języka wspólnego (CLR). Ogólne wprowadzenie do programu .NET Framework pojęcia parametrów typu, które umożliwiają do projektu klasy i metody, które mają być odroczone specyfikację jeden lub więcej typów, aż klasa lub metoda jest zadeklarowany i utworzone przez kod klienta. Na przykład za pomocą parametru typu ogólnego T można napisać jedną klasę, używaną przez inny kod klienta bez ponoszenia kosztów lub ryzyka środowiska uruchomieniowego rzutowania lub konwersji boxing operacji, jak pokazano poniżej:  
@@ -54,15 +54,13 @@ Typy ogólne zostały dodane do wersji 2.0 języka C# i środowisko uruchomienio
   
 -   [Metody ogólne](../../../csharp/programming-guide/generics/generic-methods.md)  
   
--   [Delegaty ogólne](../../../csharp/programming-guide/generics/generic-delegates.md)  
+-   [Delegaci ogólni](../../../csharp/programming-guide/generics/generic-delegates.md)  
   
 -   [Różnice między szablonami C++ i typami ogólnymi C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
   
 -   [Typy ogólne i odbicie](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
   
 -   [Typy ogólne w czasie wykonywania](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
-  
--   [Typy ogólne w bibliotece klas programu .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  Aby uzyskać więcej informacji, zobacz [Specyfikacja języka C#](../../../csharp/language-reference/language-specification/index.md).  
@@ -72,4 +70,5 @@ Typy ogólne zostały dodane do wersji 2.0 języka C# i środowisko uruchomienio
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Typy](../../../csharp/programming-guide/types/index.md)  
  [\<typeparam >](../../../csharp/programming-guide/xmldoc/typeparam.md)  
- [\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+ [\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
+ [Typy ogólne w .NET](../../../standard/generics/index.md)  

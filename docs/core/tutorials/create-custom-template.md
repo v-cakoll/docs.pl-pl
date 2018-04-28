@@ -1,21 +1,19 @@
 ---
 title: Utwórz nowy szablon niestandardowy dla platformy dotnet
 description: Dowiedz się, jak utworzyć szablon niestandardowy dla platformy dotnet nowe polecenie w fun tego samouczka.
-keywords: Szablonu .NET i .NET core, tworzenia szablonów, samouczek, dotnet nowy
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ff58634daa6d51c10df9a3c9a1af0fd6420c69c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Utwórz nowy szablon niestandardowy dla platformy dotnet
 

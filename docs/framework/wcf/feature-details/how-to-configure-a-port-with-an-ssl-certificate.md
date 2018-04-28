@@ -1,12 +1,13 @@
 ---
 title: 'Instrukcje: Konfigurowanie portu z certyfikatem SSL'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Instrukcje: Konfigurowanie portu z certyfikatem SSL
-Podczas tworzenia własnym hostowanej [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi z <xref:System.ServiceModel.WSHttpBinding> zabezpieczenia transportu używa klasy, należy również skonfigurować port za pomocą certyfikatu X.509. Jeśli nie utworzysz samodzielnie hostowana usługa, może obsługiwać usługi na Internet Information Services (IIS). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Podczas tworzenia własnym hostowanej [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi z <xref:System.ServiceModel.WSHttpBinding> zabezpieczenia transportu używa klasy, należy również skonfigurować port za pomocą certyfikatu X.509. Jeśli nie utworzysz samodzielnie hostowana usługa, może obsługiwać usługi na Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Aby skonfigurować port, narzędzia, których używasz zależy od systemu operacyjnego, który działa na tym komputerze.  
   
- Jeśli używasz [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe. Z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] to narzędzie jest zainstalowany. Z [!INCLUDE[wxp](../../../../includes/wxp-md.md)], możesz pobrać narzędzia z [narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Omówienie tak](http://go.microsoft.com/fwlink/?LinkId=88605). [Dokumentacji narzędzia obsługi systemu Windows](http://go.microsoft.com/fwlink/?LinkId=94840) opisano składnię narzędzia Httpcfg.exe.  
+ Jeśli używasz [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe. Z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] to narzędzie jest zainstalowany. Z [!INCLUDE[wxp](../../../../includes/wxp-md.md)], możesz pobrać narzędzia z [narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [omówienie tak](http://go.microsoft.com/fwlink/?LinkId=88605). [Dokumentacji narzędzia obsługi systemu Windows](http://go.microsoft.com/fwlink/?LinkId=94840) opisano składnię narzędzia Httpcfg.exe.  
   
  Jeśli używasz [!INCLUDE[wv](../../../../includes/wv-md.md)], użyj narzędzia Netsh.exe, która jest już zainstalowana.  
   
@@ -66,9 +68,9 @@ Podczas tworzenia własnym hostowanej [!INCLUDE[indigo1](../../../../includes/in
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Aby uzyskać odcisk palca certyfikatu  
   
-1.  Użyj przystawki certyfikatów konsoli MMC można znaleźć certyfikatu X.509, który ma zamierzony cel uwierzytelniania klienta. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Użyj przystawki certyfikatów konsoli MMC można znaleźć certyfikatu X.509, który ma zamierzony cel uwierzytelniania klienta. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie certyfikatów w przystawce MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Dostęp do odcisk palca certyfikatu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Dostęp do odcisk palca certyfikatu. Aby uzyskać więcej informacji, zobacz [porady: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Skopiuj odcisk palca certyfikatu do edytora tekstu, takiego jak Notatnik.  
   

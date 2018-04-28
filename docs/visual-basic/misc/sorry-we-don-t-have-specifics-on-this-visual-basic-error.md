@@ -3052,11 +3052,11 @@ ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Niestety, nie ma żadnych szczegółów dotyczących tego błędu języka Visual Basic
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Możesz także zapytać innych deweloperów, korzystając z następujących forów:  
@@ -3068,7 +3068,7 @@ Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. 
  Udostępnia forum odpowiedzi na pytania dotyczące i problemy związane z uaktualnieniem do programu Visual Basic i Praca z funkcji współdziałania.  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Forum do zadawania pytań dotyczących pracy w środowisku [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Udostępnia forum odpowiedzi na pytania dotyczące pracy w środowisku Visual Studio.  
   
  [Visual Basic General](http://go.microsoft.com/fwlink/?LinkId=145973)  
  Udostępnia forum odpowiedzi na pytania dotyczące i problemy związane z języka Visual Basic, które nie zostały omówione w innych forach.  

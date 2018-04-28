@@ -1,27 +1,26 @@
 ---
-title: "skryptów instalacji DotNet"
-description: "Więcej informacji na temat skryptów instalacji dotnet instalacji narzędzi interfejsu wiersza polecenia platformy .NET Core i udostępnionych środowiska uruchomieniowego."
-keywords: DotNet instalacji, skrypty dotnet. Zainstaluj oprogramowanie .NET Core
+title: skryptów instalacji DotNet
+description: Więcej informacji na temat skryptów instalacji dotnet instalacji narzędzi interfejsu wiersza polecenia platformy .NET Core i udostępnionych środowiska uruchomieniowego.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.workload: dotnetcore
-ms.openlocfilehash: bc38ca7b9f00c6c252ff4963c42519a64c456b43
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 96336df087ea2ad01584010f0715ad31e079b663
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-install-scripts-reference"></a>odwołania skryptów instalacji DotNet
 
 ## <a name="name"></a>Nazwa
 
-`dotnet-install.ps1` | `dotnet-install.sh`-Skrypt użyty do zainstalowania narzędzi interfejsu wiersza polecenia platformy .NET Core i udostępnionych środowiska uruchomieniowego.
+`dotnet-install.ps1` | `dotnet-install.sh` -Skrypt użyty do zainstalowania narzędzi interfejsu wiersza polecenia platformy .NET Core i udostępnionych środowiska uruchomieniowego.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -39,8 +38,8 @@ System macOS/Linux:
 
 Zalecane jest użycie stabilną wersję, która znajduje się na [.NET Core głównym witryny sieci Web](https://dot.net). Bezpośrednie ścieżki do skryptów są:
 
-* https://dot.NET/V1/DotNet-Install.sh (bash, UNIX)
-* https://dot.NET/V1/DotNet-Install.ps1 (środowiska Powershell, system Windows)
+* https://dot.net/v1/dotnet-install.sh (bash, UNIX)
+* https://dot.net/v1/dotnet-install.ps1 (System Windows Powershell)
 
 Jest głównym przydatność te skrypty w scenariuszach automatyzacji i instalacji bez uprawnień administratora. Istnieją dwa skrypty: jedna jest skrypt programu PowerShell, która działa w systemie Windows. Inne skryptu to skrypt bash, który działa na systemie Linux/macOS. Zarówno skryptów ma takie samo zachowanie. Skrypt bash odczytuje również przełączników programu PowerShell, dzięki czemu można używać przełączników programu PowerShell przy użyciu skryptu w systemach Linux/macOS. 
 
@@ -58,8 +57,8 @@ Można zainstalować przy użyciu określonej wersji `--version` argumentu. Nale
 
 Określa kanał źródła instalacji. Możliwe wartości to:
 
-- `Current`-Bieżącej wersji
-- `LTS`-Długoterminowej kanału pomocy technicznej (bieżąca wersja obsługiwane)
+- `Current` -Bieżącej wersji
+- `LTS` -Długoterminowej kanału pomocy technicznej (bieżąca wersja obsługiwane)
 - Wersja dwóch elementów w formacie X.Y reprezentujący dla określonej wersji (na przykład `2.0` lub `1.0`)
 - Nazwa gałęzi [na przykład `release/2.0.0`, `release/2.0.0-preview2`, lub `master` najnowsze z `master` gałęzi (wydań co noc "marginesy krawędzi")]
 
@@ -69,9 +68,9 @@ Wartość domyślna to `LTS`. Aby uzyskać więcej informacji dotyczących kana�
 
 Reprezentuje wersji określonej kompilacji. Możliwe wartości to:
 
-- `latest`-Najnowszych kompilacji w kanale (używany z `-Channel` opcja)
-- `coherent`-Najnowszych spójnego kompilacji na kanał. używa kombinacji najnowsza stabilna pakietu (używana z nazwą gałęzi `-Channel` opcje)
-- Trzech części wersja reprezentujący określony format X.Y.Z kompilacji wersji; zastępuje `-Channel` opcji. Na przykład:`2.0.0-preview2-006120`
+- `latest` -Najnowszych kompilacji w kanale (używany z `-Channel` opcja)
+- `coherent` -Najnowszych spójnego kompilacji na kanał. używa kombinacji najnowsza stabilna pakietu (używana z nazwą gałęzi `-Channel` opcje)
+- Trzech części wersja reprezentujący określony format X.Y.Z kompilacji wersji; zastępuje `-Channel` opcji. Na przykład: `2.0.0-preview2-006120`
 
 Pominięcie `-Version` domyślnie `latest`.
 

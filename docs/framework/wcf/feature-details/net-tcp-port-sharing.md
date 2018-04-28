@@ -1,30 +1,32 @@
 ---
-title: "Współużytkowanie portów w składniku Net.TCP"
-ms.custom: 
+title: Współużytkowanie portów w składniku Net.TCP
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zapewnia nowy protokół sieciach opartych na protokole TCP (net.tcp://) komunikację wysokiej wydajności. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]wprowadza również nowy składnik systemu usługi udostępniania portów Net.TCP, który umożliwia porty net.tcp, które mają być udostępniane wielu procesom użytkownika.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zapewnia nowy protokół sieciach opartych na protokole TCP (net.tcp://) komunikację wysokiej wydajności. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wprowadza również nowy składnik systemu usługi udostępniania portów Net.TCP, który umożliwia porty net.tcp, które mają być udostępniane wielu procesom użytkownika.  
   
 ## <a name="background-and-motivation"></a>Tło i Motywacją  
  Protokół TCP/IP została wprowadzona, tylko niewielka liczba protokołów aplikacji wprowadzane z niego korzystać. Numery portów jest używany przez protokół TCP/IP do rozróżniania między aplikacjami, przypisując unikatowy 16-bitowy numer portu dla każdego protokołu aplikacji. Na przykład ruch HTTP jest obecnie standardowym by używał portu TCP 80 SMTP używa portu TCP 25 i FTP używa portów TCP 20 i 21. Inne aplikacje korzystające z protokołu TCP jako transportu wybrać inny numer portu dostępne przez Konwencję lub za pośrednictwem posiadanie normalizacji.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  Gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która używa net.tcp:// udostępniania, portów [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktura transportu TCP nie powoduje bezpośredniego otwarcia gniazda TCP w procesie aplikacji. Zamiast tego infrastruktura transportu rejestruje usługi adres podstawowy identyfikator URI (Uniform Resource) z usługi udostępniania portów Net.TCP i czeka na port udostępnianej usługi do nasłuchiwania wiadomości w jego imieniu.  Usługi współużytkowania portów wysyła komunikaty adresowane do usługi aplikacji podczas ich dostarczania.  
   
 ## <a name="installing-port-sharing"></a>Instalowanie współużytkowania portów  
- Usługa udostępniania portów Net.TCP jest dostępna we wszystkich systemach operacyjnych, które obsługują [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ale usługa nie jest domyślnie włączona. Ze względów bezpieczeństwa administrator musi ręcznie włączyć usługi udostępniania portów Net.TCP przed pierwszym użyciem. Usługa udostępniania portów Net.TCP udostępnia opcje konfiguracji, dzięki którym można manipulować pewne cechy gniazda sieci właścicielem usługi współużytkowania portów. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Usługa udostępniania portów Net.TCP jest dostępna we wszystkich systemach operacyjnych, które obsługują [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ale usługa nie jest domyślnie włączona. Ze względów bezpieczeństwa administrator musi ręcznie włączyć usługi udostępniania portów Net.TCP przed pierwszym użyciem. Usługa udostępniania portów Net.TCP udostępnia opcje konfiguracji, dzięki którym można manipulować pewne cechy gniazda sieci właścicielem usługi współużytkowania portów. Aby uzyskać więcej informacji, zobacz [porady: Włączanie usługi udostępniania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Za pomocą aplikacji do udostępniania portów Net.tcp  
  Najłatwiejszym sposobem na korzystanie z portu net.tcp:// udostępniania w sieci [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji jest do udostępnienia usługi za pomocą <xref:System.ServiceModel.NetTcpBinding> , a następnie włączyć usługi udostępniania portów Net.TCP przy użyciu <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwości.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak to zrobić, zobacz [porady: Konfigurowanie usługi WCF na potrzeby współużytkowania portów użyj](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak to zrobić, zobacz [porady: Konfigurowanie usługi WCF na potrzeby współużytkowania portów użyj](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Ryzyko związane z współużytkowania portów  
  Chociaż usługi udostępniania portów Net.TCP zapewnia warstwę przetwarzania między aplikacjami i siecią, aplikacje używające Udostępnianie portów nadal powinien być zabezpieczony, tak, jakby były one bezpośrednio nasłuchiwanie w sieci. W szczególności aplikacje korzystające z Udostępnianie portów należy ocenić uprawnień procesów, w których są uruchamiane. Należy rozważyć uruchomienie aplikacji przy użyciu wbudowane konto Usługa sieciowa, która działa z minimalnym zestawem uprawnień procesów wymagane do komunikacji sieciowej.  

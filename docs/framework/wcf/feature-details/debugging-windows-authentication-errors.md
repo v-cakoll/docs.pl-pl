@@ -1,12 +1,13 @@
 ---
-title: "Debugowanie błędów uwierzytelniania systemu Windows"
-ms.custom: 
+title: Debugowanie błędów uwierzytelniania systemu Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, interfejsu dostawcy obsługi zabezpieczeń (SSPI) obsługuje procesów zabezpieczeń. W przypadku wystąpienia błędów zabezpieczeń w warstwie SSPI, są udostępniane przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Ten temat zawiera framework i zestawu pytania, aby pomóc w zdiagnozowaniu błędów.  
@@ -49,10 +51,10 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
   
 ||Użytkownik lokalny|System lokalny|Użytkownik domeny|Komputerze domeny|  
 |-|----------------|------------------|-----------------|--------------------|  
-|Użytkownik lokalny|UWIERZYTELNIANIE NTLM|UWIERZYTELNIANIE NTLM|UWIERZYTELNIANIE NTLM|UWIERZYTELNIANIE NTLM|  
+|Użytkownik lokalny|NTLM|NTLM|NTLM|NTLM|  
 |System lokalny|Anonimowe NTLM|Anonimowe NTLM|Anonimowe NTLM|Anonimowe NTLM|  
-|Użytkownik domeny|UWIERZYTELNIANIE NTLM|UWIERZYTELNIANIE NTLM|Kerberos|Kerberos|  
-|Komputerze domeny|UWIERZYTELNIANIE NTLM|UWIERZYTELNIANIE NTLM|Kerberos|Kerberos|  
+|Użytkownik domeny|NTLM|NTLM|Kerberos|Kerberos|  
+|Komputerze domeny|NTLM|NTLM|Kerberos|Kerberos|  
   
  W szczególności cztery typy kont obejmują:  
   
@@ -73,11 +75,11 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
 ### <a name="kerberos-protocol"></a>Protokół Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Nazwa SPN/nazwa UPN problemów przy użyciu protokołu Kerberos  
- Korzystając z uwierzytelniania systemu Windows i protokołu Kerberos, protokół jest używany lub wynegocjowanym przez interfejs SSPI, adres URL punktu końcowego klienta używa musi zawierać w pełni kwalifikowana nazwa domeny hosta usługi wewnątrz adres URL usługi. Przy założeniu, że konto, na którym uruchomiono usługę ma prawa dostępu do klucza głównej nazwy (usługi SPN) usługi maszyny (ustawienie domyślne), który jest tworzony po dodaniu komputera do domeny usługi Active Directory, najczęściej jest to zrobić, uruchamiając usługi w Konto Usługa sieciowa. Jeśli usługa nie ma dostępu do klucza SPN komputera, należy podać poprawną nazwę SPN lub użytkownika nazwę główną (UPN) konta, pod którym usługa jest uruchomiona w tożsamości punktu końcowego klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] współpracuje z nazw SPN i UPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Korzystając z uwierzytelniania systemu Windows i protokołu Kerberos, protokół jest używany lub wynegocjowanym przez interfejs SSPI, adres URL punktu końcowego klienta używa musi zawierać w pełni kwalifikowana nazwa domeny hosta usługi wewnątrz adres URL usługi. Przy założeniu, że konto, na którym uruchomiono usługę ma prawa dostępu do klucza głównej nazwy (usługi SPN) usługi maszyny (ustawienie domyślne), który jest tworzony po dodaniu komputera do domeny usługi Active Directory, najczęściej jest to zrobić, uruchamiając usługi w Konto Usługa sieciowa. Jeśli usługa nie ma dostępu do klucza SPN komputera, należy podać poprawną nazwę SPN lub użytkownika nazwę główną (UPN) konta, pod którym usługa jest uruchomiona w tożsamości punktu końcowego klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] współpracuje z nazw SPN i UPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  W programie Równoważenie obciążenia scenariusze, takie jak farmy serwerów sieci Web lub ogrodach sieci Web popularną praktyką jest zdefiniuj unikatowe konto dla poszczególnych aplikacji, Przypisz nazwę SPN dla tego konta i upewnij się, że wszystkie usługi aplikacji uruchomione na tym koncie.  
   
- Aby uzyskać nazwę SPN konta usługi, musisz być administratorem domeny usługi Active Directory. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Dodatku Technical protokołu Kerberos w systemie Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
+ Aby uzyskać nazwę SPN konta usługi, musisz być administratorem domeny usługi Active Directory. Aby uzyskać więcej informacji, zobacz [Kerberos techniczne dodatku dla systemu Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Protokół Kerberos Direct wymaga usługi do uruchomienia konta komputera do domeny  
  Dzieje się tak, gdy `ClientCredentialType` właściwość jest ustawiona na `Windows` i <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> właściwość jest ustawiona na `false`, jak pokazano w poniższym kodzie.  
@@ -102,7 +104,7 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
   
 3.  Wymagaj negocjowanie interfejsu SSPI, aby używać protokołu Kerberos, zezwalając na korzystanie z uwierzytelniania NTLM:  
   
-    1.  Wykonaj następujące czynności w kodzie, z następujących instrukcji:`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  Wykonaj następujące czynności w kodzie, z następujących instrukcji: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  Lub możesz zrobić to w pliku konfiguracji przez ustawienie `allowNtlm` atrybutu `false`. Ten atrybut jest zawarta w [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
@@ -132,7 +134,7 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]personifikacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] personifikacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Alternatywnie klient jest uruchomiony jako usługa systemu Windows przy użyciu wbudowanego konta SYSTEM.  
   

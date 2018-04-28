@@ -1,0 +1,4 @@
+> [!NOTE]
+> Począwszy od programu .NET Core 2.0, nie trzeba uruchamiać [ `dotnet restore` ](~/docs/core/tools/dotnet-restore.md) , ponieważ jest ona uruchamiana niejawnie przez wszystkich poleceń, takich jak `dotnet build` i `dotnet run`, wymagających przywracania występuje. Nadal jest prawidłowe polecenie, w niektórych scenariuszach, w którym podczas przywracania jawne ma sens, takich jak [kompilacje ciągłej integracji w programie Visual Studio Team Services](/vsts/build-release/apps/aspnet/build-aspnet-core) lub w systemach kompilacji, które trzeba jawnie kontrolować czas, w którym występuje, przywracania.
+>
+> To polecenie umożliwia `dotnet restore` po przekazano długą formę (na przykład `--source`). Krótka Opcje formularza, takich jak `-s`, nie są obsługiwane.

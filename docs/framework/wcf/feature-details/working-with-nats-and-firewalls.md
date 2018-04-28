@@ -1,32 +1,34 @@
 ---
-title: "Praca z translatorami adresów sieciowych i zaporami"
-ms.custom: 
+title: Praca z translatorami adresów sieciowych i zaporami
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Praca z translatorami adresów sieciowych i zaporami
 Klient i serwer połączenia sieciowego często nie mają bezpośredniego i ścieżki do komunikacji. Pakiety są filtrowane, kierowane przeanalizowane i przekształcony zarówno na komputerach punktu końcowego i pośredniego komputerów w sieci. Translacji adresów sieciowych (NAT) i zapory są typowe przykłady pośrednich aplikacji, które mogą uczestniczyć w komunikacji sieciowej.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Transporty i wiadomości exchange wzorce (MEPs) inaczej do reagowania obecności NAT i zapory. W tym temacie opisano, jak translatorami adresów sieciowych i zaporami wspólnych funkcji topologii sieci. Zalecenia dotyczące konkretnych kombinacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportów MEPs podano i który sprawić, że aplikacje bardziej niezawodne translatory adresów sieciowych i zaporami w sieci.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Transporty i wiadomości exchange wzorce (MEPs) inaczej do reagowania obecności NAT i zapory. W tym temacie opisano, jak translatorami adresów sieciowych i zaporami wspólnych funkcji topologii sieci. Zalecenia dotyczące konkretnych kombinacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportów MEPs podano i który sprawić, że aplikacje bardziej niezawodne translatory adresów sieciowych i zaporami w sieci.  
   
 ## <a name="how-nats-affect-communication"></a>Wpływ komunikacji NAT  
  NAT został utworzony w celu włączenia kilka maszyn do udostępniania jednego zewnętrznego adresu IP. Translatora adresów Sieciowych ponownego mapowania portów mapuje zewnętrzny adres IP z nowym numerem portu wewnętrznego adresu IP i portu dla połączenia. Nowy numer portu umożliwia NAT służące do skorelowania ruchu zwrotu z oryginalnego komunikacji. W przypadku wielu użytkowników domowych teraz ma adres IP, który jest tylko prywatnie routingu i polegać na NAT zapewnienie globalne routing pakietów.  
@@ -43,7 +45,7 @@ Klient i serwer połączenia sieciowego często nie mają bezpośredniego i ści
  Typowa konfiguracja zapory użytkownika jest Zabroń używania połączenia przychodzące, chyba że połączenia wychodzącego został wcześniej wprowadzone do tej maszyny. Typowa konfiguracja zapory firm użytkownika ma Zabroń używania połączenia przychodzące na portach wszystkie z wyjątkiem grupy dokładnie zidentyfikowana. Przykładem jest zaporą, która uniemożliwia połączeń na wszystkich portach, z wyjątkiem porty 80 i 443 do obsługi protokołu HTTP i HTTPS. Zarządzane zapór istnieją dla użytkowników firmowymi i macierzystego, pozwalające Zaufany użytkownik lub proces na komputerze, aby zmienić konfigurację zapory. Zarządzane zapory są częściej dla użytkowników domowych przypadku nie zasady firmowe kontrolowanie użycia sieci.  
   
 ## <a name="using-teredo"></a>Przy użyciu protokołu Teredo  
- Protokół Teredo jest technologii przejściowej IPv6, który umożliwia bezpośrednie adresowanie maszyn za urządzeniem NAT Teredo opiera się na korzystanie z serwera, które mogą być publicznie i globalnie przesyłane do anonsowania potencjalnych połączenia. Serwer Teredo daje aplikacji klienta i serwera, wspólnego punktu spotkania, jaką mogą wymieniać informacje o połączeniu. Maszyny następnie zażądać tymczasowego adresu Teredo, a pakiety są tunneled za pomocą istniejącej sieci. Obsługa protokołu Teredo w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga włączania obsługi protokołu IPv6 i Teredo w systemie operacyjnym. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]i nowszych systemów operacyjnych obsługuje Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)]i nowszych systemów operacyjnych obsługiwać protokół IPv6 domyślnie tylko wymagają od użytkownika włączyć protokół Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] wymagają od użytkownika do włączenia protokołu IPv6 i Teredo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][omówienie Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Protokół Teredo jest technologii przejściowej IPv6, który umożliwia bezpośrednie adresowanie maszyn za urządzeniem NAT Teredo opiera się na korzystanie z serwera, które mogą być publicznie i globalnie przesyłane do anonsowania potencjalnych połączenia. Serwer Teredo daje aplikacji klienta i serwera, wspólnego punktu spotkania, jaką mogą wymieniać informacje o połączeniu. Maszyny następnie zażądać tymczasowego adresu Teredo, a pakiety są tunneled za pomocą istniejącej sieci. Obsługa protokołu Teredo w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga włączania obsługi protokołu IPv6 i Teredo w systemie operacyjnym. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i nowszych systemów operacyjnych obsługuje Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] i nowszych systemów operacyjnych obsługiwać protokół IPv6 domyślnie tylko wymagają od użytkownika włączyć protokół Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] wymagają od użytkownika do włączenia protokołu IPv6 i Teredo. Aby uzyskać więcej informacji, zobacz [omówienie Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Wybieranie transportu i wymiany komunikatów  
  Wybieranie transportu i MEP jest procesem trzech etapów:  
@@ -67,9 +69,9 @@ Klient i serwer połączenia sieciowego często nie mają bezpośredniego i ści
 |Adresowanie|Bezpośrednie serwera|Serwer bezpośrednio z przechodzeniem translatora adresów Sieciowych|Serwer translatora adresów Sieciowych|Serwer NAT z przechodzeniem translatora adresów Sieciowych|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
 |Klienckie bezpośrednie|Wszelkie transportu i MEP|Wszelkie transportu i MEP|Nieobsługiwane.|Nieobsługiwane.|  
-|Klienckie bezpośrednie z przechodzeniem translatora adresów Sieciowych|Transport i MEP.|Transport i MEP.|Nieobsługiwane.|TCP z klientów Teredo i wszelkie MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)]jest dostępna opcji konfiguracji komputera do obsługi protokołu Teredo HTTP.|  
+|Klienckie bezpośrednie z przechodzeniem translatora adresów Sieciowych|Transport i MEP.|Transport i MEP.|Nieobsługiwane.|TCP z klientów Teredo i wszelkie MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] jest dostępna opcji konfiguracji komputera do obsługi protokołu Teredo HTTP.|  
 |Klient translatora adresów Sieciowych|Wszystkie procesory z systemem innym niż transportu i MEP. Dupleks MEP wymaga transportu TCP.|Wszystkie procesory z systemem innym niż transportu i MEP. Dupleks MEP wymaga transportu TCP.|Nieobsługiwane.|Nieobsługiwane.|  
-|Klient translatora adresów Sieciowych z przechodzeniem translatora adresów Sieciowych|Wszystkie procesory z systemem innym niż transportu i MEP. Dupleks MEP wymaga transportu TCP.|Wszystkie elementy oprócz dwóch HTTP i wszelkie MEP. Dupleks MEP wymaga transportu TCP. Podwójna transportu TCP wymaga protokołu Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)]jest dostępna opcji konfiguracji komputera do obsługi protokołu Teredo HTTP.|Nieobsługiwane.|TCP z klientów Teredo i wszelkie MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)]jest dostępna opcji konfiguracji komputera do obsługi protokołu Teredo HTTP.|  
+|Klient translatora adresów Sieciowych z przechodzeniem translatora adresów Sieciowych|Wszystkie procesory z systemem innym niż transportu i MEP. Dupleks MEP wymaga transportu TCP.|Wszystkie elementy oprócz dwóch HTTP i wszelkie MEP. Dupleks MEP wymaga transportu TCP. Podwójna transportu TCP wymaga protokołu Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] jest dostępna opcji konfiguracji komputera do obsługi protokołu Teredo HTTP.|Nieobsługiwane.|TCP z klientów Teredo i wszelkie MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] jest dostępna opcji konfiguracji komputera do obsługi protokołu Teredo HTTP.|  
   
 |Ograniczeń zapory|Otwórz serwera|Serwer z zarządzanego zapory|Serwer z zapory tylko HTTP|Serwer z zapory tylko ruchu wychodzącego|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  

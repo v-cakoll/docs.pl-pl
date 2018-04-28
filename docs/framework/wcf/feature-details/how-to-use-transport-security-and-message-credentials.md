@@ -1,13 +1,13 @@
 ---
-title: "Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów"
-ms.custom: 
+title: 'Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów
-Zabezpieczanie usługi za pomocą poświadczeń transportowe i komunikatów używa najlepiej tryby zabezpieczenia transportowe i komunikatów w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. W sum transport layer security zapewnia integralności i poufności, gdy komunikat warstwy zabezpieczeń zawiera szereg poświadczenia, które nie są możliwe za pomocą mechanizmów zabezpieczeń transportu strict. W tym temacie przedstawiono podstawowe czynności w przypadku implementowania transportu z poświadczeniami komunikatu za pomocą <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ustawianie trybu zabezpieczeń, zobacz [porady: Ustawianie trybu zabezpieczeń](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Zabezpieczanie usługi za pomocą poświadczeń transportowe i komunikatów używa najlepiej tryby zabezpieczenia transportowe i komunikatów w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. W sum transport layer security zapewnia integralności i poufności, gdy komunikat warstwy zabezpieczeń zawiera szereg poświadczenia, które nie są możliwe za pomocą mechanizmów zabezpieczeń transportu strict. W tym temacie przedstawiono podstawowe czynności w przypadku implementowania transportu z poświadczeniami komunikatu za pomocą <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ustawianie trybu zabezpieczeń, zobacz [porady: Ustawianie trybu zabezpieczeń](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Podczas ustawiania trybu zabezpieczeń `TransportWithMessageCredential`, transport określa konkretny mechanizm, który zapewnia zabezpieczeń na poziomie transportu. W przypadku protokołu HTTP mechanizm jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP (HTTPS); TCP jest protokół SSL za pośrednictwem protokołu TCP lub systemu Windows.  
   
@@ -38,11 +38,11 @@ Zabezpieczanie usługi za pomocą poświadczeń transportowe i komunikatów uży
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Aby użyć klasy WSHttpBinding przy użyciu certyfikatu zabezpieczeń transportu (w kodzie)  
   
-1.  Użyj narzędzia HttpCfg.exe można powiązać certyfikatu SSL z portem na maszynie. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Użyj narzędzia HttpCfg.exe można powiązać certyfikatu SSL z portem na maszynie. Aby uzyskać więcej informacji, zobacz [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding> klasy i ustaw <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> właściwości <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Ustaw <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> właściwości odpowiednią wartość. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Poniższy kod używa <xref:System.ServiceModel.MessageCredentialType.Certificate> wartość.  
+3.  Ustaw <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> właściwości odpowiednią wartość. (Aby uzyskać więcej informacji, zobacz [Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Poniższy kod używa <xref:System.ServiceModel.MessageCredentialType.Certificate> wartość.  
   
 4.  Utwórz wystąpienie <xref:System.Uri> klasy przy użyciu odpowiedniego adresu podstawowego. Należy pamiętać, że adres musi używać schematu "HTTPS" i musi zawierać rzeczywistą nazwą komputera i numer portu, który jest powiązany certyfikat SSL. (Alternatywnie można ustawić adres podstawowy w konfiguracji.)  
   
@@ -97,7 +97,7 @@ Zabezpieczanie usługi za pomocą poświadczeń transportowe i komunikatów uży
   
 #### <a name="to-use-the-wshttpbinding"></a>Aby użyć klasy WSHttpBinding  
   
-1.  Skonfiguruj komputer z certyfikatem SSL powiązany z portem. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Nie należy ustawić <`transport`> Wartość elementu z tą konfiguracją.  
+1.  Skonfiguruj komputer z certyfikatem SSL powiązany z portem. (Aby uzyskać więcej informacji, zobacz [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Nie należy ustawić <`transport`> Wartość elementu z tą konfiguracją.  
   
 2.  Określ typ poświadczeń klienta dla zabezpieczeń na poziomie wiadomości. W poniższym przykładzie `clientCredentialType` atrybut <`message`> elementu `UserName`.  
   

@@ -1,26 +1,27 @@
 ---
-title: "Porady: uruchamianie przepływu pracy"
-ms.custom: 
+title: 'Porady: uruchamianie przepływu pracy'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a41bf5c1f7a12e98ac10295af5b2608c8bf3a46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 88c8adc74b707891a93e34aa135db82715da968e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-run-a-workflow"></a>Porady: uruchamianie przepływu pracy
 W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadzenie oraz opisano, jak utworzyć hosta przepływów pracy i Uruchom przepływ pracy określone w poprzedniej [porady: tworzenie przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) tematu.  
@@ -72,7 +73,7 @@ W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadz
     WorkflowInvoker.Invoke(workflow1);  
     ```  
   
-     To wygenerowany hostingu używa kod <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker>zapewnia prostą metodę do wywoływania przepływu pracy, tak, jakby były wywołanie metody i można używać tylko w przypadku przepływów pracy, które nie korzystają z trwałości. <xref:System.Activities.WorkflowApplication>zapewnia bardziej rozbudowane model do wykonywania przepływów pracy, które zawiera powiadomienia o zdarzenia cyklu życia, kontrola wykonywania wznowienie zakładek i trwałości. W tym przykładzie użyto zakładek i <xref:System.Activities.WorkflowApplication> służy do obsługi przepływu pracy. Dodaj następujące `using` lub **importów** instrukcji w górnej części **Program.cs** lub **Module1.vb** poniżej istniejące **przy użyciu** lub **importów** instrukcje.  
+     To wygenerowany hostingu używa kod <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> zapewnia prostą metodę do wywoływania przepływu pracy, tak, jakby były wywołanie metody i można używać tylko w przypadku przepływów pracy, które nie korzystają z trwałości. <xref:System.Activities.WorkflowApplication> zapewnia bardziej rozbudowane model do wykonywania przepływów pracy, które zawiera powiadomienia o zdarzenia cyklu życia, kontrola wykonywania wznowienie zakładek i trwałości. W tym przykładzie użyto zakładek i <xref:System.Activities.WorkflowApplication> służy do obsługi przepływu pracy. Dodaj następujące `using` lub **importów** instrukcji w górnej części **Program.cs** lub **Module1.vb** poniżej istniejące **przy użyciu** lub **importów** instrukcje.  
   
     ```vb  
     Imports NumberGuessWorkflowActivities  
@@ -109,7 +110,7 @@ W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadz
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]  
   
-     Ten słownik zawiera jeden element z kluczem `MaxNumber`. Klucze w słowniku wejściowe odpowiadają wejściowych argumentów działania głównego przepływu pracy. `MaxNumber`jest używany przez przepływ pracy do określenia górna granica losowo generowany numer.  
+     Ten słownik zawiera jeden element z kluczem `MaxNumber`. Klucze w słowniku wejściowe odpowiadają wejściowych argumentów działania głównego przepływu pracy. `MaxNumber` jest używany przez przepływ pracy do określenia górna granica losowo generowany numer.  
   
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>Aby pobrać dane wyjściowe argumenty przepływu pracy  
   
@@ -133,7 +134,7 @@ W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadz
      Zawsze przepływu pracy, staje się bezczynności oczekiwanie na następny dopasowanie, ten program obsługi jest nazywany i `idleAction` <xref:System.Threading.AutoResetEvent> jest ustawiona. Kod w następnym kroku używa `idleEvent` i `syncEvent` czy oczekuje na następny wynik przepływu pracy, czy została ukończona.  
   
     > [!NOTE]
-    >  W tym przykładzie korzysta z resetowaniem automatycznym zdarzenia w aplikacji hosta <xref:System.Activities.WorkflowApplication.Completed%2A> i <xref:System.Activities.WorkflowApplication.Idle%2A> obsługi synchronizacji aplikacji hosta z postęp przepływu pracy. Nie jest konieczne zablokować i poczekaj, aż przejdzie w stan bezczynności przed wznowieniem zakładki przepływu pracy, ale w tym przykładzie zdarzenia synchronizacji są wymagane, będzie wówczas traktował hosta, czy przepływ pracy jest pełny lub czy oczekuje na więcej danych wejściowych użytkownika przy użyciu <xref:System.Activities.Bookmark>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Zakładki](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
+    >  W tym przykładzie korzysta z resetowaniem automatycznym zdarzenia w aplikacji hosta <xref:System.Activities.WorkflowApplication.Completed%2A> i <xref:System.Activities.WorkflowApplication.Idle%2A> obsługi synchronizacji aplikacji hosta z postęp przepływu pracy. Nie jest konieczne zablokować i poczekaj, aż przejdzie w stan bezczynności przed wznowieniem zakładki przepływu pracy, ale w tym przykładzie zdarzenia synchronizacji są wymagane, będzie wówczas traktował hosta, czy przepływ pracy jest pełny lub czy oczekuje na więcej danych wejściowych użytkownika przy użyciu <xref:System.Activities.Bookmark>. Aby uzyskać więcej informacji, zobacz [zakładki](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
   
 3.  Usuń wywołanie `WaitOne`i Zastąp kod w celu zbierania danych wejściowych od użytkownika i Wznów <xref:System.Activities.Bookmark>.  
   
@@ -147,7 +148,7 @@ W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadz
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]  
   
-##  <a name="BKMK_ToRunTheApplication"></a>Aby skompilować i uruchomić aplikację  
+##  <a name="BKMK_ToRunTheApplication"></a> Aby skompilować i uruchomić aplikację  
   
 1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz **Ustaw jako projekt startowy**.  
   

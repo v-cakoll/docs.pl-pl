@@ -16,14 +16,14 @@ ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c02e95573d0ba894bf68510219bd66965fc234fc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 4497c9586182cca9e2be97dc39e5ccb242725d25
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Porady: zwijanie i ukrywanie fragmentów kodu (Visual Basic)
-`#Region` Dyrektywy umożliwia zwijanie i ukrywanie fragmentów kodu w plikach języka Visual Basic. `#Region` Dyrektywy pozwala określić blok kodu, który można rozwinąć lub Zwiń, korzystając z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] edytora kodu. Możliwość selektywnego ukrywanie kodu sprawia, że pliki można zarządzać i czytelne. Aby uzyskać więcej informacji, zobacz [Tworzenie konspektu](/visualstudio/ide/outlining).  
+`#Region` Dyrektywy umożliwia zwijanie i ukrywanie fragmentów kodu w plikach języka Visual Basic. `#Region` Dyrektywy pozwala określić blok kodu, który można rozwinąć lub Zwiń, gdy za pomocą edytora kodu programu Visual Studio. Możliwość selektywnego ukrywanie kodu sprawia, że pliki można zarządzać i czytelne. Aby uzyskać więcej informacji, zobacz [Tworzenie konspektu](/visualstudio/ide/outlining).  
   
  `#Region` dyrektywy obsługuje semantyki blok kodu `#If...#End If`. Oznacza to nie może zaczynać się jeden blok, a kończyć się w innym; rozpoczęcia i zakończenia musi być w tym samym bloku. `#Region` dyrektywy nie są obsługiwane w funkcjach.  
   

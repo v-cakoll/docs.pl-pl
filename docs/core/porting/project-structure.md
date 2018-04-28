@@ -1,21 +1,19 @@
 ---
 title: Organizowanie projektu do obsługi środowiska .NET Framework i .NET Core
 description: Pomoc dotyczącą właściciele projektu do skompilowania ich rozwiązanie przed .NET Framework i side-by-side .NET Core.
-keywords: .NET, .NET core, .NET Framework, układ projektu, wiele platform
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2392c6e477138e21dc98055fe7ecca84789f07af
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 5e2b56c325f54f49bf53b00c74a0e89137928c03
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organizowanie projektu do obsługi środowiska .NET Framework i .NET Core
 

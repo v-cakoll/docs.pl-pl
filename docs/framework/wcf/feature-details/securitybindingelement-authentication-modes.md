@@ -1,30 +1,32 @@
 ---
 title: Tryby uwierzytelniania elementu SecurityBindingElement
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Tryby uwierzytelniania elementu SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia kilka metod za pomocą których klienci usług uwierzytelniać się na siebie. Można utworzyć zabezpieczeń elementy powiązania dla tych trybach uwierzytelniania przy użyciu metod statycznych na <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy lub przy użyciu konfiguracji. W tym temacie opisano tryby uwierzytelniania 18.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia kilka metod za pomocą których klienci usług uwierzytelniać się na siebie. Można utworzyć zabezpieczeń elementy powiązania dla tych trybach uwierzytelniania przy użyciu metod statycznych na <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy lub przy użyciu konfiguracji. W tym temacie opisano tryby uwierzytelniania 18.  
   
  Na przykład za pomocą elementu dla jednej z metod uwierzytelniania, zobacz [porady: Tworzenie elementu SecurityBindingElement dla trybu uwierzytelniania określone](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  Element powiązania umożliwia utworzenie niestandardowego powiązania. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+3.  Element powiązania umożliwia utworzenie niestandardowego powiązania. Aby uzyskać więcej informacji, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="mode-descriptions"></a>Tryb opisów  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
  Z tego trybu uwierzytelniania klient przeprowadza uwierzytelnianie usługi przy użyciu biletu protokołu Kerberos. Korzystając z tego samego biletu także uwierzytelniania serwera. Element powiązania zabezpieczeń jest `SymmetricSecurityBindingElement` zwrócony przez <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> metody. Możesz również ustawić `authenticationMode` atrybutu `Kerberos`.  
   
 > [!NOTE]
->  Aby można było używać tego trybu uwierzytelniania, musi być skojarzony z główną nazwę usługi (SPN) konta usługi. W tym celu należy uruchomić usługę w ramach konta Usługa sieciowa lub konta SYSTEM lokalny. Można również użyć narzędzia SetSpn.exe, aby utworzyć nazwę SPN konta usługi. W obu przypadkach klient musi używać poprawną nazwę SPN w [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elementu, lub za pomocą <xref:System.ServiceModel.EndpointAddress> konstruktora. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usługi uwierzytelnianie i tożsamość](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Aby można było używać tego trybu uwierzytelniania, musi być skojarzony z główną nazwę usługi (SPN) konta usługi. W tym celu należy uruchomić usługę w ramach konta Usługa sieciowa lub konta SYSTEM lokalny. Można również użyć narzędzia SetSpn.exe, aby utworzyć nazwę SPN konta usługi. W obu przypadkach klient musi używać poprawną nazwę SPN w [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elementu, lub za pomocą <xref:System.ServiceModel.EndpointAddress> konstruktora. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 > [!NOTE]
 >  Gdy `Kerberos` tryb uwierzytelniania jest używany, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> i <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> poziomy personifikacji nie są obsługiwane.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
  Z tego trybu uwierzytelniania klient przeprowadza uwierzytelnianie usługi przy użyciu biletu protokołu Kerberos. Token protokołu Kerberos jest wyświetlany w warstwie protokołu SOAP jako tokenu pomocniczego; oznacza to, że token, który podpisuje podpisu wiadomości. Usługa jest uwierzytelniany przy użyciu certyfikatu X.509 w warstwie transportowej. Element powiązania zabezpieczeń jest `TransportSecurityBindingElement` zwrócony przez <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A> metody. Możesz również ustawić `authenticationMode` atrybutu `KerberosOverTransport`.  
   
 > [!NOTE]
->  Aby można było używać tego trybu uwierzytelniania, konto usługi musi być skojarzony z główną nazwą usługi. W tym celu należy uruchomić usługę w ramach konta Usługa sieciowa lub konta SYSTEM lokalny. Można również użyć narzędzia SetSpn.exe, aby utworzyć nazwę SPN konta usługi. W obu przypadkach klient musi używać poprawną nazwę SPN w [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elementu, lub za pomocą <xref:System.ServiceModel.EndpointAddress> konstruktora. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usługi uwierzytelnianie i tożsamość](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Aby można było używać tego trybu uwierzytelniania, konto usługi musi być skojarzony z główną nazwą usługi. W tym celu należy uruchomić usługę w ramach konta Usługa sieciowa lub konta SYSTEM lokalny. Można również użyć narzędzia SetSpn.exe, aby utworzyć nazwę SPN konta usługi. W obu przypadkach klient musi używać poprawną nazwę SPN w [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elementu, lub za pomocą <xref:System.ServiceModel.EndpointAddress> konstruktora. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  Z tego trybu uwierzytelniania klient przeprowadza uwierzytelnianie za pomocą certyfikatu X.509, który pojawia się w warstwie protokołu SOAP jako tokenu pomocniczego; oznacza to, że token, który podpisuje podpisu wiadomości. Usługa jest również uwierzytelniony za pomocą certyfikatu X.509. Element powiązania zabezpieczeń jest `SymmetricSecurityBindingElement` zwrócony przez <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A> metody. Możesz również ustawić `authenticationMode` atrybutu `MutualCertificate`.  

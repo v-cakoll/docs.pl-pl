@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 912bfae4ab867540c01af798f883a0249ec297f7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Umożliwia korzystanie z deklaratywne mechanizm buforowania już dostępne w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można do pamięci podręcznej odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła do usługi, który jest skonfigurowany dla buforowania GET protokołu HTTP, ASP.NET odsyła odpowiedź buforowana i nie wywołano metody usługi. Po wygaśnięciu pamięci podręcznej, przy następnym użytkownik wysyła HTTP GET, jest wywoływana przez metodę usługi i ponownie buforowaną odpowiedź. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET buforowanie, zobacz [omówienie pamięci podręcznej programu ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -71,7 +71,7 @@ public class Service
 </system.web>  
 ```  
   
- Jest to tego samego elementu konfiguracji, która jest dostępna dla aplikacji ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Profile pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP sieci Web, są najważniejsze atrybuty w profilu pamięci podręcznej: `cacheDuration` i `varyByParam`. Oba te atrybuty są wymagane. `cacheDuration` Ustawia czas, które mają być buforowane odpowiedzi w sekundach. `varyByParam` można określić parametr ciągu zapytania używanego do odpowiedzi z pamięci podręcznej. Wszystkie żądania z wartościami parametrów ciągu zapytania różnych są buforowane oddzielnie. Na przykład po wysłaniu żądania początkowego do http://MyServer/MyHttpService/MyOperation?param=10 wszystkie kolejne żądania o tym samym identyfikatorze URI może być zwracany buforowanej odpowiedzi (o ile nie upłynął czas buforowania). Odpowiedzi na żądania podobne jest taki sam, ale ma inną wartość dla parametru ciągu zapytania parametru są buforowane oddzielnie. Jeśli nie chcesz, aby to zachowanie buforowania w oddzielnych, ustaw `varyByParam` "none".  
+ Jest to tego samego elementu konfiguracji, która jest dostępna dla aplikacji ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Profile pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP sieci Web, są najważniejsze atrybuty w profilu pamięci podręcznej: `cacheDuration` i `varyByParam`. Oba te atrybuty są wymagane. `cacheDuration` Ustawia czas, które mają być buforowane odpowiedzi w sekundach. `varyByParam` można określić parametr ciągu zapytania używanego do odpowiedzi z pamięci podręcznej. Wszystkie żądania z wartościami parametrów ciągu zapytania różnych są buforowane oddzielnie. Na przykład po wysłaniu żądania początkowego do http://MyServer/MyHttpService/MyOperation?param=10 wszystkie kolejne żądania o tym samym identyfikatorze URI będzie zwracany buforowanej odpowiedzi (o ile nie upłynął czas trwania pamięci podręcznej). Odpowiedzi na żądania podobne jest taki sam, ale ma inną wartość dla parametru ciągu zapytania parametru są buforowane oddzielnie. Jeśli nie chcesz, aby to zachowanie buforowania w oddzielnych, ustaw `varyByParam` "none".  
   
 ## <a name="sql-cache-dependency"></a>Zależności bufora SQL  
  Odpowiedzi usługi HTTP sieci Web można buforować w taki sposób, w zależności buforu SQL. Jeśli usługi WCF Web HTTP zależy od danych przechowywanych w bazie danych SQL, można buforować odpowiedzi usługi akcji i unieważnić buforowanej odpowiedzi podczas zmiany tabeli bazy danych SQL danych. To zachowanie jest całkowicie skonfigurowany w pliku Web.config. Należy określić parametry połączenia w <`connectionStrings`> elementu.  
@@ -135,7 +135,7 @@ public class Service
  W tym miejscu czas buforowania ma ustawioną wartość 60 sekund, `varyByParam` ma wartość none i `sqlDependency` ma ustawioną wartość listy rozdzielanych średnikami oddzielone dwukropkiem pary nazwa/tabeli bazy danych. Gdy dane w `MyTable` zostanie zmieniona buforowanej odpowiedzi dla operacji usługi zostanie usunięty i po wywołaniu operacji nową odpowiedź jest generowany (przez wywołanie operacji usługi), w pamięci podręcznej i zwracany do klienta.  
   
 > [!IMPORTANT]
->  Dla platformy ASP.NET dostępu do bazy danych SQL, należy użyć [ASP.NET SQL Server Registration Tool](http://go.microsoft.com/fwlink/?LinkId=152536). Ponadto musisz zezwolić na odpowiedniego użytkownika konta dostępu do bazy danych i tabeli. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Uzyskiwanie dostępu do programu SQL Server z aplikacji sieci Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
+>  Dla platformy ASP.NET dostępu do bazy danych SQL, należy użyć [ASP.NET SQL Server Registration Tool](http://go.microsoft.com/fwlink/?LinkId=152536). Ponadto musisz zezwolić na odpowiedniego użytkownika konta dostępu do bazy danych i tabeli. Aby uzyskać więcej informacji, zobacz [podczas uzyskiwania dostępu do programu SQL Server z aplikacji sieci Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
   
 ## <a name="conditional-http-get-based-caching"></a>Warunkowe HTTP GET na podstawie buforowanie  
  W scenariuszach protokołu HTTP sieci Web warunkowego HTTP GET jest często używane przez usługi do zaimplementowania inteligentne buforowanie HTTP zgodnie z opisem w [specyfikacji HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). W tym celu usługi należy ustawić wartość nagłówka ETag w odpowiedzi HTTP. On również sprawdzić nagłówka If-None-Match w żądaniu HTTP, czy dowolne ETag określony odpowiada bieżącej ETag.  

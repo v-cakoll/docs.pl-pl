@@ -1,37 +1,37 @@
 ---
-title: "Przegląd architektury metadanych"
-ms.custom: 
+title: Przegląd architektury metadanych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="metadata-architecture-overview"></a>Przegląd architektury metadanych
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zapewnia infrastrukturę sformatowanego eksportowania, publikowania, pobieranie i Importowanie metadanych usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usługi używają metadanych opisujących sposób interakcji z punktów końcowych usługi, dzięki czemu narzędzi, takich jak Svcutil.exe, może automatycznie generować kod klienta do uzyskiwania dostępu do usługi.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zapewnia infrastrukturę sformatowanego eksportowania, publikowania, pobieranie i Importowanie metadanych usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi używają metadanych opisujących sposób interakcji z punktów końcowych usługi, dzięki czemu narzędzi, takich jak Svcutil.exe, może automatycznie generować kod klienta do uzyskiwania dostępu do usługi.  
   
  Większość typów, które tworzą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury metadanych znajdują się w <xref:System.ServiceModel.Description> przestrzeni nazw.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa <xref:System.ServiceModel.Description.ServiceEndpoint> klasy do opisywania punktów końcowych w usłudze. Można użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Generowanie metadanych dla punktów końcowych usługi lub importowanie metadanych usługi do generowania <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa <xref:System.ServiceModel.Description.ServiceEndpoint> klasy do opisywania punktów końcowych w usłudze. Można użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Generowanie metadanych dla punktów końcowych usługi lub importowanie metadanych usługi do generowania <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]reprezentuje metadanych dla usługi jako wystąpienie <xref:System.ServiceModel.Description.MetadataSet> typ struktury jest silnie powiązany zdefiniowane w WS-MetadataExchange format serializacji metadanych. <xref:System.ServiceModel.Description.MetadataSet> Typu zawiera rzeczywiste usługi metadanych, takich jak dokumenty Web Services Description Language (WSDL), dokumentach schematów XML lub wyrażenia WS-Policy jako kolekcja <xref:System.ServiceModel.Description.MetadataSection> wystąpień. Każdy <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> wystąpienie zawiera dialekt określonych metadanych i identyfikator. A <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> może zawierać następujące elementy w jego <xref:System.ServiceModel.Description.MetadataSection.Metadata%2A?displayProperty=nameWithType> właściwości:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reprezentuje metadanych dla usługi jako wystąpienie <xref:System.ServiceModel.Description.MetadataSet> typ struktury jest silnie powiązany zdefiniowane w WS-MetadataExchange format serializacji metadanych. <xref:System.ServiceModel.Description.MetadataSet> Typu zawiera rzeczywiste usługi metadanych, takich jak dokumenty Web Services Description Language (WSDL), dokumentach schematów XML lub wyrażenia WS-Policy jako kolekcja <xref:System.ServiceModel.Description.MetadataSection> wystąpień. Każdy <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> wystąpienie zawiera dialekt określonych metadanych i identyfikator. A <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> może zawierać następujące elementy w jego <xref:System.ServiceModel.Description.MetadataSection.Metadata%2A?displayProperty=nameWithType> właściwości:  
   
 -   Nieprzetworzona metadanych.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   A <xref:System.ServiceModel.Description.MetadataLocation> wystąpienia.  
   
- A <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> wystąpień wskaż inny punkt końcowy programu exchange (MEX) metadanych i <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> wystąpień wskaż dokumentu metadanych za pomocą adresu URL HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Umożliwia używanie dokumentów WSDL do opisywania punktów końcowych usługi, kontraktów usług, powiązań, komunikat wymiany wzorców, wiadomości i komunikatów "fault" zaimplementowana przez usługę. Typy danych używane przez usługę są opisane w dokumentacji WSDL przy użyciu schematu XML. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md). Można użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do eksportowania i importowania rozszerzenia WSDL dla zachowania usługi, należy Zwiń zachowania i elementy wiązania, które zapewniają rozszerzenie funkcjonalności usługi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Eksportowanie niestandardowych metadanych dla rozszerzenia WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
+ A <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> wystąpień wskaż inny punkt końcowy programu exchange (MEX) metadanych i <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> wystąpień wskaż dokumentu metadanych za pomocą adresu URL HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia używanie dokumentów WSDL do opisywania punktów końcowych usługi, kontraktów usług, powiązań, komunikat wymiany wzorców, wiadomości i komunikatów "fault" zaimplementowana przez usługę. Typy danych używane przez usługę są opisane w dokumentacji WSDL przy użyciu schematu XML. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md). Można użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do eksportowania i importowania rozszerzenia WSDL dla zachowania usługi, należy Zwiń zachowania i elementy wiązania, które zapewniają rozszerzenie funkcjonalności usługi. Aby uzyskać więcej informacji, zobacz [Eksportowanie niestandardowych metadanych dla rozszerzenia WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   
 ## <a name="exporting-service-metadata"></a>Eksportowanie metadanych usługi  
  W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], *eksportowania metadanych* jest proces opisujące punktów końcowych usługi i projekcji ich reprezentację równoległe, standardowe, której klienci mogą używać, aby zrozumieć sposób korzystania z usługi. Aby wyeksportować metadane z <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień, korzystać z implementacji <xref:System.ServiceModel.Description.MetadataExporter> klasy abstrakcyjnej. A <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> implementacji generuje metadanych, które są umieszczane w <xref:System.ServiceModel.Description.MetadataSet> wystąpienia.  
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/22/2017
  Aby wyeksportować niestandardowych metadanych WSDL lub rozszerzenia WSDL dla zachowania punktu końcowego, zachowania kontraktu lub elementy powiązania punktu końcowego usługi, można zaimplementować <xref:System.ServiceModel.Description.IWsdlExportExtension> interfejsu. <xref:System.ServiceModel.Description.WsdlExporter> Analizuje <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia dla powiązania elementów, zachowania operacja kontraktu zachowania i zachowania punktu końcowego, które implementują <xref:System.ServiceModel.Description.IWsdlExportExtension> interfejsu podczas generowania pliku WSDL.  
   
 ## <a name="publishing-service-metadata"></a>Publikowanie metadanych usługi  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usługi Publikowanie metadanych przez udostępnianie punkty końcowe metadanych. Publikowanie metadanych usługi udostępnia metadane usługi za pomocą standardowych protokołów, takich jak żądania MEX i HTTP/GET. Punkty końcowe metadanych są podobne do innych punktów końcowych usługi, w tym mają address, binding i kontrakt. Punkty końcowe metadanych można dodać do usługi hosta w konfiguracji lub w kodzie.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi Publikowanie metadanych przez udostępnianie punkty końcowe metadanych. Publikowanie metadanych usługi udostępnia metadane usługi za pomocą standardowych protokołów, takich jak żądania MEX i HTTP/GET. Punkty końcowe metadanych są podobne do innych punktów końcowych usługi, w tym mają address, binding i kontrakt. Punkty końcowe metadanych można dodać do usługi hosta w konfiguracji lub w kodzie.  
   
  Aby opublikować punkty końcowe metadanych dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, należy najpierw dodać wystąpienia <xref:System.ServiceModel.Description.ServiceMetadataBehavior> usługi zachowania do usługi. Dodawanie <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> wystąpienia z usługą rozszerza usługi umożliwia publikowanie metadanych przez udostępnianie punkty końcowe metadanych. Po dodaniu <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> zachowanie usługi można następnie udostępnić punkty końcowe metadanych, które obsługują MEX protokołu lub metadane punkty końcowe, które odpowiadają na żądania HTTP/GET.  
   
  Aby dodać punkty końcowe metadanych, które używają protokołu MEX, należy dodać punkty końcowe usługi do używanego kontraktu usługi o nazwie IMetadataExchange hosta usługi.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definiuje <xref:System.ServiceModel.Description.IMetadataExchange> interfejs o tej nazwie kontraktu usługi. Punkty końcowe usługi WS-MetadataExchange lub MEX punktów końcowych, można użyć jednej z powiązań cztery domyślne udostępnianych przez metody statycznej fabryki na <xref:System.ServiceModel.Description.MetadataExchangeBindings> powiązania domyślne używane przez klasę [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] narzędzi, takich jak Svcutil.exe. Można także skonfigurować punkty końcowe metadanych MEX przy użyciu niestandardowego powiązania.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Używa <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> Aby wyeksportować metadane dla wszystkich punktów końcowych usługi w usłudze. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Eksportowanie metadanych z usługą, zobacz [eksportowanie i Importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Używa <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> Aby wyeksportować metadane dla wszystkich punktów końcowych usługi w usłudze. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Eksportowanie metadanych z usługą, zobacz [eksportowanie i Importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Wspomaga host usług przez dodanie <xref:System.ServiceModel.Description.ServiceMetadataExtension> wystąpienia jako rozszerzenie hosta usługi. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> Udostępnia implementację dla publikowania protokołów metadanych. Można również użyć <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> można pobrać metadanych usługi w czasie wykonywania, uzyskując dostęp do <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> właściwości.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 > -   Wartość jednej z operacji w przestrzeni nazw przy użyciu różnych nazw <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> właściwości.  
   
 ## <a name="retrieving-service-metadata"></a>Pobieranie metadanych usługi  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]można pobrać metadanych usługi za pomocą standardowych protokołów, takich jak usługi WS-MetadataExchange i HTTP. Oba te protokoły są obsługiwane przez <xref:System.ServiceModel.Description.MetadataExchangeClient> typu. Możesz pobrać metadanych usługi przy użyciu <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> typu, podając adres i powiązanie opcjonalne. Powiązanie używane przez <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> wystąpienie może być jednym z powiązań domyślne z <xref:System.ServiceModel.Description.MetadataExchangeBindings> klasy statycznej, powiązanie dostarczone przez użytkownika lub powiązanie ładowane z konfiguracji punktu końcowego dla `IMetadataExchange` kontraktu. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Również może rozpoznać adres HTTP URL odwołania do metadanych za pomocą <xref:System.Net.HttpWebRequest> typu.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] można pobrać metadanych usługi za pomocą standardowych protokołów, takich jak usługi WS-MetadataExchange i HTTP. Oba te protokoły są obsługiwane przez <xref:System.ServiceModel.Description.MetadataExchangeClient> typu. Możesz pobrać metadanych usługi przy użyciu <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> typu, podając adres i powiązanie opcjonalne. Powiązanie używane przez <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> wystąpienie może być jednym z powiązań domyślne z <xref:System.ServiceModel.Description.MetadataExchangeBindings> klasy statycznej, powiązanie dostarczone przez użytkownika lub powiązanie ładowane z konfiguracji punktu końcowego dla `IMetadataExchange` kontraktu. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Również może rozpoznać adres HTTP URL odwołania do metadanych za pomocą <xref:System.Net.HttpWebRequest> typu.  
   
  Domyślnie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> wystąpienia jest powiązany z pojedynczym <xref:System.ServiceModel.Channels.ChannelFactoryBase> wystąpienia. Możesz zmienić lub Zastąp <xref:System.ServiceModel.Channels.ChannelFactoryBase> wystąpienie używane przez <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> przez zastąpienie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> metoda wirtualna. Analogicznie, można zmienić lub Zastąp <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> wystąpienie używane przez <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> na wysyłanie żądań HTTP/GET przez zastąpienie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> metoda wirtualna.  
   

@@ -1,18 +1,19 @@
 ---
-title: "DotNet — Dodaj polecenie odwołanie - .NET Core interfejsu wiersza polecenia"
-description: "Dotnet Dodaj odwołanie polecenie zapewnia to wygodny sposób, aby dodać odwołania projektu do projektu."
+title: DotNet — Dodaj polecenie odwołanie - .NET Core interfejsu wiersza polecenia
+description: Dotnet Dodaj odwołanie polecenie zapewnia to wygodny sposób, aby dodać odwołania projektu do projektu.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/19/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 9a79468168979a7c89efe48e11175f926e39cf4f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c82696eee2fbe4bbad86e59cf5de1c2e74d048f6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-add-reference"></a>DotNet — Dodaj odwołanie
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet add reference`-Dodaje odwołania do projektu do projektu (P2P).
+`dotnet add reference` -Dodaje odwołania do projektu do projektu (P2P).
 
 ## <a name="synopsis"></a>Streszczenie
 

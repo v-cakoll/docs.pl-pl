@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: ''
+caps.latest.revision: 42
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bindings-and-security"></a>Powiązania i zabezpieczenia
 Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferują możliwość szybkiego program [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. Ten temat ułatwia wybierz prawa powiązanie dla wymagania w zakresie zabezpieczeń.  
@@ -56,7 +56,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
 -   Profil zabezpieczeń podstawowe, zgodnie z definicją w WS-I.  
   
- Domyślnie to powiązanie nie jest bezpieczne. Zaprojektowano go na potrzeby współdziałania z usługami ASMX. Po włączeniu zabezpieczeń powiązania jest przeznaczona dla bezproblemowe współdziałanie z mechanizmów zabezpieczeń Internet Information Services (IIS), takich jak uwierzytelnianie podstawowe, szyfrowane i zintegrowane zabezpieczenia systemu Windows. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). To powiązanie obsługuje następujące funkcje:  
+ Domyślnie to powiązanie nie jest bezpieczne. Zaprojektowano go na potrzeby współdziałania z usługami ASMX. Po włączeniu zabezpieczeń powiązania jest przeznaczona dla bezproblemowe współdziałanie z mechanizmów zabezpieczeń Internet Information Services (IIS), takich jak uwierzytelnianie podstawowe, szyfrowane i zintegrowane zabezpieczenia systemu Windows. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). To powiązanie obsługuje następujące funkcje:  
   
 -   Zabezpieczenia transportu dla protokołu HTTPS.  
   
@@ -64,7 +64,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
 -   WS-Security.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, i <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, i <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
  W kodzie, użyj <xref:System.ServiceModel.WSHttpBinding> klasy; w konfiguracji, użyj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -77,7 +77,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
 -   HTTPS transportu ochrony z protokołu SOAP wiadomości poświadczeń zabezpieczeń w celu uwierzytelniania wywołującego.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, i <xref:System.ServiceModel.HttpProxyCredentialType>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, i <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
  W kodzie, użyj <xref:System.ServiceModel.WSDualHttpBinding> klasy; w konfiguracji, użyj [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -102,7 +102,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
     -   Podawanie poświadczeń usługi negocjowane z usługi w ramach instalacji kanału.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> i <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.WSDualHttpSecurity> i <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  W kodzie, użyj <xref:System.ServiceModel.NetTcpBinding> klasy; w konfiguracji, użyj [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -125,7 +125,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
 -   Transport zabezpieczeń z poświadczeniami komunikatu — poufności i integralności udostępniane przez zabezpieczeń TLS (Transport Layer) za pośrednictwem TCP i poświadczenia do autoryzacji dostarczane przez usługę WS-Security.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, i <xref:System.ServiceModel.MessageCredentialType>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, i <xref:System.ServiceModel.MessageCredentialType>.  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
  W kodzie, użyj <xref:System.ServiceModel.NetNamedPipeBinding> klasy; w konfiguracji, użyj [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
@@ -144,7 +144,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
 -   Uwierzytelnianie przy użyciu zabezpieczeń systemu Windows.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, i <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, i <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  W kodzie, użyj <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> klasy; w konfiguracji, użyj [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
@@ -157,7 +157,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
 -   Zabezpieczenia transportu usługi MSMQ (transportu).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> i <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.NetMsmqSecurity> i <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  W kodzie, użyj <xref:System.ServiceModel.NetMsmqBinding> klasy; w konfiguracji, użyj [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -178,17 +178,17 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> Poświadczeń jest obsługiwana tylko wtedy, gdy tryb zabezpieczeń jest ustawiona jako <xref:System.ServiceModel.NetMsmqSecurityMode.Both> lub <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> i <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MessageSecurityOverMsmq> i <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  W kodzie, użyj <xref:System.ServiceModel.WSFederationHttpBinding> klasy; w konfiguracji, użyj [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Domyślnie używa tego powiązania WS-Security (Zabezpieczenia warstwy komunikat).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federacyjna](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, i <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ Aby uzyskać więcej informacji, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, i <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Powiązania niestandardowe  
- Jeśli żaden z powiązania dostarczane przez system spełnia wymagania, można utworzyć niestandardowego powiązania z elementu powiązania zabezpieczeń niestandardowych. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Możliwości zabezpieczeń wiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Jeśli żaden z powiązania dostarczane przez system spełnia wymagania, można utworzyć niestandardowego powiązania z elementu powiązania zabezpieczeń niestandardowych. Aby uzyskać więcej informacji, zobacz [możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Opcje  
  W poniższej tabeli przedstawiono funkcje oferowane w ustawieniu trybu zabezpieczeń, oznacza to, wyświetlane są funkcje dostępne podczas tryb zabezpieczeń jest ustawiony na `Transport`, `Message`, lub `TransportWithMessageCredential`. Użyj tej tabeli w celu znalezienia funkcji zabezpieczeń wymaganych przez aplikację.  
@@ -218,12 +218,12 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
 |Typ|Opis|  
 |----------|-----------------|  
 |Brak|Określa, że klient musi przedstawiać żadnego poświadczenia. Umożliwia to anonimowym klientem.|  
-|Podstawowy|Uwierzytelnianie podstawowe. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 — uwierzytelnianie HTTP: Basic i uwierzytelniania szyfrowanego, dostępne pod adresem [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Skrót|Uwierzytelnianie szyfrowane. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 — uwierzytelnianie HTTP: Basic i uwierzytelniania szyfrowanego, dostępne pod adresem [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Podstawowy|Uwierzytelnianie podstawowe. Aby uzyskać więcej informacji, zobacz dokument RFC 2617 — uwierzytelnianie HTTP: Basic i uwierzytelniania szyfrowanego, dostępne pod adresem [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Skrót|Uwierzytelnianie szyfrowane. Aby uzyskać więcej informacji, zobacz dokument RFC 2617 — uwierzytelnianie HTTP: Basic i uwierzytelniania szyfrowanego, dostępne pod adresem [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Uwierzytelnianie NT LAN Manager (NTLM).|  
 |Windows|Uwierzytelnianie systemu Windows.|  
 |certyfikat|Uwierzytelnianie jest wykonywane przy użyciu certyfikatu.|  
-|IssuedToken|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą tokenu wystawiony przez usługę tokenu zabezpieczającego przez [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą tokenu wystawiony przez usługę tokenu zabezpieczającego przez [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Aby uzyskać więcej informacji, zobacz [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Poświadczenia klienta komunikatu w powiązaniach  
  W poniższej tabeli wymieniono dostępne typy poświadczeń klienta, gdy użycie powiązania w trybie zabezpieczeń wiadomości.  

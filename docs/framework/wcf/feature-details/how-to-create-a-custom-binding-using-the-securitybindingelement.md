@@ -1,13 +1,13 @@
 ---
-title: "Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement"
-ms.custom: 
+title: 'Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zawiera kilka powiązania dostarczane przez system, które można skonfigurować, ale nie udostępniają pełną elastyczność podczas konfigurowania wszystkich zabezpieczeń opcji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawia sposób tworzenia niestandardowego powiązania bezpośrednio z powiązania poszczególnych elementów i zaznacza niektórych ustawień zabezpieczeń, które można określić podczas tworzenia takiego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie niestandardowych powiązań, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera kilka powiązania dostarczane przez system, które można skonfigurować, ale nie udostępniają pełną elastyczność podczas konfigurowania wszystkich zabezpieczeń opcji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawia sposób tworzenia niestandardowego powiązania bezpośrednio z powiązania poszczególnych elementów i zaznacza niektórych ustawień zabezpieczeń, które można określić podczas tworzenia takiego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie niestandardowych powiązań, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement>nie obsługuje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanału kształtu, który jest używany domyślny kanał kształtu przez TCP podczas transportu <xref:System.ServiceModel.TransferMode> ma ustawioną wartość <xref:System.ServiceModel.TransferMode.Buffered>. Należy ustawić <xref:System.ServiceModel.TransferMode> do <xref:System.ServiceModel.TransferMode.Streamed> aby można było używać <xref:System.ServiceModel.Channels.SecurityBindingElement> w tym scenariuszu.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> nie obsługuje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanału kształtu, który jest używany domyślny kanał kształtu przez TCP podczas transportu <xref:System.ServiceModel.TransferMode> ma ustawioną wartość <xref:System.ServiceModel.TransferMode.Buffered>. Należy ustawić <xref:System.ServiceModel.TransferMode> do <xref:System.ServiceModel.TransferMode.Streamed> aby można było używać <xref:System.ServiceModel.Channels.SecurityBindingElement> w tym scenariuszu.  
   
 ## <a name="creating-a-custom-binding"></a>Tworzenie niestandardowego powiązania  
  W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składają się wszystkie powiązania z *elementów wiązania*. Każdy element powiązania jest pochodną <xref:System.ServiceModel.Channels.BindingElement> klasy. Standardowe powiązania dostarczane przez system elementy powiązania są tworzone i skonfigurowany, mimo że można dostosowywać niektóre ustawienia właściwości.  
@@ -88,9 +88,9 @@ ms.lasthandoff: 12/22/2017
 |||Protokół SSL lub StreamSecurityBindingElement systemu Windows|Protokół SSL lub StreamSecurityBindingElement systemu Windows|Protokół SSL lub StreamSecurityBindingElement systemu Windows|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Należy pamiętać, że wiele ustawień można skonfigurować na SecurityBindingElements. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Należy pamiętać, że wiele ustawień można skonfigurować na SecurityBindingElements. Aby uzyskać więcej informacji, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bezpieczne konwersacje i bezpieczne sesje](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Aby uzyskać więcej informacji, zobacz [Secure konwersacje i sesje Secure](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Procedury  
   

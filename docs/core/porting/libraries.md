@@ -1,21 +1,19 @@
 ---
 title: Eksportowanie do platformy .NET Core - bibliotek
-description: "Informacje o porcie projektów bibliotek z programu .NET Framework do platformy .NET Core."
-keywords: .NET, .NET Core
+description: Informacje o porcie projektów bibliotek z programu .NET Framework do platformy .NET Core.
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ca71ed4b2423846db4b2c2fc0ba87c49330b7d14
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>Eksportowanie do platformy .NET Core - bibliotek
 
@@ -53,7 +51,7 @@ Kilka technologie dostępne do bibliotek .NET Framework nie są dostępne do uż
 
 Tak, ponieważ nie jest obecnie zaimplementowana interfejsu API lub technologii nie oznacza, że celowo ma nieobsługiwany. Problem w pliku [problemy z repozytorium dotnet/corefx](https://github.com/dotnet/corefx/issues) w witrynie GitHub, aby poprosić o określonych interfejsów API i technologii. [Eksportowanie żądań w problemy](https://github.com/dotnet/corefx/labels/port-to-core) są oznaczone ikoną z `port-to-core` etykiety.
 
-### <a name="appdomains"></a>AppDomains
+### <a name="appdomains"></a>Domen aplikacji
 
 Elementami AppDomain izolowania aplikacji od siebie nawzajem. Domen wymagają obsługi środowiska uruchomieniowego i zazwyczaj są stosunkowo drogie. Nie jest zaimplementowana w .NET Core. Nie planujemy dodanie tej funkcji w przyszłości. Kod izolacji, zaleca się osobne procesy lub przy użyciu kontenery alternatywnym. Dynamiczne ładowanie zestawów, zaleca się nowe <xref:System.Runtime.Loader.AssemblyLoadContext> klasy.
 

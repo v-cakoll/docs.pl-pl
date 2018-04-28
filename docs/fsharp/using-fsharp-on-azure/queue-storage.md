@@ -1,20 +1,17 @@
 ---
-title: "Rozpoczynanie pracy z magazynem kolejek Azure przy użyciu języka F #"
-description: "Kolejek platformy Azure zapewniają niezawodne, asynchronicznego wysyłanie komunikatów między składnikami aplikacji. Chmury obsługi komunikatów włącza składniki aplikacji można skalować niezależnie."
-keywords: visual f#, f#, functional programming, .NET, .NET Core, Azure
+title: 'Rozpoczynanie pracy z magazynem kolejek Azure przy użyciu języka F #'
+description: Kolejek platformy Azure zapewniają niezawodne, asynchronicznego wysyłanie komunikatów między składnikami aplikacji. Chmury obsługi komunikatów włącza składniki aplikacji można skalować niezależnie.
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: 50b2d69a1753add688aa14c3314a0ca2df9f03a4
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: bd49fd0f0e8d91449443051ab9a4ffc2d2638e11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Rozpoczynanie pracy z magazynem kolejek Azure przy użyciu języka F # #
 
@@ -144,6 +141,6 @@ Teraz, kiedy znasz już podstawy magazynu kolejek, skorzystaj z poniższych link
 
 - [Interfejsy API usługi Azure Storage dla platformy .NET](/dotnet/api/overview/azure/storage)
 - [Dostawca typów magazynu Azure](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Azure Storage Team Blog](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Blog zespołu usługi Magazyn Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Konfigurowanie parametrów połączenia usługi Azure Storage](/azure/storage/common/storage-configure-connection-string)
 - [Dokumentacja interfejsu API REST usług magazynu Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

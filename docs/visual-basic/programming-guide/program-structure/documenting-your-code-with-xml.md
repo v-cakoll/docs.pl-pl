@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Dokumentowanie kodu za pomocą XML (Visual Basic)
 W języku Visual Basic można udokumentować kod za pomocą XML  
@@ -40,7 +40,7 @@ W języku Visual Basic można udokumentować kod za pomocą XML
   
     -   `cref` Atrybut może zostać dołączony do żadnych znacznik w celu zapewnienia odwołania do elementu kodu. Kompilator sprawdza, czy istnieje tego elementu kodu. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie. Kompilator również szanuje żadnego `Imports` instrukcje podczas wyszukiwania dla typu opisanego w `cref` atrybutu.  
   
-    -   \<Podsumowania > tag jest używany przez funkcję IntelliSense w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Aby wyświetlić dodatkowe informacje na temat typu lub elementu członkowskiego.  
+    -   \<Podsumowania > tag jest używany przez funkcję IntelliSense w Visual Studio Aby wyświetlić dodatkowe informacje na temat typu lub elementu członkowskiego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Aby uzyskać więcej informacji na temat tworzenia pliku XML z komentarzy do dokumentacji zobacz następujące tematy:  

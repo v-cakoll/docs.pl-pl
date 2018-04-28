@@ -1,0 +1,11 @@
+### <a name="change-in-behavior-for-taskwaitall-methods-with-time-out-arguments"></a>Zmiana zachowania Task.WaitAll metod z argumentami limitu czasu
+
+|   |   |
+|---|---|
+|Szczegóły|Zachowanie Task.WaitAll dokonano bardziej spójny w .NET 4.5.In programu .NET Framework 4, te metody niespójnie działa. Gdy upłynął limit czasu, jeśli jeden lub więcej zadań, zostały ukończone lub anulowane przed wywołaniem metody, metoda zwrócił <xref:System.AggregateException?displayProperty=name> wyjątku. Gdy upłynął limit czasu, jeśli żadne zadania zostały ukończone lub anulowane przed wywołaniem metody, ale jedno lub więcej zadań wprowadzony te stany po wywołaniu metody, Metoda zwróciła wartość false.<br/><br/>W programie .NET Framework 4.5, te przeciążenia metody zwrócić teraz wartość false, jeśli wszystkie zadania nadal działają w przypadku wygasłych interwał limitu czasu i ich throw <xref:System.AggregateException?displayProperty=name> wyjątek tylko wtedy, gdy wejściowych zadanie zostało anulowane (niezależnie od tego, czy jest ono przed lub po — metoda Wywołaj) i nadal są uruchomione nie inne zadania.|
+|Sugestia|Jeśli <xref:System.AggregateException?displayProperty=name> przechwycono trwa jako sposób wykrywania zadanie, które zostało anulowane przed wywołaniem metod WaitAll wywoływaną, kod zrobić zamiast tego samego wykrywania za pomocą właściwości IsCanceled (na przykład:. Any(t =&gt; t.IsCanceled)) od czasu .NET 4.6 tylko zgłosi w tym przypadku jeśli wszystkie oczekiwano czynności zostały wykonane przed limit czasu.|
+|Zakres|Pomocnicza|
+|Wersja|4.5|
+|Typ|Środowisko uruchomieniowe|
+|Dotyczy interfejsów API|<ul><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
+

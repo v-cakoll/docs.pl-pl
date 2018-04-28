@@ -1,30 +1,32 @@
 ---
-title: "Zabezpieczenia komunikatów z klientem dysponującym certyfikatem"
-ms.custom: 
+title: Zabezpieczenia komunikatów z klientem dysponującym certyfikatem
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bb7efa82e14f899ddcbb2fdfd26eba2023bdd61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>Zabezpieczenia komunikatów z klientem dysponującym certyfikatem
-Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klient i usługa zabezpieczone przy użyciu trybu zabezpieczenia wiadomości. Klient i usługa są uwierzytelniane za pomocą certyfikatów. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klient i usługa zabezpieczone przy użyciu trybu zabezpieczenia wiadomości. Klient i usługa są uwierzytelniane za pomocą certyfikatów. Aby uzyskać więcej informacji, zobacz [rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
  Przykładową aplikację, zobacz [certyfikat zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
@@ -33,7 +35,7 @@ Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo
 |Cechy|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Komunikat|  
-|Współdziałanie|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tylko|  
+|Współdziałanie|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tylko|  
 |Uwierzytelnianie (serwer)|Za pomocą certyfikatu usługi|  
 |Uwierzytelnianie (klient)|Przy użyciu certyfikatu klienta|  
 |Integralność|Tak|  
@@ -112,7 +114,7 @@ Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następująca konfiguracja Określa certyfikat klienta, używając zachowania punktu końcowego. Aby uzyskać więcej informacji o certyfikatach, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Kod używa również <`identity`> elementu, aby określić systemu nazw domen (DNS) tożsamości serwera oczekiwanego. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]tożsamości, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Następująca konfiguracja Określa certyfikat klienta, używając zachowania punktu końcowego. Aby uzyskać więcej informacji o certyfikatach, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Kod używa również <`identity`> elementu, aby określić systemu nazw domen (DNS) tożsamości serwera oczekiwanego. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] tożsamości, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

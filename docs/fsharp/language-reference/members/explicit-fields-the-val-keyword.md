@@ -1,20 +1,17 @@
 ---
-title: "Pola jawne: val — Słowo kluczowe (F#)"
-description: "Dowiedz się więcej o F # \"val\" — słowo kluczowe, które służy do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury bez zainicjowania typu."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Pola jawne: val — Słowo kluczowe (F#)'
+description: 'Dowiedz się więcej o F # "val" — słowo kluczowe, które służy do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury bez zainicjowania typu.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Pola jawne: val — Słowo kluczowe
 
@@ -49,7 +46,7 @@ Dla pola modyfikowalnego reprezentacja skompilowana .NET jest polem .NET.
 
 
 >[!WARNING] 
-`Note`Przestrzeń nazw .NET Framework `System.ComponentModel` zawiera atrybut, który ma taką samą nazwę. Informacje dla tego atrybutu, zobacz `System.ComponentModel.DefaultValueAttribute`.
+`Note` Przestrzeń nazw .NET Framework `System.ComponentModel` zawiera atrybut, który ma taką samą nazwę. Informacje dla tego atrybutu, zobacz `System.ComponentModel.DefaultValueAttribute`.
 
 
 Poniższy kod przedstawia użycie pola jawne oraz do porównania, `let` powiązania w klasie, która ma podstawowego konstruktora. Należy pamiętać, że `let`— pole powiązane `myInt1` jest prywatny. Gdy `let`— pole powiązane `myInt1` jest wywoływany przez metodę elementu członkowskiego własnego identyfikatora `this` nie jest wymagana. Jednak gdy utworzono odwołanie do pola jawne `myInt2` i `myString`, własnego identyfikatora jest wymagana.
@@ -85,4 +82,4 @@ Gdy słowa kluczowe `member val` występować razem w definicji typu, jest autom
 
 [Elementy członkowskie](index.md)
 
-[`let`Powiązania w klasach](let-bindings-in-classes.md)
+[`let` Powiązania w klasach](let-bindings-in-classes.md)

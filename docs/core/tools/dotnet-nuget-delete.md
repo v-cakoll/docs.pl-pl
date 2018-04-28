@@ -4,15 +4,16 @@ description: Polecenie dotnet-nuget-delete Usuwa lub unlists pakietu z serwera.
 author: karann-msft
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 3c09556fe90a5c447b181bc1ac5b36f014399e4f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 1e81501d526ae92336b808f98c7c192b55e89f98
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-nuget-delete"></a>Usuń nuget DotNet
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet nuget delete`— Usuwa lub unlists pakietu z serwera.
+`dotnet nuget delete` — Usuwa lub unlists pakietu z serwera.
 
 ## <a name="synopsis"></a>Streszczenie
 

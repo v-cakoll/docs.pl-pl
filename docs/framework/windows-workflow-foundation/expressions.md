@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 293e59bd53607b7ca4c3d9075cb4bb0c4be4d4da
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 18c64daca1532bb626a59e5f01528e207e6b6b87
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="expressions"></a>Wyrażenia
 Wyrażenie Windows Workflow Foundation (WF) to żadnych działań, które zwraca wynik. Wszystkie działania wyrażeń pośrednio pochodzi od <xref:System.Activities.Activity%601>, który zawiera <xref:System.Activities.OutArgument> właściwości o nazwie <xref:System.Activities.Activity%601.Result%2A> jako wartości zwracane działania. [!INCLUDE[wf1](../../../includes/wf1-md.md)] jest dostarczany z szeroką gamę działania wyrażeń z prostego, takich jak te <xref:System.Activities.Expressions.VariableValue%601> i <xref:System.Activities.Expressions.VariableReference%601>, które zapewniają dostęp do zmiennej w jednym przepływie pracy za pomocą operatora działań dla działań złożonych takich jak <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> i <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> tej oferty dostęp do rozmaitych języka Visual Basic w celu utworzenia wyniku. Można tworzyć dodatkowe wyrażenie działania przez wynikających z <xref:System.Activities.CodeActivity%601> lub <xref:System.Activities.NativeActivity%601>.  
@@ -27,7 +27,7 @@ Wyrażenie Windows Workflow Foundation (WF) to żadnych działań, które zwraca
  Korzysta z projektanta przepływów pracy <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> i <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> dla wszystkie wyrażenia w projektach Visual Basic i <xref:Microsoft.CSharp.Activities.CSharpValue%601> i <xref:Microsoft.CSharp.Activities.CSharpReference%601> dla wyrażenia w C# projektów przepływu pracy.  
   
 > [!NOTE]
->  Obsługa wyrażeń C# w projektach przepływu pracy została wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C# wyrażenia](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+>  Obsługa wyrażeń C# w projektach przepływu pracy została wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby uzyskać więcej informacji, zobacz [wyrażeń C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  Utworzone przez projektanta przepływów pracy są zapisywane w kodzie XAML, gdzie wyrażenia są wyświetlane w nawiasach kwadratowych, jak w poniższym przykładzie.  
   

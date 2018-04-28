@@ -1,20 +1,17 @@
 ---
 title: Tablice (F#)
-description: "Dowiedz się, jak utworzyć i korzystanie z tablic w języku programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak utworzyć i korzystanie z tablic w języku programowania w języku F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>Tablice
 
@@ -68,7 +65,7 @@ Wszystkie tablice F # jest typem .NET Framework <xref:System.Array?displayProper
 Moduł biblioteki [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) obsługuje operacje na tablice jednowymiarowe. Moduły `Array2D`, `Array3D`, i `Array4D` zawierają funkcje obsługujące operacje w tablicach dwa, trzy i czterema wymiarami. Można utworzyć tablic o randze większej niż cztery przy użyciu <xref:System.Array?displayProperty=nameWithType>.
 
 ### <a name="simple-functions"></a>Proste funkcje
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)pobiera element. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)zapewnia długość tablicy. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)Ustawia element określonej wartości. W poniższym przykładzie przedstawiono użycie tych funkcji.
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) pobiera element. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) zapewnia długość tablicy. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Ustawia element określonej wartości. W poniższym przykładzie przedstawiono użycie tych funkcji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ Dane wyjściowe są następujące:
 
 ### <a name="functions-that-create-arrays"></a>Funkcji służących do tworzenia tablic
 
-Niektóre funkcje tworzenie tablic bez konieczności istniejącej tablicy. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)Tworzy nowy tablica, która nie zawiera żadnych elementów. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)tworzy tablicę określonego rozmiaru i ustawia wszystkie elementy podanych wartości. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)tworzy tablicę, wymiar i funkcji, aby wygenerować elementy. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)tworzy tablicę, w której wszystkie elementy są inicjowane z wartością zero dla typu tablicy. Poniższy kod przedstawia tych funkcji.
+Niektóre funkcje tworzenie tablic bez konieczności istniejącej tablicy. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) Tworzy nowy tablica, która nie zawiera żadnych elementów. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) tworzy tablicę określonego rozmiaru i ustawia wszystkie elementy podanych wartości. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) tworzy tablicę, wymiar i funkcji, aby wygenerować elementy. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) tworzy tablicę, w której wszystkie elementy są inicjowane z wartością zero dla typu tablicy. Poniższy kod przedstawia tych funkcji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)Tworzy nową macierz, który zawiera elementy, które są kopiowane z istniejącej tablicy. Zwróć uwagę, że kopia kopia pobieżna, co oznacza, że jeśli typ elementu jest typem referencyjnym, skopiowane tylko odwołanie, nie źródłowego obiektu. Pokazano to w poniższym przykładzie kodu.
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) Tworzy nową macierz, który zawiera elementy, które są kopiowane z istniejącej tablicy. Zwróć uwagę, że kopia kopia pobieżna, co oznacza, że jeśli typ elementu jest typem referencyjnym, skopiowane tylko odwołanie, nie źródłowego obiektu. Pokazano to w poniższym przykładzie kodu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ Dane wyjściowe poprzedniego kodu jest następujący:
 
 Ciąg `Test1` pojawia się tylko w pierwszym tablicy, ponieważ operacja tworzenia nowego elementu zastępuje odwołania w `firstArray` , ale nie ma wpływu na oryginalnym odwołania na pusty ciąg, który jest nadal znajdują się w `secondArray`. Ciąg `Test2` pojawia się w obu tablic, ponieważ `Insert` operacji na <xref:System.Text.StringBuilder?displayProperty=nameWithType> typu ma wpływ na podstawową <xref:System.Text.StringBuilder?displayProperty=nameWithType> obiektu, który odwołuje się do obu tablic.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)generuje nowy tablicy Podzakres tablicy. Należy określić Podzakres przez podanie początkowego indeksu i długości. Poniższy kod przedstawia użycie `Array.sub`.
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) generuje nowy tablicy Podzakres tablicy. Należy określić Podzakres przez podanie początkowego indeksu i długości. Poniższy kod przedstawia użycie `Array.sub`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ Dane wyjściowe zawierają czy subarray rozpoczyna się od elementu 5 i zawiera 
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)Tworzy nową macierz przez dwie tablice istniejące połączenie.
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) Tworzy nową macierz przez dwie tablice istniejące połączenie.
 
 Poniższy kod przedstawia **Array.append —**.
 
@@ -126,7 +123,7 @@ Poniżej przedstawiono dane wyjściowe poprzedniego kodu.
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)wybiera elementy tablicy do uwzględnienia w nowej tablicy. Poniższy kod przedstawia `Array.choose`. Należy pamiętać, że typ elementu tablicy nie trzeba pasuje do typu wartość zwracana w typ opcji. W tym przykładzie jest typ elementu `int` i opcją jest wynikiem funkcji wielomianu `elem*elem - 1`, jako zmiennoprzecinkową numer punktu.
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) wybiera elementy tablicy do uwzględnienia w nowej tablicy. Poniższy kod przedstawia `Array.choose`. Należy pamiętać, że typ elementu tablicy nie trzeba pasuje do typu wartość zwracana w typ opcji. W tym przykładzie jest typ elementu `int` i opcją jest wynikiem funkcji wielomianu `elem*elem - 1`, jako zmiennoprzecinkową numer punktu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ Poniżej przedstawiono dane wyjściowe poprzedniego kodu.
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)Uruchamia funkcję na każdy element tablicy istniejącej tablicy, a następnie zbiera elementy generowane przez funkcję i łączy je do nowej tablicy. Poniższy kod przedstawia `Array.collect`.
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) Uruchamia funkcję na każdy element tablicy istniejącej tablicy, a następnie zbiera elementy generowane przez funkcję i łączy je do nowej tablicy. Poniższy kod przedstawia `Array.collect`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ Poniżej przedstawiono dane wyjściowe poprzedniego kodu.
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)pobiera sekwencję tablic i łączy je do jednej macierzy. Poniższy kod przedstawia `Array.concat`.
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) pobiera sekwencję tablic i łączy je do jednej macierzy. Poniższy kod przedstawia `Array.concat`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ Poniżej przedstawiono dane wyjściowe poprzedniego kodu.
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)pobiera funkcję warunek typu Boolean i generuje nowy tablica, która zawiera tylko elementy z tablicy wejściowej, dla którego warunku jest PRAWDA. Poniższy kod przedstawia `Array.filter`.
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) pobiera funkcję warunek typu Boolean i generuje nowy tablica, która zawiera tylko elementy z tablicy wejściowej, dla którego warunku jest PRAWDA. Poniższy kod przedstawia `Array.filter`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ Poniżej przedstawiono dane wyjściowe poprzedniego kodu.
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)Tworzy nową macierz odwracanie kolejności istniejącej tablicy. Poniższy kod przedstawia `Array.rev`.
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) Tworzy nową macierz odwracanie kolejności istniejącej tablicy. Poniższy kod przedstawia `Array.rev`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>Wyszukiwanie tablic
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)przyjmuje funkcja logiczna i zwraca pierwszy element, dla którego funkcja zwraca `true`, lub zgłasza <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> Jeśli zostanie znaleziony żaden element, który spełnia warunek. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)przypomina `Array.find`, ale zwraca indeks elementu zamiast elementu.
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) przyjmuje funkcja logiczna i zwraca pierwszy element, dla którego funkcja zwraca `true`, lub zgłasza <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> Jeśli zostanie znaleziony żaden element, który spełnia warunek. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) przypomina `Array.find`, ale zwraca indeks elementu zamiast elementu.
 
 Poniższy kod używa `Array.find` i `Array.findIndex` zlokalizować liczby, która jest idealny kwadrat i doskonałe modułu.
 
@@ -346,7 +343,7 @@ Dane wyjściowe są następujące:
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)przypomina `Array.find`, ale jej wynikiem jest typ opcji i zwraca `None` Jeśli zostanie znaleziony żaden element. `Array.tryFind`należy użyć zamiast `Array.find` Jeśli nie wiesz, czy pasujący element w tablicy. Podobnie [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) przypomina [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) z tą różnicą, że typ opcji jest zwracana wartość. Jeśli element nie zostanie znaleziony, ta opcja jest `None`.
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) przypomina `Array.find`, ale jej wynikiem jest typ opcji i zwraca `None` Jeśli zostanie znaleziony żaden element. `Array.tryFind` należy użyć zamiast `Array.find` Jeśli nie wiesz, czy pasujący element w tablicy. Podobnie [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) przypomina [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) z tą różnicą, że typ opcji jest zwracana wartość. Jeśli element nie zostanie znaleziony, ta opcja jest `None`.
 
 Poniższy kod przedstawia użycie `Array.tryFind`. Ten kod jest zależny od poprzedniego kodu.
 
@@ -380,7 +377,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 Użyj [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) lub [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) można pobrać elementu maksymalnego lub minimalnego, jeśli typ elementu obsługuje. Podobnie [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) i [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) Zezwalaj funkcja do wykonania, najpierw, możliwe, że do przekształcenia do typu, który obsługuje porównania.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)Dodaje elementy tablicy i [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) wywołuje funkcję dla każdego elementu i dodaje wyniki ze sobą.
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) Dodaje elementy tablicy i [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) wywołuje funkcję dla każdego elementu i dodaje wyniki ze sobą.
 
 Aby wykonać funkcję dla każdego elementu w tablicy bez przechowywania zwracanych wartości, należy użyć [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). Dla funkcji z dwiema tablicami o równej długości obejmujące użyj [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Jeśli należy zapewnić tablicę wyniki funkcji, użyj [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) lub [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), który działa na dwóch tablic naraz.
 
@@ -392,7 +389,7 @@ Te funkcje umożliwiające wykonywanie obliczeń odpowiadają funkcji należący
 
 ### <a name="modifying-arrays"></a>Modyfikowanie tablic
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)Ustawia element określonej wartości. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)Określa zakres elementów w tablicy do określonej wartości. Poniższy kod stanowi przykład `Array.fill`.
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Ustawia element określonej wartości. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) Określa zakres elementów w tablicy do określonej wartości. Poniższy kod stanowi przykład `Array.fill`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Można użyć [ `Array.blit` ](https://msdn.microsoft.com/library/675e13e4-7fb9-
 
 ### <a name="converting-to-and-from-other-types"></a>Konwertowanie do i z innych typów
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)tworzy tablicę z listy. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)tworzy tablicę z sekwencji. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)i [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) konwertować na inne typy kolekcji z typu tablicy.
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) tworzy tablicę z listy. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) tworzy tablicę z sekwencji. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) i [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) konwertować na inne typy kolekcji z typu tablicy.
 
 ### <a name="sorting-arrays"></a>Sortowanie tablic
 
@@ -414,13 +411,13 @@ Użyj [ `Array.sort` ](https://msdn.microsoft.com/library/c6679075-e7eb-463c-9be
 
 ### <a name="arrays-and-tuples"></a>Tablice i spójnych kolekcji
 
-Funkcje [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) i [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) przekonwertować tablice par krotki krotek, tablic i na odwrót. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)i [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) przypominają one działać z krotek trzy elementy lub krotek trzech tablic.
+Funkcje [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) i [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) przekonwertować tablice par krotki krotek, tablic i na odwrót. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) i [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) przypominają one działać z krotek trzy elementy lub krotek trzech tablic.
 
 ## <a name="parallel-computations-on-arrays"></a>Równoległe obliczenia w tablicach
 
 Moduł [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-4050-9a5c-bcdb3f5cbb09) zawiera funkcje umożliwiające wykonywanie równoległe obliczenia w tablicach. Ten moduł nie jest dostępne w aplikacjach, które odnoszą się do wersji programu .NET Framework, przed w wersji 4.
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [F #; Typy](fsharp-types.md)

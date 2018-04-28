@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3f48de4b4073a6b34671b3eab5e07890790c71ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generowanie klienta programu WCF na podstawie metadanych usługi
 W tym temacie opisano sposób użycia różnych przełączników w Svcutil.exe do generowania klientów z dokumentów metadanych.  
@@ -60,7 +60,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/Language:\<języka >**|Określa język programowania do użycia podczas generowania kodu. Podaj albo nazwę języka zarejestrowany w pliku Machine.config lub w pełni kwalifikowaną nazwę klasy, która dziedziczy <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Wartości: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c ++, mc, cpp<br /><br /> Domyślne: csharp<br /><br /> Krótka forma: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Klasa CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/Language:\<języka >**|Określa język programowania do użycia podczas generowania kodu. Podaj albo nazwę języka zarejestrowany w pliku Machine.config lub w pełni kwalifikowaną nazwę klasy, która dziedziczy <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Wartości: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c ++, mc, cpp<br /><br /> Domyślne: csharp<br /><br /> Krótka forma: `/l`<br /><br /> Aby uzyskać więcej informacji, zobacz [CodeDomProvider klasy](http://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Wybieranie Namespace dla klienta  
   

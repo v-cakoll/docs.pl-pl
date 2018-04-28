@@ -1,20 +1,17 @@
 ---
-title: "let — Powiązania (F#)"
-description: "Dowiedz się, jak używać F # \"let\" powiązanie, co umożliwia skojarzenie identyfikatora z wartości lub funkcji."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: let — Powiązania (F#)
+description: 'Dowiedz się, jak używać F # "let" powiązanie, co umożliwia skojarzenie identyfikatora z wartości lub funkcji.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: bee69edc-d5ae-46bd-8b56-f02d97725d0d
-ms.openlocfilehash: a57c5572e4bb5a3777c928dd572b7a84d4f0a334
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2abc4e05f9f2977501f01f745062e2e7cd611f68
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings"></a>let — Powiązania
 
@@ -125,4 +122,4 @@ Aby uzyskać więcej informacji dotyczących modułów i kontroli dostępu, zoba
 
 [Funkcje](index.md)
 
-[`let`Powiązania w klasach](../members/let-bindings-in-classes.md)
+[`let` Powiązania w klasach](../members/let-bindings-in-classes.md)

@@ -1,20 +1,17 @@
 ---
-title: "Funkcje śródwierszowe (F#)"
-description: "Dowiedz się, jak używać F # funkcji śródwierszowych zintegrowanych bezpośrednio z kodu wywołującego."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Funkcje śródwierszowe (F#)
+description: 'Dowiedz się, jak używać F # funkcji śródwierszowych zintegrowanych bezpośrednio z kodu wywołującego.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3fa31178-08f8-463d-9d41-d29220a90027
-ms.openlocfilehash: 0489d411e2754eaab6a10ff0feb4405491b3b511
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.openlocfilehash: cb0addd1456af1ab97e249b9c5ece4d9f0818fa3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="inline-functions"></a>Funkcje śródwierszowe
 

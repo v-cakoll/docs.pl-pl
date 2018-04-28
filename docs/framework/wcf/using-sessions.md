@@ -1,13 +1,13 @@
 ---
 title: Korzystanie z sesji
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,25 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
-W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są powiązane z grupą wiadomości do konwersacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]sesje są inne niż dostępna w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji, obsługuje różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje, które sesji umożliwiają w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i sposobu ich używania.  
+W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są powiązane z grupą wiadomości do konwersacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sesje są inne niż dostępna w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji, obsługuje różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje, które sesji umożliwiają w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i sposobu ich używania.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Sesje w aplikacjach programu Windows Communication Foundation  
  Gdy kontrakt usługi określa, że wymaga ona sesji, umowy jest określenie, że wszystkie wywołania (to znaczy podstawowej wymiany komunikatów obsługujących wywołania) musi być częścią jednej konwersacji. Jeśli kontrakt Określa, że umożliwia sesji, ale nie wymaga jednego, klienci mogą łączyć się i albo ustanowienia sesji lub nie ustanowienia sesji. Jeśli sesja zakończy się oraz komunikat jest wysyłany za pośrednictwem tego samego kanału, który jest zwracany wyjątek.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]sesje mają następujące funkcje koncepcyjnej główne:  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sesje mają następujące funkcje koncepcyjnej główne:  
   
 -   Jawnie są inicjowane i został przerwany przez wywołanie aplikacji (klienta WCF).  
   
@@ -45,11 +45,11 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są po
   
  Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji i funkcji umożliwia, można zauważyć następujące różnice między tego rodzaju sesji i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sesji:  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]sesje są zawsze inicjowanych przez serwer.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sesje są zawsze inicjowanych przez serwer.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]sesje są niejawnie nieuporządkowaną.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sesje są niejawnie nieuporządkowaną.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]sesje udostępniają mechanizm magazynu danych ogólnych żądań.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sesje udostępniają mechanizm magazynu danych ogólnych żądań.  
   
  W tym temacie opisano:  
   
@@ -73,15 +73,15 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są po
 ## <a name="system-provided-session-types"></a>Typy sesji dostarczane przez system  
  Powiązanie opartymi na sesji obsługuje domyślne skojarzenie wystąpienia usługi z określoną sesją. Jednak różnych powiązania opartymi na sesji obsługuje różne funkcje oprócz włączenia opartymi na sesji sterowania wystąpień opisany wcześniej.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]udostępnia następujące rodzaje zachowanie aplikacji opartych na sesji:  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] udostępnia następujące rodzaje zachowanie aplikacji opartych na sesji:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> Obsługuje sesji na podstawie zabezpieczeń, w których oba końce elementu komunikacji przyjmują określonej bezpiecznej konwersacji. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Zabezpieczania usług](../../../docs/framework/wcf/securing-services.md). Na przykład <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> powiązanie, który zawiera pomocy technicznej dla sesji zabezpieczeń i sesje niezawodne, domyślnie używa tylko bezpiecznej sesji i podpisaniu wiadomości.  
+-   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> Obsługuje sesji na podstawie zabezpieczeń, w których oba końce elementu komunikacji przyjmują określonej bezpiecznej konwersacji. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md). Na przykład <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> powiązanie, który zawiera pomocy technicznej dla sesji zabezpieczeń i sesje niezawodne, domyślnie używa tylko bezpiecznej sesji i podpisaniu wiadomości.  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> Powiązanie obsługuje opartych na protokole TCP/IP sesji, aby upewnić się, skorelowanych wszystkie komunikaty dla tego połączenia na poziomie gniazda.  
   
--   <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> Element, który implementuje specyfikacji WS-ReliableMessaging, zapewnia obsługę niezawodne sesje, w których można skonfigurować komunikaty mają być dostarczone w kolejności i dokładnie, po sprawdzeniu, nawet wtedy, gdy są przesyłane komunikaty są odbierane wiadomości w wielu węzłach podczas konwersacji. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sesji niezawodnej](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+-   <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> Element, który implementuje specyfikacji WS-ReliableMessaging, zapewnia obsługę niezawodne sesje, w których można skonfigurować komunikaty mają być dostarczone w kolejności i dokładnie, po sprawdzeniu, nawet wtedy, gdy są przesyłane komunikaty są odbierane wiadomości w wielu węzłach podczas konwersacji. Aby uzyskać więcej informacji, zobacz [sesji niezawodnej](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
--   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> Powiązanie obsługuje sesje datagramu MSMQ. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+-   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> Powiązanie obsługuje sesje datagramu MSMQ. Aby uzyskać więcej informacji, zobacz [kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
  Ustawienie <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> właściwość nie określa typ sesji kontrakt wymaga, tylko że wymaga jednego.  
   
@@ -121,33 +121,33 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są po
 > [!NOTE]
 >  Domyślne zachowanie nosi podobieństwa do lokalnego konstruktory i destruktory, ale jest tylko wynik. Wszelkie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Operacja usługi może być inicjowanie zakończenia operacji i/lub w tym samym czasie. Ponadto w przypadku domyślne Inicjowanie operacji można wywołać dowolną liczbę razy w dowolnej kolejności. nie dodatkowych sesji są tworzone po ustanowić sesję i skojarzone z wystąpieniem, chyba że jawnie zarządzają okresem istnienia wystąpienia usługi (przez manipulowanie <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> obiektu). Na koniec stan jest skojarzony z sesji, a nie obiektu usługi.  
   
- Na przykład `ICalculatorSession` kontraktu użyty w poprzednim przykładzie wymaga, aby [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pierwsze wywołanie obiektu klienta `Clear` operacji przed innej operacji i że sesji z tym [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powinien obiektu klienta Kiedy wywołuje `Equals` operacji. Poniższy przykład kodu pokazuje kontraktu, która wymusza te wymagania. `Clear`Najpierw należy wywołać do zainicjowania sesji, i że kończenia sesji, gdy `Equals` jest wywoływana.  
+ Na przykład `ICalculatorSession` kontraktu użyty w poprzednim przykładzie wymaga, aby [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pierwsze wywołanie obiektu klienta `Clear` operacji przed innej operacji i że sesji z tym [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powinien obiektu klienta Kiedy wywołuje `Equals` operacji. Poniższy przykład kodu pokazuje kontraktu, która wymusza te wymagania. `Clear` Najpierw należy wywołać do zainicjowania sesji, i że kończenia sesji, gdy `Equals` jest wywoływana.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  Usługi nie są uruchamiane sesje z klientami. W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacje klienckie bezpośrednie relację między okres istnienia kanału opartymi na sesji i okresem istnienia sesji sam. Tak klienci tworzenia nowej sesji przez utworzenie nowych kanałów opartymi na sesji i zniszcz istniejące sesje, zamykając bezpiecznie kanały opartymi na sesji. Klient uruchamia sesję z punktem końcowym usługi wywołując jedną z następujących czynności:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>w kanale zwrócony przez wywołanie do <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> w kanale zwrócony przez wywołanie do <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] generowanych przez obiekt klient [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+-   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] generowanych przez obiekt klient [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 -   Operacja inicjujący w obu typów [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta (domyślnie wszystkie operacje są Inicjowanie). Po pierwszej operacji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta automatycznie otwiera kanału i inicjuje sesję.  
   
  Zazwyczaj klient kończy sesję przy użyciu punktu końcowego usługi wywołując jedną z następujących czynności:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>w kanale zwrócony przez wywołanie do <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> w kanale zwrócony przez wywołanie do <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] generowane przez Svcutil.exe obiektu klienta.  
+-   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] generowane przez Svcutil.exe obiektu klienta.  
   
 -   Trwa przerywanie działania operacji na obu typów [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta (domyślnie żadne operacje nie są przerywanie; kontrakt musi zawierać jawnie zakończenia operacji). Po pierwszej operacji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta automatycznie otwiera kanału i inicjuje sesję.  
   
  Przykłady można znaleźć [porady: Tworzenie usługi czy wymaga sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , jak również [domyślne zachowanie usługi](../../../docs/framework/wcf/samples/default-service-behavior.md) i [Instancing](../../../docs/framework/wcf/samples/instancing.md) próbek.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Klienci i sesji, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Klienci i sesji, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Sesje interakcję z ustawieniami InstanceContext  
- Brak interakcji między <xref:System.ServiceModel.SessionMode> wyliczenia w umowie i <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwość, która określa skojarzenie między kanałów i obiektów określonej usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sesje, tworzenie wystąpień i współbieżność](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+ Brak interakcji między <xref:System.ServiceModel.SessionMode> wyliczenia w umowie i <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwość, która określa skojarzenie między kanałów i obiektów określonej usługi. Aby uzyskać więcej informacji, zobacz [sesji, Instancing i współbieżność](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów InstanceContext  
  Można również sterować kanał opartymi na sesji lub połączenia jest skojarzony z którym <xref:System.ServiceModel.InstanceContext> obiektu przez siebie wykonanie tego skojarzenia. Pełny przykład, zobacz [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  

@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
 Mechanizmy zabezpieczeń transportu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] są zależne od powiązania i transportu są używane. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy, transport HTTP i podstawowego mechanizmu zabezpieczanie transportu Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, często nazywane HTTPS. W tym temacie omówiono mechanizmy zabezpieczeń transportu główne używane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania dostarczane przez system.  
@@ -72,10 +72,10 @@ Mechanizmy zabezpieczeń transportu [!INCLUDE[indigo1](../../../../includes/indi
  Odpowiada to zintegrowane uwierzytelnianie systemu Windows w usługach IIS. Po ustawieniu tej wartości serwer również powinien istnieć w domenie systemu Windows, który korzysta z protokołu Kerberos jako kontrolera domeny. Jeśli serwer nie jest w domenie kopii protokołu Kerberos lub system protokołu Kerberos nie powiedzie się, możesz użyć wartości NT LAN Manager (NTLM), opisane w następnej sekcji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [zintegrowane uwierzytelnianie systemu Windows w usługach IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], zobacz [usług IIS 7.0 Beta: Konfigurowanie certyfikatów serwerów w usługach IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Dzięki temu serwer służącego do uwierzytelniania NTLM, jeżeli protokół Kerberos nie powiedzie się. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Konfigurowanie usług IIS w [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [wymuszania uwierzytelnianie NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Aby uzyskać [!INCLUDE[iisver](../../../../includes/iisver-md.md)], uwierzytelnianie systemu Windows zawiera uwierzytelniania NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Usługi IIS 7.0 Beta: Konfigurowanie certyfikatów serwera w usługach IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Dzięki temu serwer służącego do uwierzytelniania NTLM, jeżeli protokół Kerberos nie powiedzie się. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Konfigurowanie usług IIS w [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [wymuszania uwierzytelnianie NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Aby uzyskać [!INCLUDE[iisver](../../../../includes/iisver-md.md)], uwierzytelnianie systemu Windows zawiera uwierzytelniania NTLM. Aby uzyskać więcej informacji, zobacz [usług IIS 7.0 Beta: Konfigurowanie certyfikatów serwerów w usługach IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> Klasy zaprojektowano pod kątem współpracy z usługami, które implementują WS-* specyfikacji. Zabezpieczenia transportu dla tego powiązania jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP lub HTTPS. Aby utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, która używa protokołu SSL, używać usług IIS do hostowania aplikacji. Alternatywnie Jeśli tworzysz aplikację hostowanie Samoobsługowe narzędzie HttpCfg.exe powiązać certyfikat X.509 do określonego portu na komputerze. Numer portu jest określony jako część [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji jako adresu punktu końcowego. W trybie transportu adres punktu końcowego musi zawierać nazwę protokołu HTTPS lub zostanie wygenerowany wyjątek w czasie wykonywania. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ <xref:System.ServiceModel.WSHttpBinding> Klasy zaprojektowano pod kątem współpracy z usługami, które implementują WS-* specyfikacji. Zabezpieczenia transportu dla tego powiązania jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP lub HTTPS. Aby utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, która używa protokołu SSL, używać usług IIS do hostowania aplikacji. Alternatywnie Jeśli tworzysz aplikację hostowanie Samoobsługowe narzędzie HttpCfg.exe powiązać certyfikat X.509 do określonego portu na komputerze. Numer portu jest określony jako część [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji jako adresu punktu końcowego. W trybie transportu adres punktu końcowego musi zawierać nazwę protokołu HTTPS lub zostanie wygenerowany wyjątek w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Uwierzytelnianie klienta, można ustawić <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> właściwość <xref:System.ServiceModel.HttpTransportSecurity> klasy do jednego z <xref:System.ServiceModel.HttpClientCredentialType> wartości wyliczenia. Wartości wyliczenia są takie same jak typy poświadczeń klienta dla <xref:System.ServiceModel.BasicHttpBinding> i mają być obsługiwane z usługami IIS.  
   

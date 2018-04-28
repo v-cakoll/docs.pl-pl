@@ -1,12 +1,13 @@
 ---
-title: "Tokeny i oświadczenia języka SAML"
-ms.custom: 
+title: Tokeny i oświadczenia języka SAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="saml-tokens-and-claims"></a>Tokeny i oświadczenia języka SAML
 Zabezpieczenia potwierdzenia Markup Language (SAML) *tokenów* są oświadczenia reprezentacji XML. Domyślnie tokeny SAML [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] są używane w scenariuszach zabezpieczeń *wystawionych tokenów*.  
@@ -48,7 +50,7 @@ Zabezpieczenia potwierdzenia Markup Language (SAML) *tokenów* są oświadczenia
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
->  Gdy tokenów SAML są serializowane w wiadomości, gdy zostaną wystawione przez usługi tokenu zabezpieczającego lub mają być przedstawiane przez klientów do usług w ramach uwierzytelniania, maksymalny przydział rozmiaru komunikatu musi być wystarczająco duży, aby zmieścił się w tokenie SAML i inne części wiadomości. W przypadku normalnych przydziały rozmiar komunikatu domyślne są wystarczające. Jednak w przypadku, gdy tokenu SAML jest duży, ponieważ zawiera on setki oświadczenia, konieczne może być zwiększyć przydziały w celu uwzględnienia Zserializowany token. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+>  Gdy tokenów SAML są serializowane w wiadomości, gdy zostaną wystawione przez usługi tokenu zabezpieczającego lub mają być przedstawiane przez klientów do usług w ramach uwierzytelniania, maksymalny przydział rozmiaru komunikatu musi być wystarczająco duży, aby zmieścił się w tokenie SAML i inne części wiadomości. W przypadku normalnych przydziały rozmiar komunikatu domyślne są wystarczające. Jednak w przypadku, gdy tokenu SAML jest duży, ponieważ zawiera on setki oświadczenia, konieczne może być zwiększyć przydziały w celu uwzględnienia Zserializowany token. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="from-samlattributes-to-claims"></a>Z SamlAttributes oświadczeń  
  Po odebraniu wiadomości tokeny SAML, różne oświadczenia w tokenie SAML są włączone do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> obiektów, które są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext>. Oświadczenia z każdym instrukcji SAML są zwracane przez <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> właściwość <xref:System.IdentityModel.Policy.AuthorizationContext> i można zbadać w celu określenia, czy do uwierzytelniania i autoryzacji użytkownika.  

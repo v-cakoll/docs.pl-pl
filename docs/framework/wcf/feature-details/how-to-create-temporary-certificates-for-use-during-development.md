@@ -1,27 +1,29 @@
 ---
-title: "Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania"
-ms.custom: 
+title: 'Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c955c3498c830403f628b4805611fadc44d68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
 Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], jest często przekazać certyfikat X.509 mają być używane jako poświadczenie. Certyfikat jest zwykle częścią łańcucha certyfikatów przy użyciu głównego urzędu został znaleziony w magazynie zaufanych głównych urzędów certyfikacji komputera. Posiadanie łańcuch certyfikatów umożliwia określania zakresu zestawu certyfikatów, w których zwykle głównego urzędu certyfikacji jest od swojej organizacji lub jednostki biznesowej. Aby emulować to w czasie tworzenia, możesz utworzyć dwa certyfikaty by spełnić ich wymagań zabezpieczeń. Pierwsza to certyfikatu z podpisem własnym, który jest umieszczony w magazynie zaufanych głównych urzędów certyfikacji i drugiego certyfikatu jest tworzona na podstawie pierwszego i znajduje się w magazynie osobistym lokalizacji komputera lokalnego lub w magazynie osobistym Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono kroki, aby utworzyć tych dwóch certyfikatów przy użyciu [narzędzie tworzenia certyfikatów (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), które są dostarczane przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zestawu SDK.  
@@ -29,9 +31,9 @@ Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo
 > [!IMPORTANT]
 >  Narzędzie do tworzenia certyfikacji generuje certyfikaty są udostępniane tylko do celów testowych. Podczas wdrażania usługi lub klienta, należy użyć odpowiedni certyfikat dostarczony przez urząd certyfikacji. Może to być albo z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] certyfikatów serwera w organizacji lub innych firm.  
 >   
->  Domyślnie [Makecert.exe (narzędzie tworzenia certyfikatów)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) tworzy certyfikaty, których główny urząd certyfikacji jest nazywany "Agencji głównego**."** Ponieważ agencję"główny" nie ma w magazynie zaufanych głównych urzędów certyfikacji, dzięki temu te certyfikaty niezabezpieczonych. Tworzenie certyfikatu z podpisem własnym, który znajduje się w zaufanych głównych urzędów certyfikacji magazynu umożliwia utworzenie Środowisko deweloperskie, która symuluje dokładniejsze środowiska wdrażania.  
+>  Domyślnie [Makecert.exe (narzędzie tworzenia certyfikatów)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) tworzy certyfikaty, których główny urząd certyfikacji jest nazywany "Agencji głównego **."** Ponieważ agencję"główny" nie ma w magazynie zaufanych głównych urzędów certyfikacji, dzięki temu te certyfikaty niezabezpieczonych. Tworzenie certyfikatu z podpisem własnym, który znajduje się w zaufanych głównych urzędów certyfikacji magazynu umożliwia utworzenie Środowisko deweloperskie, która symuluje dokładniejsze środowiska wdrażania.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie i używanie certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą certyfikatu jako poświadczeń, zobacz [zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Samouczek dotyczący przy użyciu technologii Microsoft Authenticode, zobacz [Authenticode omówienia i samouczki](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie i używanie certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą certyfikatu jako poświadczeń, zobacz [zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Samouczek dotyczący przy użyciu technologii Microsoft Authenticode, zobacz [Authenticode omówienia i samouczki](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Utwórz samopodpisany certyfikat głównego urzędu certyfikacji i eksportowanie klucza prywatnego  
   
@@ -39,7 +41,7 @@ Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo
   
     1.  `-n` `subjectName`. Określa nazwę podmiotu. Konwencji jest przed nazwą podmiotu "CN =" dla "Nazwa pospolita".  
   
-    2.  `-r`., Określa, że certyfikat będzie podpisem.  
+    2.  `-r`. Określa, że certyfikat będzie podpisem.  
   
     3.  `-sv` `privateKeyFile`. Określa plik, który zawiera kontener klucza prywatnego.  
   
@@ -74,7 +76,7 @@ Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Aby zainstalować certyfikat z podpisem własnym w zaufane główne urzędy certyfikacji  
   
-1.  Otwórz przystawkę certyfikatu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Otwórz przystawkę certyfikatu. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie certyfikatów w przystawce MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Otwórz folder z certyfikatem, albo **komputera lokalnego** lub **bieżącego użytkownika**.  
   

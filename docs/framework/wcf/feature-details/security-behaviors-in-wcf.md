@@ -1,24 +1,26 @@
 ---
-title: "Zachowania zabezpieczeń w programie WCF"
-ms.custom: 
+title: Zachowania zabezpieczeń w programie WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98323b4d29b68d57d3c01e9a007b5f0f9fc08377
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowanie zachowania czasu wykonywania na poziomie usługi lub na poziomie punktu końcowego. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] zachowania ogólnie rzecz biorąc, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwiają kontrolę nad poświadczeniami, uwierzytelniania, autoryzacji i dzienniki inspekcji. Można użyć zachowania, przez programowania w języku lub przy użyciu konfiguracji. Ten temat koncentruje się na konfigurowaniu następujące zachowania związane z funkcjami zabezpieczeń:  
@@ -64,10 +66,10 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > — Element  
  Użyj tego elementu, aby określić certyfikat X.509, który jest używany do uwierzytelniania usługi dla klientów używających trybu zabezpieczenia wiadomości. Jeśli używasz certyfikatu, który okresowo odnawiać, następnie zmiany jego odcisk palca. W takim przypadku użyj nazwy podmiotu jako `X509FindType` ponieważ certyfikat może zostać wydany ponownie z taką samą nazwę podmiotu.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą elementu, zobacz [porady: Określanie wartości poświadczeń klienta](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą elementu, zobacz [porady: Określanie wartości poświadczeń klienta](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<certyfikat > z \<clientCertificate > — Element  
- Użyj [ \<certyfikatu >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) elementu, gdy usługa musi mieć certyfikat klienta z wyprzedzeniem do bezpiecznego komunikowania się z klientem. Dzieje się tak podczas używania wzorca komunikację dupleksową. We wzorcu bardziej typowego żądanie odpowiedź klienta obejmuje jego certyfikat w żądaniu, w której usługa secure swojej odpowiedzi do klienta. Wzorzec komunikację dupleksową, jednak nie ma żądań i odpowiedzi. Nie można wnioskować o usługę certyfikatu klienta z komunikacji i w związku z tym usługa wymaga certyfikatu klienta z wyprzedzeniem, aby zabezpieczyć wiadomości do klienta. Należy uzyskać certyfikat klienta w sposób poza pasmem i Określ certyfikat przy użyciu tego elementu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usługi dwukierunkowe, zobacz [porady: tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Użyj [ \<certyfikatu >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) elementu, gdy usługa musi mieć certyfikat klienta z wyprzedzeniem do bezpiecznego komunikowania się z klientem. Dzieje się tak podczas używania wzorca komunikację dupleksową. We wzorcu bardziej typowego żądanie odpowiedź klienta obejmuje jego certyfikat w żądaniu, w której usługa secure swojej odpowiedzi do klienta. Wzorzec komunikację dupleksową, jednak nie ma żądań i odpowiedzi. Nie można wnioskować o usługę certyfikatu klienta z komunikacji i w związku z tym usługa wymaga certyfikatu klienta z wyprzedzeniem, aby zabezpieczyć wiadomości do klienta. Należy uzyskać certyfikat klienta w sposób poza pasmem i Określ certyfikat przy użyciu tego elementu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usługi dwukierunkowe, zobacz [porady: tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<Uwierzytelnianie > z \<clientCertificate > — Element  
  [ \<Uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) element umożliwia dostosowanie sposobu uwierzytelniania klientów. Można ustawić `CertificateValidationMode` atrybutu `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, lub `Custom`. Domyślnie po ustawieniu poziomu `ChainTrust`, który określa, że każdy certyfikat musi zostać znaleziony w hierarchii certyfikatów w *główny urząd* w górnej części łańcucha. Jest to najbardziej bezpieczny tryb. Można również ustawić wartość `PeerOrChainTrust`, która określa, że certyfikaty wystawionej samodzielnie (relacja zaufania elementów równorzędnych) są akceptowane oraz certyfikaty, które znajdują się w łańcuchu zaufanego. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawione certyfikaty nie muszą można zakupić z zaufanego urzędu. Podczas wdrażania klienta, użyj `ChainTrust` wartość zmiennej. Można również ustawić wartość `Custom`. Jeśli wartość `Custom` wartości, należy także ustawić `CustomCertificateValidatorType` atrybutu zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własnego niestandardowego modułu weryfikacji, musi dziedziczyć z klasy abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.  
@@ -93,9 +95,9 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
   
 -   Określ zbiór prawidłowymi identyfikatorami URI, dodając identyfikatory URI do tej kolekcji. Aby to zrobić, Wstaw [ \<Dodaj >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) dla każdego identyfikatora URI  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]przy użyciu tego elementu konfiguracji, zobacz [porady: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] przy użyciu tego elementu konfiguracji, zobacz [porady: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Zezwalanie użytkownikom anonimowym CardSpace  
  Ustawienie `AllowUntrustedRsaIssuers` atrybutu `<IssuedTokenAuthentication>` elementu `true` jawnie zezwala dowolnego klienta do prezentowania samodzielnie wystawionego tokenu, podpisany z dowolnego parę kluczy RSA. Wystawca ma *niezaufanych* ponieważ klucz nie zawiera wystawcy danych skojarzonych z nim. A [!INCLUDE[infocard](../../../../includes/infocard-md.md)] użytkownik może utworzyć karty wystawionej samodzielnie zawierającej własnym podana oświadczeń tożsamości. Użyj tej funkcji należy z rozwagą. Użyj tej funkcji, można wziąć pod uwagę klucza publicznego RSA jako bardziej bezpiecznym hasłem, które mają być przechowywane w bazie danych oraz nazwę użytkownika. Przed umożliwieniem dostępu klienta do usługi, sprawdź przedstawione przez klienta klucza publicznego RSA, porównując go z przechowywanych klucza publicznego dla nazwy użytkownika przedstawioną. To zakłada, że zostało ustanowione procesu rejestracji, zgodnie z którymi użytkownicy mogą zarejestrować swoje nazwy użytkownika i skojarzyć je z wystawionej samodzielnie klucze publiczne RSA.  
@@ -103,7 +105,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
 ## <a name="client-credentials"></a>Poświadczenia klienta  
  Poświadczenia klienta są używane do uwierzytelniania klienta do usług w przypadkach, gdy jest wymagane uwierzytelnianie wzajemne. Sekcji można użyć do określenia usługi certyfikatów w scenariuszach, gdzie klient musi Zabezpieczanie komunikatów do usługi za pomocą certyfikatu usługi.  
   
- Można także skonfigurować klienta w ramach scenariusza z Federacją kompletną do użycia wystawione tokeny z bezpiecznego usługi tokenu lub lokalnego wystawcy tokenów. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz scenariuszach obejmujących Federację, [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Wszystkie poświadczenia klienta znajdują się w obszarze [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), jak pokazano w poniższym kodzie.  
+ Można także skonfigurować klienta w ramach scenariusza z Federacją kompletną do użycia wystawione tokeny z bezpiecznego usługi tokenu lub lokalnego wystawcy tokenów. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz scenariuszach obejmujących Federację, [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Wszystkie poświadczenia klienta znajdują się w obszarze [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), jak pokazano w poniższym kodzie.  
   
 ```xml  
 <behaviors>  
@@ -126,16 +128,16 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > — Element  
- Ustawić certyfikat używany do uwierzytelniania klienta z tym elementem. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Określanie wartości poświadczeń klienta](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Ustawić certyfikat używany do uwierzytelniania klienta z tym elementem. Aby uzyskać więcej informacji, zobacz [porady: Określanie wartości poświadczeń klienta](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="httpdigest"></a>\<httpDigest >  
- Ta funkcja musi być włączona w usłudze Active Directory w systemach Windows i usługi Internet Information Services (IIS). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Szyfrowanego uwierzytelniania w usługach IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Ta funkcja musi być włączona w usłudze Active Directory w systemach Windows i usługi Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > — Element  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) zawiera elementy umożliwia konfigurowanie lokalnego wystawcy tokenów lub zachowania używane z usługi tokenu zabezpieczającego. Aby uzyskać instrukcje dotyczące konfigurowania klienta do używania wystawcy lokalnego, zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
- Określa domyślny adres usługi tokenu zabezpieczeń. Ten element jest używany podczas <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL usługi tokenu zabezpieczeń, lub gdy adres wystawcy wiązania federacyjnego jest http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous lub `null`. W takich przypadkach <xref:System.ServiceModel.Description.ClientCredentials> musi być skonfigurowany adres wystawcy lokalnego i powiązania, które używają do komunikowania się z tym wystawcą.  
+ Określa domyślny adres usługi tokenu zabezpieczeń. Ten element jest używany podczas <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL dla usługi tokenu zabezpieczającego lub gdy jest adres wystawcy wiązania federacyjnego http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous lub `null`. W takich przypadkach <xref:System.ServiceModel.Description.ClientCredentials> musi być skonfigurowany adres wystawcy lokalnego i powiązania, które używają do komunikowania się z tym wystawcą.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
  Użyj [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) można dodać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zachowań klienta używany podczas komunikacji z usługi tokenu zabezpieczającego. Definiowanie zachowania klienta w [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sekcji. Aby użyć zdefiniowanego zachowania, Dodaj <`add`> elementu `<issuerChannelBehaviors>` elementu o dwa atrybuty. Ustaw `issuerAddress` do adresu URL usługi tokenu zabezpieczeń i zestaw `behaviorConfiguration` atrybutu nazwy zachowanie określonych punktów końcowych, jak pokazano w poniższym przykładzie.  
@@ -155,9 +157,9 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
   
  Użyj [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) i [ \<Dodaj >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) można ustawić certyfikatów usługi, które są skojarzone z określonych usług. `<add>` Element zawiera `targetUri` atrybut, który jest używany do skojarzenia z usługą certyfikatu.  
   
- [ \<Uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) element określa poziom zaufania używany do uwierzytelniania certyfikatów. Domyślnie "ChainTrust", który określa, że każdy certyfikat musi zostać znaleziony w hierarchii kończy się za zaufany urząd certyfikacji w górnej części łańcucha certyfikatów po ustawieniu poziomu. Jest to najbardziej bezpieczny tryb. Można również ustawić wartość "PeerOrChainTrust", która określa, że certyfikaty wystawionej samodzielnie (relacja zaufania elementów równorzędnych) są akceptowane, a także certyfikaty, które znajdują się w łańcuchu zaufanego. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawione certyfikaty nie muszą można zakupić z zaufanego urzędu. Podczas wdrażania klienta, należy użyć wartości "ChainTrust". Można również ustawić wartość "Custom" lub "None." Aby użyć wartości "Custom", należy także ustawić `CustomCertificateValidatorType` atrybutu zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własnego niestandardowego modułu weryfikacji, musi dziedziczyć z klasy abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ [ \<Uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) element określa poziom zaufania używany do uwierzytelniania certyfikatów. Domyślnie "ChainTrust", który określa, że każdy certyfikat musi zostać znaleziony w hierarchii kończy się za zaufany urząd certyfikacji w górnej części łańcucha certyfikatów po ustawieniu poziomu. Jest to najbardziej bezpieczny tryb. Można również ustawić wartość "PeerOrChainTrust", która określa, że certyfikaty wystawionej samodzielnie (relacja zaufania elementów równorzędnych) są akceptowane, a także certyfikaty, które znajdują się w łańcuchu zaufanego. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawione certyfikaty nie muszą można zakupić z zaufanego urzędu. Podczas wdrażania klienta, należy użyć wartości "ChainTrust". Można również ustawić wartość "Custom" lub "None." Aby użyć wartości "Custom", należy także ustawić `CustomCertificateValidatorType` atrybutu zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własnego niestandardowego modułu weryfikacji, musi dziedziczyć z klasy abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi korzystającej z niestandardowego moduł weryfikacji certyfikatów](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
- [ \<Uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) element zawiera `RevocationMode` atrybut określający, jak certyfikaty są sprawdzane pod kątem odwołań. Wartość domyślna to "online", co oznacza, że certyfikaty są automatycznie sprawdzane pod kątem odwołań. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ [ \<Uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) element zawiera `RevocationMode` atrybut określający, jak certyfikaty są sprawdzane pod kątem odwołań. Wartość domyślna to "online", co oznacza, że certyfikaty są automatycznie sprawdzane pod kątem odwołań. Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="serviceauthorization"></a>ServiceAuthorization  
  [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) element zawiera elementy, które mają wpływ na autoryzacji, dostawców niestandardowej roli zabezpieczeń i personifikacji.  
@@ -199,7 +201,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
 ```  
   
 ## <a name="configuring-security-audits"></a>Konfigurowanie inspekcji zabezpieczeń  
- Użyj [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) do określenia zapisywane w dzienniku, a co typy dziennika zdarzeń. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Użyj [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) do określenia zapisywane w dzienniku, a co typy dziennika zdarzeń. Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -215,7 +217,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
 ```  
   
 ## <a name="secure-metadata-exchange"></a>Bezpiecznej wymiany metadanych  
- Eksportowanie metadanych do klientów jest wygodny dla deweloperów usługi i klienta, jak umożliwia pobieranie kodu konfiguracji i klienta. Aby zmniejszyć ryzyko usługi złośliwych użytkowników, jest możliwe do zabezpieczenia przy użyciu protokołu SSL za pośrednictwem protokołu HTTP (HTTPS) mechanizm transferu. Aby to zrobić, należy najpierw powiązać odpowiedniego certyfikatu X.509 określonego portu na komputerze, na którym uruchomiono usługę. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Po drugie, Dodaj [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) konfigurację usługi i zestawu `HttpsGetEnabled` atrybutu `true`. Wreszcie, ustaw `HttpsGetUrl` atrybutu na adres URL punktu końcowego metadanych usługi, jak pokazano w poniższym przykładzie.  
+ Eksportowanie metadanych do klientów jest wygodny dla deweloperów usługi i klienta, jak umożliwia pobieranie kodu konfiguracji i klienta. Aby zmniejszyć ryzyko usługi złośliwych użytkowników, jest możliwe do zabezpieczenia przy użyciu protokołu SSL za pośrednictwem protokołu HTTP (HTTPS) mechanizm transferu. Aby to zrobić, należy najpierw powiązać odpowiedniego certyfikatu X.509 określonego portu na komputerze, na którym uruchomiono usługę. (Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Po drugie, Dodaj [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) konfigurację usługi i zestawu `HttpsGetEnabled` atrybutu `true`. Wreszcie, ustaw `HttpsGetUrl` atrybutu na adres URL punktu końcowego metadanych usługi, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <behaviors>  

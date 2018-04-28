@@ -1,35 +1,35 @@
 ---
-title: "Omówienie śledzenia analitycznego"
-ms.custom: 
+title: Omówienie śledzenia analitycznego
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3492821d56f7089c2aa53bba566690ded02f8a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analytic-tracing-overview"></a>Omówienie śledzenia analitycznego
 Śledzenie analityczne w [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] jest wysoka wydajność i niski poziom szczegółowości śledzenia skonfigurowaną na górze zdarzenia śledzenia dla systemu Windows (ETW). ETW. działa na poziomie jądra można znacznie zmniejszyć koszty operacji śledzenia. Go efektywnego buforuje zdarzenia trybu jądra i użytkownika i umożliwia dynamiczne Włączanie rejestrowania bez konieczności ponownego uruchomienia usługi. Dane śledzenia są dostępne w dziennikach zdarzeń po nim ma zostały wyemitowane i odebranych.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]ETW, zobacz [poprawy debugowania i dostrajania wydajności za pomocą funkcji ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW, zobacz [poprawy debugowania i dostrajania wydajności za pomocą funkcji ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Oprócz przy użyciu dzienników zdarzeń systemu Windows, zabezpieczeń i aplikacji do analizowania aplikacji, [!INCLUDE[wv](../../../../../includes/wv-md.md)] i [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] wprowadzono dodatkowe dzienniki w węźle Dzienniki aplikacji i usług najwyższego poziomu. Te nowe dzienniki ma na celu przechowywania zdarzeń dla określonej aplikacji lub określonego składnika zamiast zdarzenia globalne, które mają wpływ systemowe (takie jak typ zdarzenia, które mogą rejestrować w dzienniku zdarzeń zabezpieczeń). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]łączy i uzależnia rejestrowanie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zdarzeń śledzenia [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dzienników wiadomości i [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] śledzenie rekordów Dzienniki aplikacji i usług.  
+ Oprócz przy użyciu dzienników zdarzeń systemu Windows, zabezpieczeń i aplikacji do analizowania aplikacji, [!INCLUDE[wv](../../../../../includes/wv-md.md)] i [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] wprowadzono dodatkowe dzienniki w węźle Dzienniki aplikacji i usług najwyższego poziomu. Te nowe dzienniki ma na celu przechowywania zdarzeń dla określonej aplikacji lub określonego składnika zamiast zdarzenia globalne, które mają wpływ systemowe (takie jak typ zdarzenia, które mogą rejestrować w dzienniku zdarzeń zabezpieczeń). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] łączy i uzależnia rejestrowanie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zdarzeń śledzenia [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dzienników wiadomości i [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] śledzenie rekordów Dzienniki aplikacji i usług.  
   
 ## <a name="concepts-and-capabilities"></a>Pojęcia i możliwości  
  Następujące pojęcia i możliwości dotyczą [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] śledzenie danych analitycznych.  
@@ -54,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>Konfiguracji dynamicznej  
- Infrastruktura ETW umożliwia śledzenie, aby być włączona i skonfigurowana dynamicznie przy użyciu standardowych narzędzi systemu Windows. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Dynamiczne Włączanie śledzenia danych analitycznych](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
+ Infrastruktura ETW umożliwia śledzenie, aby być włączona i skonfigurowana dynamicznie przy użyciu standardowych narzędzi systemu Windows. Aby uzyskać więcej informacji, zobacz [dynamiczne Włączanie analityczne śledzenia](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Śledzenia przepływu komunikatów  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]jak włączyć śledzenie przepływu wiadomości, zobacz [Konfigurowanie śledzenia przepływu komunikatów](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] jak włączyć śledzenie przepływu wiadomości, zobacz [Konfigurowanie śledzenia przepływu komunikatów](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Słowa kluczowe  
- Słowa kluczowe są używane do filtrowania komunikatów śledzenia i zdefiniuj którym składnikiem [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] wysyłanego zdarzenia. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Dynamiczne Włączanie śledzenia danych analitycznych](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Słowa kluczowe są używane do filtrowania komunikatów śledzenia i zdefiniuj którym składnikiem [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] wysyłanego zdarzenia. Aby uzyskać więcej informacji, zobacz [dynamiczne Włączanie analityczne śledzenia](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

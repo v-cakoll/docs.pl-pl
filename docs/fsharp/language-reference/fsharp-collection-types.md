@@ -1,20 +1,17 @@
 ---
 title: Typy kolekcji F#
-description: "Poznaj typy kolekcji F # i jak są one różne od typy kolekcji w programie .NET Framework."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Poznaj typy kolekcji F # i jak są one różne od typy kolekcji w programie .NET Framework.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>Typy kolekcji F#
 
@@ -30,11 +27,11 @@ W poniższej tabeli przedstawiono typy kolekcji F #.
 
 |Typ|Opis|Linki pokrewne|
 |----|-----------|-------------|
-|[Lista](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Seria uporządkowany i modyfikować elementów tego samego typu. Zaimplementowane jako listy połączonej.|[Wyświetla listę](lists.md)<br /><br />[Lista modułów](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
+|[Lista](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Seria uporządkowany i modyfikować elementów tego samego typu. Zaimplementowane jako listy połączonej.|[Listy](lists.md)<br /><br />[Lista modułów](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
 |[Tablica](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Stały rozmiar, liczony od zera, modyfikowalną kolekcję elementów kolejnych danych, które znajdują się tego samego typu.|[Tablice](arrays.md)<br /><br />[Moduł tablic](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2d — moduł](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3d — moduł](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[SEQ](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Seria logiczne elementy, które są tylko jeden typ. Sekwencje są szczególnie przydatne, gdy ma dużą, uporządkowanych zbierania danych, ale niekoniecznie nie powinien być wszystkie elementy. Sekwencja poszczególne elementy są obliczane tylko jako wymagana, więc sekwencję zapewnia lepszą wydajność niż listy, jeśli nie wszystkie elementy są używane. Sekwencje są reprezentowane przez `seq<'T>` typu, który jest aliasem dla `IEnumerable<T>`. W związku z tym dowolnego typu .NET Framework, który implementuje `System.Collections.Generic.IEnumerable<'T>` mogą być używane jako sekwencję.|[Sekwencje](sequences.md)<br /><br />[SEQ — moduł](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Mapy](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Niezmienne słownikiem elementów. Elementy są dostępne dla klucza.|[Map — moduł](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Zestaw](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Niezmienne zestaw, który jest oparty na drzew binarnych porównania w przypadku F # Funkcja porównywania strukturalnego, który używa potencjalnie implementacje `System.IComparable` interfejsu wartości klucza.|[Set — moduł](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[mapy](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Niezmienne słownikiem elementów. Elementy są dostępne dla klucza.|[Map — moduł](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
+|[zestaw](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Niezmienne zestaw, który jest oparty na drzew binarnych porównania w przypadku F # Funkcja porównywania strukturalnego, który używa potencjalnie implementacje `System.IComparable` interfejsu wartości klucza.|[Set — moduł](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tabela w funkcji
 Ta sekcja zawiera porównanie funkcji, które są dostępne na typy kolekcji F #. Podano obliczeniową złożoność funkcji, gdzie N jest rozmiarem pierwszej kolekcji i M jest większy niż druga kolekcja, jeśli istnieje. Łączniki (-) wskazuje, że ta funkcja nie jest dostępna w kolekcji. Ponieważ sekwencje opóźnieniem są oceniane, funkcji, takich jak SEQ.DISTINCT — może być O(1) ponieważ zwraca ono natychmiast, mimo że nadal ma wpływ na wydajność sekwencji, gdy wyliczenie.
@@ -62,8 +59,8 @@ Ta sekcja zawiera porównanie funkcji, które są dostępne na typy kolekcji F #
 |tworzenie|O(N)|-|-|-|-|Tworzy tablicę całego elementy, które są wszystkie początkowo podanej wartości.|
 |Opóźnienie|-|-|O(1)|-|-|Zwraca sekwencję, która składa się ze specyfikacji opóźnione danej sekwencji.|
 |różnica|-|-|-|-|O (M &#42; dziennika N)|Zwraca nowy zbiór z elementami drugiego zbioru usuniętego z pierwszego zestawu.|
-|Różne|||O(1) &#42;|||Zwraca sekwencję, która nie zawiera żadnych zduplikowanych pozycji zgodnie z ogólnego porównania wyznaczania wartości skrótu i o równość zapisów. Jeśli element występuje wiele razy w sekwencji, nowsze wystąpienia są odrzucane.|
-|distinctby —|||O(1) &#42;|||Zwraca sekwencję, która nie zawiera żadnych zduplikowanych pozycji zgodnie z ogólnego porównania wyznaczania wartości skrótu i o równość kluczy, które zwraca daną funkcję generowania klucza. Jeśli element występuje wiele razy w sekwencji, nowsze wystąpienia są odrzucane.|
+|Różne|||O(1)&AMP;#42;|||Zwraca sekwencję, która nie zawiera żadnych zduplikowanych pozycji zgodnie z ogólnego porównania wyznaczania wartości skrótu i o równość zapisów. Jeśli element występuje wiele razy w sekwencji, nowsze wystąpienia są odrzucane.|
+|distinctby —|||O(1)&AMP;#42;|||Zwraca sekwencję, która nie zawiera żadnych zduplikowanych pozycji zgodnie z ogólnego porównania wyznaczania wartości skrótu i o równość kluczy, które zwraca daną funkcję generowania klucza. Jeśli element występuje wiele razy w sekwencji, nowsze wystąpienia są odrzucane.|
 |empty|O(1)|O(1)|O(1)|O(1)|O(1)|Tworzy pustą kolekcję.|
 |istnieje|O(N)|O(N)|O(N)|O (dziennik N)|O (dziennik N)|Sprawdza, czy dowolny element sekwencji spełnia danego predykatu.|
 |exists2 —|O(min(N,M))|-|O(min(N,M))|||Sprawdza, czy w jakiejkolwiek parze odpowiednie elementy sekwencji wejściowych spełnia danego predykatu.|
@@ -83,7 +80,7 @@ Ta sekcja zawiera porównanie funkcji, które są dostępne na typy kolekcji F #
 |init|O(N)|O(N)|O(1)|-|-|Tworzy kolekcję wymiaru i funkcja generator obliczeniowe elementy.|
 |initinfinite —|-|-|O(1)|-|-|Generuje sekwencję, gdy iterowane, zwraca kolejnych elementów przez wywołanie metody danej funkcji.|
 |INTERSECT|-|-|-|-|O (dziennika N &#42; dziennika M)|Oblicza część wspólną dwóch zestawów.|
-|intersectmany —|-|-|-|-|O (N1 &#42; N2...)|Oblicza przecięcie sekwencji zestawów. Sekwencja nie może być pusta.|
+|intersectmany —|-|-|-|-|O (N1 &AMP;#42; N2...)|Oblicza przecięcie sekwencji zestawów. Sekwencja nie może być pusta.|
 |IsEmpty|O(1)|O(1)|O(1)|O(1)|-|Zwraca `true` Jeśli kolekcja jest pusta.|
 |ispropersubset —|-|-|-|-|O (M &#42; dziennika N)|Zwraca `true` są wszystkie elementy pierwszego zbioru w drugim zbiorze i co najmniej jeden element drugi zestaw nie znajduje się w pierwszym zestawie.|
 |ispropersuperset —|-|-|-|-|O (M &#42; dziennika N)|Zwraca `true` są wszystkie elementy drugiego zestawu w pierwszym zestawie i co najmniej jeden element pierwszy zestaw nie znajduje się w drugim zbiorze.|
@@ -146,7 +143,7 @@ Ta sekcja zawiera porównanie funkcji, które są dostępne na typy kolekcji F #
 |trypick —|O(N)|O(N)|O(N)|O (dziennik N)|-|Dotyczy dana funkcja kolejnych elementów, zwracanie pierwszego wyniku, gdy funkcja zwraca `Some` dla niektórych wartości. Jeśli żaden taki element istnieje, zwraca operacji `None`.|
 |unfold —|-|-|O(N)|-|-|Zwraca sekwencję, która zawiera elementy, które generuje danego obliczeń.|
 |unia|-|-|-|-|O (M &#42; dziennika N)|Oblicza sumę dwóch zestawów.|
-|unionmany —|-|-|-|-|O (N1 &#42; N2...)|Oblicza Unii sekwencji zestawów.|
+|unionmany —|-|-|-|-|O (N1 &AMP;#42; N2...)|Oblicza Unii sekwencji zestawów.|
 |Rozpakowywanie|O(N)|O(N)|O(N)|-|-|Dzieli listę par na dwie listy.|
 |unzip3 —|O(N)|O(N)|O(N)|-|-|Dzieli listę triples na trzy listy.|
 |okna|-|-|O(N)|-|-|Zwraca sekwencję daje przesuwanego okna zawierającego elementy, które są pobierane z sekwencji wejściowych. Każde okno jest zwracana jako pierwszą tablicy.|
@@ -154,7 +151,7 @@ Ta sekcja zawiera porównanie funkcji, które są dostępne na typy kolekcji F #
 |zip3 —|O(N)|O(N)|O(N)|-|-|Łączy trzy kolekcji na listę triples. Listy muszą mieć takie same długości.|
 
 ## <a name="see-also"></a>Zobacz też
-[Typy F #](fsharp-types.md)
+[Typy F#](fsharp-types.md)
 
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 

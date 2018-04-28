@@ -1,26 +1,26 @@
 ---
-title: "Duże ilości danych i przesyłanie strumieniowe"
-ms.custom: 
+title: Duże ilości danych i przesyłanie strumieniowe
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML często jest zakodowany w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838), połączonych projektanci systemów i architektów zwykle niepokoi rozmiaru danych przesyłanych w sieci (lub rozmiar) komunikaty wysyłane między sieci i kodowanie tekstowy XML stanowi wyzwanie specjalne wydajność transferu danych binarnych.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  W związku z tym podjęciem decyzji o tekst lub binarny nie jest dość tak proste, jak przy założeniu binarne komunikaty są zawsze mniejszy niż wiadomości tekstowe XML.  
   
- Wyczyść zaletą wiadomości tekstowe XML jest są oparte na standardach i oferują najszerszych wybór opcji współdziałanie i Obsługa platform. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]w sekcji "Kodowania" w dalszej części tego tematu.  
+ Wyczyść zaletą wiadomości tekstowe XML jest są oparte na standardach i oferują najszerszych wybór opcji współdziałanie i Obsługa platform. Aby uzyskać więcej informacji zobacz sekcję "Kodowania" w dalszej części tego tematu.  
   
 ### <a name="binary-content"></a>Zawartość binarna  
  Jeden obszar, w których kodowania binarnego są nadrzędne w stosunku do tekstowych kodowania pod względem wynikowy rozmiar wiadomości są dużych danych binarnych elementy, takie jak zdjęcia, wideo, dźwięki lub jakąkolwiek inną formę nieprzezroczyste, binarne dane, które muszą być wymieniane między usługami i ich konsumentów. Aby dopasować te typy danych do tekstu XML, typowym podejściem jest kodować je przy użyciu kodowania Base64.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Komunikat mechanizmu MTOM SOAP są modyfikowane z jego wersja nie jest zakodowany tak, aby tagi specjalne elementów, które odwołują się do odpowiednich części MIME miejsce elementów oryginalnej wiadomości, która zawiera dane binarne. W związku z tym komunikatu protokołu SOAP odwołuje się do zawartości binarnej poprzez wskazanie części MIME wysyłane z nim, ale w przeciwnym razie po prostu przenosi dane tekstowe XML. Ten model jest ściśle wyrównany z ustalonymi modelu SMTP, nie istnieje szerokie narzędzia pomocy technicznej do kodowania i dekodowania komunikaty mechanizmu MTOM na wielu platformach, co czyni go bardzo interoperacyjne wybór.  
   
- Nadal podobnie jak w przypadku Base64, MTOM również zawiera pewne koszty niezbędne w formacie MIME tak, aby korzyści wynikające z używania MTOM są tylko widoczne, gdy rozmiar elementu danych binarnych przekracza około 1 KB. Ze względu na obciążenie wiadomości w formacie MTOM może być większa niż wiadomości, korzystających z kodowania Base64 dla danych binarnych, jeśli ładunek danych binarnych pozostaje poniżej tej wartości progowej. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]w sekcji "Kodowania" w dalszej części tego tematu.  
+ Nadal podobnie jak w przypadku Base64, MTOM również zawiera pewne koszty niezbędne w formacie MIME tak, aby korzyści wynikające z używania MTOM są tylko widoczne, gdy rozmiar elementu danych binarnych przekracza około 1 KB. Ze względu na obciążenie wiadomości w formacie MTOM może być większa niż wiadomości, korzystających z kodowania Base64 dla danych binarnych, jeśli ładunek danych binarnych pozostaje poniżej tej wartości progowej. Aby uzyskać więcej informacji zobacz sekcję "Kodowania" w dalszej części tego tematu.  
   
 ### <a name="large-data-content"></a>Zawartość dużej ilości danych  
  Przewodowy poziomu Odłóż, opisane powyżej ładunku 500 MB również stanowi doskonałe wyzwanie lokalnego na usługę i klienta. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przetwarza wiadomości w *tryb buforowany*. Oznacza to, że cała zawartość komunikatu jest dostępny w pamięci przed wysłaniem lub po odebraniu. Gdy to dobre rozwiązanie dla większości scenariuszy i niezbędne do obsługi funkcji, takich jak podpisów cyfrowych i niezawodne dostarczanie dużych wiadomości może wyczerpać zasobów systemowych.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Nie są dostępne w całości po zainicjowaniu transferu.  
   
- Dla danych, który nie ma tych ograniczeń, zazwyczaj lepiej jest wysyłanie sekwencji komunikatów w zakresie sesji niż jeden komunikat duże. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]sekcja "Dane przesyłania strumieniowego" w dalszej części tego tematu.  
+ Dla danych, który nie ma tych ograniczeń, zazwyczaj lepiej jest wysyłanie sekwencji komunikatów w zakresie sesji niż jeden komunikat duże. Aby uzyskać więcej informacji zobacz sekcję "Dane przesyłania strumieniowego" w dalszej części tego tematu.  
   
  Podczas wysyłania dużych ilości danych należy ustawić `maxAllowedContentLength` ustawienie programu IIS (Aby uzyskać więcej informacji, zobacz [Konfigurowanie limity żądań usług IIS](http://go.microsoft.com/fwlink/?LinkId=253165)) i `maxReceivedMessageSize` powiązanie ustawienie (na przykład [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) lub <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` Wartości domyślne właściwości 28.6 m i `maxReceivedMessageSize` właściwość domyślnie 64 KB.  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  W związku z tym ograniczenie maksymalny rozmiar wiadomości przychodzącej nie jest wystarczająco w takim przypadku. `MaxBufferSize` Jest wymagana właściwość, aby ograniczyć ilość pamięci który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] buforów. Ważne jest, aby to ustawienie na wartość bezpieczne (lub zachowania jej wartość domyślną) podczas przesyłania strumieniowego. Załóżmy na przykład, usługa musi otrzymać pliki o rozmiarze do 4 GB i przechowywać je na dysku lokalnym. Załóżmy również, że pamięć jest ograniczona w taki sposób, można tylko buforu 64 KB danych w czasie. Następnie należy ustawić `MaxReceivedMessageSize` do 4 GB i `MaxBufferSize` 64 KB. Ponadto w implementacji usługi, należy tylko odczytywać przychodzący strumień w fragmentów 64 KB, a nie odczytuj dalej fragmentu przed poprzedniego został zapisany na dysku i usuwane z pamięci.  
   
- Jest również wziąć pod uwagę, że przydział ogranicza tylko buforowania programach [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i nie można chronić przed żadnych buforowania, należy wykonać w celu wykonania własne usługi lub klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zagadnienia dotyczące zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Jest również wziąć pod uwagę, że przydział ogranicza tylko buforowania programach [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i nie można chronić przed żadnych buforowania, należy wykonać w celu wykonania własne usługi lub klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zagadnienia dotyczące zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  Decyzja o wykorzystaniu buforowane lub przesyłany strumieniowo transferu jest decyzji lokalnego punktu końcowego. Dla transportu HTTP tryb transferu nie propaguje przez połączenie lub serwerów proxy i innych pośredników. Ustawianie trybu transferu nie zostaną uwzględnione w opisie interfejsu usługi. Po wygenerowaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta do usługi, należy edytować pliku konfiguracji dla usług przeznaczony do użycia w przypadku transferów przesyłanej strumieniowo można ustawić trybu. Dla transportu nazwanego potoku i TCP tryb transferu jest propagowana jako potwierdzenia zasad.  

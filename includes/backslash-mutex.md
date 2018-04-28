@@ -1,0 +1,1 @@
+Kreska ułamkowa odwrócona (\\) jest zarezerwowany znak w nazwie obiektu mutex. Nie używaj ukośnika odwrotnego (\\) w nazwie obiektu mutex z wyjątkiem zgodnie z uwagi na temat używania muteksy w sesji serwera terminali. W przeciwnym razie <xref:System.IO.DirectoryNotFoundException> może zostać zgłoszony, nawet jeśli nazwa obiektu mutex reprezentuje istniejący plik.

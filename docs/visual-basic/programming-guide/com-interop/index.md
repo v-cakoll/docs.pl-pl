@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych składników i umożliwia obsługę aplikacji. Większość oprogramowania współczesnych obejmuje obiekty COM. Mimo że zestawy .NET to najlepszy wybór dla nowych aplikacji, w czasie konieczne może być zastosowana obiektów COM. W tej sekcji opisano niektóre problemy związane z tworzenie i używanie obiektów COM z Visual Basic.  
@@ -32,7 +32,7 @@ Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych sk
  Uwzględniono również sposób dodawania odwołania do obiektów COM, które mają biblioteki typów.  
   
  [Instrukcje: praca z kontrolkami ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Pokazuje, jak używać istniejących formantów ActiveX do dodawania funkcji do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] przybornika.  
+ Pokazuje, jak używać istniejących formantów ActiveX do dodawania funkcji do przybornika programu Visual Studio.  
   
  [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Przeprowadza użytkownika przez proces wywoływania interfejsów API, które są częścią systemu operacyjnego Windows.  

@@ -1,20 +1,17 @@
 ---
-title: "Funkcje środowiska deweloperskiego F#"
-description: "Dowiedz się, jakie funkcje programu Visual Studio 2012 są obsługiwane w F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Funkcje środowiska deweloperskiego F#
+description: 'Dowiedz się, jakie funkcje programu Visual Studio 2012 są obsługiwane w F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Funkcje środowiska deweloperskiego Visual F #
 
@@ -109,7 +106,7 @@ Poniższa tabela zawiera podsumowanie obsługi F # w narzędziach Visual Studio.
 |Metryki kodów|Zbiera informacje o kodzie, takich jak liczby wierszy.|Nie|
 |Widok klas|Zapewnia widok na podstawie typu kodu w projekcie.|Nie|
 |[Okno listy błędów](/visualstudio/ide/reference/error-list-window)|Przedstawia listę błędów w kodzie.|Tak|
-|[Interakcyjne F #](../tutorials/fsharp-interactive/index.md)|Umożliwia wpisz (lub skopiuj i Wklej) F # kodu i uruchom go natychmiast, niezależnie od tworzenia projektu. Okno narzędzia F # Interactive jest odczytu, Evaluate, drukowania pętli (REPL).|Tak|
+|[F# Interactive](../tutorials/fsharp-interactive/index.md)|Umożliwia wpisz (lub skopiuj i Wklej) F # kodu i uruchom go natychmiast, niezależnie od tworzenia projektu. Okno narzędzia F # Interactive jest odczytu, Evaluate, drukowania pętli (REPL).|Tak|
 |Przeglądarka obiektów|Umożliwia wyświetlanie typów w zestawie.|Typy F # znajdujące się w skompilowane zestawy nie są dokładnie tak, jak je tworzyć. Reprezentacja skompilowana typów F # można przeglądać, ale nie można wyświetlić typy, jak pojawiają się one od F #.|
 |[Okno Dane wyjściowe](/visualstudio/ide/reference/output-window)|Wyświetla dane wyjściowe kompilacji.|Tak|
 |Analiza wydajności|Udostępnia narzędzia do pomiaru wydajności kodu.|Tak|

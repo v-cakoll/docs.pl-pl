@@ -1,33 +1,35 @@
 ---
 title: '&lt;clientCertificate&gt; w &lt;clientCredentials&gt;, element'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c5616aab5cb54e94a62370ad682eaa55eceb8ef
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt; w &lt;clientCredentials&gt;, element
 Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<clientCertificate >  
   
 ## <a name="syntax"></a>Składnia  
@@ -59,10 +61,10 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji określa certyfikat używany do uwierzytelniania klienta z tym elementem. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Porady: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Ten element konfiguracji określa certyfikat używany do uwierzytelniania klienta z tym elementem. Aby uzyskać więcej informacji, zobacz [porady: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

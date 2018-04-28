@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródła śledzenia na emitowanie danych śledzenia i poziomy śledzenia zestawu, śledzenie działania zestawu i propagacji do obsługi korelacji śledzenia end-to-end i ustaw obiektów nasłuchujących śledzenia do śledzenia.  
@@ -155,7 +155,7 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
   
  Można skonfigurować odbiornik śledzenia niestandardowych do wysyłania danych śledzenia w sieci, na przykład ze zdalną bazą danych. Jako wdrażania aplikacji należy wymusić kontrolę dostępu do dzienników śledzenia na maszynie zdalnej.  
   
- Można również skonfigurować odbiornik śledzenia programowo. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Porady: tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](http://go.microsoft.com/fwlink/?LinkId=94648) i [Tworzenie niestandardowego elementu TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Można również skonfigurować odbiornik śledzenia programowo. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](http://go.microsoft.com/fwlink/?LinkId=94648) i [tworzenie TraceListener niestandardowy](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Ponieważ `System.Diagnostics.XmlWriterTraceListener` jest nie wątkowo, źródło śladu może zablokować zasobów wyłącznie podczas wyprowadzania danych śledzenia. Wiele wątków dane wyjściowe śledzenia źródła skonfigurowane do używania tego odbiornika rywalizacji może wystąpić, które powoduje problem znaczących wydajności. Aby rozwiązać ten problem, należy zaimplementować wątkowo niestandardowe odbiornik.  

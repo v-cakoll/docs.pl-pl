@@ -1,23 +1,24 @@
 ---
-title: "Wyjątki"
-ms.custom: 
+title: Wyjątki
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Wyjątki
 Przepływy pracy można użyć <xref:System.Activities.Statements.TryCatch> działanie obsługi wyjątków, które są wywoływane podczas wykonywania przepływu pracy. Wyjątki te mogą być obsługiwane lub ich może zostać zgłoszony ponownie przy użyciu <xref:System.Activities.Statements.Rethrow> działania. Działania w <xref:System.Activities.Statements.TryCatch.Finally%2A> sekcji są wykonywane, kiedy albo <xref:System.Activities.Statements.TryCatch.Try%2A> sekcji lub <xref:System.Activities.Statements.TryCatch.Catches%2A> zakończeniu sekcji. Przepływy pracy na użytek <xref:System.Activities.WorkflowApplication> wystąpienia można również użyć <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> program obsługi zdarzeń do obsługi wyjątków, które nie są obsługiwane przez <xref:System.Activities.Statements.TryCatch> działania.  
@@ -58,7 +59,7 @@ Przepływy pracy można użyć <xref:System.Activities.Statements.TryCatch> dzia
 -   Wyjątek nie jest obsługiwany przez wyższego poziomu <xref:System.Activities.Statements.TryCatch>, specjalne głównego przepływu pracy i przepływ pracy jest skonfigurowany do anulowania zamiast przerwania lub przerwania. Przepływy pracy hostowane przy użyciu <xref:System.Activities.WorkflowApplication> można skonfigurować to obsługa <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> i zwracanie <xref:System.Activities.UnhandledExceptionAction.Cancel>. Przykład obsługa <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> znajduje się wcześniej w tym temacie. Konfigurowanie dla usługi przepływu pracy przy użyciu <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> i określając <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Aby uzyskać przykład konfigurowania <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, zobacz [rozszerzalność hosta usługi przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Obsługa i kompensacji wyjątków  
- Różnica między wyjątków i kompensacji jest, że obsługa wyjątków odbywa się podczas wykonywania działania. Kompensacji występuje, gdy działanie zostało zakończone pomyślnie. Obsługa wyjątków umożliwia czyszczenie po działania zgłasza wyjątek, kompensacji stanowi mechanizm, za pomocą którego można cofnąć pomyślnie ukończona Praca poprzednio ukończoną działania. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Kompensacji](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ Różnica między wyjątków i kompensacji jest, że obsługa wyjątków odbywa się podczas wykonywania działania. Kompensacji występuje, gdy działanie zostało zakończone pomyślnie. Obsługa wyjątków umożliwia czyszczenie po działania zgłasza wyjątek, kompensacji stanowi mechanizm, za pomocą którego można cofnąć pomyślnie ukończona Praca poprzednio ukończoną działania. Aby uzyskać więcej informacji, zobacz [kompensacji](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.Statements.TryCatch>  

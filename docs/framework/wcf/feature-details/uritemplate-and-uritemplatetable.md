@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>Klasy UriTemplate i UriTemplateTable
 Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfikatory URI, które odpowiadają swoich usług. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dodano dwa nowe klasy umożliwiają deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate> i <xref:System.UriTemplateTable> stanowią podstawę aparat wysyłki na podstawie identyfikatora URI w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Te klasy można również na ich własnych, dzięki czemu deweloperzy mógł korzystać z szablonów i mechanizmu mapowanie identyfikatora URI bez stosowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
@@ -33,7 +33,7 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
 |Prognozy National|pogody/national|  
 |Prognozy stanu|pogody / {stanu}|  
 |Prognozy miasta|pogody / {stanu} / {Miasto}|  
-|Prognozy działania|weather/{state}/{city}/{activity}|  
+|Prognozy działania|pogody / {stanu} / {Miasto} / {działania}|  
   
  Poniższa tabela zawiera opis zestawu strukturę podobną identyfikatorów URI. Każdy wpis jest szablon identyfikatora URI. Segmenty w nawiasach klamrowych opisano zmienne. Segmenty nie w nawiasach klamrowych opisano ciągi literału. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Szablonu klasy umożliwiają dewelopera zająć przychodzący identyfikator URI, na przykład "/ pogody/wa/seattle/cyklicznie", i porównuje ją do szablonu, który opisuje, "/weather/ {stanu} / {Miasto} / {działania}".  
   
@@ -51,7 +51,7 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> Właściwość zawiera kolekcję nazw zmiennych w segmentach ścieżki w ciągu szablonu.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> Trwa <xref:System.UriTemplate> jako parametr i zwraca wartość logiczną, która określa, czy dwa szablony są równoważne. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] w sekcji równoważność szablonu w dalszej części tego tematu.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> Trwa <xref:System.UriTemplate> jako parametr i zwraca wartość logiczną, która określa, czy dwa szablony są równoważne. Aby uzyskać więcej informacji zobacz sekcję równoważność szablonu w dalszej części tego tematu.  
   
  <xref:System.UriTemplate> jest przeznaczona do pracy z dowolnego schemat URI, który odpowiada gramatyki identyfikator URI protokołu HTTP. Poniżej przedstawiono przykłady obsługiwane schematy identyfikatorów URI.  
   
@@ -104,7 +104,7 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
   
 -   "uniesienia / {łodzi}? x = {bielizny}"  
   
--   "shoe/{boat}?x={bed}&y=band"  
+-   "uniesienia / {łodzi}? x = {bielizny} & y = poza pasmem"  
   
 -   "? x = {buta}"  
   
@@ -137,7 +137,7 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
   
  Poniżej przedstawiono przykłady segmentów nieprawidłową ścieżkę.  
   
--   /{} — Zmienne musi mieć nazwę.  
+-   /{} -Zmienne musi mieć nazwę.  
   
 -   / {łodzi} - {uniesienia} zmiennych muszą być oddzielone literału.  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Identyfikator URI, np. http://localhost: 8000 / / / jest niezgodna z szablonu wymienionych w powyższym kodzie, jednak identyfikatora URI, np. http://localhost: 8000 / jest.  
+>  Identyfikator URI, takich jak http://localhost:8000/// pasuje do szablonu, jednak wymienione w poprzednim kodzie identyfikatora URI, takich jak http://localhost:8000/ jest.  
   
  Poniższy kod przedstawia sposób obsługi domyślnych wartości zmiennych podczas tworzenia identyfikator URI przy użyciu szablonu.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Rozwiązywanie problemów obsługi komunikatów kolejek"
-ms.custom: 
+title: Rozwiązywanie problemów obsługi komunikatów kolejek
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -26,7 +28,7 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
 ## <a name="common-questions"></a>Często zadawane pytania  
  **Pytanie:** używany [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 oraz zainstalowana poprawka usługi MSMQ. Należy usunąć poprawkę?  
   
- **Odpowiedź:** tak. Ta poprawka jest już obsługiwany. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]teraz działa on MSMQ bez poprawki wymagane.  
+ **Odpowiedź:** tak. Ta poprawka jest już obsługiwany. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] teraz działa on MSMQ bez poprawki wymagane.  
   
  **Pytanie:** istnieją dwa powiązania dla usługi MSMQ: <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Co należy użyć, gdy?  
   
@@ -46,7 +48,7 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
   
 -   Tylko usługi MSMQ 4.0 obsługuje zdalne odczytu transakcyjnego.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Aby uzyskać więcej informacji, zobacz [różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
  **Pytanie:** można używać usługi MSMQ 3.0 na jednej stronie komunikatu w kolejce i MSMQ 4.0 po drugiej stronie?  
   
@@ -97,7 +99,7 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
   
  **Pytanie:** Moje zgłasza usługi na SvcHost.Open z komunikatem "wymagania EndpointListener nie może spełnić ListenerFactory". Dlaczego?  
   
- . Sprawdź umowy serwisowej. Być może została put "IsOneWay =`true`" dla wszystkich operacji usługi. Kolejki obsługują tylko operacje jednokierunkowe usługi.  
+ A. Sprawdź umowy serwisowej. Być może została put "IsOneWay =`true`" dla wszystkich operacji usługi. Kolejki obsługują tylko operacje jednokierunkowe usługi.  
   
  **Pytanie:** są wiadomości w kolejce, ale jest wywoływana żadna operacja usługi. Co to jest problem?  
   

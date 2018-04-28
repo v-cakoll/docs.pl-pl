@@ -1,27 +1,29 @@
 ---
-title: "Używanie klasy Message"
-ms.custom: 
+title: Używanie klasy Message
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Używanie klasy Message
 <xref:System.ServiceModel.Channels.Message> Klasy jest niezbędne, aby [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Cała komunikacja między klientami i usługami powoduje w rezultacie <xref:System.ServiceModel.Channels.Message> wysyłanych i odbieranych wystąpień.  
@@ -76,7 +78,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="creating-messages-with-bodywriter"></a>Tworzenie wiadomości z BodyWriter  
  Jeden `CreateMessage` przeciążenia przyjmuje `BodyWriter` wystąpienie do opisywania treści wiadomości. A `BodyWriter` jest klasą abstrakcyjną, jaką można dostosować sposób tworzenia treści wiadomości. Utwórz swój własny `BodyWriter` klasy do opisywania treści wiadomości w niestandardowy sposób. Konieczne jest przesłonięcie `BodyWriter.OnWriteBodyContents` metody pobierającej <xref:System.Xml.XmlDictionaryWriter>; ta metoda jest odpowiedzialna za wypisywanie treści.  
   
- Można buforować treść zapisywania lub niebuforowanym (przesyłane strumieniowo). Autorzy buforowanego treści można zapisać poza ich zawartość dowolną liczbę razy, gdy przesyłany strumieniowo z nich może zapisywać tylko raz poza ich zawartość. `IsBuffered` Właściwość wskazuje, czy edytor treści są buforowane, czy nie. Możesz ustawić dla Twojego zapisu treści przez wywołanie metody chronionej `BodyWriter` konstruktora przyjmującego `isBuffered` parametrów typu boolean. Autorzy treści obsługuje tworzenie Edytor treści buforowanego Autor niebuforowanym treści. Można zastąpić `OnCreateBufferedCopy` metodę w celu dostosowania tego procesu. Domyślnie buforów w pamięci, który zawiera kod XML zwrócony przez `OnWriteBodyContents` jest używany. `OnCreateBufferedCopy`Trwa `maxBufferSize` parametru liczby całkowitej; razie przesłonięcia tej metody nie można utworzyć buforów przekracza dopuszczalny rozmiar.  
+ Można buforować treść zapisywania lub niebuforowanym (przesyłane strumieniowo). Autorzy buforowanego treści można zapisać poza ich zawartość dowolną liczbę razy, gdy przesyłany strumieniowo z nich może zapisywać tylko raz poza ich zawartość. `IsBuffered` Właściwość wskazuje, czy edytor treści są buforowane, czy nie. Możesz ustawić dla Twojego zapisu treści przez wywołanie metody chronionej `BodyWriter` konstruktora przyjmującego `isBuffered` parametrów typu boolean. Autorzy treści obsługuje tworzenie Edytor treści buforowanego Autor niebuforowanym treści. Można zastąpić `OnCreateBufferedCopy` metodę w celu dostosowania tego procesu. Domyślnie buforów w pamięci, który zawiera kod XML zwrócony przez `OnWriteBodyContents` jest używany. `OnCreateBufferedCopy` Trwa `maxBufferSize` parametru liczby całkowitej; razie przesłonięcia tej metody nie można utworzyć buforów przekracza dopuszczalny rozmiar.  
   
  `BodyWriter` Klasa udostępnia `WriteBodyContents` i `CreateBufferedCopy` metody, które są zasadniczo elastycznej otoki wokół `OnWriteBodyContents` i `OnCreateBufferedCopy` metod, odpowiednio. Te metody sprawdzania stanu aby upewnić się, że edytor niebuforowanym treści nie jest dostępny więcej niż raz. Te metody są wywoływane bezpośrednio tylko podczas tworzenia niestandardowego `Message` na podstawie klasy pochodne `BodyWriters`.  
   
@@ -107,9 +109,9 @@ ms.lasthandoff: 12/22/2017
   
  Dwie metody pomocnicze dodatkowe zapisać niektórych początkowe tagi elementu SOAP. Tych metod nie uzyskać dostępu do treści wiadomości i dlatego nie zmienić stan komunikatu. Należą do nich następujące elementy:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A>Zapisuje element body początkowy, na przykład `<soap:Body>`.  
+-   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> Zapisuje element body początkowy, na przykład `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A>Zapisuje element koperty początkowy, na przykład `<soap:Envelope>`.  
+-   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> Zapisuje element koperty początkowy, na przykład `<soap:Envelope>`.  
   
  Aby napisać odpowiedniego końca znaczniki elementów, należy wywołać `WriteEndElement` na odpowiedniego edytora XML. Te metody są rzadko wywołać bezpośrednio.  
   
@@ -162,7 +164,7 @@ ms.lasthandoff: 12/22/2017
  Można użyć <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> metodę, aby uzyskać dostępu do określonego atrybutu na element otoki treści (na przykład `<soap:Body>`) identyfikowana na podstawie określonej nazwy i przestrzeni nazw. Jeśli nie odnaleziono takiego atrybutu, `null` jest zwracany. Tę metodę można wywołać tylko wtedy, gdy `Message` jest w stanie Created (Jeśli treść komunikatu nie uzyska dostępu).  
   
 ## <a name="working-with-headers"></a>Praca z nagłówkami  
- A `Message` może zawierać dowolną liczbę fragmenty XML o nazwie, o nazwie *nagłówki*. Każdy fragment zwykle mapuje do nagłówka SOAP. Nagłówki są dostępne za pośrednictwem `Headers` właściwości typu <xref:System.ServiceModel.Channels.MessageHeaders>. <xref:System.ServiceModel.Channels.MessageHeaders>to kolekcja <xref:System.ServiceModel.Channels.MessageHeaderInfo> obiektów i poszczególne nagłówki są dostępne za pośrednictwem jego <xref:System.Collections.IEnumerable> interfejsu lub za pośrednictwem jego indeksatora. Na przykład poniższy kod wyświetla nazwy wszystkich nagłówków w `Message`.  
+ A `Message` może zawierać dowolną liczbę fragmenty XML o nazwie, o nazwie *nagłówki*. Każdy fragment zwykle mapuje do nagłówka SOAP. Nagłówki są dostępne za pośrednictwem `Headers` właściwości typu <xref:System.ServiceModel.Channels.MessageHeaders>. <xref:System.ServiceModel.Channels.MessageHeaders> to kolekcja <xref:System.ServiceModel.Channels.MessageHeaderInfo> obiektów i poszczególne nagłówki są dostępne za pośrednictwem jego <xref:System.Collections.IEnumerable> interfejsu lub za pośrednictwem jego indeksatora. Na przykład poniższy kod wyświetla nazwy wszystkich nagłówków w `Message`.  
   
  [!code-csharp[C_UsingTheMessageClass#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#8)]
  [!code-vb[C_UsingTheMessageClass#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#8)]  
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
  Pobrać za pomocą określonego nagłówka <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> metody. Ta metoda przyjmuje nazwę i przestrzeń nazw nagłówka, aby znaleźć i zwraca jego indeksu. Jeśli w nagłówku występuje więcej niż raz, jest zwracany wyjątek. Jeśli w nagłówku nie zostanie znaleziony, zwraca -1.  
   
- W modelu nagłówka SOAP, może mieć nagłówków `Actor` wartość, która określa adresata nagłówka. Najprostsza `FindHeader` przeciążenia wyszukuje tylko nagłówki przeznaczonych do ostatecznej odbiorcy wiadomości. Jednak innego przeciążenia umożliwia określenie, które `Actor` wartości są uwzględniane w wyszukiwaniu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Specyfikacja protokołu SOAP.  
+ W modelu nagłówka SOAP, może mieć nagłówków `Actor` wartość, która określa adresata nagłówka. Najprostsza `FindHeader` przeciążenia wyszukuje tylko nagłówki przeznaczonych do ostatecznej odbiorcy wiadomości. Jednak innego przeciążenia umożliwia określenie, które `Actor` wartości są uwzględniane w wyszukiwaniu. Aby uzyskać więcej informacji zobacz specyfikację protokołu SOAP.  
   
  A <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> metody są dostarczane do kopiowania nagłówków z <xref:System.ServiceModel.Channels.MessageHeaders> kolekcji do tablicy <xref:System.ServiceModel.Channels.MessageHeaderInfo> obiektów.  
   
@@ -187,7 +189,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="defining-the-message-body-contents"></a>Definiowanie treść wiadomości  
  Istnieją trzy metody głównej do uzyskiwania dostępu do danych w ramach treści wiadomości: zapisywanie, odczytywanie i skopiować go do buforu. Te operacje, ale ostatecznie spowodować <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>, <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents%2A>, i <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> metody wywoływane, odpowiednio w klasie pochodnej z `Message`. Podstawowym `Message` klasy gwarantuje tylko jeden z tych metod jest wywoływana dla każdej `Message` wystąpienia i że nie jest wywoływany więcej niż raz. Klasa podstawowa gwarantuje również, że metody nie są wywoływane na zamkniętym wiadomości. Nie istnieje potrzeba śledzenia stanu komunikat w implementacji.  
   
- <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>jest metoda abstrakcyjna i musi zostać wdrożone. Najprostszym sposobem definiowania zawartości w treści wiadomości jest przy użyciu tej metody. Na przykład następujący komunikat zawiera 100 000 losowych liczb z zakresu od 1 do 20.  
+ <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A> jest metoda abstrakcyjna i musi zostać wdrożone. Najprostszym sposobem definiowania zawartości w treści wiadomości jest przy użyciu tej metody. Na przykład następujący komunikat zawiera 100 000 losowych liczb z zakresu od 1 do 20.  
   
  [!code-csharp[C_UsingTheMessageClass#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#9)]
  [!code-vb[C_UsingTheMessageClass#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#9)]  

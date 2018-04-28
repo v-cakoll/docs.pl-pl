@@ -1,20 +1,17 @@
 ---
-title: "Kopiowanie i aktualizację wyrażenia rekordów (F #)"
-description: "Dowiedz się, jak napisać określone pola \"Kopiuj i Aktualizuj rekordu wyrażenia\" który kopiuje istniejących rekordów, aktualizacji i zwraca zaktualizowany rekord."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Kopiowanie i aktualizację wyrażenia rekordów (F #)'
+description: Dowiedz się, jak napisać określone pola "Kopiuj i Aktualizuj rekordu wyrażenia" który kopiuje istniejących rekordów, aktualizacji i zwraca zaktualizowany rekord.
 author: ChrSteinert
 ms.author: phcart
 ms.date: 06/04/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b5fc4ef0-64eb-4272-96a7-bb4dffbb634a
-ms.openlocfilehash: 2eb51842b678780a1d6da96e237ebb92d1ea5cec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 98a515b5f053e9339588157185848e8315a580f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopiowanie i aktualizację wyrażenia rekordów
 
@@ -43,4 +40,4 @@ Jeśli masz zamiar aktualizacji tylko na pola rekordu można użyć *kopiowanie 
 ## <a name="see-also"></a>Zobacz też
 [Rekordy](records.md)
 
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)

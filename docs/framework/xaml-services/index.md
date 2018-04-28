@@ -20,11 +20,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-services"></a>Usługi XAML
 W tym temacie opisano funkcje zestawu technologii, znany jako .NET Framework XAML usług. Większość usług i interfejsów API opisanego znajdują się w zestawie System.Xaml, która jest zestawem wprowadzone w systemie [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zbiór zestawów platformy .NET core. Usługi obejmują fabryki czytelników i moduły zapisujące klasy schematu i obsługi schematu, przypisywanie klas, wewnętrzne obsługę języka XAML i inne funkcje języka XAML.  
@@ -49,7 +49,7 @@ W tym temacie opisano funkcje zestawu technologii, znany jako .NET Framework XAM
  Jeśli szukasz wprowadzające informacje na języku XAML jako język, możesz spróbować [omówienie XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Ten temat omówiono XAML na odbiorców, którzy nowego zarówno do [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] i również przy użyciu znaczników XAML i funkcje języka XAML. Innym dokumencie przydatne jest wprowadzające informacje w [specyfikacja języka XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Usługi XAML .NET framework i System.Xaml architektury .NET  
- W poprzednich wersjach [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], pomocy technicznej dla XAML — funkcje językowe został zaimplementowany przez platformy, które są oparte na [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], programu Windows Workflow Foundation i [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) i w związku z tym zmieniona w jego zachowanie i interfejsu API używany w zależności od tego, które określonej platformy były używane. Obejmuje XAML analizatora i jego obiektu wykresu mechanizm tworzenia, funkcje wewnętrzne języka XAML, obsługi serializacji i tak dalej.  
+ W poprzednich wersjach [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], pomocy technicznej dla XAML — funkcje językowe został zaimplementowany przez platformy, które są oparte na [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], programu Windows Workflow Foundation i Windows Communication Foundation (WCF)) i w związku z tym zmieniona w jego zachowanie i interfejsu API używany w zależności od tego, które określonej platformy były używane. Obejmuje XAML analizatora i jego obiektu wykresu mechanizm tworzenia, funkcje wewnętrzne języka XAML, obsługi serializacji i tak dalej.  
   
  W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], usługi XAML .NET Framework i zestawu System.Xaml zdefiniować wiele co jest potrzebne do obsługi funkcji języka XAML. Dotyczy to również klas podstawowych dla czytników XAML i zapisywania XAML. Najważniejsze funkcja dodana do usług XAML .NET Framework, która nie była obecna w innych implementacjach XAML określonej struktury jest reprezentacja system typu dla XAML. Reprezentacja typu systemu przedstawia XAML w sposób zorientowane obiektowo koncentruje się na funkcjach XAML bez konieczności przełączania zależności na określone możliwości platform.  
   

@@ -1,26 +1,26 @@
 ---
-title: "Trwałość przepływu pracy"
-ms.custom: 
+title: Trwałość przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2278762895978f90d80977f9e538b0e10a4f3f8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-persistence"></a>Trwałość przepływu pracy
 Trwałość przepływu pracy jest trwałe przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji procesu lub komputera. Jest to zrobić, aby przekazać dobrze znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które są aktywnie niewykonania pracy lub przenoszenie stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.  
@@ -33,7 +33,7 @@ Trwałość przepływu pracy jest trwałe przechwytywania stanu wystąpienia prz
   
  Do przechowywania i załaduj swoje dane specyficzne dla aplikacji, oraz informacje dotyczące wystąpienia przepływu pracy, można utworzyć uczestników trwałości, które rozszerzają <xref:System.Activities.Persistence.PersistenceParticipant> klasy. Uczestnika trwałości uczestniczy w procesie trwałości można zapisać w magazynie informacji o trwałości, aby załadować dane z magazynu wystąpień w pamięci i wykonywać żadnych dodatkowych logiki w ramach transakcji trwałości niestandardowe dane do serializacji. Aby uzyskać więcej informacji, zobacz [uczestników trwałości](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
   
- Windows Server AppFabric upraszcza proces konfigurowania trwałości. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Koncepcji trwałości z systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server AppFabric upraszcza proces konfigurowania trwałości. Aby uzyskać więcej informacji, zobacz [koncepcji trwałości z systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
   
 ## <a name="implicit-persistence-points"></a>Niejawne punktów trwałości  
  Poniższa lista zawiera przykłady warunków, od których przepływu pracy jest trwały, gdy magazyn wystąpienia jest skojarzony z przepływem pracy.  

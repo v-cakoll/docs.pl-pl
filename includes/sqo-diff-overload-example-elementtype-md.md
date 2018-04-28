@@ -1,0 +1,2 @@
+> [!NOTE]
+>  W tym przykładzie kodu używane jest przeciążenie tej przeciążonej metody inne niż przeciążenie opisane w tym temacie. W celu rozszerzenia przykładu tak, aby dotyczył tego tematu, należy zastąpić elementy sekwencji źródłowej elementami odpowiedniego typu numerycznego.

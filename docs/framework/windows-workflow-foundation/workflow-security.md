@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-security"></a>Zabezpieczenia przepływu pracy
 Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Interakcja z tych technologii może powodować problemy z zabezpieczeniami z przepływem pracy, jeśli wykonane nieprawidłowo.  
@@ -41,15 +41,15 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
   
 -   Jeśli dużej liczby działań podrzędnych, lokalizacji, zakładki, rozszerzenia hosta lub zakresy są używane, lub zakładki z bardzo dużych ładunki są używane, pamięci można wyczerpane lub nadmiernej ilości miejsca w bazie danych, którą można przydzielić podczas utrwalania. Można to zminimalizować przy użyciu zabezpieczeń na poziomie bazy danych i na poziomie obiektu.  
   
--   Korzystając z <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, muszą być zabezpieczone w magazynie wystąpień. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server najlepsze rozwiązania](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Korzystając z <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, muszą być zabezpieczone w magazynie wystąpień. Aby uzyskać więcej informacji, zobacz [programu SQL Server najlepsze rozwiązania](http://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   Powinny być szyfrowane poufnych danych w magazynie wystąpień. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Szyfrowanie zabezpieczeń SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   Powinny być szyfrowane poufnych danych w magazynie wystąpień. Aby uzyskać więcej informacji, zobacz [szyfrowania zabezpieczeń SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Ponieważ często zawiera parametry połączenia bazy danych w pliku konfiguracji, zabezpieczenia na poziomie systemu windows (ACL) powinien być używany do zapewnienia, że plik konfiguracyjny (zwykle w pliku Web.Config) jest bezpieczne i informacje logowania i hasła nie są uwzględnione w Parametry połączenia. Uwierzytelnianie systemu Windows należy użyć między bazy danych i serwera sieci web.  
   
 ## <a name="considerations-for-workflowservicehost"></a>Zagadnienia dotyczące obiektu WorkflowServiceHost  
   
--   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] punkty końcowe używane w przepływach pracy powinny być chronione. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Przegląd zabezpieczeń WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] punkty końcowe używane w przepływach pracy powinny być chronione. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń usługi WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Zezwolenie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [jak: tworzenie Menedżera autoryzacji niestandardowej dla usługi](http://go.microsoft.com/fwlink/?LinkId=192228) szczegółowe informacje. Jest to również przedstawiono w poniższym przykładzie: [zabezpieczania usług przepływu pracy](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

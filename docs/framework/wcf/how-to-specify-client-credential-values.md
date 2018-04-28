@@ -1,27 +1,29 @@
 ---
-title: "Instrukcje: Określanie wartości poświadczeń klienta"
-ms.custom: 
+title: 'Instrukcje: Określanie wartości poświadczeń klienta'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Instrukcje: Określanie wartości poświadczeń klienta
 Przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługi można określić, jak klient jest uwierzytelniony do usługi. Na przykład usługi można określić uwierzytelnienia klienta przy użyciu certyfikatu.  
@@ -32,7 +34,7 @@ Przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługi możn
   
 2.  Otwórz plik konfiguracji XML. Jeśli korzystasz z narzędzia Svcutil.exe w domyślnej nazwy pliku jest Output.config.  
   
-3.  Znajdź  **\<zabezpieczeń >** element z **tryb** atrybutu (**< tryb zabezpieczeń =** `MessageOrTransport`  **>**  gdzie `MessageOrTransport` jest ustawiona na jeden z trybów zabezpieczeń.  
+3.  Znajdź  **\<zabezpieczeń >** element z **tryb** atrybutu (**< tryb zabezpieczeń =** `MessageOrTransport` **>** gdzie `MessageOrTransport` jest ustawiona na jeden z trybów zabezpieczeń.  
   
 4.  Znajdź element podrzędny, która jest zgodna z wartością tryb. Na przykład, jeśli ustawiono tryb **komunikat**, Znajdź  **\<wiadomości >** element zawarty w  **\<zabezpieczeń >** elementu.  
   
@@ -50,7 +52,7 @@ Przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługi możn
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Przykład: Tryb transportu protokołu TCP z certyfikatu jako poświadczeń klienta  
- W tym przykładzie ustawiono tryb zabezpieczeń transportu i ustawia wartość poświadczenia klienta certyfikatu X.509. Poniższe procedury pokazują, jak można ustawić wartości poświadczeń klienta na komputerze klienckim w kodzie i konfiguracji. Przy założeniu, że użyto [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do zwracania metadanych (kod i konfiguracja) z usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+ W tym przykładzie ustawiono tryb zabezpieczeń transportu i ustawia wartość poświadczenia klienta certyfikatu X.509. Poniższe procedury pokazują, jak można ustawić wartości poświadczeń klienta na komputerze klienckim w kodzie i konfiguracji. Przy założeniu, że użyto [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do zwracania metadanych (kod i konfiguracja) z usługi. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Aby określić wartość poświadczenia klienta na komputerze klienckim w kodzie  
   
@@ -73,7 +75,7 @@ Przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługi możn
   
 3.  Dodaj [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) elementu [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu.  
   
-4.  Ustaw następujące atrybuty odpowiednie wartości: `storeLocation`, `storeName`, `x509FindType`, i `findValue`, jak pokazano w poniższym kodzie. [!INCLUDE[crabout](../../../includes/crabout-md.md)]certyfikaty, zobacz [Praca z certyfikatami](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Ustaw następujące atrybuty odpowiednie wartości: `storeLocation`, `storeName`, `x509FindType`, i `findValue`, jak pokazano w poniższym kodzie. [!INCLUDE[crabout](../../../includes/crabout-md.md)] certyfikaty, zobacz [Praca z certyfikatami](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  
@@ -113,10 +115,10 @@ Przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługi możn
  [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Praca z certyfikatami](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Instrukcje: tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
  [\<Zabezpieczenia >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
- [\<komunikat >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
+ [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
  [\<zachowanie >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
  [\<zachowania >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+ [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

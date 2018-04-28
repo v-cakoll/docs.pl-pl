@@ -1,13 +1,13 @@
 ---
-title: "Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I"
-ms.custom: 
+title: Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,44 +15,44 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6bef68c8ba433e902cfd50e59a3b343e3af08cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fa561e5019bcf90e93da669f93cbce51d02e89dc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="creating-ws-i-basic-profile-11-interoperable-services"></a><span data-ttu-id="8682d-102">Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I</span><span class="sxs-lookup"><span data-stu-id="8682d-102">Creating WS-I Basic Profile 1.1 Interoperable Services</span></span>
-<span data-ttu-id="8682d-103">Aby skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu końcowego usługi do współdziałać z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web:</span><span class="sxs-lookup"><span data-stu-id="8682d-103">To configure a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients:</span></span>  
+# <a name="creating-ws-i-basic-profile-11-interoperable-services"></a><span data-ttu-id="83bbf-102">Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I</span><span class="sxs-lookup"><span data-stu-id="83bbf-102">Creating WS-I Basic Profile 1.1 Interoperable Services</span></span>
+<span data-ttu-id="83bbf-103">Aby skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu końcowego usługi do współdziałać z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web:</span><span class="sxs-lookup"><span data-stu-id="83bbf-103">To configure a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients:</span></span>  
   
--   <span data-ttu-id="8682d-104">Użyj <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> typu powiązanie dla punktu końcowego usługi.</span><span class="sxs-lookup"><span data-stu-id="8682d-104">Use the <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type as the binding type for your service endpoint.</span></span>  
+-   <span data-ttu-id="83bbf-104">Użyj <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> typu powiązanie dla punktu końcowego usługi.</span><span class="sxs-lookup"><span data-stu-id="83bbf-104">Use the <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type as the binding type for your service endpoint.</span></span>  
   
--   <span data-ttu-id="8682d-105">Nie używaj wywołania zwrotnego i funkcje kontraktu sesji lub transakcji zachowania punktu końcowego usługi</span><span class="sxs-lookup"><span data-stu-id="8682d-105">Do not use callback and session contract features or transaction behaviors on your service endpoint</span></span>  
+-   <span data-ttu-id="83bbf-105">Nie używaj wywołania zwrotnego i funkcje kontraktu sesji lub transakcji zachowania punktu końcowego usługi</span><span class="sxs-lookup"><span data-stu-id="83bbf-105">Do not use callback and session contract features or transaction behaviors on your service endpoint</span></span>  
   
- <span data-ttu-id="8682d-106">Opcjonalnie można włączyć obsługę uwierzytelniania klienta na poziomie transportu dla powiązania i HTTPS.</span><span class="sxs-lookup"><span data-stu-id="8682d-106">You can optionally enable support for HTTPS and transport-level client authentication on the binding.</span></span>  
+ <span data-ttu-id="83bbf-106">Opcjonalnie można włączyć obsługę uwierzytelniania klienta na poziomie transportu dla powiązania i HTTPS.</span><span class="sxs-lookup"><span data-stu-id="83bbf-106">You can optionally enable support for HTTPS and transport-level client authentication on the binding.</span></span>  
   
- <span data-ttu-id="8682d-107">Poniższe funkcje <xref:System.ServiceModel.BasicHttpBinding> klasy wymagają funkcji poza WS-I Basic Profile 1.1:</span><span class="sxs-lookup"><span data-stu-id="8682d-107">The following features of the <xref:System.ServiceModel.BasicHttpBinding> class require functionality beyond WS-I Basic Profile 1.1:</span></span>  
+ <span data-ttu-id="83bbf-107">Poniższe funkcje <xref:System.ServiceModel.BasicHttpBinding> klasy wymagają funkcji poza WS-I Basic Profile 1.1:</span><span class="sxs-lookup"><span data-stu-id="83bbf-107">The following features of the <xref:System.ServiceModel.BasicHttpBinding> class require functionality beyond WS-I Basic Profile 1.1:</span></span>  
   
--   <span data-ttu-id="8682d-108">Kodowanie komunikatu mechanizmu optymalizacji transmisji (MTOM) komunikatu kontrolowane przez <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> właściwości.</span><span class="sxs-lookup"><span data-stu-id="8682d-108">Message Transmission Optimization Mechanism (MTOM) message encoding controlled by the <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="8682d-109">Pozostaw tę właściwość na wartość domyślną, która jest <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> aby nie używać mechanizmu MTOM.</span><span class="sxs-lookup"><span data-stu-id="8682d-109">Leave  this property at its default value, which is <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> to not use MTOM.</span></span>  
+-   <span data-ttu-id="83bbf-108">Kodowanie komunikatu mechanizmu optymalizacji transmisji (MTOM) komunikatu kontrolowane przez <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> właściwości.</span><span class="sxs-lookup"><span data-stu-id="83bbf-108">Message Transmission Optimization Mechanism (MTOM) message encoding controlled by the <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="83bbf-109">Pozostaw tę właściwość na wartość domyślną, która jest <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> aby nie używać mechanizmu MTOM.</span><span class="sxs-lookup"><span data-stu-id="83bbf-109">Leave  this property at its default value, which is <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> to not use MTOM.</span></span>  
   
--   <span data-ttu-id="8682d-110">Kontrolowane przez zabezpieczenia wiadomości <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> wartość zapewnia obsługę WS-Security zgodne z WS-I Basic 1.0 profil zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="8682d-110">Message security controlled by the <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> value provides WS-Security support compliant with WS-I Basic Security Profile 1.0.</span></span> <span data-ttu-id="8682d-111">Pozostaw tę właściwość na wartość domyślną, która jest <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> nieużywanie WS-Security.</span><span class="sxs-lookup"><span data-stu-id="8682d-111">Leave this property at its default value, which is <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> to not use WS-Security.</span></span>  
+-   <span data-ttu-id="83bbf-110">Kontrolowane przez zabezpieczenia wiadomości <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> wartość zapewnia obsługę WS-Security zgodne z WS-I Basic 1.0 profil zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="83bbf-110">Message security controlled by the <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> value provides WS-Security support compliant with WS-I Basic Security Profile 1.0.</span></span> <span data-ttu-id="83bbf-111">Pozostaw tę właściwość na wartość domyślną, która jest <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> nieużywanie WS-Security.</span><span class="sxs-lookup"><span data-stu-id="83bbf-111">Leave this property at its default value, which is <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> to not use WS-Security.</span></span>  
   
- <span data-ttu-id="8682d-112">Aby uzyskać metadanych [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dostępnych usług do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], użyj narzędzia generowania klienta usługi sieci Web: [narzędzia języka opisu usługi sieci Web (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [narzędzia odnajdywania usług sieci Web ( DISCO.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)i `Add Web Reference` w narzędziu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; należy włączyć publikowanie metadanych.</span><span class="sxs-lookup"><span data-stu-id="8682d-112">To make the metadata for a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service available to [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], use the Web service client generation tools: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [Web Services Discovery Tool (Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), and the `Add Web Reference` feature in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; you must enable metadata publication.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="8682d-113">[Publikowania punkty końcowe metadanych](../../../docs/framework/wcf/publishing-metadata-endpoints.md).</span><span class="sxs-lookup"><span data-stu-id="8682d-113"> [Publishing Metadata Endpoints](../../../docs/framework/wcf/publishing-metadata-endpoints.md).</span></span>  
+ <span data-ttu-id="83bbf-112">Aby uzyskać metadanych [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dostępnych usług do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], użyj narzędzia generowania klienta usługi sieci Web: [narzędzia języka opisu usługi sieci Web (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [narzędzia odnajdywania usług sieci Web ( DISCO.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)i `Add Web Reference` funkcji w programie Visual Studio; należy włączyć publikowanie metadanych.</span><span class="sxs-lookup"><span data-stu-id="83bbf-112">To make the metadata for a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service available to [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], use the Web service client generation tools: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [Web Services Discovery Tool (Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979), and the `Add Web Reference` feature in Visual Studio; you must enable metadata publication.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="83bbf-113"> [Publikowanie punktów końcowych metadanych](../../../docs/framework/wcf/publishing-metadata-endpoints.md).</span><span class="sxs-lookup"><span data-stu-id="83bbf-113"> [Publishing Metadata Endpoints](../../../docs/framework/wcf/publishing-metadata-endpoints.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8682d-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="8682d-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="83bbf-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="83bbf-114">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="8682d-115">Opis</span><span class="sxs-lookup"><span data-stu-id="8682d-115">Description</span></span>  
- <span data-ttu-id="8682d-116">Poniższy przykładowy kod przedstawia sposób dodawania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu końcowego, który jest zgodny z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sieci Web obsługi klientów w kodzie i alternatywnie w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="8682d-116">The following example code demonstrates how to add a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoint that is compatible with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients in code and, alternatively, in a configuration file.</span></span>  
+### <a name="description"></a><span data-ttu-id="83bbf-115">Opis</span><span class="sxs-lookup"><span data-stu-id="83bbf-115">Description</span></span>  
+ <span data-ttu-id="83bbf-116">Poniższy przykładowy kod przedstawia sposób dodawania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu końcowego, który jest zgodny z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sieci Web obsługi klientów w kodzie i alternatywnie w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="83bbf-116">The following example code demonstrates how to add a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoint that is compatible with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients in code and, alternatively, in a configuration file.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="8682d-117">Kod</span><span class="sxs-lookup"><span data-stu-id="8682d-117">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="83bbf-117">Kod</span><span class="sxs-lookup"><span data-stu-id="83bbf-117">Code</span></span>  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="8682d-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8682d-118">See Also</span></span>  
- [<span data-ttu-id="8682d-119">Współdziałanie z usługami ASP.NET w sieci Web</span><span class="sxs-lookup"><span data-stu-id="8682d-119">Interoperability with ASP.NET Web Services</span></span>](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+## <a name="see-also"></a><span data-ttu-id="83bbf-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="83bbf-118">See Also</span></span>  
+ [<span data-ttu-id="83bbf-119">Współdziałanie z usługami ASP.NET w sieci Web</span><span class="sxs-lookup"><span data-stu-id="83bbf-119">Interoperability with ASP.NET Web Services</span></span>](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

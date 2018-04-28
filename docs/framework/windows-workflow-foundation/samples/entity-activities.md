@@ -1,49 +1,50 @@
 ---
-title: "Działania jednostki"
-ms.custom: 
+title: Działania jednostki
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="entity-activities"></a><span data-ttu-id="3a6e0-102">Działania jednostki</span><span class="sxs-lookup"><span data-stu-id="3a6e0-102">Entity Activities</span></span>
-<span data-ttu-id="3a6e0-103">Ten przykład przedstawia sposób użycia programu ADO.NET Entity Framework z [!INCLUDE[wf2](../../../../includes/wf2-md.md)] uprościć dostęp do danych.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-103">This sample shows how to use the ADO.NET Entity Framework with [!INCLUDE[wf2](../../../../includes/wf2-md.md)] to simplify data access.</span></span>  
+# <a name="entity-activities"></a><span data-ttu-id="41df3-102">Działania jednostki</span><span class="sxs-lookup"><span data-stu-id="41df3-102">Entity Activities</span></span>
+<span data-ttu-id="41df3-103">Ten przykład przedstawia sposób upraszczanie dostępu do danych przy użyciu programu ADO.NET Entity Framework z programu Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="41df3-103">This sample shows how to use the ADO.NET Entity Framework with Windows Workflow Foundation to simplify data access.</span></span>  
   
- <span data-ttu-id="3a6e0-104">ADO.NET Entity Framework umożliwia deweloperom pracy z danymi w postaci obiektów specyficznego dla domeny, właściwości i relacje, takich jak klienci, zamówienia, szczegółów zamówienia i relacji między tymi obiektami.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-104">The ADO.NET Entity Framework enables developers to work with data in the form of domain-specific objects, properties and relationships such as Customers, Orders, Order Details and the relationships between these entities.</span></span> <span data-ttu-id="3a6e0-105">ADO.NET Entity Framework robi to przez zapewnienie na poziomie abstrakcji, która umożliwia programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-105">The ADO.NET Entity Framework does this by providing a level of abstraction that enables programming against a conceptual application model instead of programming directly against a relational storage schema.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3a6e0-106">Zobacz ADO.NET Entity Framework [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).</span><span class="sxs-lookup"><span data-stu-id="3a6e0-106"> the ADO.NET Entity Framework see [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).</span></span>  
+ <span data-ttu-id="41df3-104">ADO.NET Entity Framework umożliwia deweloperom pracy z danymi w postaci obiektów specyficznego dla domeny, właściwości i relacje, takich jak klienci, zamówienia, szczegółów zamówienia i relacji między tymi obiektami.</span><span class="sxs-lookup"><span data-stu-id="41df3-104">The ADO.NET Entity Framework enables developers to work with data in the form of domain-specific objects, properties and relationships such as Customers, Orders, Order Details and the relationships between these entities.</span></span> <span data-ttu-id="41df3-105">ADO.NET Entity Framework robi to przez zapewnienie na poziomie abstrakcji, która umożliwia programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu.</span><span class="sxs-lookup"><span data-stu-id="41df3-105">The ADO.NET Entity Framework does this by providing a level of abstraction that enables programming against a conceptual application model instead of programming directly against a relational storage schema.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="41df3-106"> Zobacz ADO.NET Entity Framework [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).</span><span class="sxs-lookup"><span data-stu-id="41df3-106"> the ADO.NET Entity Framework see [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="3a6e0-107">Szczegóły próbki</span><span class="sxs-lookup"><span data-stu-id="3a6e0-107">Sample details</span></span>  
- <span data-ttu-id="3a6e0-108">W przykładzie użyto `Northwind` bazy danych i obejmuje skrypty umożliwiające tworzenie i usuwanie `Northwind` bazy danych (Setup.cmd i Cleanup.cmd).</span><span class="sxs-lookup"><span data-stu-id="3a6e0-108">This sample uses the `Northwind` database and includes scripts for creating and removing the `Northwind` database (Setup.cmd and Cleanup.cmd).</span></span> <span data-ttu-id="3a6e0-109">Projekty w tym przykładzie obejmują modelu danych jednostki na podstawie `Northwind` bazy danych.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-109">The projects in this sample include an Entity Data Model based on the `Northwind` database.</span></span> <span data-ttu-id="3a6e0-110">Można znaleźć modelu, otwierając `Northwind.edmx` pliku, który jest dołączony do projektu.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-110">You can find the model by opening the `Northwind.edmx` file that is included in the project.</span></span> <span data-ttu-id="3a6e0-111">To jest model, który określa kształt obiektów, które są dostępne przy użyciu programu ADO.NET Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-111">This is the model that defines the shape of the objects that can be accessed using the ADO.NET Entity Framework.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="41df3-107">Szczegóły próbki</span><span class="sxs-lookup"><span data-stu-id="41df3-107">Sample details</span></span>  
+ <span data-ttu-id="41df3-108">W przykładzie użyto `Northwind` bazy danych i obejmuje skrypty umożliwiające tworzenie i usuwanie `Northwind` bazy danych (Setup.cmd i Cleanup.cmd).</span><span class="sxs-lookup"><span data-stu-id="41df3-108">This sample uses the `Northwind` database and includes scripts for creating and removing the `Northwind` database (Setup.cmd and Cleanup.cmd).</span></span> <span data-ttu-id="41df3-109">Projekty w tym przykładzie obejmują modelu danych jednostki na podstawie `Northwind` bazy danych.</span><span class="sxs-lookup"><span data-stu-id="41df3-109">The projects in this sample include an Entity Data Model based on the `Northwind` database.</span></span> <span data-ttu-id="41df3-110">Można znaleźć modelu, otwierając `Northwind.edmx` pliku, który jest dołączony do projektu.</span><span class="sxs-lookup"><span data-stu-id="41df3-110">You can find the model by opening the `Northwind.edmx` file that is included in the project.</span></span> <span data-ttu-id="41df3-111">To jest model, który określa kształt obiektów, które są dostępne przy użyciu programu ADO.NET Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="41df3-111">This is the model that defines the shape of the objects that can be accessed using the ADO.NET Entity Framework.</span></span>  
   
- <span data-ttu-id="3a6e0-112">Ten przykład obejmuje wykonywanie następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="3a6e0-112">The following activities are included in this sample:</span></span>  
+ <span data-ttu-id="41df3-112">Ten przykład obejmuje wykonywanie następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="41df3-112">The following activities are included in this sample:</span></span>  
   
--   <span data-ttu-id="3a6e0-113">`EntitySQLQuery`: `EntitySQLQuery` Działania umożliwia pobieranie obiektów z bazy danych, w zależności od ciągu zapytania SQL jednostki.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-113">`EntitySQLQuery`: The `EntitySQLQuery` activity allows you to retrieve objects from the database based on an Entity SQL query string.</span></span> <span data-ttu-id="3a6e0-114">Jednostka SQL jest językiem niezależne magazynu jest podobny do bazy danych SQL i umożliwia określenie zapytań na podstawie modelu koncepcyjnego i jednostkami, które są częścią modelu lub domeny.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-114">Entity SQL is a store independent language that is similar to SQL and it allows you to specify queries based on the conceptual model and the entities that are a part of the model or domain.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3a6e0-115">Jednostki języka SQL, zobacz [języka SQL jednostki](http://go.microsoft.com/fwlink/?LinkId=165646).</span><span class="sxs-lookup"><span data-stu-id="3a6e0-115"> Entity SQL Language, see [Entity SQL Language](http://go.microsoft.com/fwlink/?LinkId=165646).</span></span>  
+-   <span data-ttu-id="41df3-113">`EntitySQLQuery`: `EntitySQLQuery` Działania umożliwia pobieranie obiektów z bazy danych, w zależności od ciągu zapytania SQL jednostki.</span><span class="sxs-lookup"><span data-stu-id="41df3-113">`EntitySQLQuery`: The `EntitySQLQuery` activity allows you to retrieve objects from the database based on an Entity SQL query string.</span></span> <span data-ttu-id="41df3-114">Jednostka SQL jest językiem niezależne magazynu jest podobny do bazy danych SQL i umożliwia określenie zapytań na podstawie modelu koncepcyjnego i jednostkami, które są częścią modelu lub domeny.</span><span class="sxs-lookup"><span data-stu-id="41df3-114">Entity SQL is a store independent language that is similar to SQL and it allows you to specify queries based on the conceptual model and the entities that are a part of the model or domain.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="41df3-115"> Jednostki języka SQL, zobacz [języka SQL jednostki](http://go.microsoft.com/fwlink/?LinkId=165646).</span><span class="sxs-lookup"><span data-stu-id="41df3-115"> Entity SQL Language, see [Entity SQL Language](http://go.microsoft.com/fwlink/?LinkId=165646).</span></span>  
   
--   <span data-ttu-id="3a6e0-116">`EntityLinqQuery`: To działanie umożliwia pobieranie obiektów z bazy danych na podstawie zapytania LINQ lub predykatu.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-116">`EntityLinqQuery`: This activity allows you to retrieve objects from the database based on a LINQ query or predicate.</span></span>  
+-   <span data-ttu-id="41df3-116">`EntityLinqQuery`: To działanie umożliwia pobieranie obiektów z bazy danych na podstawie zapytania LINQ lub predykatu.</span><span class="sxs-lookup"><span data-stu-id="41df3-116">`EntityLinqQuery`: This activity allows you to retrieve objects from the database based on a LINQ query or predicate.</span></span>  
   
--   <span data-ttu-id="3a6e0-117">`EntityAdd`: `EntityAdd` Działania umożliwia dodanie jednostki lub kolekcji jednostek w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-117">`EntityAdd`: The `EntityAdd` activity allows you to add an entity or a collection of entities to the database.</span></span>  
+-   <span data-ttu-id="41df3-117">`EntityAdd`: `EntityAdd` Działania umożliwia dodanie jednostki lub kolekcji jednostek w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="41df3-117">`EntityAdd`: The `EntityAdd` activity allows you to add an entity or a collection of entities to the database.</span></span>  
   
--   <span data-ttu-id="3a6e0-118">`EntityDelete`: `EntityDelete` Działania umożliwia usunięcie jednostki lub kolekcji jednostek z bazy danych.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-118">`EntityDelete`: The `EntityDelete` activity allows you to delete an entity or a collection of entities from the database.</span></span>  
+-   <span data-ttu-id="41df3-118">`EntityDelete`: `EntityDelete` Działania umożliwia usunięcie jednostki lub kolekcji jednostek z bazy danych.</span><span class="sxs-lookup"><span data-stu-id="41df3-118">`EntityDelete`: The `EntityDelete` activity allows you to delete an entity or a collection of entities from the database.</span></span>  
   
--   <span data-ttu-id="3a6e0-119">`ObjectContextScope`: Działania opisane powyżej można używać tylko w nadrzędnym `ObjectContextScope` wystąpienia działania.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-119">`ObjectContextScope`: The previously mentioned activities can only be used within a containing `ObjectContextScope` activity instance.</span></span> <span data-ttu-id="3a6e0-120">`ObjectContextScope` Działanie ustawia połączenie z bazą danych.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-120">The `ObjectContextScope` activity sets up the connection to the database.</span></span> <span data-ttu-id="3a6e0-121">Wymaga to ciąg połączenia (który jest przekazany lub pobrany przy użyciu ustawienia konfiguracji pliku).</span><span class="sxs-lookup"><span data-stu-id="3a6e0-121">It requires a connection string (that is either passed in or retrieved using a configuration file setting).</span></span> <span data-ttu-id="3a6e0-122">`ObjectContextScope` Działania można łatwo przeprowadzić grupy powiązanych operacji na jednostkach.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-122">The `ObjectContextScope` activity makes it easy to perform a group of related operations on entities.</span></span> <span data-ttu-id="3a6e0-123">Ponieważ ten zakres ma aktywne połączenie, jest zakres nie będą się powtarzać.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-123">Because this scope maintains an active connection, it is a No Persist scope.</span></span> <span data-ttu-id="3a6e0-124">Ponadto, kiedy `ObjectContextScope` wyjścia działania, wszystkie zmiany wprowadzone w obiektach pobrany przy użyciu jednostek działań w ramach tego zakresu automatycznie pobrać utrwalone w bazie danych, a żadne jawne lub kolejne działania są niezbędne do zapisywania obiektów z powrotem do Baza danych.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-124">In addition, when the `ObjectContextScope` activity exits, any changes that are made to objects retrieved using Entity Activities within that scope automatically get persisted back to the database, and no explicit or subsequent action is required to save objects back to the database.</span></span>  
+-   <span data-ttu-id="41df3-119">`ObjectContextScope`: Działania opisane powyżej można używać tylko w nadrzędnym `ObjectContextScope` wystąpienia działania.</span><span class="sxs-lookup"><span data-stu-id="41df3-119">`ObjectContextScope`: The previously mentioned activities can only be used within a containing `ObjectContextScope` activity instance.</span></span> <span data-ttu-id="41df3-120">`ObjectContextScope` Działanie ustawia połączenie z bazą danych.</span><span class="sxs-lookup"><span data-stu-id="41df3-120">The `ObjectContextScope` activity sets up the connection to the database.</span></span> <span data-ttu-id="41df3-121">Wymaga to ciąg połączenia (który jest przekazany lub pobrany przy użyciu ustawienia konfiguracji pliku).</span><span class="sxs-lookup"><span data-stu-id="41df3-121">It requires a connection string (that is either passed in or retrieved using a configuration file setting).</span></span> <span data-ttu-id="41df3-122">`ObjectContextScope` Działania można łatwo przeprowadzić grupy powiązanych operacji na jednostkach.</span><span class="sxs-lookup"><span data-stu-id="41df3-122">The `ObjectContextScope` activity makes it easy to perform a group of related operations on entities.</span></span> <span data-ttu-id="41df3-123">Ponieważ ten zakres ma aktywne połączenie, jest zakres nie będą się powtarzać.</span><span class="sxs-lookup"><span data-stu-id="41df3-123">Because this scope maintains an active connection, it is a No Persist scope.</span></span> <span data-ttu-id="41df3-124">Ponadto, kiedy `ObjectContextScope` wyjścia działania, wszystkie zmiany wprowadzone w obiektach pobrany przy użyciu jednostek działań w ramach tego zakresu automatycznie pobrać utrwalone w bazie danych, a żadne jawne lub kolejne działania są niezbędne do zapisywania obiektów z powrotem do Baza danych.</span><span class="sxs-lookup"><span data-stu-id="41df3-124">In addition, when the `ObjectContextScope` activity exits, any changes that are made to objects retrieved using Entity Activities within that scope automatically get persisted back to the database, and no explicit or subsequent action is required to save objects back to the database.</span></span>  
   
-## <a name="using-the-entity-activities"></a><span data-ttu-id="3a6e0-125">Przy użyciu działań jednostki</span><span class="sxs-lookup"><span data-stu-id="3a6e0-125">Using the entity activities</span></span>  
- <span data-ttu-id="3a6e0-126">Poniższe fragmenty kodu przedstawiają sposób działania jednostki przedstawionych w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-126">The following code snippets demonstrate how to use the entity activities presented in this sample.</span></span>  
+## <a name="using-the-entity-activities"></a><span data-ttu-id="41df3-125">Przy użyciu działań jednostki</span><span class="sxs-lookup"><span data-stu-id="41df3-125">Using the entity activities</span></span>  
+ <span data-ttu-id="41df3-126">Poniższe fragmenty kodu przedstawiają sposób działania jednostki przedstawionych w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="41df3-126">The following code snippets demonstrate how to use the entity activities presented in this sample.</span></span>  
   
-### <a name="entitysql"></a><span data-ttu-id="3a6e0-127">EntitySql</span><span class="sxs-lookup"><span data-stu-id="3a6e0-127">EntitySql</span></span>  
- <span data-ttu-id="3a6e0-128">Poniższy fragment kodu przedstawia, jak wykonać zapytanie dotyczące wszystkich klientów w Londynie sortowane według nazwy i jak wykonać iterację na liście klientów.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-128">The code snippet below shows how to query all customers in London sorted by name and how to iterate through the list of customers.</span></span>  
+### <a name="entitysql"></a><span data-ttu-id="41df3-127">EntitySql</span><span class="sxs-lookup"><span data-stu-id="41df3-127">EntitySql</span></span>  
+ <span data-ttu-id="41df3-128">Poniższy fragment kodu przedstawia, jak wykonać zapytanie dotyczące wszystkich klientów w Londynie sortowane według nazwy i jak wykonać iterację na liście klientów.</span><span class="sxs-lookup"><span data-stu-id="41df3-128">The code snippet below shows how to query all customers in London sorted by name and how to iterate through the list of customers.</span></span>  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>();  
@@ -89,8 +90,8 @@ return new ObjectContextScope
 };     
 ```  
   
-### <a name="entitylinqquery"></a><span data-ttu-id="3a6e0-129">EntityLinqQuery</span><span class="sxs-lookup"><span data-stu-id="3a6e0-129">EntityLinqQuery</span></span>  
- <span data-ttu-id="3a6e0-130">Poniższy fragment kodu pokazano, jak wykonać zapytanie dotyczące wszystkich klientów w Londynie oraz jak wykonać iterację wynikowy listę klientów.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-130">The code snippet below shows how to query all customers in London and how to iterate through the resulting list of customers.</span></span>  
+### <a name="entitylinqquery"></a><span data-ttu-id="41df3-129">EntityLinqQuery</span><span class="sxs-lookup"><span data-stu-id="41df3-129">EntityLinqQuery</span></span>  
+ <span data-ttu-id="41df3-130">Poniższy fragment kodu pokazano, jak wykonać zapytanie dotyczące wszystkich klientów w Londynie oraz jak wykonać iterację wynikowy listę klientów.</span><span class="sxs-lookup"><span data-stu-id="41df3-130">The code snippet below shows how to query all customers in London and how to iterate through the resulting list of customers.</span></span>  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>() { Name = "LondonCustomers" };  
@@ -132,8 +133,8 @@ return new ObjectContextScope
 };  
 ```  
   
-### <a name="entityadd"></a><span data-ttu-id="3a6e0-131">EntityAdd</span><span class="sxs-lookup"><span data-stu-id="3a6e0-131">EntityAdd</span></span>  
- <span data-ttu-id="3a6e0-132">Poniższy fragment kodu przedstawia sposób dodawania rekordu OrderDetail do istniejącego zamówienia.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-132">The code snippet below shows how to add an OrderDetail record to an existing Order.</span></span>  
+### <a name="entityadd"></a><span data-ttu-id="41df3-131">EntityAdd</span><span class="sxs-lookup"><span data-stu-id="41df3-131">EntityAdd</span></span>  
+ <span data-ttu-id="41df3-132">Poniższy fragment kodu przedstawia sposób dodawania rekordu OrderDetail do istniejącego zamówienia.</span><span class="sxs-lookup"><span data-stu-id="41df3-132">The code snippet below shows how to add an OrderDetail record to an existing Order.</span></span>  
   
 ```  
 Variable<IEnumerable<Order>> orders = new Variable<IEnumerable<Order>>();  
@@ -181,8 +182,8 @@ return new ObjectContextScope
 };  
 ```  
   
-### <a name="entitydelete"></a><span data-ttu-id="3a6e0-133">EntityDelete</span><span class="sxs-lookup"><span data-stu-id="3a6e0-133">EntityDelete</span></span>  
- <span data-ttu-id="3a6e0-134">Poniższy fragment kodu przedstawia sposób usuwanie istniejącego rekordu OrderDetail w kolejności (jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="3a6e0-134">The code snippet below shows how to delete an existing OrderDetail record in an Order (if it exists).</span></span>  
+### <a name="entitydelete"></a><span data-ttu-id="41df3-133">EntityDelete</span><span class="sxs-lookup"><span data-stu-id="41df3-133">EntityDelete</span></span>  
+ <span data-ttu-id="41df3-134">Poniższy fragment kodu przedstawia sposób usuwanie istniejącego rekordu OrderDetail w kolejności (jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="41df3-134">The code snippet below shows how to delete an existing OrderDetail record in an Order (if it exists).</span></span>  
   
 ```  
 Variable<IEnumerable<OrderDetail>> orderDetails = new Variable<IEnumerable<OrderDetail>>();              
@@ -228,40 +229,40 @@ return new ObjectContextScope
 };  
 ```  
   
-## <a name="to-use-this-sample"></a><span data-ttu-id="3a6e0-135">Aby użyć tego przykładu</span><span class="sxs-lookup"><span data-stu-id="3a6e0-135">To use this sample</span></span>  
- <span data-ttu-id="3a6e0-136">Należy utworzyć `Northwind` bazy danych w sieci lokalnej wystąpienie serwera SQL Express przed uruchomieniem tego przykładu.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-136">You must create the `Northwind` database in your local SQL server Express instance before running this sample.</span></span>  
+## <a name="to-use-this-sample"></a><span data-ttu-id="41df3-135">Aby użyć tego przykładu</span><span class="sxs-lookup"><span data-stu-id="41df3-135">To use this sample</span></span>  
+ <span data-ttu-id="41df3-136">Należy utworzyć `Northwind` bazy danych w sieci lokalnej wystąpienie serwera SQL Express przed uruchomieniem tego przykładu.</span><span class="sxs-lookup"><span data-stu-id="41df3-136">You must create the `Northwind` database in your local SQL server Express instance before running this sample.</span></span>  
   
-#### <a name="to-set-up-the-northwind-database"></a><span data-ttu-id="3a6e0-137">Do konfigurowania bazy danych Northwind</span><span class="sxs-lookup"><span data-stu-id="3a6e0-137">To set up the Northwind database</span></span>  
+#### <a name="to-set-up-the-northwind-database"></a><span data-ttu-id="41df3-137">Do konfigurowania bazy danych Northwind</span><span class="sxs-lookup"><span data-stu-id="41df3-137">To set up the Northwind database</span></span>  
   
-1.  <span data-ttu-id="3a6e0-138">Otwórz wiersz polecenia.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-138">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="41df3-138">Otwórz wiersz polecenia.</span><span class="sxs-lookup"><span data-stu-id="41df3-138">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="3a6e0-139">W nowym oknie wiersza polecenia przejdź do folderu EntityActivities\CS.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-139">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
+2.  <span data-ttu-id="41df3-139">W nowym oknie wiersza polecenia przejdź do folderu EntityActivities\CS.</span><span class="sxs-lookup"><span data-stu-id="41df3-139">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
   
-3.  <span data-ttu-id="3a6e0-140">Typ `setup.cmd` i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-140">Type `setup.cmd` and press ENTER.</span></span>  
+3.  <span data-ttu-id="41df3-140">Typ `setup.cmd` i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="41df3-140">Type `setup.cmd` and press ENTER.</span></span>  
   
-#### <a name="to-run-the-sample"></a><span data-ttu-id="3a6e0-141">Aby uruchomić przykładowy</span><span class="sxs-lookup"><span data-stu-id="3a6e0-141">To run the sample</span></span>  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="41df3-141">Aby uruchomić przykładowy</span><span class="sxs-lookup"><span data-stu-id="41df3-141">To run the sample</span></span>  
   
-1.  <span data-ttu-id="3a6e0-142">Przy użyciu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik rozwiązania EntityActivities.sln.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-142">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the EntityActivities.sln solution file.</span></span>  
+1.  <span data-ttu-id="41df3-142">Przy użyciu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik rozwiązania EntityActivities.sln.</span><span class="sxs-lookup"><span data-stu-id="41df3-142">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the EntityActivities.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="3a6e0-143">Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-143">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="41df3-143">Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.</span><span class="sxs-lookup"><span data-stu-id="41df3-143">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="3a6e0-144">Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-144">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="41df3-144">Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="41df3-144">To run the solution, press CTRL+F5.</span></span>  
   
- <span data-ttu-id="3a6e0-145">Po uruchomieniu tego przykładu, można usunąć `Northwind` bazy danych.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-145">After running this sample, you may want to remove the `Northwind` database.</span></span>  
+ <span data-ttu-id="41df3-145">Po uruchomieniu tego przykładu, można usunąć `Northwind` bazy danych.</span><span class="sxs-lookup"><span data-stu-id="41df3-145">After running this sample, you may want to remove the `Northwind` database.</span></span>  
   
-#### <a name="to-uninstall-the-northwind-database"></a><span data-ttu-id="3a6e0-146">Aby odinstalować bazy danych Northwind</span><span class="sxs-lookup"><span data-stu-id="3a6e0-146">To uninstall the Northwind database</span></span>  
+#### <a name="to-uninstall-the-northwind-database"></a><span data-ttu-id="41df3-146">Aby odinstalować bazy danych Northwind</span><span class="sxs-lookup"><span data-stu-id="41df3-146">To uninstall the Northwind database</span></span>  
   
-1.  <span data-ttu-id="3a6e0-147">Otwórz wiersz polecenia.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-147">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="41df3-147">Otwórz wiersz polecenia.</span><span class="sxs-lookup"><span data-stu-id="41df3-147">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="3a6e0-148">W nowym oknie wiersza polecenia przejdź do folderu EntityActivities\CS.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-148">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
+2.  <span data-ttu-id="41df3-148">W nowym oknie wiersza polecenia przejdź do folderu EntityActivities\CS.</span><span class="sxs-lookup"><span data-stu-id="41df3-148">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
   
-3.  <span data-ttu-id="3a6e0-149">Typ `cleanup.cmd` i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-149">Type `cleanup.cmd` and press ENTER.</span></span>  
+3.  <span data-ttu-id="41df3-149">Typ `cleanup.cmd` i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="41df3-149">Type `cleanup.cmd` and press ENTER.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="3a6e0-150">Próbki mogą być zainstalowane na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3a6e0-151">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="3a6e0-151">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="41df3-150">Próbki mogą być zainstalowane na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="41df3-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="41df3-151">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="41df3-151">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="3a6e0-152">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3a6e0-153">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="3a6e0-153">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="41df3-152">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek.</span><span class="sxs-lookup"><span data-stu-id="41df3-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="41df3-153">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="41df3-153">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

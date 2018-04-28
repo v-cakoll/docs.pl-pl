@@ -1,97 +1,97 @@
 ---
-title: "Wprowadzenie do języka C# i Visual Studio Code — przewodnik C#"
-description: "Informacje o sposobie tworzenia i debugowania w języku C# za pomocą programu Visual Studio Code pierwszej aplikacji platformy .NET Core."
+title: Wprowadzenie do języka C# i Visual Studio Code — przewodnik C#
+description: Informacje o sposobie tworzenia i debugowania w języku C# za pomocą programu Visual Studio Code pierwszej aplikacji platformy .NET Core.
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: d4ee1c9ef66ef61156453786f65d16470d7a5ea2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a><span data-ttu-id="5e3b1-103">Wprowadzenie do języka C# i Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5e3b1-103">Get Started with C# and Visual Studio Code</span></span>
+# <a name="get-started-with-c-and-visual-studio-code"></a><span data-ttu-id="2ebc7-103">Wprowadzenie do języka C# i Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="2ebc7-103">Get Started with C# and Visual Studio Code</span></span>
 
-<span data-ttu-id="5e3b1-104">Oprogramowanie .NET core umożliwia szybka, modularna platforma do tworzenia aplikacji działających w systemach Windows, Linux i macOS.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-104">.NET Core gives you a fast and modular platform for creating applications that run on Windows, Linux, and macOS.</span></span> <span data-ttu-id="5e3b1-105">Za pomocą programu Visual Studio Code rozszerzenia C# Aby uzyskać zaawansowane edytowania z pełną obsługę funkcji IntelliSense języka C# (uzupełnianie kodu inteligentne) i debugowania.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-105">Use Visual Studio Code with the C# extension to get a powerful editing experience with full support for C# IntelliSense (smart code completion) and debugging.</span></span>
+<span data-ttu-id="2ebc7-104">Oprogramowanie .NET core umożliwia szybka, modularna platforma do tworzenia aplikacji działających w systemach Windows, Linux i macOS.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-104">.NET Core gives you a fast and modular platform for creating applications that run on Windows, Linux, and macOS.</span></span> <span data-ttu-id="2ebc7-105">Za pomocą programu Visual Studio Code rozszerzenia C# Aby uzyskać zaawansowane edytowania z pełną obsługę funkcji IntelliSense języka C# (uzupełnianie kodu inteligentne) i debugowania.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-105">Use Visual Studio Code with the C# extension to get a powerful editing experience with full support for C# IntelliSense (smart code completion) and debugging.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="5e3b1-106">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="5e3b1-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="2ebc7-106">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="2ebc7-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="5e3b1-107">Zainstaluj [kodu programu Visual Studio](https://code.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="5e3b1-107">Install [Visual Studio Code](https://code.visualstudio.com/).</span></span>
-2. <span data-ttu-id="5e3b1-108">Zainstaluj [.NET Core SDK](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="5e3b1-108">Install the [.NET Core SDK](https://www.microsoft.com/net/download/core).</span></span>
-3. <span data-ttu-id="5e3b1-109">Zainstaluj [C# rozszerzenia](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) dla programu Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-109">Install the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) for Visual Studio Code.</span></span> <span data-ttu-id="5e3b1-110">Aby uzyskać więcej informacji o sposobie instalowania rozszerzeń w Visual Studio Code, zobacz [VS kodu rozszerzenie Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span><span class="sxs-lookup"><span data-stu-id="5e3b1-110">For more information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+1. <span data-ttu-id="2ebc7-107">Zainstaluj [kodu programu Visual Studio](https://code.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="2ebc7-107">Install [Visual Studio Code](https://code.visualstudio.com/).</span></span>
+2. <span data-ttu-id="2ebc7-108">Zainstaluj [.NET Core SDK](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="2ebc7-108">Install the [.NET Core SDK](https://www.microsoft.com/net/download/core).</span></span>
+3. <span data-ttu-id="2ebc7-109">Zainstaluj [C# rozszerzenia](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) dla programu Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-109">Install the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) for Visual Studio Code.</span></span> <span data-ttu-id="2ebc7-110">Aby uzyskać więcej informacji o sposobie instalowania rozszerzeń w Visual Studio Code, zobacz [VS kodu rozszerzenie Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span><span class="sxs-lookup"><span data-stu-id="2ebc7-110">For more information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
 
-## <a name="hello-world"></a><span data-ttu-id="5e3b1-111">Witaj Świecie</span><span class="sxs-lookup"><span data-stu-id="5e3b1-111">Hello World</span></span>
+## <a name="hello-world"></a><span data-ttu-id="2ebc7-111">Witaj Świecie</span><span class="sxs-lookup"><span data-stu-id="2ebc7-111">Hello World</span></span>
 
-<span data-ttu-id="5e3b1-112">Rozpocznijmy prosty program .NET Core "Hello World":</span><span class="sxs-lookup"><span data-stu-id="5e3b1-112">Let's get started with a simple "Hello World" program on .NET Core:</span></span>
+<span data-ttu-id="2ebc7-112">Rozpocznijmy prosty program .NET Core "Hello World":</span><span class="sxs-lookup"><span data-stu-id="2ebc7-112">Let's get started with a simple "Hello World" program on .NET Core:</span></span>
 
-1. <span data-ttu-id="5e3b1-113">Otwórz projekt:</span><span class="sxs-lookup"><span data-stu-id="5e3b1-113">Open a project:</span></span>
+1. <span data-ttu-id="2ebc7-113">Otwórz projekt:</span><span class="sxs-lookup"><span data-stu-id="2ebc7-113">Open a project:</span></span>
 
-    * <span data-ttu-id="5e3b1-114">Otwórz kod programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-114">Open Visual Studio Code.</span></span>
-    * <span data-ttu-id="5e3b1-115">Kliknij ikonę Explorer z menu po lewej stronie, a następnie kliknij przycisk **Otwórz Folder**.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-115">Click on the Explorer icon on the left menu and then click **Open Folder**.</span></span>
-    * <span data-ttu-id="5e3b1-116">Wybierz **pliku** > **Otwórz Folder** z poziomu menu głównego, aby otworzyć folder ma projektu C# w i kliknij przycisk **wybierz Folder**.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-116">Select **File** > **Open Folder** from the main menu to open the folder you want your C# project to be in and click **Select Folder**.</span></span> <span data-ttu-id="5e3b1-117">W naszym przykładzie tworzymy folderu dla naszych projektu o nazwie *HelloWorld*.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-117">For our example, we're creating a folder for our project named *HelloWorld*.</span></span>
+    * <span data-ttu-id="2ebc7-114">Otwórz kod programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-114">Open Visual Studio Code.</span></span>
+    * <span data-ttu-id="2ebc7-115">Kliknij ikonę Explorer z menu po lewej stronie, a następnie kliknij przycisk **Otwórz Folder**.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-115">Click on the Explorer icon on the left menu and then click **Open Folder**.</span></span>
+    * <span data-ttu-id="2ebc7-116">Wybierz **pliku** > **Otwórz Folder** z poziomu menu głównego, aby otworzyć folder ma projektu C# w i kliknij przycisk **wybierz Folder**.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-116">Select **File** > **Open Folder** from the main menu to open the folder you want your C# project to be in and click **Select Folder**.</span></span> <span data-ttu-id="2ebc7-117">W naszym przykładzie tworzymy folderu dla naszych projektu o nazwie *HelloWorld*.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-117">For our example, we're creating a folder for our project named *HelloWorld*.</span></span>
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
-2. <span data-ttu-id="5e3b1-119">Inicjowanie projektu C#:</span><span class="sxs-lookup"><span data-stu-id="5e3b1-119">Initialize a C# project:</span></span>
-    * <span data-ttu-id="5e3b1-120">Otwórz Terminal zintegrowane z kodem Visual Studio, wybierając **widoku** > **zintegrowane Terminal** z poziomu menu głównego.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-120">Open the Integrated Terminal from Visual Studio Code by selecting **View** > **Integrated Terminal** from the main menu.</span></span>
-    * <span data-ttu-id="5e3b1-121">W oknie terminalu wpisz `dotnet new console`.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-121">In the terminal window, type `dotnet new console`.</span></span>
-    * <span data-ttu-id="5e3b1-122">To polecenie tworzy `Program.cs` plik w folderze z programem proste "Hello World" już zapisane razem z pliku projektu C# o nazwie `HelloWorld.csproj`.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-122">This command creates a `Program.cs` file in your folder with a simple "Hello World" program already written, along with a C# project file named `HelloWorld.csproj`.</span></span>
+2. <span data-ttu-id="2ebc7-119">Inicjowanie projektu C#:</span><span class="sxs-lookup"><span data-stu-id="2ebc7-119">Initialize a C# project:</span></span>
+    * <span data-ttu-id="2ebc7-120">Otwórz Terminal zintegrowane z kodem Visual Studio, wybierając **widoku** > **zintegrowane Terminal** z poziomu menu głównego.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-120">Open the Integrated Terminal from Visual Studio Code by selecting **View** > **Integrated Terminal** from the main menu.</span></span>
+    * <span data-ttu-id="2ebc7-121">W oknie terminalu wpisz `dotnet new console`.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-121">In the terminal window, type `dotnet new console`.</span></span>
+    * <span data-ttu-id="2ebc7-122">To polecenie tworzy `Program.cs` plik w folderze z programem proste "Hello World" już zapisane razem z pliku projektu C# o nazwie `HelloWorld.csproj`.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-122">This command creates a `Program.cs` file in your folder with a simple "Hello World" program already written, along with a C# project file named `HelloWorld.csproj`.</span></span>
 
       ![Nowe polecenie dotnet](media/with-visual-studio-code/dotnetnew.png)
 
-3. <span data-ttu-id="5e3b1-124">Aby usunąć zasoby kompilacji:</span><span class="sxs-lookup"><span data-stu-id="5e3b1-124">Resolve the build assets:</span></span>
+3. <span data-ttu-id="2ebc7-124">Aby usunąć zasoby kompilacji:</span><span class="sxs-lookup"><span data-stu-id="2ebc7-124">Resolve the build assets:</span></span>
 
-    * <span data-ttu-id="5e3b1-125">Aby uzyskać **.NET Core 1.x**, typ `dotnet restore`.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-125">For **.NET Core 1.x**, type `dotnet restore`.</span></span> <span data-ttu-id="5e3b1-126">Uruchomiona `dotnet restore` zapewnia dostęp do wymagane pakiety platformy .NET Core, które są wymagane, aby skompilować projekt.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-126">Running `dotnet restore` gives you access to the  required .NET Core packages that are needed to build your project.</span></span>
+    * <span data-ttu-id="2ebc7-125">Aby uzyskać **.NET Core 1.x**, typ `dotnet restore`.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-125">For **.NET Core 1.x**, type `dotnet restore`.</span></span> <span data-ttu-id="2ebc7-126">Uruchomiona `dotnet restore` zapewnia dostęp do wymagane pakiety platformy .NET Core, które są wymagane, aby skompilować projekt.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-126">Running `dotnet restore` gives you access to the  required .NET Core packages that are needed to build your project.</span></span>
 
       ![Polecenie restore dotnet](media/with-visual-studio-code/dotnetrestore.png)
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-4. <span data-ttu-id="5e3b1-128">Uruchom program "Hello World":</span><span class="sxs-lookup"><span data-stu-id="5e3b1-128">Run the "Hello World" program:</span></span>
+4. <span data-ttu-id="2ebc7-128">Uruchom program "Hello World":</span><span class="sxs-lookup"><span data-stu-id="2ebc7-128">Run the "Hello World" program:</span></span>
 
-    * <span data-ttu-id="5e3b1-129">Typ `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-129">Type `dotnet run`.</span></span> 
+    * <span data-ttu-id="2ebc7-129">Typ `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-129">Type `dotnet run`.</span></span> 
 
       ![Dotnet, uruchom polecenie](media/with-visual-studio-code/dotnetrun.png)
 
-<span data-ttu-id="5e3b1-131">Można również obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Instalatora na [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), lub [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).</span><span class="sxs-lookup"><span data-stu-id="5e3b1-131">You can also watch a short video tutorial for further setup help on [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), or [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).</span></span>
+<span data-ttu-id="2ebc7-131">Można również obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Instalatora na [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), lub [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).</span><span class="sxs-lookup"><span data-stu-id="2ebc7-131">You can also watch a short video tutorial for further setup help on [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), or [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).</span></span>
 
-## <a name="debug"></a><span data-ttu-id="5e3b1-132">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="5e3b1-132">Debug</span></span>
+## <a name="debug"></a><span data-ttu-id="2ebc7-132">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="2ebc7-132">Debug</span></span>
 
-1. <span data-ttu-id="5e3b1-133">Otwórz *Program.cs* , klikając go.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-133">Open *Program.cs* by clicking on it.</span></span> <span data-ttu-id="5e3b1-134">Przy pierwszym otwarciu pliku C# w programie Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) ładuje w edytorze.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-134">The first time you open a C# file in Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) loads in the editor.</span></span>
+1. <span data-ttu-id="2ebc7-133">Otwórz *Program.cs* , klikając go.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-133">Open *Program.cs* by clicking on it.</span></span> <span data-ttu-id="2ebc7-134">Przy pierwszym otwarciu pliku C# w programie Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) ładuje w edytorze.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-134">The first time you open a C# file in Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) loads in the editor.</span></span>
 
     ![Otwórz plik Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. <span data-ttu-id="5e3b1-136">Visual Studio Code powinien monit o dodanie brakujące zasoby do tworzenia i debugowanie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-136">Visual Studio Code should prompt you to add the missing assets to build and debug your app.</span></span> <span data-ttu-id="5e3b1-137">Wybierz **tak**.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-137">Select **Yes**.</span></span> 
+2. <span data-ttu-id="2ebc7-136">Visual Studio Code powinien monit o dodanie brakujące zasoby do tworzenia i debugowanie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-136">Visual Studio Code should prompt you to add the missing assets to build and debug your app.</span></span> <span data-ttu-id="2ebc7-137">Wybierz **tak**.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-137">Select **Yes**.</span></span> 
 
     ![Monituj o brakujących zasobów](media/with-visual-studio-code/missing-assets.png)
 
-3. <span data-ttu-id="5e3b1-139">Aby otworzyć widok debugowania, kliknij ikonę debugowanie z menu po lewej stronie.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-139">To open the Debug view, click on the Debugging icon on the left side menu.</span></span>
+3. <span data-ttu-id="2ebc7-139">Aby otworzyć widok debugowania, kliknij ikonę debugowanie z menu po lewej stronie.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-139">To open the Debug view, click on the Debugging icon on the left side menu.</span></span>
 
     ![Otwórz kartę debugowania](media/with-visual-studio-code/opendebug.png)
 
-4. <span data-ttu-id="5e3b1-141">Zlokalizuj zieloną strzałkę u góry okienka.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-141">Locate the green arrow at the top of the pane.</span></span> <span data-ttu-id="5e3b1-142">Upewnij się, że ma listy rozwijanej obok niej `.NET Core Launch (console)` wybrane.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-142">Make sure the drop-down next to it has `.NET Core Launch (console)` selected.</span></span>
+4. <span data-ttu-id="2ebc7-141">Zlokalizuj zieloną strzałkę u góry okienka.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-141">Locate the green arrow at the top of the pane.</span></span> <span data-ttu-id="2ebc7-142">Upewnij się, że ma listy rozwijanej obok niej `.NET Core Launch (console)` wybrane.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-142">Make sure the drop-down next to it has `.NET Core Launch (console)` selected.</span></span>
 
     ![Wybieranie platformy .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. <span data-ttu-id="5e3b1-144">Dodaj punkt przerwania do projektu, klikając **marginesu edytora**, czyli miejsce po lewej stronie numerów wierszy w edytorze, obok wiersza 9.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-144">Add a breakpoint to your project by clicking on the **editor margin**, which is the space on the left of the line numbers in the editor, next to line 9.</span></span>
+5. <span data-ttu-id="2ebc7-144">Dodaj punkt przerwania do projektu, klikając **marginesu edytora**, czyli miejsce po lewej stronie numerów wierszy w edytorze, obok wiersza 9.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-144">Add a breakpoint to your project by clicking on the **editor margin**, which is the space on the left of the line numbers in the editor, next to line 9.</span></span>
 
     ![Ustawienia punktu przerwania](media/with-visual-studio-code/setbreakpoint.png)
 
-6. <span data-ttu-id="5e3b1-146">Aby rozpocząć debugowanie, wybierz <kbd>F5</kbd> lub zieloną strzałkę.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-146">To start debugging, select <kbd>F5</kbd> or the green arrow.</span></span> <span data-ttu-id="5e3b1-147">Debuger zatrzymuje wykonanie programu, po osiągnięciu punktu przerwania ustawionych w poprzednim kroku.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-147">The debugger stops execution of your program when it reaches the breakpoint you set in the previous step.</span></span>
-    * <span data-ttu-id="5e3b1-148">Podczas debugowania, możesz wyświetlić zmiennych lokalnych w górnym okienku po lewej stronie lub za pomocą konsoli debugowania.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-148">While debugging, you can view your local variables in the top left pane or use the debug console.</span></span>
+6. <span data-ttu-id="2ebc7-146">Aby rozpocząć debugowanie, wybierz <kbd>F5</kbd> lub zieloną strzałkę.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-146">To start debugging, select <kbd>F5</kbd> or the green arrow.</span></span> <span data-ttu-id="2ebc7-147">Debuger zatrzymuje wykonanie programu, po osiągnięciu punktu przerwania ustawionych w poprzednim kroku.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-147">The debugger stops execution of your program when it reaches the breakpoint you set in the previous step.</span></span>
+    * <span data-ttu-id="2ebc7-148">Podczas debugowania, możesz wyświetlić zmiennych lokalnych w górnym okienku po lewej stronie lub za pomocą konsoli debugowania.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-148">While debugging, you can view your local variables in the top left pane or use the debug console.</span></span>
 
     ![Uruchom i debugowania](media/with-visual-studio-code/rundebug.png)
 
-7. <span data-ttu-id="5e3b1-150">Wybierz zieloną strzałkę u góry, aby kontynuować, debugowanie, lub czerwonego kwadratu u góry, aby zatrzymać.</span><span class="sxs-lookup"><span data-stu-id="5e3b1-150">Select the green arrow at the top to continue debugging, or select the red square at the top to stop.</span></span>
+7. <span data-ttu-id="2ebc7-150">Wybierz zieloną strzałkę u góry, aby kontynuować, debugowanie, lub czerwonego kwadratu u góry, aby zatrzymać.</span><span class="sxs-lookup"><span data-stu-id="2ebc7-150">Select the green arrow at the top to continue debugging, or select the red square at the top to stop.</span></span>
 
 > [!TIP] 
-> <span data-ttu-id="5e3b1-151">Aby uzyskać więcej informacji oraz wskazówki na debugowanie .NET Core za pomocą OmniSharp w programie Visual Studio Code, zobacz [instrukcje dotyczące konfigurowania debuger .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span><span class="sxs-lookup"><span data-stu-id="5e3b1-151">For more information and troubleshooting tips on .NET Core debugging with OmniSharp in Visual Studio Code, see [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
+> <span data-ttu-id="2ebc7-151">Aby uzyskać więcej informacji oraz wskazówki na debugowanie .NET Core za pomocą OmniSharp w programie Visual Studio Code, zobacz [instrukcje dotyczące konfigurowania debuger .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span><span class="sxs-lookup"><span data-stu-id="2ebc7-151">For more information and troubleshooting tips on .NET Core debugging with OmniSharp in Visual Studio Code, see [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5e3b1-152">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5e3b1-152">See also</span></span>
-<span data-ttu-id="5e3b1-153">[Konfigurowanie programu Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) </span><span class="sxs-lookup"><span data-stu-id="5e3b1-153">[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) </span></span>  
-[<span data-ttu-id="5e3b1-154">Profilowanie kodu Visual Studio</span><span class="sxs-lookup"><span data-stu-id="5e3b1-154">Debugging in Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/editor/debugging)
+## <a name="see-also"></a><span data-ttu-id="2ebc7-152">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2ebc7-152">See also</span></span>
+<span data-ttu-id="2ebc7-153">[Konfigurowanie programu Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) </span><span class="sxs-lookup"><span data-stu-id="2ebc7-153">[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) </span></span>  
+[<span data-ttu-id="2ebc7-154">Profilowanie kodu Visual Studio</span><span class="sxs-lookup"><span data-stu-id="2ebc7-154">Debugging in Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/editor/debugging)

@@ -1,41 +1,38 @@
 ---
-title: "Pętle: while...do — Wyrażenie (F#)"
-description: "Zobacz temat jak podczas... czy wyrażenie jest używana do wykonywania iteracji wykonywania (zapętlenia), podczas testu określony warunek jest spełniony."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Pętle: while...do — Wyrażenie (F#)'
+description: Zobacz temat jak podczas... czy wyrażenie jest używana do wykonywania iteracji wykonywania (zapętlenia), podczas testu określony warunek jest spełniony.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 0416ffca-7ed9-4aff-9493-e001fdba8c9b
-ms.openlocfilehash: 5f10fda84a5e748856eb7b2c63ad46cc1fba44bb
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 847f99faab42c8805bd788e42e3f24ad6369ba52
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="loops-whiledo-expression"></a><span data-ttu-id="6d342-104">Pętle: while...do — Wyrażenie</span><span class="sxs-lookup"><span data-stu-id="6d342-104">Loops: while...do Expression</span></span>
+# <a name="loops-whiledo-expression"></a><span data-ttu-id="9f4c0-103">Pętle: while...do — Wyrażenie</span><span class="sxs-lookup"><span data-stu-id="9f4c0-103">Loops: while...do Expression</span></span>
 
-<span data-ttu-id="6d342-105">`while...do` Wyrażenie służy do wykonywania iteracji wykonywania (zapętlenia), podczas testu określony warunek jest spełniony.</span><span class="sxs-lookup"><span data-stu-id="6d342-105">The `while...do` expression is used to perform iterative execution (looping) while a specified test condition is true.</span></span>
+<span data-ttu-id="9f4c0-104">`while...do` Wyrażenie służy do wykonywania iteracji wykonywania (zapętlenia), podczas testu określony warunek jest spełniony.</span><span class="sxs-lookup"><span data-stu-id="9f4c0-104">The `while...do` expression is used to perform iterative execution (looping) while a specified test condition is true.</span></span>
 
 
-## <a name="syntax"></a><span data-ttu-id="6d342-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="6d342-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="9f4c0-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="9f4c0-105">Syntax</span></span>
 
 ```fsharp
 while test-expression do
     body-expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="6d342-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6d342-107">Remarks</span></span>
-<span data-ttu-id="6d342-108">*Testu wyrażenie* jest oceniany; Jeśli `true`, *treść wyrażenia* jest wykonywany i ponownie obliczyć wyrażenia testu.</span><span class="sxs-lookup"><span data-stu-id="6d342-108">The *test-expression* is evaluated; if it is `true`, the *body-expression* is executed and the test expression is evaluated again.</span></span> <span data-ttu-id="6d342-109">*Treść wyrażenia* musi mieć typ `unit`.</span><span class="sxs-lookup"><span data-stu-id="6d342-109">The *body-expression* must have type `unit`.</span></span> <span data-ttu-id="6d342-110">Jeśli wyrażenie testu jest `false`, zakończenia iteracji.</span><span class="sxs-lookup"><span data-stu-id="6d342-110">If the test expression is `false`, the iteration ends.</span></span>
+## <a name="remarks"></a><span data-ttu-id="9f4c0-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9f4c0-106">Remarks</span></span>
+<span data-ttu-id="9f4c0-107">*Testu wyrażenie* jest oceniany; Jeśli `true`, *treść wyrażenia* jest wykonywany i ponownie obliczyć wyrażenia testu.</span><span class="sxs-lookup"><span data-stu-id="9f4c0-107">The *test-expression* is evaluated; if it is `true`, the *body-expression* is executed and the test expression is evaluated again.</span></span> <span data-ttu-id="9f4c0-108">*Treść wyrażenia* musi mieć typ `unit`.</span><span class="sxs-lookup"><span data-stu-id="9f4c0-108">The *body-expression* must have type `unit`.</span></span> <span data-ttu-id="9f4c0-109">Jeśli wyrażenie testu jest `false`, zakończenia iteracji.</span><span class="sxs-lookup"><span data-stu-id="9f4c0-109">If the test expression is `false`, the iteration ends.</span></span>
 
-<span data-ttu-id="6d342-111">Poniższy przykład przedstawia użycie `while...do` wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="6d342-111">The following example illustrates the use of the `while...do` expression.</span></span>
+<span data-ttu-id="9f4c0-110">Poniższy przykład przedstawia użycie `while...do` wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="9f4c0-110">The following example illustrates the use of the `while...do` expression.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
 
-<span data-ttu-id="6d342-112">Dane wyjściowe poprzedniego kodu jest strumień losowych liczb od 1 do 20, ostatni wynosi 10.</span><span class="sxs-lookup"><span data-stu-id="6d342-112">The output of the previous code is a stream of random numbers between 1 and 20, the last of which is 10.</span></span>
+<span data-ttu-id="9f4c0-111">Dane wyjściowe poprzedniego kodu jest strumień losowych liczb od 1 do 20, ostatni wynosi 10.</span><span class="sxs-lookup"><span data-stu-id="9f4c0-111">The output of the previous code is a stream of random numbers between 1 and 20, the last of which is 10.</span></span>
 
 ```
 13 19 8 18 16 2 10
@@ -43,12 +40,12 @@ Found a 10!
 ```
 
 >[!NOTE] 
-<span data-ttu-id="6d342-113">Można użyć `while...do` w wyrażeniach sekwencji i inne wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `while...do` wyrażenie jest używane.</span><span class="sxs-lookup"><span data-stu-id="6d342-113">You can use `while...do` in sequence expressions and other computation expressions, in which case a customized version of the `while...do` expression is used.</span></span> <span data-ttu-id="6d342-114">Aby uzyskać więcej informacji, zobacz [sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="6d342-114">For more information, see [Sequences](sequences.md), [Asynchronous Workflows](asynchronous-workflows.md), and [Computation Expressions](computation-expressions.md).</span></span>
+<span data-ttu-id="9f4c0-112">Można użyć `while...do` w wyrażeniach sekwencji i inne wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `while...do` wyrażenie jest używane.</span><span class="sxs-lookup"><span data-stu-id="9f4c0-112">You can use `while...do` in sequence expressions and other computation expressions, in which case a customized version of the `while...do` expression is used.</span></span> <span data-ttu-id="9f4c0-113">Aby uzyskać więcej informacji, zobacz [sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="9f4c0-113">For more information, see [Sequences](sequences.md), [Asynchronous Workflows](asynchronous-workflows.md), and [Computation Expressions](computation-expressions.md).</span></span>
 
 
-## <a name="see-also"></a><span data-ttu-id="6d342-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6d342-115">See Also</span></span>
-[<span data-ttu-id="6d342-116">Dokumentacja języka F#</span><span class="sxs-lookup"><span data-stu-id="6d342-116">F# Language Reference</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="9f4c0-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9f4c0-114">See Also</span></span>
+[<span data-ttu-id="9f4c0-115">Dokumentacja języka F#</span><span class="sxs-lookup"><span data-stu-id="9f4c0-115">F# Language Reference</span></span>](index.md)
 
-[<span data-ttu-id="6d342-117">Pętle: `for...in` wyrażenia</span><span class="sxs-lookup"><span data-stu-id="6d342-117">Loops: `for...in` Expression</span></span>](loops-for-in-expression.md)
+[<span data-ttu-id="9f4c0-116">Pętle: `for...in` wyrażenia</span><span class="sxs-lookup"><span data-stu-id="9f4c0-116">Loops: `for...in` Expression</span></span>](loops-for-in-expression.md)
 
-[<span data-ttu-id="6d342-118">Pętle: `for...to` wyrażenia</span><span class="sxs-lookup"><span data-stu-id="6d342-118">Loops: `for...to` Expression</span></span>](loops-for-to-expression.md)
+[<span data-ttu-id="9f4c0-117">Pętle: `for...to` wyrażenia</span><span class="sxs-lookup"><span data-stu-id="9f4c0-117">Loops: `for...to` Expression</span></span>](loops-for-to-expression.md)

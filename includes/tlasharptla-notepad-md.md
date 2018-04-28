@@ -1,0 +1,1 @@
+<span data-ttu-id="4a896-101">Notatnik firmy Microsoft</span><span class="sxs-lookup"><span data-stu-id="4a896-101">Microsoft Notepad</span></span>

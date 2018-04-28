@@ -1,0 +1,1 @@
+<span data-ttu-id="83330-101">jednostka miary niezależna od urządzenia (1/96 cala)</span><span class="sxs-lookup"><span data-stu-id="83330-101">device-independent unit (1/96th inch)</span></span>

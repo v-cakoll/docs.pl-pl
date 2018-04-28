@@ -1,0 +1,1 @@
+<span data-ttu-id="0710a-101">Pole identyfikatora właściwości zależności:</span><span class="sxs-lookup"><span data-stu-id="0710a-101">Dependency property identifier field:</span></span>

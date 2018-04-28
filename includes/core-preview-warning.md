@@ -1,0 +1,2 @@
+> [!WARNING]
+> <span data-ttu-id="b6fb9-101">Ten temat dotyczy .NET Core SDK 2.0 wersja zapoznawcza 2.</span><span class="sxs-lookup"><span data-stu-id="b6fb9-101">This topic applies to .NET Core SDK 2.0 Preview 2.</span></span>

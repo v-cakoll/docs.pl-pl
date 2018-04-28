@@ -1,0 +1,1 @@
+<span data-ttu-id="a4cab-101">Ten element członkowski obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="a4cab-101">This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

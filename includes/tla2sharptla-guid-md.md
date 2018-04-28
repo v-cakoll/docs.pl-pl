@@ -1,0 +1,1 @@
+ <span data-ttu-id="68386-101">Identyfikator GUID</span><span class="sxs-lookup"><span data-stu-id="68386-101">GUID</span></span> 

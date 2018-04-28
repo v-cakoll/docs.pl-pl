@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: HT
+ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Co&#39;s nowe w programie Windows Workflow Foundation programu .NET 4.5
 Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, takich jak nowe działania, funkcje projektanta i modele programowania przepływu pracy. Wiele, ale nie wszystkich nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] nowe funkcje, które są obsługiwane, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Projektancie przepływów pracy Rehosted](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrowanie .NET 3.0 i .NET 3.5 przepływu pracy aplikacji do korzystania z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Ten temat zawiera omówienie nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
   
 -   Aktualizacja dynamiczna jest wprowadzenie zapewnia mechanizm aktualizacji definicji wystąpienia utrwalonego przepływu pracy. Aby uzyskać więcej informacji, zobacz [aktualizacja dynamiczna](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) i [porady: aktualizacji definicji wystąpienia przepływu pracy systemem](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
--   Podano SqlWorkflowInstanceStoreSchemaUpgrade.sql skryptu bazy danych do uaktualnienia trwałości baz danych utworzonych przy użyciu [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bazy danych skryptów. Ten skrypt aktualizacji [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] trwałości baz danych obsługują nowe możliwości przechowywania wersji wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Wystąpienia utrwalonego przepływu pracy w bazie danych są podane wartości domyślne przechowywanie wersji i mogą uczestniczyć w side-by-side wykonywania i aktualizacji dynamicznej. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [.NET Framework 4 trwałości baz danych obsługi przechowywania wersji przepływu pracy uaktualniania](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+-   Podano SqlWorkflowInstanceStoreSchemaUpgrade.sql skryptu bazy danych do uaktualnienia trwałości baz danych utworzonych przy użyciu [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bazy danych skryptów. Ten skrypt aktualizacji [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] trwałości baz danych obsługują nowe możliwości przechowywania wersji wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Wystąpienia utrwalonego przepływu pracy w bazie danych są podane wartości domyślne przechowywanie wersji i mogą uczestniczyć w side-by-side wykonywania i aktualizacji dynamicznej. Aby uzyskać więcej informacji, zobacz [uaktualniania .NET Framework 4 trwałości baz danych do przechowywania wersji przepływu pracy obsługi](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
 ##  <a name="BKMK_NewActivities"></a> działania  
  Biblioteka działań wbudowanych zawiera nowe działania i nowe funkcje istniejących działań.  

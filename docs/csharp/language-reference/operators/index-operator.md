@@ -23,34 +23,34 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>Operator [] (odwołanie w C#)
-Nawiasy kwadratowe (`[]`) są używane dla tablic, indeksatorów i atrybutów. Mogą one również używane z wskaźniki.  
+Nawiasy kwadratowe (`[]`) są wykorzystywane do obsługi tablic, indeksatorów i atrybutów. Mogą one również być używane ze wskaźnikami.  
   
 ## <a name="remarks"></a>Uwagi  
- Typ tablicy jest typem następuje `[]`:  
+ Typ tablicy jest typem następującym po `[]`:  
   
  [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
- Aby uzyskać dostęp do elementu tablicy, indeks żądany element jest ujęty w nawiasy:  
+ Aby uzyskać dostęp do elementu tablicy, indeks żądanego elementu musi zostać ujęty w nawiasy kwadratowe:  
   
  [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
- Jeśli indeks tablicy jest poza zakresem, jest zgłaszany wyjątek.  
+ Jeśli indeks tablicy jest poza zakresem, zgłaszany jest wyjątek.  
   
- Operator indeksowanie tablicy nie może zostać przeciążony; jednak typów można zdefiniować, indeksatorów i właściwości, które przyjmują co najmniej jeden parametr. Indeksator parametry są ujęte w nawiasy kwadratowe, podobnie jak indeksy tablicy, ale indeksatora parametry mogą być deklarowane jako dowolnego typu, w odróżnieniu od indeksy tablicy, które musi być wartością całkowitą.  
+ Operator indeksowania tablicy nie może zostać przeciążony; jednak typy mogą definiować indeksatory oraz właściwości, które przyjumą jeden lub więcej parametrów. Parametry indeksatora są ujęte w nawiasach kwadratowych podobnie jak indeksy tablicy, ale parametry indeksatora mogą być deklarowane jako dowolny typ, w odróżnieniu od indeksów tablicy, które muszą być wartością całkowitą.  
   
- Na przykład, .NET Framework definiuje `Hashtable` typu, który kojarzy kluczy i wartości dowolnego typu:  
+ Na przykład, .NET Framework definiuje typ `Hashtable` ,który kojarzy klucze i wartości dowolnego typu:  
   
  [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
- Nawiasy kwadratowe są również używane do określenia [atrybuty](../../../csharp/programming-guide/concepts/attributes/index.md):  
+ Nawiasy kwadratowe są również używane do określenia [atrybutów](../../../csharp/programming-guide/concepts/attributes/index.md):  
   
  [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
- Nawiasy kwadratowe umożliwia indeksu poza wskaźnik:  
+ Nawiasy kwadratowe umożliwia indeksowanie poza wskaźnik:  
   
  [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
- Nie granice sprawdzanie jest wykonywane.  
+ Nie jest wykonywane żadne sprawdzanie granic.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

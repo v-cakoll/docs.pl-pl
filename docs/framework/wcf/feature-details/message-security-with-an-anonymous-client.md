@@ -1,60 +1,62 @@
 ---
-title: "Zabezpieczenia komunikatów z anonimowym klientem"
-ms.custom: 
+title: Zabezpieczenia komunikatów z anonimowym klientem
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 25c184d32c6cedf893c79f15d77ba93ec5e9461e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="message-security-with-an-anonymous-client"></a><span data-ttu-id="7ed85-102">Zabezpieczenia komunikatów z anonimowym klientem</span><span class="sxs-lookup"><span data-stu-id="7ed85-102">Message Security with an Anonymous Client</span></span>
-<span data-ttu-id="7ed85-103">Poniższy scenariusz przedstawia klientów i usług zabezpieczonych przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczenia wiadomości.</span><span class="sxs-lookup"><span data-stu-id="7ed85-103">The following scenario shows a client and service secured by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] message security.</span></span> <span data-ttu-id="7ed85-104">Celem projektu jest użycie zabezpieczeń wiadomości, a nie zabezpieczeń transportu, aby w przyszłości może obsługiwać bardziej rozbudowane modelu opartego na oświadczeniach.</span><span class="sxs-lookup"><span data-stu-id="7ed85-104">A design goal is to use message security rather than transport security, so that in the future it can support a richer claims-based model.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="7ed85-105">przy użyciu zaawansowanych oświadczenia dotyczące autoryzacji, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span><span class="sxs-lookup"><span data-stu-id="7ed85-105"> using rich claims for authorization, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
+# <a name="message-security-with-an-anonymous-client"></a><span data-ttu-id="d0393-102">Zabezpieczenia komunikatów z anonimowym klientem</span><span class="sxs-lookup"><span data-stu-id="d0393-102">Message Security with an Anonymous Client</span></span>
+<span data-ttu-id="d0393-103">Poniższy scenariusz przedstawia klientów i usług zabezpieczonych przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczenia wiadomości.</span><span class="sxs-lookup"><span data-stu-id="d0393-103">The following scenario shows a client and service secured by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] message security.</span></span> <span data-ttu-id="d0393-104">Celem projektu jest użycie zabezpieczeń wiadomości, a nie zabezpieczeń transportu, aby w przyszłości może obsługiwać bardziej rozbudowane modelu opartego na oświadczeniach.</span><span class="sxs-lookup"><span data-stu-id="d0393-104">A design goal is to use message security rather than transport security, so that in the future it can support a richer claims-based model.</span></span> <span data-ttu-id="d0393-105">Aby uzyskać więcej informacji o korzystaniu z zaawansowanych oświadczenia dotyczące autoryzacji, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span><span class="sxs-lookup"><span data-stu-id="d0393-105">For more information about using rich claims for authorization, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
   
- <span data-ttu-id="7ed85-106">Przykładową aplikację, zobacz [komunikat zabezpieczeń anonimowe](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span><span class="sxs-lookup"><span data-stu-id="7ed85-106">For a sample application, see [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span></span>  
+ <span data-ttu-id="d0393-106">Przykładową aplikację, zobacz [komunikat zabezpieczeń anonimowe](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span><span class="sxs-lookup"><span data-stu-id="d0393-106">For a sample application, see [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span></span>  
   
- <span data-ttu-id="7ed85-107">![Zabezpieczenia za pomocą klienta anynymous wiadomości](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span><span class="sxs-lookup"><span data-stu-id="7ed85-107">![Message security with an anynymous client](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span></span>  
+ <span data-ttu-id="d0393-107">![Zabezpieczenia za pomocą klienta anynymous wiadomości](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span><span class="sxs-lookup"><span data-stu-id="d0393-107">![Message security with an anynymous client](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span></span>  
   
-|<span data-ttu-id="7ed85-108">Cechy</span><span class="sxs-lookup"><span data-stu-id="7ed85-108">Characteristic</span></span>|<span data-ttu-id="7ed85-109">Opis</span><span class="sxs-lookup"><span data-stu-id="7ed85-109">Description</span></span>|  
+|<span data-ttu-id="d0393-108">Cechy</span><span class="sxs-lookup"><span data-stu-id="d0393-108">Characteristic</span></span>|<span data-ttu-id="d0393-109">Opis</span><span class="sxs-lookup"><span data-stu-id="d0393-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="7ed85-110">Tryb zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="7ed85-110">Security Mode</span></span>|<span data-ttu-id="7ed85-111">Komunikat</span><span class="sxs-lookup"><span data-stu-id="7ed85-111">Message</span></span>|  
-|<span data-ttu-id="7ed85-112">Współdziałanie</span><span class="sxs-lookup"><span data-stu-id="7ed85-112">Interoperability</span></span>|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="7ed85-113">tylko</span><span class="sxs-lookup"><span data-stu-id="7ed85-113"> only</span></span>|  
-|<span data-ttu-id="7ed85-114">Uwierzytelnianie (serwer)</span><span class="sxs-lookup"><span data-stu-id="7ed85-114">Authentication (Server)</span></span>|<span data-ttu-id="7ed85-115">Początkowa negocjacji wymaga uwierzytelniania serwera, ale nie uwierzytelnianie klienta</span><span class="sxs-lookup"><span data-stu-id="7ed85-115">Initial negotiation requires server authentication, but not client authentication</span></span>|  
-|<span data-ttu-id="7ed85-116">Uwierzytelnianie (klient)</span><span class="sxs-lookup"><span data-stu-id="7ed85-116">Authentication (Client)</span></span>|<span data-ttu-id="7ed85-117">Brak</span><span class="sxs-lookup"><span data-stu-id="7ed85-117">None</span></span>|  
-|<span data-ttu-id="7ed85-118">Integralność</span><span class="sxs-lookup"><span data-stu-id="7ed85-118">Integrity</span></span>|<span data-ttu-id="7ed85-119">Tak, przy użyciu kontekstu zabezpieczeń udostępnionego</span><span class="sxs-lookup"><span data-stu-id="7ed85-119">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="7ed85-120">Poufność</span><span class="sxs-lookup"><span data-stu-id="7ed85-120">Confidentiality</span></span>|<span data-ttu-id="7ed85-121">Tak, przy użyciu kontekstu zabezpieczeń udostępnionego</span><span class="sxs-lookup"><span data-stu-id="7ed85-121">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="7ed85-122">Transportu</span><span class="sxs-lookup"><span data-stu-id="7ed85-122">Transport</span></span>|<span data-ttu-id="7ed85-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="7ed85-123">HTTP</span></span>|  
+|<span data-ttu-id="d0393-110">Tryb zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="d0393-110">Security Mode</span></span>|<span data-ttu-id="d0393-111">Komunikat</span><span class="sxs-lookup"><span data-stu-id="d0393-111">Message</span></span>|  
+|<span data-ttu-id="d0393-112">Współdziałanie</span><span class="sxs-lookup"><span data-stu-id="d0393-112">Interoperability</span></span>|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d0393-113"> tylko</span><span class="sxs-lookup"><span data-stu-id="d0393-113"> only</span></span>|  
+|<span data-ttu-id="d0393-114">Uwierzytelnianie (serwer)</span><span class="sxs-lookup"><span data-stu-id="d0393-114">Authentication (Server)</span></span>|<span data-ttu-id="d0393-115">Początkowa negocjacji wymaga uwierzytelniania serwera, ale nie uwierzytelnianie klienta</span><span class="sxs-lookup"><span data-stu-id="d0393-115">Initial negotiation requires server authentication, but not client authentication</span></span>|  
+|<span data-ttu-id="d0393-116">Uwierzytelnianie (klient)</span><span class="sxs-lookup"><span data-stu-id="d0393-116">Authentication (Client)</span></span>|<span data-ttu-id="d0393-117">Brak</span><span class="sxs-lookup"><span data-stu-id="d0393-117">None</span></span>|  
+|<span data-ttu-id="d0393-118">Integralność</span><span class="sxs-lookup"><span data-stu-id="d0393-118">Integrity</span></span>|<span data-ttu-id="d0393-119">Tak, przy użyciu kontekstu zabezpieczeń udostępnionego</span><span class="sxs-lookup"><span data-stu-id="d0393-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="d0393-120">Poufność</span><span class="sxs-lookup"><span data-stu-id="d0393-120">Confidentiality</span></span>|<span data-ttu-id="d0393-121">Tak, przy użyciu kontekstu zabezpieczeń udostępnionego</span><span class="sxs-lookup"><span data-stu-id="d0393-121">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="d0393-122">Transportu</span><span class="sxs-lookup"><span data-stu-id="d0393-122">Transport</span></span>|<span data-ttu-id="d0393-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="d0393-123">HTTP</span></span>|  
   
-## <a name="service"></a><span data-ttu-id="7ed85-124">Usługa</span><span class="sxs-lookup"><span data-stu-id="7ed85-124">Service</span></span>  
- <span data-ttu-id="7ed85-125">Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie.</span><span class="sxs-lookup"><span data-stu-id="7ed85-125">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="7ed85-126">Wykonaj jedną z następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="7ed85-126">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="d0393-124">Usługa</span><span class="sxs-lookup"><span data-stu-id="d0393-124">Service</span></span>  
+ <span data-ttu-id="d0393-125">Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie.</span><span class="sxs-lookup"><span data-stu-id="d0393-125">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="d0393-126">Wykonaj jedną z następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="d0393-126">Do one of the following:</span></span>  
   
--   <span data-ttu-id="7ed85-127">Tworzenie przy użyciu kodu z konfiguracji autonomicznej usługi.</span><span class="sxs-lookup"><span data-stu-id="7ed85-127">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="d0393-127">Tworzenie przy użyciu kodu z konfiguracji autonomicznej usługi.</span><span class="sxs-lookup"><span data-stu-id="d0393-127">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="7ed85-128">Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.</span><span class="sxs-lookup"><span data-stu-id="7ed85-128">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="d0393-128">Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.</span><span class="sxs-lookup"><span data-stu-id="d0393-128">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="7ed85-129">Kod</span><span class="sxs-lookup"><span data-stu-id="7ed85-129">Code</span></span>  
- <span data-ttu-id="7ed85-130">Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z zabezpieczeń wiadomości.</span><span class="sxs-lookup"><span data-stu-id="7ed85-130">The following code shows how to create a service endpoint that uses message security.</span></span>  
+### <a name="code"></a><span data-ttu-id="d0393-129">Kod</span><span class="sxs-lookup"><span data-stu-id="d0393-129">Code</span></span>  
+ <span data-ttu-id="d0393-130">Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z zabezpieczeń wiadomości.</span><span class="sxs-lookup"><span data-stu-id="d0393-130">The following code shows how to create a service endpoint that uses message security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
  [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
   
-### <a name="configuration"></a><span data-ttu-id="7ed85-131">Konfiguracja</span><span class="sxs-lookup"><span data-stu-id="7ed85-131">Configuration</span></span>  
- <span data-ttu-id="7ed85-132">Następującej konfiguracji można zamiast kodu.</span><span class="sxs-lookup"><span data-stu-id="7ed85-132">The following configuration can be used instead of the code.</span></span> <span data-ttu-id="7ed85-133">Element zachowania usługi służy do określenia certyfikatu, który jest używany do uwierzytelniania usługi do klienta.</span><span class="sxs-lookup"><span data-stu-id="7ed85-133">The service behavior element is used to specify a certificate that is used to authenticate the service to the client.</span></span> <span data-ttu-id="7ed85-134">Element usługi należy określić przy użyciu zachowanie `behaviorConfiguration` atrybutu.</span><span class="sxs-lookup"><span data-stu-id="7ed85-134">The service element must specify the behavior using the `behaviorConfiguration` attribute.</span></span> <span data-ttu-id="7ed85-135">Element powiązania Określa, że typ poświadczeń klienta `None`, umożliwiając anonimowe klientów do korzystania z usługi.</span><span class="sxs-lookup"><span data-stu-id="7ed85-135">The binding element specifies that the client credential type is `None`, allowing anonymous clients to use the service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="d0393-131">Konfiguracja</span><span class="sxs-lookup"><span data-stu-id="d0393-131">Configuration</span></span>  
+ <span data-ttu-id="d0393-132">Następującej konfiguracji można zamiast kodu.</span><span class="sxs-lookup"><span data-stu-id="d0393-132">The following configuration can be used instead of the code.</span></span> <span data-ttu-id="d0393-133">Element zachowania usługi służy do określenia certyfikatu, który jest używany do uwierzytelniania usługi do klienta.</span><span class="sxs-lookup"><span data-stu-id="d0393-133">The service behavior element is used to specify a certificate that is used to authenticate the service to the client.</span></span> <span data-ttu-id="d0393-134">Element usługi należy określić przy użyciu zachowanie `behaviorConfiguration` atrybutu.</span><span class="sxs-lookup"><span data-stu-id="d0393-134">The service element must specify the behavior using the `behaviorConfiguration` attribute.</span></span> <span data-ttu-id="d0393-135">Element powiązania Określa, że typ poświadczeń klienta `None`, umożliwiając anonimowe klientów do korzystania z usługi.</span><span class="sxs-lookup"><span data-stu-id="d0393-135">The binding element specifies that the client credential type is `None`, allowing anonymous clients to use the service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -95,24 +97,24 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="7ed85-136">Klient</span><span class="sxs-lookup"><span data-stu-id="7ed85-136">Client</span></span>  
- <span data-ttu-id="7ed85-137">Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie.</span><span class="sxs-lookup"><span data-stu-id="7ed85-137">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="7ed85-138">Wykonaj jedną z następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="7ed85-138">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="d0393-136">Klient</span><span class="sxs-lookup"><span data-stu-id="d0393-136">Client</span></span>  
+ <span data-ttu-id="d0393-137">Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie.</span><span class="sxs-lookup"><span data-stu-id="d0393-137">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="d0393-138">Wykonaj jedną z następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="d0393-138">Do one of the following:</span></span>  
   
--   <span data-ttu-id="7ed85-139">Utwórz autonomiczny klienta przy użyciu kodu (i kod klienta).</span><span class="sxs-lookup"><span data-stu-id="7ed85-139">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="d0393-139">Utwórz autonomiczny klienta przy użyciu kodu (i kod klienta).</span><span class="sxs-lookup"><span data-stu-id="d0393-139">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="7ed85-140">Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych.</span><span class="sxs-lookup"><span data-stu-id="7ed85-140">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="7ed85-141">W zamian użyj Konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument.</span><span class="sxs-lookup"><span data-stu-id="7ed85-141">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="7ed85-142">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="7ed85-142">For example:</span></span>  
+-   <span data-ttu-id="d0393-140">Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych.</span><span class="sxs-lookup"><span data-stu-id="d0393-140">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="d0393-141">W zamian użyj Konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument.</span><span class="sxs-lookup"><span data-stu-id="d0393-141">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="d0393-142">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="d0393-142">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="7ed85-143">Kod</span><span class="sxs-lookup"><span data-stu-id="7ed85-143">Code</span></span>  
- <span data-ttu-id="7ed85-144">Poniższy kod tworzy wystąpienie klienta.</span><span class="sxs-lookup"><span data-stu-id="7ed85-144">The following code creates an instance of the client.</span></span> <span data-ttu-id="7ed85-145">Powiązanie używa komunikat trybu zabezpieczeń i typu poświadczeń klienta ma wartość none.</span><span class="sxs-lookup"><span data-stu-id="7ed85-145">The binding uses message mode security, and the client credential type is set to none.</span></span>  
+### <a name="code"></a><span data-ttu-id="d0393-143">Kod</span><span class="sxs-lookup"><span data-stu-id="d0393-143">Code</span></span>  
+ <span data-ttu-id="d0393-144">Poniższy kod tworzy wystąpienie klienta.</span><span class="sxs-lookup"><span data-stu-id="d0393-144">The following code creates an instance of the client.</span></span> <span data-ttu-id="d0393-145">Powiązanie używa komunikat trybu zabezpieczeń i typu poświadczeń klienta ma wartość none.</span><span class="sxs-lookup"><span data-stu-id="d0393-145">The binding uses message mode security, and the client credential type is set to none.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
  [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
   
-### <a name="configuration"></a><span data-ttu-id="7ed85-146">Konfiguracja</span><span class="sxs-lookup"><span data-stu-id="7ed85-146">Configuration</span></span>  
- <span data-ttu-id="7ed85-147">Poniższy kod konfiguruje klienta.</span><span class="sxs-lookup"><span data-stu-id="7ed85-147">The following code configures the client.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="d0393-146">Konfiguracja</span><span class="sxs-lookup"><span data-stu-id="d0393-146">Configuration</span></span>  
+ <span data-ttu-id="d0393-147">Poniższy kod konfiguruje klienta.</span><span class="sxs-lookup"><span data-stu-id="d0393-147">The following code configures the client.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -142,9 +144,9 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7ed85-148">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7ed85-148">See Also</span></span>  
- [<span data-ttu-id="7ed85-149">Przegląd zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="7ed85-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="7ed85-150">Rozproszone zabezpieczenia aplikacji</span><span class="sxs-lookup"><span data-stu-id="7ed85-150">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [<span data-ttu-id="7ed85-151">Zabezpieczenia komunikatów z anonimowością</span><span class="sxs-lookup"><span data-stu-id="7ed85-151">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [<span data-ttu-id="7ed85-152">Uwierzytelnianie i tożsamość usług</span><span class="sxs-lookup"><span data-stu-id="7ed85-152">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="7ed85-153">Model zabezpieczeń systemu Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="7ed85-153">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="d0393-148">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d0393-148">See Also</span></span>  
+ [<span data-ttu-id="d0393-149">Przegląd zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="d0393-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="d0393-150">Rozproszone zabezpieczenia aplikacji</span><span class="sxs-lookup"><span data-stu-id="d0393-150">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [<span data-ttu-id="d0393-151">Zabezpieczenia komunikatów z anonimowością</span><span class="sxs-lookup"><span data-stu-id="d0393-151">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [<span data-ttu-id="d0393-152">Uwierzytelnianie i tożsamość usług</span><span class="sxs-lookup"><span data-stu-id="d0393-152">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="d0393-153">Model zabezpieczeń systemu Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="d0393-153">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

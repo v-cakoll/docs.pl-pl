@@ -1,23 +1,24 @@
 ---
-title: "Wymagane argumenty i grupy metod przeciążonych"
-ms.custom: 
+title: Wymagane argumenty i grupy metod przeciążonych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>Wymagane argumenty i grupy metod przeciążonych
 Można skonfigurować tak, aby niektóre argumenty są wymagane może być powiązane działania jest nieprawidłowy do wykonania działań. `RequiredArgument` Atrybut służy do wskazania, że niektóre argumenty w działaniu wymagane i `OverloadGroup` atrybutów jest używane do grupowania kategorii wymaganych argumentów. Przy użyciu atrybutów, autorzy działania zapewniają prostymi lub złożonymi działanie sprawdzania poprawności konfiguracji.  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **Nie podano wartości dla wymaganego argumentu działania "Operand1".**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]o sprawdzanie i obsługa błędów sprawdzania poprawności i ostrzeżenia, zobacz [wywoływania sprawdzania poprawności działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+>  Aby uzyskać informacje dotyczące sprawdzania i obsługi sprawdzania poprawności błędy i ostrzeżenia, zobacz [wywoływania sprawdzania poprawności działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Za pomocą grupy metod przeciążonych  
  Grupy metod przeciążonych udostępnia metody wskazujący, które kombinacje argumenty są prawidłowe w działaniu. Argumenty są zgrupowane za pomocą <xref:System.Activities.OverloadGroupAttribute>. Każda grupa ma nadane nazwy, która jest określona przez <xref:System.Activities.OverloadGroupAttribute>, działanie jest prawidłowa, gdy tylko jeden zestaw argumentów w grupie metod przeciążonych są powiązane. W poniższym przykładzie pobierana z [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) próbki, `CreateLocation` klasa jest zdefiniowana.  
@@ -113,7 +114,7 @@ class CreateLocation: Activity
 }  
 ```  
   
- Celem tego działania jest do określenia lokalizacji w Stanach Zjednoczonych. Aby to zrobić, użytkownik działania można określić lokalizacji przy użyciu jednej z trzech grup argumentów. Aby określić prawidłową kombinację argumenty, trzy grupy metod przeciążonych są zdefiniowane. `G1`zawiera `Latitude` i `Longitude` argumentów. `G2`zawiera `Street`, `City`, i `State`. `G3`zawiera `Street` i `Zip`. `Name`jest również wymagany argument, ale nie jest częścią grupy przeciążenia. Dla tego działania identyfikator był prawidłowy `Name` musi być powiązane razem wszystkie argumenty z grupy metod przeciążonych jeden i tylko jeden.  
+ Celem tego działania jest do określenia lokalizacji w Stanach Zjednoczonych. Aby to zrobić, użytkownik działania można określić lokalizacji przy użyciu jednej z trzech grup argumentów. Aby określić prawidłową kombinację argumenty, trzy grupy metod przeciążonych są zdefiniowane. `G1` zawiera `Latitude` i `Longitude` argumentów. `G2` zawiera `Street`, `City`, i `State`. `G3` zawiera `Street` i `Zip`. `Name` jest również wymagany argument, ale nie jest częścią grupy przeciążenia. Dla tego działania identyfikator był prawidłowy `Name` musi być powiązane razem wszystkie argumenty z grupy metod przeciążonych jeden i tylko jeden.  
   
  W poniższym przykładzie pobierana z [działania dostępu do bazy danych](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) przykładowa występują dwa przeciążenia grup: `ConnectionString` i `ConfigFileSectionName`. Dla tego działania identyfikator był prawidłowy, albo `ProviderName` i `ConnectionString` argumentów musi być powiązana, lub `ConfigName` argumentu, ale nie oba.  
   

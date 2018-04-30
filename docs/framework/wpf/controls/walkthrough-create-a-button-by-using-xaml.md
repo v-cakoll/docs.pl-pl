@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a05e0af94cc84db117c7b8caf389d084cd4c3fd5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Wskazówki: Tworzenie przycisku przy użyciu XAML
-Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do użycia w [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji. W tym przewodniku zastosowano style i szablon, aby utworzyć zasób dostosowany przycisk umożliwiający ponowne użycie kodu i oddzielenie logiki przycisk z deklaracji przycisku. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+Celem tego przewodnika jest aby dowiedzieć się, jak utworzyć animowany przycisku do użycia w aplikacji Windows Presentation Foundation (WPF). W tym przewodniku zastosowano style i szablon, aby utworzyć zasób dostosowany przycisk umożliwiający ponowne użycie kodu i oddzielenie logiki przycisk z deklaracji przycisku. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
 >  W tym przewodniku prowadzi użytkownika przez kroki tworzenia aplikacji, wpisując lub kopiowanie i wklejanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do programu Microsoft Visual Studio. Jeśli chcesz dowiedzieć się, jak używać narzędzia projektowe (Microsoft Expression Blend) do tworzenia tej samej aplikacji, zobacz [utworzyć przycisk przy użyciu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  

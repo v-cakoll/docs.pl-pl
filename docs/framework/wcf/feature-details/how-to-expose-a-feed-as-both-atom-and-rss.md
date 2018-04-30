@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Porady: udostępnianie źródło danych jako Atom i RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługa syndykacji ujawniający zespolonego źródła danych przy użyciu zarówno Atom 1.0 i RSS 2.0. Ta usługa udostępnia jeden punkt końcowy, który może zwrócić albo formacie zespolonego. Dla uproszczenia usługę używaną w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS lub WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] różnych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hosting opcji, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługa syndykacji ujawniający zespolonego źródła danych przy użyciu zarówno Atom 1.0 i RSS 2.0. Ta usługa udostępnia jeden punkt końcowy, który może zwrócić albo formacie zespolonego. Dla uproszczenia usługę używaną w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS lub WAS. Aby uzyskać więcej informacji na temat różnych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hosting opcji, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Aby utworzyć usługę zespolonego podstawowe  
   

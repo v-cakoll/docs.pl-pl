@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Instrukcje: Zabezpieczanie usługi za pomocą certyfikatu X.509
 Zabezpieczanie usługi za pomocą certyfikatu X.509 to technika podstawowe który większości powiązania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] użycia. W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowana usługa za pomocą certyfikatu X.509.  
   
- Warunkiem wstępnym jest ważny certyfikat, który może służyć do uwierzytelniania serwera. Certyfikat musi wystawiony na serwerze przez zaufany urząd certyfikacji. Jeśli certyfikat nie jest prawidłowy, każdy klient próbuje użyć usługi nie ufa usługi, a w związku z tym połączenie nie zostanie ustanowione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Warunkiem wstępnym jest ważny certyfikat, który może służyć do uwierzytelniania serwera. Certyfikat musi wystawiony na serwerze przez zaufany urząd certyfikacji. Jeśli certyfikat nie jest prawidłowy, każdy klient próbuje użyć usługi nie ufa usługi, a w związku z tym połączenie nie zostanie ustanowione. Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Aby skonfigurować usługę przy użyciu certyfikatu przy użyciu kodu  
   

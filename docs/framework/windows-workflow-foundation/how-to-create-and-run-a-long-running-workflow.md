@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c7776c9155ef2c2c5c4ea804285cd67e995ef119
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Porady: tworzenie i uruchamianie długi uruchamiania przepływu pracy
 Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość środowiska uruchomieniowego utrwalić i zwolnić bezczynne przepływy pracy z bazą danych. Kroki opisane w [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące obsługi przepływu pracy za pomocą aplikacji konsoli. Przykłady zostały przedstawione początkowy przepływy pracy, programy obsługi cyklu życia przepływu pracy i wznawianie zakładki. W celu zaprezentowania skutecznie utrwalania przepływu pracy, konieczne jest bardziej złożonych hosta przepływu pracy obsługującego uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok samouczka przedstawia sposób tworzenia hosta formularzy systemu Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, utrwalania przepływu pracy i stanowi podstawę do zaawansowanych funkcji, takich jak śledzenia i wersjonowania, które są zostało to pokazane w kolejnych krokach samouczka.  
@@ -703,7 +703,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość �
     ```  
   
 ###  <a name="BKMK_WorkflowVersionMap"></a> Aby włączyć uruchamianie i wznawianie wielu typów przepływu pracy  
- Aby wznowić wystąpienia przepływu pracy, host musi dostarczyć definicji przepływu pracy. W tym samouczku są trzy typy przepływu pracy, a kolejne kroki samouczka wprowadzić wiele wersji tych typów. `WorkflowIdentity` umożliwia aplikacji hosta skojarzyć z wystąpieniem przepływu pracy utrwalonych informacje identyfikacyjne. Kroki opisane w tej sekcji przedstawiają sposób utworzyć klasę narzędzie pomagające mapowania tożsamości przepływu pracy z wystąpienia utrwalonego przepływu pracy do odpowiedniej definicji przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` i przechowywania wersji, zobacz [za pomocą właściwości WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+ Aby wznowić wystąpienia przepływu pracy, host musi dostarczyć definicji przepływu pracy. W tym samouczku są trzy typy przepływu pracy, a kolejne kroki samouczka wprowadzić wiele wersji tych typów. `WorkflowIdentity` umożliwia aplikacji hosta skojarzyć z wystąpieniem przepływu pracy utrwalonych informacje identyfikacyjne. Kroki opisane w tej sekcji przedstawiają sposób utworzyć klasę narzędzie pomagające mapowania tożsamości przepływu pracy z wystąpienia utrwalonego przepływu pracy do odpowiedniej definicji przepływu pracy. Aby uzyskać więcej informacji na temat `WorkflowIdentity` i wersji, zobacz [za pomocą właściwości WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
 1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **klasy**. Typ `WorkflowVersionMap` do **nazwa** polu i kliknij przycisk **Dodaj**.  
   

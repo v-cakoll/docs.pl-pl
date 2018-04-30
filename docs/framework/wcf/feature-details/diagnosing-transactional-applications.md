@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnozowanie aplikacji transakcyjnych
 W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcji zarządzania i diagnostyki rozwiązywać transakcyjnych aplikacji.  
@@ -58,7 +58,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/in
 |Przepływ transakcji na sekundę|Liczba transakcji przekazanych do operacji w tym punkcie końcowym w ciągu każdej sekundy. Ten licznik jest zwiększany za każdym razem transakcji jest obecny w wiadomości, które są wysyłane do punktu końcowego.|  
   
 ## <a name="windows-management-instrumentation"></a>Instrumentacja zarządzania Windows  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] dostęp do danych usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows dla diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI). Aby uzyskać więcej informacji na temat uzyskiwania dostępu do danych usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows dla diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Wiele-do-odczytu właściwości WMI wskazują ustawienia zastosowane transakcji dla usługi. W poniższych tabelach przedstawiono wszystkie te ustawienia.  
   

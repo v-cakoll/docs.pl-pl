@@ -1,28 +1,28 @@
 ---
-title: "Konfigurowanie obsługi protokołu WS-Atomic Transaction"
-ms.custom: 
+title: Konfigurowanie obsługi protokołu WS-Atomic Transaction
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurowanie obsługi protokołu WS-Atomic Transaction
 W tym temacie opisano, jak można skonfigurować obsługę protokołu WS-AtomicTransaction (WS-AT) za pomocą narzędzia konfiguracji WS-AT.  
@@ -34,11 +34,11 @@ W tym temacie opisano, jak można skonfigurować obsługę protokołu WS-AtomicT
   
  W oknie wiersza polecenia są dostępne w lokalizacji instalacji zestawu Windows SDK "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation".  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Narzędzie wiersza polecenia, zobacz [narzędzia konfiguracji WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Aby uzyskać więcej informacji na temat narzędzia wiersza polecenia, zobacz [narzędzia konfiguracji WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
  Jeśli używasz [!INCLUDE[wxp](../../../../includes/wxp-md.md)] lub [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], uzyskać dostęp do przystawki programu MMC, przechodząc do **usługi składnik/narzędzia panelu/administracyjne kontroli**, klikając prawym przyciskiem myszy **Mój komputer**, i Wybieranie **właściwości**. To jest tej samej lokalizacji, w którym można skonfigurować MSDTC Microsoft Distributed Transaction Coordinator (). Opcje dostępne dla konfiguracji są pogrupowane w obszarze **WS-AT** kartę. Jeśli używasz systemu Windows Vista lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)], przystawki programu MMC można znaleźć, klikając **Start** przycisk i wprowadzając `dcomcnfg.exe` w **wyszukiwania** pole. Po otwarciu programu MMC, przejdź do **Moje Computer\Distributed transakcji Coordinator\Local DTC** węzeł, kliknij prawym przyciskiem myszy i wybierz **właściwości**. Opcje dostępne dla konfiguracji są pogrupowane w obszarze **WS-AT** kartę.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz przystawki [przystawki MMC konfiguracji WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
+ Aby uzyskać więcej informacji na temat przystawki, zobacz [przystawki MMC konfiguracji WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
  Aby włączyć narzędzia interfejsu użytkownika, najpierw należy zarejestrować pliku WsatUI.dll, znajdującym się w następującej ścieżce  
   
@@ -88,7 +88,7 @@ W tym temacie opisano, jak można skonfigurować obsługę protokołu WS-AtomicT
 ### <a name="configuring-msdtc-to-use-certificates"></a>Konfigurowanie usługi MSDTC, aby korzystać z certyfikatów  
  Ponieważ Usługa protokołu WS-AT działa jako klient i serwer, musi zarówno nasłuchiwania przychodzących połączeń i inicjowania połączeń wychodzących. W związku z tym należy skonfigurować usługi MSDTC, dzięki czemu bez informacji o certyfikacie używanym do komunikacji z zewnętrznymi i certyfikatów, które można autoryzować akceptując komunikacji przychodzącej.  
   
- Można to skonfigurować za pomocą przystawki MMC usługi WS-AT. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]to narzędzie, zobacz [przystawki MMC konfiguracji WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) tematu. W poniższych krokach opisano sposób ustanowić zaufanie między dwa komputery z systemem usługi MSDTC.  
+ Można to skonfigurować za pomocą przystawki MMC usługi WS-AT. Aby uzyskać więcej informacji o tym narzędziu, zobacz [przystawki MMC konfiguracji WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) tematu. W poniższych krokach opisano sposób ustanowić zaufanie między dwa komputery z systemem usługi MSDTC.  
   
 1.  Skonfiguruj ustawienia maszyny A. Wybierz certA "Certyfikatu punktu końcowego". Wybierz certB "Autoryzowany certyfikatów".  
   

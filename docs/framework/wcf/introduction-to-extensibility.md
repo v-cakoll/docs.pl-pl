@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>Wprowadzenie do rozszerzalności
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Model aplikacji jest zaprojektowana w celu rozwiązania większa część wymaganiach dotyczących komunikacji z dowolnej aplikacji rozproszonej. Zawsze jednak mogą scenariusze, które nie obsługują implementacji dostarczane przez system i domyślny model aplikacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Modelu rozszerzalności jest przeznaczona do obsługi niestandardowych scenariuszy, umożliwiając zmodyfikować zachowanie systemu na każdym poziomie, nawet do punktu wymiana modelu całej aplikacji. W tym temacie opisano różne obszary rozszerzenia i wskazuje więcej informacji o poszczególnych.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  Komunikatów aplikacji zawiera dane, które jest przeznaczone dla klienta lub operacji usługi, utworzony zostanie lub klienta. Komunikaty te są dostępne dla systemu rozszerzenia na poziomie aplikacji w formie wiadomości lub obiektu, w zależności od potrzeb.  
   
- Wszystkie komunikaty przechodzą przez system kanału; tylko komunikaty aplikacji są przekazywane z systemu kanału do aplikacji. Aby utworzyć nowe funkcje na poziomie kanału, muszą być rozszerzane systemu kanału. Aby utworzyć nowe funkcje na poziomie aplikacji, należy rozszerzyć środowiska uruchomieniowego usługi lub klienta (dystrybucja i fabryk kanałów, odpowiednio). [!INCLUDE[crabout](../../../includes/crabout-md.md)] rozszerzanie środowiska uruchomieniowego aplikacji, zobacz [rozszerzanie elementu ServiceHost i warstwy modelu usług](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Wszystkie komunikaty przechodzą przez system kanału; tylko komunikaty aplikacji są przekazywane z systemu kanału do aplikacji. Aby utworzyć nowe funkcje na poziomie kanału, muszą być rozszerzane systemu kanału. Aby utworzyć nowe funkcje na poziomie aplikacji, należy rozszerzyć środowiska uruchomieniowego usługi lub klienta (dystrybucja i fabryk kanałów, odpowiednio). Aby uzyskać więcej informacji na temat rozszerzania środowiska uruchomieniowego aplikacji, zobacz [rozszerzanie elementu ServiceHost i warstwy modelu usług](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Rozszerzanie zabezpieczeń  
  Aby utworzyć mechanizmy zabezpieczeń niestandardowych, takich jak tokeny i poświadczeń, będzie konieczne rozszerzenie systemu zabezpieczeń. Aby uzyskać więcej informacji, zobacz [rozszerzanie zabezpieczeń](../../../docs/framework/wcf/extending/extending-security.md).  

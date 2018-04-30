@@ -22,11 +22,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34d48e7de0269449bd4ed6eedb83a7464b6d3d50
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typy konwerterów i rozszerzenia znaczników dla XAML
 Typy konwerterów i rozszerzeń znaczników są dwie metody, które systemów typu XAML i zapisywania XAML służy do generowania elementów wykresu obiektu. Mimo że mają pewne cechy typy konwerterów i rozszerzeń znaczników znajdują się inaczej w strumień węzłów XAML. W tej dokumentacji zestawu, konwertery typu rozszerzenia znaczników i podobne konstrukcje są czasami zbiorczo nazywane konwertery wartości.  
@@ -45,7 +45,7 @@ Typy konwerterów i rozszerzeń znaczników są dwie metody, które systemów ty
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Konwertery typu  
- W definicji usług .NET Framework XAML konwertery typu są klasy, które pochodzą ze środowiska CLR <xref:System.ComponentModel.TypeConverter> klasy. <xref:System.ComponentModel.TypeConverter> jest klasą w [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] przed wprowadzeniem XAML. Jego celem oryginalnego było do obsługi systemu windows właściwości i podobne tekstowych owoce cytrusowe metafory edycji dla [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] właściwości. Wprowadzenie XAML .NET Framework używa <xref:System.ComponentModel.TypeConverter> można przekonwertować na obiekt składnię tekst (jako znajdujące się w wartości atrybutu lub węzeł wartość XAML). <xref:System.ComponentModel.TypeConverter> można również do serializacji obiektu wartości do składni tekstu. <xref:System.ComponentModel.TypeConverter> wykorzystano w poprzednich implementacjach XAML określonej struktury w [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] i Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat <xref:System.ComponentModel.TypeConverter> w języku XAML, zobacz [typy konwerterów dla przeglądu XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ W definicji usług .NET Framework XAML konwertery typu są klasy, które pochodzą ze środowiska CLR <xref:System.ComponentModel.TypeConverter> klasy. <xref:System.ComponentModel.TypeConverter> jest klasą w [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] przed wprowadzeniem XAML. Jego celem oryginalnego było do obsługi systemu windows właściwości i podobne tekstowych owoce cytrusowe metafory edycji dla [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] właściwości. Wprowadzenie XAML .NET Framework używa <xref:System.ComponentModel.TypeConverter> można przekonwertować na obiekt składnię tekst (jako znajdujące się w wartości atrybutu lub węzeł wartość XAML). <xref:System.ComponentModel.TypeConverter> można również do serializacji obiektu wartości do składni tekstu. <xref:System.ComponentModel.TypeConverter> wykorzystano w poprzednich implementacjach XAML określonej struktury Windows Presentation Foundation (WPF) i Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat <xref:System.ComponentModel.TypeConverter> w języku XAML, zobacz [typy konwerterów dla przeglądu XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Rozszerzenia znaczników  

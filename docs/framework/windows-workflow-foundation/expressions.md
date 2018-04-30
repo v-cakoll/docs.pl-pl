@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 18c64daca1532bb626a59e5f01528e207e6b6b87
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 805a49d45da308744fc528b63e8a74bb69bbd124
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="expressions"></a>Wyrażenia
 Wyrażenie Windows Workflow Foundation (WF) to żadnych działań, które zwraca wynik. Wszystkie działania wyrażeń pośrednio pochodzi od <xref:System.Activities.Activity%601>, który zawiera <xref:System.Activities.OutArgument> właściwości o nazwie <xref:System.Activities.Activity%601.Result%2A> jako wartości zwracane działania. [!INCLUDE[wf1](../../../includes/wf1-md.md)] jest dostarczany z szeroką gamę działania wyrażeń z prostego, takich jak te <xref:System.Activities.Expressions.VariableValue%601> i <xref:System.Activities.Expressions.VariableReference%601>, które zapewniają dostęp do zmiennej w jednym przepływie pracy za pomocą operatora działań dla działań złożonych takich jak <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> i <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> tej oferty dostęp do rozmaitych języka Visual Basic w celu utworzenia wyniku. Można tworzyć dodatkowe wyrażenie działania przez wynikających z <xref:System.Activities.CodeActivity%601> lub <xref:System.Activities.NativeActivity%601>.  
@@ -176,4 +176,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] za pomocą wyrażeń w kodzie, zobacz [tworzenia przepływów pracy, działań i kod Imperatywne za pomocą wyrażenia](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).
+ Aby uzyskać więcej informacji na temat za pomocą wyrażeń w kodzie, zobacz [tworzenia przepływów pracy, działań i kod Imperatywne za pomocą wyrażenia](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).

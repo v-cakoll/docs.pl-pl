@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>Powiązania i zabezpieczenia
 Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferują możliwość szybkiego program [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. Ten temat ułatwia wybierz prawa powiązanie dla wymagania w zakresie zabezpieczeń.  
   
- Omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Programowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przy użyciu powiązań, zobacz [programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania w języku [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przy użyciu powiązań, zobacz [programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Jeśli zostały już wybrane powiązanie, można znaleźć więcej informacji na temat zachowania czasu wykonywania, które są skojarzone z zabezpieczeniami w [zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Niektóre funkcje zabezpieczeń nie są programowalny za pomocą powiązania dostarczane przez system. Aby uzyskać większą kontrolę przy użyciu niestandardowego powiązania, zobacz [możliwości zabezpieczeń wiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funkcje związane z bezpieczeństwem powiązań  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera liczbę powiązania dostarczane przez system, które spełniają potrzeby większości. Jeśli określonego powiązania nie wystarcza, można również utworzyć niestandardowego powiązania. Aby uzyskać listę powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] powiązania niestandardowe, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera liczbę powiązania dostarczane przez system, które spełniają potrzeby większości. Jeśli określonego powiązania nie wystarcza, można również utworzyć niestandardowego powiązania. Aby uzyskać listę powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md). Aby uzyskać więcej informacji dotyczących powiązań niestandardowych, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Każde powiązanie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ma dwie formy: interfejs API, a element XML używane w pliku konfiguracji. Na przykład `WSHttpBinding` (API) ma odpowiednik w [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   

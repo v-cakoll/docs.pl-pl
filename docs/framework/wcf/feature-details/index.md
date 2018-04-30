@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-feature-details"></a>Szczegóły funkcji WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zapewnia szeroką gamę kontrolę nad funkcji obsługi wiadomości w aplikacji. Tematy w tej sekcji, przejdź do szczegółów dotyczących dostępnych funkcji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]podstawowe programowania, zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zapewnia szeroką gamę kontrolę nad funkcji obsługi wiadomości w aplikacji. Tematy w tej sekcji, przejdź do szczegółów dotyczących dostępnych funkcji. Aby uzyskać więcej informacji na temat podstawy programowania, zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)  

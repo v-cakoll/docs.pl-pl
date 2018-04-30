@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta
 Aplikacje klienckie należy utworzyć, konfiguracji i użytkowaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta lub kanału obiektów do komunikowania się z usługami. [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md) temat zawiera omówienie obiektów i kroki związane z tworzeniem podstawowych obiektów klienta i kanału i za ich pomocą.  
@@ -76,7 +76,7 @@ Aplikacje klienckie należy utworzyć, konfiguracji i użytkowaniu [!INCLUDE[ind
   
  Kanały datagram fault nigdy nie nawet wtedy, gdy wyjątki występują po zamknięciu. Ponadto throw-duplex klientów, którzy nie mogą się uwierzytelnić, zwykle za pomocą bezpiecznej konwersacji <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>. Jednak jeśli dupleksu klienta przy użyciu bezpiecznej konwersacji uwierzytelnianie zakończy się niepowodzeniem, klient odbierze <xref:System.TimeoutException?displayProperty=nameWithType> zamiast tego.  
   
- Aby uzyskać więcej informacji o pracy z informacje o błędzie na poziomie aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Oczekiwano wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) opisuje oczekiwane wyjątki oraz sposób ich obsługę. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sposób obsługi błędów podczas tworzenia kanałów, zobacz [obsługi wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Aby uzyskać więcej informacji o pracy z informacje o błędzie na poziomie aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Oczekiwano wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) opisuje oczekiwane wyjątki oraz sposób ich obsługę. Aby uzyskać więcej informacji o sposobie obsługi błędów podczas tworzenia kanałów, zobacz [obsługi wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Blokowanie klienta i wydajności  
  Gdy aplikacji synchronicznie odwołuje się operacja żądanie odpowiedź, bloki klienta do momentu otrzymania wartości zwracanej lub wyjątek (takie jak <xref:System.TimeoutException?displayProperty=nameWithType>) zostanie zgłoszony. To zachowanie jest podobne do zachowania lokalnego. Gdy aplikacja synchronicznie wywołuje operację na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu klienta lub kanału, klient nie może zwracać dopóki warstwie kanału można zapisać danych w sieci lub dopóki nie jest zgłaszany wyjątek. I podczas wymiany komunikatów jednokierunkowe (określonego przez oznaczenie operacji o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> ustawioną `true`) ułatwia niektórzy klienci również zablokować poprawę reakcji, jednokierunkowe operacje, w zależności od powiązania i jakie komunikaty są już wysyłane. Operacje jednokierunkowe są tylko o wymianie wiadomości, ma więcej i nie mniejsza. Aby uzyskać więcej informacji, zobacz [usług One-Way](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
@@ -85,7 +85,7 @@ Aplikacje klienckie należy utworzyć, konfiguracji i użytkowaniu [!INCLUDE[ind
   
  Jeśli aplikacja może kontynuować pracę podczas operacji, należy utworzyć pary metod asynchronicznych interfejsu kontraktu usługi który Twojej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje klienta. Najprostszym sposobem, w tym celu jest użycie `/async` Włącz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Na przykład zobacz [porady: wywołania operacji usługi asynchronicznie](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zwiększa wydajność klienta, zobacz [aplikacje klienckie warstwy środkowej](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ Aby uzyskać więcej informacji na temat zwiększa wydajność klienta, zobacz [aplikacje klienckie warstwy środkowej](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Włączanie użytkownikowi na wybranie dynamicznie poświadczeń  
  <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> Interfejs umożliwia aplikacjom wyświetlania interfejsu użytkownika, który umożliwia użytkownikowi wybranie poświadczeń, z którymi jest tworzony kanał przed rozpoczęciem czasomierze limitu czasu.  

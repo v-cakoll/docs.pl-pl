@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 53459517591c36430b9326d6605c4eb1b28a13e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Używanie mechanizmu rozpoznawania kontraktów danych
-Mechanizmu rozpoznawania kontraktów danych umożliwia konfigurowanie znane typy dynamicznie. Znane typy są wymagane w przypadku serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać wszystkie możliwe typy operacji może pojawić się podczas wykonania operacji. Brak scenariuszy, w których nie dotyczy ważne jest możliwość dynamicznie Określ znanych typów.  
+Mechanizmu rozpoznawania kontraktów danych umożliwia konfigurowanie znane typy dynamicznie. Znane typy są wymagane w przypadku serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać wszystkie możliwe typy operacji może pojawić się podczas wykonania operacji. Brak scenariuszy, w których nie dotyczy ważne jest możliwość dynamicznie Określ znanych typów.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Tworzenie mechanizmu rozpoznawania kontraktów danych  
  Tworzenie mechanizmu rozpoznawania kontraktów danych wymaga wykonania dwóch metod <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> i <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Te dwie metody wdrożenia wywołania zwrotne, które są używane podczas serializacji i deserializacji, odpowiednio. <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> Metoda jest wywoływana podczas serializacji i pobiera typu kontraktu danych i go do mapy `xsi:type` nazwę i przestrzeń nazw. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> Metoda jest wywoływana podczas deserializacji i przyjmuje `xsi:type` nazwę i przestrzeń nazw i jest rozpoznawany jako typ kontraktu danych. Obie te metody mają `knownTypeResolver` parametr, który może służyć do korzysta z domyślnego znany typ programu rozpoznawania nazw w implementacji.  

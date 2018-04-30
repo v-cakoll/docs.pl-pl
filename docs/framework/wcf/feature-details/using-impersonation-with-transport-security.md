@@ -1,27 +1,29 @@
 ---
 title: Korzystanie z personifikacji z zabezpieczeniami transportu
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Korzystanie z personifikacji z zabezpieczeniami transportu
-*Personifikacja* to funkcja aplikacji serwera do podjęcia tożsamości klienta. Jest typowe dla usługi, aby podczas sprawdzania dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, dzięki czemu kontroli dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest to mechanizm przekazywania poświadczeń i zabezpieczania komunikacji przy użyciu tych poświadczeń. W tym temacie opisano za pomocą zabezpieczeń transportu w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] z funkcją personifikacji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Personifikacja korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Personifikacja* to funkcja aplikacji serwera do podjęcia tożsamości klienta. Jest typowe dla usługi, aby podczas sprawdzania dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, dzięki czemu kontroli dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest to mechanizm przekazywania poświadczeń i zabezpieczania komunikacji przy użyciu tych poświadczeń. W tym temacie opisano za pomocą zabezpieczeń transportu w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] z funkcją personifikacji. Aby uzyskać więcej informacji o personifikacji korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Pięć poziomów personifikacji  
  Zabezpieczenia transportu korzysta z pięciu poziomów personifikacji, zgodnie z opisem w poniższej tabeli.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Nazwane potoki nie można używać z `Impersonate` lub `Delegate` poziom personifikacji. Nazwany potok nie można wymusić na komputerze gwarancji te poziomy personifikacji.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]nazwane potoki, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Aby uzyskać więcej informacji o nazwanych potoków, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>HTTP Transport  
  Powiązania, które używają protokołu HTTP (<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.BasicHttpBinding>) obsługuje wielu schematów uwierzytelniania, zgodnie z objaśnieniem w [opis uwierzytelniania HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Personifikacja obsługiwany poziom zależy od schematu uwierzytelniania. Następujące elementy są używane z transportu HTTP:  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Schemat uwierzytelniania Kerberos, który można wybrać tylko za pośrednictwem negocjacji, może służyć o dowolnym poziomie personifikacji obsługiwane.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP transport, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Aby uzyskać więcej informacji na temat protokołu HTTP, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

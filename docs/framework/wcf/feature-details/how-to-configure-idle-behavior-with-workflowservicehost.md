@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cc10357e8ae6b5458ca3440e1728cb578208b3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 22c71c0840b4fa44c585dfac4d99bdcbb3227fdb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Instrukcje: Konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost
 Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi zostać wznowiony przez niektóre bodźca zewnętrznych, np. gdy wystąpienie przepływu pracy oczekuje na być dostarczane za pomocą wiadomości <xref:System.ServiceModel.Activities.Receive> działania. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> jest to zachowanie, który umożliwia określenie czasu między po wystąpieniu usługi przechodzi bezczynności i gdy wystąpienie jest utrwalona lub zwalnianie modułu. Zawiera dwie właściwości, które umożliwiają skonfigurowanie tych okresów. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Określa przedział czasu między po bezczynności przechodzi wystąpienia usługi przepływu pracy i gdy wystąpienie usługi przepływu pracy jest trwały. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Określa przedział czasu między gdy przepływ pracy usługi wystąpienie przechodzi bezczynności i gdy wystąpienie usługi przepływu pracy jest zwolniony, gdzie zwolnienie oznacza przechowywanie wystąpienie w magazynie wystąpień i usunięcie go z pamięci. W tym temacie opisano sposób konfigurowania <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> w pliku konfiguracji.  
@@ -42,7 +42,7 @@ Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi zo
     </behaviors>  
     ```  
   
-     `timeToUnload` Atrybut określa okres czasu między po bezczynności przechodzi wystąpienia usługi przepływu pracy i kiedy zwolniony jest usługi przepływu pracy. `timeToPersist` Atrybut określa okres czasu między po bezczynności przechodzi wystąpienia usługi przepływu pracy i gdy wystąpienie usługi przepływu pracy jest trwały. Wartość domyślna dla `timeToUnload` to 1 minuta. Wartość domyślna dla `timeToPersist` jest <xref:System.TimeSpan.MaxValue>. Jeśli chcesz zachować bezczynne wystąpienia w pamięci, ale zachowywał je dla niezawodności, ustaw wartości, aby `timeToPersist`  <  `timeToUnload`. Aby zapobiec zwalnianie bezczynne wystąpienia, należy ustawić `timeToUnload` do <xref:System.TimeSpan.MaxValue>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>, zobacz [rozszerzalność hosta usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+     `timeToUnload` Atrybut określa okres czasu między po bezczynności przechodzi wystąpienia usługi przepływu pracy i kiedy zwolniony jest usługi przepływu pracy. `timeToPersist` Atrybut określa okres czasu między po bezczynności przechodzi wystąpienia usługi przepływu pracy i gdy wystąpienie usługi przepływu pracy jest trwały. Wartość domyślna dla `timeToUnload` to 1 minuta. Wartość domyślna dla `timeToPersist` jest <xref:System.TimeSpan.MaxValue>. Jeśli chcesz zachować bezczynne wystąpienia w pamięci, ale zachowywał je dla niezawodności, ustaw wartości, aby `timeToPersist`  <  `timeToUnload`. Aby zapobiec zwalnianie bezczynne wystąpienia, należy ustawić `timeToUnload` do <xref:System.TimeSpan.MaxValue>. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>, zobacz [rozszerzalność hosta usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
   
     > [!NOTE]
     >  Uproszczona konfiguracja używa powyższego przykładu konfiguracji. Aby uzyskać więcej informacji, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md).  

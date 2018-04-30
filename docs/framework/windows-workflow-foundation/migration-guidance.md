@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11a4b1d6665e0198f8c9afc0209e9fb09cc599ad
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e6b42296d6780d93d5835b89732d114de6d8aca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="migration-guidance"></a>Wskazówki dotyczące migracji
 W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną systemu Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] została wydana w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywane WF3) i rozszerzony w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieją obok nowej technologii przepływu pracy (typy węzła System.Activities.\* przestrzeni nazw; określone jako WF4). Podczas określania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że kontrolować czas.  
@@ -46,7 +46,7 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Micros
  [Wskazówki dotyczące WF: Automatu stanów](http://go.microsoft.com/fwlink/?LinkId=153855)  
  W tym artykule omówiono przepływ sterowania WF4 modelowania w przypadku braku aktywności komputera stanu.  
   
- Należy pamiętać, że w tych wskazówkach dotyczy tylko projektów przepływu pracy, które odnoszą się do programu .NET Framework 4. Stan pracy maszyny zostały dodane w programie .NET 4.0.1 wraz z wydaniem Platform Update 1 i zostały zawarte w ramach programu .NET Framework 4.5. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Stan maszyny z przepływów pracy w programie .NET 4.0.1 — 4.0.3 i .NET Framework 4.5, zobacz [aktualizacji dla programu Microsoft .NET Framework 4 funkcji 4.0.1](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) i [przepływy pracy maszyny stanu](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Należy pamiętać, że w tych wskazówkach dotyczy tylko projektów przepływu pracy, które odnoszą się do programu .NET Framework 4. Stan pracy maszyny zostały dodane w programie .NET 4.0.1 wraz z wydaniem Platform Update 1 i zostały zawarte w ramach programu .NET Framework 4.5. Aby uzyskać więcej informacji na temat przepływów pracy maszyny stanu w programie .NET 4.0.1 — 4.0.3 i .NET Framework 4.5, zobacz [aktualizacji dla programu Microsoft .NET Framework 4 funkcji 4.0.1](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) i [przepływy pracy maszyny stanu](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [WF Cookbook migracji: Niestandardowe działania](http://go.microsoft.com/fwlink/?LinkId=153856)  
  Zawiera instrukcje dotyczące zmiany projektu WF3 niestandardowych działań na WF4 i przykłady.  

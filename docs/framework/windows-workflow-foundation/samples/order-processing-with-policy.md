@@ -1,23 +1,24 @@
 ---
-title: "Kolejność przetwarzania za pomocą zasad"
-ms.custom: 
+title: Kolejność przetwarzania za pomocą zasad
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>Kolejność przetwarzania za pomocą zasad
 Przykładowe kolejność przetwarzania zasad przedstawiono niektóre najważniejsze funkcje wprowadzone w systemie [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF). Nowy aparat reguł WF są następujące funkcje:  
@@ -29,12 +30,12 @@ Przykładowe kolejność przetwarzania zasad przedstawiono niektóre najważniej
 -   Obsługa metody rozszerzenia, aby interfejs w wywoływanie metod rozszerzeń z reguł WF użytkownika zgodny z styl kodowania C#.  
   
 > [!NOTE]
->  W tym przykładzie wymaga, aby [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] jest zainstalowany, aby skompilować i uruchomić. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]jest wymagany do otwierania plików projektu i rozwiązania.  
+>  W tym przykładzie wymaga, aby [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] jest zainstalowany, aby skompilować i uruchomić. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] jest wymagany do otwierania plików projektu i rozwiązania.  
   
  W przykładzie pokazano `OrderProcessingPolicy` projektu w jest wprowadzana zamówienie klienta, składający się z Lista numerowana dostępne elementy i kod pocztowy. Kolejność jest przetworzone pomyślnie, jeśli obie pozycje są prawidłowe; w przeciwnym razie zasady tworzy obiekty błąd, wykorzystując przeciążone `+` operatora, a także metodę rozszerzenie wstępnie zdefiniowanych informują użytkownika o błędach.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]metody rozszerzenia, zobacz [C# w wersji 3.0 specyfikacji](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Aby uzyskać więcej informacji na temat metody rozszerzenia, zobacz [C# w wersji 3.0 specyfikacji](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  Próbka składa się z następujących projektów:  
   

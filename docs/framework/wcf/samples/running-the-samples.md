@@ -1,24 +1,26 @@
 ---
-title: "Uruchamianie przykładów programu Windows Communication Foundation"
-ms.custom: 
+title: Uruchamianie przykładów programu Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Uruchamianie przykładów programu Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Próbki mogą być uruchamiane w konfiguracji pojedynczego komputera lub między komputerami. Dostarczony, próbki są gotowe do uruchamiania na jednym komputerze. W konfiguracji między komputerami należy zmodyfikować ustawienia pliku konfiguracji na próbkę. Poniższe procedury dotyczą sposobu uruchamiania próbkę w tym samym komputerze lub między komputerami konfiguracje. Należy pamiętać, że zmiany w opisach usług hostowanych w Internet Information Services (IIS) i hostowanie Samoobsługowe próbek. Większość przykładów są hostowane w usługach IIS; Zapoznaj się z informacjami readme próbki ustalenie, jak jest obsługiwana.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
   
     1.  Jeśli usługa nie jest uruchomiona w ramach konta domeny, otwórz plik konfiguracji klienta i zmień wartość adresu definicji punktu końcowego do dopasowania nowy adres z usługą. Zamień wszystkie odwołania do "localhost" pełni kwalifikowanej nazwy domeny w adresie.  
   
-    2.  Jeśli usługa jest uruchomiona w ramach konta domeny, należy ponownie wygenerować konfiguracji klienta, uruchamiając Svcutil.exe z usługą. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Uruchamianie Svcutil.exe, zobacz [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Użyj wygenerowanego pliku zamiast pliku konfiguracji w próbce. Wygenerowano plik konfiguracyjny zawiera informacje o dodatkowych tożsamości i zawiera wszystkie ustawienia niezbędne do połączenia z punktem końcowym usługi, nawet jeśli są one ustawienia domyślne. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]informacje o tożsamości, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), i [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  Jeśli usługa jest uruchomiona w ramach konta domeny, należy ponownie wygenerować konfiguracji klienta, uruchamiając Svcutil.exe z usługą. Aby uzyskać więcej informacji o uruchamianiu Svcutil.exe, zobacz [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Użyj wygenerowanego pliku zamiast pliku konfiguracji w próbce. Wygenerowano plik konfiguracyjny zawiera informacje o dodatkowych tożsamości i zawiera wszystkie ustawienia niezbędne do połączenia z punktem końcowym usługi, nawet jeśli są one ustawienia domyślne. Aby uzyskać więcej informacji o tożsamości, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), i [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4.  Na komputerze klienckim należy uruchomić Client.exe z wiersza polecenia.  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  Jeśli usługa jest obsługiwana w usługach IIS:  
   
-    1.  Aktywowanie usługi, wprowadzając adres http://localhost/servicemodelsamples/service.svc przy użyciu przeglądarki.  
+    1.  Aktywowanie usługi przy użyciu przeglądarki, wprowadzając adres http://localhost/servicemodelsamples/service.svc.  
   
     2.  W rozwiązaniu, wybierz **debugowania** menu i **dołączyć do procesu** elementu menu.  
   
@@ -93,4 +95,4 @@ ms.lasthandoff: 01/19/2018
 ## <a name="see-also"></a>Zobacz też  
  [Kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [Uruchomione z próbek w grupie roboczej i na komputerach](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Porady dotyczące rozwiązywania problemów](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Wskazówki dotyczące rozwiązywania problemów](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

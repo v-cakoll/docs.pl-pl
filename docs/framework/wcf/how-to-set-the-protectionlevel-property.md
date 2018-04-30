@@ -1,12 +1,13 @@
 ---
-title: "Instrukcje: Ustawianie właściwości ProtectionLevel"
-ms.custom: 
+title: 'Instrukcje: Ustawianie właściwości ProtectionLevel'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Instrukcje: Ustawianie właściwości ProtectionLevel
-Stosowanie odpowiedniego atrybutu i ustawiając właściwości można ustawić poziom ochrony. Można ustawić ochrony na poziomie usługi wpływ na wszystkie części każdej wiadomości lub coraz bardziej szczegółowym poziomie, można ustawić ochrony z metody części wiadomości. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`ProtectionLevel` właściwości, zobacz [poziom ochrony opis](../../../docs/framework/wcf/understanding-protection-level.md).  
+Stosowanie odpowiedniego atrybutu i ustawiając właściwości można ustawić poziom ochrony. Można ustawić ochrony na poziomie usługi wpływ na wszystkie części każdej wiadomości lub coraz bardziej szczegółowym poziomie, można ustawić ochrony z metody części wiadomości. Aby uzyskać więcej informacji na temat `ProtectionLevel` właściwości, zobacz [poziom ochrony opis](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
 >  Poziomy ochrony można ustawić tylko w kodzie, a nie w konfiguracji.  
@@ -53,7 +55,7 @@ Stosowanie odpowiedniego atrybutu i ustawiając właściwości można ustawić p
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Ochrona komunikatów "Fault"  
- Wyjątki, które są generowane w usłudze można wysłać do klienta jako błędach SOAP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Tworzenie silnie typizowanej błędów, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) i [porady: deklarowanie błędów w kontraktach usług](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
+ Wyjątki, które są generowane w usłudze można wysłać do klienta jako błędach SOAP. Aby uzyskać więcej informacji o tworzeniu silnie typizowanej błędów, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) i [porady: deklarowanie błędów w kontraktach usług](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
   
 #### <a name="to-protect-a-fault-message"></a>Aby chronić komunikat o błędzie  
   
@@ -72,7 +74,7 @@ Stosowanie odpowiedniego atrybutu i ustawiając właściwości można ustawić p
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>Ochrona części wiadomości  
- Użyj kontraktu komunikatu, aby chronić części wiadomości. [!INCLUDE[crabout](../../../includes/crabout-md.md)]kontrakty, zobacz [za pomocą kontraktów komunikatu](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ Użyj kontraktu komunikatu, aby chronić części wiadomości. Aby uzyskać więcej informacji na temat kontraktów komunikatu, zobacz [za pomocą kontraktów komunikatu](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>Aby chronić treści wiadomości  
   

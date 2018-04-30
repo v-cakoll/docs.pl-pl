@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Autonomiczna serializacja kodu JSON
 JSON (JavaScript Object Notation) to format danych przeznaczone do użycia przez kod JavaScript uruchomionych na stronach sieci Web w przeglądarce. Jest to domyślny format danych używany przez usługi ASP.NET AJAX utworzone w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -53,7 +53,7 @@ JSON (JavaScript Object Notation) to format danych przeznaczone do użycia przez
 |`Null` wartość dla każdego typu|Null|Typy dopuszczające wartości null są również obsługiwane i mapowanie do formatu JSON w taki sam sposób jak typów wartości null.|  
   
 ### <a name="enumerations-and-json"></a>Wyliczenia i JSON  
- Wartości elementu członkowskiego wyliczenia są traktowane jako liczby w formacie JSON, który jest inny niż jak są traktowane w kontraktach danych, w którym zostaną one dołączone jako nazwy elementów członkowskich. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] traktowanie, kontraktu danych zobacz [Typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Wartości elementu członkowskiego wyliczenia są traktowane jako liczby w formacie JSON, który jest inny niż jak są traktowane w kontraktach danych, w którym zostaną one dołączone jako nazwy elementów członkowskich. Aby uzyskać więcej informacji na temat przetwarzania kontraktu danych, zobacz [Typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Na przykład, jeśli masz `public enum Color {red, green, blue, yellow, pink}`, serializacji `yellow` tworzy liczbę 3, a nie ciąg "żółty".  
   

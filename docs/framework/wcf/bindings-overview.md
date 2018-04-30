@@ -1,28 +1,28 @@
 ---
-title: "Omówienie powiązań WCF (Windows Communication Foundation)"
-ms.custom: 
+title: Omówienie powiązań WCF (Windows Communication Foundation)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania są obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do nawiązania połączenia z punktów końcowych [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi. Każdy punkt końcowy w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi wymaga powiązania być poprawnie określona. W tym temacie przedstawiono typy komunikacji szczegóły definiujące powiązań, elementy powiązania, jakie powiązania są uwzględnione w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], jak można określić powiązanie dla punktu końcowego.  
@@ -40,7 +40,7 @@ Powiązania są obiekty, które są używane do określania szczegółów komuni
  Określa podstawowy protokół transportu do użycia (np. TCP lub HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Elementy powiązania  
- Powiązanie zasadniczo składa się z uporządkowanej stosu powiązania elementów, z których każdy określa część komunikacji informacje wymagane do połączenia z punktem końcowym usługi. Znajdują się dwie warstwy najniższy w stosie wymagane. Na podstawie stosu jest element powiązania transportu i powyżej to jest element zawierający specyfikacje Kodowanie komunikatu. Elementy opcjonalne określające innych protokołów komunikacyjnych są warstwę ponad tych dwóch wymaganych elementów. [!INCLUDE[crabout](../../../includes/crabout-md.md)]te elementy powiązania i ich kolejności poprawne, zobacz [powiązań niestandardowych](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Powiązanie zasadniczo składa się z uporządkowanej stosu powiązania elementów, z których każdy określa część komunikacji informacje wymagane do połączenia z punktem końcowym usługi. Znajdują się dwie warstwy najniższy w stosie wymagane. Na podstawie stosu jest element powiązania transportu i powyżej to jest element zawierający specyfikacje Kodowanie komunikatu. Elementy opcjonalne określające innych protokołów komunikacyjnych są warstwę ponad tych dwóch wymaganych elementów. Aby uzyskać więcej informacji na temat tych elementów powiązania i ich kolejności poprawne zobacz [powiązań niestandardowych](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
  Informacje w powiązaniu może być skomplikowane, a niektóre ustawienia mogą nie być zgodne z innymi osobami. Z tego powodu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera zestaw powiązania dostarczane przez system. Te powiązania zostały zaprojektowane tak, aby pokrywał większość wymagań aplikacji. Następujące klasy reprezentują przykłady powiązania dostarczane przez system:  
@@ -56,7 +56,7 @@ Powiązania są obiekty, które są używane do określania szczegółów komuni
  Aby uzyskać pełną listę, z opisami wszystkich [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-pod warunkiem powiązania, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Przy użyciu własnego powiązań  
- Jeśli żaden z uwzględnione powiązania dostarczane przez system nie ma odpowiednie połączenie funkcji, które wymaga aplikacji usługi, można tworzyć własne powiązania. Istnieją dwa sposoby, w tym celu. Możesz utworzyć nowe powiązanie z istniejącym elementów powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding> obiektu albo można utworzyć powiązania całkowicie zdefiniowane przez użytkownika przez pochodny <xref:System.ServiceModel.Channels.Binding> powiązania. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Tworzenie własnych powiązania za pomocą te dwie metody, zobacz [powiązań niestandardowych](../../../docs/framework/wcf/extending/custom-bindings.md) i [powiązania Creating User-Defined](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Jeśli żaden z uwzględnione powiązania dostarczane przez system nie ma odpowiednie połączenie funkcji, które wymaga aplikacji usługi, można tworzyć własne powiązania. Istnieją dwa sposoby, w tym celu. Możesz utworzyć nowe powiązanie z istniejącym elementów powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding> obiektu albo można utworzyć powiązania całkowicie zdefiniowane przez użytkownika przez pochodny <xref:System.ServiceModel.Channels.Binding> powiązania. Aby uzyskać więcej informacji na temat tworzenia własnych powiązanie, używając te dwie metody, zobacz [powiązań niestandardowych](../../../docs/framework/wcf/extending/custom-bindings.md) i [powiązania Creating User-Defined](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Przy użyciu powiązań  
  Przy użyciu powiązań pociąga za sobą dwa podstawowe kroki:  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Tworzenie i wdrażanie usług danych WCF
 Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby uzyskać więcej ogólnych informacji o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], zobacz [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) i [omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -80,7 +80,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
 3.  **Środowisko projektowe platformy Azure z systemem Windows**  
   
-     Narzędzia systemu Windows Azure dla programu Visual Studio zawiera zintegrowany zestaw narzędzi do tworzenia usług systemu Windows Azure w programie Visual Studio. Za pomocą tych narzędzi można zaprojektować usługę danych, którą będzie można wdrożyć w systemie Microsoft Azure i przed wdrożeniem można przetestować usługę danych na komputerze lokalnym. Te narzędzia używane do opracowywania usłudze danych, która działa na platformie Windows Azure przy użyciu programu Visual Studio. Możesz pobrać narzędzi systemu Windows Azure dla programu Visual Studio z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie usłudze danych, która działa w systemie Windows Azure, zobacz wpis [wdrażanie usługi OData w systemie Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Narzędzia systemu Windows Azure dla programu Visual Studio zawiera zintegrowany zestaw narzędzi do tworzenia usług systemu Windows Azure w programie Visual Studio. Za pomocą tych narzędzi można zaprojektować usługę danych, którą będzie można wdrożyć w systemie Microsoft Azure i przed wdrożeniem można przetestować usługę danych na komputerze lokalnym. Te narzędzia używane do opracowywania usłudze danych, która działa na platformie Windows Azure przy użyciu programu Visual Studio. Możesz pobrać narzędzi systemu Windows Azure dla programu Visual Studio z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji o tworzeniu usłudze danych, która działa na platformie Windows Azure, zobacz wpis [wdrażanie usługi OData w systemie Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="development-tips"></a>Porady dotyczące projektowania  
  Podczas projektowania usługi danych należy wziąć pod uwagę następujące kwestie:  
@@ -116,21 +116,21 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Opcje wdrożenia dla [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji, zobacz [Omówienie wdrożenia sieci Web dla platformy ASP.NET i Visual Studio](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     Aby uzyskać więcej informacji o opcjach wdrożenia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji, zobacz [Omówienie wdrożenia sieci Web dla platformy ASP.NET i Visual Studio](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Przed próbą wdrożenia usługi danych w programie IIS należy przetestować wdrożenie na serwerze sieci Web, na którym działa program IIS. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych WCF działającą na serwerze IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Windows Azure**  
   
-     Usługi danych systemu Windows Azure można wdrożyć przy użyciu narzędzi systemu Windows Azure dla programu Visual Studio. Możesz pobrać narzędzi systemu Windows Azure dla programu Visual Studio z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Wdrażanie usługi danych w systemie Windows Azure, zobacz wpis [wdrażanie usługi OData w systemie Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Usługi danych systemu Windows Azure można wdrożyć przy użyciu narzędzi systemu Windows Azure dla programu Visual Studio. Możesz pobrać narzędzi systemu Windows Azure dla programu Visual Studio z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji o wdrażaniu usługi danych w systemie Windows Azure, zobacz wpis [wdrażanie usługi OData w systemie Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Uwagi dotyczące wdrażania  
  Podczas wdrażania usługi danych należy wziąć pod uwagę następujące kwestie:  
   
 -   Podczas wdrażania usługi danych, który używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy bazy danych programu SQL Server, może być również konieczne propagację struktury danych, danych, lub wdrożenie zarówno z danymi usługi. Visual Studio może automatycznie tworzyć skrypty (pliki SQL), aby to zrobić w docelowej bazie danych, i te skrypty może być uwzględniony w pakiecie wdrożeniowym sieci Web z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [NIB: porady: Wdrażanie bazy danych z projektu aplikacji sieci Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Aby uzyskać [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web, można to zrobić pomocą **Kreator publikowania bazy danych** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [wdrażania bazy danych przy użyciu Kreatora publikowania bazy danych](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Ponieważ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonych w programie IIS w systemie Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą programu Windows Server AppFabric do monitorowania usługi danych, zobacz wpis [śledzenia usług danych WCF za pomocą programu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Ponieważ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonych w programie IIS w systemie Windows Server. Aby uzyskać więcej informacji o korzystaniu z programu Windows Server AppFabric do monitorowania usługi danych, zobacz wpis [śledzenia usług danych WCF za pomocą programu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

@@ -1,12 +1,13 @@
 ---
-title: "Przegląd Rysowanie obiektów"
-ms.custom: 
+title: Przegląd Rysowanie obiektów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="drawing-objects-overview"></a>Przegląd Rysowanie obiektów
 W tym temacie przedstawiono <xref:System.Windows.Media.Drawing> obiekty i opisuje sposób umożliwia wydajne Rysowanie kształtów, mapy bitowe, tekst i nośnika. Użyj <xref:System.Windows.Media.Drawing> malować obiekty podczas tworzenia obiektów graficznych, <xref:System.Windows.Media.DrawingBrush>, lub użyj <xref:System.Windows.Media.Visual> obiektów.  
@@ -36,17 +38,17 @@ W tym temacie przedstawiono <xref:System.Windows.Media.Drawing> obiekty i opisuj
 ## <a name="what-is-a-drawing-object"></a>Co to jest obiekt rysunku?  
  A <xref:System.Windows.Media.Drawing> obiektu opisuje widocznej zawartości, takich jak kształtu, mapy bitowej, wideo lub wiersza tekstu. Różne typy rysunki opis różnych typów zawartości. Poniżej znajduje się lista różnych typów obiektów rysowania.  
   
--   <xref:System.Windows.Media.GeometryDrawing>— Rysuje kształt.  
+-   <xref:System.Windows.Media.GeometryDrawing> — Rysuje kształt.  
   
--   <xref:System.Windows.Media.ImageDrawing>— Rysuje obraz.  
+-   <xref:System.Windows.Media.ImageDrawing> — Rysuje obraz.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>— Rysuje tekst.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> — Rysuje tekst.  
   
--   <xref:System.Windows.Media.VideoDrawing>— Odtwarza plik audio i wideo.  
+-   <xref:System.Windows.Media.VideoDrawing> — Odtwarza plik audio i wideo.  
   
--   <xref:System.Windows.Media.DrawingGroup>— Rysuje inne rysunki. Użyj grupy rysunku, aby połączyć inne rysunki w jeden złożonego.  
+-   <xref:System.Windows.Media.DrawingGroup> — Rysuje inne rysunki. Użyj grupy rysunku, aby połączyć inne rysunki w jeden złożonego.  
   
- <xref:System.Windows.Media.Drawing>obiekty są uniwersalne; istnieje wiele sposobów, można użyć <xref:System.Windows.Media.Drawing> obiektu.  
+ <xref:System.Windows.Media.Drawing> obiekty są uniwersalne; istnieje wiele sposobów, można użyć <xref:System.Windows.Media.Drawing> obiektu.  
   
 -   Można wyświetlić jako obraz za pomocą <xref:System.Windows.Media.DrawingImage> i <xref:System.Windows.Controls.Image> formantu.  
   
@@ -86,7 +88,7 @@ Obiekt GeometryDrawing zawierający
   
  Poniższy przykład Rysuje obraz do prostokąta znajduje się w punkcie (75,75) czyli 100 x 100 pikseli. Na poniższej ilustracji pokazano <xref:System.Windows.Media.ImageDrawing> powstały w przykładzie. Dodano szarego obramowania pokazanie granice <xref:System.Windows.Media.ImageDrawing>.  
   
- ![100 x 100 Obiekt ImageDrawing o rozmiarze rysowane &#40; 75,75 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![100 x 100 Obiekt ImageDrawing o rozmiarze rysowane &#40;75,75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 Obiekt ImageDrawing o rozmiarze 100 na 100  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -107,7 +109,7 @@ Obiekt ImageDrawing o rozmiarze 100 na 100
   
  Do odtwarzania multimediów bez tworzenia własnego <xref:System.Windows.Media.MediaTimeline>, wykonaj następujące kroki.  
   
-1.  Utwórz <xref:System.Windows.Media.MediaPlayer> obiektu.  
+1.  Tworzy obiekt <xref:System.Windows.Media.MediaPlayer>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
@@ -180,7 +182,7 @@ Rysowanie złożone
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- A <xref:System.Windows.Media.DrawingGroup> umożliwia także zastosowanie nieprzezroczystość maski, transformacje efekty mapy bitowej i innych operacji do jego zawartości. <xref:System.Windows.Media.DrawingGroup>operacje są stosowane w następującej kolejności: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, a następnie <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ A <xref:System.Windows.Media.DrawingGroup> umożliwia także zastosowanie nieprzezroczystość maski, transformacje efekty mapy bitowej i innych operacji do jego zawartości. <xref:System.Windows.Media.DrawingGroup> operacje są stosowane w następującej kolejności: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, a następnie <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Na poniższej ilustracji przedstawiono kolejność, w którym <xref:System.Windows.Media.DrawingGroup> operacji są stosowane.  
   
@@ -189,7 +191,7 @@ Kolejność operacji DrawingGroup
   
  W poniższej tabeli opisano właściwości można użyć do manipulowania <xref:System.Windows.Media.DrawingGroup> zawartości obiektu.  
   
-|Właściwość|Opis|Illustration|  
+|Właściwość|Opis|Ilustracja|  
 |--------------|-----------------|------------------|  
 |<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Zmienia nieprzezroczystość zaznaczonych części <xref:System.Windows.Media.DrawingGroup> zawartość. Na przykład zobacz [porady: kontrolowanie przezroczystości rysunku](http://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![Obiekt DrawingGroup z maskę przezroczystości](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
 |<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Zmienia jednolicie nieprzezroczystość <xref:System.Windows.Media.DrawingGroup> zawartość. Używaj tej właściwości umożliwia <xref:System.Windows.Media.Drawing> przezroczystego lub częściowo przezroczysty. Na przykład, zobacz [porady: stosowanie maskę przezroczystości do rysunku](http://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![Obiekty DrawingGroup z różnymi ustawieniami nieprzezroczystości](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
@@ -232,7 +234,7 @@ Obiekt GeometryDrawing zawierający używane z DrawingBrush
 ## <a name="drawingcontext-objects"></a>Obiekty klasy DrawingContext  
  <xref:System.Windows.Media.DrawingContext> Klasa umożliwia wypełnienie <xref:System.Windows.Media.Visual> lub <xref:System.Windows.Media.Drawing> z zawartością visual. Użyj takich obiektów grafiki niższego poziomu <xref:System.Windows.Media.DrawingContext> ponieważ opisuje zawartość graficzną bardzo wydajnie.  
   
- Mimo że <xref:System.Windows.Media.DrawingContext> metody rysowania wyglądać podobnie do metody rysowania <xref:System.Drawing.Graphics?displayProperty=nameWithType> typu są faktycznie bardzo różnią się. <xref:System.Windows.Media.DrawingContext>jest używany z systemu grafiki zachowanych trybie, podczas gdy <xref:System.Drawing.Graphics?displayProperty=nameWithType> typ jest używany z systemem grafiki w trybie natychmiastowym. Jeśli używasz <xref:System.Windows.Media.DrawingContext> polecenia rysowania obiektu, zestaw instrukcji renderowania faktycznie są przechowywane (chociaż mechanizmu magazynowania dokładne zależy od typu obiektu, który dostarcza <xref:System.Windows.Media.DrawingContext>) który później będzie używany przez grafiki systemu; nie pobierają do ekranu w czasie rzeczywistym. Aby uzyskać więcej informacji na temat sposobu [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] grafiki systemu znaleźć [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+ Mimo że <xref:System.Windows.Media.DrawingContext> metody rysowania wyglądać podobnie do metody rysowania <xref:System.Drawing.Graphics?displayProperty=nameWithType> typu są faktycznie bardzo różnią się. <xref:System.Windows.Media.DrawingContext> jest używany z systemu grafiki zachowanych trybie, podczas gdy <xref:System.Drawing.Graphics?displayProperty=nameWithType> typ jest używany z systemem grafiki w trybie natychmiastowym. Jeśli używasz <xref:System.Windows.Media.DrawingContext> polecenia rysowania obiektu, zestaw instrukcji renderowania faktycznie są przechowywane (chociaż mechanizmu magazynowania dokładne zależy od typu obiektu, który dostarcza <xref:System.Windows.Media.DrawingContext>) który później będzie używany przez grafiki systemu; nie pobierają do ekranu w czasie rzeczywistym. Aby uzyskać więcej informacji na temat działania systemu grafiki Windows Presentation Foundation (WPF), zobacz [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
  Użytkownik nigdy nie bezpośrednio utworzyć wystąpienia <xref:System.Windows.Media.DrawingContext>; można jednak uzyskać rysowania kontekstu z niektórych metod, takich jak <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> i <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
   

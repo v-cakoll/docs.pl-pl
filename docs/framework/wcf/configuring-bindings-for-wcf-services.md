@@ -1,28 +1,28 @@
 ---
-title: "Konfigurowanie powiązań dla usług WCF (Windows Communication Foundation)"
-ms.custom: 
+title: Konfigurowanie powiązań dla usług WCF (Windows Communication Foundation)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurowanie powiązań dla usług WCF (Windows Communication Foundation)
 Podczas tworzenia aplikacji, ma często mają być odroczone decyzje administratora po wdrożeniu aplikacji. Na przykład często istnieje żaden sposób uzyskać z wyprzedzeniem, co adres usługi lub identyfikator URI (Uniform Resource), będzie. Zamiast kodować adres, zaleca się pozwalają administratorowi zrobić po utworzeniu usługi. Tego rodzaju elastyczności odbywa się za pośrednictwem konfiguracji.  
@@ -47,13 +47,13 @@ Podczas tworzenia aplikacji, ma często mają być odroczone decyzje administrat
 ```  
   
 ### <a name="servicemodel-elements"></a>Elementy modelu ServiceModel  
- Korzystając z sekcji ograniczone przez `system.ServiceModel` element, aby skonfigurować typ usługi z jednego lub więcej punktów końcowych, a także ustawienia usługi. Następnie można skonfigurować za pomocą adresu, kontrakt i powiązanie każdego punktu końcowego. [!INCLUDE[crabout](../../../includes/crabout-md.md)]punktów końcowych, zobacz [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md). Jeśli nie określono żadnych punktów końcowych, środowisko uruchomieniowe dodaje domyślne punkty końcowe. [!INCLUDE[crabout](../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Korzystając z sekcji ograniczone przez `system.ServiceModel` element, aby skonfigurować typ usługi z jednego lub więcej punktów końcowych, a także ustawienia usługi. Następnie można skonfigurować za pomocą adresu, kontrakt i powiązanie każdego punktu końcowego. Aby uzyskać więcej informacji dotyczących punktów końcowych, zobacz [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md). Jeśli nie określono żadnych punktów końcowych, środowisko uruchomieniowe dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  Powiązanie określa transportów (potoki protokołu HTTP, TCP, kolejkowania) i protokołów (zabezpieczeń, niezawodności, przepływy transakcji) i składa się z elementów, z których każdy określa aspektów jak punkt końcowy komunikuje się z świecie wiązania.  
   
  Na przykład określenie [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) wskazuje element do obsługi protokołu HTTP jako transportu dla punktu końcowego. Ten element jest używany do przesyłania się punkt końcowy w czasie wykonywania, gdy jest otwarty przy użyciu tego punktu końcowego usługi.  
   
- Istnieją dwa rodzaje powiązań: wstępnie zdefiniowanych i niestandardowych. Wstępnie zdefiniowanych powiązań kombinację przydatne elementy, które są używane w typowych scenariuszy. Dla listy wstępnie zdefiniowanych powiązań typy, które [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] udostępnia, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). Jeśli żadna kolekcja wstępnie zdefiniowanych powiązania ma poprawne kombinacja funkcji, które wymaga aplikacji usługi, można utworzyć powiązania niestandardowe, aby spełnić wymagania aplikacji. [!INCLUDE[crabout](../../../includes/crabout-md.md)]powiązania niestandardowe, zobacz [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Istnieją dwa rodzaje powiązań: wstępnie zdefiniowanych i niestandardowych. Wstępnie zdefiniowanych powiązań kombinację przydatne elementy, które są używane w typowych scenariuszy. Dla listy wstępnie zdefiniowanych powiązań typy, które [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] udostępnia, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). Jeśli żadna kolekcja wstępnie zdefiniowanych powiązania ma poprawne kombinacja funkcji, które wymaga aplikacji usługi, można utworzyć powiązania niestandardowe, aby spełnić wymagania aplikacji. Aby uzyskać więcej informacji dotyczących powiązań niestandardowych, zobacz [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  Cztery następujące przykłady przedstawiają najbardziej typowe konfiguracje powiązania, używany do konfigurowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi.  
   
@@ -71,7 +71,7 @@ Podczas tworzenia aplikacji, ma często mają być odroczone decyzje administrat
 </service>  
 ```  
   
- W tym przykładzie `name` atrybut wskazuje typ usługi, których konfiguracja jest ustawiona na. Po utworzeniu usługi kodu za pomocą `HelloWorld` kontraktu, został zainicjowany z wszystkich punktów końcowych zdefiniowanych w przykładowej konfiguracji. Jeśli zestaw implementuje tylko jeden kontrakt usługi, `name` atrybut może zostać pominięty, ponieważ usługa korzysta z typu dostępne tylko. Atrybut przyjmuje ciąg, który musi być w formacie`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ W tym przykładzie `name` atrybut wskazuje typ usługi, których konfiguracja jest ustawiona na. Po utworzeniu usługi kodu za pomocą `HelloWorld` kontraktu, został zainicjowany z wszystkich punktów końcowych zdefiniowanych w przykładowej konfiguracji. Jeśli zestaw implementuje tylko jeden kontrakt usługi, `name` atrybut może zostać pominięty, ponieważ usługa korzysta z typu dostępne tylko. Atrybut przyjmuje ciąg, który musi być w formacie `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  `address` Atrybut określa identyfikator URI, który innych punktów końcowych używają do komunikowania się z usługą. Identyfikator URI może być ścieżką bezwzględną ani względną. Jeśli zostanie podany adres względny, hosta powinien podać adres podstawowy, który jest odpowiedni dla używany w powiązaniu schemat transportu. Jeśli nie skonfigurowano adres podstawowy adres zakłada się, że adres dla tego punktu końcowego.  
   

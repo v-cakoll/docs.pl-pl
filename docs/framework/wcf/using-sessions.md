@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
 W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są powiązane z grupą wiadomości do konwersacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sesje są inne niż dostępna w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji, obsługuje różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje, które sesji umożliwiają w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i sposobu ich używania.  
@@ -144,7 +144,7 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są po
   
  Przykłady można znaleźć [porady: Tworzenie usługi czy wymaga sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , jak również [domyślne zachowanie usługi](../../../docs/framework/wcf/samples/default-service-behavior.md) i [Instancing](../../../docs/framework/wcf/samples/instancing.md) próbek.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Klienci i sesji, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Aby uzyskać więcej informacji dotyczących klientów i sesji, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Sesje interakcję z ustawieniami InstanceContext  
  Brak interakcji między <xref:System.ServiceModel.SessionMode> wyliczenia w umowie i <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwość, która określa skojarzenie między kanałów i obiektów określonej usługi. Aby uzyskać więcej informacji, zobacz [sesji, Instancing i współbieżność](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  

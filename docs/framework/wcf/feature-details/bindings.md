@@ -1,35 +1,37 @@
 ---
-title: "Powiązania WCF (Windows Communication Foundation)"
-ms.custom: 
+title: Powiązania WCF (Windows Communication Foundation)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], bindings
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 926cdab8b835aa170fc0cdc0046c3fef579c3fec
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Powiązania WCF (Windows Communication Foundation)
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oddziela sposób zapisywania oprogramowania dla aplikacji z jak on komunikuje się z innym oprogramowaniem. Powiązania są używane do określania transportu, kodowanie i szczegóły protokołu wymagane dla klientów i usług komunikować się ze sobą. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa powiązania w celu wygenerowania danych przesyłanych w sieci podstawowej reprezentację punktu końcowego, dlatego większość szczegóły wiązania należy uzgodnić przez strony komunikujące się. Najprostszym sposobem osiągnąć ten cel jest dla klientów usługi można używać tego samego powiązanie punktu końcowego do zastosowań usługi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak to zrobić, zobacz [przy użyciu powiązań, aby skonfigurować usługi systemu Windows Communication Foundation i klientów](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oddziela sposób zapisywania oprogramowania dla aplikacji z jak on komunikuje się z innym oprogramowaniem. Powiązania są używane do określania transportu, kodowanie i szczegóły protokołu wymagane dla klientów i usług komunikować się ze sobą. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa powiązania w celu wygenerowania danych przesyłanych w sieci podstawowej reprezentację punktu końcowego, dlatego większość szczegóły wiązania należy uzgodnić przez strony komunikujące się. Najprostszym sposobem osiągnąć ten cel jest dla klientów usługi można używać tego samego powiązanie punktu końcowego do zastosowań usługi. Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz [przy użyciu powiązań, aby skonfigurować usługi systemu Windows Communication Foundation i klientów](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Powiązanie składa się z kolekcji elementów wiązania. Każdy element opisano niektóre aspekty jak punkt końcowy komunikuje się z klientami. Powiązanie musi zawierać co najmniej jeden element powiązania transportu, co najmniej jeden Kodowanie komunikatu element powiązania (co element powiązania transportu może zapewnić domyślnie), a elementy powiązania protokołu wiele innych. Proces, który tworzy moduł wykonawczy poza ten opis umożliwia każdego elementu powiązania do ich współtworzenia kodu do tego środowiska wykonawczego.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia powiązań, które zawiera typowe opcje elementów wiązania. Te mogą być używane z ustawień domyślnych, lub zmodyfikować te wartości domyślne, zgodnie z wymaganiami użytkownika. Te powiązania dostarczane przez system ma właściwości, które umożliwia bezpośrednią kontrolę nad elementy wiązania i ich ustawienia. Można również łatwo pracować side-by-side z wieloma wersjami powiązania przez nadanie każdej wersji powiązania własną nazwę. Aby uzyskać więcej informacji, zobacz [powiązania Configuring System-Provided](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia powiązań, które zawiera typowe opcje elementów wiązania. Te mogą być używane z ustawień domyślnych, lub zmodyfikować te wartości domyślne, zgodnie z wymaganiami użytkownika. Te powiązania dostarczane przez system ma właściwości, które umożliwia bezpośrednią kontrolę nad elementy wiązania i ich ustawienia. Można również łatwo pracować side-by-side z wieloma wersjami powiązania przez nadanie każdej wersji powiązania własną nazwę. Aby uzyskać więcej informacji, zobacz [powiązania Configuring System-Provided](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).  
   
  Jeśli potrzebujesz kolekcję elementów wiązania nie podano za pomocą jednej z tych powiązań dostarczane przez system, można utworzyć niestandardowego powiązania, który zawiera kolekcję elementów wymaganych powiązań. Te niestandardowe powiązania łatwych do tworzenia i wymagają nowej klasy, ale nie udostępniają właściwości sterujące elementy powiązania lub ich ustawienia. Możesz dostęp do elementów powiązania i zmieniać ustawienia za pomocą kolekcji, który je zawiera. Aby uzyskać więcej informacji, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

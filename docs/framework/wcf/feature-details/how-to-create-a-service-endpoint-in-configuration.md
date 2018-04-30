@@ -1,24 +1,26 @@
 ---
-title: "Porady: Tworzenie punktu końcowego usługi w konfiguracji"
-ms.custom: 
+title: 'Porady: Tworzenie punktu końcowego usługi w konfiguracji'
+ms.custom: ''
 ms.date: 06/16/2016
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b96ccdb7e80faa35748a41947ed97f273cb330e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ecb7345dbbff04388edb39dae9e5c05f2c40fd75
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Porady: Tworzenie punktu końcowego usługi w konfiguracji
 Punkty końcowe udostępniać klientom dostęp do funkcji [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferty usługi. Można określić jedną lub więcej punktów końcowych dla usługi przy użyciu kombinacji adresy punktów końcowych względne i bezwzględne lub jeśli żadnych punktów końcowych usługi nie jest zdefiniowana, środowiska uruchomieniowego zawiera niektóre domyślnie dla Ciebie. W tym temacie przedstawiono sposób dodawania punktów końcowych przy użyciu pliku konfiguracji, które zawierają zarówno względnych i bezwzględnych adresów.  
@@ -94,7 +96,7 @@ Punkty końcowe udostępniać klientom dostęp do funkcji [!INCLUDE[indigo1](../
 ```  
   
 ## <a name="example"></a>Przykład  
- Pierwszy definicji punktu końcowego pokazano w poniższym przykładzie określa adres względny, co oznacza, że adres punktu końcowego jest kombinacją adresu podstawowego i adres względny zgodnie z regułami kompozycji jednolity identyfikator zasobów (URI). Adres względny jest pusty (""), więc adres punktu końcowego jest taki sam jak adres podstawowy. Adres rzeczywisty punkt końcowy jest http://localhost: 8000/servicemodelsamples/usług.  
+ Pierwszy definicji punktu końcowego pokazano w poniższym przykładzie określa adres względny, co oznacza, że adres punktu końcowego jest kombinacją adresu podstawowego i adres względny zgodnie z regułami kompozycji jednolity identyfikator zasobów (URI). Adres względny jest pusty (""), więc adres punktu końcowego jest taki sam jak adres podstawowy. Adres rzeczywisty punkt końcowy jest http://localhost:8000/servicemodelsamples/service.  
   
 ```xml  
 <endpoint address=""   
@@ -103,7 +105,7 @@ Punkty końcowe udostępniać klientom dostęp do funkcji [!INCLUDE[indigo1](../
 ```  
   
 ## <a name="example"></a>Przykład  
- Druga definicja punkt końcowy określa również adresem względnym, jak pokazano w poniższych Przykładowa konfiguracja. Adres względny "test", jest dołączany do adres podstawowy. Adres rzeczywisty punkt końcowy jest http://localhost: 8000/servicemodelsamples/service/testowanie oprogramowania.  
+ Druga definicja punkt końcowy określa również adresem względnym, jak pokazano w poniższych Przykładowa konfiguracja. Adres względny "test", jest dołączany do adres podstawowy. Adres rzeczywisty punkt końcowy jest http://localhost:8000/servicemodelsamples/service/test.  
   
 ```xml  
 <endpoint address="/test"  
@@ -130,7 +132,7 @@ Punkty końcowe udostępniać klientom dostęp do funkcji [!INCLUDE[indigo1](../
 ```  
   
 ## <a name="example"></a>Przykład  
- Aby użyć domyślnych punktów końcowych dostarczonym w czasie wykonywania, nie określaj żadnych punktów końcowych usługi w kodzie i pliku konfiguracji. W tym przykładzie środowiska uruchomieniowego tworzy domyślne punkty końcowe po otwarciu usługi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Aby użyć domyślnych punktów końcowych dostarczonym w czasie wykonywania, nie określaj żadnych punktów końcowych usługi w kodzie i pliku konfiguracji. W tym przykładzie środowiska uruchomieniowego tworzy domyślne punkty końcowe po otwarciu usługi. Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ```xml  
 <configuration>  

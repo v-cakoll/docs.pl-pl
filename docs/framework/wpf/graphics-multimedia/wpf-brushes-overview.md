@@ -1,13 +1,13 @@
 ---
-title: "Przegląd Pędzle WPF"
-ms.custom: 
+title: Przegląd Pędzle WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>Przegląd Pędzle WPF
 Wszystko, co jest widoczne na ekranie jest widoczna, ponieważ został on rysowane przez pędzla. Na przykład służy pędzel opisujący tło przycisku, pierwszego planu tekstu i wypełnienia kształtu. W tym temacie przedstawiono koncepcję malowanie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzle oraz przykłady. Pędzle umożliwiają malowanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] obiekty o nic proste, pełne kolory do złożonych zestawów wzorców i obrazów.  
@@ -142,7 +142,7 @@ Prostokąt rysowane przy użyciu VisualBrush
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Paint przy użyciu wstępnie zdefiniowane i pędzle systemu  
- Dla wygody [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] udostępnia zestaw wstępnie zdefiniowanych i system pędzle, której można malować obiektów.  
+ Dla wygody Windows Presentation Foundation (WPF) zawiera zestaw wstępnie zdefiniowanych i system pędzle, której można malować obiektów.  
   
 -   Lista dostępnych pędzle wstępnie zdefiniowane, zobacz <xref:System.Windows.Media.Brushes> klasy. Na przykład przedstawiający sposób użycia wstępnie zdefiniowanych pędzla zobacz [malowanie obszar jednolitym kolorem](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ Prostokąt rysowane przy użyciu VisualBrush
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Wspólne funkcje pędzla  
- <xref:System.Windows.Media.Brush>Podaj obiekty <xref:System.Windows.Media.Brush.Opacity%2A> właściwość, która może służyć do upewnij pędzla przezroczystego lub częściowo przezroczysty. <xref:System.Windows.Media.Brush.Opacity%2A> Wartość 0 powoduje, że pędzel jest całkowicie przezroczysty podczas <xref:System.Windows.Media.Brush.Opacity%2A> wartość 1 powoduje, że pędzel jest całkowicie przezroczystości. W poniższym przykładzie użyto <xref:System.Windows.Media.Brush.Opacity%2A> właściwości, aby <xref:System.Windows.Media.SolidColorBrush> 25 procent przezroczystości.  
+ <xref:System.Windows.Media.Brush> Podaj obiekty <xref:System.Windows.Media.Brush.Opacity%2A> właściwość, która może służyć do upewnij pędzla przezroczystego lub częściowo przezroczysty. <xref:System.Windows.Media.Brush.Opacity%2A> Wartość 0 powoduje, że pędzel jest całkowicie przezroczysty podczas <xref:System.Windows.Media.Brush.Opacity%2A> wartość 1 powoduje, że pędzel jest całkowicie przezroczystości. W poniższym przykładzie użyto <xref:System.Windows.Media.Brush.Opacity%2A> właściwości, aby <xref:System.Windows.Media.SolidColorBrush> 25 procent przezroczystości.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

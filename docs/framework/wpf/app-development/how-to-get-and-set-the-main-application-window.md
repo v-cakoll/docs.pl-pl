@@ -1,12 +1,13 @@
 ---
-title: "Porady: pobieranie i ustawianie w głównym oknie aplikacji"
-ms.custom: 
+title: 'Porady: pobieranie i ustawianie w głównym oknie aplikacji'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9aa02b0d5ff4456cf5ef86fa0d4f8431fe3d846b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bdc96c509f88650edd93ba4a7f595e2b161db39
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>Porady: pobieranie i ustawianie w głównym oknie aplikacji
 W tym przykładzie pokazano, jak pobrać i ustawić w głównym oknie aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Pierwszy <xref:System.Windows.Window> który zostanie uruchomiony w ramach [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji zostanie automatycznie ustawione <xref:System.Windows.Application> jako okna głównego aplikacji. Pierwszy <xref:System.Windows.Window> być skonkretyzowanym najprawdopodobniej będzie można okna jest określony jako początkową [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (zobacz <xref:System.Windows.Application.StartupUri%2A>).  
+ Pierwszy <xref:System.Windows.Window> który zostanie uruchomiony w systemie Windows Presentation Foundation (WPF) aplikacji zostanie automatycznie ustawione przez <xref:System.Windows.Application> jako okna głównego aplikacji. Pierwszy <xref:System.Windows.Window> być skonkretyzowanym najprawdopodobniej będzie można okna jest określony jako początkową [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (zobacz <xref:System.Windows.Application.StartupUri%2A>).  
   
  Pierwszy <xref:System.Windows.Window> również mogła zostać utworzona przy użyciu kodu. Przykładem jest otwarcie okna podczas uruchamiania aplikacji, takie jak następujące:  
   

@@ -1,28 +1,30 @@
 ---
-title: "Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET"
-ms.custom: 
+title: 'Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c5042e73945c54da2b1ee71fc5ea61727dc73c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy członkostwa jest funkcją, która umożliwia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] deweloperom tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie użytkownika unikatowych kombinacji nazwy i hasła. Z tej funkcji każdy użytkownik można założyć konto w witrynie i zaloguj się do wyłącznego dostępu do lokacji i jej usług. Dzięki temu nie trzeba zabezpieczenia systemu Windows, który wymaga od użytkowników mają konta w domenie systemu Windows. Zamiast tego każdy użytkownik, który dostarcza swoje poświadczenia (kombinacja nazwy i hasła użytkownika), można użyć lokacji i jej usługi.  
@@ -31,10 +33,10 @@ ms.lasthandoff: 12/22/2017
   
  Funkcja członkostwa wymaga, korzystanie z bazy danych programu SQL Server do przechowywania informacji o użytkowniku. Funkcja zawiera również metody w celu wyświetlenia monitu z pytaniem wszyscy użytkownicy, którzy pamiętasz swojego hasła.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Deweloperzy mogą korzystać z tych funkcji ze względów bezpieczeństwa. Po zintegrowaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, użytkowników należy podać kombinacji nazwa/hasło użytkownika, aby [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji klienckiej. Na przesyłanie danych do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, użyj powiązania, które obsługuje poświadczenia nazwy i hasła użytkownika, takich jak <xref:System.ServiceModel.WSHttpBinding> (w konfiguracji [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) i Ustaw poświadczenia klienta Typ `UserName`. W usłudze [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń uwierzytelnia użytkownika, w oparciu o nazwę użytkownika i hasło, a następnie przypisuje także rola określona przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] roli.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Deweloperzy mogą korzystać z tych funkcji ze względów bezpieczeństwa. Po zintegrowaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, użytkowników należy podać kombinacji nazwa/hasło użytkownika, aby [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji klienckiej. Na przesyłanie danych do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, użyj powiązania, które obsługuje poświadczenia nazwy i hasła użytkownika, takich jak <xref:System.ServiceModel.WSHttpBinding> (w konfiguracji [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) i Ustaw poświadczenia klienta Typ `UserName`. W usłudze [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń uwierzytelnia użytkownika, w oparciu o nazwę użytkownika i hasło, a następnie przypisuje także rola określona przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] roli.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie zawiera metody służące do wypełniania bazy danych z kombinacji nazwy i hasła użytkownika lub inne informacje o użytkowniku.  
+>  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie zawiera metody służące do wypełniania bazy danych z kombinacji nazwy i hasła użytkownika lub inne informacje o użytkowniku.  
   
 ### <a name="to-configure-the-membership-provider"></a>Aby skonfigurować dostawcę członkostwa  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  W pliku konfiguracji w obszarze [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu, Dodaj [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu.  
   
-2.  Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) do sekcji powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania elementu, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) do sekcji powiązania. Aby uzyskać więcej informacji o tworzeniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania elementu, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Ustaw atrybut `mode` elementu `<security>` na `Message`.  
   

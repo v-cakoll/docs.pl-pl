@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1eb5d8e0b19bc32ea5158d1614447b76f4924440
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
 W tym przykładzie pokazano, jak zarządzać zespolonego źródła danych, które zawierają dużą liczbę elementów. Na serwerze, przykładzie pokazano, jak opóźnienie tworzenia poszczególnych <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w ramach źródła danych do bezpośrednio przed elementu są zapisywane do strumienia sieci.  
@@ -29,7 +29,7 @@ W tym przykładzie pokazano, jak zarządzać zespolonego źródła danych, któr
   
  Aby zademonstrować najlepiej przesyłania strumieniowego możliwości zespolonego interfejsu API, w tym przykładzie użyto nieco prawdopodobne scenariusz, w którym serwer udostępnia źródło z nieograniczoną liczbę elementów. W takim przypadku serwer kontynuuje generowania nowych elementów w źródle danych, dopóki nie określa, że klient ma odczytu określoną liczbę elementów ze źródła strumieniowego (domyślnie 10). Dla uproszczenia zarówno klient, jak i serwera są zaimplementowane w tym samym procesie i używać udostępnionej `ItemCounter` obiekt, aby śledzić liczbę elementów klienta został utworzony. `ItemCounter` Typu istnieje tylko w celu umożliwienia przykładowy scenariusz zakończenie prawidłowo i nie jest elementem core wzorca jest uruchomiona.  
   
- Pokazu korzysta z programu Visual C# Iteratory (przy użyciu `yield``return` konstrukcja — słowo kluczowe). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Iteratory, zobacz temat "Przy użyciu Iteratory" w witrynie MSDN.  
+ Pokazu korzysta z programu Visual C# Iteratory (przy użyciu `yield``return` konstrukcja — słowo kluczowe). Aby uzyskać więcej informacji na temat Iteratory zobacz temat "Przy użyciu Iteratory" w witrynie MSDN.  
   
 ## <a name="service"></a>Usługa  
  Usługa implementuje podstawowego <xref:System.ServiceModel.Web.WebGetAttribute> kontraktu, który składa się z jednej operacji, jak pokazano w poniższym kodzie.  

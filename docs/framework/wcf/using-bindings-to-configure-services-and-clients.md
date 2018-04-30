@@ -1,28 +1,28 @@
 ---
-title: "Konfigurowanie usług i klientów za pomocą powiązań"
-ms.custom: 
+title: Konfigurowanie usług i klientów za pomocą powiązań
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Konfigurowanie usług i klientów za pomocą powiązań
 Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do połączenia z punktem końcowym. W szczególności powiązania zawierają informacje o konfiguracji, który jest używany do tworzenia środowiska uruchomieniowego klienta lub usługę, definiując specyfice transportów, formatów łańcuchowych (kodowania wiadomości) i protokoły dla odpowiednich kanału klienta lub punktu końcowego. Aby utworzyć działanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi, powiązanie wymaga każdego punktu końcowego w usłudze. W tym temacie opisano powiązania są, jak są definiowane i jak określono konkretnego powiązanie dla punktu końcowego.  
@@ -40,7 +40,7 @@ Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do poł
  Określa, kodowania wiadomości, na przykład, text/XML, binarne lub komunikat transmisji optymalizacji mechanizmu (MTOM), określający, jak komunikaty są reprezentowane jako strumienie bajtów umieszczonego w.  
   
 ## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]zawiera zestaw powiązania dostarczane przez system, które są zaprojektowane tak, aby pokrywał większość wymagań aplikacji i scenariuszy. Następujące klasy reprezentują przykłady powiązania dostarczane przez system:  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera zestaw powiązania dostarczane przez system, które są zaprojektowane tak, aby pokrywał większość wymagań aplikacji i scenariuszy. Następujące klasy reprezentują przykłady powiązania dostarczane przez system:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: Protokołu HTTP powiązanie odpowiednie dla łączących się z usługami sieci Web, który jest zgodny ze standardem WS-I Basic Profile 1.1 specyfikacji (na przykład ASP.NET Web services [ASMX] — na podstawie usługi).  
   
@@ -53,7 +53,7 @@ Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do poł
  Aby uzyskać pełną listę powiązania dostarczane przez system, z opisami, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Powiązania niestandardowe  
- Jeśli kolekcja powiązania dostarczane przez system nie ma poprawnej kombinacji funkcji, które wymaga aplikacji usługi, możesz utworzyć <xref:System.ServiceModel.Channels.CustomBinding> powiązania. [!INCLUDE[crabout](../../../includes/crabout-md.md)]elementy <xref:System.ServiceModel.Channels.CustomBinding> powiązanie, zobacz [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) i [powiązań niestandardowych](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Jeśli kolekcja powiązania dostarczane przez system nie ma poprawnej kombinacji funkcji, które wymaga aplikacji usługi, możesz utworzyć <xref:System.ServiceModel.Channels.CustomBinding> powiązania. Aby uzyskać więcej informacji na temat elementów <xref:System.ServiceModel.Channels.CustomBinding> powiązanie, zobacz [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) i [powiązań niestandardowych](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Przy użyciu powiązań  
  Przy użyciu powiązań pociąga za sobą dwa podstawowe kroki:  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serializacja przepływów pracy i działań do i z XAML
 Oprócz kompilowany do typów, które znajdują się w zestawach definicji przepływu pracy może być Zserializowany w języku XAML. Te definicje serializacji można wykorzystać do edycji lub inspekcję, przekazany do system kompilacji dla kompilacji, i załadować wywołany. Ten temat zawiera omówienie serializacji definicji przepływu pracy oraz pracy z definicji przepływu pracy XAML.  
@@ -84,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] wywoływanie przepływy pracy argumentów wejściowych i wyjściowych, zobacz [przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) i <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  Aby uzyskać więcej informacji na temat wywoływania przepływy pracy argumentów wejściowych i wyjściowych, zobacz [przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) i <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  Jeśli serializacji przepływ pracy zawiera wyrażenia języka C#, a następnie <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> wystąpienia z jego <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> ustawioną właściwość `true` muszą być przekazywane jako parametr <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, w przeciwnym razie <xref:System.NotSupportedException> zostanie zgłoszony z komunikatu podobnego do następujące: `Expression Activity type 'CSharpValue`1" wymaga kompilacji, aby można było uruchomić.  Upewnij się, że przepływ pracy został skompilowany. "  
   

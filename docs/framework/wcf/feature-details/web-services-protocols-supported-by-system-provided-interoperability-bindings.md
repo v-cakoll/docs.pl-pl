@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest oparty na potrzeby współdziałania z usługami sieci Web, które obsługuje zestaw specyfikacji znany jako specyfikacje usług sieci Web. Aby uprościć konfigurację usługi współdziałanie najważniejsze wskazówki dotyczące [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przedstawiono trzy interoperacyjne powiązania dostarczane przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Współdziałanie z organizacji standardów przejścia z Structured Information Standards (OASIS) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera jeden interoperacyjne powiązanie dostarczane przez system: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Dla publikacji metadanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera dwa interoperacyjne powiązania dostarczane przez system: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) i [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). W tym temacie wymieniono specyfikacje obsługujących powiązania interoperacyjne dostarczane przez system.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/28/2018
  W poniższych tabelach opisano protokoły obsługiwane przez wiązania dostarczane przez system interoperacyjne metadanych udostępnianych przez <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> klasy.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) powiązanie obsługuje następujące protokoły. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) powiązanie obsługuje następujące protokoły. Aby uzyskać więcej informacji na temat używania tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategoria|Protokół|Specyfikacja i użycia|  
 |--------------|--------------|-----------------------------|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 04/28/2018
 |Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje usługi WS-MetadataExchange, można pobrać schematu XML, WSDL i WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) obsługuje następujące protokoły. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) obsługuje następujące protokoły. Aby uzyskać więcej informacji na temat używania tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategoria|Protokół|Specyfikacja i użycia|  
 |--------------|--------------|-----------------------------|  

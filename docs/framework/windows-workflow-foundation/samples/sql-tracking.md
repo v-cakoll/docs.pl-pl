@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4153ed905fc9c5c67ce1743fa76497f76b7398cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
-W tym przykładzie pokazano, jak pisać niestandardowe uczestnika śledzenia SQL, który zapisuje śledzenie rekordów bazy danych SQL. Windows Workflow Foundation (WF) zapewnia śledzenia wgląd we wykonywania wystąpienia przepływu pracy przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] przepływ pracy śledzenia, zobacz [przepływu pracy śledzenia i śledzenia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+W tym przykładzie pokazano, jak pisać niestandardowe uczestnika śledzenia SQL, który zapisuje śledzenie rekordów bazy danych SQL. Windows Workflow Foundation (WF) zapewnia śledzenia wgląd we wykonywania wystąpienia przepływu pracy przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji o śledzeniu w przepływie pracy, zobacz [przepływu pracy śledzenia i śledzenia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
@@ -52,7 +52,7 @@ W tym przykładzie pokazano, jak pisać niestandardowe uczestnika śledzenia SQL
   
 10. W kliencie testowym WCF, kliknij dwukrotnie **GetStockPrice**. Spowoduje to otwarcie `GetStockPrice` operacja, która przyjmuje jeden parametr typu w wartości `Contoso` i kliknij przycisk **Invoke**.  
   
-11. Rejestruje emitowany śledzenia są zapisywane do bazy danych SQL. Aby wyświetlić rekordy śledzenia, należy otworzyć TrackingSample bazy danych w programie SQL Management Studio i przejdź do tabel. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio, zobacz [wprowadzenie do programu SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express można pobrać [tutaj](http://go.microsoft.com/fwlink/?LinkId=180520). Uruchamianie zapytania select w tabelach wyświetla dane przechowywane w tabelach odpowiednie rekordy śledzenia.  
+11. Rejestruje emitowany śledzenia są zapisywane do bazy danych SQL. Aby wyświetlić rekordy śledzenia, należy otworzyć TrackingSample bazy danych w programie SQL Management Studio i przejdź do tabel. Aby uzyskać więcej informacji na temat programu SQL Server Management Studio, zobacz [wprowadzenie do programu SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express można pobrać [tutaj](http://go.microsoft.com/fwlink/?LinkId=180520). Uruchamianie zapytania select w tabelach wyświetla dane przechowywane w tabelach odpowiednie rekordy śledzenia.  
   
 #### <a name="to-uninstall-the-sample"></a>Aby odinstalować próbki  
   

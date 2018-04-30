@@ -1,12 +1,13 @@
 ---
-title: "Dostosowywanie kanału informacyjnego (usługi danych WCF)"
-ms.custom: 
+title: Dostosowywanie kanału informacyjnego (usługi danych WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do udostępniania danych jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]obsługuje zarówno Atom i JavaScript Object Notation (JSON) formaty dla źródła danych. Korzystając z źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zawiera standardowe metody do serializowania danych, takich jak jednostki i relacje w formacie XML, który można umieścić w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Definiuje właściwości jednostki domyślne mapowanie danych, który znajduje się w jednostkach i elementy Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](http://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do udostępniania danych jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje zarówno Atom i JavaScript Object Notation (JSON) formaty dla źródła danych. Korzystając z źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zawiera standardowe metody do serializowania danych, takich jak jednostki i relacje w formacie XML, który można umieścić w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje właściwości jednostki domyślne mapowanie danych, który znajduje się w jednostkach i elementy Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](http://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Może być scenariusz aplikacji, który wymaga się, że właściwość danych zwróconych przez usługę danych można zserializować w sposób dostosowany, a nie w standardzie formatu źródła. Z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], można dostosować serializacji w strumieniowego źródła danych, dzięki czemu można zamapować właściwości jednostki do nieużywanych elementów i atrybutów wpisu lub elementy niestandardowe wpisu w źródle danych.  
   
@@ -53,19 +55,19 @@ ms.lasthandoff: 01/19/2018
  Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie źródeł danych z dostawcy programu Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Rozszerzenia do modelu danych nie są obsługiwane przez program Entity Designer, należy ręcznie zmodyfikować plik XML, który zawiera model danych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pliku edmx, który jest generowany przez [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia, zobacz [pliku Przegląd edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Rozszerzenia do modelu danych nie są obsługiwane przez program Entity Designer, należy ręcznie zmodyfikować plik XML, który zawiera model danych. Aby uzyskać więcej informacji o pliku edmx, który jest generowany przez [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia, zobacz [pliku Przegląd edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Niestandardowe źródła atrybutów  
  W poniższej tabeli przedstawiono atrybuty XML, które dostosować źródła danych, które można dodać do języka definicji schematu koncepcyjnego (CSDL), który definiuje modelu danych. Te atrybuty są równoważne właściwości <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> użycia z dostawcą odbicia.  
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|Wskazuje typ zawartości. Poniższe słowa kluczowe Definiowanie typów zawartości zespolonego.<br /><br /> `text:`Wartość właściwości jest wyświetlana w źródle danych jako tekst.<br /><br /> `html:`Wartość właściwości jest wyświetlana w źródle danych jako HTML.<br /><br /> `xhtml:`Wartość właściwości jest wyświetlana w źródle danych jako HTML w formacie XML.<br /><br /> Słowa kluczowe są równoważne wartości <xref:System.Data.Services.Common.SyndicationTextContentKind> wyliczenie użycia z dostawcą odbicia.<br /><br /> Ten atrybut nie jest obsługiwane w przypadku `FC_NsPrefix` i `FC_NsUri` są używane atrybuty.<br /><br /> Po określeniu wartość `xhtml` dla `FC_ContentKind` atrybutu, użytkownik musi zapewnić, że wartość właściwości zawiera poprawnie sformatowany XML. Usługi danych zwraca wartość bez żadnych przekształcenia. Upewnij się że wszystkie prefiksy — element XML w zwróconego kodu XML ma identyfikator URI przestrzeni nazw i prefiks zdefiniowany w mapowanej źródle danych.|  
+|`FC_ContentKind`|Wskazuje typ zawartości. Poniższe słowa kluczowe Definiowanie typów zawartości zespolonego.<br /><br /> `text:` Wartość właściwości jest wyświetlana w źródle danych jako tekst.<br /><br /> `html:` Wartość właściwości jest wyświetlana w źródle danych jako HTML.<br /><br /> `xhtml:` Wartość właściwości jest wyświetlana w źródle danych jako HTML w formacie XML.<br /><br /> Słowa kluczowe są równoważne wartości <xref:System.Data.Services.Common.SyndicationTextContentKind> wyliczenie użycia z dostawcą odbicia.<br /><br /> Ten atrybut nie jest obsługiwane w przypadku `FC_NsPrefix` i `FC_NsUri` są używane atrybuty.<br /><br /> Po określeniu wartość `xhtml` dla `FC_ContentKind` atrybutu, użytkownik musi zapewnić, że wartość właściwości zawiera poprawnie sformatowany XML. Usługi danych zwraca wartość bez żadnych przekształcenia. Upewnij się że wszystkie prefiksy — element XML w zwróconego kodu XML ma identyfikator URI przestrzeni nazw i prefiks zdefiniowany w mapowanej źródle danych.|  
 |`FC_KeepInContent`|Wskazuje, że wartość właściwości przywoływanego powinny być dołączone zarówno w sekcji zawartości źródła danych, jak i w mapowanej lokalizacji. Prawidłowe wartości to `true` i `false`. Aby wynikowe źródła danych zgodny z wcześniejszymi wersjami programu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], określ wartość `true` aby upewnić się, że wartość znajduje się w sekcji zawartości kanału informacyjnego.|  
 |`FC_NsPrefix`|Prefiks przestrzeni nazw elementu XML w mapowaniu nie zespolonego. Ten atrybut musi być używany z `FC_NsUri` atrybutu i nie można używać z `FC_ContentKind` atrybutu.|  
 |`FC_NsUri`|Identyfikator URI przestrzeni nazw elementu XML w mapowaniu nie zespolonego. Ten atrybut musi być używany z `FC_NsPrefix` atrybutu i nie można używać z `FC_ContentKind` atrybutu.|  
 |`FC_SourcePath`|Ścieżka właściwości jednostki, które tego źródła danych mapowanie dotyczy dana reguła. Ten atrybut jest obsługiwany tylko, gdy jest używany w `EntityType` elementu.<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> Właściwości bezpośrednio nie może odwoływać się do typu złożonego. Dla typów złożonych, należy użyć wyrażenie ścieżki gdzie nazw właściwości oddzielonych ukośnik odwrotny (`/`) znaków. Na przykład, dozwolone są następujące wartości dla typu jednostki `Person` z właściwością liczby całkowitej `Age` i właściwości złożonej<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> Nie można ustawić właściwości na wartość zawiera spację lub dowolny znak, który jest nieprawidłowy w nazwie właściwości.|  
-|`FC_TargetPath`|Nazwa elementu docelowego wynikowy źródła danych, aby zamapować właściwości. Ten element może być elementu ze specyfikacją Atom lub elementu niestandardowego.<br /><br /> Poniższe słowa kluczowe są zespolonego wstępnie zdefiniowanych wartości ścieżkę docelową, odnoszące się do określonej lokalizacji w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.<br /><br /> `SyndicationAuthorEmail:``atom:email` Elementem podrzędnym `atom:author` elementu.<br /><br /> `SyndicationAuthorName:``atom:name` Elementem podrzędnym `atom:author` elementu.<br /><br /> `SyndicationAuthorUri:``atom:uri` Elementem podrzędnym `atom:author` elementu.<br /><br /> `SyndicationContributorEmail:``atom:email` Elementem podrzędnym `atom:contributor` elementu.<br /><br /> `SyndicationContributorName:``atom:name` Elementem podrzędnym `atom:contributor` elementu.<br /><br /> `SyndicationContributorUri:``atom:uri` Elementem podrzędnym `atom:contributor` elementu.<br /><br /> `SyndicationCustomProperty:`Element właściwości niestandardowej. Podczas mapowania do elementu niestandardowego, element docelowy musi być wyrażenie ścieżki, w którym zagnieżdżone elementy są oddzielone ukośnik odwrotny (`/`) i atrybuty są określone przez handlowego "i" (`@`). W poniższym przykładzie ciąg `UnitsInStock/@ReorderLevel` mapuje wartości właściwości do atrybutu o nazwie `ReorderLevel` na element podrzędny o nazwie `UnitsInStock` głównego elementu wpis.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Gdy element docelowy jest nazwą elementu niestandardowego `FC_NsPrefix` i `FC_NsUri` atrybutów musi być także określona.<br /><br /> `SyndicationPublished:``atom:published` Elementu.<br /><br /> `SyndicationRights:``atom:rights` Elementu.<br /><br /> `SyndicationSummary:``atom:summary` Elementu.<br /><br /> `SyndicationTitle:``atom:title` Elementu.<br /><br /> `SyndicationUpdated:``atom:updated` Elementu.<br /><br /> Słowa kluczowe są równoważne wartości <xref:System.Data.Services.Common.SyndicationItemProperty> wyliczenie użycia z dostawcą odbicia.|  
+|`FC_TargetPath`|Nazwa elementu docelowego wynikowy źródła danych, aby zamapować właściwości. Ten element może być elementu ze specyfikacją Atom lub elementu niestandardowego.<br /><br /> Poniższe słowa kluczowe są zespolonego wstępnie zdefiniowanych wartości ścieżkę docelową, odnoszące się do określonej lokalizacji w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.<br /><br /> `SyndicationAuthorEmail:` `atom:email` Elementem podrzędnym `atom:author` elementu.<br /><br /> `SyndicationAuthorName:` `atom:name` Elementem podrzędnym `atom:author` elementu.<br /><br /> `SyndicationAuthorUri:` `atom:uri` Elementem podrzędnym `atom:author` elementu.<br /><br /> `SyndicationContributorEmail:` `atom:email` Elementem podrzędnym `atom:contributor` elementu.<br /><br /> `SyndicationContributorName:` `atom:name` Elementem podrzędnym `atom:contributor` elementu.<br /><br /> `SyndicationContributorUri:` `atom:uri` Elementem podrzędnym `atom:contributor` elementu.<br /><br /> `SyndicationCustomProperty:` Element właściwości niestandardowej. Podczas mapowania do elementu niestandardowego, element docelowy musi być wyrażenie ścieżki, w którym zagnieżdżone elementy są oddzielone ukośnik odwrotny (`/`) i atrybuty są określone przez handlowego "i" (`@`). W poniższym przykładzie ciąg `UnitsInStock/@ReorderLevel` mapuje wartości właściwości do atrybutu o nazwie `ReorderLevel` na element podrzędny o nazwie `UnitsInStock` głównego elementu wpis.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Gdy element docelowy jest nazwą elementu niestandardowego `FC_NsPrefix` i `FC_NsUri` atrybutów musi być także określona.<br /><br /> `SyndicationPublished:` `atom:published` Elementu.<br /><br /> `SyndicationRights:` `atom:rights` Elementu.<br /><br /> `SyndicationSummary:` `atom:summary` Elementu.<br /><br /> `SyndicationTitle:` `atom:title` Elementu.<br /><br /> `SyndicationUpdated:` `atom:updated` Elementu.<br /><br /> Słowa kluczowe są równoważne wartości <xref:System.Data.Services.Common.SyndicationItemProperty> wyliczenie użycia z dostawcą odbicia.|  
   
 > [!NOTE]
 >  Nazwy i wartości atrybutów jest uwzględniana wielkość liter. Atrybuty mogą być stosowane do `EntityType` elementu jednego lub więcej `Property` elementów, ale nie oba.  

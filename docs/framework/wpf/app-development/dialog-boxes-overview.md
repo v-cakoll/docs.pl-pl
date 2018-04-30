@@ -1,12 +1,13 @@
 ---
-title: "Przegląd okien dialogowych"
-ms.custom: 
+title: Przegląd okien dialogowych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>Przegląd okien dialogowych
 Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetlenie głównego danych za pośrednictwem której aplikacja działa i udostępnia funkcje do przetwarzania danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak paski menu, pasków narzędzi i paski stanu. — Prosta aplikacja może również wyświetlić dodatkowe okna, aby wykonać następujące czynności:  
@@ -43,7 +45,7 @@ Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetleni
   
  A *niemodalne* okno dialogowe z drugiej strony, nie zapobiega użytkownika aktywacji innych systemu windows, gdy jest otwarty. Na przykład jeśli użytkownik chce, aby wyszukać wystąpienia określonego wyrazu w dokumencie, okno główne będzie często otworzyć okno dialogowe poprosić użytkownika programu word, jakie szukają. Ponieważ wyszukiwanie wyrazu nie zapobiec edycji dokumentu przez użytkownika, jednak okna dialogowego nie musi być modalne. Niemodalne okna dialogowe co najmniej zapewnia **zamknąć** przycisk, aby zamknąć okno dialogowe i mogą dostarczać dodatkowych przycisków do wykonywania określonych funkcji, takich jak **Znajdź następny** przycisk, aby znaleźć następne programu word, który kryteria znajdowania wyszukiwania programu word.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Umożliwia tworzenie wielu typów okien dialogowych, w tym pola wiadomości, wspólne okna dialogowe i niestandardowych okien dialogowych. W tym temacie omówiono poszczególnych usług i [przykładowe okno dialogowe](http://go.microsoft.com/fwlink/?LinkID=159984) przykłady dopasowania.  
+ Windows Presentation Foundation (WPF) umożliwia tworzenie wielu typów okien dialogowych, w tym pola wiadomości, wspólne okna dialogowe i niestandardowych okien dialogowych. W tym temacie omówiono poszczególnych usług i [przykładowe okno dialogowe](http://go.microsoft.com/fwlink/?LinkID=159984) przykłady dopasowania.  
   
  
   
@@ -53,7 +55,7 @@ Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetleni
   
  ![Okno dialogowe Edytor tekstów](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- Aby utworzyć okno komunikatu, należy użyć <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox>Umożliwia skonfigurowanie tekst pola wiadomości, tytuł, ikony i przyciski, za pomocą kodu podobne do następujących.  
+ Aby utworzyć okno komunikatu, należy użyć <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox> Umożliwia skonfigurowanie tekst pola wiadomości, tytuł, ikony i przyciski, za pomocą kodu podobne do następujących.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetleni
   
  Mimo że <xref:System.Windows.MessageBox> mogą oferować prostego okna dialogowego pole użytkowników, zaletą korzystania z <xref:System.Windows.MessageBox> jest to jedyny typ okna, które mogą być wyświetlane w aplikacji działających w częściowej relacji zaufania piaskownicy zabezpieczeń (zobacz [zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md)), takich jak [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- Większość okien dialogowych Wyświetl i zbierania danych bardziej złożone niż wynik okno komunikatu, łącznie z tekstem, wybór (pola wyboru), wybór wykluczają się wzajemnie (przyciski radiowe) i listy wyboru (pola listy, pola kombi, pola listy rozwijanej). W tym przypadku [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] zapewnia kilka wspólne okna dialogowe i służy do tworzenia własnych okien dialogowych, mimo że korzystanie z albo jest ograniczony do aplikacji działających przy pełnym zaufaniu.  
+ Większość okien dialogowych Wyświetl i zbierania danych bardziej złożone niż wynik okno komunikatu, łącznie z tekstem, wybór (pola wyboru), wybór wykluczają się wzajemnie (przyciski radiowe) i listy wyboru (pola listy, pola kombi, pola listy rozwijanej). W tym przypadku Windows Presentation Foundation (WPF) zawiera kilka wspólne okna dialogowe i służy do tworzenia własnych okien dialogowych, mimo że korzystanie z albo jest ograniczony do aplikacji działających przy pełnym zaufaniu.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Wspólne okna dialogowe  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]implementuje wiele okien dialogowych wielokrotnego użytku, które są wspólne dla wszystkich aplikacji, w tym okien dialogowych służących do otwarcia plików, zapisywanie plików i drukowania. Ponieważ tych okien dialogowych są implementowane przez system operacyjny, mogły być udostępniane między wszystkich aplikacji uruchomionych w systemie operacyjnym, co pomaga spójności; interfejs użytkownika gdy użytkownicy zapoznali się przy użyciu okna dialogowego dostarczane przez system operacyjny w jednej aplikacji, nie muszą dowiedzieć się, jak używać tego okna dialogowego w innych aplikacjach. Ponieważ okna te są dostępne dla wszystkich aplikacji, a ponieważ one zapewnić spójny interfejs użytkownika, są określane jako *wspólne okna dialogowe*.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementuje wiele okien dialogowych wielokrotnego użytku, które są wspólne dla wszystkich aplikacji, w tym okien dialogowych służących do otwarcia plików, zapisywanie plików i drukowania. Ponieważ tych okien dialogowych są implementowane przez system operacyjny, mogły być udostępniane między wszystkich aplikacji uruchomionych w systemie operacyjnym, co pomaga spójności; interfejs użytkownika gdy użytkownicy zapoznali się przy użyciu okna dialogowego dostarczane przez system operacyjny w jednej aplikacji, nie muszą dowiedzieć się, jak używać tego okna dialogowego w innych aplikacjach. Ponieważ okna te są dostępne dla wszystkich aplikacji, a ponieważ one zapewnić spójny interfejs użytkownika, są określane jako *wspólne okna dialogowe*.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]hermetyzuje Otwórz plik, Zapisz plik i drukowania wspólne okna dialogowe i udostępnia je jako zarządzanych klas do użycia w aplikacjach autonomicznych. Ten temat zawiera krótkie omówienie każdego z nich.  
+ Otwórz plik hermetyzuje Windows Presentation Foundation (WPF), Zapisz plik i drukowanie wspólnych okien dialogowych i udostępnia je jako zarządzanych klas do użycia w aplikacjach autonomicznych. Ten temat zawiera krótkie omówienie każdego z nich.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>Okno dialogowe Otwieranie pliku  
@@ -94,7 +96,7 @@ Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetleni
  Aby uzyskać więcej informacji, otwórz plik — okno dialogowe, zobacz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>można bezpiecznie pobrać nazwy pliku przez aplikacje działające z częściowa relacja zaufania (zobacz [zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> można bezpiecznie pobrać nazwy pliku przez aplikacje działające z częściowa relacja zaufania (zobacz [zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Zapisz plik — okno dialogowe  
@@ -124,7 +126,7 @@ Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetleni
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Niestandardowych okien dialogowych  
- Wspólne okna dialogowe są przydatne, i powinien być używany, gdy jest to możliwe, które nie obsługują wymagania właściwe dla domeny okien dialogowych. W takich przypadkach musisz utworzyć własne okien dialogowych. Jak zajmiemy się tym, okno dialogowe jest okno programu przy użyciu specjalnego zachowania. <xref:System.Windows.Window>implementuje te zachowania i w związku z tym, użyj <xref:System.Windows.Window> do tworzenia niestandardowych modalne i Niemodalne okna dialogowe.  
+ Wspólne okna dialogowe są przydatne, i powinien być używany, gdy jest to możliwe, które nie obsługują wymagania właściwe dla domeny okien dialogowych. W takich przypadkach musisz utworzyć własne okien dialogowych. Jak zajmiemy się tym, okno dialogowe jest okno programu przy użyciu specjalnego zachowania. <xref:System.Windows.Window> implementuje te zachowania i w związku z tym, użyj <xref:System.Windows.Window> do tworzenia niestandardowych modalne i Niemodalne okna dialogowe.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Tworzenie modalnych niestandardowe okno dialogowe  
@@ -221,7 +223,7 @@ Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetleni
   
  ![Nieprawidłowy lewy margines](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]nie ogranicza użytkownika do nieprawidłowej kontrolki, aż do ich zostały wprowadzone prawidłowe dane. Jest to dobry zachowanie dla okna dialogowego; Użytkownik powinien móc za darmo Przejdź formantów w oknie dialogowym, czy dane są prawidłowe. Oznacza to jednak użytkownik może wprowadzić nieprawidłowe dane i naciśnij klawisz **OK** przycisku. Z tego powodu kodu również wymagane jest sprawdzenie wszystkich kontrolek w oknie dialogowym dialogowe **OK** przycisku Obsługa <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nie ogranicza użytkownika do nieprawidłowej kontrolki, aż do ich zostały wprowadzone prawidłowe dane. Jest to dobry zachowanie dla okna dialogowego; Użytkownik powinien móc za darmo Przejdź formantów w oknie dialogowym, czy dane są prawidłowe. Oznacza to jednak użytkownik może wprowadzić nieprawidłowe dane i naciśnij klawisz **OK** przycisku. Z tego powodu kodu również wymagane jest sprawdzenie wszystkich kontrolek w oknie dialogowym dialogowe **OK** przycisku Obsługa <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -307,7 +309,7 @@ Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetleni
  W odróżnieniu od <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> natychmiast kończy pracę. W rezultacie wywoływania okna nie wiadomo, gdy Niemodalne okna dialogowe zostanie zamknięte, a w związku z tym nie może określić, kiedy należy sprawdzić, czy wynik okno dialogowe lub pobieranie danych z okna dialogowego dla dalszego przetwarzania. Okno dialogowe musi utworzyć alternatywny sposób, aby powrócić do wywoływania okna do przetwarzania danych.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Przetwarzanie dane zwrócone z niemodalnego okna dialogowego  
- W tym przykładzie `FindDialogBox` może zwracać jedną lub więcej znaleźć wyników do głównego okna, w zależności od tekst wyszukane bez żadnych szczególnych częstotliwości. Podobnie jak w przypadku modalne okno dialogowe, niemodalne okno dialogowe może zwrócić wyniki za pomocą właściwości. Jednak okna, który jest właścicielem okna dialogowego musi wiedzieć, kiedy należy sprawdzić te właściwości. Jest jednym ze sposobów włączyć tę opcję w oknie dialogowym zaimplementować zdarzenie jest zgłaszane, gdy zostanie znaleziony tekst. `FindDialogBox`implementuje `TextFoundEvent` w tym celu, który po raz pierwszy wymaga delegata.  
+ W tym przykładzie `FindDialogBox` może zwracać jedną lub więcej znaleźć wyników do głównego okna, w zależności od tekst wyszukane bez żadnych szczególnych częstotliwości. Podobnie jak w przypadku modalne okno dialogowe, niemodalne okno dialogowe może zwrócić wyniki za pomocą właściwości. Jednak okna, który jest właścicielem okna dialogowego musi wiedzieć, kiedy należy sprawdzić te właściwości. Jest jednym ze sposobów włączyć tę opcję w oknie dialogowym zaimplementować zdarzenie jest zgłaszane, gdy zostanie znaleziony tekst. `FindDialogBox` implementuje `TextFoundEvent` w tym celu, który po raz pierwszy wymaga delegata.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

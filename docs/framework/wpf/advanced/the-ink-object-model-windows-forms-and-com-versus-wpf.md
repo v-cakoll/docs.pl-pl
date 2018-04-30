@@ -2,7 +2,8 @@
 title: 'Model obiektu atramentowego: Windows Forms i COM, a WPF'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Model obiektu atramentowego: Windows Forms i COM, a WPF
 
-Istnieją zasadniczo trzy platformy, które obsługują elektroniczne pismo odręczne: platforma formularzy systemu Windows na komputerze typu Tablet, platforma typu Tablet PC COM i [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] platformy.  Formularze systemu Windows i COM udziału platformy podobne modelu obiektu, ale obiekt model [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] platformy różni się znacząco.  W tym temacie omówiono różnice w wysokiego poziomu, dzięki czemu deweloperzy, które działały w jeden obiekt modelu mogą lepiej zrozumieć innych.  
+Istnieją zasadniczo trzy platformy, które obsługują elektroniczne pismo odręczne: platformy formularzy systemu Windows na komputerze typu Tablet, tabletu PC COM platformy i platformy Windows Presentation Foundation (WPF).  Formularze systemu Windows i COM udziału platformy podobne modelu obiektu, ale obiekt model [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] platformy różni się znacząco.  W tym temacie omówiono różnice w wysokiego poziomu, dzięki czemu deweloperzy, które działały w jeden obiekt modelu mogą lepiej zrozumieć innych.  
   
 ## <a name="enabling-ink-in-an-application"></a>Włączanie pismo odręczne w aplikacji  
  Wszystkie trzy platformy są dostarczane obiekty i formantami, które umożliwiają aplikacji na odbieranie danych wejściowych z pióra.  Formularze systemu Windows i platform COM są dostarczane z [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) i [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) klasy.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) i [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) formantów, które można dodać do aplikacji w celu zbierania odręczne.  [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) i [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) można dołączyć do istniejącego okna Włącz odręczne systemu windows i kontrolki niestandardowe.  
@@ -49,7 +51,7 @@ Istnieją zasadniczo trzy platformy, które obsługują elektroniczne pismo odr�
   
  Para następujące ilustracje porównuje modele obiektów danych odręczne.  Formularze systemu Windows i platform COM [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType) obiektu ogranicza okres istnienia [Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType) obiektów i pakietów pióro należą do poszczególnych pociągnięć.  Co najmniej dwa pociągnięć może odwoływać się takie same [Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType) obiektów, jak pokazano na poniższej ilustracji.  
   
- ![Diagram odręczne obiektu modelu COM &#47; Winforms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![Diagram modelu obiektów pisma odręcznego dla modelu COM&#47;Winforms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  Na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], każdy <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> jest typowe obiektu środowiska wykonawczego języka, który istnieje, tak długo, jak długo element ma odwołanie do niej.  Każdy <xref:System.Windows.Ink.Stroke> odwołania <xref:System.Windows.Input.StylusPointCollection> i <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> obiektu, które są również wspólnych obiektów środowiska uruchomieniowego języka.  
   
@@ -64,7 +66,7 @@ Istnieją zasadniczo trzy platformy, które obsługują elektroniczne pismo odr�
 |Testu trafienia|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |Kopiuj pismo odręczne|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |Wklejanie pisma odręcznego|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|Dostęp do właściwości niestandardowe kolekcja strokes|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(właściwości są przechowywane wewnętrznie i dostępne za pośrednictwem <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, i <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Użyj [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|Dostęp do właściwości niestandardowe kolekcja strokes|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (właściwości są przechowywane wewnętrznie i dostępne za pośrednictwem <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, i <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Użyj [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>Udostępnianie odręczne między platformami  
  Mimo że platformy inny obiekt modeli danych odręczne, udostępniania danych między platformy jest bardzo proste. Poniższe przykłady odręczne z aplikacji formularzy systemu Windows i załadować pismo odręczne do aplikacji Windows Presentation Foundation.  

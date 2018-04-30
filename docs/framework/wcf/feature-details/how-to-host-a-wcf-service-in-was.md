@@ -1,29 +1,31 @@
 ---
-title: "Instrukcje: Hostowanie usługi WCF w usłudze WAS"
-ms.custom: 
+title: 'Instrukcje: Hostowanie usługi WCF w usłudze WAS'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Instrukcje: Hostowanie usługi WCF w usłudze WAS
-W tym temacie przedstawiono podstawowe czynności wymagane do tworzenia usług systemu Windows proces aktywacji (znanej także jako Usługa WAS) hostowanej [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi. ZOSTAŁO to nowa usługa aktywacji procesów, która jest generalizacji funkcji Internet Information Services (IIS), które współpracują z protokołów innych niż HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa interfejsu adapter odbiornika do komunikowania się żądania aktywacji, które są otrzymywane za pośrednictwem protokołów innych niż HTTP obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], takich jak TCP, potoków nazwanych i usługi kolejkowania komunikatów.  
+W tym temacie przedstawiono podstawowe czynności wymagane do tworzenia usług systemu Windows proces aktywacji (znanej także jako Usługa WAS) hostowanej [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi. ZOSTAŁO to nowa usługa aktywacji procesów, która jest generalizacji funkcji Internet Information Services (IIS), które współpracują z protokołów innych niż HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa interfejsu adapter odbiornika do komunikowania się żądania aktywacji, które są otrzymywane za pośrednictwem protokołów innych niż HTTP obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], takich jak TCP, potoków nazwanych i usługi kolejkowania komunikatów.  
   
- Ta opcja hostingu wymaga składników aktywacji WAS są prawidłowo zainstalowane i skonfigurowane, ale nie wymaga żadnego kodu macierzystego do zapisania jako części aplikacji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Instalowanie i konfigurowanie usługi WAS, zobacz [porady: Instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Ta opcja hostingu wymaga składników aktywacji WAS są prawidłowo zainstalowane i skonfigurowane, ale nie wymaga żadnego kodu macierzystego do zapisania jako części aplikacji. Aby uzyskać więcej informacji o instalowaniu i konfigurowaniu WAS, zobacz [porady: Instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  BYŁA aktywacji nie jest obsługiwane, jeśli ustawiono potoku przetwarzania żądań serwera sieci web do trybu klasycznego. Potoku przetwarzania żądań serwera sieci web musi mieć ustawioną trybu zintegrowanego, jeśli ma być używany przez aktywację usługi WAS.  

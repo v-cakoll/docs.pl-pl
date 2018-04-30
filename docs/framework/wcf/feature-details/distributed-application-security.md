@@ -1,32 +1,34 @@
 ---
 title: Rozproszone zabezpieczenia aplikacji
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zabezpieczeń jest podzielone na trzy główne obszary funkcjonalności: transfer zabezpieczeń, kontroli dostępu i inspekcji. Transfer zabezpieczeń zapewnia integralność, poufność i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: transportu zabezpieczenia, zabezpieczenia wiadomości lub `TransportWithMessageCredential`.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczeń jest podzielone na trzy główne obszary funkcjonalności: transfer zabezpieczeń, kontroli dostępu i inspekcji. Transfer zabezpieczeń zapewnia integralność, poufność i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: transportu zabezpieczenia, zabezpieczenia wiadomości lub `TransportWithMessageCredential`.  
   
- Omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]dwie części z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) i [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat innych dwa elementy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) i [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Transfer scenariusze zabezpieczeń  
  Typowych scenariuszy korzystających z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transfer zabezpieczeń są następujące:  
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |Uwierzytelnianie|*Uwierzytelnianie* jest weryfikacja tożsamości. Na przykład korzystając z konta bankowego, należy bezwzględnie możliwość rzeczywiste właściciela konta do wycofania środków. Uwierzytelnianie może być udostępniane przez różnych środków. Jednej wspólnej metody to system użytkownika i hasło. Drugim jest użycie certyfikatu X.509, który jest świadczona przez inną firmę.|  
   
 ## <a name="security-modes"></a>Tryby zabezpieczeń  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]trybach kilka transfer zabezpieczeń, które zostały opisane w poniższej tabeli.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trybach kilka transfer zabezpieczeń, które zostały opisane w poniższej tabeli.  
   
 |Tryb|Opis|  
 |----------|-----------------|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |Zarówno|Wykonuje ochrony i uwierzytelniania na obu poziomach. Ten tryb jest dostępny tylko w [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) elementu.|  
   
 ## <a name="credentials-and-transfer-security"></a>Poświadczenia i Transfer zabezpieczeń  
- A *poświadczeń* się dane, które są prezentowane w celu ustalenia tożsamości lub funkcji. Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Można określić rodzajem poświadczenia dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania.  
+ A *poświadczeń* się dane, które są prezentowane w celu ustalenia tożsamości lub funkcji. Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Można określić rodzajem poświadczenia dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania.  
   
  W wielu krajach lub regionach jazdy jest przykładem poświadczenie. Licencji zawiera dane reprezentujące tożsamości i możliwości w jeden. Zawiera ona dowodu posiadania w formie obrazu właściciel. Licencji wystawiony przez zaufany urząd zwykle rządowych działu licencjonowania. Licencja jest zapieczętowany i może zawierać hologram, pokazujący, że nie został zmieniony przez niepowołane lub podrobić.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  W poświadczeniach certyfikatu do reprezentowania tożsamości i/lub możliwości można użyć nazwy podmiotu, alternatywna nazwa podmiotu lub określonych pól w certyfikacie. Potwierdzenie posiadania danych w poświadczeniu została ustanowiona przy użyciu skojarzony klucz prywatny do generowania podpisu.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Programowanie zabezpieczeń transfer i określania poświadczeń, zobacz [powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) i [zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Więcej informacji na temat programowania w języku transfer zabezpieczeń i określania poświadczeń, zobacz [powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) i [zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Typy poświadczeń klienta transportu  
  W poniższej tabeli przedstawiono możliwe wartości używane podczas tworzenia aplikacji, która korzysta z transferu zabezpieczeń. Możesz użyć tych wartości za pomocą kodu lub ustawienia powiązania.  
@@ -96,7 +98,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="programming-credentials"></a>Programowanie poświadczeń  
  Dla każdego typu poświadczeń klienta [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania umożliwia określenie wartości poświadczeń i modułów sprawdzania poprawności poświadczeń przy użyciu usługi zachowania i zachowania kanału.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zabezpieczenia mają dwa rodzaje poświadczeń: poświadczenia zachowania i zachowania poświadczeń kanału usługi service. Poświadczeń zachowania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Określ dane, a mianowicie, poświadczenia używane w celu spełnienia wymagań zabezpieczeń wyrazić za pomocą powiązania. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], klasa klienta to składnik czasu wykonywania, który wykonuje konwersję między wywołania operacji i komunikatów. Wszyscy klienci dziedziczyć <xref:System.ServiceModel.ClientBase%601> klasy. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Właściwości dla klasy podstawowej można określić różne wartości poświadczeń klienta.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia mają dwa rodzaje poświadczeń: poświadczenia zachowania i zachowania poświadczeń kanału usługi service. Poświadczeń zachowania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Określ dane, a mianowicie, poświadczenia używane w celu spełnienia wymagań zabezpieczeń wyrazić za pomocą powiązania. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], klasa klienta to składnik czasu wykonywania, który wykonuje konwersję między wywołania operacji i komunikatów. Wszyscy klienci dziedziczyć <xref:System.ServiceModel.ClientBase%601> klasy. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Właściwości dla klasy podstawowej można określić różne wartości poświadczeń klienta.  
   
  W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zachowania usługi są atrybuty stosowane do klasy Implementowanie kontraktu usługi (interface), można programowo zarządzać usługi. <xref:System.ServiceModel.Description.ServiceCredentials> Klasy można określić certyfikaty dla ustawienia usługi poświadczenia i klienta sprawdzania poprawności dla różnych typów poświadczeń klienta.  
   

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Wykorzystywanie OData źródeł danych z przepływu pracy
 Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , umożliwia tworzenie usług korzystających z protokołu Open Data Protocol (OData) do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantyki representational stanu transfer (REST). OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Wszelkie aplikacje mogą współdziałać z usługi OData na podstawie danych jeśli umożliwia wysyłanie żądania HTTP i przetworzyć źródła strumieniowego OData zwracanych usługi danych. Usługi danych WCF zawiera ponadto biblioteki klienta, które zapewniają bardziej rozbudowane środowisko programowania po używać źródła danych OData z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji. Ten temat zawiera omówienie używania OData podawania w przepływie pracy z użyciem biblioteki klienta i bez.  
@@ -78,7 +78,7 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  W poniższym przykładzie `ListCustomers` zdefiniowano działania. To działanie wysyła zapytanie do usługi danych Northwind próbki i zwraca `List<Customer>` zawierający wszystkich klientów w bazie danych Northwind. Asynchroniczne zadanie jest wykonywane przez `GetCustomers` metody. Ta metoda korzysta z usługi dla wszystkich klientów, a następnie kopiuje je do `List<Customer>`. Następnie sprawdza, czy wyniki są stronicowanej. Jeśli tak, wysyła zapytanie do usługi dla następnej strony wyników, dodaje je do listy, a będzie wykonywany do momentu pobraniu wszystkich danych klienta.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Stronicowanie w usługi danych WCF, zobacz. [Porady: obciążenia stronicowanej wyników (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  Aby uzyskać więcej informacji na temat stronicowania w usługi danych WCF Zobacz. [Porady: obciążenia stronicowanej wyników (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  Po dodaniu wszystkich klientów, jest zwracana lista. `GetCustomers` Metody jest określony w działaniu <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zastąpienia. Ponieważ metoda ma wartość zwracaną `Func<string, List<Customer>>` jest tworzony, aby określić metodę.  
   
@@ -143,4 +143,4 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  **\<Link rel = "edit" title = "Order" href="Orders(10643)" / >**  
  **\<Link rel = "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **Typ = "application/atom + xml; typ = entry" title = "Klient" href = "Zamówienia (10643) / klienta" / >**  
-**...**  W poniższym przykładzie przedstawiono jedną metodę, która umożliwia korzystać nieprzetworzonych danych zwróconych z usługi OData autorzy aplikacji przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Uzyskiwanie dostępu przy użyciu identyfikatorów URI usługi danych WCF, zobacz [podczas uzyskiwania dostępu do zasobów usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193397) i [OData: identyfikator URI konwencje](http://go.microsoft.com/fwlink/?LinkId=185564).
+**...**  W poniższym przykładzie przedstawiono jedną metodę, która umożliwia korzystać nieprzetworzonych danych zwróconych z usługi OData autorzy aplikacji przepływu pracy. Aby uzyskać więcej informacji na temat uzyskiwania dostępu do usługi danych WCF za pomocą identyfikatorów URI, zobacz [podczas uzyskiwania dostępu do zasobów usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193397) i [OData: identyfikator URI konwencje](http://go.microsoft.com/fwlink/?LinkId=185564).

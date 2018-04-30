@@ -1,35 +1,35 @@
 ---
-title: "Terminologia dotycząca zabezpieczeń programu WCF"
-ms.custom: 
+title: Terminologia dotycząca zabezpieczeń programu WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologia dotycząca zabezpieczeń programu WCF
 Niektóre z terminologią używaną w opisach zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektóre pojęcia dotyczące zabezpieczeń, ale nie mają na celu dostarczenie wyczerpujące dla każdego elementu.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] terminów używanych w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dokumentacji, zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Aby uzyskać więcej informacji na temat pojęć używanych w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dokumentacji, zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  listy kontroli dostępu (ACL)  
  Lista zabezpieczeń obiektu. (Obiekt może być pliku, procesu, zdarzenia lub niczego else o deskryptora zabezpieczeń). Wpis na liście kontroli dostępu jest wpisu kontroli dostępu (ACE). Istnieją dwa typy list kontroli dostępu: DACL i systemu.  

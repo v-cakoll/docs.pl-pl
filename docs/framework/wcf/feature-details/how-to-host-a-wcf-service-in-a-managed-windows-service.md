@@ -1,27 +1,29 @@
 ---
-title: "Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows"
-ms.custom: 
+title: 'Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows
 W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi hostowanej przez usługę systemu Windows. Scenariusz jest zapewniana przez usługę zarządzanych systemu Windows obsługującego długo działającą opcję [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi hostowanej poza Internet Information Services (IIS) w bezpiecznym środowisku nie jest wiadomości aktywowany. Okres istnienia usługi steruje zamiast tego systemu operacyjnego. Ta opcja obsługi jest dostępna we wszystkich wersjach systemu Windows.  
@@ -61,7 +63,7 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia [!INCLU
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]  
   
-8.  Utwórz nową klasę o nazwie `CalculatorWindowsService` dziedziczący po <xref:System.ServiceProcess.ServiceBase> klasy. Dodawanie zmiennej lokalnej o nazwie `serviceHost` do odwołania <xref:System.ServiceModel.ServiceHost> wystąpienia. Zdefiniuj `Main` metodę, która wywołuje`ServiceBase.Run(new CalculatorWindowsService)`  
+8.  Utwórz nową klasę o nazwie `CalculatorWindowsService` dziedziczący po <xref:System.ServiceProcess.ServiceBase> klasy. Dodawanie zmiennej lokalnej o nazwie `serviceHost` do odwołania <xref:System.ServiceModel.ServiceHost> wystąpienia. Zdefiniuj `Main` metodę, która wywołuje `ServiceBase.Run(new CalculatorWindowsService)`  
   
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]  
@@ -122,7 +124,7 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia [!INCLU
   
      Kliknij prawym przyciskiem myszy w pliku App.config **Eksploratora rozwiązań** i wybierz **właściwości**. W obszarze **Kopiuj do katalogu wyjściowego** wybierz **Kopiuj, jeśli nowszy**.  
   
-     W tym przykładzie jawnie określa punkty końcowe w pliku konfiguracji. Jeśli nie dodawaj żadnych punktów końcowych do usługi, środowisko uruchomieniowe dodaje domyślne punkty końcowe. W tym przykładzie ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ustawioną `true`, usługa ma również publikowanie metadanych włączone. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     W tym przykładzie jawnie określa punkty końcowe w pliku konfiguracji. Jeśli nie dodawaj żadnych punktów końcowych do usługi, środowisko uruchomieniowe dodaje domyślne punkty końcowe. W tym przykładzie ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ustawioną `true`, usługa ma również publikowanie metadanych włączone. Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ### <a name="install-and-run-the-service"></a>Zainstaluj i uruchom usługę  
   

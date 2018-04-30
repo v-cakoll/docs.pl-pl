@@ -1,27 +1,29 @@
 ---
-title: "Usługa HTTP w sieci Web dla programu WCF — strona pomocy"
-ms.custom: 
+title: Usługa HTTP w sieci Web dla programu WCF — strona pomocy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dabb5e7a949cb26c619ad02dc73d0405222d08cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-service-help-page"></a>Usługa HTTP w sieci Web dla programu WCF — strona pomocy
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]zawiera strona pomocy automatycznego dla usług HTTP sieci WEB WCF. Ta strona pomocy Wyświetla opis każdej operacji, żądania i odpowiedzi formaty i schematów. Ta funkcja jest domyślnie wyłączona. Gdy użytkownik przechodzi do usługi WCF WEB HTTP i dołącza "/ Help" na końcu adresu URL, na przykład http://localhost: 8000/klientów/Help, jest wyświetlana strona pomocy, podobnie jak poniżej.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] zawiera strona pomocy automatycznego dla usług HTTP sieci WEB WCF. Ta strona pomocy Wyświetla opis każdej operacji, żądania i odpowiedzi formaty i schematów. Ta funkcja jest domyślnie wyłączona. Gdy użytkownik przechodzi do usługi WCF WEB HTTP i dołącza "/ Help" na końcu adresu URL, na przykład http://localhost:8000/Customers/Help, strona pomocy, takie jak następujące jest wyświetlany.  
   
  ![Strona pomocy REST usługi WCF](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
@@ -251,4 +253,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Schemat serializacji kontraktu danych, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Aby uzyskać więcej informacji na temat schematu serializacji kontraktu danych, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

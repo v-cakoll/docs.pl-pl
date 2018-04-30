@@ -1,24 +1,26 @@
 ---
 title: Niestandardowe kodery
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>Niestandardowe kodery
 W tym temacie omówiono tworzenie niestandardowe kodery.  
@@ -32,20 +34,20 @@ W tym temacie omówiono tworzenie niestandardowe kodery.
  Podczas łączenia z istniejących klienta lub serwera, możesz nie mieć wybór o przy użyciu określonego komunikatu kodowania. Jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług można udostępnić za pośrednictwem wiele punktów końcowych, każde z nich koder inny komunikat. Gdy jeden koder nie obejmuje całego odbiorców dla usługi, należy wziąć pod uwagę udostępnianie usługi przez wiele punktów końcowych. Aplikacje klienckie można wybrać punkt końcowy, który jest najlepsze dla nich. Przy użyciu wielu punktów końcowych pozwala na połączenie korzyści wynikające z koderów inny komunikat z innymi elementami powiązania.  
   
 ## <a name="system-provided-encoders"></a>Kodery dostarczane przez system  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia kilka powiązania dostarczane przez system, które są zaprojektowane tak, aby pokrywał najbardziej typowych scenariuszy aplikacji. Każdy z tych powiązań połączenie transportu, kodera wiadomości i inne opcje (na przykład zabezpieczeń). W tym temacie opisano, jak rozszerzyć `Text`, `Binary`, i `MTOM` komunikatu koderów, które znajdują się w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], lub utworzyć niestandardowego kodera. Tekst koder komunikatów obsługuje zarówno zwykły Kodowanie XML oraz kodowania protokołu SOAP. Zwykły tryb kodowania XML kodera wiadomości tekstowych nosi nazwę kodera POX ("XML starego zwykły") odróżniający go od tekstowych kodowaniu protokołu SOAP.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia kilka powiązania dostarczane przez system, które są zaprojektowane tak, aby pokrywał najbardziej typowych scenariuszy aplikacji. Każdy z tych powiązań połączenie transportu, kodera wiadomości i inne opcje (na przykład zabezpieczeń). W tym temacie opisano, jak rozszerzyć `Text`, `Binary`, i `MTOM` komunikatu koderów, które znajdują się w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], lub utworzyć niestandardowego kodera. Tekst koder komunikatów obsługuje zarówno zwykły Kodowanie XML oraz kodowania protokołu SOAP. Zwykły tryb kodowania XML kodera wiadomości tekstowych nosi nazwę kodera POX ("XML starego zwykły") odróżniający go od tekstowych kodowaniu protokołu SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kombinacje dostarczonych przez powiązania dostarczane przez system elementów powiązania w sekcji odpowiednie w [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Aby uzyskać więcej informacji na temat kombinacje elementy wiązania dostarczane przez powiązania dostarczane przez system, zobacz sekcję odpowiednie w [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Jak pracować z koderów dostarczane przez System  
  Kodowanie jest dodawany do powiązania za pomocą klasy pochodzącej od <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia następujące elementy powiązania pochodną <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> klasy, która może zapewnić tekstu, dane binarne i kodowanie mechanizmu optymalizacji transmisji wiadomości (MTOM):  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia następujące elementy powiązania pochodną <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> klasy, która może zapewnić tekstu, dane binarne i kodowanie mechanizmu optymalizacji transmisji wiadomości (MTOM):  
   
 -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Najbardziej współdziałanie, ale najmniej wydajne koder komunikatów XML. Usługa sieci Web lub klient usługi sieci Web zwykle zrozumieć tekstowy XML. Jednak przesyłania dużych bloków danych binarnych jako tekst nie jest skuteczne.  
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków i komunikatu versioning używanego w formacie binarnym komunikatów XML. Jest to najbardziej efektywny opcji kodowania, ale najmniej interoperacyjne, ponieważ jest obsługiwany tylko przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: reprezentuje element powiązania, który określa kodowanie znaków i wersji komunikatu używany przy użyciu mechanizmu optymalizacji transmisji wiadomości (MTOM) kodowania komunikatu. MTOM jest technologią wydajne przekazywania danych binarnych w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości. Koder MTOM próbuje równowaga między wydajności i współdziałanie. Kodowanie MTOM przesyła większości XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazując je jako — Brak konwersji na tekst.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: reprezentuje element powiązania, który określa kodowanie znaków i wersji komunikatu używany przy użyciu mechanizmu optymalizacji transmisji wiadomości (MTOM) kodowania komunikatu. MTOM jest technologią wydajne przekazywania danych binarnych w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości. Koder MTOM próbuje równowaga między wydajności i współdziałanie. Kodowanie MTOM przesyła większości XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazując je jako — Brak konwersji na tekst.  
   
  Tworzy element powiązania pliku binarnego, MTOM lub tekst <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Tworzy fabrykę pliku binarnego, MTOM lub tekst <xref:System.ServiceModel.Channels.MessageEncoderFactory> wystąpienia. Zazwyczaj jest tylko jedno wystąpienie. Jednak sesji są używane, mogą być dostarczane do każdej sesji kodera innego. Kodera binarnego sprawia, że użycie tego do koordynowania słowniki dynamiczne (patrz infrastruktury XML).  
   
@@ -61,7 +63,7 @@ W tym temacie omówiono tworzenie niestandardowe kodery.
 ### <a name="pooling"></a>Buforowanie  
  Każda z implementacji kodera próbuje puli, jak to możliwe. Zmniejszenie alokacji jest klucza sposób, aby poprawić wydajność kodu zarządzanego. Do wykonania tej puli, użyj implementacje `SynchronizedPool` klasy. C# plik zawiera opis dodatkowe optymalizacje używane przez tę klasę.  
   
- `XmlDictionaryReader`i `XmlDictionaryWriter` wystąpienia są grupowane w pulach i ponownie zainicjowano zapobiegające przydzielania nowych dla każdego komunikatu. Czytniki `OnClose` wywołania zwrotnego zwraca czytnik podczas `Close()` jest wywoływana. Koder odtwarza także niektóre obiekty stanu komunikatów używana podczas tworzenia wiadomości. Rozmiary te pule są konfigurowane przez `MaxReadPoolSize` i `MaxWritePoolSize` właściwości dla wszystkich trzech klas pochodnych <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ `XmlDictionaryReader` i `XmlDictionaryWriter` wystąpienia są grupowane w pulach i ponownie zainicjowano zapobiegające przydzielania nowych dla każdego komunikatu. Czytniki `OnClose` wywołania zwrotnego zwraca czytnik podczas `Close()` jest wywoływana. Koder odtwarza także niektóre obiekty stanu komunikatów używana podczas tworzenia wiadomości. Rozmiary te pule są konfigurowane przez `MaxReadPoolSize` i `MaxWritePoolSize` właściwości dla wszystkich trzech klas pochodnych <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Kodowanie binarne  
  Gdy binarny kodowanie używane sesje, ciąg dynamiczny słownik powiadamia odbiorcy wiadomości. Jest to realizowane przez prefiksu wiadomości z ciągami dynamiczny słownik. Odbiornik taśmy poza ciągi, dodaje je do sesji i przetwarza wiadomość. Poprawnie przesłaniem słownika wymaga buforowane transportu.  
@@ -90,9 +92,9 @@ W tym temacie omówiono tworzenie niestandardowe kodery.
   
 -   Klucza metody tej klasy, który należy zastąpić to:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>który bierze <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> obiektu i zapisuje go w <xref:System.IO.Stream> obiektu.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> który bierze <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> obiektu i zapisuje go w <xref:System.IO.Stream> obiektu.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>który bierze <xref:System.IO.Stream> obiektu i rozmiar maksymalny nagłówka i zwraca <xref:System.ServiceModel.Channels.Message> obiektu.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> który bierze <xref:System.IO.Stream> obiektu i rozmiar maksymalny nagłówka i zwraca <xref:System.ServiceModel.Channels.Message> obiektu.  
   
  Jest kod napisany w tych metod, obsługujący konwersja między protokołu transportu standardowe i niestandardowe kodowania.  
   

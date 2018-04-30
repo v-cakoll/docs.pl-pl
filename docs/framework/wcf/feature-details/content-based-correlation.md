@@ -1,24 +1,26 @@
 ---
-title: "Korelacja na podstawie zawartości"
-ms.custom: 
+title: Korelacja na podstawie zawartości
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>Korelacja na podstawie zawartości
 Gdy usługi przepływu pracy komunikację z klientami oraz innymi usługami, często istnieje części danych w ramach wymiany wiadomości, które jednoznacznie odnosi się komunikat do konkretnego wystąpienia. Na podstawie zawartości korelacji używa tych danych w komunikacie, takich jak numer lub kolejności ID klienta do wyznaczania tras wiadomościom do wystąpienia przepływu pracy właściwe. W tym temacie opisano sposób korzystania na podstawie zawartości korelacji w przepływach pracy.  
@@ -27,7 +29,7 @@ Gdy usługi przepływu pracy komunikację z klientami oraz innymi usługami, cz�
  Korelacja na podstawie zawartości jest używany, gdy usługi przepływu pracy posiada wiele metod, które są udostępniane przez pojedynczego klienta i element danych w ramach wymiany wiadomości identyfikuje odpowiednie wystąpienie.  
   
 > [!NOTE]
->  Na podstawie zawartości korelacji jest przydatne, gdy nie można użyć korelacji kontekstu, ponieważ powiązanie nie jest jednym z obsługiwanych kontekstu powiązania programu exchange. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kontekst korelacji, zobacz [wymiana kontekstu](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  Na podstawie zawartości korelacji jest przydatne, gdy nie można użyć korelacji kontekstu, ponieważ powiązanie nie jest jednym z obsługiwanych kontekstu powiązania programu exchange. Aby uzyskać więcej informacji o kontekście korelacji, zobacz [wymiana kontekstu](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  Każde działanie obsługi wiadomości, używane podczas komunikacji te należy określić lokalizację danych w komunikacie, który unikatowo identyfikuje wystąpienie. Jest to zrobić, podając <xref:System.ServiceModel.MessageQuerySet>, za pomocą <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> lub <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>, który wysyła zapytanie do wiadomości dla element lub elementy danych, które jednoznacznie zidentyfikować wystąpienie.  
   

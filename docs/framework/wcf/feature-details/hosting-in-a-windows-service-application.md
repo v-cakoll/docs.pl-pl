@@ -1,27 +1,29 @@
 ---
-title: "Hostowanie w aplikacji usługi systemu Windows"
-ms.custom: 
+title: Hostowanie w aplikacji usługi systemu Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
-Usługi systemu Windows (wcześniej znane jako usługi systemu Windows NT) zapewniają proces modelu szczególnie nadaje się do aplikacji, musi istnieć w pliku wykonywalnym długotrwałe, które nie są wyświetlane wszystkie formularza interfejsu użytkownika. Okres istnienia procesu systemu Windows, usługi aplikacja jest zarządzana przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i wstrzymywanie aplikacji usług systemu Windows. Można skonfigurować do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko macierzyste dla aplikacji "zawsze włączone" proces usługi systemu Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Aplikacje usług systemu Windows, temacie [aplikacji usług systemu Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
+Usługi systemu Windows (wcześniej znane jako usługi systemu Windows NT) zapewniają proces modelu szczególnie nadaje się do aplikacji, musi istnieć w pliku wykonywalnym długotrwałe, które nie są wyświetlane wszystkie formularza interfejsu użytkownika. Okres istnienia procesu systemu Windows, usługi aplikacja jest zarządzana przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i wstrzymywanie aplikacji usług systemu Windows. Można skonfigurować do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko macierzyste dla aplikacji "zawsze włączone" proces usługi systemu Windows. Aby uzyskać więcej informacji o aplikacji usług systemu Windows, zobacz [aplikacji usług systemu Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Aplikacje obsługujące długotrwałe [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług mają wiele właściwości usługami wdrażania systemu Windows. W szczególności [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi są długotrwałe plików wykonywalnych serwera, które nie wchodzą w interakcje bezpośrednio z użytkownikiem i w związku z tym nie należy implementować dowolnej formy interfejsu użytkownika. W efekcie hosting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług wewnątrz aplikacji usługi systemu Windows jest jedną z opcji tworzenia niezawodne, długotrwałą, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
   

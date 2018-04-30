@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>Tworzenie kolejek w programie WCF
 W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -51,7 +51,7 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
   
  Kolejki usługi MSMQ mogą również chronione, za pomocą tożsamości systemu Windows, w zarejestrowany w usłudze katalogowej Active Directory. Podczas instalowania usługi MSMQ, należy zainstalować integracji usługi Active Directory, która wymaga komputera, jako część sieci domeny systemu Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Usługa MSMQ, zobacz [usługi kolejkowania komunikatów instalowanie (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [usługi kolejkowania komunikatów instalowanie (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) jest Zakolejkowane powiązanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia dwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych do komunikowania się przy użyciu usługi MSMQ. Wiązanie, w związku z tym udostępnia właściwości, które są specyficzne dla usługi MSMQ. Jednak nie wszystkie funkcje usługi MSMQ i właściwości są widoczne w `NetMsmqBinding`. CD `NetMsmqBinding` zaprojektowano z optymalny zestaw funkcji, które większość klientów stwierdzi, że wystarczające.  
@@ -79,12 +79,12 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
   
  Powiązanie ma dwie właściwości odsetek:  
   
--   `DeadLetterQueue`: Ta właściwość jest wyliczeniem, która wskazuje, czy kolejka utraconych wiadomości jest wymagane. Wyliczenie zawiera także rodzaj kolejki utraconych wiadomości, jeśli wymagane jest jeden. Wartości są `None`, `System`, i `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Interpretacja te właściwości, zobacz [przy użyciu kolejki utraconych wiadomości do obsługi błędów transferu](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: Ta właściwość jest wyliczeniem, która wskazuje, czy kolejka utraconych wiadomości jest wymagane. Wyliczenie zawiera także rodzaj kolejki utraconych wiadomości, jeśli wymagane jest jeden. Wartości są `None`, `System`, i `Custom`. Aby uzyskać więcej informacji na temat interpretacji te właściwości, zobacz [przy użyciu kolejki utraconych wiadomości do obsługi błędów transferu](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: Ta właściwość jest adresem identyfikator URI (Uniform Resource) specyficzne dla aplikacji kolejki utraconych wiadomości. Jest to wymagane, jeśli `DeadLetterQueue`.`Custom` zostanie wybrany.  
   
 #### <a name="poison-message-handling-properties"></a>Właściwości Obsługa komunikatów zanieczyszczonych  
- Usługa odczytuje wiadomości z kolejki docelowej, w ramach transakcji, usługa może zakończyć się niepowodzeniem przetworzyć komunikatu z różnych przyczyn. Komunikat jest następnie przywracane do kolejki, aby ponownie odczytać. Na wypadek wiadomości, które nie są często zestaw poison komunikat — Obsługa właściwości można skonfigurować w powiązaniu. Istnieją cztery właściwości: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, i `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] te właściwości, zobacz [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Usługa odczytuje wiadomości z kolejki docelowej, w ramach transakcji, usługa może zakończyć się niepowodzeniem przetworzyć komunikatu z różnych przyczyn. Komunikat jest następnie przywracane do kolejki, aby ponownie odczytać. Na wypadek wiadomości, które nie są często zestaw poison komunikat — Obsługa właściwości można skonfigurować w powiązaniu. Istnieją cztery właściwości: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, i `ReceiveErrorHandling`. Aby uzyskać więcej informacji na temat tych właściwości, zobacz [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Właściwości zabezpieczeń  
  MSMQ udostępnia własny model zabezpieczeń, takie jak listy kontroli dostępu (ACL) w kolejce lub wysyłania uwierzytelnione komunikaty. `NetMsmqBinding` Opisuje te właściwości zabezpieczeń jako część jej ustawienia zabezpieczeń transportu. Istnieją dwie właściwości powiązanie dla zabezpieczeń transportu: `MsmqAuthenticationMode` i `MsmqProtectionLevel`. Ustawienia te właściwości są zależne od konfiguracji usługi MSMQ. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

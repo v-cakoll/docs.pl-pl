@@ -1,13 +1,13 @@
 ---
-title: "Przegląd Adnotacje"
-ms.custom: 
+title: Przegląd Adnotacje
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f3ac3ce66d944934724bef1b69307030ec813e2
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: dcc881421e1a6960ab1ab9760ec2cd18a4c77c36
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
 Uwagi dotyczące pisania lub komentarzy w dokumencie dokumentów jest takie działanie popularne, że firma Microsoft niemal stosować go dla przyznane. Te informacje i komentarze są "adnotacji" dodamy do dokumentu, aby flaga informacji lub Wyróżnij elementy do wykorzystania w późniejszym czasie. Pisanie uwagi na drukowanych dokumentów jest łatwe i popularne, aby dodać komentarz do elektronicznych dokumentów jest zazwyczaj bardzo ograniczony dostępne na wszystkich.  
   
- W tym temacie zapoznaje się kilka typowych adnotacji, w szczególności notatki i najważniejsze funkcje oraz przedstawiono sposób [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] ułatwia obsługę tych typów adnotacje w aplikacjach za pomocą [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] wyświetlania formantów dokumentów.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]dokument wyświetlania formantów, które obsługują adnotacje obejmują <xref:System.Windows.Controls.FlowDocumentReader> i <xref:System.Windows.Controls.FlowDocumentScrollViewer>, jak również formanty pochodne <xref:System.Windows.Controls.Primitives.DocumentViewerBase> takich jak <xref:System.Windows.Controls.DocumentViewer> i <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ W tym temacie zapoznaje się kilka typowych adnotacji, w szczególności notatki i najważniejsze funkcje oraz przedstawiono sposób [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] ułatwia obsługę tych typów adnotacje w aplikacjach za pomocą dokumentu Windows Presentation Foundation (WPF) wyświetlanie formantów.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dokument wyświetlania formantów, które obsługują adnotacje obejmują <xref:System.Windows.Controls.FlowDocumentReader> i <xref:System.Windows.Controls.FlowDocumentScrollViewer>, jak również formanty pochodne <xref:System.Windows.Controls.Primitives.DocumentViewerBase> takich jak <xref:System.Windows.Controls.DocumentViewer> i <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
   
 <a name="caf1_type_stickynotes"></a>   

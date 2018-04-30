@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Określanie transferu danych w kontraktach usług
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Można traktować jako infrastruktury obsługi wiadomości. Operacje usługi można odbierać wiadomości, ich przetworzyć i wysyłanie do nich wiadomości. Komunikaty są opisane przy użyciu kontrakty operacji. Na przykład należy wziąć pod uwagę następujące kontraktu.  
@@ -453,7 +453,7 @@ End Class
  Można zrobić na kilka rzeczy, które można dostosować sposób danych jest serializowany.  
   
 ### <a name="changing-server-serialization-settings"></a>Zmiana ustawień serializacji serwera  
- Gdy domyślne <xref:System.Runtime.Serialization.DataContractSerializer> jest używana, można kontrolować niektóre aspekty procesu serializacji w usłudze, stosując <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu z usługą. W szczególności mogą używać `MaxItemsInObjectGraph` właściwości można ustawić limit przydziału, która ogranicza maksymalną liczbę obiektów <xref:System.Runtime.Serialization.DataContractSerializer> deserializuje. Można użyć `IgnoreExtensionDataObject` właściwości, aby wyłączyć funkcji przechowywania wersji dwustronną komunikację. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] przydziały, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] dwustronną komunikację, zobacz [kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Gdy domyślne <xref:System.Runtime.Serialization.DataContractSerializer> jest używana, można kontrolować niektóre aspekty procesu serializacji w usłudze, stosując <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu z usługą. W szczególności mogą używać `MaxItemsInObjectGraph` właściwości można ustawić limit przydziału, która ogranicza maksymalną liczbę obiektów <xref:System.Runtime.Serialization.DataContractSerializer> deserializuje. Można użyć `IgnoreExtensionDataObject` właściwości, aby wyłączyć funkcji przechowywania wersji dwustronną komunikację. Aby uzyskać więcej informacji na temat przydziałów, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Aby uzyskać więcej informacji na temat dwustronną komunikację, zobacz [kontrakty danych zgodne z nowszymi](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  Przed otwarciem hosta usługi lub tworzenie kanału klienta, Usuń istniejące <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> zachowanie i wtyczki w klasie pochodnej niestandardowe utworzone w poprzednich krokach.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Serializacja pojęcia zaawansowane, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ Aby uzyskać więcej informacji o pojęciach serializacji zaawansowanych, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Używanie klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

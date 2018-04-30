@@ -1,33 +1,33 @@
 ---
-title: "Tworzenie powiązań zdefiniowanych przez użytkownika"
-ms.custom: 
+title: Tworzenie powiązań zdefiniowanych przez użytkownika
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Tworzenie powiązań zdefiniowanych przez użytkownika
 Istnieje kilka sposobów, aby utworzyć powiązania nie są dostarczane przez system:  
   
--   Tworzenie niestandardowego powiązania, na podstawie <xref:System.ServiceModel.Channels.CustomBinding> klasy, która jest kontenerem, który należy wypełnić elementy powiązania. Wiązanie niestandardowe jest dodawane do punktu końcowego usługi. Można utworzyć niestandardowego powiązania, które albo programowo lub w konfiguracji aplikacji pliku. Aby użyć elementu powiązania z pliku konfiguracji aplikacji, musi rozszerzać element powiązania <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]powiązania niestandardowe, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md) i <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Tworzenie niestandardowego powiązania, na podstawie <xref:System.ServiceModel.Channels.CustomBinding> klasy, która jest kontenerem, który należy wypełnić elementy powiązania. Wiązanie niestandardowe jest dodawane do punktu końcowego usługi. Można utworzyć niestandardowego powiązania, które albo programowo lub w konfiguracji aplikacji pliku. Aby użyć elementu powiązania z pliku konfiguracji aplikacji, musi rozszerzać element powiązania <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Aby uzyskać więcej informacji dotyczących powiązań niestandardowych, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md) i <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 -   Można utworzyć klasy, która pochodzi z Powiązanie standardowe. Na przykład mogą dziedziczyć klasy z <xref:System.ServiceModel.WSHttpBinding> i zastąpić <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> metodę, aby uzyskać elementy wiązania i Wstaw element niestandardowego powiązania lub ustanawiania konkretną wartość zabezpieczeń.  
   
@@ -38,7 +38,7 @@ Istnieje kilka sposobów, aby utworzyć powiązania nie są dostarczane przez sy
   
  Istnieją trzy typy elementy powiązania: elementy powiązania protokołu, kodowania elementów wiązania i elementy powiązania transportu.  
   
- Elementy powiązania protokołu — te elementy reprezentują wyższego poziomu przetwarzania czynności, które działają w wiadomości. Kanałów i odbiorników utworzone przez te elementy powiązania można dodać, usunąć lub zmodyfikować zawartość komunikatu. Podane powiązanie może mieć dowolną liczbę elementy powiązania protokołu, każdy dziedziczenie z <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zawiera kilka elementów powiązania protokołu, w tym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> i <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Elementy powiązania protokołu — te elementy reprezentują wyższego poziomu przetwarzania czynności, które działają w wiadomości. Kanałów i odbiorników utworzone przez te elementy powiązania można dodać, usunąć lub zmodyfikować zawartość komunikatu. Podane powiązanie może mieć dowolną liczbę elementy powiązania protokołu, każdy dziedziczenie z <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera kilka elementów powiązania protokołu, w tym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> i <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
  Kodowanie elementu powiązania — te stanowią elementy przekształceń między komunikat i kodowania gotowe do transmisji w sieci. Typowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania zawierać dokładnie jeden element powiązania kodowania. Kodowanie elementy powiązania przykłady <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Jeśli nie określono kodowanie elementu powiązania dla powiązania, domyślnym kodowaniem jest używany. Wartość domyślna to tekst w przypadku transportu HTTP i dane binarne w przeciwnym razie wartość.  
   

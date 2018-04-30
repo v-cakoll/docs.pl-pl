@@ -1,36 +1,38 @@
 ---
-title: "Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji"
-ms.custom: 
+title: 'Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f2671dc381e0d3ef8f55ced01268de6205fcb7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji
 Aby obsługiwać usługę w aplikacji zarządzanej, osadzanie kodu dla usługi w kodzie aplikacji zarządzanych, albo imperatively w kodzie, deklaratywnego za pomocą konfiguracji lub użyciu domyślne punkty końcowe, określić punkt końcowy usługi, a następnie utwórz wystąpienie klasy <xref:System.ServiceModel.ServiceHost>.  
   
  Aby rozpocząć odbieranie komunikatów, należy wywołać <xref:System.ServiceModel.ICommunicationObject.Open%2A> na <xref:System.ServiceModel.ServiceHost>. Tworzy i otwiera odbiornika dla usługi. Hosting usług w ten sposób jest często określany jako "hostingu samodzielnego" ponieważ wykonuje hostingu pracy samego zarządzanej aplikacji. Aby zamknąć tę usługę, należy wywołać <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.ServiceHost>.  
   
- Usługi mogą być również obsługiwane w usłudze zarządzanej systemu Windows, w konsoli Internet Information Services (IIS) lub w usługi aktywacji procesów systemu Windows (WAS). [!INCLUDE[crabout](../../../includes/crabout-md.md)]hosting opcje dla usługi, zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
+ Usługi mogą być również obsługiwane w usłudze zarządzanej systemu Windows, w konsoli Internet Information Services (IIS) lub w usługi aktywacji procesów systemu Windows (WAS). Aby uzyskać więcej informacji o opcji dla usługi hostingu, zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
   
- Usługi w zarządzanej aplikacji hosta jest najbardziej elastycznym opcja, ponieważ wymaga co najmniej infrastruktury do wdrożenia. [!INCLUDE[crabout](../../../includes/crabout-md.md)]hosting usług aplikacji zarządzanych, zobacz [Hosting w zarządzanej aplikacji](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
+ Usługi w zarządzanej aplikacji hosta jest najbardziej elastycznym opcja, ponieważ wymaga co najmniej infrastruktury do wdrożenia. Aby uzyskać więcej informacji na temat hostingu usług w zarządzanych aplikacjach, zobacz [Hosting w zarządzanej aplikacji](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
   
  W poniższej procedurze przedstawiono implementowania samodzielnie hostowana usługa w aplikacji konsoli.  
   
@@ -58,7 +60,7 @@ Aby obsługiwać usługę w aplikacji zarządzanej, osadzanie kodu dla usługi w
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Zdefiniuj i zaimplementuj interfejs usługi, zobacz [porady: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) i [porady: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
+    >  Aby uzyskać więcej informacji o sposobie Zdefiniuj i zaimplementuj interfejs usługi, zobacz [porady: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) i [porady: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
   
 7.  W górnej części `Main` metody, Utwórz wystąpienie <xref:System.Uri> klasy adres podstawowy usługi.  
   
@@ -71,7 +73,7 @@ Aby obsługiwać usługę w aplikacji zarządzanej, osadzanie kodu dla usługi w
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  W tym przykładzie używane domyślne punkty końcowe, a nie plik konfiguracji jest wymagany dla tej usługi. Jeśli nie skonfigurowano żadnych punktów końcowych, środowisko uruchomieniowe tworzy jeden punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej zaimplementowanych przez usługę. [!INCLUDE[crabout](../../../includes/crabout-md.md)]domyślne punkty końcowe, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    >  W tym przykładzie używane domyślne punkty końcowe, a nie plik konfiguracji jest wymagany dla tej usługi. Jeśli nie skonfigurowano żadnych punktów końcowych, środowisko uruchomieniowe tworzy jeden punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej zaimplementowanych przez usługę. Aby uzyskać więcej informacji o domyślnych punktów końcowych, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 9. Naciśnij klawisze CTRL + SHIFT + B w celu skompilowania rozwiązania.  
   

@@ -1,12 +1,13 @@
 ---
-title: "Optymalizacja wydajności: inne zalecenia"
-ms.custom: 
+title: 'Optymalizacja wydajności: inne zalecenia'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e45296befd51af5e4b03f123241efba030fd3754
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: afe0e93706089e1893d46316b33c2568df83ffd3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optymalizacja wydajności: inne zalecenia
-<a name="introduction"></a>W tym temacie przedstawiono zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizacji wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) sekcji.  
+<a name="introduction"></a> W tym temacie przedstawiono zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizacji wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) sekcji.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Konfigurowanie usługi pamięć podręczna czcionki, aby skrócić czas uruchamiania  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Usługi pamięć podręczna czcionki udostępnia dane czcionek między [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji. Pierwszy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchomieniu aplikacji uruchamia tej usługi, jeśli usługa nie jest już uruchomiona. Jeśli używasz [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], można ustawić "[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] pamięci podręcznej czcionki 3.0.0.0" usługi "Ręczny" (wartość domyślna) ma wartość "Automatycznie (opóźnione uruchomienie)" w celu skrócenia czasu początkowego rozruchu z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Usługi pamięć podręczna czcionki udostępnia dane czcionek między [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji. Pierwszy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchomieniu aplikacji uruchamia tej usługi, jeśli usługa nie jest już uruchomiona. Jeśli używasz [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], można ustawić usługę "Windows Presentation Foundation (WPF) czcionki pamięci podręcznej 3.0.0.0" od "Ręczny" (wartość domyślna) ma wartość "Automatycznie (opóźnione uruchomienie)" w celu skrócenia czasu początkowego rozruchu z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  

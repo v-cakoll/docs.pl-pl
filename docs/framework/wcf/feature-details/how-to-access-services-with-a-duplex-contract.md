@@ -1,13 +1,13 @@
 ---
-title: "Instrukcje: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego"
-ms.custom: 
+title: 'Instrukcje: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Instrukcje: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego
 Jedna funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest możliwość tworzenia usługi, który korzysta ze wzorca komunikacji dupleksowej. Ten wzorzec umożliwia usługi do komunikacji z klientem za pośrednictwem wywołania zwrotnego. W tym temacie przedstawiono kroki, aby utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta w klasie klienta, który implementuje interfejs wywołania zwrotnego.  
@@ -36,7 +36,7 @@ Jedna funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest możl
   
 ### <a name="to-access-a-duplex-service"></a>Dostęp do usługi dupleksu  
   
-1.  Utwórz usługę, która zawiera dwa interfejsy. Pierwszy interfejs dla usługi, druga jest przeznaczona dla wywołania zwrotnego. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie usługi duplex, zobacz [porady: tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+1.  Utwórz usługę, która zawiera dwa interfejsy. Pierwszy interfejs dla usługi, druga jest przeznaczona dla wywołania zwrotnego. Aby uzyskać więcej informacji na temat tworzenia usługi duplex zobacz [porady: tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 2.  Uruchom usługę.  
   

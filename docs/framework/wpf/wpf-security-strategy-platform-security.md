@@ -31,14 +31,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61197255c11745c2c3f6f60db084b96dc812cb00
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8d4606023c1a9f3252e9039da547f384d27b7ecd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
-Gdy [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] udostępnia wiele usług zabezpieczeń on również korzysta z funkcji zabezpieczeń w podstawowej platformy, który zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy połączyć zapewnienie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, obrony zabezpieczeń, podejmowanych w celu uniknięcia dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
+Windows Presentation Foundation (WPF) zawiera szereg usług zabezpieczeń, natomiast także wykorzystanie funkcji zabezpieczeń w podstawowej platformy, który zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy połączyć zapewnienie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, obrony zabezpieczeń, podejmowanych w celu uniknięcia dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
   
  ![Ilustracja przedstawiająca zabezpieczenia WPF](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
   

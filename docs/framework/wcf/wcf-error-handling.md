@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b85ef2b0c077b67cc341a48c9260393e158033c5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d951c0d85294dfcef56e231f7702cb2d37efa967
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-error-handling"></a>Obsługa błędów programu WCF
 Błędy napotykane przez aplikacja WCF należeć do jednej z trzech grup:  
@@ -51,7 +51,7 @@ Błędy napotykane przez aplikacja WCF należeć do jednej z trzech grup:
  Kontrakty usterek umożliwiają definiowanie błędów, które mogą wystąpić podczas operacji dotyczącej usługi na platformie sposób niezależny. Domyślnie wszystkie wyjątki zgłaszane z wewnątrz operacji usługi zostanie zwrócony do klienta jako <xref:System.ServiceModel.FaultException> obiektu. <xref:System.ServiceModel.FaultException> Obiektu będzie zawierać bardzo niewielka ilość informacji. Można kontrolować informacje wysyłane do klienta przez definiowanie kontraktu usterek i zwróci komunikat jako <xref:System.ServiceModel.FaultException%601>. Aby uzyskać więcej informacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="ierrorhandler"></a>Interfejsy IErrorHandler  
- <xref:System.ServiceModel.Dispatcher.IErrorHandler> Interfejs umożliwia większą kontrolę nad jak aplikacja WCF reaguje na błędy.  Udostępnia pełną kontrolę nad komunikat o błędzie, jest zwracana do klienta, który umożliwia wykonywanie przetwarzania, takich jak rejestrowanie błędów niestandardowych.  [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Dispatcher.IErrorHandler> i [rozszerzanie kontroli obsługi i raportowania błędów](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler> Interfejs umożliwia większą kontrolę nad jak aplikacja WCF reaguje na błędy.  Udostępnia pełną kontrolę nad komunikat o błędzie, jest zwracana do klienta, który umożliwia wykonywanie przetwarzania, takich jak rejestrowanie błędów niestandardowych.  Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Dispatcher.IErrorHandler> i [rozszerzanie kontroli nad błąd obsługi i raportowania](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>Zdarzenia ServiceHost  
  <xref:System.ServiceModel.ServiceHost> Klasa usług hostów i definiuje kilka zdarzeń, które mogą być potrzebne do obsługi błędów. Na przykład:  

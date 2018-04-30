@@ -1,28 +1,28 @@
 ---
-title: "Powiązania dostarczane przez system"
-ms.custom: 
+title: Powiązania dostarczane przez system
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 
+caps.latest.revision: 60
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="system-provided-bindings"></a>Powiązania dostarczane przez system
 Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i określić sposób nawiązywania połączenia z punktem końcowym. Powiązanie zawiera następujące elementy:  
@@ -33,7 +33,7 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
   
 -   Kodowanie określa przewodowy kodowanie do użycia dla wiadomości, które są wysyłane do punktu końcowego, na przykład, text/XML, binarne lub mechanizmu optymalizacji transmisji wiadomości (MTOM).  
   
- W tym temacie przedstawiono wszystkie dostarczane przez system [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] powiązania. Jeśli nie spełnia żadnego z tych dokładnych kryteriów dla aplikacji, można utworzyć niestandardowego powiązania. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Tworzenie niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ W tym temacie przedstawiono wszystkie dostarczane przez system [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] powiązania. Jeśli nie spełnia żadnego z tych dokładnych kryteriów dla aplikacji, można utworzyć niestandardowego powiązania. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Bezpieczne i interoperacyjne powiązanie, który obsługuje protokół WS-Federation umożliwia organizacjom, które znajdują się w Federacji, aby wydajnie uwierzytelniania i autoryzacji użytkowników.  
   
@@ -49,19 +49,19 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
 |Powiązanie|Element konfiguracji|Opis|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji z profilu WS-Basic zgodność usług sieci Web, na przykład usługi sieci Web platformy ASP.NET (ASMX) — na podstawie usług. To powiązanie korzysta z protokołu HTTP jako transportu i tekstu/XML jako domyślne kodowanie komunikatu.|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów na usługę non-duplex.|  
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów na usługę non-duplex.|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługuje protokół WS-Federation, która umożliwia organizacjom, które znajdują się w Federacji, aby wydajnie uwierzytelniania i autoryzacji użytkowników.|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługuje protokół WS-Federation, która umożliwia organizacjom, które znajdują się w Federacji, aby wydajnie uwierzytelniania i autoryzacji użytkowników.|  
 |<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding >|Powiązanie przeznaczony do używania protokołu HTTP lub protokołu WebSocket usług używającej kodowanie binarne domyślnie.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|Bezpiecznego powiązania przeznaczony do używania protokołu HTTP lub protokołu WebSocket usług używającej kodowanie binarne domyślnie.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Bezpieczne, niezawodne i zoptymalizowane powiązanie, które jest odpowiednie dla komunikacji na komputerze między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Zakolejkowane powiązanie, które jest odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Powiązanie, które umożliwia bezpieczne, wiele komunikacji maszyny.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i istniejące aplikacje usługi kolejkowania komunikatów.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i istniejące aplikacje usługi kolejkowania komunikatów.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<Obiekt basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji z zgodność profilu WS-Basic usług sieci Web umożliwiającą plików cookie protokołu HTTP używanego do wymiany kontekstu.|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji, które umożliwia nagłówki SOAP używanego do wymiany kontekstu.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Wiązanie używane do konfigurowania punktów końcowych dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług, które są dostępne za pośrednictwem żądania HTTP zamiast na wiadomości SOAP sieci Web.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Wiązanie używane do konfigurowania punktów końcowych dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług, które są dostępne za pośrednictwem żądania HTTP zamiast na wiadomości SOAP sieci Web.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Bezpieczny i |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|Wiązanie używane podczas wysyłania serii proste wiadomości do wielu klientów jednocześnie.|  
   
  W poniższej tabeli przedstawiono funkcje każdego powiązania dostarczane przez system. Powiązania znajdują się w kolumnach tabeli; funkcje są wyświetlane w wierszach i opisane w drugiej tabeli. Poniższa tabela zawiera klucz, skróty powiązanie użyte. Aby wybrać powiązanie, określić kolumnę, która spełnia wszystkie potrzebne funkcje wiersza.  
@@ -85,7 +85,7 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
 |<xref:System.ServiceModel.UdpBinding>|.NET **Uwaga:** współdziałanie można osiągnąć poprzez wdrożenie standardowe specyfikacji SOAP-over-UDP, która implementuje tego powiązania.|(Brak)|(Brak)|(Brak)|n/d|(Tekst)|Nie|  
   
 > [!IMPORTANT]
->  <xref:System.ServiceModel.NetHttpBinding>jest przeznaczony do używania protokołu HTTP lub protokołu WebSocket usług powiązania i używa kodowanie binarne domyślnie. <xref:System.ServiceModel.NetHttpBinding>wykryje, czy jest używana z kontraktu "żądanie-odpowiedź" lub kontraktu dwukierunkowego i zmianę jego zachowania, aby dopasować — zostanie użyty dla dupleks HTTP dla żądanie odpowiedź i technologia WebSockets. To zachowanie można przesłonić przy użyciu <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` powiązanie ustawienie: dozwolone — jest to wartość domyślna i działa zgodnie z powyższym opisem. NotAllowed — uniemożliwia to Websocket używana. Podjęto próbę użycia kontraktu dwukierunkowego tego ustawienia spowoduje Wystąpił wyjątek. Wymagana — wymusza Websocket do użycia nawet w przypadku kontraktów "żądanie-odpowiedź". NetHttpBinding obsługuje zarówno w trybie HTTP, jak i w trybie protokołu WebSocket niezawodnej sesji. W WebSocket tryb sesji są dostarczane przez transport.  
+>  <xref:System.ServiceModel.NetHttpBinding> jest przeznaczony do używania protokołu HTTP lub protokołu WebSocket usług powiązania i używa kodowanie binarne domyślnie. <xref:System.ServiceModel.NetHttpBinding> wykryje, czy jest używana z kontraktu "żądanie-odpowiedź" lub kontraktu dwukierunkowego i zmianę jego zachowania, aby dopasować — zostanie użyty dla dupleks HTTP dla żądanie odpowiedź i technologia WebSockets. To zachowanie można przesłonić przy użyciu <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` powiązanie ustawienie: dozwolone — jest to wartość domyślna i działa zgodnie z powyższym opisem. NotAllowed — uniemożliwia to Websocket używana. Podjęto próbę użycia kontraktu dwukierunkowego tego ustawienia spowoduje Wystąpił wyjątek. Wymagana — wymusza Websocket do użycia nawet w przypadku kontraktów "żądanie-odpowiedź". NetHttpBinding obsługuje zarówno w trybie HTTP, jak i w trybie protokołu WebSocket niezawodnej sesji. W WebSocket tryb sesji są dostarczane przez transport.  
   
  W poniższej tabeli przedstawiono funkcje wymienione w powyższej tabeli.  
   

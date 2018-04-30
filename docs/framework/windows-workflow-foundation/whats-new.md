@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 73f4364d92c366dc6750144668f722fea93bca2b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Co&#39;s nowe w programie Windows Workflow Foundation
-Windows Workflow Foundation (WF) w [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zmienia kilka wzorcami programowanie z poprzednich wersji. Przepływy pracy są teraz łatwiejsze do tworzenia, zostanie wykonane, obsługi i wdrożenie hosta funkcji. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrowanie .NET 3.0 i .NET 3.5 przepływu pracy aplikacji do korzystania z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Windows Workflow Foundation (WF) w [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zmienia kilka wzorcami programowanie z poprzednich wersji. Przepływy pracy są teraz łatwiejsze do tworzenia, zostanie wykonane, obsługi i wdrożenie hosta funkcji. Aby uzyskać więcej informacji na temat migrowania aplikacji .NET 3.0 i .NET 3.5 przepływu pracy korzysta z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Model działania przepływu pracy  
  Działanie jest teraz podstawowa jednostka tworzenia przepływu pracy, a nie za pomocą <xref:System.Workflow.Activities.SequentialWorkflowActivity> lub <xref:System.Workflow.Activities.StateMachineWorkflowActivity> klasy. <xref:System.Activities.Activity> Klasa udostępnia podstawowe abstrakcji działania przepływu pracy. Autorzy działania można następnie wdrożyć to rozwiązanie albo <xref:System.Activities.CodeActivity> funkcji podstawowych działań niestandardowych lub <xref:System.Activities.NativeActivity> dla działań niestandardowych funkcje, które używa szerokość środowiska uruchomieniowego. <xref:System.Activities.Activity> jest klasą używaną przez autorów działania Express nowe zachowania deklaratywnie pod względem innych <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, lub <xref:System.Activities.DynamicActivity> obiekty, czy są one opracowany niestandardowe lub składnikach uwzględnionych w [wbudowane działania Biblioteka](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  

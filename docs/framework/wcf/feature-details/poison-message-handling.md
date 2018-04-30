@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja kolejki nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty w ramach transakcji. Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, tak, aby komunikat zostanie ponowiony w nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może zostać zablokowane w pętli otrzymywanie i przerywanie tę samą wiadomość do czasu przekroczyła maksymalną liczbę prób dostarczenia i wyniki Trująca wiadomość.  
@@ -104,7 +104,7 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
  Sesja ulega poison komunikat — Obsługa procedur i ponów próbę wykonania tego samego jako pojedynczym komunikacie. Właściwości wymienionego powyżej skażone komunikaty dotyczą całej sesji. Oznacza to, że całej sesji próba zostanie ponowiona i przechodzi do końcowego kolejki komunikatów poison lub kolejki utraconych wiadomości nadawcy, jeśli komunikat zostanie odrzucony.  
   
 ## <a name="batching-and-poison-messages"></a>Przetwarzanie wsadowe i skażone komunikaty  
- Jeśli wiadomość staje się Trująca wiadomość i jest częścią partii, całą partię zostanie wycofana i zwraca kanału do odczytywania jeden komunikat w czasie. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Przetwarzanie wsadowe, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Jeśli wiadomość staje się Trująca wiadomość i jest częścią partii, całą partię zostanie wycofana i zwraca kanału do odczytywania jeden komunikat w czasie. Aby uzyskać więcej informacji na temat przetwarzania wsadowego, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Obsługa komunikatów w kolejce skażone poison komunikatów  
  Obsługa komunikatów poison nie zakończy się wiadomość jest umieszczana w kolejce wiadomości poison. Wiadomości w kolejce wiadomości poison nadal musi być do odczytu i obsługi. Podzbiór ustawienia poison komunikat — Obsługa można użyć podczas odczytywania wiadomości z ostatnim trującej. Są stosowane ustawienia `ReceiveRetryCount` i `ReceiveErrorHandling`. Można ustawić `ReceiveErrorHandling` porzucić Odrzuć lub Fault. `MaxRetryCycles` jest ignorowany i jest zwracany wyjątek, jeśli `ReceiveErrorHandling` ma wartość Move.  

@@ -1,34 +1,36 @@
 ---
-title: "Porady: dostosowywanie powiązania dostarczane przez System"
-ms.custom: 
+title: 'Porady: dostosowywanie powiązania dostarczane przez System'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Porady: dostosowywanie powiązania dostarczane przez System
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zawiera kilka powiązania dostarczane przez system, które umożliwiają konfigurowanie niektórych właściwości podstawowych elementów powiązania, ale nie wszystkie właściwości. W tym temacie przedstawiono sposób ustawiania właściwości do powiązania elementów do tworzenia niestandardowego powiązania.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera kilka powiązania dostarczane przez system, które umożliwiają konfigurowanie niektórych właściwości podstawowych elementów powiązania, ale nie wszystkie właściwości. W tym temacie przedstawiono sposób ustawiania właściwości do powiązania elementów do tworzenia niestandardowego powiązania.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak bezpośrednio utworzyć i skonfigurować elementy powiązania bez korzystania z wiązania dostarczane przez system, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Aby uzyskać więcej informacji o sposobie bezpośrednio utworzyć i skonfigurować elementy powiązania bez korzystania z wiązania dostarczane przez system, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie i rozszerzanie wiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Aby uzyskać więcej informacji o tworzeniu i rozszerzanie wiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
  W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składają się wszystkie powiązania z *elementów wiązania*. Każdy element powiązania jest pochodną <xref:System.ServiceModel.Channels.BindingElement> klasy. Powiązania dostarczane przez system, takich jak <xref:System.ServiceModel.BasicHttpBinding> utworzyć i skonfigurować własne elementy wiązania. W tym temacie przedstawiono sposób dostępu i zmiana właściwości tych elementów powiązania, które nie są bezpośrednio widoczne dla powiązania; w szczególności <xref:System.ServiceModel.BasicHttpBinding> klasy.  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>Ujawnianie informacji
 Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji na temat systemu. W związku z tym zawsze należy wziąć pod uwagę jakie informacje są ujawniania i czy mogą być używane przez złośliwego użytkownika. Poniżej przedstawiono informacje o możliwych ataków ujawnienie i zapewnia środki zaradcze dla każdego.  
@@ -29,7 +29,7 @@ Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji
  Jeśli używane są zabezpieczenia na poziomie komunikatu za pośrednictwem warstwy transportu HTTP, należy pamiętać, zabezpieczenia na poziomie komunikatu nie chroni nagłówków HTTP. Jedynym sposobem, aby chronić nagłówków HTTP jest używają protokołu HTTPS zamiast protokołu HTTP. HTTPS transport powoduje, że cały komunikat, włącznie z nagłówkami HTTP szyfrowania przy użyciu protokołu Secure Sockets Layer (SSL).  
   
 ## <a name="policy-information"></a>Informacje o zasadach  
- Dzięki bezpieczna zasad jest ważne, szczególnie w scenariuszach Federacji, gdzie informacje wystawcy tokenu lub poufnych wymagania wystawiony token jest widoczna w zasadach. W takich przypadkach zaleca się bezpieczny punkt końcowy zasad usługi federacyjnej, aby uniemożliwić osobom atakującym uzyskania informacji na temat usługi, takie jak typ oświadczenia, które mają zostać umieszczone w wystawionego tokenu lub przekierowanie klientów do złośliwego wystawcy tokenu. Na przykład osoba atakująca może odnaleźć pary nazwa/hasło użytkownika przez ponowne skonfigurowanie łańcuch zaufania federacyjnego zakończenie w wystawcę wykonywania ataku typu man-in--middle. Zalecane jest również federacyjnych klientów, którzy uzyskać ich powiązania za pośrednictwem pobieranie zasad Sprawdź, zaufanych wystawców w łańcuchu zaufania federacyjnego uzyskany. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz scenariuszach Federacji [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Dzięki bezpieczna zasad jest ważne, szczególnie w scenariuszach Federacji, gdzie informacje wystawcy tokenu lub poufnych wymagania wystawiony token jest widoczna w zasadach. W takich przypadkach zaleca się bezpieczny punkt końcowy zasad usługi federacyjnej, aby uniemożliwić osobom atakującym uzyskania informacji na temat usługi, takie jak typ oświadczenia, które mają zostać umieszczone w wystawionego tokenu lub przekierowanie klientów do złośliwego wystawcy tokenu. Na przykład osoba atakująca może odnaleźć pary nazwa/hasło użytkownika przez ponowne skonfigurowanie łańcuch zaufania federacyjnego zakończenie w wystawcę wykonywania ataku typu man-in--middle. Zalecane jest również federacyjnych klientów, którzy uzyskać ich powiązania za pośrednictwem pobieranie zasad Sprawdź, zaufanych wystawców w łańcuchu zaufania federacyjnego uzyskany. Aby uzyskać więcej informacji o scenariuszach Federacji, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Zrzuty pamięci mogą zawierać informacje o  
  W przypadku awarii aplikacji pliki dzienników, takich jak te utworzone przez odzyskiwania po awarii. Watson, mogą zawierać informacje oświadczeń. Te informacje nie powinny być eksportowany do inne jednostki, na przykład zespoły pomocy technicznej; w przeciwnym razie informacje oświadczenia, które zawiera dane prywatne, również są eksportowane. Można to zagrożenie, wysyłając nie pliki dziennika na nieznany jednostki. Aby uzyskać więcej informacji, zobacz [systemu Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Ten kod nie określa nazwy domeny, a w związku z tym będzie można użyć uwierzytelniania NTLM.  
   
- Jeśli zostanie określona domena, ale nieprawidłowa główna nazwa usługi jest określona za pomocą funkcji tożsamość punktu końcowego, uwierzytelnianie NTLM jest używany. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Określono tożsamość punktu końcowego, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Jeśli zostanie określona domena, ale nieprawidłowa główna nazwa usługi jest określona za pomocą funkcji tożsamość punktu końcowego, uwierzytelnianie NTLM jest używany. Aby uzyskać więcej informacji dotyczących sposobu określono tożsamość punktu końcowego, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

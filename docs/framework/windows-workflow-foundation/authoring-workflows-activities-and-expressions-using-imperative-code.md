@@ -1,23 +1,24 @@
 ---
-title: "Tworzenie przepływów pracy, działań i wyrażenia przy użyciu kodu Imperatywne"
-ms.custom: 
+title: Tworzenie przepływów pracy, działań i wyrażenia przy użyciu kodu Imperatywne
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee7c5320caa3b7704813b94d4ddfbf1ce0fecf96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efbefbffdc0314826a361b4a165c67ab1828e40b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Tworzenie przepływów pracy, działań i wyrażenia przy użyciu kodu Imperatywne
 Definicji przepływu pracy jest drzewa obiektów skonfigurowane działania. Tego drzewa działania można zdefiniować wiele sposobów, łącznie z ręcznie edytować XAML lub za pomocą projektanta przepływów pracy do produkcji XAML. Korzystanie z języka XAML, jednak nie jest wymagane. Można także programowo utworzyć definicji przepływu pracy. Ten temat zawiera omówienie tworzenia definicji przepływu pracy, działań i wyrażenia przy użyciu kodu. Przykłady z przepływów pracy XAML przy użyciu kodu) (Praca można znaleźć [serializacji przepływów pracy i działań do i z XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
@@ -28,7 +29,7 @@ Definicji przepływu pracy jest drzewa obiektów skonfigurowane działania. Tego
  [!code-csharp[CFX_WorkflowApplicationExample#47](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
->  Przykłady w tym temacie <xref:System.Activities.WorkflowInvoker> do uruchamiania przepływów pracy próbki. [!INCLUDE[crabout](../../../includes/crabout-md.md)]wywoływanie przepływy pracy, przekazywanie argumentów i różnych opcji obsługi, które są dostępne, zobacz [przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md).  
+>  Przykłady w tym temacie <xref:System.Activities.WorkflowInvoker> do uruchamiania przepływów pracy próbki. Aby uzyskać więcej informacji na temat wywoływania przepływy pracy, przekazywanie argumentów i różnych opcji obsługi, które są dostępne, zobacz [przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md).  
   
  W tym przykładzie przepływ pracy, który składa się pojedyncza <xref:System.Activities.Statements.WriteLine> utworzeniu działania. <xref:System.Activities.Statements.WriteLine> Działania <xref:System.Activities.Statements.WriteLine.Text%2A> argument ma wartość i jest wywoływane przez przepływ pracy. Jeśli działanie występują działania podrzędne, przypomina metody konstrukcji. W poniższym przykładzie użyto <xref:System.Activities.Statements.Sequence> działania, która zawiera dwa <xref:System.Activities.Statements.WriteLine> działań.  
   
@@ -39,7 +40,7 @@ Definicji przepływu pracy jest drzewa obiektów skonfigurowane działania. Tego
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Inicjatory obiektów, zobacz [porady: Inicjowanie obiektów bez wywoływania konstruktora (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkId=161015) i [porady: deklarowanie obiektu za pomocą inicjatora obiektów](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Aby uzyskać więcej informacji na temat inicjatory obiektów, zobacz [porady: Inicjowanie obiektów bez wywoływania konstruktora (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkId=161015) i [porady: deklarowanie obiektu za pomocą inicjatora obiektów](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>Praca z zmiennych, wartości literałów i wyrażenia  
  Podczas tworzenia definicji przepływu pracy, przy użyciu kodu, należy pamiętać o jakie kod wykonywany w ramach tworzenia definicji przepływu pracy i jakie kod wykonywany w ramach wykonywania wystąpienia przepływ pracy. Na przykład poniższy przepływ pracy ma na celu Generowanie liczby losowej i zapisują do konsoli.  
@@ -65,13 +66,13 @@ new Assign<int>
  A <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> reprezentuje wyrażenie w składni języka Visual Basic, który może służyć jako r w wyrażeniu, a <xref:Microsoft.CSharp.Activities.CSharpValue%601> reprezentuje wyrażenie w składni języka C#, który może służyć jako r w wyrażeniu. Wyrażenia te są oceniane pod każdym razem, gdy jest wykonywane działanie zawierającego. Wynikiem wyrażenia jest przypisany do zmiennej przepływu pracy `n`, a te wyniki są używane przez następne działanie w przepływie pracy. Aby uzyskać dostęp do wartości zmiennej przepływu pracy `n` w czasie wykonywania, <xref:System.Activities.ActivityContext> jest wymagana. To jest możliwy za pomocą następującego wyrażenia lambda.  
   
 > [!NOTE]
->  Należy pamiętać, że oba te kodu przedstawiono przykłady są przy użyciu języka C# jako języka programowania, ale korzysta z jednego <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> i korzysta z jednego <xref:Microsoft.CSharp.Activities.CSharpValue%601>. <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>i <xref:Microsoft.CSharp.Activities.CSharpValue%601> mogą być używane w projektach zarówno Visual Basic i C#. Domyślnie wyrażenia utworzone w Projektancie przepływów pracy język projektu hostingu. Podczas tworzenia przepływów pracy w kodzie, jest odpowiedni język, według uznania Autor przepływu pracy.  
+>  Należy pamiętać, że oba te kodu przedstawiono przykłady są przy użyciu języka C# jako języka programowania, ale korzysta z jednego <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> i korzysta z jednego <xref:Microsoft.CSharp.Activities.CSharpValue%601>. <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> i <xref:Microsoft.CSharp.Activities.CSharpValue%601> mogą być używane w projektach zarówno Visual Basic i C#. Domyślnie wyrażenia utworzone w Projektancie przepływów pracy język projektu hostingu. Podczas tworzenia przepływów pracy w kodzie, jest odpowiedni język, według uznania Autor przepływu pracy.  
   
  W tych przykładach wynikiem wyrażenia jest przypisany do zmiennej przepływu pracy `n`, a te wyniki są używane przez następne działanie w przepływie pracy. Aby uzyskać dostęp do wartości zmiennej przepływu pracy `n` w czasie wykonywania, <xref:System.Activities.ActivityContext> jest wymagana. To jest możliwy za pomocą następującego wyrażenia lambda.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]wyrażenia lambda, zobacz [wyrażenia Lambda (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkID=152436) lub [wyrażenia Lambda (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437).  
+ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażenia Lambda (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkID=152436) lub [wyrażenia Lambda (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437).  
   
  Wyrażenia lambda nie są można serializować do formatu XAML. Jeśli podejmowana jest próba do serializacji przepływu pracy za pomocą wyrażeń lambda, <xref:System.Activities.Expressions.LambdaSerializationException> zostanie zgłoszony następujący komunikat o błędzie: "ten przepływ pracy zawiera wyrażenia lambda określone w kodzie. Wyrażenia te nie są XAML do serializacji. Aby przepływ pracy do serializacji XAML, użyj obiektu VisualBasicValue/VisualBasicReference lub metody ExpressionServices.Convert(lambda). Spowoduje to przekonwertowanie wyrażenia lambda na działania wyrażeń." Aby to wyrażenie zgodne z XAML, użyj <xref:System.Activities.Expressions.ExpressionServices> i <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, jak pokazano w poniższym przykładzie.  
   
@@ -81,7 +82,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- W czasie wykonywania wyrażenia języka Visual Basic są kompilowane do wyrażenia LINQ. W poprzednich przykładach jest możliwy do serializacji w języku XAML, ale jeśli serializacji XAML ma można wyświetlić i edytować w Projektancie przepływów pracy, użyj <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> dla wyrażenia. Serializowany przepływy pracy używające `ExpressionServices.Convert` może być otwarty w projektancie, ale wartość wyrażenia będzie puste. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Serializacja przepływów pracy w języku XAML, zobacz [serializacji przepływów pracy i działań do i z XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ W czasie wykonywania wyrażenia języka Visual Basic są kompilowane do wyrażenia LINQ. W poprzednich przykładach jest możliwy do serializacji w języku XAML, ale jeśli serializacji XAML ma można wyświetlić i edytować w Projektancie przepływów pracy, użyj <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> dla wyrażenia. Serializowany przepływy pracy używające `ExpressionServices.Convert` może być otwarty w projektancie, ale wartość wyrażenia będzie puste. Aby uzyskać więcej informacji na temat serializacji przepływów pracy w języku XAML, zobacz [serializacji przepływów pracy i działań do i z XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 #### <a name="literal-expressions-and-reference-types"></a>Wyrażenia dosłowne i typy referencyjne  
  Wyrażenia dosłowne są reprezentowane w przepływach pracy przez <xref:System.Activities.Expressions.Literal%601> działania. Następujące <xref:System.Activities.Statements.WriteLine> działania działają tak samo.  
@@ -117,7 +118,7 @@ new Assign
 },  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]wyrażeń, zobacz [wyrażenia](../../../docs/framework/windows-workflow-foundation/expressions.md).  
+ Aby uzyskać więcej informacji na temat wyrażeń, zobacz [wyrażenia](../../../docs/framework/windows-workflow-foundation/expressions.md).  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>Wywoływanie metod obiektów przy użyciu wyrażeń i działania InvokeMethod  
  <xref:System.Activities.Expressions.InvokeMethod%601> Działanie może być używane do wywołania statyczne i wystąpienie metody klas w programie .NET Framework. W poprzednim przykładzie, w tym temacie, liczbę losową został wygenerowany za pomocą <xref:System.Random> klasy.  
@@ -147,7 +148,7 @@ new InvokeMethod<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]dynamiczne działań, zobacz [tworzenia działania w czasie wykonywania](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md).  
+ Aby uzyskać więcej informacji o działaniach dynamicznej, zobacz [tworzenia działania w czasie wykonywania](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md).  
   
 ## <a name="compiled-activities"></a>Skompilowany działań  
  Dynamiczne działania są jednym ze sposobów zdefiniuj działanie, które zawiera argumenty, przy użyciu kodu, ale również można tworzyć w kodzie i skompilować do typów działań. Proste można tworzyć działania pochodzące z <xref:System.Activities.CodeActivity>oraz asynchroniczne działania, które pochodzi od <xref:System.Activities.AsyncCodeActivity>. Te działania mogą mieć argumentów, zwracać wartości i definiowanie ich logiki przy użyciu kodu imperatywnych. Przykłady tworzenia tych typów działań, zobacz [klasa podstawowa klasy CodeActivity](../../../docs/framework/windows-workflow-foundation/workflow-activity-authoring-using-the-codeactivity-class.md) i [tworzenia działań asynchroniczne](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  

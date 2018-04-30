@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
 A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tych list można przedstawić przy użyciu tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może utrzymywać listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
@@ -42,7 +42,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
   
  Typy zawarte w kolekcji musi być typy kontraktu danych, lub w inny sposób możliwy do serializacji. Aby uzyskać więcej informacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Co to jest i co to jest uznawane za prawidłowe kolekcji, jak również informacje jak kolekcje są serializowane, zapoznaj się z informacjami o serializowanie kolekcji w sekcji "Zaawansowane zasady kolekcji" tego tematu.  
+ Aby uzyskać więcej informacji na temat nowości i co to jest uznawane za prawidłowe kolekcji, a także o sposobie kolekcje są serializowane zobacz informacje o serializacji kolekcji w sekcji "Zaawansowane zasady kolekcji" tego tematu.  
   
 ## <a name="interchangeable-collections"></a>Wymienne kolekcje  
  Wszystkie kolekcje listy tego samego typu, jest uznawany za tych samych danych kontraktu (chyba że są one dostosowane przy użyciu <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atrybutu, zgodnie z opisem w dalszej części tego tematu). W związku z tym na przykład następujące kontraktów danych są równoważne.  
@@ -91,7 +91,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
 ## <a name="customizing-collection-types"></a>Dostosowywanie typów kolekcji  
  Typy kolekcji można dostosować, używając <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atrybut, który ma kilka zastosowań.  
   
- Należy zwrócić uwagę tego Dostosowywanie kolekcji typów dokonywania kolekcji wymiennego stosowania, dlatego zazwyczaj zalecane jest aby uniknąć stosowania tego atrybutu, jeśli to możliwe. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ten problem, zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
+ Należy zwrócić uwagę tego Dostosowywanie kolekcji typów dokonywania kolekcji wymiennego stosowania, dlatego zazwyczaj zalecane jest aby uniknąć stosowania tego atrybutu, jeśli to możliwe. Aby uzyskać więcej informacji na temat tego problemu zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
   
 ### <a name="collection-data-contract-naming"></a>Kontraktu danych kolekcji nazewnictwa  
  Reguły nazewnictwa typy kolekcji są podobne do reguł nazewnictwa typy kontraktu danych regularne, zgodnie z opisem w [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md), mimo że istnieje kilka istotnych różnic:  
@@ -203,7 +203,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Słownik kolekcji, zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
+ Aby uzyskać więcej informacji o kolekcjach słownika zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
   
 ## <a name="collections-and-known-types"></a>Kolekcje i znanych typów  
  Dodawanie typów kolekcji znanych typów stosowania polymorphically zamiast inne kolekcje lub interfejsy kolekcji nie jest konieczne. Na przykład w przypadku elementu członkowskiego danych typu <xref:System.Collections.IEnumerable> i umożliwia wysyłanie wystąpienia <xref:System.Collections.ArrayList>, nie trzeba dodać <xref:System.Collections.ArrayList> do znanych typów.  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Łączenie typów kolekcji (o kolekcji kolekcje) jest dozwolone. Tablice nieregularne są traktowane jako kolekcje z kolekcji. Tablice wielowymiarowe nie są obsługiwane.  
   
--   Tablice typu byte i tablice <xref:System.Xml.XmlNode> to typy tablicy specjalne, które są traktowane jako typów podstawowych, nie kolekcji. Serializacja tablicę bajtów wyników w pojedynczy element XML zawierający fragmentów danych algorytmem Base64, zamiast elementu osobne dla każdego bajtu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] w jaki sposób tablicę <xref:System.Xml.XmlNode> jest traktowane, zobacz [typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Oczywiście te typy specjalne mogą się uczestniczyć w kolekcji: tablica tablicy bajtów skutkuje wiele elementów XML, z zawierających fragmentów danych algorytmem Base64.  
+-   Tablice typu byte i tablice <xref:System.Xml.XmlNode> to typy tablicy specjalne, które są traktowane jako typów podstawowych, nie kolekcji. Serializacja tablicę bajtów wyników w pojedynczy element XML zawierający fragmentów danych algorytmem Base64, zamiast elementu osobne dla każdego bajtu. Aby uzyskać więcej informacji o tym, jak tablicę <xref:System.Xml.XmlNode> jest traktowane, zobacz [typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Oczywiście te typy specjalne mogą się uczestniczyć w kolekcji: tablica tablicy bajtów skutkuje wiele elementów XML, z zawierających fragmentów danych algorytmem Base64.  
   
 -   Jeśli <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do typu kolekcji, typ jest traktowany jako typ kontraktu regularnych danych, nie jako kolekcja.  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Domyślna nazwa listy kontraktów danych kolekcji, chyba że zastąpione przy użyciu nazwy, jest ciąg "ArrayOf" łączyć o nazwie kontraktu danych typu zawartego w kolekcji. Na przykład nazwa kontraktu danych ogólnych listy liczb całkowitych jest "ArrayOfint". Należy pamiętać, że nazwa kontraktu danych `Object` jest "anyType", takie jak nazwa kontraktu danych list nieogólnego <xref:System.Collections.ArrayList> jest "ArrayOfanyType".  
   
- Domyślna nazwa dla słownika danych kolekcji umów, chyba że przesłonić przy użyciu `Name`, to ciąg "ArrayOfKeyValueOf" połączone z nazwą kontraktu danych typu klucza następuje nazwa kontraktu danych typu wartości. Na przykład dane nazwy kontraktu dla ogólnego słownika ciągiem, a liczba całkowita jest "ArrayOfKeyValueOfstringint". Ponadto jeśli klucz lub typów wartości nie są typy pierwotne, skrót przestrzeni nazw z przestrzeni nazw kontraktu danych typów kluczy i wartości jest dołączany do nazwy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] skróty przestrzeni nazw, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Domyślna nazwa dla słownika danych kolekcji umów, chyba że przesłonić przy użyciu `Name`, to ciąg "ArrayOfKeyValueOf" połączone z nazwą kontraktu danych typu klucza następuje nazwa kontraktu danych typu wartości. Na przykład dane nazwy kontraktu dla ogólnego słownika ciągiem, a liczba całkowita jest "ArrayOfKeyValueOfstringint". Ponadto jeśli klucz lub typów wartości nie są typy pierwotne, skrót przestrzeni nazw z przestrzeni nazw kontraktu danych typów kluczy i wartości jest dołączany do nazwy. Aby uzyskać więcej informacji na temat skrótów przestrzeni nazw, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Każdy kontraktu danych kolekcji słownik ma pomocnika kontraktu danych, który reprezentuje jeden wpis w słowniku. Jego nazwa jest taka sama jak w przypadku słownika kontraktu danych, z wyjątkiem prefiksu "ArrayOf" i jego przestrzeni nazw są takie same jak kontraktu danych słownika. Na przykład dla kontraktu danych słownika "ArrayOfKeyValueOfstringint", "KeyValueofstringint" kontraktu danych reprezentuje jeden wpis w słowniku. Nazwa tego kontraktu danych można dostosować, używając `ItemName` właściwości, zgodnie z opisem w następnej sekcji.  
   

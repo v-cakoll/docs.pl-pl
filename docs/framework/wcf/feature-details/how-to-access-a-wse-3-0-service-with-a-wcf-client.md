@@ -1,32 +1,34 @@
 ---
-title: "Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF"
-ms.custom: 
+title: 'Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Klienci są przewodowy poziom zgodny z sieci Web usług ulepszenia (WSE) 3.0 dla usług Microsoft .NET, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów są skonfigurowane do korzystania z sierpnia 2004 wersja specyfikacji WS-Addressing. Jednak usługi WSE 3.0 nie obsługują protokół exchange (MEX) metadanych, dlatego jeśli używasz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta, ustawienia zabezpieczeń nie są stosowane do wygenerowany [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. W związku z tym należy określić ustawienia zabezpieczeń, które wymaga usługi WSE 3.0 po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest generowany przez klienta.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Klienci są przewodowy poziom zgodny z sieci Web usług ulepszenia (WSE) 3.0 dla usług Microsoft .NET, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów są skonfigurowane do korzystania z sierpnia 2004 wersja specyfikacji WS-Addressing. Jednak usługi WSE 3.0 nie obsługują protokół exchange (MEX) metadanych, dlatego jeśli używasz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta, ustawienia zabezpieczeń nie są stosowane do wygenerowany [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. W związku z tym należy określić ustawienia zabezpieczeń, które wymaga usługi WSE 3.0 po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest generowany przez klienta.  
   
- Można zastosować te ustawienia zabezpieczeń przy użyciu niestandardowego powiązania wziąć pod uwagę wymagania dotyczące usługi WSE 3.0 i wymagania współpraca między usługi WSE 3.0 i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. Te wymagania dotyczące współdziałania obejmują wyżej wymienione korzystanie z sierpnia 2004 specyfikacji WS-Addressing i WSE 3.0default wiadomości ochrony <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Domyślna ochrona wiadomości dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. W tym temacie szczegółowo przedstawiają, jak utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania, który współdziała z usługi WSE 3.0. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia również próbki, która będzie zawierała tego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ten przykład, zobacz [współpracy z usługami sieci Web ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
+ Można zastosować te ustawienia zabezpieczeń przy użyciu niestandardowego powiązania wziąć pod uwagę wymagania dotyczące usługi WSE 3.0 i wymagania współpraca między usługi WSE 3.0 i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. Te wymagania dotyczące współdziałania obejmują wyżej wymienione korzystanie z sierpnia 2004 specyfikacji WS-Addressing i WSE 3.0default wiadomości ochrony <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Domyślna ochrona wiadomości dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. W tym temacie szczegółowo przedstawiają, jak utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania, który współdziała z usługi WSE 3.0. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia również próbki, która będzie zawierała tego powiązania. Aby uzyskać więcej informacji dotyczących tego przykładu, zobacz [współpracy z usługami sieci Web ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Do uzyskania dostępu do usługi sieci Web programu WSE 3.0 za pomocą klienta WCF  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
      Usługi sieci Web programu WSE 3.0 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klient jest tworzony. Ponieważ WSE 3.0 nie obsługuje protokołu MEX, nie można użyć narzędzia do pobierania wymagań bezpieczeństwa dla usługi sieci Web. Deweloper aplikacji należy dodać ustawienia zabezpieczeń dla klienta.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, zobacz [porady: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Aby uzyskać więcej informacji o tworzeniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, zobacz [porady: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Utwórz klasę, która reprezentuje powiązanie, który może komunikować się z usługami WSE 3.0 w sieci Web.  
   

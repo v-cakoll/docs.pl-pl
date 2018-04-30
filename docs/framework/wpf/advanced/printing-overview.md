@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 639e1bbac049e4186faa2b243200f7ef544add38
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f6478f23e6be8875ebe281b83094e4ea1d2e24e4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
-Z programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ma bogaty zestaw nowe drukowania i wydruku system zarządzania [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Z [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych ulepszeń system drukowania są również dostępne dla deweloperów, którzy tworzą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperów przy użyciu niezarządzanych kodu. Stanowiącej podstawę tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku.  
+W przypadku programu Microsoft .NET Framework deweloperzy aplikacji przy użyciu systemu Windows Presentation Foundation (WPF) mają bogaty zestaw nowe drukowania i wydruku system zarządzania [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Z [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych ulepszeń system drukowania są również dostępne dla deweloperów, którzy tworzą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperów przy użyciu niezarządzanych kodu. Stanowiącej podstawę tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku.  
   
  Ten temat zawiera następujące sekcje.  
   

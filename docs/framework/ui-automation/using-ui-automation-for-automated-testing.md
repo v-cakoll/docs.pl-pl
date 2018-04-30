@@ -20,11 +20,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d38183d90e99c7b8b9b5ffabb871f13886d801f0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/27/2018
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implementacja automatyzacji interfejsu użytkownika  
- Jak wspomniano wcześniej, bez ujednoliconego modelu udostępniane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], narzędzia testowania i deweloperów są wymagane do znajomości ujawnić właściwości i zachowania formantów w ramach tej informacji określonej struktury. Ponieważ może istnieć kilka różnych platform interfejsu użytkownika występuje w dowolnym momencie jednego systemu operacyjnego, w tym [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], i [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], może być lada wyzwanie testowanie wielu aplikacji z formantami, które wydają się podobne . Na przykład poniższa tabela przedstawia nazwy właściwości określonej struktury wymagany do pobrania skojarzony z kontrolką przycisku nazwę (lub tekst) i zawiera pojedynczy równoważne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości.  
+ Jak wspomniano wcześniej, bez ujednoliconego modelu udostępniane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], narzędzia testowania i deweloperów są wymagane do znajomości ujawnić właściwości i zachowania formantów w ramach tej informacji określonej struktury. Ponieważ może istnieć kilka różnych platform interfejsu użytkownika występuje w dowolnym momencie jednego systemu operacyjnego, w tym [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], i Windows Presentation Foundation (WPF), może być lada wyzwanie testowanie wielu aplikacji z formanty, które wydają się podobne. Na przykład poniższa tabela przedstawia nazwy właściwości określonej struktury wymagany do pobrania skojarzony z kontrolką przycisku nazwę (lub tekst) i zawiera pojedynczy równoważne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości.  
   
 |Automatyzacja interfejsu użytkownika — typ formantu|Framework interfejsu użytkownika|Określoną właściwość Framework|Właściwości automatyzacji interfejsu użytkownika|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

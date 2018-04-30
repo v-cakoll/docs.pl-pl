@@ -1,27 +1,29 @@
 ---
-title: "Konfigurowanie serializacji w usłudze przepływu pracy"
-ms.custom: 
+title: Konfigurowanie serializacji w usłudze przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8138fb94de953f133ab21cc2320e0914bc380fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47c66077da051fd70300e1961593e906fe8e77aa
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Konfigurowanie serializacji w usłudze przepływu pracy
-Usługi przepływu pracy są [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług i dlatego mają możliwość za pomocą <xref:System.Runtime.Serialization.DataContractSerializer> (ustawienie domyślne) lub <xref:System.Xml.Serialization.XmlSerializer>. Podczas zapisywania bez przepływu pracy typu serializatora do użycia usług został określony w kontrakcie usługi lub operacji. Podczas tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kontraktów usług przepływu pracy nie można określić w kodzie, ale raczej są one generowane w czasie wykonywania przez wnioskowania kontraktu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zwiń wnioskowania, zobacz [za pomocą kontraktów w przepływie pracy](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Serializator jest określona za pomocą <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> właściwości. To może można ustawić w projektancie, jak pokazano na poniższej ilustracji.  
+Usługi przepływu pracy są [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług i dlatego mają możliwość za pomocą <xref:System.Runtime.Serialization.DataContractSerializer> (ustawienie domyślne) lub <xref:System.Xml.Serialization.XmlSerializer>. Podczas zapisywania bez przepływu pracy typu serializatora do użycia usług został określony w kontrakcie usługi lub operacji. Podczas tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kontraktów usług przepływu pracy nie można określić w kodzie, ale raczej są one generowane w czasie wykonywania przez wnioskowania kontraktu. Aby uzyskać więcej informacji na temat wnioskowania kontraktu, zobacz [za pomocą kontraktów w przepływie pracy](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Serializator jest określona za pomocą <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> właściwości. To może można ustawić w projektancie, jak pokazano na poniższej ilustracji.  
   
  ![Ustawienia serializatora](../../../../docs/framework/wcf/feature-details/media/settingserialzier.png "SettingSerialzier")  
   
@@ -38,7 +40,7 @@ Receive approveExpense = new Receive
             };  
 ```  
   
- Znane typy można określać również usług przepływu pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Znane typy zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Znane typy można określić w Projektancie lub w kodzie. Aby określić znanych typów w projektancie, kliknij przycisk wielokropka obok właściwości element KnownTypes w oknie dialogowym właściwości <xref:System.ServiceModel.Activities.Receive> działania, jak pokazano na poniższej ilustracji.  
+ Znane typy można określać również usług przepływu pracy. Aby uzyskać więcej informacji na temat znanych typów zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Znane typy można określić w Projektancie lub w kodzie. Aby określić znanych typów w projektancie, kliknij przycisk wielokropka obok właściwości element KnownTypes w oknie dialogowym właściwości <xref:System.ServiceModel.Activities.Receive> działania, jak pokazano na poniższej ilustracji.  
   
  ![Element KnownTypes właściwości](../../../../docs/framework/wcf/feature-details/media/knowntypes.png "element KnownTypes")  
   

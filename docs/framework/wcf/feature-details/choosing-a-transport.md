@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>Wybieranie transportu
 W tym temacie omówiono kryteriów wyboru spośród trzech głównych transportów uwzględnionych w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP i nazwane potoki. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera również transportu MSMQ (MSMQ), ale ten dokument nie obejmuje usługi kolejkowania komunikatów.  
@@ -39,7 +39,7 @@ W tym temacie omówiono kryteriów wyboru spośród trzech głównych transport�
  W tej sekcji opisano główne powody wyboru jednego z trzech transportów głównego, w tym wybór między nimi wykres decyzji szczegółowe.  
   
 ### <a name="when-to-use-http-transport"></a>Kiedy należy używać transportu HTTP  
- HTTP jest protokołem żądanie/odpowiedź między klientami a serwerami. Najbardziej typowe aplikacja składa się z klientów w przeglądarkach sieci Web, które komunikują się z serwerem sieci Web. Klient wysyła żądanie do serwera, który oczekuje na komunikaty żądania klienta. Kiedy serwer odbiera żądanie, zwraca odpowiedź, który zawiera stan żądania. W przypadku powodzenia jest zwracana opcjonalna danych, takich jak strony sieci Web, komunikat o błędzie lub innych informacji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Protokół HTTP, zobacz [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP jest protokołem żądanie/odpowiedź między klientami a serwerami. Najbardziej typowe aplikacja składa się z klientów w przeglądarkach sieci Web, które komunikują się z serwerem sieci Web. Klient wysyła żądanie do serwera, który oczekuje na komunikaty żądania klienta. Kiedy serwer odbiera żądanie, zwraca odpowiedź, który zawiera stan żądania. W przypadku powodzenia jest zwracana opcjonalna danych, takich jak strony sieci Web, komunikat o błędzie lub innych informacji. Aby uzyskać więcej informacji na temat protokołu HTTP, zobacz [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
   
  Protokół HTTP nie jest opartego na połączeniach — po wysłaniu odpowiedzi Państwa nie jest obsługiwany. Do obsługi transakcji wielu stron, aplikacji, muszą zostać zachowane wszystkie niezbędne stanu.  
   

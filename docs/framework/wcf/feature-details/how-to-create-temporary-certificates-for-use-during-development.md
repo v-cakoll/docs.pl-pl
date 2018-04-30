@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
 Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], jest często przekazać certyfikat X.509 mają być używane jako poświadczenie. Certyfikat jest zwykle częścią łańcucha certyfikatów przy użyciu głównego urzędu został znaleziony w magazynie zaufanych głównych urzędów certyfikacji komputera. Posiadanie łańcuch certyfikatów umożliwia określania zakresu zestawu certyfikatów, w których zwykle głównego urzędu certyfikacji jest od swojej organizacji lub jednostki biznesowej. Aby emulować to w czasie tworzenia, możesz utworzyć dwa certyfikaty by spełnić ich wymagań zabezpieczeń. Pierwsza to certyfikatu z podpisem własnym, który jest umieszczony w magazynie zaufanych głównych urzędów certyfikacji i drugiego certyfikatu jest tworzona na podstawie pierwszego i znajduje się w magazynie osobistym lokalizacji komputera lokalnego lub w magazynie osobistym Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono kroki, aby utworzyć tych dwóch certyfikatów przy użyciu [narzędzie tworzenia certyfikatów (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), które są dostarczane przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zestawu SDK.  
@@ -33,7 +33,7 @@ Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo
 >   
 >  Domyślnie [Makecert.exe (narzędzie tworzenia certyfikatów)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) tworzy certyfikaty, których główny urząd certyfikacji jest nazywany "Agencji głównego **."** Ponieważ agencję"główny" nie ma w magazynie zaufanych głównych urzędów certyfikacji, dzięki temu te certyfikaty niezabezpieczonych. Tworzenie certyfikatu z podpisem własnym, który znajduje się w zaufanych głównych urzędów certyfikacji magazynu umożliwia utworzenie Środowisko deweloperskie, która symuluje dokładniejsze środowiska wdrażania.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie i używanie certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą certyfikatu jako poświadczeń, zobacz [zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Samouczek dotyczący przy użyciu technologii Microsoft Authenticode, zobacz [Authenticode omówienia i samouczki](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Aby uzyskać więcej informacji o używaniu certyfikatu jako poświadczeń, zobacz [zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Samouczek dotyczący przy użyciu technologii Microsoft Authenticode, zobacz [Authenticode omówienia i samouczki](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Utwórz samopodpisany certyfikat głównego urzędu certyfikacji i eksportowanie klucza prywatnego  
   

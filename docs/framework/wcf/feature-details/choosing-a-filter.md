@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
 Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i skonfigurować je do pozwalają zapewnić dokładne dopasowania przed wiadomości, które otrzymujesz. Jeśli wybrane filtry są zbyt szerokie w ich odpowiedniki lub są niepoprawnie skonfigurowane, komunikaty są kierowane niepoprawnie. Jeśli filtry są zbyt restrykcyjne, nie masz żadnych prawidłowy trasy dostępne dla niektórych wiadomości.  
@@ -144,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Ten filtr jest przydatne, jeśli wiadomo, że wiadomości, które otrzymujesz zawiera określoną wartość. Na przykład jeśli wiadomo, że komunikaty adresowane do nowszej wersji usługi zawiera unikatową wartość niestandardowego nagłówka znajdują się dwie wersje tej samej usługi, należy utworzyć filtr, który używa języka XPath można przejść do tego nagłówka i porównuje prez wartość Enterprise w nagłówku do innego podane w konfiguracji filtru do określenia, czy pasuje do filtru.  
   
- Ponieważ kwerendy XPath często zawierają unikatowy przestrzeni nazw, które są często długie lub wartości ciągu złożonych, filtr XPath umożliwia użycie tabeli przestrzeni nazw do definiowania prefiksy unikatowy dla obszary nazw. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] w tabeli nazw, zobacz [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Ponieważ kwerendy XPath często zawierają unikatowy przestrzeni nazw, które są często długie lub wartości ciągu złożonych, filtr XPath umożliwia użycie tabeli przestrzeni nazw do definiowania prefiksy unikatowy dla obszary nazw. Aby uzyskać więcej informacji o tabeli przestrzeni nazw, zobacz [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Projektowanie kwerendy XPath, zobacz [składni języka XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ Aby uzyskać więcej informacji na temat opracowywania kwerendy XPath, zobacz [składni języka XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)  

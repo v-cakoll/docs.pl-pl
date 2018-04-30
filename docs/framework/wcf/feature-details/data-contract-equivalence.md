@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>Równoważność kontraktów danych
 Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyślnie wysyłać dane do klienta wysłane typu nie zawsze musi istnieje po stronie odbiorczej. Jedynym wymaganiem jest równoważne kontraktów danych obu typów. (Czasami strict równoważność nie jest wymagana, zgodnie z opisem w [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyśl
 > [!NOTE]
 >  Należy pamiętać, że kontraktu danych, nazwy i przestrzeni nazw, jak również nazwy elementów członkowskich danych, jest rozróżniana wielkość liter.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nazwy kontraktów danych i przestrzenie nazw, jak również nazwy elementów członkowskich danych, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Aby uzyskać więcej informacji na temat nazw kontraktu danych i przestrzenie nazw, jak również nazwy elementów członkowskich danych, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Jeśli istnieją dwa typy na tej samej stronie (nadawcy i adresata) i ich kontraktów danych nie są równoważne (na przykład użytkownicy mają elementy członkowskie danych różnych), nie należy nadawać je taką samą nazwę i przestrzeń nazw. W ten sposób może spowodować wyjątki zostanie wygenerowany.  
   

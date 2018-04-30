@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>Magazyn wystąpienia przepływu pracy SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Jest dostarczany z SQL magazyn wystąpienia przepływu pracy, dzięki czemu przepływy pracy, aby zachować informacje o stanie dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Ta funkcja jest głównie zaimplementowana w formie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> klasy, która pochodzi z klasy abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy framework trwałości. Funkcja magazynu wystąpienia przepływu pracy SQL stanowi SQL dostawcy trwałości, który jest konkretną implementację trwałości interfejsu API używany przez hosta do wysyłania polecenia trwałości w magazynie.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
   
  Tematy w tej sekcji opisano właściwości i funkcji w magazynie wystąpień przepływu pracy SQL i dostarczać szczegółowe informacje na temat konfigurowania magazynu.  
   
- Windows Server AppFabric udostępnia własne wystąpienie magazynu i narzędziami uproszczenie konfiguracji i użycia w magazynie wystąpień. Aby uzyskać więcej informacji, zobacz zobacz [sklepu wystąpienia sieci szkieletowej dla systemu Windows Server](http://go.microsoft.com/fwlink/?LinkId=201201). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Zobacz danych aplikacji sieci szkieletowej programu SQL Server trwałości [aplikacji sieci szkieletowej trwałości bazy danych SQL](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server AppFabric udostępnia własne wystąpienie magazynu i narzędziami uproszczenie konfiguracji i użycia w magazynie wystąpień. Aby uzyskać więcej informacji, zobacz zobacz [sklepu wystąpienia sieci szkieletowej dla systemu Windows Server](http://go.microsoft.com/fwlink/?LinkId=201201). Aby uzyskać więcej informacji o aplikacji sieci szkieletowej trwałości bazy danych SQL, zobacz [aplikacji sieci szkieletowej trwałości bazy danych SQL](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   

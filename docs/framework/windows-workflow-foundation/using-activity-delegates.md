@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: a8b30882ef2e75f21c3b90d0e13ff06b52fe5229
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-activity-delegates"></a>Używanie delegatów działania
 Działanie delegatów Włącz autorów działania do udostępnienia wywołań zwrotnych z określonych podpisów, dla których użytkownik działania można podać oparte na działaniu programów obsługi. Dostępne są dwa typy delegatów działania: <xref:System.Activities.ActivityAction%601> służy do definiowania obiektów delegowanych działania, które nie mają zwracanych wartości, i <xref:System.Activities.ActivityFunc%601> służy do definiowania delegatów działania, które mają wartość zwracaną.  
@@ -38,7 +38,7 @@ Przykłady w tym temacie należy użyć składni inicjalizacji obiektu. Składni
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Inicjatory obiektów, zobacz [porady: Inicjowanie obiektów bez wywoływania konstruktora (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkId=161015) i [porady: deklarowanie obiektu za pomocą inicjatora obiektów](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Aby uzyskać więcej informacji na temat inicjatory obiektów, zobacz [porady: Inicjowanie obiektów bez wywoływania konstruktora (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkId=161015) i [porady: deklarowanie obiektu za pomocą inicjatora obiektów](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  W poniższym przykładzie <xref:System.Activities.Statements.TryCatch> działanie jest używane w przepływie pracy. <xref:System.ApplicationException> Jest generowany przez przepływ pracy i jest obsługiwany przez <xref:System.Activities.Statements.Catch%601> działania. Program obsługi dla <xref:System.Activities.Statements.Catch%601> Akcja działania działania jest <xref:System.Activities.Statements.WriteLine> działania i szczegóły wyjątku jest umieszczane za pośrednictwem do niej przy użyciu `ex` <xref:System.Activities.DelegateInArgument%601>.  
   

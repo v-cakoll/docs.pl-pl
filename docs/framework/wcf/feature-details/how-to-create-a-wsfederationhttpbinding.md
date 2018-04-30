@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Porady: tworzenie WSFederationHttpBinding
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> klasy ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) w konfiguracji) zapewnia mechanizm udostępnianie usługi federacyjnej. Oznacza to, że usługa, która wymaga od klientów uwierzytelniania za pomocą tokenu zabezpieczającego wydanego przez usługę tokenu zabezpieczającego. W tym temacie przedstawiono sposób konfigurowania <xref:System.ServiceModel.WSFederationHttpBinding> w kodzie i konfiguracji. Po utworzeniu powiązania punktu końcowego można skonfigurować do używania tego powiązania.  
@@ -48,7 +48,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceM
   
      Identyfikator URI dla tokenu SAML 1.1 jest "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  Opcjonalna. W usługach federacyjnych, należy ustawić <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> właściwość adres URL metadanych usługi tokenu zabezpieczającego. Punkt końcowy metadanych umożliwia klientom usługi wybierz para powiązanie odpowiednie/punktu końcowego, jeśli usługa jest skonfigurowana do publikowania metadanych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Publikowanie metadanych, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Opcjonalna. W usługach federacyjnych, należy ustawić <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> właściwość adres URL metadanych usługi tokenu zabezpieczającego. Punkt końcowy metadanych umożliwia klientom usługi wybierz para powiązanie odpowiednie/punktu końcowego, jeśli usługa jest skonfigurowana do publikowania metadanych. Aby uzyskać więcej informacji o publikowaniu metadanych, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Można również ustawić inne właściwości, takich jak typ klucz używany jako dowód klucza wystawionego tokenu, pakiet algorytmów do użycia między klientem a usługą, czy do negocjowania lub jawnie określ poświadczenia usługi, szczególne oświadczeń usługi oczekuje wystawiony token zawierał i wszelkie dodatkowe elementy XML dodane do żądania, które klient wysyła do usługi tokenu zabezpieczającego.  
   
@@ -103,7 +103,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceM
   
 12. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Wymagany na kliencie, jeśli określono nie wystawcy lokalnego; nie są używane w usłudze. Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) w sekcji powiązania, który może służyć do komunikacji z usługą tokenu zabezpieczeń. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie powiązania, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Wymagany na kliencie, jeśli określono nie wystawcy lokalnego; nie są używane w usłudze. Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) w sekcji powiązania, który może służyć do komunikacji z usługą tokenu zabezpieczeń. Aby uzyskać więcej informacji na temat tworzenia powiązania, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Określanie powiązania utworzony w poprzednim kroku, ustawiając `binding` i `bindingConfiguration` atrybuty `<issuer>` elementu.  
   

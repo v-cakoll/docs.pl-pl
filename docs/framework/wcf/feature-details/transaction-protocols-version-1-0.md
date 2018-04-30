@@ -1,32 +1,34 @@
 ---
-title: "Protokoły transakcyjne wersja 1.0"
-ms.custom: 
+title: Protokoły transakcyjne wersja 1.0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-protocols-version-10"></a>Protokoły transakcyjne wersja 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Wersja 1 implementuje wersji 1.0 protokołów WS-Atomic Transaction i koordynacji WS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]w wersji 1.1, zobacz [protokoły transakcji](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Wersja 1 implementuje wersji 1.0 protokołów WS-Atomic Transaction i koordynacji WS. Aby uzyskać więcej informacji o wersji 1.1, zobacz [protokoły transakcji](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
-|Koordynacji WS|http://msdn.microsoft.com/ws/2005/08/ws-Coordination/|  
-|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/WS-AtomicTransaction/|  
+|WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
+|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
  Współdziałanie z tymi specyfikacjami protokołu jest wymagany na dwa poziomy: między aplikacjami i między menedżerowie transakcji (zobacz poniższą ilustrację). Specyfikacje opisano szczegółowo formaty wiadomości i wiadomości programu exchange na obu poziomach współdziałania. Niektóre bezpieczeństwa, niezawodności i kodowania dla aplikacji do aplikacji programu exchange mają zastosowanie tak samo, jak dla programu exchange regularne aplikacji. Pomyślne współdziałanie menedżerowie transakcji wymaga jednak umowy dla określonego powiązania, ponieważ zwykle nie jest skonfigurowany przez użytkownika.  
   
@@ -70,12 +72,12 @@ ms.lasthandoff: 12/22/2017
   
 |Prefiks|Identyfikator URI Namespace|  
 |------------|-------------------|  
-|S11|http://schemas.xmlsoap.org/SOAP/Envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|wsa|http://www.w3.org/2004/08/addressing|  
 |wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
-|WSAT|http://schemas.xmlsoap.org/ws/2004/10/WSAT|  
+|WSAT|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
 |t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
-|O|http://docs.oasis-open.org/WSS/2004/01/oasis-200401-WSS-wssecurity-secext-1.0.xsd|  
+|o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
 |XSD|http://www.w3.org/2001/XMLSchema|  
   
 ## <a name="transaction-manager-bindings"></a>Menedżer transakcji powiązania  
@@ -94,10 +96,10 @@ ms.lasthandoff: 12/22/2017
 -   B1112: DNS musi być funkcjonalności każda para odbiornika nadawcy w systemie kontroli nazwa podmiotu X.509 powiodło się.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Aktywacja i rejestracja powiązania konfiguracji  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]wymaga dwukierunkowego powiązania żądania/odpowiedzi z korelacją za pośrednictwem protokołu HTTPS. (Aby uzyskać więcej informacji na temat korelacji i opisy wzorców wymiany wiadomości żądania/odpowiedzi, zobacz WS-Atomic Transaction, sekcja 8).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga dwukierunkowego powiązania żądania/odpowiedzi z korelacją za pośrednictwem protokołu HTTPS. (Aby uzyskać więcej informacji na temat korelacji i opisy wzorców wymiany wiadomości żądania/odpowiedzi, zobacz WS-Atomic Transaction, sekcja 8).  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja powiązania protokołu 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Szczegóły implementacji pozostaje korelacji między wiadomości.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Szczegóły implementacji pozostaje korelacji między wiadomości.  
   
  B2131: Implementacje musi obsługiwać `wsa:ReferenceParameters` zgodnie z opisem w WS-Addressing, aby osiągnąć korelacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]firmy 2PC wiadomości.  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 12/22/2017
  `wsse:Timestamp` Elementu muszą być podpisane przy użyciu `SecurityContextToken``STx` wystawione. Podpis jest potwierdzenie posiadania token skojarzony z określonej transakcji i jest używany do uwierzytelniania uczestnika rejestracji w transakcji. RegistrationResponse wiadomości jest ponownie przy użyciu protokołu HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja powiązania protokołu 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Szczegóły implementacji pozostaje korelacji między wiadomości.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Szczegóły implementacji pozostaje korelacji między wiadomości.  
   
  B2131: Implementacje musi obsługiwać `wsa:ReferenceParameters` zgodnie z opisem w WS-Addressing, aby osiągnąć korelacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]firmy 2PC wiadomości.  
   

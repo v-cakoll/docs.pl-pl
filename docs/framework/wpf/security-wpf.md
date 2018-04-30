@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
-<a name="introduction"></a> Podczas tworzenia [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autonomiczne i aplikacje obsługiwane w przeglądarce, należy wziąć pod uwagę modelu zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Aplikacje autonomiczne wykonywane za pomocą nieograniczonych uprawnień ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** zestaw uprawnień), czy wdrożyć przy użyciu Instalatora Windows (msi), XCopy, lub [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Częściowo zaufane, aplikacje autonomiczne WPF za pomocą technologii ClickOnce do wdrażania nie jest obsługiwane. Jednak utworzyć aplikację hosta pełnego zaufania częściowego zaufania <xref:System.AppDomain> przy użyciu modelu dodatku programu .NET Framework. Aby uzyskać więcej informacji, zobacz [omówienie Add-Ins WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Podczas tworzenia autonomicznego Windows Presentation Foundation (WPF) i aplikacje obsługiwane w przeglądarce, należy wziąć pod uwagę modelu zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Aplikacje autonomiczne wykonywane za pomocą nieograniczonych uprawnień ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** zestaw uprawnień), czy wdrożyć przy użyciu Instalatora Windows (msi), XCopy, lub [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Częściowo zaufane, aplikacje autonomiczne WPF za pomocą technologii ClickOnce do wdrażania nie jest obsługiwane. Jednak utworzyć aplikację hosta pełnego zaufania częściowego zaufania <xref:System.AppDomain> przy użyciu modelu dodatku programu .NET Framework. Aby uzyskać więcej informacji, zobacz [omówienie Add-Ins WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce są obsługiwane przez [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] lub Firefox, i mogą być [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] lub utracić [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] dokumentów, aby uzyskać więcej informacji, zobacz [przeglądu aplikacje przeglądarki XAML w WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce wykonania w częściowej relacji zaufania izolowanym, domyślnie, który ogranicza domyślną [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** uprawnień zestawu stref. Efektywne zidentyfikowany [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce na komputerze klienckim w taki sam sposób, można oczekiwać odizolowanie typowych aplikacji sieci Web. XBAP podnieść poziom uprawnień do pełnego zaufania, w zależności od strefy zabezpieczeń adres URL wdrożenia i konfiguracji zabezpieczeń klienta. Aby uzyskać więcej informacji, zobacz [WPF częściowego zaufania zabezpieczeń](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
- W tym temacie omówiono model zabezpieczeń [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autonomicznych i aplikacje obsługiwane w przeglądarce.  
+ W tym temacie omówiono model zabezpieczeń Windows Presentation Foundation (WPF), jak i aplikacje obsługiwane w przeglądarce.  
   
  Ten temat zawiera następujące sekcje:  
   

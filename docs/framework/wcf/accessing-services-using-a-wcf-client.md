@@ -1,13 +1,13 @@
 ---
-title: "Uzyskiwanie dostępu do usług za pomocą klienta WCF"
-ms.custom: 
+title: Uzyskiwanie dostępu do usług za pomocą klienta WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69352ba5c12267f5075ae38c5bdcc0665b3fe050
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta WCF
 Po utworzeniu usługi, następnym krokiem jest utworzenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta. Aplikacja kliencka używa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta do komunikowania się z usługą. Aplikacje klienckie zwykle Importowanie metadanych usługi do generowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kodu klienta, który może służyć do wywołania usługi.  
@@ -61,7 +61,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- Jeśli tylko jedną nazwę pliku, jest to nazwa pliku wyjściowego. Jeśli są podane dwie nazwy pliku, plik jest plik wejściowy konfiguracji, których zawartość jest scalany z wygenerowanym konfiguracji i zapisywane w pliku drugie. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfiguracja, zobacz [konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
+ Jeśli tylko jedną nazwę pliku, jest to nazwa pliku wyjściowego. Jeśli są podane dwie nazwy pliku, plik jest plik wejściowy konfiguracji, których zawartość jest scalany z wygenerowanym konfiguracji i zapisywane w pliku drugie. Aby uzyskać więcej informacji o konfiguracji, zobacz [konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Żądania metadanych niezabezpieczona stanowić zagrożenie niektórych w taki sam sposób, który wykonuje każde żądanie sieć niezabezpieczona: Jeśli nie masz pewność, że punkt końcowy komunikują się z jest tożsamości jest, można pobrać informacji mogą być metadanych z złośliwe usługi.  
@@ -194,7 +194,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Połączenie gniazda zostało przerwane. Przyczyną może być błąd podczas przetwarzania komunikatu, limit czasu odbioru przekroczenia przez hosta zdalnego lub podstawowej problemem z zasobami sieciowymi.  
   
- W przypadku wystąpienia tego typu wyjątki najlepszy sposób, aby umożliwić rozwiązanie tego problemu jest Włącz śledzenie po stronie usługi, a także określenie, jakie wyjątek wystąpił brak. [!INCLUDE[crabout](../../../includes/crabout-md.md)]śledzenie, zobacz [śledzenie](../../../docs/framework/wcf/diagnostics/tracing/index.md) i [przy użyciu śledzenie, aby rozwiązać Twoja aplikacja](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ W przypadku wystąpienia tego typu wyjątki najlepszy sposób, aby umożliwić rozwiązanie tego problemu jest Włącz śledzenie po stronie usługi, a także określenie, jakie wyjątek wystąpił brak. Aby uzyskać więcej informacji dotyczących śledzenia, zobacz [śledzenie](../../../docs/framework/wcf/diagnostics/tracing/index.md) i [przy użyciu śledzenie, aby rozwiązać Twoja aplikacja](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>Przegląd usług przepływu pracy
-Usługi przepływu pracy są [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— na podstawie usług, które są implementowane przy użyciu przepływów pracy. Usługi przepływu pracy są przepływy pracy używające działania obsługi wiadomości do wysyłania i odbierania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wiadomości. .NET framework 4.5 wprowadzono wiele działań obsługi komunikatów, które umożliwia wysyłanie i odbieranie wiadomości z poziomu przepływu pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] działania obsługi wiadomości i jak one używane do implementowania inny komunikat wzorce programu exchange, zobacz [wiadomości działania](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+Usługi przepływu pracy są [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— na podstawie usług, które są implementowane przy użyciu przepływów pracy. Usługi przepływu pracy są przepływy pracy używające działania obsługi wiadomości do wysyłania i odbierania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wiadomości. .NET framework 4.5 wprowadzono wiele działań obsługi komunikatów, które umożliwia wysyłanie i odbieranie wiadomości z poziomu przepływu pracy. Aby uzyskać więcej informacji dotyczących działań i jak one używane do implementowania wzorce exchange inny komunikat do obsługi komunikatów, zobacz [wiadomości działania](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Korzyści wynikające ze stosowania usług przepływu pracy  
  Jak aplikacje stają się coraz bardziej dystrybuowane, poszczególnych usług stają się odpowiedzialny za wywoływanie innych usług w celu odciążenia część obciążenia pracą. Wdrażanie tych wywołań jako operacji asynchronicznych wprowadza pewne złożoności do kodu. Obsługa błędów dodaje stopnia złożoności w formularzu, obsługa wyjątków i udostępnia szczegółowe informacje śledzenia. Niektóre usługi są często, długotrwałą i może trwać cenne zasoby systemowe podczas oczekiwania na dane wejściowe. Z powodu problemów z tymi aplikacje rozproszone są często bardzo złożonych i trudne do zapisu i zarządzania. Przepływy pracy są fizyczną sposobem express koordynacji zadanie asynchroniczne, szczególnie wywołania usług zewnętrznych. Przepływy pracy są również obowiązujące reprezentujący długotrwałe procesów biznesowych. Jest tych klas, wchodzące w przepływie pracy dużą zasobów do tworzenia usług w środowisku rozproszonym.  

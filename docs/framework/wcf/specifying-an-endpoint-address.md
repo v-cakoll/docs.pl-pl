@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
 Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi odbywa się przez jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą, a adres Określa, gdzie można znaleźć usługi. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowana przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera zasób identyfikator URI (Uniform) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, reprezentuje tożsamości zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają bardziej szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Na przykład nagłówków można wskazać sposobu przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania komunikat przychodzący z konkretnego użytkownika, jeśli dostępnych jest wiele wystąpień.  
@@ -93,7 +93,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
 ## <a name="using-default-endpoints"></a>Przy użyciu domyślnych punktów końcowych  
  Jeśli nie określono żadnych punktów końcowych w kodzie, lub w konfiguracji następnie środowiska uruchomieniowego zawiera domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej zaimplementowanych przez usługę. Adres podstawowy można określić w kodzie, lub w konfiguracji i domyślne punkty końcowe są dodawane, gdy <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> jest wywoływana na <xref:System.ServiceModel.ServiceHost>.  
   
- W przypadku punktów końcowych są jawnie, nadal można dodać domyślne punkty końcowe przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ W przypadku punktów końcowych są jawnie, nadal można dodać domyślne punkty końcowe przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.EndpointAddress>  

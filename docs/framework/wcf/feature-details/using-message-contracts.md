@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>Używanie kontraktów komunikatu
 Zwykle podczas kompilowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji, deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy serializacji i nie trzeba zajmować się struktury wiadomości, w których odbywa się dane. W przypadku tych aplikacji prostego jest utworzenie kontraktów danych do parametrów lub zwracanych wartości. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ Zwykle podczas kompilowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Zwykle kontrakt danych jest wystarczająca do definiowania schematu dla wiadomości. Na przykład w poprzednim przykładzie jest wystarczające dla większości aplikacji Jeśli `BankingTransaction` i `BankingTransactionResponse` ma kontraktów danych do definiowania zawartości źródłowej wiadomości protokołu SOAP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] kontrakty danych, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Zwykle kontrakt danych jest wystarczająca do definiowania schematu dla wiadomości. Na przykład w poprzednim przykładzie jest wystarczające dla większości aplikacji Jeśli `BankingTransaction` i `BankingTransactionResponse` ma kontraktów danych do definiowania zawartości źródłowej wiadomości protokołu SOAP. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Jednak czasami zachodzi konieczność precyzyjne sterowanie jak struktury wiadomości SOAP są przesyłane przez sieć. Najbardziej typowym scenariuszem dla tego wstawia niestandardowe nagłówki SOAP. Inny typowy scenariusz polega do definiowania właściwości zabezpieczeń w nagłówkach wiadomości i treści, oznacza to, aby zdecydować, czy te elementy są cyfrowo podpisane i zaszyfrowane. Ponadto niektóre stosy SOAP innych firm wymagają wiadomości w określonym formacie. Styl wiadomości operacji Podaj tego formantu.  
   

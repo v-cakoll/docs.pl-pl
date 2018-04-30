@@ -19,18 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
 Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu złożonego jako dane wejściowe. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
@@ -74,12 +74,12 @@ Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Wiele elementów formatu może odwoływać się do tego samego elementu na liście obiektów, jeśli będą miały określony taki sam specyfikator parametru. Na przykład można sformatować taką samą wartość liczbową w formacie szesnastkowym, naukowych i numeru, określając ciąg formatu złożonego, takich jak: "0 x {0: x} {0:E} {0: n}", jak pokazano na poniższym przykładzie.  
+ Wiele elementów formatu może odwoływać się do tego samego elementu na liście obiektów, jeśli będą miały określony taki sam specyfikator parametru. Na przykład można sformatować taką samą wartość liczbową w formacie szesnastkowym, naukowych i numeru, określając ciąg formatu złożonego, takich jak: "0 x{0:X} {0:E} {0:N}", jak pokazano na poniższym przykładzie.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Każdy element formatu może odwoływać się do dowolnego obiektu na liście. Na przykład jeśli istnieją trzy obiekty, można sformatować obiekt drugi, pierwszy i trzeci, określając ciąg formatu złożonego, taki jak ten: „{1} {0} {2}”. Obiekt, do którego nie odwołuje się element formatu, zostanie zignorowany. A <xref:System.FormatException> jest zgłaszany w czasie wykonywania, jeśli Specyfikator parametru wyznacza elementu poza granice listy obiektów.  
+ Każdy element formatu może odwoływać się do dowolnego obiektu na liście. Na przykład jeśli istnieją trzy obiekty, można sformatować drugie, pierwsze i trzecie obiektu podając ciąg formatu złożonych, takie: "{1} {0} {2}". Obiekt, do którego nie odwołuje się element formatu, zostanie zignorowany. A <xref:System.FormatException> jest zgłaszany w czasie wykonywania, jeśli Specyfikator parametru wyznacza elementu poza granice listy obiektów.  
   
 ### <a name="alignment-component"></a>Składnik wyrównania  
  Opcjonalny *wyrównanie* składnik jest całkowita wskazującą szerokość preferowanych sformatowane pola. Jeśli wartość *wyrównanie* jest mniejsza niż długość ciągu sformatowaną *wyrównanie* jest ignorowany i długość sformatowany ciąg jest używany jako szerokość pola. Sformatowane dane w tym polu jest wyrównany do prawej czy *wyrównanie* jest dodatnia i wyrównane do lewej w przypadku *wyrównanie* jest ujemna. Jeśli potrzebne jest dopełnienie, będą używane znaki odstępu. Przecinek jest wymagany, jeśli *wyrównanie* jest określona.  
@@ -105,7 +105,7 @@ Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu
 ### <a name="escaping-braces"></a>Unikanie nawiasów klamrowych  
  Klamrowe nawiasy otwierający i zamykający są interpretowane jako rozpoczęcie i zakończenie elementu formatu. W związku z tym należy użyć sekwencji ucieczki, aby wyświetlić literał otwierającego nawiasu klamrowego lub zamykającego nawiasu klamrowego. Należy określić dwa otwierające nawiasy klamrowe („{{”) w stałym tekście, aby wyświetlić jeden otwierający nawias klamrowy („{”), bądź dwa zamykające nawiasy klamrowe („}}”), aby wyświetlić jeden zamykający nawias klamrowy („}”). Nawiasy klamrowe w elemencie formatu są interpretowane sekwencyjnie w kolejności, w jakiej są napotykane. Interpretowanie zagnieżdżonych nawiasów klamrowych nie jest obsługiwane.  
   
- Sposób interpretowania nawiasów klamrowych poprzedzonych znakiem ucieczki może prowadzić do nieoczekiwanych rezultatów. Na przykład rozważmy element formatu „{{{0:D}}}”, który jest przeznaczony do wyświetlenia otwierającego nawiasu klamrowego, wartości liczbowej sformatowanej w postaci liczby dziesiętnej i zamykającego nawiasu klamrowego. Jednak element formatu jest w rzeczywistości interpretowany w następujący sposób:  
+ Sposób interpretowania nawiasów klamrowych poprzedzonych znakiem ucieczki może prowadzić do nieoczekiwanych rezultatów. Rozważmy na przykład element formatu "{{{0:D}}}", który jest przeznaczony do wyświetlania nawiasu otwierającego, wartości numerycznej w formacie liczbą dziesiętną, a zamykający nawias klamrowy. Jednak element formatu jest w rzeczywistości interpretowany w następujący sposób:  
   
 1.  Pierwsze dwa otwierające nawiasy klamrowe są traktowane jako nawias i znak ucieczki, przez co są zwracane jako jeden otwierający nawias klamrowy.  
   
@@ -137,7 +137,7 @@ Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu
   
     -   Wartości daty i godziny, jeśli złożone formatowanie metody z inną niż null <xref:System.IFormatProvider> argumentu po wywołaniu żądania obsługi <xref:System.Globalization.DateTimeFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli nie można podać, jeśli wartość argumentu jest `null`, lub jeśli złożone formatowanie — metoda nie ma <xref:System.IFormatProvider> parametru <xref:System.Globalization.DateTimeFormatInfo> obiektu dla bieżącej kultury wątku jest używana.  
   
-    -   Dla obiektów inne typy złożone formatowanie jest wywoływana z <xref:System.IFormatProvider> argumentu, jego wartość (w tym `null`, jeśli nie <xref:System.IFormatProvider> obiektu jest dostarczany) jest przekazywane bezpośrednio do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji.  W przeciwnym razie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje bieżącej kultury wątku jest przekazywany do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji.  
+    -   Dla obiektów z innych typów, jeśli złożone formatowanie metoda jest wywoływana z <xref:System.IFormatProvider> argument, jego wartość jest przekazywany bezpośrednio do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji. W przeciwnym razie `null` jest przekazywana do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji.  
   
 4.  Typ obiektu bez parametrów `ToString` metody, co użytkownik zastępuje <xref:System.Object.ToString?displayProperty=nameWithType> lub dziedziczy zachowanie klasy podstawowej, nosi nazwę. W takim przypadku ciąg formatu określona przez *formatString* składnika w elemencie formatu, jeśli jest obecny, jest ignorowana.  
   

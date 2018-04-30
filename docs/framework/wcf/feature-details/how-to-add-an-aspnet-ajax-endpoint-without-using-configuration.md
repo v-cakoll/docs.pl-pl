@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d82febd776bfc51e3e9725701253ed19996349b5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b8d9d9b55bbeade5aa337719ba19ea9f386dfd6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Służy do tworzenia usługi, która przedstawia włączone ASP.NET AJAX punktu końcowego, który można wywołać z poziomu języka JavaScript w witrynie sieci Web klienta. Można utworzyć punktu końcowego, można użyć pliku konfiguracji, tak jak w przypadku wszystkich innych punktów końcowych WCF lub użyć metody, która nie wymaga żadnych elementów konfiguracji. W tym temacie przedstawiono drugiej metody.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/28/2018
     %>  
     ```  
   
-2.  Tworzenie usługi i wywołać go z klienta. Internet Information Services (IIS) aktywuje usługę po wywołaniu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] hosting w usługach IIS, zobacz [porady: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  Tworzenie usługi i wywołać go z klienta. Internet Information Services (IIS) aktywuje usługę po wywołaniu. Aby uzyskać więcej informacji na temat hostingu w usługach IIS, zobacz [porady: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Do wywołania tej usługi  
   

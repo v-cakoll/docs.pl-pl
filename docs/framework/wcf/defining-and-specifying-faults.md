@@ -1,12 +1,13 @@
 ---
-title: "Definiowanie i określanie błędów"
-ms.custom: 
+title: Definiowanie i określanie błędów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definiowanie i określanie błędów
-Błąd warunku informacji z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjne przedstawienia błędach SOAP W tym temacie omówiono, kiedy i jak definiowanie zawartości błędów niestandardowych i określ, jakie operacje może zwracać je. [!INCLUDE[crabout](../../../includes/crabout-md.md)]usługi lub dupleks klient może wysyłać te błędy i sposób obsługi tych błędów w aplikacji klienta lub usługi, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Omówienie obsługi błędów w [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Błąd warunku informacji z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjne przedstawienia błędach SOAP W tym temacie omówiono, kiedy i jak definiowanie zawartości błędów niestandardowych i określ, jakie operacje może zwracać je. Aby uzyskać więcej informacji dotyczących sposobu usługi lub klienta dupleksu może wysyłać te błędy i sposób obsługi tych błędów w aplikacji klienta lub usługi, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Omówienie obsługi błędów w [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Omówienie  
  Zadeklarowany w błędach SOAP są te, w których ma operacji <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> , który określa typ niestandardowy błędu protokołu SOAP. Niezadeklarowany błędach SOAP są tymi, które nie są określone w umowie dla operacji. Ten temat pomaga zidentyfikować te warunki błędów i tworzenie usterki kontraktu usługi używanego przez klientów do poprawnie obsługiwać te warunki błędów przy powiadomieniu przez niestandardowe błędach SOAP. Podstawowe zadania znajdują się w kolejności:  
@@ -77,7 +79,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]jak zapewnić danych jest możliwy do serializacji, zobacz [Określanie transferu danych w kontraktach usług](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Aby uzyskać listę serializacji obsługuje <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> udostępnia, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Aby uzyskać więcej informacji na temat jak zapewnić danych jest możliwy do serializacji, zobacz [Określanie transferu danych w kontraktach usług](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Aby uzyskać listę serializacji obsługuje <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> udostępnia, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Oznacz operacje w celu ustanowienia kontrakt błędu  
  Gdy struktura danych serializacji, zwracana ustalony część niestandardowego błędu protokołu SOAP, ostatnim krokiem jest oznaczenie dany kontrakt operacji jako zgłaszanie błędu protokołu SOAP tego typu. Aby to zrobić, użyj <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> atrybutu i przekazać typ typu danych niestandardowych, które zostały utworzone. Poniższy przykładowy kod przedstawia sposób użycia <xref:System.ServiceModel.FaultContractAttribute> atrybutu, aby określić, że `Divide` operacji może zwrócić błędu protokołu SOAP, którego typ `MathFault`. Inne operacje na podstawie matematyczne można teraz dodawać funkcje te mogą zwracać `MathFault`.  
@@ -96,7 +98,7 @@ End Class
   
  Zgodnie ze standardowego protokołu SOAP usterka może mieć `Action`, `Code`, a `Reason`. `Action` Jest kontrolowany przez <xref:System.ServiceModel.FaultContractAttribute.Action%2A> właściwości. <xref:System.ServiceModel.FaultException.Code%2A> Właściwości i <xref:System.ServiceModel.FaultException.Reason%2A> właściwości są obie właściwości <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> klasy, która jest klasą nadrzędną ogólnego <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>. `Code` Zawiera właściwość <xref:System.ServiceModel.FaultCode.SubCode%2A> elementu członkowskiego.  
   
- Podczas uzyskiwania dostępu do innych niż usług, które generowanie błędów, istnieją pewne ograniczenia. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]obsługuje tylko błędy z typami szczegółowo opisujący schematu i które są zgodne z kontraktów danych. Na przykład, jak wspomniano powyżej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nie obsługuje usterki, które Użyj atrybutów XML w ich typach szczegółów lub błędów z więcej niż jeden element najwyższego poziomu w sekcji szczegółów.  
+ Podczas uzyskiwania dostępu do innych niż usług, które generowanie błędów, istnieją pewne ograniczenia. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje tylko błędy z typami szczegółowo opisujący schematu i które są zgodne z kontraktów danych. Na przykład, jak wspomniano powyżej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nie obsługuje usterki, które Użyj atrybutów XML w ich typach szczegółów lub błędów z więcej niż jeden element najwyższego poziomu w sekcji szczegółów.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.FaultContractAttribute>  

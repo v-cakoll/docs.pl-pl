@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Co&#39;s nowe w programie Windows Workflow Foundation programu .NET 4.5
-Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, takich jak nowe działania, funkcje projektanta i modele programowania przepływu pracy. Wiele, ale nie wszystkich nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] nowe funkcje, które są obsługiwane, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Projektancie przepływów pracy Rehosted](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrowanie .NET 3.0 i .NET 3.5 przepływu pracy aplikacji do korzystania z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Ten temat zawiera omówienie nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, takich jak nowe działania, funkcje projektanta i modele programowania przepływu pracy. Wiele, ale nie wszystkich nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. Aby uzyskać więcej informacji na temat nowych funkcji, które są obsługiwane, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Projektancie przepływów pracy Rehosted](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Aby uzyskać więcej informacji na temat migrowania aplikacji .NET 3.0 i .NET 3.5 przepływu pracy korzysta z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Ten temat zawiera omówienie nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 > [!WARNING]
 >  Nowe funkcje programu Windows Workflow Foundation wprowadzone w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] nie są dostępne dla projektów, które odnoszą się do poprzednich wersji platformy. Jeśli projekt, którego celem jest [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ponownie jest skierowany do poprzednich wersji platformy, może wystąpić pewne problemy.  
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
   
  C# wyrażenia są weryfikowane w czasie projektowania. Błędy w wyrażeniach języka C# będą oznaczone znakiem gramatyczne.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] C# wyrażeń, zobacz [wyrażeń C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Aby uzyskać więcej informacji na temat wyrażeń C#, zobacz [wyrażeń C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
 ###  <a name="BKMK_Visibility"></a> Większa kontrola nad widoczność paska powłoki i nagłówek elementów  
  W Projektancie rehosted niektóre ze standardowych formantów interfejsu użytkownika nie może mieć znaczenie dla danego przepływu pracy i może być wyłączona. W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], to dostosowanie jest obsługiwana tylko na pasku powłoki w dolnej części projektanta. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], widoczność powłoki elementy nagłówka w górnej części projektanta można dostosować przez ustawienie <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> z odpowiednią <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> wartość.  

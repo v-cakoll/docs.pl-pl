@@ -22,20 +22,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ffb33ea70f67e209648e470656a2719404dd7f2d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzenie usługi federacyjnej składa się z następujących procedur głównego:  
   
-1.  Konfigurowanie <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie powiązanie odpowiednie zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1.  Konfigurowanie <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowego powiązania. Aby uzyskać więcej informacji o tworzeniu powiązanie odpowiednie, zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
 2.  Konfigurowanie <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> steruje jak wystawionych tokenów prezentowane z usługą uwierzytelniania.  
   
- Ten temat zawiera szczegółowe informacje o drugim krokiem. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sposób działania usługi federacyjnej, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Ten temat zawiera szczegółowe informacje o drugim krokiem. Aby uzyskać więcej informacji na temat działania usługi federacyjnej, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Aby ustawić właściwości IssuedTokenServiceCredential w kodzie  
   
@@ -80,7 +80,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzenie usługi fed
   
 -   Gdy wystawiony token podpisu używa numeru seryjnego wystawcy X.509, identyfikator klucza podmiotu X.509 lub identyfikator zabezpieczeń palca certyfikatu X.509, wystawionego tokenu musi być podpisany przez certyfikatu w kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwości <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>klasy.  
   
--   Gdy wystawiony token jest podpisany przy użyciu certyfikatu X.509, certyfikat musi zostać sprawdzony na semantykę określony przez wartość <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> właściwości, niezależnie od tego, czy certyfikat został wysłany do jednostki uzależnionej jako <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> lub uzyskano z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwości. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Sprawdzanie poprawności certyfikatu X.509, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+-   Gdy wystawiony token jest podpisany przy użyciu certyfikatu X.509, certyfikat musi zostać sprawdzony na semantykę określony przez wartość <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> właściwości, niezależnie od tego, czy certyfikat został wysłany do jednostki uzależnionej jako <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> lub uzyskano z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwości. Aby uzyskać więcej informacji o walidacji certyfikatu X.509, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Na przykład ustawienie <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> do <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> może uwierzytelniać dowolnego wystawionego tokenu, którego certyfikat podpisywania znajduje się w `TrustedPeople` magazynu certyfikatów. W takim przypadku ustawić <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> właściwości albo <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> lub <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Możesz wybrać inne tryby, w tym <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Gdy `Custom` jest zaznaczone, należy przypisać wystąpienia <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> właściwości. Niestandardowego modułu weryfikacji można sprawdzić poprawność certyfikatów przy użyciu dowolnego kryterium, które potrzeby. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi korzystającej z niestandardowego moduł weryfikacji certyfikatów](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   

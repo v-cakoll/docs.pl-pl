@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
 W tym temacie omówiono Implementowanie i wywoływanie operacji usługi asynchronicznego.  
@@ -51,7 +51,7 @@ W tym temacie omówiono Implementowanie i wywoływanie operacji usługi asynchro
   
 -   Przy użyciu asynchronicznej metody na kliencie lub aplikacja wywołująca w następujących przypadkach:  
   
--   Jeśli są wywoływanie operacji aplikacji warstwy środkowej. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] takich scenariuszy, zobacz [aplikacje klienckie warstwy środkowej](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   Jeśli są wywoływanie operacji aplikacji warstwy środkowej. (Aby uzyskać więcej informacji na temat takich scenariuszy, zobacz [aplikacje klienckie warstwy środkowej](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
 -   Jeśli są wywoływania operacji strony ASP.NET, użyj stron asynchronicznego.  
   

@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7bf6512be6fabb87797fb6338f64320d5787d547
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 Modelu programowania protokołu HTTP sieci WEB WCF umożliwia deweloperom ujawnia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług za pośrednictwem podstawowego żądania HTTP sieci Web bez konieczności protokołu SOAP. Modelu programowania protokołu HTTP sieci WEB WCF jest oparty na istniejące [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelu rozszerzalności. Definiuje następujące klasy:  
@@ -110,7 +110,7 @@ Modelu programowania protokołu HTTP sieci WEB WCF umożliwia deweloperom ujawni
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Modelu programowania protokołu HTTP sieci WEB nie używa opartego na protokole SOAP komunikatów i dlatego nie obsługuje WS-* protokołów. Możesz jednak udostępnić ten sam kontrakt dwóch różnych punktu końcowego: go przy użyciu protokołu SOAP oraz innymi nie przy użyciu protokołu SOAP. Zobacz [porady: ujawnianie kontraktu klientom sieci Web i SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) przykład.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelu programowania protokołu HTTP sieci WEB nie obsługuje WS-* protokoły jedynym sposobem do zabezpieczania usługi sieci Web oparta na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest Model programowania protokołu HTTP sieci WEB do udostępnienia do usługi przy użyciu protokołu SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Konfigurowanie protokołu SSL z [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zobacz [Implementowanie protokołu SSL w usługach IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelu programowania protokołu HTTP sieci WEB nie obsługuje WS-* protokoły jedynym sposobem do zabezpieczania usługi sieci Web oparta na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest Model programowania protokołu HTTP sieci WEB do udostępnienia do usługi przy użyciu protokołu SSL. Aby uzyskać więcej informacji o konfigurowaniu protokołu SSL z [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zobacz [Implementowanie protokołu SSL w usługach IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.WebHttpBinding>  

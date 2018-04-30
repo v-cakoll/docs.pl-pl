@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to SOAP oparta na komunikatach rozproszonej programowania platforma i zabezpieczanie komunikatów między klientami i usługami jest niezbędne do ochrony danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia elastyczne i interoperacyjne platformę wymiany zabezpieczonych wiadomości na podstawie zarówno istniejącej infrastruktury zabezpieczeń i standardów zabezpieczeń rozpoznanym wiadomości protokołu SOAP.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/28/2018
   
 -   *Tryb zabezpieczeń wiadomości*, inne strony, używa WS-Security (i inne specyfikacje) do zaimplementowania transfer zabezpieczeń. Ponieważ zabezpieczenia wiadomości są stosowane bezpośrednio do komunikatów SOAP i znajduje się wewnątrz koperty protokołu SOAP, oraz dane aplikacji ma prowadzoną zabezpieczeń na trasie niezależne od protokołu extensible więcej i zapewnienie transportu (w przeciwieństwie do point-to-point); ma ona wadą jest kilka razy mniejsza niż tryb zabezpieczeń transport, ponieważ ma ona radzenia sobie z natury XML wiadomości SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] te różnice, zobacz [zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ Aby uzyskać więcej informacji na temat tych różnic, zobacz [zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  Trzeci trybu zabezpieczeń używa oba tryby poprzedniej i oferuje zalety obu. Ten tryb jest nazywany `TransportWithMessageCredential`. W tym trybie Zabezpieczenia wiadomości jest używany do uwierzytelniania klienta i zabezpieczeń transportu jest używany do uwierzytelniania serwera i zagwarantować poufność komunikatów i integralność. Dzięki temu `TransportWithMessageCredential` trybu zabezpieczeń jest niemal tak szybko, jak tryb zabezpieczeń transport i udostępnia rozszerzalności uwierzytelniania klienta w taki sam sposób jak zabezpieczenia wiadomości. Jednak w przeciwieństwie do trybu zabezpieczenia wiadomości, nie zapewnia ona pełną zabezpieczeń na trasie.  
   

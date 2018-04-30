@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows
-W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi znajduje się w domenie systemu Windows, który jest wywoływany przez klientów w tej samej domenie. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Ten scenariusz, zobacz [zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Przykładową aplikację, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
+W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi znajduje się w domenie systemu Windows, który jest wywoływany przez klientów w tej samej domenie. Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Przykładową aplikację, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
   
  W tym temacie założono masz istniejący interfejs kontrakt i implementacja już zdefiniowany i dodaje się, że. Można również zmodyfikować istniejącą usługę i klienta.  
   
@@ -57,7 +57,7 @@ W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!IN
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Za pomocą tego powiązania w usłudze  
- Jest to druga procedura przedstawia sposób użycia powiązania w samodzielnie hostowana usługa. [!INCLUDE[crabout](../../../includes/crabout-md.md)] hosting usług zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
+ Jest to druga procedura przedstawia sposób użycia powiązania w samodzielnie hostowana usługa. Aby uzyskać więcej informacji na temat usług hostingu zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Aby użyć powiązania w usłudze  
   

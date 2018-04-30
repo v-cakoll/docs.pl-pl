@@ -1,27 +1,29 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-W tym przykładzie pokazano, jak udostępniać [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kieruje usługi REST przy użyciu platformy ASP.NET. [Podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) przykładowe pokazuje siebie wersję tego scenariusza i implementacji usługi szczegółowo omówiono. Ten temat koncentruje się na funkcji integracji ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET routingu, zobacz <xref:System.Web.Routing>.  
+W tym przykładzie pokazano, jak udostępniać [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kieruje usługi REST przy użyciu platformy ASP.NET. [Podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) przykładowe pokazuje siebie wersję tego scenariusza i implementacji usługi szczegółowo omówiono. Ten temat koncentruje się na funkcji integracji ASP.NET. Aby uzyskać więcej informacji o routingu platformy ASP.NET, zobacz <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Usługi udostępnia kolekcję klientów w sposób zasobów ukierunkowane/REST. Podobnie jak opartego na protokole SOAP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, usługi mogą być hostowane w programie ASP.NET przy użyciu pliku svc. Jednak to często nie jest preferowane w przypadku scenariuszy HTTP ponieważ wymaga ona o .svc w adresie URL dla usługi. Ponadto wymaga wdrażanie pliku svc wraz z biblioteki usługi. Ograniczenia te można uniknąć przez usługę przy użyciu tras platformy ASP.NET, jak przedstawiono w przykładach w tym przykładzie.  

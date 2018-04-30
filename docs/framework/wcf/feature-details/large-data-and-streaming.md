@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML często jest zakodowany w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838), połączonych projektanci systemów i architektów zwykle niepokoi rozmiaru danych przesyłanych w sieci (lub rozmiar) komunikaty wysyłane między sieci i kodowanie tekstowy XML stanowi wyzwanie specjalne wydajność transferu danych binarnych.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  W związku z tym ograniczenie maksymalny rozmiar wiadomości przychodzącej nie jest wystarczająco w takim przypadku. `MaxBufferSize` Jest wymagana właściwość, aby ograniczyć ilość pamięci który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] buforów. Ważne jest, aby to ustawienie na wartość bezpieczne (lub zachowania jej wartość domyślną) podczas przesyłania strumieniowego. Załóżmy na przykład, usługa musi otrzymać pliki o rozmiarze do 4 GB i przechowywać je na dysku lokalnym. Załóżmy również, że pamięć jest ograniczona w taki sposób, można tylko buforu 64 KB danych w czasie. Następnie należy ustawić `MaxReceivedMessageSize` do 4 GB i `MaxBufferSize` 64 KB. Ponadto w implementacji usługi, należy tylko odczytywać przychodzący strumień w fragmentów 64 KB, a nie odczytuj dalej fragmentu przed poprzedniego został zapisany na dysku i usuwane z pamięci.  
   
- Jest również wziąć pod uwagę, że przydział ogranicza tylko buforowania programach [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i nie można chronić przed żadnych buforowania, należy wykonać w celu wykonania własne usługi lub klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zagadnienia dotyczące zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Jest również wziąć pod uwagę, że przydział ogranicza tylko buforowania programach [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i nie można chronić przed żadnych buforowania, należy wykonać w celu wykonania własne usługi lub klienta. Aby uzyskać więcej informacji dotyczących zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  Decyzja o wykorzystaniu buforowane lub przesyłany strumieniowo transferu jest decyzji lokalnego punktu końcowego. Dla transportu HTTP tryb transferu nie propaguje przez połączenie lub serwerów proxy i innych pośredników. Ustawianie trybu transferu nie zostaną uwzględnione w opisie interfejsu usługi. Po wygenerowaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta do usługi, należy edytować pliku konfiguracji dla usług przeznaczony do użycia w przypadku transferów przesyłanej strumieniowo można ustawić trybu. Dla transportu nazwanego potoku i TCP tryb transferu jest propagowana jako potwierdzenia zasad.  

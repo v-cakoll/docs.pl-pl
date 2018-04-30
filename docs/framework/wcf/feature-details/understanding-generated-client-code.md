@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="understanding-generated-client-code"></a>Opis wygenerowanego kodu klienta
-[Narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generuje kod klienta i pliku konfiguracji aplikacji klienta do użycia z tworzeniem aplikacji klienckich. Ten temat zawiera przegląd przykładów wygenerowanego kodu dla scenariuszy kontraktu usługi standardowa. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie aplikacji klienta przy użyciu wygenerowanego kodu, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+[Narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generuje kod klienta i pliku konfiguracji aplikacji klienta do użycia z tworzeniem aplikacji klienckich. Ten temat zawiera przegląd przykładów wygenerowanego kodu dla scenariuszy kontraktu usługi standardowa. Aby uzyskać więcej informacji dotyczących tworzenia aplikacji klienta przy użyciu wygenerowanego kodu, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Omówienie  
  Jeśli używasz programu Visual Studio do generowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] typy klientów dla projektu, zwykle nie trzeba sprawdzić kod wygenerowanego klienta. Jeśli nie używasz Środowisko deweloperskie, który wykonuje te same usługi dla Ciebie, umożliwia narzędzia, takiego jak Svcutil.exe generowanie kodu klienta, a następnie użyj tego kodu do opracowywania aplikacji klienta.  
@@ -73,10 +73,10 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- W takim przypadku typ danych jest typ szczegółów zgłaszanych przez określony wyjątek na kliencie, <xref:System.ServiceModel.FaultException%601> gdzie parametr typu szczegółów jest `microsoft.wcf.documentation.SampleFault`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] typy danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Obsługa wyjątków w klientach, zobacz [wysyłanie i odbieranie błędów](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ W takim przypadku typ danych jest typ szczegółów zgłaszanych przez określony wyjątek na kliencie, <xref:System.ServiceModel.FaultException%601> gdzie parametr typu szczegółów jest `microsoft.wcf.documentation.SampleFault`. Aby uzyskać więcej informacji na temat typów danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Aby uzyskać więcej informacji na temat obsługi wyjątków w klientach, zobacz [wysyłanie i odbieranie błędów](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Znajdowanie kontraktach wywołania zwrotnego dla usługi dwukierunkowe  
- Jeśli zlokalizować kontraktu usługi, dla którego interfejsu kontraktu określa wartość <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> określa kontrakt dupleksowy, właściwości, a następnie tej Umowy. Kontrakty dwukierunkowe wymaga aplikacji klienckiej, aby utworzyć klasę wywołania zwrotnego, która implementuje kontrakt wywołania zwrotnego i przekaż wystąpienie tej klasy do <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> lub <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> używany do komunikacji z usługą. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] dupleks klientów, zobacz [porady: dostęp do usług z kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Jeśli zlokalizować kontraktu usługi, dla którego interfejsu kontraktu określa wartość <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> określa kontrakt dupleksowy, właściwości, a następnie tej Umowy. Kontrakty dwukierunkowe wymaga aplikacji klienckiej, aby utworzyć klasę wywołania zwrotnego, która implementuje kontrakt wywołania zwrotnego i przekaż wystąpienie tej klasy do <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> lub <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> używany do komunikacji z usługą. Aby uzyskać więcej informacji o klientach dupleksowy, zobacz [porady: dostęp do usług z kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Następujące kontrakt określa kontrakt wywołania zwrotnego typu `SampleDuplexHelloCallback`.  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>Architektura syndykacji
 Interfejs API zespolonego umożliwia model programowania niezależny od formatu, który umożliwia zawartości zespolonej do zapisania do przesyłania w różnych formatach. Model danych abstrakcyjny składa się z następujących klas:  
@@ -43,7 +43,7 @@ Interfejs API zespolonego umożliwia model programowania niezależny od formatu,
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Obsługa zespolonego jest wbudowana nad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST definiujący <xref:System.ServiceModel.WebHttpBinding> powiązania, który jest używany w połączeniu z <xref:System.ServiceModel.Description.WebHttpBehavior> udostępnić źródła danych jako usługi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST, zobacz [programowania omówienie modelu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Obsługa zespolonego jest wbudowana nad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST definiujący <xref:System.ServiceModel.WebHttpBinding> powiązania, który jest używany w połączeniu z <xref:System.ServiceModel.Description.WebHttpBehavior> udostępnić źródła danych jako usługi. Aby uzyskać więcej informacji na temat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST, zobacz [programowania omówienie modelu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  Specyfikacja Atom 1.0 umożliwia sekund ułamkowa należy określić w jednym z jego konstrukcji daty. Podczas serializowania i deserializowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji ignoruje ułamkowych części sekundy.  

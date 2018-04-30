@@ -1,12 +1,13 @@
 ---
-title: "Instrukcje: Używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania"
-ms.custom: 
+title: 'Instrukcje: Używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 944e9974ac5cb84aa0dd7e732c35752cb4ea749e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Instrukcje: Używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania
 W tym temacie przedstawiono sposób konfigurowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] korzystanie z różnych certyfikatów komunikat podpisywania i szyfrowania na kliencie i usługi.  
@@ -34,19 +36,19 @@ W tym temacie przedstawiono sposób konfigurowania [!INCLUDE[indigo1](../../../.
   
  Na poniższym diagramie przedstawiono główne klasy używane, klasy dziedziczą z (się za pomocą strzałki wskazującej w górę) i typy zwracane niektórych metod i właściwości.  
   
--   `MyClientCredentials`to niestandardowe implementacja <xref:System.ServiceModel.Description.ClientCredentials>.  
+-   `MyClientCredentials` to niestandardowe implementacja <xref:System.ServiceModel.Description.ClientCredentials>.  
   
     -   Właściwości wyświetlane na diagramie zwracany wszystkie wystąpienia <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
   
     -   Metody <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> Zwraca wystąpienie klasy `MyClientCredentialsSecurityTokenManager`.  
   
--   `MyClientCredentialsSecurityTokenManager`to niestandardowe implementacja <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+-   `MyClientCredentialsSecurityTokenManager` to niestandardowe implementacja <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
     -   Metody <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> Zwraca wystąpienie klasy <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
   
  ![Wykres przedstawiający sposób używania poświadczeń klienta](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz niestandardowych poświadczeń [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Aby uzyskać więcej informacji o niestandardowych poświadczeń, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Ponadto należy utworzyć weryfikatora tożsamość niestandardowa i połączyć elementu powiązania zabezpieczeń, do niestandardowego powiązania. Należy również użyć niestandardowych poświadczeń zamiast domyślnych poświadczeń.  
   
@@ -54,7 +56,7 @@ W tym temacie przedstawiono sposób konfigurowania [!INCLUDE[indigo1](../../../.
   
  ![Wykres przedstawiający element niestandardowego powiązania](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie weryfikatora tożsamość niestandardowa, zobacz jak: [porady: Tworzenie niestandardowego weryfikator tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
+ Aby uzyskać więcej informacji o tworzeniu weryfikatora tożsamość niestandardowa, zobacz jak: [porady: Tworzenie niestandardowego weryfikator tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Korzystanie z osobnych certyfikatów podpisywania i szyfrowania  
   

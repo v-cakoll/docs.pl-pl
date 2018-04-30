@@ -1,23 +1,24 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 W przykładzie pokazano, używanie i konfigurację awansowanej właściwości w magazynie wystąpień przepływu pracy SQL. W magazynie wystąpień przepływu pracy SQL jest implementacją SQL na podstawie wystąpienia magazynu. Umożliwia on wystąpienie do zapisywania stanu i ładowania stanu do i z bazy danych programu SQL Server lub SQL Server Express. Funkcja rozszerzalność magazyn zezwala użytkownikowi na definiowanie właściwości, które są przechowywane w magazynie wystąpień. Te właściwości są wyświetlane w widoku awansowanej właściwości, które umożliwia użytkownikowi zapytania dla nich.  
@@ -36,7 +37,7 @@ W przykładzie pokazano, używanie i konfigurację awansowanej właściwości w 
   
  Aby promować wartość licznika jako właściwość niestandardową, należy podjąć następujące kroki:  
   
-1.  Klasa `CounterStatus` definiuje rozszerzenie wystąpienia typu <xref:System.Activities.Persistence.PersistenceParticipant>, używany do dostarczania zmienne stanu przez działania. `Count`nie zdefiniowano jako wartość tylko do zapisu. Gdy do punktu utrwalania wystąpienia przepływu pracy, rozszerzenie wystąpienia zapisuje `Count` właściwości do zbierania danych trwałości.  
+1.  Klasa `CounterStatus` definiuje rozszerzenie wystąpienia typu <xref:System.Activities.Persistence.PersistenceParticipant>, używany do dostarczania zmienne stanu przez działania. `Count` nie zdefiniowano jako wartość tylko do zapisu. Gdy do punktu utrwalania wystąpienia przepływu pracy, rozszerzenie wystąpienia zapisuje `Count` właściwości do zbierania danych trwałości.  
   
 2.  Podczas tworzenia w magazynie wystąpień nową właściwość `CountStatus`, jest zdefiniowana za pomocą `store.Promote()` metody.  
   
@@ -62,7 +63,7 @@ W przykładzie pokazano, używanie i konfigurację awansowanej właściwości w 
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Aby zweryfikować próbki działa poprawnie  
   
-1.  Użyj programu SQL Server Management Studio, aby wyświetlić zawartość tej tabeli wystąpienia, wybierając **baz danych**, **InstanceStore**, a następnie  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** w Eksploratorze obiektów kliknij prawym przyciskiem myszy **System.ServiceModel.Activities.DurableInstancing.InstanceTable** i wybierz  **Zaznacz 1000 pierwszych wierszy**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, zobacz [wprowadzenie do programu SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Użyj programu SQL Server Management Studio, aby wyświetlić zawartość tej tabeli wystąpienia, wybierając **baz danych**, **InstanceStore**, a następnie  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** w Eksploratorze obiektów kliknij prawym przyciskiem myszy **System.ServiceModel.Activities.DurableInstancing.InstanceTable** i wybierz  **Zaznacz 1000 pierwszych wierszy**. Aby uzyskać więcej informacji na temat programu SQL Server Management Studio, zobacz [wprowadzenie do programu SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Obserwować wystąpień przepływu pracy.  
   

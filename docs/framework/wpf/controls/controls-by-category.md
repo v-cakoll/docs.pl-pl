@@ -1,31 +1,31 @@
 ---
-title: "Kontrolki według kategorii"
-ms.custom: 
+title: Kontrolki według kategorii
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 26cd5c40a68b42b16fd2b7aacfcd84fdce483ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e88dc45d640391798a22af7a6a1d34f1acebcc0a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controls-by-category"></a>Kontrolki według kategorii
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Formanty można grupować logicznie w różne kategorie. Tych kategorii można wybrać odpowiednią kontrolkę dla danego scenariusza pozwala zobaczyć, które kontrolki mają podobne wzorców użycia lub funkcji.  
+Formanty Windows Presentation Foundation (WPF) można grupować logicznie w różne kategorie. Tych kategorii można wybrać odpowiednią kontrolkę dla danego scenariusza pozwala zobaczyć, które kontrolki mają podobne wzorców użycia lub funkcji.  
   
 ## <a name="layout"></a>Układ  
  Formanty układu służą do zarządzania rozmiar, wymiary, pozycji i rozmieszczenia elementów podrzędnych.  
@@ -153,7 +153,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Dokumenty  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]obejmuje kilka specjalne formantów na wyświetlanie dokumentów. Formanty zoptymalizować czytanie oparta na scenariuszu wybrany użytkownik.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obejmuje kilka specjalne formantów na wyświetlanie dokumentów. Formanty zoptymalizować czytanie oparta na scenariuszu wybrany użytkownik.  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -175,7 +175,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Nośnik  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]zawiera zintegrowane funkcje obsługi hosting zawartości audio i wideo, a także [koderów-dekoderów] dla najbardziej popularnych formatach.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera zintegrowane funkcje obsługi hosting zawartości audio i wideo, a także [koderów-dekoderów] dla najbardziej popularnych formatach.  
   
 -   <xref:System.Windows.Controls.Image>  
   

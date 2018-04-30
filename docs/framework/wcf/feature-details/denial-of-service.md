@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości, lub są przetwarzane bardzo wolno.  
@@ -57,7 +57,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="auditing-event-log-can-be-filled"></a>Dziennik zdarzeń inspekcji mogą być wypełnione  
  Jeśli złośliwy użytkownik rozumie, że inspekcja jest włączona, niepowołana może wysyłać nieprawidłowe komunikaty, powodujących wpisy inspekcji do zapisania. Dziennik inspekcji jest wypełniony w ten sposób, inspekcji systemu nie powiedzie się.  
   
- Aby temu zaradzić, ustaw <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwości `true` i użyj właściwości podglądu zdarzeń w celu kontrolowania zachowania inspekcji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Wyświetlanie i zarządzanie dziennikami zdarzeń za pomocą Podglądu zdarzeń zobacz [Podgląd zdarzeń](http://go.microsoft.com/fwlink/?LinkId=186123). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Aby temu zaradzić, ustaw <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwości `true` i użyj właściwości podglądu zdarzeń w celu kontrolowania zachowania inspekcji. Aby uzyskać więcej informacji na temat wyświetlania i zarządzania dziennikami zdarzeń za pomocą Podglądu zdarzeń, zobacz [Podgląd zdarzeń](http://go.microsoft.com/fwlink/?LinkId=186123). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Nieprawidłowy implementacje zawiesza się usługa Przyczyna może IAuthorizationPolicy  
  Wywoływanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metody na błędną implementację elementu <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejs może spowodować, że usługa zawieszenie.  
@@ -74,7 +74,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
   
  Aby temu zaradzić, odwoływać się dokładnie certyfikat do użycia przy użyciu kryterium wyszukiwania dokładniejsze na [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Na przykład użyć <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> opcji, a następnie określ certyfikat przez jego unikatowy odcisk palca (skrót).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Funkcja automatycznego rejestrowania, zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ Aby uzyskać więcej informacji na temat funkcji autorejestrowania, zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Ostatnie wielu nazwy alternatywnej podmiotu używane na potrzeby autoryzacji  
  W rzadkich przypadkach, kiedy certyfikat X.509 zawiera wiele nazwy alternatywnej podmiotu i autoryzacji, przy użyciu ustawienia alternatywnej nazwy podmiotu, autoryzacji może zakończyć się niepowodzeniem.  
@@ -88,7 +88,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
  Gdy klient zostanie pomyślnie uwierzytelniony przez usługę i bezpieczne ustanowiono połączenie z usługą, Usługa przechowuje informacje o sesji, dopóki klient anuluje go lub wygaśnięcia sesji. Każdy ustanowienie sesji jest za mała limit maksymalnej liczby aktywnych sesji jednoczesnych z usługą. Po osiągnięciu tego limitu klientów, które próbują utworzyć nowej sesji z tą usługą są odrzucane, dopóki jedna lub więcej aktywnych sesji wygaśnięcia lub anulowania przez klienta. Klient może mieć wiele sesji z usługą, a limit liczony w każdej z nich tymi sesjami.  
   
 > [!NOTE]
->  Korzystając z sesji stanowe, powyżej nie ma zastosowania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] stanowe sesje, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpieczną sesję](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Korzystając z sesji stanowe, powyżej nie ma zastosowania. Aby uzyskać więcej informacji o stanowe sesji, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpieczną sesję](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Aby temu zaradzić, Ustaw limit maksymalnej liczby aktywnych sesji i maksymalny okres istnienia sesji przez ustawienie <xref:System.ServiceModel.Channels.SecurityBindingElement> właściwość <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
   

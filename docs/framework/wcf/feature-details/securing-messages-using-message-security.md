@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
 W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia wiadomości, korzystając z <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -54,7 +54,7 @@ W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z
   
  Rozłączona charakter kolejek, klient i usługa nie może być online w tym samym czasie. Tak klient i usługa trzeba wymienić certyfikaty poza pasmem. W szczególności klienta, na podstawie przechowywania w magazynie zaufanych certyfikatów usługi, (które można powiązać do urzędu certyfikacji) musi ufać jest podczas komunikacji z usługą poprawne. W celu uwierzytelniania klienta, używane przez usługę certyfikatu X.509, dołączone do wiadomości dopasowuje je przy użyciu certyfikatu w magazynie w celu sprawdzenia autentyczności klienta. Ponownie certyfikat musi być powiązany łańcuchem zależności urzędu certyfikacji.  
   
- Na komputerze z systemem Windows certyfikaty są przechowywane w kilku rodzajów magazynów. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz różnych sklepów [magazyny certyfikatów](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Na komputerze z systemem Windows certyfikaty są przechowywane w kilku rodzajów magazynów. Aby uzyskać więcej informacji o różnych magazynach, zobacz [magazyny certyfikatów](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Typ poświadczeń komunikatu systemu Windows używa protokołu Kerberos.  

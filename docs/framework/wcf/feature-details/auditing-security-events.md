@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
 Aplikacje utworzone przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] może rejestrować zdarzeń zabezpieczeń (sukces, Niepowodzenie lub obie) z funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  
   
  Inspekcja umożliwia administratorowi wykrycia ataku, który już wystąpił, lub jest w toku. Ponadto inspekcja może ułatwić deweloperom debugowanie problemów związanych z zabezpieczeniami. Na przykład jeśli wystąpił błąd w konfiguracji autoryzacji lub Sprawdzanie, czy zasady przypadkowo nie zezwala na dostęp do autoryzowanych użytkowników, dewelopera można szybko odnajdywanie i izolowanie przyczynę tego błędu, sprawdzając dziennik zdarzeń.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Programowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Aby uzyskać więcej informacji na temat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania w języku [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Poziom inspekcji i zachowania  
  Istnieją dwa poziomy inspekcji zabezpieczeń:  

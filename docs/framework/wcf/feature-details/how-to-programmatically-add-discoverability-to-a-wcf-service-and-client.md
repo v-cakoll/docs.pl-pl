@@ -1,24 +1,26 @@
 ---
-title: "Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF"
-ms.custom: 
+title: 'Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF
 W tym temacie wyjaśniono, jak utworzyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wykrywalny usługi. Jest on oparty na [hosta samodzielnego](http://go.microsoft.com/fwlink/?LinkId=145523) próbki.  
@@ -69,7 +71,7 @@ W tym temacie wyjaśniono, jak utworzyć [!INCLUDE[indigo1](../../../../includes
   
 1.  Dodaj nową aplikację konsoli do rozwiązania o nazwie `DiscoveryClientApp`.  
   
-2.  Dodaj odwołanie do `System.ServiceModel.dll` i`System.ServiceModel.Discovery.dll`  
+2.  Dodaj odwołanie do `System.ServiceModel.dll` i `System.ServiceModel.Discovery.dll`  
   
 3.  Skopiuj pliki GeneratedClient.cs i App.config z istniejącego projektu klienta do nowego projektu DiscoveryClientApp. Aby to zrobić, kliknij prawym przyciskiem myszy plik w **Eksploratora rozwiązań**, wybierz pozycję **kopiowania**, a następnie wybierz **DiscoveryClientApp** projektu, kliknij prawym przyciskiem myszy i wybierz **Wklej**.  
   
@@ -231,7 +233,7 @@ W tym temacie wyjaśniono, jak utworzyć [!INCLUDE[indigo1](../../../../includes
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się lista kodu dla tego przykładu. Ponieważ ten kod jest oparta na [hosta samodzielnego](http://go.microsoft.com/fwlink/?LinkId=145523) przykładowe są wyświetlane tylko te pliki, które są zmieniane. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]przykład hosta samodzielnego zobacz [instrukcje dotyczące konfigurowania](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ Poniżej znajduje się lista kodu dla tego przykładu. Ponieważ ten kod jest oparta na [hosta samodzielnego](http://go.microsoft.com/fwlink/?LinkId=145523) przykładowe są wyświetlane tylko te pliki, które są zmieniane. Aby uzyskać więcej informacji na temat przykład hosta samodzielnego zobacz [instrukcje dotyczące konfigurowania](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

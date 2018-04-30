@@ -1,27 +1,29 @@
 ---
-title: "Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń"
-ms.custom: 
+title: Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
 Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta i usługi zabezpieczonej przez protokół Kerberos.  
@@ -61,7 +63,7 @@ Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo
   
 2.  Użyj dowolnego konta domeny usługi Active Directory do uruchomienia usługi. W takim przypadku należy ustanowić nazwę SPN dla tego konta domeny. Jednym ze sposobów realizacji tego jest narzędzie Narzędzie Setspn.exe. Po utworzeniu nazwy SPN dla konta usługi należy skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do opublikowania tej nazwy SPN do obsługi klientów za pośrednictwem jego metadanych (WSDL). Odbywa się przez ustawienie tożsamość punktu końcowego dla dostępnego punktu końcowego, albo jeśli pliku konfiguracji aplikacji lub kodu. Poniższy przykład publikuje tożsamość programowo.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Nazwy SPN, protokołu Kerberos i usługi Active Directory, zobacz [Kerberos techniczne dodatku dla systemu Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tożsamość punktu końcowego, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Aby uzyskać więcej informacji na temat nazw SPN, protokołu Kerberos i usługi Active Directory, zobacz [Kerberos techniczne dodatku dla systemu Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Aby uzyskać więcej informacji o tożsamości punktu końcowego, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -117,9 +119,9 @@ Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo
  Poniższy kod konfiguruje klienta. Tryb zabezpieczeń jest ustawiony na komunikat, a ustawiono typ poświadczeń klienta Windows. Należy pamiętać, że <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> i <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwości są ustawione na `false`.  
   
 > [!NOTE]
->  Aby użyć typu poświadczeń systemu Windows bez negocjowania, klient musi być skonfigurowany przed rozpoczęciem komunikacji z usługą nazwa SPN konta usługi. Klient używa nazwy SPN, aby uzyskać token protokołu Kerberos do uwierzytelniania i zabezpieczania komunikacji z usługą. Poniższy przykład przedstawia sposób konfigurowania klienta z usługi SPN. Jeśli używasz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania klienta, nazwę usługi SPN będzie automatycznie propagowane do klienta z metadanych usługi (WSDL), jeśli zawiera metadanych usługi te informacje. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak skonfigurować usługę, aby uwzględnić jego nazwę SPN w metadanych usługi, zobacz sekcję "Usługa" w dalszej części tego tematu.  
+>  Aby użyć typu poświadczeń systemu Windows bez negocjowania, klient musi być skonfigurowany przed rozpoczęciem komunikacji z usługą nazwa SPN konta usługi. Klient używa nazwy SPN, aby uzyskać token protokołu Kerberos do uwierzytelniania i zabezpieczania komunikacji z usługą. Poniższy przykład przedstawia sposób konfigurowania klienta z usługi SPN. Jeśli używasz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania klienta, nazwę usługi SPN będzie automatycznie propagowane do klienta z metadanych usługi (WSDL), jeśli zawiera metadanych usługi te informacje. Aby uzyskać więcej informacji o sposobie konfigurowania usługi do uwzględnienia w metadanych usługi jego głównej nazwy usługi zobacz sekcję "Usługa" w dalszej części tego tematu.  
 >   
->  Aby uzyskać więcej informacji na temat nazw SPN, protokołu Kerberos i usługi Active Directory, zobacz [Kerberos techniczne dodatku dla systemu Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tożsamość punktu końcowego, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) tematu.  
+>  Aby uzyskać więcej informacji na temat nazw SPN, protokołu Kerberos i usługi Active Directory, zobacz [Kerberos techniczne dodatku dla systemu Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Aby uzyskać więcej informacji o tożsamości punktu końcowego, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) tematu.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  

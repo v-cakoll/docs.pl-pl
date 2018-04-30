@@ -1,33 +1,33 @@
 ---
-title: "Hosting w Usłudze aktywacji procesów systemu Windows"
-ms.custom: 
+title: Hosting w Usłudze aktywacji procesów systemu Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji obsługujących [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług. Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesu dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług jednoczesne używanie protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację opartą na wiadomości i oferuje możliwość obsługi dużej liczby aplikacji na danym komputerze.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która działa w usługi WAS hosting środowiska, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Aby uzyskać więcej informacji dotyczących tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która działa w usługi WAS hosting środowiska, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Model procesu WAS zawiera kilka funkcji, które umożliwiają aplikacjom, które ma być obsługiwana w sposób jest bardziej niezawodne, łatwiejsze w obsłudze i efektywnie używającej zasobów:  
   
@@ -39,7 +39,7 @@ Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem 
   
 -   Pozwala aplikacjom korzystać z modelu procesów usług IIS bez konieczności wdrażania rozmiaru pełnej instalacji usług IIS.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Funkcje WAS, zobacz [usług IIS 7.0 Beta: Administrowanie sieci Web usług IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Aby uzyskać więcej informacji na temat funkcji WAS, zobacz [usług IIS 7.0 Beta: Administrowanie sieci Web usług IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) współpracuje z [!INCLUDE[iisver](../../../../includes/iisver-md.md)] i Windows Process Activation Service (WAS) zapewnienie rozbudowanych aplikacji, środowisko NET4 WCF i WF usług hostingu. Te korzyści obejmują zarządzanie cyklem życia procesu, odtwarzanie procesów, udostępniona Usługa hostingu, natychmiastową ochronę przed błędami, oddzielanie procesu, na żądanie aktywacji i monitorowanie kondycji. Aby uzyskać szczegółowe informacje, zobacz [funkcje hostingu AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) i [pojęcia Hosting AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -58,7 +58,7 @@ Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem 
   
  Można również uwzględnione usług i zasobów w aplikacji. W aplikacji zasoby aplikacji są opisane względem ścieżki podstawowej aplikacji. Załóżmy na przykład, że lokacja na contoso.com nazwa komputera ma powiązania witryny dla protokołów HTTP i Net.TCP. Również założono, że lokacji zawiera jedną aplikację znajdujący się w /Billing, który udostępnia usługi po GetOrders.svc. Następnie usługa GetOrders.svc ujawniany punkt końcowy z adresem względnym SecureEndpoint, czy można ujawnić w następujących dwóch identyfikatorów URI punktu końcowego usługi:  
   
- http://contoso.com/billing/GetOrders.svc/SecureEndpoint  
+ http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
 NET.TCP://contoso.com/billing/GetOrders.svc/SecureEndpoint  
   
 ## <a name="the-was-runtime"></a>Usługi WAS środowiska wykonawczego  

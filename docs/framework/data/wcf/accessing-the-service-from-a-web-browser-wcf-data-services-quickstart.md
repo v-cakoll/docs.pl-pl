@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (Szybki Start usługi danych WCF)
 W tym zadaniu rozpocznie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z programu Visual Studio i opcjonalnie Wyłącz strumieniowe źródło odczytu w przeglądarce sieci Web. Możesz zostanie następnie pobrać dokumentu definicji usługi a także uzyskiwać dostęp do danych usługi zasobów poprzez przesłanie żądania HTTP GET za pośrednictwem przeglądarki sieci Web do narażonych zasobów.  
   
 > [!NOTE]
->  Domyślnie program Visual Studio automatycznie przypisanie numeru portu do `localhost` identyfikatora URI na tym komputerze. To zadanie używa numeru portu `12345` w przykładach identyfikatora URI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak ustawić określonego numeru portu Zobacz projektu programu Visual Studio [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  Domyślnie program Visual Studio automatycznie przypisanie numeru portu do `localhost` identyfikatora URI na tym komputerze. To zadanie używa numeru portu `12345` w przykładach identyfikatora URI. Aby uzyskać więcej informacji na temat sposobu ustawiania określonego numeru portu w projekcie programu Visual Studio zobacz [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Aby zażądać domyślny dokument usługi przy użyciu programu Internet Explorer  
   

@@ -1,30 +1,32 @@
 ---
-title: "Przegląd integrowania z aplikacjami COM+"
-ms.custom: 
+title: Przegląd integrowania z aplikacjami COM+
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, możesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, możesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.  
   
  Gdy interfejs składnika COM + jest udostępniany jako usługa sieci Web, Specyfikacja i kontraktu usługi te są określane przez automatyczne mapowanie, które jest przeprowadzane w czasie inicjowania aplikacji. Na poniższej liście przedstawiono modelu koncepcyjnego dla tego mapowania:  
   
@@ -51,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  Wybierz odpowiedni tryb obsługi.  
   
-3.  Użyj narzędzia konfiguracji modelu usług COM + (ComSvcConfig.exe), aby dodać usługi sieci Web dla interfejsu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak używać ComSvcConfig.exe, zobacz [porady: Użyj modelu COM + narzędzia konfiguracji modelu usług](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3.  Użyj narzędzia konfiguracji modelu usług COM + (ComSvcConfig.exe), aby dodać usługi sieci Web dla interfejsu. Aby uzyskać więcej informacji o sposobie używania ComSvcConfig.exe, zobacz [porady: Użyj modelu COM + narzędzia konfiguracji modelu usług](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Skonfiguruj ustawienia dodatkowe usługi w pliku konfiguracyjnym aplikacji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak skonfigurować składnik, zobacz [porady: Konfigurowanie ustawień usługi COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4.  Skonfiguruj ustawienia dodatkowe usługi w pliku konfiguracyjnym aplikacji. Aby uzyskać więcej informacji na temat konfigurowania składnika, zobacz [porady: Konfigurowanie ustawień usługi COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Interfejsy obsługiwane  
  Istnieją pewne ograniczenia dotyczące typów interfejsów, które są dostępne jako usługę sieci Web. Następujące typy interfejsów nie są obsługiwane:  

@@ -1,28 +1,30 @@
 ---
-title: "Usługi jednokierunkowe"
-ms.custom: 
+title: Usługi jednokierunkowe
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>Usługi jednokierunkowe
 Domyślne zachowanie operacji usługi jest wzorzec żądanie odpowiedź. We wzorcu żądanie odpowiedź, klient oczekuje na komunikat odpowiedzi nawet wtedy, gdy operacja usługi jest reprezentowana w kodzie jako `void` metody. Z operacji jednokierunkowych są przesyłane tylko jeden komunikat. Odbiornik nie wysyła komunikat odpowiedzi nie jest nadawca oczekiwany jeden.  
@@ -31,7 +33,7 @@ Domyślne zachowanie operacji usługi jest wzorzec żądanie odpowiedź. We wzor
   
 -   Gdy klient musi wywołać operacji i nie ma wpływu na wynik operacji na poziomie operacji.  
   
--   Korzystając z <xref:System.ServiceModel.NetMsmqBinding> lub <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> klasy. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] tego scenariusza, zobacz [kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   Korzystając z <xref:System.ServiceModel.NetMsmqBinding> lub <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> klasy. (Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Podczas operacji jest jednokierunkowa, nie ma odpowiedzi do przenoszenia informacje o błędzie do klienta. Warunki błędów można wykryć za pomocą funkcji podstawowych powiązania, takich jak niezawodnej sesji lub Projektując kontrakt usługi dwustronnej, która używa dwóch operacji jednokierunkowych — kontraktu jednokierunkowego od klienta do usługi do wywołania operacji usługi, a drugi jednokierunkowe kontraktu między usługą i klienta, dzięki czemu usługa może wysyłać błędy wstecz do klienta przy użyciu wywołania zwrotnego, który implementuje klienta.  
   

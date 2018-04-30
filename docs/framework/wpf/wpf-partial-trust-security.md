@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
-<a name="introduction"></a> Ogólnie rzecz biorąc można ograniczyć aplikacji internetowych, z mające bezpośredni dostęp do zasobów systemowych krytyczne, aby zapobiec uszkodzeniu złośliwe. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] i języki skryptów po stronie klienta nie będą mogli uzyskiwać dostęp do zasobów systemu. Ponieważ [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce może być uruchamiany z przeglądarki, powinny odpowiadać podobny zestaw ograniczeń. Aby wymusić ograniczenia te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na obu [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] i [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (zobacz [strategii zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Domyślnie aplikacje obsługiwane w przeglądarce żądań strefy internetowej [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zestaw uprawnień, niezależnie od tego, czy są one uruchamiane z Internetu, lokalnego intranetu lub komputera lokalnego. Aplikacje uruchamiane przy użyciu innych mniej niż pełny zestaw uprawnień są określane jako działać z częściowa relacja zaufania.  
+<a name="introduction"></a> Ogólnie rzecz biorąc można ograniczyć aplikacji internetowych, z mające bezpośredni dostęp do zasobów systemowych krytyczne, aby zapobiec uszkodzeniu złośliwe. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] i języki skryptów po stronie klienta nie będą mogli uzyskiwać dostęp do zasobów systemu. Ponieważ aplikacje obsługiwane w przeglądarce Windows Presentation Foundation (WPF) można uruchomić w przeglądarce, powinna być zgodna z zestawem podobne ograniczenia. Aby wymusić ograniczenia te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na obu [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] i [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (zobacz [strategii zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Domyślnie aplikacje obsługiwane w przeglądarce żądań strefy internetowej [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zestaw uprawnień, niezależnie od tego, czy są one uruchamiane z Internetu, lokalnego intranetu lub komputera lokalnego. Aplikacje uruchamiane przy użyciu innych mniej niż pełny zestaw uprawnień są określane jako działać z częściowa relacja zaufania.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oferuje szeroką gamę pomocy technicznej, aby upewnić się, że tylu funkcji, jak to możliwe może być używany w częściowej relacji zaufania, wraz z [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], zapewnia dodatkowe obsługę programowania częściowej relacji zaufania.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Obsługa częściowej relacji zaufania funkcja WPF  
- W poniższej tabeli wymieniono funkcje wysokiego poziomu [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] włączanych do użycia w ramach strefy zestaw uprawnień internetowych.  
+ W poniższej tabeli wymieniono funkcje wysokiego poziomu o Windows Presentation Foundation (WPF), które są bezpiecznie korzystać w granicach zestaw uprawnień w strefie Internet.  
   
  Tabela 1: WPF funkcje, które są bezpieczne w przypadku zaufania częściowego  
   

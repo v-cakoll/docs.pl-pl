@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>Odwołanie do schematu kontraktu danych
 W tym temacie opisano podzestawu elementu schematu XML (XSD) używany przez <xref:System.Runtime.Serialization.DataContractSerializer> do opisywania wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) typy serializacji XML.  
@@ -245,7 +245,7 @@ W tym temacie opisano podzestawu elementu schematu XML (XSD) używany przez <xre
   
 -   Ograniczenia typu prostego `xs:string` nie mają żadnych ograniczeń aspekty inne niż `xs:enumeration` są mapowane na wyliczenie kontraktów danych.  
   
--   Wszystkie inne ograniczenia typu prostego są mapowane na typy, które ograniczają one. Na przykład ograniczenia `xs:int` mapowana na liczbę całkowitą, podobnie jak `xs:int` sam przeprowadza. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] typ pierwotny mapowania, zobacz Mapowanie typu/typów pierwotnych.  
+-   Wszystkie inne ograniczenia typu prostego są mapowane na typy, które ograniczają one. Na przykład ograniczenia `xs:int` mapowana na liczbę całkowitą, podobnie jak `xs:int` sam przeprowadza. Aby uzyskać więcej informacji o mapowaniu typu pierwotnego Zobacz Mapowanie typu/typów pierwotnych.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs:restriction >: atrybuty  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- Opcjonalny atrybut `ser:FactoryType` zadeklarowany w danych serializacji kontraktu schematu odwołuje się do klasy fabryki, która może wykonywać deserializację typu. Klasa fabryki muszą być częścią kolekcji znanych typów `DataContractSerializer` wystąpienie używane. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Opcjonalny atrybut `ser:FactoryType` zadeklarowany w danych serializacji kontraktu schematu odwołuje się do klasy fabryki, która może wykonywać deserializację typu. Klasa fabryki muszą być częścią kolekcji znanych typów `DataContractSerializer` wystąpienie używane. Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>Schematu serializacji DataContract  
  Liczba schematów wyeksportowane przez `DataContractSerializer` użyć typów, elementy i atrybuty z specjalne nazw serializacji kontraktu danych:  

@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72712e0934646a39c1e03a38716179384051003a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>Pojęcia zabezpieczeń użyte dla programu WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczenia jest oparty na koncepcji już w użyciu i wdrożone w różnych infrastruktur zabezpieczeń.  
@@ -36,10 +36,10 @@ ms.lasthandoff: 04/28/2018
  Infrastruktura kluczy publicznych (PKI) to system certyfikaty cyfrowe, urzędy certyfikacji i innych urzędów rejestracji, które sprawdzają i uwierzytelniania każdej Strony biorącej udział w operacji elektronicznej za pomocą kryptografii klucza publicznego. Aby uzyskać więcej informacji, zobacz [usług certyfikatów systemu Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=210211).  
   
 ### <a name="kerberos-protocol"></a>Protokół Kerberos  
- *Protokołu Kerberos* jest specyfikacją dla tworzenia mechanizm zabezpieczeń, który uwierzytelnia użytkowników w domenie systemu Windows. Umożliwia użytkownikowi ustanowić bezpiecznego kontekst z innymi jednostkami w domenie. Windows 2000 lub nowszych platformach domyślnie używają protokołu Kerberos. Zrozumienie mechanizmów systemu jest przydatne, gdy tworzenie usługi, która będzie współpracować z klienci w intranecie. Ponadto, ponieważ *powiązania protokołu Kerberos zabezpieczeń usług sieci Web* jest powszechnie opublikowana, można użyć protokołu Kerberos do komunikacji z klientami internetowymi (protokół Kerberos jest współpraca). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Protokół Kerberos jest zaimplementowany w systemie Windows, zobacz [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
+ *Protokołu Kerberos* jest specyfikacją dla tworzenia mechanizm zabezpieczeń, który uwierzytelnia użytkowników w domenie systemu Windows. Umożliwia użytkownikowi ustanowić bezpiecznego kontekst z innymi jednostkami w domenie. Windows 2000 lub nowszych platformach domyślnie używają protokołu Kerberos. Zrozumienie mechanizmów systemu jest przydatne, gdy tworzenie usługi, która będzie współpracować z klienci w intranecie. Ponadto, ponieważ *powiązania protokołu Kerberos zabezpieczeń usług sieci Web* jest powszechnie opublikowana, można użyć protokołu Kerberos do komunikacji z klientami internetowymi (protokół Kerberos jest współpraca). Aby uzyskać więcej informacji na temat implementowania protokołu Kerberos w systemie Windows, zobacz [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
   
 ### <a name="x509-certificates"></a>Certyfikaty X.509  
- Certyfikaty X.509 są formularza podstawowego poświadczeń używanych w aplikacjach zabezpieczeń. Aby uzyskać więcej informacji na temat X.509 Zobacz certyfikaty [certyfikatów kluczy publicznych X.509](http://go.microsoft.com/fwlink/?LinkId=210213). Certyfikaty X.509 są przechowywane w magazynie certyfikatów. Komputer z systemem Windows ma kilka rodzajów magazynów certyfikatów, każde z nich innym celu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz różnych sklepów [magazynów certyfikatów](http://go.microsoft.com/fwlink/?LinkID=87787).  
+ Certyfikaty X.509 są formularza podstawowego poświadczeń używanych w aplikacjach zabezpieczeń. Aby uzyskać więcej informacji na temat X.509 Zobacz certyfikaty [certyfikatów kluczy publicznych X.509](http://go.microsoft.com/fwlink/?LinkId=210213). Certyfikaty X.509 są przechowywane w magazynie certyfikatów. Komputer z systemem Windows ma kilka rodzajów magazynów certyfikatów, każde z nich innym celu. Aby uzyskać więcej informacji o różnych magazynach, zobacz [magazynów certyfikatów](http://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Specyfikacje zabezpieczeń usług sieci Web  
  Powiązania zdefiniowane przez system obsługi wielu specyfikacji zabezpieczenia usługi sieci web często używane. Aby uzyskać pełną listę powiązania dostarczane przez system i specyfikacji usługi sieci web obsługuje zobacz: [sieci Web usług protokoły obsługiwane przez wiązania współdziałania System-Provided](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

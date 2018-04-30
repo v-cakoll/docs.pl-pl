@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>Wybieranie typu poświadczeń
 *Poświadczenia* są dane [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa w celu ustalenia tożsamości lub funkcji. Na przykład usługi passport jest poświadczenia, który wystawia Rząd potwierdzenie możliwości dostępnych w kraju lub regionie. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczeń, jak są używane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oraz sposobu wybierania prawo poświadczeń dla aplikacji.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  Istnieje sytuacja pod uwagę podczas tożsamości nie można przełączyć (to znaczy podczas ustanawiania zabezpieczeń kontekstu jest włączona, domyślnie). Po utworzeniu usługi, która komunikuje się z usługą drugi tożsamość użyty do otwarcia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta drugi usługi nie można zmienić. To stanie się problemem, jeśli wielu klientów mogą korzystać z pierwszej usługi i usługa personifikuje klientów podczas uzyskiwania dostępu do usługi drugiego. Jeśli usługa ponownie używa tego samego klienta dla wszystkich obiektów wywołujących, wszystkie połączenia z usługą drugi są wykonywane z tożsamością pierwszy obiekt wywołujący, który został użyty do otwarcia klienta usługi drugiego. Innymi słowy usługa używa tożsamości pierwszego klienta dla wszystkich klientów do komunikacji z usługą drugiego. Może to spowodować podniesienie uprawnień. Jeśli nie jest zamierzone zachowanie usługi, musi śledzić każdy obiekt wywołujący i tworzenia nowego klienta do drugiego usługi dla każdego obiektu wywołującego w odrębnych i upewnić, że usługa używa tylko prawo klienta do obiektu wywołującego w prawo do komunikowania się z usługą drugiego.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] poświadczenia i bezpieczne sesje, zobacz [zagadnienia dotyczące zabezpieczeń dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Aby uzyskać więcej informacji na temat poświadczeń i bezpieczne sesje, zobacz [zagadnienia dotyczące zabezpieczeń dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

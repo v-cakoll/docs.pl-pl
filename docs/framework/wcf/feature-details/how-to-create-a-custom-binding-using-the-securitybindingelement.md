@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera kilka powiązania dostarczane przez system, które można skonfigurować, ale nie udostępniają pełną elastyczność podczas konfigurowania wszystkich zabezpieczeń opcji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawia sposób tworzenia niestandardowego powiązania bezpośrednio z powiązania poszczególnych elementów i zaznacza niektórych ustawień zabezpieczeń, które można określić podczas tworzenia takiego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie niestandardowych powiązań, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera kilka powiązania dostarczane przez system, które można skonfigurować, ale nie udostępniają pełną elastyczność podczas konfigurowania wszystkich zabezpieczeń opcji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawia sposób tworzenia niestandardowego powiązania bezpośrednio z powiązania poszczególnych elementów i zaznacza niektórych ustawień zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> nie obsługuje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanału kształtu, który jest używany domyślny kanał kształtu przez TCP podczas transportu <xref:System.ServiceModel.TransferMode> ma ustawioną wartość <xref:System.ServiceModel.TransferMode.Buffered>. Należy ustawić <xref:System.ServiceModel.TransferMode> do <xref:System.ServiceModel.TransferMode.Streamed> aby można było używać <xref:System.ServiceModel.Channels.SecurityBindingElement> w tym scenariuszu.  

@@ -1,26 +1,26 @@
 ---
-title: "Przechowywanie wersji usługi"
-ms.custom: 
+title: Przechowywanie wersji usługi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usług (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub do innych adresów problemy. Każda zmiana wprowadziła nową wersję usługi. W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywania wersji [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -138,7 +138,7 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
  Zmiany adres punktu końcowego i powiązania są fundamentalne zmiany, chyba że klienci są w stanie powiązania lub dynamicznie odnajdywania nowy adres punktu końcowego. Jeden mechanizm stosowania tej funkcji jest za pomocą rejestru Universal Description odnajdywania i usług UDDI i wzorzec wywołania UDDI, gdzie klient próbuje nawiązać połączenia z punktem końcowym i, w przypadku awarii zapytanie UDDI dobrze znane rejestr dla bieżących metadanych punktu końcowego. Klient używa następnie adres i powiązanie z tym metadanych do komunikowania się z punktem końcowym. Jeśli ta komunikacja zakończy się powodzeniem, klient buforuje informacje adres i powiązanie do użytku w przyszłości.  
   
 ## <a name="routing-service-and-versioning"></a>Usługa routingu i kontroli wersji  
- Jeśli zmiany wprowadzone do usługi są fundamentalne zmiany, a muszą mieć co najmniej dwa różne wersje usługi uruchomionej jednocześnie służy usługa routingu WCF do przesyłania wiadomości do wystąpienia odpowiedniej usługi. Usługa routingu WCF używa routingu opartego na zawartość, innymi słowy, używa informacji w komunikacie do określenia miejsca kierowania komunikatu. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Zobacz Usługa routingu WCF [usługa routingu](../../../docs/framework/wcf/feature-details/routing-service.md). Przykład sposobu użycia usługi routingu WCF do wersji usługi zobacz [jak: przechowywanie wersji usługi](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Jeśli zmiany wprowadzone do usługi są fundamentalne zmiany, a muszą mieć co najmniej dwa różne wersje usługi uruchomionej jednocześnie służy usługa routingu WCF do przesyłania wiadomości do wystąpienia odpowiedniej usługi. Usługa routingu WCF używa routingu opartego na zawartość, innymi słowy, używa informacji w komunikacie do określenia miejsca kierowania komunikatu. Aby uzyskać więcej informacji o routingu usługi WCF, zobacz [usługa routingu](../../../docs/framework/wcf/feature-details/routing-service.md). Przykład sposobu użycia usługi routingu WCF do wersji usługi zobacz [jak: przechowywanie wersji usługi](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Dodatek  
  Wskazówki przechowywanie wersji kontraktu ogólne dane gdy wymagany jest strict versioning jest traktować jako niezmienialny kontraktów danych i utworzyć nowe, jeśli są wymagane zmiany. Nową klasę musi zostać utworzona dla każdego nowego kontraktu danych, więc mechanizm jest potrzebny, aby uniknąć konieczności podjęcia istniejący kod, który został zapisany w postaci liczby stare dane kontraktu klasy i ponowne zapisywanie adresów pod względem nowej klasy kontraktu danych.  

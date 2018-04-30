@@ -1,37 +1,37 @@
 ---
-title: "Zabezpieczanie klientów [WCF]"
-ms.custom: 
+title: Zabezpieczanie klientów [WCF]
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
-W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługa nakazują wymagania dotyczące zabezpieczeń dla klientów. To, że usługa określa, jakie tryb zabezpieczeń, aby używać, i określa, czy klient musi dostarczyć poświadczenia. Zabezpieczanie klientów, w związku z tym, proces jest prosty: używanie metadanych uzyskane z usługi (jeśli jest publikowany) i kompilacji klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga to, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie opisano proces bardziej szczegółowo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Tworzenie bezpiecznej usługi, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
+W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługa nakazują wymagania dotyczące zabezpieczeń dla klientów. To, że usługa określa, jakie tryb zabezpieczeń, aby używać, i określa, czy klient musi dostarczyć poświadczenia. Zabezpieczanie klientów, w związku z tym, proces jest prosty: używanie metadanych uzyskane z usługi (jeśli jest publikowany) i kompilacji klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga to, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie opisano proces bardziej szczegółowo. Aby uzyskać więcej informacji o tworzeniu Usługa bezpiecznego, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Usługa określa zabezpieczeń  
  Domyślnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powiązania ma włączone funkcje zabezpieczeń. (Wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding>.) W związku z tym jeśli usługa została utworzona przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], istnieje duże prawdopodobieństwo, że będzie implementowany zabezpieczeń, aby zapewnić uwierzytelnianie, poufność i integralność. W takim przypadku metadanych, który udostępnia usługi wskaże, co wymaga, aby ustanowić kanał bezpiecznej komunikacji. Jeśli metadane usługi nie ma żadnych wymagań dotyczących zabezpieczeń, nie istnieje sposób nałożyć schemat zabezpieczeń, takich jak Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, w usłudze. Jeśli jednak usługa wymaga klienta podać poświadczenia, następnie deweloperowi klienta, narzędzia wdrażania lub administrator musisz podać poświadczenia rzeczywiste używanego przez klienta do samodzielnego uwierzytelnienia usługi.  
   
 ## <a name="obtaining-metadata"></a>Uzyskiwanie metadanych  
- Podczas tworzenia klienta, pierwszym krokiem jest uzyskać metadanych dla usługi klienta będą komunikować się z. Można to zrobić na dwa sposoby. Po pierwsze, jeśli usługa publikuje punktu końcowego metadanych programu exchange (MEX) lub udostępnia metadanych za pośrednictwem protokołu HTTP lub HTTPS, można pobrać przy użyciu metadanych [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), zarówno generująca pliki kodu dla klienta, a także plik konfiguracji. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] za pomocą narzędzia, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Jeśli usługa nie jest publikowany punktu końcowego MEX i również nie powoduje jego metadanych dostępne za pośrednictwem protokołu HTTP lub HTTPS, należy skontaktuj się z autorem usługi dokumentacji, które opisują wymagania dotyczące zabezpieczeń i metadanych.  
+ Podczas tworzenia klienta, pierwszym krokiem jest uzyskać metadanych dla usługi klienta będą komunikować się z. Można to zrobić na dwa sposoby. Po pierwsze, jeśli usługa publikuje punktu końcowego metadanych programu exchange (MEX) lub udostępnia metadanych za pośrednictwem protokołu HTTP lub HTTPS, można pobrać przy użyciu metadanych [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), zarówno generująca pliki kodu dla klienta, a także plik konfiguracji. (Aby uzyskać więcej informacji na temat korzystania z narzędzia, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Jeśli usługa nie jest publikowany punktu końcowego MEX i również nie powoduje jego metadanych dostępne za pośrednictwem protokołu HTTP lub HTTPS, należy skontaktuj się z autorem usługi dokumentacji, które opisują wymagania dotyczące zabezpieczeń i metadanych.  
   
 > [!IMPORTANT]
 >  Zaleca się, że metadane pochodzą z zaufanego źródła i że nie być zmodyfikowany. Metadane pobrany przy użyciu protokołu HTTP są wysyłane w postaci zwykłego tekstu i może zostać naruszone. Jeśli usługa używa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> i <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> właściwości, użyj adresu URL, twórca usługi dostarczone w celu pobierania danych przy użyciu protokołu HTTPS.  
@@ -93,13 +93,13 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługa nakazują wymaga
   
 |Właściwość poświadczeń klienta|Opis|Uwagi|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Zwraca<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Reprezentuje certyfikat X.509 dostarczonych przez klienta do samodzielnego uwierzytelnienia usługi.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Zwraca<xref:System.ServiceModel.Security.HttpDigestClientCredential>|Reprezentuje poświadczenie HTTP digest. Poświadczenie jest skrót nazwy użytkownika i hasła.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Zwraca<xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Reprezentuje token zabezpieczający niestandardowych wystawiony przez usługę tokenu zabezpieczającego, często używane w scenariuszach federacji.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Zwraca<xref:System.ServiceModel.Security.PeerCredential>|Reprezentuje poświadczenia elementu równorzędnego dla udziału w siatki elementów równorzędnych w domenie systemu Windows.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Zwraca<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Reprezentuje certyfikat X.509 dostarczonych przez usługę w negocjacji poza pasmem.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Zwraca<xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Reprezentuje parę nazwa i hasło użytkownika.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Zwraca<xref:System.ServiceModel.Security.WindowsClientCredential>|Reprezentuje poświadczeń klienta systemu Windows (poświadczeń protokołu Kerberos). Właściwości klasy są tylko do odczytu.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Zwraca <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Reprezentuje certyfikat X.509 dostarczonych przez klienta do samodzielnego uwierzytelnienia usługi.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Zwraca <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Reprezentuje poświadczenie HTTP digest. Poświadczenie jest skrót nazwy użytkownika i hasła.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Zwraca <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Reprezentuje token zabezpieczający niestandardowych wystawiony przez usługę tokenu zabezpieczającego, często używane w scenariuszach federacji.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Zwraca <xref:System.ServiceModel.Security.PeerCredential>|Reprezentuje poświadczenia elementu równorzędnego dla udziału w siatki elementów równorzędnych w domenie systemu Windows.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Zwraca <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Reprezentuje certyfikat X.509 dostarczonych przez usługę w negocjacji poza pasmem.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Zwraca <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Reprezentuje parę nazwa i hasło użytkownika.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Zwraca <xref:System.ServiceModel.Security.WindowsClientCredential>|Reprezentuje poświadczeń klienta systemu Windows (poświadczeń protokołu Kerberos). Właściwości klasy są tylko do odczytu.|  
   
 #### <a name="setting-a-clientcredentials-value-in-configuration"></a>Ustawienie \<clientCredentials > wartości w konfiguracji  
  Poświadczenie wartości są określane przy użyciu zachowanie punktu końcowego jako elementy podrzędne [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu. Element używany zależy od typu poświadczeń klienta. Na przykład w poniższym przykładzie przedstawiono konfigurację, aby ustawić certyfikatu X.509 przy użyciu <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
@@ -147,10 +147,10 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługa nakazują wymaga
 > [!NOTE]
 >  Niektóre wartości poświadczeń klienta nie może być zestawu przy użyciu pliki konfiguracji aplikacji, na przykład, nazwę użytkownika i hasło, lub użytkownika systemu Windows i wartości hasła. Wartości te poświadczenia można określić tylko w kodzie.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Ustawienie poświadczeń klienta, zobacz [porady: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Aby uzyskać więcej informacji na temat ustawiania poświadczeń klienta, zobacz [porady: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
->  `ClientCredentialType`jest ignorowana, jeśli `SecurityMode` ustawiono `"TransportWithMessageCredential",` jak pokazano w poniższych Przykładowa konfiguracja.  
+>  `ClientCredentialType` jest ignorowana, jeśli `SecurityMode` ustawiono `"TransportWithMessageCredential",` jak pokazano w poniższych Przykładowa konfiguracja.  
   
 ```xml  
 <wsHttpBinding>  

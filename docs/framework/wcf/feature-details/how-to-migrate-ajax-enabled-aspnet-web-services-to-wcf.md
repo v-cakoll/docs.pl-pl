@@ -1,24 +1,26 @@
 ---
-title: "Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF"
-ms.custom: 
+title: 'Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF
 W tym temacie przedstawiono procedury migracji podstawowej usługi ASP.NET AJAX równoważną interfejsu AJAX [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi. Widoczny jest sposób utworzyć taką samą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wersja usługi ASP.NET AJAX. Te dwie usługi mogą być następnie używane obok siebie lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi może być używany do zastąpienia usługi ASP.NET AJAX.  
@@ -33,7 +35,7 @@ W tym temacie przedstawiono procedury migracji podstawowej usługi ASP.NET AJAX 
   
  Kod, który jest wynikiem procedury opisane w tym temacie podano w przykładzie zamieszczonym procedur.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]udostępnianie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi za pośrednictwem punktu końcowego z włączoną obsługą technologii AJAX, zobacz [porady: Użyj konfiguracji można dodać punktu końcowego AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) tematu.  
+ Aby uzyskać więcej informacji na temat udostępnianie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi za pośrednictwem punktu końcowego z włączoną obsługą technologii AJAX, zobacz [porady: Użyj konfiguracji można dodać punktu końcowego AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) tematu.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Tworzenie i testowanie aplikacji usługi sieci Web ASP.NET  
   
@@ -204,9 +206,9 @@ d.Add("two", 2);
   
  Ten słownik jest reprezentowana w obiektów JSON, jak pokazano na poniższej liście:  
   
--   [{"Klucza": "Jeden", "Value": 1}, {"Klucza": "Dwa", "Value": 2}] według<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
+-   [{"Klucza": "Jeden", "Value": 1}, {"Klucza": "Dwa", "Value": 2}] według <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
   
--   {"jeden": 1, "dwa": 2} przez ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>  
+-   {"jeden": 1, "dwa": 2} przez ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>  
   
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Jest bardziej zaawansowanych, w tym sensie, że może obsługiwać słowniki gdzie typ klucza nie jest ciągiem, gdy <xref:System.Web.Script.Serialization.JavaScriptSerializer> nie. Ale nie jest bardziej przyjazny JSON.  
   
@@ -215,11 +217,11 @@ d.Add("two", 2);
 |Kategoria różnic|Klasa DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|  
 |-----------------------------|--------------------------------|---------------------------------------|  
 |Podczas deserializacji pustego buforu (nowe byte[0]) do <xref:System.Object> (lub <xref:System.Uri>, lub niektóre inne klasy).|SerializationException|null|  
-|Serializacja<xref:System.DBNull.Value>|{} (lub {"__type": "#System"})|Null|  
+|Serializacja <xref:System.DBNull.Value>|{} (lub {"__type": "#System"})|Null|  
 |Serializacja prywatne elementy członkowskie typów [Serializable].|serializowany|nie serializacji|  
 |Serializacja właściwości publicznej <xref:System.Runtime.Serialization.ISerializable> typów.|nie serializacji|serializowany|  
 |"Rozszerzenia" JSON|Jest zgodna ze specyfikacją JSON, co wymaga cudzysłowów wokół nazwy elementów członkowskich obiektu ({"": "tekst hello"}).|Obsługuje nazwy elementów członkowskich obiektu bez cudzysłowów ({a: "tekst hello"}).|  
-|<xref:System.DateTime>Uniwersalny czas koordynowany (UTC)|Nie obsługuje formatu "\\/Date(123456789U)\\/" lub "\\/data\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\\\/)".|Obsługuje format "\\/Date(123456789U)\\/" i "\\/data\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\ \\/) "jako wartości daty/godziny.|  
+|<xref:System.DateTime> Uniwersalny czas koordynowany (UTC)|Nie obsługuje formatu "\\/Date(123456789U)\\/" lub "\\/data\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Obsługuje format "\\/Date(123456789U)\\/" i "\\/data\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "jako wartości daty/godziny.|  
 |Reprezentacja słowników|Tablica KeyValuePair\<K, V >, obsługuje typów kluczy, które nie są ciągami.|Jako rzeczywisty obiektów JSON -, ale tylko typów kluczy dojść, które są ciągami.|  
 |Znaki zmienionym|Zawsze z ucieczki ukośnika (/); nigdy nie umożliwia niezmieniony nieprawidłowe znaki JSON, takie jak "\n".|Z ucieczki ukośnika (/) dla wartości daty/godziny.|  
   

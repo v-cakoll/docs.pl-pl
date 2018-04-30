@@ -1,24 +1,24 @@
 ---
-title: "Działania niestandardowe SendMail"
-ms.custom: 
+title: Działania niestandardowe SendMail
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46038466233e7039229890b15b0ad6ca9d1a717f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sendmail-custom-activity"></a>Działania niestandardowe SendMail
 Ten przykład przedstawia sposób tworzenia działań niestandardowych, która jest pochodną <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail do użycia w aplikacji przepływu pracy za pomocą protokołu SMTP. To niestandardowe działanie korzysta z funkcji programu <xref:System.Net.Mail.SmtpClient> do asynchronicznego wysyłania wiadomości e-mail i do wysyłania wiadomości e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje przez użytkownika końcowego, takie jak przetestować tryb, zastępujący tokenu, Szablony plików i test ścieżkę.  
@@ -116,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Instrukcje dotyczące konfiguracji  
  Dostęp do serwera SMTP jest wymagany dla tego przykładu.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Konfigurowanie serwera SMTP, zobacz następujące linki.  
+ Aby uzyskać więcej informacji na temat konfigurowania serwera SMTP zobacz następujące łącza.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   

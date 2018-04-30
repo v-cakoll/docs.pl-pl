@@ -1,24 +1,26 @@
 ---
 title: Konfigurowanie odnajdywania w pliku konfiguracji
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43344fc5411236fbb7420fd4d58526b3e0351d4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ba224bbf27e5a61168040c944bb940c3e6b0d8c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Konfigurowanie odnajdywania w pliku konfiguracji
 Istnieją cztery główne grupy ustawień konfiguracji używane podczas odnajdywania. W tym temacie zostaną krótko opisują każdą i przedstawiono przykłady sposobu ich konfiguracji. Po każdej sekcji będzie łącze do szczegółową dokumentację o każdym obszarze.  
@@ -148,7 +150,7 @@ Istnieją cztery główne grupy ustawień konfiguracji używane podczas odnajdyw
 </behavior>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> zobacz [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> zobacz [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Konfiguracja elementu powiązania  
  Konfiguracja elementu powiązania jest najbardziej interesujące po stronie klienta. Określ kryteria znajdowania używanej do odnajdywania usług z aplikacji klienta WCF umożliwia konfiguracji.  Poniższy przykład tworzy niestandardowego powiązania z <xref:System.ServiceModel.Discovery.DiscoveryClient> kanału i określa kryteria wyszukiwania, które obejmuje typie i zakresie. Ponadto określa wartości <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> i <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> właściwości.  
@@ -188,7 +190,7 @@ Istnieją cztery główne grupy ustawień konfiguracji używane podczas odnajdyw
     </client>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Znajdź Zobacz kryteria [odnajdywania Znajdowanie i kryteria znajdowania](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Odnajdywanie i powiązania elementów Zobacz, [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Aby uzyskać więcej informacji na temat kryteria znajdowania zobacz [odnajdywania Znajdowanie i kryteria znajdowania](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Aby uzyskać więcej informacji na temat odnajdowania i powiązania elementów, zobacz temat [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Konfiguracja standardowego punktu końcowego  
  Standardowe punkty końcowe są wstępnie zdefiniowanych punktów końcowych, które mają przypisane wartości domyślne dla co najmniej jednej właściwości (adres, powiązanie lub kontraktu) lub wartości właściwości, których nie można zmienić. .NET 4 jest dostarczany z 3 odnajdywania powiązane standardowych punktów końcowych: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, i <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> Jest powiązanie standardowy punkt końcowy, który jest wstępnie skonfigurowane dla operacji odnajdowania za pośrednictwem multiemisji UDP. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> Jest standardowy punkt końcowy, który jest wstępnie skonfigurowana do wysyłania wiadomości powiadomienia za pośrednictwem powiązania protokołu UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Jest standardowy punkt końcowy, który korzysta z odnajdywania można znaleźć adres punktu końcowego usługi odnalezionych dynamicznie w czasie wykonywania.  Standardowe powiązania są określane za pomocą <`endpoint`> element, który zawiera rodzaju atrybutu określającego typ Standardowy punkt końcowy do dodania. Poniższy przykład przedstawia sposób dodawania <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
@@ -280,4 +282,4 @@ Istnieją cztery główne grupy ustawień konfiguracji używane podczas odnajdyw
 </system.ServiceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz standardowych punktów końcowych [standardowych punktów końcowych](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Aby uzyskać więcej informacji na temat standardowych punktów końcowych zobacz [standardowych punktów końcowych](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

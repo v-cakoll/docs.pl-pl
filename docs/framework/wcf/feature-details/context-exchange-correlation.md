@@ -1,24 +1,26 @@
 ---
 title: Korelacja wymiany kontekstu
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="context-exchange-correlation"></a>Korelacja wymiany kontekstu
 Kontekst korelacji jest oparta na mechanizm wymiany kontekstu opisanego w [Specyfikacja protokół wymiany kontekstu .NET](http://go.microsoft.com/fwlink/?LinkId=166059). Kontekst korelacji używa nagłówka kontekstu dobrze znanego lub plik cookie powiązać wiadomości na prawidłowe wystąpienie. Umożliwia korelacji kontekstu, na podstawie kontekstu wiązania takich jak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, lub <xref:System.ServiceModel.NetTcpContextBinding> musi być używany w określony punkt końcowy do <xref:System.ServiceModel.Activities.WorkflowServiceHost>. W tym temacie wyjaśniono, jak używać kontekstu korelacji z działaniami obsługi komunikatów w usłudze przepływu pracy.  
@@ -54,7 +56,7 @@ SendReply ReplyToStartOrder = new SendReply
 ```  
   
 > [!NOTE]
->  W tym przykładzie są faktycznie dwa rodzaje korelacji używany: kontekst korelacji i korelacja żądań i odpowiedzi. Korelacji kontekstu jest używana i połączeń od klientów są kierowane do prawidłowe wystąpienie. Korelacja żądań i odpowiedzi jest używany przez <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> działań ze sobą w celu wykonania operacji dwukierunkowe formowane przez te działania. W tym przykładzie tylko korelacji kontekstu jest jawnie skonfigurowany, a <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary używa korelacja żądań i odpowiedzi domyślne, dostarczone przez niejawne <xref:System.ServiceModel.Activities.CorrelationHandle> zarządzania <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Korzystając z **ReceiveAndSendReply** jawnie skonfigurowano szablon działania w korelacja żądań i odpowiedzi z projektanta przepływów pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Korelacja żądań i odpowiedzi i zarządzanie dojścia korelacji niejawne, zobacz [żądanie-odpowiedź](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) i [Przegląd korelacji](../../../../docs/framework/wcf/feature-details/correlation-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]**ReceiveAndSendReply** szablon działania, zobacz [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
+>  W tym przykładzie są faktycznie dwa rodzaje korelacji używany: kontekst korelacji i korelacja żądań i odpowiedzi. Korelacji kontekstu jest używana i połączeń od klientów są kierowane do prawidłowe wystąpienie. Korelacja żądań i odpowiedzi jest używany przez <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> działań ze sobą w celu wykonania operacji dwukierunkowe formowane przez te działania. W tym przykładzie tylko korelacji kontekstu jest jawnie skonfigurowany, a <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary używa korelacja żądań i odpowiedzi domyślne, dostarczone przez niejawne <xref:System.ServiceModel.Activities.CorrelationHandle> zarządzania <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Korzystając z **ReceiveAndSendReply** jawnie skonfigurowano szablon działania w korelacja żądań i odpowiedzi z projektanta przepływów pracy. Aby uzyskać więcej informacji dotyczących zarządzania dojścia korelacji niejawne i korelacja żądań i odpowiedzi, zobacz [żądanie-odpowiedź](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) i [Przegląd korelacji](../../../../docs/framework/wcf/feature-details/correlation-overview.md). Aby uzyskać więcej informacji na temat **ReceiveAndSendReply** szablon działania, zobacz [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
   
  Kolejne <xref:System.ServiceModel.Activities.Receive> działania w usłudze przepływu pracy można odwoływać się <xref:System.ServiceModel.Activities.CorrelationHandle> który został zainicjowany przez <xref:System.ServiceModel.Activities.SendReply> w poprzednim przykładzie.  
   
@@ -109,6 +111,6 @@ Send request2 = new Send
 };  
 ```  
   
- Należy pamiętać, że w tych przykładach, jawnie skonfigurowane korelacji kontekstu. Jeśli przepływ pracy klienta nie jest obsługiwany w <xref:System.ServiceModel.Activities.WorkflowServiceHost>, a następnie korelacji musi być jawnie skonfigurowany, chyba że działania są zawarte w <xref:System.ServiceModel.Activities.CorrelationScope> działania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kontekst korelacji, zobacz [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) próbki.  
+ Należy pamiętać, że w tych przykładach, jawnie skonfigurowane korelacji kontekstu. Jeśli przepływ pracy klienta nie jest obsługiwany w <xref:System.ServiceModel.Activities.WorkflowServiceHost>, a następnie korelacji musi być jawnie skonfigurowany, chyba że działania są zawarte w <xref:System.ServiceModel.Activities.CorrelationScope> działania. Aby uzyskać więcej informacji o kontekście korelacji, zobacz [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) próbki.  
   
  Jeśli klient, który jest wykonywania wywołań do usługi przepływu pracy nie jest przepływ pracy, następnie go można nadal prowadzić powtarzane wywołania tak długo, jak ją jawnie odsyła kontekście, który zostanie zwrócony w pierwszym wywołaniu usługi przepływu pracy. Serwery proxy generowany przez dodanie odwołania do usługi w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] przechowywania i przekaż tego kontekstu domyślnie.

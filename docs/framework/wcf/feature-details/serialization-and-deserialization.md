@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serializacja i deserializacja
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML w obu kierunkach. W tym temacie wyjaśniono, jak działa serializatora.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>Określanie znanych typów  
- Jeśli polimorfizm uczestniczy w typach serializowana, które nie jest już obsługiwana za pomocą <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybutu lub innych mechanizmu listę możliwych znane typy muszą być przekazywane do konstruktora serializatora za pomocą `knownTypes` parametru. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Jeśli polimorfizm uczestniczy w typach serializowana, które nie jest już obsługiwana za pomocą <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybutu lub innych mechanizmu listę możliwych znane typy muszą być przekazywane do konstruktora serializatora za pomocą `knownTypes` parametru. Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  W poniższym przykładzie przedstawiono klasę, `LibraryPatron`, który zawiera kolekcję określonego typu `LibraryItem`. Definiuje klasę sekundę `LibraryItem` typu. Trzeci i cztery klasy (`Book` i `Newspaper`) dziedziczyć `LibraryItem` klasy.  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/28/2018
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> i <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> metody są aliasami <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> i <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> metody. Istnieją one w celu zapewnienia bardziej spójny model programowania z pliku binarnego lub serializacji SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] te funkcje, zobacz [szeregowanie binarne](../../../../docs/standard/serialization/binary-serialization.md).  
+ Aby uzyskać więcej informacji o tych funkcjach, zobacz [szeregowanie binarne](../../../../docs/standard/serialization/binary-serialization.md).  
   
  Formatów XML, który `NetDataContractSerializer` i `DataContractSerializer` użycia zazwyczaj nie są zgodne. Oznacza to, że próby serializacji jednego z tych serializatorów i deserializacji z innym nie jest obsługiwanym scenariuszem.  
   

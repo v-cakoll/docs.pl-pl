@@ -1,28 +1,28 @@
 ---
-title: "Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów"
-ms.custom: 
+title: Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 
+caps.latest.revision: 20
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 632d4cc19c19342363228a1e86b1ba6445d14ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 19b54739d82fe7363319211d3f753416e0966aed
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów
 W tym temacie omówiono przy użyciu certyfikatów X.509 do uwierzytelniania klienta i serwera, korzystając z zabezpieczeń transportu. Aby uzyskać więcej informacji na temat X.509 Zobacz certyfikaty [certyfikatów kluczy publicznych X.509](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). Certyfikaty muszą być wystawiane przez urząd certyfikacji, który jest często wystawcy certyfikatów innych firm. W domenie systemu Windows Server usługi certyfikatów Active Directory może służyć do wystawiania certyfikatów dla komputerów klienckich w domenie. Aby uzyskać więcej informacji, zobacz [usług certyfikatów systemu Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). W tym scenariuszu usługi jest obsługiwane w obszarze Internet usługi informacyjne (IIS), której skonfigurowano protokołem SSL Secure Sockets Layer (). Usługa jest skonfigurowana z certyfikatem SSL (X.509), aby umożliwić klientom zweryfikowanie tożsamości serwera. Klient jest konfigurowane również certyfikatu X.509, który umożliwia usłudze do weryfikacji tożsamości klienta. Certyfikat serwera musi być uważany za zaufany przez klienta i certyfikat klienta musi być uważany za zaufany przez serwer. Rzeczywiste mechanika jak usługa i klient sprawdza tożsamość siebie nawzajem wykracza poza zakres tego tematu. Aby uzyskać więcej informacji, zobacz [podpisu cyfrowego w witrynie Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -31,7 +31,7 @@ W tym temacie omówiono przy użyciu certyfikatów X.509 do uwierzytelniania kli
   
  ![Bezpiecznego transferu za pomocą certyfikatów](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą certyfikatu usługi, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). W poniższej tabeli opisano różne charakterystyki scenariusza.  
+ Aby uzyskać więcej informacji dotyczących używania certyfikatu z usługą, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). W poniższej tabeli opisano różne charakterystyki scenariusza.  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  

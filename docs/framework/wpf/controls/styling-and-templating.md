@@ -1,12 +1,13 @@
 ---
-title: "Tworzenie szablonów i stylów"
-ms.custom: 
+title: Tworzenie szablonów i stylów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Style i tworzenia szablonów odwoływać się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualny i utworzyć spójny wygląd ich produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji przez aplikację, model strong style i tworzenia szablonów jest niezbędne w celu umożliwienia obsługi i udostępnianie wyglądu w ramach i między aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia modelu.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Style i tworzenia szablonów odwoływać się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualny i utworzyć spójny wygląd ich produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji przez aplikację, model strong style i tworzenia szablonów jest niezbędne w celu umożliwienia obsługi i udostępnianie wyglądu w ramach i między aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia modelu.  
   
  Kolejną funkcją [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] model stylów jest oddzielenie logiki i prezentacji. Oznacza to, że projektantów można zmieniać wygląd aplikacji tylko przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w tym samym czasie, który deweloperzy pracować przy użyciu logiki programowania przy użyciu języka C# lub Visual Basic.  
   
@@ -181,15 +183,15 @@ ms.lasthandoff: 12/22/2017
  ![Zrzut ekranu przedstawiający przykładowy stylów](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers i MultiDataTriggers  
- Oprócz <xref:System.Windows.Trigger> i <xref:System.Windows.EventTrigger>, występują inne typy wyzwalaczy. <xref:System.Windows.MultiTrigger>Służy do ustawiania wartości właściwości na podstawie wielu warunków. Możesz użyć <xref:System.Windows.DataTrigger> i <xref:System.Windows.MultiDataTrigger> gdy właściwość warunku jest powiązany z danymi.  
+ Oprócz <xref:System.Windows.Trigger> i <xref:System.Windows.EventTrigger>, występują inne typy wyzwalaczy. <xref:System.Windows.MultiTrigger> Służy do ustawiania wartości właściwości na podstawie wielu warunków. Możesz użyć <xref:System.Windows.DataTrigger> i <xref:System.Windows.MultiDataTrigger> gdy właściwość warunku jest powiązany z danymi.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>Udostępnione zasoby i motywów  
- Typowe [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacje mogą mieć wiele zasobów interfejsu użytkownika, które są stosowane w całej aplikacji. Zbiorczo ten zestaw zasobów, jest uznawana za motyw dla aplikacji. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]zapewnia obsługę użytkownika pakowania zasoby interfejsu użytkownika jako motyw za pomocą słownika zasobów, która jest hermetyzowany jako <xref:System.Windows.ResourceDictionary> klasy.  
+ Typowa aplikacja Windows Presentation Foundation (WPF) może mieć wielu zasobów interfejsu użytkownika, które są stosowane w całej aplikacji. Zbiorczo ten zestaw zasobów, jest uznawana za motyw dla aplikacji. Windows Presentation Foundation (WPF) zapewnia obsługę użytkownika pakowania zasoby interfejsu użytkownika jako motyw za pomocą słownika zasobów, która jest hermetyzowany jako <xref:System.Windows.ResourceDictionary> klasy.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Motywy są definiowane za pomocą mechanizmu stylami i tworzenia szablonów który [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] przedstawia dostosowywania wizualnych dowolnego elementu.  
+ Motywy Windows Presentation Foundation (WPF) są zdefiniowane przy użyciu stylów i mechanizm tworzenia szablonów, który ujawnia Windows Presentation Foundation (WPF) dostosowywania wizualnych dowolnego elementu.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]motyw zasobów są przechowywane w słownikach zasobów osadzonych. Te słowniki zasobów musi być osadzony w zestawie podpisane i albo można osadzić w tym samym zestawie co kodu lub w zestawie side-by-side. W przypadku PresentationFramework.dll, zestawu, który zawiera [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] formantów, motyw zasoby są w serii side-by-side zestawów.  
+ Zasoby motywu Windows Presentation Foundation (WPF) są przechowywane w słownikach zasobów osadzonych. Te słowniki zasobów musi być osadzony w zestawie podpisane i albo można osadzić w tym samym zestawie co kodu lub w zestawie side-by-side. W przypadku PresentationFramework.dll, zestawu, którego zawiera kontrolki Windows Presentation Foundation (WPF) motywu zasoby są w szeregu side-by-side zestawów.  
   
  Staje się ostatnie miejsce do wyszukiwania przy wyszukiwaniu styl elementu. Zazwyczaj wyszukiwanie będzie rozpocząć przez krótki w górę drzewa element wyszukiwanie odpowiednich zasobów, a następnie Szukaj w kolekcji zasobów aplikacji i koniec wykonywanie zapytań względem systemu. Deweloperzy aplikacji daje możliwość ponownego zdefiniowania stylu dla dowolnego obiektu na poziomie drzewa lub aplikacji przed osiągnięciem motywu.  
   

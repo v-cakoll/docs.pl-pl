@@ -1,27 +1,29 @@
 ---
-title: "Instrukcje: Określanie łańcucha certyfikatu urzędu certyfikacji służącego do weryfikowania podpisów (WCF)"
-ms.custom: 
+title: 'Instrukcje: Określanie łańcucha certyfikatu urzędu certyfikacji służącego do weryfikowania podpisów (WCF)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Instrukcje: Określanie łańcucha certyfikatu urzędu certyfikacji służącego do weryfikowania podpisów (WCF)
 Gdy [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] odbiera wiadomości SOAP podpisany za pomocą certyfikatu X.509, domyślnie sprawdza, czy certyfikat X.509 został wystawiony przez zaufany urząd certyfikacji. Jest to realizowane przez wyszukiwanie w magazynie certyfikatów i określenia, czy certyfikat dla tego urzędu certyfikacji został wyznaczony jako zaufany. Aby [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Aby określić to łańcucha certyfikatu urzędu certyfikacji musi być zainstalowany w magazynie prawidłowego certyfikatu.  
@@ -42,7 +44,7 @@ Gdy [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] odbiera wiadomości 
   
          W programie Microsoft Management Console (MMC), otwórz przystawkę Certyfikaty. Certyfikatu przechowywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest skonfigurowany do pobierania certyfikatów X.509 z wybierz opcję **zaufanym głównym** **urzędów certyfikacji**folderu. W obszarze **zaufane główne urzędy certyfikacji** folderu, kliknij prawym przyciskiem myszy **certyfikaty**folderu, wskaż **wszystkie zadania**, a następnie kliknij przycisk **importu** . Określ plik wyeksportowany w kroku.  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą przystawki Certyfikaty w programie MMC, zobacz [porady: wyświetlanie certyfikatów w przystawce MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         Aby uzyskać więcej informacji o korzystaniu z przystawki Certyfikaty w programie MMC, zobacz [porady: wyświetlanie certyfikatów w przystawce MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

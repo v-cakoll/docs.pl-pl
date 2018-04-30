@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 32fb7be6f8c465994b40814a94efd95d42a481da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="c-expressions"></a>Wyrażenia języka C#
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# wyrażenia są obsługiwane w systemie Windows Workflow Foundation (WF). Nowych projektów C# przepływu pracy utworzone w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] kierowanych [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Użyj C# wyrażeń i projekty Visual Basic przepływu pracy, użyj wyrażenia języka Visual Basic. Istniejące [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] projektów przepływu pracy, które używają wyrażeń języka Visual Basic można poddać migracji do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] niezależnie od tego projektu języka i są obsługiwane. Ten temat zawiera omówienie wyrażeń C# w [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
@@ -45,7 +45,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# wyrażeni
  ![Automatycznie utworzone działania sequence](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   
 > [!NOTE]
->  C# wyrażenia są obsługiwane tylko w programie Visual Studio i nie są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] nowe funkcje WF45 obsługiwane w Projektancie ponownie hostowanej zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Projektancie przepływów pracy Rehosted](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
+>  C# wyrażenia są obsługiwane tylko w programie Visual Studio i nie są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. Aby uzyskać więcej informacji o nowych funkcjach WF45 obsługiwane w Projektancie ponownie hostowanej, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Projektancie przepływów pracy Rehosted](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
   
 ####  <a name="BackwardCompat"></a> Zapewnienia zgodności  
  Wyrażenia języka Visual Basic w istniejących [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] C# przepływu pracy projektów, które zostały poddane migracji do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] są obsługiwane. Patrząc wyrażeń języka Visual Basic w Projektancie przepływów pracy tekst istniejących wyrażenia języka Visual Basic jest zastępowany **wartość została ustawiona w języku XAML**, chyba że wyrażenie języka Visual Basic jest prawidłowej składni języka C#. Jeśli wyrażenie języka Visual Basic jest prawidłowej składni języka C#, wyrażenie jest wyświetlany. Aby zaktualizować wyrażeń języka Visual Basic na język C#, można je edytować w Projektancie przepływów pracy i określ równoważne wyrażenie języka C#. Zaktualizuj wyrażenia języka Visual Basic, C#, ale po wyrażenia są aktualizowane w Projektancie przepływów pracy są konwertowane na język C# i nie można przywrócić w języku Visual Basic nie jest wymagane.  
@@ -195,7 +195,7 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
   
 -   `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` jest wywoływana zamiast `CompiledExpressionInvoker.SetCompiledExpressionRoot`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Praca z wyrażeń w kodzie, zobacz [tworzenia przepływów pracy, działań i kod Imperatywne za pomocą wyrażenia](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Aby uzyskać więcej informacji na temat pracy z wyrażeń w kodzie, zobacz [tworzenia przepływów pracy, działań i kod Imperatywne za pomocą wyrażenia](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
 ###  <a name="XamlWorkflows"></a> Za pomocą wyrażeń C# w przepływach pracy XAML  
  C# wyrażenia są obsługiwane w przepływach pracy XAML. Skompilowany przepływów pracy XAML są kompilowane na typ i utracić przepływów pracy XAML są załadowane w czasie wykonywania i skompilowany w drzewie działań podczas wykonywania przepływu pracy.  
@@ -219,7 +219,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Praca z przepływów pracy XAML, zobacz [serializacji przepływów pracy i działań do i z XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ Aby uzyskać więcej informacji na temat pracy z przepływów pracy XAML, zobacz [serializacji przepływów pracy i działań do i z XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 ###  <a name="WFServices"></a> Za pomocą wyrażeń C# w XAMLX usług przepływu pracy  
  C# wyrażenia są obsługiwane w XAMLX usług przepływu pracy. Gdy nie są wymagane żadne dodatkowe czynności, a następnie usługi przepływu pracy znajduje się w usługach IIS lub WAS, ale własnym znajduje się usługa XAML przepływu pracy, muszą być skompilowane wyrażenia języka C#. Aby skompilować wyrażeń C# własnym hostowanej usługi przepływu pracy XAMLX, najpierw załadować pliku XAMLX do `WorkflowService`, a następnie przekazać `Body` z `WorkflowService` do `CompileExpressions` metody opisane w poprzedniej [przy użyciu języka C# wyrażenia w przepływach pracy kodu](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) sekcji. W poniższym przykładzie jest ładowany XAMLX usługi przepływu pracy, są kompilowane wyrażeń C#, a następnie usługi przepływu pracy jest otwarty i czeka na żądania.  

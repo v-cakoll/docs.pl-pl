@@ -1,27 +1,29 @@
 ---
-title: "Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem"
-ms.custom: 
+title: Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
 Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te komunikaty nie powiodło się są rejestrowane w kolejce wiadomości utraconych. Nie powiodło się dostarczania może być spowodowane powodów, takich jak awarie sieci, usunięto kolejki, pełną kolejkę, niepowodzenie uwierzytelniania lub niepowodzenie dostarczyć na czas.  
@@ -54,7 +56,7 @@ Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te kom
   
 -   Aby odczytać wiadomości z niestandardowej kolejki utraconych wiadomości, identyfikator URI musi być formularza: net.msmq://localhost/private/\<*niestandardowy dlq nazwy*> gdzie *niestandardowy dlq nazwy* jest nazwą niestandardowego Kolejka utraconych wiadomości.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak adresów kolejek, zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Aby uzyskać więcej informacji na temat kolejek adres, zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Stosu adresów dopasowań odbiornika, które nasłuchuje usługa z adresem w komunikacie. Jeśli adresy są zgodne, jest wysyłany komunikat; Jeśli nie, nie jest wysyłany komunikat. Może to spowodować problemy podczas czytania z kolejki utraconych wiadomości, ponieważ wiadomości w kolejce wiadomości utraconych zwykle są wysyłane do usługi i nie usługi kolejki utraconych wiadomości. W związku z tym usługa czytania z kolejki utraconych wiadomości, należy zainstalować filtr adresów `ServiceBehavior` który powoduje, że stos, aby dopasować wszystkich wiadomości w kolejce niezależnie od adresata. W szczególności należy dodać `ServiceBehavior` z <xref:System.ServiceModel.AddressFilterMode.Any> parametru do odczytywania wiadomości z kolejki utraconych wiadomości usługi.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Instrukcje: Pobieranie metadanych przez powiązanie inne niż wymiany metadanych"
-ms.custom: 
+title: 'Instrukcje: Pobieranie metadanych przez powiązanie inne niż wymiany metadanych'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6879694c0c6490de5f591f9aed82075c539fbc1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Instrukcje: Pobieranie metadanych przez powiązanie inne niż wymiany metadanych
 W tym temacie opisano, jak pobrać metadanych z punktu końcowego MEX za pośrednictwem powiązania-MEX. Kod w tym przykładzie jest oparta na [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) próbki.  
@@ -132,7 +134,7 @@ W tym temacie opisano, jak pobrać metadanych z punktu końcowego MEX za pośred
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  W tym momencie masz kolekcję punktów końcowych usługi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Importowanie metadanych, zobacz [porady: Importowanie metadanych do punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  W tym momencie masz kolekcję punktów końcowych usługi. Aby uzyskać więcej informacji na temat importowania metadanych, zobacz [porady: Importowanie metadanych do punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 068615510d7e1d73ae260441ccef6536ee6ff317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="secure-sessions"></a>Bezpieczne sesje
-Funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to niezawodnej sesji, które gwarantują, komunikaty są odbierane w kolejności wysłania. Tematy w tej sekcji omówiono wpływ zabezpieczenia wziąć pod uwagę podczas tworzenia niezawodnej sesji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] niezawodne sesje, zobacz [sesji przy użyciu](../../../../docs/framework/wcf/using-sessions.md).  
+Funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to niezawodnej sesji, które gwarantują, komunikaty są odbierane w kolejności wysłania. Tematy w tej sekcji omówiono wpływ zabezpieczenia wziąć pod uwagę podczas tworzenia niezawodnej sesji. Aby uzyskać więcej informacji na temat niezawodnej sesji, zobacz [sesji przy użyciu](../../../../docs/framework/wcf/using-sessions.md).  
   
 > [!NOTE]
 >  Jeśli wymagane jest personifikacji w systemie Windows XP, należy użyć bezpiecznej sesji bez token kontekstu zabezpieczeń stanową (SCT). Gdy stanowe SCTs są używane z personifikacji, <xref:System.InvalidOperationException> jest generowany. Aby uzyskać więcej informacji, zobacz [nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  

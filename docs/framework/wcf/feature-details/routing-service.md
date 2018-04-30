@@ -1,24 +1,26 @@
 ---
-title: "Usługa routingu"
-ms.custom: 
+title: Usługa routingu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Usługa routingu
 Usługa routingu jest ogólny pośrednik SOAP, który działa jako router wiadomości. Do podstawowych funkcji usługi routingu jest możliwość przesyłania wiadomości, na podstawie zawartości komunikatu, dzięki czemu wiadomości do przekazania do punktu końcowego klienta na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.  
@@ -98,12 +100,12 @@ Usługa routingu jest ogólny pośrednik SOAP, który działa jako router wiadom
   
  Jeśli usługi routingu napotkał <xref:System.ServiceModel.CommunicationException> podczas próby wysłania wiadomości, odbędzie się obsługi błędów.  Tych wyjątków zwykle oznaczają, że wystąpił problem podczas próby komunikacji z punktem końcowym zdefiniowanych klienta, takich jak <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, lub <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Kod obsługi błędów utworzy również catch i spróbuj ponowić próbę, gdy wysyłanie **TimeoutException** występuje, który jest inny wspólnej wyjątek, który nie pochodzi od **communicationexception —**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Błąd podczas obsługi, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Aby uzyskać więcej informacji na temat obsługi błędów, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Punkty końcowe kopii zapasowej  
  Oprócz docelowego klienta punkty końcowe skojarzone z każdej definicji filtru w tablicy filtrów można tworzyć również listę kopii zapasowych punkty końcowe, które wiadomości będą kierowane do awarii transmisji. Jeśli wystąpi błąd i listy kopii zapasowych jest zdefiniowany dla wpisu filtru, usługa routingu będzie podejmować próby wysłania wiadomości do pierwszego punktu końcowego zdefiniowane na liście. Jeśli ten transmisji próba nie powiedzie się, usługa spróbuj następnego punktu końcowego i kontynuować ten proces, dopóki próba transmisji kończy się powodzeniem, zwróci błąd powiązany z systemem innym niż transmisji lub wszystkie punkty końcowe na liście kopii zapasowej zwrócono błąd transmisji.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Wykonaj kopię zapasową punktów końcowych, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md) i [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Aby uzyskać więcej informacji dotyczących tworzenia kopii zapasowej punktów końcowych, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md) i [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>przesyłanie strumieniowe  
  Usługa routingu pomyślnie można strumienia komunikatów, jeśli ustawisz powiązania w celu obsługi przesyłania strumieniowego.  Istnieją jednak niektóre warunki, w których wiadomości może być konieczne buforowane:  

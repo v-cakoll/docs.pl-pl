@@ -12,17 +12,17 @@ ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-caps.latest.revision: ''
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f23918031c6cc8cd6509d7b7c079b8df050bbb08
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4bde13abeac782da1c553afa290943eeff925fa4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Instrukcje: Konfigurowanie podstawowego klienta WCF (Windows Communication Foundation)
 To jest piątym sześciu zadania wymagane do tworzenia prostej [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
@@ -61,11 +61,11 @@ To jest piątym sześciu zadania wymagane do tworzenia prostej [!INCLUDE[indigo1
     </configuration>   
     ```  
   
-     Ten przykład konfiguruje punktu końcowego, który klient używa do uzyskania dostępu do usługi, która znajduje się pod następującym adresem: http://localhost: 8000/ServiceModelSamples/Service/CalculatorService  
+     Ten przykład konfiguruje punktu końcowego, który klient używa do uzyskania dostępu do usługi, która znajduje się pod następującym adresem: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
   
      Określa element punktu końcowego, że `ServiceReference1.ICalculator` kontraktu usługi jest używany do komunikacji między klienta WCF i usługi. Skonfigurowano kanał WCF dostarczane przez system <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>. Ten kontrakt wygenerowanych przy użyciu Dodaj odwołanie do usługi w programie Visual Studio. Jest zasadniczo kopią kontraktu, który został zdefiniowany w projekcie GettingStartedLib. <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> Powiązanie określa HTTP jako transportu, interoperacyjne zabezpieczeń i inne szczegóły konfiguracji.  
   
-2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] wygenerowanego klienta za pomocą tej konfiguracji, zobacz [porady: używanie klienta](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
+2.  Aby uzyskać więcej informacji o sposobie używania wygenerowanego klienta w tej konfiguracji, zobacz [porady: używanie klienta](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  

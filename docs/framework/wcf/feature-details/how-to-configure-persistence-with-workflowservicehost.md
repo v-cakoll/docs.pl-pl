@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8a11ab534cbb643d17985670e202954313f5a068
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: de177180dc22fc3236924da691cf9b1f594519ce
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>Porady: Konfigurowanie trwałości za pomocą elementu WorkflowServiceHost
 W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przepływu pracy SQL do włączenia trwałości dla przepływów pracy obsługiwanych w <xref:System.ServiceModel.Activities.WorkflowServiceHost> przy użyciu pliku konfiguracji. Przed użyciem funkcji magazynu wystąpienia przepływu pracy SQL należy utworzyć bazę danych SQL używanego w taki sposób, aby utrwalić wystąpienia przepływu pracy. Aby uzyskać więcej informacji, zobacz [porady: Włącz trwałość SQL dla przepływów pracy i przepływ pracy usług](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
@@ -44,7 +44,7 @@ W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przep
     </serviceBehaviors>  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak skonfigurować Magazyn wystąpienia przepływu pracy SQL, zobacz [porady: Włącz trwałość SQL dla przepływów pracy i przepływ pracy usług](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] poszczególne ustawienia dla <`sqlWorkflowInstanceStore`> element zachowania, zobacz [magazyn wystąpienia przepływu pracy SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric zapewnia magazynie trwałości. Aby uzyskać więcej informacji, zobacz [systemu Windows Server aplikacji sieci szkieletowej trwałości](http://go.microsoft.com/fwlink/?LinkId=193121).  
+     Aby uzyskać więcej informacji na temat konfigurowania magazynu wystąpienia przepływu pracy SQL, zobacz [porady: Włącz trwałość SQL dla przepływów pracy i przepływ pracy usług](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). Aby uzyskać więcej informacji o poszczególnych ustawieniach dla <`sqlWorkflowInstanceStore`> element zachowania, zobacz [magazyn wystąpienia przepływu pracy SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric zapewnia magazynie trwałości. Aby uzyskać więcej informacji, zobacz [systemu Windows Server aplikacji sieci szkieletowej trwałości](http://go.microsoft.com/fwlink/?LinkId=193121).  
   
     > [!NOTE]
     >  W poprzednim przykładzie konfiguracji używa uproszczona konfiguracja. Aby uzyskać więcej informacji, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md)  
@@ -65,7 +65,7 @@ W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przep
     });  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak skonfigurować Magazyn wystąpienia przepływu pracy SQL, zobacz [porady: Włącz trwałość SQL dla przepływów pracy i przepływ pracy usług](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] poszczególne ustawienia dla <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> element zachowania, zobacz [magazyn wystąpienia przepływu pracy SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric zapewnia magazynie trwałości. Aby uzyskać więcej informacji, zobacz [systemu Windows Server aplikacji sieci szkieletowej trwałości](http://go.microsoft.com/fwlink/?LinkId=193121).  
+     Aby uzyskać więcej informacji na temat konfigurowania magazynu wystąpienia przepływu pracy SQL, zobacz [porady: Włącz trwałość SQL dla przepływów pracy i przepływ pracy usług](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). Aby uzyskać więcej informacji o poszczególnych ustawieniach dla <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> element zachowania, zobacz [magazyn wystąpienia przepływu pracy SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric zapewnia magazynie trwałości. Aby uzyskać więcej informacji, zobacz [systemu Windows Server aplikacji sieci szkieletowej trwałości](http://go.microsoft.com/fwlink/?LinkId=193121).  
   
     > [!NOTE]
     >  W poprzednim przykładzie konfiguracji używa uproszczona konfiguracja. Aby uzyskać więcej informacji, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md)  

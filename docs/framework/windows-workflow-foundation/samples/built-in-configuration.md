@@ -1,23 +1,24 @@
 ---
 title: Wbudowane konfiguracji
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>Wbudowane konfiguracji
 W przykładzie pokazano, używania i konfiguracji w magazynie wystąpień przepływu pracy SQL. W magazynie wystąpień przepływu pracy SQL jest implementacją SQL na podstawie wystąpienia magazynu. Umożliwia on do zapisywania i ładowania stanu z bazy danych programu SQL Server lub SQL Server Express i wystąpienia.  
@@ -36,7 +37,7 @@ W przykładzie pokazano, używania i konfiguracji w magazynie wystąpień przep�
   
  Zliczania przepływu pracy jest samodzielnie hostowana przez hosta usługi przepływu pracy. Program `Main` metoda tworzy wystąpienie hosta usługi przepływu pracy obsługującego zliczania przepływu pracy. Definiuje punkty końcowe, zgodnie z którymi zliczania przepływu pracy jest osiągalna. Po wykonaniu tej definiuje SQL zachowanie magazynu wystąpienia przepływu pracy, który służy do konfigurowania w magazynie wystąpień przepływu pracy programu SQL. Następnie program tworzy klienta, który wywołuje metodę start zliczania przepływu pracy.  
   
- Po uruchomieniu programu licznik uruchamia się automatycznie zliczania. Należy pamiętać, że może zająć kilka sekund, aby załadować wystąpienie i skonfigurować Magazyn wystąpienia przepływu pracy programu SQL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]w magazynie wystąpień przepływu pracy, zobacz [magazyn wystąpienia przepływu pracy SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Po uruchomieniu programu licznik uruchamia się automatycznie zliczania. Należy pamiętać, że może zająć kilka sekund, aby załadować wystąpienie i skonfigurować Magazyn wystąpienia przepływu pracy programu SQL. Aby uzyskać więcej informacji o magazynie wystąpienia przepływu pracy, zobacz [magazyn wystąpienia przepływu pracy SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  Próbka składa się z dwóch części:  
   

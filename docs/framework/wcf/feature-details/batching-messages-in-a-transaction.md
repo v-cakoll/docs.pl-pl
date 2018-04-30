@@ -1,31 +1,31 @@
 ---
-title: "Tworzenie partii komunikatów w ramach transakcji"
-ms.custom: 
+title: Tworzenie partii komunikatów w ramach transakcji
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17d9bd3b58e8320bfe1f62ac56aff59ba52f4374
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="batching-messages-in-a-transaction"></a>Tworzenie partii komunikatów w ramach transakcji
-Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie komunikatów. Transakcje, jednak operacje kosztowne i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów poprawy wydajności przesyłania wiadomości jest używana aplikacja odczytywać i przetwarzać wiele komunikatów w ramach jednej transakcji. Jest kompromis między wydajnością i odzyskiwanie: jak zwiększa liczbę komunikatów w partii, co powoduje ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesje. A *sesji* jest grupowanie powiązanych wiadomości, które są przetwarzane przez pojedynczą aplikacją i zatwierdzona jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy powiązane komunikaty, które muszą zostać przetworzone jednocześnie. Na przykład jest online zakupów witryna sieci Web. *Partie* są używane do przetwarzania wielu, niepowiązanych wiadomości w taki sposób, że zwiększa komunikatu przepływności. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sesje, zobacz [grupowania w kolejce wiadomości w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez pojedynczą aplikacją i zatwierdzone jako pojedyncza jednostka, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposób uruchamiania aplikacji.  
+Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie komunikatów. Transakcje, jednak operacje kosztowne i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów poprawy wydajności przesyłania wiadomości jest używana aplikacja odczytywać i przetwarzać wiele komunikatów w ramach jednej transakcji. Jest kompromis między wydajnością i odzyskiwanie: jak zwiększa liczbę komunikatów w partii, co powoduje ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesje. A *sesji* jest grupowanie powiązanych wiadomości, które są przetwarzane przez pojedynczą aplikacją i zatwierdzona jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy powiązane komunikaty, które muszą zostać przetworzone jednocześnie. Na przykład jest online zakupów witryna sieci Web. *Partie* są używane do przetwarzania wielu, niepowiązanych wiadomości w taki sposób, że zwiększa komunikatu przepływności. Aby uzyskać więcej informacji o sesji, zobacz [grupowania w kolejce wiadomości w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez pojedynczą aplikacją i zatwierdzone jako pojedyncza jednostka, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposób uruchamiania aplikacji.  
   
 ## <a name="entering-batching-mode"></a>Wprowadzanie przetwarzanie wsadowe tryb  
  <xref:System.ServiceModel.Description.TransactedBatchingBehavior> Kontroli zachowania punktu końcowego przetwarzania wsadowego. Dodawanie tego zachowania punktu końcowego na punkt końcowy usługi określa, że [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] do partii komunikatów w ramach transakcji. Nie wszystkie wiadomości wymaga transakcji, dzięki czemu można tylko komunikaty, które wymagają transakcji są umieszczane w partii i oznaczone wyłącznie wiadomości wysyłane z operacji `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete`  =  `true` są uwzględnione w partii. Jeśli wszystkie operacje w kontrakcie usługi są oznaczone ikoną z `TransactionScopeRequired`  =  `false` i `TransactionAutoComplete`  =  `false`, a następnie przetwarzanie wsadowe tryb nigdy nie wprowadzono.  
@@ -33,11 +33,11 @@ Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawnoś�
 ## <a name="committing-a-transaction"></a>Zatwierdzanie transakcji  
  Transakcji wsadowej dba oparte na następujących czynności:  
   
--   `MaxBatchSize`., Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowania. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w partii. Po osiągnięciu tej liczby dba partii. Jest to wartość nie jest ścisłym limit, można przekazać partii przed otrzymaniem to liczba komunikatów.  
+-   `MaxBatchSize`. Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowania. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w partii. Po osiągnięciu tej liczby dba partii. Jest to wartość nie jest ścisłym limit, można przekazać partii przed otrzymaniem to liczba komunikatów.  
   
--   `Transaction Timeout`., Po upływie limitu czasu transakcji 80 procent, dba partii i utworzeniu nowej instancji. Oznacza to, że jeśli 20% lub mniej czasu dla transakcji ukończyć pozostaje, dba partii.  
+-   `Transaction Timeout`. Po upływie limitu czasu transakcji 80 procent, dba partii i utworzeniu nowej instancji. Oznacza to, że jeśli 20% lub mniej czasu dla transakcji ukończyć pozostaje, dba partii.  
   
--   `TransactionScopeRequired`., Podczas przetwarzania wsadowego komunikatów, jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znalezienia punktu, który ma `TransactionScopeRequired`  =  `false`, zatwierdza partii i ponownie otwiera nową instancję po otrzymaniu pierwszego komunikatu z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`. Podczas przetwarzania wsadowego komunikatów, jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znalezienia punktu, który ma `TransactionScopeRequired`  =  `false`, zatwierdza partii i ponownie otwiera nową instancję po otrzymaniu pierwszego komunikatu z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete` = `true`.  
   
 -   Jeśli nie więcej istnieją wiadomości w kolejce, a następnie bieżącej partii został przekazany, nawet jeśli `MaxBatchSize` nie został osiągnięty lub nie upłynął limit czasu transakcji 80 procent.  
   

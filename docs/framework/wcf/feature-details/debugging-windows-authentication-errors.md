@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, interfejsu dostawcy obsługi zabezpieczeń (SSPI) obsługuje procesów zabezpieczeń. W przypadku wystąpienia błędów zabezpieczeń w warstwie SSPI, są udostępniane przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Ten temat zawiera framework i zestawu pytania, aby pomóc w zdiagnozowaniu błędów.  
@@ -75,7 +75,7 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
 ### <a name="kerberos-protocol"></a>Protokół Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Nazwa SPN/nazwa UPN problemów przy użyciu protokołu Kerberos  
- Korzystając z uwierzytelniania systemu Windows i protokołu Kerberos, protokół jest używany lub wynegocjowanym przez interfejs SSPI, adres URL punktu końcowego klienta używa musi zawierać w pełni kwalifikowana nazwa domeny hosta usługi wewnątrz adres URL usługi. Przy założeniu, że konto, na którym uruchomiono usługę ma prawa dostępu do klucza głównej nazwy (usługi SPN) usługi maszyny (ustawienie domyślne), który jest tworzony po dodaniu komputera do domeny usługi Active Directory, najczęściej jest to zrobić, uruchamiając usługi w Konto Usługa sieciowa. Jeśli usługa nie ma dostępu do klucza SPN komputera, należy podać poprawną nazwę SPN lub użytkownika nazwę główną (UPN) konta, pod którym usługa jest uruchomiona w tożsamości punktu końcowego klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] współpracuje z nazw SPN i UPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Korzystając z uwierzytelniania systemu Windows i protokołu Kerberos, protokół jest używany lub wynegocjowanym przez interfejs SSPI, adres URL punktu końcowego klienta używa musi zawierać w pełni kwalifikowana nazwa domeny hosta usługi wewnątrz adres URL usługi. Przy założeniu, że konto, na którym uruchomiono usługę ma prawa dostępu do klucza głównej nazwy (usługi SPN) usługi maszyny (ustawienie domyślne), który jest tworzony po dodaniu komputera do domeny usługi Active Directory, najczęściej jest to zrobić, uruchamiając usługi w Konto Usługa sieciowa. Jeśli usługa nie ma dostępu do klucza SPN komputera, należy podać poprawną nazwę SPN lub użytkownika nazwę główną (UPN) konta, pod którym usługa jest uruchomiona w tożsamości punktu końcowego klienta. Aby uzyskać więcej informacji o tym, jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] współpracuje z nazw SPN i UPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  W programie Równoważenie obciążenia scenariusze, takie jak farmy serwerów sieci Web lub ogrodach sieci Web popularną praktyką jest zdefiniuj unikatowe konto dla poszczególnych aplikacji, Przypisz nazwę SPN dla tego konta i upewnij się, że wszystkie usługi aplikacji uruchomione na tym koncie.  
   
@@ -134,7 +134,7 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] personifikacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Aby uzyskać więcej informacji o personifikacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Alternatywnie klient jest uruchomiony jako usługa systemu Windows przy użyciu wbudowanego konta SYSTEM.  
   

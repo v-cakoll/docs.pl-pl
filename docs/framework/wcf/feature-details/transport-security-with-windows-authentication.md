@@ -1,30 +1,32 @@
 ---
 title: Zabezpieczenia transportu z uwierzytelnianiem systemu Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 4f5f81617a8962eeb8748e2c5c35ea34f7a1705f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5effb18435241b00c3036fd23e15ef5ce485b646
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-windows-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem systemu Windows
-Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta i usługi zabezpieczonej przez zabezpieczenia systemu Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programowania, zobacz [porady: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta i usługi zabezpieczonej przez zabezpieczenia systemu Windows. Aby uzyskać więcej informacji na temat programowania w języku, zobacz [porady: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Intranet usługi sieci Web Wyświetla informacje o zasoby ludzkie. Klient jest aplikacją formularza systemu Windows. Aplikacja jest wdrażana w domenie za pomocą kontrolera protokołu Kerberos, zabezpieczanie domeny.  
   
@@ -33,7 +35,7 @@ Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo
 |Cechy|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Transportu|  
-|Współdziałanie|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tylko|  
+|Współdziałanie|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tylko|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą zintegrowanego uwierzytelniania systemu Windows)<br /><br /> Tak (za pomocą zintegrowanego uwierzytelniania systemu Windows)|  
 |Integralność|Tak|  
 |Poufność|Tak|  

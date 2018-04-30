@@ -1,30 +1,32 @@
 ---
-title: "Kontrolowanie zużycia zasobów i zwiększanie wydajności"
-ms.custom: 
+title: Kontrolowanie zużycia zasobów i zwiększanie wydajności
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrolowanie zużycia zasobów i zwiększanie wydajności
 W tym temacie opisano różne właściwości w różnych obszarach [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architekturę, która działa kontrolowanie zużycia zasobów i wpływają na metryki wydajności.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Właściwości, które ograniczyć zużycie zasobów w programie WCF  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]zastosowanie ograniczenia dotyczące niektórych typów procesów celów zabezpieczeń i wydajności. Ograniczenia te są dostępne w dwóch głównych formularzy, przydziały i limity. *Przydziały* są limity wyzwalających osiągnięto lub przekroczono natychmiastowego wyjątek w pewnym momencie w systemie. *Ogranicza* ograniczeń, które nie powodują natychmiast wyjątków. Zamiast tego po osiągnięciu limitu ograniczania przepustowości przetwarzania nadal, ale w granicach ustawiony przez wartość tego ograniczenia. To ograniczona przetwarzanie może wyzwolić wyjątek w innym miejscu, ale zależy to od aplikacji.  
+ [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] zastosowanie ograniczenia dotyczące niektórych typów procesów celów zabezpieczeń i wydajności. Ograniczenia te są dostępne w dwóch głównych formularzy, przydziały i limity. *Przydziały* są limity wyzwalających osiągnięto lub przekroczono natychmiastowego wyjątek w pewnym momencie w systemie. *Ogranicza* ograniczeń, które nie powodują natychmiast wyjątków. Zamiast tego po osiągnięciu limitu ograniczania przepustowości przetwarzania nadal, ale w granicach ustawiony przez wartość tego ograniczenia. To ograniczona przetwarzanie może wyzwolić wyjątek w innym miejscu, ale zależy to od aplikacji.  
   
  Oprócz różnicy między przydziały i limity niektóre właściwości ograniczający znajdują się na poziomie serializacji, niektóre na poziomie transportu i niektóre na poziomie aplikacji. Na przykład limit przydziału <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, który jest implementowany przez wszystkie elementy powiązania transportu dostarczany przez system, jest domyślnie do 65 536 bajtów utrudnić złośliwego klientów angażowania ataku typu "odmowa usługi" Usługa powodując nadmiernego pamięci Użycie. (Zazwyczaj można zwiększyć wydajność przez zmniejszenie tej wartości.)  
   
@@ -55,7 +57,7 @@ W tym temacie opisano różne właściwości w różnych obszarach [!INCLUDE[ind
  [Narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) może poprawić wydajność uruchamiania tych aplikacji przez generowania kodu serializacji niezbędne z skompilowane zestawy dla aplikacji. Aby uzyskać więcej informacji, zobacz [porady: poprawy uruchamiania czasu programu WCF aplikacje klienckie przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problemy z wydajnością odnośnie do hostowania usług WCF w ramach platformy ASP.NET  
- Gdy usługa WCF jest hostowana w ramach usług IIS i platformy ASP.NET, ustawienia konfiguracji usług IIS i platformy ASP.NET może mieć wpływ na przepustowość i pamięci rozmiaru usługi WCF.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Wydajność programu ASP.NET, zobacz [poprawę wydajności ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Jeden ustawienie może być jest niezamierzone skutki <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, która jest właściwością <xref:System.Web.Configuration.ProcessModelSection>. Jeśli aplikacja ma stały lub małej liczby klientów, ustawienie <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 może zawierać większą przepustowość na komputerze wieloprocesorowych, który ma użycie procesora CPU, bliski 100%. To zwiększenie wydajności jest dostarczany z koszt: również spowoduje zwiększenie użycia pamięci, co może zmniejszyć skalowalności.  
+ Gdy usługa WCF jest hostowana w ramach usług IIS i platformy ASP.NET, ustawienia konfiguracji usług IIS i platformy ASP.NET może mieć wpływ na przepustowość i pamięci rozmiaru usługi WCF.  Aby uzyskać więcej informacji o wydajności platformy ASP.NET, zobacz [poprawę wydajności ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Jeden ustawienie może być jest niezamierzone skutki <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, która jest właściwością <xref:System.Web.Configuration.ProcessModelSection>. Jeśli aplikacja ma stały lub małej liczby klientów, ustawienie <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 może zawierać większą przepustowość na komputerze wieloprocesorowych, który ma użycie procesora CPU, bliski 100%. To zwiększenie wydajności jest dostarczany z koszt: również spowoduje zwiększenie użycia pamięci, co może zmniejszyć skalowalności.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Administracja i diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  

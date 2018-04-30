@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] to platforma do tworzenia aplikacji korzystających z usług. Przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], możesz wysłać dane jako asynchroniczne komunikaty z punktu końcowego jednej usługi do innego. Punkt końcowy usługi mogą być częścią stale dostępna usługa hostowana przez usługi IIS, lub można ją z usługą hostowaną w aplikacji. Punkt końcowy może być klienta usługi, która wysyła żądanie danych z punktu końcowego usługi. Komunikaty może być tak proste, jak pojedynczy znak lub słowo wysyłane w formacie XML lub złożonym, strumień danych binarnych. Kilka przykładowych scenariuszy obejmują:  
@@ -52,11 +52,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **Współdziałanie**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] implementuje standardy branżowe nowoczesnych współdziałania usługi sieci Web. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Obsługiwane standardy, zobacz [współdziałanie i integracja](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] implementuje standardy branżowe nowoczesnych współdziałania usługi sieci Web. Aby uzyskać więcej informacji na temat obsługiwanych standardów zobacz [współdziałanie i integracja](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **Wiele wzorców wiadomości**  
   
-     Komunikaty są wymieniane w jednym z kilku. Najbardziej typowe wzorzec jest wzorzec żądanie/odpowiedź, gdzie jeden punkt końcowy żąda danych od drugiego punktu końcowego. Drugi odpowiedzi punktu końcowego. Istnieją inne wzorców, takich jak komunikat jednokierunkowy, w której jeden punkt końcowy wysyła wiadomość bez żadnych oczekiwania odpowiedzi. Bardziej złożone wzorzec jest wzorzec dupleksu programu exchange, gdy dwa punkty końcowe nawiązania połączenia i wysyłania danych i z powrotem, podobnie jak program obsługi wiadomości błyskawicznych. [!INCLUDE[crabout](../../../includes/crabout-md.md)] implementowania wymiany wiadomości różnych wzorców przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [kontrakty](../../../docs/framework/wcf/feature-details/contracts.md).  
+     Komunikaty są wymieniane w jednym z kilku. Najbardziej typowe wzorzec jest wzorzec żądanie/odpowiedź, gdzie jeden punkt końcowy żąda danych od drugiego punktu końcowego. Drugi odpowiedzi punktu końcowego. Istnieją inne wzorców, takich jak komunikat jednokierunkowy, w której jeden punkt końcowy wysyła wiadomość bez żadnych oczekiwania odpowiedzi. Bardziej złożone wzorzec jest wzorzec dupleksu programu exchange, gdy dwa punkty końcowe nawiązania połączenia i wysyłania danych i z powrotem, podobnie jak program obsługi wiadomości błyskawicznych. Aby uzyskać więcej informacji na temat sposobu wdrażania komunikat różnych wzorców programu exchange przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [kontrakty](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 -   **Metadane usługi**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **Wiele transport i kodowanie**  
   
-     Na dowolnym kilka wbudowanych protokołów i kodowania można wysłać wiadomości. Najbardziej typowe protokołu i kodowanie jest wysłanie wiadomości SOAP przy użyciu protokołu HTTP (HyperText Transfer) do użytku w sieci World Wide Web kodowany tekst. Alternatywnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, nazwanych potoków lub usługi MSMQ. Te komunikaty mogą być kodowane jako tekst lub za pomocą zoptymalizowanego formatu binarnego.  Dane binarne mogą być wysyłane efektywne wykorzystanie standardowego mechanizmu MTOM. Brak podanego transportu lub kodowania własnych potrzeb można utworzyć własny transportu lub kodowania. [!INCLUDE[crabout](../../../includes/crabout-md.md)] transport i kodowanie obsługiwane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [transportów](../../../docs/framework/wcf/feature-details/transports.md).  
+     Na dowolnym kilka wbudowanych protokołów i kodowania można wysłać wiadomości. Najbardziej typowe protokołu i kodowanie jest wysłanie wiadomości SOAP przy użyciu protokołu HTTP (HyperText Transfer) do użytku w sieci World Wide Web kodowany tekst. Alternatywnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, nazwanych potoków lub usługi MSMQ. Te komunikaty mogą być kodowane jako tekst lub za pomocą zoptymalizowanego formatu binarnego.  Dane binarne mogą być wysyłane efektywne wykorzystanie standardowego mechanizmu MTOM. Brak podanego transportu lub kodowania własnych potrzeb można utworzyć własny transportu lub kodowania. Aby uzyskać więcej informacji na temat transport i kodowanie obsługiwane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [transportów](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Niezawodne i umieszczonych w kolejce wiadomości**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje wymianę komunikatów niezawodnej przy użyciu sesji niezawodnej implementowane za pośrednictwem usługi WS-Reliable Messaging i przy użyciu usługi MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Obsługa komunikatów niezawodnej i umieszczonych w kolejce w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [kolejki i sesje niezawodne](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje wymianę komunikatów niezawodnej przy użyciu sesji niezawodnej implementowane za pośrednictwem usługi WS-Reliable Messaging i przy użyciu usługi MSMQ. Więcej informacji na temat niezawodnych i umieszczonych w kolejce wiadomości działu pomocy technicznej w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [kolejki i sesje niezawodne](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Trwałe wiadomości**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **Transakcje**  
   
-     Usługi WCF obsługuje również transakcji przy użyciu jednej z trzech modele transakcji: WS-AtomicTtransactions, interfejsy API w <xref:System.Transactions> przestrzeni nazw i Microsoft Distributed Transaction Coordinator. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Obsługa transakcji w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [transakcji](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
+     Usługi WCF obsługuje również transakcji przy użyciu jednej z trzech modele transakcji: WS-AtomicTtransactions, interfejsy API w <xref:System.Transactions> przestrzeni nazw i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji o transakcji obsługuje w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [transakcji](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
   
 -   **AJAX i obsługa REST**  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **Rozszerzalność**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Architektura ma kilka punktów rozszerzalności. Jeśli wymagana jest dodatkowa możliwość, istnieje wiele punktów wejścia, które pozwalają dostosować zachowanie usługi. [!INCLUDE[crabout](../../../includes/crabout-md.md)] punkty rozszerzeń dostępnych w temacie [rozszerzanie WCF](../../../docs/framework/wcf/extending/index.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Architektura ma kilka punktów rozszerzalności. Jeśli wymagana jest dodatkowa możliwość, istnieje wiele punktów wejścia, które pozwalają dostosować zachowanie usługi. Aby uzyskać więcej informacji na temat rozszerzeń dostępnych punktów zobacz [rozszerzanie WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integracja WCF z innych technologii firmy Microsoft  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to elastyczna platforma. Ze względu na to wyjątkową elastyczność [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] służy również kilka innych produktów firmy Microsoft. Zrozumienie podstaw [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], masz natychmiastowe korzyści, jeśli również przy użyciu jednej z tych produktów.  

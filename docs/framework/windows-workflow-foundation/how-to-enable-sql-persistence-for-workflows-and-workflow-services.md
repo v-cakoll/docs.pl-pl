@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e5872be7e8b686a744832bf63a98e97a99cf9b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Porady: Włącz trwałość SQL dla przepływów pracy i usług przepływu pracy
 W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przepływu pracy SQL do włączenia trwałości dla przepływów pracy i przepływ pracy usługi programowo i za pomocą pliku konfiguracji.  
@@ -41,7 +41,7 @@ W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przep
 >   
 >  System.Data.SqlClient.SqlException: Nie można odnaleźć procedury składowanej "System.Activities.DurableInstancing.CreateLockOwner"  
   
- W poniższych sekcjach opisano sposób włączania trwałości dla przepływów pracy i usług przepływu pracy przy użyciu magazynu wystąpienia przepływu pracy SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] właściwości magazynu wystąpienia przepływu pracy SQL, zobacz [właściwości z przepływu pracy wystąpienia magazynu SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ W poniższych sekcjach opisano sposób włączania trwałości dla przepływów pracy i usług przepływu pracy przy użyciu magazynu wystąpienia przepływu pracy SQL. Aby uzyskać więcej informacji o właściwościach magazynu wystąpienia przepływu pracy SQL, zobacz [właściwości z przepływu pracy wystąpienia magazynu SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Włączenie trwałości dla przepływów pracy Self-Hosted, używanego przez obiekt WorkflowApplication  
  Można włączyć trwałości dla siebie przepływy pracy używające <xref:System.Activities.WorkflowApplication> programowo przy użyciu <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> obiektu modelu. Poniższa procedura zawiera kroki, aby to zrobić.  

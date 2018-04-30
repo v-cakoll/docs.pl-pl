@@ -38,14 +38,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bf7ec6cc18461a906e889a997968677d0c63df20
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="navigation-overview"></a>Przegląd Nawigacja
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] obsługuje nawigacji stylu przeglądarki, które mogą być używane w dwóch typów aplikacji: aplikacje autonomiczne i [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Zawartość pakietu do nawigacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia <xref:System.Windows.Controls.Page> klasy. Można przejść z jednej <xref:System.Windows.Controls.Page> do innego deklaratywnie, za pomocą <xref:System.Windows.Documents.Hyperlink>, lub programowo, za pomocą <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] korzysta z dziennika do zapamiętania stron, które zostały przesłane z i do przejdź z powrotem do ich.  
+Windows Presentation Foundation (WPF) obsługuje nawigacji stylu przeglądarki, które mogą być używane w dwóch typów aplikacji: aplikacje autonomiczne i [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Zawartość pakietu do nawigacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia <xref:System.Windows.Controls.Page> klasy. Można przejść z jednej <xref:System.Windows.Controls.Page> do innego deklaratywnie, za pomocą <xref:System.Windows.Documents.Hyperlink>, lub programowo, za pomocą <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] korzysta z dziennika do zapamiętania stron, które zostały przesłane z i do przejdź z powrotem do ich.  
   
  <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, i dziennika stanowią podstawową Obsługa nawigacji oferowane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. To omówienie Eksploruje te funkcje szczegółowo przed obejmujące obsługi zaawansowanych nawigacji, który obejmuje nawigacji można utracić [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pliki, [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] plików i obiektów.  
   

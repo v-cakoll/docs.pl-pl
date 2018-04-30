@@ -1,27 +1,29 @@
 ---
-title: "Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji"
-ms.custom: 
+title: Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be460249ed877b2f67f2d153c2aea4a3cc4d2b37
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d1e5082ace452eabddd91a45a20c6d6363e118b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji
-Należy rozważyć następujące elementy, które mają wpływ na zabezpieczeń podczas implementowania bezpiecznej sesji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zagadnienia dotyczące zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) i [najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+Należy rozważyć następujące elementy, które mają wpływ na zabezpieczeń podczas implementowania bezpiecznej sesji. Aby uzyskać więcej informacji na temat zagadnień dotyczących zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) i [najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
   
 ## <a name="secure-sessions-and-metadata"></a>Bezpieczne sesje i metadane  
  Po ustanowieniu bezpiecznej sesji i <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> właściwość jest ustawiona na `false`, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wysyła `mssp:MustNotSendCancel` potwierdzenia jako część metadanych w dokumencie Web Services Description Language (WSDL) dla punktu końcowego usługi. `mssp:MustNotSendCancel` Potwierdzenia informuje klientów, że usługa nie odpowiada na żądania anulowania bezpiecznej sesji. Gdy <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> właściwość jest ustawiona na `true`, następnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie Emituj `mssp:MustNotSendCancel` potwierdzenia w dokumencie WSDL. Klienci powinni wysyłać żądania anulowania do usługi, gdy nie jest już wymagany bezpiecznej sesji. Gdy klient jest generowany przy użyciu [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), kod klienta odpowiednio reaguje na obecności lub braku `mssp:MustNotSendCancel` potwierdzenia.  

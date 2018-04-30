@@ -1,12 +1,13 @@
 ---
-title: "Zasoby aplikacji WPF, zawartość, pliki danych"
-ms.custom: 
+title: Zasoby aplikacji WPF, zawartość, pliki danych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]aplikacje często są zależne od plików, które zawierają dane inne niż wykonywalne, takich jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i audio. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]oferuje obsługę specjalne Konfigurowanie, identyfikowanie i używanie tych typów plików danych, które są nazywane pliki danych aplikacji. Ta obsługa dotyczy tego określonego zestawu danych typów plików aplikacji, w tym:  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplikacje często są zależne od plików, które zawierają dane inne niż wykonywalne, takich jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i audio. Windows Presentation Foundation (WPF) oferuje obsługę specjalne Konfigurowanie, identyfikowanie i używanie tych typów plików danych, które są nazywane pliki danych aplikacji. Ta obsługa dotyczy tego określonego zestawu danych typów plików aplikacji, w tym:  
   
 -   **Pliki zasobów**: pliki danych, które są łączone w plik wykonywalny lub biblioteka [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Jedną istotną różnicę między te trzy typy plików, aby jest plików zasobów i pliki zawartości są znane w czasie kompilacji. zestaw ma jawne o nich wiedział. Dla witryny pochodzenia plików, jednak zestaw może nie mieć nie będzie o nich wiedział w, lub niejawne informacji na temat za pomocą pakietu [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] odwołanie; w przypadku, nie ma żadnej gwarancji, do którego istnieje odwołanie witryny pochodzenia pliku faktycznie istnieje.  
   
- Aby odwołać pliki danych aplikacji, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] korzysta z pakietu [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] schemat, który opisano szczegółowo w [identyfikatorów URI pakietu na platformie WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+ Aby odwołać pliki danych aplikacji, Windows Presentation Foundation (WPF) korzysta z pakietu [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] schemat, który opisano szczegółowo w [identyfikatorów URI pakietu na platformie WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
   
  W tym temacie opisano sposób konfigurowania i używanie plików danych aplikacji.  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
  Po utworzeniu projektu [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] kompiluje zasobu w zestawie.  
   
 ### <a name="using-resource-files"></a>Przy użyciu plików zasobów  
- Aby załadować plik zasobów, należy wywołać <xref:System.Windows.Application.GetResourceStream%2A> metody <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] identyfikującym rozszerzenie pliku żądanego zasobu. <xref:System.Windows.Application.GetResourceStream%2A>Zwraca <xref:System.Windows.Resources.StreamResourceInfo> obiektu, który przedstawia plik zasobu jako <xref:System.IO.Stream> oraz opis jego typ zawartości.  
+ Aby załadować plik zasobów, należy wywołać <xref:System.Windows.Application.GetResourceStream%2A> metody <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] identyfikującym rozszerzenie pliku żądanego zasobu. <xref:System.Windows.Application.GetResourceStream%2A> Zwraca <xref:System.Windows.Resources.StreamResourceInfo> obiektu, który przedstawia plik zasobu jako <xref:System.IO.Stream> oraz opis jego typ zawartości.  
   
  Na przykład poniższy kod przedstawia sposób użycia <xref:System.Windows.Application.GetResourceStream%2A> załadować <xref:System.Windows.Controls.Page> zasobów plików i ustaw go jako zawartość <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Wartość jest również wartość ścieżki do zawartości pliku w folderze wyjściowym kompilacji.  
   
 ### <a name="using-content-files"></a>Przy użyciu plików zawartości  
- Aby załadować plik zawartości, należy wywołać <xref:System.Windows.Application.GetContentStream%2A> metody <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] żądanego pliku zawartości, które identyfikują. <xref:System.Windows.Application.GetContentStream%2A>Zwraca <xref:System.Windows.Resources.StreamResourceInfo> obiektu, który udostępnia zawartość pliku jako <xref:System.IO.Stream> oraz opis jego typ zawartości.  
+ Aby załadować plik zawartości, należy wywołać <xref:System.Windows.Application.GetContentStream%2A> metody <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] żądanego pliku zawartości, które identyfikują. <xref:System.Windows.Application.GetContentStream%2A> Zwraca <xref:System.Windows.Resources.StreamResourceInfo> obiektu, który udostępnia zawartość pliku jako <xref:System.IO.Stream> oraz opis jego typ zawartości.  
   
  Na przykład poniższy kod przedstawia sposób użycia <xref:System.Windows.Application.GetContentStream%2A> załadować <xref:System.Windows.Controls.Page> zawartości pliku i ustaw go jako zawartość <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/22/2017
  Po utworzeniu projektu [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] kopiuje określone pliki do folderu wyjściowego kompilacji.  
   
 ### <a name="using-site-of-origin-files"></a>Za pomocą witryny pochodzenia plików  
- Aby załadować witryny pochodzenia pliku, należy wywołać <xref:System.Windows.Application.GetRemoteStream%2A> metody <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] identyfikującym żądanej witryny pochodzenia pliku. <xref:System.Windows.Application.GetRemoteStream%2A>Zwraca <xref:System.Windows.Resources.StreamResourceInfo> obiektu, który udostępnia witryny pochodzenia pliku jako <xref:System.IO.Stream> oraz opis jego typ zawartości.  
+ Aby załadować witryny pochodzenia pliku, należy wywołać <xref:System.Windows.Application.GetRemoteStream%2A> metody <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] identyfikującym żądanej witryny pochodzenia pliku. <xref:System.Windows.Application.GetRemoteStream%2A> Zwraca <xref:System.Windows.Resources.StreamResourceInfo> obiektu, który udostępnia witryny pochodzenia pliku jako <xref:System.IO.Stream> oraz opis jego typ zawartości.  
   
  Na przykład poniższy kod przedstawia sposób użycia <xref:System.Windows.Application.GetRemoteStream%2A> załadować <xref:System.Windows.Controls.Page> witryny pochodzenia pliku i ustaw go jako zawartość <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   

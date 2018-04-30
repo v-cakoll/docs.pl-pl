@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródła śledzenia na emitowanie danych śledzenia i poziomy śledzenia zestawu, śledzenie działania zestawu i propagacji do obsługi korelacji śledzenia end-to-end i ustaw obiektów nasłuchujących śledzenia do śledzenia.  
@@ -146,7 +146,7 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Tworzenie użytkownika śledzenia źródeł, zobacz [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Aby uzyskać więcej informacji o tworzeniu źródła śledzenia zdefiniowanych przez użytkownika, zobacz [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Konfigurowanie obiektów nasłuchujących śledzenia zużyje śledzenia  
  W czasie wykonywania [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] źródła danych do odbiorników, które przetwarzają dane śledzenia. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zawiera kilka wstępnie zdefiniowanych odbiorników dla <xref:System.Diagnostics>, które różnią się w formacie ich użycia dla danych wyjściowych. Można również dodać niestandardowe odbiornika typów.  
@@ -187,7 +187,7 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
   
  `propagateActivity` Atrybut wskazuje, czy działanie powinno propagowane do pozostałych punktów końcowych, które uczestniczą w wymianie wiadomości. Ustawiając tę wartość na `true`, możesz pobrać pliki śledzenia wygenerowane przez dwoma punktami końcowymi i obserwować, jak zestaw ślady na jeden punkt końcowy skierowana do zestawu danych śledzenia w innym punktem końcowym.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] śledzenie działania i propagacji, zobacz [propagacji](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Aby uzyskać więcej informacji na temat propagacji i śledzenie działań, zobacz [propagacji](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Zarówno `propagateActivity` i `ActivityTracing` wartościami logicznymi dotyczą System.ServiceModel TraceSource. `ActivityTracing` Wartości mają zastosowanie również do dowolnego źródła śledzenia, łącznie z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] lub zdefiniowanej przez użytkownika.  
   

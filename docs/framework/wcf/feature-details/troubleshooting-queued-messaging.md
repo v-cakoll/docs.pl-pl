@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -125,7 +125,7 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
   
  **Pytanie:** gdzie mogę znaleźć odpowiedzi na często zadawane pytania na MSMQ?  
   
- **Odpowiedź:** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, zobacz [usługi kolejkowania wiadomości firmy Microsoft](http://go.microsoft.com/fwlink/?LinkId=87810).  
+ **Odpowiedź:** uzyskać więcej informacji na temat usługi MSMQ, zobacz [usługi kolejkowania wiadomości firmy Microsoft](http://go.microsoft.com/fwlink/?LinkId=87810).  
   
  **Pytanie:** Dlaczego moja usługa throw `ProtocolException` podczas czytania z kolejki, który zawiera zarówno sesji wiadomości w kolejce i datagram wiadomości w kolejce?  
   

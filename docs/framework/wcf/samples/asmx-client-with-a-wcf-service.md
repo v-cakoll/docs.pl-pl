@@ -1,24 +1,26 @@
 ---
-title: "Klient ASMX z usługą WCF"
-ms.custom: 
+title: Klient ASMX z usługą WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26fc56ae465c2792f895f08a8e55577d3b74b97d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Klient ASMX z usługą WCF
 W tym przykładzie pokazano, jak utworzyć przy użyciu usługi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i uzyskuje dostęp do usługi z innej[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, takich jak klient ASMX.  
@@ -149,7 +151,7 @@ Press <ENTER> to terminate client.
 3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]przekazywanie i zwracający dane złożone typy Zobacz: [powiązania danych w kliencie formularzy systemu Windows](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [powiązania danych w kliencie systemu Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), i [powiązania danych w programie ASP.NET Klienta](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Aby uzyskać więcej informacji o przekazywanie i zwracający dane złożone Zobacz typy: [powiązania danych w kliencie formularzy systemu Windows](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [powiązania danych w kliencie systemu Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), i [danych Powiązanie w kliencie programu ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

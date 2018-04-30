@@ -1,45 +1,47 @@
 ---
-title: "Śledzenie danych analitycznych programu WCF"
-ms.custom: 
+title: Śledzenie danych analitycznych programu WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
 W tym przykładzie pokazano, jak dodać własne zdarzenia śledzenia w strumieniu danych analitycznych śledzi, który [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zapisuje ETW w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne są przeznaczone do ułatwiają pobrać widoczność do usług bez płatności kar wysokiej wydajności. Ten przykład przedstawia sposób użycia <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsy API w celu zapisu zdarzenia, które integrują się z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsów API, zobacz <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Aby uzyskać więcej informacji na temat <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsów API, zobacz <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Aby dowiedzieć się więcej na temat śledzenia zdarzeń w systemie Windows, zobacz [poprawy debugowania i dostrajania wydajności za pomocą funkcji ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Usuwanie EventProvider  
- W przykładzie użyto <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> klasy, która implementuje <xref:System.IDisposable?displayProperty=nameWithType>. Podczas implementowania śledzenia dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, prawdopodobnie można także użyć <xref:System.Diagnostics.Eventing.EventProvider>dla zasobów przez czas ich istnienia usługi. Z tego powodu i czytelności, w tym przykładzie nigdy nie usuwa opakowany <xref:System.Diagnostics.Eventing.EventProvider>. Jeśli zaistnieje usługa ma różne wymagania dotyczące śledzenia i użytkownik musi dysponować tego zasobu, a następnie należy modyfikować tego przykładu zgodnie z najlepszych rozwiązań dotyczących usuwania niezarządzanych zasobów. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Usuwanie niezarządzane zasoby, zobacz [implementacja metody Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ W przykładzie użyto <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> klasy, która implementuje <xref:System.IDisposable?displayProperty=nameWithType>. Podczas implementowania śledzenia dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, prawdopodobnie można także użyć <xref:System.Diagnostics.Eventing.EventProvider>dla zasobów przez czas ich istnienia usługi. Z tego powodu i czytelności, w tym przykładzie nigdy nie usuwa opakowany <xref:System.Diagnostics.Eventing.EventProvider>. Jeśli zaistnieje usługa ma różne wymagania dotyczące śledzenia i użytkownik musi dysponować tego zasobu, a następnie należy modyfikować tego przykładu zgodnie z najlepszych rozwiązań dotyczących usuwania niezarządzanych zasobów. Aby uzyskać więcej informacji na temat usuwania zasoby niezarządzane, zobacz [implementacja metody Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Własnym hostingu vs. Usługa hostingu sieci Web  
  W przypadku usług hostowanych w sieci Web analityczne dane śledzenia WCF w Podaj pola o nazwie "HostReference", który jest używany do identyfikowania usługi, która jest wysyłających dane śledzenia. Ślady extensible użytkownika mogą uczestniczyć w tym modelu i w tym przykładzie przedstawiono najlepsze rozwiązania w zakresie w ten sposób. Format hosta sieci Web odwołać, kiedy potoku "&#124;" znak nie są wyświetlane w wynikowym ciąg może być jednym z następujących czynności:  
   
 -   Jeśli aplikacja nie jest w katalogu głównym.  
   
-     \<Nazwa witryny >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Nazwa witryny >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   Jeśli w katalogu głównym aplikacji.  
   
-     \<Nazwa witryny > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Nazwa witryny >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  W przypadku usług hostowania samoobsługowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]firmy analityczne dane śledzenia nie należy wypełniać pola "HostReference". `WCFUserEventProvider` Klasy w tym przykładzie zachowuje się spójnie, gdy jest używana przez siebie usługi.  
   

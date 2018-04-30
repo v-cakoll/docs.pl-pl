@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
-W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę podczas tworzenia bezpiecznego aplikacji przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zabezpieczenia, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę podczas tworzenia bezpiecznego aplikacji przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Aby uzyskać więcej informacji o zabezpieczeniach, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identyfikacja usług uwierzytelniania systemu Windows na nazwy SPN  
  Usługi można określić nazwy głównej użytkownika (UPN) lub głównych nazw usług (SPN). Usługi uruchomiony w ramach konta komputera, na przykład usługi sieciowej mają tożsamością SPN odpowiadającego na komputerze, na którym jest na nich uruchomione. Usługi uruchomione na kontach użytkowników ma tożsamością UPN odpowiadający użytkownika nich uruchomiony, mimo że `setspn` narzędzia można przypisać nazwę SPN konta użytkownika. Konfigurowanie usługi, dzięki czemu można zidentyfikować za pomocą głównej nazwy usługi i konfigurowanie klientów połączenie z usługą, aby użyć tej nazwy SPN może upewnić się, ataki trudniejsze. Niniejsze wytyczne mają zastosowanie do wiązania za pomocą negocjowania protokołu Kerberos lub interfejs SSPI.  Klienci nadal należy określić nazwę SPN w przypadku, gdy SSPI powraca do uwierzytelniania NTLM.  
@@ -66,7 +66,7 @@ W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę p
  Jeśli adres wystawcy i powiązanie zostały określone dla danego powiązania, wystawcy lokalnego nie jest używany dla punktów końcowych, które używają tego powiązania. Klienci, którzy oczekują, że zawsze używaj wystawcy lokalnego powinien upewnij się, że nie używaj takiego powiązania lub ich zmodyfikuj powiązanie w taki sposób, że adres wystawcy jest pusta.  
   
 ## <a name="saml-token-size-quotas"></a>Przydziały rozmiar tokenu SAML  
- Gdy tokenów zabezpieczeń potwierdzenia Markup Language (SAML) są serializowane w wiadomości, wystawiane przez zabezpieczenia tokenu usługi (STS) lub, gdy klienci je do usług w ramach uwierzytelniania, maksymalny przydział rozmiaru komunikatu musi być wystarczająco duży, aby zmieścił się w tokenie SAML i innych części wiadomości. W przypadku normalnych przydziały rozmiar komunikatu domyślne są wystarczające. Jednak w przypadku, gdy tokenu SAML jest duży, ponieważ zawiera on setki oświadczenia, przydziały powinny być zwiększyć Zserializowany token. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] przydziały, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Gdy tokenów zabezpieczeń potwierdzenia Markup Language (SAML) są serializowane w wiadomości, wystawiane przez zabezpieczenia tokenu usługi (STS) lub, gdy klienci je do usług w ramach uwierzytelniania, maksymalny przydział rozmiaru komunikatu musi być wystarczająco duży, aby zmieścił się w tokenie SAML i innych części wiadomości. W przypadku normalnych przydziały rozmiar komunikatu domyślne są wystarczające. Jednak w przypadku, gdy tokenu SAML jest duży, ponieważ zawiera on setki oświadczenia, przydziały powinny być zwiększyć Zserializowany token. Aby uzyskać więcej informacji na temat przydziałów, zobacz [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Ustaw SecurityBindingElement.IncludeTimestamp wartość True na powiązania niestandardowe  
  Podczas tworzenia niestandardowego powiązania, należy ustawić <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> do `true`. W przeciwnym razie, jeśli <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> ma ustawioną wartość `false`, a klient używa asymetrycznego token opartego na kluczach, takich jak X509 certyfikatu, komunikat nie zostanie podpisana.  

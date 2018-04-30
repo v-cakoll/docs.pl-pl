@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
 W tym temacie opisano podstawowe zadania programowania, używany do tworzenia bezpiecznego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji. W tym temacie omówiono tylko uwierzytelnianie, poufność i integralność, nazywanych zbiorczo *transferu zabezpieczeń*. W tym temacie nie opisano autoryzacji (kontrola dostępu do zasobów lub usług); informacje dotyczące autoryzacji znajdują się w temacie [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,7 +48,7 @@ W tym temacie opisano podstawowe zadania programowania, używany do tworzenia be
   
     1.  `Transport`  
   
-         Zabezpieczenia transportu zależy od mechanizm, który używa wybranego powiązania. Na przykład, jeśli używasz `WSHttpBinding` mechanizm zabezpieczeń jest Secure Sockets Layer (SSL) (również mechanizm dla protokołu HTTPS). Główną zaletą zabezpieczeń transportu jest ogólnie rzecz biorąc, zapewnia dobre przepływności, niezależnie od tego, które transportu są używane. Jednak mieć dwa ograniczenia: pierwsza to, że mechanizm transportu nakazują typ poświadczenia używane do uwierzytelnienia użytkownika. Wadą jest tylko wtedy, gdy usługa musi współdziałać z innymi usługami, które wymagają różnych rodzajów poświadczeń. Drugim jest, ponieważ nie zastosowano zabezpieczenia na poziomie komunikatu, zabezpieczeń jest zaimplementowana w sposób przeskoku przeskoku zamiast end-to-end. To ograniczenie ostatnie jest problem tylko, jeśli ścieżka wiadomości między klientem a usługą zawiera pośredników. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] które transportu do użycia, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą zabezpieczeń transportu, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Zabezpieczenia transportu zależy od mechanizm, który używa wybranego powiązania. Na przykład, jeśli używasz `WSHttpBinding` mechanizm zabezpieczeń jest Secure Sockets Layer (SSL) (również mechanizm dla protokołu HTTPS). Główną zaletą zabezpieczeń transportu jest ogólnie rzecz biorąc, zapewnia dobre przepływności, niezależnie od tego, które transportu są używane. Jednak mieć dwa ograniczenia: pierwsza to, że mechanizm transportu nakazują typ poświadczenia używane do uwierzytelnienia użytkownika. Wadą jest tylko wtedy, gdy usługa musi współdziałać z innymi usługami, które wymagają różnych rodzajów poświadczeń. Drugim jest, ponieważ nie zastosowano zabezpieczenia na poziomie komunikatu, zabezpieczeń jest zaimplementowana w sposób przeskoku przeskoku zamiast end-to-end. To ograniczenie ostatnie jest problem tylko, jeśli ścieżka wiadomości między klientem a usługą zawiera pośredników. Aby uzyskać więcej informacji o którym transportu do użycia, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać więcej informacji o korzystaniu z zabezpieczeń transportu, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   

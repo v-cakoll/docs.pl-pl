@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>Ograniczenia deklaratywne
 Deklaratywne ograniczenia udostępnia zaawansowane metody sprawdzania poprawności działania i ich relacji z innymi działaniami. Ograniczenia są skonfigurowane dla działania podczas procesu tworzenia, ale można również określić dodatkowe ograniczenia przez hosta przepływu pracy. Ten temat zawiera omówienie sposobu użycia deklaratywne ograniczenia do udostępnienia weryfikacji działania.  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- Jeśli <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> właściwość <xref:System.Activities.Validation.ValidationSettings> jest `true`, następnie określonego dodatkowe ograniczenia są oceniane podczas sprawdzania poprawności jest wywoływany przez wywołanie metody <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Może to być przydatne do inspekcji przepływy pracy dla określonych sprawdzania poprawności konfiguracji. Zauważ jednak, że po wywołaniu przepływu pracy logikę weryfikacji skonfigurowany w przepływie pracy jest obliczane i musi przejść pomyślnie rozpocząć przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] wywoływanie weryfikacji, zobacz [wywoływania sprawdzania poprawności działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Jeśli <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> właściwość <xref:System.Activities.Validation.ValidationSettings> jest `true`, następnie określonego dodatkowe ograniczenia są oceniane podczas sprawdzania poprawności jest wywoływany przez wywołanie metody <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Może to być przydatne do inspekcji przepływy pracy dla określonych sprawdzania poprawności konfiguracji. Zauważ jednak, że po wywołaniu przepływu pracy logikę weryfikacji skonfigurowany w przepływie pracy jest obliczane i musi przejść pomyślnie rozpocząć przepływu pracy. Aby uzyskać więcej informacji na temat wywoływania weryfikacji, zobacz [wywoływania sprawdzania poprawności działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

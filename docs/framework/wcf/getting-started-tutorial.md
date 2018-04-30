@@ -20,16 +20,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c66e7d8f610126e2702a6c593a93ee496108ecf
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Tematy zawarte w tej sekcji mają na celu umożliwiają szybkie narażenia na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] środowisko programowania. Są one przeznaczone do wypełnienia kolejności na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wprowadzające kroków wymaganych do utworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje klienckie. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jedną operację usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klient musi komunikować się z usługą i kontrakt definiujący funkcje udostępniony przez usługę klientom.  
   
- Po zakończeniu pracy z sekwencją tematów w tym samouczku, będzie mieć uruchomioną usługę i klienta, który wywołuje usługę. Pierwsze trzy tematach opisano, jak definiowanie kontraktu usługi, jak Implementowanie kontraktu usługi oraz sposobu obsługi usługi. Usługa, która jest tworzona jest samodzielnie hostowana w aplikacji konsoli. Usługi również może być hostowana w obszarze usługi Internet Information Services (IIS). [!INCLUDE[crabout](../../../includes/crabout-md.md)] jak to zrobić, zobacz [porady: hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Usługa jest skonfigurowana w kodzie; Jednak usługi, można również skonfigurować w pliku konfiguracji. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Zobacz użycie pliku konfiguracji [Konfigurowanie usług za pomocą plików konfiguracji](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
+ Po zakończeniu pracy z sekwencją tematów w tym samouczku, będzie mieć uruchomioną usługę i klienta, który wywołuje usługę. Pierwsze trzy tematach opisano, jak definiowanie kontraktu usługi, jak Implementowanie kontraktu usługi oraz sposobu obsługi usługi. Usługa, która jest tworzona jest samodzielnie hostowana w aplikacji konsoli. Usługi również może być hostowana w obszarze usługi Internet Information Services (IIS). Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz [porady: hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Usługa jest skonfigurowana w kodzie; Jednak usługi, można również skonfigurować w pliku konfiguracji. Aby uzyskać więcej informacji na temat używania pliku konfiguracji zobacz [Konfigurowanie usług za pomocą plików konfiguracji](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
  W trzech kolejnych tematach opisano sposób tworzenia serwera proxy klienta, konfigurowania aplikacji klienckiej i użyć serwera proxy klienta do wywołania operacji usługi udostępniane przez usługę. Usługi Publikowanie metadanych, który definiuje informacje potrzebne do komunikowania się z usługi aplikacji klienckiej. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] automatyzuje proces uzyskiwania dostępu do metadanych i używa go do tworzenia i konfigurowania aplikacji klienckiej dla usługi. Jeśli nie używasz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], można użyć [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) utworzyć i skonfigurować aplikację klienta dla usługi.  
   

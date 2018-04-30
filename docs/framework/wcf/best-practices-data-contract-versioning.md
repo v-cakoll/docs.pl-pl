@@ -21,14 +21,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Wskazówki: Przechowywanie wersji kontraktów danych
-Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych, które można łatwo rozwijać, wraz z upływem czasu. [!INCLUDE[crabout](../../../includes/crabout-md.md)] kontrakty danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych, które można łatwo rozwijać, wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Uwagi dotyczące sprawdzania poprawności schematu  
  W dyskutować przechowywanie wersji kontraktów danych, należy pamiętać, że wyeksportowane przez schematu kontraktu danych jest [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] nie ma żadnych obsługi przechowywania wersji, innego niż fakt, że elementy nie została oznaczona jako opcjonalna domyślnie.  
@@ -56,7 +56,7 @@ Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych
   
 -   Zastosuj <xref:System.ServiceModel.ServiceBehaviorAttribute> do umowy serwisowej z atrybut <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> ustawioną właściwość `true`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] dwustronną komunikację, zobacz [kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Aby uzyskać więcej informacji na temat dwustronną komunikację, zobacz [kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Przechowywanie wersji podczas sprawdzania poprawności schematu nie jest wymagana  
  Rzadko wymagany jest schemat Strict zgodności. Wiele platform tolerować dodatkowe elementy, które nie dotyczą schematu. Tak długo, jak jest to dopuszczalne, pełny zestaw funkcji opisanych w [przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) i [kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) mogą być używane. Zaleca się następujące wskazówki.  
@@ -69,7 +69,7 @@ Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych
   
 3.  Począwszy od pierwszej wersji kontraktu danych, zawsze zaimplementować <xref:System.Runtime.Serialization.IExtensibleDataObject> umożliwiające dwustronną komunikację. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bez stosowania tego interfejsu wydaniu wersji co najmniej jednego typu należy wdrożyć go w następnej wersji tego typu.  
   
-4.  W nowszych wersjach nie należy zmieniać nazwy kontraktu danych lub przestrzeni nazw. Jeśli zmiana nazwy lub przestrzeni nazw typu podstawowego kontraktu danych, upewnij się zachować nazwie kontraktu danych i przestrzeni nazw przy użyciu odpowiednich mechanizmów, takich jak <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> właściwość <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] nazw, zobacz [nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  W nowszych wersjach nie należy zmieniać nazwy kontraktu danych lub przestrzeni nazw. Jeśli zmiana nazwy lub przestrzeni nazw typu podstawowego kontraktu danych, upewnij się zachować nazwie kontraktu danych i przestrzeni nazw przy użyciu odpowiednich mechanizmów, takich jak <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> właściwość <xref:System.Runtime.Serialization.DataContractAttribute>. Aby uzyskać więcej informacji o nazwach, zobacz [nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  W nowszych wersjach nie należy zmieniać nazwy żadnych elementów członkowskich danych. Jeśli zmiana nazwy pola, właściwości lub zdarzenia podstawowy element członkowski danych, użyj `Name` właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> zachować nazwę istniejącego elementu członkowskiego danych.  
   
@@ -81,7 +81,7 @@ Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Właściwość zawsze należy pozostawić wartość domyślną `false`.  
   
-    2.  Jeśli wartość domyślną równą `null` lub zero dla elementu członkowskiego jest nie do przyjęcia, metody wywołania zwrotnego należy podawać przy użyciu <xref:System.Runtime.Serialization.OnDeserializingAttribute> do zapewniania domyślnego uzasadnione, w przypadku, gdy element członkowski nie jest obecny w strumienia przychodzącego. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Wywołanie zwrotne, zobacz [wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Jeśli wartość domyślną równą `null` lub zero dla elementu członkowskiego jest nie do przyjęcia, metody wywołania zwrotnego należy podawać przy użyciu <xref:System.Runtime.Serialization.OnDeserializingAttribute> do zapewniania domyślnego uzasadnione, w przypadku, gdy element członkowski nie jest obecny w strumienia przychodzącego. Aby uzyskać więcej informacji na temat wywołania zwrotnego, zobacz [wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
     3.  `Order` Właściwość `DataMemberAttribute` powinien być używany do upewnij się, że wszystkie elementy członkowskie nowo dodanych danych zostaną wyświetlone po istniejące elementy członkowskie danych. Zalecaną metodą zrobić to wygląda następująco: żaden z elementów członkowskich danych w pierwszej wersji kontraktu danych powinien nie ma ich `Order` zestawu właściwości. Wszystkie elementy członkowskie danych dodany w wersji 2 kontraktu danych powinny mieć swoje `Order` właściwością o wartości 2. Wszystkie elementy członkowskie danych dodany w wersji 3 kontraktu danych powinny mieć ich `Order` na 3 i tak dalej. Dopuszcza się ma więcej niż jeden element członkowski danych takie same `Order` numer.  
   

@@ -1,34 +1,36 @@
 ---
 title: Drukowanie Tematy porad
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>Drukowanie Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania z drukowania i dołączone do funkcji zarządzania system drukowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oraz nowe [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ścieżki wydruku.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wywoływanie okna dialogowego drukowania](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- Instrukcje dotyczące znaczników XAML zadeklarować [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] obiektu okna dialogowego i Wywołaj okno dialogowe z poziomu za pomocą kodu wydruku [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji.  
+ Instrukcje dotyczące znaczników XAML zadeklarować [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Drukowanie obiektu okna dialogowego i Wywołaj okno dialogowe z poziomu aplikacji Windows Presentation Foundation (WPF) za pomocą kodu.  
   
  [Klonowanie drukarki](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  Instrukcje dotyczące instalowania drugi kolejki wydruku z dokładnie takie same właściwości jako istniejącej kolejki wydruku.  

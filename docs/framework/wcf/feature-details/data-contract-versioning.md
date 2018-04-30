@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
 Jak aplikacje rozwijać, może również trzeba zmienić użycia usług kontraktów danych. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy kontroli wersji kontraktu danych. Pełny przegląd i wskazówki przetestowanego przechowywania wersji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -125,7 +125,7 @@ Jak aplikacje rozwijać, może również trzeba zmienić użycia usług kontrakt
  Dodawanie lub usuwanie elementu członkowskiego wyliczenia jest istotne zmiany. Zmiana nazwy elementu członkowskiego wyliczenia jest krytyczne, chyba że jego nazwa kontraktu pozostaje taki sam jak stara wersja przy użyciu `EnumMemberAtttribute` atrybutu. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Kolekcje  
- Większość zmian w kolekcji są nierozdzielający ponieważ większość typów kolekcji są wymienne ze sobą w modelu kontraktu danych. Jednak dokonywanie noncustomized kolekcji dostosowane lub odwrotnie jest istotne zmiany. Zmiana ustawień dostosowania kolekcji jest również istotne zmiany; oznacza to, że zmiana jego nazwie kontraktu danych i przestrzeni nazw, powtarzające się nazwy elementu, nazwa elementu klucza i wartość nazwy elementu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Dostosowywanie kolekcji, zobacz [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Większość zmian w kolekcji są nierozdzielający ponieważ większość typów kolekcji są wymienne ze sobą w modelu kontraktu danych. Jednak dokonywanie noncustomized kolekcji dostosowane lub odwrotnie jest istotne zmiany. Zmiana ustawień dostosowania kolekcji jest również istotne zmiany; oznacza to, że zmiana jego nazwie kontraktu danych i przestrzeni nazw, powtarzające się nazwy elementu, nazwa elementu klucza i wartość nazwy elementu. Aby uzyskać więcej informacji dotyczących dostosowywania kolekcji, zobacz [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Oczywiście zmiana z kontraktem danych zawartość kolekcji (np. zmiana z listy liczb całkowitych na listę ciągów) jest istotne zmiany.  
   
 ## <a name="see-also"></a>Zobacz też  

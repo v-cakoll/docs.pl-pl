@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7085b9069235de7cd8754937f9f6facdf60cd5b3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f131d644d58359cec305b83c136e6fe7f68a1b93
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Działanie externalized zasad w programie .NET Framework 4.5
-W tym przykładzie przedstawiono sposób działania ExternalizedPolicy4 umożliwia wykonywanie istniejących [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiekty w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) bezpośrednio za pomocą aparatu reguł który jest dostarczany w wersji 3.5 WF. Za pomocą tego działania, można otwierać i wykonać wszelkie istniejące 3.5 WF <xref:System.Workflow.Activities.Rules.RuleSet>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Przeczytaj aparatu reguł dołączone jako część programu Windows Workflow Foundation WF 3.5 [wprowadzenie do aparatu reguł systemu Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Migrowanie reguł [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], przeczytaj wskazówki dotyczące migracji w [wskazówki dotyczące migracji](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+W tym przykładzie przedstawiono sposób działania ExternalizedPolicy4 umożliwia wykonywanie istniejących [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiekty w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) bezpośrednio za pomocą aparatu reguł który jest dostarczany w wersji 3.5 WF. Za pomocą tego działania, można otwierać i wykonać wszelkie istniejące 3.5 WF <xref:System.Workflow.Activities.Rules.RuleSet>. Aby uzyskać więcej informacji na temat aparatu reguł 3.5 WF dołączone jako część programu Windows Workflow Foundation, przeczytaj [wprowadzenie do aparatu reguł systemu Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). Aby uzyskać więcej informacji na temat migracji reguły do [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], przeczytaj wskazówki dotyczące migracji w [wskazówki dotyczące migracji](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="projects-in-this-sample"></a>Projekty w tym przykładzie  
   

@@ -22,16 +22,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a52aa5c2c3af6c7288b2a375e44024195dfe1cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>Instrukcje: Tworzenie klienta federacyjnego
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *usługa* składa się z trzech głównych kroków:  
   
-1.  Skonfiguruj [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub podobne niestandardowego powiązania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie powiązanie odpowiednie zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Można również uruchomić [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) wobec usługi federacyjnej, aby wygenerować plik konfiguracji do komunikowania się z usługi federacyjnej i co najmniej jeden punkt końcowy metadanych usługi tokenu zabezpieczeń.  
+1.  Skonfiguruj [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub podobne niestandardowego powiązania. Aby uzyskać więcej informacji o tworzeniu powiązanie odpowiednie, zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Można również uruchomić [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) wobec usługi federacyjnej, aby wygenerować plik konfiguracji do komunikowania się z usługi federacyjnej i co najmniej jeden punkt końcowy metadanych usługi tokenu zabezpieczeń.  
   
 2.  Ustawianie właściwości <xref:System.ServiceModel.Security.IssuedTokenClientCredential> steruje różnych aspektów interakcji klienta z usługi tokenu zabezpieczającego.  
   
@@ -40,7 +40,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *u
 > [!NOTE]
 >  A <xref:System.Security.Cryptography.CryptographicException> może zostać zgłoszony, gdy klient użyje poświadczeń personifikowanej <xref:System.ServiceModel.WSFederationHttpBinding> powiązanie lub token wystawiony niestandardowe i klucze asymetryczne. Klucze asymetryczne są używane z <xref:System.ServiceModel.WSFederationHttpBinding> powiązania i wydane niestandardowe tokenów gdy <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> i <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> właściwości, są odpowiednio ustawione na <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>. <xref:System.Security.Cryptography.CryptographicException> Jest generowany, gdy klient próbuje wysłać wiadomość i profilu użytkownika nie istnieje dla tożsamości, która jest personifikacji klienta. Aby zminimalizować ten problem, zaloguj się na komputerze klienckim lub wywołanie `LoadUserProfile` przed wysłaniem wiadomości.  
   
- Ten temat zawiera szczegółowe informacje na temat tych procedur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie powiązanie odpowiednie zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sposób działania usługi federacyjnej, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Ten temat zawiera szczegółowe informacje na temat tych procedur. Aby uzyskać więcej informacji o tworzeniu powiązanie odpowiednie, zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Aby uzyskać więcej informacji na temat działania usługi federacyjnej, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Aby wygenerować i sprawdzić jego konfigurację usługi federacyjnej  
   
@@ -165,7 +165,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzy klienta dla *u
 ## <a name="localissuer-required"></a>LocalIssuer wymagane  
  Jeśli klienci powinni zawsze używaj wystawcy lokalnego, należy uwzględnić następujące informacje: domyślnego wyjścia Svcutil.exe skutkuje wystawcy lokalnego nie są używane, jeśli usługi tokenu zabezpieczeń na sekundę do ostatniego w łańcuchu Określa adres wystawcy lub adres metadanych Wystawca.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ustawienie <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości <xref:System.ServiceModel.Security.IssuedTokenClientCredential> , zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Aby uzyskać więcej informacji o ustawieniu <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, i <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości <xref:System.ServiceModel.Security.IssuedTokenClientCredential> , zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Certyfikaty zakresami  
  Jeśli certyfikaty usługi musi być określona dla komunikacji z dowolnej usługi tokenu zabezpieczeń, zwykle ponieważ negocjowanie certyfikatu nie jest używany, ich można określić za pomocą <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> właściwość <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> klasy. <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> Ma metodę <xref:System.Uri> i <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> jako parametry. Określony certyfikat jest używany podczas komunikacji z punktami końcowymi na określony identyfikator URI. Alternatywnie można użyć <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> metody, aby dodać certyfikat do kolekcji zwróconej przez <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> właściwości.  

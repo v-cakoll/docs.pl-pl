@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b44a1587c704b0995821c7126f0264695861558
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c0ac6cec6a86b431d71534880f1a883d648c4332
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-discovery-overview"></a>Omówienie odnajdywania WCF
 Interfejsy API wykrywania zapewnienia ujednoliconego modelu programowania dynamiczne publikacji i odnajdywania usług sieci Web za pomocą protokołu WS-Discovery. Te interfejsy API umożliwiają usług do publikowania się i klientom znalezienie usług opublikowanych. Gdy usługa następuje wykrywalny, usługa ma możliwość wysyłać powiadomienia, a także nasłuchiwania i odpowiadać na żądania odnajdywania. Wykrywalny usług można wysyłać wiadomości powitania ogłaszamy przybyciu w sieci i komunikaty Bye poinformować ich wyjścia z sieci. Aby znaleźć usługi, klienci wysyłają `Probe` żądania, która zawiera określone kryteria, takie jak typ kontraktu usługi, słowa kluczowe i zakresem w sieci. Odbieranie usług `Probe` żądania i ustalić, czy odpowiadają one kryteriom. Usługa zgodna, odpowiadały wysyłając `ProbeMatch` wiadomość do klienta informacje niezbędne do kontaktu z usługą. Klienci mogą również wysyłać `Resolve` żądania, dzięki czemu można znaleźć usługi, które mogą zmienić swój adres punktu końcowego. Usługi pasującego odpowiadanie na `Resolve` żądań wysyłając `ResolveMatch` wiadomość do klienta.  
@@ -159,7 +159,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>Odnajdywanie i zabezpieczeń na poziomie komunikatu  
- Korzystając z zabezpieczeniami na poziomie wiadomości jest niezbędne do określenia <xref:System.ServiceModel.EndpointIdentity> na punkt końcowy odnajdowania usługi i odpowiadający mu <xref:System.ServiceModel.EndpointIdentity> odnajdywania klienta w punkcie końcowym. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] poziom zabezpieczeń, zobacz [zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Korzystając z zabezpieczeniami na poziomie wiadomości jest niezbędne do określenia <xref:System.ServiceModel.EndpointIdentity> na punkt końcowy odnajdowania usługi i odpowiadający mu <xref:System.ServiceModel.EndpointIdentity> odnajdywania klienta w punkcie końcowym. Aby uzyskać więcej informacji dotyczących zabezpieczeń na poziomie komunikatu, zobacz [zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ## <a name="discovery-and-web-hosted-services"></a>Odnajdywanie i sieci Web usług hostowanych  
  Aby usługi WCF być wykrywalny musi być uruchomiona. Usługi WCF hostowanej przez usługi IIS lub WAS nie uruchamiaj do usług IIS / WAS odbiera komunikat przeznaczony dla usługi, dlatego nie może być wykrywalny domyślnie.  Dostępne są dwie opcje do wprowadzania wykrywalny usług hostowanych w sieci Web:  
@@ -168,9 +168,9 @@ class Client
   
 2.  Użyj serwera proxy odnajdywania do komunikacji w imieniu usługi  
   
- Windows Server AppFabric ma funkcję automatycznego uruchamiania, która umożliwi usługa ma zostać uruchomiony przed otrzymaniem komunikaty. Auto-Start ustawiona, usługi IIS / WAS hostowanej usługi można skonfigurować w celu być wykrywalny. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Automatyczne uruchamianie funkcji, zobacz [systemu Windows Server AppFabric automatycznego uruchamiania funkcji](http://go.microsoft.com/fwlink/?LinkId=205545). Wraz z włączenie funkcji automatycznego uruchamiania, należy skonfigurować usługę odnajdywania. Aby uzyskać więcej informacji, zobacz [porady: programowane Dodawanie odnajdywania usługi WCF i klienta](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurowanie odnajdywania w pliku konfiguracyjnym](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric ma funkcję automatycznego uruchamiania, która umożliwi usługa ma zostać uruchomiony przed otrzymaniem komunikaty. Auto-Start ustawiona, usługi IIS / WAS hostowanej usługi można skonfigurować w celu być wykrywalny. Aby uzyskać więcej informacji na temat automatycznego uruchamiania funkcji, zobacz [systemu Windows Server AppFabric automatycznego uruchamiania funkcji](http://go.microsoft.com/fwlink/?LinkId=205545). Wraz z włączenie funkcji automatycznego uruchamiania, należy skonfigurować usługę odnajdywania. Aby uzyskać więcej informacji, zobacz [porady: programowane Dodawanie odnajdywania usługi WCF i klienta](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurowanie odnajdywania w pliku konfiguracyjnym](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
- Serwer proxy odnajdywania może służyć do komunikacji imieniu usług WCF, gdy usługa nie jest uruchomiona. Serwer proxy można nasłuchiwać sondy lub rozwiązać wiadomości i odpowiedzi do klienta. Klient następnie może wysyłać komunikaty bezpośrednio do usługi. Gdy klient wysyła komunikat do usługi będzie można wdrożyć odpowiedzieć na wiadomość. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Wdrażanie serwera proxy odnajdywania zobacz [Implementowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
+ Serwer proxy odnajdywania może służyć do komunikacji imieniu usług WCF, gdy usługa nie jest uruchomiona. Serwer proxy można nasłuchiwać sondy lub rozwiązać wiadomości i odpowiedzi do klienta. Klient następnie może wysyłać komunikaty bezpośrednio do usługi. Gdy klient wysyła komunikat do usługi będzie można wdrożyć odpowiedzieć na wiadomość. Aby uzyskać więcej informacji o implementacji odnajdywania serwera proxy, zobacz temat [Implementowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   
 > [!NOTE]
 >  Do odnajdywania WCF działał prawidłowo wszystkie karty sieciowe (kontrolera interfejsu sieciowego) powinien mieć tylko 1 adres IP.

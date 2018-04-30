@@ -1,24 +1,26 @@
 ---
-title: "Przesłanie formularza"
-ms.custom: 
+title: Przesłanie formularza
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Przesłanie formularza
 W tym przykładzie pokazano, jak rozszerzyć WCF modelu programowania INTERFEJSU REST do obsługi nowych formatów żądania przychodzące. Przykład obejmuje również implementacja element formatujący może zdeserializować żądania post formularza HTML do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu. Ponadto próbki używa szablonu T4, aby powrócić do strony HTML, który zapewnia formularza HTML, który użytkownicy mogą post do usługi WCF REST.  
@@ -38,7 +40,7 @@ W tym przykładzie pokazano, jak rozszerzyć WCF modelu programowania INTERFEJSU
   
  Ten projekt aplikacji konsoli rozszerza [podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbki. Przykład podstawowe usługi zasobów pokazano, jak udostępnianie zasobów w taki sposób, który używa modelu programowania INTERFEJSU REST usługi WCF. Na przykład podstawowe usługi zasobów zasobu kolekcji klienta jest uwidoczniony tak, aby klienci w kolekcji można tworzyć, pobrać, aktualizowane i usuwane. Przykład podstawowe usługi zasobów używa tylko dwa natywnie obsługiwane przychodzące żądanie formaty, XML i JSON.  
   
- Niestandardowy element formatujący w bibliotece HtmlFormProcessing, co pozwala użytkownikom na tworzenie klientów, wysyłając żądanie post formularza HTML za pomocą przeglądarki sieci korzysta z aplikacji konsoli w tym przykładzie Post formularza. Dodano również operację, która zwraca stronę HTML, w tym formularzu do ponownego zaksięgowania usługi. Ta strona HTML jest generowany przy użyciu wstępnie przetworzonych szablonu T4, który składa się z plikiem .TT — i plik CS wygenerowany automatycznie. Plik .TT — umożliwia deweloperom zapisu odpowiedzi w formularzu szablonu, który zawiera zmienne i kontrolowanie struktury. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, zobacz [generowania artefaktów przez przy użyciu szablonów tekstowych](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ Niestandardowy element formatujący w bibliotece HtmlFormProcessing, co pozwala użytkownikom na tworzenie klientów, wysyłając żądanie post formularza HTML za pomocą przeglądarki sieci korzysta z aplikacji konsoli w tym przykładzie Post formularza. Dodano również operację, która zwraca stronę HTML, w tym formularzu do ponownego zaksięgowania usługi. Ta strona HTML jest generowany przy użyciu wstępnie przetworzonych szablonu T4, który składa się z plikiem .TT — i plik CS wygenerowany automatycznie. Plik .TT — umożliwia deweloperom zapisu odpowiedzi w formularzu szablonu, który zawiera zmienne i kontrolowanie struktury. Aby uzyskać więcej informacji na temat T4 zobacz [generowania artefaktów przez przy użyciu szablonów tekstowych](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
   

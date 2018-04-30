@@ -1,31 +1,33 @@
 ---
-title: "Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji"
-ms.custom: 
+title: 'Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1b46239366c38b54a38e3ce62b59c81eeb3316c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28051dbed626dc0073a38e72f2cdc21ea108a32e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Służy do tworzenia usługi, która sprawia, że włączone ASP.NET AJAX punktu końcowego dostępne, który można wywołać z poziomu języka JavaScript w witrynie sieci Web klienta. Aby utworzyć punkt końcowy, możesz użyć pliku konfiguracji, tak jak w przypadku wszystkich innych [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] punktów końcowych lub użyj metody, która nie wymaga żadnych elementów konfiguracji. W tym temacie przedstawiono podejście konfiguracji.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Służy do tworzenia usługi, która sprawia, że włączone ASP.NET AJAX punktu końcowego dostępne, który można wywołać z poziomu języka JavaScript w witrynie sieci Web klienta. Aby utworzyć punkt końcowy, możesz użyć pliku konfiguracji, tak jak w przypadku wszystkich innych [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] punktów końcowych lub użyj metody, która nie wymaga żadnych elementów konfiguracji. W tym temacie przedstawiono podejście konfiguracji.  
   
  Część tej procedury, która umożliwia punktu końcowego usługi stać się z obsługą środowiska ASP.NET AJAX składa się z konfigurowania punktu końcowego, aby użyć <xref:System.ServiceModel.WebHttpBinding> i dodać [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) zachowania punktu końcowego. Po skonfigurowaniu punktu końcowego, kroki do wdrażania i obsługi usługi są podobne do tych używanych przez dowolną [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Na przykład pracy, zobacz [AJAX Service przy użyciu protokołu HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sposobu konfigurowania punktu końcowego ASP.NET AJAX bez używania konfiguracji, zobacz [porady: Dodawanie ASP.NET AJAX konfiguracji punktu końcowego bez przy użyciu](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ Aby uzyskać więcej informacji o sposobie konfigurowania punktu końcowego ASP.NET AJAX bez używania konfiguracji, zobacz [porady: Dodawanie ASP.NET AJAX konfiguracji punktu końcowego bez przy użyciu](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>Aby utworzyć podstawowej usługi WCF  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 12/22/2017
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]hosting w usługach IIS, zobacz [porady: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  Aby uzyskać więcej informacji na temat hostingu w usługach IIS, zobacz [porady: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Do wywołania tej usługi  
   

@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c3a5b9965f63a9fc501025493b3a323013ea2a4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72403671fe6700ae26cae4471a1d0ac100005f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="systemwebrouting-integration"></a>Integracja elementu System.Web.Routing
-Odnośnie do hostowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] w Internetowych usług informacyjnych (IIS), umieść plików .svc w katalogu wirtualnym. Ten plik .svc określa fabryki hostów usług do użycia oraz klasy, który implementuje usługę. W przypadku wysyłania żądań do usługi można określić w pliku svc w identyfikatorze URI, na przykład: http://contoso.com/EmployeeServce.svc. Dla programistów pisanie usług REST ten typ identyfikatora URI nie jest optymalna. Identyfikatory URI dla usługi REST Określ określonego zasobu i zazwyczaj nie zainstalowano rozszerzeń. <xref:System.Web.Routing> Funkcji integracji umożliwia hostowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi REST, który odpowiada na identyfikatory URI bez rozszerzenia. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz routingu [routingu platformy ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) i [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) próbki.  
+Odnośnie do hostowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] w Internetowych usług informacyjnych (IIS), umieść plików .svc w katalogu wirtualnym. Ten plik .svc określa fabryki hostów usług do użycia oraz klasy, który implementuje usługę. W przypadku wysyłania żądań do usługi można określić w pliku svc w identyfikatorze URI, na przykład: http://contoso.com/EmployeeServce.svc. Dla programistów pisanie usług REST ten typ identyfikatora URI nie jest optymalna. Identyfikatory URI dla usługi REST Określ określonego zasobu i zazwyczaj nie zainstalowano rozszerzeń. <xref:System.Web.Routing> Funkcji integracji umożliwia hostowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi REST, który odpowiada na identyfikatory URI bez rozszerzenia. Aby uzyskać więcej informacji o routingu, zobacz [routingu platformy ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) i [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) próbki.  
   
 ## <a name="using-systemwebrouting-integration"></a>Przy użyciu integracja elementu System.Web.Routing  
  Aby użyć <xref:System.Web.Routing> używać funkcji integracji <xref:System.ServiceModel.Activation.ServiceRoute> klasę, aby utworzyć co najmniej jednej trasy i dodaj je do <xref:System.Web.Routing.RouteTable> w pliku Global.asax. Te trasy określić względne identyfikatory URI, które odpowiada usługi. W przykładzie poniżej pokazano, jak to zrobić.  

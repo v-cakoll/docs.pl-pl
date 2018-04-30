@@ -1,24 +1,26 @@
 ---
-title: "Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation"
-ms.custom: 
+title: Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 Większość [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] próbki są obsługiwane w Internet Information Services (IIS) i uruchom z wspólnego katalogu wirtualnego. Ta procedura konfiguracji jednorazowej tworzy folder z dysku. Dodano również katalog wirtualny usług IIS o nazwie **ServiceModelSamples**.  
@@ -30,7 +32,7 @@ Większość [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] próbki są
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedura konfiguracji jednorazowej dla przykładów WCF  
   
-1.  Upewnij się, że [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jest skonfigurowany. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak skonfigurować [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], zobacz [informacji usługi instrukcje dotyczące hostowania internetowej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1.  Upewnij się, że [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jest skonfigurowany. Aby uzyskać więcej informacji na temat sposobu konfigurowania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], zobacz [informacji usługi instrukcje dotyczące hostowania internetowej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2.  Upewnij się, że [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] jest zainstalowany. Wyszukaj następujące do wersji 4.0 (lub nowszej): **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ Większość [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] próbki są
     > [!NOTE]
     >  Ze względów bezpieczeństwa Pamiętaj, aby usunąć katalog wirtualny definicji i uprawnienia w ramach kroków konfiguracji powyżej, uruchamiając plik wsadowy o nazwie Cleanupvroot.bat po zakończeniu próbek.  
   
-13. Przykłady, które znajdują się własnym (nie obsługiwany w usługach IIS) wymagają uprawnień, aby zarejestrować adresy HTTP na komputerze w celu nasłuchiwania. Uprawnienie do rezerwacji przestrzeni nazw protokołu HTTP, pochodzi z konto użytkownika używane do uruchomienia przykładu. Domyślnie konto administratora mają uprawnienia do rejestrowania dowolny adres HTTP. Konta administratorów inne niż musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP używanego przez próbek. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak skonfigurować rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
+13. Przykłady, które znajdują się własnym (nie obsługiwany w usługach IIS) wymagają uprawnień, aby zarejestrować adresy HTTP na komputerze w celu nasłuchiwania. Uprawnienie do rezerwacji przestrzeni nazw protokołu HTTP, pochodzi z konto użytkownika używane do uruchomienia przykładu. Domyślnie konto administratora mają uprawnienia do rejestrowania dowolny adres HTTP. Konta administratorów inne niż musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP używanego przez próbek. Aby uzyskać więcej informacji o sposobie konfiguracji rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
   
 14. Niektóre przykłady wymagają usługi kolejkowania komunikatów. Zobacz [usługi kolejkowania komunikatów instalowanie (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) instrukcje instalacji.  
   

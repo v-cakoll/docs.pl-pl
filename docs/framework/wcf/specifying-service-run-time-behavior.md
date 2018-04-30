@@ -1,35 +1,37 @@
 ---
-title: "Określanie zachowania środowiska uruchomieniowego usługi"
-ms.custom: 
+title: Określanie zachowania środowiska uruchomieniowego usługi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Określanie zachowania środowiska uruchomieniowego usługi
-Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)) i realizowane umowy serwisowej ([Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)) można skonfigurować zachowanie operacji usługi czasu wykonywania. W tym temacie omówiono usługi dostarczane przez system i zachowania operacji i opisano, gdzie można znaleźć więcej informacji, aby utworzyć nowe zachowania. Podczas niektórych zachowań są stosowane jako atrybuty, wiele są stosowane przy użyciu pliku konfiguracji aplikacji lub programowo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfigurowanie aplikacji usługi, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
+Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)) i realizowane umowy serwisowej ([Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)) można skonfigurować zachowanie operacji usługi czasu wykonywania. W tym temacie omówiono usługi dostarczane przez system i zachowania operacji i opisano, gdzie można znaleźć więcej informacji, aby utworzyć nowe zachowania. Podczas niektórych zachowań są stosowane jako atrybuty, wiele są stosowane przy użyciu pliku konfiguracji aplikacji lub programowo. Aby uzyskać więcej informacji na temat konfigurowania aplikacji usługi, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
   
 ## <a name="overview"></a>Omówienie  
  Kontrakt definiuje wejść, wyjść, typy danych i możliwości usługi tego typu. Implementowanie kontraktu usługi tworzy klasę, gdy skonfigurowano powiązania pod adresem spełnia implementuje kontrakt. Umownymi, powiązania i informacje o adresie są wszystkie znane przez klienta; bez obawy, klient nie można wprowadzić korzystanie z usługi.  
   
- Szczegóły operacji, takich jak wątkowość problemy lub Zarządzanie wystąpieniami, są jednak nieprzezroczysta dla klientów. Po wdrożeniu umowy serwisowej, dużą liczbę operacji właściwości można skonfigurować przy użyciu *zachowania*. Zachowania są obiekty, które modyfikują [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] środowiska uruchomieniowego, ustawiając właściwość modułu wykonawczego lub przez wstawienie typu dostosowania w czasie wykonywania. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Modyfikowanie środowiska uruchomieniowego przez utworzenie użytkownika zachowania, zobacz [rozszerzanie elementu ServiceHost i warstwy modelu usług](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Szczegóły operacji, takich jak wątkowość problemy lub Zarządzanie wystąpieniami, są jednak nieprzezroczysta dla klientów. Po wdrożeniu umowy serwisowej, dużą liczbę operacji właściwości można skonfigurować przy użyciu *zachowania*. Zachowania są obiekty, które modyfikują [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] środowiska uruchomieniowego, ustawiając właściwość modułu wykonawczego lub przez wstawienie typu dostosowania w czasie wykonywania. Aby uzyskać więcej informacji na temat modyfikowania środowiska uruchomieniowego, tworząc zachowania zdefiniowane przez użytkownika, zobacz [rozszerzanie elementu ServiceHost i warstwy modelu usług](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> i <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> atrybuty są najczęściej przydatne zachowania i Ujawnij najczęściej wymagane funkcje operacji. Ponieważ są one atrybuty, należy je zastosować do wykonania operacji lub usługi. Innych zachowań, takich jak <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, są zazwyczaj stosowane przy użyciu pliku konfiguracji aplikacji, chociaż można je programowo.  
   
@@ -88,48 +90,48 @@ Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../..
 ### <a name="service-behaviors"></a>Zachowania usług  
  Następujące zachowania działają na usługi.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>., Stosowane do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, aby wskazać, czy usługi mogą być uruchamiane [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] w trybie zgodności.  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Stosowane do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, aby wskazać, czy usługi mogą być uruchamiane [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] w trybie zgodności.  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>., Określa, jak usługa autoryzuje oświadczenia klienta.  
+-   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Określa, jak usługa autoryzuje oświadczenia klienta.  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>., Określa poświadczenia usługi. Ta klasa umożliwia określanie poświadczeń dla usługi, takie jak certyfikat X.509.  
+-   <xref:System.ServiceModel.Description.ServiceCredentials>. Określa poświadczenia usługi. Ta klasa umożliwia określanie poświadczeń dla usługi, takie jak certyfikat X.509.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>., Włącza debugowanie i funkcje informacji pomocy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi.  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Włącza debugowanie i funkcje informacji pomocy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi.  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>., Określa publikację usługi metadanych i skojarzonych informacji.  
+-   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Określa publikację usługi metadanych i skojarzonych informacji.  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>., Określa zachowanie inspekcji zdarzeń zabezpieczeń.  
+-   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Określa zachowanie inspekcji zdarzeń zabezpieczeń.  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>., Konfiguruje ustawienia czasu wykonywania przepływności, umożliwiające dostrojenie wydajności usługi.  
+-   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Konfiguruje ustawienia czasu wykonywania przepływności, umożliwiające dostrojenie wydajności usługi.  
   
 ### <a name="endpoint-behaviors"></a>Zachowania punktu końcowego  
  Następujące zachowania działać dla punktów końcowych. Wiele z tych zachowań są używane w aplikacjach klienckich.  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>., Konfiguruje implementacji usługi wywołania zwrotnego w aplikacji klienckiej dupleksowych.  
+-   <xref:System.ServiceModel.CallbackBehaviorAttribute>. Konfiguruje implementacji usługi wywołania zwrotnego w aplikacji klienckiej dupleksowych.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>., Włącza usługę debugowania dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu wywołania zwrotnego.  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Włącza usługę debugowania dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu wywołania zwrotnego.  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>., Zezwala użytkownikowi na konfigurowanie poświadczeń klienta i usługi, a także ustawienia uwierzytelniania poświadczenia do użycia na kliencie usługi.  
+-   <xref:System.ServiceModel.Description.ClientCredentials>. Zezwala użytkownikowi na konfigurowanie poświadczeń klienta i usługi, a także ustawienia uwierzytelniania poświadczenia do użycia na kliencie usługi.  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>., Używany przez klientów, aby określić identyfikator URI (Uniform Resource) dla której należy utworzyć kanał transportu.  
+-   <xref:System.ServiceModel.Description.ClientViaBehavior>. Używany przez klientów, aby określić identyfikator URI (Uniform Resource) dla której należy utworzyć kanał transportu.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>., Powoduje, że [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wyłączyć `MustUnderstand` przetwarzania.  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Powoduje, że [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wyłączyć `MustUnderstand` przetwarzania.  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>., Powoduje, że środowiska uruchomieniowego do użycia synchronicznego odbierania procesu dla kanałów.  
+-   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Powoduje, że środowiska uruchomieniowego do użycia synchronicznego odbierania procesu dla kanałów.  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>., Optymalizuje operacji odbierania dla transportów, które otrzymuje transakcyjne pomocy technicznej.  
+-   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Optymalizuje operacji odbierania dla transportów, które otrzymuje transakcyjne pomocy technicznej.  
   
 ### <a name="contract-behaviors"></a>Kontrakt zachowania  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>., Określa wymagania funkcji, które wiązania podać implementacji usługi lub klienta.  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Określa wymagania funkcji, które wiązania podać implementacji usługi lub klienta.  
   
 ### <a name="operation-behaviors"></a>Operacja zachowania  
  Następujące zachowania operacji Określanie sterowania serializacji i transakcji dla operacji.  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>., Reprezentuje zachowanie środowiska wykonawczego <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Reprezentuje zachowanie środowiska wykonawczego <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>., Określa zachowanie środowiska wykonawczego `XmlSerializer` i kojarzy ją z operacji.  
+-   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Określa zachowanie środowiska wykonawczego `XmlSerializer` i kojarzy ją z operacji.  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>., Określa poziom, w którym operacji usługi akceptuje Nagłówek transakcji.  
+-   <xref:System.ServiceModel.TransactionFlowAttribute>. Określa poziom, w którym operacji usługi akceptuje Nagłówek transakcji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md)  

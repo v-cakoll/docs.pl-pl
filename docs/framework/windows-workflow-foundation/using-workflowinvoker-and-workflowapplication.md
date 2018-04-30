@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d0b12fc6c91f57ec49050a0a37b16f64d0e54e6d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication
-Windows Workflow Foundation (WF) zapewnia kilka metod obsługi przepływów pracy. <xref:System.Activities.WorkflowInvoker> zapewnia prostą metodę do wywoływania przepływu pracy, tak, jakby były wywołanie metody i można używać tylko w przypadku przepływów pracy, które nie korzystają z trwałości. <xref:System.Activities.WorkflowApplication> zapewnia bardziej rozbudowane model do wykonywania przepływów pracy, które zawiera powiadomienia o zdarzenia cyklu życia, kontrola wykonywania wznowienie zakładek i trwałości. <xref:System.ServiceModel.Activities.WorkflowServiceHost> zapewnia obsługę działań dotyczących komunikatów i jest używany głównie z usług przepływu pracy. Ten temat stanowi wprowadzenie do przepływu pracy obsługującego z <xref:System.Activities.WorkflowInvoker> i <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] hosting przepływy pracy z <xref:System.ServiceModel.Activities.WorkflowServiceHost>, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md) i [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
+Windows Workflow Foundation (WF) zapewnia kilka metod obsługi przepływów pracy. <xref:System.Activities.WorkflowInvoker> zapewnia prostą metodę do wywoływania przepływu pracy, tak, jakby były wywołanie metody i można używać tylko w przypadku przepływów pracy, które nie korzystają z trwałości. <xref:System.Activities.WorkflowApplication> zapewnia bardziej rozbudowane model do wykonywania przepływów pracy, które zawiera powiadomienia o zdarzenia cyklu życia, kontrola wykonywania wznowienie zakładek i trwałości. <xref:System.ServiceModel.Activities.WorkflowServiceHost> zapewnia obsługę działań dotyczących komunikatów i jest używany głównie z usług przepływu pracy. Ten temat stanowi wprowadzenie do przepływu pracy obsługującego z <xref:System.Activities.WorkflowInvoker> i <xref:System.Activities.WorkflowApplication>. Aby uzyskać więcej informacji o przepływach pracy z hostingu <xref:System.ServiceModel.Activities.WorkflowServiceHost>, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md) i [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>Przy użyciu WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> udostępnia model wykonania przepływu pracy, jak w przypadku wywołania metody. Można wywołać przepływu pracy przy użyciu <xref:System.Activities.WorkflowInvoker>, wywołaj <xref:System.Activities.WorkflowInvoker.Invoke%2A> — metoda i przekazać w definicji przepływu pracy przepływu pracy do wywołania. W tym przykładzie <xref:System.Activities.Statements.WriteLine> działania jest wywoływana przy użyciu <xref:System.Activities.WorkflowInvoker>.  
@@ -78,7 +78,7 @@ Windows Workflow Foundation (WF) zapewnia kilka metod obsługi przepływów prac
  [!code-csharp[CFX_WorkflowApplicationExample#21](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> i <xref:System.Activities.WorkflowInvoker> przyjmować ze słownika wejściowego argumenty i zwracać słownik `out` argumentów. Te parametry słownika, właściwości i wartości zwracane są typu `IDictionary<string, object>`. Rzeczywiste wystąpienie klasy słownik, który jest przekazywany w może być każda klasa implementująca `IDictionary<string, object>`. W tym przykładzie `Dictionary<string, object>` jest używany. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Zobacz słowników, <xref:System.Collections.Generic.IDictionary%602> i <xref:System.Collections.Generic.Dictionary%602>.  
+>  <xref:System.Activities.WorkflowApplication> i <xref:System.Activities.WorkflowInvoker> przyjmować ze słownika wejściowego argumenty i zwracać słownik `out` argumentów. Te parametry słownika, właściwości i wartości zwracane są typu `IDictionary<string, object>`. Rzeczywiste wystąpienie klasy słownik, który jest przekazywany w może być każda klasa implementująca `IDictionary<string, object>`. W tym przykładzie `Dictionary<string, object>` jest używany. Aby uzyskać więcej informacji na temat słowników, zobacz <xref:System.Collections.Generic.IDictionary%602> i <xref:System.Collections.Generic.Dictionary%602>.  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>Przekazywanie danych do działania przepływu pracy korzystanie z zakładek  
  Zakładki są mechanizm, za pomocą której działanie pasywnie poczekać wznowienie zadania było i jest mechanizm przekazywania danych do uruchomionego wystąpienia przepływu pracy. Jeśli działanie oczekuje na dane, można utworzyć <xref:System.Activities.Bookmark> i zarejestruj Metoda wywołania zwrotnego wywoływana, gdy <xref:System.Activities.Bookmark> zostanie wznowione, jak pokazano w poniższym przykładzie.  

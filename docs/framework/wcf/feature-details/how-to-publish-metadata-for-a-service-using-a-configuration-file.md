@@ -1,24 +1,26 @@
 ---
-title: "Porady: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji"
-ms.custom: 
+title: 'Porady: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Porady: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji
 Jest to jeden z dwóch tematy porad, które przedstawiają Publikowanie metadanych dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi. Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i kod. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji.  
@@ -26,7 +28,7 @@ Jest to jeden z dwóch tematy porad, które przedstawiają Publikowanie metadany
 > [!CAUTION]
 >  W tym temacie pokazano, jak publikować metadane w sposób niezabezpieczonych. Dowolny klient może pobrać metadanych usługi. Jeśli potrzebujesz usługi publikować metadane w sposób bezpieczny, zobacz [niestandardowe bezpiecznego punktu końcowego metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Publikowanie metadanych w kodzie, zobacz [porady: Publikowanie metadanych dla kodu przy użyciu usługi](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Publikowanie metadanych pozwala klientom na pobieranie metadanych za pomocą żądania GET usługi WS-Transfer lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania. Aby się upewnić, że działa kod, należy utworzyć basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Dla uproszczenia podstawowej usługi hostowanej własnym znajduje się w następującym kodem.  
+ Aby uzyskać więcej informacji o publikowaniu metadanych w kodzie, zobacz [porady: Publikowanie metadanych dla kodu przy użyciu usługi](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Publikowanie metadanych pozwala klientom na pobieranie metadanych za pomocą żądania GET usługi WS-Transfer lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania. Aby się upewnić, że działa kod, należy utworzyć basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Dla uproszczenia podstawowej usługi hostowanej własnym znajduje się w następującym kodem.  
   
 ```csharp  
 using System;  
@@ -115,7 +117,7 @@ namespace Metadata.Samples
   
   
   
-4.  Dodaj `<serviceMetadata>` elementu `<behavior>` elementu. Ustaw `httpGetEnabled` atrybutu `true` i `policyVersion` atrybutu Policy15. `httpGetEnabled`Umożliwia usłudze odpowiadać na żądania metadanych przez żądanie HTTP GET. `policyVersion`Określa, że usługa odpowiadają WS-Policy 1.5 podczas generowania metadanych.  
+4.  Dodaj `<serviceMetadata>` elementu `<behavior>` elementu. Ustaw `httpGetEnabled` atrybutu `true` i `policyVersion` atrybutu Policy15. `httpGetEnabled` Umożliwia usłudze odpowiadać na żądania metadanych przez żądanie HTTP GET. `policyVersion` Określa, że usługa odpowiadają WS-Policy 1.5 podczas generowania metadanych.  
   
   
   
@@ -159,13 +161,13 @@ namespace Metadata.Samples
   
 7.  Punkty końcowe metadanych dodanym w poprzednim kroku, można ustawić `binding` atrybutu do jednej z następujących czynności:  
   
-    -   `mexHttpBinding`dla publikacji HTTP.  
+    -   `mexHttpBinding` dla publikacji HTTP.  
   
-    -   `mexHttpsBinding`dla publikacji HTTPS.  
+    -   `mexHttpsBinding` dla publikacji HTTPS.  
   
-    -   `mexNamedPipeBinding`dla publikacji nazwanego potoku.  
+    -   `mexNamedPipeBinding` dla publikacji nazwanego potoku.  
   
-    -   `mexTcpBinding`dla publikacji TCP.  
+    -   `mexTcpBinding` dla publikacji TCP.  
   
 8.  Punkty końcowe metadanych dodanym w poprzednim kroku należy ustawić adres równe:  
   
@@ -177,7 +179,7 @@ namespace Metadata.Samples
   
 9. Tworzenie i uruchamianie aplikacji konsoli.  
   
-10. Przejdź do podstawowego adresu usługi (w tym przykładzie http://localhost:8001/MetadataSample) i sprawdź, czy Publikowanie metadanych jest włączona w programie Internet Explorer. Jeśli nie, zostanie wyświetlony komunikat w górnej części strony wynikowy: "Publikowanie metadanych dla tej usługi jest obecnie wyłączona."  
+10. Aby przejść do podstawowego adresu usługi w programie Internet Explorer (http://localhost:8001/MetadataSample w tym przykładzie) i sprawdź, czy Publikowanie metadanych jest włączony. Jeśli nie, zostanie wyświetlony komunikat w górnej części strony wynikowy: "Publikowanie metadanych dla tej usługi jest obecnie wyłączona."  
   
 ### <a name="to-use-default-endpoints"></a>Aby użyć domyślnych punktów końcowych  
   
@@ -198,7 +200,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> z `httpGetEnabled` ustawioną `true`, usługa ma Publikowanie metadanych włączone, a ponieważ punkty końcowe nie zostały dodane w sposób jawny, środowisko uruchomieniowe dodaje domyślne punkty końcowe. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> z `httpGetEnabled` ustawioną `true`, usługa ma Publikowanie metadanych włączone, a ponieważ punkty końcowe nie zostały dodane w sposób jawny, środowisko uruchomieniowe dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykładowy kod przedstawia implementację podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi i pliku konfiguracji, która umożliwia publikowanie metadanych dla usługi.  

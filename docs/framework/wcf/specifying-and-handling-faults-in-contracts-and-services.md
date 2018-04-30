@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Określanie i obsługa błędów w kontraktach i usługach
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacje obsługują sytuacjach błędu przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, jak zwrócić takie błędy jako część implementacji usługi i jak klienci catch takie błędy.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="map-exceptions-to-soap-faults"></a>Mapowanie wyjątków do błędach SOAP  
  Pierwszym krokiem tworzenia obsługującego błędy operacji jest podjęcie pod jakimi warunkami aplikacja kliencka powinna informowany o błędach. Niektóre operacje mają błędy specyficzne dla ich funkcje. Na przykład `PurchaseOrder` operacji może zwrócić określone informacje do klientów, którzy nie mogą inicjować zamówienia zakupu. W pozostałych przypadkach takich jak `Calculator` usługi bardziej ogólnym `MathFault` błędu protokołu SOAP mogą mieć możliwość opisano wszystkie błędy w całej usługi. Po zidentyfikowaniu warunków błędów klientów usługi można utworzyć niestandardowego błędu protokołu SOAP i operacji może być oznaczony jako zwracanie tego błędu protokołu SOAP, gdy wystąpi jego odpowiedniego warunku błędu.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Ten krok w rozwoju usługi lub klienta, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ Aby uzyskać więcej informacji dotyczących tego kroku powstania usługi lub klienta, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Klienci i usługi obsługi błędów SOAP jako wyjątki  
  Identyfikacji operacji błędów, definiowania niestandardowych błędach SOAP i oznaczenie te operacje jako zwracanie te błędy są pierwsze kroki w pomyślnym obsługi błędów w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji. Następnym krokiem jest prawidłowo zaimplementować wysyłania i odbierania tych błędów. Zwykle usług wysłać błędy poinformowanie aplikacji klienckich o warunkach błędów, ale dupleksu klientów można również wysłać błędach SOAP usług.  

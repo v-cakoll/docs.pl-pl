@@ -1,24 +1,26 @@
 ---
-title: "Tworzenie długo działającej usługi przepływu pracy"
-ms.custom: 
+title: Tworzenie długo działającej usługi przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano sposób tworzenia usługi przepływu pracy długotrwałe. Długotrwałe usług przepływu pracy mogą działać przez dłuższy czas. W pewnym momencie przepływ pracy może być bezczynności oczekiwanie na dodatkowe informacje. W takim przypadku przepływ pracy zostanie na stałe zapisana bazy danych SQL i zostanie usunięty z pamięci. Po udostępnieniu dodatkowe informacje wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku implementowania bardzo uproszczonego systemu porządkowania.  Klient wysyła początkowy komunikat do usługi przepływu pracy, aby uruchomić kolejność. Zwraca identyfikator zamówienia do klienta. W tym momencie usługi przepływu pracy jest oczekiwanie na kolejny komunikat z klienta i przechodzi w stan bezczynności i zostanie na stałe zapisana bazy danych programu SQL Server.  Gdy klient wysyła następny komunikat do kolejność elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg informujący, że element został dodany do zlecenia. Przykładowy kod ma nie być rzeczywistych stosowania technologii, ale zamiast prosty przykład, który przedstawiono długotrwała usług przepływu pracy. W tym temacie założono, wiesz, jak utworzyć [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projekty i rozwiązania.  
@@ -30,7 +32,7 @@ W tym temacie opisano sposób tworzenia usługi przepływu pracy długotrwałe. 
   
 2.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]  
   
-3.  Microsoft[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
   
 4.  Znasz WCF i [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] i wiedzieć, jak tworzyć projekty/rozwiązania.  
   
@@ -82,7 +84,7 @@ W tym temacie opisano sposób tworzenia usługi przepływu pracy długotrwałe. 
   
          ![Właściwości działania odbierania zestawu](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         Właściwość DisplayName ustawia nazwę wyświetlaną dla działania Receive w projektancie. Właściwości ServiceContractName i OperationName Określ nazwę kontraktu usługi i operacji, które są implementowane przez działanie Receive. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]używania kontraktów w przepływie pracy usług zobacz [za pomocą kontraktów w przepływie pracy](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         Właściwość DisplayName ustawia nazwę wyświetlaną dla działania Receive w projektancie. Właściwości ServiceContractName i OperationName Określ nazwę kontraktu usługi i operacji, które są implementowane przez działanie Receive. Aby uzyskać więcej informacji na temat używania kontraktów w przepływie pracy usług zobacz [za pomocą kontraktów w przepływie pracy](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
   
     2.  Kliknij przycisk **zdefiniuj...**  łącze w **ReceiveStartOrder** działania i ustaw właściwości wyświetlane na poniższej ilustracji.  Zwróć uwagę, że **parametry** przycisk radiowy zostanie wybrany, parametr o nazwie `p_customerName` jest powiązany z `customerName` zmiennej. Spowoduje to skonfigurowanie **Receive** działanie, aby odbierać niektóre dane i powiązać te dane do zmiennych lokalnych.  
   
@@ -120,13 +122,13 @@ W tym temacie opisano sposób tworzenia usługi przepływu pracy długotrwałe. 
   
          ![Określanie parametrów dla drugiego odbierania](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  Kliknij przycisk **CorrelateOn** wielokropka przycisk, a następnie wprowadź `orderIdHandle`. W obszarze **kwerendy XPath**, kliknij strzałkę listy rozwijanej i wybierz `p_orderId`. Spowoduje to skonfigurowanie korelację na drugiej stronie działanie odbierania. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz korelacji [korelacji](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  Kliknij przycisk **CorrelateOn** wielokropka przycisk, a następnie wprowadź `orderIdHandle`. W obszarze **kwerendy XPath**, kliknij strzałkę listy rozwijanej i wybierz `p_orderId`. Spowoduje to skonfigurowanie korelację na drugiej stronie działanie odbierania. Aby uzyskać więcej informacji na temat korelacji zobacz [korelacji](../../../../docs/framework/wcf/feature-details/correlation.md).  
   
          ![Ustawienie właściwości CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  Przeciągnij i upuść **Jeśli** działanie natychmiast po **ReceiveAddItem** działania. To działanie działa tak samo jak w przypadku instrukcji.  
   
-        1.  Ustaw **warunku** właściwości`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  Ustaw **warunku** właściwości `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  Przeciągnij i upuść **przypisać** do działania w **następnie** sekcji, a drugi do **Else** sekcję ustawić właściwości **przypisać** działania, jak pokazano na poniższej ilustracji.  
   

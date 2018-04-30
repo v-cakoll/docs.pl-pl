@@ -14,23 +14,23 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ff7e505f6e2040e847b711030d310a70ede65413
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="entity-activities"></a>Działania jednostki
 Ten przykład przedstawia sposób upraszczanie dostępu do danych przy użyciu programu ADO.NET Entity Framework z programu Windows Workflow Foundation.  
   
- ADO.NET Entity Framework umożliwia deweloperom pracy z danymi w postaci obiektów specyficznego dla domeny, właściwości i relacje, takich jak klienci, zamówienia, szczegółów zamówienia i relacji między tymi obiektami. ADO.NET Entity Framework robi to przez zapewnienie na poziomie abstrakcji, która umożliwia programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz ADO.NET Entity Framework [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET Entity Framework umożliwia deweloperom pracy z danymi w postaci obiektów specyficznego dla domeny, właściwości i relacje, takich jak klienci, zamówienia, szczegółów zamówienia i relacji między tymi obiektami. ADO.NET Entity Framework robi to przez zapewnienie na poziomie abstrakcji, która umożliwia programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu. Aby uzyskać więcej informacji o ADO.NET Entity Framework, zobacz [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  W przykładzie użyto `Northwind` bazy danych i obejmuje skrypty umożliwiające tworzenie i usuwanie `Northwind` bazy danych (Setup.cmd i Cleanup.cmd). Projekty w tym przykładzie obejmują modelu danych jednostki na podstawie `Northwind` bazy danych. Można znaleźć modelu, otwierając `Northwind.edmx` pliku, który jest dołączony do projektu. To jest model, który określa kształt obiektów, które są dostępne przy użyciu programu ADO.NET Entity Framework.  
   
  Ten przykład obejmuje wykonywanie następujących czynności:  
   
--   `EntitySQLQuery`: `EntitySQLQuery` Działania umożliwia pobieranie obiektów z bazy danych, w zależności od ciągu zapytania SQL jednostki. Jednostka SQL jest językiem niezależne magazynu jest podobny do bazy danych SQL i umożliwia określenie zapytań na podstawie modelu koncepcyjnego i jednostkami, które są częścią modelu lub domeny. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Jednostki języka SQL, zobacz [języka SQL jednostki](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: `EntitySQLQuery` Działania umożliwia pobieranie obiektów z bazy danych, w zależności od ciągu zapytania SQL jednostki. Jednostka SQL jest językiem niezależne magazynu jest podobny do bazy danych SQL i umożliwia określenie zapytań na podstawie modelu koncepcyjnego i jednostkami, które są częścią modelu lub domeny. Aby uzyskać więcej informacji na temat jednostek języka SQL, zobacz [języka SQL jednostki](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: To działanie umożliwia pobieranie obiektów z bazy danych na podstawie zapytania LINQ lub predykatu.  
   

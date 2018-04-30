@@ -1,31 +1,31 @@
 ---
 title: Kolejki programu Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
-Tematy w tej sekcji omówiono w nim [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługę kolejki. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia obsługę dla usługi kolejkowania wiadomości dzięki wykorzystaniu kolejkowania wiadomości Microsoft (wcześniej znane jako MSMQ) jako transportu i umożliwia realizację następujących scenariuszy:  
+Tematy w tej sekcji omówiono w nim [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługę kolejki. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia obsługę dla usługi kolejkowania wiadomości dzięki wykorzystaniu kolejkowania wiadomości Microsoft (wcześniej znane jako MSMQ) jako transportu i umożliwia realizację następujących scenariuszy:  
   
 -   Luźno powiązanych aplikacji. Wysyłanie aplikacje mogą wysyłać wiadomości do kolejki, bez dokładnej znajomości, czy aplikacja jest dostępna do przetworzenia komunikatów. Kolejka zapewnia niezależność przetwarzania, umożliwiający wysyłanie aplikacji do wysyłania wiadomości do kolejki z szybkością nie zależy od tempa aplikacje odbierające może przetwarzać komunikatów. Ogólnej dostępności systemu zwiększa podczas wysyłania wiadomości do kolejki jest nie ściśle powiązane do przetwarzania komunikatów.  
   
@@ -35,7 +35,7 @@ Tematy w tej sekcji omówiono w nim [!INCLUDE[indigo1](../../../../includes/indi
   
 -   Operacje odłączone. Wysyłania, odbierania i operacji przetwarzania może stać się rozłączona podczas komunikacji za pośrednictwem sieci dużymi opóźnieniami lub ograniczoną dostępność sieci, takich jak w przypadku urządzeń przenośnych. Kolejki umożliwiają te operacje kontynuować, nawet wtedy, gdy punkty końcowe zostały odłączone. Po ponownym ustanowieniu połączenia, kolejki przesyła dalej wiadomości do aplikacji odbierającej.  
   
- Aby korzystać z funkcji kolejek w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, można użyć jednej z powiązań standardowych, lub można utworzyć powiązania niestandardowego, jeśli jedno z powiązań standardowych nie spełnia wymagań. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]odpowiednich powiązań standardowych i wybierz jedną, zobacz [porady: wymiany komunikatów z punktami końcowymi WCF i aplikacji usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Aby korzystać z funkcji kolejek w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, można użyć jednej z powiązań standardowych, lub można utworzyć powiązania niestandardowego, jeśli jedno z powiązań standardowych nie spełnia wymagań. Aby uzyskać więcej informacji na temat odpowiednich powiązań standardowych i wybierz jedną, zobacz [porady: wymiany komunikatów z punktami końcowymi WCF i aplikacji usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

@@ -1,12 +1,13 @@
 ---
-title: "Jak utworzyć dodatek, który jest interfejsem użytkownika"
-ms.custom: 
+title: Jak utworzyć dodatek, który jest interfejsem użytkownika
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Jak utworzyć dodatek, który jest interfejsem użytkownika
-W tym przykładzie przedstawiono sposób tworzenia dodatku, który jest [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hostowanej przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja autonomiczna.  
+W tym przykładzie przedstawiono sposób tworzenia dodatku, który jest Windows Presentation Foundation (WPF), która jest hostowana przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja autonomiczna.  
   
  Dodatek jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] czyli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kontrolki użytkownika. Zawartość kontrolki użytkownika jest pojedynczy przycisku, po kliknięciu wyświetla okno komunikatu. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Aplikacji autonomicznych hostów dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jako zawartość okna głównego aplikacji.  
   
@@ -64,7 +66,7 @@ W tym przykładzie przedstawiono sposób tworzenia dodatku, który jest [!INCLUD
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- W modelu dodatku, gdzie dodatek zwraca [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (zobacz [tworzenia dodatku zwracanych interfejsu użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), przekonwertować adapter dodatku <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>również musi zostać wywołany w tym modelu, chociaż należy zaimplementować metodę, z którego można napisać kod w celu wywołania go. Aby to zrobić, zastępowanie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> i wdrażanie kod, który wywołuje <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Jeśli kod, który wywołuje <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> oczekuje <xref:System.AddIn.Contract.INativeHandleContract>. W takim przypadku obiekt wywołujący będzie karty po stronie hosta, które zostało opisane w kolejnych podsekcji.  
+ W modelu dodatku, gdzie dodatek zwraca [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (zobacz [tworzenia dodatku zwracanych interfejsu użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), przekonwertować adapter dodatku <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> również musi zostać wywołany w tym modelu, chociaż należy zaimplementować metodę, z którego można napisać kod w celu wywołania go. Aby to zrobić, zastępowanie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> i wdrażanie kod, który wywołuje <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Jeśli kod, który wywołuje <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> oczekuje <xref:System.AddIn.Contract.INativeHandleContract>. W takim przypadku obiekt wywołujący będzie karty po stronie hosta, które zostało opisane w kolejnych podsekcji.  
   
 > [!NOTE]
 >  Należy również zastąpić <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> w tym modelu do Włączanie przełączania między aplikacji hosta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Aby uzyskać więcej informacji, zobacz temat "WPF dodatku ograniczenia" w [omówienie Add-Ins WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

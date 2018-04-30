@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Szablony Visual Studio są wstępnie zdefiniowanych szablonów projektów i elementów w programie Visual Studio umożliwia szybkie tworzenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje otaczającego.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/27/2018
  Pliku hosta usługi (plik service1.svc) również jest tworzony, jeśli istniejący projekt jest projektem sieci Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Projekt WF usługi WCF i szablon elementu.  
- Te szablony tworzą [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi przepływu pracy, jaką jest przepływ pracy, który można uzyskać dostępu do usługi, takich jak usługi sieci web. Szablony oddzielne istnieje XAML i imperatywnych modelach programowania. Korzystanie z szablonów, można utworzyć przepływ pracy automatu Sekwencyjna lub stanu. Aby uzyskać więcej informacji o tych typach przepływu pracy, zobacz [Windows Workflow Foundation samouczki](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Tworzenie projektów przepływu pracy, zobacz [tworzenia projektów przepływu pracy starszego](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Te szablony tworzą [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi przepływu pracy, jaką jest przepływ pracy, który można uzyskać dostępu do usługi, takich jak usługi sieci web. Szablony oddzielne istnieje XAML i imperatywnych modelach programowania. Korzystanie z szablonów, można utworzyć przepływ pracy automatu Sekwencyjna lub stanu. Aby uzyskać więcej informacji o tych typach przepływu pracy, zobacz [Windows Workflow Foundation samouczki](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). Aby uzyskać więcej informacji na temat tworzenia projektów przepływu pracy, zobacz [tworzenia projektów przepływu pracy starszego](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Projektanta Visual Studio jest bardziej elastyczny, gdy typ XOML, przepływy pracy są używane zamiast tego kodu na podstawie tych. XOML przepływu pracy jest domyślny typ przepływu pracy do utworzenia.  
   

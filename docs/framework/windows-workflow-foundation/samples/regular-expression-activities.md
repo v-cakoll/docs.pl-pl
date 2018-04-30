@@ -1,26 +1,27 @@
 ---
-title: "Działania wyrażeń regularnych"
-ms.custom: 
+title: Działania wyrażeń regularnych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d40d33a5d93ecce07a2e264dcfe9fcde3778437
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74aef126011789cfd48aa962973cc67a4132c224
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="regular-expression-activities"></a>Działania wyrażeń regularnych
-W tym przykładzie pokazano, jak utworzyć zestaw działań, które udostępniają funkcje wyrażenia regularnego <xref:System.Text.RegularExpressions> przestrzeni nazw. Można używać tych działań niestandardowych aplikacji przepływu pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]wyrażenia regularne, zobacz [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
+W tym przykładzie pokazano, jak utworzyć zestaw działań, które udostępniają funkcje wyrażenia regularnego <xref:System.Text.RegularExpressions> przestrzeni nazw. Można używać tych działań niestandardowych aplikacji przepływu pracy. Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
   
  Poniższa tabela zawiera szczegóły dotyczące działania niestandardowe, w tym przykładzie.  
   
@@ -40,7 +41,7 @@ W tym przykładzie pokazano, jak utworzyć zestaw działań, które udostępniaj
 |Wzorzec (wymagane)|Wyrażenie regularne do wyszukania z.|  
 |Dane wejściowe (wymagane)|Wejściowy ciąg do wyszukania.|  
 |RegexOptions|Bitowe połączenie lub [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) wartości wyliczenia.|  
-|Wartość zwracana|`true`Jeśli dane wejściowe znalezienia dopasowania we wzorcu podana; w przeciwnym razie `false`.|  
+|Wartość zwracana|`true` Jeśli dane wejściowe znalezienia dopasowania we wzorcu podana; w przeciwnym razie `false`.|  
   
  Poniższy przykład kodu pokazuje sposób użycia `IsMatch` działania niestandardowego.  
   

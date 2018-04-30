@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla różnych scenariuszy.  
@@ -58,7 +58,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla 
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ustawienia rejestrowania, zobacz [zalecane ustawienia śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Aby uzyskać więcej informacji o ustawieniach rejestrowania komunikatów, zobacz [zalecane ustawienia śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Można użyć `add` Aby określić nazwę i typ odbiornika, którego chcesz użyć. W konfiguracji przykład odbiornik o nazwie "wiadomości" i dodaje standardowe nasłuchującego śledzenia .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) jako typ do użycia. Jeśli używasz `System.Diagnostics.XmlWriterTraceListener`, należy określić dane wyjściowe lokalizację i nazwę pliku w pliku konfiguracji. Odbywa się przez ustawienie `initializeData` do nazwy pliku dziennika. W przeciwnym razie system zgłasza wyjątek. Można też wdrożyć niestandardowe odbiornik, który emituje dzienniki, aby plik domyślny.  
   
@@ -73,7 +73,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla 
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Jeśli chcesz wyłączyć źródła śledzenia, należy użyć `logMessagesAtServiceLevel`, `logMalformedMessages`, i `logMessagesAtTransportLevel` atrybuty `messageLogging` elementu zamiast tego. Należy ustawić te atrybuty `false`. Można to zrobić przy użyciu pliku konfiguracji, w poprzednim przykładzie kodu za pomocą interfejsu użytkownika edytora konfiguracji interfejsu, lub za pomocą usługi WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Narzędzie edytora konfiguracji, zobacz [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows dla diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Jeśli chcesz wyłączyć źródła śledzenia, należy użyć `logMessagesAtServiceLevel`, `logMalformedMessages`, i `logMessagesAtTransportLevel` atrybuty `messageLogging` elementu zamiast tego. Należy ustawić te atrybuty `false`. Można to zrobić przy użyciu pliku konfiguracji, w poprzednim przykładzie kodu za pomocą interfejsu użytkownika edytora konfiguracji interfejsu, lub za pomocą usługi WMI. Aby uzyskać więcej informacji o narzędziu edytora konfiguracji, zobacz [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Aby uzyskać więcej informacji dotyczących usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows dla diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Opcje i poziomy rejestrowania  
  Dla komunikatów przychodzących rejestrowanie odbywa się natychmiast po sformułowany komunikat bezpośrednio przed pobiera komunikat, aby kod użytkownika na poziomie usługi i po wykryciu wadliwe komunikaty.  
@@ -91,7 +91,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla 
  Komunikaty zarejestrowane w tej warstwie jest gotowe do można lub dekodowanym na lub po transportu w sieci. Jeśli zostały określone filtry, są rejestrowane tylko komunikatów spełniających filtrów. W przeciwnym razie są rejestrowane wszystkie komunikaty w warstwie transportowej. Wszystkie komunikaty infrastruktury są rejestrowane w tej warstwie, w tym komunikaty niezawodnej obsługi komunikatów. Na strumienia wiadomości tylko nagłówki są rejestrowane. Ponadto zabezpieczonych wiadomości są rejestrowane szyfrowane na tym poziomie, chyba że bezpiecznego transportu, takie jak jest używany protokół HTTPS.  
   
 ### <a name="malformed-level"></a>Poziom źle sformułowany  
- Wadliwe komunikaty są komunikaty, które zostały odrzucone prze [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu na każdym etapie przetwarzania. Wadliwe komunikaty są rejestrowane jako — jest: szyfrowane, gdy są one tak, z XML bez odpowiedniego i tak dalej. `maxSizeOfMessageToLog` rozmiar komunikatu, który ma zostać zarejestrowany jako typu CDATA zdefiniowany. Domyślnie `maxSizeOfMessageToLog` jest równa 256 KB. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ten atrybut, zobacz sekcję inne opcje.  
+ Wadliwe komunikaty są komunikaty, które zostały odrzucone prze [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu na każdym etapie przetwarzania. Wadliwe komunikaty są rejestrowane jako — jest: szyfrowane, gdy są one tak, z XML bez odpowiedniego i tak dalej. `maxSizeOfMessageToLog` rozmiar komunikatu, który ma zostać zarejestrowany jako typu CDATA zdefiniowany. Domyślnie `maxSizeOfMessageToLog` jest równa 256 KB. Aby uzyskać więcej informacji na temat tego atrybutu zobacz sekcję inne opcje.  
   
 ### <a name="other-options"></a>Inne opcje  
  Oprócz poziomów rejestrowania użytkownika można określić następujące opcje:  

@@ -1,12 +1,13 @@
 ---
-title: "Niezawodne usługi"
-ms.custom: 
+title: Niezawodne usługi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], reliable messaging
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408801e28fec71f133c2dddd3f30b2509ab5896c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d9cbaef77f4dce609d36ba4b679d8c569b648fa5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="reliable-services"></a>Niezawodne usługi
 Kolejki i sesje niezawodne są [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] funkcje, które implementują niezawodna obsługa komunikatów. W tym temacie opisano funkcje niezawodnej obsługi komunikatów [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -46,14 +48,14 @@ Kolejki i sesje niezawodne są [!INCLUDE[indigo1](../../../includes/indigo1-md.m
 ## <a name="reliable-sessions"></a>Niezawodne sesje  
  Niezawodne sesje Podaj end-to-end niezawodnej transferu wiadomości między źródłem a miejscem docelowym przy użyciu protokołu WS-niezawodny wiadomości, niezależnie od liczby i typ pośredników, których punkty końcowe wiadomości (źródłowego i docelowego). Dotyczy to również wszelkich pośredników transportu, które nie korzystają z protokołu SOAP (na przykład serwera proxy HTTP) lub pośredników korzystających z protokołu SOAP (np. routery opartego na protokole SOAP lub mostków), które są wymagane dla komunikatów przepływ między punktami końcowymi. Niezawodne sesje okno transfer w pamięci na awarie poziom wiadomości SOAP maski i ponownie ustanowić połączenia w przypadku awarii transportu.  
   
- Niezawodne sesje Podaj transferów komunikatów niezawodnej małe opóźnienia. Udostępniają one wiadomości SOAP za pośrednictwem serwerów proxy ani pośredników, odpowiednik jakiego protokołu TCP zapewnia pakietów przez mostków IP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]niezawodne sesje, zobacz [sesji niezawodnej](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ Niezawodne sesje Podaj transferów komunikatów niezawodnej małe opóźnienia. Udostępniają one wiadomości SOAP za pośrednictwem serwerów proxy ani pośredników, odpowiednik jakiego protokołu TCP zapewnia pakietów przez mostków IP. Aby uzyskać więcej informacji na temat niezawodnej sesji, zobacz [sesji niezawodnej](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Kolejki  
- Kolejki w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zapewniają zarówno niezawodnej transferów komunikatów i separacji między źródłami a miejsc docelowych kosztem duże opóźnienie. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Komunikacja z obsługą kolejek jest oparty na górze usługi kolejkowania komunikatów (MSMQ).  
+ Kolejki w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zapewniają zarówno niezawodnej transferów komunikatów i separacji między źródłami a miejsc docelowych kosztem duże opóźnienie. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Komunikacja z obsługą kolejek jest oparty na górze usługi kolejkowania komunikatów (MSMQ).  
   
  Usługa MSMQ jest dostarczany jako opcjonalny składnik z systemem Windows. Usługa MSMQ działa jako usługa systemu Windows. On przechwytuje wiadomości do przesłania z kolejki transmisji w imieniu źródła i dostarcza go do kolejki docelowej. Kolejka docelowa akceptuje wiadomości w imieniu docelowego w celu późniejszego dostarczenia zawsze, gdy miejsce docelowe żądań wiadomości. Menedżerów MSMQ implementuje protokołu niezawodnych transferu komunikatów, dzięki czemu komunikaty nie zostaną utracone podczas transmisji. Protokół może być natywne lub opartego na protokole SOAP protokołu SOAP Reliable Messaging Protocol (SRMP).  
   
- Separacji, w połączeniu z komunikatu niezawodnej transferu między kolejek umożliwia aplikacji, które są luźno powiązane do komunikowania się niezawodnie. W przeciwieństwie do sesji niezawodnej źródłowym i docelowym nie masz działa w tym samym czasie. Dzięki temu niejawnie scenariuszy, w którym kolejek w efekcie używanych jako mechanizm wyrównywanie obciążenia podczas stosownej źródła komunikatów i szybkość miejsca docelowego zużycia wiadomości nie są zgodne. [!INCLUDE[crabout](../../../includes/crabout-md.md)]kolejki, zobacz [kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ Separacji, w połączeniu z komunikatu niezawodnej transferu między kolejek umożliwia aplikacji, które są luźno powiązane do komunikowania się niezawodnie. W przeciwieństwie do sesji niezawodnej źródłowym i docelowym nie masz działa w tym samym czasie. Dzięki temu niejawnie scenariuszy, w którym kolejek w efekcie używanych jako mechanizm wyrównywanie obciążenia podczas stosownej źródła komunikatów i szybkość miejsca docelowego zużycia wiadomości nie są zgodne. Aby uzyskać więcej informacji na temat kolejek, zobacz [kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie sesji niezawodnych](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie obsługuje protokoły uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Innych mechanizmów uwierzytelniania, takich jak nazwy użytkownika i hasła i zintegrowane uwierzytelnianie HTTP i HTTPS są obsługiwane podczas uruchamiania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w systemie Windows XP Home Edition.  
@@ -58,7 +58,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
 >  Wartość domyślna dla <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> jest klasa <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. W większości przypadków kontekstu identyfikacji poziom personifikacji nie ma praw do załadowania dowolnych dodatkowych zestawów. Wartością domyślną jest więc jest to bardzo powszechne pod uwagę. Identyfikator poziomu personifikacji występuje także, gdy proces personifikacji nie ma `SeImpersonate` uprawnień. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>Delegowanie wymaga negocjowania poświadczeń  
- Aby używać protokołu uwierzytelniania Kerberos z delegowania, musi implementować protokołu Kerberos z negocjowania poświadczeń (nazywane również wieloetapowego lub wieloetapowych protokołu Kerberos). Uwierzytelnianie Kerberos w przypadku zastosowania bez negocjowania poświadczeń (nazywane również jednorazowej lub jeden etap protokołu Kerberos), jest zwracany wyjątek. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak zaimplementować negocjowania poświadczeń, zobacz [Debugowanie błędów uwierzytelniania systemu Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Aby używać protokołu uwierzytelniania Kerberos z delegowania, musi implementować protokołu Kerberos z negocjowania poświadczeń (nazywane również wieloetapowego lub wieloetapowych protokołu Kerberos). Uwierzytelnianie Kerberos w przypadku zastosowania bez negocjowania poświadczeń (nazywane również jednorazowej lub jeden etap protokołu Kerberos), jest zwracany wyjątek. Aby uzyskać więcej informacji dotyczących sposobu wdrażania negocjowania poświadczeń, zobacz [Debugowanie błędów uwierzytelniania systemu Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Kryptografia  
   

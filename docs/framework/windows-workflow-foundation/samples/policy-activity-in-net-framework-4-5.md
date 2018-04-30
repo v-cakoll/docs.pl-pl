@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8457182b666570853953830a92c3f2380a0eb85
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 5ff750942a2d05310669361e83a10a5acefbcbd4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Zasady działania w programie .NET Framework 4.5
-Działanie Policy4 umożliwia Windows Workflow Foundation w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów do użycia w programie Windows Workflow Foundation w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio za pomocą aparatu reguł, który jest dostarczany w wersji 3.5 WF. Za pomocą tego działania, można tworzyć i wykonywać WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 aparatu reguł dołączone jako część programu Windows Workflow Foundation, przeczytaj wprowadzenie do aparatu reguł systemu Windows Workflow Foundation. Aby uzyskać więcej informacji na temat migracji reguł WF w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], przeczytaj [wskazówki dotyczące migracji](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Działanie Policy4 umożliwia Windows Workflow Foundation w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów do użycia w programie Windows Workflow Foundation w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio za pomocą aparatu reguł, który jest dostarczany w wersji 3.5 WF. Za pomocą tego działania, można tworzyć i wykonywać WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>. Aby uzyskać więcej informacji na temat aparatu reguł 3.5 WF dołączone jako część programu Windows Workflow Foundation przeczytaj wprowadzenie do aparatu reguł systemu Windows Workflow Foundation. Aby uzyskać więcej informacji na temat migracji reguł WF w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], przeczytaj [wskazówki dotyczące migracji](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

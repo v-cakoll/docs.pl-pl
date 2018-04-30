@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Kompilowanie przykładów programu Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Próbki mogą być tworzone przy użyciu programu Visual Studio 2010 lub **msbuild** polecenie w wierszu polecenia. Zarówno procedury opisane w tym temacie.  
@@ -52,10 +52,10 @@ ms.lasthandoff: 04/27/2018
  Pliki wsadowe Setup.exe i Cleanup.exe i skrypty powinien zostać uruchomiony z wiersza polecenia programu Visual Studio. Kilka zestawu w górę i oczyszczania plików wykonywanie zadań, które wymagają uprawnień administratora i powinna być uruchamiana z uprawnieniami administratora.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Ważne informacje dotyczące zabezpieczeń dotyczące punkty końcowe metadanych  
- Aby zapobiec przypadkowe ujawnienie metadanych usługi potencjalnie poufnych, konfigurację domyślną dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale również zaimportować narzędzia (na przykład Svcutil.exe) oznacza, że metadane nie można użyć do generowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie podczas publikowania metadanych usługi w konfiguracji. Aby eksperymentowanie z próbek łatwiejsze, prawie wszystkie próbki ujawniać punkt końcowy publikowania metadanych niezabezpieczona. Takie punkty końcowe są potencjalnie dostępne dla anonimowych użytkowników nieuwierzytelnionych i należy uważać przed wdrożeniem takich punktów końcowych w celu zapewnienia publicznie ujawniająca metadanych usługi odpowiednie. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Publikowanie metadanych usługi, zobacz [zachowanie podczas publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) próbki. Zobacz [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) przykładowa przykładowe zabezpieczanie punktu końcowego metadanych.  
+ Aby zapobiec przypadkowe ujawnienie metadanych usługi potencjalnie poufnych, konfigurację domyślną dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale również zaimportować narzędzia (na przykład Svcutil.exe) oznacza, że metadane nie można użyć do generowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie podczas publikowania metadanych usługi w konfiguracji. Aby eksperymentowanie z próbek łatwiejsze, prawie wszystkie próbki ujawniać punkt końcowy publikowania metadanych niezabezpieczona. Takie punkty końcowe są potencjalnie dostępne dla anonimowych użytkowników nieuwierzytelnionych i należy uważać przed wdrożeniem takich punktów końcowych w celu zapewnienia publicznie ujawniająca metadanych usługi odpowiednie. Aby uzyskać więcej informacji o publikowaniu metadanych usługi, zobacz [zachowanie podczas publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) próbki. Zobacz [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) przykładowa przykładowe zabezpieczanie punktu końcowego metadanych.  
   
 ## <a name="exception-handling"></a>Obsługa wyjątków  
- Ogólnie rzecz biorąc, te przykłady nie obejmują obsługi wyjątków, aby zachować koncentruje się na temat próbki kodu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Obsługa wyjątków, zobacz [oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) próbki.  
+ Ogólnie rzecz biorąc, te przykłady nie obejmują obsługi wyjątków, aby zachować koncentruje się na temat próbki kodu. Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz [oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) próbki.  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Trwa ponowne generowanie klientów i konfiguracji z narzędzia Svcutil  
  Można użyć [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można ponownie wygenerować kod klienta i konfiguracji dla większości próbek. Niektóre przykłady wymagają konfiguracji ręcznie edytowane. Na przykład jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla przykładu, który używa poświadczeń certyfikatu klienta, muszą ręcznie określić poświadczenia, wcześniej skonfigurowany. Niektóre przykłady użycia określonych opcji Svcutil.exe wpływ na wygenerowany kod, te opcje są określone w tematy szczególnych próbek.  

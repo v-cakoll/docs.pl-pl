@@ -1,31 +1,33 @@
 ---
-title: "Sieć Web hostująca aplikację zakolejkowaną"
-ms.custom: 
+title: Sieć Web hostująca aplikację zakolejkowaną
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Sieć Web hostująca aplikację zakolejkowaną
 Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji obsługujących [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług. Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesu dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług jednoczesne używanie protokołów HTTP i protokołów innych niż HTTP, na przykład net.msmq i msmq.formatname w środowisku macierzystym, który obsługuje aktywacji opartej na komunikat i oferuje możliwość obsługi dużej liczby aplikacji na danym komputerze.  
   
  ZOSTAŁ obejmują usługę aktywacji usługi kolejkowania komunikatów (MSMQ), który uaktywnia umieszczonych w kolejce aplikacji, gdy jeden lub więcej komunikatów są umieszczane w jednym z kolejek używany przez aplikację. Usługa aktywacji usługi MSMQ jest usługi NT, który jest automatycznie uruchamiane domyślnie.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Usługa WAS i korzyści, zobacz [Hosting w usłudze aktywacji procesów systemu Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Usługa MSMQ, zobacz [omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ Aby uzyskać więcej informacji na temat WAS i korzyści, zobacz [Hosting w usłudze aktywacji procesów systemu Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>Kolejka adresowania usługi WAS  
  ZOSTAŁ, że aplikacje mają adresy jednolity identyfikator zasobów (URI). Adresy aplikacji ma dwie części: specyficzne dla aplikacji, względny adres (ścieżka) i podstawowa Prefiks URI. Te dwie części Podaj adres zewnętrzny aplikację, jeśli połączone. Podstawowy Prefiks URI jest tworzony z powiązania witryny i jest używany dla wszystkich aplikacji w witrynie, na przykład "net.msmq://localhost", "msmq.formatname://localhost" lub "NET.TCP://localhost". Następnie zbudowanych aplikacji adresów wykonując fragmenty ścieżki specyficzne dla aplikacji (takich jak "/ applicationOne") i dodanie ich do podstawowego identyfikatora URI prefiksu na pełny identyfikator URI aplikacji, na przykład "net.msmq://localhost/applicationOne".  

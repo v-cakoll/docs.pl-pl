@@ -10,6 +10,5 @@
 ## [Delegaci ogólni](generic-delegates.md)
 ## [Różnice między szablonami C++ i typami ogólnymi C#](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Typy ogólne w czasie wykonywania](generics-in-the-run-time.md)
-## [Typy ogólne w bibliotece klas platformy .NET Framework](generics-in-the-net-framework-class-library.md)
 ## [Typy ogólne i odbicie](generics-and-reflection.md)
 ## [Typy ogólne i atrybuty](generics-and-attributes.md)

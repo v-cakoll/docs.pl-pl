@@ -1,30 +1,20 @@
 ---
 title: '&lt;certificateValidation&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7a5d31bce5f71e644b40b3aa7e7c0c1c8790cab6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af4dc459da49b46d70276d3f4bcd5f94d2a91ffe
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 Określa ustawienia, które programy obsługi token służący do weryfikowania certyfikatów. Te ustawienia zostały zastąpione, jeśli określony program obsługi jest skonfigurowany z własnego modułu sprawdzania poprawności.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<certificateValidation >  
   
 ## <a name="syntax"></a>Składnia  
@@ -48,9 +38,9 @@ Określa ustawienia, które programy obsługi token służący do weryfikowania 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Wartość, która określa tryb walidacji do użycia na potrzeby certyfikatów X.509. Wartość domyślna to "PeerOrChainTrust". Aby określić niestandardowego modułu weryfikacji, wartość tego atrybutu na "Custom", i określ modułu sprawdzania poprawności przy użyciu [ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md) elementu. Opcjonalny.|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Wartość, która określa tryb odwołania dla certyfikatu X.509. Wartość domyślna to "Online". Opcjonalny.|  
-|trustedStoreLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> wartość, która określa magazynu certyfikatu X.509. Wartością domyślną jest "Komputer lokalny". Opcjonalny.|  
+|tryb certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Wartość, która określa tryb walidacji do użycia na potrzeby certyfikatów X.509. Wartość domyślna to "PeerOrChainTrust". Aby określić niestandardowego modułu weryfikacji, wartość tego atrybutu na "Custom", i określ modułu sprawdzania poprawności przy użyciu [ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md) elementu. Opcjonalna.|  
+|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Wartość, która określa tryb odwołania dla certyfikatu X.509. Wartość domyślna to "Online". Opcjonalna.|  
+|trustedStoreLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> wartość, która określa magazynu certyfikatu X.509. Wartością domyślną jest "Komputer lokalny". Opcjonalna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

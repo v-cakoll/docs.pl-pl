@@ -1,24 +1,12 @@
 ---
 title: '&lt;peer&gt; w &lt;serviceCredentials&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79af459aae2eef0544d713b86e8534635fcdd141
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f50c192639df7b7ed35e863821d5b7a8d62f29bc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt; w &lt;serviceCredentials&gt;
 Określa bieżące poświadczenia dla węzła równorzędnego.  
@@ -26,7 +14,7 @@ Określa bieżące poświadczenia dla węzła równorzędnego.
  \<system.ServiceModel>  
 \<zachowania >  
 \<serviceBehaviors>  
-\<behavior>  
+\<zachowanie >  
 \<serviceCredentials>  
 \<peer >  
   
@@ -52,7 +40,7 @@ Określa bieżące poświadczenia dla węzła równorzędnego.
 |-------------|-----------------|  
 |[\<certyfikat >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Określa certyfikat X.509 do użycia podczas podpisywania i szyfrowania wiadomości dla usług peer-to-peer. .|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Określa opcje uwierzytelnienia dla nadawców wiadomości.|  
-|[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Określa opcje uwierzytelniania dla usług elementów równorzędnych.|  
+|[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Określa opcje uwierzytelniania dla usług elementów równorzędnych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

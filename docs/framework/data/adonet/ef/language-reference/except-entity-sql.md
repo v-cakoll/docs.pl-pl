@@ -1,24 +1,12 @@
 ---
-title: "Z wyjątkiem (jednostka SQL)"
-ms.custom: 
+title: Z wyjątkiem (jednostka SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 546503d3fc51c863779c26f363721bf81be054b9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fb7f8040e9e310798b003ad02614cd464e996389
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="except-entity-sql"></a>Z wyjątkiem (jednostka SQL)
 Zwraca kolekcję wszystkie unikatowe wartości w wyrażeniu kwerendy do lewego operandu EXCEPT, które nie są również zwracane w wyrażeniu zapytania z prawej strony argument EXCEPT. Wszystkie wyrażenia musi być tego samego typu lub wspólny podstawowej lub pochodny typ jako `expression`.  
@@ -44,7 +32,7 @@ expression EXCEPT expression
 |Najwyższy|INTERSECT|  
 ||UNION<br /><br /> UNION ALL|  
 ||EXCEPT|  
-|Lowest|EXISTS<br /><br /> POKRYWA SIĘ<br /><br /> SPŁASZCZANIE<br /><br /> SET|  
+|Najniższa|EXISTS<br /><br /> POKRYWA SIĘ<br /><br /> SPŁASZCZANIE<br /><br /> SET|  
   
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa operatora EXCEPT do zwracać kolekcji wartości różne od dwóch wyrażeń zapytania. Kwerenda jest oparta na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  

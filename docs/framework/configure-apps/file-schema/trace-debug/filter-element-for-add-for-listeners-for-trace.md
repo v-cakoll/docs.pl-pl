@@ -1,14 +1,6 @@
 ---
-title: "&lt;Filtr&gt; elementu &lt;dodać&gt; dla &lt;odbiorników&gt; dla &lt;śledzenia&gt;"
-ms.custom: 
+title: '&lt;Filtr&gt; elementu &lt;dodać&gt; dla &lt;odbiorników&gt; dla &lt;śledzenia&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: efd31d03960fa516886586c4cf0a3e080d904977
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 095212f73adb906d9d80db747c331c436c1cf846
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;Filtr&gt; elementu &lt;dodać&gt; dla &lt;odbiorników&gt; dla &lt;śledzenia&gt;
 Dodaje filtr do odbiornika w `Listeners` kolekcji dla śledzenia.  
@@ -35,7 +24,7 @@ Dodaje filtr do odbiornika w `Listeners` kolekcji dla śledzenia.
 \<System.Diagnostics >  
 \<śledzenia >  
 \<obiekty nasłuchujące >  
-\<Dodaj >  
+\<add>  
 \<Filtr >  
   
 ## <a name="syntax"></a>Składnia  

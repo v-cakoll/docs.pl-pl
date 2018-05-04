@@ -1,24 +1,12 @@
 ---
 title: '&lt;message&gt; w &lt;ws2007FederationHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c30ba2995a0f8768292dd71733d3e6f4c3799f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 565a0c6027e94954c81c11f96fbd5473dbcd4fdf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;message&gt; w &lt;ws2007FederationHttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu dla [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementu.  
@@ -27,7 +15,7 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu dla [ \<ws2007Federati
 \<powiązania >  
 \<ws2007FederationHttpBinding>  
 \<Powiązanie >  
-\<security>  
+\<Zabezpieczenia >  
 \<message>  
   
 ## <a name="syntax"></a>Składnia  
@@ -98,7 +86,7 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu dla [ \<ws2007Federati
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`algorithmSuite`|Opcjonalny. Ustawia szyfrowania wiadomości, sygnatury i algorytmów zawijania klucza. Algorytmy i klucza rozmiary są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasy. Algorytmy te są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Zobacz poniższą tabelę z prawidłowych wartości. Wartość domyślna to Basic256.|  
+|`algorithmSuite`|Opcjonalna. Ustawia szyfrowania wiadomości, sygnatury i algorytmów zawijania klucza. Algorytmy i klucza rozmiary są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasy. Algorytmy te są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Zobacz poniższą tabelę z prawidłowych wartości. Wartość domyślna to Basic256.|  
 |`issuedKeyType`|Określa typ klucza zostanie wysłane. Prawidłowe wartości są następujące:<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> Wartość domyślna to SymmetricKey. Ten atrybut jest typu <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |`issuedTokenType`|Identyfikator URI, który określa typ token został wystawiony. Wartość domyślna to `null`.|  
 |`negotiateServiceCredential`|Wartość określająca, czy poświadczenie usługi powinny być wymieniane w ramach negocjacji lub jest niedostępny poza pasmem. Wartość domyślna to `true`, co oznacza, że negocjowane jest poświadczenie usługi.|  
@@ -137,13 +125,13 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu dla [ \<ws2007Federati
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
  <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

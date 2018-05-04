@@ -1,13 +1,6 @@
 ---
-title: "Porady: odwołanie do zestawu o silnej nazwie"
-ms.custom: 
+title: 'Porady: odwołanie do zestawu o silnej nazwie'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5934f67387e29bfbd4f011ad2ba47f50d81b983
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f78fff50d1a227061076790ad77f17debe3f690
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Porady: odwołanie do zestawu o silnej nazwie
 Proces odwołania do typów lub zasoby zestawu z silną nazwą jest zazwyczaj niewidoczny. Istnieje możliwość odwołania w czasie kompilacji (wczesne wiązanie) lub w czasie wykonywania.  
@@ -55,7 +45,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1.  Po dokonaniu środowiska wykonawczego odwołanie do zestawu z silną nazwą (na przykład za pomocą <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> metodę), należy użyć nazwy wyświetlanej przywoływanego zestawu o silnej nazwie. Składnia nazwy wyświetlanej jest następujący:  
   
-     \<*Nazwa zestawu*>**,** \< *numer wersji*>**,** \<  *kultura*>**,** \< *token klucza publicznego*>  
+     \<*Nazwa zestawu*>**,** \< *numer wersji*>**,** \< *kultury*  > **,** \< *token klucza publicznego*>  
   
      Na przykład:  
   
@@ -73,11 +63,11 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  Można drukować szesnastkowej klucz publiczny i token klucza publicznego dla określonego zestawu przy użyciu następujących [Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenia:  
   
- **SN - Tp \<**  *zestawu***>**  
+ **SN - Tp \<**  *zestawu* **>**  
   
  Jeśli masz plik klucza publicznego, można użyć następującego polecenia (Uwaga różnica w przypadku opcji wiersza polecenia):  
   
- **SN - tp \<**  *zestawu***>**  
+ **SN - tp \<**  *zestawu* **>**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

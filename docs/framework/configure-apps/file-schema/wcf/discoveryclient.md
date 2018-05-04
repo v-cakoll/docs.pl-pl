@@ -1,31 +1,19 @@
 ---
-title: '&lt;Obiekt discoveryClient&gt;'
-ms.custom: 
+title: '&lt;Obiekt DiscoveryClient&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c9cbdb61152a5315aaf919e3a3c58d9329449e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8c69104b9eb1097ef5dc94c9aae7352d4949668f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltdiscoveryclientgt"></a>&lt;Obiekt discoveryClient&gt;
+# <a name="ltdiscoveryclientgt"></a>&lt;Obiekt DiscoveryClient&gt;
 Element konfiguracji do tworzenia niestandardowego powiązania, który umożliwia aplikacjom klienta automatycznie wyszukiwać wykrywalnej usługi i znaleźć jej adres w czasie wykonywania.  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<powiązania >  
-\<customBinding >  
+\<customBinding>  
 \<Powiązanie >  
 \<Obiekt discoveryClient >  
   

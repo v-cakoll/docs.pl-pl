@@ -1,13 +1,6 @@
 ---
-title: "Porady: ustalić zestawu &#39; s w pełni kwalifikowana nazwa"
-ms.custom: 
+title: 'Porady: określić zestawu&#39;s w pełni kwalifikowana nazwa'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +10,15 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 841bec105f171f3450bfc33ee9052ddb85814a5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Porady: ustalić zestawu &#39; s w pełni kwalifikowana nazwa
+# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Porady: określić zestawu&#39;s w pełni kwalifikowana nazwa
 Aby dowiedzieć się, w pełni kwalifikowanej nazwy zestawu w globalnej pamięci podręcznej zestawów, użyj narzędzie globalnej pamięci podręcznej zestawów ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Zobacz [porady: wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Nazwy zestawu w pełni kwalifikowaną dla zestawów, które nie znajdują się w globalnej pamięci podręcznej zestawów, można uzyskać na kilka sposobów: można użyć kodu do danych wyjściowych informacji w konsoli lub do zmiennej lub skorzystać z [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)zbadać metadanych zestawu, który zawiera w pełni kwalifikowana nazwa.  

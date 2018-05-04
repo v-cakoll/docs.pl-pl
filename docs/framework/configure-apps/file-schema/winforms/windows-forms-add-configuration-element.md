@@ -1,26 +1,17 @@
 ---
 title: Formularze systemu Windows, Dodaj Element konfiguracji
-ms.custom: 
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529dbccd5ddb4dd1f1456fb9a6043f3c5f7b378d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-add-configuration-element"></a>Formularze systemu Windows, Dodaj Element konfiguracji
 
@@ -45,19 +36,19 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 | `key`     | Atrybut wymagany. Wstępnie zdefiniowane nazwy klucza, która odpowiada określonej funkcji dostosowania formularzy systemu Windows. |
 | `value`   | Atrybut wymagany. Wartość do przypisania do `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`nazwy atrybutów i skojarzone wartości
+### <a name="key-attribute-names-and-associated-values"></a>`key` nazwy atrybutów i skojarzone wartości
 
-| `key`Nazwa | Wartości | Opis |
+| `key` Nazwa | Wartości | Opis |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true" &#124;" false" | Wskazuje, czy formanty zakotwiczonej są skalowane w jednym przebiegu. "true", aby wyłączyć jeden przekazać skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Jednym przekazać skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
-| "DpiAwareness" | "PerMonitorV2" &#124;" false" | Wskazuje, czy aplikacja ma obsługującą ustawienia DPI. Ustaw klucz do "PerMonitorV2" do obsługi rozpoznawania Dpi; w przeciwnym wypadku ustaw ją na "false". Rozpoznawanie DPI jest funkcji opcjonalnych; Aby skorzystać z pomocy technicznej formularzy systemu Windows wysokiej rozdzielczości, należy ustawić jej wartości "PerMonitorV2". Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true" &#124;" false" | Wskazuje, czy <xref:System.Windows.Forms.CheckedListBox> kontroli wykorzystuje skalowanie i układu usprawnienia wprowadzone w .NET Framework 4.7. "true", aby zrezygnować z usprawnień caling i układu. w przeciwnym razie wartość "false". |
-| "DataGridView.DisableHighDpiImprovements" | "true" &#124;" false" | Wskazuje, czy <xref:System.Windows.Forms.DataGridView> kontrolować skalowanie i układu usprawnienia wprowadzone w .NET Framework 4.7. wartość "true" rezygnacji z świadomości DPI; "false" w przeciwnym razie wartość. |
-| "DisableDpiChangedMessageHandling" | "true" &#124;" false" | "true", aby zrezygnować z otrzymywania wiadomości dotyczące skalowania zmian; rozdzielczości "false" w przeciwnym razie wartość. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
-| "EnableWindowsFormsHighDpiAutoResizing" | "true" &#124;" false" | Wskazuje, czy automatycznie rozmiaru aplikacji formularzy systemu Windows z powodu zmian skalowania DPI. "true", aby włączyć automatyczną zmianę rozmiaru; w przeciwnym razie wartość false. |
-| "Form.DisableSinglePassControlScaling" | "true" &#124;" false" | Wskazuje, czy <xref:System.Windows.Forms.Form> skalowania w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Jednym przekazać skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true" &#124;" false" | Wskazuje, czy <xref:System.Windows.Forms.MonthCalendar> skalowania formantu w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Jednym przekazać skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
-| "Toolstrip.DisableHighDpiImprovements" | "true" &#124;" false" | Wskazuje, czy <xref:System.Windows.Forms.ToolStrip> kontroli wykorzystuje skalowanie i układu usprawnienia wprowadzone w .NET Framework 4.7. wartość "true" rezygnacji z świadomości DPI; "false" w przeciwnym razie wartość. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "wartość prawda"&#124;"false" | Wskazuje, czy formanty zakotwiczonej są skalowane w jednym przebiegu. "true", aby wyłączyć jeden przekazać skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Jednym przekazać skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
+| "DpiAwareness" | "PerMonitorV2"&#124;"false" | Wskazuje, czy aplikacja ma obsługującą ustawienia DPI. Ustaw klucz do "PerMonitorV2" do obsługi rozpoznawania Dpi; w przeciwnym wypadku ustaw ją na "false". Rozpoznawanie DPI jest funkcji opcjonalnych; Aby skorzystać z pomocy technicznej formularzy systemu Windows wysokiej rozdzielczości, należy ustawić jej wartości "PerMonitorV2". Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
+| "CheckedListBox.DisableHighDpiImprovements" | "wartość prawda"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.CheckedListBox> kontroli wykorzystuje skalowanie i układu usprawnienia wprowadzone w .NET Framework 4.7. "true", aby zrezygnować z usprawnień caling i układu. w przeciwnym razie wartość "false". |
+| "DataGridView.DisableHighDpiImprovements" | "wartość prawda"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.DataGridView> kontrolować skalowanie i układu usprawnienia wprowadzone w .NET Framework 4.7. wartość "true" rezygnacji z świadomości DPI; "false" w przeciwnym razie wartość. |
+| "DisableDpiChangedMessageHandling" | "wartość prawda"&#124;"false" | "true", aby zrezygnować z otrzymywania wiadomości dotyczące skalowania zmian; rozdzielczości "false" w przeciwnym razie wartość. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
+| "EnableWindowsFormsHighDpiAutoResizing" | "wartość prawda"&#124;"false" | Wskazuje, czy automatycznie rozmiaru aplikacji formularzy systemu Windows z powodu zmian skalowania DPI. "true", aby włączyć automatyczną zmianę rozmiaru; w przeciwnym razie wartość false. |
+| "Form.DisableSinglePassControlScaling" | "wartość prawda"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.Form> skalowania w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Jednym przekazać skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "wartość prawda"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.MonthCalendar> skalowania formantu w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Jednym przekazać skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
+| "Toolstrip.DisableHighDpiImprovements" | "wartość prawda"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.ToolStrip> kontroli wykorzystuje skalowanie i układu usprawnienia wprowadzone w .NET Framework 4.7. wartość "true" rezygnacji z świadomości DPI; "false" w przeciwnym razie wartość. |
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -69,7 +60,7 @@ Brak.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Konfiguruje obsługę nowych funkcji w aplikacji formularzy systemu Windows. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" />Uwagi
+## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Uwagi
 
 W programie .NET Framework 4.7, `<System.Windows.Forms.ApplicationConfigurationSection>` element pozwala na skonfigurowanie aplikacji formularzy systemu Windows, aby wykorzystać funkcje dodane w najnowszych wersjach programu .NET Framework. 
 

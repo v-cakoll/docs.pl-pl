@@ -1,13 +1,6 @@
 ---
 title: Opracowywanie potoku
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>Opracowywanie potoku
 Potok dodatku jest ścieżką segmentów potoku, w których aplikacja hosta i jego dodatku musi komunikować się ze sobą.  
   
  Na poniższej ilustracji przedstawiono potok komunikacji i jego segmentów.  
   
- ![Dodaj &#45; w modelu procesu. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Dodaj&#45;w potoku modelu. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Potok dodatku  
   
  Aplikacja hosta znajduje się na końcu jednego potoku i dodatek jest na końcu. Począwszy od każdego końca i przenoszenie kierunku środka, zarówno aplikacji hosta, jak i dodatku mają abstrakcyjna klasa podstawowa, definiujący widok modelu obiektu, który zarówno mają. Te typy (klasy) tworzą segmentów potoku dodatku widoku oraz widoku hosta segmentu potoku dodatku. Segment potoku dodatku widoku często zawiera więcej niż jednej klasy abstrakcyjnej, ale klasa, która dodatek dziedziczy jest znany jako podstawy dodatku.  
@@ -45,7 +35,7 @@ Potok dodatku
   
  Na poniższej ilustracji przedstawiono typy, które tworzą segmentów potoku. Nazwy typów pokazany na rysunku są dowolne, ale wszystkie typy oprócz hosta i host wyświetlania atrybutów wymagają dodatku, może być rozpoznana za pomocą metod, które utworzyć magazyn informacji.  
   
- ![Dodaj &#45; w modelu z wymaganymi atrybutami typów. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Dodaj&#45;w modelu z wymaganymi atrybutami typów. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Potok dodatku z typami  
   
  W poniższej tabeli opisano segmentów potoku dla aktywacji dodatku. Aby uzyskać więcej informacji na temat te segmenty, zobacz [kontrakty, widoków i kart](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
@@ -63,7 +53,7 @@ Potok dodatku z typami
 ## <a name="pipeline-activation-path"></a>Ścieżka aktywacji potoku  
  Na poniższej ilustracji przedstawiono aktywacji typów, gdy dodatek jest aktywny. Przedstawiono również przekazywanie obiektów do hosta, takich jak wyników obliczeń lub kolekcja obiektów. Jest to najbardziej typowym scenariuszem.  
   
- ![Dodaj &#45; w modelu ze ścieżką aktywacji. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Dodaj&#45;w modelu ze ścieżką aktywacji. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Ścieżka aktywacji z dodatku do hosta  
   
  Ścieżka aktywacji potoku odbywa się w następujący sposób:  

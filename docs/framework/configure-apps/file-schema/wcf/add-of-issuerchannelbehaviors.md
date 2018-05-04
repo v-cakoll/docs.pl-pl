@@ -1,24 +1,12 @@
 ---
 title: '&lt;add&gt; w &lt;issuerChannelBehaviors&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf66b3d3b531ae41329aade6a416c330957d83c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;add&gt; w &lt;issuerChannelBehaviors&gt;
 Dodaje zachowanie punktu końcowego, który będzie używany podczas komunikacji z STS.  
@@ -26,14 +14,14 @@ Dodaje zachowanie punktu końcowego, który będzie używany podczas komunikacji
 > [!NOTE]
 >  Jeśli jakiekolwiek zachowanie punktu końcowego zawiera [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu, zostanie wygenerowany wyjątek.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
 sekcja endpointBehaviors  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<issuedToken >  
 \<issuerChannelBehaviors > — Element  
-\<Dodaj >  
+\<add>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -59,10 +47,10 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Zawiera kolekcję [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] zachowania punktu końcowego klienta do użycia przy komunikacji z określonych usług tokenu usługi.|  
+|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Zawiera kolekcję zachowania punktu końcowego klienta Windows Communication Foundation (WCF) używanego podczas komunikacji z określonych usług tokenu usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
- `issuerAddress`zawiera identyfikator URI usługi tokenu zabezpieczającego, który klient do komunikacji z. `behaviorConfiguration`Wskazuje zachowanie punktu końcowego, w której aplikacja będzie używać w kanałach utworzone przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] można pobrać wystawionych tokenów z usługi tokenu zabezpieczeń.  
+ `issuerAddress` zawiera identyfikator URI usługi tokenu zabezpieczającego, który klient do komunikacji z. `behaviorConfiguration` Wskazuje zachowanie punktu końcowego, w której aplikacja będzie używać w kanałach utworzony przez Windows Communication Foundation (WCF) można pobrać wystawionych tokenów z usługi tokenu zabezpieczeń.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  

@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Szczegóły|W .NET 4.0, parametru ogólnego <code>T</code> z <code>ObjectContext.Translate</code> i <code>ObjectContext.ExecuteStoreQuery</code> metody może nie być wyliczeniem. W tym scenariuszu jest teraz obsługiwane.|
-|Sugestia|Jeśli Przetłumacz lub ExecuteStoreQuery została wywołana dla typu wyliczeniowego w programie .NET 4.0, "0" została zwrócona. Jeśli to zachowanie pożądane, wywołań ma być zastąpiona stała 0 (lub odpowiednik wyliczenia go).|
+|Szczegóły|W .NET Framework 4.0, parametru ogólnego <code>T</code> z <code>ObjectContext.Translate</code> i <code>ObjectContext.ExecuteStoreQuery</code> metody może nie być wyliczeniem. W tym scenariuszu jest teraz obsługiwane.|
+|Sugestia|Jeśli Przetłumacz lub ExecuteStoreQuery została wywołana dla typu wyliczeniowego w programie .NET Framework 4.0, "0" została zwrócona. Jeśli to zachowanie pożądane, wywołań ma być zastąpiona stała 0 (lub odpowiednik wyliczenia go).|
 |Zakres|Krawędź|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

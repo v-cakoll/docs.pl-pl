@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 3f8df58503fe0dd4c3096250c920db250b06046b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programowanie asynchroniczne z async i await (C#)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -153,7 +153,7 @@ Metody async mają być operacjami niepowodującymi blokowania. `await` Wyrażen
   
 `async` i `await` słów kluczowych nie powodują dodatkowe wątki ma zostać utworzony. Metody komunikacji async nie wymagają wielowątkowości, ponieważ nie działają we własnym wątku. Metoda działa w bieżącym kontekście synchronizacji i używa czasu wątku, tylko wtedy, gdy jest aktywna. Można użyć <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> można przenieść procesor do wątku w tle, ale tło wątku nie pomoże z procesem, które właśnie oczekuje na wyniki stają się dostępne.  
   
-Podejście async do programowania asynchronicznego jest preferowane prawie w każdym przypadku. W szczególności, ta metoda jest lepszym rozwiązaniem niż <xref:System.ComponentModel.BackgroundWorker> klasy dla operacji We/Wy wiązaniem, ponieważ kod jest prostsze i nie trzeba zabezpieczyć się przed wyścigu. W połączeniu z <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> metody programowania asynchronicznego jest lepszym rozwiązaniem niż <xref:System.ComponentModel.BackgroundWorker> dla procesora operacji ponieważ programowania asynchronicznego oddziela szczegóły koordynacji uruchomionych kodu z pracy `Task.Run` przesyła do puli wątków.  
+Podejście async do programowania asynchronicznego jest preferowane prawie w każdym przypadku. W szczególności, ta metoda jest lepszym rozwiązaniem niż <xref:System.ComponentModel.BackgroundWorker> klasy I/E-powiązane z operacji, ponieważ kod jest prostsze i nie trzeba zabezpieczyć się przed wyścigu. W połączeniu z <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> metody programowania asynchronicznego jest lepszym rozwiązaniem niż <xref:System.ComponentModel.BackgroundWorker> dla procesora operacji ponieważ programowania asynchronicznego oddziela szczegóły koordynacji uruchomionych kodu z pracy `Task.Run` przesyła do puli wątków.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async i await  
  Jeśli określisz, że metoda jest to metoda asynchroniczna przy użyciu [async](../../../../csharp/language-reference/keywords/async.md) modyfikator, zostanie włączone następujące dwie możliwości.  

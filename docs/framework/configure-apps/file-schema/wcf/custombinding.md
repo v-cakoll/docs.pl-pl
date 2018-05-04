@@ -1,24 +1,12 @@
 ---
 title: '&lt;customBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.  
@@ -205,9 +193,9 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
 |[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Określa dwukierunkowej wiadomości do niestandardowego powiązania. Jest ona używana z transportu, które nie zezwalają na komunikacji dupleksowej natywnie, na przykład HTTP. TCP, natomiast natywnie umożliwia komunikacji dupleksowej i nie wymaga użycia tego elementu powiązania dla usługi wysłać wiadomości zwrotnie do klienta.<br /><br /> Klient musi ujawniać adres usługi upewnić się, skontaktuj się z pomocą i nawiązania połączenia. Ten adres klienta jest zapewniana przez `ClientBaseAddress` atrybutu.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Określa nazwę elementu równorzędnego rozpoznawania protokołu PNRP (Peer Name) program rozpoznawania nazw. Ten element jest typu <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
 |[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Określa ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do niestandardowego powiązania, wynikowy kanał obsługuje dokładnie — raz gwarancje dostarczenia. Ten element jest typu <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.SecurityElement>.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.SecurityElement>.|  
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Określa ustawienia zabezpieczeń dla powiązania strumienia SSL. Ten element jest typu <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Określa, czy wiązanie obsługuje przepływu transakcji i Protokół do użycia przez `transactionProtocol` atrybutu. Ten element jest typu <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
+|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Określa, czy wiązanie obsługuje przepływu transakcji i Protokół do użycia przez `transactionProtocol` atrybutu. Ten element jest typu <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
 |[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Określa opcje do przesyłania strumieniowego zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -241,7 +229,7 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
   
 -   Następnie to opcjonalna <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> zapewnia sesji i kolejność mechanizmu zgodnie z definicją w specyfikacji WS-ReliableMessaging. To pojęcie sesji mogą przechodzić pośredników SOAP i transportu.  
   
--   Następnie jest elementu powiązania zabezpieczeń opcjonalne, która udostępnia funkcje zabezpieczeń, takich jak autoryzacja, uwierzytelnianie, ochrony i poufności. Następujące elementy powiązania zabezpieczeń są dostarczane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   Następnie jest elementu powiązania zabezpieczeń opcjonalne, która udostępnia funkcje zabezpieczeń, takich jak autoryzacja, uwierzytelnianie, ochrony i poufności. Następujące elementy powiązania zabezpieczeń są dostarczane przez Windows Communication Foundation (WCF):  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -271,7 +259,7 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   W dolnej części jest element wymagany transportu. Można użyć własnych transportu lub użyj jednej z elementami pochodzącymi powiązania transportu [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   W dolnej części jest element wymagany transportu. Można użyć własnych transportu lub użyj jednej z transportu powiązań dostarczonych przez Windows Communication Foundation (WCF) elementów:  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

@@ -1,31 +1,21 @@
 ---
 title: '&lt;secureConversationBootstrap&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5cff19fc6d931f5dd391776c39f3934c8809a5ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f7eab333899f5fc379db8fb5683ea3d29d04943c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<powiązania >  
-\<customBinding >  
+\<customBinding>  
 \<Powiązanie >  
 \<Zabezpieczenia >  
 \<secureConversationBootstrap >  
@@ -59,7 +49,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`allowSerializedSigningTokenOnReply`|Opcjonalny. Wartość logiczna, która określa, czy szeregowanego tokenu można używać w odpowiedzi. Wartość domyślna to `false`. Korzystając z podwójną powiązanie, ustawienie domyślnie `true` każdego ustawienia wprowadzone zostaną zignorowane.|  
+|`allowSerializedSigningTokenOnReply`|Opcjonalna. Wartość logiczna, która określa, czy szeregowanego tokenu można używać w odpowiedzi. Wartość domyślna to `false`. Korzystając z podwójną powiązanie, ustawienie domyślnie `true` każdego ustawienia wprowadzone zostaną zignorowane.|  
 |`authenticationMode`|Określa tryb uwierzytelniania SOAP między inicjatorem i obiekt odpowiadający.<br /><br /> Wartość domyślna to sspiNegotiated.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Configuration.AuthenticationMode>.|  
 |`defaultAlgorithmSuite`|Definiuje pakiet algorytmów zabezpieczeń z różnych algorytmów, takich jak zapewniania kanoniczności, Digest, KeyWrap, podpisu, szyfrowanie oraz keyderivation. Każdy z mechanizmów zabezpieczeń algorytmu definiuje wartości dla różnych parametrów. Zabezpieczenia na poziomie komunikatu jest osiągane przy użyciu tych algorytmów.<br /><br /> Ten atrybut jest używany podczas pracy z innej platformie, która zdecyduje się na zestawem algorytmów innych niż domyślne. Należy pamiętać o słabych algorytmów odpowiednich i po zmodyfikowaniu tego ustawienia. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Wartość domyślna to `Basic256`.|  
 |`includeTimestamp`|Wartość logiczna określająca czy sygnatury czasowe są umieszczane w każdej wiadomości. Wartość domyślna to `true`.|  
@@ -75,7 +65,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Określa bieżący wystawionego tokenu. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Określa bieżący wystawionego tokenu. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Określa ustawienia zabezpieczenia lokalnej usługi dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
   
@@ -93,6 +83,6 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Zabezpieczenia powiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

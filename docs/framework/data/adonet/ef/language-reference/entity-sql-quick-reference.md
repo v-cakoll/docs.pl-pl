@@ -1,24 +1,12 @@
 ---
-title: "Szybkie odwołanie do jednostki SQL"
-ms.custom: 
+title: Szybkie odwołanie do jednostki SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 81fd76d09f9cc02e89ac34d5f8fa74bd7f9d92f9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0617ce96acaf5a6eafb2658cfe218cc8f4135f6e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do jednostki SQL
 Ten temat zawiera krótkie odwołanie do [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. Zapytania w tym temacie są oparte na modelu AdventureWorks sprzedaży.  
@@ -83,7 +71,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>Konstruktory typu  
   
 ### <a name="row"></a>WIERSZ  
- [WIERSZ](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) tworzy anonimowe, strukturę wpisane wartości (rekordów) jak w:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [WIERSZ](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) tworzy anonimowe, strukturę wpisane wartości (rekordów) jak w: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Przykład:  
   
@@ -327,7 +315,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>WYBIERZ WARTOŚĆ I WYBIERZ POZYCJĘ  
   
 ### <a name="select-value"></a>WYBIERZ WARTOŚĆ  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]udostępnia w klauzuli SELECT VALUE pomijania konstrukcji niejawne wiersza. W klauzuli SELECT VALUE można określić tylko jeden element. Podczas takiej klauzuli jest używana, nie otoki wiersza jest tworzony wokół elementów w klauzuli SELECT i kolekcji żądanego kształtu można wyprodukować, na przykład: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia w klauzuli SELECT VALUE pomijania konstrukcji niejawne wiersza. W klauzuli SELECT VALUE można określić tylko jeden element. Podczas takiej klauzuli jest używana, nie otoki wiersza jest tworzony wokół elementów w klauzuli SELECT i kolekcji żądanego kształtu można wyprodukować, na przykład: `SELECT VALUE a`.  
   
  Przykład:  
   
@@ -345,7 +333,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>WYBIERZ  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]udostępnia również Konstruktor row do utworzenia dowolnego wierszy. Wybierz przyjmuje jeden lub więcej elementów w projekcji i wyników w rekordzie danych z polami, na przykład: `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia również Konstruktor row do utworzenia dowolnego wierszy. Wybierz przyjmuje jeden lub więcej elementów w projekcji i wyników w rekordzie danych z polami, na przykład: `SELECT a, b, c`.  
   
  Przykład:  
   

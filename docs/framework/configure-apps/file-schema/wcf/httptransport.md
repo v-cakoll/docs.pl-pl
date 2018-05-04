@@ -1,26 +1,12 @@
 ---
 title: '&lt;httpTransport&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50cbf6521870a54f4f87c3eeb12030d5d7f2f6bb
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandardowego powiązania.  
@@ -59,9 +45,9 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |---------------|-----------------|  
 |allowCookies|Wartość logiczna określająca, czy klient akceptuje pliki cookie i propaguje je do przyszłych żądań. Wartość domyślna to `false`.<br /><br /> Ten atrybut można użyć w przypadku interakcji z usługami sieci Web ASMX, które używają plików cookie. W ten sposób można się upewnić, że pliki cookie zwrócony z serwera, automatycznie są kopiowane do wszystkich przyszłych żądań dla tej usługi.|  
 |authenticationScheme|Określa protokół używany do uwierzytelniania żądań klientów przetwarzanych przez odbiornik HTTP. Prawidłowe wartości są następujące:<br /><br /> -Skrótu: Określa uwierzytelnianie szyfrowane.<br />-Negocjowania: Negocjuje z klienta w celu określenia schematu uwierzytelniania. Jeśli zarówno klient, jak i serwer obsługują protokół Kerberos, jest używany; w przeciwnym razie uwierzytelnianie NTLM jest używany.<br />-Ntlm: Określa uwierzytelniania NTLM.<br />-Basic: Określa uwierzytelnianie podstawowe.<br />-Anonimowe: Określa uwierzytelnianie anonimowe.<br /><br /> Wartość domyślna to anonimowe. Ten atrybut jest typu <xref:System.Net.AuthenticationSchemes>. Ten atrybut można ustawić tylko raz.|  
-|bypassProxyOnLocal|Wartość logiczna, która wskazuje, czy pominąć serwer proxy dla adresów lokalnych. Wartość domyślna to `false`.<br /><br /> Lokalny adres jest taki, który znajduje się w lokalnej sieci LAN lub intranet.<br /><br /> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Zawsze ignoruje serwera proxy, jeśli adres usługi rozpoczyna się od http://localhost.<br /><br /> Jeśli klienci mają przechodzić przez serwer proxy po rozmowie z usługi na tym samym komputerze, należy używać nazwy hosta zamiast localhost.|  
+|bypassProxyOnLocal|Wartość logiczna, która wskazuje, czy pominąć serwer proxy dla adresów lokalnych. Wartość domyślna to `false`.<br /><br /> Lokalny adres jest taki, który znajduje się w lokalnej sieci LAN lub intranet.<br /><br /> Windows Communication Foundation (WCF) zawsze ignoruje serwera proxy, jeśli zaczyna się od adresu usługi http://localhost.<br /><br /> Jeśli klienci mają przechodzić przez serwer proxy po rozmowie z usługi na tym samym komputerze, należy używać nazwy hosta zamiast localhost.|  
 |hostnameComparisonMode|Określa tryb porównania nazw hostów HTTP używany do przeprowadzenia analizy identyfikatorów URI. Prawidłowe wartości to,<br /><br /> -StrongWildcard: ("+") dopasowuje wszystkie możliwe nazwy hostów w kontekście określony schemat, port i względnym identyfikatorem URI.<br />-Dokładnie: bez symboli wieloznacznych<br />-WeakWildcard: ("*") zgodna wszystkie możliwe hosta w kontekście określony schemat, port i względną UIR, która nie została jawnie dopasowana lub za pośrednictwem mechanizmu silne symboli wieloznacznych.<br /><br /> Wartość domyślna to StrongWildcard. Ten atrybut jest typu `System.ServiceModel.HostnameComparisonMode`.|  
-|keepAliveEnabled|Wartość logiczna, która określa, czy ustanowić trwałe połączenie z zasobem internetowym.|  
+|KeepAliveEnabled|Wartość logiczna, która określa, czy ustanowić trwałe połączenie z zasobem internetowym.|  
 |wartość maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar buforu. Wartość domyślna to 524288|  
 |proxyAddress|Identyfikator URI, który określa adres serwera proxy HTTP. Jeśli `useSystemWebProxy` jest `true`, to ustawienie musi być `null`. Wartość domyślna to `null`.|  
 |proxyAuthenticationScheme|Określa protokół używany do uwierzytelniania żądań klientów przetwarzanych przez serwer proxy HTTP. Prawidłowe wartości są następujące:<br /><br /> -Brak: Uwierzytelnianie nie jest wykonywane.<br />-Skrótu: Określa uwierzytelnianie szyfrowane.<br />-Negocjowania: Negocjuje z klienta w celu określenia schematu uwierzytelniania. Jeśli zarówno klient, jak i serwer obsługują protokół Kerberos, jest używany; w przeciwnym razie uwierzytelnianie NTLM jest używany.<br />-Ntlm: Określa uwierzytelniania NTLM.<br />-Basic: Określa uwierzytelnianie podstawowe.<br />-Anonimowe: Określa uwierzytelnianie anonimowe.<br />-IntegratedWindowsAuthentication: Określa uwierzytelnianie systemu Windows.<br /><br /> Wartość domyślna to anonimowe. Ten atrybut jest typu <xref:System.Net.AuthenticationSchemes>.|  
@@ -80,7 +66,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości powiązania niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- `httpTransport` Element jest punkt początkowy do tworzenia niestandardowego powiązania, który implementuje ten protokół transportu HTTP. HTTP jest transportu podstawowego używana do celów współdziałania. Ten transport jest obsługiwany przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] zapewnienie współdziałania z innymi nienależących[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosy usług sieci Web.  
+ `httpTransport` Element jest punkt początkowy do tworzenia niestandardowego powiązania, który implementuje ten protokół transportu HTTP. HTTP jest transportu podstawowego używana do celów współdziałania. Ten transport jest obsługiwany przez Windows Communication Foundation (WCF), aby zapewnić współdziałanie z innymi nienależących[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosy usług sieci Web.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  

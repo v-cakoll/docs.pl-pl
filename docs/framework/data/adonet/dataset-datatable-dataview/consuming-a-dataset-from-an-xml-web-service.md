@@ -1,29 +1,15 @@
 ---
 title: Korzystanie z zestawu danych z usługi sieci Web XML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: da3eca875df9b80f66241a2ecb72c5ba5c1df309
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z zestawu danych z usługi sieci Web XML
 <xref:System.Data.DataSet> Została zaprojektowana z projektem bez połączenia, w części w celu ułatwienia wygodny transportu danych za pośrednictwem Internetu. **DataSet** jest "serializacji" można określić jako dane wejściowe lub dane wyjściowe z usług XML sieci Web bez dodatkowy kod wymagany do strumienia zawartości **DataSet** z usługi XML sieci Web do klienta i z powrotem. **DataSet** jest niejawnie przekonwertować na strumień XML przy użyciu formatu elementu DiffGram wysyłane za pośrednictwem sieci i następnie odtworzyć strumienia XML jako **DataSet** po stronie odbiorczej. Zapewnia to bardzo prosty i elastyczny — metoda przekazywania i zwracający dane relacyjne przy użyciu usług XML sieci Web. Aby uzyskać więcej informacji na temat formatu elementu DiffGram, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -176,7 +162,7 @@ ms.lasthandoff: 03/22/2018
   
      Klienci usługi XML sieci Web wymagają serwera proxy protokołu SOAP aby można było korzystać z metod uwidocznione. Może mieć Visual Studio Generowanie ten serwer proxy dla Ciebie. Ustawiając odwołanie sieci Web do istniejącej usługi sieci Web z poziomu programu Visual Studio, wszystkie działania opisane w tym kroku wykonywane w sposób przezroczysty. Jeśli chcesz samodzielnie utworzyć klasy proxy kontynuować tej dyskusji. W większości przypadków jednak można utworzyć klasy proxy dla aplikacji klienta przy użyciu programu Visual Studio jest wystarczająca.  
   
-     Serwer proxy można utworzyć za pomocą narzędzia języka opisu usługi sieci Web. Na przykład jeśli usługa XML sieci Web jest narażony na http://myserver/data/DataSetSample.asmx adres URL, należy wydać polecenie podobne do poniższych utworzyć proxy Visual Basic .NET z przestrzenią nazw z **WebData.DSSample** i zapisze go w pliku Sample.VB.  
+     Serwer proxy można utworzyć za pomocą narzędzia języka opisu usługi sieci Web. Na przykład w przypadku udostępnienia usługi XML sieci Web pod adresem URL http://myserver/data/DataSetSample.asmx, należy wydać polecenie podobne do poniższych utworzyć proxy Visual Basic .NET z przestrzenią nazw z **WebData.DSSample** i zapisz go w sample.vb pliku.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

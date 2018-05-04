@@ -1,26 +1,12 @@
 ---
 title: Składnia ciągu połączenia
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: 11
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-syntax"></a>Składnia ciągu połączenia
 Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedziczący z <xref:System.Data.Common.DbConnection> oraz specyficznych dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia specyficzne dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które znajdują się w programie .NET Framework.  
@@ -138,9 +124,9 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
  <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Właściwość <xref:System.Data.OleDb.OleDbConnection> służy do pobierania lub ustawiania ciągu połączenia dla źródła danych OLE DB, takich jak program Microsoft Access. Można również utworzyć `OleDb` parametry połączenia w czasie wykonywania za pomocą <xref:System.Data.OleDb.OleDbConnectionStringBuilder> klasy.  
   
 ### <a name="oledb-connection-string-syntax"></a>Składnia ciągu połączenia OLE DB  
- Należy określić nazwę dostawcy <xref:System.Data.OleDb.OleDbConnection> parametry połączenia. Następujący ciąg połączenia łączy się z bazą danych programu Microsoft Access za pomocą dostawcy Jet. Należy pamiętać, że `UserID` i `Password` słowa kluczowe są opcjonalne, jeśli baza danych jest niezabezpieczone (ustawienie domyślne).  
+ Należy określić nazwę dostawcy <xref:System.Data.OleDb.OleDbConnection> parametry połączenia. Następujący ciąg połączenia łączy się z bazą danych programu Microsoft Access za pomocą dostawcy Jet. Należy pamiętać, że `User ID` i `Password` słowa kluczowe są opcjonalne, jeśli baza danych jest niezabezpieczone (ustawienie domyślne).  
   
-```  
+```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   

@@ -1,32 +1,20 @@
 ---
 title: '&lt;add&gt; w &lt;transportConfigurationType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b52345ae30ab56a6f34d2aa46f9836d67555b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d13ef51444e1600b0cea5d55a1b5e332e440bc6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;add&gt; w &lt;transportConfigurationType&gt;
 Ten element jest para klucza i wartości, które identyfikuje typ danego transportu.  
   
- \<System. ServiceModel >  
-\<ServiceHostingEnvironment >  
+ \<system.ServiceModel>  
+\<serviceHostingEnvironment >  
 \<transportConfigurationTypes >  
-\<Dodaj >  
+\<add>  
   
 ## <a name="syntax"></a>Składnia  
   

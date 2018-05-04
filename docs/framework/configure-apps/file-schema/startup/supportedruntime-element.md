@@ -1,9 +1,6 @@
 ---
-title: "&lt;supportedRuntime&gt; — Element"
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+title: '&lt;supportedRuntime&gt; — Element'
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
@@ -15,12 +12,11 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 544aaf5a58b743c437b42764bdea3c6b7eea7c74
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; — Element
 
@@ -63,23 +59,23 @@ Zalecane jest, aby testować aplikacje z każdą wersją programu .NET Framework
 ## <a name="runtime-version-values"></a>"wersja środowiska uruchomieniowego" wartości  
 `runtime` Atrybut określa wersję środowiska uruchomieniowego języka wspólnego (CLR), która jest wymagana dla danej aplikacji. Należy pamiętać, że wszystkie wersje v4.x .NET Framework określ `v4.0` CLR. Poniższa tabela zawiera listę prawidłowych wartości dla *wersja środowiska uruchomieniowego* wartość `version` atrybutu.  
 
-|Wersja programu .NET Framework|`version`atrybut|  
+|Wersja programu .NET Framework|`version` Atrybut|  
 |----------------------------|-------------------------|  
 |1.0|"v1.0.3705"|  
 |1.1|"v1.1.4322"|  
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0-4.7.1|"v4.0"|  
+|4.0 4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>wartości "identyfikator jednostki sku"
 
 `sku` Atrybut używa moniker platformy docelowej (TFM) w celu wskazania wersji programu .NET Framework, która dotyczy i wymaga do uruchomienia aplikacji. W poniższej tabeli przedstawiono prawidłowe wartości, które są obsługiwane przez `sku` atrybutu, począwszy od programu .NET Framework 4.
   
-|Wersja programu .NET Framework|`sku`atrybut|  
+|Wersja programu .NET Framework|`sku` Atrybut|  
 |----------------------------|---------------------|  
-|4.0|".NETFramework,Version=v4.0"|  
+|4.0|". NETFramework, Version = v4.0 "|  
 |4.0, profil klienta|".NETFramework,Version=v4.0,Profile=Client"|  
 |4.0, platform update 1|.NETFramework,Version=v4.0.1|  
 |4.0, profil klienta, aktualizacja 1|.NETFramework,Version=v4.0.1,Profile=Client|  
@@ -87,14 +83,15 @@ Zalecane jest, aby testować aplikacje z każdą wersją programu .NET Framework
 |4.0, profil klienta, aktualizacja 2|.NETFramework,Version=v4.0.2,Profile=Client|  
 |4.0, platform update 3|.NETFramework,Version=v4.0.3|  
 |4.0, profil klienta, aktualizacja 3|.NETFramework,Version=v4.0.3,Profile=Client|  
-|4.5|".NETFramework,Version=v4.5"|  
+|4.5|". NETFramework, Version = 4.5 "|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
-|4.5.2|".NETFramework,Version=v4.5.2"|  
+|4.5.2|". NETFramework, Version = v4.5.2 "|  
 |4.6|". NETFramework, Version = 4.6 "|  
 |4.6.1|". NETFramework, Version = v4.6.1 "|  
 |4.6.2|". NETFramework, Version = v4.6.2 "|  
 |4.7|". NETFramework, Version = v4.7 "|
 |4.7.1|".NETFramework,Version=v4.7.1"|
+|4.7.2|". NETFramework, Version = v4.7.2 "|
 
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak do określania wersji środowiska uruchomieniowego obsługiwanych w pliku konfiguracji. Plik konfiguracji wskazuje, że aplikacja jest przeznaczony dla .NET Framework 4.7.  

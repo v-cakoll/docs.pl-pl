@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
-ms.translationtype: MT
+ms.openlocfilehash: 5a888440a76119eae7e4c525942878e0aa6ddafc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest tekstem. Wewnętrznie, tekst jest przechowywana jako sekwencyjnych kolekcji tylko do odczytu z <xref:System.Char> obiektów. Brak nie przerywa null znak na końcu C# ciąg. w związku z tym ciągu języka C# może zawierać dowolną liczbę osadzonych znaki null ('\0'). <xref:System.String.Length%2A> Właściwości ciągu reprezentuje liczbę `Char` obiekty nie zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punktów kodowych Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
@@ -125,12 +125,14 @@ string s = String.Empty;
 |-----------|-----------------|  
 |[Instrukcje: modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md)|Ilustracja technik Przekształcanie ciągów i zmodyfikowania zawartości ciągów.|  
 |[Instrukcje: porównywanie ciągów](../../how-to/compare-strings.md)|Pokazuje, jak wykonać porządkowej i kultury porównań określonych ciągów.|  
-|[Porady: analizowanie ciągów za pomocą String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykładowy kod, który ilustruje sposób używania `String.Split` metodę, aby przeanalizować parametry.|  
+|[Instrukcje: łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Przedstawia różne sposoby dołączenia wielu ciągów w jeden.|
+|[Porady: analizowanie ciągów za pomocą String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które przedstawiają sposób użycia `String.Split` metodę, aby przeanalizować parametry.|  
 |[Porady: wyszukiwanie ciągów](../../how-to/search-strings.md)|Wyjaśniono, jak użyć funkcji wyszukiwania dla określonego tekstu lub wzorce w ciągach.|  
 |[Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak można bezpiecznie przeanalizować ciągu czy ma prawidłową wartość liczbową.|  
-|[Instrukcje: konwertowanie ciągu na DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Pokazuje, jak można przekonwertować ciągu, takich jak "2008-01-24" do <xref:System.DateTime?displayProperty=nameWithType> obiektu.|  
+|[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Zawiera opis funkcji interpolacji ciągu, która umożliwia wygodne składni formatowanie ciągów.|
 |[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które używają <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> metody wykonywać podstawowe operacje na ciągach.|  
-|[Analizowanie ciągów](../../../../docs/standard/base-types/parsing-strings.md)|Opisuje sposób wstawiania znaków lub pustych miejsc w ciągu.|  
+|[Analizowanie ciągów](../../../standard/base-types/parsing-strings.md)|Opisuje sposób konwertowania ciągu reprezentacje typów podstawowych .NET do wystąpień odpowiednie typy.|  
+|[Analizowanie ciągów daty i godziny w .NET](../../../standard/base-types/parsing-datetime.md)|Pokazuje, jak można przekonwertować ciągu, takich jak "2008-01-24" do <xref:System.DateTime?displayProperty=nameWithType> obiektu.|  
 |[Porównywanie ciągów](../../../../docs/standard/base-types/comparing.md)|Zawiera informacje na temat sposobu porównywania ciągów oraz przykłady w języku C# i Visual Basic.|  
 |[Używanie klasy StringBuilder](../../../standard/base-types/stringbuilder.md)|Opisuje sposób tworzenia i modyfikowania obiektów ciąg dynamiczny za pomocą <xref:System.Text.StringBuilder> klasy.|  
 |[LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Zawiera informacje dotyczące sposobu wykonywania różnych operacji na ciągach przy użyciu zapytań LINQ.|  

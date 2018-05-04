@@ -1,27 +1,15 @@
 ---
-title: "Wyświetlanie danych w DataTable"
-ms.custom: 
+title: Wyświetlanie danych w DataTable
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5d39d2a856a40b5ea20832a544ede360313309d3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Wyświetlanie danych w DataTable
 Można uzyskać dostępu do zawartości <xref:System.Data.DataTable> za pomocą **wierszy** i **kolumn** kolekcji **DataTable**. Można również użyć <xref:System.Data.DataTable.Select%2A> metodę zwracanie podzbiorów danych w **DataTable** zgodnie z kryteriami, w tym kryteria wyszukiwania, porządek sortowania i wiersza stanu. Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody **kolekcji DataRowCollection** podczas wyszukiwania dla konkretnego wiersza przy użyciu wartości klucza podstawowego.  
@@ -36,13 +24,13 @@ Można uzyskać dostępu do zawartości <xref:System.Data.DataTable> za pomocą 
 |Wartość DataViewRowState|Opis|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Bieżące bez zmian, dodano i zmodyfikowanych wierszy w tym wiersze.|  
-|**Usunięte**|Wiersz usunięty.|  
+|**usunięte**|Wiersz usunięty.|  
 |**ModifiedCurrent**|W bieżącej wersji, która jest zmodyfikowanej wersji oryginalnych danych. (Zobacz **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|Z oryginalną wersją wszystkich zmodyfikowanych wierszy. Bieżąca wersja jest dostępna za pomocą **ModifiedCurrent**.|  
 |**Dodane**|Nowy wiersz.|  
 |**Brak**|Brak.|  
 |**OriginalRows**|Oryginalny wiersze, w tym bez zmian i usuniętych wierszy.|  
-|**Unchanged**|Niezmieniony.|  
+|**Bez zmian**|Niezmieniony.|  
   
  W poniższym przykładzie **DataSet** obiektu jest filtrowany, tak aby tylko pracy z wierszami którego **DataViewRowState** ustawiono **CurrentRows**.  
   

@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Szczegóły|W programie .NET Framework 4.5, wywoływania <code>System.Windows.Forms.MessageBox.Show</code> z <xref:System.Windows.UIElement.PreviewLostKeyboardFocus> obsługi spowoduje ponowne uruchomienie po zamknięciu okna komunikatu może spowodować nieskończoną pętlę komunikatów programu obsługi.|
-|Sugestia|Dostępne są dwie opcje w celu obejścia tego problemu —<ol><li>Można go uniknąć przez wywołanie metody <code>System.Windows.MessageBox.Show</code> zamiast <code>System.Windows.Forms.MessageBox.Show</code>.</li><li>Można go uniknąć przez wyświetlanie pola komunikatu z <xref:System.Windows.UIElement.LostKeyboardFocus> obsługi zdarzeń (w przeciwieństwie do <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name> obsługi zdarzeń).</li></ol>|
+|Szczegóły|W programie .NET Framework 4.5, wywoływania <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> z <xref:System.Windows.UIElement.PreviewLostKeyboardFocus> obsługi spowoduje ponowne uruchomienie po zamknięciu okna komunikatu może spowodować nieskończoną pętlę komunikatów programu obsługi.|
+|Sugestia|Dostępne są dwie opcje w celu obejścia tego problemu:<ol><li>Można go uniknąć przez wywołanie metody <xref:System.Windows.MessageBox.Show%2A?displayProperty=nameWithType> zamiast <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>.</li><li>Można go uniknąć przez wyświetlanie pola komunikatu z <xref:System.Windows.UIElement.LostKeyboardFocus?displayProperty=nameWithType> obsługi zdarzeń (w przeciwieństwie do <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name> obsługi zdarzeń).</li></ol>|
 |Zakres|Krawędź|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

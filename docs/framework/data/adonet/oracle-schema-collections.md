@@ -1,24 +1,12 @@
 ---
-title: "Kolekcje schematów Oracle"
-ms.custom: 
+title: Kolekcje schematów Oracle
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Kolekcje schematów Oracle
 Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
@@ -69,7 +57,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |ID|Wartość dziesiętna|Numer kolumny sekwencji, jak utworzyć.|  
 |TYP DANYCH|String|Typ danych kolumny.|  
 |DŁUGOŚĆ|Wartość dziesiętna|Długość kolumny w bajtach.|  
-|PRECISION|Wartość dziesiętna|Dokładność dla typu danych Liczba; binarny precyzja dla typu danych typu FLOAT, wartość null dla wszystkich innych typów danych.|  
+|DOKŁADNOŚĆ|Wartość dziesiętna|Dokładność dla typu danych Liczba; binarny precyzja dla typu danych typu FLOAT, wartość null dla wszystkich innych typów danych.|  
 |SKALI|Wartość dziesiętna|Cyfr z prawej strony punktu dziesiętnego w kilku.|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|String|Określa, czy kolumna zezwala na wartości null. Wartość jest N Jeśli istnieje ograniczenie NOT NULL w kolumnie lub kolumna jest częścią klucza podstawowego.|  
   
@@ -83,7 +71,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |TABLE_OWNER|String|Właściciel obiektu indeksowanego.|  
 |TABLE_NAME|String|Nazwa obiektu indeksowanego.|  
 |TABLE_TYPE|String|Typ obiektu indeksowanego (na przykład tabeli, KLASTRA).|  
-|UNIQUENESS|String|Określa, czy indeks jest unikatowy lub NONUNIQUE.|  
+|UNIKATOWOŚĆ|String|Określa, czy indeks jest unikatowy lub NONUNIQUE.|  
 |KOMPRESJA|String|Określa, czy indeks jest włączone lub wyłączone.|  
 |PREFIX_LENGTH|Wartość dziesiętna|Liczba kolumn w prefiks klucza kompresji.|  
 |TABLESPACE_NAME|String|Nazwa obszaru tabel zawierających indeks.|  
@@ -106,16 +94,16 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |AVG_LEAF_BLOCKS_PER_KEY|Wartość dziesiętna|Średnia liczba bloków typu liść, w których występuje każdy różne wartości w indeksie jest zaokrąglana do najbliższej liczby całkowitej. Indeksy, które wymuszają ograniczenia UNIQUE i PRIMARY KEY ta wartość jest zawsze 1.|  
 |AVG_DATA_BLOCKS_PER_KEY|Wartość dziesiętna|Średnia liczba danych blokuje w tabeli, która jest wskazywana przez różne wartości w indeksie zaokrąglona do najbliższej liczby całkowitej. Ta statystyka jest to średnia liczba bloków danych, zawierające wiersze zawierające podanej wartości dla indeksowanego kolumn.|  
 |CLUSTERING_FACTOR|Wartość dziesiętna|Wskazuje wielkość kolejność wierszy w tabeli na podstawie wartości indeksu.|  
-|STATUS|String|Określa, czy niepartycjonowany indeks jest PRAWIDŁOWY lub UNUSABLE.|  
+|STAN|String|Określa, czy niepartycjonowany indeks jest PRAWIDŁOWY lub UNUSABLE.|  
 |NUM_ROWS|Wartość dziesiętna|Liczba wierszy w indeksie.|  
 |SAMPLE_SIZE|Wartość dziesiętna|Rozmiar próbki używane do analizowania indeksu.|  
 |LAST_ANALYZED|DataGodzina|Data ostatniego przeanalizowane tego indeksu.|  
 |STOPNIA|String|Liczba wątków dla każdego wystąpienia skanowania indeksu.|  
 |WYSTĄPIENIA|String|Liczba wystąpień, w którym indeksów do przeskanowania.|  
-|PODZIELONE NA PARTYCJE|String|Określa, czy ten indeks jest podzielona na partycje (tak &#124; NIE).|  
+|PODZIELONE NA PARTYCJE|String|Określa, czy ten indeks jest podzielona na partycje (tak &#124; nr).|  
 |TYMCZASOWE|String|Określa, czy indeks znajduje się w tabeli tymczasowej.|  
-|WYGENEROWANY|String|Czy nazwę indeksu systemu wygenerowaniu (T &#124; N).|  
-|POMOCNICZY|String|Określa, czy indeks jest obiektem dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i kasety danych (T &#124; N).|  
+|WYGENEROWANY|String|Określa, czy nazwa indeksu jest wygenerowany przez system (Y&#124;N).|  
+|POMOCNICZY|String|Określa, czy indeks jest obiektem dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i kasety danych (Y&#124;N).|  
 |BUFFER_POOL|String|Nazwa domyślnej puli bufora używanego do bloków indeksu.|  
 |USER_STATS|String|Określa, czy wprowadzono statystyki bezpośrednio przez użytkownika.|  
 |CZAS TRWANIA|String|Wskazuje czas trwania tabeli tymczasowej: 1) SYS$ sesji: wiersze zostaną zachowane w czasie trwania sesji, 2) SYS$ transakcji: wiersze zostaną usunięte po zatwierdzenie, Null 3) dla tabeli trwałych.|  
@@ -150,14 +138,14 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
 |SUBOBJECT_NAME|String|Nazwa podobiektów (na przykład partycji).|  
-|OBJECT_ID|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
+|IDENTYFIKATOR OBIEKTU|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
 |DATA_OBJECT_ID|Wartość dziesiętna|Numer obiekt segmentu, która zawiera obiekt słownika.|  
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU|String|Sygnatura czasowa specyfikacji obiektu (dane znaków).|  
-|STATUS|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
+|STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
 |TYMCZASOWE|String|Określa, czy obiekt jest tymczasowe (bieżącej sesji można znaleźć tylko te dane, które go umieścić w ten sam obiekt).|  
-|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &#124; N).|  
-|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (T &#124; N).|  
+|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &AMP;#124; N).|  
+|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (Y &#124; N).|  
 |UTWORZONE|DataGodzina|Data utworzenia obiektu.|  
   
 ## <a name="sequences"></a>Sekwencje  
@@ -223,16 +211,16 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
 |SUBOBJECT_NAME|String|Nazwa podobiektów (na przykład partycji).|  
-|OBJECT_ID|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
+|IDENTYFIKATOR OBIEKTU|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
 |DATA_OBJECT_ID|Wartość dziesiętna|Numer obiekt segmentu, która zawiera obiekt słownika.|  
 |OBJECT_TYPE|String|Typ obiektu.|  
 |UTWORZONE|DataGodzina|Data utworzenia obiektu.|  
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU|String|Sygnatura czasowa specyfikacji obiektu (dane znakowe)|  
-|STATUS|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
+|STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
 |TYMCZASOWE|String|Określa, czy obiekt jest tymczasowe (bieżącej sesji można znaleźć tylko te dane, które go umieścić w ten sam obiekt).|  
-|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &#124; N).|  
-|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (T &#124; N).|  
+|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &AMP;#124; N).|  
+|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (Y &#124; N).|  
   
 ## <a name="packages"></a>Pakiety  
   
@@ -241,14 +229,14 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
 |SUBOBJECT_NAME|String|Nazwa podobiektów (na przykład partycji).|  
-|OBJECT_ID|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
+|IDENTYFIKATOR OBIEKTU|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
 |DATA_OBJECT_ID|Wartość dziesiętna|Numer obiekt segmentu, która zawiera obiekt słownika.|  
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU|String|Sygnatura czasowa specyfikacji obiektu (dane znaków).|  
-|STATUS|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
+|STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
 |TYMCZASOWE|String|Określa, czy obiekt jest tymczasowe (bieżącej sesji można znaleźć tylko te dane, które go umieścić w ten sam obiekt).|  
-|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &#124; N).|  
-|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (T &#124; N).|  
+|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &AMP;#124; N).|  
+|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (Y &#124; N).|  
 |UTWORZONE|DataGodzina|Data utworzenia obiektu.|  
   
 ## <a name="packagebodies"></a>PackageBodies  
@@ -258,14 +246,14 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
 |SUBOBJECT_NAME|String|Nazwa podobiektów (na przykład partycji).|  
-|OBJECT_ID|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
+|IDENTYFIKATOR OBIEKTU|Wartość dziesiętna|Liczba obiekt słownika obiektu.|  
 |DATA_OBJECT_ID|Wartość dziesiętna|Numer obiekt segmentu, która zawiera obiekt słownika.|  
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU|String|Sygnatura czasowa specyfikacji obiektu (dane znaków).|  
-|STATUS|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
+|STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub brak).|  
 |TYMCZASOWE|String|Określa, czy obiekt jest tymczasowe (bieżącej sesji można znaleźć tylko te dane, które go umieścić w ten sam obiekt).|  
-|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &#124; N).|  
-|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (T &#124; N).|  
+|WYGENEROWANY|String|Znajdował się wygenerowany przez system tego obiektu? (Y &AMP;#124; N).|  
+|POMOCNICZY|String|Czy to jest obiekt dodatkowej tworzone przez metodę ODCIIndexCreate Oracle9i filtra danych (Y &#124; N).|  
 |UTWORZONE|DataGodzina|Data utworzenia obiektu.|  
   
 ## <a name="arguments"></a>Argumenty  
@@ -297,7 +285,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |R_OWNER|String|Właściciel tabeli określonej w ograniczeniu referencyjnym.|  
 |R_CONSTRAINT_NAME|String|Nazwa definicji unikatowego ograniczenia dla tabeli.|  
 |DELETE_RULE|String|Usuń regułę dla ograniczenia referencyjnego (CASCADE lub NO ACTION).|  
-|STATUS|String|Stan wymuszenia ograniczenia (włączone lub wyłączone).|  
+|STAN|String|Stan wymuszenia ograniczenia (włączone lub wyłączone).|  
 |DEFERRABLE|String|Określa, czy ograniczenie jest deferrable.|  
 |SPRAWDZANIA POPRAWNOŚCI|String|Określa, czy wszystkie dane przestrzega ograniczenia (WERYFIKOWANE lub NIEZWERYFIKOWANY).|  
 |WYGENEROWANY|String|Określa, czy nazwy ograniczenia użytkownika lub jest wygenerowany przez system.|  
@@ -318,7 +306,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |R_OWNER|String|Właściciel tabeli określonej w ograniczeniu referencyjnym.|  
 |R_CONSTRAINT_NAME|String|Nazwa definicji unikatowego ograniczenia dla tabeli.|  
 |DELETE_RULE|String|Usuń regułę dla ograniczenia referencyjnego (CASCADE lub NO ACTION).|  
-|STATUS|String|Stan wymuszenia ograniczenia (włączone lub wyłączone).|  
+|STAN|String|Stan wymuszenia ograniczenia (włączone lub wyłączone).|  
 |DEFERRABLE|String|Określa, czy ograniczenie jest deferrable.|  
 |SPRAWDZANIA POPRAWNOŚCI|String|Określa, czy wszystkie dane przestrzega ograniczenia (WERYFIKOWANE lub NIEZWERYFIKOWANY).|  
 |WYGENEROWANY|String|Określa, czy nazwy ograniczenia użytkownika lub jest wygenerowany przez system.|  
@@ -342,7 +330,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |R_OWNER|String|Właściciel tabeli określonej w ograniczeniu referencyjnym.|  
 |R_CONSTRAINT_NAME|String|Nazwa definicji unikatowego ograniczenia dla tabeli.|  
 |DELETE_RULE|String|Usuń regułę dla ograniczenia referencyjnego (CASCADE lub NO ACTION).|  
-|STATUS|String|Stan wymuszenia ograniczenia (włączone lub wyłączone).|  
+|STAN|String|Stan wymuszenia ograniczenia (włączone lub wyłączone).|  
 |SPRAWDZANIA POPRAWNOŚCI|String|Określa, czy wszystkie dane przestrzega ograniczenia (WERYFIKOWANE lub NIEZWERYFIKOWANY).|  
 |WYGENEROWANY|String|Określa, czy nazwy ograniczenia użytkownika lub jest wygenerowany przez system.|  
 |POLEGAĆ|String|Określa, czy włączone jest wymuszane lub niewymuszone.|  
@@ -367,7 +355,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa procedury lub funkcji.|  
 |PACKAGE_NAME|String|Nazwa procedury lub funkcji.|  
-|OBJECT_ID|Wartość dziesiętna|Liczba obiektów obiektu.|  
+|IDENTYFIKATOR OBIEKTU|Wartość dziesiętna|Liczba obiektów obiektu.|  
 |PRZECIĄŻENIA|String|Przeciążenia Unikatowy identyfikator.|  
 |ARGUMENT_NAME|String|Nazwa argumentu.|  
 |STANOWISKO|Wartość dziesiętna|Pozycja na liście argument lub wartość null dla wartości zwracanej funkcji.|  

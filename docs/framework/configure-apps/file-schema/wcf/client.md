@@ -1,32 +1,20 @@
 ---
-title: '&lt;klienta&gt;'
-ms.custom: 
+title: '&lt;Klienta&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7d52d74c36ea1b1d722d781f554f8cc6691d53e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8a006d3dee4149569b3f5b573d9d765504b0d65
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltclientgt"></a>&lt;klienta&gt;
+# <a name="ltclientgt"></a>&lt;Klienta&gt;
 `client` Element definiuje listę punktów końcowych, które klient może nawiązać połączenia.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<Klient >  
   
 ## <a name="syntax"></a>Składnia  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Element główny wszystkich elementów konfiguracji systemu Windows Communication Foundation (WCF).|  
+|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Element główny wszystkich elementów konfiguracji systemu Windows Communication Foundation (WCF).|  
   
 ## <a name="remarks"></a>Uwagi  
  `client` Sekcja definiuje listę punktów końcowych, które klient może nawiązać połączenie. Każdy punkt końcowy wymienione w sekcji klienta definiuje własną powiązanie, zachowania i kontraktu. Jest unikatowo identyfikowana przez kombinację `name` i `contract` atrybutów. Określa kod klienta `name` nawiązać połączenia z punktu końcowego usługi, który implementuje klienta. Jeśli `name` atrybut nie jest określony, punkt końcowy działa jako domyślnego punktu końcowego dla kontraktu ją implementuje.  

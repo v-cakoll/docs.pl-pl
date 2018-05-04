@@ -1,27 +1,15 @@
 ---
 title: Znajdowanie wierszy
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 43703ead9d38ea1cf02539f12479e9228d7eacd4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 57ed6045ca0ea9f9579640839e8198716cf79fe0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="finding-rows"></a>Znajdowanie wierszy
 Możesz wyszukać wierszy, zgodnie z ich wartości klucza sortowania za pomocą <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metody <xref:System.Data.DataView>. Uwzględniana wielkość liter wyszukiwania wartości w **znaleźć** i **FindRows** metod jest określany przez **CaseSensitive** właściwości podstawowych <xref:System.Data.DataTable>. Wartości wyszukiwania musi być zgodna istniejące wartości klucza sortowania w całości w celu zwrócony wynik.  

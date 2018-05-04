@@ -1,31 +1,19 @@
 ---
 title: '&lt;channelPoolSettings&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09496add0adcc11756b6aae01a0236fe590f819f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad722fbc34617ef7f424d5f1c4418e1e1cb45344
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 Określa ustawienia puli kanału dla niestandardowego powiązania.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<powiązania >  
-\<customBinding >  
+\<customBinding>  
 \<Powiązanie >  
 \<oneWay >  
 \<channelPoolSettings >  
@@ -62,7 +50,7 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
 ## <a name="remarks"></a>Uwagi  
  Przydziały są używane jako mechanizm zasad zapobiegających zużycie zasobów nadmierne. Zapobiegają one przez ataków typu odmowa usługi (DOS), które są złośliwe lub przypadkowe. Użyj tego elementu, ustawiając przydziały kanału w niestandardowym kanale.  
   
- `ChannelPoolSettings`Określa trzy przydziały:  
+ `ChannelPoolSettings` Określa trzy przydziały:  
   
 -   `idleTimeout` Przydziału służy do ograniczenie liczby ataków typu odmowa usługi (DOS) na serwerze, które są oparte na zajmowania zasobów przez dłuższy czas. Na komputerze klienckim ustawienie poprawną wartość może zwiększyć niezawodność nawiązywać połączenia z usługą. Wartość domyślna jest oparta na konserwatywnie niewielkie alokacji zasobów. Jest ona odpowiednia dla Środowisko deweloperskie i scenariusze małych instalacji. Administratorzy usługi powinni sprawdzić wartość, jeśli instalacja kończy się zasoby lub połączeń są ograniczeni niezależnie od dostępności dodatkowych zasobów.  
   
@@ -80,4 +68,4 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

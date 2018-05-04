@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> Ma nie gwarancji, że obiekty serializowane w jednym .NET Framework w wersji pomyślnie przeprowadzić deserializacji w innej wersji. W szczególności niektóre uporządkowane kolekcji (takie jak <xref:System.Collections.Hashtable?displayProperty=name>) dodany członków między 4.0 i 4.5 w taki sposób, że obiekty tego typu nie można deserializować .NET 4.0, jeśli zostały one serializowany z .NET 4.5. Należy pamiętać, że jeśli dane serializowane jest serializacji i deserializacji o tej samej wersji .NET Framework, problem nie nastąpi.|
+|Szczegóły|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> Ma nie gwarancji, że obiekty serializowane w jednym .NET Framework w wersji pomyślnie przeprowadzić deserializacji w innej wersji. W szczególności niektóre uporządkowane kolekcji (takie jak <xref:System.Collections.Hashtable?displayProperty=name>) dodane elementy członkowskie między 4.0 i 4.5 w taki sposób, że obiekty tego typu nie można deserializować z programu .NET Framework 4.0, jeśli zostały one serializowany z programu .NET Framework 4.5. Należy pamiętać, że jeśli dane serializowane jest serializacji i deserializacji o tej samej wersji .NET Framework, problem nie nastąpi.|
 |Sugestia|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> serializacji powinna zostać zastąpiona <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> szeregowanie lub <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> pozwala uzyskać odporność na zmiany .NET Framework.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|

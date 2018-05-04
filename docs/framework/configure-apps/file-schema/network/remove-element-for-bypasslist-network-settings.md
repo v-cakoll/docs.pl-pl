@@ -1,13 +1,6 @@
 ---
-title: "&lt;Usuń&gt; elementu bypasslist — (ustawienia sieciowe)"
-ms.custom: 
+title: '&lt;Usuń&gt; elementu bypasslist — (ustawienia sieciowe)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
@@ -17,22 +10,20 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a385401217c10a316268f48757e46e3d0cfea09c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Usuń&gt; elementu bypasslist — (ustawienia sieciowe)
 Usuwa adres IP lub nazwa DNS lista obejść serwerów proxy.  
   
  \<Konfiguracja >  
-\<System.NET >  
+\<system.net>  
 \<defaultProxy — >  
 \<bypasslist — >  
 \<Usuń >  

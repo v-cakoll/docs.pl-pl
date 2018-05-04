@@ -1,33 +1,21 @@
 ---
 title: '&lt;baseAddressPrefixFilters&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1c2e5e887ceaadf3db6f51991d53c3db8fb6ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8fffcd02b1c08172b184225f13a1852414cf429a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
-Reprezentuje kolekcję elementów konfiguracji, określających przebiegu filtry, które zawierają mechanizm wyboru odpowiednich powiązań usług Internet Information Services (IIS), odnośnie do hostowania [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] aplikacji w usługach IIS.  
+Reprezentuje kolekcję elementów, które określają przechodzą przez filtry, które zawierają mechanizm wyboru odpowiednich powiązań usług Internet Information Services (IIS), odnośnie do hostowania aplikacji Windows Communication Foundation (WCF) w usługach IIS konfiguracji.  
   
 > [!WARNING]
 >  \<baseAddressPrefixFilters > nie rozpoznano "localhost", zamiast tego użyj nazwy FQDN komputera.  
   
- \<System. ServiceModel >  
-\<ServiceHostingEnvironment >  
+ \<system.ServiceModel>  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +37,7 @@ Reprezentuje kolekcję elementów konfiguracji, określających przebiegu filtry
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|Dodaje element konfiguracji, który określa filtr prefiks dla adres podstawowy używany przez hosta usługi.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|Dodaje element konfiguracji, który określa filtr prefiks dla adres podstawowy używany przez hosta usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

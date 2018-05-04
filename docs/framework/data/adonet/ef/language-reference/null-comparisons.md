@@ -1,27 +1,15 @@
 ---
-title: "Porównania wartości null"
-ms.custom: 
+title: Porównania wartości null
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9168051a87b1cd2c0cccaa54f1d688aca018b731
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f4d4f6cdbb5ac6bae3af66d46599ec65aaae22f4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="null-comparisons"></a>Porównania wartości null
 A `null` wartość w źródle danych wskazuje, że wartość jest nieznany. W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] kwerendy, można sprawdzić, tak aby niektóre obliczenia wartości null lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowy lub inną niż null, danych. Semantyka null CLR, jednak mogą się różnić od null semantykę źródła danych. Większość baz danych używa wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie zostało oszacowane jako `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI wartości null, ale nie zawsze jest wielkość liter.  

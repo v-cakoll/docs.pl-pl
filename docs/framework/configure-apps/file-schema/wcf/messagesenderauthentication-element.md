@@ -1,24 +1,12 @@
 ---
 title: '&lt;messageSenderAuthentication&gt;. element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20d452a6aa9047032d989d62d6c1121d7edc5ee3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 898569796c65a7999583f4faba9f11a6172a5af8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt;. element
 Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.  
@@ -28,7 +16,7 @@ Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.
  \<system.ServiceModel>  
 \<zachowania >  
 \<endpointBehaviors>  
-\<behavior>  
+\<zachowanie >  
 \<clientCredentials>  
 \<peer >  
 \<messageSenderAuthentication>  
@@ -60,13 +48,13 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|String|Opcjonalny. Określa nazwę typu i zestawu i innych danych można znaleźć typu. Co najmniej nazwę przestrzeni nazw i typ są wymagane. Zawiera dodatkowe informacje: Nazwa zestawu, numer wersji, kultury i tokenu klucza publicznego.|  
+|String|Opcjonalna. Określa nazwę typu i zestawu i innych danych można znaleźć typu. Co najmniej nazwę przestrzeni nazw i typ są wymagane. Zawiera dodatkowe informacje: Nazwa zestawu, numer wersji, kultury i tokenu klucza publicznego.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>tryb certificateValidationMode atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Opcjonalny. Jedną z następujących wartości: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Wartość domyślna to `ChainTrust`. Wartość domyślna to `ChainTrust`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Wyliczenie|Opcjonalna. Jedną z następujących wartości: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Wartość domyślna to `ChainTrust`. Wartość domyślna to `ChainTrust`.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode atrybutu  
   

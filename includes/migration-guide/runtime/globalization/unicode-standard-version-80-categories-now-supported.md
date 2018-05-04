@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Szczegóły|W programie .NET Framework 4.6.2 danych Unicode w ramach został uaktualniony z wersji standard 6.3 Unicode do wersji 8.0.  Podczas żądania Kategoria znaków Unicode w programie .NET Framework 4.6.2, niektóre wyniki mogą być niezgodne wyniki w poprzednich wersjach systemu .NET Framework.  Ta zmiana przede wszystkim ma wpływ sylab Cherokee i nowe znaki samogłoski Tai artość i znaczniki sygnału.|
+|Szczegóły|W programie .NET Framework 4.6.2 został uaktualniony danych Unicode zgodne ze standardem Unicode wersji 6.3 do wersji 8.0.  Podczas żądania kategorie znaków Unicode w programie .NET Framework 4.6.2, niektóre wyniki mogą być niezgodne wyniki w poprzednich wersjach systemu .NET Framework.  Ta zmiana przede wszystkim ma wpływ sylab Cherokee i nowe znaki samogłoski Tai artość i znaczniki sygnału.|
 |Sugestia|Przegląd kodu i Usuń/Zmień logikę, która jest zależna od ustalony kategorie znaków Unicode.|
 |Zakres|Pomocnicza|
 |Wersja|4.6.2|

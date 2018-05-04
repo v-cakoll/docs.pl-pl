@@ -1,13 +1,6 @@
 ---
-title: "Porady: wyświetlanie zawartości zestawu"
-ms.custom: 
+title: 'Porady: wyświetlanie zawartości zestawu'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,13 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9c12c4811e8b23e86fca3960acdb4da06e38fbe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eadc320483d46503e7331ef57b0cc29b08f13f4c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-view-assembly-contents"></a>Porady: wyświetlanie zawartości zestawu
 Można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić informacje o języku pośrednim (MSIL) firmy Microsoft w pliku. Jeśli badane plik jest zestawem, te informacje mogą uwzględniać zestaw atrybutów, a także odwołania do innych modułów i zestawów. Informacje te mogą być pomocne w określeniu, czy plik jest zestawem lub część zestawu i określa, czy plik ma odwołania do innych modułach ani zestawów.  
@@ -85,14 +75,14 @@ Można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm
   
 |Dyrektywy|Opis|  
 |---------------|-----------------|  
-|**Deklaracja extern \<**  *nazwy zestawu***>**|Określa innego zestawu, który zawiera elementy, które odwołuje się moduł bieżący (w tym przykładzie `mscorlib`).|  
-|**.PublicKeyToken \<**  *tokenu***>**|Określa token klucza rzeczywiste przywoływanego zestawu.|  
-|**.ver \<**  *numer wersji***>**|Określa numer wersji przywoływanego zestawu.|  
-|**Deklaracja \<**  *nazwy zestawu***>**|Określa nazwę zestawu.|  
-|**algorytm .hash \<**  *wartość int32***>**|Określa algorytm wyznaczania wartości skrótu używany.|  
-|**.ver \<**  *numer wersji***>**|Określa numer wersji zestawu.|  
-|**.module \<**  *nazwę pliku***>**|Określa nazwę modułów, które tworzą zestaw. W tym przykładzie zestaw składa się z tylko jednego pliku.|  
-|**.Subsystem \<**  *wartość***>**|Określa środowisko aplikacji wymagane przez program. W tym przykładzie wartość 3 oznacza, że ten plik wykonywalny jest uruchamiane z poziomu konsoli.|  
+|**Deklaracja extern \<**  *nazwy zestawu* **>**|Określa innego zestawu, który zawiera elementy, które odwołuje się moduł bieżący (w tym przykładzie `mscorlib`).|  
+|**.PublicKeyToken \<**  *tokenu* **>**|Określa token klucza rzeczywiste przywoływanego zestawu.|  
+|**.ver \<**  *numer wersji* **>**|Określa numer wersji przywoływanego zestawu.|  
+|**Deklaracja \<**  *nazwy zestawu* **>**|Określa nazwę zestawu.|  
+|**algorytm .hash \<**  *wartość int32* **>**|Określa algorytm wyznaczania wartości skrótu używany.|  
+|**.ver \<**  *numer wersji* **>**|Określa numer wersji zestawu.|  
+|**.module \<**  *nazwy pliku* **>**|Określa nazwę modułów, które tworzą zestaw. W tym przykładzie zestaw składa się z tylko jednego pliku.|  
+|**.Subsystem \<**  *wartości* **>**|Określa środowisko aplikacji wymagane przez program. W tym przykładzie wartość 3 oznacza, że ten plik wykonywalny jest uruchamiane z poziomu konsoli.|  
 |**.corflags**|Obecnie zastrzeżone pole w metadanych.|  
   
  Manifest zestawu może zawierać wiele różnych dyrektyw, w zależności od zestawu zawartości. Obszernej listy dyrektywy w manifeście zestawu dokumentacji ECMA, szczególnie "Partycji II: metadane definicji i semantyki" i "III: CIL instrukcji zestawu partycji". Dokumentacja jest dostępna w trybie online; zobacz [ECMA C# i wspólne normy infrastruktury języka](http://go.microsoft.com/fwlink/?LinkID=99212) w witrynie MSDN i [standardowe ECMA-335 - infrastruktury języka wspólnego (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) w witrynie sieci Web międzynarodowej Ecma.  

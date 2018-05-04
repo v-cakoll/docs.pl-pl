@@ -1,24 +1,12 @@
 ---
-title: "Porady: Użyj EdmGen.exe, aby wygenerować kod warstwy obiektu"
-ms.custom: 
+title: 'Porady: Użyj EdmGen.exe, aby wygenerować kod warstwy obiektu'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 394215b6e532013953fd1850ea8dbe973bdd960a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cd919f382096af6ff3e5e27225619767f3922ff0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Porady: Użyj EdmGen.exe, aby wygenerować kod warstwy obiektu
 W tym temacie przedstawiono sposób użycia [Generator EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) narzędzie do generowania kodu warstwy obiektu oparte na pliku CSDL.  

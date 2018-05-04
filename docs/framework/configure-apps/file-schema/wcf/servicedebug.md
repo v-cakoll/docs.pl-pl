@@ -1,31 +1,19 @@
 ---
 title: '&lt;serviceDebug&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cdd5d8a05354ad6f0df8343d546fd6cd1e8eac4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1e9a8a310a2b3154568b20ea225faead1c71d64f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
-Określa funkcje informacji pomocy i debugowania dla [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usługi.  
+Określa funkcje informacji pomocy i debugowania dla usługi Windows Communication Foundation (WCF).  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<zachowanie >  
 \<serviceDebug >  
   

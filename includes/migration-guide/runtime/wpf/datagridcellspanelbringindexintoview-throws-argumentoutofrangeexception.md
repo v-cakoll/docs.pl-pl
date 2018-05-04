@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Szczegóły|<xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> będzie działać asynchronicznie, gdy włączona jest wirtualizacja kolumny, ale szerokości kolumn, które nie zostały jeszcze określić.  Jeśli kolumny zostaną usunięte przed sytuacji asynchroniczne <xref:System.ArgumentOutOfRangeException?displayProperty=name> może wystąpić.|
-|Sugestia|Jeden z następujących czynności:<ol><li>Uaktualnij platformę .NET 4.7.</li><li>Zainstaluj najnowsze obsługi poprawki dla platformy .NET 4.6.2.</li><li>Unikaj usuwanie kolumn do asynchronicznego odpowiedzi na <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> zostało ukończone.</li></ol>|
+|Sugestia|Jeden z następujących czynności:<ol><li>Uaktualnij do platformy .NET Framework 4.7.</li><li>Instalowanie obsługi najnowsze poprawki dla programu .NET Framework 4.6.2.</li><li>Unikaj usuwanie kolumn do asynchronicznego odpowiedzi na <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> zostało ukończone.</li></ol>|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
 |Typ|Środowisko uruchomieniowe|

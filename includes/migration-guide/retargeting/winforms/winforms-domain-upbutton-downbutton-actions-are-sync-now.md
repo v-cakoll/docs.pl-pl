@@ -1,0 +1,11 @@
+### <a name="winforms-domain-upbutton-and-downbutton-actions-are-in-sync-now"></a>Akcje upbutton i downbutton domeny w kontrolce są teraz zsynchronizowane
+
+|   |   |
+|---|---|
+|Szczegóły|W poprzednich wersjach i .NET Framework 4.7.1 <xref:System.Windows.Forms.DomainUpDown> formantu <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> akcji jest ignorowana, gdy tekst formantu jest obecny i dewelopera jest wymagany do użycia <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> akcji w formancie przed użyciem <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> akcji. Począwszy od programu .NET Framework 4.7.2 zarówno <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> i <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> akcje pracować wielel osób, w tym scenariuszu i pozostają zsynchronizowane.|
+|Sugestia|Aby dla aplikacji, aby korzystać z tych zmian, należy uruchomić w programie .NET Framework 4.7.2 lub nowszym. Aplikacji mogą korzystać z tych zmian w jednym z następujących sposobów:<ul><li>Jest ponownie kompilowana docelową programu .NET Framework 4.7.2. Ta zmiana jest domyślnie włączona w aplikacji formularzy systemu Windows, które odnoszą się do programu .NET Framework 4.7.2 lub nowszej.</li><li>Zdecyduje się poza starsza przewijanie zachowanie przez dodanie poniższego [przełącznika AppContext](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) do <code>&lt;runtime&gt;</code> sekcji pliku konfiguracji aplikacji i ustawieniem dla niego <code>false</code>, jak pokazano na poniższym przykładzie.</li></ul><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Zakres|Krawędź|
+|Wersja|4.7.2|
+|Typ|Przekierowania|
+|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType></li><li><xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType></li></ul>|
+

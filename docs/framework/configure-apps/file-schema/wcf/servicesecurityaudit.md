@@ -1,26 +1,14 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczenia podczas operacji usługi.  
@@ -28,7 +16,7 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczenia podcz
  \<system.ServiceModel>  
 \<zachowania >  
 \<serviceBehaviors>  
-\<behavior>  
+\<zachowanie >  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Składnia  
@@ -60,10 +48,10 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczenia podcz
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element Wyświetl służy do inspekcji [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] zdarzeń uwierzytelniania. Po włączeniu inspekcji można przeprowadzać inspekcję pomyślnym lub niepomyślnym uwierzytelniania prób (albo obu). Zdarzenia są zapisywane do jednej z trzech dzienniki zdarzeń: aplikacji, zabezpieczeń lub domyślnego dziennika dla wersji systemu operacyjnego. Dzienniki zdarzeń wszystkich można wyświetlić za pomocą Podglądu zdarzeń systemu Windows.  
+ Ten element Wyświetl służy do inspekcji zdarzeń uwierzytelniania systemu Windows Communication Foundation (WCF). Po włączeniu inspekcji można przeprowadzać inspekcję pomyślnym lub niepomyślnym uwierzytelniania prób (albo obu). Zdarzenia są zapisywane do jednej z trzech dzienniki zdarzeń: aplikacji, zabezpieczeń lub domyślnego dziennika dla wersji systemu operacyjnego. Dzienniki zdarzeń wszystkich można wyświetlić za pomocą Podglądu zdarzeń systemu Windows.  
   
  Aby uzyskać szczegółowy przykład za pomocą tego elementu konfiguracji, zobacz [zachowanie inspekcji usługi](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   

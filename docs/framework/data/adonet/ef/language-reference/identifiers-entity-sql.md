@@ -1,27 +1,15 @@
 ---
 title: Identyfikatory (jednostka SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>Identyfikatory (jednostka SQL)
-Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do reprezentowania aliasy wyrażenia zapytania, odwołań do zmiennych, właściwości obiektów, funkcje i tak dalej. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]zawiera dwa rodzaje identyfikatorów: identyfikatory proste i identyfikatory w cudzysłowach.  
+Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do reprezentowania aliasy wyrażenia zapytania, odwołań do zmiennych, właściwości obiektów, funkcje i tak dalej. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera dwa rodzaje identyfikatorów: identyfikatory proste i identyfikatory w cudzysłowach.  
   
 ## <a name="simple-identifiers"></a>Proste identyfikatory  
  Prosty identyfikator w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest sekwencją alfanumeryczne oraz znaki podkreślenia. Pierwszy znak identyfikatora muszą być litery (a-z lub A-Z).  
@@ -97,7 +85,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>Zakres reguły  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Definiuje reguły zakresu, które ustalania momentu konkretnym zmienne są widoczne w języku zapytań. Niektóre wyrażenia lub instrukcji przedstawiono nowe nazwy. Określania zakresu reguły określają, których można używać tych nazw, a jeśli lub gdy nowe oświadczenie o takiej samej nazwie, jak inny można ukryć jego poprzednik.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Definiuje reguły zakresu, które ustalania momentu konkretnym zmienne są widoczne w języku zapytań. Niektóre wyrażenia lub instrukcji przedstawiono nowe nazwy. Określania zakresu reguły określają, których można używać tych nazw, a jeśli lub gdy nowe oświadczenie o takiej samej nazwie, jak inny można ukryć jego poprzednik.  
   
  Gdy nazwy są określane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania, są one określane w zakresie zdefiniowania. Zakres obejmuje całego regionu zapytania. Wszystkie wyrażenia lub nazwę odwołania w ramach określonego zakresu można wyświetlić nazwy, które są zdefiniowane w tym zakresie. Przed rozpoczęciem zakresu i po jej zakończeniu, nie można przywołać nazw, które są zdefiniowane w ramach zakresu.  
   
@@ -125,7 +113,7 @@ SELECT 1 AS X, 2 AS X …
 -   Kolejność klauzul w wyrażeniu wybierz określa porządek, że nazwy są wprowadzane do zakresu. Klauzula FROM jest oceniany, najpierw następuje klauzuli WHERE, klauzuli GROUP BY w klauzuli HAVING, klauzuli SELECT i finally w klauzuli ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Obsługa agregacji  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje dwa rodzaje agreguje: opartego na kolekcji wartości zagregowanych i agreguje oparte na grupach. Agreguje opartego na kolekcji są preferowane konstrukcja [!INCLUDE[esql](../../../../../../includes/esql-md.md)], i na podstawie grupy agregacje są obsługiwane w przypadku zgodności SQL.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje dwa rodzaje agreguje: opartego na kolekcji wartości zagregowanych i agreguje oparte na grupach. Agreguje opartego na kolekcji są preferowane konstrukcja [!INCLUDE[esql](../../../../../../includes/esql-md.md)], i na podstawie grupy agregacje są obsługiwane w przypadku zgodności SQL.  
   
  Podczas rozpoznawania agregacji, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] po raz pierwszy próbuje zaliczenie agregacji opartego na kolekcji. W przypadku niepowodzenia [!INCLUDE[esql](../../../../../../includes/esql-md.md)] przekształca agregacji danych wejściowych do odwołania do wartości zagregowanej zestawu i próbuje rozpoznać tego wyrażenia nowego, jak pokazano w poniższym przykładzie.  
   

@@ -1,29 +1,19 @@
 ---
-title: "Tworzenie zestawów"
-ms.custom: 
+title: Tworzenie zestawów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - single-file assemblies
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2168cbcd19437c1e275da7a01aa0c75ab47600eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8490351b4ab1bb115e4bd7277f43ad22b144a2df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-assemblies"></a>Tworzenie zestawów
 Możesz utworzyć zestawy jednoplikowe lub wiele plików przy użyciu IDE, takich jak [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], lub kompilatory i narzędzi dostarczonych przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Najprostsza zestaw jest pojedynczy plik ma prostą nazwą, który jest ładowany do domeny pojedynczej aplikacji. Ten zestaw nie może odwoływać się do innych zestawów znajdujących się poza katalogiem aplikacji i nie podlegają kontroli wersji. Aby odinstalować aplikację, składa się z zestawu, po prostu Usuń katalog, w którym znajduje się. W przypadku wielu deweloperów zestawu z tych funkcji jest wszystkie, który jest wymagany do wdrażania aplikacji.  

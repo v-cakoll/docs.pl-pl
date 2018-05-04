@@ -1,24 +1,12 @@
 ---
 title: W przypadku (jednostka SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9afc5e3bbf8e6fe732aca9e65c8ba5bd5f620c85
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ee878409e7698300b7bebbdac760422013f3b7de
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="case-entity-sql"></a>W przypadku (jednostka SQL)
 Ocenia zestaw `Boolean` wyrażeń w celu ustalenia wyniku.  
@@ -39,14 +27,14 @@ END
  `n`  
  Jest to symbol zastępczy, która wskazuje, że wiele podczas `Boolean_expression` następnie `result_expression` klauzule można użyć.  
   
- NASTĘPNIE`result_expression`  
- Wyrażenie zwracane, gdy `Boolean_expression` daje w wyniku `true`. `result expression`jest dowolne prawidłowe wyrażenie.  
+ NASTĘPNIE `result_expression`  
+ Wyrażenie zwracane, gdy `Boolean_expression` daje w wyniku `true`. `result expression` Jest dowolne prawidłowe wyrażenie.  
   
  ELSE `else_result_expression`  
- Wyrażenie zwracane, jeśli żadna operacja porównania nie daje w wyniku `true`. Jeśli ten argument zostanie pominięty i żadna operacja porównania nie daje w wyniku `true`, przypadku zwraca wartość null. `else_result_expression`jest dowolne prawidłowe wyrażenie. Typy danych `else_result_expression` oraz wszelkie `result_expression` muszą być takie same lub musi być niejawnej konwersji.  
+ Wyrażenie zwracane, jeśli żadna operacja porównania nie daje w wyniku `true`. Jeśli ten argument zostanie pominięty i żadna operacja porównania nie daje w wyniku `true`, przypadku zwraca wartość null. `else_result_expression` Jest dowolne prawidłowe wyrażenie. Typy danych `else_result_expression` oraz wszelkie `result_expression` muszą być takie same lub musi być niejawnej konwersji.  
   
- KIEDY`Boolean_expression`  
- Jest `Boolean` wyrażenia obliczonego w przypadku użycia przeszukane formatu wielkość. `Boolean_expression`nadaje się żadnym `Boolean` wyrażenia.  
+ KIEDY `Boolean_expression`  
+ Jest `Boolean` wyrażenia obliczonego w przypadku użycia przeszukane formatu wielkość. `Boolean_expression` nadaje się żadnym `Boolean` wyrażenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca typ najwyższy priorytet z zestawu typów w `result_expression` oraz opcjonalny `else_result_expression`.  

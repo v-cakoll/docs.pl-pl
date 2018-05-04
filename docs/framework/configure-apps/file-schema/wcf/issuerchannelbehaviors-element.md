@@ -1,33 +1,21 @@
 ---
 title: '&lt;issuerChannelBehaviors&gt;, element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb90b318f99816a3886056394559fdc80fa986ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e5b8ace06a224db3abcc6b9d0ec87ccbc1a6a77
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a>&lt;issuerChannelBehaviors&gt;, element
-Zawiera kolekcję [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] zachowania punktu końcowego klienta (zdefiniowane w konfiguracji) ma być używany podczas komunikacji z określonych usług tokenu usługi. Zdefiniowanych zachowań nie może zawierać żadnego [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementów.  
+Zawiera kolekcję zachowania punktu końcowego klienta usługi Windows Communication Foundation (WCF) (zdefiniowany w konfiguracji) ma być używany podczas komunikacji z określonych usług tokenu usługi. Zdefiniowanych zachowań nie może zawierać żadnego [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementów.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
 sekcja endpointBehaviors  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<issuedToken >  
 \<issuerChannelBehaviors >  
   
@@ -50,7 +38,7 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Dodaje zachowanie do kolekcji.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Dodaje zachowanie do kolekcji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

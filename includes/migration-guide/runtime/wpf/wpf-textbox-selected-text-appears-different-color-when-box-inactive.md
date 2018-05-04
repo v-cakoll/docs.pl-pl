@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Szczegóły|W programie .NET 4.5, gdy formant pola tekstowego WPF jest nieaktywny (nie ma fokusu), pojawi się zaznaczony tekst wewnątrz pola innym kolorze niż gdy formant jest aktywny.|
-|Sugestia|Poprzednie zachowanie (.NET 4.0) mogą zostać przywrócone przez ustawienie <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> właściwości <code>false</code>.|
+|Szczegóły|W .NET Framework 4.5, gdy formant pola tekstowego WPF jest nieaktywny (nie ma fokusu), pojawi się zaznaczony tekst wewnątrz pola innym kolorze niż gdy formant jest aktywny.|
+|Sugestia|Poprzednie zachowanie (.NET Framework 4.0) mogą zostać przywrócone przez ustawienie <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> właściwości <code>false</code>.|
 |Zakres|Krawędź|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

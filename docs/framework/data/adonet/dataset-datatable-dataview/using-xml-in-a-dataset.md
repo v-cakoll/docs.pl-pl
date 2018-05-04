@@ -1,24 +1,12 @@
 ---
-title: "Za pomocą języka XML w zestawie danych"
-ms.custom: 
+title: Za pomocą języka XML w zestawie danych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e2a036f7623637a7e4561461f45ce03ea122be22
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c5a4df5f2c77853864f51ee9b226f412f382dd09
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-xml-in-a-dataset"></a>Za pomocą języka XML w zestawie danych
 Z ADO.NET możesz wpisać <xref:System.Data.DataSet> ze strumienia XML lub dokumentu. Strumień XML lub dokument można użyć do dostarczenia <xref:System.Data.DataSet> danych, informacje o schemacie lub obu. Informacje podane w strumieniu XML lub dokument można połączyć z istniejących danych i informacji o schemacie znajduje się już w <xref:System.Data.DataSet>.  

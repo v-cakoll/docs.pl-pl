@@ -1,24 +1,14 @@
 ---
 title: '&lt;federationConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 Konfiguruje <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) za pomocą federacyjnych uwierzytelniania za pomocą protokołu WS-Federation. Konfiguruje <xref:System.Security.Claims.ClaimsAuthorizationManager> przy użyciu <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> lub <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> klasy w celu zapewnienia kontroli dostępu opartej na oświadczeniach.  
@@ -42,16 +32,16 @@ Konfiguruje <xref:System.IdentityModel.Services.WSFederationAuthenticationModule
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Nazwa tego elementu konfiguracji federacji. Ten atrybut głównie udostępnia punkt rozszerzalności dla przyszłych protokołów. Opcjonalny.|  
-|identityConfigurationName|Nazwa określona w sekcji konfiguracyjnej tożsamości [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) z elementów. Jeśli ten atrybut nie jest określony, używana jest sekcji konfiguracji domyślnej tożsamości. Opcjonalny.|  
+|nazwa|Nazwa tego elementu konfiguracji federacji. Ten atrybut głównie udostępnia punkt rozszerzalności dla przyszłych protokołów. Opcjonalna.|  
+|identityConfigurationName|Nazwa określona w sekcji konfiguracyjnej tożsamości [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) z elementów. Jeśli ten atrybut nie jest określony, używana jest sekcji konfiguracji domyślnej tożsamości. Opcjonalna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Umożliwia skonfigurowanie programu obsługi plików cookie używany przez Menedżera kont zabezpieczeń. Opcjonalny.|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Określa certyfikat, który jest używany do szyfrowania i odszyfrowywania tokenów. Opcjonalny.|  
-|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Konfiguruje moduł uwierzytelniania protokołu WS-Federation (WSFAM). Opcjonalny.|  
+|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Umożliwia skonfigurowanie programu obsługi plików cookie używany przez Menedżera kont zabezpieczeń. Opcjonalna.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Określa certyfikat, który jest używany do szyfrowania i odszyfrowywania tokenów. Opcjonalna.|  
+|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Konfiguruje moduł uwierzytelniania protokołu WS-Federation (WSFAM). Opcjonalna.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -76,7 +66,7 @@ Konfiguruje <xref:System.IdentityModel.Services.WSFederationAuthenticationModule
   
 4.  Jeśli wiele o nazwie `<federationConfiguration>` elementy są obecne i nie nienazwane `<federationConfiguration>` elementu, jest zgłaszany wyjątek.  
   
- Zazwyczaj tylko jeden `<federationConfiguration>` sekcja jest zdefiniowana. Ta sekcja ma domyślnej konfiguracji federacji. Można określić wiele jednoznacznie nazwane `<federationConfiguration>` elementów; jednak w tym przypadku jeśli chcesz załadować konfiguracji Federacji, innego niż ten, bez nazwy, należy podać program obsługi. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>zdarzenia i zestaw <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> właściwości wewnątrz obsługi ma <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> obiekt inicjowany z wartościami z wykorzystaniem odpowiedniej `<federationConfiguration>` w pliku konfiguracji.  
+ Zazwyczaj tylko jeden `<federationConfiguration>` sekcja jest zdefiniowana. Ta sekcja ma domyślnej konfiguracji federacji. Można określić wiele jednoznacznie nazwane `<federationConfiguration>` elementów; jednak w tym przypadku jeśli chcesz załadować konfiguracji Federacji, innego niż ten, bez nazwy, należy podać program obsługi. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> zdarzenia i zestaw <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> właściwości wewnątrz obsługi ma <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> obiekt inicjowany z wartościami z wykorzystaniem odpowiedniej `<federationConfiguration>` w pliku konfiguracji.  
   
  `<federationConfiguration>` Reprezentowany przez element <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> klasy. Sam obiekt konfiguracji jest reprezentowana przez <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> klasy. Pojedynczy <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> wystąpienia jest ustawiona na <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> właściwości i zapewnia federacyjnych konfigurację aplikacji.  
   

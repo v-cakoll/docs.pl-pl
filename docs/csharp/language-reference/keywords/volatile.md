@@ -14,11 +14,11 @@ ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
 caps.latest.revision: 29
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1cefa39313c3c551e8d05fbc31e528b86c6888d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: a4f63c4b7b2d32afac9b0d086ecd64cd2b29366f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="volatile-c-reference"></a>volatile (odwołanie w C#)
 `volatile` — Słowo kluczowe wskazuje, czy pole może zostać zmodyfikowany przez wiele wątków, które są wykonywane w tym samym czasie. Pola, które są zadeklarowane `volatile` nie są objęte optymalizacje kompilatora, które przyjmuje dostępu przez jednego wątku. Dzięki temu, czy aktualną wartość znajduje się w polu przez cały czas.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Parametry typu ogólnego, znane jako typy referencyjne.  
   
--   <xref:System.IntPtr>i <xref:System.UIntPtr>.  
+-   <xref:System.IntPtr> i <xref:System.UIntPtr>.  
   
  Volatile — słowo kluczowe można zastosować tylko do pól klasy lub struktury. Nie można deklarować zmiennych lokalnych `volatile`.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak wątek pomocniczy lub procesu roboczego można tworzyć i używane do przetwarzania równolegle z podstawowym wątku. Aby uzyskać ogólne informacje o wielowątkowości, zobacz [wątki](../../../standard/threading/index.md) i [wątki](../../programming-guide/concepts/threading/index.md).  
+ W poniższym przykładzie pokazano, jak wątek pomocniczy lub procesu roboczego można tworzyć i używane do przetwarzania równolegle z podstawowym wątku. Aby uzyskać ogólne informacje o wielowątkowości, zobacz [wątki (C#)](../../../standard/threading/index.md) i [zarządzanych wątków](../../programming-guide/concepts/threading/index.md).  
   
  [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   

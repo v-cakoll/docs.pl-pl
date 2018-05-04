@@ -1,32 +1,20 @@
 ---
-title: "Porady: Tworzenie składnika LINQ to projektu DataSet w programie Visual Studio"
-ms.custom: 
+title: 'Porady: Tworzenie składnika LINQ to projektu DataSet w programie Visual Studio'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Porady: Tworzenie składnika LINQ to projektu DataSet w programie Visual Studio
-Różne typy [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projekt wymaga niektórych importowane przestrzenie nazw (Visual Basic) lub `using` dyrektywy (C#) i odwołań. Minimalna wymagana wartość to odwołania do System.Core.dll i `using` dyrektywy dla <xref:System.Linq>. Domyślnie te są dostarczane w przypadku utworzenia nowego [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] projektu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]również wymaga odwołania do System.Data.dll i System.Data.DataSetExtensions.dll i `Imports` (Visual Basic) lub `using` — dyrektywa (C#).  
+Różne typy [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projekt wymaga niektórych importowane przestrzenie nazw (Visual Basic) lub `using` dyrektywy (C#) i odwołań. Minimalna wymagana wartość to odwołania do System.Core.dll i `using` dyrektywy dla <xref:System.Linq>. Domyślnie te są dostarczane w przypadku utworzenia nowego [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] projektu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] również wymaga odwołania do System.Data.dll i System.Data.DataSetExtensions.dll i `Imports` (Visual Basic) lub `using` — dyrektywa (C#).  
   
  Jeśli uaktualniasz projektu ze starszej wersji programu Visual Studio, trzeba będzie ręcznie podać te odwołania dotyczące LINQ. Ponadto może być konieczne ręczne ustawienie projekt pod kątem .NET Framework w wersji 3.5.  
   
 > [!NOTE]
->  Jeśli tworzysz z wiersza polecenia, ręcznie musi odwoływać LINQ związane z bibliotek DLL w `drive` **:**\Program Files\Reference Assemblies\Microsoft\Framework\v3.5.  
+>  Jeśli tworzysz z wiersza polecenia, ręcznie musi odwoływać LINQ związane z bibliotek DLL w `drive` **:** \Program Files\Reference Assemblies\Microsoft\Framework\v3.5.  
   
 ### <a name="to-target-the-net-framework-35"></a>Docelowy .NET Framework 3.5  
   

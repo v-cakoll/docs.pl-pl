@@ -1,26 +1,12 @@
 ---
 title: LINQ do DataSet — omówienie
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3e030ca62625e2b8870cf0eeb5694f4b889b3a7e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d269ea2899ffd8005aad9912cf9273a012e13edd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ do DataSet — omówienie
 <xref:System.Data.DataSet> Jest jedną z powszechnie używane składniki [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Jest kluczowym elementem odłączonego modelu programowania w języku [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zależy, i umożliwia jawnie pamięci podręcznej danych z różnych źródeł danych. Dla warstwy prezentacji <xref:System.Data.DataSet> jest ściśle zintegrowany z formantami graficznego interfejsu użytkownika dla powiązania danych. Dla warstwy środkowej zapewnia pamięci podręcznej, który zachowuje kształt danych relacyjnych i zawiera fast prostego zapytania i hierarchii nawigacji usługi. Typowe technika pozwala zmniejszyć liczbę żądań w bazie danych jest użycie <xref:System.Data.DataSet> do buforowania danych w warstwie środkowej. Rozważmy na przykład opartego na danych [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Często znaczna część danych aplikacji nie zmienia się często i jest wspólna dla sesji lub użytkowników. Te dane będą przechowywane w pamięci na serwerze sieci Web, co zmniejsza liczbę żądań w bazie danych i przyspiesza interakcji użytkownika. Inna zaleta <xref:System.Data.DataSet> jest możliwość aplikacji w celu dostosowania podzbiór danych z co najmniej jednego źródła danych do obszaru aplikacji. Aplikacja następnie można manipulować danych w pamięci, zachowując jego kształtu relacyjne.  

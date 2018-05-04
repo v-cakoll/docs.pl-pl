@@ -1,24 +1,12 @@
 ---
 title: '@ServiceHost'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 027debb311a3f9547623b6dff778e82b7e475327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Kojarzy fabryka użyta do wyprodukowania hosta usługi z usługą ma być obsługiwana i inne aspekty programowania wymagane do uzyskania dostępu lub skompilować hostingu kod zawarty w pliku svc.  
@@ -43,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  Nazwa typu CLR fabryki hostów usług służący do uruchamiania usługi hosta. Ten atrybut jest opcjonalne. Jeśli zostanie określona, domyślnie <xref:System.ServiceModel.Activation.ServiceHostFactory> jest używana, która zwraca wystąpienie klasy <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Debugowanie  
- Wskazuje, czy [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usługi ma być kompilowana przy użyciu symboli debugowania. `true`Jeśli [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi powinny być skompilowanych przy użyciu symboli debugowania; w przeciwnym razie `false`.  
+ Wskazuje, czy usługi Windows Communication Foundation (WCF) ma być kompilowana przy użyciu symboli debugowania. `true` Jeśli [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi powinny być skompilowanych przy użyciu symboli debugowania; w przeciwnym razie `false`.  
   
 #### <a name="language"></a>Język  
  Określa język używany podczas kompilowania kodu wbudowanego w pliku (SVC). Wartości może reprezentować żadnego. Obsługiwane NET język, w tym C#, VB i JS, które dotyczą odpowiednio C#, Visual Basic .NET i JScript .NET. Ten atrybut jest opcjonalne.  
@@ -52,7 +40,7 @@ CodeBehind = "CodeBehind"%>
  Określa plik źródłowy, który implementuje usługi XML sieci Web, gdy klasa, która implementuje usługi XML sieci Web nie znajduje się w tym samym pliku, a nie został skompilowany w zestawie i umieszczane w katalogu \Bin.  
   
 ## <a name="remarks"></a>Uwagi  
- <xref:System.ServiceModel.ServiceHost> Używane do obsługi usługi jest punktem rozszerzalności w [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] model programowania. Wzorzec fabryki służy do tworzenia wystąpienia <xref:System.ServiceModel.ServiceHost> , dlatego potencjalnie, typ polimorficzny środowisko macierzyste nie należy bezpośrednio wystąpienia.  
+ <xref:System.ServiceModel.ServiceHost> Używany do obsługi usługi jest punktem rozszerzalności w ramach modelu programowania usług Windows Communication Foundation (WCF). Wzorzec fabryki służy do tworzenia wystąpienia <xref:System.ServiceModel.ServiceHost> , dlatego potencjalnie, typ polimorficzny środowisko macierzyste nie należy bezpośrednio wystąpienia.  
   
  Domyślna implementacja używa <xref:System.ServiceModel.Activation.ServiceHostFactory> można utworzyć wystąpienia <xref:System.ServiceModel.ServiceHost>. Ale możesz podać własne fabryki (taki, który zwraca pochodnej hosta), określając nazwę typu CLR fabryki implementacji w [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
   

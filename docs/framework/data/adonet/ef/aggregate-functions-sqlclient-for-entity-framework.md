@@ -1,24 +1,12 @@
 ---
-title: "Funkcje agregujące (SqlClient Entity Framework)"
-ms.custom: 
+title: Funkcje agregujące (SqlClient Entity Framework)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 11779c07661edb8bfecda3b8ef955c35989294be
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 558e9f8480dd69e2277603e9bb1013acfbc29467
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Funkcje agregujące (SqlClient Entity Framework)
 .NET Framework Data Provider for SQL Server (SqlClient) zapewnia funkcje agregujące. Funkcje agregujące obliczeń na zestaw wartości wejściowych i zwracać wartość. Te funkcje są w obszarze nazw SqlServer, która jest dostępna, gdy używasz SqlClient. Właściwości przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, które prefiks jest używany przez tego dostawcę dla określonych elementów składowych, takich jak typy i funkcje.  
@@ -31,9 +19,9 @@ ms.lasthandoff: 01/17/2018
  [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
 |`CHECKSUM_AGG(` `collection` `)`|Zwraca sumę kontrolną wartości w kolekcji.<br /><br /> Wartości null są ignorowane.<br /><br /> **Argumenty**<br /><br /> Kolekcja (`Int32`).<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]|  
-|`COUNT(` `expression` `)`|Zwraca liczbę elementów w kolekcji jako `Int32`.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów:<br /><br /> `Guid`(nie zwrócił programu SQL Server 2000)<br /><br /> `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, lub `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
+|`COUNT(` `expression` `)`|Zwraca liczbę elementów w kolekcji jako `Int32`.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów:<br /><br /> `Guid` (nie zwrócił programu SQL Server 2000)<br /><br /> `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, lub `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]|  
-|`COUNT_BIG(` `expression` `)`|Zwraca liczbę elementów w kolekcji jako `bigint`.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów:<br /><br /> `Guid`(nie zwrócił programu SQL Server 2000), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, lub `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> `Int64`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
+|`COUNT_BIG(` `expression` `)`|Zwraca liczbę elementów w kolekcji jako `bigint`.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów:<br /><br /> `Guid` (nie zwrócił programu SQL Server 2000), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, lub `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> `Int64`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]|  
 |`MAX(` `expression` `)`|Zwraca maksymalną wartość w kolekcji.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time` , `String`, `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> Typ `expression`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]|  

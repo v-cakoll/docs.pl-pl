@@ -1,24 +1,12 @@
 ---
-title: "Opcje technologii ADO.NET i wskazówki"
-ms.custom: 
+title: Opcje technologii ADO.NET i wskazówki
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: aa4cefb27ff3fde3f4f31d996a80b19b94ea57e2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 106fdbc121c3b1c15aaced5e0314e0651387cede
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opcje technologii ADO.NET i wskazówki
 Platforma danych ADO.NET to strategii wielu wersji, aby zmniejszyć ilość kodowania i konserwacji wymagane dla deweloperów, należy włączyć je do programowania dla modeli danych jednostki koncepcyjnego. Ta platforma obejmuje ADO.NET Entity Framework i technologii pokrewnych.  
@@ -48,7 +36,7 @@ Platforma danych ADO.NET to strategii wielu wersji, aby zmniejszyć ilość kodo
  LINQ do SQL jest mapowania relacyjnego obiektu (lub / M) implementację, która umożliwia modelu bazy danych programu SQL Server przy użyciu klasy .NET Framework. LINQ do SQL umożliwia zapytanie bazy danych za pomocą LINQ, jak również zaktualizować, Wstaw i usuwanie danych z go. LINQ do SQL obsługuje transakcje, widoków i procedur składowanych, zapewniając łatwy sposób na zintegrowanie sprawdzanie poprawności danych i reguł logiki biznesowej do modelu danych. Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych) służy do modelowania klas jednostek i skojarzenia, które są oparte na obiektach w bazie danych. Aby uzyskać więcej informacji, zobacz [składnika LINQ to SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>Usługi danych WCF  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]wdraża usług danych w sieci Web lub w sieci intranet. Dane mają strukturę jako jednostki i relacje zgodnie ze specyfikacją modelu danych jednostki. Adresowane przez standardowego protokołu HTTP jest wdrożony w tym modelu danych. Aby uzyskać więcej informacji, zobacz [4.5 usługi danych WCF](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] wdraża usług danych w sieci Web lub w sieci intranet. Dane mają strukturę jako jednostki i relacje zgodnie ze specyfikacją modelu danych jednostki. Adresowane przez standardowego protokołu HTTP jest wdrożony w tym modelu danych. Aby uzyskać więcej informacji, zobacz [4.5 usługi danych WCF](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  

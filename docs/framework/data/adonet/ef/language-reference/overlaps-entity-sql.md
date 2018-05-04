@@ -1,24 +1,12 @@
 ---
-title: "Nakładania się (jednostka SQL)"
-ms.custom: 
+title: Nakładania się (jednostka SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 22593af3f79e78621764ba293e65505a72b194f8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9b67e6824317b032f420501ffba385ec6fd651b9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overlaps-entity-sql"></a>Nakładania się (jednostka SQL)
 Określa, czy dwie kolekcje mają wspólne elementy.  
@@ -34,7 +22,7 @@ expression OVERLAPS expression
  Wszystkie prawidłowe zapytanie zwracające kolekcja do porównania z kolekcji zwrócony z innym wyrażeniu zapytania. Wszystkie wyrażenia musi być tego samego typu lub wspólny podstawowej lub pochodny typ jako `expression`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli dwie kolekcje mają wspólne elementy; w przeciwnym razie `false`.  
+ `true` Jeśli dwie kolekcje mają wspólne elementy; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
  Nakładania się funkcjonalnie udostępnia odpowiednik do następującego:  

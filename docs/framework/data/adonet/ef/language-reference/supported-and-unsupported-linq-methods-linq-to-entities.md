@@ -1,24 +1,12 @@
 ---
-title: "Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)"
-ms.custom: 
+title: Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6994632c88b4ac67c9340fc95f07687d99917933
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
 Ta sekcja zawiera informacje o język Language-Integrated zapytania (LINQ) standardowych operatorów zapytań obsługiwane i nieobsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Wiele LINQ standardowych operatorów zapytań ma zastąpionej wersji, która akceptuje argument liczby całkowitej. Argument całkowitą odpowiada liczony od zera indeks w sekwencji, że jest on obsługiwany przez, <xref:System.Collections.Generic.IEqualityComparer%601>, lub <xref:System.Collections.Generic.IComparer%601>. Inaczej, te wersje przeciążone LINQ standardowych operatorów zapytań nie są obsługiwane, a następnie podjęto próbę użycia ich spowoduje zgłoszenie wyjątku.  
@@ -161,7 +149,7 @@ Ta sekcja zawiera informacje o język Language-Integrated zapytania (LINQ) stand
 |Metoda|Obsługa|Sygnatura funkcji języka Visual Basic|Podpis metody C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|Obsługiwane w przypadku typów pierwotnych modelu EDM|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
-|<xref:System.Linq.Queryable.OfType%2A>|Obsługiwane w przypadku<xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
+|<xref:System.Linq.Queryable.OfType%2A>|Obsługiwane w przypadku <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Metody stronicowania  
  Wiele metod stronicowania LINQ nie są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w składniku LINQ to Entities zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). W poniższej tabeli wymieniono te metody stronicowanie obsługiwane i nieobsługiwane.  

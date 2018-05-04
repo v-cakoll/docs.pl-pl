@@ -1,27 +1,18 @@
 ---
 title: '&lt;applicationPool&gt; elementu (ustawienia sieci Web)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; elementu (ustawienia sieci Web)
 Określa ustawienia konfiguracji, które są używane przez program ASP.NET do zarządzania zachowanie całego procesu, gdy aplikacja ASP.NET działa w trybie zintegrowanym z [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszym.  
@@ -29,7 +20,7 @@ Określa ustawienia konfiguracji, które są używane przez program ASP.NET do z
 > [!IMPORTANT]
 >  Ten element i funkcji obsługuje działa tylko, jeśli aplikacja ASP.NET jest hostowany na [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszy.  
   
- \<configuration>  
+ \<Konfiguracja >  
 \<System.Web > elementu (ustawienia sieci Web)  
 \<applicationPool > elementu (ustawienia sieci Web)  
   
@@ -79,7 +70,7 @@ Określa ustawienia konfiguracji, które są używane przez program ASP.NET do z
   
 -   Aplikacja jest hostowana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] puli aplikacji.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]działa w trybie zintegrowanym.  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] działa w trybie zintegrowanym.  
   
 -   Aplikacja używa [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] lub nowszym.  
   

@@ -1,24 +1,12 @@
 ---
-title: "Przejdź (jednostka SQL)"
-ms.custom: 
+title: Przejdź (jednostka SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e6d61e3fb03a1e0ee0cdf344bd61167ad3046a13
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c374261ad3702294f5720edb7881e21ba79d85bc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="navigate-entity-sql"></a>Przejdź (jednostka SQL)
 Przechodzi przez relację między jednostkami.  
@@ -46,7 +34,7 @@ navigate(instance-expresssion, [relationship-type], [to-end [, from-end] ])
  Jeśli kardynalność do końca wynosi 1, jest zwracana wartość `Ref<T>`. Jeśli kardynalność na koniec jest n, jest zwracana wartość `Collection<Ref<T>>`.  
   
 ## <a name="remarks"></a>Uwagi  
- Relacje są najwyższej jakości konstrukcje w [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM). Można utworzyć relacji między co najmniej dwa typy jednostek, a użytkownicy mogą uzyskać dostęp za pośrednictwem relacji z jednej strony (jednostka) do innego. `from`i `to` są warunkowo opcjonalny, gdy istnieje nie niejednoznaczności w rozpoznawania nazw w relacji.  
+ Relacje są najwyższej jakości konstrukcje w [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM). Można utworzyć relacji między co najmniej dwa typy jednostek, a użytkownicy mogą uzyskać dostęp za pośrednictwem relacji z jednej strony (jednostka) do innego. `from` i `to` są warunkowo opcjonalny, gdy istnieje nie niejednoznaczności w rozpoznawania nazw w relacji.  
   
  Nawigacja jest prawidłowa w przestrzeni O i C.  
   

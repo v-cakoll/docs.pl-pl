@@ -1,27 +1,15 @@
 ---
-title: "Scalanie zawartości zestawu danych"
-ms.custom: 
+title: Scalanie zawartości zestawu danych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 26b351b314d82c2b9e602d1ea629bbcf379d9284
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merging-dataset-contents"></a>Scalanie zawartości zestawu danych
 Można użyć <xref:System.Data.DataSet.Merge%2A> sposób scalania zawartość <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, lub <xref:System.Data.DataRow> tablicy do istniejącej `DataSet`. Kilka czynników, jak i opcje mają wpływ na sposób nowe dane są scalane istniejące `DataSet`.  
@@ -36,7 +24,7 @@ Można użyć <xref:System.Data.DataSet.Merge%2A> sposób scalania zawartość <
  Jeśli tabela otrzymuje nowych danych z scalania nie ma klucza podstawowego, nowych wierszy z przychodzących danych nie można dopasować do istniejących wierszy w tabeli i zamiast tego są dołączane do istniejącej tabeli.  
   
 ## <a name="table-names-and-namespaces"></a>Nazwy tabel i przestrzenie nazw  
- <xref:System.Data.DataTable>Opcjonalnie można przypisać obiektów <xref:System.Data.DataTable.Namespace%2A> wartości właściwości. Gdy <xref:System.Data.DataTable.Namespace%2A> przypisywania wartości <xref:System.Data.DataSet> może zawierać wiele <xref:System.Data.DataTable> obiektów z takimi samymi <xref:System.Data.DataTable.TableName%2A> wartość. Podczas operacji scalania zarówno <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataTable.Namespace%2A> są używane do identyfikowania element docelowy scalania. Jeśli nie <xref:System.Data.DataTable.Namespace%2A> przypisano, tylko <xref:System.Data.DataTable.TableName%2A> służy do identyfikowania element docelowy scalania.  
+ <xref:System.Data.DataTable> Opcjonalnie można przypisać obiektów <xref:System.Data.DataTable.Namespace%2A> wartości właściwości. Gdy <xref:System.Data.DataTable.Namespace%2A> przypisywania wartości <xref:System.Data.DataSet> może zawierać wiele <xref:System.Data.DataTable> obiektów z takimi samymi <xref:System.Data.DataTable.TableName%2A> wartość. Podczas operacji scalania zarówno <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataTable.Namespace%2A> są używane do identyfikowania element docelowy scalania. Jeśli nie <xref:System.Data.DataTable.Namespace%2A> przypisano, tylko <xref:System.Data.DataTable.TableName%2A> służy do identyfikowania element docelowy scalania.  
   
 > [!NOTE]
 >  To zachowanie, zmiany w wersji 2.0 programu .NET Framework. W wersji 1.1 przestrzenie nazw są obsługiwane, ale zostały zignorowane podczas operacji scalania. Z tego powodu <xref:System.Data.DataSet> używającą <xref:System.Data.DataTable.Namespace%2A> wartości właściwości mają różne zachowania, w zależności od instalowanej wersji programu .NET Framework są uruchomione. Załóżmy na przykład, jeśli masz dwa `DataSets` zawierający `DataTables` o takim samym <xref:System.Data.DataTable.TableName%2A> ale o innej wartości właściwości <xref:System.Data.DataTable.Namespace%2A> wartości właściwości. W wersji 1.1 programu .NET Framework różnych <xref:System.Data.DataTable.Namespace%2A> nazwy zostaną pominięte podczas scalania dwa <xref:System.Data.DataSet> obiektów. Jednak począwszy od wersji 2.0, scalanie powoduje, że dwa nowe `DataTables` ma zostać utworzony w celu <xref:System.Data.DataSet>. Oryginalna `DataTables` będą mieć wpływu na scalanie.  

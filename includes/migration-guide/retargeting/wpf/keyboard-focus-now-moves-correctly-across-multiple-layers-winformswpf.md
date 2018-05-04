@@ -1,0 +1,10 @@
+### <a name="keyboard-focus-now-moves-correctly-across-multiple-layers-of-winformswpf-hosting"></a>Fokus klawiatury teraz porusza się prawidłowo na wielu warstw hosting WinForms/WPF
+
+|   |   |
+|---|---|
+|Szczegóły|Należy wziąć pod uwagę formant programu WinForms, który z kolei obsługuje formantów WPF hosting aplikacji WPF. Użytkownicy nie mogą mieć możliwość karcie poza warstwą WinForms, jeśli formant pierwszego lub ostatniego w tej warstwie jest WPF <code>System.Windows.Forms.Integration.ElementHost</code>. Ta zmiana rozwiązuje ten problem, a użytkownicy mogą teraz karcie poza warstwą WinForms. Automatyczne aplikacje, które są oparte na fokus nigdy nie anulowanie warstwy WinForms może przestać działać zgodnie z oczekiwaniami.|
+|Sugestia|Deweloper, który chce korzystać z tej zmiany podczas określania wartości docelowej wersji struktury poniżej .NET 4.7.2 można ustawić następujący zestaw AppContext flagi na wartość false, aby zmiana można włączyć.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Aplikacje WPF musi zgłosić się do wszystkich wczesne ulepszenia ułatwień dostępu, aby uzyskać nowsze ulepszenia. Innymi słowy, zarówno <code>Switch.UseLegacyAccessibilityFeatures</code> i <code>Switch.UseLegacyAccessibilityFeatures.2</code> przełączniki muszą być setA projektanta, który wymaga poprzedniej funkcji podczas określania wartości docelowej .NET 4.7.2 lub większa może ustawione następujące flagi AppContext na wartość true zmiany, które mają zostać wyłączone.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures.2=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|Zakres|Krawędź|
+|Wersja|4.7.2|
+|Typ|Przekierowania|
+

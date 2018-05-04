@@ -1,13 +1,6 @@
 ---
 title: Domeny aplikacji
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - process boundaries for isolation
 - application isolation
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe2d8ea8be2781e747398e18cc99cc6ce6cf6dc5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 Systemy operacyjne i środowiska wykonawcze zwykle zapewnia jakiegoś izolacja pomiędzy aplikacjami. Na przykład system Windows używa procesów do izolowania aplikacji. Izolacja jest niezbędne do zapewnienia, że kod działający w jednej aplikacji nie może niekorzystnie wpłynąć na innych, niezależnych aplikacji.  
@@ -126,7 +116,7 @@ Systemy operacyjne i środowiska wykonawcze zwykle zapewnia jakiegoś izolacja p
 |Metoda klasy AppDomain|Opis|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Tworzenie nowej domeny aplikacji. Zaleca się używanie przeciążenia tej metody, które określa obiekt <xref:System.AppDomainSetup>. Jest to preferowany sposób konfigurowania właściwości nowej domeny, takich jak baza aplikacji czy główny katalog aplikacji, lokalizacja pliku konfiguracji domeny oraz ścieżka wyszukiwania, z której środowisko uruchomieniowe języka wspólnego ma ładować zestawy do domeny.|  
-|<xref:System.AppDomain.ExecuteAssembly%2A>i<xref:System.AppDomain.ExecuteAssemblyByName%2A>|Wykonywanie zestawu w domenie aplikacji. To jest metoda wystąpienia, dlatego może służyć do wykonywania kodu w innej domenie aplikacji, do której prowadzi odwołanie.|  
+|<xref:System.AppDomain.ExecuteAssembly%2A> I <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Wykonywanie zestawu w domenie aplikacji. To jest metoda wystąpienia, dlatego może służyć do wykonywania kodu w innej domenie aplikacji, do której prowadzi odwołanie.|  
 |<xref:System.AppDomain.CreateInstanceAndUnwrap%2A>|Tworzenie wystąpienie wskazanego typu w domenie aplikacji oraz zwracanie danych serwera proxy. Ta metoda pozwala uniknąć wczytywania zestawu zawierającego utworzony typ do wywoływanego zestawu.|  
 |<xref:System.AppDomain.Unload%2A>|Uporządkowanie wyłączanie domeny. Domena aplikacji zostanie zwolniona z pamięci dopiero wtedy, gdy wszystkie wątki uruchomione w domenie zostaną zatrzymane lub przestaną być obecne w domenie.|  
   

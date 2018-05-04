@@ -1,14 +1,6 @@
 ---
-title: "&lt;Dodaj&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;"
-ms.custom: 
+title: '&lt;Dodaj&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Dodaj&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;
 Dodaje odbiornika do `Listeners` kolekcji źródła śledzenia.  
@@ -36,7 +25,7 @@ Dodaje odbiornika do `Listeners` kolekcji źródła śledzenia.
 \<źródeł >  
 \<źródło >  
 \<obiekty nasłuchujące >  
-\<Dodaj >  
+\<add>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,7 +46,7 @@ Dodaje odbiornika do `Listeners` kolekcji źródła śledzenia.
 |`initializeData`|Atrybut opcjonalny.<br /><br /> Ciąg przekazany do konstruktora dla określonej klasy. A <xref:System.Configuration.ConfigurationException> jest generowany, jeśli klasa nie ma konstruktora przyjmującego ciąg.|  
 |`name`|Atrybut opcjonalny.<br /><br /> Określa nazwę odbiornika.|  
 |`traceOutputOptions`|Atrybut opcjonalny.<br /><br /> Określa <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> wartości właściwości dla obiektu nasłuchującego śledzenia.|  
-|[atrybuty niestandardowe]|Opcjonalne atrybuty.<br /><br /> Określa wartość atrybuty specyficzne dla odbiornika identyfikowane przez <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> metody dla tego odbiornika. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>Przykładem dodatkowe atrybutu jest unikatowa dla <xref:System.Diagnostics.DelimitedListTraceListener> klasy.|  
+|[atrybuty niestandardowe]|Opcjonalne atrybuty.<br /><br /> Określa wartość atrybuty specyficzne dla odbiornika identyfikowane przez <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> metody dla tego odbiornika. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Przykładem dodatkowe atrybutu jest unikatowa dla <xref:System.Diagnostics.DelimitedListTraceListener> klasy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

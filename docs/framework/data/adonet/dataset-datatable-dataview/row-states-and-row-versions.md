@@ -1,27 +1,15 @@
 ---
 title: Stany wiersza i wersje wiersza
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6c37c33f5deda2d16e24fab77f394d97749ae63e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-states-and-row-versions"></a>Stany wiersza i wersje wiersza
 ADO.NET zarządza wierszy w tabelach przy użyciu stany wiersza i wersje. Stan wiersz wskazuje stan wiersza; wersje wiersza Obsługa wartościami przechowywanymi w wierszu jako jego modyfikacji, w tym bieżące, oryginalny i wartości domyślnych. Na przykład po dokonaniu zmiany z kolumną w wierszu wiersza zostanie mają stan wiersza `Modified`, i wiersza dwie wersje: `Current`, zawierającą bieżące wartości wiersza i `Original`, który zawiera wartości wierszy przed kolumny zmodyfikowane.  
@@ -34,7 +22,7 @@ ADO.NET zarządza wierszy w tabelach przy użyciu stany wiersza i wersje. Stan w
 |<xref:System.Data.DataRowState.Added>|Wiersz został dodany do tabeli, ale `AcceptChanges` nie została wywołana.|  
 |<xref:System.Data.DataRowState.Modified>|Niektóre elementu wiersz został zmieniony.|  
 |<xref:System.Data.DataRowState.Deleted>|Wiersz został usunięty z tabeli, a `AcceptChanges` nie została wywołana.|  
-|<xref:System.Data.DataRowState.Detached>|Wiersza nie jest częścią żadnego `DataRowCollection`. `RowState` Nowo utworzony wiersza jest ustawiony na wartość `Detached`. Po nowe `DataRow` jest dodawany do `DataRowCollection` przez wywołanie metody `Add` metody, wartość `RowState` właściwość jest ustawiona na `Added`.<br /><br /> `Detached`zostanie również ustawiona dla wiersza, który został usunięty z `DataRowCollection` przy użyciu `Remove` metody, lub `Delete` następuje — metoda `AcceptChanges` metody.|  
+|<xref:System.Data.DataRowState.Detached>|Wiersza nie jest częścią żadnego `DataRowCollection`. `RowState` Nowo utworzony wiersza jest ustawiony na wartość `Detached`. Po nowe `DataRow` jest dodawany do `DataRowCollection` przez wywołanie metody `Add` metody, wartość `RowState` właściwość jest ustawiona na `Added`.<br /><br /> `Detached` zostanie również ustawiona dla wiersza, który został usunięty z `DataRowCollection` przy użyciu `Remove` metody, lub `Delete` następuje — metoda `AcceptChanges` metody.|  
   
  Gdy `AcceptChanges` jest wywoływana na <xref:System.Data.DataSet>, <xref:System.Data.DataTable> , lub <xref:System.Data.DataRow>, wszystkie wiersze ze stanem wiersza `Deleted` zostaną usunięte. Pozostałe wiersze są podane stan wiersza `Unchanged`i wartościami w `Original` wersja wiersza zostaną zastąpione `Current` wiersz wartości wersji. Gdy `RejectChanges` jest nazywany wszystkie wiersze ze stanem wiersza `Added` zostaną usunięte. Pozostałe wiersze są podane stan wiersza `Unchanged`i wartościami w `Current` wersja wiersza zostaną zastąpione `Original` wiersz wartości wersji.  
   
@@ -61,7 +49,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Można sprawdzić, czy `DataRow` ma wersję określonego wiersza przez wywołanie metody <xref:System.Data.DataRow.HasVersion%2A> — metoda i przekazywanie `DataRowVersion` jako argument. Na przykład `DataRow.HasVersion(DataRowVersion.Original)` zwróci `false` dla nowo dodanych wierszy przed `AcceptChanges` została wywołana.  
   
- Poniższy przykładowy kod przedstawia wartości w usuniętych wierszy w tabeli. `Deleted`wiersze nie mają `Current` wersja wiersza, więc należy przekazać `DataRowVersion.Original` podczas uzyskiwania dostępu do wartości w kolumnie.  
+ Poniższy przykładowy kod przedstawia wartości w usuniętych wierszy w tabeli. `Deleted` wiersze nie mają `Current` wersja wiersza, więc należy przekazać `DataRowVersion.Original` podczas uzyskiwania dostępu do wartości w kolumnie.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  

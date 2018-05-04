@@ -12,11 +12,11 @@ ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
-ms.translationtype: MT
+ms.openlocfilehash: 605724874d952befceea0f89ae48e6151c97f363
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zostanie oznaczony do generowania dokumentacji. (Informacje o sposobie tagów w kodzie, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Ciąg Identyfikatora unikatowo identyfikuje konstrukcja. Programy, które przetwarzają plik XML można umożliwia zidentyfikowanie odpowiadający mu element .NET Framework metadane/odbicia dotyczy dokumentacji ciąg Identyfikatora.  
@@ -77,7 +77,7 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zosta
   
 -   Dla typów ogólnych Nazwa typu będzie następować wstecz znaczników, a następnie liczbę wskazującą liczbę parametrów typu ogólnego.  Na przykład  
   
-     `<member name="T:SampleClass`2" >` is the tag for a type that is defined as `Klasa publiczna SampleClass\<T, U >".  
+     ``<member name="T:SampleClass`2">`` jest znacznik typu, który jest zdefiniowany jako `public class SampleClass<T, U>`.  
   
      Dla metod biorąc typów podstawowych jako parametrów, parametry typu ogólnego są określone jako liczby poprzedzone znakiem Takty Wstecz (na przykład \`0, 1 ").  Każdy liczba reprezentująca liczony od zera tablicy notacji ogólnych parametrów typu.  
   

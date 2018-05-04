@@ -1,24 +1,12 @@
 ---
 title: Entity Data Model
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1a1bdeffcc85383d241c277240187ede41401cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bb3c529a19ca96ea5695061fb1b612f9179899be
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Modelu danych jednostki (EDM) to zestaw kwestie dotyczące struktury danych, niezależnie od jego przechowywanych formularza. EDM obiektowy opisanego przez Chen Peterowi w 1976 modelu Relacja jednostki, ale również oparty na modelu Relacja jednostki i zwiększa jego tradycyjnego wykorzystania.  

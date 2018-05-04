@@ -1,31 +1,19 @@
 ---
 title: '&lt;behavior&gt; w &lt;endpointBehaviors&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aed43e76b817c9a2eded6c1e5daee183625ecc0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0619d14444d835ed959a1a1db7cd37aaf0429728
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;behavior&gt; w &lt;endpointBehaviors&gt;
 `behavior` Element zawiera kolekcję ustawień zachowania dla punktu końcowego. Każde działanie jest indeksowane według jego `name`. Punkty końcowe można połączyć z każdym zachowanie za pośrednictwem tej nazwy. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o konfiguracji domyślnej i bez powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<zachowanie >  
   
 ## <a name="syntax"></a>Składnia  
@@ -53,8 +41,8 @@ ms.lasthandoff: 12/22/2017
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
-|[\<callbackDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|Określa usługę debugowania dla [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] obiektu wywołania zwrotnego.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
+|[\<callbackDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|Określa usługę debugowania dla obiektu wywołania zwrotnego Windows Communication Foundation (WCF).|  
 |[\<callbackTimeouts >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbacktimeouts.md)|Określa limit czasu dla wywołania zwrotnego klienta.|  
 |[\<clientVia >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientvia.md)|Określa, że powinno zająć trasy wiadomości.|  
 |[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer.md)|Zawiera dane konfiguracyjne dla elementu DataContractSerializer.|  

@@ -1,27 +1,15 @@
 ---
-title: "Nawiązywania połączenia"
-ms.custom: 
+title: Nawiązywania połączenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5fa47254f97d48dccd13644e2547eaac4ca787bd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a416994e5d5a1be5da9571d9f8e7564f0f14f238
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="establishing-the-connection"></a>Nawiązywania połączenia
 Aby nawiązać połączenie programu Microsoft SQL Server, należy użyć <xref:System.Data.SqlClient.SqlConnection> obiekt dostawcy danych programu .NET Framework dla programu SQL Server. Aby połączyć się ze źródłem danych OLE DB, użyć <xref:System.Data.OleDb.OleDbConnection> obiektu .NET Framework Data Provider for OLE DB. Aby połączyć źródła danych ODBC, użyj <xref:System.Data.Odbc.OdbcConnection> obiekt dostawcy danych programu .NET Framework dla ODBC. Aby połączyć się ze źródłem danych programu Oracle, użyj <xref:System.Data.OracleClient.OracleConnection> obiektu .NET Framework Data Provider for Oracle. W celu bezpiecznego przechowywania i pobierania parametry połączenia, zobacz [ochrony informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).  

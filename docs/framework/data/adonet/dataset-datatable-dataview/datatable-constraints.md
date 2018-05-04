@@ -1,27 +1,15 @@
 ---
 title: Ograniczenia elementu DataTable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 95bbba30bc9cd75d1694d7d8062bc9a6e6105084
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
 Ograniczenia umożliwiają wymuszenie zastosowania ograniczenia dotyczące danych w <xref:System.Data.DataTable>, aby zapewnić integralność danych. Ograniczenie jest automatyczne reguły, kolumny lub powiązane kolumny określa sposób postępowania przypadku jakiś sposób zmiany wartości wiersza. Wymuszone są ograniczenia podczas `System.Data.DataSet.EnforceConstraints` właściwość <xref:System.Data.DataSet> jest **true**. Na przykład kodu, który pokazuje, jak ustawić `EnforceConstraints` właściwości, zobacz <xref:System.Data.DataSet.EnforceConstraints%2A> temat referencyjny.  
@@ -35,7 +23,7 @@ Ograniczenia umożliwiają wymuszenie zastosowania ograniczenia dotyczące danyc
   
 |Ustawienie reguły|Opis|  
 |------------------|-----------------|  
-|**Cascade**|Usuń lub zaktualizuj powiązane wiersze.|  
+|**Kaskadowo**|Usuń lub zaktualizuj powiązane wiersze.|  
 |**SetNull**|Ustaw wartości w powiązane wiersze do **DBNull**.|  
 |**SetDefault**|Ustaw wartości w powiązane wiersze do wartości domyślnej.|  
 |**Brak**|Podejmij żadnej akcji na powiązane wiersze. Domyślnie włączone.|  
@@ -71,7 +59,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |Ustawienie reguły|Opis|  
 |------------------|-----------------|  
-|**Cascade**|Zaakceptuj lub Odrzuć zmiany do wierszy podrzędnych.|  
+|**Kaskadowo**|Zaakceptuj lub Odrzuć zmiany do wierszy podrzędnych.|  
 |**Brak**|Nie zająć się wierszy podrzędnych. Domyślnie włączone.|  
   
 ### <a name="example"></a>Przykład  

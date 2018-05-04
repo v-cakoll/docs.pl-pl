@@ -1,10 +1,6 @@
 ---
 title: '&lt;appSettings&gt; elementu &lt;konfiguracji&gt;'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cebb9ba7ebeb483233276324289a4ddc5a0bc381
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d17400536b911ce0be4d2bf105b0b4d99d0916df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > elementu \<configuration >
 
@@ -41,7 +34,7 @@ Zawiera ustawienia aplikacji niestandardowej. Jest to sekcję konfiguracji wstę
 
 |           | Opis |
 | --------- | ----------- |
-| **plik**  | Atrybut opcjonalny.<br><br>Określa ścieżkę względną do zewnętrznego pliku zawierającego ustawienia konfiguracji aplikacji niestandardowej. Określony plik zawiera ten sam rodzaj ustawień, które są określone w  **\<Dodaj >**,  **\<Usuń >**, i  **\<Wyczyść >** elementów i używa tej samej pary klucz wartość w formacie tych elementów.<br><br>Określona ścieżka jest względną do pliku konfiguracji głównego. Dla aplikacji formularzy systemu Windows, jest to folder binarne (takie jak */bin/debug*), nie lokalizację pliku konfiguracji aplikacji. Dla aplikacji formularzy sieci Web, ścieżka jest względem katalogu głównego aplikacji, których *web.config* znajduje się plik.<br><br>Należy pamiętać, środowisko uruchomieniowe ignoruje atrybut, jeśli nie można odnaleźć określonego pliku. |
+| **Plik**  | Atrybut opcjonalny.<br><br>Określa ścieżkę względną do zewnętrznego pliku zawierającego ustawienia konfiguracji aplikacji niestandardowej. Określony plik zawiera ten sam rodzaj ustawień, które są określone w  **\<Dodaj >**,  **\<Usuń >**, i  **\<Wyczyść >** elementów i używa tej samej pary klucz wartość w formacie tych elementów.<br><br>Określona ścieżka jest względną do pliku konfiguracji głównego. Dla aplikacji formularzy systemu Windows, jest to folder binarne (takie jak */bin/debug*), nie lokalizację pliku konfiguracji aplikacji. Dla aplikacji formularzy sieci Web, ścieżka jest względem katalogu głównego aplikacji, których *web.config* znajduje się plik.<br><br>Należy pamiętać, środowisko uruchomieniowe ignoruje atrybut, jeśli nie można odnaleźć określonego pliku. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
@@ -59,7 +52,7 @@ Zawiera ustawienia aplikacji niestandardowej. Jest to sekcję konfiguracji wstę
 
 ## <a name="remarks"></a>Uwagi
 
- **\<AppSettings >** element przechowuje informacje o konfiguracji niestandardowej aplikacji, takich jak parametry połączenia bazy danych, ścieżki do pliku, adresy URL usługi XML sieci Web lub innych informacji konfiguracji niestandardowej dla aplikacja. Pary klucz wartość określona w  **\<appSettings >** elementu są dostępne w kodu za pomocą <xref:System.Configuration.ConfigurationSettings> klasy.
+**\<AppSettings >** element przechowuje informacje o konfiguracji niestandardowej aplikacji, takich jak parametry połączenia bazy danych, ścieżki do pliku, adresy URL usługi XML sieci Web lub innych informacji konfiguracji niestandardowej dla aplikacja. Pary klucz wartość określona w  **\<appSettings >** elementu są dostępne w kodu za pomocą <xref:System.Configuration.ConfigurationSettings> klasy.
 
 Można użyć **pliku** atrybutu w  **\<appSettings >** elementu *Web.config* i pliki konfiguracji aplikacji. Ten atrybut określa plik konfiguracji, który udostępnia dodatkowe ustawienia lub zastępuje ustawienia określone w  **\<appSettings >** elementu. **Pliku** atrybut może być używany w źródła formantu zespołu scenariusze programowania, np. gdy użytkownik chce, aby zastąpić ustawienia projektu określony w pliku konfiguracji aplikacji.
 

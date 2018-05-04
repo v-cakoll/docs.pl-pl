@@ -1,24 +1,12 @@
 ---
 title: Generator EDM (EdmGen.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90d67af0d2ba3ff04ee5c78b7d0a3f061a69bc1d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>Generator EDM (EdmGen.exe)
 EdmGen.exe to narzędzie wiersza polecenia służące do pracy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] modelu i mapowania plików. Narzędzie EdmGen.exe wykonaj następujące czynności:  
@@ -71,9 +59,9 @@ EdmGen /mode:choice [options]
 |`/entitycontainer:`\<ciąg >|Określa nazwę, aby zastosować do `<EntityContainer>` elementu w modelu wygenerowanym i mapowania plików.|  
 |`/pl[uralize]`|Zastosowanie zasady język angielski singulars i liczba mnoga do `Entity`, `EntitySet`, i `NavigationProperty` nazwy w modelu koncepcyjnym. Ta opcja będzie wykonywać następujące czynności:<br /><br /> -Sprawdź wszystkie `EntityType` pojedynczej nazwy.<br />-Sprawdź wszystkie `EntitySet` nazwy w liczbie mnogiej.<br />— Dla każdej `NavigationProperty` zwracającą co najwyżej jedną jednostkę, sprawdź nazwę pojedynczej.<br />— Dla każdej `NavigationProperty` zwracającą więcej niż jednej jednostki, sprawdź nazwę liczbie mnogiej.|  
 |`/SupressForeignKeyProperties or /nofk`|Kolumny klucza obcego zapobiega przed przypadkowym jako właściwości skalarnych na typy jednostek w modelu koncepcyjnym.|  
-|`/help`lub`?`|Wyświetla składnię polecenia i opcje narzędzia.|  
+|`/help` lub `?`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/nologo`|Pomija wyświetlanie komunikaty o prawach autorskich.|  
-|`/targetversion:`\<ciąg >|Wersja .NET Framework, która będzie służyć do kompilowania wygenerowanego kodu. Obsługiwane wersje to 4 i 4.5. Wartość domyślna to 4.|  
+|`/targetversion:` \<ciąg >|Wersja .NET Framework, która będzie służyć do kompilowania wygenerowanego kodu. Obsługiwane wersje to 4 i 4.5. Wartość domyślna to 4.|  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

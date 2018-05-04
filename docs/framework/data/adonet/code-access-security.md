@@ -1,27 +1,15 @@
 ---
-title: "Zabezpieczenia dostępu kodu i ADO.NET"
-ms.custom: 
+title: Zabezpieczenia dostępu kodu i ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e69073f757c07c5dd262900d4d8f7ad2cc83cdc4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ea5dbcc128f97ebbec72273378adb042bbe34e1e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje opartej na rolach zabezpieczeń, a także zabezpieczenia dostępu kodu (CAS), które są implementowane za pomocą wspólnej infrastruktury dostarczanych przez środowisko uruchomieniowe języka wspólnego (CLR). Większość aplikacji na świecie kodu niezarządzanego, wykonywane za pomocą uprawnienia użytkownika lub podmiot zabezpieczeń. W związku z tym systemów komputerowych może być uszkodzony i prywatnych danych zagrożone, gdy złośliwe lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podniesionymi uprawnieniami.  
@@ -38,11 +26,11 @@ ms.lasthandoff: 01/19/2018
   
  Istnieją trzy typy uprawnień dostępu do kodu:  
   
--   `Code access permissions`pochodzić od <xref:System.Security.CodeAccessPermission> klasy. Uprawnienia są wymagane, aby uzyskać dostęp do chronionych zasobów, takie jak pliki i zmienne środowiskowe i wykonywanie operacji chronionych, takich jak uzyskiwanie dostępu do kodu niezarządzanego.  
+-   `Code access permissions` pochodzić od <xref:System.Security.CodeAccessPermission> klasy. Uprawnienia są wymagane, aby uzyskać dostęp do chronionych zasobów, takie jak pliki i zmienne środowiskowe i wykonywanie operacji chronionych, takich jak uzyskiwanie dostępu do kodu niezarządzanego.  
   
--   `Identity permissions`reprezentuje właściwości, które identyfikują zestawu. Przyznano uprawnienia do zestawu na podstawie dowodów, które obejmują elementy, takie jak podpisu cyfrowego lub pochodzenie kod. Uprawnienia dotyczące tożsamości również pochodzić od <xref:System.Security.CodeAccessPermission> klasy podstawowej.  
+-   `Identity permissions` reprezentuje właściwości, które identyfikują zestawu. Przyznano uprawnienia do zestawu na podstawie dowodów, które obejmują elementy, takie jak podpisu cyfrowego lub pochodzenie kod. Uprawnienia dotyczące tożsamości również pochodzić od <xref:System.Security.CodeAccessPermission> klasy podstawowej.  
   
--   `Role-based security permissions`są na podstawie tego, czy podmiot zabezpieczeń ma określoną tożsamością lub jest członkiem określonej roli. <xref:System.Security.Permissions.PrincipalPermission> Klasa umożliwia kontroli zarówno uprawnienia deklaratywne i nadrzędnych względem aktywny podmiot zabezpieczeń.  
+-   `Role-based security permissions` są na podstawie tego, czy podmiot zabezpieczeń ma określoną tożsamością lub jest członkiem określonej roli. <xref:System.Security.Permissions.PrincipalPermission> Klasa umożliwia kontroli zarówno uprawnienia deklaratywne i nadrzędnych względem aktywny podmiot zabezpieczeń.  
   
  Aby ustalić, czy kod jest autoryzowany do uzyskania dostępu do zasobu lub wykonania operacji, system zabezpieczeń środowiska uruchomieniowego przechodzi przez stos wywołań, porównanie uprawnienia nadanego każdy obiekt wywołujący, aby uprawnienia są wymagane. Jeśli każdego obiektu wywołującego w stosie wywołań nie ma wymaganego uprawnienia <xref:System.Security.SecurityException> jest generowany, a w przypadku odmowy dostępu.  
   
@@ -84,7 +72,7 @@ ms.lasthandoff: 01/19/2018
 |`AllowBlankPassword`|Włącza lub wyłącza użycie pustego hasła w parametrach połączenia. Prawidłowe wartości to `true` (Aby włączyć użycie pustego hasła) i `false` (Aby zablokować używanie pustych haseł). Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`ConnectionString`|Określa ciąg dozwolone połączenia. Można określić wiele parametrów połączenia. **Uwaga:** nie dołączaj nazwy użytkownika i hasła w ciągu połączenia. W tej wersji nie można zmienić ograniczenia ciągu połączenia za pomocą narzędzia konfiguracji programu .NET Framework. <br /><br /> Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictions`|Określa parametry ciągu połączenia, które ma być dozwolony lub niedozwolony. Parametry ciągu połączenia są identyfikowane w formularzu  *\<parametru name > =*. Można określić wiele parametrów, rozdzielone średnikami (;). **Uwaga:** Jeśli nie określisz `KeyRestrictions`, ale zostanie ustawiona `KeyRestrictionBehavior` właściwości `AllowOnly` lub `PreventUsage`, bez parametrów ciągu dodatkowego połączenia są dozwolone. Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictionBehavior`|Określa parametry połączenia w ciągu jako tylko dodatkowe parametry, które są niedozwolone (`AllowOnly`), lub określa dodatkowe parametry, które nie są dozwolone (`PreventUsage`). `AllowOnly`jest ustawieniem domyślnym. Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictionBehavior`|Określa parametry połączenia w ciągu jako tylko dodatkowe parametry, które są niedozwolone (`AllowOnly`), lub określa dodatkowe parametry, które nie są dozwolone (`PreventUsage`). `AllowOnly` jest ustawieniem domyślnym. Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Pobiera unikatowy identyfikator dla tego atrybutu w przypadku zaimplementowania w klasie pochodnej. Dziedziczone z <xref:System.Attribute>.|  
 |`Unrestricted`|Wskazuje, czy zadeklarowano nieograniczone uprawnienia do tego zasobu. Dziedziczone z <xref:System.Security.Permissions.SecurityAttribute>.|  
   

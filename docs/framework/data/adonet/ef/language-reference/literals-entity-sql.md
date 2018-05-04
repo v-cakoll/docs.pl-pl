@@ -1,24 +1,12 @@
 ---
-title: "Literały (jednostka SQL)"
-ms.custom: 
+title: Literały (jednostka SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7665d0cb2e3c0a3cff5f602e7b02c572a3dc341d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="literals-entity-sql"></a>Literały (jednostka SQL)
 W tym temacie opisano [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługę literały.  
@@ -78,7 +66,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- Literał datetimeoffset jest niezależne od ustawień regionalnych i składać się ze część daty, godziny i część dotyczącą przesunięcia. Wszystkie daty, godziny i przesunięcia części są obowiązkowe i nie ma wartości domyślnej. Data część musi mieć format RRRR-MM-DD, gdzie RRRR jest wartością czterocyfrowy rok zakresu od 0001 do 9999, miesiąc od 1 do 12, a DD jest wartość dnia, który jest prawidłowy dla danego miesiąca. Składnik godziny musi mieć format gg: mm [: SS [.fffffff]], gdzie HH jest wartość godziny między 0 a 23, MM minuty wartość między 0 a 59, SS jest druga wartość od 0 do 59 i fffffff jest ułamkowych drugiej wartości od 0 do 9999999. Wszystkie zakresy wartości są włącznie. Ułamkowych części sekundy są opcjonalne. Sekund są opcjonalne, chyba że określono ułamkowych części sekundy; w takim przypadku sekund są wymagane. Jeśli sekund lub ułamków nie są określone, wartością domyślną równą zero, zostanie użyty. Części przesunięcia musi mieć format {+ &#124;-} gg: mm, gdzie HH i MM mają takie samo znaczenie jak składnik godziny. Zakres przesunięcia, jednak musi należeć do zakresu od -14:00 i + 14:00  
+ Literał datetimeoffset jest niezależne od ustawień regionalnych i składać się ze część daty, godziny i część dotyczącą przesunięcia. Wszystkie daty, godziny i przesunięcia części są obowiązkowe i nie ma wartości domyślnej. Data część musi mieć format RRRR-MM-DD, gdzie RRRR jest wartością czterocyfrowy rok zakresu od 0001 do 9999, miesiąc od 1 do 12, a DD jest wartość dnia, który jest prawidłowy dla danego miesiąca. Składnik godziny musi mieć format gg: mm [: SS [.fffffff]], gdzie HH jest wartość godziny między 0 a 23, MM minuty wartość między 0 a 59, SS jest druga wartość od 0 do 59 i fffffff jest ułamkowych drugiej wartości od 0 do 9999999. Wszystkie zakresy wartości są włącznie. Ułamkowych części sekundy są opcjonalne. Sekund są opcjonalne, chyba że określono ułamkowych części sekundy; w takim przypadku sekund są wymagane. Jeśli sekund lub ułamków nie są określone, wartością domyślną równą zero, zostanie użyty. Części przesunięcia musi mieć format {+&#124;-} gg: mm, gdzie HH i MM mają takie samo znaczenie jak składnik godziny. Zakres przesunięcia, jednak musi należeć do zakresu od -14:00 i + 14:00  
   
  Może być dowolną liczbę spacji między DATETIMEOFFSET symbol i ładunek w postaci literału, ale nie nowych wierszy.  
   

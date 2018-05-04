@@ -1,29 +1,17 @@
 ---
 title: '&lt;serviceActivations&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47a7d0984a5fafa7f03a589570e2a1aa2546dd8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c62f2bd1a34aca31ea9f9d5de17840f2967b269c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
-Element konfiguracji, który pozwala Tobie dodać ustawienia, które definiują ustawienia aktywacji usług wirtualnych mapowane na Twojej [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] typów usług. Dzięki temu można aktywować usługi hostowane w WAS / usług IIS bez pliku svc.  
+Element konfiguracji, który umożliwia Tobie dodać ustawienia, które definiują ustawienia aktywacji usług wirtualnych, które odpowiadają typom usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w WAS / usług IIS bez pliku svc.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
 \<serviceActivations >  
   
@@ -48,7 +36,7 @@ Element konfiguracji, który pozwala Tobie dodać ustawienia, które definiują 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|Dodaje element konfiguracji, który określa aktywacji aplikacji usługi.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|Dodaje element konfiguracji, który określa aktywacji aplikacji usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

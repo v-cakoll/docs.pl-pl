@@ -21,7 +21,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt;Operator (odwołanie w C#)
-`->` Łączy wskaźnik usuwania odwołania i element członkowski dostępu operatora.  
+Operator `->` łączy dereferencję wskaźnika i element członkowski.  
   
 ## <a name="remarks"></a>Uwagi  
  Wyrażenie w postaci  
@@ -30,15 +30,15 @@ ms.lasthandoff: 11/21/2017
 x->y  
 ```  
   
- (gdzie `x` wskaźnika typu `T*` i `y` jest elementem członkowskim `T`) jest odpowiednikiem,  
+ (gdzie `x` jest wskaźnikiem typu `T*` i `y` jest elementem członkowskim `T`) jest odpowiednikiem,  
   
 ```  
 (*x).y  
 ```  
   
- `->` Operatora można używać tylko w kodzie, który jest oznaczony jako [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md).  
+ Operatora `->` można używać tylko w kodzie, który jest oznaczony jako [niebezpieczny](../../../csharp/language-reference/keywords/unsafe.md).  
   
- `->` Operator nie może być przeciążony.  
+ Operator `->` nie może być przeciążony.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  

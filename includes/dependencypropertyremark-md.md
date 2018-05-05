@@ -1,1 +1,0 @@
-Pośredni dostęp do każdej publicznej właściwości i zdarzenia tego typu uzyskuje się poprzez rozpoznanie odpowiadającej właściwości zależności. Ta właściwość zależności jest publicznym statycznym polem o nazwie **XProperty** lub **systemu XEvent**, gdzie X jest odpowiadającą właściwością.

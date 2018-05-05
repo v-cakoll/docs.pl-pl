@@ -1,1 +1,0 @@
-Typ elementu w kontrolowanej sekwencji.

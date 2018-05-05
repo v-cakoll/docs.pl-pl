@@ -1,2 +1,0 @@
-> [!NOTE]
->  W tym przykładzie kodu używane jest przeciążenie tej przeciążonej metody inne niż przeciążenie opisane w tym temacie. W celu rozszerzenia tego przykładu tak, aby dotyczył tego tematu, należy zmienić treść funkcji `selector`.

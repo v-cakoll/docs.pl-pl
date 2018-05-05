@@ -1,1 +1,0 @@
-Notatnik firmy Microsoft

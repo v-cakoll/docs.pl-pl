@@ -21,7 +21,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp;Operator (odwołanie w C#)
-Warunkowe — i — operator (`&&`) wykonuje logiczną — i jego `bool` argumentów operacji, ale tylko ocenia jego drugiego operandu w razie potrzeby.  
+Operator warunkowy i - AND, (`&&`) wykonuje koniunkcję jego argumentów typu `bool`. W razie potrzeby ocenia wartośc tylko drugiego z argumentów.  
   
 ## <a name="remarks"></a>Uwagi  
  Operacja  
@@ -30,18 +30,18 @@ Warunkowe — i — operator (`&&`) wykonuje logiczną — i jego `bool` argumen
 x && y  
 ```  
   
- odnosi się do operacji  
+ Odpowiada operacji  
   
 ```  
 x & y  
 ```  
   
- z wyjątkiem, że jeśli `x` jest `false`, `y` nie jest oceniany, ponieważ wynik operacji i `false` niezależnie od tego, jakie wartości `y` jest. Jest to określane jako "zwarcia" oceny.  
+ Za wyjątkiem tego, że jeśli `x` jest `false`, to `y` nie zostanie ocenione, ponieważ wynikiem operacji będzie `false` niezależnie od tego, jakiej wartości jest `y`. Taki zabieg nazywamy 'skrótem logicznym'.  
   
- Warunkowe- i operator nie może być przeciążona, overloads regularnych operatorów logicznych, ale i operatory [true](../../../csharp/language-reference/keywords/true.md) i [false](../../../csharp/language-reference/keywords/false.md) z pewnymi ograniczeniami również pełnią funkcję przeciążenia Operatory logiczne warunkowego.  
+ Operator warunkowy 'AND' nie może być przeciążony, ale przeciążenia zwykłych operatorów logicznych, oraz [true](../../../csharp/language-reference/keywords/true.md) i [false](../../../csharp/language-reference/keywords/false.md) są dopuszczalne z odpowiednimi ograniczeniami.
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie wyrażenia warunkowego, w ciągu sekundy `if` instrukcji ocenia tylko pierwszy argument operacji, ponieważ argument zwraca `false`.  
+ W poniższym przykładzie, drugi blok warunkowy `if` ocenia tylko pierwszy z argumentów operatora `AND`, ponieważ ten zwraca `false`.  
   
  [!code-csharp[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
   

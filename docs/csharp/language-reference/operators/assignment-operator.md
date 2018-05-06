@@ -20,10 +20,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>= — Operator (odwołanie w C#)
-Operator przypisania (`=`) przechowuje wartość jego prawostronny operand w lokalizacji przechowywania, właściwość lub indeksator wskazywane przez jej argument po lewej stronie i zwraca wartość wyniku. Argumenty operacji musi być tego samego typu (lub prawostronny operand musi być umożliwiają niejawnej konwersji na typ lewego operandu).  
+Operator przypisania (`=`) przechowuje wartość jego prawostronnego operandu w lokalizacji przechowywania, właściwość lub indeksatorze wskazywanym przez jego lewostronny argument, i zwraca wartość wyniku. Argumenty operacji muszą być tego samego typu (lub operand prawostronny musi umożliwiać niejawną konwersję na typ lewego operandu).  
   
 ## <a name="remarks"></a>Uwagi  
- Operator przypisania nie może być przeciążony. Można jednak zdefiniować operatory niejawnej konwersji typu, które umożliwiają korzystanie z tych typów operator przypisania. Aby uzyskać więcej informacji, zobacz [przy użyciu operatorów konwersji](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
+ Operator przypisania nie może być przeciążony. Można jednak zdefiniować niejawne operatory konwersji typu, które umożliwiają korzystanie z operatora przypisania. Aby uzyskać więcej informacji, zobacz [Używanie Operatorów Konwersji](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  

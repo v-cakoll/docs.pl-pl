@@ -1,22 +1,12 @@
 ---
-title: "Porady: znajdowanie elementem głównym (XPath-LINQ do XML) (Visual Basic)"
-ms.custom: 
+title: 'Porady: znajdowanie elementem głównym (XPath-LINQ do XML) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 78bedc9b3f6143b1574d9063ea7ee0f08550681e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 112be85e8af8fbe31f62ef91db04de72a3793082
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Porady: znajdowanie elementem głównym (XPath-LINQ do XML) (Visual Basic)
 W tym temacie pokazano, jak uzyskać elementu głównego z XPath i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

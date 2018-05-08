@@ -1,23 +1,16 @@
 ---
 title: Wprowadzenie do formantu DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>Wprowadzenie do formantu DataRepeater (Visual Studio)
 Powerpack Visual Basic <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formant jest kontenerem przewijanego do wielokrotnego formantów, które zawierają dane, na przykład wierszy w tabeli bazy danych. Może służyć jako alternatywę do <xref:System.Windows.Forms.DataGridView> kontrolować, jeśli wymagane jest większa kontrola nad układ danych. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "Powtarza" grupy powiązanych formantów przez utworzenie wielu wystąpień w przewijania widoku. Dzięki temu użytkownicy wyświetlić kilka rekordów jednocześnie.  
@@ -51,6 +44,6 @@ Powerpack Visual Basic <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> form
  Inne dostosowania obejmują kontrolowanie możliwość dodawania i usuwania rekordów, dodawanie funkcji wyszukiwania i wyświetlanie powiązanych danych w formacie głównego i szczegółów. Aby uzyskać więcej informacji, zobacz [porady: wyłączanie dodawania i usuwania elementów DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md), [porady: wyszukiwanie danych w formancie Datarepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md), i [porady: Tworzenie formularza wzorzec/szczegół za pomocą dwóch Formantów DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formantu DataRepeater](../../../visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)  
- [Wskazówki: Wyświetlanie danych w formancie Datarepeater](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  
- [Rozwiązywanie problemów z formantem DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+ [Kontrolka DataRepeater](../../../visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)  
+ [Przewodnik: wyświetlanie danych w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  
+ [Rozwiązywanie problemów z kontrolką DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

@@ -1,49 +1,35 @@
 ---
 title: Tworzenie kolejek w programie WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>Tworzenie kolejek w programie WCF
-W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w systemie Windows Communication Foundation (WCF).  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>Powiązania transportu kolejki jako WCF  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], określ umów co wymiany. Kontrakty są wymiany komunikatów zależne od firm lub specyficzne dla aplikacji. Mechanizm służący do wymiany wiadomości (lub "jak") jest określona w powiązaniach. Powiązania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hermetyzowanie szczegółowe informacje o wymianie wiadomości. Udostępniają pokrętła konfiguracji dla użytkownika kontrolować różne aspekty transportu lub protokół, który reprezentuje powiązania. Tworzenie kolejek w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest traktowany jak wszelkie inne powiązania transportu, czyli duże korzyści w wielu aplikacjach kolejkowania wiadomości. Obecnie wiele aplikacji kolejkowania wiadomości są zapisywane inaczej z innych zdalnego wywołania procedury (RPC) — styl aplikacji rozproszonych, dzięki czemu trudniej wykonaj i obsługa. Z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], styl pisania aplikacji rozproszonej jest znacznie takie same, co ułatwia wykonaj i konserwacji. Ponadto przez factoring limit mechanizmu programu exchange, niezależnie od logiki biznesowej, łatwiej skonfigurować transportu lub go zmienić bez wpływu na kodu określonych aplikacji. Na poniższym rysunku przedstawiono struktury usług WCF i klienta przy użyciu usługi MSMQ do ich przenoszenia.  
+ W programie WCF umów Określ, jakie wymiany. Kontrakty są wymiany komunikatów zależne od firm lub specyficzne dla aplikacji. Mechanizm służący do wymiany wiadomości (lub "jak") jest określona w powiązaniach. Powiązania WCF hermetyzować szczegółowe informacje o wymianie wiadomości. Udostępniają pokrętła konfiguracji dla użytkownika kontrolować różne aspekty transportu lub protokół, który reprezentuje powiązania. Usługi kolejkowania wiadomości w programie WCF jest traktowany jak wszelkie inne powiązania transportu, czyli duże korzyści w wielu aplikacjach kolejkowania wiadomości. Obecnie wiele aplikacji kolejkowania wiadomości są zapisywane inaczej z innych zdalnego wywołania procedury (RPC) — styl aplikacji rozproszonych, dzięki czemu trudniej wykonaj i obsługa. Z programem WCF styl pisania aplikacji rozproszonej jest znacznie takie same, co ułatwia wykonaj i konserwacji. Ponadto przez factoring limit mechanizmu programu exchange, niezależnie od logiki biznesowej, łatwiej skonfigurować transportu lub go zmienić bez wpływu na kodu określonych aplikacji. Na poniższym rysunku przedstawiono struktury usług WCF i klienta przy użyciu usługi MSMQ do ich przenoszenia.  
   
  ![Diagram aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "rozproszonych kolejki — rysunek")  
   
- Jak widać na poprzedniej ilustracji, klient i usługa muszą być zdefiniowane tylko aplikacji semantykę, oznacza to, gdy kontrakt i implementacja. Usługa umożliwia skonfigurowanie Zakolejkowane powiązanie odpowiednie ustawienia. Klient używa [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta do usługi i generowania pliku konfiguracji, który opisuje powiązania służące do wysyłania komunikatów do usługi. W związku z tym, aby wysłać wiadomość w kolejce, klient tworzy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, a następnie wywołuje operację. Powoduje to, że komunikat, który ma zostać wysłane do kolejki transmisji i przeniesienia uprawnień do kolejki docelowej. Złożonością komunikatu w kolejce są ukryte przed aplikacji, która wysyła i odbiera komunikaty.  
+ Jak widać na poprzedniej ilustracji, klient i usługa muszą być zdefiniowane tylko aplikacji semantykę, oznacza to, gdy kontrakt i implementacja. Usługa umożliwia skonfigurowanie Zakolejkowane powiązanie odpowiednie ustawienia. Klient używa [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do wygenerowania klienta programu WCF z usługą i generowania pliku konfiguracji, który opisuje powiązania służące do wysyłania komunikatów do usługi. W związku z tym aby wysłać wiadomość w kolejce, klient tworzy klienta WCF i wywołuje operację. Powoduje to, że komunikat, który ma zostać wysłane do kolejki transmisji i przeniesienia uprawnień do kolejki docelowej. Złożonością komunikatu w kolejce są ukryte przed aplikacji, która wysyła i odbiera komunikaty.  
   
- Ostrzeżenia o kolejce wiąże w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obejmują:  
+ Ostrzeżenia o Zakolejkowane powiązanie w programie WCF obejmują:  
   
--   Wszystkie operacje usługi musi być jednokierunkowe, ponieważ powiązanie w kolejce domyślne [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje komunikację dupleksową korzystanie z kolejek. Przykładowe komunikacja dwukierunkowa ([komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md)) ilustruje sposób używania dwa kontrakty jednokierunkowe do zaimplementowania komunikację dupleksową korzystanie z kolejek.  
+-   Wszystkie usługi, którą musi być jednokierunkowej operacji, ponieważ domyślnie Zakolejkowane powiązanie w programie WCF nie obsługuje komunikację dupleksową korzystanie z kolejek. Przykładowe komunikacja dwukierunkowa ([komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md)) ilustruje sposób używania dwa kontrakty jednokierunkowe do zaimplementowania komunikację dupleksową korzystanie z kolejek.  
   
--   Aby wygenerować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta przy użyciu wymiany metadanych wymaga dodatkowy punkt końcowy HTTP w usłudze, dzięki czemu mogą być przeszukiwane bezpośrednio do generowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta i uzyskać informacje o powiązaniu odpowiednio skonfigurować w kolejce komunikacji.  
+-   Aby wygenerować WCF klienta przy użyciu wymiany metadanych wymaga dodatkowy punkt końcowy HTTP w usłudze mogą być przeszukiwane w bezpośrednio do generowania klienta WCF i uzyskać informacje o powiązaniu odpowiednio skonfigurować komunikację w kolejce.  
   
--   Oparte na powiązanie umieszczonych w kolejce, dodatkowej konfiguracji poza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest wymagana. Na przykład <xref:System.ServiceModel.NetMsmqBinding> klasy, która jest dostarczana razem z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga skonfigurowania powiązań, a także skonfigurować migrację usługi kolejkowania komunikatów (MSMQ).  
+-   W oparciu o Zakolejkowane powiązanie, dodatkowe poza WCF jest wymagana konfiguracja. Na przykład <xref:System.ServiceModel.NetMsmqBinding> klasy, który jest dostarczany z programem WCF, musisz skonfigurować powiązania, a także skonfigurować migrację usługi kolejkowania komunikatów (MSMQ).  
   
- W poniższych sekcjach opisano określonych w kolejce powiązania dostarczane z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], które są oparte na usługi MSMQ.  
+ W poniższych sekcjach opisano określonych umieszczonych w kolejce powiązania dostarczanego z programem WCF, które są oparte na usługi MSMQ.  
   
 ### <a name="msmq"></a>Usługa MSMQ  
- Transport z kolejką w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa usługi MSMQ do komunikacji z jej w kolejce.  
+ Transport z kolejką w programie WCF używa usługi MSMQ do komunikacji z jej w kolejce.  
   
  Usługa MSMQ jest dostarczany jako opcjonalny składnik z systemem Windows i działa jako usługa NT. Zarejestrowaniu wiadomości do przesłania w kolejce transmisji i dostarczenie w kolejce docelowej. Menedżerami kolejki usługi MSMQ implementacji protokołu niezawodnych transferu komunikatów, dzięki czemu komunikaty nie zostaną utracone podczas transmisji. Protokół może być lokalny lub opartego na protokole SOAP, takich jak Reliable protokołu komunikatu (SRMP) protokołu SOAP.  
   
@@ -54,7 +40,7 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
  Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [usługi kolejkowania komunikatów instalowanie (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) jest Zakolejkowane powiązanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia dwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych do komunikowania się przy użyciu usługi MSMQ. Wiązanie, w związku z tym udostępnia właściwości, które są specyficzne dla usługi MSMQ. Jednak nie wszystkie funkcje usługi MSMQ i właściwości są widoczne w `NetMsmqBinding`. CD `NetMsmqBinding` zaprojektowano z optymalny zestaw funkcji, które większość klientów stwierdzi, że wystarczające.  
+ [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) jest Zakolejkowane powiązanie WCF zapewnia dwa punktami końcowymi WCF do komunikowania się przy użyciu usługi MSMQ. Wiązanie, w związku z tym udostępnia właściwości, które są specyficzne dla usługi MSMQ. Jednak nie wszystkie funkcje usługi MSMQ i właściwości są widoczne w `NetMsmqBinding`. CD `NetMsmqBinding` zaprojektowano z optymalny zestaw funkcji, które większość klientów stwierdzi, że wystarczające.  
   
  `NetMsmqBinding` Manifesty podstawowe koncepcje kolejkowania omówione w związku z tym daleko w formie właściwości na powiązania. Te właściwości, komunikują się z usługi MSMQ z kolei, jak przenieść i dostarczania komunikatów. Omówienie kategorii właściwości jest w poniższych sekcjach. Aby uzyskać więcej informacji zobacz tematy dotyczące pojęć, opisujących właściwości specyficzne dla bardziej całkowicie.  
   
@@ -75,7 +61,7 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
   
  Wiele systemów kolejkowania Podaj kolejki utraconych wiadomości całego systemu. Usługa MSMQ zapewnia systemowe nietransakcyjnej kolejki utraconych wiadomości dla wiadomości, które nie są dostawy do kolejki nietransakcyjnej i systemowe transakcyjnej kolejki utraconych wiadomości dla wiadomości, które nie są dostawy do kolejek transakcyjnych.  
   
- Jeśli wielu klientów, wysyłanie komunikatów do kolejki inny element docelowy korzystają usługi MSMQ, wszystkie wiadomości wysyłane przez klientów przejdź do tej samej kolejki utraconych wiadomości. Nie zawsze jest preferowanym. Dla lepszej izolacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] Podaj niestandardowej kolejki utraconych wiadomości (lub kolejki utraconych wiadomości specyficzne dla aplikacji) czy użytkownika można określić do przechowywania komunikatów, które nie są dostawy. W związku z tym różnych klientów nie mają tej samej kolejki utraconych wiadomości.  
+ Jeśli wielu klientów, wysyłanie komunikatów do kolejki inny element docelowy korzystają usługi MSMQ, wszystkie wiadomości wysyłane przez klientów przejdź do tej samej kolejki utraconych wiadomości. Nie zawsze jest preferowanym. Dla lepszej izolacji, WCF i usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] Podaj niestandardowej kolejki utraconych wiadomości (lub kolejki utraconych wiadomości specyficzne dla aplikacji) czy użytkownika można określić do przechowywania komunikatów, które nie są dostawy. W związku z tym różnych klientów nie mają tej samej kolejki utraconych wiadomości.  
   
  Powiązanie ma dwie właściwości odsetek:  
   
@@ -105,7 +91,7 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w [!INCLUDE
 -   `UseActiveDirectory`: Wartość logiczna wskazująca, czy usługi Active Directory muszą być używane do rozpoznawania adresów kolejki. Domyślnie jest wyłączona. Aby uzyskać więcej informacji, zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- `MsmqIntegrationBinding` Jest używany, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktu końcowego do komunikowania się z istniejącej aplikacji usługi MSMQ napisana C, C++, COM lub System.Messaging interfejsów API.  
+ `MsmqIntegrationBinding` Jest używany, gdy punkt końcowy usługi WCF do komunikowania się z istniejącej aplikacji usługi MSMQ napisana C, C++, COM lub System.Messaging interfejsów API.  
   
  Właściwości powiązania są takie same, jak w przypadku `NetMsmqBinding`. Jednakże Zastosuj następujące różnice:  
   

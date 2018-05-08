@@ -1,13 +1,7 @@
 ---
-title: "Przegląd biblioteki klas programu .NET"
-ms.custom: 
+title: Przegląd biblioteki klas programu .NET
 ms.date: 02/08/2018
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - classes [.NET Framework], library overview
 - classes [.NET Core], library overview
@@ -45,15 +39,11 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ffa64d3a1f9ade7a97b15edfdecbad566c871c12
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
 Implementacje .NET zawierają klasy, interfejsy delegatów i typy wartości, które przyspieszenia i zoptymalizować proces rozwoju i zapewnienia dostępu do funkcji systemu. W celu ułatwienia współdziałanie między językami, większość typów .NET są zgodne ze specyfikacją CLS i w związku z tym można używać z dowolnego języka programowania, w których kompilatora odpowiada specyfikacja języka wspólnego (ze specyfikacją CLS).  
@@ -96,20 +86,20 @@ Implementacje .NET zawierają klasy, interfejsy delegatów i typy wartości, kt�
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Liczba całkowita|<xref:System.Byte>|8-bitową nieznakowaną liczbą całkowitą.|**Byte**|**byte**|**char bez znaku**|**byte**|  
 ||<xref:System.SByte>|8-bitową liczbę całkowitą ze znakiem.<br /><br /> Nie zgodne z CLS.|**SByte**|**sbyte**|**char**<br /> —lub—<br /> **podpisana** **char**|**sbyte**|  
-||<xref:System.Int16>|16-bitową liczbę całkowitą ze znakiem.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Całkowita 32-bitowych.|**Integer**|**int**|**int**<br /><br /> —lub—<br /><br /> **long**|**int**|  
+||<xref:System.Int16>|16-bitową liczbę całkowitą ze znakiem.|**krótki**|**short**|**short**|**int16**|  
+||<xref:System.Int32>|Całkowita 32-bitowych.|**Liczba całkowita**|**int**|**int**<br /><br /> —lub—<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Całkowita 64-bitowych.|**długa**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16-bitową liczbę całkowitą bez znaku.<br /><br /> Nie zgodne z CLS.|**UShort**|**ushort**|**short bez znaku**|**uint16**|  
 ||<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku.<br /><br /> Nie zgodne z CLS.|**Uinteger —**|**uint**|**unsigned int**<br /> —lub—<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64-bitowa liczba całkowita bez znaku.<br /><br /> Nie zgodne z CLS.|**ULong**|**ulong**|**__int64 bez znaku**|**uint64**|  
 |Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczby zmiennoprzecinkowe (32-bitowy) pojedynczej precyzji.|**Pojedynczy**|**float**|**float**|**float32**</br> lub</br>**single**|  
-||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**O podwójnej precyzji**|**double**|**double**|**float**</br> lub </br> **double**|  
+||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**Double**|**double**|**double**|**float**</br> lub </br> **double**|  
 |Logiczne|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Inne|<xref:System.Char>|Znak Unicode (16-bitowe).|**char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Wartość dziesiętna (128-bitowe).|**Decimal**|**decimal**|**Decimal**|**decimal**|  
-||<xref:System.IntPtr>|Całkowita którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowy) oraz wartość 64-bitowym na 64-bitowej platformy.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint**|  
-||<xref:System.UIntPtr>|Całkowitą bez znaku, którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowy) oraz wartość 64-bitowym na 64-bitowej platformy.<br /><br /> Nie zgodne z CLS.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint**|  
-||<xref:System.Object>|Element główny hierarchii obiektów.|**Object**|**object**|**Object^**|**obj**|  
+||<xref:System.IntPtr>|Całkowita którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowy) oraz wartość 64-bitowym na 64-bitowej platformy.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
+||<xref:System.UIntPtr>|Całkowitą bez znaku, którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowy) oraz wartość 64-bitowym na 64-bitowej platformy.<br /><br /> Nie zgodne z CLS.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
+||<xref:System.Object>|Element główny hierarchii obiektów.|**Obiekt**|**object**|**Obiekt ^**|**obj**|  
 ||<xref:System.String>|Niezmienne, o stałej długości ciągu znaków Unicode.|**Ciąg**|**string**|**String ^**|**string**|  
   
  Oprócz podstawowe typy danych <xref:System> przestrzeń nazw zawiera klasy ponad 100, począwszy od klasy, które obsługi wyjątków do klasy, które zajmują się podstawowe koncepcje środowiska uruchomieniowego, takich jak moduł garbage collector i domen aplikacji. <xref:System> Przestrzeń nazw zawiera także wiele nazw drugiego poziomu.  

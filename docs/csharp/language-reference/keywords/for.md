@@ -1,24 +1,17 @@
 ---
 title: for (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-caps.latest.revision: 39
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cb7e83733fe026658f502b430975a0f8a27e9df3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d7ab9e37be61384c33833381f44257169c81c31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-c-reference"></a>for (odwołanie w C#)
 Za pomocą `for` pętli, można wykonać instrukcji lub blok instrukcji wielokrotnie aż wynikiem obliczenia określonego wyrażenia jest `false`. Tego rodzaju pętli jest przydatne do Iterowanie przez tablice za i inne aplikacje, w których znasz z wyprzedzeniem jak często mają iteracji pętli.  
@@ -65,9 +58,9 @@ for (initializer; condition; iterator)
   
         -   Wywołanie metody  
   
-        -   Prefiks lub przyrostka [przyrostu](../../../csharp/language-reference/operators/increment-operator.md) wyrażenia, takich jak `++i` lub`i++`  
+        -   Prefiks lub przyrostka [przyrostu](../../../csharp/language-reference/operators/increment-operator.md) wyrażenia, takich jak `++i` lub `i++`  
   
-        -   Prefiks lub przyrostka [dekrementacji](../../../csharp/language-reference/operators/decrement-operator.md) wyrażenia, takich jak `--i` lub`i--`  
+        -   Prefiks lub przyrostka [dekrementacji](../../../csharp/language-reference/operators/decrement-operator.md) wyrażenia, takich jak `--i` lub `i--`  
   
         -   Tworzenie obiektu przy użyciu [nowych](../../../csharp/language-reference/keywords/new-operator.md)  
   
@@ -81,9 +74,9 @@ for (initializer; condition; iterator)
   
     -   Wywołanie metody  
   
-    -   Prefiks lub przyrostka [przyrostu](../../../csharp/language-reference/operators/increment-operator.md) wyrażenia, takich jak `++i` lub`i++`  
+    -   Prefiks lub przyrostka [przyrostu](../../../csharp/language-reference/operators/increment-operator.md) wyrażenia, takich jak `++i` lub `i++`  
   
-    -   Prefiks lub przyrostka [dekrementacji](../../../csharp/language-reference/operators/decrement-operator.md) wyrażenia, takich jak `--i` lub`i--`  
+    -   Prefiks lub przyrostka [dekrementacji](../../../csharp/language-reference/operators/decrement-operator.md) wyrażenia, takich jak `--i` lub `i--`  
   
     -   Tworzenie obiektu przy użyciu [nowych](../../../csharp/language-reference/keywords/new-operator.md)  
   
@@ -116,6 +109,6 @@ for (initializer; condition; iterator)
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Instrukcja foreach w](../../../csharp/language-reference/keywords/foreach-in.md)  
- [for — instrukcja (C++)](/cpp/cpp/for-statement-cpp)  
- [Iteracja — instrukcje](../../../csharp/language-reference/keywords/iteration-statements.md)
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [for, instrukcja (C++)](/cpp/cpp/for-statement-cpp)  
+ [Instrukcje iteracji](../../../csharp/language-reference/keywords/iteration-statements.md)

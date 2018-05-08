@@ -1,11 +1,7 @@
 ---
-title: "Funkcja PutInstanceWmi (niezarządzany wykaz interfejsów API)"
-description: "Funkcja PutInstanceWmi tworzy lub aktualizuje wystąpienia istniejącej klasy."
+title: Funkcja PutInstanceWmi (niezarządzany wykaz interfejsów API)
+description: Funkcja PutInstanceWmi tworzy lub aktualizuje wystąpienia istniejącej klasy.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutInstanceWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putinstancewmi-function"></a>Funkcja PutInstanceWmi
 Tworzy lub aktualizuje wystąpienia istniejącej klasy. Wystąpienie jest zapisywany w repozytorium WMI. 
@@ -80,7 +73,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | Określone wystąpienie jest nieprawidłowy. (Na przykład wywołanie elementu `PutInstanceWmi` z klasą zwraca tę wartość.) |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` Określono flagę, ale wystąpienie już istnieje. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`został określony w `lFlags`, ale wystąpienie nie istnieje. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` został określony w `lFlags`, ale wystąpienie nie istnieje. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Usługa WMI jest prawdopodobnie zatrzymana i ponownie uruchomić. Wywołanie [ConnectServerWmi](connectserverwmi.md) ponownie. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącze wywołań (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
@@ -106,7 +99,7 @@ Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje 
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

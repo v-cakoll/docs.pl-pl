@@ -1,13 +1,6 @@
 ---
-title: "HScrollBar i VScrollBar — Informacje o formantach (Formularze systemu Windows)"
-ms.custom: 
+title: HScrollBar i VScrollBar — Informacje o formantach (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar i VScrollBar — Informacje o formantach (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.ScrollBar> formantów służą do zapewniania nawigację za pośrednictwem długą listę elementów lub duża ilość informacji, albo przewijanie w poziomie lub pionie w aplikacji lub kontrolki. Paski przewijania są wspólnego elementu interfejsu systemu Windows, więc <xref:System.Windows.Forms.ScrollBar> kontroli jest często używana z formantami, które nie pochodzą z <xref:System.Windows.Forms.ScrollableControl> klasy. Podobnie wielu deweloperów wybierz uwzględnienie <xref:System.Windows.Forms.ScrollBar> sterowania w przypadku tworzenia własne kontrolki użytkownika.  
   
- <xref:System.Windows.Forms.HScrollBar> (Poziomy) i <xref:System.Windows.Forms.VScrollBar> formantów (pionową) działać niezależnie od innych kontrolek i mieć własny zestaw zdarzeń, właściwości i metod. <xref:System.Windows.Forms.ScrollBar>formanty nie są takie same, jak paski przewijania wbudowanych, które są dołączone do pól tekstowych, pola listy, pola kombi lub formularze MDI ( <xref:System.Windows.Forms.TextBox> formant ma <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwości, aby pokazać lub ukryć paski przewijania, które są dołączone do formantu).  
+ <xref:System.Windows.Forms.HScrollBar> (Poziomy) i <xref:System.Windows.Forms.VScrollBar> formantów (pionową) działać niezależnie od innych kontrolek i mieć własny zestaw zdarzeń, właściwości i metod. <xref:System.Windows.Forms.ScrollBar> formanty nie są takie same, jak paski przewijania wbudowanych, które są dołączone do pól tekstowych, pola listy, pola kombi lub formularze MDI ( <xref:System.Windows.Forms.TextBox> formant ma <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwości, aby pokazać lub ukryć paski przewijania, które są dołączone do formantu).  
   
  <xref:System.Windows.Forms.ScrollBar> Steruje użyciem <xref:System.Windows.Forms.ScrollBar.Scroll> zdarzenia do monitorowania przepływu suwaka (nazywane czasami stronie przycisku suwaka) na pasku przewijania. Przy użyciu <xref:System.Windows.Forms.ScrollBar.Scroll> zdarzeń zapewnia dostęp do wartości paska przewijania, jak przeciągania.  
   

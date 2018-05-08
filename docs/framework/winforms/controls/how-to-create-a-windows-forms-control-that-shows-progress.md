@@ -1,13 +1,6 @@
 ---
-title: "Porady: tworzenie formantu formularzy systemu Windows pokazującego postęp"
-ms.custom: 
+title: 'Porady: tworzenie formantu formularzy systemu Windows pokazującego postęp'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76ce5cd67b66dea47f5bd12e78bb27179b391257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Porady: tworzenie formantu formularzy systemu Windows pokazującego postęp
 Poniższy przykład kodu pokazuje formant niestandardowy o nazwie `FlashTrackBar` można wyświetlane użytkownikowi, poziomu lub postęp aplikacji. Gradient używa do wizualnego reprezentowania postępu.  
@@ -39,9 +27,9 @@ Poniższy przykład kodu pokazuje formant niestandardowy o nazwie `FlashTrackBar
   
 -   Zastępowanie <xref:System.Windows.Forms.Control.OnPaint%2A> metodę w celu zapewnienia logiki, by narysować kontrolkę.  
   
--   Obliczanie dostępne do rysowania formantu przy użyciu obszaru jego <xref:System.Windows.Forms.Control.ClientRectangle%2A> właściwości. `FlashTrackBar`Dzieje się tak jego `OptimizedInvalidate` metody.  
+-   Obliczanie dostępne do rysowania formantu przy użyciu obszaru jego <xref:System.Windows.Forms.Control.ClientRectangle%2A> właściwości. `FlashTrackBar` Dzieje się tak jego `OptimizedInvalidate` metody.  
   
--   Implementowanie serializacji lub trwałości dla właściwości, gdy zostanie zmieniona w narzędziu Projektant dla formularzy systemu Windows. `FlashTrackBar`definiuje `ShouldSerializeStartColor` i `ShouldSerializeEndColor` metody serializacji jego `StartColor` i `EndColor` właściwości.  
+-   Implementowanie serializacji lub trwałości dla właściwości, gdy zostanie zmieniona w narzędziu Projektant dla formularzy systemu Windows. `FlashTrackBar` definiuje `ShouldSerializeStartColor` i `ShouldSerializeEndColor` metody serializacji jego `StartColor` i `EndColor` właściwości.  
   
  W poniższej tabeli przedstawiono właściwości niestandardowe zdefiniowane przez `FlashTrackBar`.  
   
@@ -66,7 +54,7 @@ Poniższy przykład kodu pokazuje formant niestandardowy o nazwie `FlashTrackBar
 |`OnValueChanged`|Metoda, który wywołuje `ValueChanged` zdarzeń.|  
   
 > [!NOTE]
->  `FlashTrackBar`używa <xref:System.EventArgs> klasy na potrzeby danych zdarzenia i <xref:System.EventHandler> dla delegata zdarzenia.  
+>  `FlashTrackBar` używa <xref:System.EventArgs> klasy na potrzeby danych zdarzenia i <xref:System.EventHandler> dla delegata zdarzenia.  
   
  Do obsługi odpowiednich *EventName* zdarzenia, `FlashTrackBar` zastępuje następujące metody, które dziedziczy z <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   

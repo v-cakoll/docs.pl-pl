@@ -1,11 +1,7 @@
 ---
-title: "Funkcja CloneEnumWbemClassObject (niezarządzany wykaz interfejsów API)"
-description: "Funkcja CloneEnumWbemClassObject tworzy kopię logicznej moduł wyliczający."
+title: Funkcja CloneEnumWbemClassObject (niezarządzany wykaz interfejsów API)
+description: Funkcja CloneEnumWbemClassObject tworzy kopię logicznej moduł wyliczający.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CloneEnumWbemClassObject
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 22bcf2731ff682bf538858fc66a7a94be7f5d7df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Funkcja CloneEnumWbemClassObject
 Tworzy kopię logicznej moduł wyliczający, zachowując jego bieżącym położeniu w wyliczeniu.  
@@ -56,7 +49,7 @@ HRESULT CloneEnumWbemClassObject (
 `authLevel`  
 [in] Poziom autoryzacji.
 
-`impLevel`[in] Poziom personifikacji.
+`impLevel` [in] Poziom personifikacji.
 
 `pCurrentEnumWbemClassObject`  
 [out] Wskaźnik do [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) wystąpienia w klonowania.
@@ -99,7 +92,7 @@ Na przykład zobacz [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/lib
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

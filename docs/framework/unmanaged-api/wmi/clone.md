@@ -1,11 +1,7 @@
 ---
-title: "Funkcja klonowania (niezarządzany wykaz interfejsów API)"
-description: "Funkcja klonowania zwraca nowy obiekt, która jest klonem pełne obecną."
+title: Funkcja klonowania (niezarządzany wykaz interfejsów API)
+description: Funkcja klonowania zwraca nowy obiekt, która jest klonem pełne obecną.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Clone
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clone-function"></a>Clone — funkcja
 Zwraca nowy obiekt, który jest pełny klonowania bieżącego obiektu.   
@@ -62,7 +55,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`został określony jako parametru, a nie jest dozwolone w ten sposób użycia. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` został określony jako parametru, a nie jest dozwolone w ten sposób użycia. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna w celu sklonowania obiektu. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
@@ -77,7 +70,7 @@ Sklonowany obiekt to obiekt COM, który ma liczebności referencyjnej równej 1.
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

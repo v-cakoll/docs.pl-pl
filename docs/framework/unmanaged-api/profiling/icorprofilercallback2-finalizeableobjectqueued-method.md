@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback2::FinalizeableObjectQueued — Metoda"
-ms.custom: 
+title: ICorProfilerCallback2::FinalizeableObjectQueued — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback2.FinalizeableObjectQueued
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed9c66f7d588d855daa550031c832810b914d49
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4d10b313adc60e2b851d32aeea70e2993480b0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued — Metoda
 Powiadamia profilera kodu, że obiekt o finalizator zostało umieszczone w kolejce do wątku finalizatora dla wykonywania jego `Finalize` metody.  
@@ -60,7 +48,7 @@ HRESULT FinalizeableObjectQueued(
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  

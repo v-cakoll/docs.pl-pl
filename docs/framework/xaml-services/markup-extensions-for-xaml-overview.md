@@ -1,29 +1,15 @@
 ---
 title: Rozszerzenia znaczników dla przeglądu XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-caps.latest.revision: 14
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 464c5f547089d47906f2e227effe821357196c16
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6b7c13355fe46d4b768699555bbaf522e3b49c73
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
 Rozszerzenia znaczników to technika XAML do uzyskania wartość, która nie jest właściwością pierwotną ani określonego typu XAML. Dla użycie atrybutu rozszerzenia znaczników przy użyciu sekwencji znaków znane otwierający nawias klamrowy `{` zakres rozszerzenia znacznika i zamykający nawias klamrowy `}` aby zakończyć. Korzystając z usług .NET Framework XAML, można użyć pewnych wstępnie zdefiniowanych rozszerzeń znaczników języka XAML z System.Xaml zestawu. Możesz również podklasy z <xref:System.Windows.Markup.MarkupExtension> klasy, zdefiniowane w System.Xaml i zdefiniowanie własnego rozszerzenia znaczników. Lub może używać rozszerzeń znaczników zdefiniowane przez platformę określonego odwołuje się już w ramach tego.  

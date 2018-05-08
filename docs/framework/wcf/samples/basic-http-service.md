@@ -1,27 +1,15 @@
 ---
-title: "Podstawowa usługa HTTP"
-ms.custom: 
+title: Podstawowa usługa HTTP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0d00ee21fa328c32549f89d8d5fc4c767f64582c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-http-service"></a>Podstawowa usługa HTTP
-W tym przykładzie pokazano, jak implementacji usługi oparte na protokole HTTP, opartego na protokole RPC - popularly określonych jako "POX" (zwykły starego XML) usługi — przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] model programowania REST. Ten przykład zawiera dwa składniki: własnym hostowanej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa HTTP (Service.cs) i aplikacji konsoli (Program.cs), która tworzy usługi i wykonywania wywołań do niego.  
+W tym przykładzie pokazano, jak implementacji usługi oparte na protokole HTTP, opartego na protokole RPC - popularly określonych jako usługa "POX" (zwykły starego XML) — za pomocą modelu programowania REST Windows Communication Foundation (WCF). Ten przykład zawiera dwa składniki: własnym hostowanej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa HTTP (Service.cs) i aplikacji konsoli (Program.cs), która tworzy usługi i wykonywania wywołań do niego.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Operacji 2 udostępnia usługi `EchoWithGet` i `EchoWithPost`, która zwraca ciąg, który został przekazany jako dane wejściowe.  
@@ -49,7 +37,7 @@ W tym przykładzie pokazano, jak implementacji usługi oparte na protokole HTTP,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

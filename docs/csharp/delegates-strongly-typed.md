@@ -1,20 +1,13 @@
 ---
-title: "Jednoznacznie delegatów"
-description: "Dowiedz się, jak użycie ogólnych typów delegata w celu zadeklarowania typów niestandardowych podczas tworzenia funkcji wymagających delegatów."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+title: Jednoznacznie delegatów
+description: Dowiedz się, jak użycie ogólnych typów delegata w celu zadeklarowania typów niestandardowych podczas tworzenia funkcji wymagających delegatów.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongly-typed-delegates"></a>Jednoznacznie delegatów
 
@@ -82,4 +75,4 @@ To powinno zaoszczędzić czas i zminimalizować liczbę nowych typów, które n
 
 W artykule pojawi się kilka typowych wzorców do pracy z delegatów w praktyce.
 
-[Dalej](delegates-patterns.md)
+[Next](delegates-patterns.md)

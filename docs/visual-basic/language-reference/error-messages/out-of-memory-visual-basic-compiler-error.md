@@ -1,26 +1,17 @@
 ---
-title: "Za mało pamięci (Błąd kompilatora Visual Basic)"
+title: Za mało pamięci (Błąd kompilatora Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc2004
 - bc2004
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 23d6cf270002eac63badd8ceff28c4b8b57af0ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 543dfa8900fb14b30f6e70cdd0b4d281cc52708d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>Za mało pamięci (Błąd kompilatora Visual Basic)
 Większa ilość pamięci jest wymagana, niż jest dostępne.  
@@ -42,4 +33,4 @@ Większa ilość pamięci jest wymagana, niż jest dostępne.
 -   Upewnij się, że pamięci jest zwolniony, kiedy nie jest już potrzebne.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

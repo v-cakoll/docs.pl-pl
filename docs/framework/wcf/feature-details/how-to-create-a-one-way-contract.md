@@ -1,32 +1,18 @@
 ---
 title: 'Instrukcje: Tworzenie kontraktu jednokierunkowego'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1a54b64826735d912bdf6507023da56118fb9a69
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 80cab35b14dd3b7663405038f2afdea362cdb792
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Instrukcje: Tworzenie kontraktu jednokierunkowego
-W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu jednokierunkowego. Takie metody wywoływać operacje na [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi od klienta, ale oczekiwano odpowiedzi. Ten typ umowy można na przykład do publikowania powiadomienia dla wielu subskrybentów. Umożliwia także kontraktów jednokierunkowych podczas tworzenia kontraktu dwukierunkowego (dwukierunkowej), dzięki czemu klienci i serwery komunikować się ze sobą niezależnie, aby albo mogą inicjować połączenia do drugiego. Może to umożliwić w szczególności serwera w celu wykonywania wywołań jednokierunkowe klientowi, który klient można traktować jako zdarzenia. Aby uzyskać szczegółowe informacje na temat określania metody jednokierunkowe, zobacz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości i <xref:System.ServiceModel.OperationContractAttribute> klasy.  
+W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu jednokierunkowego. Takie metody wywoływać operacje usługi Windows Communication Foundation (WCF) od klienta, ale nie oczekuje odpowiedzi. Ten typ umowy można na przykład do publikowania powiadomienia dla wielu subskrybentów. Umożliwia także kontraktów jednokierunkowych podczas tworzenia kontraktu dwukierunkowego (dwukierunkowej), dzięki czemu klienci i serwery komunikować się ze sobą niezależnie, aby albo mogą inicjować połączenia do drugiego. Może to umożliwić w szczególności serwera w celu wykonywania wywołań jednokierunkowe klientowi, który klient można traktować jako zdarzenia. Aby uzyskać szczegółowe informacje na temat określania metody jednokierunkowe, zobacz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości i <xref:System.ServiceModel.OperationContractAttribute> klasy.  
   
  Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej dla kontraktu dwukierunkowego, zobacz [porady: dostęp do usług pomocą kontraktów jednokierunkowych i kontraktów "żądanie-odpowiedź"](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Dla przykładu pracy, zobacz [jednokierunkowe](../../../../docs/framework/wcf/samples/one-way.md) próbki.  
   

@@ -1,21 +1,14 @@
 ---
-title: "Implementowanie modelu domeny mikrousługi z platformą .NET Core"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie modelu domeny mikrousługi z platformą .NET Core"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Implementowanie modelu domeny mikrousługi z platformą .NET Core
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie modelu domeny mikrousługi z platformą .NET Core
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi z platformą .NET Core 
 
@@ -178,7 +171,7 @@ Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pól p
 -   **Vaughn Vernon. Modelowanie wartości zagregowanych z DDD i strukturą Entity Framework.** Należy pamiętać, że jest to *nie* Entity Framework Core.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Kodowanie oparte na domenie projektu: porady dotyczące danych Devs**
+-   **Julie Lerman. Kodowanie oparte na domenie projektu: porady dotyczące Devs danych**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
 -   **Udi Dahan. Jak utworzyć pełni hermetyzowany modeli domeny**

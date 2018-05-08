@@ -1,26 +1,15 @@
 ---
-title: "Implementowanie transakcji niejawnej przy użyciu zakresu transakcji"
-ms.custom: 
+title: Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
 <xref:System.Transactions.TransactionScope> Klasa udostępnia w prosty sposób oznaczyć bloku kodu jako udział w transakcji, bez konieczności interakcji z transakcja. Zakres transakcji można wybrać i automatycznie zarządzać otoczenia transakcji. Ze względu na łatwość użycia i wydajności, zaleca się, że używasz <xref:System.Transactions.TransactionScope> klasy podczas opracowywania aplikacji transakcji.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rolling-back-a-transaction"></a>Wycofywanie transakcji  
  Jeśli chcesz wycofać transakcji, nie należy wywołać <xref:System.Transactions.TransactionScope.Complete%2A> metody w zakresie transakcji. Na przykład może zgłosić wyjątek, w ramach zakresu. Transakcji, w których uczestniczy w zostaną wycofane.  
   
-##  <a name="ManageTxFlow"></a>Zarządzanie za pomocą TransactionScopeOption przepływu transakcji  
+##  <a name="ManageTxFlow"></a> Zarządzanie za pomocą TransactionScopeOption przepływu transakcji  
  Mogą być zagnieżdżane zakresu transakcji przez wywołanie metody, która używa <xref:System.Transactions.TransactionScope> z wewnątrz metody, która używa własnego zakresu jako się w przypadku `RootMethod` w poniższym przykładzie metody  
   
 ```csharp  

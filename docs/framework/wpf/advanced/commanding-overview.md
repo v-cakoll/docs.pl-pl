@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Polecenia"
-ms.custom: 
+title: Przegląd Polecenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0d426d8cf174a61c724e97b5e7af5c1428679716
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
-<a name="introduction"></a>Steruje jest mechanizmem wejściowego w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewniające wejściowych obsługi na poziomie semantycznego więcej niż dane wejściowe urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wiele aplikacji.  
+<a name="introduction"></a> Steruje jest mechanizmem wejściowego w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewniające wejściowych obsługi na poziomie semantycznego więcej niż dane wejściowe urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wiele aplikacji.  
   
  To omówienie definiuje, jakie polecenia znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], klas, które są częścią sterująca modelu i używania i utworzyć polecenia w aplikacji.  
   
@@ -83,13 +71,13 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Commands"></a>   
 ### <a name="commands"></a>Polecenia  
- Polecenia w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są tworzone z zastosowaniem <xref:System.Windows.Input.ICommand> interfejsu.  <xref:System.Windows.Input.ICommand>udostępnia dwie metody <xref:System.Windows.Input.ICommand.Execute%2A>, i <xref:System.Windows.Input.ICommand.CanExecute%2A>i zdarzenia <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A>wykonuje akcje, które są skojarzone z poleceniem. <xref:System.Windows.Input.ICommand.CanExecute%2A>Określa, czy polecenia można wykonywać w bieżącym elemencie docelowym polecenia. <xref:System.Windows.Input.ICommand.CanExecuteChanged>jest uruchamiany, jeśli Menedżer polecenia centralizuje sterująca operacji wykryje zmianę w źródle polecenia, które może unieważnić polecenie, które zostały zgłoszone, ale nie została jeszcze wykonana przez powiązanie polecenia.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Implementacja <xref:System.Windows.Input.ICommand> jest <xref:System.Windows.Input.RoutedCommand> klasy i jest fokus w tym omówieniu.  
+ Polecenia w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są tworzone z zastosowaniem <xref:System.Windows.Input.ICommand> interfejsu.  <xref:System.Windows.Input.ICommand> udostępnia dwie metody <xref:System.Windows.Input.ICommand.Execute%2A>, i <xref:System.Windows.Input.ICommand.CanExecute%2A>i zdarzenia <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A> wykonuje akcje, które są skojarzone z poleceniem. <xref:System.Windows.Input.ICommand.CanExecute%2A> Określa, czy polecenia można wykonywać w bieżącym elemencie docelowym polecenia. <xref:System.Windows.Input.ICommand.CanExecuteChanged> jest uruchamiany, jeśli Menedżer polecenia centralizuje sterująca operacji wykryje zmianę w źródle polecenia, które może unieważnić polecenie, które zostały zgłoszone, ale nie została jeszcze wykonana przez powiązanie polecenia.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Implementacja <xref:System.Windows.Input.ICommand> jest <xref:System.Windows.Input.RoutedCommand> klasy i jest fokus w tym omówieniu.  
   
  Główne źródła danych wejściowych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] myszy, klawiatury, pismo odręczne i routingiem poleceń.  Użyj danych wejściowych więcej zorientowane na urządzeniu <xref:System.Windows.RoutedEvent> powiadomiono obiektów w aplikacji, strona wystąpiło zdarzenie wejściowe.  A <xref:System.Windows.Input.RoutedCommand> nie różni się.  <xref:System.Windows.Input.RoutedCommand.Execute%2A> i <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> metody <xref:System.Windows.Input.RoutedCommand> nie zawierają logiki aplikacji dla polecenia, ale raczej podnieść kierowane zdarzenia tego tunelu i bąbelkowy za pośrednictwem elementu drzewa, aż do napotkania obiektu z <xref:System.Windows.Input.CommandBinding>.  <xref:System.Windows.Input.CommandBinding> Zawiera programy obsługi dla tych zdarzeń i obsługi, które wykonuje polecenie.  Aby uzyskać więcej informacji na zdarzenie routingu w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
  <xref:System.Windows.Input.RoutedCommand.Execute%2A> Metoda <xref:System.Windows.Input.RoutedCommand> zgłasza <xref:System.Windows.Input.CommandManager.PreviewExecuted> i <xref:System.Windows.Input.CommandManager.Executed> zdarzenia w elemencie docelowym polecenia.  <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> Metoda <xref:System.Windows.Input.RoutedCommand> zgłasza <xref:System.Windows.Input.CommandManager.CanExecute> i <xref:System.Windows.Input.CommandManager.PreviewCanExecute> zdarzenia w elemencie docelowym polecenia.  Te zdarzenia tunelu i bąbelków w drzewie element aż do napotkania obiektu, który ma <xref:System.Windows.Input.CommandBinding> dla tego konkretnego polecenia.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zestaw typowych poleceń routingiem rozmieszczenie do kilku klas dostaw: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands>, i <xref:System.Windows.Documents.EditingCommands>.  Te klasy składać się tylko z <xref:System.Windows.Input.RoutedCommand> obiektów i nie logiki wykonania polecenia.  Logika implementacji jest odpowiedzialny za obiektu, na którym jest wykonywana polecenia na.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestaw typowych poleceń routingiem rozmieszczenie do kilku klas dostaw: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands>, i <xref:System.Windows.Documents.EditingCommands>.  Te klasy składać się tylko z <xref:System.Windows.Input.RoutedCommand> obiektów i nie logiki wykonania polecenia.  Logika implementacji jest odpowiedzialny za obiektu, na którym jest wykonywana polecenia na.  
   
 <a name="Command_Sources"></a>   
 ### <a name="command-sources"></a>Polecenie źródeł  
@@ -97,13 +85,13 @@ ms.lasthandoff: 01/19/2018
   
  Polecenie źródeł w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zazwyczaj zaimplementować <xref:System.Windows.Input.ICommandSource> interfejsu.  
   
- <xref:System.Windows.Input.ICommandSource>udostępnia trzy właściwości: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, i <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
+ <xref:System.Windows.Input.ICommandSource> udostępnia trzy właściwości: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, i <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A>to polecenie do wykonania po wywołaniu polecenia źródła.  
+-   <xref:System.Windows.Input.ICommandSource.Command%2A> to polecenie do wykonania po wywołaniu polecenia źródła.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>jest obiektem, w którym można wykonać polecenia.  Warto zauważyć, że w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> właściwość <xref:System.Windows.Input.ICommandSource> ma zastosowanie tylko podczas <xref:System.Windows.Input.ICommand> jest <xref:System.Windows.Input.RoutedCommand>.  Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> jest ustawiona na <xref:System.Windows.Input.ICommandSource> i odpowiadające jej polecenie nie jest <xref:System.Windows.Input.RoutedCommand>, element docelowy polecenia jest ignorowana. Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nie jest ustawiona, element z fokusem klawiatury będzie elemencie docelowym polecenia.  
+-   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> jest obiektem, w którym można wykonać polecenia.  Warto zauważyć, że w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> właściwość <xref:System.Windows.Input.ICommandSource> ma zastosowanie tylko podczas <xref:System.Windows.Input.ICommand> jest <xref:System.Windows.Input.RoutedCommand>.  Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> jest ustawiona na <xref:System.Windows.Input.ICommandSource> i odpowiadające jej polecenie nie jest <xref:System.Windows.Input.RoutedCommand>, element docelowy polecenia jest ignorowana. Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nie jest ustawiona, element z fokusem klawiatury będzie elemencie docelowym polecenia.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>Typ danych zdefiniowany przez użytkownika, używany do przekazywania informacji do obsługi implementuje polecenia.  
+-   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Typ danych zdefiniowany przez użytkownika, używany do przekazywania informacji do obsługi implementuje polecenia.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Klas, które implementują <xref:System.Windows.Input.ICommandSource> są <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink>, i <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, i <xref:System.Windows.Documents.Hyperlink> wywołania polecenia, gdy są one kliknięty, a moduł <xref:System.Windows.Input.InputBinding> wywołuje polecenie po <xref:System.Windows.Input.InputGesture> skojarzone z jest wykonywana.  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.Windows.Input.CommandBinding> Klasa zawiera <xref:System.Windows.Input.CommandBinding.Command%2A> właściwości, oraz <xref:System.Windows.Input.CommandBinding.PreviewExecuted>, <xref:System.Windows.Input.CommandBinding.Executed>, <xref:System.Windows.Input.CommandBinding.PreviewCanExecute>, i <xref:System.Windows.Input.CommandBinding.CanExecute> zdarzenia.  
   
- <xref:System.Windows.Input.CommandBinding.Command%2A>to polecenie który <xref:System.Windows.Input.CommandBinding> jest skojarzona z.  Programy obsługi zdarzeń, które są dołączone do <xref:System.Windows.Input.CommandBinding.PreviewExecuted> i <xref:System.Windows.Input.CommandBinding.Executed> zdarzenia implementują logikę polecenia.  Programy obsługi zdarzeń jest dołączony do <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> i <xref:System.Windows.Input.CommandBinding.CanExecute> zdarzenia ustalić, czy polecenia można wykonywać w bieżącym elemencie docelowym polecenia.  
+ <xref:System.Windows.Input.CommandBinding.Command%2A> to polecenie który <xref:System.Windows.Input.CommandBinding> jest skojarzona z.  Programy obsługi zdarzeń, które są dołączone do <xref:System.Windows.Input.CommandBinding.PreviewExecuted> i <xref:System.Windows.Input.CommandBinding.Executed> zdarzenia implementują logikę polecenia.  Programy obsługi zdarzeń jest dołączony do <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> i <xref:System.Windows.Input.CommandBinding.CanExecute> zdarzenia ustalić, czy polecenia można wykonywać w bieżącym elemencie docelowym polecenia.  
   
  Poniższy przykład przedstawia sposób tworzenia <xref:System.Windows.Input.CommandBinding> w katalogu głównym <xref:System.Windows.Window> aplikacji.  <xref:System.Windows.Input.CommandBinding> Kojarzy <xref:System.Windows.Input.ApplicationCommands.Open%2A> z <xref:System.Windows.Input.CommandManager.Executed> i <xref:System.Windows.Input.CommandBinding.CanExecute> programów obsługi.  
   
@@ -182,7 +170,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Command_Library"></a>   
 ## <a name="command-library"></a>Polecenie biblioteki  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera zestaw wstępnie zdefiniowanych poleceń.  Biblioteka polecenia składa się z następujących klas: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands>i <xref:System.Windows.Input.ComponentCommands>.  Te klasy udostępniają polecenia, takich jak <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> i <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A>, i <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera zestaw wstępnie zdefiniowanych poleceń.  Biblioteka polecenia składa się z następujących klas: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands>i <xref:System.Windows.Input.ComponentCommands>.  Te klasy udostępniają polecenia, takich jak <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> i <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A>, i <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
  Wiele z tych poleceń obejmują zestaw powiązania wejściowe domyślne.  Na przykład, jeśli określono, że aplikacja obsługuje polecenie Kopiuj, automatycznie pobrać klawiatury powiązania "CTRL + C" umożliwia również wyświetlenie powiązania dla innych urządzeń wejściowych, takich jak [!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)] pióra gestów i informacje mowy.  
   

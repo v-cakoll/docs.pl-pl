@@ -1,11 +1,7 @@
 ---
-title: "Funkcja QualifierSet_Next (niezarządzany wykaz interfejsów API)"
+title: Funkcja QualifierSet_Next (niezarządzany wykaz interfejsów API)
 description: Funkcja QualifierSet_Next pobiera kwalifikator dalej w wyliczeniu.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Next
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01a9c9d162039547849597aaa9c8a6fa38a31455
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetnext-function"></a>Funkcja QualifierSet_Next
 Pobiera kwalifikator dalej w wyliczeniu, który uruchomił się wywołaniem do [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.   
@@ -92,7 +85,7 @@ Kolejność kwalifikatory zwrócony podczas wykonywania wyliczenia jest niezdefi
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

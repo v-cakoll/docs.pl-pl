@@ -1,11 +1,6 @@
 ---
-title: "If — Operator (Visual Basic)"
+title: If — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.IfOperator
 - IfOperator
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c553da5abf5453ba881671806b976125355c1e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 192309a7ca728feb300e867bf2340e669e9da16c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-operator-visual-basic"></a>If — Operator (Visual Basic)
 Używa zwarcia oceny warunkowo zwracać jedną z dwóch wartości. `If` Operator może zostać wywołany z trzech argumentów lub dwóch argumentów.  
@@ -41,9 +33,9 @@ If( [argument1,] argument2, argument3 )
   
 |Termin|Definicja|  
 |---|---|  
-|`argument1`|Wymagany. `Boolean`. Określa, który argumentów do oceny i zwracany.|  
-|`argument2`|Wymagany. `Object`. Jeśli obliczane i zwrócone `argument1` daje w wyniku `True`.|  
-|`argument3`|Wymagany. `Object`. Jeśli obliczane i zwrócone `argument1` daje w wyniku `False` lub, jeśli `argument1` jest [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` zmiennej, która daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md).|  
+|`argument1`|Wymagana. `Boolean`. Określa, który argumentów do oceny i zwracany.|  
+|`argument2`|Wymagana. `Object`. Jeśli obliczane i zwrócone `argument1` daje w wyniku `True`.|  
+|`argument3`|Wymagana. `Object`. Jeśli obliczane i zwrócone `argument1` daje w wyniku `False` lub, jeśli `argument1` jest [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` zmiennej, która daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md).|  
   
  `If` Operator, który jest wywoływany z trzech argumentów działa jak `IIf` funkcja ocena zwarcia z wyjątkiem tego, aby były używane. `IIf` Funkcja zawsze ocenia wszystkich trzech argumentów, podczas gdy `If` operator, który używa trzech argumentów ocenia tylko dwa z nich. Pierwszy `If` argument jest obliczane i wynikiem jest rzutowany jako `Boolean` wartość `True` lub `False`. Jeśli wartość jest `True`, `argument2` jest obliczany i zwracany jest jego wartość, ale `argument3` nie jest oceniany. Jeśli wartość `Boolean` wyrażenie jest `False`, `argument3` jest obliczany i zwracany jest jego wartość, ale `argument2` nie jest oceniany. Poniższe przykłady przedstawiają użycie `If` stosowania trzech argumentów:  
   
@@ -60,8 +52,8 @@ If( [argument1,] argument2, argument3 )
   
 |Termin|Definicja|  
 |---|---|  
-|`argument2`|Wymagany. `Object`. Musi być odwołanie lub typ dopuszczający wartość null. Obliczany i zwracany, jeśli wynikiem jego obliczenia cokolwiek innego niż `Nothing`.|  
-|`argument3`|Wymagany. `Object`. Jeśli obliczane i zwrócone `argument2` daje w wyniku `Nothing`.|  
+|`argument2`|Wymagana. `Object`. Musi być odwołanie lub typ dopuszczający wartość null. Obliczany i zwracany, jeśli wynikiem jego obliczenia cokolwiek innego niż `Nothing`.|  
+|`argument3`|Wymagana. `Object`. Jeśli obliczane i zwrócone `argument2` daje w wyniku `Nothing`.|  
   
  Gdy `Boolean` argument zostanie pominięty, pierwszy argument musi być odwołanie lub typ dopuszczający wartość null. Jeśli pierwszy argument ma wartość `Nothing`, jest zwracana wartość drugiego argumentu. We wszystkich innych przypadkach zwracana jest wartość pierwszego argumentu. Poniższy przykład przedstawia sposób działania tej oceny.  
   
@@ -69,5 +61,5 @@ If( [argument1,] argument2, argument3 )
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Interaction.IIf%2A>  
- [Typy dopuszczające wartości zerowe wartości](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Nothing](../../../visual-basic/language-reference/nothing.md)

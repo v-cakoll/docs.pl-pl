@@ -1,24 +1,12 @@
 ---
-title: "Używanie wielu schematów uwierzytelniania z programem WCF"
-ms.custom: 
+title: Używanie wielu schematów uwierzytelniania z programem WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e570185b7df06a47e8c7fb3319328e760079415d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Używanie wielu schematów uwierzytelniania z programem WCF
 WCF można teraz określić wielu schematów uwierzytelniania w jednym punkcie końcowym. Ponadto usługi sieci web hostowanej może dziedziczyć ustawień uwierzytelniania bezpośrednio za pomocą programu IIS. Hostowanie Samoobsługowe usługi można określić rodzaju uwierzytelniania schematy może służyć. Aby uzyskać więcej informacji na temat ustawiania ustawienia uwierzytelniania w usługach IIS, zobacz [uwierzytelniania usług IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  

@@ -1,14 +1,6 @@
 ---
-title: "ISymENCUnmanagedMethod — Interfejs"
-ms.custom: 
+title: ISymENCUnmanagedMethod — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymENCUnmanagedMethod
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f7cc1cea74cc632c65c7e3c2aee408e2f9e864d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 575c732cf1b1caf4700568a9d168463359d1ad7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod — Interfejs
 Informacje dotyczące funkcji Edytuj i Kontynuuj.  
@@ -48,7 +36,7 @@ Informacje dotyczące funkcji Edytuj i Kontynuuj.
 |[GetSourceExtentInDocument, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Pobiera najmniejszą liczbę wierszy i uruchomić największy wiersz end dla metody w określonego dokumentu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -1,14 +1,6 @@
 ---
-title: "IHostMAlloc::Alloc — Metoda"
-ms.custom: 
+title: IHostMAlloc::Alloc — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMAlloc.Alloc
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d999425be2bc5963aaa9f15b82bd951f6f564af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d67704aae80113bd41df5ea38acf2a794aacbac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc — Metoda
 Żądania, że host przydzielić określoną ilością pamięci sterty.  
@@ -62,7 +50,7 @@ HRESULT Alloc (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`Alloc`zwrócona pomyślnie.|  
+|S_OK|`Alloc` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -80,7 +68,7 @@ HRESULT Alloc (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  

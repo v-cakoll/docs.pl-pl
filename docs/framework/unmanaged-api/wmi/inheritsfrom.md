@@ -1,11 +1,7 @@
 ---
-title: "Funkcja InheritsFrom (niezarządzany wykaz interfejsów API)"
-description: "Funkcja InheritsFrom Określa, czy klasy lub wystąpienia pochodzi z klasy nadrzędnej określonej."
+title: Funkcja InheritsFrom (niezarządzany wykaz interfejsów API)
+description: Funkcja InheritsFrom Określa, czy klasy lub wystąpienia pochodzi z klasy nadrzędnej określonej.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - InheritsFrom
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0dce964829399e6761152a8ff424671b47cc6eb3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritsfrom-function"></a>Funkcja InheritsFrom
 Określa, czy bieżącej klasy lub wystąpienia jest pochodną klasy określonego elementu nadrzędnego.
@@ -53,7 +46,7 @@ HRESULT InheritsFrom (
 [in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
 
 `wszAncestor`  
-[in] Nazwa klasy. `wszAncestor`musi wskazywać prawidłowe `LPCWSTR`.
+[in] Nazwa klasy. `wszAncestor` musi wskazywać prawidłowe `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -63,7 +56,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | Bieżący obiekt dziedziczy `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | Bieżący obiekt nie dziedziczy `wszAncestor`. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor`jest `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` jest `null`. |
   
 ## <a name="remarks"></a>Uwagi
 
@@ -74,7 +67,7 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::InheritsFrom](https://msd
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

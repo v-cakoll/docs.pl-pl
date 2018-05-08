@@ -1,14 +1,6 @@
 ---
 title: Używanie kontraktów danych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,23 +9,17 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 839227e9a67d904ea4613f841deac5a9a3f6f9ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 992f35a9f7406ac161ddb5e31fdaf85756bfe31f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-data-contracts"></a>Używanie kontraktów danych
 A *kontraktu danych* jest umową posiadanie między usługą i klienta, który abstrakcyjnie opisuje dane były wymieniane. Oznacza to, że do komunikacji, klient i usługa nie masz do udostępniania tego samego typu, tylko tej samej kontraktów danych. Mówiąc definiuje kontrakt danych, dla każdego typu parametr lub zwracane, jakie dane jest serializowany (zamieniło XML) aby wymienić.  
   
 ## <a name="data-contract-basics"></a>Podstawy kontraktu danych  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mechanizm serializacji, o nazwie serializator kontraktu danych domyślnie używa do serializowania i deserializowania danych (przekonwertować go do i z pliku XML). Wszystkie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy pierwotne, takie jak liczby całkowite i ciągi, a także pewnych typów traktowane jako typów podstawowych, takich jak <xref:System.DateTime> i <xref:System.Xml.XmlElement>, może być Zserializowany bez innych przygotowań i mających kontraktów danych domyślne. Wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy również mieć istniejących kontraktów danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) używa aparatu serializacji, o nazwie serializator kontraktu danych domyślnie do serializowania i deserializowania danych (przekonwertować go do i z pliku XML). Wszystkie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy pierwotne, takie jak liczby całkowite i ciągi, a także pewnych typów traktowane jako typów podstawowych, takich jak <xref:System.DateTime> i <xref:System.Xml.XmlElement>, może być Zserializowany bez innych przygotowań i mających kontraktów danych domyślne. Wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy również mieć istniejących kontraktów danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Nowe typy złożone tworzonych musi mieć zdefiniowane dla nich jako możliwy do serializacji kontraktu danych. Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> wnioskuje kontraktu danych i serializuje wszystkich typów publicznie widoczna. Wszystkie właściwości publiczne odczytu/zapisu i pól typu są serializowane. Można zrezygnować z elementami członkowskimi z serializacji przy użyciu <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Można również jawnie tworzenie kontraktu danych przy użyciu <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów. Zazwyczaj jest to realizowane przez stosowanie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu typu. Ten atrybut można stosować do klasy, struktury i wyliczenia. <xref:System.Runtime.Serialization.DataMemberAttribute> Następnie musi zostać zastosowany atrybut do każdego elementu członkowskiego typu kontraktu danych, aby wskazać, że *element członkowski danych*, to znaczy powinny być serializowane. Aby uzyskać więcej informacji, zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

@@ -1,31 +1,17 @@
 ---
-title: "Zasoby usługi danych WCF"
-ms.custom: 
+title: Zasoby usługi danych WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9efb8c54af40d135203868d93079d15dd7878cd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-resources"></a>Zasoby usługi danych WCF
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Tematy wprowadzające można znaleźć w następujących lokalizacjach. Wiele z tych tematów zawiera również linki do powiązanych tematów, które zawierają więcej szczegółowych informacji.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Tematy wprowadzające można znaleźć w następujących lokalizacjach. Wiele z tych tematów zawiera również linki do powiązanych tematów, które zawierają więcej szczegółowych informacji.  
   
  [Omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Zawiera omówienie funkcji i możliwości, które są dostępne w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  

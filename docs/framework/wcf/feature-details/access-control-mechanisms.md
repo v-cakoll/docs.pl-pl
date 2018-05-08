@@ -1,34 +1,20 @@
 ---
 title: Mechanizmy kontroli dostępu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89606d1e02b58f5f627d28b7354def848cd5a350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57ead53dd9e6bc1b2e3624791c7cc0c7d437cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu
-Można kontrolować dostęp w sposób kilka z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. W tym temacie pokrótce omówiono różne mechanizmy i sugestie dotyczące każdej; użycie ma ona ułatwiające wybranie poprawne mechanizm do użycia. Technologie dostępu są wymienione w kolejności złożoności. Najprostszą jest <xref:System.Security.Permissions.PrincipalPermissionAttribute>; najbardziej złożonych jest modelu tożsamości.  
+Można kontrolować dostęp w sposób kilka z usługi Windows Communication Foundation (WCF). W tym temacie pokrótce omówiono różne mechanizmy i sugestie dotyczące każdej; użycie ma ona ułatwiające wybranie poprawne mechanizm do użycia. Technologie dostępu są wymienione w kolejności złożoności. Najprostszą jest <xref:System.Security.Permissions.PrincipalPermissionAttribute>; najbardziej złożonych jest modelu tożsamości.  
   
- Oprócz tych mechanizmów, personifikacja i delegowania z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zostało wyjaśnione w dokumencie [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Oprócz tych mechanizmów, personifikacja i delegowanie z programem WCF zostało wyjaśnione w dokumencie [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> Służy do ograniczania dostępu do metody usługi. Jeśli ten atrybut jest stosowany do metody, może służyć do żądania tożsamości obiektu wywołującego określonych lub członkostwa w grupie systemu Windows lub [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] roli. Jeśli klient zostanie uwierzytelniony za pomocą certyfikatu X.509, otrzymuje podstawowej tożsamości, która składa się z nazwy podmiotu i odcisk palca certyfikatu.  
@@ -41,16 +27,16 @@ Można kontrolować dostęp w sposób kilka z [!INCLUDE[indigo1](../../../../inc
  Funkcja [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa. Nawet jeśli dostawca członkostwa nie jest technicznie mechanizmu kontroli dostępu, umożliwia kontrolowanie dostępu do usługi przez ograniczenie zestaw możliwych tożsamości, które mogą uzyskiwać dostęp do punktu końcowego usługi. Funkcja członkostwo obejmuje bazy danych, które można wypełniać za pomocą kombinacji nazwy i hasła użytkownika, które umożliwiają użytkownikom witryny sieci Web zakładać kont z lokacją. Aby uzyskać dostęp do usługi, która używa dostawcy członkostwa, użytkownik musi zalogować się ze swojej nazwy użytkownika i hasła.  
   
 > [!NOTE]
->  Najpierw należy wypełnić w bazie danych przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcji przed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi może być używany na potrzeby autoryzacji.  
+>  Najpierw należy wypełnić w bazie danych przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcji przed usługi WCF może być używany na potrzeby autoryzacji.  
   
  Umożliwia także funkcję członkostwa, jeśli masz już bazę danych z istniejącego członkostwa [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web i chcesz umożliwić użytkownikom tej samej do użycia z usługą autoryzacji o takiej samej nazwy użytkownika i hasła.  
   
- Aby uzyskać więcej informacji dotyczących używania funkcji członkostwa w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, zobacz [porady: Używanie dostawcy członkostwa ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Aby uzyskać więcej informacji dotyczących używania funkcji członkostwa w usługi WCF, zobacz [porady: Używanie dostawcy członkostwa ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>Dostawcy ról ASP.NET  
- Kolejną funkcją [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jest możliwość zarządzania autoryzację za pomocą ról. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy roli umożliwia deweloperów do tworzenia ról dla użytkowników i przypisać każdemu użytkownikowi do ról. Z dostawcy członkostwa, ról i przypisania są przechowywane w bazie danych i można wypełniać za pomocą narzędzi dostarczanych przez konkretnego implementacja [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról. Podobnie jak w przypadku funkcji członkostwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deweloperzy mogą używać informacji w bazie danych do autoryzowania użytkowników usługi przez role. Na przykład można użyć dostawcy ról w połączeniu z `PrincipalPermissionAttribute` opisane powyżej mechanizm kontroli dostępu.  
+ Kolejną funkcją [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jest możliwość zarządzania autoryzację za pomocą ról. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy roli umożliwia deweloperów do tworzenia ról dla użytkowników i przypisać każdemu użytkownikowi do ról. Z dostawcy członkostwa, ról i przypisania są przechowywane w bazie danych i można wypełniać za pomocą narzędzi dostarczanych przez konkretnego implementacja [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról. Jako za pomocą funkcji członkostwa WCF deweloperzy mogą używać informacji w bazie danych do autoryzowania użytkowników usługi przez role. Na przykład można użyć dostawcy ról w połączeniu z `PrincipalPermissionAttribute` opisane powyżej mechanizm kontroli dostępu.  
   
- Można również użyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, jeśli masz istniejącą [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] bazy danych dostawcy roli, aby używać tego samego zestawu reguł i przypisania użytkowników w Twojej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+ Można również użyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, jeśli masz istniejącą [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] bazy danych dostawcy roli, aby używać tego samego zestawu zasad i przypisań użytkownika w usłudze WCF.  
   
  Aby uzyskać więcej informacji dotyczących używania funkcji dostawcy ról, zobacz [porady: Używanie dostawcy ról ASP.NET z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
@@ -59,7 +45,7 @@ Można kontrolować dostęp w sposób kilka z [!INCLUDE[indigo1](../../../../inc
   
  Można również użyć AzMan i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, jeśli już masz dostęp do istniejącej instalacji AzMan, a chcesz zezwolić użytkownikom usługi przy użyciu funkcji kombinacja dostawcy AzMan/roli.  
   
- Aby uzyskać więcej informacji na temat AzMan i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, zobacz [jak: Korzystanie z Menedżera autoryzacji (AzMan) z programem ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Aby uzyskać więcej informacji o korzystaniu z AzMan i dostawca ról dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, zobacz [porady: Używanie dostawcy ról ASP.NET Menedżera autoryzacji z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Aby uzyskać więcej informacji na temat AzMan i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, zobacz [jak: Korzystanie z Menedżera autoryzacji (AzMan) z programem ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Aby uzyskać więcej informacji o używaniu AzMan i dostawca ról dla usług WCF, zobacz [porady: Używanie dostawcy ról ASP.NET Menedżera autoryzacji z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modelu tożsamości  
  Modelu tożsamości to zestaw interfejsów API, które umożliwiają zarządzanie oświadczeń i zasad, aby zezwolić klientom. W modelu tożsamości można sprawdzić co oświadczeń zawartych w poświadczenia, które wywołującego używany do samodzielnego uwierzytelnienia usługi, porównaj oświadczenia do zestawu zasad dla usługi i Udziel lub Odmów dostępu na podstawie porównania.  

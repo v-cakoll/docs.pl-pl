@@ -1,29 +1,15 @@
 ---
 title: Klasy UriTemplate i UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>Klasy UriTemplate i UriTemplateTable
-Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfikatory URI, które odpowiadają swoich usług. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dodano dwa nowe klasy umożliwiają deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate> i <xref:System.UriTemplateTable> stanowią podstawę aparat wysyłki na podstawie identyfikatora URI w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Te klasy można również na ich własnych, dzięki czemu deweloperzy mógł korzystać z szablonów i mechanizmu mapowanie identyfikatora URI bez stosowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfikatory URI, które odpowiadają swoich usług. Windows Communication Foundation (WCF) dodano dwa nowe klasy umożliwiają deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate> i <xref:System.UriTemplateTable> stanowią podstawę aparatu wysyłki na podstawie identyfikatora URI w programie WCF. Te klasy można także na ich własnych, co pozwala deweloperom korzystać z szablonów i identyfikator URI mapowania mechanizmu bez stosowania usługi WCF.  
   
 ## <a name="templates"></a>Szablony  
  Szablon jest umożliwia opisywanie zestaw względne identyfikatory URI. Zestaw szablonów identyfikatora URI w poniższej tabeli pokazano, jak można zdefiniować systemu, które pobierają różne rodzaje informacji o pogodzie.  
@@ -35,7 +21,7 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
 |Prognozy miasta|pogody / {stanu} / {Miasto}|  
 |Prognozy działania|pogody / {stanu} / {Miasto} / {działania}|  
   
- Poniższa tabela zawiera opis zestawu strukturę podobną identyfikatorów URI. Każdy wpis jest szablon identyfikatora URI. Segmenty w nawiasach klamrowych opisano zmienne. Segmenty nie w nawiasach klamrowych opisano ciągi literału. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Szablonu klasy umożliwiają dewelopera zająć przychodzący identyfikator URI, na przykład "/ pogody/wa/seattle/cyklicznie", i porównuje ją do szablonu, który opisuje, "/weather/ {stanu} / {Miasto} / {działania}".  
+ Poniższa tabela zawiera opis zestawu strukturę podobną identyfikatorów URI. Każdy wpis jest szablon identyfikatora URI. Segmenty w nawiasach klamrowych opisano zmienne. Segmenty nie w nawiasach klamrowych opisano ciągi literału. Klasy szablonów WCF Zezwalaj dewelopera zająć przychodzący identyfikator URI, na przykład "/ pogody/wa/seattle/cyklicznie", i porównuje ją do szablonu, który opisuje, "/weather/ {stanu} / {Miasto} / {działania}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> jest klasa, która hermetyzuje szablon identyfikatora URI. Konstruktor ma parametr typu string, który definiuje szablonu. Ten ciąg zawiera szablon w formacie opisany w następnej sekcji. <xref:System.UriTemplate> Klasa udostępnia metody, które należy spełnić odpowiada przychodzący identyfikator URI do szablonu, wygenerować identyfikator URI na podstawie szablonu, pobierania kolekcję nazwy zmiennych używane w szablonie, określić, czy dwa szablony są równoważne i zwracać szablon ciąg.  

@@ -1,27 +1,18 @@
 ---
 title: this (odwołanie w C#)
 description: to słowo kluczowe (odwołanie w C#)
-keywords: Ta (C#), to słowo kluczowe (C#), to słowo kluczowe (odwołanie w C#), to słowo kluczowe (język odwołanie w C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - this
 - this_CSharpKeyword
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f159967707061481a34e72a97ec8cc8316d982ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d26ad1565dc6faf8aba6c971b3a0023bac886775
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="this-c-reference"></a>this (odwołanie w C#)
 `this` — Słowo kluczowe odwołuje się do bieżącego wystąpienia klasy, a także jest używane jako modyfikator pierwszy parametr metody rozszerzenia.  
@@ -59,5 +50,5 @@ ms.lasthandoff: 11/21/2017
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Podstawa](../../../csharp/language-reference/keywords/base.md)  
+ [base](../../../csharp/language-reference/keywords/base.md)  
  [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)

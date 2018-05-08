@@ -1,21 +1,14 @@
 ---
-title: "Pola (Przewodnik programowania w języku C#)"
+title: Pola (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fields-c-programming-guide"></a>Pola (Przewodnik programowania w języku C#)
 A *pola* jest zmienną dowolnego typu, która jest zadeklarowana jako bezpośrednio w [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md). Pola są *członków* ich typu zawierającego.  
@@ -58,4 +51,4 @@ A *pola* jest zmienną dowolnego typu, która jest zadeklarowana jako bezpośred
  [Używanie konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
  [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
  [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [Klasy abstrakcyjne i zapieczętowane oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+ [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

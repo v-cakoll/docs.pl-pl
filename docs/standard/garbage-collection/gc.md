@@ -1,23 +1,14 @@
 ---
-title: "Pamięć automatycznego zarządzania i odzyskiwanie pamięci"
-description: "Dowiedz się, jak automatyczne pamięci zarządzania jest jednym z usług, które zawiera środowisko uruchomieniowe języka wspólnego podczas wykonania kodu zarządzanego."
-keywords: .NET, .NET core
-author: dotnet-bot
-ms.author: dotnetcontent
+title: Pamięć automatycznego zarządzania i odzyskiwanie pamięci
+description: Dowiedz się, jak automatyczne pamięci zarządzania jest jednym z usług, które zawiera środowisko uruchomieniowe języka wspólnego podczas wykonania kodu zarządzanego.
 ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a99d849cc1092e36181da7b7ab767a41ff5ef234
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b9ce8b1fec5c6fc0808b86f06408c3f5d612e492
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Pamięć automatycznego zarządzania i odzyskiwanie pamięci
 

@@ -1,13 +1,6 @@
 ---
-title: "Porady: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika"
-ms.custom: 
+title: 'Porady: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - global assembly cache [Windows Forms], Choose Toolbox Items dialog box
 - AssemblyFoldersEx [Windows Forms], Choose Toolbox Items dialog box
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3964551ba2eec0980541e95a7db20ef057a1dd61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7e452c3d3be131b891ee26555e3085fc31b04517
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Porady: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika
 Jak należy opracować i rozpowszechnić formantów, może być tych kontrolek w wynikach **wybierz elementy przybornika** okno dialogowe, w którym jest wyświetlany po kliknięciu prawym przyciskiem myszy **przybornika** i wybierz  **Wybierz elementy**. Można włączyć formantu pojawią się w tym oknie dialogowym przy użyciu procedury rejestracji AssemblyFoldersEx.  

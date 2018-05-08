@@ -1,23 +1,12 @@
 ---
 title: 119 - WorkflowInstanceUpdatedRecord
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 32485d0a-dcdb-45bc-b1e3-79fa9ad9439b
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cb60a0f7905f49e4bfa4c1c50de686dd74ff114
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bbda72208dd9cf38e7b8765d324129beaf3fa0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="119---workflowinstanceupdatedrecord"></a>119 - WorkflowInstanceUpdatedRecord
 ## <a name="properties"></a>Właściwości  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 |ID|119|  
 |Słowa kluczowe|HealthMonitoring, WFTracking|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji Server aplikacje/analityczne|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
  To zdarzenie jest emitowane przez uczestnika śledzenia zdarzeń systemu Windows po zaktualizowaniu wystąpienia przepływu pracy.  

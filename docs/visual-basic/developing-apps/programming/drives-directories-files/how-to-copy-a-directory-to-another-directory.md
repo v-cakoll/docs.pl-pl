@@ -1,26 +1,17 @@
 ---
 title: 'Porady: kopiowanie katalogu do innego katalogu w Visual Basic'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
 - I/O [Visual Basic], copying folders
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f20ee767902395439f420f14fc2e352297ad31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b6e095d061619cf9d2e2d87a7247cbdbc51cbe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Porady: kopiowanie katalogu do innego katalogu w Visual Basic
 Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę kopiowanie katalogu do innego katalogu. Ta metoda kopiuje zawartość katalogu, a także dla samego katalogu. Katalog docelowy nie istnieje, zostanie utworzona. Jeśli katalog o tej samej nazwie istnieje w lokalizacji docelowej i `overwrite` ma ustawioną wartość `False`, zawartość dwa katalogi zostaną scalone. Podczas operacji można określić nową nazwę katalogu.  
@@ -44,7 +35,7 @@ Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę ko
   
 -   Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName`jest `Nothing` lub ciąg pusty (<xref:System.ArgumentNullException>)  
+-   `destinationDirectoryName` jest `Nothing` lub ciąg pusty (<xref:System.ArgumentNullException>)  
   
 -   Katalog źródłowy nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
   
@@ -54,7 +45,7 @@ Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę ko
   
 -   Ścieżka źródłowa i ścieżka docelowa są takie same (<xref:System.IO.IOException>).  
   
--   `ShowUI`ustawiono `UIOption.AllDialogs` użytkownik anulował operację, i nie można skopiować jeden lub więcej plików w katalogu (<xref:System.OperationCanceledException>).  
+-   `ShowUI` ustawiono `UIOption.AllDialogs` użytkownik anulował operację, i nie można skopiować jeden lub więcej plików w katalogu (<xref:System.OperationCanceledException>).  
   
 -   Operacja jest cykliczne (<xref:System.InvalidOperationException>).  
   
@@ -70,5 +61,5 @@ Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę ko
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- [Porady: znajdowanie podkatalogów z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- [Porady: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+ [Instrukcje: znajdowanie podkatalogów z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [Instrukcje: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

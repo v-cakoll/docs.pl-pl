@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Obiekty Freezable"
-ms.custom: 
+title: Przegląd Obiekty Freezable
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7390181570c6deeea77e5e76493a62e84107286b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3b9f6f7af22b2a846f4ee34e8d4d00bb032fd69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
 W tym temacie opisano, jak skutecznie używać i utworzyć <xref:System.Windows.Freezable> obiektów, które dostarczają specjalnych funkcji, które może zwiększyć wydajność aplikacji. Przykładami obiektu freezable obiektów pędzle, pióra przekształcenia, mają geometrię i animacji.  
@@ -101,7 +89,7 @@ W tym temacie opisano, jak skutecznie używać i utworzyć <xref:System.Windows.
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- Aby użyć `Freeze` atrybutu, musisz zamapować do przestrzeni nazw opcje prezentacji: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions`jest zalecana prefiks dla mapowania tej przestrzeni nazw:  
+ Aby użyć `Freeze` atrybutu, musisz zamapować do przestrzeni nazw opcje prezentacji: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions` jest zalecana prefiks dla mapowania tej przestrzeni nazw:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   

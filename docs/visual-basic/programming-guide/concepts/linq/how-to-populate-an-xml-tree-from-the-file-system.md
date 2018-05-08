@@ -1,22 +1,12 @@
 ---
-title: "Porady: wypełnianie drzewo XML z systemu plików (Visual Basic)"
-ms.custom: 
+title: 'Porady: wypełnianie drzewo XML z systemu plików (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6046cf5837aa033f2efb72c7b45f9526bedf871c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 158a6c5c6734f0aa11e22b5cbea35c960c7a1c40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Porady: wypełnianie drzewo XML z systemu plików (Visual Basic)
 Typowe i przydatne aplikacji drzew XML jest jako magazynu danych hierarchiczna nazwa/wartość. Można wypełnić drzewo XML z danymi hierarchicznymi i jego zapytania, przekształcać je i w razie potrzeby go serializować. W tym scenariuszu użycia nie są wiele semantyki określonego XML, takie jak obszary nazw i zachowanie biały znak, ważne. Zamiast tego drzewa XML jest używany jako mały w pamięci, hierarchiczna baza danych jednego użytkownika.  

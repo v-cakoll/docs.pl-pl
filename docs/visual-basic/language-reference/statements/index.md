@@ -1,33 +1,24 @@
 ---
 title: Instrukcje (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5619cb48907ce3d240b10a94c534c849a82fac2a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements-visual-basic"></a>Instrukcje (Visual Basic)
 Tematy w tej sekcji zawierają tabele deklaracji Visual Basic i instrukcje wykonywalne i ważne list, które dotyczą wiele instrukcji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [A-E — instrukcje](../../../visual-basic/language-reference/statements/a-e-statements.md)  
+ [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
- [F-P — instrukcje](../../../visual-basic/language-reference/statements/f-p-statements.md)  
+ [Instrukcje F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)  
   
- [Q-Z — instrukcje](../../../visual-basic/language-reference/statements/q-z-statements.md)  
+ [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
   
  [Klauzule](../../../visual-basic/language-reference/statements/clauses.md)  
   
@@ -35,7 +26,7 @@ Tematy w tej sekcji zawierają tabele deklaracji Visual Basic i instrukcje wykon
   
  [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md)  
   
- [Listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
   
  [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)  
   

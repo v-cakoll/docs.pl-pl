@@ -1,18 +1,12 @@
 ---
 title: Odbicie (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 68a586fd8a8a8fbe6e351efa3e51c5ba1d2ff4d7
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: fc5c3f6af1a089d824289a55f6781e887b7cfc56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-c"></a>Odbicie (C#)
 Odbicie udostępnia obiekty (typu <xref:System.Type>) opisują zestawy, moduły i typy. Odbicie umożliwia dynamicznie utworzyć wystąpienia typu, powiązać danego typu do istniejącego obiektu, lub pobranie typu z istniejącego obiektu i wywołanie metody lub dostępu do swoich pól i właściwości. Jeśli używane są atrybuty w kodzie, odbicia umożliwia dostęp do nich. Aby uzyskać więcej informacji, zobacz [atrybutów](../../../../docs/standard/attributes/index.md).  
@@ -71,4 +65,4 @@ System.Console.WriteLine(info);
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Zestawy w środowisko uruchomieniowe języka wspólnego](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+ [Zestawy w środowisku uruchomieniowym CLR](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

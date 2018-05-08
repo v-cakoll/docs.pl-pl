@@ -1,24 +1,17 @@
 ---
 title: internal (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - internal_CSharpKeyword
 - internal
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a3b115022ed2b38dfcfbbfad3c5fc00e0203b255
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e636cb1edfa19b08c52ff09439e66aeb1424046a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internal-c-reference"></a>internal (odwołanie w C#)
 `internal` — Słowo kluczowe jest [modyfikator dostępu](../../../csharp/language-reference/keywords/access-modifiers.md) typy i elementy członkowskie typu. 
@@ -102,6 +95,6 @@ public class TestAccess
  [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)  
  [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
- [publiczny](../../../csharp/language-reference/keywords/public.md)  
- [prywatne](../../../csharp/language-reference/keywords/private.md)  
- [chronione](../../../csharp/language-reference/keywords/protected.md)
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)

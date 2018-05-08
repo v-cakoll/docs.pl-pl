@@ -1,24 +1,12 @@
 ---
-title: "Tworzenie aplikacji multiemisji za pomocą transportu UDP"
-ms.custom: 
+title: Tworzenie aplikacji multiemisji za pomocą transportu UDP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 57c30c8b6b381be931789f3f64cbd26943bb2b34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84b36029416a66ef03768aed7d0c789a41eed8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Tworzenie aplikacji multiemisji za pomocą transportu UDP
 Aplikacje korzystające z multiemisji wysyłać mała do wielu odbiorców w tym samym czasie bez konieczności ustanawiania połączenia punkt-punkt. Nacisk takich aplikacji jest szybkość nad niezawodności. Innymi słowy ma większe znaczenie dla wysyłania aktualnych danych niż aby upewnij się, że faktycznie nieodebrania żadnych określonego komunikatu. Usługi WCF obsługuje teraz pisanie aplikacji multiemisji za pomocą <xref:System.ServiceModel.UdpBinding>. Ten transport jest przydatne w scenariuszach, w którym usługa musi wysyłać małych komunikatów do wielu klientów jednocześnie. Aplikacja giełdowych jest przykładem takiej usługi.  
@@ -102,7 +90,7 @@ while (true)
  Ten kod generuje informacje o akcji, a następnie używa kontraktu usługi IStockTicker wysyłanie komunikatów multiemisji do wywoływania usług nasłuchiwanie poprawny adres protokołu UDP.  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP i niezawodna obsługa komunikatów  
- Powiązanie UDP nie obsługuje niezawodna obsługa komunikatów z powodu lekkie rodzaj protokołu UDP. Jeśli potrzebujesz upewnić się, że komunikaty są odbierane przez zdalny punkt końcowy, użyj transportu, który obsługuje niezawodna obsługa komunikatów HTTP lub TCP. Aby uzyskać więcej informacji na temat niezawodna obsługa komunikatów zobacz http://go.microsoft.com/fwlink/?LinkId=231830  
+ Powiązanie UDP nie obsługuje niezawodna obsługa komunikatów z powodu lekkie rodzaj protokołu UDP. Jeśli potrzebujesz upewnić się, że komunikaty są odbierane przez zdalny punkt końcowy, użyj transportu, który obsługuje niezawodna obsługa komunikatów HTTP lub TCP. Aby uzyskać więcej informacji o niezawodnej obsługi komunikatów, zobacz http://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>Dwukierunkowe komunikatów multiemisji  
  Komunikaty multiemisji są zazwyczaj jednokierunkowe, UdpBinding obsługi wymiany wiadomości żądania/odpowiedzi. Komunikatów wysyłanych za pomocą transportu UDP zawierają zarówno od i do adresu. Należy uważać, gdy przy użyciu adresu From może być złośliwy zmieniona trasie.  Adres można sprawdzić przy użyciu następującego kodu:  

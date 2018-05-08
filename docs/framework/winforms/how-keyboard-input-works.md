@@ -1,28 +1,16 @@
 ---
-title: "Działanie wprowadzania z klawiatury"
-ms.custom: 
+title: Działanie wprowadzania z klawiatury
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], about keyboard input
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a0b814a18f4a8b25fba9fa0b36da44954590f056
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-keyboard-input-works"></a>Działanie wprowadzania z klawiatury
 Formularze systemu Windows przetwarza wprowadzanie z klawiatury przez wywoływanie zdarzeń klawiatury w odpowiedzi na komunikaty systemu Windows. Większość aplikacji Windows Forms przetworzyć klawiatury wyłącznie przez obsługi zdarzenia klawiatury. Jednak należy zrozumieć, jak komunikaty klawiatury działają, można wdrożyć bardziej zaawansowanych scenariuszy wejście klawiatury, takie jak przechwytywaniu kluczy przed dotarciem formantu. W tym temacie opisano typy danych klucza, że program Windows Forms rozpoznaje i omówiono sposób kierowania komunikaty klawiatury. Aby uzyskać informacje o zdarzeniach klawiatury, zobacz [zdarzenia klawiatury przy użyciu](../../../docs/framework/winforms/using-keyboard-events.md).  
@@ -74,9 +62,9 @@ Formularze systemu Windows przetwarza wprowadzanie z klawiatury przez wywoływan
 |Zadanie|Metoda|  
 |----------|------------|  
 |Przechwytywać klucza nawigacji i podnieść <xref:System.Windows.Forms.Control.KeyDown> zdarzeń. Na przykład chcesz kartę i wrócić do obsługi w polu tekstowym.|Zastąpienie <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Uwaga:** Alternatywnie można obsługiwać <xref:System.Windows.Forms.Control.PreviewKeyDown> zdarzeń i zestaw <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> z <xref:System.Windows.Forms.PreviewKeyDownEventArgs> do `true` dla klucza lub kluczy ma.|  
-|Wykonaj specjalne obsługi danych wejściowych lub nawigacji w formancie. Na przykład chcesz użycie klawiszy strzałek w formancie z listy, aby zmienić wybrany element.|Zastąpienie<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Wykonaj specjalne obsługi danych wejściowych lub nawigacji w formancie. Na przykład chcesz użycie klawiszy strzałek w formancie z listy, aby zmienić wybrany element.|zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Przechwytywać klucza nawigacji i podnieść <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład w formancie pole pokrętła ma się, że wiele Strzałka musi nacisnąć, aby przyspieszyć przez kolejne elementy.|Zastąpienie <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Specjalne obsługi danych wejściowych lub nawigacji podczas wykonywania <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład na liście kontroli, przytrzymując klawisz "r" pomija między elementami, które zaczynają się od litery r.|Zastąpienie<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Specjalne obsługi danych wejściowych lub nawigacji podczas wykonywania <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład na liście kontroli, przytrzymując klawisz "r" pomija między elementami, które zaczynają się od litery r.|zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Wykonaj niestandardowy skrót klawiszowy Obsługa; na przykład chcesz obsługiwać symboli na przyciskach rysowanych przez właściciela zawarte w pasku narzędzi.|Zastąpienie <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Zobacz też  

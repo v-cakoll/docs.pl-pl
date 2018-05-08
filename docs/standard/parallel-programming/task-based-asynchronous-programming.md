@@ -1,31 +1,20 @@
 ---
 title: Programowanie asynchroniczne opartego na zadaniach
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-caps.latest.revision: 51
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne opartego na zadaniach
 Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, który reprezentuje operację asynchroniczną. W pewnym sensie zadania jest podobny wątku lub <xref:System.Threading.ThreadPool> pracy elementu, ale na wyższym poziomie abstrakcji. Termin *równoległość zadań* odwołuje się do jednego lub więcej zadań niezależnie od uruchomione jednocześnie. Zadania zapewniają dwie podstawowe korzyści:  

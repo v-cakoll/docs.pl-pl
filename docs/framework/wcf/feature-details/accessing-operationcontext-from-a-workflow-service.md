@@ -1,24 +1,12 @@
 ---
-title: "Uzyskiwanie dostępu do elementu OperationContext w usłudze przepływu pracy"
-ms.custom: 
+title: Uzyskiwanie dostępu do elementu OperationContext w usłudze przepływu pracy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f63c2e2305eab5a97cf547bf607fbe97bb573376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Uzyskiwanie dostępu do elementu OperationContext w usłudze przepływu pracy
 Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz usługi przepływu pracy, musisz zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interfejsu we właściwości niestandardowej wykonywania. Zastąpienie <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> metodę, która została przekazana odwołanie do <xref:System.ServiceModel.OperationContext>. Ten temat przeprowadzi Cię przez wdrożenie tej właściwości wykonywania można pobrać niestandardowy nagłówek, a także działania niestandardowego, który będzie powierzchni tę właściwość, aby <xref:System.ServiceModel.Activities.Receive> w czasie wykonywania.  Działania niestandardowego zostaną zaimplementowane zachowania <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` działania, z wyjątkiem że w przypadku <xref:System.ServiceModel.Activities.Receive> znajduje się wewnątrz niej, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> zostanie wywołana i <xref:System.ServiceModel.OperationContext> można pobrać informacji.  W tym temacie przedstawiono również sposób uzyskać dostęp po stronie klienta <xref:System.ServiceModel.OperationContext> można dodać nagłówków wychodzących za pośrednictwem <xref:System.ServiceModel.Activities.ISendMessageCallback> interfejsu.  
@@ -105,7 +93,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-5.  Zastąpienie<xref:System.Activities.NativeActivity.CacheMetadata%2A>  
+5.  zastąpienie <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -117,7 +105,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-6.  Zastąpienie<xref:System.Activities.NativeActivity.Execute%2A>  
+6.  zastąpienie <xref:System.Activities.NativeActivity.Execute%2A>  
   
     ```  
     protected override void Execute(  
@@ -298,7 +286,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-5.  Zastąpienie<xref:System.Activities.NativeActivity.CacheMetadata%2A>  
+5.  zastąpienie <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -310,7 +298,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-6.  Zastąpienie<xref:System.Activities.NativeActivity.Execute%2A>  
+6.  zastąpienie <xref:System.Activities.NativeActivity.Execute%2A>  
   
     ```  
     protected override void Execute(  
@@ -383,7 +371,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
   
 2.  Dodaj odwołania do następujących zestawów:  
   
-    1.  Elementu System.Activities  
+    1.  System.Activities  
   
     2.  System.ServiceModel  
   

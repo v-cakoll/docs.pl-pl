@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumModuleRefs — Metoda"
-ms.custom: 
+title: IMetaDataImport::EnumModuleRefs — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumModuleRefs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 782b363ddf518d45ac5e5fc2b2e4b1c68aff8ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 294156983507476b7ddfda3bc3cad16bb32f422b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs — Metoda
 Wylicza tokeny element ModuleRef, które reprezentują zaimportowanych modułów.  
@@ -66,7 +54,7 @@ HRESULT EnumModuleRefs (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs`zwrócona pomyślnie.|  
+|`S_OK`|`EnumModuleRefs` zwrócona pomyślnie.|  
 |`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcModuleRefs` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -76,7 +64,7 @@ HRESULT EnumModuleRefs (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

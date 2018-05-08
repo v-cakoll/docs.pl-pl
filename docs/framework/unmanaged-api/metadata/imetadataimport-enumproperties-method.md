@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumProperties — Metoda"
-ms.custom: 
+title: IMetaDataImport::EnumProperties — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumProperties
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63ff10904440f55ec3fe6fb6aa581fbf560763e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad29204e445bc61b6dc9753d594f0e4bf62930fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties — Metoda
 Wylicza tokeny właściwości reprezentujący właściwości typu odwołuje się określony token TypeDef.  
@@ -70,7 +58,7 @@ HRESULT EnumProperties (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties`zwrócona pomyślnie.|  
+|`S_OK`|`EnumProperties` zwrócona pomyślnie.|  
 |`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcProperties` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -80,7 +68,7 @@ HRESULT EnumProperties (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

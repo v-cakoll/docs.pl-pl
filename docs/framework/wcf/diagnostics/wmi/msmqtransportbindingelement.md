@@ -1,24 +1,12 @@
 ---
 title: MsmqTransportBindingElement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4cfa3d58127fa560f39ce0dcfe51b97ded6223a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 643ab0f30c771f79df8ef7dd885013d5186fba59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -40,7 +28,7 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 ## <a name="properties"></a>Właściwości  
  Klasa elementem MsmqTransportBindingElement ma następujące właściwości:  
   
-### <a name="maxpoolsize"></a>maxPoolSize  
+### <a name="maxpoolsize"></a>MaxPoolSize  
  Typ danych: sint32  
   
  Dostęp typu: tylko do odczytu  

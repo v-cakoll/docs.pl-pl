@@ -1,13 +1,7 @@
 ---
 title: Typy formatowania w .NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,21 +25,16 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-caps.latest.revision: "43"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-types-in-net"></a>Typy formatowania w .NET
-<a name="Introduction"></a>Formatowanie to proces konwertowania wystąpienia klasy, struktury lub wyliczenia wartości do reprezentacji ciągu, często, tak aby wynikowy ciąg może być widoczny dla użytkowników lub deserializacji, aby przywrócić oryginalny typ danych. Ta konwersja może stanowić wiele wyzwań:  
+<a name="Introduction"></a> Formatowanie to proces konwertowania wystąpienia klasy, struktury lub wyliczenia wartości do reprezentacji ciągu, często, tak aby wynikowy ciąg może być widoczny dla użytkowników lub deserializacji, aby przywrócić oryginalny typ danych. Ta konwersja może stanowić wiele wyzwań:  
   
 -   Sposób, że wartości są przechowywane wewnętrznie nie odzwierciedlać sposób użytkowników chcesz przeglądać. Na przykład numer telefonu mogą być przechowywane w postaci 8009999999, który nie jest przyjazną dla użytkownika. Zamiast tego go powinna być wyświetlana jako 800-999-9999. Zobacz [niestandardowe ciągi formatów](#customStrings) sekcji, na przykład, w którym formatuje liczbę w ten sposób.  
   
@@ -277,21 +266,21 @@ ms.lasthandoff: 01/10/2018
   
 <a name="FormatProviders"></a>   
 ## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Wrażliwość na ustawienia kulturowe — mechanizm formatowania i interfejs IFormatProvider  
- Mimo że specyfikatory formatu umożliwiają dostosowanie, formatowanie obiektów, produkujących znaczący reprezentację ciągu obiektów często wymaga dodatkowe informacje dotyczące formatowania. Na przykład formatowania liczbę jako wartość walutową przy użyciu standardowego formatu ciągu "C" lub niestandardowy ciąg formatu, takie jak "$ #, #. 00" wymaga, co najmniej informacje dotyczące symbol waluty poprawne, separatora grupy i separatora dziesiętnego jako dostępne do dołączenia ciągu w formacie. W środowisku .NET, to dodatkowe informacje dotyczące formatowania ma zostać udostępnione za pośrednictwem <xref:System.IFormatProvider> interfejsu, który jest dostarczany jako parametr do co najmniej jeden przeciążeń `ToString` metody typami numerycznymi i typy daty i godziny. <xref:System.IFormatProvider>implementacje są używane w środowisku .NET do obsługuje specyficzne dla kultury. Poniższy przykład przedstawia, jak zmienia reprezentację ciągu obiektu, gdy jest on formatowany z trzema <xref:System.IFormatProvider> obiektów, które reprezentują innych kultur.  
+ Mimo że specyfikatory formatu umożliwiają dostosowanie, formatowanie obiektów, produkujących znaczący reprezentację ciągu obiektów często wymaga dodatkowe informacje dotyczące formatowania. Na przykład formatowania liczbę jako wartość walutową przy użyciu standardowego formatu ciągu "C" lub niestandardowy ciąg formatu, takie jak "$ #, #. 00" wymaga, co najmniej informacje dotyczące symbol waluty poprawne, separatora grupy i separatora dziesiętnego jako dostępne do dołączenia ciągu w formacie. W środowisku .NET, to dodatkowe informacje dotyczące formatowania ma zostać udostępnione za pośrednictwem <xref:System.IFormatProvider> interfejsu, który jest dostarczany jako parametr do co najmniej jeden przeciążeń `ToString` metody typami numerycznymi i typy daty i godziny. <xref:System.IFormatProvider> implementacje są używane w środowisku .NET do obsługuje specyficzne dla kultury. Poniższy przykład przedstawia, jak zmienia reprezentację ciągu obiektu, gdy jest on formatowany z trzema <xref:System.IFormatProvider> obiektów, które reprezentują innych kultur.  
   
  [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
  [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]  
   
  <xref:System.IFormatProvider> Interfejs zawiera jedną metodę <xref:System.IFormatProvider.GetFormat%28System.Type%29>, który ma jeden parametr, który określa typ obiektu, który zawiera informacje dotyczące formatowania. Jeśli metoda zapewniają tego typu obiektu, zwraca go. W przeciwnym razie zwraca odwołanie o wartości null (`Nothing` w języku Visual Basic).  
   
- <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>jest to metoda wywołania zwrotnego. Podczas wywoływania `ToString` przeciążenie metody, która obejmuje <xref:System.IFormatProvider> parametru wywołuje <xref:System.IFormatProvider.GetFormat%2A> metoda tego <xref:System.IFormatProvider> obiektu. <xref:System.IFormatProvider.GetFormat%2A> Metoda jest odpowiedzialna za zwraca obiekt, który dostarcza niezbędne informacje formatowania, określony przez jego `formatType` parametru, do `ToString` metody.  
+ <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> jest to metoda wywołania zwrotnego. Podczas wywoływania `ToString` przeciążenie metody, która obejmuje <xref:System.IFormatProvider> parametru wywołuje <xref:System.IFormatProvider.GetFormat%2A> metoda tego <xref:System.IFormatProvider> obiektu. <xref:System.IFormatProvider.GetFormat%2A> Metoda jest odpowiedzialna za zwraca obiekt, który dostarcza niezbędne informacje formatowania, określony przez jego `formatType` parametru, do `ToString` metody.  
   
  Parametr typu obejmują wiele metod konwersji formatowania lub ciąg <xref:System.IFormatProvider>, ale w wielu przypadkach wartość parametru jest ignorowany podczas wywoływania metody. W poniższej tabeli przedstawiono niektóre metody formatowania używających parametr i typ <xref:System.Type> obiektów, które przekazują do <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody.  
   
 |Metoda|Typ `formatType` parametru|  
 |------------|------------------------------------|  
-|`ToString`Metoda typy liczbowe|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|  
-|`ToString`Metoda typy daty i godziny|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|  
+|`ToString` Metoda typy liczbowe|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|  
+|`ToString` Metoda typy daty i godziny|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
   
@@ -304,7 +293,7 @@ ms.lasthandoff: 01/10/2018
   
 -   <xref:System.Globalization.NumberFormatInfo>, Klasa udostępniająca informacje numeryczne formatowania dla określonej kultury. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja zwraca wystąpienia samej siebie.  
   
--   <xref:System.Globalization.CultureInfo>., Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja może zwracać <xref:System.Globalization.NumberFormatInfo> obiekt, aby podać informacje numeryczne formatowania lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, aby podać informacje dotyczące formatowania dla wartości daty i godziny.  
+-   <xref:System.Globalization.CultureInfo>. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja może zwracać <xref:System.Globalization.NumberFormatInfo> obiekt, aby podać informacje numeryczne formatowania lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, aby podać informacje dotyczące formatowania dla wartości daty i godziny.  
   
  Można też wdrożyć własnego dostawcę formatowanie zastąpić któregokolwiek z tych klas. Jednak implementację programu <xref:System.IFormatProvider.GetFormat%2A> metoda musi zwracać obiekt typu wymienione w powyższej tabeli, jeśli musi podać informacje dotyczące formatowania do `ToString` metody.  
   

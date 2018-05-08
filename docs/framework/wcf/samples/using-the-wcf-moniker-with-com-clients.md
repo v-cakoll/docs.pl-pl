@@ -1,29 +1,15 @@
 ---
 title: Używanie monikera programu WCF z klientami COM
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Używanie monikera programu WCF z klientami COM
-W tym przykładzie przedstawiono sposób użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] moniker usługi do integracji usług sieci Web w środowiskach Programowanie oparte na modelu COM, na przykład Microsoft Office Visual Basic for Applications (Office VBA) lub Visual Basic 6.0. W tym przykładzie składa się z klienta Host skryptów systemu Windows (VBS), pomocnicze biblioteki klienta (.dll) i usługi biblioteki (.dll), obsługiwane przez Internet Information Services (IIS). Usługa jest usługą Kalkulator i klient modelu COM wywołuje operacji matematycznych — Dodawanie, odjąć mnożenia i dzielenia — w usłudze. Aktywność klienta jest widoczny w systemie windows — okno komunikatu.  
+W tym przykładzie przedstawiono sposób użycia moniker usługi Windows Communication Foundation (WCF) do integracji usług sieci Web w środowiskach Programowanie oparte na modelu COM, na przykład Microsoft Office Visual Basic for Applications (Office VBA) lub Visual Basic 6.0. W tym przykładzie składa się z klienta Host skryptów systemu Windows (VBS), pomocnicze biblioteki klienta (.dll) i usługi biblioteki (.dll), obsługiwane przez Internet Information Services (IIS). Usługa jest usługą Kalkulator i klient modelu COM wywołuje operacji matematycznych — Dodawanie, odjąć mnożenia i dzielenia — w usłudze. Aktywność klienta jest widoczny w systemie windows — okno komunikatu.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące konfiguracji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -33,7 +19,7 @@ W tym przykładzie przedstawiono sposób użycia [!INCLUDE[indigo1](../../../../
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   

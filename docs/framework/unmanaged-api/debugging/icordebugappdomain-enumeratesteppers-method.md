@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugAppDomain::EnumerateSteppers — Metoda"
-ms.custom: 
+title: ICorDebugAppDomain::EnumerateSteppers — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAppDomain.EnumerateSteppers
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f3c4503-570e-44c1-ae6a-a3c6b840c732
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b410eabee546307488449e577d9e102ac6a210b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bf3aa6d883dffece6ba89d41005499cc6206906
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a>ICorDebugAppDomain::EnumerateSteppers — Metoda
 Pobiera moduł wyliczający dla wszystkich aktywnych steppery w domenie aplikacji.  
@@ -57,4 +45,4 @@ HRESULT EnumerateSteppers (
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

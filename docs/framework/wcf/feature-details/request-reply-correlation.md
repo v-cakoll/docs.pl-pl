@@ -1,27 +1,15 @@
 ---
-title: "Korelacja żądań i odpowiedzi"
-ms.custom: 
+title: Korelacja żądań i odpowiedzi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4379bf-2d08-43f3-9584-dfa30ffcb1f6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f4fc436afbcc5922badda22e9a6e565bc19a0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c38854ad42ad4dddce5171482f3ddcfe5bd16b61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="request-reply-correlation"></a>Korelacja żądań i odpowiedzi
-Korelacja żądań i odpowiedzi jest używany z <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary do zaimplementowania dwukierunkowe operacji w usłudze przepływu pracy oraz <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary, który wywołuje operację dwukierunkowe w innej sieci Web Usługa. Podczas wywoływania dwukierunkowe operacji w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, usługi mogą być albo tradycyjnych imperatywne opartej na kodzie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługę albo mogą być usługi przepływu pracy. Umożliwia powiązanie dwustronne muszą być stosowane, takich jak korelacja żądań i odpowiedzi <xref:System.ServiceModel.BasicHttpBinding>. Wywoływanie lub wykonania operacji dwukierunkowe, kroków inicjowania korelacji są podobne i są przedstawione w tej sekcji.  
+Korelacja żądań i odpowiedzi jest używany z <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary do zaimplementowania dwukierunkowe operacji w usłudze przepływu pracy oraz <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary, który wywołuje operację dwukierunkowe w innej sieci Web Usługa. Podczas wywoływania dwukierunkowe operacji usługi WCF, usługa może być albo tradycyjną usługi przepływu pracy może być konieczne usługi Windows Communication Foundation (WCF) oparte na kodzie lub go. Umożliwia powiązanie dwustronne muszą być stosowane, takich jak korelacja żądań i odpowiedzi <xref:System.ServiceModel.BasicHttpBinding>. Wywoływanie lub wykonania operacji dwukierunkowe, kroków inicjowania korelacji są podobne i są przedstawione w tej sekcji.  
   
 ## <a name="using-correlation-in-a-two-way-operation-with-receivesendreply"></a>W ramach operacji dwukierunkowe z odbierania SendReply przy użyciu korelacji  
  A <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary jest używane do implementowania dwukierunkowe operacji w usłudze przepływu pracy. Środowiska uruchomieniowego używa korelacja żądań i odpowiedzi, aby upewnić się, że odpowiedź jest wysyłane do wywołującego poprawne. Gdy przepływ pracy jest hostowana przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>, czyli w przypadku usług przepływu pracy, a następnie inicjowanie domyślnych korelacja jest wystarczająca. W tym scenariuszu <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary jest używany przez przepływ pracy i nie jest wymagana żadna konfiguracja określonych korelacji.  
@@ -72,7 +60,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.  
 ```  
   
- Zamiast konfigurować jawnie korelacji, <xref:System.ServiceModel.Activities.CorrelationScope> działanie może być używane. <xref:System.ServiceModel.Activities.CorrelationScope>zapewnia niejawny <xref:System.ServiceModel.Activities.CorrelationHandle> do obsługi komunikatów działań, które zawiera. W tym przykładzie <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary znajduje się wewnątrz <xref:System.ServiceModel.Activities.CorrelationScope>. Nie jest wymagana żadna konfiguracja jawne korelacji.  
+ Zamiast konfigurować jawnie korelacji, <xref:System.ServiceModel.Activities.CorrelationScope> działanie może być używane. <xref:System.ServiceModel.Activities.CorrelationScope> zapewnia niejawny <xref:System.ServiceModel.Activities.CorrelationHandle> do obsługi komunikatów działań, które zawiera. W tym przykładzie <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary znajduje się wewnątrz <xref:System.ServiceModel.Activities.CorrelationScope>. Nie jest wymagana żadna konfiguracja jawne korelacji.  
   
 ```csharp  
 Receive StartOrder = new Receive  

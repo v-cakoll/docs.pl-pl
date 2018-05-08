@@ -1,23 +1,15 @@
 ---
 title: Automatyczne skalowanie w formularzach systemu Windows
 ms.date: 06/15/2017
-ms.prod: .net-framework
-ms.technology: dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatyczne skalowanie w formularzach systemu Windows
 Umożliwia skalowanie automatyczne formularza i jego formantów pozwala na jednej maszynie czcionką niektórych wyświetlania rozwiązania lub system, wyświetlane odpowiednio na inny komputer o czcionki różne rozwiązania lub systemu. Gwarantuje on, że formularz i jego formantów inteligentnie spowoduje zmianę rozmiaru, aby były spójne z macierzystego systemu windows i innych aplikacji na komputerach z innymi deweloperami i użytkownika. Obsługę [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] automatyczne skalowanie i style wizualne umożliwia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacje do obsługi spójny wygląd i zachowanie w porównaniu do natywnych aplikacji systemu Windows na komputerze każdego użytkownika.
@@ -92,7 +84,7 @@ Formularze systemu Windows używa teraz następującą logiką automatycznie ska
 
 3. Podczas ładowania formularza, jeśli wartości <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> i <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> są różne, a następnie <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> wywoływana jest metoda skalowania formantu i jego elementów podrzędnych. Ta metoda wstrzymuje układ i wywołania <xref:System.Windows.Forms.Control.Scale%2A> metodę w celu skalowania rzeczywistych. Później, wartość <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> jest aktualizowana w celu uniknięcia stopniowego skalowania.
 
-4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>jest również wywoływana automatycznie, w następujących sytuacjach:
+4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> jest również wywoływana automatycznie, w następujących sytuacjach:
 
     - W odpowiedzi na <xref:System.Windows.Forms.Control.OnFontChanged%2A> zdarzeń, jeśli tryb skalowania jest <xref:System.Windows.Forms.AutoScaleMode.Font>.
   

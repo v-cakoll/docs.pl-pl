@@ -1,11 +1,6 @@
 ---
-title: "Double — Typ danych (Visual Basic)"
+title: Double — Typ danych (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Double
 helpviewer_keywords:
@@ -24,14 +19,11 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-data-type-visual-basic"></a>Double — Typ danych (Visual Basic)
 Blokad podpisany IEEE 64-bitowych (8-bajtowych) podwójnej precyzji liczb zmiennoprzecinkowych, które mają wartość z zakresu od - 1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych i z 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnie. Liczby o podwójnej precyzji przechowywać zbliżenia liczba rzeczywista.  
@@ -65,10 +57,10 @@ Blokad podpisany IEEE 64-bitowych (8-bajtowych) podwójnej precyzji liczb zmienn
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Double?displayProperty=nameWithType>  
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Decimal — typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Single — typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Rozwiązywanie problemów związanych z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Znaki typu](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

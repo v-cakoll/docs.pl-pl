@@ -1,13 +1,6 @@
 ---
-title: "Jak podpiąć polecenie do formantu za pomocą obsługi poleceń"
-ms.custom: 
+title: Jak podpiąć polecenie do formantu za pomocą obsługi poleceń
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,22 +10,17 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b190868b8718442966a22d7be14d976ec47f53b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47abd36558864116e5f5ed921419c374c064e2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Jak podpiąć polecenie do formantu za pomocą obsługi poleceń
 Poniższy przykład przedstawia sposób Podłączanie <xref:System.Windows.Input.RoutedCommand> do <xref:System.Windows.Controls.Control> są wbudowane Obsługa polecenia.  Dla kompletnego przykładu, który przechwytuje się poleceń do wielu źródeł, zobacz [utworzyć niestandardowe próbę RoutedCommand](http://go.microsoft.com/fwlink/?LinkID=159980) próbki.  
   
 ## <a name="example"></a>Przykład  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia bibliotekę używanych poleceń, które programistom wystąpić regularnie.  Klasy, które obejmują biblioteki polecenia są: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, i <xref:System.Windows.Documents.EditingCommands>.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia bibliotekę używanych poleceń, które programistom wystąpić regularnie.  Klasy, które obejmują biblioteki polecenia są: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, i <xref:System.Windows.Documents.EditingCommands>.  
   
  Statycznych <xref:System.Windows.Input.RoutedCommand> obiektów, które składają się następujące klasy nie zostanie podana logiki polecenia.  Logika dla polecenia jest skojarzony z polecenie z <xref:System.Windows.Input.CommandBinding>.  Niektóre formanty utworzone w CommandBindings dla niektórych poleceń.  Mechanizm ten umożliwia semantykę pozostają takie same, podczas rzeczywistego wykonania polecenia, można zmienić.  A <xref:System.Windows.Controls.TextBox>, na przykład obsługuje <xref:System.Windows.Input.ApplicationCommands.Paste%2A> polecenia inaczej niż formantu przeznaczony do obsługi obrazów, ale podstawowe informacje o tym, co oznacza to wkleić coś pozostaje taki sam.  Logika polecenia nie może być dostarczone przez polecenie, ale raczej muszą zostać dostarczone przez formant lub aplikacji.  
   

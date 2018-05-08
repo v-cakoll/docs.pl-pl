@@ -1,26 +1,12 @@
 ---
 title: Komunikacja dwukierunkowa
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dfc332533b714083d149b2c1c4892626d2990fb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-way-communication"></a>Komunikacja dwukierunkowa
 W tym przykładzie pokazano, jak wykonać transakcyjne dwukierunkowej komunikacji w kolejce przez usługę MSMQ. W przykładzie użyto `netMsmqBinding` powiązania. W takim przypadku usługa jest aplikacji konsoli siebie umożliwiający obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -86,7 +72,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  Nazwa kolejki usługi MSMQ jest określona w sekcji appSettings pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji System.ServiceModel pliku konfiguracji.  
   
 > [!NOTE]
->  Adres nazwy i punktu końcowego kolejki usługi MSMQ Użyj konwencji adresowania nieco inne. Nazwa kolejki usługi MSMQ używa pojedynczego znaku kropki (.) dla lokalnych separatory maszyny i ukośnika w jego ścieżki. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Net.msmq Określa adres punktu końcowego: schemat, korzysta "localhost" na komputerze lokalnym, a ukośniki w swojej ścieżce. Aby odczytać z kolejki znajdującej się na komputerze zdalnym, zastąp "." i "localhost" na nazwę komputera zdalnego.  
+>  Adres nazwy i punktu końcowego kolejki usługi MSMQ Użyj konwencji adresowania nieco inne. Nazwa kolejki usługi MSMQ używa pojedynczego znaku kropki (.) dla lokalnych separatory maszyny i ukośnika w jego ścieżki. Adres punktu końcowego usługi Windows Communication Foundation (WCF) określa net.msmq: schemat, korzysta "localhost" na komputerze lokalnym, a ukośniki w swojej ścieżce. Aby odczytać z kolejki znajdującej się na komputerze zdalnym, zastąp "." i "localhost" na nazwę komputera zdalnego.  
   
  Usługa jest samodzielnie hostowana. Za pomocą transportu MSMQ, kolejki używane musi zostać utworzona z wyprzedzeniem. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie usługa sprawdza istnienie kolejki i tworzy, jeśli to konieczne. Nazwa kolejki jest do odczytu z pliku konfiguracji. Adres podstawowy jest używany przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania serwera proxy do usługi.  
 
@@ -340,7 +326,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   

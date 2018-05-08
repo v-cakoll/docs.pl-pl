@@ -1,22 +1,14 @@
 ---
 title: 'Porady: drukowanie obszarów klienckich formularza (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ef42dd3c809ff0a1594350e252d4c4aa2f0ec004
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 361db89f0880a03273aac7fc36b5c5faa825486f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a>Porady: drukowanie obszarów klienckich formularza (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Składnika pozwala na szybkie wydrukowanie obrazu formularza bez użycia <xref:System.Drawing.Printing.PrintDocument> składnika. Poniższa procedura przedstawia sposób drukowanie tylko obszarów klienckich formularza, bez paska tytułu, obramowania i paski przewijania.  

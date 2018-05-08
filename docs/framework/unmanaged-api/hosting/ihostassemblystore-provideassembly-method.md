@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyStore::ProvideAssembly — Metoda"
-ms.custom: 
+title: IHostAssemblyStore::ProvideAssembly — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideAssembly
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2097c1ea64e5e9a2a09e0ec57243624b05eeea65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e32d48931177a42dd14092b4052370764a217abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly — Metoda
 Pobiera odwołanie do zestawu, który nie jest wywoływany przez [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) zwracanego z [IHostAssemblyManager::GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje `ProvideAssembly` dla każdego zestawu, który nie ma na liście.  
@@ -58,7 +46,7 @@ HRESULT ProvideAssembly (
  [out] Wskaźnik do Unikatowy identyfikator dla żądanego zestawu dla tego `IStream`.  
   
  `pHostContext`  
- [out] Wskaźnik do dane specyficzne dla hosta, który służy do określania dowody żądany zestaw bez konieczności platformy wywołania wywołania. `pHostContext`odpowiada <xref:System.Reflection.Assembly.HostContext%2A> właściwości zarządzanej <xref:System.Reflection.Assembly> klasy.  
+ [out] Wskaźnik do dane specyficzne dla hosta, który służy do określania dowody żądany zestaw bez konieczności platformy wywołania wywołania. `pHostContext` odpowiada <xref:System.Reflection.Assembly.HostContext%2A> właściwości zarządzanej <xref:System.Reflection.Assembly> klasy.  
   
  `ppStmAssemblyImage`  
  [out] Wskaźnik do adresu `IStream` zawierający obraz przenośny plik wykonywalny (PE), który można załadować lub wartość null, jeśli nie można odnaleźć zestawu.  
@@ -70,7 +58,7 @@ HRESULT ProvideAssembly (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly`zwrócona pomyślnie.|  
+|S_OK|`ProvideAssembly` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -89,7 +77,7 @@ HRESULT ProvideAssembly (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRAssemblyReferenceList, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

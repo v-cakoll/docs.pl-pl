@@ -1,26 +1,17 @@
 ---
 title: 'Porady: usuwanie pliku w Visual Basic'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Delete method [Visual Basic]
 - files [Visual Basic], deleting
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 536c10070ef51044b801fc6a5805741896586dff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2918b756d5f37de2489042a9eabfe7312841af81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Porady: usuwanie pliku w Visual Basic
 `DeleteFile` Metody `My.Computer.FileSystem` obiektu służy do usuwania pliku. Opcje oferuje należą: czy wysyłać usuniętego pliku do **Kosza**, czy poprosić użytkownika o potwierdzenie, że plik powinien zostać usunięty i co należy zrobić, gdy użytkownik anuluje operację.  
@@ -71,4 +62,4 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.UIOption>  
  <xref:Microsoft.VisualBasic.FileIO.RecycleOption>  
- [Porady: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+ [Instrukcje: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

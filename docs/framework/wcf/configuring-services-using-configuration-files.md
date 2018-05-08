@@ -1,31 +1,17 @@
 ---
 title: Konfigurowanie usług za pomocą plików konfiguracji
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
-Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy użyciu pliku konfiguracji zapewnia elastyczność udostępniania punktu końcowego i Usługa danych zachowanie w punkcie wdrożenia, a nie w czasie projektowania. W tym temacie przedstawiono podstawowe metody dostępne.  
+Skonfigurowanie usługi Windows Communication Foundation (WCF) z pliku konfiguracji zapewnia elastyczność udostępniania punktu końcowego i danych usługi zachowanie w punkcie wdrożenia, a nie w czasie projektowania. W tym temacie przedstawiono podstawowe metody dostępne.  
   
  A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa jest można skonfigurować przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologia konfiguracji. Najczęściej, elementy XML są dodawane do pliku Web.config dla witryny Internet Information Services (IIS), który jest hostem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. Elementy umożliwiają zmianę szczegółowe informacje, takie jak adresy punktów końcowych (rzeczywiste adresy używane do komunikacji z usługą) na komputerze przez komputer. Ponadto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera kilka elementów dostarczane przez system, które umożliwiają szybkie wybranie najbardziej podstawowych funkcji usługi. Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest dostarczany z nowy model konfiguracji domyślne, które upraszcza [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wymagania dotyczące konfiguracji. Jeśli nie podano żadnego [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] konfiguracji dla określonej usługi, środowisko uruchomieniowe automatycznie konfiguruje usługi z niektórymi standardowych punktów końcowych i zachowanie wiązania domyślnego. W praktyce, zapisywanie konfiguracji to główne programowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.  
   

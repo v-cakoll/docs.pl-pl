@@ -1,27 +1,15 @@
 ---
-title: "Protokół wymiany kontekstu"
-ms.custom: 
+title: Protokół wymiany kontekstu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-protocol"></a>Protokół wymiany kontekstu
-W tej sekcji opisano protokół wymiany kontekstu wprowadzone w systemie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] wersji. Protokół ten umożliwia kanału klienta zaakceptować kontekst dostarczonych przez usługę i zastosować je do wszystkich kolejnych żądań do tej usługi, wysyłane za pośrednictwem tego samego wystąpienia kanału klienta. Implementacja protokołu wymiany kontekstu można użyć jednej z dwóch następujących mechanizmów propagację kontekstu między serwerem a klientem: plików cookie protokołu HTTP lub nagłówka SOAP.  
+W tej sekcji opisano protokół wymiany kontekstu wprowadzonych w wersji Windows Communication Foundation (WCF) .NET Framework w wersji 3.5. Protokół ten umożliwia kanału klienta zaakceptować kontekst dostarczonych przez usługę i zastosować je do wszystkich kolejnych żądań do tej usługi, wysyłane za pośrednictwem tego samego wystąpienia kanału klienta. Implementacja protokołu wymiany kontekstu można użyć jednej z dwóch następujących mechanizmów propagację kontekstu między serwerem a klientem: plików cookie protokołu HTTP lub nagłówka SOAP.  
   
  Protokół wymiany kontekstu jest zaimplementowana w niestandardowym kanale warstwy. Kanał komunikacji kontekstu do i z warstwy aplikacji przy użyciu <xref:System.ServiceModel.Channels.ContextMessageProperty> właściwości. Transmisji między punktami końcowymi wartość kontekstu jest serializowany jako nagłówka SOAP w warstwie kanału albo przekonwertować do lub z właściwości wiadomości, które reprezentują żądania HTTP i odpowiedzi. W drugim przypadku oczekuje się, że jeden z podstawowych warstwach kanału konwertuje właściwości komunikatów żądań i odpowiedzi HTTP do i z plików cookie protokołu HTTP, odpowiednio. Wybór mechanizmu używanego do wymiany kontekstu jest wykonywane przy użyciu <xref:System.ServiceModel.Channels.ContextExchangeMechanism> właściwość <xref:System.ServiceModel.Channels.ContextBindingElement>. Prawidłowe wartości to `HttpCookie` lub `SoapHeader`.  
   

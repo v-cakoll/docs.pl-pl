@@ -2,18 +2,13 @@
 title: Uruchamianie aplikacji konsoli w Docker
 description: Dowiedz się, jak wykonać istniejącej aplikacji konsoli .NET Framework i uruchom go w kontenerze Docker systemu Windows.
 author: spboyer
-keywords: Aplikacje kontenera, konsoli .NET
 ms.date: 09/28/2016
-ms.topic: article
-ms.prod: .net-framework
-ms.technology: vs-ide-deployment
-ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 266c439163888962075f804a0f5651a8e7d83151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Uruchamianie aplikacji konsoli w kontenerach systemu Windows
 

@@ -1,31 +1,17 @@
 ---
-title: "Panel — Informacje o formancie (Formularze systemu Windows)"
-ms.custom: 
+title: Panel — Informacje o formancie (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Panel
 helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel — Informacje o formancie (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Panel> formantów służą do zapewniania do zidentyfikowania grupowania dla innych formantów. Zwykle Użyj paneli do podziału formularza przez funkcję. Na przykład może być formularzu zamówienia określający wysyłkowy opcje, takie jak które liczbę operator do użycia. Grupowanie wszystkich opcji w panelu daje użytkownikowi logicznej wizualnie. Na projekt czasu wszystkie formanty, które mogą zostać przeniesione łatwo — po przeniesieniu <xref:System.Windows.Forms.Panel> sterowania wszystkie jego formanty zawarte Przenieś zbyt. Formanty są pogrupowane w panelu jest możliwy za pośrednictwem jego <xref:System.Windows.Forms.Control.Controls%2A> właściwości. Ta właściwość zwraca kolekcję <xref:System.Windows.Forms.Control> wystąpień, dzięki czemu zwykle trzeba rzutowania formantu pobrać ten sposób jego określonego typu.  

@@ -1,34 +1,20 @@
 ---
 title: Ataki oparte na metodzie powtórzeń
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>Ataki oparte na metodzie powtórzeń
 A *powtarzania ataku* występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarzaniem strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery mogą ulec ataku przetworzyć strumienia jako istotnych wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówień elementu.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Powiązania mogą być narażone na ataki odbicia  
- *Odbicie ataków* są odtworzenie nadawcy wiadomości tak, jakby pochodzą od odbiornika jako odpowiedź. Standardowe *wykrywania powtarzania* w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mechanizmu nie automatycznie obsługuje to.  
+ *Odbicie ataków* są odtworzenie nadawcy wiadomości tak, jakby pochodzą od odbiornika jako odpowiedź. Standardowe *wykrywania powtarzania* w systemie Windows Communication Foundation (WCF) mechanizm nie automatycznie obsługuje to.  
   
- Odbicie ataków zostały skorygowane domyślnie, ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model usługi dodaje identyfikator podpisanej wiadomości do komunikatów żądań i oczekuje zalogowany `relates-to` nagłówka wiadomości odpowiedzi. W związku z tym komunikat żądania nie może być powtórzone w odpowiedzi. W scenariuszach zabezpieczoną wiadomość niezawodnej (RM) odbicia ataki są niewielkie, ponieważ:  
+ Ataki odbicia zostały skorygowane domyślnie, ponieważ model usługi WCF dodaje identyfikator podpisanej wiadomości do komunikatów żądań i oczekuje zalogowany `relates-to` nagłówka wiadomości odpowiedzi. W związku z tym komunikat żądania nie może być powtórzone w odpowiedzi. W scenariuszach zabezpieczoną wiadomość niezawodnej (RM) odbicia ataki są niewielkie, ponieważ:  
   
 -   Tworzenie sekwencji i Utwórz sekwencji odpowiedzi komunikat schematy są różne.  
   

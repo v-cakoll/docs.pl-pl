@@ -1,23 +1,16 @@
 ---
 title: '#Ostrzeżenie (odwołanie w C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#warning'
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-caps.latest.revision: 9
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8145c4a62d5179d6fa46e27186d83fc0108939d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c56458e0100c23450655e48b2abfb346e18e0bb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="warning-c-reference"></a>#warning (odwołanie w C#)
 `#warning` Umożliwia wygenerowanie ostrzeżenia poziomu pierwszego w określonej lokalizacji w kodzie. Na przykład:  

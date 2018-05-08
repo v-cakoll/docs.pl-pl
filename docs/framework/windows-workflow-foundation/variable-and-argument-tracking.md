@@ -1,24 +1,12 @@
 ---
 title: Zmienna i śledzenia argumentu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c0857830b52b2f71df5d81f4bd232b62b894da63
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f1938da55d2e1d88c88f83ff75f357e23f1eb81f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variable-and-argument-tracking"></a>Zmienna i śledzenia argumentu
 Podczas śledzenia wykonywanie przepływu pracy, często jest przydatne w celu wyodrębnienia danych. Zapewnia dodatkowy kontekst podczas uzyskiwania dostępu do wykonywania post rekordu śledzenia. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], można wyodrębnić wszelkie widoczne zmiennej lub argumentu w zakresie wszystkie działania w przepływie pracy za pomocą śledzenia. Śledzenie profile ułatwiają wyodrębnić dane.  

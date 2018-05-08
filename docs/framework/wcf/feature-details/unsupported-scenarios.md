@@ -1,29 +1,15 @@
 ---
 title: Nieobsługiwane scenariusze
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cc4e65ce4f93a352b651203757a484a9d90a85d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
-Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie obsługuje protokoły uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Innych mechanizmów uwierzytelniania, takich jak nazwy użytkownika i hasła i zintegrowane uwierzytelnianie HTTP i HTTPS są obsługiwane podczas uruchamiania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w systemie Windows XP Home Edition.  
+Windows Communication Foundation (WCF) z różnych powodów, nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie obsługuje protokoły uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym WCF nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Innych mechanizmów uwierzytelniania, takich jak nazwy użytkownika i hasła i zintegrowane uwierzytelnianie HTTP i HTTPS są obsługiwane podczas uruchamiania usługi WCF w systemie Windows XP Home Edition.  
   
 ## <a name="impersonation-scenarios"></a>Scenariusze personifikacji  
   
@@ -31,7 +17,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
  Jeśli klient WCF wywołań asynchronicznych z usługą WCF za pomocą uwierzytelniania systemu Windows w ramach personifikacji, uwierzytelniania mogą wystąpić przy użyciu tożsamości procesu klienta zamiast personifikowanej tożsamości.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP i tokenu pliku Cookie bezpiecznym kontekście włączone  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje personifikacji i <xref:System.InvalidOperationException> jest generowany, gdy istnieją następujące warunki:  
+ Usługi WCF nie obsługuje personifikacji i <xref:System.InvalidOperationException> jest generowany, gdy istnieją następujące warunki:  
   
 -   System operacyjny jest [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -49,7 +35,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
 >  Specyficznych powyższych wymagań. Na przykład <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> tworzy element powiązania, który powoduje tożsamości systemu Windows, ale nie wprowadza SCT. W związku z tym użytkownik może być używany z `Required` opcja [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Możliwe konflikt ASP.NET  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jednocześnie włączyć lub wyłączyć personifikację. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hostów [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, może istnieć konflikt między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ustawienia konfiguracji. W przypadku konfliktu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ustawienie ma pierwszeństwo, chyba że <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość jest ustawiona na <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, w którym to przypadku [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pierwszeństwo ma ustawienie personifikacji.  
+ Usługi WCF i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jednocześnie włączyć lub wyłączyć personifikację. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacja WCF hostuje konflikt mogą istnieć między usługi WCF i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ustawienia konfiguracji. W przypadku konfliktu, ustawienie WCF ma pierwszeństwo, chyba że <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość jest ustawiona na <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, w którym to przypadku [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pierwszeństwo ma ustawienie personifikacji.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Ładunki zestaw może zakończyć się niepowodzeniem w ramach personifikacji  
  Jeśli spersonifikowanym kontekście nie ma praw dostępu do załadowania zestawu, a jeśli po raz pierwszy środowisko uruchomieniowe języka wspólnego (CLR) próbuje załadować zestawu dla tego elementu AppDomain, <xref:System.AppDomain> buforuje awarii. Niepowodzenie kolejnych prób załadować tego zestawu (lub zestawy), nawet po przywróceniu personifikacji, a nawet wtedy, gdy kontekst przywróconego ma prawa dostępu do ładowania zestawu. Jest to spowodowane CLR nie ponów próbę obciążenia po zmianie kontekstu użytkownika. Domeny aplikacji do odzyskiwania danych po awarii, należy ponownie.  
@@ -63,13 +49,13 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
 ## <a name="cryptography"></a>Kryptografia  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>Algorytm SHA-256 jest obsługiwane tylko w przypadku użycia klucza symetrycznego  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje wiele algorytmów szyfrowania i podpis szyfrowanego tworzenia, które można określić przy użyciu pakietu algorytmów powiązania dostarczane przez system. Ze względów bezpieczeństwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje algorytmy Secure Hash Algorithm (SHA) 2, w szczególności algorytmu SHA-256, służący do tworzenia skrótów skrótu podpisu. Ta wersja obsługuje algorytm SHA-256, tylko w przypadku użycia klucza symetrycznego, takie jak klucze Kerberos i których certyfikat X.509 nie jest używany do podpisywania wiadomości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje podpisów RSA (używane w certyfikatach X.509) przy użyciu skrótu SHA-256 ze względu na Brak bieżącej obsługi RSA-SHA256 w [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ Usługi WCF obsługuje wiele algorytmów szyfrowania i podpisywania szyfrowanego tworzenia, które można określić przy użyciu pakietu algorytmów powiązania dostarczane przez system. Ze względów bezpieczeństwa WCF obsługuje algorytmy Secure Hash Algorithm (SHA) 2, w szczególności algorytmu SHA-256, służący do tworzenia skrótów skrótu podpisu. Ta wersja obsługuje algorytm SHA-256, tylko w przypadku użycia klucza symetrycznego, takie jak klucze Kerberos i których certyfikat X.509 nie jest używany do podpisywania wiadomości. Usługi WCF nie obsługuje podpisów RSA (używane w certyfikatach X.509) przy użyciu skrótu SHA-256 ze względu na Brak bieżącej obsługi RSA-SHA256 w [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>Zgodne ze standardem FIPS skrótów algorytmu SHA-256, nie jest obsługiwane  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie algorytmu SHA-256 zgodne ze standardem FIPS obsługuje skróty, więc mechanizmów algorytmu, które korzystają z algorytmu SHA-256 nie są obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w systemach, w którym wymagany jest Użyj zgodnych algorytmów FIPS.  
+ Usługi WCF nie obsługuje wartości skrótu SHA-256 zgodne ze standardem FIPS, więc mechanizmów algorytmu, które korzystają z algorytmu SHA-256 nie są obsługiwane przez usługi WCF w systemach, w którym wymagany jest Użyj zgodnych algorytmów FIPS.  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Zgodnych algorytmów FIPS może zakończyć się niepowodzeniem w przypadku modyfikacji rejestru  
- Można włączyć i wyłączyć przetwarzania standardami FIPS (Federal Information) - algorytmów za pomocą przystawki lokalnych zabezpieczeń ustawienia programu Microsoft Management Console (MMC) - w. Można także przejść ustawienie w rejestrze. Zauważ, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje używania zresetować ustawienie rejestru. Jeśli wartość jest ustawiona na inny niż 1 lub 0, pomiędzy środowiska CLR i systemu operacyjnego mogą występować niespójne wyniki.  
+ Można włączyć i wyłączyć przetwarzania standardami FIPS (Federal Information) - algorytmów za pomocą przystawki lokalnych zabezpieczeń ustawienia programu Microsoft Management Console (MMC) - w. Można także przejść ustawienie w rejestrze. Należy jednak pamiętać, że usługi WCF nie jest obsługiwana za pomocą rejestru, aby zresetować ustawienie. Jeśli wartość jest ustawiona na inny niż 1 lub 0, pomiędzy środowiska CLR i systemu operacyjnego mogą występować niespójne wyniki.  
   
 ### <a name="fips-compliant-aes-encryption-limitation"></a>Ograniczenie szyfrowania AES zgodne ze standardem FIPS  
  Szyfrowanie AES zgodne ze standardem FIPS nie działa w dupleksowego wywołania zwrotnego w obszarze identyfikacji poziomu personifikacji.  
@@ -86,7 +72,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
 -   Użyj `certutil` polecenie w wierszu polecenia na potrzeby zapytań certyfikatów. Aby uzyskać więcej informacji, zobacz [zadania narzędzia Certutil dotyczące rozwiązywania problemów z certyfikatami](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Komunikat zabezpieczeń kończy się niepowodzeniem użycie personifikacji aplikacji ASP.NET i zgodności z platformą ASP.NET jest wymagana  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje następujących kombinacji ustawień, ponieważ ich może uniemożliwić uwierzytelnienie klienta występowaniu:  
+ Usługi WCF nie obsługuje następujących kombinacji ustawień, ponieważ ich może uniemożliwić uwierzytelnienie klienta występowaniu:  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Personifikacja jest włączona. Odbywa się w pliku Web.config przez ustawienie `impersonate` atrybut <`identity`> elementu `true`.  
   
@@ -94,7 +80,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
   
 -   Zabezpieczenia komunikatów tryb jest używany.  
   
- Obejście jest wyłączyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w trybie zgodności. Lub, jeśli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] wymagany jest w trybie zgodności, wyłącz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcja personifikacji i użyj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— zamiast tego podane personifikacji. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Obejście jest wyłączyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w trybie zgodności. Lub, jeśli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] wymagany jest w trybie zgodności, wyłącz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] personifikacji funkcji i zamiast tego należy używać personifikacji dostarczonych do usługi WCF. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Błąd literału adres IPv6  
  Żądania zabezpieczeń zakończyć się niepowodzeniem, gdy klient i usługa są na tym samym komputerze, i literału adresy IPv6 są używane przez usługę.  
@@ -102,7 +88,7 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
  Literał IPv6 rozwiązuje pracy, jeśli usługa i klient znajdują się na różnych komputerach.  
   
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Błędy pobierania WSDL z zaufaniem federacyjnym  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga dokładnie jednego dokumentu WSDL dla każdego węzła w łańcuchu zaufania federacji. Nie można więc skonfigurować pętlę w przypadku określania punktów końcowych. Jeden sposób, w którym mogą wystąpić pętle używa pobieranie WSDL łańcuchów zaufania federacyjnego z co najmniej dwóch łączy, w tym samym dokumencie WSDL. Typowy scenariusz, który może utworzyć ten problem jest usługi federacyjnej, gdzie serwer tokenu zabezpieczeń i usługi znajdują się wewnątrz tego samego elementu ServiceHost.  
+ Usługi WCF wymaga dokładnie jeden dokument WSDL dla każdego węzła w łańcuchu zaufania federacji. Nie można więc skonfigurować pętlę w przypadku określania punktów końcowych. Jeden sposób, w którym mogą wystąpić pętle używa pobieranie WSDL łańcuchów zaufania federacyjnego z co najmniej dwóch łączy, w tym samym dokumencie WSDL. Typowy scenariusz, który może utworzyć ten problem jest usługi federacyjnej, gdzie serwer tokenu zabezpieczeń i usługi znajdują się wewnątrz tego samego elementu ServiceHost.  
   
  Przykładem takiej sytuacji jest usługi za pomocą następujących trzech adresy punktów końcowych:  
   

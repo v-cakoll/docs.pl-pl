@@ -1,13 +1,6 @@
 ---
-title: "Jak renderować w interwałach klatek z użyciem CompositionTarget"
-ms.custom: 
+title: Jak renderować w interwałach klatek z użyciem CompositionTarget
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Jak renderować w interwałach klatek z użyciem CompositionTarget
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aparat animacji zapewnia wiele funkcji do tworzenia opartych na ramki animacji. Istnieją jednak scenariuszy aplikacji, w których należy dopasowanymi bardziej precyzyjną kontrolę nad renderowania na podstawie na ramki. <xref:System.Windows.Media.CompositionTarget> Obiekt zapewnia możliwość tworzenia niestandardowych animacje oparte na wywołanie zwrotne na ramki.  
   
- <xref:System.Windows.Media.CompositionTarget>jest statycznej klasy, która reprezentuje powierzchni ekranu, na którym aplikacja jest rysowane. <xref:System.Windows.Media.CompositionTarget.Rendering> Zdarzenie jest wywoływane każdorazowo sceny aplikacji jest rysowane. Szybkość klatek renderowania jest liczba powtórzeń sceny jest rysowana na sekundę.  
+ <xref:System.Windows.Media.CompositionTarget> jest statycznej klasy, która reprezentuje powierzchni ekranu, na którym aplikacja jest rysowane. <xref:System.Windows.Media.CompositionTarget.Rendering> Zdarzenie jest wywoływane każdorazowo sceny aplikacji jest rysowane. Szybkość klatek renderowania jest liczba powtórzeń sceny jest rysowana na sekundę.  
   
 > [!NOTE]
 >  Na przykład kompletny kod przy użyciu <xref:System.Windows.Media.CompositionTarget>, zobacz [przy użyciu przykładowych CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  

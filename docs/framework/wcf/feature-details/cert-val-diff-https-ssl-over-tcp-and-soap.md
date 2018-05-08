@@ -1,37 +1,25 @@
 ---
-title: "Różnice dotyczące weryfikacji certyfikatów w protokołach HTTPS, SSL przez TCP i zabezpieczeniach SOAP"
-ms.custom: 
+title: Różnice dotyczące weryfikacji certyfikatów w protokołach HTTPS, SSL przez TCP i zabezpieczeniach SOAP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 744d9208f6be47965b89ddd9555b99feab9e18b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Różnice dotyczące weryfikacji certyfikatów w protokołach HTTPS, SSL przez TCP i zabezpieczeniach SOAP
-Można użyć certyfikatów w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] z zabezpieczeń wiadomości warstwy (SOAP) oprócz transport layer security (TLS) za pośrednictwem protokołu HTTP (HTTPS) lub TCP. W tym temacie opisano różnice w taki sposób, który takie certyfikaty są weryfikowane.  
+Można użyć certyfikatów w systemie Windows Communication Foundation (WCF) z zabezpieczeń wiadomości warstwy (SOAP), oprócz transport layer security (TLS) za pośrednictwem protokołu HTTP (HTTPS) lub TCP. W tym temacie opisano różnice w taki sposób, który takie certyfikaty są weryfikowane.  
   
 ## <a name="validation-of-https-client-certificates"></a>Weryfikacja certyfikatów klienta protokołu HTTPS  
- Przy użyciu protokołu HTTPS do komunikacji między klientem a usługą, certyfikat używany przez klienta do uwierzytelniania w usłudze musi obsługiwać łańcuch zaufania. Oznacza to, że należy łańcucha do zaufanego głównego urzędu certyfikacji. Jeśli nie, wywołuje warstwę HTTP <xref:System.Net.WebException> z komunikatem "serwer zdalny zwrócił błąd: (403) zabroniony." [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Wyświetla ten wyjątek jako <xref:System.ServiceModel.Security.MessageSecurityException>.  
+ Przy użyciu protokołu HTTPS do komunikacji między klientem a usługą, certyfikat używany przez klienta do uwierzytelniania w usłudze musi obsługiwać łańcuch zaufania. Oznacza to, że należy łańcucha do zaufanego głównego urzędu certyfikacji. Jeśli nie, wywołuje warstwę HTTP <xref:System.Net.WebException> z komunikatem "serwer zdalny zwrócił błąd: (403) zabroniony." Usługi WCF powierzchni tego wyjątku, ponieważ <xref:System.ServiceModel.Security.MessageSecurityException>.  
   
 ## <a name="validation-of-https-service-certificates"></a>Weryfikacja certyfikatów usługi protokołu HTTPS  
  Przy użyciu protokołu HTTPS do komunikacji między klientem a usługą, certyfikatu, który uwierzytelnia serwer z musi obsługiwać łańcuch zaufania domyślnie. Oznacza to, że należy łańcucha do zaufanego głównego urzędu certyfikacji. Nie online jest sprawdzane aby zobaczyć, czy certyfikat został odwołany. To zachowanie można przesłonić, rejestrując <xref:System.Net.Security.RemoteCertificateValidationCallback> wywołania zwrotnego, jak pokazano w poniższym kodzie.  

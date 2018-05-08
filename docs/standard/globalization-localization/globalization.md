@@ -1,13 +1,7 @@
 ---
 title: Globalizacja
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="globalization"></a>Globalizacja
 Globalizacja obejmuje projektowanie i tworzenie aplikacji gotowe, który obsługuje interfejsy zlokalizowanych i dane regionalne dla użytkowników w wielu kultur. Przed rozpoczęciem fazy projektowania, należy określić, które kultur aplikacji będzie obsługiwać. Mimo że aplikacja jest przeznaczony dla jednego kultury lub regionu, jako jego domyślny, można projektować i zapisać go tak, aby łatwo może zostać rozszerzony do użytkowników w innych kultur lub regionach.  
@@ -45,11 +34,11 @@ Globalizacja obejmuje projektowanie i tworzenie aplikacji gotowe, który obsług
   
     -   [Pliki zasobów](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
   
-    -   [Wyszukiwanie i porównywanie ciągów](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
+    -   [Wyszukiwanie i porównywanie ciągów ](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
     -   [Testowanie pod kątem równości ciągów](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [Kolejność i sortowanie ciągów](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [Kolejność i sortowanie ciągów ](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
     -   [Unikaj ciągów](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   

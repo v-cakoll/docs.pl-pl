@@ -1,35 +1,21 @@
 ---
 title: Współdziałanie z aplikacjami POX
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7522233723b6b91d5a7b27d3f82ca328e29ce3f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>Współdziałanie z aplikacjami POX
-"Zwykły starego XML" (POX) aplikacji komunikacji przez wymianę raw komunikaty HTTP, które zawierają tylko dane aplikacji XML, który nie jest umieszczone wewnątrz koperty protokołu SOAP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] może zapewnić zarówno usług i klientów, którzy używają POX wiadomości. W usłudze [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] może służyć do wdrożenia usług, które udostępniają punktów końcowych do klientów, takich jak przeglądarki sieci Web i języki skryptów, które wysyłania i odbierania wiadomości POX. Na komputerze klienckim [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania może służyć do wdrożenia klientów, które komunikują się z usługami opartymi na POX.  
+"Zwykły starego XML" (POX) aplikacji komunikacji przez wymianę raw komunikaty HTTP, które zawierają tylko dane aplikacji XML, który nie jest umieszczone wewnątrz koperty protokołu SOAP. Windows Communication Foundation (WCF) może zapewnić zarówno usług i klientów, którzy używają POX wiadomości. W usłudze WCF może służyć do zaimplementowania usług, które udostępniają punktów końcowych do klientów, takich jak przeglądarki sieci Web i języki skryptów, które wysyłania i odbierania wiadomości POX. Na komputerze klienckim model programowania WCF może służyć do wdrożenia klientów, które komunikują się z usługami opartymi na POX.  
   
 > [!NOTE]
 >  Ten dokument został pierwotnie napisane dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 ma wbudowaną obsługę pracy z aplikacjami POX. Aby uzyskać więcej informacji na temat, zobacz [modelu programowania protokołu HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>POX programowania przy użyciu programu WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, które komunikują się za pośrednictwem protokołu HTTP przy użyciu wiadomości POX [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Usługi WCF, które komunikują się za pośrednictwem protokołu HTTP przy użyciu wiadomości POX [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ```xml  
 <customBinding>  
@@ -46,9 +32,9 @@ ms.lasthandoff: 04/30/2018
   
 -   [ \<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
- Standardowe [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kodera wiadomości tekstowych specjalnie jest skonfigurowana do używania <xref:System.ServiceModel.Channels.MessageVersion.None%2A> wartość, która pozwala na przetwarzanie XML wiadomości ładunków nie przychodzące otoczona koperty protokołu SOAP.  
+ Standardowego kodera wiadomości tekstowych WCF specjalnie jest skonfigurowana do używania <xref:System.ServiceModel.Channels.MessageVersion.None%2A> wartość, która pozwala na przetwarzanie XML wiadomości ładunków nie przychodzące otoczona koperty protokołu SOAP.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów, które komunikują się za pośrednictwem protokołu HTTP przy użyciu wiadomości POX Użyj podobne wiązanie (pokazano w poniższym kodzie konieczne).  
+ Klienci WCF, które komunikują się za pośrednictwem protokołu HTTP przy użyciu wiadomości POX Użyj podobne wiązanie (pokazano w poniższym kodzie konieczne).  
   
 ```  
 private static Binding CreatePoxBinding()  
@@ -63,7 +49,7 @@ private static Binding CreatePoxBinding()
   
  Ponieważ POX klientów należy jawnie określić identyfikatory URI, do którego wysyłania wiadomości, one zazwyczaj należy skonfigurować <xref:System.ServiceModel.Channels.HttpTransportBindingElement> na ręczny tryb adresowania przez ustawienie <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> właściwości `true` w elemencie. Dzięki temu wiadomości mogą być adresowane jawnie przez kod aplikacji i nie jest konieczne utworzyć nową <xref:System.ServiceModel.ChannelFactory> za każdym razem, gdy aplikacja wysyła komunikat do inny identyfikator URI protokołu HTTP.  
   
- Ponieważ POX wiadomości nie należy używać nagłówków SOAP w celu przedstawienia informacji o protokole ważne, POX klientów i usług często muszą manipulować części realizacji źródłowego żądania HTTP, które są używane do wysyłania i odbierania wiadomości. Informacje protokołu specyficzne dla protokołu HTTP, takie jak nagłówków HTTP i kodów stanu są udostępniane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania za pomocą dwóch klas:  
+ Ponieważ POX wiadomości nie należy używać nagłówków SOAP w celu przedstawienia informacji o protokole ważne, POX klientów i usług często muszą manipulować części realizacji źródłowego żądania HTTP, które są używane do wysyłania i odbierania wiadomości. Informacje protokołu specyficzne dla protokołu HTTP, takie jak nagłówków HTTP i kodów stanu są udostępniane w modelu programowania usług WCF za pomocą dwóch klas:  
   
 -   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty>, który zawiera informacje o żądaniu HTTP, takich jak nagłówki metoda i żądania HTTP.  
   

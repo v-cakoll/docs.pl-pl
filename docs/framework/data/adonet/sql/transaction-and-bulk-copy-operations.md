@@ -1,29 +1,15 @@
 ---
 title: Transakcja i operacje kopiowania masowego
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 40494c887ffa48c6ebc7f020cb4d42eecbd08e75
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9b485ac3f12587256a56fdfa44cf8b9c8b41a6bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transakcja i operacje kopiowania masowego
 Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać operacji kopiowania zbiorczego. Ta opcja ostatnie umożliwia wykonać więcej niż jedną operację kopiowania zbiorczego w ramach jednej transakcji, a także wykonywać innych operacji bazy danych (na przykład wstawienia, aktualizacje i usunięcia), przy zachowaniu możliwości przekazać ani wycofać cała transakcja.  

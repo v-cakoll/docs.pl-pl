@@ -1,26 +1,12 @@
 ---
 title: Trwa pobieranie i modyfikowanie danych ADO.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0c970c01352aecf6a25bac1b89b9f79c96f80d31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Trwa pobieranie i modyfikowanie danych ADO.NET
 Podstawową funkcją dowolnej aplikacji bazy danych jest połączenie ze źródłem danych i pobierania danych, które zawiera. Dostawcy danych .NET Framework ADO.NET służyć jako mostka między aplikacją a źródłem danych, co umożliwia wykonanie polecenia oraz do pobierania danych przy użyciu **DataReader** lub **element DataAdapter** . Funkcji klucza dowolnej aplikacji bazy danych jest możliwość aktualizacji są przechowywane w bazie danych. W ADO.NET, aktualizowanie danych polega na użyciu **element DataAdapter** i <xref:System.Data.DataSet>, i **polecenia** obiektów; i może również obejmować przy użyciu transakcji.  

@@ -1,14 +1,6 @@
 ---
 title: Przegląd Panele
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel> elementy są składniki, które kontrolują renderowanie elementów — ich rozmiar i wymiarów, ich pozycji i rozmieszczenia ich zawartość elementu podrzędnego. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zawiera szereg wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementy, a także możliwość tworzenia niestandardowych <xref:System.Windows.Controls.Panel> elementów.  
@@ -107,7 +93,7 @@ ms.lasthandoff: 04/09/2018
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Kanwa  
- <xref:System.Windows.Controls.Canvas> Element włącza rozmieszczania zawartości zgodnie z bezwzględną *x -* i *y -*współrzędnych. Elementy mogą znajdować się na środku unikatową lokalizację; lub, jeśli elementy zajmują te same współrzędne, kolejność znacznika określa kolejność, w którym są rysowane elementów.  
+ <xref:System.Windows.Controls.Canvas> Element włącza rozmieszczania zawartości zgodnie z bezwzględną *x -* i *y -* współrzędnych. Elementy mogą znajdować się na środku unikatową lokalizację; lub, jeśli elementy zajmują te same współrzędne, kolejność znacznika określa kolejność, w którym są rysowane elementów.  
   
  <xref:System.Windows.Controls.Canvas> najbardziej elastycznym obsługuje układ dowolnego <xref:System.Windows.Controls.Panel>. Właściwości wysokość i szerokość są używane do definiowania obszarze roboczym i elementy wewnątrz przypisanych współrzędne bezwzględne względem obszaru macierzystego <xref:System.Windows.Controls.Canvas>. Cztery dołączone właściwości, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> i <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, Zezwalaj precyzyjnego położenie obiektu <xref:System.Windows.Controls.Canvas>, dzięki czemu Deweloper to pozycjonowania i rozmieszczania elementów dokładnie na ekranie.  
   
@@ -245,7 +231,7 @@ ms.lasthandoff: 04/09/2018
   
  Podobnie, na podstawie zachowania niestandardowego układu klas pochodnych (takich jak <xref:System.Windows.Controls.Canvas> lub <xref:System.Windows.Controls.Grid>) może być zdefiniowany przez zastąpienie ich <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> i <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metody.  
   
- Następujący kod przedstawia sposób tworzenia niestandardowego <xref:System.Windows.Controls.Panel> elementu. Nowy <xref:System.Windows.Controls.Panel>, zdefiniowanej jako `PlotPanel`, obsługuje rozmieszczania elementów podrzędnych za pomocą ustalony *x -* i *y -*współrzędnych. W tym przykładzie <xref:System.Windows.Shapes.Rectangle> elementu (tego nie pokazano) znajduje się w punkcie kreślenia 50 (*x*) do 50 (*y*).  
+ Następujący kod przedstawia sposób tworzenia niestandardowego <xref:System.Windows.Controls.Panel> elementu. Nowy <xref:System.Windows.Controls.Panel>, zdefiniowanej jako `PlotPanel`, obsługuje rozmieszczania elementów podrzędnych za pomocą ustalony *x -* i *y -* współrzędnych. W tym przykładzie <xref:System.Windows.Shapes.Rectangle> elementu (tego nie pokazano) znajduje się w punkcie kreślenia 50 (*x*) do 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]

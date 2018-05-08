@@ -1,13 +1,6 @@
 ---
-title: "Właściwości zależności typu kolekcji"
-ms.custom: 
+title: Właściwości zależności typu kolekcji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e572bf7d404d0d824d3127789190ce81d4c98998
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71c29cc6d1c7955b889a56b0a6629690a2947c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-type-dependency-properties"></a>Właściwości zależności typu kolekcji
 Ten temat zawiera wskazówki i sugerowane wzorce dla implementowania właściwości zależności, których typ właściwości jest typem kolekcji.  

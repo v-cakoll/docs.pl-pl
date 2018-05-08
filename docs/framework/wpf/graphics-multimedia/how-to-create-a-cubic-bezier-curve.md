@@ -1,29 +1,17 @@
 ---
-title: "Jak utworzyć krzywą Beziera trzeciego stopnia"
-ms.custom: 
+title: Jak utworzyć krzywą Beziera trzeciego stopnia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - curves [WPF], cubic Bezier
 - Bezier curves [WPF], cubic
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9d4e033ef18cfd33635ba34409c4edca87a7e23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6332129179e1934e5a37c7a1a40ef5f46ab669a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Jak utworzyć krzywą Beziera trzeciego stopnia
 W tym przykładzie przedstawiono sposób tworzenia sześcienny krzywą Beziera. Aby utworzyć sześcienny krzywej Beziera, użyj <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, i <xref:System.Windows.Media.BezierSegment> klasy.  Aby wyświetlić wynikowe geometry, użyj <xref:System.Windows.Shapes.Path> elementu, lub użyj go przy użyciu <xref:System.Windows.Media.GeometryDrawing> lub <xref:System.Windows.Media.DrawingContext>. W poniższych przykładach sześcienny krzywej Beziera jest przenoszony z (10, 100) do (300, 100). Krzywej ma punkty kontrolne (100, 0) i (200, 200).  

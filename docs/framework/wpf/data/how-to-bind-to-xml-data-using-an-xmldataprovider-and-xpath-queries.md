@@ -1,28 +1,16 @@
 ---
-title: "Jak powiązać z danymi XML przy użyciu XMLDataProvider i zapytań XPath"
-ms.custom: 
+title: Jak powiązać z danymi XML przy użyciu XMLDataProvider i zapytań XPath
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb8eb727fb6614440721c4d34a7d1828182d2f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Jak powiązać z danymi XML przy użyciu XMLDataProvider i zapytań XPath
 W tym przykładzie przedstawiono sposób powiązania [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] danych przy użyciu <xref:System.Windows.Data.XmlDataProvider>.  
@@ -47,15 +35,15 @@ W tym przykładzie przedstawiono sposób powiązania [!INCLUDE[TLA#tla_xml](../.
   
  **XPath** właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są obsługiwane przez metodę XmlNode.SelectNodes. Można zmodyfikować **XPath** zapytania, aby uzyskać różne wyniki. Poniżej przedstawiono kilka przykładów <xref:System.Windows.Data.Binding.XPath%2A> zapytania na granicy <xref:System.Windows.Controls.ListBox> z poprzedniego przykładu:  
   
--   `XPath="Book[1]"`Zwraca pierwszy element książki ("XML w akcji"). Należy pamiętać, że **XPath** indeksy są oparte na 1, 0 nie.  
+-   `XPath="Book[1]"` Zwraca pierwszy element książki ("XML w akcji"). Należy pamiętać, że **XPath** indeksy są oparte na 1, 0 nie.  
   
--   `XPath="Book[@*]"`Zwraca wszystkie elementy księgi z żadnych atrybutów.  
+-   `XPath="Book[@*]"` Zwraca wszystkie elementy księgi z żadnych atrybutów.  
   
--   `XPath="Book[last()-1]"`zwróci drugi do ostatniego elementu książki ("wprowadzenie do programu Microsoft .NET").  
+-   `XPath="Book[last()-1]"` zwróci drugi do ostatniego elementu książki ("wprowadzenie do programu Microsoft .NET").  
   
--   `XPath="*[position()>3]"`Zwraca wszystkie elementy księgi z wyjątkiem pierwszej 3.  
+-   `XPath="*[position()>3]"` Zwraca wszystkie elementy księgi z wyjątkiem pierwszej 3.  
   
- Po uruchomieniu **XPath** zapytanie zwraca <xref:System.Xml.XmlNode> lub listę XmlNodes. <xref:System.Xml.XmlNode>jest [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektu, co oznacza, że można użyć <xref:System.Windows.Data.Binding.Path%2A> właściwości, aby powiązać [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Należy wziąć pod uwagę poprzedni przykład ponownie. Jeśli pozostała część przykładzie pozostaje taki sam <xref:System.Windows.Controls.TextBlock> powiązanie z następujących czynności, zobaczysz nazwy zwrócony XmlNodes w <xref:System.Windows.Controls.ListBox>. W takim przypadku nazwa zwróconego węzłów jest "*książki*".  
+ Po uruchomieniu **XPath** zapytanie zwraca <xref:System.Xml.XmlNode> lub listę XmlNodes. <xref:System.Xml.XmlNode> jest [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektu, co oznacza, że można użyć <xref:System.Windows.Data.Binding.Path%2A> właściwości, aby powiązać [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Należy wziąć pod uwagę poprzedni przykład ponownie. Jeśli pozostała część przykładzie pozostaje taki sam <xref:System.Windows.Controls.TextBlock> powiązanie z następujących czynności, zobaczysz nazwy zwrócony XmlNodes w <xref:System.Windows.Controls.ListBox>. W takim przypadku nazwa zwróconego węzłów jest "*książki*".  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

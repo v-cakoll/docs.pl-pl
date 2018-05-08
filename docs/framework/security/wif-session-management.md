@@ -1,24 +1,14 @@
 ---
-title: "Zarządzanie sesjami WIF"
-ms.custom: 
+title: Zarządzanie sesjami WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7703d9fb612ead13140d010b1670abb209c5acb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-session-management"></a>Zarządzanie sesjami WIF
 Gdy pierwszy klient próbuje uzyskać dostępu do chronionego zasobu, która jest obsługiwana przez jednostkę uzależnioną, klient muszą najpierw uwierzytelnić się z usługą tokenu zabezpieczeń (STS), który jest uznawany za zaufany przez jednostkę uzależnioną. Usługa tokenu Zabezpieczającego następnie wystawia token zabezpieczający do klienta. Klient przedstawia ten token do jednostki uzależnionej, co powoduje przyznanie dostępu klientów do chronionego zasobu. Jednak nie chcesz umożliwić klientowi ponownego uwierzytelnienia do serwera STS dla każdego żądania, szczególnie, ponieważ może nie nawet być w tym samym komputerze lub w tej samej domenie co jednostki uzależnionej. Zamiast tego Windows Identity Foundation (WIF) ma klienta i ustanowienia sesji, w którym klient używa tokenu zabezpieczającego sesji do samodzielnego uwierzytelnienia do jednostki uzależnionej dla wszystkich żądań, po pierwszym żądaniu jednostki uzależnionej. Jednostki uzależnionej można użyć tego tokenu zabezpieczającego sesji, który jest przechowywany w pliku cookie, aby odtworzyć klienta <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>.  
@@ -37,6 +27,6 @@ Gdy pierwszy klient próbuje uzyskać dostępu do chronionego zasobu, która jes
  Do pracy w trybie odwołania, firma Microsoft zaleca zapewnienie obsługi dla <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> zdarzenia w **global.asax.cs** plików i ustawienie **IsReferenceMode** przekazana właściwość w tokenie <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A> właściwości. Te aktualizacje zapewnia, że tokenu sesji działa w trybie odwołań dla każdego żądania i jest ich drużyna jest faworytem za pośrednictwem jedynie ustawienia <xref:System.IdentityModel.Services.SessionAuthenticationModule.IsReferenceMode%2A> właściwości w Module sesji uwierzytelniania.  
   
 ## <a name="extensibility"></a>Rozszerzalność  
- Można rozszerzyć mechanizm zarządzania sesji. Powodem tego jest poprawić wydajność. Na przykład można utworzyć niestandardowego pliku cookie programu obsługi, który przekształca lub optymalizuje tokenu zabezpieczającego sesji od jego stan w pamięci i co przechodzi w stan pliku cookie. Aby to zrobić, można skonfigurować <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> właściwość <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> do używania obsługi niestandardowego pliku cookie, pochodzącą z <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType>jest domyślny program obsługi plików cookie, ponieważ pliki cookie przekracza dozwolony rozmiar dla protokołu HTTP (Hypertext Transfer); Jeśli zamiast tego użyj obsługi niestandardowego pliku cookie musi implementować podziału.  
+ Można rozszerzyć mechanizm zarządzania sesji. Powodem tego jest poprawić wydajność. Na przykład można utworzyć niestandardowego pliku cookie programu obsługi, który przekształca lub optymalizuje tokenu zabezpieczającego sesji od jego stan w pamięci i co przechodzi w stan pliku cookie. Aby to zrobić, można skonfigurować <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> właściwość <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> do używania obsługi niestandardowego pliku cookie, pochodzącą z <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> jest domyślny program obsługi plików cookie, ponieważ pliki cookie przekracza dozwolony rozmiar dla protokołu HTTP (Hypertext Transfer); Jeśli zamiast tego użyj obsługi niestandardowego pliku cookie musi implementować podziału.  
   
- Aby uzyskać więcej informacji, zobacz [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) próbki (http://go.microsoft.com/fwlink/?LinkID=248408). W tym przykładzie pokazano pamięci podręcznej sesji gotowy farmy (w przeciwieństwie do tokenreplycache), dzięki czemu można użyć sesji przez odwołanie, zamiast wymiana dużych plików cookie. w tym przykładzie przedstawiono również prostszy sposób ochrony plików cookie w farmie. Pamięci podręcznej sesji jest oparte na WCF. W odniesieniu do zabezpieczania sesji w przykładzie pokazano nową funkcję w wersji WIF 4.5 transformacji pliku cookie oparte na MachineKey, który może być uruchomiony po prostu wklejając odpowiedni fragment kodu w pliku web.config. Próbka sam jest nie "przez człowieka", ale pokazuje, co jest potrzebne do tworzenia aplikacji gotowych farmy.
+ Aby uzyskać więcej informacji, zobacz [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) próbki. W tym przykładzie pokazano pamięci podręcznej sesji gotowy farmy (w przeciwieństwie do tokenreplycache), dzięki czemu można użyć sesji przez odwołanie, zamiast wymiana dużych plików cookie. w tym przykładzie przedstawiono również prostszy sposób ochrony plików cookie w farmie. Pamięci podręcznej sesji jest oparte na WCF. W odniesieniu do zabezpieczania sesji w przykładzie pokazano nową funkcję w wersji WIF 4.5 transformacji pliku cookie oparte na MachineKey, który może być uruchomiony po prostu wklejając odpowiedni fragment kodu w pliku web.config. Próbka sam jest nie "przez człowieka", ale pokazuje, co jest potrzebne do tworzenia aplikacji gotowych farmy.

@@ -1,20 +1,13 @@
 ---
 title: Zwracanie kwerendy z metody
-description: "Sposób zwracania zapytania."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+description: Sposób zwracania zapytania.
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: c1b69e3f5f0cd2c50ae80d2454e6b7f13dc30344
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6a1d581c46c7b0b2062859fd60701dd25ea54eea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Porady: zwracanie zapytania z metody (Przewodnik programowania w języku C#)
 W tym przykładzie pokazano, jak zwracanie kwerendy z metody jako wartość zwracaną, a `out` parametru.  

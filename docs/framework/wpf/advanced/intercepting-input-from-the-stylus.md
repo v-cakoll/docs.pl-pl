@@ -1,13 +1,6 @@
 ---
 title: Przechwycenie danych z pisaka
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 813c5f6060b3a59358b286c93a9077debd41a746
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Przechwycenie danych z pisaka
 <xref:System.Windows.Input.StylusPlugIns> Architektura udostępnia mechanizm dla implementacji kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i tworzenia elektroniczne pismo odręczne <xref:System.Windows.Ink.Stroke> obiektów. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowych zachowania i zastosować je w strumieniu danych przesyłanych przez pióro urządzenie pod kątem uzyskania optymalnej wydajności.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="architecture"></a>Architektura  
  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Jest rozwoju [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) interfejsów API, które są opisane w [dostęp i manipulowanie piórem](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)w [Microsoft Windows XP Tablet PC Edition oprogramowania Zestaw deweloperski 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409).  
   
- Każdy <xref:System.Windows.UIElement> ma <xref:System.Windows.UIElement.StylusPlugIns%2A> właściwość, która jest <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Możesz dodać <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> do elementu <xref:System.Windows.UIElement.StylusPlugIns%2A> właściwości do manipulowania <xref:System.Windows.Input.StylusPoint> danych, ponieważ jest generowany. <xref:System.Windows.Input.StylusPoint>dane zawierają wszystkie właściwości, które są obsługiwane przez system dyskretyzatora, w tym <xref:System.Windows.Input.StylusPoint.X%2A> i <xref:System.Windows.Input.StylusPoint.Y%2A> punktu danych, a także <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> danych.  
+ Każdy <xref:System.Windows.UIElement> ma <xref:System.Windows.UIElement.StylusPlugIns%2A> właściwość, która jest <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Możesz dodać <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> do elementu <xref:System.Windows.UIElement.StylusPlugIns%2A> właściwości do manipulowania <xref:System.Windows.Input.StylusPoint> danych, ponieważ jest generowany. <xref:System.Windows.Input.StylusPoint> dane zawierają wszystkie właściwości, które są obsługiwane przez system dyskretyzatora, w tym <xref:System.Windows.Input.StylusPoint.X%2A> i <xref:System.Windows.Input.StylusPoint.Y%2A> punktu danych, a także <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> danych.  
   
  Twoje <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> obiekty są wstawiane bezpośrednio w strumieniu danych przesyłanych przez <xref:System.Windows.Input.Stylus> urządzenia podczas dodawania <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> do <xref:System.Windows.UIElement.StylusPlugIns%2A> właściwości. Kolejność, w którym dodatki plug-in są dodawane do <xref:System.Windows.UIElement.StylusPlugIns%2A> kolekcji określa kolejność, w którym zostanie wyświetlony <xref:System.Windows.Input.StylusPoint> danych. Na przykład, jeśli można dodać filtr wtyczki ograniczającej danych wejściowych do określonego regionu, a następnie dodaj wtyczki, które rozpoznaje gesty, ponieważ są one zapisywane, wtyczka rozpoznającego gestów zostanie wyświetlony filtrowane <xref:System.Windows.Input.StylusPoint> danych.  
   

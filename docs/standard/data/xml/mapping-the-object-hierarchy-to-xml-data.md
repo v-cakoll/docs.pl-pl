@@ -1,29 +1,18 @@
 ---
-title: "Mapowanie hierarchii obiektów do danych XML"
-ms.custom: 
+title: Mapowanie hierarchii obiektów do danych XML
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2191cb15a85e9b16ff0a21084668e80d3c197bfa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 45f39701d409ba76e3c3f428f484b6fd5e538fbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapowanie hierarchii obiektów do danych XML
 Gdy dokument XML znajduje się w pamięci, koncepcyjnego reprezentacja jest drzewa. Programowania, musisz mieć hierarchię obiektów, uzyskać dostęp do węzłów drzewa. Poniższy przykład przedstawia sposób zawartości XML staje się węzłów.  
@@ -203,7 +192,7 @@ public class Sample
 |\<! Elementy DOCTYPE [\<! Liczba jednostek "123" >] >|\<! Elementy DOCTYPE [\<! Liczba jednostek "123" >]|XmlNodeType.DocumentType|  
 |\<Elementy >|\<Elementy >|XmlNodeType.Element|  
 |\<Element >|\<Element >|XmlNodeType.Element|  
-|Test z jednostką:&number;|Test z jednostką: 123|XmlNodeType.Text|  
+|Test z jednostką: &number;|Test z jednostką: 123|XmlNodeType.Text|  
 |\</ Elementu >|\</ Elementu >|XmlNodeType.EndElement|  
 |\<Element >|\<Element >|XmNodeType.Element|  
 |Test z elementu podrzędnego|Test z elementu podrzędnego|XmlNodeType.Text|  
@@ -212,7 +201,7 @@ public class Sample
 |\</ Elementu >|\</ Elementu >|XmlNodeType.EndElement|  
 |\<Element >|\<Element >|XmlNodeType.Element|  
 |Testowanie przy sekcja CDATA|Testowanie przy sekcja CDATA|XmlTest.Text|  
-|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
+|&LT;! [CDATA [\<456 &GT;]]\>|&LT;! [CDATA [\<456 &GT;]]\>|XmlTest.CDATA|  
 |DEF|DEF|XmlNodeType.Text|  
 |\</ Elementu >|\</ Elementu >|XmlNodeType.EndElement|  
 |\<Element >|\<Element >|XmlNodeType.Element|  

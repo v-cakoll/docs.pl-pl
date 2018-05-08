@@ -1,30 +1,20 @@
 ---
-title: "Zdarzenia ETW modułu ładującego"
-ms.custom: 
+title: Zdarzenia ETW modułu ładującego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loader-etw-events"></a>Zdarzenia ETW modułu ładującego
-<a name="top"></a>Te zdarzenia zbierać informacje dotyczące ładowanie i zwalnianie domen aplikacji, zestawów i modułów.  
+<a name="top"></a> Te zdarzenia zbierać informacje dotyczące ładowanie i zwalnianie domen aplikacji, zestawów i modułów.  
   
  Wszystkie zdarzenia modułu ładującego pojawienia się w obszarze `LoaderKeyword` — słowo kluczowe (0x8). `DCStart` i `DCEnd` zdarzenia są generowane w obszarze `LoaderRundownKeyword` (0x8) z `StartRundown` / `EndRundown` włączone. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
@@ -46,15 +36,15 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`AppDomainLoad_V1`i`AppDomainUnLoad_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` I `AppDomainUnLoad_V1`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
 |Zdarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1`(rejestrowane dla wszystkich domen aplikacji)|156|Wywoływane, gdy domena aplikacji jest tworzony przez cały okres istnienia procesu.|  
+|`AppDomainLoad_V1` (rejestrowane dla wszystkich domen aplikacji)|156|Wywoływane, gdy domena aplikacji jest tworzony przez cały okres istnienia procesu.|  
 |`AppDomainUnLoad_V1`|157|Wywoływane, gdy domeny aplikacji zostanie zniszczony przez cały okres istnienia procesu.|  
 |`AppDomainDCStart_V1`|157|Wylicza domeny aplikacji podczas uwalniania rozpoczęcia.|  
 |`AppDomainDCEnd_V1`|158|Wylicza domeny aplikacji podczas uwalniania zakończenia.|  
@@ -77,9 +67,9 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`AssemblyLoad`i`AssemblyUnload`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` I `AssemblyUnload`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -109,9 +99,9 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`ModuleLoad_V2`i`ModuleUnload_V2`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` I `ModuleUnload_V2`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Komunikat informacyjny (4)|  
 ||||  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
@@ -157,9 +147,9 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`DomainModuleLoad_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Komunikat informacyjny (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Komunikat informacyjny (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   

@@ -1,37 +1,23 @@
 ---
 title: Projektowanie kontraktów usług
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>Projektowanie kontraktów usług
 W tym temacie opisano, jakie usługi kontraktów są, jak są zdefiniowane, jakie operacje są dostępne (i wpływem na podstawowym wymiany komunikatów), jakie typy danych są używane i inne problemy, które ułatwiają projektowanie operacje, które spełniają wymagania danego scenariusza.  
   
 ## <a name="creating-a-service-contract"></a>Tworzenie kontraktu usługi  
- Usługi Udostępnianie liczba operacji. W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacje, zdefiniuj operacje tworzenia metody i oznaczenie go atrybutem <xref:System.ServiceModel.OperationContractAttribute> atrybutu. Następnie, aby utworzyć kontrakt usługi, grupują działania, poprzez ich zgłaszania interfejsu oznaczony atrybutem <xref:System.ServiceModel.ServiceContractAttribute> atrybut lub poprzez definiowanie je w klasie oznaczonej przez tego samego atrybutu. (Na przykład podstawowa, zobacz [porady: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
+ Usługi Udostępnianie liczba operacji. W aplikacji Windows Communication Foundation (WCF), należy zdefiniować operacje tworząc metodę i oznaczenie go atrybutem <xref:System.ServiceModel.OperationContractAttribute> atrybutu. Następnie, aby utworzyć kontrakt usługi, grupują działania, poprzez ich zgłaszania interfejsu oznaczony atrybutem <xref:System.ServiceModel.ServiceContractAttribute> atrybut lub poprzez definiowanie je w klasie oznaczonej przez tego samego atrybutu. (Na przykład podstawowa, zobacz [porady: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
  Wszystkie metody, które nie mają <xref:System.ServiceModel.OperationContractAttribute> atrybutów nie są operacji usługi i nie są dostępne w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług.  
   
@@ -82,7 +68,7 @@ W tym temacie opisano, jakie usługi kontraktów są, jak są zdefiniowane, jaki
 >  Wartość nazwy parametrów w podpisie operacji są częścią kontraktu i jest uwzględniana wielkość liter. Jeśli chcesz używać tej samej nazwy parametru lokalnie, ale zmodyfikować nazwę w opublikowanej metadanych, zobacz <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Kontrakty danych  
- Aplikacje zorientowane na usługę, takie jak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacje są zaprojektowane na potrzeby współdziałania z najszerszych liczba aplikacji klienckich zarówno firmy Microsoft, jak i platform firmy Microsoft. Dla najszerszych możliwych współdziałanie, zalecane jest, aby oznaczyć z typów z <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów, aby utworzyć kontrakt danych, który jest częścią kontraktu usługi, która opisuje dane które operacje usługi Program Exchange.  
+ Zorientowane na usługę aplikacji, takich jak aplikacje systemu Windows Communication Foundation (WCF) zostały zaprojektowane na potrzeby współdziałania z najszerszych liczba aplikacji klienckich zarówno firmy Microsoft, jak i platform firmy Microsoft. Dla najszerszych możliwych współdziałanie, zalecane jest, aby oznaczyć z typów z <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów, aby utworzyć kontrakt danych, który jest częścią kontraktu usługi, która opisuje dane które operacje usługi Program Exchange.  
   
  Kontrakty danych są umowami uczestnictwa w stylu: nie typu lub członka danych jest serializowany, chyba że jawnie zastosuj atrybut kontraktu danych. Kontrakty danych nie są powiązane z zakresem dostępu kodu zarządzanego: dane prywatne elementy Członkowskie mogą być serializowane i wysyłane jako dostępne publicznie w innych miejscach. (Na przykład podstawowego kontraktu danych, zobacz [porady: Tworzenie podstawowego kontraktu danych dla klasy lub struktury](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje definicji podstawowej wiadomości SOAP, które włączyć funkcję wykonać operację, a także serializacji typów danych do i z treści wiadomości. Tak długo, jak typów danych jest możliwy do serializacji, nie trzeba myśleć o podstawowej infrastruktury wymiany komunikatów podczas projektowania operacje.  
   

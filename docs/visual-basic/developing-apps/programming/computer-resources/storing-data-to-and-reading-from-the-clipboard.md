@@ -1,12 +1,6 @@
 ---
 title: Zapisywanie danych i odczytywania ze Schowka (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
 - Clipboard, reading from (My.Computer.Clipboard)
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e7bb4ad56f0a039aa7b23d7f0612aaab9366cb9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb8ae25f260ed434c4aafcc064be8fb6bebaaac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Zapisywanie danych i odczytywania ze Schowka (Visual Basic)
 Schowek może służyć do przechowywania danych, takich jak tekst i obrazy. Ponieważ Schowka jest wspólna dla wszystkich aktywnych procesów, może służyć do transferu danych między nimi. `My.Computer.Clipboard` Obiektu pozwala łatwo uzyskiwać dostęp do Schowka i można odczytywać i zapisywać do niego.  
@@ -80,5 +71,5 @@ Schowek może służyć do przechowywania danych, takich jak tekst i obrazy. Pon
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
- [Porady: odczytywanie danych o obiektach z pliku XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Porady: wpisywanie danych o obiektach do pliku XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+ [Instrukcje: odczytywanie danych o obiektach z pliku XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [Instrukcje: wpisywanie danych o obiektach do pliku XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

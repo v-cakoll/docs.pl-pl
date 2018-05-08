@@ -1,21 +1,12 @@
 ---
-title: "Operatory standardowe zapytań — omówienie (C#)"
-ms.custom: 
+title: Operatory standardowe zapytań — omówienie (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bcf64b87eb7fa1cba863f809dc11ab0ccb68ea9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36bd5927e64ffacb97beac28b8e7790204e08c5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-query-operators-overview-c"></a>Operatory standardowe zapytań — omówienie (C#)
 *Standardowych operatorów zapytań* metod, które tworzą wzorzec LINQ. Większość tych metod działają w sekwencji, w którym sekwencja jest obiekt, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Standardowe operatory zapytań zapewniają możliwość wykonywania kwerend włącznie z filtrowaniem projekcji, agregacji, sortowania i inne.  
@@ -117,4 +108,4 @@ foreach (var obj in query)
  [Wprowadzenie do kwerend LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  [Składnia wyrażeń dla standardowych operatorów zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
  [Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+ [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

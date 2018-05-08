@@ -1,26 +1,12 @@
 ---
 title: Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: 7
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae7bd21f7dcb60f8cec3e9e4592969c63234cf13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9ec161c3af3c2555e04e479fec85c48f90830a87
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 Kontekst schematu XAML jest koncepcyjny jednostki, która kwalifikuje się jak produkcji XAML, który korzysta z określonego słownika XAML współdziała z obiektu zapisywania zachowanie, w tym sposób mapowania typu rozwiązuje, jak zestawy są załadowane, jak w przypadku niektórych składników zapisywania i odczytywania ustawienia są interpretowane. W tym temacie opisano funkcje usług .NET Framework XAML i kontekst schematu XAML skojarzoną domyślną, który jest oparta na systemie typów CLR. W tym temacie opisano kontekst schematu XAML, służący do WPF.  

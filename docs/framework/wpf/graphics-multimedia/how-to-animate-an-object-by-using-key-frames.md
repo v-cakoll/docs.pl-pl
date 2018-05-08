@@ -1,27 +1,15 @@
 ---
-title: "Jak animować obiekt z wykorzystaniem klatek kluczowych"
-ms.custom: 
+title: Jak animować obiekt z wykorzystaniem klatek kluczowych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f513cda540b3337f1510ee0c46419a12023bcb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7dc49bc6b3f9156507cb821bfc32b269365b206c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Jak animować obiekt z wykorzystaniem klatek kluczowych
 W tym przykładzie pokazano, jak animować obiekt, który w tym przykładzie jest <xref:System.Windows.Controls.Page.Background%2A> właściwość <xref:System.Windows.Controls.Page> formantu przy użyciu klucza ramki.  
@@ -38,7 +26,7 @@ W tym przykładzie pokazano, jak animować obiekt, który w tym przykładzie jes
 4.  Animacja rozpoczyna się od nowa i nieskończoność powtarza się.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>jest to jedyny typ klucza ramki, w której można używać z <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> klasy. Klucz ramek, takich jak <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> utworzyć nagłym zmian w wartości, oznacza to, zmiany kolorów w tym przykładzie występują nagle.  
+>  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> jest to jedyny typ klucza ramki, w której można używać z <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> klasy. Klucz ramek, takich jak <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> utworzyć nagłym zmian w wartości, oznacza to, zmiany kolorów w tym przykładzie występują nagle.  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   

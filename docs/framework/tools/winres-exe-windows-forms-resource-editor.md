@@ -1,13 +1,6 @@
 ---
-title: "Winres.exe (Edytor zasobów formularzy systemu Windows)"
-ms.custom: 
+title: Winres.exe (Edytor zasobów formularzy systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Edytor zasobów formularzy systemu Windows)
 Edytor zasobów Windows Forms, Winres.exe, jest narzędziem układu wizualnego, które ułatwia ekspertom lokalizowanie zasobów interfejsu użytkownika Windows Forms używanych przez formularze. Pliki resx lub resources używane jako dane wejściowe do Winres.exe mogą być tworzone przy użyciu środowiska projektowania wizualnego, takiego jak Microsoft Visual Studio. Aby uzyskać informacje na temat wdrażania zasobów w aplikacjach .NET Framework, zobacz [zasobów w aplikacjach pulpitu](../../../docs/framework/resources/index.md).  

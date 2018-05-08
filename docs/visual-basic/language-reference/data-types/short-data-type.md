@@ -1,11 +1,6 @@
 ---
-title: "Short — Typ danych (Visual Basic)"
+title: Short — Typ danych (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
 f1_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: 10c9869d4fb84cd013b22bc791bd31fad745f3d3
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ef99743828d8d80844486b651178622ff45fd554
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="short-data-type-visual-basic"></a>Short — typ danych (Visual Basic)
 Blokad podpisany 16-bitowych liczb całkowitych (2-bajtowych) o wartości od-32 768 do 32 767.  
@@ -70,7 +65,7 @@ Dim number = &H_3264S
 
 -   **Rozszerzanie.** `Short` Rozszerzenie typu danych do `Integer`, `Long`, `Decimal`, `Single`, lub `Double`. Oznacza to, że można przekonwertować `Short` do dowolnego z tych typów bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Znak literalny typu dołączanie `S` do literału wymusza `Short` — typ danych. `Short`nie ma identyfikatora typu znaku.  
+-   **Znaki typu.** Znak literalny typu dołączanie `S` do literału wymusza `Short` — typ danych. `Short` nie ma identyfikatora typu znaku.  
   
 -   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.Int16?displayProperty=nameWithType> struktury.  
   

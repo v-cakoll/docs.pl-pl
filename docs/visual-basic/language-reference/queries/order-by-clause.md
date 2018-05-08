@@ -1,11 +1,6 @@
 ---
-title: "Order By — Klauzula (Visual Basic)"
+title: Order By — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryOrderBy
 - vb.QueryAscending
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c60156ee81618530b42d5f61dbcac6f59c4f675
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By — Klauzula (Visual Basic)
 Określa porządek sortowania dla wyniku zapytania.  
@@ -35,7 +27,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>Części  
  `orderExp1`  
- Wymagany. Co najmniej jednego pola z bieżącego wyniku zapytania określających kolejność zwracanych wartości. Nazwy pól muszą być oddzielone przecinkami (,). Każde pole można określić jako sortowane w kolejności rosnącej lub malejącej przy użyciu `Ascending` lub `Descending` słów kluczowych. Jeśli nie `Ascending` lub `Descending` zostanie określone słowo kluczowe, domyślna kolejność sortowania jest rosnąca. Pola kolejność sortowania podano pierwszeństwo od lewej do prawej.  
+ Wymagana. Co najmniej jednego pola z bieżącego wyniku zapytania określających kolejność zwracanych wartości. Nazwy pól muszą być oddzielone przecinkami (,). Każde pole można określić jako sortowane w kolejności rosnącej lub malejącej przy użyciu `Ascending` lub `Descending` słów kluczowych. Jeśli nie `Ascending` lub `Descending` zostanie określone słowo kluczowe, domyślna kolejność sortowania jest rosnąca. Pola kolejność sortowania podano pierwszeństwo od lewej do prawej.  
   
 ## <a name="remarks"></a>Uwagi  
  Można użyć `Order By` klauzuli sortowania wyników zapytania. `Order By` Klauzuli można sortować tylko wynik oparte na zmienną zakresu dla bieżącego zakresu. Na przykład `Select` klauzuli wprowadzono nowy zakres w wyrażeniu zapytania z nowe zmienne iteracji dla tego zakresu. Zakres zmienne zdefiniowane przed `Select` podklauzul nie są dostępne po `Select` klauzuli. W związku z tym aby uporządkować wyniki według pola, który nie jest dostępny w `Select` klauzuli, możesz umieścić `Order By` klauzuli przed `Select` klauzuli. Jeden przykład kiedy należy to zrobić to można sortować według pól, które nie są zwracane w ramach wyniku zapytania.  
@@ -60,5 +52,5 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
- [SELECT — klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Klauzula FROM](../../../visual-basic/language-reference/queries/from-clause.md)
+ [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)

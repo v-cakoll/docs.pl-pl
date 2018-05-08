@@ -1,26 +1,12 @@
 ---
-title: "Przykład integracji elementu SystemWebRouting"
-ms.custom: 
+title: Przykład integracji elementu SystemWebRouting
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Przykład integracji elementu SystemWebRouting
 W tym przykładzie pokazano integracji hostingu warstwy z klas w <xref:System.Web.Routing> przestrzeni nazw. Klasy w <xref:System.Web.Routing> przestrzeni nazw Zezwalaj aplikacji na używanie adresów URL, które nie odpowiadają bezpośrednio zasób fizyczny. Przy użyciu routingu w sieci Web umożliwia deweloperom tworzenie wirtualnych adresów dla protokołu HTTP, które następnie są mapowane do rzeczywistego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług. Jest to przydatne, gdy usługa WCF musi być obsługiwana bez konieczności fizycznej plik lub zasób, lub gdy usług muszą być dostępne z adresami URL, które nie zawierają plików, takich jak HTML lub aspx. W tym przykładzie pokazano, jak korzystać z <xref:System.Web.Routing.RouteTable> klasy w celu utworzenia wirtualnego identyfikatorów URI mapowane na uruchamianie usług zdefiniowane w pliku global.asax. 
@@ -39,7 +25,7 @@ W tym przykładzie może już być zainstalowany na tym komputerze. Przed kontyn
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+ Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ W tym przykładzie może już być zainstalowany na tym komputerze. Przed kontyn
   
      Zostanie wyświetlone listę przykładowej katalogów. Należy pamiętać, że nie ma żadnych plików z rozszerzeniem nazwy pliku svc.  
   
-3.  Na pasku adresu dodać `movies` więc do adresu URL, którego nie odczytuje http://localhost: [portu] / filmy i naciśnij klawisz ENTER.  
+3.  Na pasku adresu dodać `movies` do adresu URL, tak aby odczytuje http://localhost:[portu] / filmy i naciśnij klawisz ENTER.  
   
      Źródła strumieniowego filmów zostanie wyświetlona w przeglądarce.  
   
-4.  Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost: [portu] / kanałów i naciśnij klawisz ENTER.  
+4.  Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost:[portu] / kanałów i naciśnij klawisz ENTER.  
   
      Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.  
   
@@ -81,11 +67,11 @@ W tym przykładzie może już być zainstalowany na tym komputerze. Przed kontyn
   
 4.  Uruchom aplikację, klikając prawym przyciskiem myszy aplikację sieci Web i wybierając polecenie **aplikacji Zarządzanie** , a następnie **Przeglądaj**.  
   
-5.  Na pasku adresu dodać `movies` do adresu URL, więc to odczyty http://localhost: [portu] / filmy i naciśnij klawisz ENTER.  
+5.  Na pasku adresu dodać `movies` do adresu URL, więc to odczyty http://localhost:[portu] / filmy i naciśnij klawisz ENTER.  
   
      Źródła strumieniowego filmów zostanie wyświetlona w przeglądarce.  
   
-6.  Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost: [portu] / kanałów i naciśnij klawisz ENTER.  
+6.  Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost:[portu] / kanałów i naciśnij klawisz ENTER.  
   
      Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.  
   

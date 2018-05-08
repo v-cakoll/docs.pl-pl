@@ -1,31 +1,17 @@
 ---
 title: 'Instrukcje: Określanie powiązań klienta w konfiguracji'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2441fd7507c5bb368405685598480650114b76a9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: e2ea5a4b1c2ca9b661be5d4c653a3b5668bd26f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Instrukcje: Określanie powiązań klienta w konfiguracji
 W tym przykładzie utworzono aplikacji konsoli klienta do używania usługi Kalkulator i deklaratywnie określono powiązania dla tego klienta w konfiguracji. Klient uzyskuje dostęp do `CalculatorService`, który implementuje `ICalculator` interfejsu i usługę i klienta, użyj <xref:System.ServiceModel.BasicHttpBinding> klasy.  
   
- Procedury opisane przyjęto założenie, że jest uruchomiona usługa Kalkulator. Aby uzyskać informacje o sposobie budowania usługi, zobacz [porady: Określanie powiązania usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Zastosowano [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) który [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] umożliwia automatyczne generowanie składników klienta. Narzędzie generuje kod klienta i konfiguracji do uzyskiwania dostępu do usługi.  
+ Procedury opisane przyjęto założenie, że jest uruchomiona usługa Kalkulator. Aby uzyskać informacje o sposobie budowania usługi, zobacz [porady: Określanie powiązania usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Zastosowano [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) czy Windows Communication Foundation (WCF) zapewnia automatyczne generowanie składników klienta. Narzędzie generuje kod klienta i konfiguracji do uzyskiwania dostępu do usługi.  
   
  Klient korzysta z wbudowanej w dwóch częściach. Generuje svcutil.exe `ClientCalculator` implementującej `ICalculator` interfejsu. Ta aplikacja kliencka jest następnie tworzony przez tworzenia wystąpienia `ClientCalculator`.  
   

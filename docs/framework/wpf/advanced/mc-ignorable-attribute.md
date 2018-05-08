@@ -1,13 +1,6 @@
 ---
-title: "mc:Ignorable — Atrybut"
-ms.custom: 
+title: mc:Ignorable — Atrybut
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mc XML namespace prefix [WPF]
 - mc:Ignorable attribute
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9767b721321b34030a2f276a90c618c658645207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b8a2ef6e27bc6b25776157e59bef04b883fcb1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable — Atrybut
 Określa, która [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] prefiksy przestrzeni nazw w pliku znaczników, może być ignorowane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora. `mc:Ignorable` Atrybut obsługuje zgodności znaczników, zarówno w przypadku mapowania niestandardowej przestrzeni nazw, jak i dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przechowywania wersji.  
@@ -66,7 +54,7 @@ Określa, która [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-m
   
  Elementów lub atrybutów, których część prefiks nazwy elementu są identyfikowane jako `mc:Ignorable` nie generuje błędy podczas przetwarzania przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora. Jeśli tego atrybutu nie można rozpoznać typu podstawowego lub konstrukcji programującej, że element zostanie zignorowany. Należy jednak pamiętać, że zignorowane elementy nadal może generować dodatkowe błędy analizy, dodatkowy element wymagania, które są efekty uboczne tego elementu nie są przetwarzane. Na przykład dany element modelu zawartości mogą wymagać dokładnie jeden element podrzędny, ale jeśli był element podrzędny określonego `mc:Ignorable` prefiks i element podrzędny określonego nie można rozpoznać typu, a następnie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora może Zgłoś błąd.  
   
- `mc:Ignorable`dotyczy tylko mapowania przestrzeni nazw na ciągi identyfikator. `mc:Ignorable`nie ma zastosowania do mapowania przestrzeni nazw w zestawy, które określają [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeni nazw i zestawu (lub domyślne do bieżącego pliku wykonywalnego jako zestawu).  
+ `mc:Ignorable` dotyczy tylko mapowania przestrzeni nazw na ciągi identyfikator. `mc:Ignorable` nie ma zastosowania do mapowania przestrzeni nazw w zestawy, które określają [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeni nazw i zestawu (lub domyślne do bieżącego pliku wykonywalnego jako zestawu).  
   
  W przypadku wdrażania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora, implementacji procesor nie musi wygenerować, analizy lub przetwarzania błędów rozpoznawania typu element lub atrybut, który jest kwalifikowana przez prefiks, który jest identyfikowany jako `mc:Ignorable`. Ale implementacji procesora nadal może zgłaszać wyjątki, które są wynikiem dodatkowej elementu nie powiodło się załadowanie lub być przetwarzane, takich jak na przykład element podrzędny co podane wcześniej.  
   

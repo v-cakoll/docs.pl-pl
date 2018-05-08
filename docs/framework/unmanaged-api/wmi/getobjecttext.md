@@ -1,11 +1,7 @@
 ---
-title: "Funkcja GetObjectText (niezarządzany wykaz interfejsów API)"
-description: "Funkcja GetObjectText zwraca wartość tekstową renderowanie obiektu składnią MOF."
+title: Funkcja GetObjectText (niezarządzany wykaz interfejsów API)
+description: Funkcja GetObjectText zwraca wartość tekstową renderowanie obiektu składnią MOF.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetObjectText
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getobjecttext-function"></a>Funkcja GetObjectText
 Zwraca tekstową renderowanie obiektu w składni Managed Object Format (MOF).
@@ -81,14 +74,14 @@ Następujący algorytm służy do rekonstrukcji tekst parametry metody:
 1. Parametry są z ponownie określoną kolejnością według ich wartości identyfikatora.
 1. Parametry, które są określone jako `[in]` i `[out]` są połączone w jeden parametr.
  
-`pstrObjectText`musi być wskaźnikiem do `null` po wywołaniu funkcji; nie musi wskazywać na ciąg, który jest prawidłowy przed wywołaniem metody, ponieważ wskaźnik myszy zostanie nie można cofnąć alokacji.
+`pstrObjectText` musi być wskaźnikiem do `null` po wywołaniu funkcji; nie musi wskazywać na ciąg, który jest prawidłowy przed wywołaniem metody, ponieważ wskaźnik myszy zostanie nie można cofnąć alokacji.
 
 ## <a name="requirements"></a>Wymagania  
 **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

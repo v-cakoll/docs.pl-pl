@@ -1,23 +1,12 @@
 ---
-title: "Śledzenie rekordów"
-ms.custom: 
+title: Śledzenie rekordów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c871f019179c091fc022be0bf03ad84fbe66dc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-records"></a>Śledzenie rekordów
 Środowiska uruchomieniowego przepływu pracy jest instrumentowany na emitowanie rekordów śledzenia wykonać wykonywania wystąpienia przepływu pracy.  
@@ -60,15 +49,15 @@ ms.lasthandoff: 12/22/2017
   
  Na przykład może być prosty <xref:System.Activities.Statements.Sequence> działania, który zawiera <xref:System.Activities.Statements.WriteLine> operacji ze śledzeniem rekordów emitowanych w następującej kolejności:  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord>Wskazuje, że trwa uruchamianie przepływu pracy.  
+1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Wskazuje, że trwa uruchamianie przepływu pracy.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord>Wskazuje, czy działanie zostało zaplanowane. W tym przypadku jest <xref:System.Activities.Statements.Sequence> działania.  
+2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Wskazuje, czy działanie zostało zaplanowane. W tym przypadku jest <xref:System.Activities.Statements.Sequence> działania.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord>reprezentuje <xref:System.Activities.Statements.WriteLine> działania.  
+3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> reprezentuje <xref:System.Activities.Statements.WriteLine> działania.  
   
 4.  Istnieją dwa <xref:System.Activities.Tracking.ActivityStateRecord> rekordów, które reprezentują dwa działania, kończenie.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord>Wskazuje, że przepływ pracy jest kończonych.  
+5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Wskazuje, że przepływ pracy jest kończonych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows Server AppFabric monitorowania](http://go.microsoft.com/fwlink/?LinkId=201273)  

@@ -1,27 +1,15 @@
 ---
-title: "Określanie czasu trwania operacji usługi"
-ms.custom: 
+title: Określanie czasu trwania operacji usługi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7615a4574210ad6e9b5eee2e5d5855365768854
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-service-operation-duration"></a>Określanie czasu trwania operacji usługi
-Jeśli włączono śledzenie analityczne w [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] łatwo można ustalić czas realizacji dla operacji usługi, sprawdzając dziennik zdarzeń aplikacji.  W tym temacie przedstawiono sposób określania ilości czas do ukończenia operacji usługi.  
+Śledzenie analityczne włączenie w aplikacji Windows Communication Foundation (WCF) czas realizacji dla operacji usługi można łatwo ustalić, sprawdzając dziennik zdarzeń.  W tym temacie przedstawiono sposób określania ilości czas do ukończenia operacji usługi.  
   
 ### <a name="determining-service-operation-execution-duration"></a>Określanie czasu wykonywania operacji usługi  
   

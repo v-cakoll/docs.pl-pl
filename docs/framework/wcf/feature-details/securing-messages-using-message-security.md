@@ -1,44 +1,32 @@
 ---
 title: Korzystanie z zabezpieczeń komunikatów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
-W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia wiadomości, korzystając z <xref:System.ServiceModel.NetMsmqBinding>.  
+W tej sekcji omówiono zabezpieczenia wiadomości WCF, używając <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 >  Przed przeczytaniem za pośrednictwem tego tematu, zaleca się przeczytanie [pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- Następująca ilustracja przedstawia model koncepcyjny umieszczonych w kolejce komunikacji przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ta ilustracja i terminologia służą do wyjaśnienia  
+ Następująca ilustracja przedstawia model koncepcyjny umieszczonych w kolejce komunikację z wykorzystaniem usługi WCF. Ta ilustracja i terminologia służą do wyjaśnienia  
   
  transport pojęć związanych z zabezpieczeniami.  
   
  ![Diagram aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "rozproszonych kolejki — rysunek")  
   
- Podczas wysyłania wiadomości z kolejki przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości jest dołączony jako treść komunikatu usługi kolejkowania komunikatów (MSMQ). Gdy zabezpieczeń transportu zabezpiecza cały MSMQ komunikatu, komunikat (lub SOAP) zabezpieczeń tylko zabezpiecza treści wiadomości MSMQ.  
+ Podczas wysyłania komunikatów umieszczonych w kolejce za pomocą usługi WCF, wiadomości WCF jest dołączony jako treść komunikatu usługi kolejkowania komunikatów (MSMQ). Gdy zabezpieczeń transportu zabezpiecza cały MSMQ komunikatu, komunikat (lub SOAP) zabezpieczeń tylko zabezpiecza treści wiadomości MSMQ.  
   
- Kluczowe pojęcia zabezpieczenia komunikatów jest, czy klient zabezpiecza wiadomości do aplikacji odbierającej (usługa), w przeciwieństwie do zabezpieczeń transportu, w którym klient zabezpiecza wiadomości do kolejki docelowej. W efekcie MSMQ odgrywa bez części zabezpieczania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości przy użyciu zabezpieczeń wiadomości.  
+ Kluczowe pojęcia zabezpieczenia komunikatów jest, czy klient zabezpiecza wiadomości do aplikacji odbierającej (usługa), w przeciwieństwie do zabezpieczeń transportu, w którym klient zabezpiecza wiadomości do kolejki docelowej. Tak MSMQ odgrywa żadnej części zabezpieczania wiadomości WCF za pomocą zabezpieczeń wiadomości.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia komunikatów dodaje nagłówek zabezpieczeń w celu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości, które integrują się z istniejącej infrastruktury zabezpieczeń, takie jak certyfikat lub protokołu Kerberos.  
+ Zabezpieczenia komunikatów usługi WCF dodaje nagłówki zabezpieczeń wiadomości WCF, które integrują się z istniejącej infrastruktury zabezpieczeń, takie jak certyfikat lub protokołu Kerberos.  
   
 ## <a name="message-credential-type"></a>Typ poświadczeń komunikatu  
  Korzystanie z zabezpieczeń komunikatów, usługa i klient może stanowić poświadczenia umożliwiające uwierzytelnianie w każdym innym. Wybierz opcję zabezpieczenia komunikatów przez ustawienie <xref:System.ServiceModel.NetMsmqBinding.Security%2A> tryb `Message` lub `Both` (oznacza to, używają zarówno zabezpieczeń transportu i zabezpieczenia komunikatów).  

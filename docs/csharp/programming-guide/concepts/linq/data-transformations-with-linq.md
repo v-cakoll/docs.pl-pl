@@ -1,12 +1,6 @@
 ---
-title: "Przekształcanie danych za pomocą LINQ (C#)"
-ms.custom: 
+title: Przekształcanie danych za pomocą LINQ (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], data transformations
 - source elements [LINQ in C#]
@@ -16,17 +10,14 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0633e348c762879caa4e3f72a3662722b3894e4c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c165f78c53cec0417d39320580b812ff01fef68b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]dotyczy nie tylko pobieranie danych. Istnieje również zaawansowane narzędzia do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy, można użyć sekwencji źródłowej, jak dane wejściowe, a następnie zmodyfikować go na wiele sposobów, aby utworzyć nową sekwencję danych wyjściowych. Można zmodyfikować sekwencji bez modyfikowania ze sobą elementy sortowania i grupowania. Być może z najbardziej zaawansowanych funkcji, ale [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania jest możliwość tworzenia nowych typów. Jest to realizowane w [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) klauzuli. Na przykład można wykonywać następujące zadania:  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] dotyczy nie tylko pobieranie danych. Istnieje również zaawansowane narzędzia do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy, można użyć sekwencji źródłowej, jak dane wejściowe, a następnie zmodyfikować go na wiele sposobów, aby utworzyć nową sekwencję danych wyjściowych. Można zmodyfikować sekwencji bez modyfikowania ze sobą elementy sortowania i grupowania. Być może z najbardziej zaawansowanych funkcji, ale [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania jest możliwość tworzenia nowych typów. Jest to realizowane w [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) klauzuli. Na przykład można wykonywać następujące zadania:  
   
 -   Scala wiele sekwencji wejściowych sekwencji pojedynczym wyjściowym zawierającej nowego typu.  
   
@@ -69,7 +60,7 @@ ms.lasthandoff: 12/09/2017
  Aby uzyskać więcej informacji, zobacz [inicjatory obiektów i kolekcji](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) i [typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Przekształcanie obiektów w pamięci do formatu XML  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]zapytania ułatwiają przekształcania danych między struktury danych w pamięci, baz danych, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych i XML strumieni lub dokumenty. Poniższy przykład do elementów XML przy użyciu obiektów w strukturze danych w pamięci.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania ułatwiają przekształcania danych między struktury danych w pamięci, baz danych, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych i XML strumieni lub dokumenty. Poniższy przykład do elementów XML przy użyciu obiektów w strukturze danych w pamięci.  
   
  [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
@@ -107,8 +98,8 @@ ms.lasthandoff: 12/09/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Zapytanie o języku zintegrowanym (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
- [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [LINQ do DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
  [LINQ do XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
  [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [SELECT — klauzula](../../../../csharp/language-reference/keywords/select-clause.md)
+ [select, klauzula](../../../../csharp/language-reference/keywords/select-clause.md)

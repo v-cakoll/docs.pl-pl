@@ -1,29 +1,15 @@
 ---
 title: 'Instrukcje: Konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 22c71c0840b4fa44c585dfac4d99bdcbb3227fdb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 11992d5e262a23e8f3f29d535e615cfcf57cdc68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Instrukcje: Konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost
 Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi zostać wznowiony przez niektóre bodźca zewnętrznych, np. gdy wystąpienie przepływu pracy oczekuje na być dostarczane za pomocą wiadomości <xref:System.ServiceModel.Activities.Receive> działania. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> jest to zachowanie, który umożliwia określenie czasu między po wystąpieniu usługi przechodzi bezczynności i gdy wystąpienie jest utrwalona lub zwalnianie modułu. Zawiera dwie właściwości, które umożliwiają skonfigurowanie tych okresów. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Określa przedział czasu między po bezczynności przechodzi wystąpienia usługi przepływu pracy i gdy wystąpienie usługi przepływu pracy jest trwały. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Określa przedział czasu między gdy przepływ pracy usługi wystąpienie przechodzi bezczynności i gdy wystąpienie usługi przepływu pracy jest zwolniony, gdzie zwolnienie oznacza przechowywanie wystąpienie w magazynie wystąpień i usunięcie go z pamięci. W tym temacie opisano sposób konfigurowania <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> w pliku konfiguracji.  

@@ -1,27 +1,15 @@
 ---
-title: "Zwracanym lub Pomiń elementy w sekwencji"
-ms.custom: 
+title: Zwracanym lub Pomiń elementy w sekwencji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b5d52fd3326448c428dac16c210321889f83ea23
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zwracanym lub Pomiń elementy w sekwencji
 Użyj <xref:System.Linq.Queryable.Take%2A> operatora w celu uzyskania danej liczby elementów w sekwencji, a następnie pominąć resztę.  
@@ -29,9 +17,9 @@ Użyj <xref:System.Linq.Queryable.Take%2A> operatora w celu uzyskania danej licz
  Użyj <xref:System.Linq.Queryable.Skip%2A> operatora, aby pominąć danej liczby elementów w sekwencji, a następnie wróć resztę.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A>i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są one używane w kwerendach do programu SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i podjąć wyjątków w programie SQL Server 2000" w [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są one używane w kwerendach do programu SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i podjąć wyjątków w programie SQL Server 2000" w [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wykonuje translację <xref:System.Linq.Queryable.Skip%2A> za pomocą podzapytania SQL `NOT EXISTS` klauzuli. Tłumaczenie ma następujące ograniczenia:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wykonuje translację <xref:System.Linq.Queryable.Skip%2A> za pomocą podzapytania SQL `NOT EXISTS` klauzuli. Tłumaczenie ma następujące ograniczenia:  
   
 -   Argument musi być ustawiony. Multisets nie są obsługiwane, nawet jeśli uporządkowane.  
   
@@ -55,7 +43,7 @@ Użyj <xref:System.Linq.Queryable.Take%2A> operatora w celu uzyskania danej licz
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- <xref:System.Linq.Queryable.Take%2A>i <xref:System.Linq.Queryable.Skip%2A> operacje są jasno określone tylko względem uporządkowane zestawy. Semantyka nieuporządkowaną zestawów lub multisets jest niezdefiniowana.  
+ <xref:System.Linq.Queryable.Take%2A> i <xref:System.Linq.Queryable.Skip%2A> operacje są jasno określone tylko względem uporządkowane zestawy. Semantyka nieuporządkowaną zestawów lub multisets jest niezdefiniowana.  
   
  Ze względu na ograniczenia dotyczące kolejności w programie SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] próbuje przenieść kolejność argument <xref:System.Linq.Queryable.Take%2A> lub <xref:System.Linq.Queryable.Skip%2A> operatora wynik operatora.  
   
@@ -67,7 +55,7 @@ Użyj <xref:System.Linq.Queryable.Take%2A> operatora w celu uzyskania danej licz
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Przenosi kolejności w celu w języku SQL w następujący sposób:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Przenosi kolejności w celu w języku SQL w następujący sposób:  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  

@@ -1,11 +1,6 @@
 ---
-title: "SyncLock — Instrukcja"
+title: SyncLock — Instrukcja
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>SyncLock — Instrukcja
 Uzyskuje wyłącznej blokady dla blok instrukcji, przed wykonaniem bloku.  
@@ -36,16 +28,16 @@ End SyncLock
   
 ## <a name="parts"></a>Części  
  `lockobject`  
- Wymagany. Wyrażenie obliczane do odwołania do obiektu.  
+ Wymagana. Wyrażenie obliczane do odwołania do obiektu.  
   
  `block`  
- Opcjonalny. Blok instrukcji, które są do wykonania, gdy są uzyskiwane blokady.  
+ Opcjonalna. Blok instrukcji, które są do wykonania, gdy są uzyskiwane blokady.  
   
  `End SyncLock`  
- Kończy `SyncLock` bloku.  
+ Kończy blok `SyncLock`.  
   
 ## <a name="remarks"></a>Uwagi  
- `SyncLock` Instrukcji gwarantuje, że wiele wątków nie wykonuje bloku instrukcji w tym samym czasie. `SyncLock`Każdy wątek uniemożliwia wprowadzanie bloku, dopóki nie innego wątku jest jej wykonanie.  
+ `SyncLock` Instrukcji gwarantuje, że wiele wątków nie wykonuje bloku instrukcji w tym samym czasie. `SyncLock` Każdy wątek uniemożliwia wprowadzanie bloku, dopóki nie innego wątku jest jej wykonanie.  
   
  Najczęściej używane `SyncLock` ma chronić dane przed aktualizowana przez więcej niż jeden wątek jednocześnie. Jeśli instrukcji, które manipulowania danymi muszą przejść do ukończenia bez przeszkód, umieść je w `SyncLock` bloku.  
   

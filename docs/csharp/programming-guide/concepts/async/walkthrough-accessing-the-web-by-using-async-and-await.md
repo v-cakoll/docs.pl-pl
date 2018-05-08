@@ -1,22 +1,12 @@
 ---
-title: "Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)"
-ms.custom: 
+title: 'Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: get-started-article
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 533cb4b342e3de3eb3143b001f5a26e36e4d79b9
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 33145f6a7ececd85e6eeaebb80a81f3075878761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)
 Asynchroniczne programy można napisać łatwiejsze i bardziej intuicyjne za pomocą funkcji asynchronicznej/await. Możesz zapisać asynchroniczne kod, który wygląda jak synchroniczne kodu i umożliwić kompilatora obsługiwać funkcje wywołania zwrotnego trudne i kontynuacje, które kod asynchroniczny zazwyczaj pociąga za sobą.  
@@ -465,7 +455,7 @@ Asynchroniczne programy można napisać łatwiejsze i bardziej intuicyjne za pom
   
      Zachowanie tej wersji projektu powinien zgodne zachowanie opisano procedury "Aby przetestować asynchroniczne rozwiązania", ale z nawet mniejszym wysiłku z Twojej.  
   
-##  <a name="BKMK_CompleteCodeExamples">Przykład</a>  
+##  <a name="BKMK_CompleteCodeExamples"></a> Przykład  
  Poniższy kod zawiera pełny przykład konwersji z synchronicznego do asynchronicznego rozwiązania przy użyciu asynchroniczną `GetURLContentsAsync` metody zapisane. Należy zauważyć, że silnie podobny oryginalnego synchroniczne rozwiązania.  
   
 ```csharp  

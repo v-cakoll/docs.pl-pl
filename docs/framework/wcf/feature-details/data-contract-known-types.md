@@ -1,14 +1,6 @@
 ---
 title: Znane typy kontraktów danych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: 42
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-known-types"></a>Znane typy kontraktów danych
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Klasa pozwala na określenie z wyprzedzeniem, typów, które powinny zostać uwzględnione w brany pod uwagę podczas deserializacji. Na przykład pracy, zobacz [znane typy](../../../../docs/framework/wcf/samples/known-types.md) przykład.  
@@ -43,7 +29,7 @@ ms.lasthandoff: 04/28/2018
 -   Niektóre typy, które obejmują [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, mieć elementów członkowskich, które znajdują się w jednej z poprzednich trzech kategorii. Na przykład <xref:System.Collections.Hashtable> używa <xref:System.Object> do przechowywania rzeczywistych obiektów w tablicy skrótów. Podczas serializowania te typy, po stronie odbierającej nie można ustalić wcześniej kontraktu danych dla tych elementów członkowskich.  
   
 ## <a name="the-knowntypeattribute-class"></a>Klasa KnownTypeAttribute  
- Po odebraniu danych odbierania punktu końcowego, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska uruchomieniowego podejmuje próbę deserializacji danych do wystąpienia typu wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR). Typ, który zostanie uruchomiony do deserializacji jest wybierany przez pierwsze badanie kontraktu komunikatu przychodzącego określenie danych, do którego zawartość komunikatu jest zgodna z. Aparat deserializacji następnie próbuje odnaleźć typu CLR, który implementuje kontrakt danych zgodne z treść komunikatu. Zestaw typów kandydujących, które umożliwia aparat deserializacji w trakcie tego procesu jest określana jako zestaw Deserializator "znanych typów."  
+ Po odebraniu danych odbierania punktu końcowego, WCF runtime podejmuje próbę deserializacji danych do wystąpienia typu wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR). Typ, który zostanie uruchomiony do deserializacji jest wybierany przez pierwsze badanie kontraktu komunikatu przychodzącego określenie danych, do którego zawartość komunikatu jest zgodna z. Aparat deserializacji następnie próbuje odnaleźć typu CLR, który implementuje kontrakt danych zgodne z treść komunikatu. Zestaw typów kandydujących, które umożliwia aparat deserializacji w trakcie tego procesu jest określana jako zestaw Deserializator "znanych typów."  
   
  Jednym ze sposobów let aparat deserializacji wiedzieć o typie polega na użyciu <xref:System.Runtime.Serialization.KnownTypeAttribute>. Ten atrybut nie można zastosować do poszczególnych danych elementów członkowskich, tylko na typy kontraktu danych całego. Ten atrybut jest stosowany do *typu zewnętrznego* które może być klasą lub strukturą. W jego najbardziej podstawowa użycia stosowania ten atrybut określa typ jako "znanego typu". Powoduje to znanego typu jako część zestawu znanych typów, gdy obiekt typu zewnętrznego lub deserializacji dowolny obiekt określony przez jego elementów członkowskich. Więcej niż jeden <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybut można stosować do tego samego typu.  
   
@@ -144,7 +130,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>Dodatkowe sposoby dodawania znanych typów  
- Ponadto można dodać za pomocą pliku konfiguracji znanych typów. Jest to przydatne, gdy nie kontroli typ, który wymaga znanych typów dla odpowiednich deserializacji, takich jak przy użyciu innej firmy podczas wpisywania bibliotek z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Ponadto można dodać za pomocą pliku konfiguracji znanych typów. Jest to przydatne, gdy nie kontrolowanie tego typu, który wymaga znanych typów dla odpowiednich deserializacji, takich jak przy użyciu innej firmy podczas wpisywania bibliotek z programu Windows Communication Foundation (WCF).  
   
  Następujący plik konfiguracji pokazano, jak określić znanego typu w pliku konfiguracji.  
   

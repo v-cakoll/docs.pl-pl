@@ -1,10 +1,6 @@
 ---
 title: 'Porady: tworzenie aplikacji formularzy systemu Windows z wiersza polecenia'
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,13 +11,11 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.workload:
-- dotnet
-ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: fe7c1eddd67e678e7086d948efb854a6b4b52f6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Porady: tworzenie aplikacji formularzy systemu Windows z wiersza polecenia
 W poniższych procedurach opisano podstawowe kroki, które należy wykonać w celu tworzenia i uruchamiania aplikacji Windows Forms z wiersza polecenia. Brak kompleksową obsługę tych procedur w programie Visual Studio.  Zobacz też [wskazówki: Tworzenie prostego formularza systemu Windows](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  

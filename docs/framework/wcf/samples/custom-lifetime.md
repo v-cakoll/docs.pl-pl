@@ -1,33 +1,21 @@
 ---
 title: Niestandardowy okres istnienia
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1cbe73468e2ce1c8a4fe81a676c819b04d2ef760
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-lifetime"></a>Niestandardowy okres istnienia
-W tym przykładzie pokazano, jak napisać [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rozszerzeniem w celu zapewnienia usług Niestandardowy okres istnienia współużytkowanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wystąpień usługi.  
+W tym przykładzie pokazano, jak napisać rozszerzenia programu Windows Communication Foundation (WCF) do świadczenia usług Niestandardowy okres istnienia, współużytkowanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wystąpień usługi.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="shared-instancing"></a>Udostępnione wystąpień  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferuje kilka wystąpień trybów dla swoich wystąpień usługi. Tryb udostępnionych wystąpień opisanych w tym temacie umożliwia współużytkują wystąpienie usługi, między wiele kanałów. Klientów można rozpoznać adres punktu końcowego wystąpienia lokalnie lub skontaktuj się z metody fabryki w usłudze, aby uzyskać adres punktu końcowego uruchomionego wystąpienia. Po ma adres punktu końcowego, go utworzyć nowy kanał, a następnie uruchomić komunikacji. Poniższy fragment kodu przedstawia, jak aplikacja kliencka tworzy nowy kanał do istniejącego wystąpienia usługi.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferuje kilka wystąpień trybów dla swoich wystąpień usługi. Tryb udostępnionych wystąpień opisanych w tym temacie umożliwia współużytkują wystąpienie usługi, między wiele kanałów. Klientów można rozpoznać adres punktu końcowego wystąpienia lokalnie lub skontaktuj się z metody fabryki w usłudze, aby uzyskać adres punktu końcowego uruchomionego wystąpienia. Po ma adres punktu końcowego, go utworzyć nowy kanał, a następnie uruchomić komunikacji. Poniższy fragment kodu przedstawia, jak aplikacja kliencka tworzy nowy kanał do istniejącego wystąpienia usługi.  
   
 ```  
 // Create the first channel.  
@@ -51,7 +39,7 @@ IEchoService proxy2 = channelFactory2.CreateChannel();
  Domyślnie wartość limitu czasu bezczynności <xref:System.ServiceModel.InstanceContext> jest jedna minuta. Jednak w przykładzie pokazano, jak można rozszerzyć użycie niestandardowego rozszerzenia.  
   
 ## <a name="extending-the-instancecontext"></a>Rozszerzanie obiekt InstanceContext  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.InstanceContext> jest łącze między wystąpienie usługi i `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Umożliwia rozszerzenie tego składnika środowiska wykonawczego przez dodanie nowego stanu lub zachowania przy użyciu jego wzorzec rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu obiektu extensible: `IExtensibleObject<T>`, `IExtension<T>`, i `IExtensionCollection<T>`.  
+ W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.InstanceContext> jest łącze między wystąpienie usługi i `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia rozszerzenie tego składnika środowiska wykonawczego przez dodanie nowego stanu lub zachowania przy użyciu jego wzorzec rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu obiektu extensible: `IExtensibleObject<T>`, `IExtension<T>`, i `IExtensionCollection<T>`.  
   
  `IExtensibleObject<T>` Interfejs jest implementowany przez obiekty, aby zezwalać na rozszerzenia, które dostosowywanie ich funkcji.  
   
@@ -229,7 +217,7 @@ public class EchoService : IEchoService
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Lifetime`  
   

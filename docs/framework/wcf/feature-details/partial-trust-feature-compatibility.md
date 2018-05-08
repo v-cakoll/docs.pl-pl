@@ -1,38 +1,24 @@
 ---
 title: Zgodność funkcji zaufania częściowego
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje ograniczonym podzbiorem funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są została zaprojektowana dla określonych scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
+Windows Communication Foundation (WCF) obsługuje ograniczone funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są została zaprojektowana dla określonych scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
   
 ## <a name="minimum-permission-requirements"></a>Wymagania dotyczące minimalnych uprawnień  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje podzbiór funkcji aplikacji uruchomionych w jednej z następujących zestawów standardowe uprawnienie o nazwie:  
+ Usługi WCF obsługuje podzbiór funkcji aplikacji uruchomionych w jednej z następujących zestawów standardowe uprawnienie o nazwie:  
   
 -   Średnia uprawnień zaufania  
   
 -   Uprawnienia strefy Internet  
   
- Podjęto próbę użycia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w częściowo zaufane aplikacje z bardziej restrykcyjnymi uprawnieniami może spowodować wystąpienie wyjątków zabezpieczeń w czasie wykonywania.  
+ Podjęto próbę użycia usługi WCF w częściowo zaufane aplikacje z bardziej restrykcyjnymi uprawnieniami może skutkować wyjątki zabezpieczeń w czasie wykonywania.  
   
 ## <a name="contracts"></a>Kontrakty  
  Kontrakty obowiązują następujące ograniczenia, gdy w częściowej relacji zaufania działa:  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/27/2018
  Kodery mechanizmu optymalizacji transmisji wiadomości (MTOM) nie są obsługiwane.  
   
 ### <a name="security"></a>Zabezpieczenia  
- Częściowo zaufane aplikacje mogą używać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]na poziomie transportu funkcje zabezpieczeń do zabezpieczania komunikacji. Zabezpieczenia na poziomie komunikatu nie jest obsługiwana. Konfigurowanie powiązania w celu użycia zabezpieczenia na poziomie komunikatu powoduje wyjątek w czasie wykonywania.  
+ Częściowo zaufane aplikacje mogą używać funkcji zabezpieczeń na poziomie transportu WCF na do zabezpieczania komunikacji. Zabezpieczenia na poziomie komunikatu nie jest obsługiwana. Konfigurowanie powiązania w celu użycia zabezpieczenia na poziomie komunikatu powoduje wyjątek w czasie wykonywania.  
   
 ### <a name="unsupported-bindings"></a>Nieobsługiwany powiązania  
  Powiązań używających niezawodna obsługa komunikatów, transakcje lub zabezpieczenia na poziomie komunikatu nie są obsługiwane.  
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/27/2018
   
 -   Wszystkie serializacji `[DataContract]` typy muszą być `public`.  
   
--   Wszystkie serializacji `[DataMember]` pola lub właściwości w `[DataContract]` typu musi być publiczny i odczytu/zapisu. Serializacja i deserializacja [tylko do odczytu](http://go.microsoft.com/fwlink/?LinkID=98854) pola nie jest obsługiwane podczas uruchamiania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w częściowo zaufanych aplikacji.  
+-   Wszystkie serializacji `[DataMember]` pola lub właściwości w `[DataContract]` typu musi być publiczny i odczytu/zapisu. Serializacja i deserializacja [tylko do odczytu](http://go.microsoft.com/fwlink/?LinkID=98854) pola nie jest obsługiwane podczas uruchamiania usługi WCF w częściowo zaufanych aplikacji.  
   
 -   `[Serializable]` /ISerializable model programowania nie jest obsługiwana w środowisku częściowej relacji zaufania.  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 04/27/2018
 ### <a name="collection-types"></a>Typy kolekcji  
  Niektóre typy kolekcji implementować jednocześnie <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.Collections.IEnumerable>. Przykłady typów, które implementują <xref:System.Collections.Generic.ICollection%601>. Można zaimplementować takich typów `public` implementacja `GetEnumerator()`i jawną implementację elementu `GetEnumerator()`. W takim przypadku <xref:System.Runtime.Serialization.DataContractSerializer> wywołuje `public` implementacja `GetEnumerator()`, a nie jawną implementację elementu `GetEnumerator()`. Jeśli żadna z `GetEnumerator()` są implementacje `public` i wszystkie jawnej implementacji, następnie <xref:System.Runtime.Serialization.DataContractSerializer> wywołuje `IEnumerable.GetEnumerator()`.  
   
- Kolekcji typów, kiedy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] działa w środowisku częściowej relacji zaufania, jeśli żadna z `GetEnumerator()` są implementacje `public`, lub żaden z nich nie jest jawne implementacje interfejsu, a następnie jest zgłaszany wyjątek zabezpieczeń.  
+ Dla typów kolekcji uruchomionej usługi WCF w środowisku częściowej relacji zaufania, jeśli żadna z `GetEnumerator()` są implementacje `public`, lub żaden z nich nie jest jawne implementacje interfejsu, a następnie jest zgłaszany wyjątek zabezpieczeń.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  Wiele typów kolekcji .NET Framework, takich jak <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.Hashtable> nie są obsługiwane przez <xref:System.Runtime.Serialization.NetDataContractSerializer> w częściowej relacji zaufania. Te typy mają `[Serializable]` ustawiony atrybut i jak wspomniano wcześniej, w sekcji serializacji, ten atrybut nie jest obsługiwany w częściowej relacji zaufania. <xref:System.Runtime.Serialization.DataContractSerializer> Traktuje kolekcje w specjalny sposób i w związku z tym jest możliwość obejścia tego ograniczenia, ale <xref:System.Runtime.Serialization.NetDataContractSerializer> ma taki mechanizm obejść to ograniczenie.  
@@ -108,7 +94,7 @@ ms.lasthandoff: 04/27/2018
  Na przykład wspólnego zachowania, zobacz [porady: blokowanie dół punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Konfiguracja  
- Z jednym wyjątkiem częściowo zaufanego kodu można ładować tylko [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sekcji konfiguracyjnych w lokalnym `app.config` pliku. Aby załadować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfiguracji sekcje tego odwołania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ConfigurationPermission(Unrestricted) wymaga sekcji w pliku machine.config lub głównym pliku web.config. Bez tego uprawnienia odwołuje się do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sekcji konfiguracyjnych (zachowania, powiązania) poza wyniki do pliku lokalnej konfiguracji wystąpił wyjątek podczas ładowania konfiguracji.  
+ Z jednym wyjątkiem częściowo zaufanego kodu można ładować tylko sekcji konfiguracji usługi WCF w lokalnej `app.config` pliku. Aby załadować sekcji konfiguracji WCF odwołujące się do usługi WCF w sekcji w pliku machine.config lub głównym pliku web.config wymaga ConfigurationPermission(Unrestricted). Bez tego uprawnienia odwołań do WCF sekcji konfiguracyjnych (zachowania, powiązania) poza skutkuje pliku lokalnej konfiguracji wystąpił wyjątek podczas ładowania konfiguracji.  
   
  Jedynym wyjątkiem jest znany typ konfiguracji do serializacji, zgodnie z opisem w sekcji serializacji tego tematu.  
   
@@ -121,7 +107,7 @@ ms.lasthandoff: 04/27/2018
  Rejestrowanie zdarzeń ograniczone jest obsługiwane w częściowej relacji zaufania. Tylko usługi aktywacji usterek i błędów rejestrowania śledzenia/wiadomości są rejestrowane w dzienniku zdarzeń. Maksymalna liczba zdarzeń, które mogą być rejestrowane przez proces wynosi 5, aby uniknąć zapisywania nadmiernej liczby komunikatów w dzienniku zdarzeń.  
   
 ### <a name="message-logging"></a>Rejestrowanie komunikatów  
- Komunikat rejestrowania nie działa podczas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest uruchamiana w środowisku częściowej relacji zaufania. Jeśli włączona w częściowej relacji zaufania, nie wystąpi niepowodzenie usługi aktywacji, ale nie jest rejestrowany.  
+ Rejestrowanie komunikatów nie działa, gdy WCF jest uruchamiana w środowisku częściowej relacji zaufania. Jeśli włączona w częściowej relacji zaufania, nie wystąpi niepowodzenie usługi aktywacji, ale nie jest rejestrowany.  
   
 ### <a name="tracing"></a>Śledzenie  
  Funkcja śledzenia z ograniczeniami jest dostępna podczas uruchamiania w środowisku częściowej relacji zaufania. W <`listeners`> są tylko typy, które można dodać elementu w pliku konfiguracji, <xref:System.Diagnostics.TextWriterTraceListener> i nowych <xref:System.Diagnostics.EventSchemaTraceListener>. Użyj standardowego <xref:System.Diagnostics.XmlWriterTraceListener> może spowodować dzienniki niekompletne lub niepoprawne.  
@@ -151,13 +137,13 @@ ms.lasthandoff: 04/27/2018
  Korzystając z śledzenie w środowisku częściowej relacji zaufania, upewnij się, że aplikacja ma wystarczające uprawnienia do przechowywania danych wyjściowych obiektu nasłuchującego śledzenia. Na przykład w przypadku korzystania z <xref:System.Diagnostics.TextWriterTraceListener> do zapisywania danych wyjściowych śledzenia w pliku tekstowym, sprawdź, czy aplikacja ma niezbędne FileIOPermission, trzeba zapisać do pliku śledzenia.  
   
 > [!NOTE]
->  Aby uniknąć przepełnienia pliki śledzenia z błędami zduplikowane [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wyłącza śledzenie zasobów lub akcji po pierwszym błędzie zabezpieczeń. Istnieje jeden wyjątek śledzenia dla każdego dostęp do zasobów nie powiodło się, próby dostępu do zasobu lub wykonanie akcji po raz pierwszy.  
+>  Aby zapobiec przepełnieniu pliki śledzenia z błędami zduplikowanych, WCF wyłącza śledzenie zasobów lub akcji po pierwszym błędzie zabezpieczeń. Istnieje jeden wyjątek śledzenia dla każdego dostęp do zasobów nie powiodło się, próby dostępu do zasobu lub wykonanie akcji po raz pierwszy.  
   
 ## <a name="wcf-service-host"></a>Host usługi WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] host usługi nie obsługuje częściowej relacji zaufania. Jeśli chcesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi w częściowej relacji zaufania, nie używaj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablon projektu biblioteki usługi w programie Visual Studio do tworzenia usługi. Zamiast tego utwórz nową witrynę sieci Web w programie Visual Studio, wybierając [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablonu witryny sieci Web usługi, który może obsługiwać usługi na serwerze sieci Web, na którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest obsługiwane w częściowej relacji zaufania.  
+ Host usługi WCF nie obsługuje częściowej relacji zaufania. Jeśli chcesz użyć usługi WCF w częściowej relacji zaufania, nie należy używać szablonu projektu biblioteki usługi WCF w programie Visual Studio do tworzenia usługi. Zamiast tego należy utworzyć nową witrynę sieci Web w programie Visual Studio, wybierając szablon witryny sieci Web usługi WCF, który może obsługiwać usługi na serwerze sieci Web, na którym jest obsługiwany WCF częściowej relacji zaufania.  
   
 ## <a name="other-limitations"></a>Inne ograniczenia  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest zazwyczaj ograniczone do zagadnienia dotyczące zabezpieczeń nakłada na nią hostingu aplikacji. Na przykład jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w języku XAML przeglądarki aplikacji (XBAP), jego podlega XBAP ograniczenia, zgodnie z opisem w [zabezpieczenia systemu Windows Presentation Foundation częściowego zaufania](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ Usługi WCF jest zazwyczaj ograniczone do zagadnienia dotyczące zabezpieczeń nakłada na nią hostingu aplikacji. Na przykład, jeśli WCF jest hostowana w aplikacji przeglądarki XAML (XBAP), jego podlega XBAP ograniczenia, zgodnie z opisem w [zabezpieczenia systemu Windows Presentation Foundation częściowego zaufania](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  Podczas uruchamiania indigo2 w środowisku częściowej relacji zaufania, nie są włączone następujące dodatkowe funkcje:  
   
@@ -167,10 +153,10 @@ ms.lasthandoff: 04/27/2018
   
 -   Liczniki wydajności  
   
- Użycie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funkcje, które nie są obsługiwane w środowisku częściowej relacji zaufania może spowodować wystąpienie wyjątków w czasie wykonywania.  
+ Użycie funkcji WCF, które nie są obsługiwane w środowisku częściowej relacji zaufania może spowodować wystąpienie wyjątków w czasie wykonywania.  
   
 ## <a name="unlisted-features"></a>Funkcje nieznajdujące się na liście  
- Najlepszym sposobem, aby dowiedzieć się, że informacji lub akcja jest niedostępna, jeśli działające w środowisku częściowej relacji zaufania jest próba dostępu do zasobu lub akcję wewnątrz `try` bloku, a następnie `catch` awarii. Aby uniknąć przepełnienia pliki śledzenia z błędami zduplikowane [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wyłącza śledzenie zasobów lub akcji po pierwszym błędzie zabezpieczeń. Istnieje jeden wyjątek śledzenia dla każdego dostęp do zasobów nie powiodło się, próby dostępu do zasobu lub wykonanie akcji po raz pierwszy.  
+ Najlepszym sposobem, aby dowiedzieć się, że informacji lub akcja jest niedostępna, jeśli działające w środowisku częściowej relacji zaufania jest próba dostępu do zasobu lub akcję wewnątrz `try` bloku, a następnie `catch` awarii. Aby zapobiec przepełnieniu pliki śledzenia z błędami zduplikowanych, WCF wyłącza śledzenie zasobów lub akcji po pierwszym błędzie zabezpieczeń. Istnieje jeden wyjątek śledzenia dla każdego dostęp do zasobów nie powiodło się, próby dostępu do zasobu lub wykonanie akcji po raz pierwszy.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

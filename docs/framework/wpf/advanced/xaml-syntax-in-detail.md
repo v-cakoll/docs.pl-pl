@@ -1,13 +1,6 @@
 ---
-title: "Szczegóły składni XAML"
-ms.custom: 
+title: Szczegóły składni XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 W tym temacie opisano terminy, które służą do opisywania elementy składni języka XAML. Te warunki są często używane w dalszej części tej dokumentacji, zarówno dla dokumentacji WPF w szczególności i dla innych platform, które używają XAML lub podstawowe pojęcia języka XAML, aby włączyć obsługę języka XAML na poziomie System.Xaml. W tym temacie omówiono w podstawowej terminologii wprowadzone w temacie [omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -134,7 +122,7 @@ W tym temacie opisano terminy, które służą do opisywania elementy składni j
 ...  
 ```  
   
- Flagwise wyliczenia, które obsługują atrybuty, które są można ustawić w języku XAML są rzadko na platformie WPF. Jednak jest jedno takie wyliczenie <xref:System.Windows.Media.StyleSimulations>. Można na przykład użyć składni atrybutu flagwise rozdzielana przecinkami można zmodyfikować w przykładzie przedstawionym w uwagi dla <xref:System.Windows.Documents.Glyphs> klasy; `StyleSimulations = "BoldSimulation"` może stać się `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>jest inna właściwość, w którym można określić więcej niż jedną wartość wyliczenia. Jednak ta właściwość się nie dzieje się w szczególnych przypadkach, ponieważ <xref:System.Windows.Input.ModifierKeys> wyliczenie obsługuje własny typ konwertera. Konwerter typu dla Modyfikatory używa znak plus (+) jako ogranicznik zamiast przecinka (,). Ta konwersja obsługuje bardziej tradycyjnej składni do reprezentowania kombinacje klawiszy w programowaniu Windows firmy Microsoft, takich jak "Ctrl + Alt".  
+ Flagwise wyliczenia, które obsługują atrybuty, które są można ustawić w języku XAML są rzadko na platformie WPF. Jednak jest jedno takie wyliczenie <xref:System.Windows.Media.StyleSimulations>. Można na przykład użyć składni atrybutu flagwise rozdzielana przecinkami można zmodyfikować w przykładzie przedstawionym w uwagi dla <xref:System.Windows.Documents.Glyphs> klasy; `StyleSimulations = "BoldSimulation"` może stać się `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> jest inna właściwość, w którym można określić więcej niż jedną wartość wyliczenia. Jednak ta właściwość się nie dzieje się w szczególnych przypadkach, ponieważ <xref:System.Windows.Input.ModifierKeys> wyliczenie obsługuje własny typ konwertera. Konwerter typu dla Modyfikatory używa znak plus (+) jako ogranicznik zamiast przecinka (,). Ta konwersja obsługuje bardziej tradycyjnej składni do reprezentowania kombinacje klawiszy w programowaniu Windows firmy Microsoft, takich jak "Ctrl + Alt".  
   
 ### <a name="properties-and-event-member-name-references"></a>Właściwości i zdarzenia odwołania do nazwy elementu członkowskiego  
  Podczas określania atrybutu, możesz odwoływać się żadnych właściwości lub zdarzenia, która istnieje jako element członkowski typu CLR, który można utworzyć wystąpienia zawierający element object.  
@@ -267,7 +255,7 @@ W tym temacie opisano terminy, które służą do opisywania elementy składni j
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- W tym miejscu `StaticResource` identyfikuje <xref:System.Windows.StaticResourceExtension> klasa dostarcza implementację rozszerzenia znaczników. Ciąg dalej `MyStyle` jest używany jako dane wejściowe dla innych niż domyślne <xref:System.Windows.StaticResourceExtension> konstruktora, gdzie parametr pobrane z ciągu rozszerzenia deklaruje żądany <xref:System.Windows.ResourceKey>. `MyStyle`powinien być [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) wartość <xref:System.Windows.Style> definiowany jako zasób. [StaticResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) użycia żądań, że zasób służyć do zapewnienia <xref:System.Windows.Style> wartość właściwości przy użyciu logiki wyszukiwania zasobów statycznych w czasie ładowania.  
+ W tym miejscu `StaticResource` identyfikuje <xref:System.Windows.StaticResourceExtension> klasa dostarcza implementację rozszerzenia znaczników. Ciąg dalej `MyStyle` jest używany jako dane wejściowe dla innych niż domyślne <xref:System.Windows.StaticResourceExtension> konstruktora, gdzie parametr pobrane z ciągu rozszerzenia deklaruje żądany <xref:System.Windows.ResourceKey>. `MyStyle` powinien być [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) wartość <xref:System.Windows.Style> definiowany jako zasób. [StaticResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) użycia żądań, że zasób służyć do zapewnienia <xref:System.Windows.Style> wartość właściwości przy użyciu logiki wyszukiwania zasobów statycznych w czasie ładowania.  
   
  Aby uzyskać więcej informacji na temat rozszerzeń znaczników, zobacz [rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Odwołania do rozszerzenia znaczników i innych XAML programowania Funkcje włączane w ogólne implementacji .NET XAML, zobacz [Namespace XAML (x:) Funkcje języka](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Dla rozszerzenia znaczników dla określonych WPF, zobacz [WPF XAML rozszerzenia](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
   
@@ -309,13 +297,13 @@ W tym temacie opisano terminy, które służą do opisywania elementy składni j
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`działa, ponieważ kwalifikowaną wyszukiwania dla tej właściwości na <xref:System.Windows.Controls.Button> zakończy się pomyślnie (<xref:System.Windows.Controls.Control.Background%2A> została odziedziczona z kontroli) i <xref:System.Windows.Controls.Button> jest klasa elementu obiekt lub klasa bazowa. `Control.Background`działa, ponieważ <xref:System.Windows.Controls.Control> klasa faktycznie definiuje <xref:System.Windows.Controls.Control.Background%2A> i <xref:System.Windows.Controls.Control> jest <xref:System.Windows.Controls.Button> klasy podstawowej.  
+ `Button.Background` działa, ponieważ kwalifikowaną wyszukiwania dla tej właściwości na <xref:System.Windows.Controls.Button> zakończy się pomyślnie (<xref:System.Windows.Controls.Control.Background%2A> została odziedziczona z kontroli) i <xref:System.Windows.Controls.Button> jest klasa elementu obiekt lub klasa bazowa. `Control.Background` działa, ponieważ <xref:System.Windows.Controls.Control> klasa faktycznie definiuje <xref:System.Windows.Controls.Control.Background%2A> i <xref:System.Windows.Controls.Control> jest <xref:System.Windows.Controls.Button> klasy podstawowej.  
   
  Jednak następujące *typeName*. *memberName* przykład formularza nie działa i jest wyświetlany w związku z tym komentarze:  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>jest innej klasy pochodnej z <xref:System.Windows.Controls.Control>, i ma określony `Label.Background` w <xref:System.Windows.Controls.Label> object element, to użycie będą działały. Jednak ponieważ <xref:System.Windows.Controls.Label> nie jest klasa lub klasa podstawowa <xref:System.Windows.Controls.Button>, określonego zachowania procesora XAML jest następnie przetwarzanie `Label.Background` jako dołączona właściwość. `Label.Background`nie jest dostępne właściwości dołączonej i użycia nie powiedzie się.  
+ <xref:System.Windows.Controls.Label> jest innej klasy pochodnej z <xref:System.Windows.Controls.Control>, i ma określony `Label.Background` w <xref:System.Windows.Controls.Label> object element, to użycie będą działały. Jednak ponieważ <xref:System.Windows.Controls.Label> nie jest klasa lub klasa podstawowa <xref:System.Windows.Controls.Button>, określonego zachowania procesora XAML jest następnie przetwarzanie `Label.Background` jako dołączona właściwość. `Label.Background` nie jest dostępne właściwości dołączonej i użycia nie powiedzie się.  
   
 ### <a name="basetypenamemembername-property-elements"></a>Elementy właściwości baseTypeName.memberName  
  W sposób analogiczny, jak *typeName*. *memberName* formularza działa w przypadku Składnia atrybutu *baseTypeName*. *memberName* składni działa w przypadku składni elementu właściwości. Na przykład działa następującej składni:  

@@ -1,29 +1,17 @@
 ---
 title: Zabezpieczenia przepływu pracy
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>Zabezpieczenia przepływu pracy
-Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Interakcja z tych technologii może powodować problemy z zabezpieczeniami z przepływem pracy, jeśli wykonane nieprawidłowo.  
+Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i Windows Communication Foundation (WCF). Interakcja z tych technologii może powodować problemy z zabezpieczeniami z przepływem pracy, jeśli wykonane nieprawidłowo.  
   
 ## <a name="persistence-security-concerns"></a>Problemy z zabezpieczeniami trwałości  
   
@@ -49,7 +37,7 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
   
 ## <a name="considerations-for-workflowservicehost"></a>Zagadnienia dotyczące obiektu WorkflowServiceHost  
   
--   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] punkty końcowe używane w przepływach pracy powinny być chronione. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń usługi WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Punkty końcowe usług Windows Communication Foundation (WCF) używany w przepływach pracy powinny być zabezpieczone. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń usługi WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Zezwolenie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [jak: tworzenie Menedżera autoryzacji niestandardowej dla usługi](http://go.microsoft.com/fwlink/?LinkId=192228) szczegółowe informacje. Jest to również przedstawiono w poniższym przykładzie: [zabezpieczania usług przepływu pracy](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

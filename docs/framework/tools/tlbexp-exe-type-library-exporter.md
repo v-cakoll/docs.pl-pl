@@ -1,13 +1,6 @@
 ---
-title: "Tlbexp.exe (Eksporter biblioteki typów)"
-ms.custom: 
+title: Tlbexp.exe (Eksporter biblioteki typów)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - exporting type library [.NET Framework]
 - exporter tool [.NET Framework]
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47710b81de79a9dfbb6bddd39035be2986350b0e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Eksporter biblioteki typów)
 Eksporter biblioteki typów generuje bibliotekę typów, która opisuje typy zdefiniowane w zestawie środowiska uruchomieniowego języka wspólnego.  
@@ -53,7 +43,7 @@ tlbexp assemblyName [options]
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/oldnames**|Wymusza na Tlbexp.exe eksport uzupełnionych nazw typu, gdy występuje konflikt nazw typu. Należy zauważyć, że było to zachowanie domyślne w wersjach wcześniejszych niż .NET Framework w wersji 2.0.|  
 |**/ out:** *pliku*|Określa nazwę pliku biblioteki typów do wygenerowania. Jeżeli pominięto tę opcję, Tlbexp.exe generuje bibliotekę typów o takiej samej nazwie co zestaw (rzeczywista nazwa zestawu, która niekoniecznie jest taka sama jak nazwa pliku zawierającego zestaw) i rozszerzenie .tlb.|  
-|**/ wyłączeniu:**`warningnumber`|Pomija wyświetlanie określonego ostrzeżenia. Nie można użyć tej opcji z **/silent**.|  
+|**/silence:** `warningnumber`|Pomija wyświetlanie określonego ostrzeżenia. Nie można użyć tej opcji z **/silent**.|  
 |**/silent**|Pomija wyświetlanie komunikatów o sukcesie. Nie można użyć tej opcji z **/wyłączeniu**.|  
 |**/tlbreference:** *typelibraryname*|Wymusza na Tlbexp.exe jawne rozwiązanie odwołań do biblioteki typów bez konsultacji z rejestrem. Na przykład jeśli zestaw B odwołuje się do zestawu A, można użyć tej opcji, aby dostarczyć jawne odwołanie do biblioteki typów, zamiast polegać na bibliotece typów określonej w rejestrze. Tlbexp.exe wykonuje sprawdzenie wersji, aby zapewnić zgodność wersji biblioteki typów z wersją zestawu; w przeciwnym wypadku wygeneruje błąd.<br /><br /> Należy pamiętać, że **tlbreference** opcji nadal sprawdza rejestru w przypadkach, gdy <xref:System.Runtime.InteropServices.ComImportAttribute> atrybut jest stosowany do interfejsu, który następnie jest implementowane za pomocą innego typu.|  
 |**/tlbrefpath:** *ścieżki*|W pełni kwalifikowana ścieżka do biblioteki typów, do którego się odwoływano.|  
@@ -63,7 +53,7 @@ tlbexp assemblyName [options]
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 > [!NOTE]
->  W opcjach wiersza polecenia programu Tlbexp.exe nie jest rozróżniana wielkość liter i opcje mogą być podawane w dowolnej kolejności. Wystarczy określić część nazwy opcji umożliwiającą jej jednoznaczną identyfikację. Na przykład  **/n**  jest odpowiednikiem **/nologo**, i **/o:** *outfile.tlb* jest odpowiednikiem   **/out:**  *outfile.tlb*.  
+>  W opcjach wiersza polecenia programu Tlbexp.exe nie jest rozróżniana wielkość liter i opcje mogą być podawane w dowolnej kolejności. Wystarczy określić część nazwy opcji umożliwiającą jej jednoznaczną identyfikację. Na przykład **/n** jest odpowiednikiem **/nologo**, i **/o:** *outfile.tlb* jest odpowiednikiem **/out:**  *outfile.tlb*.  
   
 ## <a name="remarks"></a>Uwagi  
  Tlbexp.exe generuje bibliotekę typów, która zawiera definicje typów zdefiniowanych w zestawie. Aplikacje, takie jak Visual Basic 6.0, mogą użyć wygenerowanej biblioteki typów, aby utworzyć powiązanie z typami .NET zdefiniowanymi w zestawie.  

@@ -1,42 +1,31 @@
 ---
-title: "Dane wejściowe do klasy XslCompiledTransform"
-ms.custom: 
+title: Dane wejściowe do klasy XslCompiledTransform
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Dane wejściowe do klasy XslCompiledTransform
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> Metoda przyjmuje trzech typów dla dokumentu źródłowego wejściowych: obiekt, który implementuje <xref:System.Xml.XPath.IXPathNavigable> interfejsu <xref:System.Xml.XmlReader> obiekt, który odczytuje dokument źródłowy lub ciąg identyfikatora URI.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslCompiledTransform> Klasy zachowuje biały znak domyślnie. Jest to zgodne z sekcji 3.4 zalecenie W3C XSLT 1.0 (sekcji 3.4, http://www.w3.org/TR/xslt.html#strip).  
+>  <xref:System.Xml.Xsl.XslCompiledTransform> Klasy zachowuje biały znak domyślnie. Jest to zgodne z sekcji 3.4 zalecenie W3C XSLT 1.0 (sekcja 3.4, http://www.w3.org/TR/xslt.html#strip).  
   
 ## <a name="ixpathnavigable-interface"></a>Interfejs IXPathNavigable  
  <xref:System.Xml.XPath.IXPathNavigable> Interfejs jest wdrażany w <xref:System.Xml.XmlNode> i <xref:System.Xml.XPath.XPathDocument> klasy. Te klasy reprezentują w pamięci podręcznej danych XML.  
   
 -   <xref:System.Xml.XmlNode> Klasy jest oparta na W3C modelu DOM (Document Object) i obejmuje możliwości edycji.  
   
--   <xref:System.Xml.XPath.XPathDocument> Klasy jest oparte na modelu danych XPath magazyn danych tylko do odczytu. <xref:System.Xml.XPath.XPathDocument>Klasa zalecane dla XSLT jest przetwarzanie. Zapewnia większą wydajność w porównaniu z <xref:System.Xml.XmlNode> klasy.  
+-   <xref:System.Xml.XPath.XPathDocument> Klasy jest oparte na modelu danych XPath magazyn danych tylko do odczytu. <xref:System.Xml.XPath.XPathDocument> Klasa zalecane dla XSLT jest przetwarzanie. Zapewnia większą wydajność w porównaniu z <xref:System.Xml.XmlNode> klasy.  
   
 > [!NOTE]
 >  Przekształcenia mają zastosowanie do dokumentu jako całość. Innymi słowy w przypadku przekazania w węźle innym niż węzeł główny dokumentu, to nie zapobiega proces przekształcania podczas uzyskiwania dostępu do wszystkich węzłów w załadowanego dokumentu. Aby przekształcić fragmentu węzła, należy utworzyć obiekt zawierający tylko fragmentu węzeł i przekazać do obiektu <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody. Aby uzyskać więcej informacji, zobacz [porady: Przekształcanie fragmentu węzła](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  

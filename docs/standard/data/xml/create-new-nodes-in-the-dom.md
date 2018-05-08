@@ -1,26 +1,15 @@
 ---
-title: "Utwórz nowe węzły w modelu DOM"
-ms.custom: 
+title: Utwórz nowe węzły w modelu DOM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 195c0f8184bbbd84826def87ce74daa49965cb93
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bbc8d6c1055afc1a0799522f341551d04bab4ace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Utwórz nowe węzły w modelu DOM
 <xref:System.Xml.XmlDocument> Ma metody create dla wszystkich typów węzłów. Podaj metodę o nazwie, gdy jest to wymagane, a zawartości lub inne parametry dla tych węzłów, które ma zawartość (na przykład węzeł tekstowy) i węzłem, jest tworzona. Dostępne są następujące metody: te, które wymagają nazwy i kilka innych parametrów wprowadzić, aby utworzyć odpowiedni węzeł.  

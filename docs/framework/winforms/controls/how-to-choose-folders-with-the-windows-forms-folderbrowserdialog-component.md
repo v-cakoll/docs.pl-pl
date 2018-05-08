@@ -1,13 +1,6 @@
 ---
-title: "Porady: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de41d5664c2481032dffe213a52779834338ca2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 657aad6efa195ec3d9741f4f91d4e01af4a54a19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Porady: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows
 Często w aplikacji systemu Windows, które możesz utworzyć, konieczne będzie monitować użytkowników, aby wybrać folder, większość często, aby zapisać zestawu plików. Formularze systemu Windows <xref:System.Windows.Forms.FolderBrowserDialog> składnik umożliwia łatwe wykonać to zadanie.  

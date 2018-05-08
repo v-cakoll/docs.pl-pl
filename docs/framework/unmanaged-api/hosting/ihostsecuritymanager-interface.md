@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager — Interfejs"
-ms.custom: 
+title: IHostSecurityManager — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 44f2272c0f4e1423c222a004559d7bbd58237d82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f60730fedef4876f81f078f811104777050175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager — Interfejs
 Udostępnia metody, które umożliwiają dostęp do i kontrolę nad wątku aktualnie wykonywane w kontekście zabezpieczeń.  
@@ -49,7 +37,7 @@ Udostępnia metody, które umożliwiają dostęp do i kontrolę nad wątku aktua
 |[SetThreadToken, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|Ustawia dojście wątku aktualnie wykonywane.|  
   
 ## <a name="remarks"></a>Uwagi  
- Hosta można kontrolować kod dostęp do tokenów wątku przez środowisko uruchomieniowe języka wspólnego (CLR) i kod użytkownika. Zapewnia również Zabezpieczenia pełne informacje o kontekście jest przekazywany przez operacje asynchroniczne lub punktów kodowych z ograniczeniami kod dostępu. `IHostSecurityContext`hermetyzuje informacje kontekstu zabezpieczeń, które jest nieprzezroczysta dla środowiska CLR.  
+ Hosta można kontrolować kod dostęp do tokenów wątku przez środowisko uruchomieniowe języka wspólnego (CLR) i kod użytkownika. Zapewnia również Zabezpieczenia pełne informacje o kontekście jest przekazywany przez operacje asynchroniczne lub punktów kodowych z ograniczeniami kod dostępu. `IHostSecurityContext` hermetyzuje informacje kontekstu zabezpieczeń, które jest nieprzezroczysta dla środowiska CLR.  
   
  Środowisko CLR wewnętrznie obsługuje kontekstu zarządzanego wątku. Wysyła zapytanie dotyczące procesu `IHostSecurityManager` w następujących sytuacjach:  
   
@@ -68,7 +56,7 @@ Udostępnia metody, które umożliwiają dostęp do i kontrolę nad wątku aktua
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IHostSecurityContext, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

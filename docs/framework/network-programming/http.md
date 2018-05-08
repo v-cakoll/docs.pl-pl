@@ -1,12 +1,6 @@
 ---
 title: HTTP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - protocols, HTTP
 - sending data, HTTP
@@ -19,16 +13,14 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f72a77e19d04c0dd55887628033f7c975ac3ff25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed61a8addd204320560c773e917613c52e56bff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http"></a>HTTP
 .NET Framework zapewnia kompleksowe obsługę protokołu HTTP, dzięki czemu większość cały ruch internetowy, z <xref:System.Net.HttpWebRequest> i <xref:System.Net.HttpWebResponse> klasy. Te klasy wyprowadzone z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, zwracane są domyślnie zawsze, gdy metody statycznej <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> napotka przez identyfikator URI rozpoczynający się od "http" lub "https". W większości przypadków **WebRequest** i **WebResponse** klasy podać wszystko jest to niezbędne do zapewnienia żądania, ale jeśli potrzebny jest dostęp do funkcji specyficzne dla protokołu HTTP udostępniony jako właściwości, można rzutowanie typu te klasy do **HttpWebRequest** lub **HttpWebResponse**.  

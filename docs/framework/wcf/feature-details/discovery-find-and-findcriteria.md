@@ -1,26 +1,12 @@
 ---
 title: Odnajdywanie — znajdowanie i kryteria znajdowania
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
 Operacja find odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi z wiadomości WS-Discovery ProbeMatch. Aby uzyskać więcej informacji na temat wiadomości odnajdywania, zobacz [specyfikacji WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -33,7 +19,7 @@ Operacja find odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, 
   
  Kryteria wyszukiwania, obejmują:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -Opcjonalne. Nazwa kontraktu usługi wyszukane i kryteria zwykle używana podczas wyszukiwania dla usługi. Jeśli określono więcej niż jedną nazwę kontraktu, Odpowiedz, tylko punktów końcowych usługi dopasowania wszystkich umów. Należy pamiętać, że w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktu końcowego może obsługiwać tylko jeden kontrakt.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -Opcjonalne. Nazwa kontraktu usługi wyszukane i kryteria zwykle używana podczas wyszukiwania dla usługi. Jeśli określono więcej niż jedną nazwę kontraktu, Odpowiedz, tylko punktów końcowych usługi dopasowania wszystkich umów. Należy pamiętać, że w programie WCF punktu końcowego może obsługiwać tylko jeden kontrakt.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -Opcjonalne. Zakresy są bezwzględne klasyfikowania punktów końcowych usługi poszczególnych identyfikatorów URI. Możesz użyć tej funkcji w scenariuszach, w której wiele punktów końcowych narazić ten sam kontrakt, i chcesz sposobem wyszukiwania dla podzbioru punktów końcowych. Jeśli określono więcej niż jednego zakresu, Odpowiedz, tylko punktów końcowych usługi dopasowania wszystkich zakresów.  
   

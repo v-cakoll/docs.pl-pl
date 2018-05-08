@@ -1,26 +1,12 @@
 ---
 title: Działania dotyczące komunikatów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bbc9fdfff5b5c6ab6e56af12269061f06bb79404
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ae03b1671aa5c938bb3897edb919643f795f8a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messaging-activities"></a>Działania dotyczące komunikatów
 Zezwalaj na działania obsługi komunikatów przepływy pracy w celu wysyłania i odbierania wiadomości WCF. Przez dodanie obsługi komunikatów działań w przepływie pracy można modelu żadnych wiadomości arbitralnie złożonych wzorców programu exchange (MEP).  

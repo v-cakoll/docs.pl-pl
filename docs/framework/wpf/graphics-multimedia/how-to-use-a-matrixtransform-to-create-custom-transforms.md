@@ -1,28 +1,14 @@
 ---
-title: "Jak użyć MatrixTransform do utworzenia niestandardowych przekształceń"
-ms.custom: 
+title: Jak użyć MatrixTransform do utworzenia niestandardowych przekształceń
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1414ae590be10c3adcc6857492e23bf659beec67
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ffbefea498e9a2bdc5546d112f6ff10e12fed67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Jak użyć MatrixTransform do utworzenia niestandardowych przekształceń
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.MatrixTransform> do tłumaczenia (przenoszenia) pozycji, rozciąganie i pochylanie z <xref:System.Windows.Controls.Button>.  

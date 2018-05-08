@@ -1,29 +1,15 @@
 ---
 title: Publikowanie usług WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Usługa publikowania pomaga w postępu wczesne środowiska programowania dostarczonych przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego faktycznie wdrażanie aplikacji w środowisku produkcyjnym do celów testowych. Przed dokonaniem planu wdrożenia końcowego można użyć [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi publikowania, aby sprawdzić, czy Twoje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa wykonuje poprawnie i jest gotowy do opublikowania. Można również wdrożyć Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi biblioteki do testowania różnych miejsc docelowych.  
+Publikowanie usługi Windows Communication Foundation (WCF) pomaga w postępu wczesne środowiska programowania udostępniane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego faktycznie wdrażanie aplikacji do środowiska produkcyjnego środowisko do celów testowych. Przed dokonaniem planu wdrożenia końcowego umożliwia publikowanie usługi Windows Communication Foundation (WCF) upewnij się, że Twoje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa wykonuje poprawnie i jest gotowy do opublikowania. Można również wdrożyć Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi biblioteki do testowania różnych miejsc docelowych.  
   
 ## <a name="supported-services-and-target-locations"></a>Obsługiwane usługi i lokalizacji docelowej  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Usługa publikowania obsługuje publikowanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług utworzone na podstawie zestawu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablony bibliotek usługi oraz ich odpowiednich szablony elementów, które obejmują następujące:  
@@ -51,13 +37,13 @@ ms.lasthandoff: 03/26/2018
   
 3.  **Publikowania** zostanie wyświetlone okno. Kliknij przycisk **...** . przycisk, aby określić lokalizację docelową, wdrożona usługa. Można wybrać do wdrożenia aplikacji w lokalnych usług IIS, System plików lub witryny FTP. Jeśli wdrażana aplikacja lokalne usługi IIS, można wybrać witryny sieci Web i utworzyć aplikację sieci web, w obszarze, klikając **Tworzenie nowej aplikacji sieci Web** ikonę w prawym górnym rogu.  
   
-4.  Po kliknięciu **publikowania** w oknie głównym programu Visual Studio wdraża aplikację określona lokalizacja docelowa i kopiuje pliki Web.config, SVC i zestawu do katalogu docelowego. . Nazwa .svc będzie "ProjectName.ServiceName.svc". Po pomyślnym opublikowaniu usługi popularne łącze można znaleźć w oknie programu Visual Studio dane wyjściowe wygląda podobnie do "Łączenie HYPERLINK"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName...". Można nacisnąć klawisze CTRL i kliknij łącze, aby otworzyć stronę przeglądarki w programie Visual Studio, aby wyświetlić strukturę katalogu usługi.  
+4.  Po kliknięciu **publikowania** w oknie głównym programu Visual Studio wdraża aplikację określona lokalizacja docelowa i kopiuje pliki Web.config, SVC i zestawu do katalogu docelowego. . Nazwa .svc będzie "ProjectName.ServiceName.svc". Po pomyślnym opublikowaniu usługi popularne łącze można znaleźć w oknie programu Visual Studio dane wyjściowe, które jest podobny do "Łączenie HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...". Można nacisnąć klawisze CTRL i kliknij łącze, aby otworzyć stronę przeglądarki w programie Visual Studio, aby wyświetlić strukturę katalogu usługi.  
   
-     Jeśli nie możesz przeglądać do lokacji, może ponieważ przeglądarka katalogów jest wyłączona w usługach IIS. Wykonaj porady w sekcji "Czynności możesz spróbować", aby ją włączyć. Można również bezpośrednio można wpisać"HYPERLINK"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" Aby wyświetlić stronę usługi.  
+     Jeśli nie możesz przeglądać do lokacji, może ponieważ przeglądarka katalogów jest wyłączona w usługach IIS. Wykonaj porady w sekcji "Czynności możesz spróbować", aby ją włączyć. Można również bezpośrednio można wpisać"HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc", aby wyświetlić stronę usługi.  
   
  Można użyć **publikowania** Określ, czy chcesz skopiować zestaw, konfiguracji i pliku svc dla wszystkich usług zdefiniowanych w projekcie do lokalizacji docelowej i nadpisać istniejące pliki w miejscu docelowym.  
   
- Jeśli chcesz wdrożyć aplikację na lokalne usługi IIS, mogą wystąpić błędy związane z instalacji usług IIS. Upewnij się, że usługi IIS są poprawnie zainstalowane. Można wpisać "HYPERLINK"http://localhost"http://localhost" w przeglądarce i sprawdź, czy jest wyświetlana domyślna strona usług IIS.  W niektórych przypadkach problemów może być spowodowane przez platformę ASP.NET lub [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] niewłaściwy rejestracji w usługach IIS. Można otworzyć wiersz polecenia programu Visual Studio i uruchom polecenie "aspnet_regiis.exe - ir", aby rozwiązać problemy dotyczące rejestracji programu ASP.NET lub uruchom polecenie "ServiceModelReg.exe — ia" poprawka WCF rejestracji problemów.  
+ Jeśli chcesz wdrożyć aplikację na lokalne usługi IIS, mogą wystąpić błędy związane z instalacji usług IIS. Upewnij się, że usługi IIS są poprawnie zainstalowane. Można wpisać "HYPERLINK"http://localhost" http://localhost" w Twojej przeglądarce i sprawdź, czy domyślna strona usług IIS jest wyświetlane, odkąd.  W niektórych przypadkach problemów może być spowodowane przez platformę ASP.NET lub [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] niewłaściwy rejestracji w usługach IIS. Można otworzyć wiersz polecenia programu Visual Studio i uruchom polecenie "aspnet_regiis.exe - ir", aby rozwiązać problemy dotyczące rejestracji programu ASP.NET lub uruchom polecenie "ServiceModelReg.exe — ia" poprawka WCF rejestracji problemów.  
   
 ## <a name="files-generated-for-publishing"></a>Pliki utworzone dla publikacji  
  Przed [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki usługi może być hostowana w sieci Web, następujące pliki są generowane przez narzędzie: zestaw plików, pliku Web.config i pliku svc. Wszystkie pliki są kopiowane do lokalizacji docelowej. Następnie publikowany jest opis usługi.  
@@ -68,7 +54,7 @@ ms.lasthandoff: 03/26/2018
 ### <a name="svc-file"></a>. Pliku SVC  
  Operacja publikowania generuje plik *.svc dla każdego [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, czy plik istnieje lub nie, aby upewnić się, ważność wersji. Istnieją dwa typy plików svc: jeden dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki usługi i zespolonego usługi biblioteki, a innym sekwencyjnego i Biblioteka usługi przepływu pracy komputera stanu. Wygenerowany \*pliku svc jest kopiowany do folderu głównego w lokalizacji docelowej.  
   
-### <a name="webconfig-file"></a>Web.config File  
+### <a name="webconfig-file"></a>Plik Web.config  
  Zawsze, gdy projekt jest opublikowana w lokalizacji docelowej określonej tworzenia pliku Web.config.  
   
  Wygenerowany plik Web.config zawiera sekcje sieci Web, które są przydatne w przypadku usługi hostingu sieci Web i zawartość pliku App.config dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki usługi z następującymi zmianami:  

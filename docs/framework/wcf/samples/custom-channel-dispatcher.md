@@ -1,30 +1,18 @@
 ---
-title: "Niestandardowy dyspozytor kanału"
-ms.custom: 
+title: Niestandardowy dyspozytor kanału
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c67425c67625fcfcfaac5ec689f4f70dbd3d64f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Niestandardowy dyspozytor kanału
 Ten przykład demonstruje sposób tworzenia kanału stosu w niestandardowy sposób zaimplementowanie <xref:System.ServiceModel.ServiceHostBase> bezpośrednio oraz sposobu tworzenia dyspozytora niestandardowym kanale w środowisku hosta sieci Web. Dyspozytor kanału współdziała z <xref:System.ServiceModel.Channels.IChannelListener> ma akceptować komunikaty kanałów i pobiera ze stosu kanału. W tym przykładzie przedstawiono również podstawowy przykład demonstrujące sposób tworzenia kanału stosu w środowisku hosta sieci Web przy użyciu <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
 ## <a name="custom-servicehostbase"></a>Niestandardowe obiektu ServiceHostBase.  
- W tym przykładzie implementuje typ podstawowy <xref:System.ServiceModel.ServiceHostBase> zamiast <xref:System.ServiceModel.ServiceHost> do pokazują, jak zastąpić [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stosu implementacji z wiadomością niestandardową obsługę warstwy na szczycie stosu kanału. Należy przesłonić metodę wirtualną <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> tworzenie odbiorniki kanałów i dyspozytora kanału.  
+ W tym przykładzie implementuje typ podstawowy <xref:System.ServiceModel.ServiceHostBase> zamiast <xref:System.ServiceModel.ServiceHost> do pokazują, jak zastąpić wiadomość niestandardową obsługę warstwy na szczycie stosu kanału implementacji stosu Windows Communication Foundation (WCF). Należy przesłonić metodę wirtualną <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> tworzenie odbiorniki kanałów i dyspozytora kanału.  
   
  Do wdrożenia usługi sieci Web hostowanych, pobierz rozszerzenie usługi <xref:System.ServiceModel.Activation.VirtualPathExtension> z <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> kolekcji i dodaj go do <xref:System.ServiceModel.Channels.BindingParameterCollection> tak, aby warstwy transportowej wie, jak skonfigurować odbiornika kanałów na podstawie ustawień środowiska hostingu, który jest Internet Information Services (IIS) / ustawienia usługi aktywacji procesów systemu Windows (WAS).  
   
@@ -34,7 +22,7 @@ Ten przykład demonstruje sposób tworzenia kanału stosu w niestandardowy spos�
  Dyspozytor otwierania odbiornika kanałów i następnie akceptuje pojedyncze kanału odpowiedzi. Z kanału rozpoczyna się do wysyłania wiadomości (liczba żądań) w pętli nieskończonej. Dla każdego żądania tworzy komunikat odpowiedzi i wysyła je z powrotem do klienta.  
   
 ## <a name="creating-a-response-message"></a>Tworzenie komunikatu odpowiedzi  
- Przetwarzanie komunikatów jest zaimplementowany w typie `MyServiceManager`. W `HandleRequest` metody `Action` nagłówka wiadomości jest najpierw sprawdzane w celu sprawdzenia, czy żądanie jest obsługiwane. Wstępnie zdefiniowane akcji SOAP "http://tempuri.org/HelloWorld/Hello" zdefiniowano zapewnienie filtrowania wiadomości. To jest podobny do koncepcji kontraktu usługi w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacja <xref:System.ServiceModel.ServiceHost>.  
+ Przetwarzanie komunikatów jest zaimplementowany w typie `MyServiceManager`. W `HandleRequest` metody `Action` nagłówka wiadomości jest najpierw sprawdzane w celu sprawdzenia, czy żądanie jest obsługiwane. A wstępnie zdefiniowane akcji SOAP "http://tempuri.org/HelloWorld/Hello" zdefiniowano w celu zapewnienia filtrowania wiadomości. To jest podobny do koncepcji kontraktu usługi w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacja <xref:System.ServiceModel.ServiceHost>.  
   
  W przypadku poprawne akcji SOAP próbki pobiera dane żądanej wiadomości i generuje odpowiadająca mu reakcja na żądanie, podobnie jak co jest widoczne w <xref:System.ServiceModel.ServiceHost> przypadku.  
   
@@ -62,6 +50,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

@@ -1,12 +1,6 @@
 ---
 title: -= — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.-=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 753e3efca311da9e09c67131969626ff59c130f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 598fd9db4262d0a33bf0408ebe9455760d5e4506
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="--operator-visual-basic"></a>-= — Operator (Visual Basic)
 Odejmuje wartość wyrażenia z wartości zmiennej lub właściwości, a następnie przypisuje wynik do zmiennej lub właściwości.  
@@ -36,10 +27,10 @@ variableorproperty -= expression
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagany. Zmienna numeryczna lub właściwość.  
+ Wymagana. Zmienna numeryczna lub właściwość.  
   
  `expression`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagana. Dowolne wyrażenie liczbowe.  
   
 ## <a name="remarks"></a>Uwagi  
  Element po lewej stronie `-=` operator może być zmienną skalarną proste, właściwością lub element tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  

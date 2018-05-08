@@ -1,28 +1,16 @@
 ---
-title: "Przegląd Animacja kluczowych klatek"
-ms.custom: 
+title: Przegląd Animacja kluczowych klatek
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>Przegląd Animacja kluczowych klatek
 W tym temacie przedstawiono klucza ramki animacji. Klucz poklatkowych umożliwiają animować przy użyciu więcej niż dwóch wartości docelowych i kontrolować metodę interpolacji animacji.  
@@ -57,11 +45,11 @@ W tym temacie przedstawiono klucza ramki animacji. Klucz poklatkowych umożliwia
   
  Klasy klucza ramki animacji należą do <xref:System.Windows.Media.Animation> przestrzeni nazw i być zgodne z następującą konwencją nazewnictwa:  
   
- *\<Typ >*`AnimationUsingKeyFrames`  
+ *\<Typ >* `AnimationUsingKeyFrames`  
   
  Gdzie  *\<typu >* jest typ wartości, które animuje klasy.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia następujące klasy klucza ramki animacji.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia następujące klasy klucza ramki animacji.  
   
 |Typ właściwości|Odpowiadającą klasę z lub do/przez animacji|Obsługiwane metody interpolacji|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -90,7 +78,7 @@ W tym temacie przedstawiono klucza ramki animacji. Klucz poklatkowych umożliwia
 ## <a name="target-values-key-frames-and-key-times"></a>Wartości (klatek kluczowych) docelowych i czasy klucza  
  Tak samo, jak są różnego rodzaju klucza poklatkowych dla różnych typach właściwości animacji, są także różne typy obiektów klatki: jeden dla każdego typu wartości animowany i metodę interpolacji obsługiwane. Typy klatki być zgodne z następującą konwencją nazewnictwa:  
   
- *\<InterpolationMethod >\<typu >*`KeyFrame`  
+ *\<InterpolationMethod >\<typu >* `KeyFrame`  
   
  Gdzie  *\<InterpolationMethod >* jest metodę interpolacji używa klatek kluczowych i  *\<typu >* jest typ wartości, które animuje klasy. Animację klucza ramki, która obsługuje wszystkie trzy interpolacji metody ma trzy typy klatki, które są dostępne. Na przykład można użyć trzech typów klatki z <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, i <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Metody interpolacji opisano szczegółowo w dalszej części artykułu.)  
   
@@ -290,7 +278,7 @@ Kluczowych krzywej składanej za pomocą formantu punktów (0,25, 0,5) i (0,75, 
   
 6.  Rozwiąż <xref:System.Windows.Media.Animation.KeyTime> wartości klatek kluczowych z nieokreśloną razy klucza przy użyciu klucza ramek zadeklarowany najbliżej nich, które zostały rozwiązane <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   
-7.  Rozwiąż pozostałych <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> użyj <xref:System.Windows.Media.Animation.KeyTime> wartości sąsiadujących klucza ramek, aby określić czas rozwiązane.  Celem jest zapewnienie stałej wokół klatek kluczowych rozpoznać czasu prędkość animacji.  
+7.  Rozwiąż pozostałych <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Użyj <xref:System.Windows.Media.Animation.KeyTime> wartości sąsiadujących klucza ramek, aby określić czas rozwiązane.  Celem jest zapewnienie stałej wokół klatek kluczowych rozpoznać czasu prędkość animacji.  
   
 8.  Sortowanie klatek kluczowych w kolejności rozpoznać czasu (klucz podstawowy) i kolejność deklaracji (klucz pomocniczy), tj., użyj stabilna sortowania oparte na rozwiązaniu klatki <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   

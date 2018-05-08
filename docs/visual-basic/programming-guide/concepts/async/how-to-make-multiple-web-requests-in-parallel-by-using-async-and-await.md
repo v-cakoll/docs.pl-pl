@@ -1,22 +1,12 @@
 ---
-title: "Porady: wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)"
-ms.custom: 
+title: 'Porady: wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Porady: wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)
 W metodzie asynchronicznej zadania są uruchamiane, gdy są tworzone. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator jest stosowany do zadań w momencie w metodzie, której nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadania jest oczekiwane, natychmiast po utworzeniu, jak przedstawiono na poniższym przykładzie.  
@@ -77,9 +67,9 @@ Dim result = Await myTask
   
 3.  Dodaj następujące metody pomocy technicznej do projektu:  
   
-    -   `ProcessURLAsync`używa <xref:System.Net.Http.HttpClient> metodę, aby pobrać zawartość witryny sieci Web w postaci tablicy bajtów. Metoda obsługi `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.  
+    -   `ProcessURLAsync` używa <xref:System.Net.Http.HttpClient> metodę, aby pobrać zawartość witryny sieci Web w postaci tablicy bajtów. Metoda obsługi `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.  
   
-    -   `DisplayResults`Wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. Pokazuje to wyświetlenie podczas każdego zadania został pobrany.  
+    -   `DisplayResults` Wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. Pokazuje to wyświetlenie podczas każdego zadania został pobrany.  
   
      Skopiuj następujące metody i wklej je po `startButton_Click` obsługi zdarzeń w MainWindow.xaml.vb.  
   

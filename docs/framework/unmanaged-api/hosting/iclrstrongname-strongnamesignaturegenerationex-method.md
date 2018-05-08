@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameSignatureGenerationEx — Metoda"
-ms.custom: 
+title: ICLRStrongName::StrongNameSignatureGenerationEx — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameSignatureGenerationEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 247bcfa3c9f7a02dea331ff14948a00812fb06e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bf9a94c55258193e3172459da129ba16f9c3265
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx — Metoda
 Generuje podpisu silnej nazwy dla określonego zestawu, zgodnie z określonym flagi.  
@@ -80,12 +68,12 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Co najmniej jeden z następujących wartości:  
   
--   `SN_SIGN_ALL_FILES`(0x00000001) - ponownie obliczyć wszystkie skróty połączonego modułów.  
+-   `SN_SIGN_ALL_FILES` (0x00000001) - ponownie obliczyć wszystkie skróty połączonego modułów.  
   
--   `SN_TEST_SIGN`(0x00000002) - test Podpisz zestaw.  
+-   `SN_TEST_SIGN` (0x00000002) - test Podpisz zestaw.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK`Jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje niepowodzenie (zobacz [wspólne wartości HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) lista).  
+ `S_OK` Jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje niepowodzenie (zobacz [wspólne wartości HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) lista).  
   
 ## <a name="remarks"></a>Uwagi  
  Określ wartość null dla `wszFilePath` obliczyć rozmiar podpisu bez tworzenia podpisu.  
@@ -103,7 +91,7 @@ HRESULT StrongNameSignatureGenerationEx (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [StrongNameSignatureGeneration, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  

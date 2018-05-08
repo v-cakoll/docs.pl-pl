@@ -1,13 +1,6 @@
 ---
-title: "Stosowanie atrybutów międzyoperacyjności"
-ms.custom: 
+title: Stosowanie atrybutów międzyoperacyjności
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - design-time attributes
 - .NET Framework, exposing components to COM
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea9e12140e351bb5cc2b51ac2efca8a24e94bf2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-interop-attributes"></a>Stosowanie atrybutów międzyoperacyjności
 <xref:System.Runtime.InteropServices> Przestrzeń nazw zawiera trzy kategorie atrybutów specyficzny dla międzyoperacyjności: stosowanych przez użytkownika w czasie projektowania, stosowane przez COM interop narzędzia i interfejsy API w procesie konwersji i stosowane przez COM interop.  

@@ -2,11 +2,11 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 9312d5f7544a794f036f0a623df0d537eb96d145
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9e44ddcc3a3e983abe6e36d4b6095c5c4a67529f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Określa ustawienia konfiguracji sieci. TCP Port usługi udostępniania, dzięki czemu wielu procesom współużytkowanie tego samego portu TCP.  
@@ -55,13 +55,13 @@ Określa ustawienia konfiguracji sieci. TCP Port usługi udostępniania, dzięki
 |`maxPendingAccepts`|Liczba całkowita określająca maksymalną liczbę oczekujących współbieżnych wątków na punkcie końcowym nasłuchiwania dla usługi udostępniania. Wartość domyślna to 2.|  
 |`MaxPendingConnections`|Maksymalna liczba połączeń odbiornika może mieć oczekuje na zatwierdzenie przez aplikację. Po przekroczeniu tej wartości limitu przydziału nowych połączeń przychodzących są usuwane, a nie oczekuje na zatwierdzenie. Połączenie funkcji, takich jak zabezpieczenia wiadomości może spowodować klienta otworzyć więcej niż jedno połączenie. Administratorzy usługi należy uwzględnić te dodatkowe połączenia podczas ustawiania tej wartości limitu przydziału. Wartość domyślna to 10.|  
 |`receiveTimeout`|A `TimeSpan` , który określa limit czasu dla odczytu danych z ramek i wykonania przekazania połączenia z połączeń podkreślonych. Wartość domyślna to "00: 00:10".|  
-|`teredoEnabled`|Wartość logiczna, która wskazuje, czy port udostępnianej usługi używa usługi Microsoft Teredo do nasłuchiwania protokołu TCP porty zastępczy [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług. Wartość domyślna to `false`.|  
+|`teredoEnabled`|Wartość logiczna wskazująca, czy port udostępnianej usługi używa usługi Microsoft Teredo aby nasłuchiwać portów TCP w imieniu usług WCF. Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybutu, aby określić konta użytkowników dla procesów obsługujących [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług i przyznano im dostęp do połączenia z usługą udostępniania.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybutu określ konta użytkowników dla procesów, które host usługi WCF i przyznano im dostęp do połączenia z usługą udostępniania.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

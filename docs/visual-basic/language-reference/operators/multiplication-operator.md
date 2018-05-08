@@ -1,12 +1,6 @@
 ---
 title: '* — Operator (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.*
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 450d728e44ef5639d75369e05b47cb3009b4d769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e2d1000afcf8951e8914335f7b5a278b49f6277
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>* Operator (Visual Basic)
 Mnoży dwie liczby.  
@@ -38,8 +29,8 @@ number1 * number2
   
 |Termin|Definicja|  
 |---|---|  
-|`number1`|Wymagany. Dowolne wyrażenie liczbowe.|  
-|`number2`|Wymagany. Dowolne wyrażenie liczbowe.|  
+|`number1`|Wymagana. Dowolne wyrażenie liczbowe.|  
+|`number2`|Wymagana. Dowolne wyrażenie liczbowe.|  
   
 ## <a name="result"></a>Wynik  
  Wynik jest iloczyn `number1` i `number2`.  
@@ -68,7 +59,7 @@ number1 * number2
  [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [* = — Operator](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [*=, operator](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
  [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

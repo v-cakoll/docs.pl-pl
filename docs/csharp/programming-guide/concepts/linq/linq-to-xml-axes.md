@@ -1,21 +1,12 @@
 ---
 title: LINQ do osi XML (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 212754ca8bafb8c8e2d0dbe076b88d3818e39a68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ do osi XML (C#)
 Po drzewo XML utworzony lub załadowany dokumentu XML na drzewo XML można wykonać zapytanie, aby znaleźć elementy i atrybuty lub pobrać wartości.  
@@ -38,5 +29,5 @@ Po drzewo XML utworzony lub załadowany dokumentu XML na drzewo XML można wykon
 |[Porady: pobieranie skrócona wartość elementu (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Pokazuje, jak pobrać pobieżną wartości elementu.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
  [Przewodnik programowania w języku (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

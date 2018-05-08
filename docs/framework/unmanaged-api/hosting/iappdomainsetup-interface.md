@@ -1,14 +1,6 @@
 ---
-title: "IAppDomainSetup — Interfejs"
-ms.custom: 
+title: IAppDomainSetup — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainSetup
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup — Interfejs
 Dostarcza właściwości, które umożliwia konfigurowanie hosta <xref:System.AppDomain?displayProperty=nameWithType> typu przed wywołaniem [ICorRuntimeHost::CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) metodę, aby go utworzyć.  
@@ -55,7 +43,7 @@ Dostarcza właściwości, które umożliwia konfigurowanie hosta <xref:System.Ap
 ## <a name="remarks"></a>Uwagi  
  `IAppDomainSetup` Interfejsu odpowiada zarządzanej <xref:System.IAppDomainSetup> interfejsu, który <xref:System.AppDomainSetup> typ implementuje. Zobacz <xref:System.IAppDomainSetup?displayProperty=nameWithType> szczegółowe opisy jego właściwości.  
   
- `IAppDomainSetup`reprezentuje informacje o powiązaniu zestawu, które mogą być dodawane do <xref:System.AppDomain> wystąpienia przed jego utworzenie. Na przykład można ustawić hosta <xref:System.AppDomainSetup.ApplicationBase%2A> właściwości ustanowienie katalogu głównego sondy środowisko uruchomieniowe języka wspólnego (CLR) do zarządzanych zestawów.  
+ `IAppDomainSetup` reprezentuje informacje o powiązaniu zestawu, które mogą być dodawane do <xref:System.AppDomain> wystąpienia przed jego utworzenie. Na przykład można ustawić hosta <xref:System.AppDomainSetup.ApplicationBase%2A> właściwości ustanowienie katalogu głównego sondy środowisko uruchomieniowe języka wspólnego (CLR) do zarządzanych zestawów.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -64,7 +52,7 @@ Dostarcza właściwości, które umożliwia konfigurowanie hosta <xref:System.Ap
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.AppDomain>  

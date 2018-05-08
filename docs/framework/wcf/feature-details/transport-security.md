@@ -1,34 +1,24 @@
 ---
 title: Zabezpieczenia transportu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 364326e2ded11f7174adc891a5fd9bcdd3c98334
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security"></a>Zabezpieczenia transportu
-Transport zabezpieczeń w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zależy od wybrane powiązanie. Transport, który implementuje powiązania określa mechanizm rzeczywiste zabezpieczeń. Tematy w tej sekcji opisano mechanizmy, które są wykonywane i ich opcji.  
+Zabezpieczenia transportu w systemie Windows Communication Foundation (WCF) zależy od wybrane powiązanie. Transport, który implementuje powiązania określa mechanizm rzeczywiste zabezpieczeń. Tematy w tej sekcji opisano mechanizmy, które są wykonywane i ich opcji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- Przedstawiono podstawowe zabezpieczeń transportu w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Wyjaśnia podstawowe informacje dotyczące zabezpieczeń transportu programu WCF.  
   
  [Zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- Wyjaśniono, jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje protokołu Secure Sockets Layer (SSL lub HTTPS).  
+ W tym artykule wyjaśniono, jak WCF implementuje protokołu Secure Sockets Layer (SSL lub HTTPS).  
   
  [Opis uwierzytelniania HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  W tym artykule opisano schematy uwierzytelniania HTTP, takie jak Basic, Digest, NT LAN Manager (NTLM) i innych użytkowników.  

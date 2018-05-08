@@ -1,27 +1,15 @@
 ---
 title: Wprowadzenie tutorial2 —
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1be017762ed64f61516216c9d103547f88598254
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7e1bfdc79eda8095d5d391afd61abb8473d8e7ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Ta sekcja zawiera zestaw tematów wskazówki, które służą jako wprowadzenie do programowania aplikacji systemu Windows Workflow Foundation (WF). Zgodnie z instrukcjami opisanymi w tych tematach, zostanie utworzona aplikacja, która jest numer gry guessing. Pierwszym temacie samouczka poprowadzi Cię przez kroki tworzenia działań niestandardowych wymagane dla przepływu pracy. W drugim temacie te działania są łączone wraz z działań wbudowanych przepływów pracy w przepływie pracy schemat blokowy. W trzecim temacie aplikacja hosta jest skonfigurowana do uruchamiania przepływu pracy, a w ostatnim temacie wprowadzono trwałości. Każdy krok w procesie zależy od poprzednie kroki, tak więc zaleca się zakończyć je w kolejności.  

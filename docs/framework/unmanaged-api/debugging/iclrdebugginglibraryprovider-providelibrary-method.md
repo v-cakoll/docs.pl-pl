@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebuggingLibraryProvider::ProvideLibrary — Metoda"
-ms.custom: 
+title: ICLRDebuggingLibraryProvider::ProvideLibrary — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebuggingLibraryProvider.ProvideLibrary Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf6860a616312504e3d23177734cb532405bd714
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary — Metoda
 Pobiera dostawcę biblioteki interfejsu wywołania zwrotnego, który umożliwia wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) określonej wersji biblioteki debugowania należy odnaleźć i załadować na żądanie.  
@@ -71,7 +59,7 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- `ProvideLibrary`Umożliwia debugera zapewnić modułów, które są wymagane do debugowania określonych plików CLR, takie jak mscordbi.dll i pliku mscordacwks.dll. Uchwyty modułu muszą być prawidłowe do wywołania [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) metody wskazuje, że mogą one zostać zwolniony w takim przypadku odpowiada wywołującego wolne uchwytów.  
+ `ProvideLibrary` Umożliwia debugera zapewnić modułów, które są wymagane do debugowania określonych plików CLR, takie jak mscordbi.dll i pliku mscordacwks.dll. Uchwyty modułu muszą być prawidłowe do wywołania [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) metody wskazuje, że mogą one zostać zwolniony w takim przypadku odpowiada wywołującego wolne uchwytów.  
   
  Debuger może używać oznacza, że wszystkie dostępne do zlokalizowania lub uzyskaj moduł debugowania.  
   
@@ -87,7 +75,7 @@ HRESULT ProvideLibrary(
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

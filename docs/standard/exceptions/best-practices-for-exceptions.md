@@ -1,13 +1,7 @@
 ---
-title: "Najlepsze praktyki dotyczące wyjątków"
-ms.custom: 
+title: Najlepsze praktyki dotyczące wyjątków
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze praktyki dotyczące wyjątków
 
@@ -82,7 +71,7 @@ Wprowadzenie nowej klasy wyjątku tylko wtedy, gdy jeden wstępnie zdefiniowanyc
 
 - Throw <xref:System.ArgumentException> wyjątku lub jednej z wstępnie zdefiniowanych klas pochodzących od <xref:System.ArgumentException> Jeżeli nie przekazano nieprawidłowe parametry.
 
-## <a name="end-exception-class-names-with-the-word-exception"></a>Nazwy klasy wyjątków zakończenia wyraz`Exception`
+## <a name="end-exception-class-names-with-the-word-exception"></a>Nazwy klasy wyjątków zakończenia wyraz `Exception`
 
 Gdy konieczne jest niestandardowy wyjątek, odpowiednio nazwę i pochodzi ona z <xref:System.Exception> klasy. Na przykład:
 
@@ -110,7 +99,7 @@ Na przykład w implementacjach .NET, które obsługują domen aplikacji, wyjątk
 
 - Umieszczając zestaw we wspólnej podstawie aplikacji współużytkowanej przez obie domeny aplikacji.
 
-    \-lub -
+    \- lub -
 
 - Jeśli domeny nie współużytkują podstawy aplikacji, można podpisać zestaw zawierający informacje o wyjątku, używając silnej nazwy, i wdrożyć ten zestaw w globalnej pamięci podręcznej zestawów.
 

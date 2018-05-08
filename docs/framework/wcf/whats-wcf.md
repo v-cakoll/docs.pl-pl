@@ -1,33 +1,19 @@
 ---
 title: Co to jest program Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 51
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e7786b6a59b139233f10f6fef8493c299c51b54e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] to platforma do tworzenia aplikacji korzystających z usług. Przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], możesz wysłać dane jako asynchroniczne komunikaty z punktu końcowego jednej usługi do innego. Punkt końcowy usługi mogą być częścią stale dostępna usługa hostowana przez usługi IIS, lub można ją z usługą hostowaną w aplikacji. Punkt końcowy może być klienta usługi, która wysyła żądanie danych z punktu końcowego usługi. Komunikaty może być tak proste, jak pojedynczy znak lub słowo wysyłane w formacie XML lub złożonym, strumień danych binarnych. Kilka przykładowych scenariuszy obejmują:  
+Windows Communication Foundation (WCF) to platforma do tworzenia aplikacji korzystających z usług. Przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], możesz wysłać dane jako asynchroniczne komunikaty z punktu końcowego jednej usługi do innego. Punkt końcowy usługi mogą być częścią stale dostępna usługa hostowana przez usługi IIS, lub można ją z usługą hostowaną w aplikacji. Punkt końcowy może być klienta usługi, która wysyła żądanie danych z punktu końcowego usługi. Komunikaty może być tak proste, jak pojedynczy znak lub słowo wysyłane w formacie XML lub złożonym, strumień danych binarnych. Kilka przykładowych scenariuszy obejmują:  
   
 -   Usługa bezpiecznego przetwarzania transakcji.  
   

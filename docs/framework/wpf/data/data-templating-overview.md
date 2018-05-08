@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Szablonowanie danych"
-ms.custom: 
+title: Przegląd Szablonowanie danych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
 Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdefiniowania prezentacja danych. Formantów WPF ma wbudowaną funkcję obsługi dostosowywania prezentacji danych. W tym temacie przedstawiono najpierw sposób definiowania <xref:System.Windows.DataTemplate> , a następnie wprowadza inne funkcje tworzenia szablonów danych, takie jak wyboru szablonów na podstawie niestandardowej logiki i obsługę wyświetlania danych hierarchicznej.  
@@ -35,7 +23,7 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdef
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie skupiono się na funkcji tworzenia szablonów danych i nie jest wprowadzenie pojęcia dotyczące powiązania danych. Informacje o pojęciach powiązania danych podstawowych, zobacz [omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- <xref:System.Windows.DataTemplate>jest prezentacji danych i jeden z wielu funkcje oferowane przez model stylami i tworzenia szablonów WPF. Wprowadzenie WPF stylami i tworzenia szablonów modelu, np. sposób użycia <xref:System.Windows.Style> można ustawić właściwości formantów, zobacz [stylami i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md) tematu.  
+ <xref:System.Windows.DataTemplate> jest prezentacji danych i jeden z wielu funkcje oferowane przez model stylami i tworzenia szablonów WPF. Wprowadzenie WPF stylami i tworzenia szablonów modelu, np. sposób użycia <xref:System.Windows.Style> można ustawić właściwości formantów, zobacz [stylami i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md) tematu.  
   
  Ponadto jest ważne zrozumieć `Resources`, które są zasadniczo obiektów co włączyć takie jak <xref:System.Windows.Style> i <xref:System.Windows.DataTemplate> się do ponownego użycia. Aby uzyskać więcej informacji dotyczących zasobów, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
@@ -144,7 +132,7 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdef
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Co należy w szablonie danych?  
- W poprzednim przykładzie, możemy umieścić wyzwalacza w <xref:System.Windows.DataTemplate> przy użyciu <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> właściwości. <xref:System.Windows.Setter> Wyzwalacza ustawia wartości właściwości elementu ( <xref:System.Windows.Controls.Border> element) znajduje się w <xref:System.Windows.DataTemplate>. Jednak jeśli właściwości który Twojej `Setters` dotyczy nie są właściwościami elementów, które znajdują się w bieżącej <xref:System.Windows.DataTemplate>, może być odpowiedniejsze można ustawić właściwości, za pomocą <xref:System.Windows.Style> to <xref:System.Windows.Controls.ListBoxItem> klasy (Jeśli jest to powiązania kontrolki — <xref:System.Windows.Controls.ListBox>). Na przykład, jeśli chcesz z <xref:System.Windows.Trigger> do animowania <xref:System.Windows.UIElement.Opacity%2A> wartości elementu, gdy wskaźnik myszy wskazuje element zdefiniujesz Wyzwalacze w ramach <xref:System.Windows.Controls.ListBoxItem> stylu. Na przykład zobacz [wprowadzenie do stylów i tworzenia szablonów przykładowa](http://go.microsoft.com/fwlink/?LinkID=160010).  
+ W poprzednim przykładzie, możemy umieścić wyzwalacza w <xref:System.Windows.DataTemplate> przy użyciu <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> Właściwość. <xref:System.Windows.Setter> Wyzwalacza ustawia wartości właściwości elementu ( <xref:System.Windows.Controls.Border> element) znajduje się w <xref:System.Windows.DataTemplate>. Jednak jeśli właściwości który Twojej `Setters` dotyczy nie są właściwościami elementów, które znajdują się w bieżącej <xref:System.Windows.DataTemplate>, może być odpowiedniejsze można ustawić właściwości, za pomocą <xref:System.Windows.Style> to <xref:System.Windows.Controls.ListBoxItem> klasy (Jeśli jest to powiązania kontrolki — <xref:System.Windows.Controls.ListBox>). Na przykład, jeśli chcesz z <xref:System.Windows.Trigger> do animowania <xref:System.Windows.UIElement.Opacity%2A> wartości elementu, gdy wskaźnik myszy wskazuje element zdefiniujesz Wyzwalacze w ramach <xref:System.Windows.Controls.ListBoxItem> stylu. Na przykład zobacz [wprowadzenie do stylów i tworzenia szablonów przykładowa](http://go.microsoft.com/fwlink/?LinkID=160010).  
   
  Ogólnie rzecz biorąc, należy pamiętać, że <xref:System.Windows.DataTemplate> są stosowane do każdego z wygenerowany <xref:System.Windows.Controls.ListBoxItem> (Aby uzyskać więcej informacji na temat jak i gdzie faktycznie jest stosowane, zobacz <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> strony.). Twoje <xref:System.Windows.DataTemplate> dotyczy tylko z prezentacji i wyglądu obiektów danych. W większości przypadków wszystkie aspekty prezentacji, takie jak jakie elementu wygląda po zaznaczeniu lub jak <xref:System.Windows.Controls.ListBox> określa elementy, nie należą do definicji <xref:System.Windows.DataTemplate>. Na przykład zobacz [stylami i tworzenia szablonów ItemsControl](#DataTemplating_ItemsControl) sekcji.  
   
@@ -156,7 +144,7 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdef
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- Zwróć uwagę, w tym przykładzie użyto <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> właściwości. Zasoby zdefiniowane w tej sekcji są współużytkowane przez elementy wewnątrz <xref:System.Windows.DataTemplate>.  
+ Zwróć uwagę, w tym przykładzie użyto <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> Właściwość. Zasoby zdefiniowane w tej sekcji są współużytkowane przez elementy wewnątrz <xref:System.Windows.DataTemplate>.  
   
  Umożliwiają określanie logiki, aby wybrać <xref:System.Windows.DataTemplate> do użycia na podstawie `Priority` wartość obiektu danych, Utwórz podklasę <xref:System.Windows.Controls.DataTemplateSelector> i zastąpić <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metody. W poniższym przykładzie <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metoda zawiera logikę do zwrócenia odpowiedni szablon na podstawie wartości z `Priority` właściwości. Szablon do zwrócenia zostanie znaleziony w zasobów obejmujące <xref:System.Windows.Window> elementu.  
   

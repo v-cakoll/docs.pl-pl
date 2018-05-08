@@ -1,33 +1,22 @@
 ---
-title: "Klasa podstawowa działania NativeActivity"
-ms.custom: 
+title: Klasa podstawowa działania NativeActivity
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e53471a2d0245b1547ae5ee3c3a147e024aedefb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca4a497f1e78989f9488507015526214ead6cae7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nativeactivity-base-class"></a>Klasa podstawowa działania NativeActivity
-<xref:System.Activities.NativeActivity>jest klasą abstrakcyjną, przy użyciu konstruktora chronionych. Podobnie jak <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> służy do zapisywania konieczne zachowanie zaimplementowanie <xref:System.Activities.NativeActivity.Execute%2A> metody. W odróżnieniu od <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> ma dostęp do wszystkich funkcji dostępnego środowiska uruchomieniowego przepływu pracy za pośrednictwem <xref:System.Activities.NativeActivityContext> obiekt przekazywany do <xref:System.Activities.NativeActivity.Execute%2A> metody.  
+<xref:System.Activities.NativeActivity> jest klasą abstrakcyjną, przy użyciu konstruktora chronionych. Podobnie jak <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> służy do zapisywania konieczne zachowanie zaimplementowanie <xref:System.Activities.NativeActivity.Execute%2A> metody. W odróżnieniu od <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> ma dostęp do wszystkich funkcji dostępnego środowiska uruchomieniowego przepływu pracy za pośrednictwem <xref:System.Activities.NativeActivityContext> obiekt przekazywany do <xref:System.Activities.NativeActivity.Execute%2A> metody.  
   
 ## <a name="using-nativeactivitycontext"></a>Przy użyciu NativeActivityContext  
  Funkcje środowiska uruchomieniowego przepływu pracy są dostępne z poziomu <xref:System.Activities.NativeActivity.Execute%2A> metody przy użyciu elementów członkowskich `context` parametr typu <xref:System.Activities.NativeActivityContext>. Funkcji dostępnych za pośrednictwem <xref:System.Activities.NativeActivityContext> są następujące:  
   
 -   Pobieranie i Ustawianie zmiennych i argumentów.  
   
--   Planowanie działań podrzędnych z<xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>  
+-   Planowanie działań podrzędnych z <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>  
   
 -   Trwa przerywanie wykonywania działania przy użyciu <xref:System.Activities.NativeActivityContext.Abort%2A>.  
   

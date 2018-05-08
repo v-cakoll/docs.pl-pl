@@ -1,24 +1,17 @@
 ---
 title: do (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - do_CSharpKeyword
 - do
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-caps.latest.revision: 22
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d24078d3fb985f643fb66aa456900d03d2ff3fce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5599f079e29fd094c4d6a6a75afba89fb562a166
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="do-c-reference"></a>do (odwołanie w C#)
 `do` Instrukcji, która wykonuje instrukcję lub blok instrukcji wielokrotnie aż wynikiem obliczenia określonego wyrażenia jest `false`. Treści pętli musi być ujęta w nawiasy klamrowe, `{}`, chyba że składa się z jednej instrukcji. W takim przypadku nawiasy klamrowe są opcjonalne.  
@@ -41,5 +34,5 @@ ms.lasthandoff: 11/21/2017
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [czy-while — instrukcja (C++)](/cpp/cpp/do-while-statement-cpp)  
- [Iteracja — instrukcje](../../../csharp/language-reference/keywords/iteration-statements.md)
+ [do-while, instrukcja (C++)](/cpp/cpp/do-while-statement-cpp)  
+ [Instrukcje iteracji](../../../csharp/language-reference/keywords/iteration-statements.md)

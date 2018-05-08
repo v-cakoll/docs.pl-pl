@@ -1,13 +1,6 @@
 ---
-title: "Wskazówki: przeprowadzanie operacji w tle"
-ms.custom: 
+title: 'Wskazówki: przeprowadzanie operacji w tle'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca0892e9d384eefb0fec87a7717222fefb779d12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 59447bb589eb019f81beb1db2ea254a9fe3a889e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Wskazówki: przeprowadzanie operacji w tle
 Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w interfejsie użytkownika, można użyć <xref:System.ComponentModel.BackgroundWorker> klasę, aby uruchomić operację w innym wątku.  
@@ -46,7 +34,7 @@ Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w inter
     |Przycisk|Nazwa|Tekst|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
-    |`button2`|`cancelBtn`|**Cancel**|  
+    |`button2`|`cancelBtn`|**Anulowanie**|  
   
 2.  Otwórz **przybornika**, kliknij przycisk **składniki** karcie, a następnie przeciągnij <xref:System.ComponentModel.BackgroundWorker> składnika w formularzu.  
   

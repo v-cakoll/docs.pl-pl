@@ -1,14 +1,6 @@
 ---
-title: "COR_HEAPOBJECT — Struktura"
-ms.custom: 
+title: COR_HEAPOBJECT — Struktura
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_HEAPOBJECT
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 476d9dcb1c6700833b0a113028bdaaf0c5a375c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91e64bb2e1c8a7b11fe70024eb4a4fa1717c06e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT — Struktura
 Zawiera informacje dotyczące obiektów na stercie zarządzanej.  
@@ -56,7 +44,7 @@ typedef struct _COR_HEAPOBJECT {
 |`type`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token, który reprezentuje typ obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_HEAPOBJECT`wystąpienia mogą zostać pobrane przez wyliczania [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) obiektu interfejsu, który jest wypełniana przez wywołanie metody [ICorDebugProcess5::EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) metody.  
+ `COR_HEAPOBJECT` wystąpienia mogą zostać pobrane przez wyliczania [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) obiektu interfejsu, który jest wypełniana przez wywołanie metody [ICorDebugProcess5::EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) metody.  
   
  A `COR_HEAPOBJECT` wystąpienia zawiera informacje dotyczące obiektu na żywo na stercie zarządzanej lub o obiekt, który nie jest ścieżką przez dowolny obiekt, ale nie ma jeszcze zbierane przez moduł garbage collector.  
   
@@ -73,7 +61,7 @@ typedef struct _COR_HEAPOBJECT {
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager — Interfejs"
-ms.custom: 
+title: IHostTaskManager — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9573891a2c27a2a92eccd0522f84175effa8037a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager — Interfejs
 Udostępnia metody umożliwiające środowisko uruchomieniowe języka wspólnego (CLR) do pracy z zadaniami za pośrednictwem hosta zamiast przy użyciu funkcji wątki lub włókna standardowy system operacyjny.  
@@ -61,7 +49,7 @@ Udostępnia metody umożliwiające środowisko uruchomieniowe języka wspólnego
 |[SwitchToTask, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Powiadamia hosta, że należy przełączyć się bieżącego zadania.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IHostTaskManager`Umożliwia CLR tworzenie i zarządzanie nimi zadania, aby zapewnić punkty zaczepienia dla hosta podjęcie działań kontroli transferu z zarządzanego do kodu niezarządzanego lub odwrotnie, a także określić pewne akcje hosta można i nie może przyjąć podczas wykonywania kodu.  
+ `IHostTaskManager` Umożliwia CLR tworzenie i zarządzanie nimi zadania, aby zapewnić punkty zaczepienia dla hosta podjęcie działań kontroli transferu z zarządzanego do kodu niezarządzanego lub odwrotnie, a także określić pewne akcje hosta można i nie może przyjąć podczas wykonywania kodu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ Udostępnia metody umożliwiające środowisko uruchomieniowe języka wspólnego
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

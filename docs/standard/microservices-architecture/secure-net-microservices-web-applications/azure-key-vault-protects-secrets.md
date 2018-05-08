@@ -1,21 +1,14 @@
 ---
-title: "Ochrona kluczy tajnych w czasie produkcji za pomocą usługi Azure Key Vault"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Ochrona kluczy tajnych w czasie produkcji za pomocą usługi Azure Key Vault"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Ochrona kluczy tajnych w czasie produkcji za pomocą usługi Azure Key Vault
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Ochrona kluczy tajnych w czasie produkcji za pomocą usługi Azure Key Vault
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Ochrona kluczy tajnych w czasie produkcji za pomocą usługi Azure Key Vault
 
@@ -68,7 +61,7 @@ W tym przykładzie wywołanie AddAzureKeyVault pochodzi z końcem okresu rejestr
 -   **Ochrona kluczy tajnych aplikacji za pomocą usługi Azure Key Vault**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **Bezpieczne przechowywanie kluczy tajnych aplikacji podczas tworzenia**
+-   **Bezpieczne przechowywanie klucze tajne aplikacji w czasie projektowania**
     [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
 -   **Konfigurowanie ochrony danych**
@@ -78,7 +71,7 @@ W tym przykładzie wywołanie AddAzureKeyVault pochodzi z końcem okresu rejestr
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#— ustawienia ochrony danych domyślna*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** Repozytorium GitHub.
-    [*https://github.com/ASPNET/Configuration/Tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
 [Poprzednie] (developer-app-kluczy tajnych storage.md) [dalej] (.. / takeaways.md klucza)

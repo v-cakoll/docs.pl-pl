@@ -1,23 +1,16 @@
 ---
-title: "Pakowanie i wdrażanie niestandardowych rozszerzeń My (Visual Basic)"
+title: Pakowanie i wdrażanie niestandardowych rozszerzeń My (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Pakowanie i wdrażanie niestandardowych rozszerzeń My (Visual Basic)
 Visual Basic umożliwia łatwe do wdrożenia niestandardowe `My` rozszerzeń nazw przy użyciu szablonów programu Visual Studio. Jeśli tworzysz szablon projektu, dla którego Twojej `My` rozszerzenia są integralną częścią nowy typ projektu, po prostu może zawierać niestandardowe `My` kod rozszerzenia w projekcie podczas eksportowania szablonu. Aby uzyskać więcej informacji na temat eksportowania szablonów projektu, zobacz [porady: Tworzenie szablonów projektów](/visualstudio/ide/how-to-create-project-templates).  
@@ -61,9 +54,9 @@ Visual Basic umożliwia łatwe do wdrożenia niestandardowe `My` rozszerzeń naz
   
 |Atrybut|Opis|  
 |---|---|  
-|`ID`|Wymagany. Unikatowy identyfikator dla rozszerzenia. Jeśli rozszerzenie o tym identyfikatorze został już dodany do projektu, użytkownik nie będzie monitowany dodać ją ponownie.|  
-|`Version`|Wymagany. Numer wersji dla szablonu elementu.|  
-|`AssemblyFullName`|Opcjonalny. Nazwa zestawu. Gdy odwołanie do tego zestawu zostanie dodany do projektu, użytkownik będzie monitu o dodanie `My` rozszerzenia na podstawie tego szablonu elementu.|  
+|`ID`|Wymagana. Unikatowy identyfikator dla rozszerzenia. Jeśli rozszerzenie o tym identyfikatorze został już dodany do projektu, użytkownik nie będzie monitowany dodać ją ponownie.|  
+|`Version`|Wymagana. Numer wersji dla szablonu elementu.|  
+|`AssemblyFullName`|Opcjonalna. Nazwa zestawu. Gdy odwołanie do tego zestawu zostanie dodany do projektu, użytkownik będzie monitu o dodanie `My` rozszerzenia na podstawie tego szablonu elementu.|  
   
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Dodaj \<customdatasignature — > w pliku .vstemplate — element  
  Aby zidentyfikować szablonu elementów programu Visual Studio jako `My` rozszerzenie przestrzeni nazw, należy również zmodyfikować plik .vstemplate szablonu elementu. Należy dodać `<CustomDataSignature>` elementu `<TemplateData>` elementu. `<CustomDataSignature>` Element musi zawierać tekst `Microsoft.VisualBasic.MyExtension`, jak pokazano w poniższym przykładzie.  
@@ -103,5 +96,5 @@ Visual Basic umożliwia łatwe do wdrożenia niestandardowe `My` rozszerzeń naz
 ## <a name="see-also"></a>Zobacz także  
  [Rozszerzanie Moje Namespace w Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [Rozszerzanie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- [Dostosowywanie, które obiekty są dostępne w mojej](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [Dostosowywanie, które obiekty są dostępne w My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [Strona Moje rozszerzenia, Projektant projektu](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

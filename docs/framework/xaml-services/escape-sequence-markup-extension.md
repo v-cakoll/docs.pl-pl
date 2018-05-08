@@ -1,14 +1,6 @@
 ---
-title: "{} Sekwencja unikowa — rozszerzenie znaczników"
-ms.custom: 
+title: '{} Escape sekwencji — rozszerzenie znaczników'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - '{}'
 helpviewer_keywords:
@@ -19,17 +11,11 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8419a1e89d5e94b9868b0fd1fb81540253efca5d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a90f6928d68eddd29762e6206769dd7f07704e4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Sekwencja unikowa / rozszerzenie znaczników
 Udostępnia sekwencji unikowej XAML dla wartości atrybutu. Sekwencja specjalna umożliwia kolejnych wartości w atrybucie interpretowane jako literału.  
@@ -57,9 +43,9 @@ Udostępnia sekwencji unikowej XAML dla wartości atrybutu. Sekwencja specjalna 
 |*literalValue*|Literał znajdujący się sekwencji ucieczki. Zazwyczaj ten ciąg zawiera otwierania lub zamykania nawiasu klamrowego ({lub}).|  
   
 ## <a name="remarks"></a>Uwagi  
- Sekwencja specjalna ({}) jest używany, aby otwierający nawias klamrowy ({}) może być używany jako znak w języku XAML.  
+ Sekwencja specjalna ({}) jest używany, dzięki czemu otwierający nawias klamrowy ({}) może być używany jako znak w języku XAML.  
   
- Czytniki XAML zwykle otwierający nawias klamrowy ({}) do określenia punktu wejścia rozszerzenia znacznika; jednak najpierw sprawdzają następny znak w celu ustalenia, czy jest ono zamykający nawias klamrowy (}). Tylko wtedy, gdy dwa nawiasy klamrowe ({}) znajdują się obok siebie, są one traktowane jako sekwencja ucieczki.  
+ Czytniki XAML zwykle otwierający nawias klamrowy ({}) do określenia punktu wejścia rozszerzenia znacznika; jednak najpierw sprawdzają następny znak w celu ustalenia, czy jest ono zamykający nawias klamrowy (}). Tylko wtedy, gdy dwa kwadratowych ({}) czy sąsiadujących ze sobą, są one traktowane jako sekwencja ucieczki.  
   
  W przypadku sekwencji ucieczki czytnika XAML ma być przetwarzane w pozostałej części ciągu jako ciąg. Jednak jeśli sekwencja specjalna jest stosowany do elementu członkowskiego, który ma konwertera typów, ciąg mogą być konwersji typu, gdy jest interpretowany przez moduł zapisujący XAML.  
   

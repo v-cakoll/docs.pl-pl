@@ -1,24 +1,17 @@
 ---
 title: partial (typ) (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - partialtype
 - partialtype_CSharpKeyword
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-caps.latest.revision: 24
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5212984cc577ce05fc4697e0d648fb5545528562
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-type-c-reference"></a>partial (typ) (odwołanie w C#)
 Definicje typu częściowego umożliwiają definicji klasy, struktury lub interfejsu można podzielić na wiele plików.  

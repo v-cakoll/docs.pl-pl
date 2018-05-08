@@ -1,14 +1,6 @@
 ---
 title: 'Porady: wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4466f900541e92aeb59edcfbe8f4313d9084eaec
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6d6701e5e4b9a0b0fbb677b49f3791075976745a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Porady: wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows
 Jest bardzo często dla aplikacji systemu Windows wydrukować tekst. <xref:System.Drawing.Graphics> Klasa zawiera metody służące do rysowania obiektów (grafiki lub tekst) na urządzeniu, na przykład ekranu lub drukarki.  

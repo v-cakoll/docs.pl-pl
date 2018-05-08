@@ -1,27 +1,15 @@
 ---
 title: Buforowanie
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bdd1874004af1ebbde69c622853d5fdcd982005
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2c864bd0c1d27e9c771a1b97e756c04b107ac2b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pooling"></a>Buforowanie
-W tym przykładzie pokazano, jak rozszerzyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] do obsługi buforowanie obiektów. Przykład przedstawia sposób tworzenia atrybutu składnię i semantycznie podobny do `ObjectPoolingAttribute` atrybutu funkcji usług dla przedsiębiorstw. Buforowanie obiektu może zapewnić znaczne zwiększenie wydajności na wydajność aplikacji. Jednak jeśli nie jest prawidłowo używana może mieć odwrotny efekt. Buforowanie obiektu pomaga zmniejszyć koszty odtworzenie często używanych obiektów, które wymagają szeroką gamę inicjowania. Jednak jeśli wywołanie do metody w obiekcie puli przyjmuje znaczną ilość czasu, buforowanie obiektów kolejek dodatkowych żądań zaraz po osiągnięciu maksymalny rozmiar puli. W związku z tym może nie obsługiwać niektórych obiektów żądania tworzenia przez zgłaszanie wyjątków przekroczenia limitu czasu.  
+W tym przykładzie pokazano, jak rozszerzyć Windows Communication Foundation (WCF) do obsługi buforowanie obiektów. Przykład przedstawia sposób tworzenia atrybutu składnię i semantycznie podobny do `ObjectPoolingAttribute` atrybutu funkcji usług dla przedsiębiorstw. Buforowanie obiektu może zapewnić znaczne zwiększenie wydajności na wydajność aplikacji. Jednak jeśli nie jest prawidłowo używana może mieć odwrotny efekt. Buforowanie obiektu pomaga zmniejszyć koszty odtworzenie często używanych obiektów, które wymagają szeroką gamę inicjowania. Jednak jeśli wywołanie do metody w obiekcie puli przyjmuje znaczną ilość czasu, buforowanie obiektów kolejek dodatkowych żądań zaraz po osiągnięciu maksymalny rozmiar puli. W związku z tym może nie obsługiwać niektórych obiektów żądania tworzenia przez zgłaszanie wyjątków przekroczenia limitu czasu.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -262,7 +250,7 @@ Press <ENTER> to exit.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  
   

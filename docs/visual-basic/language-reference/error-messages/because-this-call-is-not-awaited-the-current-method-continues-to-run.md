@@ -1,26 +1,17 @@
 ---
-title: "Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania"
+title: Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania
 Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane ukończenia wywołania. Należy rozważyć zastosowanie operatora "Await" do wyniku wywołania.  
@@ -212,5 +203,5 @@ Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będz
      Oczekiwane dane wyjściowe pojawia się na końcu kodu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Await — Operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)  
  [Programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md)

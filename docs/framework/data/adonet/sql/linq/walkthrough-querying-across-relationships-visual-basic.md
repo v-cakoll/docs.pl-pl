@@ -1,28 +1,14 @@
 ---
-title: "Wskazówki: Wykonywanie zapytań w relacjach (Visual Basic)"
-ms.custom: 
+title: 'Wskazówki: Wykonywanie zapytań w relacjach (Visual Basic)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: fef9880d5f9fa652eab2eb0d17bbf782dc64773d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Wskazówki: Wykonywanie zapytań w relacjach (Visual Basic)
 W tym przewodniku zademonstrowano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  

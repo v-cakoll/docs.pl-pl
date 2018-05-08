@@ -1,29 +1,15 @@
 ---
 title: Kolejki i sesje niezawodne
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a60f409a0f5c237c372fe3303d67ef979950eab4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>Kolejki i sesje niezawodne
-Kolejki i sesje niezawodne są [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcje, które implementują niezawodna obsługa komunikatów. Tematy zawarte w tej sekcji omówiono w nim [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] niezawodnej funkcji obsługi komunikatów.  
+Kolejki i sesje niezawodne są funkcji Windows Communication Foundation (WCF), które implementują niezawodna obsługa komunikatów. Tematy zawarte w tej sekcji omówiono w nim niezawodnej funkcji obsługi komunikatów usługi WCF.  
   
  Niezawodna obsługa komunikatów jest sposobu wiarygodnego źródła wiadomości (nazywane źródła) przesyłania komunikatów niezawodnie do niezawodnej obsługi komunikatów miejsca docelowego (nazywane miejsce docelowe).  
   
@@ -33,7 +19,7 @@ Kolejki i sesje niezawodne są [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
 -   Rozdzielenie źródłowego i docelowego ze sobą, co zapewnia niezależnie od awarii i odzyskiwania źródłowy i docelowy jako również tak niezawodna transfer i dostarczania wiadomości nawet, jeśli źródłowy lub docelowy jest niedostępny.  
   
- Często niezawodna obsługa komunikatów odbywa się kosztem duże opóźnienie. Opóźnienie to czas potrzebny do miejsca docelowego ze źródła wiadomości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], w związku z tym zapewnia następujące typy niezawodnej obsługi komunikatów:  
+ Często niezawodna obsługa komunikatów odbywa się kosztem duże opóźnienie. Opóźnienie to czas potrzebny do miejsca docelowego ze źródła wiadomości. Usługi WCF, w związku z tym zawiera następujące typy niezawodna obsługa komunikatów:  
   
 -   [Niezawodne sesje](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), które oferują niezawodnej transfer bez kosztów duże opóźnienie  
   
@@ -45,7 +31,7 @@ Kolejki i sesje niezawodne są [!INCLUDE[indigo1](../../../../includes/indigo1-m
  Niezawodne sesje Podaj transferów komunikatów niezawodnej małe opóźnienia. Udostępniają one wiadomości SOAP za pośrednictwem serwerów proxy ani pośredników, odpowiednik jakiego protokołu TCP zapewnia pakietów przez mostków IP. Aby uzyskać więcej informacji na temat niezawodnej sesji, zobacz [sesji niezawodnej](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Kolejki  
- Kolejki w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewniają zarówno niezawodnej transferów komunikatów i separacji między źródłami a miejsc docelowych kosztem duże opóźnienie. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Komunikacja z obsługą kolejek jest oparty na usługi kolejkowania komunikatów (MSMQ).  
+ Kolejki programu WCF zawierają zarówno niezawodnej transferów komunikatów i separacji między źródłami a miejsc docelowych kosztem duże opóźnienie. Usługi WCF w kolejce komunikacji jest oparty na usługi kolejkowania komunikatów (MSMQ).  
   
  Usługa MSMQ jest dostarczany jako opcja z systemem Windows, który działa jako usługa NT. On przechwytuje wiadomości do przesłania z kolejki transmisji w imieniu źródła i dostarcza go do kolejki docelowej. Kolejka docelowa akceptuje wiadomości w imieniu docelowego w celu późniejszego dostarczenia zawsze, gdy żąda miejsce docelowe dla wiadomości. Menedżerami kolejki usługi MSMQ implementacji protokołu niezawodnych transferu komunikatów, dzięki czemu komunikaty nie zostaną utracone podczas transmisji. Protokół może być lokalny lub opartego na protokole SOAP, takich jak Soap Reliable Messaging Protocol (SRMP).  
   

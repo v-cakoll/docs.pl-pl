@@ -1,24 +1,12 @@
 ---
 title: CustomChannelsTester
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92de7f168ce323a0d84975863564389ff389d680
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` To narzędzie, które służy do testowania implementacjach użytkownika niestandardowym kanale z zestawem kontraktów usług wstępnie zdefiniowane. Możesz wybrać zestaw kontraktów usług i przekaż go za pomocą pliku XML. Narzędzie generuje następnie usługi i klienta, który korzysta z implementacji niestandardowego kanału podczas wymiany wiadomości.  
@@ -39,9 +27,9 @@ ms.lasthandoff: 12/22/2017
   
      Przy użyciu `/binding` opcja jest wymagana.  
   
-     `/dll`jest wymagany, jeśli "powiązanie" nie jest udostępniane przez powiązania dostarczane przez system [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+     `/dll` jest wymagany, jeśli "powiązanie" nie jest dostarczane przez system powiązania dostarczane przez Windows Communication Foundation (WCF).  
   
-     `/testspec`jest opcjonalna.  
+     `/testspec` jest opcjonalna.  
   
      Spowoduje to utworzenie serwer i klienci na podstawie specyfikacji testu i powiązania.  
   

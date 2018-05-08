@@ -1,28 +1,18 @@
 ---
 title: Profilowanie statycznych funkcji globalnych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - global static functions [.NET Framework profiling]
 - profiling global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], profiling
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 66f22557dd6020ff5040d5aaf76cb12e9ae9965c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-global-static-functions"></a>Profilowanie statycznych funkcji globalnych
 W tej sekcji opisano niezarządzanych funkcji interfejsu API, które używa interfejsu API profilowania.  
@@ -59,7 +49,7 @@ W tej sekcji opisano niezarządzanych funkcji interfejsu API, które używa inte
  [FunctionIDMapper2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
  Powiadamia profilera, że danym identyfikatorem funkcji mogą być mapowane ponownie do alternatywny identyfikator ma być używany w [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), i [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), lub[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), i [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) wywołań zwrotnych dla tej funkcji. Umożliwia również profilera wskazać, czy chce odbierać wywołań zwrotnych dla tej funkcji.  
   
- `FunctionIDMapper2`Rozszerza [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) działać z `clientData` parametr, który może używać profilowania, aby usunąć Niejednoznaczność między środowisk uruchomieniowych.  
+ `FunctionIDMapper2` Rozszerza [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) działać z `clientData` parametr, który może używać profilowania, aby usunąć Niejednoznaczność między środowisk uruchomieniowych.  
   
  [FunctionEnter3, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
  Powiadamia profilera, czy formant jest przekazywany do funkcji.  

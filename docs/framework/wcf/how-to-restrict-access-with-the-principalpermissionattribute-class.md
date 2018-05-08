@@ -1,14 +1,6 @@
 ---
 title: 'Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dffeae6a114563ea6b030c303bd3ed3f3a27f4f5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute
 Kontrolowanie dostępu do zasobów na komputerze domeny systemu Windows jest zadaniem podstawowych zabezpieczeń. Na przykład tylko określonym użytkownikom powinien móc wyświetlić poufnych danych, takich jak lista płac informacji. W tym temacie wyjaśniono, jak ograniczyć dostęp do metody przez wymaganie, który użytkownik należy do grupy wstępnie zdefiniowanych. Dla przykładu pracy, zobacz [Autoryzowanie dostępu do operacji usługi](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -52,7 +38,7 @@ Kontrolowanie dostępu do zasobów na komputerze domeny systemu Windows jest zad
   
 ### <a name="to-demand-user-membership"></a>Żądanie użytkownika członkostwa  
   
-1.  Otwórz [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] pliku kodu zawierającego kodu kontraktu usługi zaimplementowany. Aby uzyskać więcej informacji o implementacji kontraktu, zobacz [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1.  Otwórz plik kodu Windows Communication Foundation (WCF), który zawiera kodu kontraktu usługi zaimplementowany. Aby uzyskać więcej informacji o implementacji kontraktu, zobacz [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 2.  Zastosuj <xref:System.Security.Permissions.PrincipalPermissionAttribute> atrybutu do każdej metody, która musi być ograniczony do określonej grupy. Ustaw <xref:System.Security.Permissions.SecurityAttribute.Action%2A> właściwości <xref:System.Security.Permissions.SecurityAction.Demand> i <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> właściwość na nazwę grupy. Na przykład:  
   

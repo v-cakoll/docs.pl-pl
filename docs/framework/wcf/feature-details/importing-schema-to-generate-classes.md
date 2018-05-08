@@ -1,14 +1,6 @@
 ---
 title: Importowanie schematu w celu generowania klas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importowanie schematu w celu generowania klas
-Aby wygenerować klasy na podstawie schematów, której można używać z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], użyj <xref:System.Runtime.Serialization.XsdDataContractImporter> klasy. W tym temacie opisano proces i zmian.  
+Aby wygenerować klas z schematów, której można używać z usługi Windows Communication Foundation (WCF), należy użyć <xref:System.Runtime.Serialization.XsdDataContractImporter> klasy. W tym temacie opisano proces i zmian.  
   
 ## <a name="the-import-process"></a>Proces importowania  
  Proces importowania schematu rozpoczyna się od <xref:System.Xml.Schema.XmlSchemaSet> i tworzy <xref:System.CodeDom.CodeCompileUnit>.  
@@ -114,7 +100,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Skojarzeń można również uwzględnić listy. Na przykład można wyświetlić poprzedniego skojarzenie jako listę złożone `city` obiektów, które mają dwa pola (polem ciągu i pole Liczba całkowita). Oba wzorce ma reprezentacji w postaci w schematu XSD. Nie istnieje sposób w celu rozróżnienia listy i skojarzenia, więc tych wzorców zawsze są traktowane jako list, chyba że adnotację specjalne specyficzne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. Aby uzyskać więcej informacji, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Skojarzeń można również uwzględnić listy. Na przykład można wyświetlić poprzedniego skojarzenie jako listę złożone `city` obiektów, które mają dwa pola (polem ciągu i pole Liczba całkowita). Oba wzorce ma reprezentacji w postaci w schematu XSD. Nie istnieje sposób w celu rozróżnienia listy i skojarzenia, więc tych wzorców zawsze są traktowane jako list, chyba że adnotację specjalne specyficzne dla usługi WCF znajduje się w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. Aby uzyskać więcej informacji, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Zwykle listy jest importowany jako kontraktu danych kolekcji, która pochodzi z listy ogólnej lub jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablicy, w zależności od tego, czy schemat następuje standardowy wzorzec nazewnictwa dla kolekcji. To jest opisany bardziej szczegółowo w [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Skojarzenia są zwykle zaimportowany jako <xref:System.Collections.Generic.Dictionary%602> lub kontraktu danych kolekcji, która pochodzi z obiektu słownika. Na przykład należy wziąć pod uwagę następujące schematu.  
   

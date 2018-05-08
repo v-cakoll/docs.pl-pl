@@ -1,13 +1,6 @@
 ---
 title: Test trafienia w warstwie Visual
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Test trafienia w warstwie Visual
 Ten temat zawiera omówienie trafień testowania funkcje udostępniane przez warstwę visual. Obsługa testowania trafień pozwala określić, czy wartość geometry, czy punkt znajduje się w renderowanej zawartości <xref:System.Windows.Media.Visual>, co umożliwia wdrożenie zachowania interfejsu użytkownika, takie jak prostokąta zaznaczenia, aby zaznaczyć wiele obiektów.  
@@ -61,7 +49,7 @@ Diagram prawidłowy testu trafienia regionu
   
  Na poniższej ilustracji obiektu okręgu znajduje się na szczycie kwadrat i trójkąt obiektów. Jeśli interesuje Cię tylko trafień testowania visual obiektu, którego wartość kolejności jest najwyżej, można ustawić wyliczenia visual testu trafienia do zwrócenia <xref:System.Windows.Media.HitTestResultBehavior.Stop> z <xref:System.Windows.Media.HitTestResultCallback> można zatrzymać testu trafienia przechodzenie od pierwszego elementu.  
   
- ![Diagram z &#45; kolejność drzewa wizualnego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Diagram z&#45;kolejność drzewa wizualnego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 Diagram porządek osi z drzewa wizualnego  
   
  Aby wyliczyć wszystkie obiekty visual pod określony punkt lub geometrii wrócić <xref:System.Windows.Media.HitTestResultBehavior.Continue> z <xref:System.Windows.Media.HitTestResultCallback>. Oznacza to, że można trafień testu visual obiektów, które są pod innymi obiektami, nawet wtedy, gdy są one całkowicie zasłonięty. Zobacz przykładowy kod w sekcji "Przy użyciu trafień testu wyniki wywołania zwrotnego" Aby uzyskać więcej informacji.  

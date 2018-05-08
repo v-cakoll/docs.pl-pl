@@ -1,12 +1,6 @@
 ---
 title: Konwersje tablic (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arrays [Visual Basic], converting type
 - type conversion [Visual Basic], arrays
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 40dc9805157dd0bc991ca2375c3436aa6b6e09a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a179b7cf5b82132db88fb5412f0ca4be207f0987
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-conversions-visual-basic"></a>Konwersje tablic (Visual Basic)
 Typem tablicy można przekonwertować na typ tablicy różnych pod warunkiem spełniać następujące warunki:  
@@ -71,7 +62,7 @@ students = names
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Konwertowanie pomiędzy ciągami a innymi typami](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Porady: konwertowanie obiektu do innego typu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

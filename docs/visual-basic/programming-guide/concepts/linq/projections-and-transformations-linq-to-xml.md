@@ -1,22 +1,12 @@
 ---
-title: "Projekcje i przekształcenia (LINQ do XML) (Visual Basic)"
-ms.custom: 
+title: Projekcje i przekształcenia (LINQ do XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 92179ce3f1919187038b1bf7be92a82c1b6483ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 33be64420eb2c42ed1c8b680985609ceca241b4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>Projekcje i przekształcenia (LINQ do XML) (Visual Basic)
 Ta sekcja zawiera przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] projekcje i przekształcenia.  

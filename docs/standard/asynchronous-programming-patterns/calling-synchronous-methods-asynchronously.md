@@ -1,13 +1,7 @@
 ---
-title: "Wywołanie metod synchronicznych w sposób asynchroniczny"
-ms.custom: 
+title: Wywołanie metod synchronicznych w sposób asynchroniczny
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,18 +20,13 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cbe0178033338754c9e412dfcac993f042d943d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Wywołanie metod synchronicznych w sposób asynchroniczny
 .NET Framework umożliwia asynchroniczne wywoływanie dowolnej metody. W tym celu należy zdefiniować delegata o tej samej sygnaturze jako metodę, która ma zostać wywołana; środowisko uruchomieniowe języka wspólnego automatycznie definiuje `BeginInvoke` i `EndInvoke` metody dla tego obiektu delegowanego z odpowiednim podpisem.  
@@ -45,7 +34,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  Wywołuje delegata asynchroniczne, w szczególności `BeginInvoke` i `EndInvoke` metody, nie są obsługiwane w programie .NET Compact Framework.  
   
- `BeginInvoke` Metoda inicjuje wywołania asynchronicznego. Ma takie same parametry jako metodę, która ma być wykonana asynchronicznie, a także dwóch dodatkowych parametrów opcjonalnych. Pierwszym parametrem jest <xref:System.AsyncCallback> delegata, który odwołuje się do metody do wywołania po zakończeniu wywołania asynchronicznego. Drugi parametr jest zdefiniowane przez użytkownika obiekt, który przekazuje informacje do metody wywołania zwrotnego. `BeginInvoke`Zwraca natychmiast i bez oczekiwania dla wywołania asynchronicznego zakończyć. `BeginInvoke`Zwraca <xref:System.IAsyncResult>, które mogą służyć do monitorowania postępu wywołania asynchronicznego.  
+ `BeginInvoke` Metoda inicjuje wywołania asynchronicznego. Ma takie same parametry jako metodę, która ma być wykonana asynchronicznie, a także dwóch dodatkowych parametrów opcjonalnych. Pierwszym parametrem jest <xref:System.AsyncCallback> delegata, który odwołuje się do metody do wywołania po zakończeniu wywołania asynchronicznego. Drugi parametr jest zdefiniowane przez użytkownika obiekt, który przekazuje informacje do metody wywołania zwrotnego. `BeginInvoke` Zwraca natychmiast i bez oczekiwania dla wywołania asynchronicznego zakończyć. `BeginInvoke` Zwraca <xref:System.IAsyncResult>, które mogą służyć do monitorowania postępu wywołania asynchronicznego.  
   
  `EndInvoke` Metoda pobiera wyniki wywołania asynchronicznego. Może ona zostać wywołana dowolnym momencie po `BeginInvoke`. Jeśli nie wykonano wywołanie asynchroniczne, `EndInvoke` blokuje wątek wywołujący, dopóki nie ukończy. Parametry `EndInvoke` obejmują `out` i `ref` parametrów (`<Out>` `ByRef` i `ByRef` w języku Visual Basic) metody, która ma być wykonana asynchronicznie, wraz z <xref:System.IAsyncResult> zwrócony przez `BeginInvoke`.  
   
@@ -66,7 +55,7 @@ ms.lasthandoff: 12/23/2017
 >  Niezależnie od tego, które technika, należy wywołać zawsze `EndInvoke` do ukończenia wywołania asynchronicznego.  
   
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>Definiowanie metody testowej i asynchroniczne delegata  
- Przykłady kodu, które należy wykonać pokazują różnych sposobów wywołanie tej samej metody długotrwałe `TestMethod`, asynchronicznie. `TestMethod` Metoda wyświetla komunikat konsoli do wyświetlenia rozpoczął przetwarzanie, sen przez kilka sekund, a następnie kończy. `TestMethod`ma `out` parametr, aby zademonstrować sposób takie parametry zostaną dodane do sygnatur `BeginInvoke` i `EndInvoke`. Może obsłużyć `ref` parametry podobnie.  
+ Przykłady kodu, które należy wykonać pokazują różnych sposobów wywołanie tej samej metody długotrwałe `TestMethod`, asynchronicznie. `TestMethod` Metoda wyświetla komunikat konsoli do wyświetlenia rozpoczął przetwarzanie, sen przez kilka sekund, a następnie kończy. `TestMethod` ma `out` parametr, aby zademonstrować sposób takie parametry zostaną dodane do sygnatur `BeginInvoke` i `EndInvoke`. Może obsłużyć `ref` parametry podobnie.  
   
  Poniższy przykładowy kod przedstawia definicję `TestMethod` i delegata o nazwie `AsyncMethodCaller` można wywołać `TestMethod` asynchronicznie. Aby skompilować przykłady kodu, musi zawierać definicje `TestMethod` i `AsyncMethodCaller` delegowanie.  
   
@@ -75,7 +64,7 @@ ms.lasthandoff: 12/23/2017
  [!code-vb[AsyncDelegateExamples#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]  
   
 ## <a name="waiting-for-an-asynchronous-call-with-endinvoke"></a>Trwa oczekiwanie na wywołanie asynchroniczne z EndInvoke  
- Najprostszym sposobem wykonania metody asynchroniczne jest uruchomienie wykonania metody przez wywołanie metody delegata `BeginInvoke` metody, niektóre pracy w głównym wątku, a następnie wywołać delegata `EndInvoke` metody. `EndInvoke`może spowodować zablokowanie wątek wywołujący, ponieważ nie zwraca do momentu ukończenia wywołania asynchronicznego. Jest to dobra metoda do użycia z operacjami pliku lub sieci.  
+ Najprostszym sposobem wykonania metody asynchroniczne jest uruchomienie wykonania metody przez wywołanie metody delegata `BeginInvoke` metody, niektóre pracy w głównym wątku, a następnie wywołać delegata `EndInvoke` metody. `EndInvoke` może spowodować zablokowanie wątek wywołujący, ponieważ nie zwraca do momentu ukończenia wywołania asynchronicznego. Jest to dobra metoda do użycia z operacjami pliku lub sieci.  
   
 > [!IMPORTANT]
 >  Ponieważ `EndInvoke` może zablokować, nigdy nie należy go wywoływać z wątków, które Usługa interfejsu użytkownika.  
@@ -114,7 +103,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Informacje o stanie, który jest przekazywany do `BeginInvoke` jest ciągiem formatu, który używa metody wywołania zwrotnego do sformatowania komunikatu wyjściowego. Ponieważ jest przekazywany jako typ <xref:System.Object>, informacje o stanie musi być rzutowane na jego odpowiedniego typu, zanim będzie można użyć.  
   
--   Wywołanie zwrotne jest podejmowana <xref:System.Threading.ThreadPool> wątku. <xref:System.Threading.ThreadPool>wątki są wątki w tle, które nie jest przechowywana aplikacja była uruchomiona, gdy kończy się wątku głównego, dzięki czemu mają wątku głównego przykładu w stan uśpienia wystarczająco długi dla wywołania zwrotnego zakończyć.  
+-   Wywołanie zwrotne jest podejmowana <xref:System.Threading.ThreadPool> wątku. <xref:System.Threading.ThreadPool> wątki są wątki w tle, które nie jest przechowywana aplikacja była uruchomiona, gdy kończy się wątku głównego, dzięki czemu mają wątku głównego przykładu w stan uśpienia wystarczająco długi dla wywołania zwrotnego zakończyć.  
   
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

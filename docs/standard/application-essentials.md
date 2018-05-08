@@ -1,28 +1,17 @@
 ---
 title: Podstawy aplikacji .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f830064c585e1024bdc304c6356327ddc8c059f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-application-essentials"></a>Podstawy aplikacji .NET Framework
 Ta część dokumentacji środowiska .NET Framework zawiera informacje dotyczące podstawowych zadań tworzenia aplikacji w tym środowisku.  
@@ -46,7 +35,7 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  [Wyjątki](../../docs/standard/exceptions/index.md)  
  Opisu obsług błędów w środowisku .NET Framework oraz podstaw obsługi wyjątków.  
   
- [Plik i strumienia I-O](../../docs/standard/io/index.md)  
+ [We/Wy plików i strumieni](../../docs/standard/io/index.md)  
  Wyjaśniono, jak można wykonać pliku synchroniczne i asynchroniczne i dostęp do strumienia danych i sposobu korzystania z izolowanych magazynów.  
   
  [Daty, godziny i strefy czasowe](../../docs/standard/datetime/index.md)  

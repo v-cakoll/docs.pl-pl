@@ -1,28 +1,19 @@
 ---
-title: "Namespace lub typ określony w elemencie Imports &#39; &lt;qualifiedelementname&gt;&#39; &#39; t zawierają żadnego członka publicznego lub nie można odnaleźć"
+title: Namespace lub typ określony w elemencie Imports &#39; &lt;qualifiedelementname&gt; &#39; &#39;t zawierają żadnego członka publicznego lub nie można odnaleźć
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40056
 - vbc40056
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 49cd9fa5d5182b2cf2d7fc4623bc8e9aa02bf85e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8be0df5cbe4b8d4a640c9b6c2e126b3828254fd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports &#39; &lt;qualifiedelementname&gt;&#39; &#39; t zawierają żadnego członka publicznego lub nie można odnaleźć
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports &#39; &lt;qualifiedelementname&gt; &#39; &#39;t zawierają żadnego członka publicznego lub nie można odnaleźć
 Namespace lub typ określony w elemencie Imports\<qualifiedelementname >' nie zawierają żadnego członka publicznego lub nie można odnaleźć. Upewnij się, że przestrzeń nazw lub typ są zdefiniowane i zawierają co najmniej jednego członka publicznego. Upewnij się, że nazwa aliasu nie zawiera innych aliasów.  
   
  `Imports` Instrukcji określa zawierający element, który nie może być odnaleziona albo nie definiuje `Public` elementów członkowskich.  
@@ -52,8 +43,8 @@ Namespace lub typ określony w elemencie Imports\<qualifiedelementname >' nie za
 3.  Sprawdź element zawierający ujawnia co najmniej jeden `Public` elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Imports — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Namespace — instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Namespace, instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Przestrzenie nazw w Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
  [Odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

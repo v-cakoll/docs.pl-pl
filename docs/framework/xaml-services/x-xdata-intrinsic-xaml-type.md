@@ -1,13 +1,6 @@
 ---
-title: "x:XData — Typ funkcji XAML"
-ms.custom: 
+title: x:XData — Typ funkcji XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:XData
 - XData
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-caps.latest.revision: "17"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a16379fd6104342529723bf6d0bc9fb4762cf92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData — Typ funkcji XAML
-Umożliwia umieszczanie Wysp danych XML w produkcji XAML. Elementy XML w `x:XData` nie powinny być traktowane przez procesory XAML, jak, jeśli są one częścią działania domyślnej przestrzeni nazw XAML lub innych nazw XAML. `x:XData`może zawierać dowolne poprawnie sformułowany plik XML.  
+Umożliwia umieszczanie Wysp danych XML w produkcji XAML. Elementy XML w `x:XData` nie powinny być traktowane przez procesory XAML, jak, jeśli są one częścią działania domyślnej przestrzeni nazw XAML lub innych nazw XAML. `x:XData` może zawierać dowolne poprawnie sformułowany plik XML.  
   
 ## <a name="xaml-object-element-usage"></a>Użycie elementu obiektu języka XAML  
   
@@ -46,7 +34,7 @@ Umożliwia umieszczanie Wysp danych XML w produkcji XAML. Elementy XML w `x:XDat
 |||  
 |-|-|  
 |`elementDataRoot`|Element z jednym elementem głównym Wyspy danych zamknięte. Dla większości ostatecznego konsumentów XML, który nie ma jednym elementem głównym jest uznawane za nieprawidłowe. W szczególności jednym elementem głównym jest wymagany, jeśli `x:XData` ma pełnić rolę źródła danych XML dla WPF i wiele innych technologii używające źródła XML dla powiązania danych.|  
-|`[elementData]`|Opcjonalny. Kod XML, który reprezentuje dane XML. Dowolna liczba elementów może być używany jako element danych i elementów zagnieżdżonych mogą być zawarte w innych elementach; Ogólne zasady XML się.|  
+|`[elementData]`|Opcjonalna. Kod XML, który reprezentuje dane XML. Dowolna liczba elementów może być używany jako element danych i elementów zagnieżdżonych mogą być zawarte w innych elementach; Ogólne zasady XML się.|  
   
 ## <a name="remarks"></a>Uwagi  
  Elementy XML w `x:XData` obiekt można ponownie zadeklarować wszystkie możliwe obszary nazw i prefiksy zawierającego XMLDOM w danych.  

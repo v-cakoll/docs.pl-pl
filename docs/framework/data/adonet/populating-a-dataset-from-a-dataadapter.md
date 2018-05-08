@@ -1,39 +1,27 @@
 ---
-title: "Wypełnianie zestawu danych z element DataAdapter"
-ms.custom: 
+title: Wypełnianie zestawu danych z element DataAdapter
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ced280be0fa14077be893c59596ed65b424172c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Wypełnianie zestawu danych z element DataAdapter
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Jest rezydentny reprezentację danych, który zapewnia spójne relacyjne programowania modelu niezależnie od źródła danych. `DataSet` Reprezentuje pełny zestaw danych, który zawiera tabele, ograniczenia i relacje między tabelami. Ponieważ `DataSet` jest niezależna od źródła danych, `DataSet` mogą obejmować dane lokalne aplikacji i danych z wielu źródeł danych. Interakcja z istniejących źródeł danych są kontrolowane poprzez `DataAdapter`.  
   
  `SelectCommand` Właściwość `DataAdapter` jest `Command` obiekt, który pobiera dane ze źródła danych. `InsertCommand`, `UpdateCommand`, I `DeleteCommand` właściwości `DataAdapter` są `Command` obiektów zarządzanych aktualizacje danych w źródle danych, zgodnie ze zmian wprowadzonych w danych w `DataSet`. Te właściwości są opisane bardziej szczegółowo w [aktualizowanie źródła danych z obiektów DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- `Fill` Metody `DataAdapter` używany do wypełnienia `DataSet` z wynikami `SelectCommand` z `DataAdapter`. `Fill`przyjmuje jako argumenty `DataSet` wypełnianie, a `DataTable` obiektu lub nazwę `DataTable` należy podać wierszy zwróconych `SelectCommand`.  
+ `Fill` Metody `DataAdapter` używany do wypełnienia `DataSet` z wynikami `SelectCommand` z `DataAdapter`. `Fill` przyjmuje jako argumenty `DataSet` wypełnianie, a `DataTable` obiektu lub nazwę `DataTable` należy podać wierszy zwróconych `SelectCommand`.  
   
 > [!NOTE]
 >  Przy użyciu `DataAdapter` pobranie wszystkich tabeli wymaga czasu, zwłaszcza, jeśli istnieje wiele wierszy w tabeli. Jest to spowodowane dostęp do bazy danych, lokalizuje i przetwarzania danych, a następnie przekazania danych do klienta jest czasochłonne. Ściąganie wszystkich tabeli klientowi również blokuje wszystkie wiersze na serwerze. Aby zwiększyć wydajność, można użyć `WHERE` klauzuli znacznie zmniejszyć liczbę wierszy zwracanych do klienta. Można także zmniejszyć ilość danych do klienta zwracany przez wyświetlanie tylko jawnie wymaganych kolumn w `SELECT` instrukcji. Inne obejście dobrej jest pobieranie wierszy w partii (na przykład kilka wierszy kilkuset jednocześnie) i tylko pobieranie następnej partii, gdy klient jest gotowy z użyciem bieżącej partii.  
   
- `Fill` Używa metody `DataReader` obiektu niejawnie zwraca nazwy kolumn i typy, które są używane do tworzenia tabel w `DataSet`i dane do zapełnienia wierszy w tabelach w `DataSet`. Tabele i kolumny są tworzone tylko jeśli już nie istnieją; w przeciwnym razie `Fill` wykorzystuje istniejące `DataSet` schematu. Typy kolumn są tworzone jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów zgodnie z tabelami w [mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Klucze podstawowe nie są tworzone, jeśli nie istnieją w źródle danych i `DataAdapter` **.**`MissingSchemaAction` ustawiono `MissingSchemaAction` **.** `AddWithKey`. Jeśli `Fill` stwierdza, że istnieje klucz podstawowy dla tabeli, spowoduje zastąpienie danych w `DataSet` z danymi ze źródła danych dla wierszy, w których wartości kolumny klucza podstawowego pasują do wiersza zwracane ze źródła danych. Jeśli zostanie znaleziony żaden klucz podstawowy, dane są dołączane do tabel w `DataSet`. `Fill`używa mapowań, które mogą wystąpić podczas wypełniania `DataSet` (zobacz [element DataAdapter DataTable i mapowania elementu DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
+ `Fill` Używa metody `DataReader` obiektu niejawnie zwraca nazwy kolumn i typy, które są używane do tworzenia tabel w `DataSet`i dane do zapełnienia wierszy w tabelach w `DataSet`. Tabele i kolumny są tworzone tylko jeśli już nie istnieją; w przeciwnym razie `Fill` wykorzystuje istniejące `DataSet` schematu. Typy kolumn są tworzone jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów zgodnie z tabelami w [mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Klucze podstawowe nie są tworzone, jeśli nie istnieją w źródle danych i `DataAdapter` **.**`MissingSchemaAction` ustawiono `MissingSchemaAction` **.** `AddWithKey`. Jeśli `Fill` stwierdza, że istnieje klucz podstawowy dla tabeli, spowoduje zastąpienie danych w `DataSet` z danymi ze źródła danych dla wierszy, w których wartości kolumny klucza podstawowego pasują do wiersza zwracane ze źródła danych. Jeśli zostanie znaleziony żaden klucz podstawowy, dane są dołączane do tabel w `DataSet`. `Fill` używa mapowań, które mogą wystąpić podczas wypełniania `DataSet` (zobacz [element DataAdapter DataTable i mapowania elementu DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
   
 > [!NOTE]
 >  Jeśli `SelectCommand` zwraca wyniki OUTER JOIN `DataAdapter` nie ustawia `PrimaryKey` wartość powstałe w ten sposób `DataTable`. Należy zdefiniować `PrimaryKey` samodzielnie, aby upewnić się, że zduplikowane wiersze są rozpoznawane poprawnie. Aby uzyskać więcej informacji, zobacz [Definiowanie kluczy podstawowych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
@@ -70,7 +58,7 @@ adapter.Fill(customers, "Customers");
  Jeśli `DataAdapter` zestawy wielu wyników czynnościach, tworzy wiele tabel w `DataSet`. Tabele są podane przyrostowe domyślną nazwę tabeli*N*począwszy Table0 "tabeli". Jeśli nazwa tabeli jest przekazywany jako argument `Fill` metody, tabelach podano przyrostowe domyślną nazwę TableName*N*począwszy "Nazwa_tabeli" dla TableName0.  
   
 ## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Wypełnianie zestawu danych z wielu obiektów DataAdapter  
- Dowolną liczbę `DataAdapter` obiekty mogą być używane z `DataSet`. Każdy `DataAdapter` może być użyta do wypełnienia co najmniej jeden `DataTable` obiektów i rozwiąż aktualizacje z powrotem do źródła danych. `DataRelation`i `Constraint` obiekty mogą być dodawane do `DataSet` lokalnie, co umożliwia powiązać dane z różnych źródeł. Na przykład `DataSet` mogą zawierać dane z bazy danych programu Microsoft SQL Server, bazy danych programu IBM DB2 za pośrednictwem OLE DB i strumieni XML źródła danych. Co najmniej jeden `DataAdapter` obiektów może obsłużyć komunikacji dla każdego źródła danych.  
+ Dowolną liczbę `DataAdapter` obiekty mogą być używane z `DataSet`. Każdy `DataAdapter` może być użyta do wypełnienia co najmniej jeden `DataTable` obiektów i rozwiąż aktualizacje z powrotem do źródła danych. `DataRelation` i `Constraint` obiekty mogą być dodawane do `DataSet` lokalnie, co umożliwia powiązać dane z różnych źródeł. Na przykład `DataSet` mogą zawierać dane z bazy danych programu Microsoft SQL Server, bazy danych programu IBM DB2 za pośrednictwem OLE DB i strumieni XML źródła danych. Co najmniej jeden `DataAdapter` obiektów może obsłużyć komunikacji dla każdego źródła danych.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu wypełnia listę klientów z `Northwind` bazy danych w programie Microsoft SQL Server oraz listę zleceń `Northwind` bazy danych programu Microsoft Access 2000. Wypełniony tabel powiązanych z `DataRelation`, a następnie wyświetlona lista klientów z zamówień tego klienta. Aby uzyskać więcej informacji na temat `DataRelation` obiekty, zobacz [Dodawanie DataRelations](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md) i [nawigowanie po DataRelations](../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations.md).  
@@ -131,7 +119,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>Typ Decimal serwera SQL  
  Domyślnie `DataSet` przechowuje dane przy użyciu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów danych. Większość aplikacji te zapewniają wygodne reprezentację informacje o źródle danych. Taka reprezentacja może jednak spowodować problem, gdy typ danych w źródle danych jest typu dziesiętnego lub liczbowego danych programu SQL Server. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` — Typ danych pozwala maksymalnie 28 cyfr znaczących, podczas gdy program SQL Server `decimal` 38 cyfr znaczących zezwala na typ danych. Jeśli `SqlDataAdapter` określa podczas `Fill` operacji który dokładność programu SQL Server `decimal` pole jest większy niż 28 znaków, bieżący wiersz nie została dodana do `DataTable`. Zamiast tego `FillError` wystąpi zdarzenie, co pozwala określić, czy utratę dokładności będą występować i reagowania. Aby uzyskać więcej informacji na temat `FillError` zdarzeń, zobacz [obsługi zdarzeń element DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md). Można pobrać programu SQL Server `decimal` wartości, można również użyć <xref:System.Data.SqlClient.SqlDataReader> obiekt i wywołanie <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> metody.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0 wprowadzono rozszerzoną obsługę <xref:System.Data.SqlTypes> w `DataSet`. Aby uzyskać więcej informacji, zobacz [właściwości SqlTypes i zestawie danych](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wprowadzono rozszerzoną obsługę <xref:System.Data.SqlTypes> w `DataSet`. Aby uzyskać więcej informacji, zobacz [właściwości SqlTypes i zestawie danych](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>OLE DB rozdziałach  
  Hierarchiczna zestawów wierszy lub działami (typ OLE DB `DBTYPE_HCHAPTER`, typu ADO `adChapter`) może być użyta do wypełnienia zawartość `DataSet`. Gdy <xref:System.Data.OleDb.OleDbDataAdapter> napotka podzielony na rozdziały kolumny podczas `Fill` operacji, `DataTable` jest tworzony w kolumnie podzielony na rozdziały i ta tabela jest wypełniany kolumn i wierszy od działu. Tabela utworzona dla podzielony na rozdziały kolumna nosiła nazwę, używając nazwy tabeli nadrzędnej i nazwę kolumny podzielony na rozdziały w formie "*ParentTableNameChapteredColumnName*". Jeśli tabela już istnieje w `DataSet` odpowiadającej nazwie kolumny podzielony na rozdziały, bieżącej tabeli jest wypełniony danych działu. Jeśli w istniejącej tabeli, która odpowiada kolumny znaleźć w rozdziale nie ma żadnej kolumny, jest dodawana nowa kolumna.  
@@ -178,7 +166,7 @@ adapter.Fill(customers, "Customers");
   
 ### <a name="tablename-customers"></a>TableName: klientów  
   
-|CustomerID|CompanyName|Zlecenia|  
+|CustomerID|Nazwa firmy|Zlecenia|  
 |----------------|-----------------|------------|  
 |ALFKI|Alfreds Futterkiste|0|  
 |ANATR|Helados y ana Trujillo Emparedados|1|  

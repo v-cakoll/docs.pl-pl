@@ -1,21 +1,14 @@
 ---
 title: Containerizing wbudowanymi aplikacji
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Containerizing wbudowanymi aplikacji"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Containerizing wbudowanymi aplikacji
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fc01054e4352a711d2203e694001a1204dedadf9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f5d00c6ce4c965d66937dae3f8e5453883afb4b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containerizing-monolithic-applications"></a>Containerizing wbudowanymi aplikacji
 

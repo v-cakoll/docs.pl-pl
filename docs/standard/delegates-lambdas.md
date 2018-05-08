@@ -1,23 +1,16 @@
 ---
-title: "Delegaci i wyrażeń lambda"
-description: "Dowiedz się, jak delegatów Definiowanie typu, które określą podpisu konkretnej metody, które można wywołać bezpośrednio lub przekazana do innej metody i wywołać."
-keywords: .NET, .NET core
+title: Delegaci i wyrażeń lambda
+description: Dowiedz się, jak delegatów Definiowanie typu, które określą podpisu konkretnej metody, które można wywołać bezpośrednio lub przekazana do innej metody i wywołać.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d418733ada67a1cb751bbfa74afee2eeeee04976
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-and-lambdas"></a>Delegaci i wyrażeń lambda
 
@@ -50,9 +43,9 @@ public class Program
 
 W celu uproszczenia procesu tworzenia, .NET zawiera zestaw typów delegatów, które programiści mogą ponownie wykorzystać i nie trzeba tworzyć nowych typów. Są to `Func<>`, `Action<>` i `Predicate<>`, i mogą być używane w różnych miejscach interfejsów API architektury .NET bez konieczności do definiowania nowych typów delegata. Oczywiście są pewne różnice między trzy jak widać w ich sygnaturach, które przede wszystkim ze sposobem, które zostały one przeznaczone do użycia:
 
-*   `Action<>`jest używany, gdy istnieje potrzeba wykonania akcji na podstawie argumentów delegata.
-*   `Func<>`jest używana zazwyczaj, gdy masz transformację dostępnych produktów, oznacza to, należy przekształcić argumenty delegata w innych wyników. Projekcje są podstawowym przykładem.
-*   `Predicate<>`jest używany podczas należy ustalić, jeśli argument spełnia warunek delegata. Można również będą zapisywane jako `Func<T, bool>`.
+*   `Action<>` jest używany, gdy istnieje potrzeba wykonania akcji na podstawie argumentów delegata.
+*   `Func<>` jest używana zazwyczaj, gdy masz transformację dostępnych produktów, oznacza to, należy przekształcić argumenty delegata w innych wyników. Projekcje są podstawowym przykładem.
+*   `Predicate<>` jest używany podczas należy ustalić, jeśli argument spełnia warunek delegata. Można również będą zapisywane jako `Func<T, bool>`.
 
 Możemy teraz pobrać naszym przykładzie powyżej i przepisywania za pomocą `Func<>` delegować zamiast typu niestandardowego. Program nadal będzie działać, dokładnie tak samo.
 

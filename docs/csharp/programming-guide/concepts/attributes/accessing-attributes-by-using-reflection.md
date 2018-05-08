@@ -1,21 +1,12 @@
 ---
-title: "Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)"
-ms.custom: 
+title: Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 162bdd6b968def391a2f3413596ee8c2a8b01cc3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05c051490dab5265309fd067dfb67f0ef7822541
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)
 Fakt, że można zdefiniować atrybutów niestandardowych i umieść je w kodzie źródłowym byłoby o niewielkiej wartości bez sposób pobierania tych informacji i działające na nim. Przy użyciu odbicia, można pobierać informacje, która została zdefiniowana z atrybutów niestandardowych. Metoda klucza jest `GetCustomAttributes`, która zwraca tablicę obiektów, które są odpowiedniki środowiska wykonawczego atrybutów kodu źródłowego. Ta metoda ma kilka wersji przeciążona. Aby uzyskać więcej informacji, zobacz <xref:System.Attribute>.  
@@ -34,7 +25,7 @@ Author anonymousAuthorObject = new Author("P. Ackerman");
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- Jednak kod nie jest wykonywany do momentu `SampleClass` zostanie zapytany o atrybuty. Wywoływanie `GetCustomAttributes` na `SampleClass` powoduje, że `Author` obiektu utworzone i zainicjowane zgodnie z powyższym. Jeśli klasa ma inne atrybuty, inne obiekty atrybutu są zbudowane analogicznie. `GetCustomAttributes`Zwraca `Author` obiektu i innych obiektów atrybutu w tablicy. Można następnie iteracja tej tablicy, określić atrybuty zostały zastosowane w zależności od typu każdy element tablicy i wyodrębnienia informacji z obiektów atrybutu.  
+ Jednak kod nie jest wykonywany do momentu `SampleClass` zostanie zapytany o atrybuty. Wywoływanie `GetCustomAttributes` na `SampleClass` powoduje, że `Author` obiektu utworzone i zainicjowane zgodnie z powyższym. Jeśli klasa ma inne atrybuty, inne obiekty atrybutu są zbudowane analogicznie. `GetCustomAttributes` Zwraca `Author` obiektu i innych obiektów atrybutu w tablicy. Można następnie iteracja tej tablicy, określić atrybuty zostały zastosowane w zależności od typu każdy element tablicy i wyodrębnienia informacji z obiektów atrybutu.  
   
 ## <a name="example"></a>Przykład  
  W tym miejscu jest pełny przykład. Atrybut niestandardowy jest zdefiniowany, stosowane do kilku jednostek i pobrać za pomocą odbicia.  

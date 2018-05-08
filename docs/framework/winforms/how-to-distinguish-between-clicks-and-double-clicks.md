@@ -1,14 +1,6 @@
 ---
 title: 'Porady: rozróżnianie między kliknięciami a dwukrotnymi kliknięciami'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0f6f92c225e7b3c745c5cf439c9094d72fa0cde0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6c8603df5a844fb93db0555b605f16235b9dff54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Porady: rozróżnianie między kliknięciami a dwukrotnymi kliknięciami
 Zazwyczaj pojedynczy *kliknij* inicjuje akcji interfejsu użytkownika a *kliknij dwukrotnie* rozszerza akcji. Na przykład jednego kliknięcia zazwyczaj wybiera element, a następnie dwukrotne Edytuje wybrany element. Jednak zdarzenia kliknięcia formularze systemu Windows nie łatwo zmiany scenariusz, w którym przez kliknięcie i dwukrotne akcje niezgodne, ponieważ powiązane akcji <xref:System.Windows.Forms.Control.Click> lub <xref:System.Windows.Forms.Control.MouseClick> zdarzeń jest wykonywane przed akcją powiązane <xref:System.Windows.Forms.Control.DoubleClick>lub <xref:System.Windows.Forms.Control.MouseDoubleClick> zdarzeń. W tym temacie przedstawiono dwa rozwiązania tego problemu. Rozwiązanie polega na kliknij dwukrotnie zdarzenie i wycofać akcje obsługi zdarzenia kliknięcia. W rzadkich przypadkach może być konieczne symulować kliknij i dwukrotnie kliknij zachowanie obsługa <xref:System.Windows.Forms.Control.MouseDown> zdarzeń i za pomocą <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> i <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> właściwości <xref:System.Windows.Forms.SystemInformation> klasy. Pomiar czasu między kliknięciami a jeśli drugie kliknięcie występuje przed wartością <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> osiągnięciu i kliknięcie mieści się w prostokącie zdefiniowane przez <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, wykonania akcji kliknij dwukrotnie; w przeciwnym razie wykonaj akcję kliknij.  

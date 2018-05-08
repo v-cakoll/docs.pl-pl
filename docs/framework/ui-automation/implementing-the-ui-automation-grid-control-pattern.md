@@ -1,28 +1,19 @@
 ---
-title: "Implementacja wzorca formantu siatki automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Implementacja wzorca formantu siatki automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-caps.latest.revision: "27"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4667cd149940310e2422686b9e9fdf6e7e99ca9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0038202fb7c7f1a6e0b4f21592d7a1056c4dfa2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -47,7 +38,7 @@ Przykład formantu siatki o pustym współrzędnych
   
 -   Ukryte wiersze i kolumny, w zależności od implementacji dostawcy mogą być ładowane w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, a w związku z tym zostaną odzwierciedlone w <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> i <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> właściwości. Jeśli ukryte wiersze i kolumny nie zostały jeszcze zostały załadowane, ich nie powinno być liczone.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider>nie obsługuje aktywnego manipulowania siatki; <xref:System.Windows.Automation.Provider.ITransformProvider> musi zostać wdrożona, aby włączyć tę funkcję.  
+-   <xref:System.Windows.Automation.Provider.IGridProvider> nie obsługuje aktywnego manipulowania siatki; <xref:System.Windows.Automation.Provider.ITransformProvider> musi zostać wdrożona, aby włączyć tę funkcję.  
   
 -   Użyj <xref:System.Windows.Automation.StructureChangedEventHandler> do nasłuchiwania zmian strukturalnych lub układ do siatki, takich jak komórki, które zostały dodane, usunięte lub scalone.  
   

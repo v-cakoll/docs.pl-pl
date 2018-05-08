@@ -1,24 +1,12 @@
 ---
-title: "Przestrzeń nazw dla usług .NET Framework XAML"
-ms.custom: 
+title: Przestrzeń nazw dla usług .NET Framework XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 842cfb31e21c59bb886ccd266d19c40c64557519
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Przestrzeń nazw dla usług .NET Framework XAML
 Przestrzeń nazw XAML jest działaniem rozwijający w definicji obszaru nazw XML. Podobnie jak w przestrzeni nazw XML, można określić przestrzeń nazw XAML przy użyciu `xmlns` atrybutów w znaczniku. Przestrzeń nazw XAML również są przedstawiane w strumieniu węzłów XAML i innych interfejsów API usługi języka XAML. W tym temacie wprowadzono pojęcie przestrzeni nazw XAML i opisuje sposób przestrzeń nazw XAML mogą być definiowane i są używane przez kontekst schematu XAML i inne aspekty usług .NET Framework XAML.  
@@ -41,9 +29,9 @@ Przestrzeń nazw XAML jest działaniem rozwijający w definicji obszaru nazw XML
   
  Najbardziej podstawowa formę identyfikatora, który używa konwencji przestrzeń nazw i zestawu CLR jest następujący:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyShortName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyShortName*  
   
- `clr-namespace:`i `; assembly=` są składnikami literału składni.  
+ `clr-namespace:` i `; assembly=` są składnikami literału składni.  
   
  *clrnsName* jest nazwa ciągu, który identyfikuje przestrzeń nazw CLR. Ta nazwa ciągu obejmuje wszystkie znaki wewnętrzny kropka (.), które udostępnia wskazówek dotyczących przestrzeń nazw środowiska CLR i jego powiązanie innych przestrzeniach nazw CLR.  
   
@@ -51,7 +39,7 @@ Przestrzeń nazw XAML jest działaniem rozwijający w definicji obszaru nazw XML
   
  Bardziej szczegółowy definicję Konwencji przestrzeń nazw i zestawu CLR jest następujący:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *assemblyName* reprezentuje dowolny ciąg, który jest dozwolony jako <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> wejściowego. Ten ciąg może zawierać kultury, klucz publiczny lub informacje o wersji (definicje tych założeń są definiowane w temacie dotyczącym <xref:System.Reflection.Assembly>). COFF format i dokumentów (jak używany przez inne przeciążenia <xref:System.Reflection.Assembly.Load%2A>) nie są istotne dla celów; ładowanie zestawu XAML wszystkie informacje obciążenia muszą być przedstawione jako ciąg.  
   
@@ -72,7 +60,7 @@ Przestrzeń nazw XAML jest działaniem rozwijający w definicji obszaru nazw XML
   
  Aby wstępnie wypełnić informacji dotyczących przestrzeni nazw XAML, w przypadkach, gdzie przestrzeni nazw XAML mają kontekst schematu XAML do użycia nie jest zdefiniowany w znaczniku, co technika, można użyć jest aby zadeklarować deklaracje przestrzeni nazw XML w <xref:System.Xml.XmlParserContext> dla <xref:System.Xml.XmlReader>. Użyj tego <xref:System.Xml.XmlReader> jako dane wejściowe dla konstruktora czytnika XAML lub <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- Atrybuty są dwa API, które są odpowiednie dla przestrzeni nazw XAML Obsługa w .NET Framework XAML Services <xref:System.Windows.Markup.XmlnsDefinitionAttribute> i <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Te atrybuty stosowane do zestawów. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>jest używany przez kontekst schematu XAML interpretować wszystkie deklaracji przestrzeni nazw XAML, który zawiera identyfikator URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute>jest używana przez narzędzia, które Emituj XAML, aby określonej przestrzeni nazw XAML może być Zserializowany z prefiksem przewidywalne. Aby uzyskać więcej informacji, zobacz [XAML-Related atrybuty CLR dotyczące niestandardowych typów i bibliotek](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Atrybuty są dwa API, które są odpowiednie dla przestrzeni nazw XAML Obsługa w .NET Framework XAML Services <xref:System.Windows.Markup.XmlnsDefinitionAttribute> i <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Te atrybuty stosowane do zestawów. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> jest używany przez kontekst schematu XAML interpretować wszystkie deklaracji przestrzeni nazw XAML, który zawiera identyfikator URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> jest używana przez narzędzia, które Emituj XAML, aby określonej przestrzeni nazw XAML może być Zserializowany z prefiksem przewidywalne. Aby uzyskać więcej informacji, zobacz [XAML-Related atrybuty CLR dotyczące niestandardowych typów i bibliotek](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie struktur i koncepcji strumienia węzłów XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

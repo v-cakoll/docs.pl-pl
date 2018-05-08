@@ -1,24 +1,17 @@
 ---
-title: "explicit (odwołanie w C#)"
+title: explicit (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eab79d3ac48192f3c176ed44685ab58e50fc89be
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: c8a05aef3318eb34242ed1268ea26663592e4d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-c-reference"></a>explicit (odwołanie w C#)
 `explicit` — Słowo kluczowe deklaruje typ zdefiniowany przez użytkownika operatora konwersji, które muszą być wywoływane z rzutowanie. Na przykład tego operatora konwertuje z klasy o nazwie f do klasy o nazwie c:  
@@ -52,7 +45,7 @@ ms.lasthandoff: 12/06/2017
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [niejawne](../../../csharp/language-reference/keywords/implicit.md)  
+ [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [Operator (odwołanie w C#)](../../../csharp/language-reference/keywords/operator.md)  
- [Porady: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+ [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
  [Tworzenie łańcucha zdefiniowane przez użytkownika Konwersje jawne w języku C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

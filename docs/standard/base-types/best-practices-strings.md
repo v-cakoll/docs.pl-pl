@@ -1,13 +1,7 @@
 ---
-title: "Najlepsze rozwiązania dotyczące używania ciągów w .NET"
-ms.custom: 
+title: Najlepsze rozwiązania dotyczące używania ciągów w .NET
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,21 +17,16 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w .NET
-<a name="top"></a>Zapewnia zaawansowaną obsługę programowania zlokalizowanych i uniwersalnych aplikacji .NET i można łatwo zastosować konwencje bieżącej kultury lub określoną kulturę, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest operacją zależne od kultury. Na przykład ciągów, które są używane wewnętrznie aplikacji zwykle powinny być traktowane identycznie we wszystkich języków. Kiedy kulturalnie niezależne ciągu danych, takich jak XML tagi, HTML tagi, nazwy użytkowników, ścieżki do pliku i nazwy obiektów systemowych są interpretowane, tak jakby były zależne od kultury, kod aplikacji może być może ulec subtelnych błędów, niską wydajnością, a w niektórych przypadkach problemy z zabezpieczeniami.  
+<a name="top"></a> Zapewnia zaawansowaną obsługę programowania zlokalizowanych i uniwersalnych aplikacji .NET i można łatwo zastosować konwencje bieżącej kultury lub określoną kulturę, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest operacją zależne od kultury. Na przykład ciągów, które są używane wewnętrznie aplikacji zwykle powinny być traktowane identycznie we wszystkich języków. Kiedy kulturalnie niezależne ciągu danych, takich jak XML tagi, HTML tagi, nazwy użytkowników, ścieżki do pliku i nazwy obiektów systemowych są interpretowane, tak jakby były zależne od kultury, kod aplikacji może być może ulec subtelnych błędów, niską wydajnością, a w niektórych przypadkach problemy z zabezpieczeniami.  
   
  W tym temacie sprawdza, czy sortowanie ciągów, porównania i metod wielkość liter w programie .NET, przedstawiono zalecenia dotyczące wybierania odpowiedniej metody obsługi ciągów i udostępnia dodatkowe informacje na temat metody obsługi ciągu. Sprawdza także sposób sformatowanych danych, takich jak dane liczbowe i danych daty i godziny, jest obsługiwane dla wyświetlania i magazynu.  
   
@@ -147,17 +136,17 @@ ms.lasthandoff: 12/23/2017
   
  Porównania, które korzystają bezpośrednio z semantyki bieżącej kultury są domyślne dla następujących metod:  
   
--   <xref:System.String.Compare%2A?displayProperty=nameWithType>przeciążenia, które nie zawierają <xref:System.StringComparison> parametru.  
+-   <xref:System.String.Compare%2A?displayProperty=nameWithType> przeciążenia, które nie zawierają <xref:System.StringComparison> parametru.  
   
--   <xref:System.String.CompareTo%2A?displayProperty=nameWithType>przeciążenia.  
+-   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> przeciążenia.  
   
 -   Wartość domyślna <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> metody i <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metody z `null` <xref:System.Globalization.CultureInfo> parametru.  
   
 -   Wartość domyślna <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> metody i <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metody z `null` <xref:System.Globalization.CultureInfo> parametru.  
   
--   <xref:System.String.IndexOf%2A?displayProperty=nameWithType>przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametru i które nie mają <xref:System.StringComparison> parametru.  
+-   <xref:System.String.IndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametru i które nie mają <xref:System.StringComparison> parametru.  
   
--   <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametru i które nie mają <xref:System.StringComparison> parametru.  
+-   <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametru i które nie mają <xref:System.StringComparison> parametru.  
   
  W każdym przypadku firma Microsoft zaleca, aby wywoływać przeciążenia, które ma <xref:System.StringComparison> parametr, aby celem metodę wywołania Wyczyść.  
   
@@ -283,7 +272,7 @@ ms.lasthandoff: 12/23/2017
   
  Należy zachować ostrożność podczas użycia tych metod, ponieważ wymuszanie ciągu na wielkie i małe jest często używana jako małych normalizacji porównywania ciągów niezależnie od przypadku. Jeśli tak, należy rozważyć użycie porównania bez uwzględniania wielkości liter.  
   
- <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> i <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> są również dostępne metody. <xref:System.String.ToUpperInvariant%2A>jest standardowym sposobem do sprawę normalizacji. Porównania zostało nawiązane przy użyciu <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> behaviorally są złożeniem dwóch wywołania: wywołanie <xref:System.String.ToUpperInvariant%2A> na zarówno argumenty typu string, jak i podczas porównywania przy użyciu <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.  
+ <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> i <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> są również dostępne metody. <xref:System.String.ToUpperInvariant%2A> jest standardowym sposobem do sprawę normalizacji. Porównania zostało nawiązane przy użyciu <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> behaviorally są złożeniem dwóch wywołania: wywołanie <xref:System.String.ToUpperInvariant%2A> na zarówno argumenty typu string, jak i podczas porównywania przy użyciu <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.  
   
  Przeciążenia są również dostępne do konwersji na wielkie i małe litery w określoną kulturę, przekazując <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje kultury tej metody.  
   

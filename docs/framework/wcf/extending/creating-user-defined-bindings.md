@@ -1,28 +1,14 @@
 ---
 title: Tworzenie powiązań zdefiniowanych przez użytkownika
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Tworzenie powiązań zdefiniowanych przez użytkownika
 Istnieje kilka sposobów, aby utworzyć powiązania nie są dostarczane przez system:  
@@ -38,7 +24,7 @@ Istnieje kilka sposobów, aby utworzyć powiązania nie są dostarczane przez sy
   
  Istnieją trzy typy elementy powiązania: elementy powiązania protokołu, kodowania elementów wiązania i elementy powiązania transportu.  
   
- Elementy powiązania protokołu — te elementy reprezentują wyższego poziomu przetwarzania czynności, które działają w wiadomości. Kanałów i odbiorników utworzone przez te elementy powiązania można dodać, usunąć lub zmodyfikować zawartość komunikatu. Podane powiązanie może mieć dowolną liczbę elementy powiązania protokołu, każdy dziedziczenie z <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera kilka elementów powiązania protokołu, w tym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> i <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Elementy powiązania protokołu — te elementy reprezentują wyższego poziomu przetwarzania czynności, które działają w wiadomości. Kanałów i odbiorników utworzone przez te elementy powiązania można dodać, usunąć lub zmodyfikować zawartość komunikatu. Podane powiązanie może mieć dowolną liczbę elementy powiązania protokołu, każdy dziedziczenie z <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) obejmuje kilka elementów powiązania protokołu, w tym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> i <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
  Kodowanie elementu powiązania — te stanowią elementy przekształceń między komunikat i kodowania gotowe do transmisji w sieci. Typowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania zawierać dokładnie jeden element powiązania kodowania. Kodowanie elementy powiązania przykłady <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Jeśli nie określono kodowanie elementu powiązania dla powiązania, domyślnym kodowaniem jest używany. Wartość domyślna to tekst w przypadku transportu HTTP i dane binarne w przeciwnym razie wartość.  
   

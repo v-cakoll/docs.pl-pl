@@ -1,33 +1,19 @@
 ---
 title: Konfigurowanie powiązań dostarczanych przez system
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], system-provided bindings
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bbf04f549c492ddc392b429edf3a703f3c307a0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 184f4da26df2c688b2b6f30f063bab058af37a4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurowanie powiązań dostarczanych przez system
-Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i określić sposób nawiązywania połączenia z punktem końcowym. Powiązania składają się z elementów, które definiują sposób [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanały są warstwie się zapewnienie funkcje wymagane komunikacji. Powiązanie zawiera trzy rodzaje elementów:  
+Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i określić sposób nawiązywania połączenia z punktem końcowym. Powiązania składają się z elementów, które określają sposób warstwie kanały Windows Communication Foundation (WCF) się zapewnienie funkcje wymagane komunikacji. Powiązanie zawiera trzy rodzaje elementów:  
   
 -   Elementy powiązania kanału protokołu, które określają zabezpieczeń, niezawodności, ustawień przepływu kontekstu lub protokołów zdefiniowane przez użytkownika do użycia z wiadomości, które są wysyłane do punktu końcowego.  
   
@@ -35,7 +21,7 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
   
 -   Elementy powiązania, które określają przewodowy kodowanie do użycia dla komunikatów wysyłanych do punktu końcowego, na przykład, text/XML, binarne, kodowania komunikatu lub mechanizmu optymalizacji transmisji wiadomości (MTOM).  
   
- W tym temacie przedstawiono wszystkie dostarczane przez system [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] powiązania. Jeśli nie spełnia żadnego z tych dokładne wymagania dotyczące aplikacji, można utworzyć powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding> klasy. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ W tym temacie przedstawiono wszystkie powiązania dostarczane przez system Windows Communication Foundation (WCF). Jeśli nie spełnia żadnego z tych dokładne wymagania dotyczące aplikacji, można utworzyć powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding> klasy. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
 >  Wybierz powiązania z włączonymi zabezpieczeniami. Domyślnie wszystkie powiązania z wyjątkiem <xref:System.ServiceModel.BasicHttpBinding> powiązanie, mają włączoną obsługą zabezpieczeń. Jeśli nie wybierzesz bezpiecznego powiązania lub wyłączenie zabezpieczeń, upewnij się, że Twoje wymiany sieci są chronione w inny sposób, na przykład w Centrum zabezpieczonych danych lub w sieci izolowanej.  
@@ -44,7 +30,7 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
 >  Nie należy używać kontrakty dwukierunkowe z powiązaniami, które nie obsługują zabezpieczeń lub mają zabezpieczeń wyłączone, chyba że sieci exchange jest zabezpieczone przy użyciu innych metod.  
   
 ## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
- Dołączone są następujące powiązania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Następujące powiązania są dostarczane z programem WCF.  
   
 |Powiązanie|Element konfiguracji|Opis|  
 |-------------|---------------------------|-----------------|  
@@ -54,12 +40,12 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługuje protokół WS-Federation, włączanie organizacji, które znajdują się w Federacji, aby wydajnie uwierzytelniania i autoryzacji użytkowników.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie, która jest pochodną <xref:System.ServiceModel.WS2007HttpBinding> i obsługuje zabezpieczeń.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Bezpieczne, niezawodne i zoptymalizowane powiązanie, które jest odpowiednie dla komunikacji na komputerze między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Zakolejkowane powiązanie, które jest odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między aplikacjami WCF.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji na komputerze między aplikacjami WCF.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Zakolejkowane powiązanie, które jest odpowiednie dla komunikacji między komputerami między aplikacjami WCF.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Powiązanie, które umożliwia komunikację bezpiecznego, obejmujących wiele maszyn.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Wiązanie używane do konfigurowania punktów końcowych dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, które są dostępne za pośrednictwem żądania HTTP zamiast na wiadomości SOAP sieci Web.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji i istniejące aplikacje usługi kolejkowania komunikatów (MSMQ).|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Wiązanie używane do konfigurowania punktów końcowych dla usług sieci Web WCF, które są dostępne za pośrednictwem żądania HTTP zamiast na wiadomości SOAP.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między aplikacja WCF i istniejące usługi kolejkowania komunikatów (MSMQ) aplikacji.|  
   
 ## <a name="binding-features"></a>Powiązanie funkcji  
  W następnej tabeli przedstawiono niektóre najważniejsze funkcje każdego powiązania dostarczane przez system, pod warunkiem. Powiązania są wyświetlane w pierwszej kolumnie i informacje dotyczące funkcji jest opisany w tabeli. Poniższa tabela zawiera klucz, skróty powiązanie użyte. Aby wybrać powiązanie, określić kolumnę, która spełnia wszystkie potrzebne funkcje wiersza.  

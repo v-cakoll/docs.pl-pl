@@ -1,23 +1,12 @@
 ---
-title: "Działania dostępu do bazy danych"
-ms.custom: 
+title: Działania dostępu do bazy danych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dfc99593e1c705cff5069b5dd864d372f8afda8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9c7627738d3c5313a4f3e6e4451daf78b87839a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-access-activities"></a>Działania dostępu do bazy danych
 Działania dostępu do bazy danych pozwalają na dostęp do bazy danych w przepływie pracy. Te działania Zezwalaj na dostęp do bazy danych do pobierania lub modyfikowanie informacji i użycia [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) dostęp do bazy danych.  
@@ -27,7 +16,7 @@ Działania dostępu do bazy danych pozwalają na dostęp do bazy danych w przep�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do (stronę pobierania), aby pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do (stronę pobierania) można pobrać wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
@@ -252,7 +241,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |Obiekt CommandType|Typ <xref:System.Data.Common.DbCommand> do wykonania.|  
 |SQL|Polecenie SQL do wykonania.|  
 |Parametry|Kolekcja parametrów zapytania SQL.|  
-|Wynik|<xref:System.Data.DataSet>które są uzyskiwane po wykonaniu zapytania.|  
+|Wynik|<xref:System.Data.DataSet> które są uzyskiwane po wykonaniu zapytania.|  
   
 ## <a name="configuring-connection-information"></a>Konfigurowanie informacji o połączeniu  
  Wszystkie DbActivities mają te same parametry konfiguracji. Można je skonfigurować na dwa sposoby:  
@@ -324,7 +313,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   
 ##### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
   
-1.  Otwórz rozwiązanie w[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]  
+1.  Otwórz rozwiązanie w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]  
   
 2.  Aby skompilować rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
   
@@ -335,6 +324,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

@@ -1,27 +1,15 @@
 ---
 title: Ustawienia rejestru ClearType
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-registry-settings"></a>Ustawienia rejestru ClearType
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] ustawień rejestru, które są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -29,7 +17,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje, które renderowania tekstu można używać urządzeń wyświetlania [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcji umożliwia czytanie rozszerzoną. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]jest to technologia oprogramowania opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] która poprawia czytelność tekstu w istniejących LCDs (należy zmienić.), takie jak ekranów komputerów przenośnych, Pocket PC ekrany i prosty monitory. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]Uzyskiwanie dostępu do elementów usługi stripe poszczególnych pionowy kolorów w każdym pikselu ciekłokrystalicznym utworów. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], zobacz [omówienie ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje, które renderowania tekstu można używać urządzeń wyświetlania [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcji umożliwia czytanie rozszerzoną. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowania opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] która poprawia czytelność tekstu w istniejących LCDs (należy zmienić.), takie jak ekranów komputerów przenośnych, Pocket PC ekrany i prosty monitory. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Uzyskiwanie dostępu do elementów usługi stripe poszczególnych pionowy kolorów w każdym pikselu ciekłokrystalicznym utworów. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], zobacz [omówienie ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
  Tekst, który jest odwzorowywany z [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] może się pojawić różne podczas wyświetlania na różnych urządzeniach wyświetlania. Na przykład niewielka liczba monitorów zaimplementować kolor elementów usługi stripe w kolejności niebieski, zielony, czerwony zamiast częściej czerwony, zielony, niebieski ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) kolejności.  
   
@@ -39,11 +27,11 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Ustawienia rejestru  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Określa czterech ustawień rejestru umożliwiające sterowanie [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcje:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Określa czterech ustawień rejestru umożliwiające sterowanie [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcje:  
   
 |Ustawienie|Opis|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]poziom|Opisuje poziom [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kolor przejrzystości.|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] poziom|Opisuje poziom [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kolor przejrzystości.|  
 |Poziom gamma|Opisuje poziom składnika kolor pikseli na urządzeniu.|  
 |Struktura pikseli|W tym artykule opisano układ pikseli na urządzeniu.|  
 |Poziom kontrastu tekstu|Opisuje poziom kontrastu wyświetlanego tekstu.|  
@@ -71,7 +59,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  ![Ustawienia ClearType w Edytorze rejestru](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje renderowania tekstu w jednym z obu dwóch trybów z włączonymi i wyłączonymi [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Jeśli tekst jest renderowany bez [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], jest ona określana jako renderowania skali odcieni szarości.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje renderowania tekstu w jednym z obu dwóch trybów z włączonymi i wyłączonymi [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Jeśli tekst jest renderowany bez [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], jest ona określana jako renderowania skali odcieni szarości.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Poziom gamma  
@@ -94,9 +82,9 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
 |Typ|Wartość|Opis|  
 |----------|-----------|-----------------|  
-|Płaski|0|Dla urządzenia wyświetlania nie ma żadnych struktury pikseli. Oznacza to, że w obszarze pikseli są Rozmieść równomiernie źródła światła dla każdego koloru — jest to określane jako renderowania skali odcieni szarości. To jest sposób standard wyświetlania działa urządzenie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]nigdy nie jest stosowany do renderowanego tekstu.|  
-|RGB|1|Urządzenia wyświetlającego ma następującą liczbę pikseli, które składają się z trzech rozkłada w następującej kolejności: czerwony, zielony i niebieski. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]jest stosowany do renderowanego tekstu.|  
-|BGR|2|Urządzenia wyświetlającego ma następującą liczbę pikseli, które składają się z trzech rozkłada w następującej kolejności: niebieski, zielony i kolor czerwony. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]jest stosowany do renderowanego tekstu. Zwróć uwagę, jak jest odwrócony kolejności z typem RGB.|  
+|Płaski|0|Dla urządzenia wyświetlania nie ma żadnych struktury pikseli. Oznacza to, że w obszarze pikseli są Rozmieść równomiernie źródła światła dla każdego koloru — jest to określane jako renderowania skali odcieni szarości. To jest sposób standard wyświetlania działa urządzenie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] nigdy nie jest stosowany do renderowanego tekstu.|  
+|RGB|1|Urządzenia wyświetlającego ma następującą liczbę pikseli, które składają się z trzech rozkłada w następującej kolejności: czerwony, zielony i niebieski. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest stosowany do renderowanego tekstu.|  
+|BGR|2|Urządzenia wyświetlającego ma następującą liczbę pikseli, które składają się z trzech rozkłada w następującej kolejności: niebieski, zielony i kolor czerwony. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest stosowany do renderowanego tekstu. Zwróć uwagę, jak jest odwrócony kolejności z typem RGB.|  
   
  Struktura pikseli odpowiada wartość całkowitą z zakresu od 0 do 2. Domyślny poziom to 0, co reprezentuje strukturę płaskiej pikseli.  
   

@@ -1,11 +1,7 @@
 ---
-title: "Funkcja SpawnInstance (niezarządzany wykaz interfejsów API)"
-description: "Funkcja SpawnInstance tworzy nowe wystąpienie klasy."
+title: Funkcja SpawnInstance (niezarządzany wykaz interfejsów API)
+description: Funkcja SpawnInstance tworzy nowe wystąpienie klasy.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawninstance-function"></a>Funkcja SpawnInstance
 Tworzy nowe wystąpienie klasy.    
@@ -64,16 +57,16 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`nie jest prawidłową definicją klasy i nie można zduplikować nowych wystąpień. Jest on niepełny lub go nie został zarejestrowany z zarządzania systemu Windows przez wywołanie metody [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` nie jest prawidłową definicją klasy i nie można zduplikować nowych wystąpień. Jest on niepełny lub go nie został zarejestrowany z zarządzania systemu Windows przez wywołanie metody [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`jest `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` jest `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja jest zawijana wywołanie [klasy IWbemClassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) metody.
 
-`ptr`musi być definicją klasy uzyskana z zarządzania systemu Windows. (Należy pamiętać, że duplikowanie wystąpienia z wystąpienia jest obsługiwana, ale zwrócone wystąpienie jest pusta). Następnie możesz użyć tej definicji klasy, aby utworzyć nowe wystąpienia. Wywołanie [PutInstanceWmi](putinstancewmi.md) funkcja jest wymagana, jeśli zamierzasz zapisać wystąpienie do zarządzania systemem Windows.
+`ptr` musi być definicją klasy uzyskana z zarządzania systemu Windows. (Należy pamiętać, że duplikowanie wystąpienia z wystąpienia jest obsługiwana, ale zwrócone wystąpienie jest pusta). Następnie możesz użyć tej definicji klasy, aby utworzyć nowe wystąpienia. Wywołanie [PutInstanceWmi](putinstancewmi.md) funkcja jest wymagana, jeśli zamierzasz zapisać wystąpienie do zarządzania systemem Windows.
 
 
 
@@ -85,7 +78,7 @@ Nowy obiekt zwracane w `ppNewClass` automatycznie staje się podklasą bieżące
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

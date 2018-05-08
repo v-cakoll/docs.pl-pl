@@ -1,13 +1,6 @@
 ---
 title: Dane i obiekty danych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>Dane i obiekty danych
 Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowywane w obiekcie danych.  Koncepcyjnie obiekt danych składa się z co najmniej jeden z następujących par:  
@@ -47,7 +35,7 @@ Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowy
 |<xref:System.Windows.IDataObject.GetFormats%2A>|Zwraca listę formatów, które dane w tym obiekcie danych są przechowywane w lub może zostać przekonwertowany na.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|Zapisuje określone dane w tym obiekcie danych.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia podstawową implementację elementu <xref:System.Windows.IDataObject> w <xref:System.Windows.DataObject> klasy. Zasoby <xref:System.Windows.DataObject> klasy jest wystarczająca dla wielu typowych scenariuszy transferu danych.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia podstawową implementację elementu <xref:System.Windows.IDataObject> w <xref:System.Windows.DataObject> klasy. Zasoby <xref:System.Windows.DataObject> klasy jest wystarczająca dla wielu typowych scenariuszy transferu danych.  
   
  Istnieje kilka wstępnie zdefiniowanych formatów, takich jak mapy bitowej, CSV, pliku, HTML, RTF, string, tekst i audio. Informacje na temat wstępnie zdefiniowanych danych formatów wyposażone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz <xref:System.Windows.DataFormats> temat referencyjny klasy.  
   
@@ -86,7 +74,7 @@ Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowy
  Więcej przykładów kodu, który odpytuje obiekt danych dostępnych danych formatów, zobacz [listy formatów danych w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).  Przykłady zapytań obiekt danych na obecność format danych, zobacz [ustalić, czy Format danych jest obecnie w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
   
 ### <a name="retrieving-data-from-a-data-object"></a>Pobieranie danych z obiektu danych  
- Pobieranie danych z obiektu danych w określonym formacie po prostu obejmuje wywołaniem <xref:System.Windows.DataObject.GetData%2A> metody i określanie formatu żądanych danych.  Jeden z <xref:System.Windows.DataObject.GetDataPresent%2A> metod można sprawdzić obecność formatu danych.  <xref:System.Windows.DataObject.GetData%2A>Zwraca dane w <xref:System.Object>; zależnie od formatu danych tego obiektu mogą być rzutowane na kontenera określonego typu.  
+ Pobieranie danych z obiektu danych w określonym formacie po prostu obejmuje wywołaniem <xref:System.Windows.DataObject.GetData%2A> metody i określanie formatu żądanych danych.  Jeden z <xref:System.Windows.DataObject.GetDataPresent%2A> metod można sprawdzić obecność formatu danych.  <xref:System.Windows.DataObject.GetData%2A> Zwraca dane w <xref:System.Object>; zależnie od formatu danych tego obiektu mogą być rzutowane na kontenera określonego typu.  
   
  Poniższy przykład kodu wykorzystuje <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> przeciążenia, aby sprawdzić, czy format określonych danych jest dostępna (natywny lub automatyczną konwersję). Jeśli określony format jest dostępny, przykładzie pobiera dane przy użyciu <xref:System.Windows.DataObject.GetData%28System.String%29> metody.  
   

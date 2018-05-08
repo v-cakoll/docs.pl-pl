@@ -1,24 +1,14 @@
 ---
-title: "WIF i farmy serwerów sieci Web"
-ms.custom: 
+title: WIF i farmy serwerów sieci Web
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 93c3e4251943afa383002043d9259184be82d929
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-and-web-farms"></a>WIF i farmy serwerów sieci Web
 Korzystając z programu Windows Identity Foundation (WIF) do zabezpieczania zasobów jednostki uzależnionej aplikacji firmy (RP), które zostało wdrożone w farmie sieci web, należy wykonać określone kroki, aby upewnić się, że WIF może przetwarzać tokenów z wystąpień RP aplikacji uruchomionych na różnych komputery z farmy. Proces przetwarzania obejmuje sprawdzanie poprawności Podpisy tokenu sesji, szyfrowania i odszyfrowywania tokenów sesji, buforowanie tokeny sesji i wykrywanie odtwarzany tokenów zabezpieczających.  
@@ -65,7 +55,7 @@ Korzystając z programu Windows Identity Foundation (WIF) do zabezpieczania zaso
 -   W przypadku wykrycia przez aplikację tokenów powtórzony należy wykonać podobne rozproszonej pamięci podręcznej strategii dla pamięci podręcznej powtórzeń tokenów przez wynikających z <xref:System.IdentityModel.Tokens.TokenReplayCache> i wskazujący Twojej powtórzeń tokenów buforowanie usługi w [ \< tokenReplayCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) element konfiguracji.  
   
 > [!IMPORTANT]
->  Wszystkie przykładowe XML i kodu w tym temacie jest pobierana z [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) próbki (http://go.microsoft.com/fwlink/?LinkID=248408).  
+>  Wszystkie przykładowe XML i kodu w tym temacie jest pobierana z [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) próbki.  
   
 > [!IMPORTANT]
 >  Przykłady w tym temacie podano jako — jest i nie są przeznaczone do użycia w kodzie produkcyjnym bez żadnych modyfikacji.  
@@ -98,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- Poniższy kod przedstawia implementację usługi WCF buforowanie usługi. W tym przykładzie wartość domyślna implementowane przez WIF pamięci podręcznej tokenu sesji w pamięci jest używany. Alternatywnie można zaimplementować trwałej pamięci podręcznej przechowywana w bazie danych. `ISessionSecurityTokenCacheService`definiuje interfejs przedstawionych powyżej. W tym przykładzie nie wszystkie metody, musi implementować interfejs są wyświetlane dla skrócenia.  
+ Poniższy kod przedstawia implementację usługi WCF buforowanie usługi. W tym przykładzie wartość domyślna implementowane przez WIF pamięci podręcznej tokenu sesji w pamięci jest używany. Alternatywnie można zaimplementować trwałej pamięci podręcznej przechowywana w bazie danych. `ISessionSecurityTokenCacheService` definiuje interfejs przedstawionych powyżej. W tym przykładzie nie wszystkie metody, musi implementować interfejs są wyświetlane dla skrócenia.  
   
 ```  
 using System;  

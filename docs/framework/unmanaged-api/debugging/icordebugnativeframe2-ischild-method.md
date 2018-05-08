@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugNativeFrame2::IsChild — Metoda"
-ms.custom: 
+title: ICorDebugNativeFrame2::IsChild — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame2.IsChild Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 267bc2fcd03786bfceb218dd0218ffa7006f8fa7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d9d613e810724b8e133b490c17a37ecc6565f09a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild — Metoda
 Określa, czy bieżącej ramki jest ramką podrzędną.  
@@ -55,7 +43,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |-------------|-----------------|  
 |S_OK|Pomyślnie zwrócono stanu podrzędnego.|  
 |E_FAIL|Nie można zwrócić stanu podrzędnego.|  
-|E_INVALIDARG|`pIsChild`ma wartość null.|  
+|E_INVALIDARG|`pIsChild` ma wartość null.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
@@ -69,7 +57,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorDebugNativeFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  

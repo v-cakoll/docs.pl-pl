@@ -1,28 +1,17 @@
 ---
 title: Kolekcje bezpieczne wątkowo
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5850335a13960df9094c1a6276799de043eb28f3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7e0d5e53b255ab59eabace01e69784d88aec8aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-safe-collections"></a>Kolekcje bezpieczne wątkowo
 W programie [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] wprowadzono przestrzeń nazw <xref:System.Collections.Concurrent?displayProperty=nameWithType> zawierającą kilka klas kolekcji, które są zarówno bezpieczne wątkowo, jak i skalowalne. Wiele wątków można bezpiecznie i efektywnie Dodaj lub usuń elementy z tych kolekcji bez konieczności dodatkowe synchronizacji w kodzie użytkownika. Pisząc nowy kod, należy używać klas kolekcji współbieżnych w każdej sytuacji, gdy kolekcja będzie zapisywać równocześnie do wielu wątków. Jeśli z udostępnionej kolekcji odbywa się tylko odczyt, można używać klas z przestrzeni nazw <xref:System.Collections.Generic?displayProperty=nameWithType>. Zalecamy nieużywanie klas kolekcji w wersji 1.0, chyba że aplikacje mają być przeznaczone dla środowiska uruchomieniowego .NET Framework 1.1 lub starszego.  

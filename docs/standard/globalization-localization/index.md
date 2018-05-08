@@ -1,13 +1,7 @@
 ---
 title: Globalizacja i lokalizacja aplikacji .NET Framework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - international applications [.NET Framework]
 - globalization [.NET Framework], encoding
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizacja i lokalizacja aplikacji .NET Framework
 Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), w tym aplikacji, która może być lokalizowany do co najmniej jednego języka, obejmuje trzy kroki: sprawdzenie, lokalizacja i globalizacja.  
@@ -69,13 +58,13 @@ Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), 
  Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowania gotowych do użycia na całym świecie aplikacji ASP.NET.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Globalization?displayProperty=nameWithType>przestrzeń nazw  
+ <xref:System.Globalization?displayProperty=nameWithType> przestrzeń nazw  
  Zawiera klasy, które definiują informacje związane z kulturą, w tym język, kraj/region, używane kalendarze, wzorce formatu daty, waluty i liczb oraz kolejność sortowania dla ciągów.  
   
- <xref:System.Resources>przestrzeń nazw  
+ <xref:System.Resources> przestrzeń nazw  
  Udostępnia klasy służące do tworzenia i używania zasobów oraz wykonywania na nich operacji.  
   
- <xref:System.Text>przestrzeń nazw  
+ <xref:System.Text> przestrzeń nazw  
  Zawiera klasy reprezentujące kodowania znaków ASCII, ANSI, Unicode i inne.  
   
  [Resgen.exe (generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  

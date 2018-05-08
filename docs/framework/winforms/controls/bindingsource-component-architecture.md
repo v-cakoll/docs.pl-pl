@@ -1,29 +1,17 @@
 ---
-title: "Architektura składnika BindingSource"
-ms.custom: 
+title: Architektura składnika BindingSource
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>Architektura składnika BindingSource
 Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formularzy systemu Windows można powiązać powszechnie dla źródeł danych.  
@@ -57,13 +45,13 @@ Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formu
   
 -   Źródło danych w postaci listy.  
   
--   <xref:System.Windows.Forms.BindingSource>jako <xref:System.ComponentModel.IBindingList>.  
+-   <xref:System.Windows.Forms.BindingSource> jako <xref:System.ComponentModel.IBindingList>.  
   
 -   Tworzenie niestandardowego elementu.  
   
 -   Tworzenie elementu transakcyjnych.  
   
--   <xref:System.Collections.IEnumerable>Obsługa.  
+-   <xref:System.Collections.IEnumerable> Obsługa.  
   
 -   Obsługa czasu projektowania.  
   
@@ -89,22 +77,22 @@ Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formu
   
  <xref:System.Windows.Forms.BindingSource> Hermetyzuje składnika <xref:System.Windows.Forms.CurrencyManager> funkcjonalność i przedstawia najbardziej typowe <xref:System.Windows.Forms.CurrencyManager> właściwości i zdarzeń. W poniższej tabeli opisano niektóre elementy związane z zarządzaniem waluty.  
   
- <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>Właściwość  
+ <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> Właściwość  
  Pobiera menedżera waluty skojarzonego z <xref:System.Windows.Forms.BindingSource>.  
   
- <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A>— Metoda  
+ <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> — Metoda  
  Jeśli istnieje inny <xref:System.Windows.Forms.BindingSource> powiązana z elementem członkowskim określone dane, pobiera jego menedżera waluty.  
   
- <xref:System.Windows.Forms.BindingSource.Current%2A>Właściwość  
+ <xref:System.Windows.Forms.BindingSource.Current%2A> Właściwość  
  Pobiera bieżący element źródła danych.  
   
- <xref:System.Windows.Forms.BindingSource.Position%2A>Właściwość  
+ <xref:System.Windows.Forms.BindingSource.Position%2A> Właściwość  
  Pobiera lub ustawia bieżącą pozycję na liście podstawowej.  
   
- <xref:System.Windows.Forms.BindingSource.EndEdit%2A>— Metoda  
+ <xref:System.Windows.Forms.BindingSource.EndEdit%2A> — Metoda  
  Zastosowanie oczekujących zmian źródła danych.  
   
- <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>— Metoda  
+ <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> — Metoda  
  Umożliwia anulowanie bieżącej operacji edycji.  
   
 ### <a name="data-source-as-a-list"></a>Źródło danych w postaci listy  
@@ -120,7 +108,7 @@ Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formu
 |Odwołanie o wartości null (`Nothing` w języku Visual Basic) z <xref:System.Windows.Forms.BindingSource.DataMember%2A> ustawić|Nieobsługiwane. zgłasza <xref:System.ArgumentException>.|  
 |Typ spoza listy lub obiektu typu "T"|Pusta <xref:System.ComponentModel.IBindingList> typu "T".|  
 |Wystąpienia tablicy|<xref:System.ComponentModel.IBindingList> Zawierających elementy tablicy.|  
-|<xref:System.Collections.IEnumerable>wystąpienie|<xref:System.ComponentModel.IBindingList> Zawierający <xref:System.Collections.IEnumerable> elementów|  
+|<xref:System.Collections.IEnumerable> Wystąpienie|<xref:System.ComponentModel.IBindingList> Zawierający <xref:System.Collections.IEnumerable> elementów|  
 |Lista wystąpienia typu "T"|<xref:System.ComponentModel.IBindingList> Wystąpienia typu "T".|  
   
  Ponadto <xref:System.Windows.Forms.BindingSource.DataSource%2A> można ustawić na innych typów list, takich jak <xref:System.ComponentModel.IListSource> i <xref:System.ComponentModel.ITypedList>i <xref:System.Windows.Forms.BindingSource> odpowiednio je będzie obsługiwać. W takim przypadku typ, który znajduje się na liście powinien mieć domyślnego konstruktora.  
@@ -130,8 +118,8 @@ Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formu
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.List%2A>Właściwość|Pobiera listę będącą wynikiem obliczania <xref:System.Windows.Forms.BindingSource.DataSource%2A> lub <xref:System.Windows.Forms.BindingSource.DataMember%2A> właściwości.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A>— Metoda|Dodaje nowy element do listy źródłowej. Stosuje się do źródła danych, które implementują <xref:System.ComponentModel.IBindingList> interfejsu i Zezwalaj na dodawanie elementów (to znaczy <xref:System.Windows.Forms.BindingSource.AllowNew%2A> właściwość jest ustawiona na `true`).|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> Właściwość|Pobiera listę będącą wynikiem obliczania <xref:System.Windows.Forms.BindingSource.DataSource%2A> lub <xref:System.Windows.Forms.BindingSource.DataMember%2A> właściwości.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> — Metoda|Dodaje nowy element do listy źródłowej. Stosuje się do źródła danych, które implementują <xref:System.ComponentModel.IBindingList> interfejsu i Zezwalaj na dodawanie elementów (to znaczy <xref:System.Windows.Forms.BindingSource.AllowNew%2A> właściwość jest ustawiona na `true`).|  
   
 ### <a name="custom-item-creation"></a>Tworzenie niestandardowego elementu  
  Może obsłużyć <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie w celu udostępnienia logika tworzenia elementu. <xref:System.Windows.Forms.BindingSource.AddingNew> Zdarzenie przed dodaniem nowego obiektu do <xref:System.Windows.Forms.BindingSource>. To zdarzenie jest wywoływane po wykonaniu <xref:System.Windows.Forms.BindingSource.AddNew%2A> metoda jest wywoływana, ale przed dodaniem nowego elementu do listy źródłowej. Obsługa tego zdarzenia, zapewnia zachowanie tworzenia niestandardowego elementu bez pochodny <xref:System.Windows.Forms.BindingSource> klasy. Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie dodawania elementu przy formantu BindingSource formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).  
@@ -160,7 +148,7 @@ Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formu
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.,  
+-   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
@@ -173,8 +161,8 @@ Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formu
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A>Właściwość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView>, pobiera lub ustawia wyrażenie używane do filtrowania wierszy, które są wyświetlane.|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A>Właściwość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingList>, pobiera lub ustawia nazwę kolumny sortowania i informacje o kolejności sortowania.<br /><br /> —lub—<br /><br /> Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView> i obsługuje sortowanie, zaawansowane pobiera wiele nazw kolumn używana do sortowania i kolejność sortowania|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> Właściwość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView>, pobiera lub ustawia wyrażenie używane do filtrowania wierszy, które są wyświetlane.|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> Właściwość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingList>, pobiera lub ustawia nazwę kolumny sortowania i informacje o kolejności sortowania.<br /><br /> —lub—<br /><br /> Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView> i obsługuje sortowanie, zaawansowane pobiera wiele nazw kolumn używana do sortowania i kolejność sortowania|  
   
 ### <a name="integration-with-bindingnavigator"></a>Integracja z BindingNavigator  
  Można użyć <xref:System.Windows.Forms.BindingSource> składnika można powiązać żadnych formantu formularzy systemu Windows ze źródłem danych, ale <xref:System.Windows.Forms.BindingNavigator> kontroli zaprojektowane z myślą o pracy z <xref:System.Windows.Forms.BindingSource> składnika. <xref:System.Windows.Forms.BindingNavigator> Kontroli udostępnia interfejs użytkownika do kontrolowania <xref:System.Windows.Forms.BindingSource> składnika bieżącego elementu. Domyślnie <xref:System.Windows.Forms.BindingNavigator> formant zawiera przyciski odpowiadające metod nawigacji na <xref:System.Windows.Forms.BindingSource> składnika. Aby uzyskać więcej informacji, zobacz [porady: nawigowanie danych za pomocą BindingNavigator formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  

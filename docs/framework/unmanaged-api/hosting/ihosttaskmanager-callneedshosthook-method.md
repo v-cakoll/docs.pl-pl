@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::CallNeedsHostHook — Metoda"
-ms.custom: 
+title: IHostTaskManager::CallNeedsHostHook — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.CallNeedsHostHook
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4774c9f37f73692bf8d9455c51e76aa4c590f925
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook — Metoda
 Umożliwia hosta określić, czy środowisko uruchomieniowe języka wspólnego (CLR) może wbudowanego określonego wywołanie funkcji niezarządzanej.  
@@ -58,7 +46,7 @@ HRESULT CallNeedsHostHook (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook`zwrócona pomyślnie.|  
+|S_OK|`CallNeedsHostHook` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -66,7 +54,7 @@ HRESULT CallNeedsHostHook (
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Do optymalizowania wykonanie kodu CLR przeprowadza analizę dla każdej z platform wywołania wywołania podczas kompilacji, aby określić, czy wywołanie może być wbudowane. `CallNeedsHostHook`Umożliwia hosta do zastąpienia tej decyzji, gdyż, że wywołanie funkcji niezarządzanej być punktem zaczepienia. Jeśli host wymaga punktu zaczepienia, środowisko uruchomieniowe nie niewyrównane wywołania.  
+ Do optymalizowania wykonanie kodu CLR przeprowadza analizę dla każdej z platform wywołania wywołania podczas kompilacji, aby określić, czy wywołanie może być wbudowane. `CallNeedsHostHook` Umożliwia hosta do zastąpienia tej decyzji, gdyż, że wywołanie funkcji niezarządzanej być punktem zaczepienia. Jeśli host wymaga punktu zaczepienia, środowisko uruchomieniowe nie niewyrównane wywołania.  
   
  Host zwykle wymagają punktu zaczepienia w przypadku, gdy należy dostosować zmiennoprzecinkowy stan lub po otrzymaniu powiadomienia, że wywołanie jest wprowadzane stanu, w którym host nie może śledzić środowiska uruchomieniowego żądania dotyczące pamięci lub wszystkie blokady podjęte. Gdy host wymaga, aby być punktem zaczepienia wywołanie, środowisko uruchomieniowe powiadamia hosta przejścia do i z kodu zarządzanego za pomocą wywołania [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), i [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
@@ -77,7 +65,7 @@ HRESULT CallNeedsHostHook (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

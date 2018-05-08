@@ -2,11 +2,11 @@
 title: '&lt;message&gt; w &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3449735222d02857ee11ef6d20914c1e9a018a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 39d5ce66537fd6c94895205ccc855d7fb631284e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; w &lt;ws2007HttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.  
@@ -78,7 +78,7 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
 |`None`|Dzięki usłudze na współdziałanie z anonimowego klientów. W usłudze oznacza to, że usługa nie wymaga żadnych poświadczeń klienta. Na komputerze klienckim oznacza to, klient nie ma żadnych poświadczeń klienta.|  
 |`Certificate`|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu. Jeśli `message` używany jest tryb zabezpieczeń i `negotiateServiceCredential` atrybut ma ustawioną `false`, klient musi zostać zainicjowana obsługa certyfikatu usługi.|  
 |`IssuedToken`|Określa niestandardowy token, zwykle wydany przez zabezpieczenia tokenu usługi (STS).|  
-|`UserName`|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą `UserName` poświadczeń. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] nie obsługuje wysyłanie skrótu hasła lub wyprowadzanie kluczy przy użyciu hasła i te klucze dla zabezpieczenia wiadomości. W efekcie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] wymusza, czy transport jest zabezpieczone przy użyciu `UserName` poświadczeń. W tym trybie poświadczenia powoduje wymianę interoperacyjne lub -interoperacyjne negocjacji, na podstawie `negotiateServiceCredential` atrybutu.|  
+|`UserName`|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą `UserName` poświadczeń. Usługi WCF nie obsługuje wysyłanie skrótu hasła lub wyprowadzanie kluczy przy użyciu hasła i te klucze dla zabezpieczenia wiadomości. Tak, WCF wymusza, czy transport jest zabezpieczone przy użyciu `UserName` poświadczeń. W tym trybie poświadczenia powoduje wymianę interoperacyjne lub -interoperacyjne negocjacji, na podstawie `negotiateServiceCredential` atrybutu.|  
 |`Windows`|Umożliwia wymianę SOAP się pod uwierzytelnionego kontekście `Windows` poświadczeń. Jeśli `negotiateServiceCredential` atrybut ma ustawioną `true`, to albo przeprowadza negocjowanie interfejsu SSPI protokołu Kerberos (interoperacyjne standard).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  

@@ -1,30 +1,18 @@
 ---
-title: "Architektura WCF i międzynarodowe nazwy domen"
-ms.custom: 
+title: Architektura WCF i międzynarodowe nazwy domen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7a0a6cd2a809648aadfba9bac2c4ab35c26b4c65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 24b7af660d5fd9629639d3b63d605ef619dcf009
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>Architektura WCF i międzynarodowe nazwy domen
 Dodano obsługę umożliwiające usługi WCF z domeny nazwy (IDN). Międzynarodowych nazw domen jest nazwą domeny, który zawiera znaki spoza zestawu ASCII. Ta obsługa obejmuje to możliwość hostowanie usługi WCF z nazwą IDN i klienta WCF do komunikowania się z usługą sieci web z nazwą IDN.  
   
 ## <a name="systemuri-and-idn"></a>System.Uri i IDN  
- <xref:System.Uri>ma dwie właściwości <xref:System.Uri.Host%2A> i <xref:System.Uri.DnsSafeHost%2A>. Te właściwości zawierają wartości Unicode lub ciąg Punycode, w zależności od ustawień konfiguracji IDN.  
+ <xref:System.Uri> ma dwie właściwości <xref:System.Uri.Host%2A> i <xref:System.Uri.DnsSafeHost%2A>. Te właściwości zawierają wartości Unicode lub ciąg Punycode, w zależności od ustawień konfiguracji IDN.  
   
  IDN jest włączone w pliku konfiguracji aplikacji przy użyciu następującego kodu XML  
   

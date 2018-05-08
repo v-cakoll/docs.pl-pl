@@ -1,27 +1,15 @@
 ---
-title: "Usługi dwukierunkowe"
-ms.custom: 
+title: Usługi dwukierunkowe
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="duplex-services"></a>Usługi dwukierunkowe
 Kontrakt usługi dwustronnej jest wymiany komunikatów w których oba punkty końcowe można wysyłać wiadomości do innych niezależnie. Usługi duplex, w związku z tym wiadomości można wysyłać do punktu końcowego klienta, zapewniając zdarzenia podobne zachowania. Komunikację dupleksową występuje, gdy klient nawiąże połączenie z usługą i zapewnia usługę, z kanałem, na którym usługa można wysłać wiadomości zwrotnie do klienta. Należy pamiętać, że zachowanie podobnych zdarzeń usługi dwukierunkowe działa tylko w ramach sesji.  
@@ -43,7 +31,7 @@ Kontrakt usługi dwustronnej jest wymiany komunikatów w których oba punkty ko�
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Klienta, który jest generowany dla kontraktu dwukierunkowego wymaga <xref:System.ServiceModel.InstanceContext> klasę, aby podać po konstrukcji. To <xref:System.ServiceModel.InstanceContext> klasa jest używana jako witryna dla obiekt, który implementuje interfejs wywołania zwrotnego i obsługi wiadomości, które są wysyłane z usługi. <xref:System.ServiceModel.InstanceContext> Klasy jest tworzony przy użyciu wystąpienia `CallbackHandler` klasy. Ten obiekt obsługi komunikatów wysyłanych z usługi do klienta w interfejsie wywołania zwrotnego.  
+ Klient WCF, generowany dla kontraktu dwukierunkowego wymaga <xref:System.ServiceModel.InstanceContext> klasę, aby podać po konstrukcji. To <xref:System.ServiceModel.InstanceContext> klasa jest używana jako witryna dla obiekt, który implementuje interfejs wywołania zwrotnego i obsługi wiadomości, które są wysyłane z usługi. <xref:System.ServiceModel.InstanceContext> Klasy jest tworzony przy użyciu wystąpienia `CallbackHandler` klasy. Ten obiekt obsługi komunikatów wysyłanych z usługi do klienta w interfejsie wywołania zwrotnego.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  

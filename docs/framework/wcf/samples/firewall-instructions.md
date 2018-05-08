@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje dotyczące zapory"
-ms.custom: 
+title: Instrukcje dotyczące zapory
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae7adcb773167a6af190355dd595f0f063fedc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="firewall-instructions"></a>Instrukcje dotyczące zapory
-Należy włączyć kilka portów lub programów w zaporze, tak że [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] próbki mogą działać. Wiele próbek komunikują się przy użyciu portów w zakresie 8000-8003 i portu 9000. Zapora jest włączona domyślnie i uniemożliwia dostęp do tych portów. Aby włączyć zapory próbek, wykonaj jedną z następujących procedur, w zależności od wymagań i środowisko zabezpieczeń:  
+Tak, aby mógł działać przykładów programu Windows Communication Foundation (WCF) należy włączyć kilka portów lub programów w zaporze. Wiele próbek komunikują się przy użyciu portów w zakresie 8000-8003 i portu 9000. Zapora jest włączona domyślnie i uniemożliwia dostęp do tych portów. Aby włączyć zapory próbek, wykonaj jedną z następujących procedur, w zależności od wymagań i środowisko zabezpieczeń:  
   
 -   Opcja 1: Włącz interakcyjne przykłady podczas pracy. Nie wprowadzisz wcześniejszym zmian do konfiguracji zapory i przejdź do zacząć tworzyć i uruchamiać próbek. Po uruchomieniu próbkę **Alert zabezpieczeń systemu Windows** zostanie wyświetlone okno dialogowe. Przykładowy program zagrożona można dodać interaktywnie do listy odblokowany. Ta procedura może być ponowne uruchomienie przykładu.  
   

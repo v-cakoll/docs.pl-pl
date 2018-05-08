@@ -3,19 +3,14 @@ title: Docelowych platform
 description: Więcej informacji na temat platformy docelowej dla aplikacji .NET Core i bibliotek.
 author: richlander
 ms.author: mairaw
-ms.date: 09/22/2017
-ms.topic: article
+ms.date: 04/16/2018
 ms.custom: updateeachrelease
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="target-frameworks"></a>Docelowych platform
 
@@ -31,13 +26,13 @@ Dla struktury docelowej na podstawie pakietu (na przykład standardowe .NET i .N
 
 ## <a name="latest-target-framework-versions"></a>Najnowsze target framework w wersji
 
-W poniższej tabeli opisano najbardziej typowe docelowych platform, jak w przypadku odwołania i wersję [.NET Standard](~/docs/standard/net-standard.md) ich wdrożenia. Te target framework w wersji są najnowsze wersje stabilna. Wersje wstępne nie są wyświetlane. Docelowy Framework Moniker (TFM) jest standardowym formacie token służący do określania platformę docelową aplikacji .NET lub biblioteki. 
+W poniższej tabeli opisano najbardziej typowe docelowych platform, jak w przypadku odwołania i wersję [.NET Standard](~/docs/standard/net-standard.md) ich wdrożenia. Te target framework w wersji są najnowsze wersje stabilna. Wersje wstępne nie są wyświetlane. Docelowy Framework Moniker (TFM) jest standardowym formacie token służący do określania platformę docelową aplikacji .NET lub biblioteki.
 
-| Platforma docelowa      | Najnowsza wersja | Moniker platformy docelowej (TFM) | Zaimplementowany <br/> .NET w wersji standard |
-| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
-| .NET standard         | 2.0            | netstandard2.0                 | Brak                                     |
-| Aplikacja programu .NET core | 2.0            | netcoreapp2.0                  | 2.0                                     |
-| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
+| Platforma docelowa      | Najnowsza <br/> Stabilna wersja | Moniker platformy docelowej (TFM) | Zaimplementowany <br/> .NET w wersji standard |
+| :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
+| .NET standard         | 2.0                         | netstandard2.0                 | Brak                                     |
+| Aplikacja programu .NET core | 2.0                         | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Obsługiwane target framework w wersji
 
@@ -46,8 +41,8 @@ Platforma docelowa jest zwykle przywoływany przez TFM. W poniższej tabeli prze
 | Platforma docelowa           | TFM |
 | -------------------------- | --- |
 | .NET standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Sklep Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -135,10 +130,10 @@ Następujące struktury docelowej są przestarzałe. Pakietów przeznaczonych dl
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pakiety, metapakiety i struktury](~/docs/core/packages.md)  
-[Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](~/docs/core/tutorials/libraries.md)  
-[.NET Standard](~/docs/standard/net-standard.md)  
-[Przechowywanie wersji programu .NET core](~/docs/core/versions/index.md)  
+[Pakiety, metapakiety i struktury](../core/packages.md)  
+[Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](../core/tutorials/libraries.md)  
+[.NET Standard](net-standard.md)  
+[Przechowywanie wersji programu .NET core](../core/versions/index.md)  
 [repozytorium GitHub DotNet/standard](https://github.com/dotnet/standard)  
 [Repozytorium GitHub narzędzia NuGet](https://github.com/joelverhagen/NuGetTools)  
 [Profile Framework w .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

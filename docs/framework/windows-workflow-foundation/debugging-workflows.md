@@ -1,24 +1,12 @@
 ---
 title: Debugowanie przepływów pracy
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8fa22db7fe613279fcf8487abaf57691250b7d80
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f41a76cd121373924a408361cfc9074574cc12b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-workflows"></a>Debugowanie przepływów pracy
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] oferuje kilka opcji debugowania uruchomionych przepływów pracy ze środowiska projektowego. Przepływy pracy może być debugowany w projektancie, języka XAML i kodem.  

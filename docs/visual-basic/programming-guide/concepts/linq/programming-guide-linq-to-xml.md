@@ -1,22 +1,12 @@
 ---
-title: "Przewodnik programowania w języku (LINQ do XML) (Visual Basic)"
-ms.custom: 
+title: Przewodnik programowania w języku (LINQ do XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a68c72dd30059063c86dc79be0dfd5a470b9d72c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Przewodnik programowania w języku (LINQ do XML) (Visual Basic)
 Ta sekcja zawiera informacje o pojęciach i porad dotyczących programowania w języku [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -24,9 +14,9 @@ Ta sekcja zawiera informacje o pojęciach i porad dotyczących programowania w j
 ## <a name="who-should-read-this-documentation"></a>Kto powinien przeczytać tej dokumentacji  
  Ta dokumentacja jest przeznaczony dla deweloperów, którzy już zrozumieć Visual Basic i niektórych podstawowych aspektów [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- Celem tej dokumentacji jest zapewnienie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] łatwy w użyciu dla wszystkich rodzajów deweloperów. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Aby ułatwić programowania w języku XML. Nie trzeba być programisty ekspertów z niego korzystać.  
+ Celem tej dokumentacji jest zapewnienie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] łatwy w użyciu dla wszystkich rodzajów deweloperów. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Aby ułatwić programowania w języku XML. Nie trzeba być programisty ekspertów z niego korzystać.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]odgrywa klas rodzajowych. W związku z tym jest bardzo ważne jest, że rozumiesz, użycie typów ogólnych i klasy. Aby uzyskać więcej informacji, zobacz [typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] odgrywa klas rodzajowych. W związku z tym jest bardzo ważne jest, że rozumiesz, użycie typów ogólnych i klasy. Aby uzyskać więcej informacji, zobacz [typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -41,8 +31,8 @@ Ta sekcja zawiera informacje o pojęciach i porad dotyczących programowania w j
 |[Modyfikowanie drzew XML (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Modelu DOM (Document Object), takich jak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] umożliwia modyfikowanie drzewo XML w miejscu.|  
 |[Zaawansowane LINQ do XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Informacje na temat adnotacji, zdarzenia, przesyłanie strumieniowe i inne zaawansowane scenariusze.|  
 |[LINQ do XML zabezpieczeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|Zawiera opis zagadnień związanych z LINQ do XML zabezpieczeniami i wskazówki łagodzenia zagrożenie bezpieczeństwa.|  
-|[Dokumenty XML próbki (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Zawiera przykładowe dokumenty XML używane przez wiele przykładów w tej dokumentacji.|  
+|[Przykładowe dokumenty XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Zawiera przykładowe dokumenty XML używane przez wiele przykładów w tej dokumentacji.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  [LINQ do XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

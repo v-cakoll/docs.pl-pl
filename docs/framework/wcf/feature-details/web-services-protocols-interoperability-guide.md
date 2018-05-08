@@ -1,34 +1,20 @@
 ---
 title: Przewodnik dotyczący współpracy protokołów usług sieci Web
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1ee8b485d8a46d2599958db2c71f4a6e84875169
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Przewodnik dotyczący współpracy protokołów usług sieci Web
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawiera szereg opcji i punkty rozszerzalności w gestii implementujący. W tym temacie przedstawiono protokoły usług sieci Web wykaz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu obsługiwane.  
+Windows Communication Foundation (WCF) implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawiera szereg opcji i punkty rozszerzalności w gestii implementujący. Ten temat zawiera listę protokołów usług sieci Web, który implementuje usługi WCF. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu obsługiwane.  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Usługi sieci Web protokołów implementowanych przez usługi WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia obsługę protokołów infrastruktury (WS) usługi sieci Web za pośrednictwem kanałów i protokołów aplikacji usługi sieci Web za pomocą funkcji umów. Współdziałanie protokołu aplikacji odbywa się za pośrednictwem języka opisu schematu XML 1.0 (XSD) i sieci Web Services Description Language (WSDL) 1.1.  
+ Usługi WCF obsługuje protokoły infrastruktury (WS) usługi sieci Web za pośrednictwem kanałów i protokoły aplikacji za pomocą funkcji kontraktów usług sieci Web. Współdziałanie protokołu aplikacji odbywa się za pośrednictwem języka opisu schematu XML 1.0 (XSD) i sieci Web Services Description Language (WSDL) 1.1.  
   
- Infrastruktury współdziałania protokoły są udostępniane przez usługi WS-* specyfikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kanały zapewniają obsługę wielu WS -\* protokołów infrastruktury. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanały są skonfigurowane za pomocą elementów powiązania. Poniższe tabele zawierają pełną listę WS -\* infrastruktury protokołów implementowanych przez różnych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementów wiązania.  
+ Infrastruktury współdziałania protokoły są udostępniane przez usługi WS-* specyfikacji. Kanały programu WCF zapewniają obsługę wielu WS -\* protokołów infrastruktury. Kanały programu WCF są skonfigurowane za pomocą elementów powiązania. Poniższe tabele zawierają pełną listę WS -\* infrastruktury protokołów implementowanych przez różne elementy wiązania WCF.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> obsługuje specyfikacje w poniższej tabeli.  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 03/26/2018
   
 -   [Pobierz usługę WS-Transfer do pobierania metadanych](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
- Ponadto następujące profile współdziałanie są implementowane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Ponadto następujące profile współdziałanie są implementowane przez WCF:  
   
 -   [Basic Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
   

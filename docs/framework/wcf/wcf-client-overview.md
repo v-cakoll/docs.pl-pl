@@ -1,34 +1,20 @@
 ---
 title: Przegląd klienta programu WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f083ea44b9bdbd9bf85d65c42d663d87af8d812
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 1aa540d084e9b11cc7a355db02047705f55ea4be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
-W tej sekcji opisano, jakie aplikacje klienckie czy i jak konfigurowanie, tworzenie i używanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] klienta i zabezpieczania aplikacji klienckich.  
+W tej sekcji opisano, co zrobić, aplikacje klienckie, jak skonfigurować, tworzenie i używanie klienta usługi Windows Communication Foundation (WCF) i zabezpieczania aplikacji klienckich.  
   
 ## <a name="using-wcf-client-objects"></a>Przy użyciu obiektów klienta WCF  
  Aplikacja kliencka zarządzanych aplikacji, która używa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientom komunikowanie się z inną aplikację. Aby utworzyć aplikację klienta dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi wymaga wykonania następujących czynności:  

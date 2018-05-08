@@ -1,31 +1,17 @@
 ---
 title: Metadane
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ec0ba750a692d6f2c397fd565d855ac97b59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata"></a>Metadane
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Oferuje infrastrukturę do eksportowania, publikowania, pobieranie i Importowanie metadanych usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usługi używają metadanych opisujących sposób interakcji z punktów końcowych usługi, dzięki czemu narzędzi, takich jak Svcutil.exe, może automatycznie generować kod klienta do uzyskiwania dostępu do usługi.  
+Windows Communication Foundation (WCF) zapewnia infrastrukturę do eksportowania, publikowania, pobieranie i Importowanie metadanych usługi. Usługi WCF umożliwia metadane opisują sposób interakcji z punktów końcowych usługi, dzięki czemu narzędzi, takich jak Svcutil.exe, może automatycznie generować kod klienta do uzyskiwania dostępu do usługi.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przegląd architektury metadanych](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  Opisuje sposób eksportowania i importowania metadanych.  
   
  [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Opisuje sposób [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publikuje metadane.  
+ W tym artykule opisano, jak WCF publikuje metadane.  
   
  [Pobieranie metadanych](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  W tym artykule opisano różne sposoby do pobierania metadanych.  

@@ -1,21 +1,14 @@
 ---
-title: "Projektowanie poprawności warstwy modelu domeny"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie poprawności warstwy modelu domeny"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Projektowanie poprawności warstwy modelu domeny
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie poprawności warstwy modelu domeny
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Projektowanie poprawności warstwy modelu domeny
 

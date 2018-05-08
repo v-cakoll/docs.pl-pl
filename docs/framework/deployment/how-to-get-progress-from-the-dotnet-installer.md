@@ -1,31 +1,19 @@
 ---
-title: "Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5"
-ms.custom: 
+title: 'Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest pakiet redystrybucyjny środowiska wykonawczego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcucha) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Do prezentowania dostosowane lub ujednoliconego konfiguracji systemu, można uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas pokazywania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być obserwowane) definiuje protokół za pomocą mapowanych na pamięć segment rozwiązanie we/wy (MMIO) do komunikacji z ustawień (obserwatora lub moduł łańcucha). Protokół ten definiuje sposób moduł łańcucha uzyskać informacje o postępie, uzyskiwać szczegółowe wyniki, odpowiada na komunikaty i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.  

@@ -1,14 +1,6 @@
 ---
-title: "IHostTask::Alert — Metoda"
-ms.custom: 
+title: IHostTask::Alert — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTask.Alert
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 10dc8b9894c6f5444ccfcfd17f749df1a3fb5d05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 057e2aafff726b187f36b8b52859b2f2e812e70e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert — Metoda
 Żądania, że host wake reprezentowany przez bieżące zadanie [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia, zadania można zostało przerwane.  
@@ -59,7 +47,7 @@ HRESULT Alert ();
  Wywołania CLR `Alert` — metoda podczas <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> jest wywoływana z kodu użytkownika, lub gdy <xref:System.AppDomain> skojarzone z bieżącym <xref:System.Threading.Thread> zamknięty. Host musi zwracać natychmiast, ponieważ połączenie jest nawiązywane asynchronicznie. Jeśli host nie może od razu alertów zadania, jego wznawiania przy następnym go przechodzi do stanu, w którym można otrzymywać alerty.  
   
 > [!NOTE]
->  `Alert`dotyczy tylko te zadania, dla których minął środowiska uruchomieniowego [wait_option —](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) wartość WAIT_ALERTABLE do metod, takich jak [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
+>  `Alert` dotyczy tylko te zadania, dla których minął środowiska uruchomieniowego [wait_option —](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) wartość WAIT_ALERTABLE do metod, takich jak [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -68,7 +56,7 @@ HRESULT Alert ();
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

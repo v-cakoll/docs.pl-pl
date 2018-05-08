@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje: Eksportowanie metadanych z punktów końcowych usług"
-ms.custom: 
+title: 'Instrukcje: Eksportowanie metadanych z punktów końcowych usług'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 14b045ef55ac0b6d76bb06e711b4134d54b3d61f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9235498956f53d69b3024d1db023f3eb0908d2aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Instrukcje: Eksportowanie metadanych z punktów końcowych usług
 W tym temacie opisano sposób eksportowania metadanych z punktów końcowych usługi.  

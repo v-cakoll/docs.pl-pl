@@ -1,25 +1,16 @@
 ---
-title: "Porady: tworzenie procedury, która zwraca wartość (Visual Basic)"
-ms.custom: 
+title: 'Porady: tworzenie procedury, która zwraca wartość (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 787eddc1fd1cdb9dd6b655a8556b75044b2a49dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 472f55173a4897a23a82812a2b24bf1646c1a6ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Porady: tworzenie procedury, która zwraca wartość (Visual Basic)
 Możesz użyć `Function` procedury, aby zwrócić wartość do wywołującego kodu.  
@@ -46,10 +37,10 @@ Możesz użyć `Function` procedury, aby zwrócić wartość do wywołującego k
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Sub — procedury](./sub-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Sub, procedury](./sub-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Procedury operatorów](./operator-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Function — instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Porady: zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)  
- [Porady: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)
+ [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Instrukcje: zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)  
+ [Instrukcje: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)

@@ -1,31 +1,20 @@
 ---
 title: Zamawianie zachowywania w PLINQ
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 164dce7c58e1ce44972e0e390e4f0bf2be8de548
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-preservation-in-plinq"></a>Zamawianie zachowywania w PLINQ
 W PLINQ celem jest zmaksymalizować wydajność przy zachowaniu poprawności. Zapytanie powinien uruchamiana tak szybko jak to możliwe, ale nadal tworzyć poprawnych wyników. W niektórych przypadkach poprawności wymaga kolejność sekwencji źródłowej jest zachowywana; Jednak kolejność może być kosztowne w praktyce. W związku z tym domyślnie PLINQ nie zachowują kolejność sekwencji źródłowej. W tym zakresie podobny PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ale różni się od LINQ do obiektów, które zachowania kolejności.  
@@ -108,26 +97,26 @@ W PLINQ celem jest zmaksymalizować wydajność przy zachowaniu poprawności. Za
 |<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Nie dotyczy (domyślna takie same jak <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Odwraca|Nic nie robi.|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>(indeksowane)|Uporządkowanych wyników|Nieuporządkowaną wyniki.|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A> (indeksowane)|Uporządkowanych wyników|Nieuporządkowaną wyniki.|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Uporządkowanych wyników.|Wyniki nieuporządkowaną|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>(indeksowane)|Uporządkowanych wyników.|Nieuporządkowaną wyniki.|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A> (indeksowane)|Uporządkowanych wyników.|Nieuporządkowaną wyniki.|  
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|Porównanie uporządkowane|Porównanie nieuporządkowaną|  
 |<xref:System.Linq.ParallelEnumerable.Single%2A>|Nie dotyczy|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|Nie dotyczy|Nie dotyczy|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Pomija najpierw  *n*  elementów|Pomija wszelkie  *n*  elementów|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Pomija najpierw *n* elementów|Pomija wszelkie *n* elementów|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|Uporządkowanych wyników.|Tego rodzaju. Wykonuje SkipWhile dowolnego bieżącego zamówienia|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|Tego rodzaju dane wyjściowe nonassociative lub noncommutative operacji|Tego rodzaju dane wyjściowe nonassociative lub noncommutative operacji|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|Pobiera pierwszy `n` elementów|Przyjmuje żadnego `n` elementów|  
 |<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|Uporządkowanych wyników|Tego rodzaju. Wykonuje TakeWhile dowolnego bieżącego zamówienia|  
-|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Dodatki`OrderBy`|Dodatki`OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Dodatki`OrderBy`|Dodatki`OrderBy`|  
+|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Dodatki `OrderBy`|Dodatki `OrderBy`|  
+|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Dodatki `OrderBy`|Dodatki `OrderBy`|  
 |<xref:System.Linq.ParallelEnumerable.ToArray%2A>|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
 |<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|Nie dotyczy|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.ToList%2A>|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
 |<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
 |<xref:System.Linq.ParallelEnumerable.Union%2A>|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
 |<xref:System.Linq.ParallelEnumerable.Where%2A>|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>(indeksowane)|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A> (indeksowane)|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
 |<xref:System.Linq.ParallelEnumerable.Zip%2A>|Uporządkowanych wyników|Wyniki nieuporządkowaną|  
   
  Wyniki nieuporządkowaną nie są aktywnie przemieszane; po prostu nie mają żadnych specjalnych logiki porządkowania zastosowanych do nich. W niektórych przypadkach nieuporządkowaną zapytania mogą zachować kolejność sekwencji źródłowej. Dla zapytań używających indeksowanego wybierz operator PLINQ gwarantuje, że elementy danych wyjściowych rozpocznie kolejności rosnącej indeksy, ale udziela żadnych gwarancji dotyczących indeksów, które zostaną przypisane do elementów.  

@@ -1,39 +1,25 @@
 ---
 title: 'Porady: implementowanie ICommandSource'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>Porady: implementowanie ICommandSource
-W tym przykładzie pokazano, jak utworzyć źródło polecenia zaimplementowanie <xref:System.Windows.Input.ICommandSource>.  Źródło polecenia jest obiekt, który umożliwia wywołanie polecenia.  <xref:System.Windows.Input.ICommandSource> Interfejsu udostępnia trzy elementy członkowskie: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, i <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>to polecenie, które zostanie wywołany. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Jest typem danych zdefiniowane przez użytkownika, który jest przekazywany z źródło polecenia do metody, która obsługuje polecenie. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> To polecenie jest wykonywana na obiekt.  
+W tym przykładzie pokazano, jak utworzyć źródło polecenia zaimplementowanie <xref:System.Windows.Input.ICommandSource>.  Źródło polecenia jest obiekt, który umożliwia wywołanie polecenia.  <xref:System.Windows.Input.ICommandSource> Interfejsu udostępnia trzy elementy członkowskie: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, i <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> to polecenie, które zostanie wywołany. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Jest typem danych zdefiniowane przez użytkownika, który jest przekazywany z źródło polecenia do metody, która obsługuje polecenie. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> To polecenie jest wykonywana na obiekt.  
   
  W tym przykładzie klasa jest tworzony które podklasy <xref:System.Windows.Controls.Slider> kontroli i implementuje <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Przykład  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia szereg klas, które implementują <xref:System.Windows.Input.ICommandSource>, takich jak <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, i <xref:System.Windows.Controls.ListBoxItem>.  Źródło polecenia definiuje sposób wywołuje polecenie.   <xref:System.Windows.Controls.Button>i <xref:System.Windows.Controls.MenuItem> wywołania polecenia, gdy są one kliknięty.  A <xref:System.Windows.Controls.ListBoxItem> wywołuje polecenie, po kliknięciu double. Te klasy tylko staną się polecenie źródło ich <xref:System.Windows.Input.ICommandSource.Command%2A> właściwość jest ustawiona.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia szereg klas, które implementują <xref:System.Windows.Input.ICommandSource>, takich jak <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, i <xref:System.Windows.Controls.ListBoxItem>.  Źródło polecenia definiuje sposób wywołuje polecenie.   <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.MenuItem> wywołania polecenia, gdy są one kliknięty.  A <xref:System.Windows.Controls.ListBoxItem> wywołuje polecenie, po kliknięciu double. Te klasy tylko staną się polecenie źródło ich <xref:System.Windows.Input.ICommandSource.Command%2A> właściwość jest ustawiona.  
   
  W tym przykładzie mamy wywoła polecenie, gdy zostanie przesunięty suwak lub dokładniej, gdy <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> właściwości zostanie zmieniona.  
   

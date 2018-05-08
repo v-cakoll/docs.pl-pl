@@ -1,33 +1,19 @@
 ---
 title: Hosting w Usłudze aktywacji procesów systemu Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cd2244c4b44592e436dfd983985dca3c1a50144
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
-Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji obsługujących [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług. Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesu dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług jednoczesne używanie protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację opartą na wiadomości i oferuje możliwość obsługi dużej liczby aplikacji na danym komputerze.  
+Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesu dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF jednoczesne używanie protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację opartą na wiadomości i oferuje możliwość obsługi dużej liczby aplikacji na danym komputerze.  
   
- Aby uzyskać więcej informacji dotyczących tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która działa w usługi WAS hosting środowiska, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Aby uzyskać więcej informacji na temat tworzenia usługi WCF, która działa w środowisku macierzystym WAS, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Model procesu WAS zawiera kilka funkcji, które umożliwiają aplikacjom, które ma być obsługiwana w sposób jest bardziej niezawodne, łatwiejsze w obsłudze i efektywnie używającej zasobów:  
   

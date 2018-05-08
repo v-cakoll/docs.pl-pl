@@ -1,14 +1,6 @@
 ---
 title: Typy kolekcji w kontraktach danych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
 A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tych list można przedstawić przy użyciu tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może utrzymywać listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
@@ -86,7 +72,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
   
  Podczas serializacji gdy deklarowany typ jest interfejsem, typ rzeczywistego wystąpienia używany może być dowolnego typu, który implementuje ten interfejs. Ograniczenia omówionych wcześniej (o konstruktora domyślnego i `Add` metoda) nie są stosowane. Na przykład można ustawić adresów w Customer2 na wystąpienie ogólnej <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> adresu, mimo że element członkowski danych klasy bezpośrednio nie można zadeklarować typu ogólnego <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
- Podczas deserializacji, gdy deklarowany typ jest interfejsem, aparat serializacji wybiera typ, który implementuje interfejs zadeklarowane i tworzenia wystąpienia typu klasy. Znane typy mechanizmu (opisany w [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) nie ma wpływu; wbudowane wybór typu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Podczas deserializacji, gdy deklarowany typ jest interfejsem, aparat serializacji wybiera typ, który implementuje interfejs zadeklarowane i tworzenia wystąpienia typu klasy. Znane typy mechanizmu (opisany w [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) nie ma wpływu; wybór typu jest wbudowany w usługi WCF.  
   
 ## <a name="customizing-collection-types"></a>Dostosowywanie typów kolekcji  
  Typy kolekcji można dostosować, używając <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atrybut, który ma kilka zastosowań.  
@@ -235,7 +221,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
 ## <a name="collections-and-schema"></a>Kolekcje i schematu  
  Wszystkie kolekcje równoważne mają taką samą reprezentację w schemacie (XSD) języka definicji schematu XML. W związku z tym zazwyczaj nie otrzymasz ten sam typ kolekcji w kodzie wygenerowanego klienta co na serwerze. Na przykład serwer może wykorzystać kontraktu danych z ogólnego <xref:System.Collections.Generic.List%601> elementu członkowskiego danych Liczba całkowita, ale w kodzie wygenerowanego klienta elementu członkowskiego danych może stać się tablica liczb całkowitych.  
   
- Słownik kolekcje są oznaczone ikoną z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— adnotacja schematu, wskazujące, że znajdują się słowniki; w przeciwnym razie są nierozróżnialne z prostej listy zawierające wpisów z klucza i wartości. Aby uzyskać dokładny opis sposobu kolekcje są reprezentowane w schemacie kontraktu danych, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Słownik kolekcje są oznaczone ikoną z adnotacji schematu specyficzne dla usługi WCF, wskazujące, że znajdują się słowniki; w przeciwnym razie są nierozróżnialne z prostej listy zawierające wpisów z klucza i wartości. Aby uzyskać dokładny opis sposobu kolekcje są reprezentowane w schemacie kontraktu danych, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Domyślnie typy nie są generowane bez dostosowania kolekcji w kodzie zaimportowany. Elementy członkowskie danych typów kolekcji listy są importowane jako tablic, a elementy członkowskie danych typów kolekcji słownika są importowane jako ogólnego słownika.  
   

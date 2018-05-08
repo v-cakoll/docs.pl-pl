@@ -1,13 +1,6 @@
 ---
-title: "x:TypeArguments — dyrektywa"
-ms.custom: 
+title: x:TypeArguments — dyrektywa
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments — dyrektywa
 Przekazuje ograniczający wpisz argumenty ogólne do konstruktora typu ogólnego.  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>Lista\<ciąg >  
- `<scg:List x:TypeArguments="sys:String" ...>`Tworzy nowy <xref:System.Collections.Generic.List%601> z <xref:System.String> argument typu.  
+ `<scg:List x:TypeArguments="sys:String" ...>` Tworzy nowy <xref:System.Collections.Generic.List%601> z <xref:System.String> argument typu.  
   
 ### <a name="dictionarystringstring"></a>Słownik\<ciąg, ciąg >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`Tworzy nowy <xref:System.Collections.Generic.Dictionary%602> z dwoma <xref:System.String> argumentów typu.  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` Tworzy nowy <xref:System.Collections.Generic.Dictionary%602> z dwoma <xref:System.String> argumentów typu.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>Kolejki < KeyValuePair\<ciąg, ciąg >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`Tworzy nowy <xref:System.Collections.Generic.Queue%601> mający ograniczenie <xref:System.Collections.Generic.KeyValuePair%602> z argumentami typu Ograniczenie wewnętrzne <xref:System.String> i <xref:System.String>.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` Tworzy nowy <xref:System.Collections.Generic.Queue%601> mający ograniczenie <xref:System.Collections.Generic.KeyValuePair%602> z argumentami typu Ograniczenie wewnętrzne <xref:System.String> i <xref:System.String>.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 i WPF XAML ogólnego zastosowania  
  Dla XAML 2006 użycia i XAML, który jest używany w aplikacji WPF, istnieją następujące ograniczenia `x:TypeArguments` i użycia typu ogólnego z XAML w ogólne:  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   Element główny element XAML obiektu dla ogólnych musi również deklarować częściowej klasy przy użyciu `x:Class`. Dotyczy to nawet wtedy, gdy akcja kompilacji Definiowanie WPF.  
   
--   `x:TypeArguments`Nie można odwołać zagnieżdżonych ograniczenia ogólne.  
+-   `x:TypeArguments` Nie można odwołać zagnieżdżonych ograniczenia ogólne.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 lub 2006 XAML bez WPF 3.0 lub WPF 3.5 zależności  
  .NET Framework XAML Services for XAML 2006 lub XAML 2009 rozluźnić są ograniczenia związane z WPF na ogólne użycie języka XAML. Można utworzyć wystąpienia elementu obiekt generyczny w każdej pozycji w XAML kod znaczników, który może obsługiwać zapasowy typ systemu i obiekt modelu.  

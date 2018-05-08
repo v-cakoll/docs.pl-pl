@@ -1,21 +1,12 @@
 ---
-title: "Porady: znajdowanie elementu podrzędnego (XPath-LINQ do XML) (C#)"
-ms.custom: 
+title: 'Porady: znajdowanie elementu podrzędnego (XPath-LINQ do XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f66866ea938bf5f10ed4369b3728621ee2f87fec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 769b0fd2a3c0e2de64342550f8adb52ef177ad96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Porady: znajdowanie elementu podrzędnego (XPath-LINQ do XML) (C#)
 W tym temacie porównuje osi elementu podrzędnego XPath do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> metody.  

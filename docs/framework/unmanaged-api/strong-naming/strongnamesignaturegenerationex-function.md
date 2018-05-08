@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureGenerationEx — Funkcja"
-ms.custom: 
+title: StrongNameSignatureGenerationEx — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGenerationEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f68befd145649e6d8921e160d302cdb81000a9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx — Funkcja
 Generuje podpisu silnej nazwy dla określonego zestawu, zgodnie z określonym flagi.  
@@ -81,12 +69,12 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Co najmniej jeden z następujących wartości:  
   
--   `SN_SIGN_ALL_FILES`(0x00000001) - ponownie obliczyć wszystkie skróty połączonego modułów.  
+-   `SN_SIGN_ALL_FILES` (0x00000001) - ponownie obliczyć wszystkie skróty połączonego modułów.  
   
--   `SN_TEST_SIGN`(0x00000002) - test Podpisz zestaw.  
+-   `SN_TEST_SIGN` (0x00000002) - test Podpisz zestaw.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
+ `true` Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
  Określ wartość null dla `wszFilePath` obliczyć rozmiar podpisu bez tworzenia podpisu.  
@@ -106,7 +94,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [StrongNameSignatureGenerationEx, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

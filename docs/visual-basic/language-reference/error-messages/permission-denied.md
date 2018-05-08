@@ -1,23 +1,14 @@
 ---
-title: "Odmowa uprawnień (Visual Basic)"
+title: Odmowa uprawnień (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c5d7965ebd42cb3e56d66966d035be9ba3d3957c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b814d041fe312220d30d8faf4674f809d8ddc8ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="permission-denied-visual-basic"></a>Odmowa uprawnień (Visual Basic)
 Nastąpiła próba zapisu na dysku przed zapisem lub uzyskać dostępu do zablokowanego pliku.  
@@ -31,4 +22,4 @@ Nastąpiła próba zapisu na dysku przed zapisem lub uzyskać dostępu do zablok
 3.  Dostępu do rejestru, sprawdź, czy uprawnienia użytkownika i zawierać tego rodzaju dostępu do rejestru.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

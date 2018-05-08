@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Dokument przepływu"
-ms.custom: 
+title: Przegląd Dokument przepływu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0cf8944298af62a512599fc52998a046c66fed9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
 Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelności. Zamiast ustawiany jeden układ wstępnie zdefiniowane, dokumenty przepływu dynamicznie dostosować i ułożenia ich zawartość na podstawie czasu wykonywania zmiennych, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Ponadto przepływ dokumentów oferuje dokumentu zaawansowane funkcje, takie jak podział na strony i kolumn. Ten temat zawiera omówienie przepływu dokumentów i sposób ich tworzenia.  
@@ -69,13 +57,13 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
 ## <a name="flow-document-types"></a>Przepływ typów dokumentów  
  Wyświetlanie zawartości dokumentu przepływu i sposób wyświetlania jest zależne od tego, jak obiekt jest używana do hostowania zawartości przepływu. Istnieją cztery kontrolki, które obsługują wyświetlanie zawartości przepływu: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Formanty krótko opisano poniżej.  
   
- **Uwaga:** <xref:System.Windows.Documents.FlowDocument> jest wymagany do bezpośrednio zawartość śródwierszowa hosta, aby korzystać z wszystkich tych wyświetlania formantów <xref:System.Windows.Documents.FlowDocument> umożliwiające hosting zawartości przepływu.
+ **Uwaga:** <xref:System.Windows.Documents.FlowDocument> jest wymagany do bezpośrednio zawartość śródwierszowa hosta, aby korzystać z wszystkich tych wyświetlania formantów <xref:System.Windows.Documents.FlowDocument> umożliwiające hosting zawartości przepływu.  
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>zawiera funkcje, które umożliwiają użytkownikowi dynamicznie wybrać różne tryby wyświetlania, w tym tryb wyświetlania (strony na a-time) jednej strony, dwa strony na pojedynczych (format księgi odczytu) wyświetlanie trybu i trybie przewijania ciągłego wyświetlania (nieograniczone od dołu). Aby uzyskać więcej informacji na temat trybów wyświetlania, zobacz <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Jeśli nie potrzebujesz możliwości dynamicznie przełączać tryby wyświetlania różnych <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> Podaj zawartości przeglądarek, które zostały usunięte w trybie przeglądania określonego jaśniejszego wagi przepływu.  
+ <xref:System.Windows.Controls.FlowDocumentReader> zawiera funkcje, które umożliwiają użytkownikowi dynamicznie wybrać różne tryby wyświetlania, w tym tryb wyświetlania (strony na a-time) jednej strony, dwa strony na pojedynczych (format księgi odczytu) wyświetlanie trybu i trybie przewijania ciągłego wyświetlania (nieograniczone od dołu). Aby uzyskać więcej informacji na temat trybów wyświetlania, zobacz <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Jeśli nie potrzebujesz możliwości dynamicznie przełączać tryby wyświetlania różnych <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> Podaj zawartości przeglądarek, które zostały usunięte w trybie przeglądania określonego jaśniejszego wagi przepływu.  
   
 ### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer i FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>Pokazuje zawartość strony w czasie trybu wyświetlania, podczas gdy <xref:System.Windows.Controls.FlowDocumentScrollViewer> pokazuje zawartości w trybie przewijania ciągłego. Zarówno <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> zostały usunięte w trybie przeglądania określonego. Porównaj z <xref:System.Windows.Controls.FlowDocumentReader>, która obejmuje funkcje, które umożliwiają użytkownikowi dynamicznie wybrać różne tryby wyświetlania (zgodnie z <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> wyliczenie), kosztem jest więcej zasobów niż <xref:System.Windows.Controls.FlowDocumentPageViewer> lub <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> Pokazuje zawartość strony w czasie trybu wyświetlania, podczas gdy <xref:System.Windows.Controls.FlowDocumentScrollViewer> pokazuje zawartości w trybie przewijania ciągłego. Zarówno <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> zostały usunięte w trybie przeglądania określonego. Porównaj z <xref:System.Windows.Controls.FlowDocumentReader>, która obejmuje funkcje, które umożliwiają użytkownikowi dynamicznie wybrać różne tryby wyświetlania (zgodnie z <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> wyliczenie), kosztem jest więcej zasobów niż <xref:System.Windows.Controls.FlowDocumentPageViewer> lub <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
  Domyślnie pionowy pasek przewijania jest zawsze widoczne, a poziomy pasek przewijania jest widoczna, jeśli to konieczne. Domyślnie interfejs użytkownika dla <xref:System.Windows.Controls.FlowDocumentScrollViewer> nie obejmuje paska narzędzi, ale <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> właściwości może służyć do włączenia wbudowanego paska narzędzi.  
   
@@ -111,7 +99,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
 ### <a name="block-derived-classes"></a>Klas pochodnych bloku  
  **Akapitu**  
   
- <xref:System.Windows.Documents.Paragraph>jest zazwyczaj używany do zawartości grupy do akapitu. Najprostszym i najbardziej typowych akapitu polega na utworzeniu akapit tekstu.  
+ <xref:System.Windows.Documents.Paragraph> jest zazwyczaj używany do zawartości grupy do akapitu. Najprostszym i najbardziej typowych akapitu polega na utworzeniu akapit tekstu.  
   
  [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
@@ -122,7 +110,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **Sekcja**  
   
- <xref:System.Windows.Documents.Section>Służy tylko do zawierać inne <xref:System.Windows.Documents.Block>-elementów pochodnych. Formatowanie elementy, które zawiera wszystkie domyślne nie ma zastosowania. Jednak żadnej właściwości wartości zestawu na <xref:System.Windows.Documents.Section> ma zastosowanie do jego elementów podrzędnych. Sekcja umożliwia także programowo iterację jego podrzędnej kolekcji. <xref:System.Windows.Documents.Section>jest używany w sposób podobny do \<DIV > znacznika w kodzie HTML.  
+ <xref:System.Windows.Documents.Section> Służy tylko do zawierać inne <xref:System.Windows.Documents.Block>-elementów pochodnych. Formatowanie elementy, które zawiera wszystkie domyślne nie ma zastosowania. Jednak żadnej właściwości wartości zestawu na <xref:System.Windows.Documents.Section> ma zastosowanie do jego elementów podrzędnych. Sekcja umożliwia także programowo iterację jego podrzędnej kolekcji. <xref:System.Windows.Documents.Section> jest używany w sposób podobny do \<DIV > znacznika w kodzie HTML.  
   
  W poniższym przykładzie trzy akapitów są zdefiniowane zgodnie z jednym <xref:System.Windows.Documents.Section>. Sekcja zawiera <xref:System.Windows.Documents.TextElement.Background%2A> wartość właściwości czerwony, w związku z tym kolor tła akapitów jest również czerwony.  
   
@@ -133,7 +121,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **BlockUIContainer**  
   
- <xref:System.Windows.Documents.BlockUIContainer>Umożliwia <xref:System.Windows.UIElement> elementy (tj. <xref:System.Windows.Controls.Button>) osadzone w zawartości przepływu pochodnych bloku. <xref:System.Windows.Documents.InlineUIContainer>(patrz poniżej) jest używany do osadzania <xref:System.Windows.UIElement> elementów pochodzących z wbudowanym przepływ zawartości. <xref:System.Windows.Documents.BlockUIContainer>i <xref:System.Windows.Documents.InlineUIContainer> są ważne, ponieważ nie istnieje inny sposób użycia <xref:System.Windows.UIElement> w dowolnej zawartości, chyba że jest on zawarty w jeden z tych dwóch elementów.  
+ <xref:System.Windows.Documents.BlockUIContainer> Umożliwia <xref:System.Windows.UIElement> elementy (tj. <xref:System.Windows.Controls.Button>) osadzone w zawartości przepływu pochodnych bloku. <xref:System.Windows.Documents.InlineUIContainer> (patrz poniżej) jest używany do osadzania <xref:System.Windows.UIElement> elementów pochodzących z wbudowanym przepływ zawartości. <xref:System.Windows.Documents.BlockUIContainer> i <xref:System.Windows.Documents.InlineUIContainer> są ważne, ponieważ nie istnieje inny sposób użycia <xref:System.Windows.UIElement> w dowolnej zawartości, chyba że jest on zawarty w jeden z tych dwóch elementów.  
   
  Poniższy przykład przedstawia użycie <xref:System.Windows.Documents.BlockUIContainer> element do hosta <xref:System.Windows.UIElement> obiektów w dowolnej zawartości.  
   
@@ -145,7 +133,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **Lista**  
   
- <xref:System.Windows.Documents.List>Służy do tworzenia listy punktowanej lub liczbowe. Ustaw <xref:System.Windows.Documents.List.MarkerStyle%2A> właściwości <xref:System.Windows.TextMarkerStyle> wartość wyliczenia, aby określić styl listy. W poniższym przykładzie pokazano, jak utworzyć prostą listę.  
+ <xref:System.Windows.Documents.List> Służy do tworzenia listy punktowanej lub liczbowe. Ustaw <xref:System.Windows.Documents.List.MarkerStyle%2A> właściwości <xref:System.Windows.TextMarkerStyle> wartość wyliczenia, aby określić styl listy. W poniższym przykładzie pokazano, jak utworzyć prostą listę.  
   
  [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
@@ -156,12 +144,12 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **Tabela**  
   
- <xref:System.Windows.Documents.Table>Służy do tworzenia tabeli. <xref:System.Windows.Documents.Table>przypomina <xref:System.Windows.Controls.Grid> elementu, ale ma więcej możliwości i dlatego wymaga większe obciążenie zasobów. Ponieważ <xref:System.Windows.Controls.Grid> jest <xref:System.Windows.UIElement>, nie można w dowolnej zawartości, chyba że znajduje się w <xref:System.Windows.Documents.BlockUIContainer> lub <xref:System.Windows.Documents.InlineUIContainer>. Aby uzyskać więcej informacji na temat <xref:System.Windows.Documents.Table>, zobacz [omówienie tabeli](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ <xref:System.Windows.Documents.Table> Służy do tworzenia tabeli. <xref:System.Windows.Documents.Table> przypomina <xref:System.Windows.Controls.Grid> elementu, ale ma więcej możliwości i dlatego wymaga większe obciążenie zasobów. Ponieważ <xref:System.Windows.Controls.Grid> jest <xref:System.Windows.UIElement>, nie można w dowolnej zawartości, chyba że znajduje się w <xref:System.Windows.Documents.BlockUIContainer> lub <xref:System.Windows.Documents.InlineUIContainer>. Aby uzyskać więcej informacji na temat <xref:System.Windows.Documents.Table>, zobacz [omówienie tabeli](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Klas pochodnych wbudowany  
  **Uruchom**  
   
- <xref:System.Windows.Documents.Run>Służy do zawierają niesformatowanego tekstu. Mogą wymagać <xref:System.Windows.Documents.Run> obiektów, które ma być używany często w przepływ zawartości. Jednak w znaczniku <xref:System.Windows.Documents.Run> elementy nie są wymagane do użycia w sposób jawny. <xref:System.Windows.Documents.Run>jest wymagany do użycia podczas tworzenia lub manipulowanie przepływu dokumentów za pomocą kodu. Na przykład w przypadku znaczników poniżej pierwszy <xref:System.Windows.Documents.Paragraph> Określa <xref:System.Windows.Documents.Run> element jawnie, a druga nie. Oba punkty Generowanie identyczne dane wyjściowe.  
+ <xref:System.Windows.Documents.Run> Służy do zawierają niesformatowanego tekstu. Mogą wymagać <xref:System.Windows.Documents.Run> obiektów, które ma być używany często w przepływ zawartości. Jednak w znaczniku <xref:System.Windows.Documents.Run> elementy nie są wymagane do użycia w sposób jawny. <xref:System.Windows.Documents.Run> jest wymagany do użycia podczas tworzenia lub manipulowanie przepływu dokumentów za pomocą kodu. Na przykład w przypadku znaczników poniżej pierwszy <xref:System.Windows.Documents.Paragraph> Określa <xref:System.Windows.Documents.Run> element jawnie, a druga nie. Oba punkty Generowanie identyczne dane wyjściowe.  
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
@@ -169,7 +157,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **Zakres**  
   
- <xref:System.Windows.Documents.Span>Grupowanie elementów zawartości innych śródwierszowych. Nie dostępu do właściwych renderowania jest stosowane do zawartości w <xref:System.Windows.Documents.Span> elementu. Jednak elementy który dziedziczyć <xref:System.Windows.Documents.Span> tym <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> i <xref:System.Windows.Documents.Underline> formatowania tekstu.  
+ <xref:System.Windows.Documents.Span> Grupowanie elementów zawartości innych śródwierszowych. Nie dostępu do właściwych renderowania jest stosowane do zawartości w <xref:System.Windows.Documents.Span> elementu. Jednak elementy który dziedziczyć <xref:System.Windows.Documents.Span> tym <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> i <xref:System.Windows.Documents.Underline> formatowania tekstu.  
   
  Poniżej przedstawiono przykładowy <xref:System.Windows.Documents.Span> są używane do przechowywania zawartości śródwierszowej, łącznie z tekstem, <xref:System.Windows.Documents.Bold> elementu, a <xref:System.Windows.Controls.Button>.  
   
@@ -181,7 +169,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **InlineUIContainer**  
   
- <xref:System.Windows.Documents.InlineUIContainer>Umożliwia <xref:System.Windows.UIElement> elementy (tj., takich jak formantu <xref:System.Windows.Controls.Button>) do osadzenia w <xref:System.Windows.Documents.Inline> elementu zawartości. Ten element jest wbudowany odpowiednikiem <xref:System.Windows.Documents.BlockUIContainer> opisane powyżej. Poniżej znajduje się przykład używającej <xref:System.Windows.Documents.InlineUIContainer> do wstawienia <xref:System.Windows.Controls.Button> tekście <xref:System.Windows.Documents.Paragraph>.  
+ <xref:System.Windows.Documents.InlineUIContainer> Umożliwia <xref:System.Windows.UIElement> elementy (tj., takich jak formantu <xref:System.Windows.Controls.Button>) do osadzenia w <xref:System.Windows.Documents.Inline> elementu zawartości. Ten element jest wbudowany odpowiednikiem <xref:System.Windows.Documents.BlockUIContainer> opisane powyżej. Poniżej znajduje się przykład używającej <xref:System.Windows.Documents.InlineUIContainer> do wstawienia <xref:System.Windows.Controls.Button> tekście <xref:System.Windows.Documents.Paragraph>.  
   
  [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
@@ -192,7 +180,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **Rysunek i Floater**  
   
- <xref:System.Windows.Documents.Figure>i <xref:System.Windows.Documents.Floater> służą do osadzania zawartości w dokumentach przepływ z właściwości umieszczania, które można dostosowywać niezależne od podstawowej przepływ zawartości. <xref:System.Windows.Documents.Figure>lub <xref:System.Windows.Documents.Floater> elementy są często używane wyróżniania lub akcentowania części zawartości do obsługi obrazów i innej zawartości w głównej przepływ zawartości, hosta lub iniekcję luźno powiązane zawartości, takie jak anonse.  
+ <xref:System.Windows.Documents.Figure> i <xref:System.Windows.Documents.Floater> służą do osadzania zawartości w dokumentach przepływ z właściwości umieszczania, które można dostosowywać niezależne od podstawowej przepływ zawartości. <xref:System.Windows.Documents.Figure> lub <xref:System.Windows.Documents.Floater> elementy są często używane wyróżniania lub akcentowania części zawartości do obsługi obrazów i innej zawartości w głównej przepływ zawartości, hosta lub iniekcję luźno powiązane zawartości, takie jak anonse.  
   
  Poniższy przykład przedstawia sposób osadzenia <xref:System.Windows.Documents.Figure> do tekstu akapitu.  
   
@@ -205,7 +193,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  ![Zrzut ekranu: Przykład rysunek](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
- <xref:System.Windows.Documents.Figure>i <xref:System.Windows.Documents.Floater> różnią się na kilka sposobów i są używane w różnych scenariuszach.  
+ <xref:System.Windows.Documents.Figure> i <xref:System.Windows.Documents.Floater> różnią się na kilka sposobów i są używane w różnych scenariuszach.  
   
  **Rysunek:**  
   
@@ -219,15 +207,15 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
 -   Nie może znajdować się i będzie renderować wszędzie tam, gdzie przestrzeni mogą być dostępne dla niego. Nie można ustawić przesunięcie lub zakotwiczenia <xref:System.Windows.Documents.Floater>.  
   
--   Nie może być ustalone na więcej niż jedną kolumnę: Domyślnie <xref:System.Windows.Documents.Floater> rozmiary w jednej kolumnie. Ma ona <xref:System.Windows.Documents.Floater.Width%2A> właściwość, którą można ustawić wartości podane w pikselach, ale jeśli ta wartość jest większa niż szerokość jednej kolumny jest ignorowany i floater jest o rozmiarze w jednej kolumnie. Rozmiar do mniej niż jednej kolumny ustawienie szerokości poprawne pikseli, ale zmiany rozmiaru nie jest względnego kolumny, więc "0.5Column" nie jest prawidłowym wyrażeniem dla <xref:System.Windows.Documents.Floater> szerokości. <xref:System.Windows.Documents.Floater>nie ma wysokość właściwości i jest wysokość nie może być ustawiona, jej wysokość zależy od zawartości  
+-   Nie może być ustalone na więcej niż jedną kolumnę: Domyślnie <xref:System.Windows.Documents.Floater> rozmiary w jednej kolumnie. Ma ona <xref:System.Windows.Documents.Floater.Width%2A> właściwość, którą można ustawić wartości podane w pikselach, ale jeśli ta wartość jest większa niż szerokość jednej kolumny jest ignorowany i floater jest o rozmiarze w jednej kolumnie. Rozmiar do mniej niż jednej kolumny ustawienie szerokości poprawne pikseli, ale zmiany rozmiaru nie jest względnego kolumny, więc "0.5Column" nie jest prawidłowym wyrażeniem dla <xref:System.Windows.Documents.Floater> szerokości. <xref:System.Windows.Documents.Floater> nie ma wysokość właściwości i jest wysokość nie może być ustawiona, jej wysokość zależy od zawartości  
   
--   <xref:System.Windows.Documents.Floater>identyczny: jeśli jego zawartość w określonej szerokości do wysokości kolumny więcej niż 1, floater przerywa i identyczny do następnej kolumnie następnej strony, itp.  
+-   <xref:System.Windows.Documents.Floater> identyczny: jeśli jego zawartość w określonej szerokości do wysokości kolumny więcej niż 1, floater przerywa i identyczny do następnej kolumnie następnej strony, itp.  
   
- <xref:System.Windows.Documents.Figure>jest dobrym miejscem do umieszczenia autonomiczny zawartości, której chcesz kontrolować rozmiar i położenie i pewność, że zawartość będzie mieści się w określonym rozmiarze. <xref:System.Windows.Documents.Floater>jest dobrym miejscem do umieszczenia więcej zawartości swobodnego przepływu podobne do zawartości strony głównej, ale jest oddzielony od niego.  
+ <xref:System.Windows.Documents.Figure> jest dobrym miejscem do umieszczenia autonomiczny zawartości, której chcesz kontrolować rozmiar i położenie i pewność, że zawartość będzie mieści się w określonym rozmiarze. <xref:System.Windows.Documents.Floater> jest dobrym miejscem do umieszczenia więcej zawartości swobodnego przepływu podobne do zawartości strony głównej, ale jest oddzielony od niego.  
   
  **LineBreak**  
   
- <xref:System.Windows.Documents.LineBreak>powoduje, że podział wiersza w zawartości przepływu. W poniższym przykładzie pokazano użycie <xref:System.Windows.Documents.LineBreak>.  
+ <xref:System.Windows.Documents.LineBreak> powoduje, że podział wiersza w zawartości przepływu. W poniższym przykładzie pokazano użycie <xref:System.Windows.Documents.LineBreak>.  
   
  [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   
@@ -295,7 +283,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **2.** Zgodnie z diagramu, dostępnych jest kilka <xref:System.Windows.Documents.Block> elementów do wyboru w tym <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, i <xref:System.Windows.Documents.BlockUIContainer> (zobacz powyżej klas pochodnych bloku). Załóżmy, że chcemy <xref:System.Windows.Documents.Table>. Zgodnie z powyższym diagramie <xref:System.Windows.Documents.Table> zawiera <xref:System.Windows.Documents.TableRowGroup> zawierający <xref:System.Windows.Documents.TableRow> elementów, które zawierają <xref:System.Windows.Documents.TableCell> elementy, które zawierają <xref:System.Windows.Documents.Block>-pochodzi z obiektu. Poniżej znajduje się o odpowiadającym segmencie dla <xref:System.Windows.Documents.Table> pobranych z powyższym diagramie.  
   
- ![Diagram: Nadrzędnego &#47; schemat tabeli podrzędnej](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
+ ![Diagram: Nadrzędnego&#47;schemat tabeli podrzędnej](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
  Poniżej znajduje się odpowiedni kod znaczników.  
   
@@ -303,9 +291,9 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
  **3.** Ponownie co najmniej jeden <xref:System.Windows.Documents.Block> elementy są wymagane poniżej <xref:System.Windows.Documents.TableCell>. Aby był prosty, możemy umieścić tekst wewnątrz komórki. Firma Microsoft może to zrobić za pomocą <xref:System.Windows.Documents.Paragraph> z <xref:System.Windows.Documents.Run> elementu. Poniżej znajdują się odpowiednie segmentów z diagram przedstawiający <xref:System.Windows.Documents.Paragraph> może zająć <xref:System.Windows.Documents.Inline> elementu oraz że <xref:System.Windows.Documents.Run> ( <xref:System.Windows.Documents.Inline> element) przyjmuje tylko zwykły tekst.  
   
- ![Diagram: Nadrzędnego &#47; schematu podrzędnych akapitu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
+ ![Diagram: Nadrzędnego&#47;schematu podrzędnych akapitu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
- ![Diagramu: Nadrzędny &#47; Schemat element podrzędny dla przebiegu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
+ ![Diagram: Nadrzędnego&#47;podrzędnych schematu dla przebiegu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
   
  Poniżej znajduje się cały przykładowy w znaczniku.  
   

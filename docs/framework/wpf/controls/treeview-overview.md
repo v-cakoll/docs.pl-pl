@@ -1,28 +1,16 @@
 ---
-title: "TreeView — Przegląd"
-ms.custom: 
+title: TreeView — Przegląd
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - expanding node [WPF]
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5f6b3d0a185754bc0d8d8ee726ca13443ccdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8c49013bc34671ec590f0bd9f84a0f2cf3f9aaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-overview"></a>TreeView — Przegląd
 <xref:System.Windows.Controls.TreeView> Kontrola zapewnia sposób wyświetlania informacji w strukturę hierarchiczną przy użyciu zwijanej węzłów. W tym temacie przedstawiono <xref:System.Windows.Controls.TreeView> i <xref:System.Windows.Controls.TreeViewItem> formanty i zawiera proste przykłady ich użycia.  
@@ -30,7 +18,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>Co to jest element TreeView?  
- <xref:System.Windows.Controls.TreeView>jest <xref:System.Windows.Controls.ItemsControl> który zagnieżdżony elementów za pomocą <xref:System.Windows.Controls.TreeViewItem> kontrolki. Poniższy przykład tworzy <xref:System.Windows.Controls.TreeView>.  
+ <xref:System.Windows.Controls.TreeView> jest <xref:System.Windows.Controls.ItemsControl> który zagnieżdżony elementów za pomocą <xref:System.Windows.Controls.TreeViewItem> kontrolki. Poniższy przykład tworzy <xref:System.Windows.Controls.TreeView>.  
   
  [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   

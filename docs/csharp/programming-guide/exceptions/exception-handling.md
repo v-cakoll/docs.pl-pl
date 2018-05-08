@@ -1,21 +1,15 @@
 ---
-title: "Obsługa wyjątków (Przewodnik programowania w języku C#)"
+title: Obsługa wyjątków (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dfdd8b8bdd89e4253dfc1afebc1e78140b121dd6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bbe9db48ab5cc1313c18fce66312f4334b40b9c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-c-programming-guide"></a>Obsługa wyjątków (Przewodnik programowania w języku C#)
 A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest używany przez programistów C# do kodu partycji, które mogą wpłynąć na wyjątek. Skojarzone [catch](../../../csharp/language-reference/keywords/try-catch.md) bloki są używane do obsługi wyjątków wynikowy. A [koniec](../../../csharp/language-reference/keywords/try-finally.md) blok zawiera kod, który jest uruchomiony niezależnie od tego, czy wyjątek jest zgłaszany `try` bloku, takich jak zwolnienia zasobów przydzielonych w `try` bloku. A `try` blok wymaga co najmniej jednego skojarzone `catch` bloków, lub `finally` bloku lub oba.  
@@ -66,4 +60,4 @@ A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
- [Using — instrukcja](../../../csharp/language-reference/keywords/using-statement.md)
+ [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)

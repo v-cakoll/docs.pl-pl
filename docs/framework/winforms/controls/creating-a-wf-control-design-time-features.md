@@ -1,13 +1,6 @@
 ---
-title: "Wskazówki: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio"
-ms.custom: 
+title: 'Wskazówki: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-caps.latest.revision: "46"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 10905df76f2b638c10b14c1dd8c181b9652ea963
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Wskazówki: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio
 Środowisko czasu projektowania dla kontrolek niestandardowych można zwiększyć przez tworzenia skojarzone projektanta niestandardowych.  
@@ -481,7 +469,7 @@ using MarqueeControlLibrary;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#570)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#570)]  
   
-2.  Połączenia te programy obsługi zdarzeń do ich odpowiednich zleceń projektanta. `MarqueeControlRootDesigner`dziedziczy <xref:System.ComponentModel.Design.DesignerVerbCollection> ze swojej klasy podstawowej. Utworzysz dwa nowe <xref:System.ComponentModel.Design.DesignerVerb> obiekty i dodaj je do tej kolekcji w <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> metody.  
+2.  Połączenia te programy obsługi zdarzeń do ich odpowiednich zleceń projektanta. `MarqueeControlRootDesigner` dziedziczy <xref:System.ComponentModel.Design.DesignerVerbCollection> ze swojej klasy podstawowej. Utworzysz dwa nowe <xref:System.ComponentModel.Design.DesignerVerb> obiekty i dodaj je do tej kolekcji w <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> metody.  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  

@@ -1,34 +1,20 @@
 ---
-title: "Nazwy kontraktów danych"
-ms.custom: 
+title: Nazwy kontraktów danych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>Nazwy kontraktów danych
-Czasami klientem a usługą nie mają takich samych typach. One nadal przekazują dane do siebie, tak długo, jak kontraktów danych są równoważne po obu stronach. [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) opiera się na kontrakt danych i nazwy elementów członkowskich danych, i w związku z tym mechanizm jest dostępne do mapowania typów i członków tych nazw. W tym temacie opisano reguły dotyczące nazw kontraktów danych, a także domyślne zachowanie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastruktury podczas tworzenia nazwy.  
+Czasami klientem a usługą nie mają takich samych typach. One nadal przekazują dane do siebie, tak długo, jak kontraktów danych są równoważne po obu stronach. [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) opiera się na kontrakt danych i nazwy elementów członkowskich danych, i w związku z tym mechanizm jest dostępne do mapowania typów i członków tych nazw. W tym temacie opisano reguły dotyczące nazw kontraktów danych, a także domyślne zachowanie infrastruktury usług Windows Communication Foundation (WCF), podczas tworzenia nazwy.  
   
 ## <a name="basic-rules"></a>Podstawowe zasady  
  Podstawowe zasady dotyczące nazewnictwa dane, które obejmują kontraktów:  
@@ -37,7 +23,7 @@ Czasami klientem a usługą nie mają takich samych typach. One nadal przekazuj�
   
 -   Elementy członkowskie danych mają tylko nazwy, ale nie przestrzeni nazw.  
   
--   Podczas przetwarzania kontraktów danych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury jest rozróżniana wielkość liter, zarówno w przestrzeni nazw, jak i nazwy kontraktów danych i elementy członkowskie danych.  
+-   Podczas przetwarzania kontraktów danych, infrastruktura WCF jest uwzględniana wielkość liter, zarówno w przestrzeni nazw, jak i nazwy kontraktów danych i elementy członkowskie danych.  
   
 ## <a name="data-contract-namespaces"></a>Przestrzeni nazw kontraktów danych  
  Przestrzeń nazw kontraktu danych ma postać z zasobów identyfikator URI (Uniform). Identyfikator URI może być bezwzględny lub względny. Domyślnie kontraktów danych dla określonego typu są przypisywane przestrzeni nazw, która pochodzi z wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) przestrzeni nazw tego typu.  
@@ -45,7 +31,7 @@ Czasami klientem a usługą nie mają takich samych typach. One nadal przekazuj�
  Domyślnie w danej przestrzeni nazw CLR (w formacie *Clr.Namespace*) jest zamapowany do przestrzeni nazw "http://schemas.datacontract.org/2004/07/Clr.Namespace". Aby zastąpić to ustawienie domyślne, należy zastosować <xref:System.Runtime.Serialization.ContractNamespaceAttribute> atrybutu cały moduł lub zestaw. Alternatywnie w celu kontroli przestrzeń nazw kontraktu danych dla każdego typu należy ustawić <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> właściwość <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 > [!NOTE]
->  Przestrzeń nazw "http://schemas.microsoft.com/2003/10/Serialization" jest zarezerwowany i nie można użyć jako przestrzeń nazw kontraktu danych.  
+>  "http://schemas.microsoft.com/2003/10/Serialization"Przestrzeni nazw jest zarezerwowany i nie można użyć jako przestrzeń nazw kontraktu danych.  
   
 > [!NOTE]
 >  Nie można zastąpić domyślną przestrzeń nazw w typach kontraktu danych, które zawierają `delegate` deklaracji.  

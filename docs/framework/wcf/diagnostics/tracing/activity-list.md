@@ -1,27 +1,15 @@
 ---
-title: "Lista działań"
-ms.custom: 
+title: Lista działań
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>Lista działań
-Ten temat zawiera listę wszystkich działań, które są zdefiniowane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Ten temat zawiera listę wszystkich działań, które są zdefiniowane przez Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  Działania można również definiować programowo do grupy użytkowników śladów. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
@@ -33,8 +21,8 @@ Ten temat zawiera listę wszystkich działań, które są zdefiniowane przez [!I
 |-----------|-------------------|-------------------|-----------------|  
 |M,|Działanie otoczenia|N/d (to nie są kontrolowane przez ServiceModel)|Działanie, którego identyfikator jest ustawione w protokole TLS przed wszelkie wywołania kodu ServiceModel (po stronie klienta lub po stronie serwera).<br /><br /> Przykład: Gdy wywoływana jest otwarte działania [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] klienta lub serviceHost.open jest wywoływana.|  
 |B|Konstrukcja<br /><br /> Obiekt ChannelFactory. ContractType: "[typ]".|Konstrukcja||  
-|C|Otwarcie<br /><br /> [Element ClientBase &#124; Obiekt ChannelFactory]. ContractType: "[typ]".|Otwarcie||  
-|I|Zamknij [obiektu ClientBase &#124; Obiekt ChannelFactory]. ContractType: "[typ]".|Zamknięcie||  
+|C|Otwarcie<br /><br /> [Element ClientBase&#124;ChannelFactory]. ContractType: "[typ]".|Otwarcie||  
+|I|Zamknij [obiektu ClientBase&#124;ChannelFactory]. ContractType: "[typ]".|Zamknięcie||  
 |M|Konstruować ServiceHost. Typ ServiceType: "[typ]".|Konstrukcja||  
 |N|Otwórz element ServiceHost. Typ ServiceType: "[typ]".|Otwarcie||  
 |Z|Zamknij ServiceHost. Typ ServiceType: "[typ]".|Zamknięcie||  

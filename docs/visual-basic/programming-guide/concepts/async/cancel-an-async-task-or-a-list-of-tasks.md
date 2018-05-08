@@ -1,22 +1,12 @@
 ---
-title: "Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)"
-ms.custom: 
+title: Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 916577107bd65559aed71dc9bb2921969a117e90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74f0c1c4653709497cb264aac18b49f4fee4eefa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 Można skonfigurować przycisku, który służy do anulowania aplikacji async, jeśli nie chcesz czekać na jego zakończenie. Wykonując poniższe przykłady w tym temacie, można dodać przycisk anulowania do aplikacji, która pobiera zawartość witryny lub listy witryn sieci Web.  
@@ -26,7 +16,7 @@ Można skonfigurować przycisku, który służy do anulowania aplikacji async, j
 > [!NOTE]
 >  Uruchamianie przykładów, musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
-##  <a name="BKMK_CancelaTask"></a>Anuluj zadanie  
+##  <a name="BKMK_CancelaTask"></a> Anuluj zadanie  
  W pierwszym przykładzie **anulować** przycisk z zadania jednego pobierania. Jeśli wybierzesz przycisk podczas pobierania zawartości aplikacji, pobieranie zostało anulowane.  
   
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
@@ -144,7 +134,7 @@ Można skonfigurować przycisku, który służy do anulowania aplikacji async, j
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a>Anuluj listy zadań  
+##  <a name="BKMK_CancelaListofTasks"></a> Anuluj listy zadań  
  Można rozszerzyć poprzedni przykład, aby anulować wiele zadań można skojarzyć takie same `CancellationTokenSource` wystąpienia z każdego zadania. Jeśli wybierzesz **anulować** przycisku Anuluj wszystkie zadania, które nie są jeszcze ukończone.  
   
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
@@ -256,7 +246,7 @@ Można skonfigurować przycisku, który służy do anulowania aplikacji async, j
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a>Przykłady ukończone  
+##  <a name="BKMK_CompleteExamples"></a> Przykłady ukończone  
  Poniższe sekcje zawierają kod dla każdego z poprzednich przykładach. Zwróć uwagę, że musisz dodać odwołanie do <xref:System.Net.Http>.  
   
  Można pobrać projektów z [próbki Async: poprawnie dostrajanie Twoja aplikacja](http://go.microsoft.com/fwlink/?LinkId=255046).  

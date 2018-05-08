@@ -1,24 +1,14 @@
 ---
-title: "Omówienie programu Windows Identity Foundation 4.5"
-ms.custom: 
+title: Omówienie programu Windows Identity Foundation 4.5
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
-caps.latest.revision: "11"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a3b07d94804741dfbfee508dfb0ce47e2cb47c2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5d668ff2b6c79105ddb4ec3672144a188e0b78c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Omówienie programu Windows Identity Foundation 4.5
 Program Windows Identity Foundation 4.5 to zestaw klas programu .NET Framework służących do wdrożenia mechanizmu tożsamości opartych na oświadczeniach w aplikacjach. Korzystając z niego, łatwiej możesz czerpać korzyści z aplikacji i usług obsługujących oświadczenia. Programu WIF 4.5 można użyć w dowolnej aplikacji sieci Web lub usłudze sieci Web, która korzysta z programu .NET Framework w wersji 4.5 lub nowszej. Program WIF to tylko jeden element rodziny oprogramowania tożsamości federacyjnych firmy Microsoft, który implementuje wspólną wizję branżową opartą na otwartych standardach. Tożsamości federacyjnych składa się z trzech składników: [usług federacyjnych Active Directory®](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [usługi kontroli dostępu do programu Windows Azure](http://go.microsoft.com/fwlink/?LinkID=247517) (ACS) i WIF. Te trzy elementy tworzą razem jądro nowej, opracowanej przez firmę Microsoft platformy tożsamości i dostępu opartej na oświadczeniach i działającej w chmurze.  
@@ -38,7 +28,7 @@ Program Windows Identity Foundation 4.5 to zestaw klas programu .NET Framework s
   
      Ponadto struktura ta oferuje możliwość utworzenia usługi STS, która obsługuje protokół WS-Federation na potrzeby klientów przeglądarki sieci Web. Taką usługę STS nazywa się również pasywną usługą STS.  
   
--   Nowe narzędzie tożsamości i dostępu dla programu Visual Studio 11, które umożliwia zabezpieczenie aplikacji za pomocą tożsamości opartej na oświadczeniach i akceptowanie użytkowników z wielu dostawców tożsamości. Możesz pobrać to narzędzie WIF z następującego adresu URL: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) lub bezpośrednio w programie Visual Studio 11, wyszukując "identity" bezpośrednio w Menedżerze rozszerzeń. Aby uzyskać więcej informacji, zobacz [tożsamości i dostępu do narzędzi dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+-   Nowe narzędzie tożsamości i dostępu dla programu Visual Studio 11, które umożliwia zabezpieczenie aplikacji za pomocą tożsamości opartej na oświadczeniach i akceptowanie użytkowników z wielu dostawców tożsamości. Możesz pobrać to narzędzie WIF z następującego adresu URL: [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849) lub bezpośrednio w programie Visual Studio 11, wyszukując "identity" bezpośrednio w Menedżerze rozszerzeń. Aby uzyskać więcej informacji, zobacz [tożsamości i dostępu do narzędzi dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
  Program WIF obsługuje następujące główne scenariusze:  
   

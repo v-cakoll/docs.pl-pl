@@ -1,13 +1,6 @@
 ---
-title: "Najlepsze rozwiązania dotyczące niezawodności"
-ms.custom: 
+title: Najlepsze rozwiązania dotyczące niezawodności
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>Najlepsze rozwiązania dotyczące niezawodności
 Następujące reguły niezawodności są ukierunkowane do programu SQL Server; jednak mają one również zastosowanie do aplikacji opartej na hoście serwera. Jest bardzo ważne, że serwery, takich jak SQL Server nie nastąpił przeciek zasobów i nie można przełączyć w dół.  Jednak, że nie można wykonać pisząc kod wycofujący się dla każdej metody, która zmienia stan obiektu.  Celem jest nie do pisania 100 procent niezawodnej zarządzanego kodu, który będzie odzyskanie wszystkich błędów w każdej lokalizacji kod wycofujący się.  Który będzie stanowić nie lada wyzwanie z małego prawdopodobieństwo pomyślnego.  Środowisko uruchomieniowe języka wspólnego (CLR) nie można łatwo udostępnić wystarczająco silne gwarancje z kodem zarządzanym aby pisanie kodu doskonałe możliwe.  Należy pamiętać, że w przeciwieństwie do programu ASP.NET, program SQL Server używa tylko jednego procesu, który nie może zostać odtworzona bez konieczności przełączania bazy danych w dół przez zbyt długi czas.  
@@ -89,7 +79,7 @@ Następujące reguły niezawodności są ukierunkowane do programu SQL Server; j
  W wypadku braku ograniczenia blokady lub zasób, SQL Server będzie przerwać wątek lub zerwanie <xref:System.AppDomain>.  W takim przypadku tylko wycofujący kodu w regionie ograniczonego wykonania (CER) jest gwarantowana do uruchomienia.  
   
 ### <a name="use-safehandle-to-avoid-resource-leaks"></a>Używaj klasy SafeHandle w celu uniknięcia przecieków zasobów  
- W przypadku liczby <xref:System.AppDomain> zwolniony, nie może zależeć od `finally` bloków lub finalizatory wykonywana, dlatego ważne jest, aby abstrakcyjnej wszystkich dostęp do zasobów systemu operacyjnego za pomocą <xref:System.Runtime.InteropServices.SafeHandle> klasy zamiast <xref:System.IntPtr>, <xref:System.Runtime.InteropServices.HandleRef>, lub podobne klasy. Dzięki temu CLR do śledzenia i zamknąć dojścia używasz nawet w <xref:System.AppDomain> przypadku zakończenia.  <xref:System.Runtime.InteropServices.SafeHandle>będzie używać krytyczne finalizator CLR zawsze będzie działał.  
+ W przypadku liczby <xref:System.AppDomain> zwolniony, nie może zależeć od `finally` bloków lub finalizatory wykonywana, dlatego ważne jest, aby abstrakcyjnej wszystkich dostęp do zasobów systemu operacyjnego za pomocą <xref:System.Runtime.InteropServices.SafeHandle> klasy zamiast <xref:System.IntPtr>, <xref:System.Runtime.InteropServices.HandleRef>, lub podobne klasy. Dzięki temu CLR do śledzenia i zamknąć dojścia używasz nawet w <xref:System.AppDomain> przypadku zakończenia.  <xref:System.Runtime.InteropServices.SafeHandle> będzie używać krytyczne finalizator CLR zawsze będzie działał.  
   
  Dojście systemu operacyjnego są przechowywane w bezpieczne dojście od chwili utworzenia aż do momentu jego zwolnienia.  Brak żadnego okna, podczas którego <xref:System.Threading.ThreadAbortException> może wystąpić zostały publicznie dojścia.  Ponadto wywołanie liczebności referencyjnej zostanie uchwytu, dzięki czemu Zamknij śledzenia ważności uchwytu uniemożliwia problem zabezpieczeń z wyścigu między platformy `Dispose` i metody, które jest aktualnie używane dojście.  
   
@@ -97,11 +87,11 @@ Następujące reguły niezawodności są ukierunkowane do programu SQL Server; j
   
  Należy pamiętać, że <xref:System.Runtime.InteropServices.SafeHandle> nie zastępuje ona dla <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  Ma nadal potencjalnych zasobów rywalizacji i wydajności zalet jawnie usunąć zasoby systemu operacyjnego.  Po prostu należy pamiętać, że `finally` bloków, które jawnie usuwa zasoby mogą być wykonywane do zakończenia.  
   
- <xref:System.Runtime.InteropServices.SafeHandle>Umożliwia wdrożenie własne <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metodę, która wykonuje pracę, aby zwolnić dojścia, takich jak przekazywanie stanu do dojścia systemu operacyjnego zwalnianie procedury lub zwalnianie zestaw uchwytów w pętli.  Środowisko CLR gwarantuje, że ta metoda jest uruchomione.  Jest odpowiedzialny za Autor <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> implementacji, aby upewnić się, jest zwolnienie uchwytu we wszystkich okolicznościach. Błąd w tym celu spowoduje, że dojście do przedostawać, który często powoduje wyciek natywne zasoby skojarzone z dojścia. W związku z tym jest krytyczny do struktury <xref:System.Runtime.InteropServices.SafeHandle> klas pochodnych tak, aby <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> implementacji nie wymaga Alokacja wszystkie zasoby, które mogą być niedostępne w momencie wywołania. Zauważ, że dozwolone wywołania metody, które może zakończyć się niepowodzeniem w ramach wdrożenia <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> pod warunkiem, że swój kod obsługi tych błędów i ukończyć kontraktu, aby zwolnić uchwyt macierzysty. Na potrzeby debugowania, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> ma <xref:System.Boolean> zwrócić wartość, która może być ustawiony na `false` po napotkaniu błędu krytycznego, co uniemożliwia wersji zasobu. Dzięki temu będzie uaktywniać [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA, jeśli jest włączona, które pomogą zidentyfikować problem. Nie ma wpływu na środowisko uruchomieniowe w inny sposób; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> nie zostanie ponownie wywołany dla tego samego zasobu i w związku z tym przecieku dojścia.  
+ <xref:System.Runtime.InteropServices.SafeHandle> Umożliwia wdrożenie własne <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metodę, która wykonuje pracę, aby zwolnić dojścia, takich jak przekazywanie stanu do dojścia systemu operacyjnego zwalnianie procedury lub zwalnianie zestaw uchwytów w pętli.  Środowisko CLR gwarantuje, że ta metoda jest uruchomione.  Jest odpowiedzialny za Autor <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> implementacji, aby upewnić się, jest zwolnienie uchwytu we wszystkich okolicznościach. Błąd w tym celu spowoduje, że dojście do przedostawać, który często powoduje wyciek natywne zasoby skojarzone z dojścia. W związku z tym jest krytyczny do struktury <xref:System.Runtime.InteropServices.SafeHandle> klas pochodnych tak, aby <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> implementacji nie wymaga Alokacja wszystkie zasoby, które mogą być niedostępne w momencie wywołania. Zauważ, że dozwolone wywołania metody, które może zakończyć się niepowodzeniem w ramach wdrożenia <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> pod warunkiem, że swój kod obsługi tych błędów i ukończyć kontraktu, aby zwolnić uchwyt macierzysty. Na potrzeby debugowania, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> ma <xref:System.Boolean> zwrócić wartość, która może być ustawiony na `false` po napotkaniu błędu krytycznego, co uniemożliwia wersji zasobu. Dzięki temu będzie uaktywniać [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA, jeśli jest włączona, które pomogą zidentyfikować problem. Nie ma wpływu na środowisko uruchomieniowe w inny sposób; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> nie zostanie ponownie wywołany dla tego samego zasobu i w związku z tym przecieku dojścia.  
   
- <xref:System.Runtime.InteropServices.SafeHandle>nie jest odpowiednia w niektórych kontekstach.  Ponieważ <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metoda może być uruchamiane w <xref:System.GC> wątku finalizatora żadnych dojścia, które są wymagane do zwolniona, w szczególności wątku nie musi być ujęte w <xref:System.Runtime.InteropServices.SafeHandle>.  
+ <xref:System.Runtime.InteropServices.SafeHandle> nie jest odpowiednia w niektórych kontekstach.  Ponieważ <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metoda może być uruchamiane w <xref:System.GC> wątku finalizatora żadnych dojścia, które są wymagane do zwolniona, w szczególności wątku nie musi być ujęte w <xref:System.Runtime.InteropServices.SafeHandle>.  
   
- Wywoływane otoki środowiska uruchomieniowego (RCWs) mogą być czyszczone przez środowisko CLR bez dodatkowego kodu.  Dla kodu korzystającego z platformy wywołania i traktuje obiektu modelu COM jako `IUnknown*` lub <xref:System.IntPtr>, kod powinien ulegną do użycia otoki RCW.  <xref:System.Runtime.InteropServices.SafeHandle>może nie być odpowiednie dla tego scenariusza z powodu możliwości wersji niezarządzanej metody wywołań zwrotnych do kodu zarządzanego.  
+ Wywoływane otoki środowiska uruchomieniowego (RCWs) mogą być czyszczone przez środowisko CLR bez dodatkowego kodu.  Dla kodu korzystającego z platformy wywołania i traktuje obiektu modelu COM jako `IUnknown*` lub <xref:System.IntPtr>, kod powinien ulegną do użycia otoki RCW.  <xref:System.Runtime.InteropServices.SafeHandle> może nie być odpowiednie dla tego scenariusza z powodu możliwości wersji niezarządzanej metody wywołań zwrotnych do kodu zarządzanego.  
   
 #### <a name="code-analysis-rule"></a>Reguł analizy kodu  
  Użyj <xref:System.Runtime.InteropServices.SafeHandle> celu hermetyzacji zasobów systemu operacyjnego. Nie używaj <xref:System.Runtime.InteropServices.HandleRef> lub pól typu <xref:System.IntPtr>.  
@@ -110,7 +100,7 @@ Następujące reguły niezawodności są ukierunkowane do programu SQL Server; j
  Zapoznaj się z finalizatory dokładnie, aby upewnić się, że nawet jeśli nie można uruchamiać, zasobu krytycznego systemu operacyjnego jest nie przedostają.  W odróżnieniu od zwykłym <xref:System.AppDomain> zwolniony, gdy aplikacja jest wykonywany w stanie stabilności lub serwera, takie jak program SQL Server wyłącza, obiekty, zostały zakończone podczas niespodziewane <xref:System.AppDomain> zwolnienia.  Upewnij się, że zasoby nie przedostają w przypadku nagłego zwolniony, ponieważ nie można zagwarantować poprawność aplikacji, ale integralność serwera muszą być obsługiwane za nie przeciek zasobów.  Użyj <xref:System.Runtime.InteropServices.SafeHandle> zwolnić wszystkie zasoby systemu operacyjnego.  
   
 ### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>Oznacza koniec upewnij się, klauzule nie ma potrzeby uruchom, aby zapobiec przeciekom zasoby systemu operacyjnego  
- `finally`klauzule nie ma gwarancji uruchomiony poza CERs, wymagających deweloperom biblioteki nie zależą od kodu w ramach `finally` bloku do zwalniania niezarządzanych zasobów.  Przy użyciu <xref:System.Runtime.InteropServices.SafeHandle> jest zalecanym rozwiązaniem.  
+ `finally` klauzule nie ma gwarancji uruchomiony poza CERs, wymagających deweloperom biblioteki nie zależą od kodu w ramach `finally` bloku do zwalniania niezarządzanych zasobów.  Przy użyciu <xref:System.Runtime.InteropServices.SafeHandle> jest zalecanym rozwiązaniem.  
   
 #### <a name="code-analysis-rule"></a>Reguł analizy kodu  
  Użyj <xref:System.Runtime.InteropServices.SafeHandle> oczyszczania zasoby systemu operacyjnego zamiast `Finalize`. Nie używaj <xref:System.IntPtr>; użyj <xref:System.Runtime.InteropServices.SafeHandle> celu hermetyzacji zasobów. Jeśli koniec klauzuli musi uruchomić, umieść go w CER.  
@@ -118,7 +108,7 @@ Następujące reguły niezawodności są ukierunkowane do programu SQL Server; j
 ### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>Wszystkie blokady powinien przejść przez istniejące zarządzanego kodu blokowania  
  Środowisko CLR muszą znać, jeśli kod jest w blokady tak, aby wiedzieli, aby usunąć <xref:System.AppDomain> zamiast właśnie Trwa przerywanie wątku.  Trwa przerywanie wątku może być niebezpieczne, jak dane zasilaniu przez wątek może pozostać w niespójnym stanie. W związku z tym całą <xref:System.AppDomain> musi zostać odtworzona.  Konsekwencje można zidentyfikować blokady może być zakleszczenie lub niepoprawne wyniki. Użyj metody <xref:System.Threading.Thread.BeginCriticalRegion%2A> i <xref:System.Threading.Thread.EndCriticalRegion%2A> do identyfikowania regionów blokady.  Są one metody statyczne <xref:System.Threading.Thread> klasy, które mają zastosowanie tylko do bieżącego wątku, pomaga w zapobieganiu jeden wątek Edycja liczbę blokad inny wątek.  
   
- <xref:System.Threading.Monitor.Enter%2A>i <xref:System.Threading.Monitor.Exit%2A> ma to powiadomienie CLR wbudowane, dlatego zaleca się ich użycia oraz stosowania [lock — instrukcja](~/docs/csharp/language-reference/keywords/lock-statement.md), który używa tych metod.  
+ <xref:System.Threading.Monitor.Enter%2A> i <xref:System.Threading.Monitor.Exit%2A> ma to powiadomienie CLR wbudowane, dlatego zaleca się ich użycia oraz stosowania [lock — instrukcja](~/docs/csharp/language-reference/keywords/lock-statement.md), który używa tych metod.  
   
  Innych mechanizmów blokowania, takich jak pokrętła blokad i <xref:System.Threading.AutoResetEvent> należy wywołać tych metod, aby powiadomić CLR jest wprowadzane sekcja krytyczna.  Tych metod nie wykonuj żadnych blokad; informują wykonywanego kodu w sekcji krytycznej środowiska CLR i przerywanie wątku można pozostawić niespójne udostępniania stanu.  Jeśli zdefiniowano własne typu blokady, na przykład niestandardowy <xref:System.Threading.ReaderWriterLock> klasy, należy użyć tych metod licznik blokady.  
   
@@ -131,7 +121,7 @@ Następujące reguły niezawodności są ukierunkowane do programu SQL Server; j
  Mimo że <xref:System.AppDomain> odtwarzania można wyczyścić zasobów w wątku finalizatora, jest nadal należy umieścić oczyszczanie kodu w odpowiednie miejsce.  Należy pamiętać, że jeśli wątek odebrał wyjątek asynchroniczny bez blokada, CLR próbuje zakończyć wątku bez konieczności Odtwórz <xref:System.AppDomain>.  Zapewnienie, że zasoby są czyszczone wcześniej zamiast nowsze pomaga udostępniając więcej zasobów, a także lepsze zarządzanie przez czas ich istnienia.  Jeśli nie zamykaj jawnie dojście do pliku w ścieżce kodu błędu, niektóre poczekaj <xref:System.Runtime.InteropServices.SafeHandle> finalizatorów, aby wyczyścić go, przy następnym kodzie uruchamia go może zakończyć się niepowodzeniem próby uzyskania dostępu dokładnie tego samego pliku, jeśli finalizator nie został już uruchomiony.  Z tego powodu zagwarantowaniu, że oczyszczanie kodu istnieje i że działa ona prawidłowo może pomóc skutków błędów więcej prawidłowo i szybko, mimo że nie jest to bezwzględnie konieczne.  
   
 #### <a name="code-analysis-rule"></a>Reguł analizy kodu  
- Oczyszczanie kodu po `catch` musi być w `finally` bloku. Wywołania do usunięcia w bloku finally.  `catch`bloki powinien kończyć się throw albo ponownie Zgłoś.  Gdy będzie istnieć wyjątki, takie jak kod wykrywania, czy można nawiązać połączenia sieciowego gdzie może przyczynić się do żadnego z dużą liczbę wyjątków, kodu, który wymaga Przechwytywanie liczba wyjątków w normalnych okolicznościach nadać Wskazuje, że kod powinien być testowane, jeśli powiedzie.  
+ Oczyszczanie kodu po `catch` musi być w `finally` bloku. Wywołania do usunięcia w bloku finally.  `catch` bloki powinien kończyć się throw albo ponownie Zgłoś.  Gdy będzie istnieć wyjątki, takie jak kod wykrywania, czy można nawiązać połączenia sieciowego gdzie może przyczynić się do żadnego z dużą liczbę wyjątków, kodu, który wymaga Przechwytywanie liczba wyjątków w normalnych okolicznościach nadać Wskazuje, że kod powinien być testowane, jeśli powiedzie.  
   
 ### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>Modyfikowalne stanu udostępnionego całego procesu między domenami aplikacji powinny zostać usunięte lub użyj Region ograniczonego wykonania  
  Zgodnie z opisem we wprowadzeniu, może być bardzo trudne do pisania kodu zarządzanego, który monitoruje stan udostępnionego całego procesu między domenami aplikacji w sposób niezawodny.  Udostępniony stan całego procesu jest dowolny rodzaj struktury danych udostępnionych między domenami aplikacji w kodzie Win32, wewnątrz środowiska CLR lub w kodzie zarządzanym przy użyciu usług zdalnych.  Dowolny modyfikowalną udostępniony stan jest bardzo trudne do poprawnie zapisać w kodzie zarządzanym i wszelkie statyczny udostępnionego stanu może być wykonywana tylko ze szczególną uwagę na to.  Jeśli masz całego procesu lub dla komputera stanu udostępnionego, Znajdź sposobem jej wyeliminowania lub ochrony stanu udostępnionego, przy użyciu region ograniczonego wykonania (CER).  Wszystkie biblioteki z stanu udostępnionego, który nie jest zidentyfikowała i poprawiła powodować hosta, takich jak SQL Server, wymaga czystej <xref:System.AppDomain> zwalnianie awarię.  
@@ -266,7 +256,7 @@ public static MyClass SingletonProperty
  Można bezpiecznie użyć większości stanu na zarządzanego <xref:System.Threading.Thread> obiektu, w tym lokalny magazyn wątków zarządzanych i wątku bieżącej kultury interfejsu użytkownika.  Można również użyć <xref:System.ThreadStaticAttribute>, która sprawia, że wartość istniejącej zmiennej statycznych dostępne tylko przez bieżący wątek zarządzanych (jest to inny sposób realizacji włókien magazynu lokalnego w środowisku CLR).  Programowania powodów modelu, nie można zmienić bieżącej kultury wątku podczas uruchamiania w języku SQL.  
   
 #### <a name="code-analysis-rule"></a>Reguł analizy kodu  
- SQL Server jest uruchomiony w trybie włókien; nie należy używać magazynu lokalnego wątku. Unikaj platformy wywołania wywołania `TlsAlloc`, `TlsFree`, `TlsGetValue`, i`TlsSetValue.`  
+ SQL Server jest uruchomiony w trybie włókien; nie należy używać magazynu lokalnego wątku. Unikaj platformy wywołania wywołania `TlsAlloc`, `TlsFree`, `TlsGetValue`, i `TlsSetValue.`  
   
 ### <a name="let-sql-server-handle-impersonation"></a>Let personifikacji dojście do serwera SQL  
  Ponieważ personifikacji operuje na poziomie wątku i SQL można uruchomić w trybie włókien, kodu zarządzanego nie ma personifikować użytkowników i nie powinny wywoływać `RevertToSelf`.  
@@ -275,7 +265,7 @@ public static MyClass SingletonProperty
  Pozwolić, aby obsłużyć personifikacji programu SQL Server. Nie używaj `RevertToSelf`, `ImpersonateAnonymousToken`, `DdeImpersonateClient`, `ImpersonateDdeClientWindow`, `ImpersonateLoggedOnUser`, `ImpersonateNamedPipeClient`, `ImpersonateSelf`, `RpcImpersonateClient`, `RpcRevertToSelf`, `RpcRevertToSelfEx`, lub `SetThreadToken`.  
   
 ### <a name="do-not-call-threadsuspend"></a>Nie wywołuj Thread::Suspend  
- Możliwość wstrzymywania wątku mogą wydawać się prostą operacją, ale może spowodować zakleszczenie.  Jeśli wątek posiadająca blokady pobiera zawieszony przez drugi wątek, a następnie drugiego wątku spróbuje, biorąc tego samego blokady, zakleszczenie występuje.  <xref:System.Threading.Thread.Suspend%2A>może zakłócać zabezpieczeń, podczas ładowania klasy usług zdalnych i odbicie obecnie.  
+ Możliwość wstrzymywania wątku mogą wydawać się prostą operacją, ale może spowodować zakleszczenie.  Jeśli wątek posiadająca blokady pobiera zawieszony przez drugi wątek, a następnie drugiego wątku spróbuje, biorąc tego samego blokady, zakleszczenie występuje.  <xref:System.Threading.Thread.Suspend%2A> może zakłócać zabezpieczeń, podczas ładowania klasy usług zdalnych i odbicie obecnie.  
   
 #### <a name="code-analysis-rule"></a>Reguł analizy kodu  
  Nie wywołuj <xref:System.Threading.Thread.Suspend%2A>. Należy rozważyć użycie rzeczywistych synchronizacji pierwotne, takie jak <xref:System.Threading.Semaphore> lub <xref:System.Threading.ManualResetEvent> .  

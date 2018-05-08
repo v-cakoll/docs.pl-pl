@@ -1,13 +1,6 @@
 ---
 title: Promocja typu (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
 - visibility [Visual Basic], declared elements
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 104fa906fecc5a5bb8704fe3ab839f9f200cf73b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-promotion-visual-basic"></a>Promocja typu (Visual Basic)
 Deklaracja elementu programistycznego w module języka Visual Basic zamienia jego zakresu przestrzeni nazw zawierającej modułu. Jest to nazywane *wpisz podwyższania poziomu*.  

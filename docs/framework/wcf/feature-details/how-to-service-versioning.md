@@ -1,24 +1,12 @@
 ---
-title: "Instrukcje: Przechowywanie wersji usługi"
-ms.custom: 
+title: 'Instrukcje: Przechowywanie wersji usługi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: "6"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-service-versioning"></a>Instrukcje: Przechowywanie wersji usługi
 W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia konfiguracji routingu, który kieruje komunikaty do różnych wersji tę samą usługę. W tym przykładzie wiadomości są kierowane do dwóch różnych wersji usługi Kalkulator `roundingCalc` (wersja 1) i `regularCalc` (v2). Zarówno implementacje obsługują te same operacje; jednak starsza usługa `roundingCalc`, zaokrągla przed zwróceniem wszystkich obliczeń do najbliższej wartości całkowitej. Aplikacja kliencka musi mieć możliwość wskazuje, czy należy użyć nowszej `regularCalc` usługi.  
@@ -105,7 +93,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  Prefiks przestrzeni nazw s12 jest zdefiniowany w tabeli nazw domyślnie i reprezentuje przestrzeni nazw "http://www.w3.org/2003/05/soap-envelope".  
+    >  Prefiks przestrzeni nazw s12 jest zdefiniowana w tabeli nazw i reprezentuje przestrzeni nazw "http://www.w3.org/2003/05/soap-envelope".  
   
 3.  Zdefiniuj filtr tabeli, które kojarzy każdego filtru z punktem końcowym klienta. Komunikat zawiera nagłówek "CalcVer" o wartości 1, będą przesyłane do usługi regularCalc. Nagłówek zawiera wartość 2, będą przesyłane do usługi roundingCalc. Jeśli występuje bez nagłówka wiadomości będą kierowane do regularCalc.  
   

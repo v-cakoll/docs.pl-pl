@@ -1,31 +1,20 @@
 ---
 title: Dołączone i odłączone zadania podrzędne
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attached-and-detached-child-tasks"></a>Dołączone i odłączone zadania podrzędne
 A *zadania podrzędnego* (lub *zadania zagnieżdżonego*) jest <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> wystąpienia utworzone w delegata użytkownika innego zadania, które jest nazywany *zadaniem nadrzędnym*. Zadania podrzędnego można odłączyć lub dołączony. A *zadania podrzędnego odłączyć* to zadanie, które wykonuje niezależnie od jego elementu nadrzędnego. *Dołączony zadania podrzędnego* jest tworzonych za pomocą zadania zagnieżdżonego <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcji, których elementem nadrzędnym nie jawnie lub domyślnie zabronić dołączony. Zadanie może utworzyć dowolną liczbę podrzędnych dołączone i odłączone zadania ograniczony tylko ilością zasobów systemowych.  

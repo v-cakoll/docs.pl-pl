@@ -1,24 +1,12 @@
 ---
 title: Kolekcje i typy kolekcji dla XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Kolekcje i typy kolekcji dla XAML
 W tym temacie opisano sposób definiowania właściwości typów, które są przeznaczone do obsługi kolekcji, a także do obsługi składni języka XAML dla wystąpienia elementy kolekcji jako elementy podrzędne elementu nadrzędnego obiektu lub właściwości elementu.  
@@ -34,7 +22,7 @@ W tym temacie opisano sposób definiowania właściwości typów, które są prz
   
 2.  <xref:System.Collections.IDictionary> Interfejsu wskazuje dicionary kolekcji.  
   
-3.  <xref:System.Array>reprezentuje tablicę i tablicy obsługuje <xref:System.Collections.IList> metody.  
+3.  <xref:System.Array> reprezentuje tablicę i tablicy obsługuje <xref:System.Collections.IList> metody.  
   
  W każdym z tych pojęć kolekcji procesora .NET Framework XAML Services XAML oczekuje, że wywołanie `Add` metody na określonym wystąpieniu typu właściwości kolekcji. Lub, w przypadku serializacji, procesor XAML tworzy osobne wystąpienia typu XAML dla każdego elementu listy, słownika lub tablicy oparte na każdej kolekcji specyficzną koncepcję "Elementów". Są to: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; jawnych <xref:System.Array.System%23Collections%23IList%23Item%2A> dla <xref:System.Array>.  
   
@@ -49,8 +37,8 @@ W tym temacie opisano sposób definiowania właściwości typów, które są prz
 ## <a name="xaml-type-system-support-and-collections"></a>Obsługa systemu typu XAML i kolekcji  
  Poza podstawowa mechanika analizowania XAML i wypełnianie lub serializowania właściwości kolekcji system typów języka XAML zgodnie z implementacją w .NET Framework XAML Services zawiera kilka funkcji projektowania odnoszą się do kolekcji w języku XAML.  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>Zwraca wartość true, jeśli typ XAML nie jest obsługiwana przez typ, który zapewnia obsługę kolekcji XAML.  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> Zwraca wartość true, jeśli typ XAML nie jest obsługiwana przez typ, który zapewnia obsługę kolekcji XAML.  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>i <xref:System.Xaml.XamlType.IsArray%2A> dalsze zidentyfikuje, który typ XAML obsługuje tryb kolekcji. Dla XAML niestandardowych procesorów, które są oparte na usług .NET Framework XAML i XAML system typów, ale nie jest oparty na istniejących <xref:System.Xaml.XamlWriter> implementacji, wiedząc, który tryb kolekcji jest używany może być konieczne, aby wiedzieć, którego metoda do wywołania dla Przetwarzanie kolekcji.  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> i <xref:System.Xaml.XamlType.IsArray%2A> dalsze zidentyfikuje, który typ XAML obsługuje tryb kolekcji. Dla XAML niestandardowych procesorów, które są oparte na usług .NET Framework XAML i XAML system typów, ale nie jest oparty na istniejących <xref:System.Xaml.XamlWriter> implementacji, wiedząc, który tryb kolekcji jest używany może być konieczne, aby wiedzieć, którego metoda do wywołania dla Przetwarzanie kolekcji.  
   
 3.  Poprzednie wartości właściwości potencjalnie wpływało przesłonięcia <xref:System.Xaml.XamlType.LookupCollectionKind%2A> typu XAML.

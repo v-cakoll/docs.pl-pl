@@ -1,9 +1,6 @@
 ---
-title: "Typy ogólne w Visual Basic (Visual Basic)"
+title: Typy ogólne w Visual Basic (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - generic interfaces
 - data type arguments [Visual Basic], defining
@@ -39,14 +36,11 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-caps.latest.revision: "45"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 463391da61cbafe1f50a246307994cfa134dba38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
 A *typu ogólnego* jest pojedynczego elementu programistycznego, który dostosowuje się do wykonywania funkcji dla różnych typów danych. Podczas definiowania klasy ogólnej lub procedury, trzeba zdefiniować oddzielnych wersji dla każdego typu danych, dla których warto wykonywać te funkcje.  
@@ -155,12 +149,12 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, który dostosow
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Typy wartości i typy referencyjne](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Z](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [Jako](../../../../visual-basic/language-reference/statements/as-clause.md)  
- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Kowariancja i Kontrawariancja](../../concepts/covariance-contravariance/index.md)  
+ [z](../../../../visual-basic/language-reference/statements/of-clause.md)  
+ [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
+ [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Kowariancja i kontrawariancja](../../concepts/covariance-contravariance/index.md)  
  [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)

@@ -1,14 +1,6 @@
 ---
 title: Importowanie i eksportowanie schematu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c9bb0d6df362380a37ae3079694ab91e9577741d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-import-and-export"></a>Importowanie i eksportowanie schematu
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML (w obu kierunkach). Oprócz serializator, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obejmuje importowanie skojarzony schemat i mechanizmów eksportu schematu. *Schemat* jest posiadanie, dokładne i czytelną opis kształtu XML tworzącego serializator lub które mogą uzyskiwać dostęp do deserializacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Język definicji sieci World Wide Web konsorcjum W3C schematu XML (XSD) jest używana jako reprezentacja schematu, który jest powszechnie współdziała z wielu platform innych firm.  
+Windows Communication Foundation (WCF) obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML (w obu kierunkach). Oprócz samego elementu serializującego WCF zawiera importu skojarzony schemat i mechanizmów eksportowania schematu. *Schemat* jest posiadanie, dokładne i czytelną opis kształtu XML tworzącego serializator lub które mogą uzyskiwać dostęp do deserializacji. Usługi WCF używa języka definicji sieci World Wide Web konsorcjum W3C schematu XML (XSD) jako jego reprezentacja schemat, który jest powszechnie współdziała z wielu platform innych firm.  
   
  Składnik importowania schematu <xref:System.Runtime.Serialization.XsdDataContractImporter>, pobiera dokument schematu XSD i generuje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] klasy (zwykle klasy kontraktu danych) w taki sposób, że serializacji formularze odpowiadają dany schemat.  
   

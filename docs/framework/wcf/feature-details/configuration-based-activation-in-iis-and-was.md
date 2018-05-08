@@ -1,27 +1,15 @@
 ---
-title: "Aktywacja oparta na konfiguracji w usługach IIS i WAS"
-ms.custom: 
+title: Aktywacja oparta na konfiguracji w usługach IIS i WAS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Aktywacja oparta na konfiguracji w usługach IIS i WAS
-Zwykle odnośnie do hostowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi Internet Information Services (IIS) lub usługi aktywacji procesów systemu Windows (WAS), należy podać pliku svc. W pliku svc zawiera nazwę usługi i opcjonalne niestandardowe usługi fabryka hostów. Ten plik dodatkowe zwiększa możliwości zarządzania obciążenia. Aktywacja oparta na konfiguracji funkcji eliminuje konieczność pliku svc i w związku z tym skojarzone koszty.  
+Zwykle odnośnie do hostowania usługi Windows Communication Foundation (WCF) w ramach usług Internet Information Services (IIS) ani Usługa aktywacji procesów systemu Windows (WAS), musisz podać pliku svc. W pliku svc zawiera nazwę usługi i opcjonalne niestandardowe usługi fabryka hostów. Ten plik dodatkowe zwiększa możliwości zarządzania obciążenia. Aktywacja oparta na konfiguracji funkcji eliminuje konieczność pliku svc i w związku z tym skojarzone koszty.  
   
 ## <a name="configuration-based-activation"></a>Aktywacja oparta na konfiguracji  
  Aktywacja oparta na konfiguracji ma metadane używane do umieszczenia w pliku svc i umieszcza je w pliku Web.config. W ramach <`serviceHostingEnvironment`> istnieje element <`serviceActivations`> elementu. W ramach <`serviceActivations`> elementu są co najmniej jeden <`add`> elementy, dla każdej usługi hostowanej. <`add`> Element zawiera atrybuty, które pozwalają na ustawienie adres względny dla typu usługi i fabryki hostów usług lub usługi. Poniższy przykładowy kod konfiguracji pokazuje, jak jest używany w tej sekcji.  

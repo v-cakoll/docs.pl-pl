@@ -1,31 +1,17 @@
 ---
-title: "Przegląd Strukturyzowana nawigacja"
-ms.custom: 
+title: Przegląd Strukturyzowana nawigacja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, które mogą zostać zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i nawigacji do hiperłącza. Struktura stron i sposoby, w którym one może zostać przesłane, zgodnie z definicją hiperłącza, jest określany jako topologii nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które przeglądanie dokumentów. Dla takich aplikacji użytkownika można przejść z jednej strony na innej stronie bez dowolnej stronie znajomości o innych.  
@@ -160,7 +146,7 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- W tym przykładzie użytkownik naciśnie przycisk Anuluj, wartość `null` jest zwracana do wywoływania strony. Jeśli zamiast tego naciśnięciu przycisku OK jest zwracana wartość ciągu podanego przez użytkownika. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>jest `protected``virtual` metody należy wywołać, aby zwrócić dane do wywoływania strony. Danych musi być spakowany w wystąpieniu ogólnego <xref:System.Windows.Navigation.ReturnEventArgs%601> wartość typu, którego argument typu określa typ, który <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> zwraca. W ten sposób, przy deklarowaniu <xref:System.Windows.Navigation.PageFunction%601> z argumentem typu, jest zawarcie tej <xref:System.Windows.Navigation.PageFunction%601> zwróci wystąpienia typu określonego przez argument typu. W tym przykładzie argument typu i, w związku z tym, zwracana wartość jest typu <xref:System.String>.  
+ W tym przykładzie użytkownik naciśnie przycisk Anuluj, wartość `null` jest zwracana do wywoływania strony. Jeśli zamiast tego naciśnięciu przycisku OK jest zwracana wartość ciągu podanego przez użytkownika. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> jest `protected``virtual` metody należy wywołać, aby zwrócić dane do wywoływania strony. Danych musi być spakowany w wystąpieniu ogólnego <xref:System.Windows.Navigation.ReturnEventArgs%601> wartość typu, którego argument typu określa typ, który <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> zwraca. W ten sposób, przy deklarowaniu <xref:System.Windows.Navigation.PageFunction%601> z argumentem typu, jest zawarcie tej <xref:System.Windows.Navigation.PageFunction%601> zwróci wystąpienia typu określonego przez argument typu. W tym przykładzie argument typu i, w związku z tym, zwracana wartość jest typu <xref:System.String>.  
   
  Gdy <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> jest nazywany wywołujący musi strony jakiś sposób odbierania zwracanej wartości <xref:System.Windows.Navigation.PageFunction%601>. Z tego powodu <xref:System.Windows.Navigation.PageFunction%601> implementuje <xref:System.Windows.Navigation.PageFunction%601.Return> zdarzeń wywoływania stron do obsługi. Gdy <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> jest nazywany <xref:System.Windows.Navigation.PageFunction%601.Return> jest wywoływane, aby zarejestrować wywoływania strony z <xref:System.Windows.Navigation.PageFunction%601.Return> do odbioru powiadomienia.  
   

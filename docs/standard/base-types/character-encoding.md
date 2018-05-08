@@ -1,13 +1,7 @@
 ---
 title: Znak kodowania w .NET
-ms.custom: ''
 ms.date: 12/22/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 357f380a7103f186f7a66ea92a1a8b7930adead8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-encoding-in-net"></a>Znak kodowania w .NET
 Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposobów. Kodowanie znaków to system, który pary każdego znaku w obsługiwanych zestaw z niektórych wartość, która reprezentuje ten znak znaków. Na przykład Morse'a jest kodowania każdego znaku alfabetu łacińskiego z wzorcem kropek tej pary znaków i łączniki, które są odpowiednie do przesyłania za pośrednictwem telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku zestaw z wartością numeryczną, która reprezentuje ten znak obsługiwanych znaków. Kodowanie znaków ma dwa różne składniki:  

@@ -1,30 +1,18 @@
 ---
 title: 'Instrukcje: Ujawnianie kontraktu klientom sieci Web i SOAP'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Instrukcje: Ujawnianie kontraktu klientom sieci Web i SOAP
-Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia punkty końcowe tylko do klientów protokołu SOAP. W [porady: Tworzenie podstawowej usługi HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), punkt końcowy będą dostępne dla klientów z systemem innym niż SOAP. Może to być razy, jeśli chcesz udostępnić ten sam kontrakt obu kierunkach, jako punkt końcowy sieci Web, a punkt końcowy protokołu SOAP. W tym temacie przedstawiono przykład sposobu wykonania tego zadania.  
+Domyślnie program Windows Communication Foundation (WCF) udostępnia punkty końcowe tylko do klientów protokołu SOAP. W [porady: Tworzenie podstawowej usługi HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), punkt końcowy będą dostępne dla klientów z systemem innym niż SOAP. Może to być razy, jeśli chcesz udostępnić ten sam kontrakt obu kierunkach, jako punkt końcowy sieci Web, a punkt końcowy protokołu SOAP. W tym temacie przedstawiono przykład sposobu wykonania tego zadania.  
   
 ### <a name="to-define-the-service-contract"></a>Aby zdefiniować kontrakt usługi  
   
@@ -34,7 +22,7 @@ Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia p
      [!code-vb[htSoapWeb#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Domyślnie <xref:System.ServiceModel.Web.WebInvokeAttribute> mapuje wywołania operacji POST. Można jednak określić metodę do mapowania na operację, określając "metody =" parametru. <xref:System.ServiceModel.Web.WebGetAttribute>nie ma "metody =" parametru i map tylko GET wywołania do operacji usługi.  
+    >  Domyślnie <xref:System.ServiceModel.Web.WebInvokeAttribute> mapuje wywołania operacji POST. Można jednak określić metodę do mapowania na operację, określając "metody =" parametru. <xref:System.ServiceModel.Web.WebGetAttribute> nie ma "metody =" parametru i map tylko GET wywołania do operacji usługi.  
   
 2.  Implementowanie kontraktu usługi, jak pokazano w poniższym kodzie.  
   
@@ -65,7 +53,7 @@ Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia p
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Do wywołania operacji usługi mapowane na GET w programie Internet Explorer  
   
-1.  Otwórz program Internet Explorer i wpisz "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" i naciśnij klawisz ENTER. Adres URL zawiera adres podstawowy usługi ("http://localhost: 8000 /"), względny adres punktu końcowego (""), usługi operację wywołania ("EchoWithGet") i znak zapytania następuje lista parametrów nazwanych oddzielonymi znakiem handlowego "i" (&).  
+1.  Otwórz program Internet Explorer i wpisz "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" i naciśnij klawisz ENTER. Adres URL zawiera adres podstawowy usługi ("http://localhost:8000/"), względny adres punktu końcowego (""), usługi operację wywołania ("EchoWithGet") i znak zapytania następuje lista parametrów nazwanych oddzielonymi znakiem handlowego "i" (&).  
   
 ### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>Do wywołania operacji usługi sieci Web w punkcie końcowym w kodzie  
   
@@ -75,7 +63,7 @@ Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia p
      [!code-vb[htSoapWeb#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#6)]  
   
 > [!NOTE]
->  `Close()`automatycznie jest wywoływana w kanale na końcu `using` bloku.  
+>  `Close()` automatycznie jest wywoływana w kanale na końcu `using` bloku.  
   
 1.  Tworzenie kanału i wywołania tej usługi, jak pokazano w poniższym kodzie.  
   

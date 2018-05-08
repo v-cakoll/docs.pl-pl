@@ -1,22 +1,12 @@
 ---
 title: Podstawowe zapytania (LINQ do XML) (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a6611d4aeba39dd96ea7ea92bbaef9630bb6d870
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 25f0e49e57f03cbde190125ca2d24a01f208fda6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>Podstawowe zapytania (LINQ do XML) (Visual Basic)
 Ta sekcja zawiera przykłady basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania.  
@@ -27,7 +17,7 @@ Ta sekcja zawiera przykłady basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq
 |-----------|-----------------|  
 |[Porady: znajdowanie Element z określonym atrybutem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Pokazuje, jak można znaleźć określonego elementu, który ma atrybut o określonej wartości.|  
 |[Porady: znajdowanie Element z elementu podrzędnego określonego (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Pokazuje, jak można znaleźć określonego elementu, który ma element podrzędny, która ma określoną wartość.|  
-|[Kwerenda vs klasy XDocument. Wykonywanie zapytania XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Wyjaśniono różnice między Pisanie zapytań na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XElement> i zapisywanie zapytania na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XDocument>.|  
+|[Tworzenie zapytań dotyczących elementu XDocument a Wykonywanie zapytania XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Wyjaśniono różnice między Pisanie zapytań na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XElement> i zapisywanie zapytania na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XDocument>.|  
 |[Porady: znajdowanie elementów podrzędnych o nazwie określonego elementu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Pokazuje, jak można znaleźć wszystkie elementy podrzędne elementu o określonej nazwie. W tym przykładzie użyto <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.|  
 |[Porady: znajdowanie pojedynczego podrzędnym, przy użyciu metody elementy podrzędne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Przedstawia sposób użycia <xref:System.Xml.Linq.XContainer.Descendants%2A> metody osi do znalezienia pojedynczy jednoznacznie o nazwie elementu.|  
 |[Porady: pisać zapytania z złożone filtrowanie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Pokazano, jak napisać zapytanie z bardziej złożonych filtrów.|  

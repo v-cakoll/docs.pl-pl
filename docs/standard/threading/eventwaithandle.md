@@ -1,31 +1,20 @@
 ---
 title: EventWaitHandle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], EventWaitHandle class
 - EventWaitHandle class
 - event wait handles [.NET Framework]
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 665676a25aea48388ba01b8028af00049b113f2b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 697820b01bd629baa306d96002a98d92e44dab51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> Klasa umożliwia wątków, aby komunikować się ze sobą za pomocą sygnalizacji i Oczekiwanie na sygnały. Uchwyty oczekiwania na zdarzenie (zwaną także po prostu zdarzeń) to dojścia oczekiwania, które można zasygnalizować aby zwolnić jeden lub więcej wątków oczekujących. Po zostanie zasygnalizowane dojścia oczekiwania jest resetowany ręcznie lub automatycznie. <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo lokalnego oczekiwania obsługi zdarzenia (zdarzenie lokalnego) lub zdarzenia o nazwie systemu Zaczekaj dojścia (o nazwie zdarzenia lub zdarzeń systemowych są widoczne dla wszystkich procesów).  
@@ -55,7 +44,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="features-common-to-automatic-and-manual-events"></a>Wspólne funkcje automatycznej i ręcznej zdarzenia  
  Zazwyczaj zablokować co najmniej jeden wątek na <xref:System.Threading.EventWaitHandle> do momentu wywołania wątku odblokowany <xref:System.Threading.EventWaitHandle.Set%2A> metodę, która udostępnia jeden z wątków oczekujących (w przypadku zdarzeń automatycznego resetowania) lub wszystkie z nich (w przypadku ręcznego resetowania zdarzeń). Wątek może sygnalizować <xref:System.Threading.EventWaitHandle> a następnie zablokować, jako operacją niepodzielną, wywołując statycznych <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> metody.  
   
- <xref:System.Threading.EventWaitHandle>obiekty mogą być używane z statycznych <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> i <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> metody. Ponieważ <xref:System.Threading.EventWaitHandle> i <xref:System.Threading.Mutex> pochodną klasy zarówno <xref:System.Threading.WaitHandle>, obie klasy można używać z tych metod.  
+ <xref:System.Threading.EventWaitHandle> obiekty mogą być używane z statycznych <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> i <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> metody. Ponieważ <xref:System.Threading.EventWaitHandle> i <xref:System.Threading.Mutex> pochodną klasy zarówno <xref:System.Threading.WaitHandle>, obie klasy można używać z tych metod.  
   
 ### <a name="named-events"></a>Zdarzenia o nazwie  
  System operacyjny Windows umożliwia uchwyty oczekiwania na zdarzenie mieć nazwy. Nazwane zdarzenie jest całym systemie. Oznacza to, że po utworzeniu zdarzenia o nazwie jest widoczne dla wszystkich wątków w wszystkich procesów. W związku z tym nazwanego zdarzenia mogą służyć do synchronizowania działania procesów, a także wątków.  

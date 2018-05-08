@@ -1,11 +1,6 @@
 ---
-title: "Like — Operator (Visual Basic)"
+title: Like — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like — Operator (Visual Basic)
 Porównuje ciąg do wzorca.  
@@ -47,13 +39,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagany. Wszelkie `Boolean` zmiennej. Wynik jest `Boolean` wartość wskazującą, czy `string` spełnia `pattern`.  
+ Wymagana. Wszelkie `Boolean` zmiennej. Wynik jest `Boolean` wartość wskazującą, czy `string` spełnia `pattern`.  
   
  `string`  
- Wymagany. Wszelkie `String` wyrażenia.  
+ Wymagana. Wszelkie `String` wyrażenia.  
   
  `pattern`  
- Wymagany. Wszelkie `String` wyrażeń zgodnych z konwencjami dopasowywanie do wzorca opisanego w "Uwagi".  
+ Wymagana. Wszelkie `String` wyrażeń zgodnych z konwencjami dopasowywanie do wzorca opisanego w "Uwagi".  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli wartość w `string` spełnia wzorzec zawarte w `pattern`, `result` jest `True`. Jeśli ciąg nie spełnia wzorzec, `result` jest `False`. Jeśli oba `string` i `pattern` są puste ciągi, wynikiem jest `True`.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Opcje wzorca  
  Dopasowanie wzorca wbudowanych zapewnia elastyczne narzędzia do porównywania ciągów znaków. Dopasowywanie do wzorca funkcje umożliwiają dopasowanie każdego znaku w `string` przed określony znak symbolu wieloznacznego, listę znaku albo zakresu znaków. W poniższej tabeli przedstawiono znaków dozwolonych w `pattern` i są zgodne.  
   
-|Znaków`pattern`|Dopasowania w`string`|  
+|Znaków `pattern`|Dopasowania w `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Dowolny pojedynczy znak|  
 |`*`|Zero lub więcej znaków|  
 |`#`|Dowolna cyfra (0 – 9)|  
-|`[charlist]`|Dowolny pojedynczy znak`charlist`|  
-|`[!charlist]`|Dowolny pojedynczy znak nie`charlist`|  
+|`[charlist]`|Dowolny pojedynczy znak `charlist`|  
+|`[!charlist]`|Dowolny pojedynczy znak nie `charlist`|  
   
 ## <a name="character-lists"></a>Znak list  
  Grupy co najmniej jeden znak (`charlist`) w nawiasach (`[ ]`) może służyć do dopasowuje dowolny pojedynczy znak w `string` i może zawierać kod prawie każdego znaku, w tym cyfr.  
@@ -115,6 +107,6 @@ result = string Like pattern
  [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare — instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
  [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Porady: dopasowywanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+ [Instrukcje: dopasowywanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

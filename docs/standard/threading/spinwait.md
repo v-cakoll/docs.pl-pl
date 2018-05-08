@@ -1,38 +1,27 @@
 ---
 title: SpinWait
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1e67dd59464de09a35941d91ef984db6b7779b8c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e5bb6262b32201207853ef702ae38002c2ded252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spinwait"></a>SpinWait
-<xref:System.Threading.SpinWait?displayProperty=nameWithType>jest typem synchronizacji lekkie, który można użyć w scenariuszach niskiego poziomu, aby uniknąć przełączeń kontekstu kosztowne i przejścia jądra, które są wymagane w przypadku zdarzeń jądra. Na komputerach wielordzeniowych gdy zasób nie powinno być przechowywane przez długi czas, może być bardziej wydajny oczekiwania wątku pokrętła w trybie użytkownika przez kilka dozen lub kilka cykli kilkuset, a następnie spróbuj ponownie do uzyskania dostępu do zasobu. Jeśli zasób jest dostępny po Obracająca, zostały zapisane w kilku tysięcy cykle. Jeśli zasób jest nadal niedostępna, następnie poświęcony tylko kilka cykli i nadal można wprowadzić oczekiwania na podstawie jądra. Ta kombinacja Obracająca następnie oczekiwania jest czasami nazywany *dwufazowej operacji oczekiwania*.  
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> jest typem synchronizacji lekkie, który można użyć w scenariuszach niskiego poziomu, aby uniknąć przełączeń kontekstu kosztowne i przejścia jądra, które są wymagane w przypadku zdarzeń jądra. Na komputerach wielordzeniowych gdy zasób nie powinno być przechowywane przez długi czas, może być bardziej wydajny oczekiwania wątku pokrętła w trybie użytkownika przez kilka dozen lub kilka cykli kilkuset, a następnie spróbuj ponownie do uzyskania dostępu do zasobu. Jeśli zasób jest dostępny po Obracająca, zostały zapisane w kilku tysięcy cykle. Jeśli zasób jest nadal niedostępna, następnie poświęcony tylko kilka cykli i nadal można wprowadzić oczekiwania na podstawie jądra. Ta kombinacja Obracająca następnie oczekiwania jest czasami nazywany *dwufazowej operacji oczekiwania*.  
   
- <xref:System.Threading.SpinWait>jest przeznaczony do użycia w połączeniu z typów .NET Framework, które otaczają zdarzeń jądra, takich jak <xref:System.Threading.ManualResetEvent>. <xref:System.Threading.SpinWait>można również samodzielnie Obracająca podstawowych funkcji programu tylko jeden.  
+ <xref:System.Threading.SpinWait> jest przeznaczony do użycia w połączeniu z typów .NET Framework, które otaczają zdarzeń jądra, takich jak <xref:System.Threading.ManualResetEvent>. <xref:System.Threading.SpinWait> można również samodzielnie Obracająca podstawowych funkcji programu tylko jeden.  
   
- <xref:System.Threading.SpinWait>jest więcej niż tylko puste pętli. Starannie wdrażana jest zapewnienie Obracająca poprawne zachowanie w przypadku ogólnych i samego zainicjuje przełączenia kontekstu, jeśli jego obraca wystarczająco długi (około długość czasu wymaganego do przejścia jądra). Na przykład na komputerach jednordzeniowy <xref:System.Threading.SpinWait> daje przedział czasu wątku natychmiast, ponieważ bloki Obracająca przekazywania postępu na wszystkie wątki. <xref:System.Threading.SpinWait>daje również nawet w wielordzeniowych maszynach, aby zapobiec oczekiwania wątku zablokowanie wątków o wyższym priorytecie lub moduł garbage collector. Dlatego jeśli używasz <xref:System.Threading.SpinWait> w dwufazowej operacji oczekiwania, zaleca się, że wywołanie jądra czas oczekiwania przed <xref:System.Threading.SpinWait> inicjuje się przełączenie kontekstu. <xref:System.Threading.SpinWait>udostępnia <xref:System.Threading.SpinWait.NextSpinWillYield%2A> właściwości, które można sprawdzić przed każdym wywołaniu <xref:System.Threading.SpinWait.SpinOnce%2A>. Gdy właściwość zwraca `true`, Inicjowanie operacji oczekiwania. Na przykład zobacz [porady: użycie metody SpinWait, aby zaimplementować operację oczekiwania dwufazowy](../../../docs/standard/threading/how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md).  
+ <xref:System.Threading.SpinWait> jest więcej niż tylko puste pętli. Starannie wdrażana jest zapewnienie Obracająca poprawne zachowanie w przypadku ogólnych i samego zainicjuje przełączenia kontekstu, jeśli jego obraca wystarczająco długi (około długość czasu wymaganego do przejścia jądra). Na przykład na komputerach jednordzeniowy <xref:System.Threading.SpinWait> daje przedział czasu wątku natychmiast, ponieważ bloki Obracająca przekazywania postępu na wszystkie wątki. <xref:System.Threading.SpinWait> daje również nawet w wielordzeniowych maszynach, aby zapobiec oczekiwania wątku zablokowanie wątków o wyższym priorytecie lub moduł garbage collector. Dlatego jeśli używasz <xref:System.Threading.SpinWait> w dwufazowej operacji oczekiwania, zaleca się, że wywołanie jądra czas oczekiwania przed <xref:System.Threading.SpinWait> inicjuje się przełączenie kontekstu. <xref:System.Threading.SpinWait> udostępnia <xref:System.Threading.SpinWait.NextSpinWillYield%2A> właściwości, które można sprawdzić przed każdym wywołaniu <xref:System.Threading.SpinWait.SpinOnce%2A>. Gdy właściwość zwraca `true`, Inicjowanie operacji oczekiwania. Na przykład zobacz [porady: użycie metody SpinWait, aby zaimplementować operację oczekiwania dwufazowy](../../../docs/standard/threading/how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md).  
   
  Jeśli bez wykonywania dwufazowej operacji oczekiwania, ale są po prostu wirowania do czasu spełnienia określonego warunku jest PRAWDA, aby umożliwić <xref:System.Threading.SpinWait> przeprowadzić jego kontekstu przełącza się tak, aby dobrej obywateli w środowisku systemu operacyjnego Windows. W poniższym przykładzie podstawowe przedstawiono <xref:System.Threading.SpinWait> w stosie bez blokady. Jeśli potrzebujesz stosu wysokiej wydajności, bezpieczne wątkowo, należy rozważyć użycie <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>.  
   

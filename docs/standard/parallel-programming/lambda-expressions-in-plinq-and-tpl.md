@@ -1,13 +1,7 @@
 ---
 title: Wyrażenia Lambda w PLINQ i TPL
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b1739bf8d98bbee49cf3cb3d83cac27796ccf72
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bf211a35cb8864e0271032d63b5b4e9e25697e96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Wyrażenia Lambda w PLINQ i TPL
 Zadania biblioteki równoległych (TPL) zawiera wiele metod, które wykonać jedną z <xref:System.Func%601?displayProperty=nameWithType> lub <xref:System.Action?displayProperty=nameWithType> rodziny delegatów jako parametry wejściowe. Te obiekty delegowane umożliwia Przekaż logiki program niestandardowy do pętli równoległej, zadania lub zapytania. Przykłady kodu dla TPL, a także PLINQ użycie wyrażeń lambda, można utworzyć wystąpień tych obiektów delegowanych jako bloki kodu wbudowanego. Ten temat zawiera krótkie wprowadzenie do Func i Action i przedstawiono sposób użycie wyrażeń lambda w bibliotece równoległych zadań i PLINQ.  

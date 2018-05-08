@@ -1,24 +1,12 @@
 ---
 title: Dostosowywanie uprawnieniami personifikacja w programie SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7175542d8a9441d9f0d3eeb05acc67cf12d6a270
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Dostosowywanie uprawnieniami personifikacja w programie SQL Server
 Wiele aplikacji korzysta procedur składowanych dostępu do danych polegania na własność łańcucha, aby ograniczyć dostęp do tabel podstawowych. Można przyznać uprawnienia EXECUTE procedur składowanych, odwoływanie lub nie zezwalających na uprawnienia do tabel podstawowych. SQL Server nie sprawdza uprawnienia obiektu wywołującego, jeśli procedura składowana i tabele mieć tego samego właściciela. Jednak łańcucha własności nie działa obiektów mieć różnych właścicieli lub w przypadku dynamicznego SQL.  
@@ -72,7 +60,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   OBIEKT WYWOŁUJĄCY. Wykonywanie jako obiekt WYWOŁUJĄCY jest domyślnie; Jeśli zostanie określona żadna inna opcja, następnie procedura jest wykonywana w kontekście zabezpieczeń obiektu wywołującego.  
   
--   OWNER. W kontekście właściciela procedury wykonywania jako właściciela wykonuje procedurę. Jeśli procedura jest tworzona w schemacie własnością `dbo` lub właściciela bazy danych z nieograniczonych uprawnień wykona procedurę.  
+-   WŁAŚCICIEL. W kontekście właściciela procedury wykonywania jako właściciela wykonuje procedurę. Jeśli procedura jest tworzona w schemacie własnością `dbo` lub właściciela bazy danych z nieograniczonych uprawnień wykona procedurę.  
   
 -   SELF. Wykonywanie jako SELF wykonywane w kontekście zabezpieczeń Twórcy procedury składowanej. Jest to równoważne wykonywania jako dla określonego użytkownika, jeśli określony użytkownik jest osoba, utworzenie lub modyfikacja procedury.  
   

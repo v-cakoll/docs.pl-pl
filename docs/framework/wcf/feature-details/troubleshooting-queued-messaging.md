@@ -1,38 +1,24 @@
 ---
 title: Rozwiązywanie problemów obsługi komunikatów kolejek
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
-Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w systemie Windows Communication Foundation (WCF).  
   
 ## <a name="common-questions"></a>Często zadawane pytania  
- **Pytanie:** używany [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 oraz zainstalowana poprawka usługi MSMQ. Należy usunąć poprawkę?  
+ **Pytanie:** użyta WCF Beta 1 i zainstalowaniu poprawki usługi MSMQ. Należy usunąć poprawkę?  
   
- **Odpowiedź:** tak. Ta poprawka jest już obsługiwany. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] teraz działa on MSMQ bez poprawki wymagane.  
+ **Odpowiedź:** tak. Ta poprawka jest już obsługiwany. Usługi WCF działa teraz na usługę MSMQ bez poprawki wymagane.  
   
  **Pytanie:** istnieją dwa powiązania dla usługi MSMQ: <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Co należy użyć, gdy?  
   
- **Odpowiedź:** użyj <xref:System.ServiceModel.NetMsmqBinding> Jeśli chcesz użyć usługi MSMQ jako transportu umieszczonych w kolejce komunikacji między dwiema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Użyj <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> Jeśli chcesz użyć istniejącej aplikacji usługi MSMQ do komunikowania się z nowych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
+ **Odpowiedź:** użyć <xref:System.ServiceModel.NetMsmqBinding> gdy chcesz użyć usługi MSMQ jako transportu do komunikacji między dwiema aplikacjami WCF z obsługą kolejek. Użyj <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> Jeśli chcesz użyć istniejącej aplikacji usługi MSMQ do komunikowania się z nowych aplikacji WCF.  
   
  **Pytanie:** należy uaktualnić usługi MSMQ, aby użyć <xref:System.ServiceModel.NetMsmqBinding> i `MsmqIntegration` powiązania?  
   
@@ -54,7 +40,7 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
   
  **Odpowiedź:** tak.  
   
- **Pytanie:** chcę integracji usługi MSMQ aplikacji za pomocą instrukcji new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów lub serwerów. Należy uaktualnić obie strony Moje infrastruktury MSMQ?  
+ **Pytanie:** chcę integracji istniejących aplikacji usługi MSMQ z nowej usługi WCF klientów lub serwerów. Należy uaktualnić obie strony Moje infrastruktury MSMQ?  
   
  **Odp.:** Nie. Nie masz dokonać uaktualnienia do usługi MSMQ 4.0 po obu stronach.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Pytanie:** po Użyj nazwy formatu publicznych lub prywatnych i otworzyć hosta usługi na [!INCLUDE[wv](../../../../includes/wv-md.md)], występuje błąd. Dlaczego?  
   
- **Odpowiedź:** [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanał integracji na [!INCLUDE[wv](../../../../includes/wv-md.md)] sprawdza, jeśli będzie można otworzyć kolejki podrzędne dla kolejki głównej aplikacji do obsługi wiadomości. Nazwa podrzędnej kolejki jest pochodną msmq.formatname identyfikatora URI przekazane do odbiornika. Nazwa podrzędnej kolejki w usłudze MSMQ może zawierać tylko z bezpośrednią nazwą formatu. Dlatego zostanie wyświetlony błąd. Zmień identyfikator URI kolejki z bezpośrednią nazwą formatu.  
+ **Odpowiedź:** kanał integracji WCF na [!INCLUDE[wv](../../../../includes/wv-md.md)] sprawdza, jeśli będzie można otworzyć kolejki podrzędne dla kolejki głównej aplikacji do obsługi wiadomości. Nazwa podrzędnej kolejki jest pochodną msmq.formatname identyfikatora URI przekazane do odbiornika. Nazwa podrzędnej kolejki w usłudze MSMQ może zawierać tylko z bezpośrednią nazwą formatu. Dlatego zostanie wyświetlony błąd. Zmień identyfikator URI kolejki z bezpośrednią nazwą formatu.  
   
- **Pytanie:** podczas odbierania wiadomości z aplikacji usługi MSMQ, wiadomość znajduje się w kolejce i nie jest odczytywany przez odbieranie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Dlaczego?  
+ **Pytanie:** podczas odbierania wiadomości z aplikacji usługi MSMQ, wiadomość znajduje się w kolejce i nie został odczytany przez aplikację odbierającą WCF. Dlaczego?  
   
  **Odpowiedź:** Sprawdź, czy wiadomość została treści. Jeśli wiadomość ma nie treści, kanał integracji usługi MSMQ ignoruje komunikat. Implementowanie `IErrorHandler` powiadamianych wyjątków i sprawdź dane śledzenia.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **Odpowiedź:** Sprawdź konfigurację powiązania. Powiązanie domyślna ma MSMQ zabezpieczeń transportu włączone do podpisania wiadomości. Wyłącz ją.  
   
 ### <a name="remote-transacted-receives"></a>Odbiera zdalnego nietransakcyjnego  
- **Pytanie:** podczas mam kolejki na komputerze A i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która odczytuje wiadomości z kolejki na komputerze B (zdalnego nietransakcyjnego odbierać scenariusz), wiadomości nie są odczytywane z kolejki. Śledzenie informacji wskazuje receive nie powiodło się komunikat "nie można zaimportować transakcji." Co można zrobić, aby rozwiązać ten problem?  
+ **Pytanie:** po mam kolejki na komputerze A, a usługi WCF odczytującego komunikaty z kolejki na komputerze B (zdalnego nietransakcyjnego odbierać scenariusz), wiadomości nie są odczytywane z kolejki. Śledzenie informacji wskazuje receive nie powiodło się komunikat "nie można zaimportować transakcji." Co można zrobić, aby rozwiązać ten problem?  
   
  **Odpowiedź:** istnieją trzy możliwe przyczyny to:  
   

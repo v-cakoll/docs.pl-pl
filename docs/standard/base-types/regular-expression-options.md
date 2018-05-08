@@ -1,13 +1,7 @@
 ---
-title: "Opcje wyrażeń regularnych"
-ms.custom: 
+title: Opcje wyrażeń regularnych
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
 <a name="Top"></a> Domyślnie porównanie ciągu wejściowego z dowolnego literał znaków wzorzec wyrażenia regularnego jest rozróżniana wielkość liter, biały znak w wzorzec wyrażenia regularnego jest interpretowana jako literał znaków odstępu i grup przechwytywania w wyrażeniu regularnym są także niejawnie jako jawnie nazwane. Te i kilka innych aspektów domyślnego zachowania wyrażeń regularnych można zmieniać, określając opcje wyrażeń regularnych. Te opcje, które są wymienione w poniższej tabeli, może być wbudowany dołączone jako część wzorzec wyrażenia regularnego lub mogą być dostarczane do <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statyczna wzorca zgodną metodę jako <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartości wyliczenia.  

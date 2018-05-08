@@ -1,24 +1,14 @@
 ---
 title: Architektura .NET Native i kompilacja
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 Aplikacje Windows 8.1 i aplikacje dla komputerów z systemem Windows przeznaczonych dla platformy.NET Framework są zapisywane w określonym języku programowania i skompilowany w języku pośrednim (IL). W czasie wykonywania kompilatora just in time (JIT) jest odpowiedzialny za kompilowanie IL do kodu natywnego dla komputera lokalnego, po prostu, przed wykonaniem metody po raz pierwszy. Z kolei łańcucha narzędzi dla platformy .NET Native konwertuje kodu źródłowego do kodu macierzystego w czasie kompilacji. W tym temacie porównuje platformy .NET Native z innymi technologiami kompilacji dostępne dla aplikacji .NET Framework, a także omówienie praktyczne jak platforma .NET Native tworzy kodu natywnego, które mogą ułatwić zrozumienie, dlaczego wyjątków, które występują w kodzie skompilowanym z .NET Macierzysty nie występują w kodzie kompilacji JIT.  
@@ -66,9 +56,9 @@ Aplikacje Windows 8.1 i aplikacje dla komputerów z systemem Windows przeznaczon
   
  Wynikowa aplikację, która jest generowany przez platformę .NET Native łańcucha narzędzi są zapisywane w katalogu o nazwie ilc.out w katalogu debugowanie czy wydanie w katalogu projektu. Składa się z następujących plików:  
   
--   *\<Nazwa aplikacji >*.exe, plik wykonywalny skrótowa, która po prostu transfer kontroli do specjalnego `Main` eksportu w  *\<nazwa_aplikacji >*dll.  
+-   *\<Nazwa aplikacji >*.exe, plik wykonywalny skrótowa, która po prostu transfer kontroli do specjalnego `Main` eksportu w  *\<nazwa_aplikacji >* dll.  
   
--   *\<Nazwa aplikacji >*dll, Windows dynamic link biblioteki, który zawiera kod aplikacji, a także kodu w bibliotece klas programu .NET Framework i biblioteki żadnych innych firm, które zależy od.  Zawiera także kod pomocy technicznej, takich jak kod niezbędne do współpracy z systemem Windows oraz do serializacji obiektów w aplikacji.  
+-   *\<Nazwa aplikacji >* dll, Windows dynamic link biblioteki, który zawiera kod aplikacji, a także kodu w bibliotece klas programu .NET Framework i biblioteki żadnych innych firm, które zależy od.  Zawiera także kod pomocy technicznej, takich jak kod niezbędne do współpracy z systemem Windows oraz do serializacji obiektów w aplikacji.  
   
 -   mrt100_app.dll, refactored środowisko uruchomieniowe, które zapewnia usługi czasu wykonywania, takie jak wyrzucanie elementów bezużytecznych.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Dostawca tokenów SAML"
-ms.custom: 
+title: Dostawca tokenów SAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5c1fdb3801762f20dd99c0f2d9e6835eb98d0d1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-token-provider"></a>Dostawca tokenów SAML
-W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy tokenu SAML. Dostawca tokenu w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]jest dostarczany z domyślnym dostawcy tokenu Menedżera poświadczeń. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]również jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
+W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy tokenu SAML. Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest dostarczany z domyślnym dostawcy tokenu Menedżera poświadczeń. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
   
 -   Jeśli masz Magazyn poświadczeń, które tych dostawców tokenu nie może pracować z.  
   

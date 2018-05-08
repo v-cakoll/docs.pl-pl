@@ -1,25 +1,19 @@
 ---
-title: "Omówienie środowiska uruchomieniowego języka dynamicznego | Dokumentacja firmy Microsoft"
+title: Omówienie środowiska uruchomieniowego języka dynamicznego | Dokumentacja firmy Microsoft
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
 - IronPython
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 *Środowisko uruchomieniowe języka dynamicznego* (DLR) jest środowisko uruchomieniowe, który dodaje zestaw usług dla języków dynamicznych do środowisko uruchomieniowe języka wspólnego (CLR). DLR ułatwia tworzenie dynamicznych języki do uruchomienia w programie .NET Framework oraz dodawać funkcje dynamicznego do statycznie językach.  

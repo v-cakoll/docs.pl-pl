@@ -1,22 +1,12 @@
 ---
 title: Grupowanie danych (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f2e5c4c4713f1056f1eb2243f27e5acf0494542
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="grouping-data-visual-basic"></a>Grupowanie danych (Visual Basic)
 Grupowanie odwołuje się do operacji umieszczania danych w grupach, aby elementów w każdej grupie miały wspólny atrybut.  
@@ -75,6 +65,6 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Linq>  
  [Operatory standardowe zapytań — omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Group By — klauzula](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [Group By, klauzula](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
  [Porady: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
  [Porady: dzielenie pliku na wiele plików za pomocą grup (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

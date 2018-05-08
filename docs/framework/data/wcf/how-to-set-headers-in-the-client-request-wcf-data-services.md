@@ -1,31 +1,17 @@
 ---
-title: "Porady: Ustawianie nagłówków w żądaniu klienta (usługi danych WCF)"
-ms.custom: 
+title: 'Porady: Ustawianie nagłówków w żądaniu klienta (usługi danych WCF)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4e923966e3c2a84ad032e546733f00c7672536a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b9b01f18e8412857a38a8e22fadfa88faf9d24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Porady: Ustawianie nagłówków w żądaniu klienta (usługi danych WCF)
 Jeśli używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta do dostępu do usługi danych, która obsługuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], Biblioteka klienta automatycznie ustawia wymagane nagłówki HTTP wiadomości żądania wysyłane do usługi danych. Biblioteka klienta nie może określić można ustawić nagłówków komunikatów, które są wymagane w niektórych przypadkach, takich jak kiedy usługa danych wymaga uwierzytelniania opartego na oświadczeniach lub plików cookie. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie usługi danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). W takich przypadkach należy ręcznie ustawić nagłówki komunikatów w komunikacie żądania przed ich wysłaniem. W przykładzie w tym temacie przedstawiono sposób obsługi <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> zdarzenie, aby dodać nowy nagłówek komunikat żądania, przed wysłaniem do usługi danych.  

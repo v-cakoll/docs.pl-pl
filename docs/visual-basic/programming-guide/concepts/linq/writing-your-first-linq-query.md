@@ -1,34 +1,24 @@
 ---
 title: Pisanie pierwszego zapytania LINQ (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Pisanie pierwszego zapytania LINQ (Visual Basic)
 A *zapytania* jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są wyrażane w języku dedykowanych zapytania. Wraz z upływem czasu w różnych językach opracowano dla różnych typów źródeł danych, na przykład SQL relacyjnych baz danych i XQuery dla formatu XML. Dzięki temu niezbędne dla deweloperów aplikacji dowiedzieć się nowy język kwerendy dla każdego typu źródła danych lub format danych, która jest obsługiwana.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]upraszcza sytuację, oferując spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze korzystasz z obiektów. Użyj tego samego kodowania wzorców podstawowych zapytań, przekształcania danych w dokumentach XML, baz danych SQL, danych ADO.NET i jednostek, kolekcji .NET Framework i wszelkie inne źródła lub format, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny. W tym dokumencie opisano trzy etapy tworzenia i stosowania basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] upraszcza sytuację, oferując spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze korzystasz z obiektów. Użyj tego samego kodowania wzorców podstawowych zapytań, przekształcania danych w dokumentach XML, baz danych SQL, danych ADO.NET i jednostek, kolekcji .NET Framework i wszelkie inne źródła lub format, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny. W tym dokumencie opisano trzy etapy tworzenia i stosowania basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Trzy etapy operacji zapytania  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]Operacje kwerend obejmują trzy czynności:  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Operacje kwerend obejmują trzy czynności:  
   
 1.  Uzyskaj źródła danych lub źródła.  
   

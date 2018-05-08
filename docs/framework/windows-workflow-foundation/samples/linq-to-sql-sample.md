@@ -1,23 +1,12 @@
 ---
-title: "LINQ do SQL próbki"
-ms.custom: 
+title: LINQ do SQL próbki
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06273f3ac7dd159adac4c058a23c187f44417d94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a5c84dab941a50ddd5edb065004343cc304fd0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-sample"></a>LINQ do SQL próbki
 Ten przykład przedstawia sposób tworzenia działania, aby używać LINQ do jednostek zapytania SQL z tabel w bazach danych programu SQL Server.  
@@ -36,8 +25,8 @@ Ten przykład przedstawia sposób tworzenia działania, aby używać LINQ do jed
   
 |Właściwości lub wartości zwracanej|Opis|  
 |------------------------------|-----------------|  
-|`Collection`Właściwość|Wymaganą właściwość, która określa kolekcji źródłowej.|  
-|`Predicate`Właściwość|Wymaganą właściwość, która określa filtr do kolekcji w postaci wyrażenia lambda.|  
+|`Collection` Właściwość|Wymaganą właściwość, która określa kolekcji źródłowej.|  
+|`Predicate` Właściwość|Wymaganą właściwość, która określa filtr do kolekcji w postaci wyrażenia lambda.|  
 |Wartość zwracana|Filtrowane kolekcji.|  
   
 ## <a name="code-sample-that-uses-the-custom-activity"></a>Przykładem kodu, który używa działania niestandardowe  
@@ -94,7 +83,7 @@ new FindInSqlTable<Employee>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   

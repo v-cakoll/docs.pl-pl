@@ -1,10 +1,6 @@
 ---
-title: "&lt;zobacz&gt; (C# przewodnik programowania w języku)"
+title: '&lt;zobacz&gt; (C# przewodnik programowania w języku)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - <see>
 - see
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 959da56269081ebee036c620e535185609c5bff3
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: 24fa317a0f89568d9aa1b53849e327ef7615cc7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;zobacz&gt; (C# przewodnik programowania w języku)
 ## <a name="syntax"></a>Składnia  

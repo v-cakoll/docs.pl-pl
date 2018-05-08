@@ -1,27 +1,15 @@
 ---
-title: "Przegląd Użyj automatycznego układu"
-ms.custom: 
+title: Przegląd Użyj automatycznego układu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>Przegląd Użyj automatycznego układu
 W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji za pomocą Lokalizowalny [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości, lokalizacja [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] został czasochłonny proces. Każdego języka, który [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] została dostosowana dla wymagane dostosowanie poszczególne piksele. Dzisiaj z prawej projektu i prawej standardy, kodowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] można skonstruować tak, aby wiadomość dla lokalizatorów mają mniejsze zmiana rozmiaru i położenia zrobić. Podejście do pisania aplikacji, które mogą być łatwo po zmianie rozmiaru i zmienionym jest nazywana automatyczny układ i może zostać osiągnięty przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projekt aplikacji.  
@@ -30,13 +18,13 @@ W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania
 ## <a name="advantages-of-using-automatic-layout"></a>Zalety korzystania z automatycznego układu  
  Ponieważ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prezentacji system jest wystarczająco wydajny i elastyczny, zapewnia możliwość układ elementów w aplikacji, którą można dostosować do wymagań różnych języków. Poniższa lista wskazuje niektóre zalety automatyczny układ.  
   
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]Wyświetla również w dowolnym języku.  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Wyświetla również w dowolnym języku.  
   
 -   Ogranicza potrzebę Dopasuj położenie i rozmiar kontrolki po przetłumaczono tekstu.  
   
 -   Ogranicza potrzebę Dopasuj rozmiar okna.  
   
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]układu renderuje prawidłowo w dowolnym języku.  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] układu renderuje prawidłowo w dowolnym języku.  
   
 -   Lokalizacja, można zmniejszyć do punktu się nieco więcej niż ciąg tłumaczenia.  
   
@@ -63,7 +51,7 @@ Przycisk o zmiennym rozmiarze automatycznie
 |----------------------|-----------------|  
 |Nie należy używać położenia bezwzględne.|— Nie używaj <xref:System.Windows.Controls.Canvas> ponieważ umieszcza elementy absolutnie.<br />-Użyj <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, i <xref:System.Windows.Controls.Grid> do Umieść formanty.<br />— Aby uzyskać informacje o różnych typach panele, zobacz [omówienie panele](../../../../docs/framework/wpf/controls/panels-overview.md).|  
 |Nie ustawiaj o stałym rozmiarze okna.|-Użyj <xref:System.Windows.Window.SizeToContent%2A>.<br />— Na przykład:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A> do elementu głównego aplikacji.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia to wygodny sposób obsługiwać poziomej, dwukierunkowego i układy pionowy. W ramach prezentacji <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości może służyć do definiowania układu. Wzorce kierunek przepływu to:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb) — układ poziomy Latin, wschodnioazjatyckich i tak dalej.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb) — dwukierunkowy dla arabskiego, hebrajskiego i tak dalej.</li></ul></li></ul>|  
+|Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A> do elementu głównego aplikacji.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia to wygodny sposób obsługiwać poziomej, dwukierunkowego i układy pionowy. W ramach prezentacji <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości może służyć do definiowania układu. Wzorce kierunek przepływu to:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — układ poziomy Latin, wschodnioazjatyckich i tak dalej.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — dwukierunkowy dla arabskiego, hebrajskiego i tak dalej.</li></ul></li></ul>|  
 |Użyj czcionki zamiast fizycznej czcionki.|<ul><li>W przypadku złożonego czcionek <xref:System.Windows.Controls.Control.FontFamily%2A> właściwości nie musi być lokalizowany.</li><li>Deweloperzy można użyć jednej z następujących czcionek lub utworzyć własne.<br /><br /> <ul><li>Interfejs użytkownika globalne</li><li>Serif globalnej sieci San</li><li>Globalne Serif</li></ul></li></ul>|  
 |Dodaj XML: lang.|-Dodaj `xml:lang` atrybutu w elemencie głównym Twojego [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], takich jak `xml:lang="en-US"` dla aplikacji w języku angielskim.<br />-Ponieważ Użyj czcionki `xml:lang` Aby ustalić, jakie czcionki do użycia, ustaw tę właściwość obsługi wielu języków.|  
   

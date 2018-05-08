@@ -1,12 +1,6 @@
 ---
-title: "Przykłady serializacji XML"
-ms.custom: 
+title: Przykłady serializacji XML
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,11 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 39cf89856b8096fb879ee42f068e96308c5f9660
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8d30afa0b517f31ded2bc5229927c698e476f790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="examples-of-xml-serialization"></a>Przykłady serializacji XML
 Serializacja XML może zająć więcej niż jednej formy z proste i złożone. Na przykład można serializować klasy, która po prostu składa się z pola publiczne i właściwości, jak pokazano w [wprowadzenie serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md). W poniższych przykładach kodu adresów różne scenariusze zaawansowane, łącznie ze sposobem użyć serializacji XML do wygenerowania strumień XML, który odpowiada określony dokument schematu XML (XSD).  

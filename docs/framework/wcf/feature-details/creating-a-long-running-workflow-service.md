@@ -1,26 +1,12 @@
 ---
 title: Tworzenie długo działającej usługi przepływu pracy
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ddb995b849a15451c36d5d11c95a4904a3e0496
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano sposób tworzenia usługi przepływu pracy długotrwałe. Długotrwałe usług przepływu pracy mogą działać przez dłuższy czas. W pewnym momencie przepływ pracy może być bezczynności oczekiwanie na dodatkowe informacje. W takim przypadku przepływ pracy zostanie na stałe zapisana bazy danych SQL i zostanie usunięty z pamięci. Po udostępnieniu dodatkowe informacje wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku implementowania bardzo uproszczonego systemu porządkowania.  Klient wysyła początkowy komunikat do usługi przepływu pracy, aby uruchomić kolejność. Zwraca identyfikator zamówienia do klienta. W tym momencie usługi przepływu pracy jest oczekiwanie na kolejny komunikat z klienta i przechodzi w stan bezczynności i zostanie na stałe zapisana bazy danych programu SQL Server.  Gdy klient wysyła następny komunikat do kolejność elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg informujący, że element został dodany do zlecenia. Przykładowy kod ma nie być rzeczywistych stosowania technologii, ale zamiast prosty przykład, który przedstawiono długotrwała usług przepływu pracy. W tym temacie założono, wiesz, jak utworzyć [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projekty i rozwiązania.  
@@ -52,7 +38,7 @@ W tym temacie opisano sposób tworzenia usługi przepływu pracy długotrwałe. 
   
 1.  Utwórz pustą [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] rozwiązania, nadaj mu nazwę `OrderProcessing`.  
   
-2.  Dodaj nową [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] projektu aplikacji usługi przepływu pracy o nazwie `OrderService` do rozwiązania.  
+2.  Dodaj nowy projekt aplikacji usługi przepływu pracy WCF o nazwie `OrderService` do rozwiązania.  
   
 3.  W oknie dialogowym właściwości projektu, zaznacz **Web** kartę.  
   

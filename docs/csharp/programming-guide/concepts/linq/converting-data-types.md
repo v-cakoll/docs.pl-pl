@@ -1,21 +1,12 @@
 ---
-title: "Konwertowanie typów danych (C#)"
-ms.custom: 
+title: Konwertowanie typów danych (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4733694c2a9fd7c83520b0bf2edea6ebffb47041
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 374ce15b8329c02c6b496a276a40fd9a60596e1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-data-types-c"></a>Konwertowanie typów danych (C#)
 Metody konwersji Zmień typ wejściowy obiektów.  
@@ -85,6 +76,6 @@ static void Cast()
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Linq>  
  [Operatory standardowe zapytań — omówienie (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Klauzula FROM](../../../../csharp/language-reference/keywords/from-clause.md)  
+ [from, klauzula](../../../../csharp/language-reference/keywords/from-clause.md)  
  [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Porady: zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

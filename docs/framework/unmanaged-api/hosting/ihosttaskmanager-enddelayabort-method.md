@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::EndDelayAbort — Metoda"
-ms.custom: 
+title: IHostTaskManager::EndDelayAbort — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.EndDelayAbort
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6e02facb-2504-4356-9af5-0cee1f8436a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7a38f024c408065ffcd0e0278b76c064ff148bc6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3e8691461179e4f70a4617fd9487949df62f6cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerenddelayabort-method"></a>IHostTaskManager::EndDelayAbort — Metoda
 Powiadamia hosta, którego kod zarządzany jest zamykanie okres, w którym nie można przerwać bieżące zadanie, po wcześniejszej wywołanie [IHostTaskManager::BeginDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md).  
@@ -48,13 +36,13 @@ HRESULT EndDelayAbort ();
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`EndDelayAbort`zwrócona pomyślnie.|  
+|S_OK|`EndDelayAbort` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|E_UNEXPECTED|`EndDelayAbort`Wywołano bez odpowiedniego wywołania `BeginDelayAbort`.|  
+|E_UNEXPECTED|`EndDelayAbort` Wywołano bez odpowiedniego wywołania `BeginDelayAbort`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Środowisko CLR sprawia, że do odpowiedniego wywołania `BeginDelayAbort` na bieżące zadanie przed wywołaniem `EndDelayAbort`. W przypadku braku takiego odpowiedniego wywołania implementacja hosta [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md) powinien zwrócić E_UNEXPECTED z `EndDelayAbort`, a powinien Nie podejmuj żadnej akcji.  
@@ -66,7 +54,7 @@ HRESULT EndDelayAbort ();
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Threading>  

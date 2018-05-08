@@ -1,20 +1,13 @@
 ---
-title: "Drzewa wyrażeń"
-description: "Więcej informacji na temat drzew wyrażeń w .NET Core i sposób ich użycia, aby reprezentować kodu struktury, które można zbadać, modyfikowania i wykonać."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+title: Drzewa wyrażeń
+description: Więcej informacji na temat drzew wyrażeń w .NET Core i sposób ich użycia, aby reprezentować kodu struktury, które można zbadać, modyfikowania i wykonać.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db35dd99dadc4e49aaaebd5d3782409a206cafc5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-trees"></a>Drzewa wyrażeń
 
@@ -30,19 +23,19 @@ Umożliwiającej [Entity Framework](http://docs.efproject.net/en/latest/) tłuma
 
 Pozostałe sekcje w tym samouczku zostanie Eksploruj są drzewa wyrażeń, zbadać klasy framework, które obsługują drzew wyrażeń i opisano sposób pracy z drzewa wyrażeń. Dowiesz się, jak przeczytać drzew wyrażeń, sposób tworzenia drzewa wyrażeń sposobu tworzenia drzewa wyrażeń zmodyfikowane i jak wykonać kod reprezentowany przez drzewa wyrażeń. Po zapoznaniu się z, będzie gotowa do użycia tych struktur można tworzyć rozbudowane algorytmy adaptacyjną.
 
-1. [Wyjaśniono drzew wyrażeń](expression-trees-explained.md)
+1. [Drzewa wyrażeń — objaśnienie](expression-trees-explained.md)
 
     Zrozumienie struktury i pojęć dotyczących *drzew wyrażeń*.
     
-2. [Framework typy obsługi drzewa wyrażeń](expression-classes.md)
+2. [Typy platform obsługujące drzewa wyrażeń](expression-classes.md)
     
     Więcej informacji na temat struktury i klasy, które Zdefiniuj i manipulowania drzewa wyrażeń.
     
-3. [Wykonywania wyrażenia](expression-trees-execution.md)
+3. [Wykonywanie wyrażeń](expression-trees-execution.md)
 
     Dowiedz się, jak można skonwertować na drzewo wyrażenia reprezentowane jako wyrażenie Lambda do delegata i wykonaj wynikowy delegata.
 
-4. [Interpretowanie wyrażenia](expression-trees-interpreting.md)
+4. [Interpretowanie wyrażeń](expression-trees-interpreting.md)
 
     Dowiedz się, jak przechodzić między nimi i sprawdź, czy *drzew wyrażeń* zrozumienie kodu drzewa wyrażenia reprezentuje.
 
@@ -50,7 +43,7 @@ Pozostałe sekcje w tym samouczku zostanie Eksploruj są drzewa wyrażeń, zbada
 
     Dowiedz się, jak utworzyć węzły drzewa wyrażeń i tworzenia drzewa wyrażeń.
 
-6. [Tłumaczenia wyrażenia](expression-trees-translating.md)
+6. [Translacja wyrażeń](expression-trees-translating.md)
 
     Dowiedz się, jak kompilacji kopię zmodyfikowane drzewo wyrażenia lub tłumaczenie drzewo wyrażenia w innym formacie.
 

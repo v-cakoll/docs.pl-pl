@@ -1,30 +1,18 @@
 ---
 title: 'Porady: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring apps to support .NET Framework 4
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 45044e286fa48149c117e97c2e22aa8a0b7d5ce3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Porady: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5
 Wszystkie aplikacje, które obsługują środowisko uruchomieniowe języka wspólnego (CLR) należy uruchomić, lub *aktywować*, CLR, aby można było uruchamiać kodu zarządzanego. Zazwyczaj aplikacja programu .NET Framework działa w wersji środowiska CLR, w którym została skompilowana, ale można zmienić to zachowanie dla aplikacji komputerowych, używając pliku konfiguracji aplikacji (czasami określanego jako plik app.config). Przy użyciu pliku konfiguracji aplikacji nie można jednak zmienić domyślnego zachowania aktywacji dla aplikacji do Sklepu Windows lub dla systemu Windows Phone. W tym artykule wyjaśniono, jak umożliwić uruchomienie aplikacji komputerowej w innej wersji programu .NET Framework i przedstawiono przykład określania jako platformy docelowej wersji 4 lub 4.5.  

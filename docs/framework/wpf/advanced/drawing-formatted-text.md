@@ -1,13 +1,6 @@
 ---
 title: Rysowanie formatowanego tekstu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 978c97b8cae24bff4ebdea8f4e56a940e5907fa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt zapewnia kontrolę niskiego poziomu dla Rysowanie tekstu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -42,11 +30,11 @@ Przy użyciu metody FormattedText wyświetlanego tekstu.
 >  Dla tych deweloperów migracji z [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] interfejsu API, tabeli w [migracji Win32](#win32_migration) sekcji list [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText flagi i przybliżony odpowiednik w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Przyczyny przy użyciu tekstu sformatowanego  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera wiele formantów na rysowanie tekstu na ekranie. Każdej kontrolki jest przeznaczona do innego scenariusza i ma własną listę funkcji i ograniczenia. Ogólnie rzecz biorąc <xref:System.Windows.Controls.TextBlock> Jeśli obsługa ograniczona tekstu jest wymagane, na przykład krótki zdanie w, należy użyć elementu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>można można użyć, gdy wymagana jest obsługa minimalnej ilości tekstu. Aby uzyskać więcej informacji, zobacz [dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wiele formantów na rysowanie tekstu na ekranie. Każdej kontrolki jest przeznaczona do innego scenariusza i ma własną listę funkcji i ograniczenia. Ogólnie rzecz biorąc <xref:System.Windows.Controls.TextBlock> Jeśli obsługa ograniczona tekstu jest wymagane, na przykład krótki zdanie w, należy użyć elementu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> można można użyć, gdy wymagana jest obsługa minimalnej ilości tekstu. Aby uzyskać więcej informacji, zobacz [dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
  <xref:System.Windows.Media.FormattedText> Obiekt zapewnia funkcji niż większa tekstu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kontrolek tekstu i mogą być przydatne w sytuacjach, w której chcesz używać jako elementu ozdobne tekstu. Aby uzyskać więcej informacji, zobacz sekcję poniżej [konwersji tekstu w formacie geometrii](#converting_formatted_text).  
   
- Ponadto <xref:System.Windows.Media.FormattedText> obiektu jest przydatne w przypadku tworzenia tekstowych <xref:System.Windows.Media.DrawingVisual>-pochodnych obiektów. <xref:System.Windows.Media.DrawingVisual>jest klasą rysowania lekkie używany do renderowania kształty, obrazy i tekst. Aby uzyskać więcej informacji, zobacz [trafień przy użyciu DrawingVisuals próbki](http://go.microsoft.com/fwlink/?LinkID=159994).  
+ Ponadto <xref:System.Windows.Media.FormattedText> obiektu jest przydatne w przypadku tworzenia tekstowych <xref:System.Windows.Media.DrawingVisual>-pochodnych obiektów. <xref:System.Windows.Media.DrawingVisual> jest klasą rysowania lekkie używany do renderowania kształty, obrazy i tekst. Aby uzyskać więcej informacji, zobacz [trafień przy użyciu DrawingVisuals próbki](http://go.microsoft.com/fwlink/?LinkID=159994).  
   
 ## <a name="using-the-formattedtext-object"></a>Przy użyciu obiektu FormattedText  
  Aby utworzyć tekst sformatowany, należy wywołać <xref:System.Windows.Media.FormattedText.%23ctor%2A> konstruktora w celu utworzenia <xref:System.Windows.Media.FormattedText> obiektu. Po utworzeniu początkowej tekst sformatowany, można zastosować zakres formatowania style.  
@@ -127,7 +115,7 @@ Wyświetlanie wideo w geometrii ścieżki tekstu
 |DT_PREFIXONLY|Brak|Nieobsługiwane.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Użyj <xref:System.Windows.Media.FormattedText.TextAlignment%2A> właściwość z wartością ustawioną na <xref:System.Windows.TextAlignment.Right>. (Tylko WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Ustaw <xref:System.Windows.Media.FormattedText.FlowDirection%2A> właściwości <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|Brak|Nie jest wymagane. <xref:System.Windows.Media.FormattedText>obiekty zachowują się jako formant jednym wierszu, chyba że albo <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> właściwość ma wartość lub tekst zawiera CR/LF (CR/LF).|  
+|DT_SINGLELINE|Brak|Nie jest wymagane. <xref:System.Windows.Media.FormattedText> obiekty zachowują się jako formant jednym wierszu, chyba że albo <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> właściwość ma wartość lub tekst zawiera CR/LF (CR/LF).|  
 |DT_TABSTOP|Brak|Brak obsługi położenie tabulatorów zdefiniowane przez użytkownika.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Nie jest wymagane. Justowanie TOP jest ustawieniem domyślnym. Inne pionowy pozycjonowania wartości można zdefiniować za pomocą <xref:System.Windows.Media.FormattedText.Height%2A> właściwości można obliczyć odpowiedniego [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] pozycji DrawText "y".|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Użyj <xref:System.Windows.Media.FormattedText.Height%2A> właściwości można obliczyć odpowiedniego [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] pozycji DrawText "y".|  

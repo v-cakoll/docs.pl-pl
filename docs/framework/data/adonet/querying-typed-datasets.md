@@ -1,32 +1,20 @@
 ---
 title: Wykonywanie zapytania Typizowane zbiory danych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 30a6512202615590a4b399b8ce7173b213a8873c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-typed-datasets"></a>Wykonywanie zapytania Typizowane zbiory danych
 Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecane jest użycie typu <xref:System.Data.DataSet> przy użyciu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Typizowany <xref:System.Data.DataSet> jest klasą pochodną <xref:System.Data.DataSet>. W efekcie dziedziczy wszystkie metody, zdarzeń i właściwości <xref:System.Data.DataSet>. Ponadto maszynowy <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzeń i właściwości. Oznacza to, że masz dostęp tabele i kolumny według nazwy, zamiast za pomocą metody opartej na kolekcji. Dzięki temu zapytania prostszy i bardziej czytelne. Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]obsługuje również obsługę zapytań typu <xref:System.Data.DataSet>. Z typu <xref:System.Data.DataSet>, nie trzeba używać ogólnych <xref:System.Data.DataRowExtensions.Field%2A> metody lub <xref:System.Data.DataRowExtensions.SetField%2A> metodę dostępu do danych kolumny.  Nazwy właściwości są dostępne w czasie kompilacji, ponieważ zawiera informacje o typie <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]zapewnia dostęp do wartości w kolumnie jako poprawny typ, dzięki czemu błędy niezgodności typów są przechwytywane podczas kompilowania kodu zamiast w czasie wykonywania.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] obsługuje również obsługę zapytań typu <xref:System.Data.DataSet>. Z typu <xref:System.Data.DataSet>, nie trzeba używać ogólnych <xref:System.Data.DataRowExtensions.Field%2A> metody lub <xref:System.Data.DataRowExtensions.SetField%2A> metodę dostępu do danych kolumny.  Nazwy właściwości są dostępne w czasie kompilacji, ponieważ zawiera informacje o typie <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapewnia dostęp do wartości w kolumnie jako poprawny typ, dzięki czemu błędy niezgodności typów są przechwytywane podczas kompilowania kodu zamiast w czasie wykonywania.  
   
  Przed rozpoczęciem wykonywania zapytania typu <xref:System.Data.DataSet>, należy wygenerować za pomocą Projektanta obiektów DataSet w klasie [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie zestawów danych](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).  
   

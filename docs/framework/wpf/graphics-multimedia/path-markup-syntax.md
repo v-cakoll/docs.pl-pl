@@ -1,31 +1,17 @@
 ---
 title: Składni znacznikowania ścieżki
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
 - XAML [WPF], attribute usage
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 86901f357c43dc7c0c1402bf313e674603eaccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="path-markup-syntax"></a>Składni znacznikowania ścieżki
 Ścieżki zostały omówione w [kształtów i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) i [omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jednak w tym temacie opisano szczegółowo wydajny i złożone mini języka można określić ścieżkę wykorzystuje więcej compactly mają geometrię [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -101,7 +87,7 @@ ms.lasthandoff: 03/26/2018
   
 |Składnia|  
 |------------|  
-|`L` *endPoint*<br /><br /> - lub -<br /><br /> `l` *endPoint*|  
+|`L` *punkt końcowy*<br /><br /> - lub -<br /><br /> `l` *punkt końcowy*|  
   
 |Termin|Opis|  
 |----------|-----------------|  

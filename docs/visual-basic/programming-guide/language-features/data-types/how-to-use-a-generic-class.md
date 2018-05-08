@@ -1,12 +1,6 @@
 ---
-title: "Porady: używanie klasy ogólnej (Visual Basic)"
-ms.custom: 
+title: 'Porady: używanie klasy ogólnej (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - type parameters [Visual Basic], defining
 - data type arguments [Visual Basic], defining
@@ -27,14 +21,11 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 168e5c7f7d144d5c20513d62f4e3458bc6f87235
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: adea9f7e7dbbc2317e5b857a5153e3ec67d63344
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Porady: używanie klasy ogólnej (Visual Basic)
 Klasa, która przyjmuje *parametry typu* jest nazywany *klasy ogólnej*. Jeśli korzystasz z klasy ogólnej, można wygenerować *skonstruowany klasy* z niego podając *argument typu* dla każdego z tych parametrów. Następnie można zadeklarować zmiennej typu klasy utworzone i może utworzyć wystąpienia klasy skonstruowane i przypisz je do tej zmiennej.  
@@ -57,7 +48,7 @@ Klasa, która przyjmuje *parametry typu* jest nazywany *klasy ogólnej*. Jeśli 
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [Niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)  
- [Z](../../../../visual-basic/language-reference/statements/of-clause.md)  
+ [z](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [Instrukcje: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
  [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)

@@ -1,27 +1,15 @@
 ---
 title: Metody System.Convert
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0d0dc8889c9d71063dabd89b0434b088b4368080
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a16839bf64d5786caa6feb557333fe93c66edc3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemconvert-methods"></a>Metody System.Convert
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie obsługuje następujących <xref:System.Convert> metody.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących <xref:System.Convert> metody.  
   
 -   Wersje z <xref:System.IFormatProvider> parametru.  
   
@@ -37,9 +25,9 @@ ms.lasthandoff: 01/17/2018
   
 -   Następujących metod:  
   
-    -   `public static <Type2> To<Type2>(<Type1> value);`gdzie  
+    -   `public static <Type2> To<Type2>(<Type1> value);` gdzie  
   
-         `Type1`i `Type2` są każdego `sbyte`, `uint`, `ulong`, lub `ushort`.  
+         `Type1` i `Type2` są każdego `sbyte`, `uint`, `ulong`, lub `ushort`.  
   
     -   C#:  
   

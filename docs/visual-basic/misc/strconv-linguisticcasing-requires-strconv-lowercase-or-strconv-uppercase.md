@@ -1,23 +1,16 @@
 ---
-title: '&#39; StrConv.LinguisticCasing &#39; wymaga &#39; StrConv.LowerCase &#39; i &#39; StrConv.UpperCase &#39;'
+title: '&#39;StrConv.LinguisticCasing&#39; wymaga &#39;StrConv.LowerCase&#39; lub &#39;StrConv.UpperCase&#39;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 871615f8b127d482f5df37e6c95b5be33e345f06
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 664c7428521eea1cc59e9aa2e8e37b3149022bbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a>&#39; StrConv.LinguisticCasing &#39; wymaga &#39; StrConv.LowerCase &#39; i &#39; StrConv.UpperCase &#39;
+# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a>&#39;StrConv.LinguisticCasing&#39; wymaga &#39;StrConv.LowerCase&#39; lub &#39;StrConv.UpperCase&#39;
 Podjęto próbę użycia `StrConv.LinguisticCasing`, który jest prawidłowy tylko w połączeniu z `StrConv.LowerCase` lub `StrConv.UpperCase`.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

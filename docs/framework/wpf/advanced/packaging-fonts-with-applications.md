@@ -1,13 +1,6 @@
 ---
 title: Pakowanie czcionek z aplikacjami
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-fonts-with-applications"></a>Pakowanie czcionek z aplikacjami
 Ten temat zawiera przegląd zagadnień związanych z czcionkami pakietu z sieci [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -40,7 +28,7 @@ Ten temat zawiera przegląd zagadnień związanych z czcionkami pakietu z sieci 
 ## <a name="introduction-to-packaging-fonts"></a>Wprowadzenie do tworzenia pakietów czcionek  
  Można łatwo spakować czcionki jako zasoby w sieci [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, aby wyświetlić tekst interfejsu użytkownika i innych typów tekstu na podstawie zawartości. Czcionki mogą być oddzielony od lub osadzone w aplikacji zestawu plików. Można również utworzyć w bibliotece tylko do zasobów czcionki aplikacji może odwoływać się.  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]i [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] czcionki zawierać flagę typu fsType, wskazującą osadzanie licencjonowania czcionek praw czcionki. Jednak tego typu Flaga odwołuje się tylko do czcionki osadzone przechowywane w dokumencie — it nie odwołuje się do czcionki osadzone w aplikacji. Możesz pobrać osadzanie praw dla czcionki, tworząc czcionek <xref:System.Windows.Media.GlyphTypeface> obiektu i odwołanie się do jego <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> właściwości. Zapoznaj się z sekcją "OS i 2 oraz Windows metryki" [specyfikacji OpenType](http://www.microsoft.com/typography/otspec/os2.htm) Aby uzyskać więcej informacji na temat flagi fsType.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] czcionki zawierać flagę typu fsType, wskazującą osadzanie licencjonowania czcionek praw czcionki. Jednak tego typu Flaga odwołuje się tylko do czcionki osadzone przechowywane w dokumencie — it nie odwołuje się do czcionki osadzone w aplikacji. Możesz pobrać osadzanie praw dla czcionki, tworząc czcionek <xref:System.Windows.Media.GlyphTypeface> obiektu i odwołanie się do jego <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> właściwości. Zapoznaj się z sekcją "OS i 2 oraz Windows metryki" [specyfikacji OpenType](http://www.microsoft.com/typography/otspec/os2.htm) Aby uzyskać więcej informacji na temat flagi fsType.  
   
  [Typography Microsoft](http://www.microsoft.com/typography/links/) witryna sieci Web zawiera informacje kontaktowe, które mogą pomóc w zlokalizować dostawcy określonej czcionki lub znaleźć dostawcy czcionki dla niestandardowych pracy.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Porady: blokowanie formantów do formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: blokowanie formantów do formularzy systemu Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f5cd70e71a4a8bc48a3240055117dadc1086a50
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f05da53f134f13bf5edbbe7ab8c5973f79bbca4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Porady: blokowanie formantów do formularzy systemu Windows
 Podczas projektowania interfejsu użytkownika (UI) aplikacji systemu Windows, można zablokować formantów po znajdują się one poprawnie, tak aby nie mogą przypadkowo przenieść lub zmienić ich rozmiar przy ustawianiu inne właściwości.  

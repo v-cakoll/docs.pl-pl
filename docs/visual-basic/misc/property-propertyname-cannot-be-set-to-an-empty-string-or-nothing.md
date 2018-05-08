@@ -1,18 +1,12 @@
 ---
-title: "Właściwość &lt;propertyname&gt; nie można ustawić pustego ciągu lub nic"
+title: Właściwość &lt;propertyname&gt; nie można ustawić pustego ciągu lub nic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: c4f6ceb2-cee0-4e79-9cc6-cb20276d24f8
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e11a320689b5583282d9de56ed24c350daf76ce6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4582423a34ee51d8f8716fb39c5e59a14384e396
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-an-empty-string-or-nothing"></a>Właściwość &lt;propertyname&gt; nie można ustawić pustego ciągu lub nic
 Właściwość wymaga wartości innej niż ciąg pusty ("") lub `Nothing`. Może to być wynikiem niepoprawnie obliczania wartości.  

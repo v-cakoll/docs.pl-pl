@@ -1,13 +1,7 @@
 ---
-title: "Porady: tworzenie plików i katalogów w izolowanym magazynie"
-ms.custom: 
+title: 'Porady: tworzenie plików i katalogów w izolowanym magazynie'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cf6295e7d58d03e7b4bf4e0a00cfc509d289e071
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b7fa96e4f28e92e0890acf6ffc105ca11a97d575
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Porady: tworzenie plików i katalogów w izolowanym magazynie
 Po uzyskaniu izolowanego magazynu można utworzyć katalogów i plików do przechowywania danych. W sklepie nazwy plików i katalogów są określane względem katalogu głównego wirtualnego systemu plików.  

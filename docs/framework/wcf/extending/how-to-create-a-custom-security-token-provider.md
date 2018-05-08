@@ -1,31 +1,19 @@
 ---
-title: "Jak: utworzyć dostawcę tokenu zabezpieczającego niestandardowych"
-ms.custom: 
+title: 'Jak: utworzyć dostawcę tokenu zabezpieczającego niestandardowych'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Jak: utworzyć dostawcę tokenu zabezpieczającego niestandardowych
 W tym temacie przedstawiono sposób tworzenia nowych typów tokenu z dostawcę tokenu zabezpieczającego niestandardowych i sposobu integracji dostawcy z Menedżer tokenów zabezpieczających niestandardowych.  
@@ -33,7 +21,7 @@ W tym temacie przedstawiono sposób tworzenia nowych typów tokenu z dostawcę t
 > [!NOTE]
 >  Utworzyć niestandardowego dostawcę tokenów, jeśli dostarczane przez system tokenów w <xref:System.IdentityModel.Tokens> przestrzeni nazw nie są zgodne z wymaganiami.  
   
- Dostawcy tokenów zabezpieczających tworzy reprezentację tokenu zabezpieczeń na podstawie informacji w poświadczeniach klienta lub usługi. Aby użyć niestandardowego dostawcy tokenów zabezpieczających w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczeń, należy utworzyć niestandardowe poświadczenia i implementacje Menedżer tokenów zabezpieczeń.  
+ Dostawcy tokenów zabezpieczających tworzy reprezentację tokenu zabezpieczeń na podstawie informacji w poświadczeniach klienta lub usługi. Aby użyć dostawcy tokenów zabezpieczających niestandardowych w zabezpieczeń systemu Windows Communication Foundation (WCF), należy utworzyć niestandardowe poświadczenia i implementacje Menedżer tokenów zabezpieczeń.  
   
  Aby uzyskać więcej informacji o niestandardowych poświadczeń i Menedżer tokenów zabezpieczających zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   

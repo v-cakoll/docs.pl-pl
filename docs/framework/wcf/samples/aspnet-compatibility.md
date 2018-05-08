@@ -1,27 +1,15 @@
 ---
-title: "Zgodność platformy ASP.NET"
-ms.custom: 
+title: Zgodność platformy ASP.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-compatibility"></a>Zgodność platformy ASP.NET
-W tym przykładzie pokazano, jak włączyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Usługi uruchomione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności uczestniczyć w pełni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji potoku i może wykonywać użycie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcji, takich jak autoryzacja pliku lub adres URL, stan sesji i <xref:System.Web.HttpContext> klasy. <xref:System.Web.HttpContext> Klasy zezwala na dostęp do plików cookie sesji i innych [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcji. Ten tryb wymaga powiązania korzystać z transportu HTTP i musi być obsługiwana przez usługę w usługach IIS.  
+W tym przykładzie pokazano, jak włączyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności w systemie Windows Communication Foundation (WCF). Usługi uruchomione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności uczestniczyć w pełni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji potoku i może wykonywać użycie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcji, takich jak autoryzacja pliku lub adres URL, stan sesji i <xref:System.Web.HttpContext> klasy. <xref:System.Web.HttpContext> Klasy zezwala na dostęp do plików cookie sesji i innych [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funkcji. Ten tryb wymaga powiązania korzystać z transportu HTTP i musi być obsługiwana przez usługę w usługach IIS.  
   
  W tym przykładzie klient jest aplikacji konsoli (plik wykonywalny), a usługa jest obsługiwana w Internet Information Services (IIS).  
   
@@ -41,7 +29,7 @@ W tym przykładzie pokazano, jak włączyć [!INCLUDE[vstecasp](../../../../incl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   
@@ -71,7 +59,7 @@ public interface ICalculatorSession
  Używane przez usługę [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesji, aby przechowywać wynik dla każdej sesji klienta. Dzięki temu usługę, aby zachować wynik uruchomiony dla każdego klienta w całej wielu wywołań do usługi.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Stan sesji i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesje są bardzo różnych rzeczy.  Zobacz [sesji](../../../../docs/framework/wcf/samples/session.md) szczegółowe informacje na temat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesji.  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Stan sesji i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesje są bardzo różnych rzeczy.  Zobacz [sesji](../../../../docs/framework/wcf/samples/session.md) szczegółowe informacje na temat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesji.  
   
  Usługa ma zależności jednorodnej [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] stan sesji i wymaga [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności, aby mógł działać poprawnie. Te wymagania są wyrażane deklaratywnie przez zastosowanie `AspNetCompatibilityRequirements` atrybutu.  
   

@@ -1,31 +1,20 @@
 ---
-title: "Porady: zapisywanie równoległej pętli ForEach ze zmiennymi lokalnymi wątku"
-ms.custom: 
+title: 'Porady: zapisywanie równoległej pętli ForEach ze zmiennymi lokalnymi wątku'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4c65edd8959cbf5f83e3353770f71cad130953d1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4a89b3f25fb3d6e85c666e57f24e68c297c8c29a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Porady: zapisywanie równoległej pętli ForEach ze zmiennymi lokalnymi wątku
 W poniższym przykładzie pokazano, w jaki sposób napisać metodę <xref:System.Threading.Tasks.Parallel.ForEach%2A>, która używa zmiennych lokalnych wątku. Gdy wykonywana jest pętla <xref:System.Threading.Tasks.Parallel.ForEach%2A>, kolekcja źródłowa jest dzielona na wiele partycji. Każda partycja otrzyma własną kopię zmiennej „lokalnej wątku”. (Termin „lokalna wątku” jest nieprecyzyjny, ponieważ w niektórych przypadkach dwie partycje mogą działać w tym samym wątku).  

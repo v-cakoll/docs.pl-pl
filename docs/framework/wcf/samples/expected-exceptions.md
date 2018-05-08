@@ -1,26 +1,12 @@
 ---
 title: Oczekiwane wyjątki
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expected-exceptions"></a>Oczekiwane wyjątki
 W tym przykładzie pokazano, jak catch oczekiwane wyjątki, używając typu klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS).  
@@ -30,7 +16,7 @@ W tym przykładzie pokazano, jak catch oczekiwane wyjątki, używając typu klie
   
  W tym przykładzie pokazano przechwytywanie i dwa typy oczekiwanego wyjątku, które Popraw programy obsługi musi obsługiwać: `TimeoutException` i `CommunicationException`.  
   
- Wyjątki, które są generowane z metody komunikacji na [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta są oczekiwane lub nieoczekiwany. Nieoczekiwany wyjątków należą poważnej awarii, takich jak `OutOfMemoryException` i programowania błędów, takich jak `ArgumentNullException` lub `InvalidOperationException`. Zwykle nie istnieje sposób przydatne do obsługi błędów nieoczekiwany, dlatego zazwyczaj nie należy przechwytywać ich podczas wywoływania metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] metodę komunikacji z klientem.  
+ Wyjątki, które są generowane z metody komunikacji na kliencie systemu Windows Communication Foundation (WCF) są oczekiwane lub nieoczekiwany. Nieoczekiwany wyjątków należą poważnej awarii, takich jak `OutOfMemoryException` i programowania błędów, takich jak `ArgumentNullException` lub `InvalidOperationException`. Zwykle nie istnieje sposób przydatne do obsługi błędów nieoczekiwany, dlatego zazwyczaj nie należy przechwytywać ich podczas wywoływania metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] metodę komunikacji z klientem.  
   
  Oczekiwano wyjątki od metody komunikacji na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta obejmują `TimeoutException`, `CommunicationException`, oraz wszelkie otrzymane z klasy `CommunicationException`. Te wskazują na problem podczas komunikacji, który może być bezpiecznie obsługiwanych przez przerywanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta oraz raportowania błędów komunikacji. Ponieważ czynniki zewnętrzne mogą powodować błędy w dowolnej aplikacji, poprawne aplikacji należy przechwytywać tych wyjątków i odzyskać wystąpieniach.  
   
@@ -89,7 +75,7 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

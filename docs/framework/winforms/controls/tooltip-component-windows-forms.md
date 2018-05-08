@@ -1,27 +1,15 @@
 ---
-title: "ToolTip — Składnik (Formularze systemu Windows)"
-ms.custom: 
+title: ToolTip — Składnik (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tooltips [Windows Forms]
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e051fa13eee9a9110654d8791d83b2ff51cbdb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c8175e4a3d2ddf08bcfc603b5d0fe40917bc37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip — Składnik (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.ToolTip> składnika wyświetla tekst, gdy użytkownik wskazuje na formanty. Etykietka narzędzia może być skojarzony z żadnym formantem. Przykładowe zastosowanie tego formantu: Aby zaoszczędzić miejsce na formularzu, można wyświetlić na małe ikony na przycisku i używać etykietka narzędzia wyjaśnić funkcja przycisku.  
@@ -37,7 +25,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.ToolTip> składnika wyświ
  Wyjaśniono sposób ustawiania wartości określające, jak długo trwa etykietka narzędzia pojawią się i czas, dla którego jest wyświetlany.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.ToolTip>klasy  
+ <xref:System.Windows.Forms.ToolTip> Klasy  
  Zawiera informacje o klasie i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

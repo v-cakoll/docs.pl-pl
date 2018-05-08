@@ -1,30 +1,19 @@
 ---
 title: Zarządzana i niezarządzana wątkowość w systemie Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Zarządzana i niezarządzana wątkowość w systemie Windows
 Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threading.Thread> klasy, w tym utworzone przez środowisko uruchomieniowe języka wspólnego wątki i utworzone poza środowisko uruchomieniowe, które wprowadź zarządzanego środowiska do wykonywania kodu. Środowisko uruchomieniowe monitoruje wszystkie wątki w procesie, które kiedykolwiek wykonali kodu w ramach zarządzanego środowiska wykonawczego. Nie śledzi inne wątki. Wątki można wprowadzić zarządzanego środowiska wykonawczego za pomocą modelu COM interop (ponieważ środowisko uruchomieniowe przedstawia zarządzanych obiektów w postaci obiektów COM niezarządzane world), modelu COM [metody DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) funkcji i wywołanie platformy.  

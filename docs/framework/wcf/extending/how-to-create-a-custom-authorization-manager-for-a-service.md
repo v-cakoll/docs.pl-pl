@@ -1,13 +1,6 @@
 ---
-title: "Instrukcje: Tworzenie menedżera autoryzacji niestandardowej dla usługi"
-ms.custom: 
+title: 'Instrukcje: Tworzenie menedżera autoryzacji niestandardowej dla usługi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1977a26f3185ad1ef85584b0da7d63826b7f93ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7fe392b2fcd2f8ccb00bfd6ffd7e917649f8280c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Instrukcje: Tworzenie menedżera autoryzacji niestandardowej dla usługi
-Infrastruktura modelu tożsamości w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje model extensible autoryzacji opartej na oświadczeniach. Oświadczenia są wyodrębnione z tokenów i opcjonalnie przetwarzane przy użyciu zasad autoryzacji niestandardowej, a następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext>. Menedżer autoryzacji sprawdza oświadczeń z <xref:System.IdentityModel.Policy.AuthorizationContext> podejmowanie decyzji dotyczących autoryzacji.  
+Infrastruktura modelu tożsamości w systemie Windows Communication Foundation (WCF) obsługuje modelu extensible autoryzacji opartej na oświadczeniach. Oświadczenia są wyodrębnione z tokenów i opcjonalnie przetwarzane przy użyciu zasad autoryzacji niestandardowej, a następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext>. Menedżer autoryzacji sprawdza oświadczeń z <xref:System.IdentityModel.Policy.AuthorizationContext> podejmowanie decyzji dotyczących autoryzacji.  
   
  Domyślnie decyzji dotyczących autoryzacji są wykonywane przez <xref:System.ServiceModel.ServiceAuthorizationManager> klasy; jednak tych decyzji może zostać przesłonięta przez tworzenie Menedżera autoryzacji niestandardowej. Można utworzyć Menedżera autoryzacji niestandardowej, Utwórz klasę, która pochodzi z <xref:System.ServiceModel.ServiceAuthorizationManager> i wdrożenie <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metody. Decyzje dotyczące autoryzacji zostały wprowadzone w <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metody, która zwraca `true` po dostęp i `false` jeśli odmówiono dostępu.  
   

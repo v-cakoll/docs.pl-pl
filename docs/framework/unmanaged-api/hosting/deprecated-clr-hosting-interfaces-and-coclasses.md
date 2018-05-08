@@ -1,29 +1,19 @@
 ---
-title: "Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR"
-ms.custom: 
+title: Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - interfaces [.NET Framework hosting], version 1
 - .NET Framework 1.1, hosting interfaces
 - hosting interfaces [.NET Framework], version 1
 - .NET Framework 1.0, hosting interfaces
 ms.assetid: 7b3d2755-cbab-4160-bc69-eb85791e38c7
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a4410814669ed329e477fbad13dac60103b1ac0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR
 W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w wersji systemu .NET Framework 1.0 i 1.1 w swoich aplikacjach. Te interfejsy podania metod dla hosta, skonfigurować i załadować środowiska uruchomieniowego do procesu.  

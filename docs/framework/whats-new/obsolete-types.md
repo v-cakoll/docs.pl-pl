@@ -1,30 +1,18 @@
 ---
 title: Przestarzałe typy w programie .NET Framework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a5668292eaae2b05bbc056196a35a9b8840b7177
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
 <a name="introduction"></a> W tabelach w tym artykule przedstawiono typy, które są nieaktualne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], uporządkowany według zestawu. Użyj następujących łączy, aby wyświetlić listę przestarzałe typy i zalecanych rozwiązań alternatywnych w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementy Członkowskie również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -151,7 +139,7 @@ ms.lasthandoff: 03/26/2018
  [Powrót do początku](#introduction)  
   
 <a name="Core"></a>   
-### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll  
+### <a name="assembly-systemcoredll"></a>Zestaw: System.Core.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  

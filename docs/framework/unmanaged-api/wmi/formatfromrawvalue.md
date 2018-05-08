@@ -1,11 +1,7 @@
 ---
-title: "Funkcja FormatFromRawValue (niezarządzany wykaz interfejsów API)"
-description: "Funkcja FormatFromRawValue konwertuje pierwotnych danych wydajności w określonym formacie."
+title: Funkcja FormatFromRawValue (niezarządzany wykaz interfejsów API)
+description: Funkcja FormatFromRawValue konwertuje pierwotnych danych wydajności w określonym formacie.
 ms.date: 11/21/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - FormatFromRawValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatfromrawvalue-function"></a>Funkcja FormatFromRawValue
 Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych wydajność pierwotna, jeśli Konwersja formatu jest oparte na czasie.   
@@ -50,7 +43,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametry
 
 `dwCounterType`  
-[in] Typ licznika. Listę typów licznika, zobacz [typy licznika wydajności WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType`mogą być dowolnego typu licznika, z wyjątkiem `PERF_LARGE_RAW_FRACTION` i `PERF_LARGE_RAW_BASE`. 
+[in] Typ licznika. Listę typów licznika, zobacz [typy licznika wydajności WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` mogą być dowolnego typu licznika, z wyjątkiem `PERF_LARGE_RAW_FRACTION` i `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
 [in] Format, do którego można przekonwertować pierwotnych danych wydajności. Może być jedną z następujących wartości:
@@ -71,11 +64,11 @@ Jedną z poprzednimi wartościami może być operacja logiczna z jednym z nastę
 `pTimeBase`  
 [in] Wskaźnik do podstawy czasu, jeśli to konieczne do konwersji na format. Jeśli podstawowe informacje o czasie nie jest niezbędna dla Konwersja formatu, wartość tego parametru jest ignorowana.
 
-`pRawValue1`[in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje wydajność pierwotna wartość.
+`pRawValue1` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje wydajność pierwotna wartość.
 
-`pRawValue2`[in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje druga wartość wydajność pierwotna. Jeśli drugiej wartości wydajność pierwotna nie jest konieczne, ten parametr powinien być `null`.
+`pRawValue2` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje druga wartość wydajność pierwotna. Jeśli drugiej wartości wydajność pierwotna nie jest konieczne, ten parametr powinien być `null`.
 
-`pFmtValue`[out] Wskaźnik do [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) struktury, który odbiera wartość wydajności sformatowany.
+`pFmtValue` [out] Wskaźnik do [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) struktury, który odbiera wartość wydajności sformatowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -96,7 +89,7 @@ Ta funkcja jest zawijana wywołanie [FormatFromRawValue](https://msdn.microsoft.
   
  **Biblioteka:** PerfCounter.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

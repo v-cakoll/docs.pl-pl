@@ -1,27 +1,18 @@
 ---
-title: "Przegląd drzewa automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Przegląd drzewa automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 25a1ddb113916563c234eefb8cdc0746b04f3e66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0823a569b19d46f32c1cb780470a935f20429c11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-tree-overview"></a>Przegląd drzewa automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -43,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  Dostawcy automatyzacji interfejsu użytkownika obsługuje filtrowanie, definiując właściwości dla elementów, w tym <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> i <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty> właściwości.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]udostępnia trzy widoki. Widoki te są definiowane przez typ filtrowania wykonywane; zakres dowolnego widoku jest zdefiniowany przez aplikację. Ponadto aplikacji można stosować inne filtry właściwości; na przykład aby uwzględnić tylko włączone formantów w widoku kontrolki.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] udostępnia trzy widoki. Widoki te są definiowane przez typ filtrowania wykonywane; zakres dowolnego widoku jest zdefiniowany przez aplikację. Ponadto aplikacji można stosować inne filtry właściwości; na przykład aby uwzględnić tylko włączone formantów w widoku kontrolki.  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Pierwotny widok  

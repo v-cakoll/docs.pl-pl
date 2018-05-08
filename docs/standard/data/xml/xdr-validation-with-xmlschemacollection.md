@@ -1,29 +1,18 @@
 ---
-title: "Weryfikowanie XDR przy użyciu kolekcji XmlSchemaCollection"
-ms.custom: 
+title: Weryfikowanie XDR przy użyciu kolekcji XmlSchemaCollection
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4d4e970423693bbe221f0146ecc07dd69e27bc35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Weryfikowanie XDR przy użyciu kolekcji XmlSchemaCollection
 Jeśli jest sprawdzana poprawność względem schematu XML danych (XDR) są przechowywane w **kolekcji XmlSchemaCollection**, jest on skojarzony z przestrzenią nazw, identyfikator URI określony, jeśli schemat został dodany do kolekcji. **Elementu XmlValidatingReader** mapuje identyfikator URI przestrzeni nazw w dokumencie XML do schematu, do którego odnosi się do tego identyfikatora URI w kolekcji.  

@@ -1,24 +1,17 @@
 ---
 title: Klauzula where (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - whereclause_CSharpKeyword
 helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0324346ee5e214bf467fcb522ef781c91fa1b76f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-clause-c-reference"></a>Klauzula where (odwołanie w C#)
 `where` Klauzuli jest używany w wyrażeniu zapytania, aby określić, które elementy ze źródła danych zostaną zwrócone w wyrażeniu zapytania. Ma to zastosowanie warunek typu Boolean (*predykatu*) do każdego elementu źródłowego (odwołuje się zmienna zakresu) i zwraca te, dla których określony warunek jest spełniony. Wyrażenie pojedynczego zapytania mogą zawierać wiele `where` klauzule i jedną klauzulę może zawierać wiele zakresie predykatu.  
@@ -29,7 +22,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- W jednym `where` klauzuli, można określić dowolną liczbę predykaty odpowiednio przy użyciu [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) i [&#124; &#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) operatorów. W poniższym przykładzie zapytanie określa dwa predykaty wybór liczby parzyste, które są mniej niż 5.  
+ W jednym `where` klauzuli, można określić dowolną liczbę predykaty odpowiednio przy użyciu [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) i [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md) operatorów. W poniższym przykładzie zapytanie określa dwa predykaty wybór liczby parzyste, które są mniej niż 5.  
   
  [!code-csharp[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
@@ -47,8 +40,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe zapytania (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [Klauzula FROM](../../../csharp/language-reference/keywords/from-clause.md)  
- [SELECT — klauzula](../../../csharp/language-reference/keywords/select-clause.md)  
+ [from, klauzula](../../../csharp/language-reference/keywords/from-clause.md)  
+ [select, klauzula](../../../csharp/language-reference/keywords/select-clause.md)  
  [Filtrowanie danych](../../programming-guide/concepts/linq/filtering-data.md)  
  [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Wprowadzenie do korzystania z LINQ w C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

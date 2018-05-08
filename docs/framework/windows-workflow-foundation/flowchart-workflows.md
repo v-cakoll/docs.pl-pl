@@ -1,23 +1,12 @@
 ---
-title: "Schemat blokowy przepływów pracy"
-ms.custom: 
+title: Schemat blokowy przepływów pracy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ddfa98a8b9de0b362a27b55d4cd9a4c02ac8a761
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd013e47da881c16d1fa469dfc3e3c4f2a86b6e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowchart-workflows"></a>Schemat blokowy przepływów pracy
 Schemat blokowy jest dobrze znanego modelu projektowania programów. Schemat blokowy działania jest zwykle używane do implementowania niesekwencyjnych przepływy pracy, ale może służyć do sekwencyjnego przepływy pracy, jeśli nie `FlowDecision` węzły są używane.  
@@ -28,11 +17,11 @@ Schemat blokowy jest dobrze znanego modelu projektowania programów. Schemat blo
 ## <a name="types-of-flow-nodes"></a>Typy węzłów przepływu  
  Różnych typów elementów są używane w zależności od typu sterowaniu przepływem wymagana, gdy element jest wykonywana. Typy elementów schemat blokowy:  
   
--   `FlowStep`— Modele jeden krok wykonywania w schemacie blokowym.  
+-   `FlowStep` — Modele jeden krok wykonywania w schemacie blokowym.  
   
--   `FlowDecision`-Wykonanie gałęzie oparciu warunek typu Boolean, podobnie jak <xref:System.Activities.Statements.If>.  
+-   `FlowDecision` -Wykonanie gałęzie oparciu warunek typu Boolean, podobnie jak <xref:System.Activities.Statements.If>.  
   
--   `FlowSwitch`— Wykonanie gałęzie na podstawie wyłącznego przełącznika, podobnie jak <xref:System.Activities.Statements.Switch%601>.  
+-   `FlowSwitch` — Wykonanie gałęzie na podstawie wyłącznego przełącznika, podobnie jak <xref:System.Activities.Statements.Switch%601>.  
   
  Każde łącze ma `Action` właściwość, która definiuje <xref:System.Activities.ActivityAction> który może służyć do wykonywania działań podrzędnych oraz co najmniej jedną `Next` właściwości, które definiują, które element lub elementy do wykonania, gdy bieżący element kończy działanie.  
   

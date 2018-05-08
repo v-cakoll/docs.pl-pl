@@ -1,43 +1,31 @@
 ---
 title: Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
-W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę podczas tworzenia bezpiecznego aplikacji przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Aby uzyskać więcej informacji o zabezpieczeniach, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+W poniższych sekcjach wymieniono najlepszych rozwiązań, które należy uwzględnić podczas tworzenia bezpiecznego aplikacji przy użyciu usługi Windows Communication Foundation (WCF). Aby uzyskać więcej informacji o zabezpieczeniach, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identyfikacja usług uwierzytelniania systemu Windows na nazwy SPN  
  Usługi można określić nazwy głównej użytkownika (UPN) lub głównych nazw usług (SPN). Usługi uruchomiony w ramach konta komputera, na przykład usługi sieciowej mają tożsamością SPN odpowiadającego na komputerze, na którym jest na nich uruchomione. Usługi uruchomione na kontach użytkowników ma tożsamością UPN odpowiadający użytkownika nich uruchomiony, mimo że `setspn` narzędzia można przypisać nazwę SPN konta użytkownika. Konfigurowanie usługi, dzięki czemu można zidentyfikować za pomocą głównej nazwy usługi i konfigurowanie klientów połączenie z usługą, aby użyć tej nazwy SPN może upewnić się, ataki trudniejsze. Niniejsze wytyczne mają zastosowanie do wiązania za pomocą negocjowania protokołu Kerberos lub interfejs SSPI.  Klienci nadal należy określić nazwę SPN w przypadku, gdy SSPI powraca do uwierzytelniania NTLM.  
   
 ## <a name="verify-service-identities-in-wsdl"></a>Sprawdź tożsamości usługi w języku WSDL  
- WS-SecurityPolicy umożliwia usługom do publikowania informacji o własną tożsamość w metadanych. Po pobraniu przez `svcutil` lub innych metod, takich jak <xref:System.ServiceModel.Description.WsdlImporter>, informacje o tożsamości jest translacja do właściwości identity [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adresy punktów końcowych usługi. Klientów, które sprawdza, czy te tożsamości usługi są poprawne i prawidłowe skutecznego obejścia uwierzytelniania usługi. Złośliwe usługi mogą wykorzystać takich klientów można wykonać przekazywania poświadczeń i innymi atakami "man w środku" przez zmianę tożsamości zastrzeżonego w WSDL.  
+ WS-SecurityPolicy umożliwia usługom do publikowania informacji o własną tożsamość w metadanych. Po pobraniu przez `svcutil` lub innych metod, takich jak <xref:System.ServiceModel.Description.WsdlImporter>, informacje o tożsamości jest przekonwertowana na stronę właściwości tożsamości adresy punktów końcowych usługi WCF. Klientów, które sprawdza, czy te tożsamości usługi są poprawne i prawidłowe skutecznego obejścia uwierzytelniania usługi. Złośliwe usługi mogą wykorzystać takich klientów można wykonać przekazywania poświadczeń i innymi atakami "man w środku" przez zmianę tożsamości zastrzeżonego w WSDL.  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Użyj X509 certyfikatów zamiast protokołu NTLM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostępne są dwa mechanizmy uwierzytelniania peer-to-peer: X509 certyfikatów (używanych przez kanał elementu równorzędnego) i uwierzytelniania systemu Windows, gdy negocjowanie interfejsu SSPI obniży z protokołu Kerberos do uwierzytelniania NTLM.  Uwierzytelnianie oparte na certyfikatach przy użyciu klucza rozmiary najmniej 1024 bity jest preferowana względem NTLM z kilku powodów:  
+ Usługi WCF oferuje dwa mechanizmy uwierzytelniania peer-to-peer: X509 certyfikatów (używanych przez kanał elementu równorzędnego) i uwierzytelniania systemu Windows, gdy negocjowanie interfejsu SSPI obniży z protokołu Kerberos do uwierzytelniania NTLM.  Uwierzytelnianie oparte na certyfikatach przy użyciu klucza rozmiary najmniej 1024 bity jest preferowana względem NTLM z kilku powodów:  
   
 -   dostępność wzajemnego uwierzytelniania  
   

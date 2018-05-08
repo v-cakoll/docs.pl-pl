@@ -1,30 +1,18 @@
 ---
-title: "Porady: tworzenie weryfikatora tożsamości niestandardowego klienta"
-ms.custom: 
+title: 'Porady: tworzenie weryfikatora tożsamości niestandardowego klienta'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b10dd9be996369385ca323b0409145a9cde46a1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Porady: tworzenie weryfikatora tożsamości niestandardowego klienta
-*Tożsamości* funkcji [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] z góry określić oczekiwaną tożsamość usługi przez klienta. Zawsze, gdy serwer uwierzytelnia do klienta, tożsamość jest sprawdzana względem Oczekiwana tożsamość. (Aby uzyskać informacje o tożsamości i jej działania, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
+*Tożsamości* funkcji Windows Communication Foundation (WCF) umożliwia klientowi z góry określić oczekiwaną tożsamość usługi. Zawsze, gdy serwer uwierzytelnia do klienta, tożsamość jest sprawdzana względem Oczekiwana tożsamość. (Aby uzyskać informacje o tożsamości i jej działania, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  W razie potrzeby można dostosować weryfikacji przy użyciu weryfikatora tożsamości niestandardowej. Na przykład można wykonać testy weryfikacji tożsamości dodatkowych usług. W tym przykładzie weryfikatora tożsamość niestandardowa sprawdza dodatkowe oświadczeń w certyfikatu X.509 zwrócone z serwera. Przykładową aplikację, zobacz [tożsamość usług — przykład](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
   

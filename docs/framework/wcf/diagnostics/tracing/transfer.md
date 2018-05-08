@@ -1,27 +1,15 @@
 ---
 title: Transfer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transfer"></a>Transfer
-W tym temacie opisano transferu [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] działania śledzenia modelu.  
+W tym temacie opisano transfer w modelu śledzenie działania Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definicja transferu  
  Transfery między działaniami reprezentują przyczynowy relacje między zdarzeniami w powiązanych działań w ramach punktów końcowych. Dwa działania są powiązane z transferów podczas kontroli przepływają między te działania, na przykład wywołanie metody przekraczające granice działania. W [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], gdy bajty znajdują się w usłudze nasłuchiwania podczas działania jest przenoszona do działania odbierania bajtów której jest tworzony obiekt komunikatu przychodzącego. Listę scenariuszy śledzenia end-to-end oraz ich odpowiednich działania i śledzenia projektu, zobacz [scenariusze śledzenia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  

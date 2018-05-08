@@ -1,24 +1,12 @@
 ---
 title: Działania niestandardowe
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cde06b3-51b2-4e46-900d-11140bae77f4
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b8176a5bd55022cfe8d0be191127874df5a86062
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dd4610713a0d301e5dcb5c066a0b30b46fc42a66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-activities"></a>Działania niestandardowe
 Ta sekcja zawiera przykłady, które pokazują, jak utworzyć niestandardowe działania w systemie Windows Workflow Foundation (WF).  

@@ -1,24 +1,14 @@
 ---
-title: "Uwagi dotyczące zabezpieczeń rejestrowania komunikatów"
-ms.custom: 
+title: Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.  
@@ -26,7 +16,7 @@ W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dziennikó
 ## <a name="security-concerns"></a>Zagadnienia dotyczące zabezpieczeń  
   
 ### <a name="logging-sensitive-information"></a>Rejestrowanie informacji poufnych  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]nie modyfikuje danych w nagłówkach specyficzne dla aplikacji i treść. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]również nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji i danych treści.  
+ Windows Communication Foundation (WCF) nie modyfikuje danych w nagłówkach specyficzne dla aplikacji i treść. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji i danych treści.  
   
  Po włączeniu rejestrowania komunikatów, informacje osobiste w nagłówkach specyficzne dla aplikacji, takich jak ciąg zapytania. i body informacje, takie jak numer karty kredytowej, może stać się widoczne w dziennikach. Narzędzia wdrażania aplikacji jest odpowiedzialny za egzekwowanie kontrolę dostępu dla plików dziennika i konfiguracji. Jeśli nie chcesz, tego rodzaju informacje są widoczne, należy wyłączyć rejestrowanie lub odfiltrować części danych, jeśli chcesz udostępnić dzienniki.  
   

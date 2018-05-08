@@ -1,13 +1,6 @@
 ---
-title: "Domyślne wartości elementów członkowskich danych"
-ms.custom: 
+title: Domyślne wartości elementów członkowskich danych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-member-default-values"></a>Domyślne wartości elementów członkowskich danych
 W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy korzystają z pojęcia *wartości domyślne*. Na przykład dla dowolnego typu odwołania, wartością domyślną jest `null`, i dla typu Liczba całkowita jest równa 0. Jest czasami pożądane, aby pominąć elementu członkowskiego danych z danych serializacji, gdy jest ustawiona na wartość domyślną. Ponieważ element członkowski ma wartość domyślną, wartość rzeczywista nie wymagają serializacji; to ustawienie korzyści wydajności.  
@@ -61,11 +49,11 @@ W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy korzysta
 ### <a name="schema-representation"></a>Reprezentacja schematu  
  Szczegóły schematu XML definition language (XSD) schematu reprezentacja elementy członkowskie danych podczas `EmitDefaultValue` właściwość jest ustawiona na `false` omówiono w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Jednak poniżej znajduje się krótki przegląd:  
   
--   Gdy <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ustawiono `false`, jest przedstawiany jako specyficzne dla adnotacji w schemacie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Nie istnieje sposób interoperacyjne do reprezentowania tych informacji. W szczególności atrybut "domyślny" w schemacie nie jest używany w tym celu `minOccurs` atrybut ma wpływ tylko przez <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ustawienie i `nillable` atrybutu dotyczy tylko typu elementu członkowskiego danych.  
+-   Gdy <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ma ustawioną wartość `false`, jest przedstawiany w schemacie adnotacji określonych do usługi Windows Communication Foundation (WCF). Nie istnieje sposób interoperacyjne do reprezentowania tych informacji. W szczególności atrybut "domyślny" w schemacie nie jest używany w tym celu `minOccurs` atrybut ma wpływ tylko przez <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ustawienie i `nillable` atrybutu dotyczy tylko typu elementu członkowskiego danych.  
   
 -   W schemacie nie ma wartości rzeczywistych do użycia. Jest odbierania punktu końcowego odpowiednio interpretować Brak elementu.  
   
- Podczas importowania schematu <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> jest automatycznie ustawiana właściwość `false` przy każdym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-określonych adnotacji wymienione wcześniej została wykryta. Zostanie ona również ustawiona `false` dla typów odwołań, które mają `nillable` ustawioną właściwość `false` obsługi określonych współdziałanie, w których zwykle występują w przypadku uzyskiwania dostępu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web.  
+ Podczas importowania schematu <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> jest automatycznie ustawiana właściwość `false` po każdej zmianie adnotacji specyficzne dla usługi WCF wymienione wcześniej została wykryta. Zostanie ona również ustawiona `false` dla typów odwołań, które mają `nillable` ustawioną właściwość `false` obsługi określonych współdziałanie, w których zwykle występują w przypadku uzyskiwania dostępu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  

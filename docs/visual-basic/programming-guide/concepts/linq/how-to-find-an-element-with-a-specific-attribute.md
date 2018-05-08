@@ -1,22 +1,12 @@
 ---
-title: "Porady: znajdowanie Element z określonym atrybutem (Visual Basic)"
-ms.custom: 
+title: 'Porady: znajdowanie Element z określonym atrybutem (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 97842cc0c42ca531c0965914d086f4c2a1faa6f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea5221553e2bb4fd624ca6b10e615c5766bfcb0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Porady: znajdowanie Element z określonym atrybutem (Visual Basic)
 W tym temacie pokazano, jak można znaleźć elementu, który ma atrybut o określonej wartości.  

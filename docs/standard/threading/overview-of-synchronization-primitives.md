@@ -1,33 +1,22 @@
 ---
-title: "Przegląd elementów podstawowych synchronizacji"
-ms.custom: 
+title: Przegląd elementów podstawowych synchronizacji
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-synchronization-primitives"></a>Przegląd elementów podstawowych synchronizacji
-<a name="top"></a>.NET Framework zapewnia szereg elementy podstawowe synchronizacji kontroli interakcji wątków i unikanie wyścigu. Te można około podzielone na trzy kategorie: blokowanie sygnalizowania i blokowanego operacji.  
+<a name="top"></a> .NET Framework zapewnia szereg elementy podstawowe synchronizacji kontroli interakcji wątków i unikanie wyścigu. Te można około podzielone na trzy kategorie: blokowanie sygnalizowania i blokowanego operacji.  
   
  Kategorie nie są porządek ani jasno określone: niektóre mechanizmy synchronizacji mają cechy wiele kategorii; zdarzenia, które wersji pojedynczego wątku w czasie funkcjonalnie przypominają blokad; Wersja żadnej blokady można traktować jako sygnał; i operacje blokowane może służyć do skonstruowania blokad. Kategorie są jednak nadal użyteczne.  
   
@@ -67,7 +56,7 @@ ms.lasthandoff: 12/23/2017
   
  <xref:System.Threading.Monitor> Klasy zapewniają blokowania w wielu domenach aplikacji, jeśli obiekt używany do blokowania pochodną <xref:System.MarshalByRefObject>.  
   
- <xref:System.Threading.Monitor>ma koligacji wątku. Oznacza to, wywołując musi się zakończyć wątku, który wprowadzono monitor <xref:System.Threading.Monitor.Exit%2A> lub <xref:System.Threading.Monitor.Wait%2A>.  
+ <xref:System.Threading.Monitor> ma koligacji wątku. Oznacza to, wywołując musi się zakończyć wątku, który wprowadzono monitor <xref:System.Threading.Monitor.Exit%2A> lub <xref:System.Threading.Monitor.Wait%2A>.  
   
  <xref:System.Threading.Monitor> Klasa nie jest tworzone jako wystąpienia. Metody tej klasy są statyczne (`Shared` w języku Visual Basic) i działa na zablokować tworzone jako wystąpienia obiektu.  
   
@@ -91,7 +80,7 @@ ms.lasthandoff: 12/23/2017
 #### <a name="readerwriterlock-class"></a>ReaderWriterLock — klasa  
  <xref:System.Threading.ReaderWriterLockSlim> Klasy adresów przypadek, w którym wątku, który zmienia danych, moduł zapisujący musi mieć wyłącznego dostępu do zasobu. Jeśli moduł zapisujący nie jest aktywne, dowolną liczbę czytników można uzyskać dostępu do zasobu (na przykład wywołując <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> metody). Wątek żądanie wyłącznego dostępu (na przykład wywołując <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> metody), czytnika kolejnych żądań bloku dopiero po zamknięciu wszystkich istniejących czytelników blokady i wprowadził twórcę i zakończony blokady.  
   
- <xref:System.Threading.ReaderWriterLockSlim>ma koligacji wątku.  
+ <xref:System.Threading.ReaderWriterLockSlim> ma koligacji wątku.  
   
  Omówienie koncepcji, zobacz [blokuje moduł zapisujący czytnika](../../../docs/standard/threading/reader-writer-locks.md).  
   
@@ -104,13 +93,13 @@ ms.lasthandoff: 12/23/2017
   
  Omówienie koncepcji, zobacz [semafor i klasa SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).  
   
- <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>to lekkie semafora synchronizacji w obrębie granicy jednego procesu.  
+ <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> to lekkie semafora synchronizacji w obrębie granicy jednego procesu.  
   
  [Powrót do początku](#top)  
   
 <a name="signaling"></a>   
 ## <a name="signaling"></a>Sygnalizowania  
- Najprostszym sposobem oczekiwanie na sygnał z innego wątku jest wywołanie <xref:System.Threading.Thread.Join%2A> metodę, która blokuje dopiero po zakończeniu innego wątku. <xref:System.Threading.Thread.Join%2A>ma dwa przeciążenia, zezwalających na zablokowanych wątków przerwanie poza czas oczekiwania, po upływie określonego interwału.  
+ Najprostszym sposobem oczekiwanie na sygnał z innego wątku jest wywołanie <xref:System.Threading.Thread.Join%2A> metodę, która blokuje dopiero po zakończeniu innego wątku. <xref:System.Threading.Thread.Join%2A> ma dwa przeciążenia, zezwalających na zablokowanych wątków przerwanie poza czas oczekiwania, po upływie określonego interwału.  
   
  Uchwyty oczekiwania Podaj znacznie większego zestawu oczekiwania i sygnalizowania możliwości.  
   
@@ -124,7 +113,7 @@ ms.lasthandoff: 12/23/2017
 #### <a name="event-wait-handles"></a>Uchwyty oczekiwania na zdarzenie  
  Uchwyty oczekiwania na zdarzenie obejmują <xref:System.Threading.EventWaitHandle> klasy i jej klas pochodnych <xref:System.Threading.AutoResetEvent> i <xref:System.Threading.ManualResetEvent>. Wątki są zwalniane z dojścia oczekiwania podczas obsługi zdarzenia oczekiwania zostanie zasygnalizowane przez wywołanie jego <xref:System.Threading.EventWaitHandle.Set%2A> metody lub za pomocą <xref:System.Threading.WaitHandle.SignalAndWait%2A> — metoda.  
   
- Zdarzenie poczekaj uchwytów albo samodzielnie automatycznie resetować, takich jak turnstile, który umożliwia tylko jeden wątek za pośrednictwem za każdym razem zostanie zasygnalizowane lub musi zostać zresetowany ręcznie, takie jak brama jest zamknięty, dopóki sygnalizuje, a następnie otwórz dopóki ktoś zostanie zamknięte. Jak oznaczać ich nazw, <xref:System.Threading.AutoResetEvent> i <xref:System.Threading.ManualResetEvent> reprezentują wcześniejsze i drugie, odpowiednio. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>jest to lekkie zdarzenie synchronizacji w obrębie granicy jednego procesu.  
+ Zdarzenie poczekaj uchwytów albo samodzielnie automatycznie resetować, takich jak turnstile, który umożliwia tylko jeden wątek za pośrednictwem za każdym razem zostanie zasygnalizowane lub musi zostać zresetowany ręcznie, takie jak brama jest zamknięty, dopóki sygnalizuje, a następnie otwórz dopóki ktoś zostanie zamknięte. Jak oznaczać ich nazw, <xref:System.Threading.AutoResetEvent> i <xref:System.Threading.ManualResetEvent> reprezentują wcześniejsze i drugie, odpowiednio. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> jest to lekkie zdarzenie synchronizacji w obrębie granicy jednego procesu.  
   
  <xref:System.Threading.EventWaitHandle> Może reprezentować obu typów zdarzeń i może być lokalnego lub globalnego. Klasy pochodne <xref:System.Threading.AutoResetEvent> i <xref:System.Threading.ManualResetEvent> zawsze znajdują się lokalnie.  
   
@@ -146,13 +135,13 @@ ms.lasthandoff: 12/23/2017
 ## <a name="lightweight-synchronization-types"></a>Typy lekkie synchronizacji  
  Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], można użyć elementy podstawowe synchronizacji, które zapewniają szybkie wydajności dzięki unikaniu kosztowne zależność od jądra systemu Win32 obiekty, takie jak oczekiwania dojść, jeśli to możliwe. Ogólnie rzecz biorąc gdy krótki czas oczekiwania, i tylko wtedy, gdy nastąpiła oryginalnego typy synchronizacji i będzie niezadowalające należy używać tych typów. Nie można użyć typu lightweight w scenariuszach, które wymagają komunikacji między procesami.  
   
--   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>jest to Uproszczona wersja <xref:System.Threading.Semaphore?displayProperty=nameWithType>.  
+-   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> jest to Uproszczona wersja <xref:System.Threading.Semaphore?displayProperty=nameWithType>.  
   
--   <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>jest to Uproszczona wersja <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.  
+-   <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> jest to Uproszczona wersja <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.  
   
--   <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>reprezentuje zdarzenie, które staje się sygnalizowane po jego liczba jest równa zero.  
+-   <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> reprezentuje zdarzenie, które staje się sygnalizowane po jego liczba jest równa zero.  
   
--   <xref:System.Threading.Barrier?displayProperty=nameWithType>Umożliwia wiele wątków do synchronizacji ze sobą bez konieczności formantu głównego wątku. Bariery zapobiega każdy wątek kontynuować dopóki wszystkie wątki osiągnięto określony punkt.  
+-   <xref:System.Threading.Barrier?displayProperty=nameWithType> Umożliwia wiele wątków do synchronizacji ze sobą bez konieczności formantu głównego wątku. Bariery zapobiega każdy wątek kontynuować dopóki wszystkie wątki osiągnięto określony punkt.  
   
  [Powrót do początku](#top)  
   

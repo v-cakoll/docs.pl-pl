@@ -1,11 +1,6 @@
 ---
-title: "Join — Klauzula (Visual Basic)"
+title: Join — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Join — Klauzula (Visual Basic)
 Łączy dwie kolekcje do jednej kolekcji. Operacja łączenia jest oparta na zgodności kluczy i używa `Equals` operatora.  
@@ -38,19 +30,19 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Części  
  `element`  
- Wymagany. Zmienna sterująca dla kolekcji jest dołączony.  
+ Wymagana. Zmienna sterująca dla kolekcji jest dołączony.  
   
  `collection`  
- Wymagany. Kolekcja do łączenia z tą kolekcją zidentyfikowane po lewej stronie `Join` operatora. A `Join` klauzuli mogą być zagnieżdżone w innym `Join` klauzuli lub `Group Join` klauzuli.  
+ Wymagana. Kolekcja do łączenia z tą kolekcją zidentyfikowane po lewej stronie `Join` operatora. A `Join` klauzuli mogą być zagnieżdżone w innym `Join` klauzuli lub `Group Join` klauzuli.  
   
  `joinClause`  
- Opcjonalny. Jeden lub więcej dodatkowych `Join` klauzule dalsze uściślenie kwerendy.  
+ Opcjonalna. Jeden lub więcej dodatkowych `Join` klauzule dalsze uściślenie kwerendy.  
   
  `groupJoinClause`  
- Opcjonalny. Jeden lub więcej dodatkowych `Group Join` klauzule dalsze uściślenie kwerendy.  
+ Opcjonalna. Jeden lub więcej dodatkowych `Group Join` klauzule dalsze uściślenie kwerendy.  
   
  `key1` `Equals` `key2`  
- Wymagany. Określa klucze w kolekcji jest dołączony. Należy użyć `Equals` operatora, aby porównać klucze z kolekcji jest dołączony. Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy. `key1`musi pochodzić z kolekcji po lewej stronie `Join` operatora. `key2`musi pochodzić z kolekcji w prawej części `Join` operatora.  
+ Wymagana. Określa klucze w kolekcji jest dołączony. Należy użyć `Equals` operatora, aby porównać klucze z kolekcji jest dołączony. Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy. `key1` musi pochodzić z kolekcji po lewej stronie `Join` operatora. `key2` musi pochodzić z kolekcji w prawej części `Join` operatora.  
   
  Klucze używane w warunek sprzężenia można wyrażeń, które zawierają więcej niż jeden element z kolekcji. Każde wyrażenie klucza może jednak zawierać tylko elementy z jego odpowiednich kolekcji.  
   
@@ -97,7 +89,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
- [SELECT — klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Klauzula FROM](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Group Join — klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Gdy klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
+ [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)

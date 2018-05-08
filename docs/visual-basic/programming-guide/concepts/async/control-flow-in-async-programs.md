@@ -1,22 +1,12 @@
 ---
-title: "Przepływ sterowania w aplikacjach asynchronicznych (Visual Basic)"
-ms.custom: 
+title: Przepływ sterowania w aplikacjach asynchronicznych (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 28d5d087b48e4c816cbe3a84966346be6cda772e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2de9c00e5094a1c40e64bdf5215157867372be8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Przepływ sterowania w aplikacjach asynchronicznych (Visual Basic)
 Możesz wpisać i obsługa asynchroniczne programy łatwiej przy użyciu `Async` i `Await` słów kluczowych. Jednak wyniki, może Cię zaskoczył Jeśli nie znasz sposób działania programu. Ślady tego tematu, które przepływu sterowania za pośrednictwem programu async proste do wyświetlenia, gdy formant są przenoszone z jednej metody do innej i jakie informacje są przesyłane za każdym razem.  
@@ -30,7 +20,7 @@ Możesz wpisać i obsługa asynchroniczne programy łatwiej przy użyciu `Async`
   
 -   `startButton_Click`, które wywołuje `AccessTheWebAsync` i wyświetla wyniki.  
   
--   `AccessTheWebAsync`, która pobiera zawartość witryny sieci Web w postaci ciągu i zwraca długość ciągu. `AccessTheWebAsync`korzysta z asynchronicznego <xref:System.Net.Http.HttpClient> metody <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, aby pobrać zawartość.  
+-   `AccessTheWebAsync`, która pobiera zawartość witryny sieci Web w postaci ciągu i zwraca długość ciągu. `AccessTheWebAsync` korzysta z asynchronicznego <xref:System.Net.Http.HttpClient> metody <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, aby pobrać zawartość.  
   
  Numerowane wyświetlania wiersze pojawiają się w punktach strategicznych w programie, aby lepiej zrozumieć, jak program zostanie uruchomiony i wyjaśniający, co się stanie w każdym punkcie, który jest oznaczony jako. Wyświetlanie linii są oznaczone jako "Jeden"do "sześć." Etykiety opisania kolejności, w którym program osiągnie tych wierszy kodu.  
   
@@ -296,7 +286,7 @@ Dim urlContents As String = Await getStringTask
  Wyrażenie await zawiesi `AccessTheWebAsync` do momentu `client.GetStringAsync` zwraca. Tymczasem zwraca sterowania do wywołującego `AccessTheWebAsync`, `startButton_Click`.  
   
 > [!NOTE]
->  Zazwyczaj należy poczekać na wywołanie metody asynchronicznej natychmiast. Na przykład następujące przypisanie można zastąpić poprzedni kod, który tworzy, a następnie oczekiwanie `getStringTask`:`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
+>  Zazwyczaj należy poczekać na wywołanie metody asynchronicznej natychmiast. Na przykład następujące przypisanie można zastąpić poprzedni kod, który tworzy, a następnie oczekiwanie `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
 >   
 >  W tym temacie operatora await jest stosowany później do uwzględnienia wiersze danych wyjściowych oznaczyć przepływu sterowania przez program.  
   
@@ -343,7 +333,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![Krok 5](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace 5")  
   
- `AccessTheWebAsync`Zwraca używa do ukończenia i kontroli do `startButton_Click`, która oczekuje na zakończenie.  
+ `AccessTheWebAsync` Zwraca używa do ukończenia i kontroli do `startButton_Click`, która oczekuje na zakończenie.  
   
 ### <a name="step-six"></a>Krok 6  
  Gdy `AccessTheWebAsync` sygnalizuje, że zakończeniu przetwarzania można kontynuować mimo instrukcja await w `startButton_Async`. W rzeczywistości program nie ma nic więcej robić.  

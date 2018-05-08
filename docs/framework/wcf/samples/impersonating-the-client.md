@@ -1,28 +1,16 @@
 ---
 title: Personifikowanie klienta
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>Personifikowanie klienta
 Personifikacja — przykład pokazuje, jak dokonać personifikacji aplikacji obiektu wywołującego w usłudze, aby usługa może uzyskiwać dostęp do zasobów systemu imieniu wywołującego.  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknach konsoli usługi i klienta. Naciśnij klawisz ENTER w każdym okna konsoli można zamknąć usługę i klienta.  
   
 > [!NOTE]
->  Usługa albo musi działać w ramach konta administratora lub konta, na którym zostanie uruchomiony w musi otrzymać uprawnienia do rejestrowania http://localhost: 8000/ServiceModelSamples identyfikatora URI z warstwą HTTP. Te prawa można udzielić, konfigurując [rezerwacji Namespace](http://go.microsoft.com/fwlink/?LinkId=95012) przy użyciu [narzędzia Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Usługę należy uruchomić przy użyciu konta administratora lub konta, zostanie uruchomiony w musi otrzymać uprawnienia do rejestrowania http://localhost:8000/ServiceModelSamples identyfikatora URI z warstwą HTTP. Te prawa można udzielić, konfigurując [rezerwacji Namespace](http://go.microsoft.com/fwlink/?LinkId=95012) przy użyciu [narzędzia Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  Na komputerach z systemem [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], personifikacja jest obsługiwana tylko wtedy, gdy aplikacja Host.exe ma uprawnienie do personifikacji. (Domyślnie tylko Administratorzy ma tych uprawnień). Aby dodać to uprawnienie do usługa jest uruchomiona jako konto, przejdź do **narzędzia administracyjne**, otwórz **zasady zabezpieczeń lokalnych**, otwórz **zasady lokalne**, kliknij przycisk **Przypisywanie praw użytkownika**i wybierz **Personifikuj klienta po uwierzytelnieniu** i kliknij dwukrotnie **właściwości** można dodać użytkownika lub grupę.  

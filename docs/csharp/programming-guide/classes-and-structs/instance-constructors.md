@@ -1,21 +1,15 @@
 ---
-title: "Konstruktory wystąpień (Przewodnik programowania w języku C#)"
+title: Konstruktory wystąpień (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: efb82128ffc27a7c065d2ba12bfc08396d3b5cf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5864511e6323ca1508494abfe2350e8eaffb6a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Konstruktory wystąpień (Przewodnik programowania w języku C#)
 Konstruktory wystąpień są używane do tworzenia i inicjowania żadnych zmiennych Członkowskich wystąpienia, korzystając z [nowe](../../../csharp/language-reference/keywords/new.md) wyrażenia do utworzenia obiektu [klasy](../../../csharp/language-reference/keywords/class.md). Zainicjować [statycznej](../../../csharp/language-reference/keywords/static.md) klasy lub statycznych zmiennych w klasie niestatyczna musi definiować konstruktora statycznego. Aby uzyskać więcej informacji, zobacz [konstruktory statyczne](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -67,4 +61,4 @@ Konstruktory wystąpień są używane do tworzenia i inicjowania żadnych zmienn
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
  [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [statyczne](../../../csharp/language-reference/keywords/static.md)
+ [static](../../../csharp/language-reference/keywords/static.md)

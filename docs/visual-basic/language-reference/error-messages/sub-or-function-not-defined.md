@@ -1,23 +1,14 @@
 ---
 title: Procedura lub funkcja nie jest zdefiniowana
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6237ca26b06bdffa06499607e634b3222725c189
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58e90d769d5a7f2d88b5c27d1ec7d0d28c8d7b03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Procedura lub funkcja nie jest zdefiniowana
 A `Sub` lub `Function` musi być zdefiniowana, aby można było można wywołać. Możliwe przyczyny tego błędu:  
@@ -39,7 +30,7 @@ A `Sub` lub `Function` musi być zdefiniowana, aby można było można wywołać
 3.  Sprawdź nazwę procedury.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../../visual-basic/programming-guide/language-features/error-types.md)  
+ [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)  
  [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)

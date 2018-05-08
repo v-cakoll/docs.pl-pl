@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Scenorysy"
-ms.custom: 
+title: Przegląd Scenorysy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 36922dce795443a4c1136f6442eff1c297f3c641
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storyboards-overview"></a>Przegląd Scenorysy
 W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation.Storyboard> obiekty do organizowania i zastosowania animacji. Opis interaktywnie manipulowania <xref:System.Windows.Media.Animation.Storyboard> obiektów oraz opis właściwości pośrednie przeznaczonych dla składni.  
@@ -38,7 +26,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
 ## <a name="what-is-a-storyboard"></a>Co to jest scenorysu?  
  Animacji nie są przydatne tylko typ osi czasu. Innych klas osi czasu są dostarczane, aby ułatwić organizowanie zestawy osi czasu i zastosować do właściwości osi czasu. Kontener osiach czasu pochodzi od <xref:System.Windows.Media.Animation.TimelineGroup> klasy, a obejmują <xref:System.Windows.Media.Animation.ParallelTimeline> i <xref:System.Windows.Media.Animation.Storyboard>.  
   
- A <xref:System.Windows.Media.Animation.Storyboard> jest typem oś czasu kontenera, która zawiera informacje o docelowych dla osi czasu, zawiera. Scenorysu może zawierać dowolne typy <xref:System.Windows.Media.Animation.Timeline>, oraz inne osiach czasu kontenera animacji. <xref:System.Windows.Media.Animation.Storyboard>obiekty umożliwiają łączenie osi czasu, które mają wpływ na wiele obiektów i właściwości w drzewie jedną oś czasu, co ułatwia organizowanie i kontrolowania zachowania złożonych chronometrażu. Na przykład załóżmy, że ma przycisku, który wykonuje te trzy elementy.  
+ A <xref:System.Windows.Media.Animation.Storyboard> jest typem oś czasu kontenera, która zawiera informacje o docelowych dla osi czasu, zawiera. Scenorysu może zawierać dowolne typy <xref:System.Windows.Media.Animation.Timeline>, oraz inne osiach czasu kontenera animacji. <xref:System.Windows.Media.Animation.Storyboard> obiekty umożliwiają łączenie osi czasu, które mają wpływ na wiele obiektów i właściwości w drzewie jedną oś czasu, co ułatwia organizowanie i kontrolowania zachowania złożonych chronometrażu. Na przykład załóżmy, że ma przycisku, który wykonuje te trzy elementy.  
   
 -   Wzrostu i rozwoju kolor, gdy użytkownik wybierze przycisk.  
   
@@ -46,7 +34,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
 -   Zmniejszanie i stopniowe do nieprzezroczystość 50 procent, gdy zostanie ona wyłączona.  
   
- W tym przypadku masz wiele zestawów animacji, które dotyczą tego samego obiektu, a ma być odtwarzany w różnym czasie, zależny od stanu przycisku. <xref:System.Windows.Media.Animation.Storyboard>obiekty umożliwiają organizowanie animacji i zastosować je w grupach co najmniej jeden obiekt.  
+ W tym przypadku masz wiele zestawów animacji, które dotyczą tego samego obiektu, a ma być odtwarzany w różnym czasie, zależny od stanu przycisku. <xref:System.Windows.Media.Animation.Storyboard> obiekty umożliwiają organizowanie animacji i zastosować je w grupach co najmniej jeden obiekt.  
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>Gdzie można użyć scenorysu?  
@@ -72,10 +60,10 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
 |Scenorysu rozpoczyna się przy użyciu...|Na wystąpienia|Styl|Szablon formantu|Szablon danych|Przykład|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>i<xref:System.Windows.EventTrigger>|Tak|Tak|Tak|Tak|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>i właściwości<xref:System.Windows.Trigger>|Nie|Tak|Tak|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>a<xref:System.Windows.DataTrigger>|Nie|Tak|Tak|Tak|[Porady: wyzwalanie animacji po zmianie danych](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>— Metoda|Tak|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Tak|Tak|Tak|Tak|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Tak|Tak|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Tak|Tak|Tak|[Porady: wyzwalanie animacji po zmianie danych](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — Metoda|Tak|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.Storyboard> do animowania <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> elementu i <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> używany do rysowania, który <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -107,7 +95,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable>typy tych klas, które dziedziczą z <xref:System.Windows.Freezable> klasy. Przykłady <xref:System.Windows.Freezable> obejmują <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, i <xref:System.Windows.Media.GradientStop>.  
+ <xref:System.Windows.Freezable> typy tych klas, które dziedziczą z <xref:System.Windows.Freezable> klasy. Przykłady <xref:System.Windows.Freezable> obejmują <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, i <xref:System.Windows.Media.GradientStop>.  
   
  Aby włączyć wartości docelowej <xref:System.Windows.Freezable> przez animacji w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [x: Name — dyrektywa](../../../../docs/framework/xaml-services/x-name-directive.md) go przypisać nazwę. W kodzie, użyj <xref:System.Windows.NameScope.RegisterName%2A> metodę, aby zarejestrować swojej nazwy elementu, dla którego utworzono <xref:System.Windows.NameScope>.  
   
@@ -123,7 +111,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard>obiekty używają obszarów nazw, aby rozwiązać <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> właściwości. Aby uzyskać więcej informacji na temat obszarów nazw WPF, zobacz [WPF XAML Namescopes](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Jeśli <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> właściwość została pominięta, animacji celem element, na którym jest zdefiniowany lub, w przypadku style, styl elementu.  
+ <xref:System.Windows.Media.Animation.Storyboard> obiekty używają obszarów nazw, aby rozwiązać <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> właściwości. Aby uzyskać więcej informacji na temat obszarów nazw WPF, zobacz [WPF XAML Namescopes](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Jeśli <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> właściwość została pominięta, animacji celem element, na którym jest zdefiniowany lub, w przypadku style, styl elementu.  
   
  Czasami nie można przypisać nazwy do <xref:System.Windows.Freezable> obiektu. Na przykład jeśli <xref:System.Windows.Freezable> jest zadeklarowany jako zasób lub używany do ustawiania wartości właściwości w stylu, nie można nadać nazwy. Ponieważ nie ma nazwy, nie może być celem bezpośrednio, ale może być celem pośrednio. W poniższych sekcjach opisano, jak korzystać z pośrednich elementów docelowych.  
   
@@ -157,7 +145,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
  Poniższy kod przedstawia sposób animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> służy do określania  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A>elementu prostokąta.  
+ <xref:System.Windows.Shapes.Shape.Fill%2A> elementu prostokąta.  
   
  [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
@@ -193,7 +181,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
 ||  
 |-|  
-|`(`*OwnerPropertyArrayIndex* `).(` *FreezablePropertyArrayIndex*`)`|  
+|`(` *OwnerPropertyArrayIndex* `).(` *FreezablePropertyArrayIndex* `)`|  
   
  Gdzie  
   
@@ -217,7 +205,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
 ||  
 |-|  
-|`(`*OwnerPropertyArrayIndex* `).(` *CollectionChildrenPropertyArrayIndex* `)` `[` *CollectionIndex* `].(` *FreezablePropertyArrayIndex*`)`|  
+|`(` *OwnerPropertyArrayIndex* `).(` *CollectionChildrenPropertyArrayIndex* `)` `[` *CollectionIndex* `].(` *FreezablePropertyArrayIndex* `)`|  
   
  Gdzie *CollectionIndex* jest indeks obiektu w kolekcji lub tablicy.  
   
@@ -234,7 +222,7 @@ W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Kontrolowanie interaktywnie scenorysu w języku XAML  
- Aby uruchomić scenorysu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], możesz użyć <xref:System.Windows.Media.Animation.BeginStoryboard> akcja wyzwalacza. <xref:System.Windows.Media.Animation.BeginStoryboard>dystrybuuje animacje obiektów i właściwości animacji i uruchamia scenorysu. (Aby uzyskać szczegółowe informacje o tym procesie, zobacz [animacji i Przegląd systemu chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Jeśli zostanie nadana <xref:System.Windows.Media.Animation.BeginStoryboard> nazwę przez określenie jego <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> właściwości, można ustawić, którymi można sterować scenorysu. Użytkownik może interakcyjnie wybrać scenorysu po jej uruchomieniu. Poniżej znajduje się lista akcji sterowane scenorysu korzystać z wyzwalaczy zdarzeń do kontrolowania scenorysu.  
+ Aby uruchomić scenorysu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], możesz użyć <xref:System.Windows.Media.Animation.BeginStoryboard> akcja wyzwalacza. <xref:System.Windows.Media.Animation.BeginStoryboard> dystrybuuje animacje obiektów i właściwości animacji i uruchamia scenorysu. (Aby uzyskać szczegółowe informacje o tym procesie, zobacz [animacji i Przegląd systemu chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Jeśli zostanie nadana <xref:System.Windows.Media.Animation.BeginStoryboard> nazwę przez określenie jego <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> właściwości, można ustawić, którymi można sterować scenorysu. Użytkownik może interakcyjnie wybrać scenorysu po jej uruchomieniu. Poniżej znajduje się lista akcji sterowane scenorysu korzystać z wyzwalaczy zdarzeń do kontrolowania scenorysu.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Wstrzymuje scenorysu.  
   

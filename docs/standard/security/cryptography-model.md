@@ -1,29 +1,18 @@
 ---
 title: Model kryptografii programu .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 842ebbe9104463a3c75f01f41a4fe5953b95303d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ced7ed2cb8d3ae3bb24211c6e7dafd1744fb9559
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-cryptography-model"></a>Model kryptografii programu .NET Framework
 .NET Framework zapewnia implementacji wiele standardowych algorytmów kryptograficznych. Algorytmy te są łatwe w użyciu i mieć najbezpieczniejszy możliwe domyślnych właściwości. Ponadto model kryptografii .NET Framework dziedziczenia obiektu, strumienia projektowania i konfiguracji jest bardzo rozszerzonego.  
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/23/2017
   
 5.  <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes>jest dziedziczona przez dwie klasy: <xref:System.Security.Cryptography.AesCryptoServiceProvider> i <xref:System.Security.Cryptography.AesManaged>. <xref:System.Security.Cryptography.AesCryptoServiceProvider> Klasy jest otokę implementacji interfejsu API kryptografii systemu Windows (CAPI) Aes, podczas gdy <xref:System.Security.Cryptography.AesManaged> klasy są zapisywane w całości kodu zarządzanego. Istnieje również trzeci typ implementacji kryptografii nowej generacji (CNG), w implementacji CAPI i dodanie do zarządzanej. Przykładem jest algorytm CNG jest <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Algorytmy CNG są dostępne w systemie Windows Vista lub nowszy.  
+ <xref:System.Security.Cryptography.Aes> jest dziedziczona przez dwie klasy: <xref:System.Security.Cryptography.AesCryptoServiceProvider> i <xref:System.Security.Cryptography.AesManaged>. <xref:System.Security.Cryptography.AesCryptoServiceProvider> Klasy jest otokę implementacji interfejsu API kryptografii systemu Windows (CAPI) Aes, podczas gdy <xref:System.Security.Cryptography.AesManaged> klasy są zapisywane w całości kodu zarządzanego. Istnieje również trzeci typ implementacji kryptografii nowej generacji (CNG), w implementacji CAPI i dodanie do zarządzanej. Przykładem jest algorytm CNG jest <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Algorytmy CNG są dostępne w systemie Windows Vista lub nowszy.  
   
  Można wybrać, którego implementacja jest najlepsze dla Ciebie.  Implementacje zarządzane są dostępne na wszystkich platformach, które obsługuje programu .NET Framework.  Implementacje CAPI są dostępne w starszych systemach operacyjnych i są już tworzone. CNG jest implementacją najnowszych, gdzie nastąpi nowych wdrożeń. Jednak zarządzanych implementacji nie zostały zatwierdzone przez przetwarzanie standardami FIPS (Federal Information) i może być mniejsza niż klasy otoki.  
   

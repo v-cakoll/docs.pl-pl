@@ -1,24 +1,14 @@
 ---
 title: Element &lt;TypeInstantiation&gt; (architektura .NET Native)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5dc19038af220cca63417a331a37d4a7d3b9f96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30802eff0b960c2a19e5cebb4757bfeff809d322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Element &lt;TypeInstantiation&gt; (architektura .NET Native)
 Zastosowanie zasad wykonywania odbicia do skonstruowanego typu ogólnego.  
@@ -88,7 +78,7 @@ Zastosowanie zasad wykonywania odbicia do skonstruowanego typu ogólnego.
 |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Stosuje zasady odbicia do metody należących do tego typu.|  
 |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego metody rodzajowej należących do tego typu.|  
 |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)|Stosuje zasady odbicia właściwości należących do tego typu.|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu zagnieżdżonego.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu zagnieżdżonego.|  
 |`<TypeInstantiation>`|Stosuje zasady odbicia do skonstruowanego typu zagnieżdżonego ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -96,10 +86,10 @@ Zastosowanie zasad wykonywania odbicia do skonstruowanego typu ogólnego.
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|  
-|[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w określonym zestawie.|  
+|[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w określonym zestawie.|  
 |[\<Biblioteka >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w przestrzeni nazw.|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu i jej elementów członkowskich.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w przestrzeni nazw.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu i jej elementów członkowskich.|  
 |`<TypeInstantiation>`|Stosuje zasady odbicia do skonstruowanego typu ogólnego i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  

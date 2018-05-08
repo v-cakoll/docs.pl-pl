@@ -1,27 +1,15 @@
 ---
 title: Zaufany podsystem
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-subsystem"></a>Zaufany podsystem
 Klient uzyskuje dostęp do usług sieci Web, które są rozproszone w sieci. Usługi sieci Web są zaprojektowane, że dostęp do dodatkowych zasobów (np. baz danych lub innych usług sieci Web) jest hermetyzowany logiki biznesowej usługi sieci Web. Te zasoby muszą być chronione przed nieautoryzowanym dostępem. Poniższa ilustracja przedstawia proces zaufany podsystem.  
@@ -43,13 +31,13 @@ Klient uzyskuje dostęp do usług sieci Web, które są rozproszone w sieci. Us�
 |Cechy|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Komunikat|  
-|Współdziałanie|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]tylko.|  
+|Współdziałanie|Windows Communication Foundation (WCF) tylko.|  
 |Uwierzytelnianie (usługa)|Usługa tokenu zabezpieczającego uwierzytelnia i autoryzuje klientów.|  
 |Uwierzytelnianie (klient)|Zaufany podsystem umożliwiają uwierzytelnienie klienta a zasobu usługi zaufany podsystem.|  
 |Integralność|Tak|  
 |Poufność|Tak|  
 |Transportu|Protokół HTTP między klientem a usługą zaufany podsystem.<br /><br /> NET. TCP między usługą zaufany podsystem i zasobów (usługi zaplecza).|  
-|Powiązanie|<xref:System.ServiceModel.WSHttpBinding>i <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Powiązanie|<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Zasobu (usługa zaplecza)  
   

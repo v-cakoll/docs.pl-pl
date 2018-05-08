@@ -1,11 +1,7 @@
 ---
-title: "Funkcja GetPropertyHandle (niezarządzany wykaz interfejsów API)"
-description: "Funkcja GetPropertyHandle zwraca uchwyt unikatowy tej właściwości tożsamości."
+title: Funkcja GetPropertyHandle (niezarządzany wykaz interfejsów API)
+description: Funkcja GetPropertyHandle zwraca uchwyt unikatowy tej właściwości tożsamości.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyHandle
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3af852fb4b9899a7937f288ffb65d8ca84e4aef1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyhandle-function"></a>Funkcja GetPropertyHandle
 Zwraca unikatowy dojścia identyfikujący właściwości.
@@ -87,7 +80,7 @@ Uchwyty można pobrać właściwości wszystkich typów danych innych niż `CIM_
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

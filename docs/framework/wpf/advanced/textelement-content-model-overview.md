@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Model zawartości TextElement"
-ms.custom: 
+title: Przegląd Model zawartości TextElement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textelement-content-model-overview"></a>Przegląd Model zawartości TextElement
 To omówienie modelu zawartości w tym artykule opisano obsługiwane zawartość <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Klasa jest elementem typu <xref:System.Windows.Documents.TextElement>. Model zawartości opisano, jakie obiekty/elementy mogą być zawarte w innym. W tym omówieniu przedstawiono modelu zawartości używana dla obiektów pochodzących od <xref:System.Windows.Documents.TextElement>. Aby uzyskać więcej informacji, zobacz [przepływ dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
@@ -49,7 +37,7 @@ To omówienie modelu zawartości w tym artykule opisano obsługiwane zawartość
   
 2.  Zgodnie z diagramu, dostępnych jest kilka <xref:System.Windows.Documents.Block> elementów do wyboru w tym <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, i <xref:System.Windows.Documents.BlockUIContainer> (zobacz klas pochodnych bloku we wcześniejszym diagramie). Załóżmy, że chcemy <xref:System.Windows.Documents.Table>. Zgodnie z wcześniejszym diagramie <xref:System.Windows.Documents.Table> zawiera <xref:System.Windows.Documents.TableRowGroup> zawierający <xref:System.Windows.Documents.TableRow> elementów, które zawierają <xref:System.Windows.Documents.TableCell> elementy, które zawierają <xref:System.Windows.Documents.Block>-pochodzi z obiektu. Poniżej przedstawiono odpowiadającym segmencie dla <xref:System.Windows.Documents.Table> pobranych z wcześniejszym diagramie.  
   
-     ![Diagram: Nadrzędnego &#47; schemat tabeli podrzędnej](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
+     ![Diagram: Nadrzędnego&#47;schemat tabeli podrzędnej](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
      Poniżej znajduje się odpowiedni kod znaczników.  
   
@@ -57,9 +45,9 @@ To omówienie modelu zawartości w tym artykule opisano obsługiwane zawartość
   
 3.  Ponownie co najmniej jeden <xref:System.Windows.Documents.Block> elementy są wymagane poniżej <xref:System.Windows.Documents.TableCell>. Aby był prosty, możemy umieścić tekst wewnątrz komórki. Firma Microsoft może to zrobić za pomocą <xref:System.Windows.Documents.Paragraph> z <xref:System.Windows.Documents.Run> elementu. Poniżej przedstawiono odpowiednich segmentów z diagram przedstawiający <xref:System.Windows.Documents.Paragraph> może zająć <xref:System.Windows.Documents.Inline> elementu oraz że <xref:System.Windows.Documents.Run> ( <xref:System.Windows.Documents.Inline> element) przyjmuje tylko zwykły tekst.  
   
-     ![Diagram: Nadrzędnego &#47; schematu podrzędnych akapitu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
+     ![Diagram: Nadrzędnego&#47;schematu podrzędnych akapitu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
-     ![Diagramu: Nadrzędny &#47; Schemat element podrzędny dla przebiegu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
+     ![Diagram: Nadrzędnego&#47;podrzędnych schematu dla przebiegu](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
   
  Poniżej znajduje się cały przykładowy w znaczniku.  
   
@@ -69,9 +57,9 @@ To omówienie modelu zawartości w tym artykule opisano obsługiwane zawartość
 ## <a name="working-with-textelement-content-programmatically"></a>Praca z zawartością elementu TextElement programowo  
  Zawartość <xref:System.Windows.Documents.TextElement> składa się przez kolekcje i dlatego programowo manipulowanie zawartość <xref:System.Windows.Documents.TextElement> obiektów polega na stosowaniu tych kolekcji. Istnieją trzy różne kolekcje używane przez <xref:System.Windows.Documents.TextElement> -klas pochodnych:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Inline> elementów. <xref:System.Windows.Documents.InlineCollection>Definiuje podrzędne dozwolone zawartości <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, i <xref:System.Windows.Controls.TextBlock> elementy.  
+-   <xref:System.Windows.Documents.InlineCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Inline> elementów. <xref:System.Windows.Documents.InlineCollection> Definiuje podrzędne dozwolone zawartości <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, i <xref:System.Windows.Controls.TextBlock> elementy.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Block> elementów. <xref:System.Windows.Documents.BlockCollection>Definiuje podrzędne dozwolone zawartości <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, i <xref:System.Windows.Documents.Figure> elementy.  
+-   <xref:System.Windows.Documents.BlockCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Block> elementów. <xref:System.Windows.Documents.BlockCollection> Definiuje podrzędne dozwolone zawartości <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, i <xref:System.Windows.Documents.Figure> elementy.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Przepływ elementu zawartości odpowiadającego danego elementu zawartości w uporządkowanej reprezentuje lub nieuporządkowaną <xref:System.Windows.Documents.List>.  
   

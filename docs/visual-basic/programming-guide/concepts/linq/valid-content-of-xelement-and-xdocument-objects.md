@@ -1,22 +1,12 @@
 ---
-title: "Nieprawidłowa zawartość klasy XElement i Objects2 klasy XDocument"
-ms.custom: 
+title: Nieprawidłowa zawartość klasy XElement i Objects2 klasy XDocument
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5093ef1c2974bcb980d97d4839af35bb69044a90
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4b1d588f0ebbfec6d5cf7a58b63f92005db75acc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Nieprawidłowa zawartość klasy XElement i obiektów klasy XDocument
 W tym temacie opisano nieprawidłowe argumenty, które mogą zostać przekazane do konstruktorów i metod, które umożliwia dodawanie zawartości do elementów i dokumentów.  
@@ -54,7 +44,7 @@ W tym temacie opisano nieprawidłowe argumenty, które mogą zostać przekazane 
   
 -   <xref:System.Xml.Linq.XAttribute>  
   
--   Dowolnego typu, który implementuje<xref:System.Collections.Generic.IEnumerable%601>  
+-   Dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>  
   
  Jeśli obiekt implementuje <xref:System.Collections.Generic.IEnumerable%601>wyliczeniu kolekcji w obiekcie i zostaną dodane wszystkie elementy w kolekcji. Jeśli kolekcja zawiera <xref:System.Xml.Linq.XNode> lub <xref:System.Xml.Linq.XAttribute> obiekty oddzielnie dodaniu każdego elementu w kolekcji. Jeśli kolekcja zawiera tekst (lub obiektów, które są konwertowane na tekst), tekst w kolekcji jest połączony i dodać jako węzeł jeden tekst.  
   

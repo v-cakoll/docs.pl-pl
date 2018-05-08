@@ -1,27 +1,15 @@
 ---
 title: HttpCookieSession
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-W tym przykładzie pokazano, jak zbudować kanału używać plików cookie protokołu HTTP do zarządzania sesji protokołu niestandardowego. Ten kanał umożliwia komunikację między [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług i klientów ASMX lub między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi ASMX i klientami.  
+W tym przykładzie pokazano, jak zbudować kanału używać plików cookie protokołu HTTP do zarządzania sesji protokołu niestandardowego. Ten kanał umożliwia komunikację między usług Windows Communication Foundation (WCF) i ASMX klientów lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi ASMX i klientami.  
   
  Kiedy klient wywołuje metody sieci Web w usługi sieci Web ASMX które jest oparte na sesji, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aparat wykonuje następujące czynności:  
   
@@ -40,7 +28,7 @@ W tym przykładzie pokazano, jak zbudować kanału używać plików cookie proto
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -94,7 +82,7 @@ InputQueue<RequestContext> requestQueue;
  Odpowiedni kanał klienta jest `HttpCookieSessionChannelFactory` klasy. Podczas tworzenia kanału fabryki kanałów opakowuje kanału wewnętrznego żądania z `HttpCookieRequestSessionChannel`. `HttpCookieRequestSessionChannel` Klasy przekazuje wywołań podstawowy kanał żądania. Jeśli klient zamyka serwera proxy, `HttpCookieRequestSessionChannel` wysyła komunikat do usługi, która wskazuje, że zamknięcie kanału. W związku z tym stosu kanału usługi można bezpiecznie zamknięcia kanału sesji, który jest używany.  
   
 ## <a name="binding-and-binding-element"></a>Powiązanie i Element powiązania  
- Po utworzeniu usługa i klient kanały, następnym krokiem jest ich do integracji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska wykonawczego. Kanały są widoczne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] za pośrednictwem powiązania i elementy powiązań. Powiązanie składa się z jednego lub wielu elementów powiązania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferuje kilka powiązań zdefiniowanych przez system; na przykład klasy BasicHttpBinding lub WSHttpBinding albo obsługę. `HttpCookieSessionBindingElement` Klasa zawiera implementację elementu powiązania. Zastępuje ona, czy niezbędne kanału wystąpień fabryki odbiornika lub kanału odbiornika kanałów i metod tworzenia fabryki kanału.  
+ Po utworzeniu usługa i klient kanały, następnym krokiem jest ich do integracji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska wykonawczego. Kanały są widoczne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] za pośrednictwem powiązania i elementy powiązań. Powiązanie składa się z jednego lub wielu elementów powiązania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferuje kilka powiązań zdefiniowanych przez system; na przykład klasy BasicHttpBinding lub WSHttpBinding albo obsługę. `HttpCookieSessionBindingElement` Klasa zawiera implementację elementu powiązania. Zastępuje ona, czy niezbędne kanału wystąpień fabryki odbiornika lub kanału odbiornika kanałów i metod tworzenia fabryki kanału.  
   
  W przykładzie użyto potwierdzeń zasad opisu usługi. Umożliwia to przykład, aby opublikować jej wymagań dotyczących kanału do innych klientów, którzy mogą korzystać z usługi. Na przykład ten element powiązania publikuje potwierdzeń zasad, aby umożliwić klientom potencjalnych wiedzieć, że aplikacja obsługuje sesji. Ponieważ próbki pozwala `ExchangeTerminateMessage` właściwości w Konfiguracja elementu powiązania, dodaje potwierdzenia niezbędne, aby pokazać, że usługa obsługuje akcję wymiany wiadomości dodatkowe zakończenie sesji konwersacji. Klienci mogą następnie użyj tej akcji. Poniższy kod WSDL przedstawia potwierdzenia zasady utworzone na podstawie `HttpCookieSessionBindingElement`.  
   

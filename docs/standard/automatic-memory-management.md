@@ -1,13 +1,7 @@
 ---
-title: "Automatyczne zarządzanie pamięcią"
-ms.custom: 
+title: Automatyczne zarządzanie pamięcią
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - garbage collection, automatic memory management
 - memory, allocating
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5405b6fc080696b7e507e70dd8b04f8ddcc4bbb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9f81db46c20b27517968078c96f9eb484a1aedec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 Automatyczne zarządzanie pamięcią jest jednym z usług, które udostępnia środowisko uruchomieniowe języka wspólnego [zarządzane wykonywania](../../docs/standard/managed-execution-process.md). Środowisko uruchomieniowe języka wspólnego przez moduł Garbage Collector zarządza alokacji i wersji pamięci dla aplikacji. Z perspektywy deweloperów oznacza to, że podczas tworzenia zarządzanych aplikacji nie trzeba pisać kodu wykonującego zadania zarządzania pamięcią. Funkcjonalność automatycznego zarządzania pamięcią może wyeliminować typowe problemy, takie jak zapominanie o zwalnianiu obiektów z pamięci, powodowanie przecieków pamięci czy próba uzyskania dostępu do pamięci dla obiektu, który został już zwolniony z pamięci. W tej części opisano, jak moduł odśmiecania pamięci przydziela i zwalnia pamięć.  

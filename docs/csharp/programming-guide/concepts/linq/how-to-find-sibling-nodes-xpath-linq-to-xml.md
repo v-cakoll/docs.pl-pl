@@ -1,21 +1,12 @@
 ---
-title: "Porady: znajdowanie węzłami tego samego poziomu (XPath-LINQ do XML) (C#)"
-ms.custom: 
+title: 'Porady: znajdowanie węzłami tego samego poziomu (XPath-LINQ do XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 65965ef1a5e24a6356bb90d3439d5ccb0dc74f86
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a448be9d86f9f2e2f85d45f9bc1f019b3f72305c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Porady: znajdowanie węzłami tego samego poziomu (XPath-LINQ do XML) (C#)
 Można znaleźć wszystkich elementów równorzędnych węzła, które ma określoną nazwę. Wynikowa kolekcji może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.  

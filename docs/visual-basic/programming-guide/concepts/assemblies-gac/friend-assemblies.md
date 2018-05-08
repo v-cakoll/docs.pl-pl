@@ -1,22 +1,12 @@
 ---
 title: Przyjazne zestawy (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3a37629582e4fc2606afaf606735464c0d247a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 91bc33f33c4fc34c6e0f3ae197ecd2b876161de3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-visual-basic"></a>Przyjazne zestawy (Visual Basic)
 A *przyjaznego zestawu* jest zestawie, do którego mogą uzyskać dostęp do innego zestawu [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) typy i składniki. Po zidentyfikowaniu zestawu jako zestawu friend, masz już Oznacz typy i składniki jako public je, aby były dostępne dla innych zestawów. Jest to szczególnie wygodne w następujących scenariuszach:  
@@ -65,7 +55,7 @@ End Class
   
  <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasa udostępnia także możliwość udostępniania typów, z następującymi różnicami:  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission>dotyczy poszczególnych typu przyjaznego zestawu dotyczy całego zestawu.  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission> dotyczy poszczególnych typu przyjaznego zestawu dotyczy całego zestawu.  
   
 -   Jeśli istnieją setki typów w zestawie *A* , który ma zostać udostępniona w zestawie *B*, należy dodać <xref:System.Security.Permissions.StrongNameIdentityPermission> do wszystkich z nich. Jeśli używasz przyjaznego zestawu, wystarczy raz zadeklarować relacji friend.  
   
@@ -79,4 +69,4 @@ End Class
  [Porady: tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [Porady: tworzenie oznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
  [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Koncepcje programowania](../../../../visual-basic/programming-guide/concepts/index.md)
+ [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)

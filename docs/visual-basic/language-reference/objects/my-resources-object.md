@@ -1,11 +1,6 @@
 ---
-title: "My.Resources — Obiekt"
+title: My.Resources — Obiekt
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
@@ -13,14 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9fd23cb119ff9148a45d32ec70ccc4dad08ab876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myresources-object"></a>My.Resources — Obiekt
 Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji.  
@@ -51,7 +43,7 @@ Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji
 |**Obrazy**|<xref:System.Drawing.Bitmap>|  
 |**Ikony**|<xref:System.Drawing.Icon>|  
 |**Audio**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> Pochodną klasy <xref:System.IO.Stream> klasy, więc można go użyć z metod, które przyjmują strumieni, takie jak <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> metody.|  
-|**Pliki**|-   [Ciąg](../../../visual-basic/language-reference/data-types/string-data-type.md) w przypadku plików tekstowych.<br />-   <xref:System.Drawing.Bitmap>w przypadku plików obrazu.<br />-   <xref:System.Drawing.Icon>Ikona plików.<br />-   <xref:System.IO.UnmanagedMemoryStream>w przypadku plików dźwięku.|  
+|**Pliki**|-   [Ciąg](../../../visual-basic/language-reference/data-types/string-data-type.md) w przypadku plików tekstowych.<br />-   <xref:System.Drawing.Bitmap> w przypadku plików obrazu.<br />-   <xref:System.Drawing.Icon> Ikona plików.<br />-   <xref:System.IO.UnmanagedMemoryStream> w przypadku plików dźwięku.|  
 |**Inne**|Zależą od informacji w Projektancie **typu** kolumny.|  
   
 ## <a name="classes"></a>Klasy  

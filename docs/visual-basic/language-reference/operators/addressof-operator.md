@@ -1,11 +1,6 @@
 ---
-title: "AddressOf — Operator (Visual Basic)"
+title: AddressOf — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - AddressOf
 - vb.AddressOf
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52560a2d9071373fd28f7aad2e485da08324656d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c229c32a3b295b4dbfe50ca2abc60d4ad5f2145
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf — Operator (Visual Basic)
 Tworzy wystąpienia delegata procedury, która odwołuje się do określonej procedury.  
@@ -33,7 +25,7 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Części  
  `procedurename`  
- Wymagany. Określa procedurę, aby odwoływać się procedury nowo utworzonego obiektu delegowanego.  
+ Wymagana. Określa procedurę, aby odwoływać się procedury nowo utworzonego obiektu delegowanego.  
   
 ## <a name="remarks"></a>Uwagi  
  `AddressOf` Operator tworzy delegata funkcji, które wskazuje funkcji określonej przez `procedurename`. Gdy określonej procedury jest metodą wystąpienia następnie delegata funkcji odwołuje się do wystąpienia i metody. Następnie gdy jest wywoływany delegat funkcji określonej metody określone wystąpienie jest wywoływana.  
@@ -51,7 +43,7 @@ AddressOf procedurename
  [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_2.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [DECLARE — instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Obiekty delegowane](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+ [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Delegaci](../../../visual-basic/programming-guide/language-features/delegates/index.md)

@@ -1,27 +1,15 @@
 ---
-title: "ClearType — Przegląd"
-ms.custom: 
+title: ClearType — Przegląd
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eaeeeee921ac5cda3a4ce09dd3ebaeeb11aea3f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d434fa913d077d72f0f889dc69eccc8a9ed0e9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
 Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] technologii znalezione w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -29,7 +17,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharp
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]jest to technologia oprogramowania opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] która poprawia czytelność tekstu w istniejących LCDs (należy zmienić.), takie jak ekranów komputerów przenośnych, Pocket PC ekrany i prosty monitory.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]Uzyskiwanie dostępu do elementów usługi stripe poszczególnych pionowy kolorów w każdym pikselu ciekłokrystalicznym utworów. Przed [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], najmniejszą poziom szczegółowości, który komputer można wyświetlić został pojedynczego piksela, ale [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] uruchomione na monitorze LCD, można teraz wyświetlany funkcje jak część piksel tekstu szerokości. Dodatkowe rozpoznawania zwiększa ostrość szczegóły niewielki rozmiar wyświetlania tekstu, co znacznie ułatwia odczytanie przez długi czas trwania.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowania opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] która poprawia czytelność tekstu w istniejących LCDs (należy zmienić.), takie jak ekranów komputerów przenośnych, Pocket PC ekrany i prosty monitory.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Uzyskiwanie dostępu do elementów usługi stripe poszczególnych pionowy kolorów w każdym pikselu ciekłokrystalicznym utworów. Przed [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], najmniejszą poziom szczegółowości, który komputer można wyświetlić został pojedynczego piksela, ale [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] uruchomione na monitorze LCD, można teraz wyświetlany funkcje jak część piksel tekstu szerokości. Dodatkowe rozpoznawania zwiększa ostrość szczegóły niewielki rozmiar wyświetlania tekstu, co znacznie ułatwia odczytanie przez długi czas trwania.  
   
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Dostępne w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] najnowszej generacji [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] która zawiera kilka ulepszeń w wersji [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)].  
   
@@ -56,18 +44,18 @@ Tekst z wcześniejszych i jego nowsze wersje ClearType
  ![Tekst na krawędzi nieregularne na krzywe skrócona](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Tekst na krawędzi nieregularne na skrócona krzywych  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia antialiasingu na poziomie kierunku y wygładzania się żadnych nieregularne krawędzi. Jest to szczególnie ważne w przypadku Poprawa czytelności języków wschodnioazjatyckich, gdzie ideogramami mają w przybliżeniu równe ilość poziome i pionowe krzywych skrócona.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia antialiasingu na poziomie kierunku y wygładzania się żadnych nieregularne krawędzi. Jest to szczególnie ważne w przypadku Poprawa czytelności języków wschodnioazjatyckich, gdzie ideogramami mają w przybliżeniu równe ilość poziome i pionowe krzywych skrócona.  
   
  W poniższym przykładzie przedstawiono wpływ antialiasingu kierunku y. W takim przypadku to krzywa Pokaż górny i dolny litery.  
   
- ![Tekst z & ClearType y 45; kierunek anty &#45; aliasów](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Tekst ClearType y&#45;kierunek anty&#45;aliasów](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Tekst z ClearType antialiasingu kierunku y  
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>Przyspieszanie sprzętowe  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] można wykorzystać przyspieszanie sprzętowe w celu poprawy wydajności i zmniejszenia wymagania pamięci systemu i obciążenia Procesora. Przy użyciu programów do cieniowania pikseli i pamięci wideo karty grafiki, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] zapewnia szybsze renderowanie tekstu, szczególnie w przypadku, gdy jest używana animacja.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] można wykorzystać przyspieszanie sprzętowe w celu poprawy wydajności i zmniejszenia wymagania pamięci systemu i obciążenia Procesora. Przy użyciu programów do cieniowania pikseli i pamięci wideo karty grafiki, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] zapewnia szybsze renderowanie tekstu, szczególnie w przypadku, gdy jest używana animacja.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje całego systemu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawienia. Wyłączanie [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ustawia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] antialiasingu tryb skali szarości. Ponadto [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje ustawienia [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje całego systemu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawienia. Wyłączanie [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ustawia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] antialiasingu tryb skali szarości. Ponadto [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie modyfikuje ustawienia [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Jeden z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] decyzji dotyczących projektowania architektonicznego ma mieć niezależne układu lepszej obsługi wyższej rozdzielczości DPI monitory, które stają się coraz bardziej rozpowszechnione rozpoznawania. To ustawienie konsekwencją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nie obsługuje aliasem renderowanie tekstu i mapy bitowej w niektórych czcionki wschodnioazjatyckie ponieważ są one zarówno zależna od rozdzielczości.  
   

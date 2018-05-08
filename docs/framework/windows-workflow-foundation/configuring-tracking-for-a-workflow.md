@@ -1,32 +1,21 @@
 ---
-title: "Konfigurowanie śledzenia przepływu pracy"
-ms.custom: 
+title: Konfigurowanie śledzenia przepływu pracy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurowanie śledzenia przepływu pracy
 Przepływ pracy można wykonać na trzy sposoby:  
   
--   Obsługiwane w<xref:System.ServiceModel.Activities.WorkflowServiceHost>  
+-   Obsługiwane w <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
--   Wykonane jako<xref:System.Activities.WorkflowApplication>  
+-   Wykonane jako <xref:System.Activities.WorkflowApplication>  
   
--   Posługując się bezpośrednio<xref:System.Activities.WorkflowInvoker>  
+-   Posługując się bezpośrednio <xref:System.Activities.WorkflowInvoker>  
   
  W zależności od opcji obsługi przepływu pracy można dodać uczestnika śledzenia za pośrednictwem kodu lub pliku konfiguracji. W tym temacie opisano konfiguracji śledzenia, dodając śledzenie uczestnika do <xref:System.Activities.WorkflowApplication> i <xref:System.ServiceModel.Activities.WorkflowServiceHost>i jak włączyć śledzenie, korzystając z <xref:System.Activities.WorkflowInvoker>.  
   
@@ -57,7 +46,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>Konfigurowanie śledzenia usługi przepływu pracy  
- Przepływ pracy może być udostępniany jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, jeśli jest przeprowadzana w <xref:System.ServiceModel.Activities.WorkflowServiceHost> hosta usługi. <xref:System.ServiceModel.Activities.WorkflowServiceHost>to specjalne implementacja .NET ServiceHost dla usługi opartej na przepływie pracy. W tej sekcji opisano sposób konfigurowania śledzenia dla [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] usługi przepływu pracy uruchomionych w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest skonfigurowany za pomocą pliku Web.config (dla usługi sieci Web hostowanych) lub plik App.config (dla usługi hostowanej w autonomicznej aplikacji, na przykład aplikacji konsoli), określając zachowanie usługi lub za pomocą kodu dodając zachowanie specyficzne dla śledzenia w celu <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> kolekcji hosta usługi.  
+ Przepływ pracy może być udostępniany jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, jeśli jest przeprowadzana w <xref:System.ServiceModel.Activities.WorkflowServiceHost> hosta usługi. <xref:System.ServiceModel.Activities.WorkflowServiceHost> to specjalne implementacja .NET ServiceHost dla usługi opartej na przepływie pracy. W tej sekcji opisano sposób konfigurowania śledzenia dla [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] usługi przepływu pracy uruchomionych w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest skonfigurowany za pomocą pliku Web.config (dla usługi sieci Web hostowanych) lub plik App.config (dla usługi hostowanej w autonomicznej aplikacji, na przykład aplikacji konsoli), określając zachowanie usługi lub za pomocą kodu dodając zachowanie specyficzne dla śledzenia w celu <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> kolekcji hosta usługi.  
   
  Dla usługi przepływu pracy hostowanych w <xref:System.ServiceModel.WorkflowServiceHost>, możesz dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu <`behavior`> w pliku konfiguracji, jak pokazano w poniższym przykładzie.  
   
@@ -156,7 +145,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Wyświetlanie rekordów w Podglądzie zdarzeń śledzenia  
- Istnieją dwa dzienniki Podglądu zdarzeń szczególne znaczenie widoku, gdy śledzenie wykonywanie WF — analityczne dziennika i dzienników debugowania. Zarówno znajdują się w usłudze Microsoft &#124; Windows &#124; Węzeł aplikacji serwera aplikacji.  Dzienniki w tej sekcji zawierają zdarzenia z jednej aplikacji zamiast zdarzenia, które mają wpływ na cały system.  
+ Istnieją dwa dzienniki Podglądu zdarzeń szczególne znaczenie widoku, gdy śledzenie wykonywanie WF — analityczne dziennika i dzienników debugowania. Znajdują się zarówno w obszarze Microsoft&#124;Windows&#124;węzła aplikacje serwera aplikacji.  Dzienniki w tej sekcji zawierają zdarzenia z jednej aplikacji zamiast zdarzenia, które mają wpływ na cały system.  
   
  Debugowanie śledzenia są zapisywane w dzienniku debugowania. Aby zbierać WF debugowania śledzenia zdarzeń w Podglądzie zdarzeń, włączyć dziennik debugowania.  
   

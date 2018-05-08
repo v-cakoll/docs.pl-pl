@@ -1,21 +1,14 @@
 ---
-title: "Używanie delegatów (Przewodnik programowania w języku C#)"
+title: Używanie delegatów (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cef62448388299f310fa26ecb632485b6538c032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b27c94570fdf76808e8a7df67b34466bde20de7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) jest typem, który hermetyzuje bezpieczne metody podobne do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji C delegatów zorientowane obiektowo, wpisz bezpieczne i bezpieczne. Typ delegata jest zdefiniowany przez nazwę obiektu delegowanego. Poniższy przykład deklaruje delegata o nazwie `Del` które hermetyzują metody pobierającej [ciąg](../../../csharp/language-reference/keywords/string.md) jako argument i zwraca [void](../../../csharp/language-reference/keywords/void.md):  
@@ -72,8 +65,8 @@ A [delegować](../../../csharp/language-reference/keywords/delegate.md) jest typ
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Obiekty delegowane](../../../csharp/programming-guide/delegates/index.md)  
- [Korzystanie z wariancji w Delegatach](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
- [Wariancje w Delegatach](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
- [Korzystanie z wariancji dla Func i akcji Delegaty ogólne](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
+ [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+ [Korzystanie z wariancji w delegatach](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
+ [Wariancje w delegatach](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
+ [Korzystanie z wariancji dla delegatów ogólnych Func i Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
  [Zdarzenia](../../../csharp/programming-guide/events/index.md)

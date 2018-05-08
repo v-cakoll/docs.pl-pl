@@ -1,21 +1,15 @@
 ---
-title: "Wyrażenia (Przewodnik programowania w języku C#)"
+title: Wyrażenia (Przewodnik programowania w języku C#)
 ms.date: 05/11/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-caps.latest.revision: "22"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 579851b8c72595ffa5b4cf8267fdc73cd2823d0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 *Wyrażenie* Sekwencja zero lub więcej operatorów, które może przyjąć pojedynczą wartość, obiekt, metodę lub przestrzeń nazw i jeden lub więcej argumentów operacji. Wartość literału, wywołania metody, operator i argumentów, może zawierać wyrażenia lub *prosta nazwa*. Proste nazwy mogą być nazwę zmiennej, członka typu, parametru metody, przestrzeni nazw lub typu.  
@@ -79,7 +73,7 @@ C# obsługuje *zabudowanych wyrażenia elementów członkowskich*, co pozwala u�
 ## <a name="see-also"></a>Zobacz także  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Obiekty delegowane](../../../csharp/programming-guide/delegates/index.md)  
+ [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
  [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
  [Typy](../../../csharp/programming-guide/types/index.md)  
  [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

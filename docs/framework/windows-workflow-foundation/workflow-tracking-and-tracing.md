@@ -1,26 +1,14 @@
 ---
 title: Przepływ pracy, kontrola i śledzenie
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7c969c414428ed0dbbe5c408c999809b672d3409
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b9c1f300bcf765cf4f74ac8a8fcf4ce34c5bd967
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-tracking-and-tracing"></a>Przepływ pracy, kontrola i śledzenie
 Śledzenie przepływu pracy systemu Windows jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] funkcja zapewnia wgląd w wykonywania przepływu pracy. Zapewnia infrastrukturę śledzenia, śledzić wystąpienia przepływu pracy. Infrastruktury programu WF śledzenia przezroczysty wykonuje Instrumentację Emituj rekordów odzwierciedlające zdarzenia klucza podczas wykonywania przepływu pracy. Ta funkcja jest dostępna domyślnie dla każdego [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Zmiany nie są wymagane do [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] przepływu pracy dla śledzenia występuje. Jest to jedynie podejmowania decyzji o tym, jak dużo danych śledzenia, które chcesz otrzymywać. Podczas uruchamiania wystąpienia przepływu pracy, lub zakończeniu jego przetwarzanie śledzenia są emitowane rekordów. Śledzenie można również wyodrębnić odpowiednich firm dane skojarzone z zmienne przepływu pracy. Na przykład, jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu, identyfikator zamówienia można wyodrębnić wraz z programem <xref:System.Activities.Tracking.TrackingRecord> obiektu. Ogólnie rzecz biorąc Włączanie śledzenia WF ułatwia diagnostyki lub danych analiz biznesowych można uzyskać dostępu do pochodzący z wykonania przepływu pracy.  

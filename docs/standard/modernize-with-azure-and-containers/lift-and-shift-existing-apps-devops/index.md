@@ -4,16 +4,11 @@ description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.prod: .net
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5229e6c9a63e5adf76c7a893a49a8a55633fa621
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 2091c6c095ae9454bb9e6ea6af92e06992c04052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>Podnieś i przesunięcie istniejące aplikacje opracowywania oprogramowania
 

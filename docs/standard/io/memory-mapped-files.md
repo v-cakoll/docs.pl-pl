@@ -1,13 +1,7 @@
 ---
-title: "Pliki mapowane w pamięci"
-ms.custom: 
+title: Pliki mapowane w pamięci
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: ec4f3f8df0478c1fc881358ae8e220220fbedf17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-mapped-files"></a>Pliki mapowane w pamięci
 Zawartość pliku w pamięci wirtualnej zawiera plik mapowanych na pamięć. To mapowanie między pliku i pamięci miejsca umożliwia aplikacji, w tym wiele procesów zmodyfikować plik przy odczytywanie i zapisywanie bezpośrednio do pamięci. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć kodu zarządzanego do dostępu do plików mapowanych na pamięć w taki sam sposób, że funkcje natywne Windows dostępu pliki mapowane w pamięci, zgodnie z opisem w [pliki Managing Memory-Mapped](https://msdn.microsoft.com/library/ms810613.aspx).  
@@ -54,7 +43,7 @@ Zawartość pliku w pamięci wirtualnej zawiera plik mapowanych na pamięć. To 
   
  Na poniższej ilustracji przedstawiono sposób wiele procesów może mieć wiele i nakładanie się widoków do tego samego pliku mapowane w pamięci w tym samym czasie.  
   
- ![Przedstawia widok pamięci &#45; zamapowanego pliku. ] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
+ ![Zawiera widoki pamięci&#45;zamapować pliku. ] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
 Wiele i nakładany widoków do pliku mapowanych na pamięć  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programowanie za pomocą plików mapowanych na pamięć  
@@ -155,4 +144,4 @@ Process C says: True
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik i strumienia I-O](../../../docs/standard/io/index.md)
+ [We/Wy plików i strumieni](../../../docs/standard/io/index.md)

@@ -1,13 +1,6 @@
 ---
-title: "Omówienie profilowania"
-ms.custom: 
+title: Omówienie profilowania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
-<a name="top"></a>Profiler to narzędzie, które monitoruje wykonywanie innej aplikacji. Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej (dynamicznie DLL), która składa się z funkcji, które odbierać komunikaty z i wysyłać wiadomości do środowiska CLR za pomocą interfejsu API profilowania. Biblioteki DLL profilera jest ładowany przez środowisko CLR w czasie wykonywania.  
+<a name="top"></a> Profiler to narzędzie, które monitoruje wykonywanie innej aplikacji. Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej (dynamicznie DLL), która składa się z funkcji, które odbierać komunikaty z i wysyłać wiadomości do środowiska CLR za pomocą interfejsu API profilowania. Biblioteki DLL profilera jest ładowany przez środowisko CLR w czasie wykonywania.  
   
  Tradycyjne narzędzia profilowania skupić się na mierzeniu wykonywania aplikacji. Oznacza to pomiaru ich czasu poświęcana w każdej funkcji lub użycie pamięci aplikacji w czasie. Interfejsu API profilowania dotyczy szerszego klasy narzędzi diagnostycznych, takich jak narzędzia pokrycia kodu i nawet zaawansowane debugowania pomocy. Te ustawienia są wszystkie diagnostycznych charakter. Interfejsu API profilowania nie tylko miary, ale również monitoruje wykonywania aplikacji. Z tego powodu interfejsu API profilowania nie mogą być używane przez samą aplikację, a nie należy uwzględniać wykonywania aplikacji (lub dotyczy) profilera.  
   

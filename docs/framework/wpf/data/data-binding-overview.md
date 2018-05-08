@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Wiązanie danych"
-ms.custom: 
+title: Przegląd Wiązanie danych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-caps.latest.revision: "78"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58cde738e2584662fa5f9ad90634931674f48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi. Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takich jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takich jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> ma wbudowanej funkcji, aby umożliwić elastyczne style elementów danych jednego lub kolekcje elementów danych. Sortowanie, filtrów i widoki grup można wygenerować na podstawie danych.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi. Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takich jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takich jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> ma wbudowanej funkcji, aby umożliwić elastyczne style elementów danych jednego lub kolekcje elementów danych. Sortowanie, filtrów i widoki grup można wygenerować na podstawie danych.  
   
  Funkcje powiązania danych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma kilka zalet w porównaniu do tradycyjnego modeli, łącznie z szeroką gamę właściwości, które z założenia obsługuje powiązanie danych, elastyczne [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] reprezentację danych i czyste rozdzielenie biznesowa logiki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Właściwość target musi być właściwością zależności. Większość <xref:System.Windows.UIElement> właściwości są właściwości zależności i większość właściwości zależności, z wyjątkiem sieci tylko do odczytu, obsługuje powiązanie danych domyślnie. (Tylko <xref:System.Windows.DependencyObject> typów można zdefiniować właściwości zależności i wszystkie <xref:System.Windows.UIElement>s pochodzi od <xref:System.Windows.DependencyObject>.)  
   
--   Mimo że nie jest określona na ilustracji, należy zauważyć, że powiązania obiektu źródłowego nie jest ograniczona do niestandardowego jest [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Powiązanie danych obsługuje dane w postaci [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Aby podać kilka przykładów, może być źródle powiązania <xref:System.Windows.UIElement>, dowolnego obiektu listy [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu, z którym skojarzony jest [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] danych lub usługi sieci Web lub element XmlNode, który zawiera z [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych. Aby uzyskać więcej informacji, zobacz [powiązanie Przegląd źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Mimo że nie jest określona na ilustracji, należy zauważyć, że powiązania obiektu źródłowego nie jest ograniczona do niestandardowego jest [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Powiązanie danych obsługuje dane w postaci [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Aby podać kilka przykładów, może być źródle powiązania <xref:System.Windows.UIElement>, dowolnego obiektu listy [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu, z którym skojarzony jest [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] danych lub usługi sieci Web lub element XmlNode, który zawiera z [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych. Aby uzyskać więcej informacji, zobacz [powiązanie Przegląd źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
  Omówione w innych [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] tematy, ważne jest, aby należy pamiętać, że podczas ustanawiania powiązania są powiązanie cel wiązania *do* źródle powiązania. Na przykład w przypadku wyświetlania niektórych podstawowych [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych w <xref:System.Windows.Controls.ListBox> używanie powiązania danych, której dokonywane jest wiązanie z <xref:System.Windows.Controls.ListBox> do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych.  
   
@@ -94,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
  ![Powiązanie danych przepływu danych](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>Powiązanie powoduje, że zmiany właściwości źródła można automatycznie zaktualizować właściwość target, ale zmiany do właściwości target nie są propagowane do właściwości source. Ten typ powiązania jest odpowiednie, jeśli formant jest powiązany jest niejawnie tylko do odczytu. Na przykład może powiązać ze źródłem, takich jak giełdowych lub prawdopodobnie Twoje właściwość target nie ma kontroli interfejsu przewidzianych wprowadzania zmian, takich jak kolory tła powiązane z danymi w tabeli. Nie jest konieczne do monitorowania zmian właściwości target, za pomocą <xref:System.Windows.Data.BindingMode.OneWay> tryb wiązania pozwala uniknąć ponoszenia dodatkowych nakładów na <xref:System.Windows.Data.BindingMode.TwoWay> tryb wiązania.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> Powiązanie powoduje, że zmiany właściwości źródła można automatycznie zaktualizować właściwość target, ale zmiany do właściwości target nie są propagowane do właściwości source. Ten typ powiązania jest odpowiednie, jeśli formant jest powiązany jest niejawnie tylko do odczytu. Na przykład może powiązać ze źródłem, takich jak giełdowych lub prawdopodobnie Twoje właściwość target nie ma kontroli interfejsu przewidzianych wprowadzania zmian, takich jak kolory tła powiązane z danymi w tabeli. Nie jest konieczne do monitorowania zmian właściwości target, za pomocą <xref:System.Windows.Data.BindingMode.OneWay> tryb wiązania pozwala uniknąć ponoszenia dodatkowych nakładów na <xref:System.Windows.Data.BindingMode.TwoWay> tryb wiązania.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>Powiązanie powoduje, że zmiany właściwości source lub właściwość target można automatycznie zaktualizować innych. Ten typ powiązania jest odpowiedni dla formularzy można edytować lub innych pełni nieinterakcyjnego [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy. Domyślnie większość właściwości <xref:System.Windows.Data.BindingMode.OneWay> powiązania, ale niektóre właściwości zależności (zazwyczaj właściwości można edytować użytkownika formantów, takich jak <xref:System.Windows.Controls.TextBox.Text%2A> właściwość <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> właściwość <xref:System.Windows.Controls.CheckBox>) domyślnie <xref:System.Windows.Data.BindingMode.TwoWay> powiązania. Programowy sposób określenia, czy właściwość zależności wiąże- lub dwukierunkowo domyślnie jest można pobrać metadanych właściwości modelu przy użyciu właściwości <xref:System.Windows.DependencyProperty.GetMetadata%2A> , a następnie sprawdź wartość logiczna <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> właściwości.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> Powiązanie powoduje, że zmiany właściwości source lub właściwość target można automatycznie zaktualizować innych. Ten typ powiązania jest odpowiedni dla formularzy można edytować lub innych pełni nieinterakcyjnego [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy. Domyślnie większość właściwości <xref:System.Windows.Data.BindingMode.OneWay> powiązania, ale niektóre właściwości zależności (zazwyczaj właściwości można edytować użytkownika formantów, takich jak <xref:System.Windows.Controls.TextBox.Text%2A> właściwość <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> właściwość <xref:System.Windows.Controls.CheckBox>) domyślnie <xref:System.Windows.Data.BindingMode.TwoWay> powiązania. Programowy sposób określenia, czy właściwość zależności wiąże- lub dwukierunkowo domyślnie jest można pobrać metadanych właściwości modelu przy użyciu właściwości <xref:System.Windows.DependencyProperty.GetMetadata%2A> , a następnie sprawdź wartość logiczna <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> właściwości.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>jest odwrotnej <xref:System.Windows.Data.BindingMode.OneWay> wiązanie; aktualizuje właściwości source po zmianie właściwości target. Przykładowy scenariusz jest Jeśli należy ponownej oceny wartości źródłowej z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> jest odwrotnej <xref:System.Windows.Data.BindingMode.OneWay> wiązanie; aktualizuje właściwości source po zmianie właściwości target. Przykładowy scenariusz jest Jeśli należy ponownej oceny wartości źródłowej z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
 -   Nie zostało to przedstawione na rysunku jest <xref:System.Windows.Data.BindingMode.OneTime> powiązanie, co powoduje, że właściwość source zainicjować właściwość target, ale nie propagację kolejne zmiany. Oznacza to, że jeśli kontekst danych ulega zmianie lub obiekt w zmiany kontekstu danych, następnie zmiany nie zostaną uwzględnione w właściwość target. Ten typ powiązania jest odpowiednie, jeśli używasz danych gdzie albo migawka bieżącego stanu jest odpowiednie do użycia lub dane są naprawdę statycznych. Ten typ powiązania jest również przydatne, jeśli chcesz zainicjować z właściwości target o niektórych wartości z właściwości source i kontekstu danych nie jest znany wcześniej. To zasadniczo prostsze formularza <xref:System.Windows.Data.BindingMode.OneWay> powiązania, który zapewnia lepszą wydajność w przypadku, gdy nie zmienia wartość źródła.  
   
@@ -125,8 +113,8 @@ ms.lasthandoff: 12/22/2017
 |Wartość UpdateSourceTrigger|Gdy zaktualizowano pobiera wartość źródła|Przykładowy scenariusz dla pola tekstowego|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |LostFocus (domyślne dla <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|Gdy TextBox — formant utraci fokus|A <xref:System.Windows.Controls.TextBox> skojarzonego z logiki sprawdzania poprawności (patrz sekcja sprawdzanie poprawności danych)|  
-|PropertyChanged|Podczas pisania w<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox>kontrolki w oknie pokoju rozmów|  
-|Jawne|Gdy aplikacja wywołuje<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox>formantów w formularzu można edytować (aktualizacje wartości źródła tylko wtedy, gdy użytkownik kliknie przycisk przesyłania)|  
+|PropertyChanged|Podczas pisania w <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> kontrolki w oknie pokoju rozmów|  
+|Jawne|Gdy aplikacja wywołuje <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> formantów w formularzu można edytować (aktualizacje wartości źródła tylko wtedy, gdy użytkownik kliknie przycisk przesyłania)|  
   
  Na przykład zobacz [kontroli, gdy tekst pola tekstowego aktualizuje źródła](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
   
@@ -236,7 +224,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="how-to-implement-collections"></a>Jak zaimplementować kolekcje  
  Można wyliczać za pośrednictwem kolekcji, która implementuje <xref:System.Collections.IEnumerable> interfejsu. Jednak aby skonfigurować dynamiczne powiązania, aby zaktualizować wstawienia lub usunięć w kolekcji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] automatycznie, Kolekcja musi zawierać <xref:System.Collections.Specialized.INotifyCollectionChanged> interfejsu. Ten interfejs przedstawia zdarzenia, które powinien być wywoływany przy każdej zmianie kolekcji źródłowej.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, która jest wbudowana implementacji zbierania danych, który ujawnia <xref:System.Collections.Specialized.INotifyCollectionChanged> interfejsu. Należy pamiętać, że do zapewnienia pełnej obsługi przesyłania wartości z obiekty źródła danych do obiektów docelowych, każdy obiekt w kolekcji, który obsługuje właściwości musi implementować też <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Aby uzyskać więcej informacji, zobacz [powiązanie Przegląd źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, która jest wbudowana implementacji zbierania danych, który ujawnia <xref:System.Collections.Specialized.INotifyCollectionChanged> interfejsu. Należy pamiętać, że do zapewnienia pełnej obsługi przesyłania wartości z obiekty źródła danych do obiektów docelowych, każdy obiekt w kolekcji, który obsługuje właściwości musi implementować też <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Aby uzyskać więcej informacji, zobacz [powiązanie Przegląd źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
  Przed wdrożeniem swojej kolekcji, należy rozważyć użycie <xref:System.Collections.ObjectModel.ObservableCollection%601> lub jeden z istniejącą kolekcję klas, takich jak <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, i <xref:System.ComponentModel.BindingList%601>, wśród wielu innych. Jeśli masz zaawansowanego scenariusza i zaimplementować swojej kolekcji, należy rozważyć użycie <xref:System.Collections.IList>, co umożliwia kolekcja nierodzajową obiektów, które można można indywidualnie uzyskać dostęp przez indeks i w związku z tym najlepszą wydajność.  
   
@@ -269,7 +257,7 @@ ms.lasthandoff: 12/22/2017
   
 |Typ kolekcji źródła|Typ widoku kolekcji|Uwagi|  
 |----------------------------|--------------------------|-----------|  
-|<xref:System.Collections.IEnumerable>|Wewnętrzny typ na podstawie<xref:System.Windows.Data.CollectionView>|Nie można grupować elementy.|  
+|<xref:System.Collections.IEnumerable>|Wewnętrzny typ na podstawie <xref:System.Windows.Data.CollectionView>|Nie można grupować elementy.|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Najszybszym.|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
@@ -373,7 +361,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
- A <xref:System.Windows.Controls.ValidationRule> obiektu sprawdza, czy wartość właściwości jest nieprawidłowa. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ma następujące dwa typy wbudowane <xref:System.Windows.Controls.ValidationRule> obiektów:  
+ A <xref:System.Windows.Controls.ValidationRule> obiektu sprawdza, czy wartość właściwości jest nieprawidłowa. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma następujące dwa typy wbudowane <xref:System.Windows.Controls.ValidationRule> obiektów:  
   
 -   A <xref:System.Windows.Controls.ExceptionValidationRule> sprawdza, czy wyjątki zgłaszane podczas aktualizacji powiązania właściwości source. W poprzednim przykładzie `StartPrice` jest typu integer. Kiedy użytkownik wprowadzi wartość, której nie można przekonwertować na liczbę całkowitą, jest zgłaszany wyjątek, powodując powiązania może być oznaczony jako nieprawidłowy. Alternatywne składni ustawienie <xref:System.Windows.Controls.ExceptionValidationRule> jawnie jest skonfigurowanie <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> właściwości `true` na Twojej <xref:System.Windows.Data.Binding> lub <xref:System.Windows.Data.MultiBinding> obiektu.  
   

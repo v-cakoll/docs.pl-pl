@@ -1,30 +1,18 @@
 ---
-title: "Sposób mapowania modelu obiektu syndykacji programu WCF na kanały informacyjne Atom i RSS"
-ms.custom: 
+title: Sposób mapowania modelu obiektu syndykacji programu WCF na kanały informacyjne Atom i RSS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Sposób mapowania modelu obiektu syndykacji programu WCF na kanały informacyjne Atom i RSS
-Podczas tworzenia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługa syndykacji tworzenia źródła danych i elementy przy użyciu następujących klas:  
+Podczas tworzenia usługi zespolonego Windows Communication Foundation (WCF), można utworzyć źródła danych i elementy przy użyciu następujących klas:  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -42,18 +30,18 @@ Podczas tworzenia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- A <xref:System.ServiceModel.Syndication.SyndicationFeed> może być Zserializowany, w dowolnym formacie zespolonego, dla którego zdefiniowano elementu formatującego. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]jest dostarczany z dwóch elementów formatujących: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> i <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ A <xref:System.ServiceModel.Syndication.SyndicationFeed> może być Zserializowany, w dowolnym formacie zespolonego, dla którego zdefiniowano elementu formatującego. Usługi WCF jest dostarczany z dwóch elementów formatujących: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> i <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Model obiektów wokół <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> jest wyrównany dokładniejsze ze specyfikacją Atom 1.0 niż specyfikacji RSS 2.0. Jest to spowodowane Atom 1.0 to bardziej znaczące Specyfikacja definiujący elementy, które są niejednoznaczne lub pominięte ze specyfikacji RSS 2.0. W związku z tym wiele elementów w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelu obiektu syndykacji ma nie bezpośrednie reprezentacji w specyfikacji RSS 2.0. Podczas serializowania <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów do RSS 2.0 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] służy do serializacji elementów danych specyficznych dla Atom jako elementów kwalifikowana przestrzeni nazw rozszerzeń, które są zgodne ze specyfikacją Atom. Użytkownik może sterować za pomocą parametr przekazany do <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> konstruktora.  
+ Model obiektów wokół <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> jest wyrównany dokładniejsze ze specyfikacją Atom 1.0 niż specyfikacji RSS 2.0. Jest to spowodowane Atom 1.0 to bardziej znaczące Specyfikacja definiujący elementy, które są niejednoznaczne lub pominięte ze specyfikacji RSS 2.0. W związku z tym wiele elementów w modelu obiektu syndykacji WCF ma nie bezpośrednie reprezentacji w specyfikacji RSS 2.0. Podczas serializowania <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów do RSS 2.0 WCF służy do serializacji elementów danych specyficznych dla Atom jako elementów kwalifikowana przestrzeni nazw rozszerzeń, które są zgodne ze specyfikacją Atom. Użytkownik może sterować za pomocą parametr przekazany do <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> konstruktora.  
   
  Przykłady kodu, w tym temacie jednej z dwóch metod zdefiniowane w tym miejscu do rzeczywistego serializacji.  
   
- `SerializeFeed`serializuje zespolonego źródła danych.  
+ `SerializeFeed` serializuje zespolonego źródła danych.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem`serializuje elementu zespolonego.  
+ `SerializeItem` serializuje elementu zespolonego.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  

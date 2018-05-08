@@ -1,13 +1,6 @@
 ---
-title: "Interceptory (usługi danych WCF)"
-ms.custom: 
+title: Interceptory (usługi danych WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c72d4ba56859e0afec4b26d7ce81668b443a4ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3ff08dd4cd20e7ce226750a386cfddb27731923
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptory (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]umożliwia aplikacji przechwycić komunikaty żądania, aby mogli dodawać niestandardowej logiki do operacji. Można użyć tej niestandardowej logiki do sprawdzania poprawności danych w komunikatach przychodzących. Można również użyć bardziej ograniczyć zakres żądania zapytania, takie jak, aby wstawić niestandardowych zasad autoryzacji na podstawie danego żądania.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia aplikacji przechwycić komunikaty żądania, aby mogli dodawać niestandardowej logiki do operacji. Można użyć tej niestandardowej logiki do sprawdzania poprawności danych w komunikatach przychodzących. Można również użyć bardziej ograniczyć zakres żądania zapytania, takie jak, aby wstawić niestandardowych zasad autoryzacji na podstawie danego żądania.  
   
  Przechwycenie odbywa się za pomocą metod specjalnie oparte na atrybutach usługi danych. Te metody są wywoływane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] we właściwym momencie podczas przetwarzania wiadomości. Interceptory są zdefiniowane na podstawie zestawu na jednostki i metody interceptora nie może przyjmować parametrów z żądania, jak operacji usługi. Metody interceptora zapytań, które są wywoływane podczas przetwarzania żądania HTTP GET, musi zwracać Wyrażenie lambda, które określa, czy wystąpienie jednostki interceptora ustawić powinny być zwracane w wynikach zapytania. To wyrażenie jest używane przez usługę danych do uściślenia żądanej operacji. Oto przykład definicji interceptora zapytań.  
   

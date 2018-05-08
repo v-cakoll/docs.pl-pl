@@ -1,24 +1,15 @@
 ---
-title: "Porady: tworzenie ciągu z tablicy wartości znaków (Visual Basic)"
-ms.custom: 
+title: 'Porady: tworzenie ciągu z tablicy wartości znaków (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 06e5c6923c26f3cb84b38475d6680523853d727d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 104b329011d69e10a2926f31ce5d296759a3cce8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Porady: tworzenie ciągu z tablicy wartości znaków (Visual Basic)
 W tym przykładzie tworzy ciągu "abcd" z poszczególnych znaków.  
@@ -36,5 +27,5 @@ W tym przykładzie tworzy ciągu "abcd" z poszczególnych znaków.
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.String>  
- [CHAR — typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
+ [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

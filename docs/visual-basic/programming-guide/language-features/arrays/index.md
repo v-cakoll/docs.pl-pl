@@ -1,11 +1,6 @@
 ---
 title: Tablice w Visual Basic
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Tablice w Visual Basic
 Tablica to zbiór wartości, które są określane jako *elementy*, logicznie powiązanych ze sobą. Na przykład tablicy może składać się z liczby studentów w każdej klasy w szkole gramatyki; Każdy element tablicy jest liczba studentów w jednej kategorii. Podobnie Tablica może składać się z klas Studenta dla klasy; Każdy element tablicy jest jednej klasy.    
@@ -165,7 +159,7 @@ Podobnie jak w przypadku tablice jednowymiarowe, tworząc tablicy wielowymiarowe
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- Poniższy przykład iteruje tablicy wielowymiarowej przy użyciu [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) instrukcji. <xref:System.Array.GetUpperBound%2A> Metoda ma parametr, który określa wymiar. `GetUpperBound(0)`Zwraca indeks najwyższy wymiar i `GetUpperBound(1)` zwraca najwyższy indeks drugi wymiar.
+ Poniższy przykład iteruje tablicy wielowymiarowej przy użyciu [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) instrukcji. <xref:System.Array.GetUpperBound%2A> Metoda ma parametr, który określa wymiar. `GetUpperBound(0)` Zwraca indeks najwyższy wymiar i `GetUpperBound(1)` zwraca najwyższy indeks drugi wymiar.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   

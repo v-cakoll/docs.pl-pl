@@ -1,13 +1,6 @@
 ---
-title: "Niestandardowe właściwości zależności"
-ms.custom: 
+title: Niestandardowe właściwości zależności
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>Niestandardowe właściwości zależności
 W tym temacie opisano przyczyny który [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperzy aplikacji autorów składnik może być utworzenie właściwości niestandardowe zależności i opisano kroki implementacji, a także niektóre opcje wdrażania, które może poprawić wydajność, użyteczność lub wszechstronność właściwości.  
@@ -134,11 +122,11 @@ W tym temacie opisano przyczyny który [!INCLUDE[TLA#tla_winclient](../../../../
   
 -   Jeśli właściwość (lub zmiany jego wartości) wpływa na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], i w szczególności wpływa na sposób system układu powinien rozmiaru lub renderowania, nazwę elementu na stronie ustawić co najmniej jeden z następujących flag: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>Wskazuje, że zmiana ta właściwość wymaga zmiany [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] renderowania, w którym obiektu zawierającego konieczność więcej lub mniej miejsca nadrzędnym. Na przykład właściwość "Width" powinien mieć ten zestaw flagi.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Wskazuje, że zmiana ta właściwość wymaga zmiany [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] renderowania, w którym obiektu zawierającego konieczność więcej lub mniej miejsca nadrzędnym. Na przykład właściwość "Width" powinien mieć ten zestaw flagi.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>Wskazuje, że zmiana ta właściwość wymaga zmiany [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] renderowania, które zwykle nie wymaga zmian w dedykowanym miejsca, ale wskazują, że zmieniła położenie w przestrzeni. Na przykład "Wyrównania" powinna mieć ten zestaw flagi.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Wskazuje, że zmiana ta właściwość wymaga zmiany [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] renderowania, które zwykle nie wymaga zmian w dedykowanym miejsca, ale wskazują, że zmieniła położenie w przestrzeni. Na przykład "Wyrównania" powinna mieć ten zestaw flagi.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>Wskazuje, że wystąpił kilka dodatkowych zmian, który nie wpłynie na układ i miary, ale wymagają innego renderowania. Przykładem może być właściwością zmienia kolor istniejącego elementu, takie jak "Tła".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Wskazuje, że wystąpił kilka dodatkowych zmian, który nie wpłynie na układ i miary, ale wymagają innego renderowania. Przykładem może być właściwością zmienia kolor istniejącego elementu, takie jak "Tła".  
   
     -   Te flagi są często używane jako protokół w metadanych własne implementacji zastąpienie właściwości systemu lub układu wywołań zwrotnych. Na przykład może być <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> wywołania zwrotnego, które wywoła <xref:System.Windows.UIElement.InvalidateArrange%2A> żadnej właściwości wystąpienia raporty zmiany wartości i czy przypisano <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> jako `true` w metadanych.  
   
@@ -148,7 +136,7 @@ W tym temacie opisano przyczyny który [!INCLUDE[TLA#tla_winclient](../../../../
   
 -   Domyślnie powiązanie danych <xref:System.Windows.Data.Binding.Mode%2A> dla parametrów domyślnych właściwości zależności do <xref:System.Windows.Data.BindingMode.OneWay>. Zawsze można zmienić powiązanie <xref:System.Windows.Data.BindingMode.TwoWay> na wystąpienie obiektu binding; Aby uzyskać więcej informacji, zobacz [określ kierunek powiązania](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md). Ale Autor właściwości zależności, możesz wprowadzić właściwości użyj <xref:System.Windows.Data.BindingMode.TwoWay> tryb wiązania domyślnie. Na przykład z istniejącej właściwości zależności <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; scenariusz dla tej właściwości jest to, że <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> ustawienie logiki i składania kanałów z <xref:System.Windows.Controls.MenuItem> interakcji z domyślnym stylu motywu. <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> Logiki właściwości wykorzystuje wiązania danych natywnie do zarządzania stanem właściwości zgodnie z innych właściwości stanu i wywołania metody. Inna właściwość przykładzie, który wiąże <xref:System.Windows.Data.BindingMode.TwoWay> domyślnie jest <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>.  
   
--   Dziedziczenie właściwości we właściwości niestandardowej zależności można także włączyć, ustawiając <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> flagi. Dziedziczenie właściwości jest przydatne w sytuacji, gdy elementy nadrzędne i podrzędne mają właściwość wspólną i warto dla obiekt podrzędny elementów ma tę wartość określonej właściwości ustawioną taką samą wartość jak ustawić nadrzędnego. Przykład właściwości dziedziczonych jest <xref:System.Windows.FrameworkElement.DataContext%2A>, która jest używana do wiązania operacji scenariusza ważne główny szczegółowy prezentacji danych. Tworząc <xref:System.Windows.FrameworkElement.DataContext%2A> dziedziczona, wszystkie elementy podrzędne dziedziczą tego kontekstu danych również. Ze względu na wartość dziedziczenia mogą określać kontekst danych w katalogu głównym strony lub aplikacji, a nie trzeba respecify go dla powiązania w wszystkie elementy podrzędne możliwe. <xref:System.Windows.FrameworkElement.DataContext%2A>jest również dobrym przykładem w celu zilustrowania dziedziczenia przesłaniać wartość domyślną, że można zawsze można ustawić lokalnie na dowolny element podrzędny określonego; Aby uzyskać więcej informacji, zobacz [Użyj wzorca wzorzec-szczegół z danymi hierarchicznymi](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Dziedziczenie właściwości wartość ma na wydajność, możliwości i w związku z tym powinny być używane rzadko; Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+-   Dziedziczenie właściwości we właściwości niestandardowej zależności można także włączyć, ustawiając <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> flagi. Dziedziczenie właściwości jest przydatne w sytuacji, gdy elementy nadrzędne i podrzędne mają właściwość wspólną i warto dla obiekt podrzędny elementów ma tę wartość określonej właściwości ustawioną taką samą wartość jak ustawić nadrzędnego. Przykład właściwości dziedziczonych jest <xref:System.Windows.FrameworkElement.DataContext%2A>, która jest używana do wiązania operacji scenariusza ważne główny szczegółowy prezentacji danych. Tworząc <xref:System.Windows.FrameworkElement.DataContext%2A> dziedziczona, wszystkie elementy podrzędne dziedziczą tego kontekstu danych również. Ze względu na wartość dziedziczenia mogą określać kontekst danych w katalogu głównym strony lub aplikacji, a nie trzeba respecify go dla powiązania w wszystkie elementy podrzędne możliwe. <xref:System.Windows.FrameworkElement.DataContext%2A> jest również dobrym przykładem w celu zilustrowania dziedziczenia przesłaniać wartość domyślną, że można zawsze można ustawić lokalnie na dowolny element podrzędny określonego; Aby uzyskać więcej informacji, zobacz [Użyj wzorca wzorzec-szczegół z danymi hierarchicznymi](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Dziedziczenie właściwości wartość ma na wydajność, możliwości i w związku z tym powinny być używane rzadko; Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 -   Ustaw <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> flagę wskazującą, czy wykryto lub używane przez usługi rejestrowania nawigacji z właściwości zależności. Na przykład <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> właściwości; dowolnego elementu wybranego w wyborze kontroli powinny być zachowywane w przypadku historii rejestrowania jest przejście.  
   

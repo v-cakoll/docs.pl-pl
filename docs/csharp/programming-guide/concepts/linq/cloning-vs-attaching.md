@@ -1,21 +1,12 @@
 ---
-title: "Vs w klonowania. Dołączanie (C#)"
-ms.custom: 
+title: Vs w klonowania. Dołączanie (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 357c5efa-7b73-4f14-aa67-6bebdba4e7ea
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e58e9538c319c20f9e820ff1de1fb6f973a18bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31b5498e18e63ffba357b34780c7eb388e08b37f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cloning-vs-attaching-c"></a>Vs w klonowania. Dołączanie (C#)
 Podczas dodawania <xref:System.Xml.Linq.XNode> (łącznie z <xref:System.Xml.Linq.XElement>) lub <xref:System.Xml.Linq.XAttribute> obiekty do nowego drzewa, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty są po prostu dołączyć do drzewa XML. Jeśli już nowej zawartości jest elementem nadrzędnym i jest częścią innego drzewa XML, został sklonowany nową zawartość. Nowo sklonowanego zawartość jest następnie dołączony do drzewa XML.  

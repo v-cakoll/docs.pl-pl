@@ -1,21 +1,12 @@
 ---
-title: "Porady: lista wszystkich węzłów w drzewie (C#)"
-ms.custom: 
+title: 'Porady: lista wszystkich węzłów w drzewie (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0db9d8f895bec9e4806bb267c91a1b9fc4500689
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0ee4c51946ff6116fa37f4ca61bc42deed562532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Porady: lista wszystkich węzłów w drzewie (C#)
 Czasami jest przydatne do tworzenia listy wszystkich węzłów w drzewie. Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie. Jeden ze sposobów wyświetlania we wszystkich węzłach w postaci tekstowej polega na generowaniu XPath Wyrażenie identyfikujące dokładnie, a w szczególności dowolnego węzła drzewa.  

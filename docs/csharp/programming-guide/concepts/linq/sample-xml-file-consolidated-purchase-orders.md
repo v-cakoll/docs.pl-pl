@@ -1,21 +1,12 @@
 ---
-title: "Przykładowy plik XML: Skonsolidowane Orders2 zakupu"
-ms.custom: 
+title: 'Przykładowy plik XML: Skonsolidowane Orders2 zakupu'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a6cf08959792e2d491ee6aede59abeeac50e1700
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d9a97b097f208cdabb63023b36db1e374ac61c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Przykładowy plik XML: Skonsolidowane zamówienia zakupu
 Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik jest zestawem zakupów z różnych kształtów z wielu firm. Zakupów z każdej firmy są w oddzielnych przestrzeniach nazw.  
@@ -153,4 +144,4 @@ Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxl
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dokumenty XML próbki (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

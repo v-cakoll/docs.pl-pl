@@ -1,14 +1,6 @@
 ---
-title: "StrongNameGetPublicKey — Funkcja"
-ms.custom: 
+title: StrongNameGetPublicKey — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameGetPublicKey
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cec7c1edac24d43924abb2bf8784d45ed6372129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3ace4a3103231f776d4e2b034f8e18ce861ee97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey — Funkcja
 Pobiera klucz publiczny z pary kluczy publiczny/prywatny. Pary kluczy można podać jako nazwa kontenera klucza dostawcy usług kryptograficznych (CSP) lub jako kolekcję pierwotnych bajtów.  
@@ -73,7 +61,7 @@ BOOLEAN StrongNameGetPublicKey (
  [out] Rozmiar zwróconego obiektu BLOB klucza publicznego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
+ `true` Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
  Klucz publiczny jest zawarta w [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) struktury.  
@@ -87,7 +75,7 @@ BOOLEAN StrongNameGetPublicKey (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [StrongNameGetPublicKey, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  

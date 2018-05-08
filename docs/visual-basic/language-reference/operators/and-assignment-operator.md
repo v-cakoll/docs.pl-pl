@@ -1,12 +1,6 @@
 ---
 title: '&amp;= — Operator (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3db2d4095600f32af92d1a4ce1f806a3f032af0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= — Operator (Visual Basic)
 Łączy `String` wyrażenie `String` zmienna lub właściwość i przypisuje wynik do zmiennej lub właściwości.  
@@ -36,10 +27,10 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagany. Wszelkie `String` zmienna lub właściwość.  
+ Wymagana. Wszelkie `String` zmienna lub właściwość.  
   
  `expression`  
- Wymagany. Wszelkie `String` wyrażenia.  
+ Wymagana. Wszelkie `String` wyrażenia.  
   
 ## <a name="remarks"></a>Uwagi  
  Element po lewej stronie `&=` operator może być zmienną skalarną proste, właściwością lub element tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md). `&=` Łączy operator `String` wyrażenie jego prawej strony, aby `String` zmienna lub właściwość po lewej stronie i przypisuje wynik do zmiennej lub właściwości po lewej stronie.  
@@ -53,8 +44,8 @@ variableorproperty &= expression
  [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [& — Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
- [+= — Operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [&, operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [+=, operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
  [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)  
  [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  

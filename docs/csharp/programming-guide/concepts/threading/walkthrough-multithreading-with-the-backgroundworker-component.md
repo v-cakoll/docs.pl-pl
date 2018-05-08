@@ -1,21 +1,12 @@
 ---
-title: "Wskazówki: Wielowątkowość ze składnikiem BackgroundWorker (C#)"
-ms.custom: 
+title: 'Wskazówki: Wielowątkowość ze składnikiem BackgroundWorker (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc334261dbea7759d1bb571cc61a5f00f84531a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Wskazówki: Wielowątkowość ze składnikiem BackgroundWorker (C#)
 Ten przewodnik przedstawia sposób tworzenia aplikacji wielowątkowych formularzy systemu Windows, która wyszukuje plik tekstowy dla wystąpień słowa. Przedstawia on:  
@@ -62,8 +53,8 @@ Ten przewodnik przedstawia sposób tworzenia aplikacji wielowątkowych formularz
   
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
-    |`WorkerReportsProgress`|Wartość true|  
-    |`WorkerSupportsCancellation`|Wartość true|  
+    |`WorkerReportsProgress`|True|  
+    |`WorkerSupportsCancellation`|True|  
   
 3.  Subskrybowanie zdarzeń obiektu backgroundWorker1. W górnej części **właściwości** okna, kliknij przycisk **zdarzenia** ikony. Kliknij dwukrotnie `RunWorkerCompleted` zdarzeń, aby utworzyć metoda obsługi zdarzeń. Tym samym `ProgressChanged` i `DoWork` zdarzenia.  
   
@@ -284,4 +275,4 @@ Ten przewodnik przedstawia sposób tworzenia aplikacji wielowątkowych formularz
   
 ## <a name="see-also"></a>Zobacz też  
  [Wątkowość (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
- [Porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+ [Instrukcje: subskrybowanie i anulowanie subskrypcji zdarzeń](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

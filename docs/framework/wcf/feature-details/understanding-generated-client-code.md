@@ -1,41 +1,27 @@
 ---
 title: Opis wygenerowanego kodu klienta
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8a28b52d786793308d8609704b564b75f23d95d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-generated-client-code"></a>Opis wygenerowanego kodu klienta
 [Narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generuje kod klienta i pliku konfiguracji aplikacji klienta do użycia z tworzeniem aplikacji klienckich. Ten temat zawiera przegląd przykładów wygenerowanego kodu dla scenariuszy kontraktu usługi standardowa. Aby uzyskać więcej informacji dotyczących tworzenia aplikacji klienta przy użyciu wygenerowanego kodu, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Omówienie  
- Jeśli używasz programu Visual Studio do generowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] typy klientów dla projektu, zwykle nie trzeba sprawdzić kod wygenerowanego klienta. Jeśli nie używasz Środowisko deweloperskie, który wykonuje te same usługi dla Ciebie, umożliwia narzędzia, takiego jak Svcutil.exe generowanie kodu klienta, a następnie użyj tego kodu do opracowywania aplikacji klienta.  
+ Jeśli używasz programu Visual Studio do generowania typów klienta usługi Windows Communication Foundation (WCF) w projekcie, zwykle nie trzeba sprawdzić kod wygenerowanego klienta. Jeśli nie używasz Środowisko deweloperskie, który wykonuje te same usługi dla Ciebie, umożliwia narzędzia, takiego jak Svcutil.exe generowanie kodu klienta, a następnie użyj tego kodu do opracowywania aplikacji klienta.  
   
  Ponieważ Svcutil.exe ma wiele opcji, które modyfikują informacji wygenerowanego typu, w tym temacie omówiono w nim wszystkie scenariusze. Następujące zadania standardowe wymaga jednak lokalizowanie wygenerowanego kodu:  
   
 -   Identyfikowanie interfejsy kontraktu usługi.  
   
--   Identyfikowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta.  
+-   Identyfikowanie klasy klienta WCF.  
   
 -   Identyfikowanie typów danych.  
   
@@ -52,14 +38,14 @@ ms.lasthandoff: 04/30/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Można użyć interfejsu kontraktu usługi wygenerowanego wraz z <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> klasy w celu utworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanału obiektu do wywołania operacji usługi. Aby uzyskać więcej informacji, zobacz [porady: używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ Można użyć interfejsu kontraktu usługi wygenerowanego wraz z programem <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> klasy można utworzyć obiektu kanału WCF, z którym do wywołania operacji usługi. Aby uzyskać więcej informacji, zobacz [porady: używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>Znajdowanie klasy klienta WCF  
- Aby zlokalizować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta, który implementuje kontraktu usługi, które chcesz użyć, wyszukaj o przedłużenie <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, gdzie parametr typu kontraktu usługi interfejs ten można wcześniej znajduje się i który rozszerza interfejs. Poniższy kod przedstawia przykład <xref:System.ServiceModel.ClientBase%601> klasy typu `ISampleService`.  
+ Aby zlokalizować klasy klienta WCF, która implementuje kontraktu usługi, którego chcesz użyć, wyszukaj rozszerzenie <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, gdzie parametr typu kontraktu usługi interfejs ten można wcześniej znajduje się i który rozszerza interfejs. Poniższy kod przedstawia przykład <xref:System.ServiceModel.ClientBase%601> klasy typu `ISampleService`.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Możesz użyć tej funkcji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta, tworząc nowe wystąpienie i wywoływania metod implementuje. Te metody wywołania operacji usługi, z którego został zaprojektowany i skonfigurowane do interakcji. Aby uzyskać więcej informacji, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Można użyć tej klasy klienta WCF, tworząc nowe wystąpienie i wywoływania metod, które implementuje. Te metody wywołania operacji usługi, z którego został zaprojektowany i skonfigurowane do interakcji. Aby uzyskać więcej informacji, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 > [!NOTE]
 >  Jeśli SvcUtil.exe wygeneruje klasy klienta WCF, dodaje <xref:System.Diagnostics.DebuggerStepThroughAttribute> do klasy klienta, który uniemożliwia debugery z krokowe klasy klienta WCF.  

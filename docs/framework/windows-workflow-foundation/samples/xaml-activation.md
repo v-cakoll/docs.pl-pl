@@ -1,23 +1,12 @@
 ---
 title: Aktywacja XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 486760e2-bb10-4ed5-8c02-fe7472498d2d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53665f39c6c0c7e5c7956912b05e3fd80659ddcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8621b0ea7b390c81e76ac7eeedb0b547b44320d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-activation"></a>Aktywacja XAML
 W tym przykładzie pokazano, jak udostępniać deklaracyjnego przepływu pracy w programie IIS. Próbka jest podstawowy przepływ pracy o nazwie `EchoService` mający jednej operacji.  
@@ -27,7 +16,7 @@ W tym przykładzie pokazano, jak udostępniać deklaracyjnego przepływu pracy w
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do (stronę pobierania), aby pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do (stronę pobierania) można pobrać wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLActivation`  
   
@@ -43,10 +32,10 @@ W tym przykładzie pokazano, jak udostępniać deklaracyjnego przepływu pracy w
   
     2.  Uruchom WcfTestClient.exe.  
   
-4.  Ustaw adres usługi na WcfTestClient.exe, naciskając klawisze CTRL + SHIFT + A i ustawienie adresu usługi http://localhost:56133/Service.xamlx.  
+4.  Ustaw adres usługi na WcfTestClient.exe naciskając klawisz CTRL + SHIFT + A, a ustawienie adresu usługi http://localhost:56133/Service.xamlx.  
   
 5.  Operacja echo testować usługę.  
   
 6.  Wdrażanie usługi w usługach IIS przy użyciu DeployToIIS.Bat w wierszu polecenia z uprawnieniami administratora.  
   
-7.  Zaktualizuj adres usługi na komputerze klienckim http://localhost/XAMLActivation/Service.xamlx, a następnie testować usługę ponownie, używając WcfTestClient.exe.
+7.  Zaktualizuj adres usługi w kliencie programu http://localhost/XAMLActivation/Service.xamlx i testować usługę ponownie, używając WcfTestClient.exe.

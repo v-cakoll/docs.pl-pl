@@ -1,17 +1,12 @@
 ---
 title: Sumy rozłączne (F#)
 description: 'Dowiedz się, jak używać F # Suma rozłączna Unii.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 64c91410e284ee16036c4f51bd2247475a202a45
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 

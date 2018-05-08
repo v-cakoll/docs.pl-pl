@@ -1,29 +1,17 @@
 ---
-title: "Powiązywanie danych formularzy systemu Windows"
-ms.custom: 
+title: Powiązywanie danych formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms]
 - Windows Forms, data binding
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 77f01bc462be67c3b613b8ab102a359a80d74140
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-data-binding"></a>Powiązywanie danych formularzy systemu Windows
 Powiązanie danych w formularzach systemu Windows zapewnia sposób wyświetlania i wprowadź zmiany do informacji ze źródła danych w kontrolek w formularzu. Można powiązać zarówno źródeł danych tradycyjnych, jak i prawie każdego struktury, która zawiera dane.  

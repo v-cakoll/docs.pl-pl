@@ -2,14 +2,14 @@
 title: '&lt;add&gt; w &lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: b9559a6921bdededf760f54f58abadb46612b174
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 4552cc030a88841d4fb80c097ba089d1c6a0066c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; w &lt;protocolMapping&gt;
-Reprezentuje domyślne mapowanie protokołu pomiędzy schematem protokołu transportu (np. http, net.tcp, net.pipe, itp.) a powiązaniem Windows Communication Foundation (WCF). Podczas tworzenia domyślne punkty końcowe w czasie wykonywania, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analizuje skonfigurowanego mapowania i decyduje o tym, na których powiązanie dla określonego na podstawie adresów.  
+Reprezentuje domyślne mapowanie protokołu pomiędzy schematem protokołu transportu (np. http, net.tcp, net.pipe, itp.) a powiązaniem Windows Communication Foundation (WCF). Podczas tworzenia domyślne punkty końcowe w czasie wykonywania, WCF przegląda skonfigurowanego mapowania i decyduje o tym, na których powiązanie dla określonego na podstawie adresów.  
   
  \<system.serviceModel>  
 \<protocolMapping >  

@@ -1,43 +1,31 @@
 ---
 title: Rozproszone zabezpieczenia aplikacji
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: 32
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d8f34d0c6b0269cc4837313d6613e3cee0eb26c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczeń jest podzielone na trzy główne obszary funkcjonalności: transfer zabezpieczeń, kontroli dostępu i inspekcji. Transfer zabezpieczeń zapewnia integralność, poufność i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: transportu zabezpieczenia, zabezpieczenia wiadomości lub `TransportWithMessageCredential`.  
+Zabezpieczenia systemu Windows Communication Foundation (WCF) jest podzielone na trzy główne obszary funkcjonalności: transfer zabezpieczeń, kontroli dostępu i inspekcji. Transfer zabezpieczeń zapewnia integralność, poufność i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: transportu zabezpieczenia, zabezpieczenia wiadomości lub `TransportWithMessageCredential`.  
   
- Omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat innych dwa elementy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) i [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Omówienie zabezpieczeń wiadomości WCF, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat dwie części zabezpieczeń WCF, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) i [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Transfer scenariusze zabezpieczeń  
- Typowych scenariuszy korzystających z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transfer zabezpieczeń są następujące:  
+ Typowych scenariuszy korzystających z WCF transfer zabezpieczeń są następujące:  
   
--   Zapewnienia bezpiecznego transferu przy użyciu systemu Windows. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta i usługi są wdrażane w domenie systemu Windows (lub lasu systemu Windows). Komunikaty zawierają dane osobowe, wymagania dotyczące obejmują wzajemnego uwierzytelniania klienta i usługi, integralności i poufności komunikatów. Ponadto wymagane jest potwierdzenie czy danej transakcji wystąpił, na przykład zarejestrować informacje o podpisie odbiorcy wiadomości.  
+-   Zapewnienia bezpiecznego transferu przy użyciu systemu Windows. Klient WCF i usługi są wdrażane w domenie systemu Windows (lub lasu systemu Windows). Komunikaty zawierają dane osobowe, wymagania dotyczące obejmują wzajemnego uwierzytelniania klienta i usługi, integralności i poufności komunikatów. Ponadto wymagane jest potwierdzenie czy danej transakcji wystąpił, na przykład zarejestrować informacje o podpisie odbiorcy wiadomości.  
   
--   Zapewnienia bezpiecznego transferu za pomocą `UserName` i HTTPS. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klient i usługa muszą być opracowany, aby działały w Internecie. Poświadczenia klienta uwierzytelniania względem bazy danych par nazwa/hasło użytkownika. Usługa jest wdrażana na adres HTTPS przy użyciu zaufanego certyfikatu Secure Sockets Layer (SSL). Ponieważ komunikaty są przesyłane za pośrednictwem Internetu, klient i usługa muszą być wzajemnie uwierzytelniane i poufności i integralności wiadomości, które muszą zostać zachowane podczas transferu.  
+-   Zapewnienia bezpiecznego transferu za pomocą `UserName` i HTTPS. Klienta WCF i usługa muszą być opracowany, aby działały w Internecie. Poświadczenia klienta uwierzytelniania względem bazy danych par nazwa/hasło użytkownika. Usługa jest wdrażana na adres HTTPS przy użyciu zaufanego certyfikatu Secure Sockets Layer (SSL). Ponieważ komunikaty są przesyłane za pośrednictwem Internetu, klient i usługa muszą być wzajemnie uwierzytelniane i poufności i integralności wiadomości, które muszą zostać zachowane podczas transferu.  
   
--   Zapewnienia bezpiecznego transferu za pomocą certyfikatów. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klient i usługa musi zostać opracowana do pracy za pośrednictwem publicznego Internetu. Klient i usługa mają certyfikaty, które mogą służyć do zabezpieczenia wiadomości. Klient i usługa korzystanie z Internetu, aby komunikować się ze sobą i wykonywać transakcje wysokiej wartości, które wymagają integralności komunikatu, poufności i wzajemnego uwierzytelniania.  
+-   Zapewnienia bezpiecznego transferu za pomocą certyfikatów. Klient WCF i usługa musi zostać opracowana do pracy za pośrednictwem publicznego Internetu. Klient i usługa mają certyfikaty, które mogą służyć do zabezpieczenia wiadomości. Klient i usługa korzystanie z Internetu, aby komunikować się ze sobą i wykonywać transakcje wysokiej wartości, które wymagają integralności komunikatu, poufności i wzajemnego uwierzytelniania.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Integralność, poufności i uwierzytelniania  
  Trzy funkcje — integralności i poufności uwierzytelniania — łącznie są nazywane transfer zabezpieczeń. Transfer zabezpieczeń zawiera funkcje, które pomogą zminimalizować zagrożenia w aplikacji rozproszonej. W poniższej tabeli opisano krótko trzy funkcje, które tworzą transfer zabezpieczeń.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 04/30/2018
 |Uwierzytelnianie|*Uwierzytelnianie* jest weryfikacja tożsamości. Na przykład korzystając z konta bankowego, należy bezwzględnie możliwość rzeczywiste właściciela konta do wycofania środków. Uwierzytelnianie może być udostępniane przez różnych środków. Jednej wspólnej metody to system użytkownika i hasło. Drugim jest użycie certyfikatu X.509, który jest świadczona przez inną firmę.|  
   
 ## <a name="security-modes"></a>Tryby zabezpieczeń  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trybach kilka transfer zabezpieczeń, które zostały opisane w poniższej tabeli.  
+ Usługi WCF trybach kilka transfer zabezpieczeń, które zostały opisane w poniższej tabeli.  
   
 |Tryb|Opis|  
 |----------|-----------------|  
@@ -60,11 +48,11 @@ ms.lasthandoff: 04/30/2018
 |Zarówno|Wykonuje ochrony i uwierzytelniania na obu poziomach. Ten tryb jest dostępny tylko w [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) elementu.|  
   
 ## <a name="credentials-and-transfer-security"></a>Poświadczenia i Transfer zabezpieczeń  
- A *poświadczeń* się dane, które są prezentowane w celu ustalenia tożsamości lub funkcji. Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Można określić rodzajem poświadczenia dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania.  
+ A *poświadczeń* się dane, które są prezentowane w celu ustalenia tożsamości lub funkcji. Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. Usługi WCF obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Można określić typ poświadczeń dla wiązania WCF.  
   
  W wielu krajach lub regionach jazdy jest przykładem poświadczenie. Licencji zawiera dane reprezentujące tożsamości i możliwości w jeden. Zawiera ona dowodu posiadania w formie obrazu właściciel. Licencji wystawiony przez zaufany urząd zwykle rządowych działu licencjonowania. Licencja jest zapieczętowany i może zawierać hologram, pokazujący, że nie został zmieniony przez niepowołane lub podrobić.  
   
- Na przykład należy wziąć pod uwagę dwa typy obsługiwanych w poświadczeń [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: nazwa użytkownika oraz (X.509) certyfikatu poświadczeń.  
+ Na przykład należy wziąć pod uwagę dwa typy obsługiwane w programie WCF poświadczenia: nazwa użytkownika oraz (X.509) certyfikatu poświadczeń.  
   
  Poświadczenie nazwy użytkownika tożsamości reprezentuje nazwę użytkownika i hasło stanowi potwierdzenie posiadania. Zaufany urząd to w takim przypadku system, który sprawdza poprawność nazwy użytkownika i hasła.  
   
@@ -91,16 +79,16 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |Brak|Umożliwia usłudze na współdziałanie z anonimowego klientów.|  
 |Windows|Umożliwia wymianę wiadomości SOAP występuje w kontekście uwierzytelnionych poświadczeń systemu Windows. Używa mechanizmu negocjacji SSPI z protokołu Kerberos lub NTLM jako usługi uwierzytelniania.|  
-|Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta z poświadczenie nazwy użytkownika. Należy pamiętać, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie zezwala na wszystkie operacje kryptograficzne z nazwą użytkownika, takie jak generowania podpis i szyfrowanie danych. W efekcie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymusza, czy transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
+|Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta z poświadczenie nazwy użytkownika. Należy pamiętać, że WCF nie zezwala na wszystkie operacje kryptograficzne z nazwą użytkownika, takie jak generowania podpis i szyfrowanie danych. Usługi WCF wymusza tak, czy transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
 |certyfikat|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu.|  
 |[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą [!INCLUDE[infocard](../../../../includes/infocard-md.md)].|  
   
 ### <a name="programming-credentials"></a>Programowanie poświadczeń  
- Dla każdego typu poświadczeń klienta [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania umożliwia określenie wartości poświadczeń i modułów sprawdzania poprawności poświadczeń przy użyciu usługi zachowania i zachowania kanału.  
+ Dla każdego typu poświadczeń klienta model programowania WCF umożliwia określanie wartości poświadczeń i poświadczeń moduły weryfikacji za pomocą zachowań usługi i zachowania kanału.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia mają dwa rodzaje poświadczeń: poświadczenia zachowania i zachowania poświadczeń kanału usługi service. Poświadczeń zachowania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Określ dane, a mianowicie, poświadczenia używane w celu spełnienia wymagań zabezpieczeń wyrazić za pomocą powiązania. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], klasa klienta to składnik czasu wykonywania, który wykonuje konwersję między wywołania operacji i komunikatów. Wszyscy klienci dziedziczyć <xref:System.ServiceModel.ClientBase%601> klasy. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Właściwości dla klasy podstawowej można określić różne wartości poświadczeń klienta.  
+ Zabezpieczenia WCF ma dwa typy poświadczeń: poświadczenia zachowania i zachowania poświadczeń kanału usługi service. Poświadczenie zachowania w programie WCF Określ dane, a mianowicie, poświadczenia używane w celu spełnienia wymagań zabezpieczeń wyrazić za pomocą powiązania. W programie WCF Klasa klienta jest składnik czasu wykonywania, który wykonuje konwersję między wywołania operacji i komunikatów. Wszyscy klienci dziedziczyć <xref:System.ServiceModel.ClientBase%601> klasy. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Właściwości dla klasy podstawowej można określić różne wartości poświadczeń klienta.  
   
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zachowania usługi są atrybuty stosowane do klasy Implementowanie kontraktu usługi (interface), można programowo zarządzać usługi. <xref:System.ServiceModel.Description.ServiceCredentials> Klasy można określić certyfikaty dla ustawienia usługi poświadczenia i klienta sprawdzania poprawności dla różnych typów poświadczeń klienta.  
+ W programie WCF zachowania usługi są atrybuty stosowane do klasy Implementowanie kontraktu usługi (interface), można programowo zarządzać usługi. <xref:System.ServiceModel.Description.ServiceCredentials> Klasy można określić certyfikaty dla ustawienia usługi poświadczenia i klienta sprawdzania poprawności dla różnych typów poświadczeń klienta.  
   
 ### <a name="negotiation-model-for-message-security"></a>Wzór negocjacji zabezpieczeń komunikatów  
  Trybu zabezpieczenia wiadomości umożliwia wykonywanie transfer zabezpieczeń, tak aby poświadczenie usługi jest skonfigurowany po stronie klienta poza pasmem. Na przykład jeśli używasz certyfikat przechowywany w magazynie certyfikatów systemu Windows, należy użyć narzędzia, takiego jak przystawki programu Microsoft Management Console (MMC).  

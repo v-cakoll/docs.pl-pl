@@ -1,24 +1,14 @@
 ---
-title: "ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod — metoda"
-ms.custom: 
+title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod — metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e11dd1c24001c764c82ed3f11336873ee57b2e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 564f3b1cdfab2a3020b6bb5ac8d9af03c6532c8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod — metoda
 [Obsługiwane w programie .NET Framework 4.6 i nowszymi wersjami]  
@@ -54,7 +44,7 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
  [out] Wskaźnik do adresów modułu wyliczającego  
   
 ## <a name="remarks"></a>Uwagi  
- `inlineeModuleId`i `inlineeMethodId` tworzą pełny identyfikator metody, które mogą być wbudowane. Załóżmy na przykład, moduł `A` definiuje metodę `Simple.Add`:  
+ `inlineeModuleId` i `inlineeMethodId` tworzą pełny identyfikator metody, które mogą być wbudowane. Załóżmy na przykład, moduł `A` definiuje metodę `Simple.Add`:  
   
 ```csharp  
 Simple.Add(int a, int b)   
@@ -68,7 +58,7 @@ Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }  
 ```  
   
- Umożliwia również założyć, że `Fancy.AddTwice` inlines wywołania do `SimpleAdd`. Profiler można użyć tego modułu wyliczającego można znaleźć wszystkie metody zdefiniowanego w module B, który wbudowanego `Simple.Add`, i czy wyliczania wynik `AddTwice`.  `inlineeModuleId`jest to identyfikator modułu `A`, i `inlineeeMethodId` jest identyfikatorem `Simple.Add(int a, int b)`.  
+ Umożliwia również założyć, że `Fancy.AddTwice` inlines wywołania do `SimpleAdd`. Profiler można użyć tego modułu wyliczającego można znaleźć wszystkie metody zdefiniowanego w module B, który wbudowanego `Simple.Add`, i czy wyliczania wynik `AddTwice`.  `inlineeModuleId` jest to identyfikator modułu `A`, i `inlineeeMethodId` jest identyfikatorem `Simple.Add(int a, int b)`.  
   
  Jeśli `incompleteData` ma wartość true po funkcja zwraca moduł wyliczający nie zawiera wszystkich metod ze śródwierszowaniem danej metody. Może się to zdarzyć, gdy dla jednego lub więcej bezpośrednie lub pośrednie zależności inliners modułu nie zostały jeszcze załadowane. Jeśli profilera musi dokładnych danych, jej powinna ponownie później ładowane więcej modułów, najlepiej na każdym załadowanie modułu.  
   
@@ -88,7 +78,7 @@ Simple.Add(int a, int b)
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorProfilerInfo6, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)

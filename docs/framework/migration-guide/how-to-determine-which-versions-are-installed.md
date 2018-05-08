@@ -1,10 +1,6 @@
 ---
 title: 'Porady: Określanie, które wersje programu .NET Framework są zainstalowane'
-ms.date: 01/24/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 dev_langs:
 - csharp
 - vb
@@ -15,14 +11,11 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: edf1e5a53f6f578f943cf8775a798b5681d2d9dd
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Porady: Określanie, które wersje programu .NET Framework są zainstalowane
 
@@ -98,11 +91,12 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |378675|.NET framework 4.5.1 zainstalowaną w systemie Windows 8.1 lub Windows Server 2012 R2|
     |378758|.NET framework 4.5.1 w systemie Windows 8, Windows 7 z dodatkiem SP1 lub Windows Vista z dodatkiem SP2|
     |379893|.NET Framework 4.5.2|
-    |W systemach Windows 10: 393295<br /><br /> We wszystkich wersjach systemu operacyjnego: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |W systemach Windows 10 listopada Update: 394254<br /><br /> We wszystkich wersjach systemu operacyjnego: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |W usłudze Windows 10 Anniversary Update: 394802<br /><br /> We wszystkich wersjach systemu operacyjnego: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Na 10 twórców usługi Windows Update: 460798<br/><br/> We wszystkich wersjach systemu operacyjnego: 460805 | .NET framework 4.7 |
-    |W systemie Windows 10 można podzielić aktualizacji twórcy: 461308<br/><br/> We wszystkich wersjach systemu operacyjnego: 461310 | .NET Framework 4.7.1 |
+    |Tylko w systemie Windows 10: 393295<br /><br /> We wszystkich wersjach systemu operacyjnego: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |Tylko w systemie Windows 10 listopada Update: 394254<br /><br /> We wszystkich wersjach systemu operacyjnego: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |W systemie Windows 10 Anniversary zaktualizować tylko: 394802<br /><br /> We wszystkich wersjach systemu operacyjnego: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Na twórców systemu Windows 10 zaktualizować tylko: 460798<br/><br/> We wszystkich wersjach systemu operacyjnego: 460805 | .NET framework 4.7 |
+    |W systemie Windows 10 twórców spadku zaktualizować tylko: 461308<br/><br/> We wszystkich wersjach systemu operacyjnego: 461310 | .NET Framework 4.7.1 |
+    |Na tylko aktualizacji systemu Windows 10 kwietnia 2018: 461808<br/><br/> We wszystkich wersjach systemu operacyjnego: 461814| .NET framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Aby znaleźć wersje programu .NET Framework, badając rejestru w kodzie (.NET Framework 1-4)
@@ -153,7 +147,9 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |4.7 framework .NET zainstalowany w innych wersjach systemu operacyjnego Windows|460805|
     |.NET framework w systemie Windows 10 spadek twórców Update 4.7.1|461308|
     |.NET framework 4.7.1 zainstalowane we wszystkich wersjach systemu operacyjnego Windows|461310|
-
+    |.NET framework 4.7.2 zainstalowany w systemie Windows 10 kwietnia 2018 aktualizacji|461808|
+    |.NET framework 4.7.2 zainstalowane we wszystkich wersjach systemu operacyjnego Windows|461814|
+    
      Następujące testy przykład `Release` wartości rejestru w celu ustalenia, czy [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowsza wersja programu .NET Framework jest zainstalowana.
 
      [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
@@ -186,7 +182,8 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET framework 4.7|460798|
     |.NET Framework 4.7.1|461308|
-    
+    |.NET framework 4.7.2|461808|
+
 <a name="clr_a"></a> 
 ## <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Aby znaleźć bieżącą wersję środowiska uruchomieniowego za pomocą narzędzia Clrver
 

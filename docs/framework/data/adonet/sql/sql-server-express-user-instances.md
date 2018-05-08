@@ -1,27 +1,15 @@
 ---
-title: "Wystąpienia programu SQL Server Express użytkownika"
-ms.custom: 
+title: Wystąpienia programu SQL Server Express użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia programu SQL Server Express użytkownika
 Microsoft SQL Server Express Edition, (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, który jest dostępny tylko w przypadku używania dostawcy danych programu .NET Framework dla programu SQL Server (`SqlClient`). Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparat bazy danych jest generowany przez wystąpienie nadrzędne. Zezwalaj na użytkowników, którzy nie są administratorami na swoich komputerach lokalnych, aby podłączyć się do programu SQL Server Express baz danych, a wystąpienia użytkownika. Każde wystąpienie jest uruchamiany w kontekście zabezpieczeń użytkownika na podstawie jednego wystąpienia na użytkownika.  
@@ -54,11 +42,11 @@ sp_configure 'user instances enabled','0'
   
 -   `Data Source` — Słowo kluczowe odwołuje się do wystąpienie programu SQL Server Express, który generuje wystąpienia użytkownika. To wystąpienie domyślne. \sqlexpress.  
   
--   `Integrated Security`ustawiono `true`. Aby połączyć się wystąpienia użytkownika, uwierzytelnianie systemu Windows jest wymagana; Logowania do programu SQL Server nie są obsługiwane.  
+-   `Integrated Security` ustawiono `true`. Aby połączyć się wystąpienia użytkownika, uwierzytelnianie systemu Windows jest wymagana; Logowania do programu SQL Server nie są obsługiwane.  
   
 -   `User Instance` Ma ustawioną wartość `true`, który wywołuje wystąpienia użytkownika. (Wartość domyślna to `false`.)  
   
--   `AttachDbFileName` Słowo kluczowe parametrów połączenia jest używany do dołączania plików podstawowej bazy danych (mdf), które musi zawierać pełną nazwę ścieżki. `AttachDbFileName`odpowiada także "rozszerzonych właściwości" i "początkowa nazwa pliku" kluczy w <xref:System.Data.SqlClient.SqlConnection> parametry połączenia.  
+-   `AttachDbFileName` Słowo kluczowe parametrów połączenia jest używany do dołączania plików podstawowej bazy danych (mdf), które musi zawierać pełną nazwę ścieżki. `AttachDbFileName` odpowiada także "rozszerzonych właściwości" i "początkowa nazwa pliku" kluczy w <xref:System.Data.SqlClient.SqlConnection> parametry połączenia.  
   
 -   `|DataDirectory|` Ujęta w potoku symbole ciąg podstawienia odwołuje się do katalogu danych aplikacji Otwieranie połączenia i zapewnia ścieżką względną wskazującą lokalizację .mdf i .ldf plików dziennika i bazy danych. Jeśli chcesz zlokalizować tych plików w innym miejscu, należy podać pełną ścieżkę do plików.  
   
@@ -71,8 +59,8 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 >  Można również użyć <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> i <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> właściwości, aby utworzyć parametry połączenia w czasie wykonywania.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Przy użyciu &#124; DataDirectory &#124; Ciąg podstawienia  
- `AttachDbFileName`został rozszerzony w ADO.NET 2.0 wraz z wprowadzeniem `|DataDirectory|` (ujęta w potoku symbole) ciąg podstawienia. `DataDirectory`jest używany w połączeniu z `AttachDbFileName` wskaż ścieżkę względną do pliku danych, umożliwiające deweloperom tworzenie parametrów połączenia, które są oparte na ścieżkę względną do źródła danych, zamiast trzeba określić pełną ścieżkę.  
+### <a name="using-the-124datadirectory124-substitution-string"></a>Przy użyciu &#124;DataDirectory&#124; ciąg podstawienia  
+ `AttachDbFileName` został rozszerzony w ADO.NET 2.0 wraz z wprowadzeniem `|DataDirectory|` (ujęta w potoku symbole) ciąg podstawienia. `DataDirectory` jest używany w połączeniu z `AttachDbFileName` wskaż ścieżkę względną do pliku danych, umożliwiające deweloperom tworzenie parametrów połączenia, które są oparte na ścieżkę względną do źródła danych, zamiast trzeba określić pełną ścieżkę.  
   
  Lokalizacji fizycznej który `DataDirectory` wskazuje zależy od typu aplikacji. W tym przykładzie można dołączyć plik Northwind.mdf znajduje się w folderze \app_data aplikacji.  
   
@@ -88,7 +76,7 @@ Initial Catalog=Northwind;
  Jeśli parametry połączenia zawiera ciąg podstawienia niewłaściwie sformatowany <xref:System.ArgumentException> zostanie wygenerowany.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient>rozpoznaje ciągów podstawienia do pełnej ścieżki dla komputera lokalnego systemu plików. W związku z tym serwerem, HTTP i UNC nazw ścieżek nie są obsługiwane. Po otwarciu połączenia, jeśli serwer nie znajduje się na komputerze lokalnym, jest zgłaszany wyjątek.  
+>  <xref:System.Data.SqlClient> rozpoznaje ciągów podstawienia do pełnej ścieżki dla komputera lokalnego systemu plików. W związku z tym serwerem, HTTP i UNC nazw ścieżek nie są obsługiwane. Po otwarciu połączenia, jeśli serwer nie znajduje się na komputerze lokalnym, jest zgłaszany wyjątek.  
   
  Gdy <xref:System.Data.SqlClient.SqlConnection> jest otwarty, nastąpi przekierowanie z domyślnego wystąpienia programu SQL Server Express do działającego wystąpienia inicjowane czasu wykonywania w ramach konta obiektu wywołującego.  
   

@@ -1,29 +1,15 @@
 ---
 title: Uruchamianie przykładów programu Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Uruchamianie przykładów programu Windows Communication Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Próbki mogą być uruchamiane w konfiguracji pojedynczego komputera lub między komputerami. Dostarczony, próbki są gotowe do uruchamiania na jednym komputerze. W konfiguracji między komputerami należy zmodyfikować ustawienia pliku konfiguracji na próbkę. Poniższe procedury dotyczą sposobu uruchamiania próbkę w tym samym komputerze lub między komputerami konfiguracje. Należy pamiętać, że zmiany w opisach usług hostowanych w Internet Information Services (IIS) i hostowanie Samoobsługowe próbek. Większość przykładów są hostowane w usługach IIS; Zapoznaj się z informacjami readme próbki ustalenie, jak jest obsługiwana.  
+Przykłady Windows Communication Foundation (WCF) można uruchomić w konfiguracji pojedynczego komputera lub między komputerami. Dostarczony, próbki są gotowe do uruchamiania na jednym komputerze. W konfiguracji między komputerami należy zmodyfikować ustawienia pliku konfiguracji na próbkę. Poniższe procedury dotyczą sposobu uruchamiania próbkę w tym samym komputerze lub między komputerami konfiguracje. Należy pamiętać, że zmiany w opisach usług hostowanych w Internet Information Services (IIS) i hostowanie Samoobsługowe próbek. Większość przykładów są hostowane w usługach IIS; Zapoznaj się z informacjami readme próbki ustalenie, jak jest obsługiwana.  
   
  Na [!INCLUDE[wv](../../../../includes/wv-md.md)], przykłady, które nie są obsługiwane w usługach IIS wymaga podwyższonego poziomu uprawnień, aby zarejestrować odbiornik przy użyciu składnika Http.sys. Użyj Httpcfg.exe, aby zarejestrować adresy nasłuchiwania usługi przy użyciu konta, które usługa jest uruchomiona w obszarze, lub uruchom usługi z wiersza polecenia z uprawnieniami administratora.  
   

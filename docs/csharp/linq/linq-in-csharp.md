@@ -1,20 +1,13 @@
 ---
 title: LINQ w C#
-description: "Łącza do tematów zawierających bardziej szczegółowe informacje dotyczące LINQ."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+description: Łącza do tematów zawierających bardziej szczegółowe informacje dotyczące LINQ.
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-ms.openlocfilehash: 8f5ef2ccc947ac2e6a237e25a94057e1677f14a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8501156bf2dfeff63a99a56d6f776ee7f2e350dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-in-c"></a>LINQ w C#
 Ta sekcja zawiera linki do tematów zawierających bardziej szczegółowe informacje dotyczące LINQ.  

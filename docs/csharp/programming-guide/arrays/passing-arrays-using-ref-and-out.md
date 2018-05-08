@@ -1,21 +1,14 @@
 ---
-title: "Przekazywanie tablic za pomocą ref i out (Przewodnik programowania w języku C#)"
+title: Przekazywanie tablic za pomocą ref i out (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], passing using ref and out
 ms.assetid: 6a2b261e-a1cc-49a6-b4f0-6cacae385a1e
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f76f63aee0100c6af6bde73c8543b4e7136b1954
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: a186399125e01bb2535f3a8b488c6fbd85932246
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>Przekazywanie tablic za pomocą ref i out (Przewodnik programowania w języku C#)
 Takich jak wszystkie [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametrów `out` parametr typu tablicy musi być przypisany, zanim zostanie on użyty; oznacza to, musi być przypisany przez funkcję wywołującą. Na przykład:  

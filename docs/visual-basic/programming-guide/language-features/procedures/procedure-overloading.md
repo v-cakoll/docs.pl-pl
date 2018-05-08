@@ -1,12 +1,6 @@
 ---
-title: "Przeciążanie procedury (Visual Basic)"
-ms.custom: 
+title: Przeciążanie procedury (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - signatures
 - Overloads keyword [Visual Basic]
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-overloading-visual-basic"></a>Przeciążanie procedury (Visual Basic)
 *Przeciążanie* procedury oznacza Definiowanie wielu wersji przy użyciu tej samej nazwie, ale listy różnych parametrów. Przeciążanie służy do definiowania kilka wersji blisko związane procedury bez konieczności odróżnić je według nazwy. W tym celu zróżnicowanie listy parametrów.  
@@ -56,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 -   **Elementy nie jest częścią podpisu**. Procedury nie mogą przeciążać bez zróżnicowanie podpisu. W szczególności nie mogą przeciążać procedury przez zróżnicowanie tylko jeden lub więcej z następujących elementów:  
   
-    -   Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i`Static`  
+    -   Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i `Static`  
   
     -   Parametr lub typ nazwy parametrów  
   
     -   Ograniczenia parametru typu (dla procedury ogólny)  
   
-    -   Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i`Optional`  
+    -   Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i `Optional`  
   
     -   Określa, czy wartość jest zwracana  
   
@@ -94,11 +85,11 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Porady: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Porady: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
- [Porady: przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
  [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)  
  [Rozpoznanie przeciążenia](./overload-resolution.md)  
- [Przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
  [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

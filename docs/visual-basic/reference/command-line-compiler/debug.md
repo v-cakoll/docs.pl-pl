@@ -1,12 +1,6 @@
 ---
 title: /debug (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - debug compiler switches
 - /debug compiler option [Visual Basic]
@@ -15,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7430a3ac85a86ed5528af9ea830da530208749eb
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 18d74b8f0a7b319e08780a8db9175c7be16d932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 Umożliwia kompilatorowi generowanie informacji o debugowaniu i umieść go w plikach wyjściowych.  
@@ -36,8 +30,8 @@ Umożliwia kompilatorowi generowanie informacji o debugowaniu i umieść go w pl
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. Określanie `+` lub `/debug` powoduje, że kompilator generuje informacje o debugowaniu i umieść go w pliku PDB. Określanie `-` ma ten sam efekt co nieokreślenie `/debug`.|  
-|`full` &#124; `pdbonly`|Opcjonalny. Określa typ informacji dotyczących debugowania generowanych przez kompilator. Jeśli nie określisz `/debug:pdbonly`, wartość domyślna to `full`, co umożliwia dołączanie debugera do działającego programu. `pdbonly` Argument umożliwia debugowanie kodu źródłowego, gdy program jest uruchomiony w debugerze, ale tylko wtedy, gdy jest uruchomiony program jest podłączony do debugera wyświetla kod języka zestawu.|  
+|`+` &#124; `-`|Opcjonalna. Określanie `+` lub `/debug` powoduje, że kompilator generuje informacje o debugowaniu i umieść go w pliku PDB. Określanie `-` ma ten sam efekt co nieokreślenie `/debug`.|  
+|`full` &#124; `pdbonly`|Opcjonalna. Określa typ informacji dotyczących debugowania generowanych przez kompilator. Jeśli nie określisz `/debug:pdbonly`, wartość domyślna to `full`, co umożliwia dołączanie debugera do działającego programu. `pdbonly` Argument umożliwia debugowanie kodu źródłowego, gdy program jest uruchomiony w debugerze, ale tylko wtedy, gdy jest uruchomiony program jest podłączony do debugera wyświetla kod języka zestawu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta opcja służy do tworzenia kompilacji do debugowania. Jeśli nie określisz `/debug`, `/debug+`, lub `/debug:full`, użytkownik będzie mógł debugowania pliku wyjściowego z programu.  

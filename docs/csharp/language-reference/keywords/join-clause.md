@@ -1,9 +1,6 @@
 ---
-title: "Klauzula join (odwołanie w C#)"
+title: Klauzula join (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a868c52cf753b1e4285586ec41c1993f519299d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-c-reference"></a>Klauzula join (odwołanie w C#)
 `join` Klauzuli przydaje się do kojarzenia elementów z sekwencje innego źródła, które nie mają bezpośredniego relacji w modelu obiektów. Jedynym wymaganiem jest to, że elementy w każdym źródle udostępniać niektóre wartości, które można porównywać pod względem równości. Na przykład dystrybutora żywności może mieć listy dostawców określonego produktu oraz listę kupujący. A `join` klauzuli można na przykład, aby utworzyć listę dostawców i kupujący tego produktu, którzy są w taki sam określić region.  
@@ -88,7 +82,7 @@ ms.lasthandoff: 11/21/2017
  [Słowa kluczowe zapytania (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Operacje połączone](../../programming-guide/concepts/linq/join-operations.md)  
- [Group — klauzula](../../../csharp/language-reference/keywords/group-clause.md)  
+ [group, klauzula](../../../csharp/language-reference/keywords/group-clause.md)  
  [Porady: wykonanie lewych sprzężeń zewnętrznych](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
  [Porady: wykonanie sprzężeń wewnętrznych](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
  [Porady: wykonanie sprzężeń grupowanych](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  

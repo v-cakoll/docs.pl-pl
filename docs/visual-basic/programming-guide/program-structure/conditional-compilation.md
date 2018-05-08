@@ -1,24 +1,15 @@
 ---
 title: Kompilacja warunkowa w Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Kompilacja warunkowa w Visual Basic
 W *kompilacja warunkowa*, konkretnego bloki kodu w programie są kompilowane selektywnie, podczas gdy inne są ignorowane.  
@@ -49,7 +40,7 @@ W *kompilacja warunkowa*, konkretnego bloki kodu w programie są kompilowane sel
 |---|---|  
 |**Projektant projektu**|Publicznego do wszystkich plików w projekcie|  
 |Wiersz polecenia|Publiczny, aby wszystkie pliki przekazywane do wiersza polecenia kompilatora|  
-|`#Const`instrukcji w code|Prywatny do pliku, w którym jest zadeklarowana|  
+|`#Const` instrukcji w code|Prywatny do pliku, w którym jest zadeklarowana|  
   
 |Aby ustawić stałe w Projektancie projektu|  
 |---|  
@@ -70,8 +61,8 @@ W *kompilacja warunkowa*, konkretnego bloki kodu w programie są kompilowane sel
 |[Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Zawiera sugestie dotyczące dzięki kodu można łatwo odczytać i obsługa.|  
   
 ## <a name="reference"></a>Tematy pomocy  
- [#Const-dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
   
- [#If... Then... #Else — dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

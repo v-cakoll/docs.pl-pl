@@ -1,12 +1,6 @@
 ---
 title: Zakres w Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Zakres w Visual Basic
 *Zakres* elementu zadeklarowane to zbiór wszystkich kod, który może odwoływać się do niego bez kwalifikujących się jego nazwę lub udostępnianie przy [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Element może mieć zakresu w jednej z następujących poziomach:  
@@ -59,21 +50,21 @@ ms.lasthandoff: 11/21/2017
 ### <a name="block-scope"></a>Zasięg bloku  
  Blok jest zestaw instrukcji ujętą w nawiasy klamrowe inicjowanie i kończenie instrukcji deklaracji, takie jak następujące:  
   
--   `Do`i`Loop`  
+-   `Do` I `Loop`  
   
--   `For`[`Each`] i`Next`  
+-   `For` [`Each`] i `Next`  
   
--   `If`i`End If`  
+-   `If` I `End If`  
   
--   `Select`i`End Select`  
+-   `Select` I `End Select`  
   
--   `SyncLock`i`End SyncLock`  
+-   `SyncLock` I `End SyncLock`  
   
--   `Try`i`End Try`  
+-   `Try` I `End Try`  
   
--   `While`i`End While`  
+-   `While` I `End While`  
   
--   `With`i`End With`  
+-   `With` I `End With`  
   
  Jeżeli można zadeklarować zmiennej w bloku, możesz używać go tylko w tym bloku. W poniższym przykładzie zakres zmienna całkowitoliczbowa `cube` bloku między `If` i `End If`, a nie mogą odwoływać się do `cube` podczas wykonywania przekazuje poza blokiem.  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Zakres Namespace zawiera zagnieżdżone przestrzeni nazw. Element dostępne w przestrzeni nazw jest również dostępne w przestrzeni nazw zagnieżdżone wewnątrz tego obszaru nazw.  
   
- Jeśli projekt nie zawiera żadnych [instrukcji Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md), wszystko w projekcie jest w tej samej przestrzeni nazw. W takim przypadku zakresie przestrzeni nazw można traktować jako zakres projektu. `Public`elementy w module, klasy lub struktury są również dostępne dla każdego projektu, który odwołuje się do swojego projektu.  
+ Jeśli projekt nie zawiera żadnych [instrukcji Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md), wszystko w projekcie jest w tej samej przestrzeni nazw. W takim przypadku zakresie przestrzeni nazw można traktować jako zakres projektu. `Public` elementy w module, klasy lub struktury są również dostępne dla każdego projektu, który odwołuje się do swojego projektu.  
   
 ## <a name="choice-of-scope"></a>Wybór zakresu  
  Deklaracja zmiennej możesz należy mieć na uwadze następujące kwestie podczas wybierania jej zakres.  
@@ -143,8 +134,8 @@ Public strMsg As String
  Ogólnie rzecz biorąc, przy deklarowaniu dowolną zmienną lub stałą, jest dobrym programowania rozwiązań, aby zakres jak to możliwe (zakresie bloku jest najwęższym). Pomaga zachować pamięci i minimalizuje ryzyko błędnego odwołujących się do zmiennej niewłaściwy kod. Podobnie, należy zadeklarować zmiennej jako [statycznych](../../../../visual-basic/language-reference/modifiers/static.md) tylko gdy jest konieczne w celu zachowania jego wartość z zakresu od wywołań procedur.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zadeklarowana Charakterystyka elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Porady: kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Instrukcje: kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
  [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
  [Poziomy dostępu w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  

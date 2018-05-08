@@ -1,24 +1,14 @@
 ---
-title: "Omówienie modułu uwierzytelniania WSFederation"
-ms.custom: 
+title: Omówienie modułu uwierzytelniania WSFederation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b9e76cbfc0afc682f6a7cd0bc95c254d25f77954
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abfd211629c3c77c87cbefbc27c6b18ab6872977
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET za pośrednictwem modułu uwierzytelniania WS-Federated (WS-FARMA). Ten temat pomoże Ci zrozumieć sposób federacyjnych działania uwierzytelniania i jak z niego korzystać.  
@@ -41,7 +31,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
 6.  RP wyodrębnia oświadczeń klienta z tokenu zabezpieczeń i sprawia, że decyzję dotyczącą autoryzacji.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Program ASP.NET przy użyciu modułu uwierzytelniania federacyjnego  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WS-FARMA) jest moduł protokołu HTTP, które umożliwia dodanie uwierzytelniania federacyjnego do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji. Uwierzytelnianie Sfederowane umożliwia logika uwierzytelniania są obsługiwane przez usługę STS i pozwala skupić się na temat pisania logiki biznesowej.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FARMA) jest moduł protokołu HTTP, które umożliwia dodanie uwierzytelniania federacyjnego do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji. Uwierzytelnianie Sfederowane umożliwia logika uwierzytelniania są obsługiwane przez usługę STS i pozwala skupić się na temat pisania logiki biznesowej.  
   
  Możesz skonfigurować WS-FARMA, aby określić STS, do których mają być przekierowywane nieuwierzytelnione żądania. WIF umożliwia uwierzytelnianie użytkowników na dwa sposoby:  
   
@@ -60,7 +50,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
   
  Na poniższym diagramie przedstawiono ogólny przepływ informacji w przypadku przekierowania pasywnych. Żądanie jest automatycznie przekierowywane za pośrednictwem usługi STS ustanowienie poświadczenia bez strony logowania:  
   
- ![Diagram czasowa znaku &#45; za pomocą przekierowania pasywnym](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![Diagram czasowa znaku&#45;się przy użyciu przekierowania pasywnym](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
   
  Na poniższym diagramie przedstawiono bardziej szczegółowo na co się dzieje, gdy użytkownik został uwierzytelniony za pomocą usługi STS i ich tokeny zabezpieczające są przetwarzane przez <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>:  
   
@@ -68,7 +58,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
   
  Na poniższym diagramie przedstawiono bardziej szczegółowo na co się dzieje, gdy tokeny zabezpieczające użytkownika ma zostać zserializowane do plików cookie i są przechwytywane przez <xref:System.IdentityModel.Services.SessionAuthenticationModule>:  
   
- ![SAM chronometrażu diagram przedstawiający znak &#45; za pomocą formantów](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
+ ![SAM chronometrażu diagram przedstawiający znak&#45;za pomocą formantów](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Zdarzenia  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>i ich klasy nadrzędnej <xref:System.IdentityModel.Services.HttpModuleBase>, wywoływanie zdarzeń na różnych etapach przetwarzania żądania HTTP. Można obsługiwać te zdarzenia w `global.asax` pliku z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji.  

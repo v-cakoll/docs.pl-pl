@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::MergeEnd — Metoda"
-ms.custom: 
+title: IMetaDataEmit::MergeEnd — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.MergeEnd
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 265fc007b5817e8dffd5846738a7a0003bbddf9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd — Metoda
 Scalenia do bieżącego zakresu zakresy metadanych określonych przez jeden lub więcej poprzedniego wywołania [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -58,7 +46,7 @@ HRESULT MergeEnd ();
   
      Jeśli moduł właściwości zostały już skonfigurowane dla bieżącego zakresu, Brak właściwości modułu zostaną zaimportowane. Jednak jeśli nie ustawiono właściwości modułu w bieżącym zakresie, są one importowane tylko raz, gdy są najpierw napotkano. Jeśli te właściwości modułu wystąpi ponownie, znajdują się duplikaty. Jeśli znajdują się duplikaty nie są porównywane wartości wszystkich właściwości modułu (z wyjątkiem identyfikatora MVID), występuje błąd.  
   
--   Dla definicji typów (`TypeDef`), bez duplikatów są scalane w bieżącym zakresie. `TypeDef`obiekty są sprawdzane pod kątem duplikatów dla każdego *obiektu w pełni kwalifikowaną nazwę* + *GUID* + *numer wersji*. Jeśli są zgodne na nazwę lub identyfikator GUID i inne elementy są różne, występuje błąd. W przeciwnym razie, jeśli wszystkie trzy elementy są zgodne, `MergeEnd` sprawdza pobieżną zapewnienie wpisy są rzeczywiście duplikaty; Jeśli nie, występuje błąd. Szuka tego pobieżnego:  
+-   Dla definicji typów (`TypeDef`), bez duplikatów są scalane w bieżącym zakresie. `TypeDef` obiekty są sprawdzane pod kątem duplikatów dla każdego *obiektu w pełni kwalifikowaną nazwę* + *GUID* + *numer wersji*. Jeśli są zgodne na nazwę lub identyfikator GUID i inne elementy są różne, występuje błąd. W przeciwnym razie, jeśli wszystkie trzy elementy są zgodne, `MergeEnd` sprawdza pobieżną zapewnienie wpisy są rzeczywiście duplikaty; Jeśli nie, występuje błąd. Szuka tego pobieżnego:  
   
     -   Tego samego elementu członkowskiego deklaracjami występujących w tej samej kolejności. Elementy członkowskie, które są oznaczone jako `mdPrivateScope` (zobacz [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenie) nie są uwzględnione w tym wyboru; są one scalane specjalnie.  
   
@@ -79,7 +67,7 @@ HRESULT MergeEnd ();
   
  **Biblioteka:** używany jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

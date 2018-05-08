@@ -1,30 +1,20 @@
 ---
-title: "Zabezpieczenia zdarzeń ETW"
-ms.custom: 
+title: Zabezpieczenia zdarzeń ETW
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: abf6e6896267b6d1c8449b020230381923f38f1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e02274b63ddf7df42d26621791de0286df9655b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-etw-events"></a>Zabezpieczenia zdarzeń ETW
-<a name="top"></a>Zdarzenia zabezpieczeń są wywoływane podczas weryfikacji silnej nazwy i weryfikacji Authenticode.  
+<a name="top"></a> Zdarzenia zabezpieczeń są wywoływane podczas weryfikacji silnej nazwy i weryfikacji Authenticode.  
   
  Ta kategoria obejmuje następujące zdarzenia:  
   
@@ -38,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword`(0x400)|Informational(4)|  
+|`SecurityKeyword` (0x400)|Informational(4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -64,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword`(0x400)|Informational(4)|  
+|`SecurityKeyword` (0x400)|Informational(4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   

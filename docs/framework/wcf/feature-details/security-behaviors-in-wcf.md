@@ -1,29 +1,17 @@
 ---
 title: Zachowania zabezpieczeń w programie WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
-W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowanie zachowania czasu wykonywania na poziomie usługi lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowania ogólnie rzecz biorąc, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwiają kontrolę nad poświadczeniami, uwierzytelniania, autoryzacji i dzienniki inspekcji. Można użyć zachowania, przez programowania w języku lub przy użyciu konfiguracji. Ten temat koncentruje się na konfigurowaniu następujące zachowania związane z funkcjami zabezpieczeń:  
+W konsoli Windows Communication Foundation (WCF) zachowania modyfikowanie zachowania w czasie wykonywania na poziomie usługi lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowania ogólnie rzecz biorąc, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwiają kontrolę nad poświadczeniami, uwierzytelniania, autoryzacji i dzienniki inspekcji. Można użyć zachowania, przez programowania w języku lub przy użyciu konfiguracji. Ten temat koncentruje się na konfigurowaniu następujące zachowania związane z funkcjami zabezpieczeń:  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -140,7 +128,7 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], zachowania modyfikowa
  Określa domyślny adres usługi tokenu zabezpieczeń. Ten element jest używany podczas <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL dla usługi tokenu zabezpieczającego lub gdy jest adres wystawcy wiązania federacyjnego http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous lub `null`. W takich przypadkach <xref:System.ServiceModel.Description.ClientCredentials> musi być skonfigurowany adres wystawcy lokalnego i powiązania, które używają do komunikowania się z tym wystawcą.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- Użyj [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) można dodać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zachowań klienta używany podczas komunikacji z usługi tokenu zabezpieczającego. Definiowanie zachowania klienta w [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sekcji. Aby użyć zdefiniowanego zachowania, Dodaj <`add`> elementu `<issuerChannelBehaviors>` elementu o dwa atrybuty. Ustaw `issuerAddress` do adresu URL usługi tokenu zabezpieczeń i zestaw `behaviorConfiguration` atrybutu nazwy zachowanie określonych punktów końcowych, jak pokazano w poniższym przykładzie.  
+ Użyj [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) funkcjonalności klienta WCF używany podczas komunikacji z usługi tokenu zabezpieczającego. Definiowanie zachowania klienta w [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sekcji. Aby użyć zdefiniowanego zachowania, Dodaj <`add`> elementu `<issuerChannelBehaviors>` elementu o dwa atrybuty. Ustaw `issuerAddress` do adresu URL usługi tokenu zabezpieczeń i zestaw `behaviorConfiguration` atrybutu nazwy zachowanie określonych punktów końcowych, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <clientCredentials>  

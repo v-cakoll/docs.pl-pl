@@ -1,26 +1,20 @@
 ---
-title: "Instrukcje (Przewodnik programowania w języku C#)"
+title: Instrukcje (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 166130ca7a63127d0bd1df8328dc08b4a8cd7845
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 68f7f799ebbfe52c99820083eb22761c79f66483
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obejmują deklarowania zmiennych, przypisywanie wartości, wywołanie metody zapętlenie przez kolekcje i rozgałęziania do jednej lub drugiej bloku kodu, w zależności od dany warunek. Kolejność wykonywania instrukcji w programie nosi nazwę przepływu sterowania lub przepływ wykonania. Przepływ sterowania mogą różnić się zawsze uruchamiany program, w zależności od tego, jak program reaguje na dane wejściowe odbiór w czasie wykonywania.  
   
- Instrukcja może zawierać pojedynczy wiersz kodu, który kończy się średnikiem lub serii jednowierszowe instrukcje w bloku. Blok instrukcji jest ujęta w nawiasy {} i mogą zawierać zagnieżdżonych bloków. Poniższy kod przedstawia dwa przykłady jednowierszowe instrukcje i blok instrukcji wiele wierszy:  
+ Instrukcja może zawierać pojedynczy wiersz kodu, który kończy się średnikiem lub serii jednowierszowe instrukcje w bloku. Blok instrukcji jest ujęta w {} nawiasy i mogą zawierać zagnieżdżonych bloków. Poniższy kod przedstawia dwa przykłady jednowierszowe instrukcje i blok instrukcji wiele wierszy:  
   
  [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
   
@@ -44,11 +38,11 @@ Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obej
 |Pusta instrukcja|Pusta instrukcja składa się z jednego średnikami. Nic nie i mogą być używane w miejscach, gdzie instrukcji jest wymagany, ale musi zostać wykonana żadna akcja. W poniższych przykładach pokazano dwa zastosowania pustą instrukcję:<br /><br /> [!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## <a name="embedded-statements"></a>Instrukcje osadzonych  
- Niektóre instrukcje w tym [czy](../../../csharp/language-reference/keywords/do.md), [podczas](../../../csharp/language-reference/keywords/while.md), [dla](../../../csharp/language-reference/keywords/for.md), i [foreach](../../../csharp/language-reference/keywords/foreach-in.md), zawsze mieć osadzona instrukcja je poniżej. To osadzona instrukcja może być pojedyncza instrukcja lub użycie wielu instrukcji ujęta w nawiasy {} w bloku instrukcji. Nawet jednowierszowe instrukcje osadzonych mogą być ujęte w nawiasy {}, jak pokazano w poniższym przykładzie:  
+ Niektóre instrukcje w tym [czy](../../../csharp/language-reference/keywords/do.md), [podczas](../../../csharp/language-reference/keywords/while.md), [dla](../../../csharp/language-reference/keywords/for.md), i [foreach](../../../csharp/language-reference/keywords/foreach-in.md), zawsze mieć osadzona instrukcja je poniżej. To osadzona instrukcja może być pojedyncza instrukcja lub użycie wielu instrukcji ujęty w {} nawiasów kwadratowych w bloku instrukcji. Nawet jednowierszowe instrukcje osadzonych mogą być ujęte w {} nawiasy, jak pokazano w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   
- Osadzona instrukcja, która nie jest ujęta w nawiasy {} nie może być etykietą instrukcji lub instrukcji deklaracji. Przedstawiono to w poniższym przykładzie:  
+ Osadzona instrukcja, która nie jest zawarta w {} nawiasy kwadratowe nie może być etykietą instrukcji lub instrukcji deklaracji. Przedstawiono to w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
   

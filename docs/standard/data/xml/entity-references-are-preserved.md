@@ -1,26 +1,15 @@
 ---
-title: "Odwołania do jednostek zostaną zachowane."
-ms.custom: 
+title: Odwołania do jednostek zostaną zachowane.
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f5a867d1301355f4c9a77654556229274f96d00c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 652a044bf1b5293bc9c36477a46a78d9851f1810
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="entity-references-are-preserved"></a>Odwołania do jednostek zostaną zachowane.
 Gdy odwołanie do jednostki nie jest rozwinięty, ale zachowane, XML modelu DOM (Document Object) tworzy **XmlEntityReference** węzła po napotkaniu odwołania do jednostki.  

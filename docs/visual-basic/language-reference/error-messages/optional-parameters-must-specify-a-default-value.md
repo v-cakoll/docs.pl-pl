@@ -1,26 +1,17 @@
 ---
-title: "Parametry opcjonalne muszą określać wartość domyślną"
+title: Parametry opcjonalne muszą określać wartość domyślną
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30812
 - bc30812
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e9ec6d044ba0a1bb904030ddbb4c4fa406c3ba63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6788a7908489591e266af6d141006f2aa2d0e6f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>Parametry opcjonalne muszą określać wartość domyślną
 Parametry opcjonalne podać wartości domyślne, które mogą być używane, jeśli parametr nie zostanie podany przez wywołanie procedury.  
@@ -39,4 +30,4 @@ Parametry opcjonalne podać wartości domyślne, które mogą być używane, je�
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcjonalne](../../../visual-basic/language-reference/modifiers/optional.md)
+ [Optional](../../../visual-basic/language-reference/modifiers/optional.md)

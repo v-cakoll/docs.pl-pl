@@ -1,13 +1,6 @@
 ---
-title: "Jednostki znaków XML i XAML"
-ms.custom: 
+title: Jednostki znaków XML i XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - '&'
 - '&amp'
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-caps.latest.revision: "23"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-character-entities-and-xaml"></a>Jednostki znaków XML i XAML
 XAML używa jednostki znaków zdefiniowane w pliku XML dla znaków specjalnych. W tym temacie opisano niektóre jednostki określonych znaków i Ogólne zagadnienia dotyczące innych koncepcji XML w języku XAML.  
@@ -47,7 +35,7 @@ XAML używa jednostki znaków zdefiniowane w pliku XML dla znaków specjalnych. 
   
  Głównego wyjątek to, że nawiasy klamrowe ({i}) ma znaczenie w języku XAML, ponieważ te znaki informuje procesora XAML, czy sekwencja znaków w nawiasach klamrowych musi być interpretowane jako rozszerzenie znaczników. Aby uzyskać więcej informacji na temat rozszerzeń znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
- Jednakże nadal można wyświetlić nawiasy klamrowe jako literały przy użyciu sekwencji unikowej specyficznych dla języka XAML, a nie XML. Aby uzyskać więcej informacji, zobacz [{} sekwencja ucieczki — rozszerzenie znaczników](escape-sequence-markup-extension.md).  
+ Jednakże nadal można wyświetlić nawiasy klamrowe jako literały przy użyciu sekwencji unikowej specyficznych dla języka XAML, a nie XML. Aby uzyskać więcej informacji, zobacz [ {} sekwencja ucieczki — rozszerzenie znaczników](escape-sequence-markup-extension.md).  
   
  Należy pamiętać, że ukośnik odwrotny (\\) nie wymaga sekwencji unikowej, gdy jest on traktowany jako ciąg.  
   
@@ -62,7 +50,7 @@ XAML używa jednostki znaków zdefiniowane w pliku XML dla znaków specjalnych. 
 |< (mniej-niż znak)|\&lt;|Dla wartości atrybutu muszą być używane, ale \< jest akceptowany w zawartości elementu tak długo, jak > nie jest zgodna.|  
 |"(proste cudzysłów)|\&quot;|Dla wartości atrybutu muszą być używane, ale proste znak cudzysłowu (") jest akceptowany w zawartości elementu. Należy pamiętać, że wartości atrybutu może być ujęte proste znak pojedynczego cudzysłowu (') lub proste znak cudzysłowu ("); występuje jako pierwszy znak niezależnie od definiuje obudowa wartość atrybutu i alternatywne oferty mogą następnie służyć jako literał w wartości.|  
 |"(proste cudzysłów pojedynczy)|\&APOS;|Dla wartości atrybutu muszą być używane, ale proste znak pojedynczego cudzysłowu (') jest akceptowany w zawartości elementu. Należy pamiętać, że wartości atrybutu może być ujęte proste znak pojedynczego cudzysłowu (') lub proste znak cudzysłowu ("); występuje jako pierwszy znak niezależnie od definiuje obudowa wartość atrybutu i alternatywne oferty mogą następnie służyć jako literał w wartości.|  
-|(znaku numerycznego mapowania)|&#*[liczba całkowita]* ; lub & #x*[szesnastkowych]*;|XAML obsługuje mapowania znaku numerycznego do kodowania, które jest aktywny.|  
+|(znaku numerycznego mapowania)|&#*[liczba całkowita]* ; lub & #x *[szesnastkowych]*;|XAML obsługuje mapowania znaku numerycznego do kodowania, które jest aktywny.|  
 |(nierozdzielających miejsca)|&\#160; (przy założeniu, kodowania UTF-8)|Dla elementów dokumentu przepływu i elementy, które tekstu, takich jak WPF <xref:System.Windows.Controls.TextBox>, spacji nierozdzielających nie są znormalizować poza znaczników, nawet w przypadku `xml:space="default"`. (Aby uzyskać więcej informacji, zobacz [przetwarzanie spacji w XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   

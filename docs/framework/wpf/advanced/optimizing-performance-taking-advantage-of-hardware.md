@@ -1,13 +1,6 @@
 ---
-title: "Optymalizacja wydajności: wykorzystanie sprzętu"
-ms.custom: 
+title: 'Optymalizacja wydajności: wykorzystanie sprzętu'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - hardware rendering pipeline [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55c9482ecb540baab3ddd57ca9350fd7265ac251
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb790da63b4636e3dd6c25ea118075304702acc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optymalizacja wydajności: wykorzystanie sprzętu
 Architektura wewnętrzny [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma dwa renderowania potoki, sprzętu i oprogramowania. Ten temat zawiera informacje o tych potoki renderowania podejmowanie decyzji o optymalizacji wydajności aplikacji.  
@@ -34,14 +22,14 @@ Architektura wewnętrzny [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
  Jedną z najbardziej ważne czynniki wpływające [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wydajności jest powiązany renderowania — więcej pikseli, należy renderować większą wydajność kosztów. Jednak im więcej renderowania, które można odciążać do [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], uzyskać więcej korzyści w zakresie wydajności. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Potoku renderowania sprzętu aplikacja wykorzystuje pełną [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] funkcje na sprzęcie, który obsługuje co najmniej [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] w wersji 7.0. Dodatkowe optymalizacje można uzyskać przez sprzęt obsługujący [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] w wersji 7.0 i właściwość PixelShader 2.0 + funkcji.  
   
 ## <a name="software-rendering-pipeline"></a>Potoku renderowania oprogramowania  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Potoku renderowania oprogramowania całkowicie CPU jest powiązany. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wykorzystuje instrukcji SSE i SSE2 ustawia w Procesora do zaimplementowania rasteryzator oprogramowania zoptymalizowane, w pełni funkcjonalne. Powrót do oprogramowania jest bezproblemowe funkcjonalność aplikacji nie może być renderowany przy użyciu sprzętu potoku renderowania za każdym razem.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Potoku renderowania oprogramowania całkowicie CPU jest powiązany. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wykorzystuje instrukcji SSE i SSE2 ustawia w Procesora do zaimplementowania rasteryzator oprogramowania zoptymalizowane, w pełni funkcjonalne. Powrót do oprogramowania jest bezproblemowe funkcjonalność aplikacji nie może być renderowany przy użyciu sprzętu potoku renderowania za każdym razem.  
   
  Problem z wydajnością największych wystąpią podczas renderowania w trybie oprogramowania jest powiązany z wypełnienia szybkości, która jest zdefiniowana jako liczbę pikseli, które są renderowania. Jeśli dane dotyczące wydajności w tryb renderowania oprogramowania, należy dążyć do minimalizacji ile razy piksel jest rysowane. Na przykład jeśli masz aplikację niebieskim tle nad nim następnie renderuje nieco przezroczystego obrazu, będą zawierały wszystkie piksele w aplikacji dwa razy. W związku z tym potrwa dwa razy tak długo, renderowanie aplikacji z obrazem niż niebieskiego tła.  
   
 ### <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki  
  Może być bardzo trudne do przewidzenia, aplikacja zostanie uruchomiona w konfiguracji sprzętu. Warto jednak wziąć pod uwagę projekt, który umożliwia aplikacjom bezproblemowo przełączyć funkcji uruchomionej na inny sprzęt, tak aby może potrwać zalet każdej innej konfiguracji sprzętu.  
   
- Aby to osiągnąć, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia funkcje, aby określić możliwości grafiki systemu w czasie wykonywania. Możliwość grafiki zależy od klasyfikacji karty wideo jako jedną z trzech renderowania możliwości warstwy. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]przedstawia [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] umożliwiająca aplikacji do badania warstwy możliwość renderowania. Aplikację można następnie automatycznie podjąć różne ścieżki w czasie wykonywania w zależności od warstwy renderowania obsługiwana przez sprzęt.  
+ Aby to osiągnąć, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia funkcje, aby określić możliwości grafiki systemu w czasie wykonywania. Możliwość grafiki zależy od klasyfikacji karty wideo jako jedną z trzech renderowania możliwości warstwy. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przedstawia [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] umożliwiająca aplikacji do badania warstwy możliwość renderowania. Aplikację można następnie automatycznie podjąć różne ścieżki w czasie wykonywania w zależności od warstwy renderowania obsługiwana przez sprzęt.  
   
  Funkcje sprzętu grafiki, że większość wpływ poziomy warstwy renderowania to:  
   

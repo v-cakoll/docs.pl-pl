@@ -1,19 +1,12 @@
 ---
 title: Koncepcje programowania (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c84b26f757ec852c9aefecab58eff9e631b95d15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-concepts-visual-basic"></a>Koncepcje programowania (Visual Basic)
 W tej sekcji opisano pojęcia dotyczące programowania w języku Visual Basic.  
@@ -40,4 +33,4 @@ W tej sekcji opisano pojęcia dotyczące programowania w języku Visual Basic.
   
 |||  
 |---|---|  
-|[Porady dotyczące wydajności](../../../framework/performance/performance-tips.md) | W tym artykule omówiono kilka podstawowych reguł, które mogą pomóc zwiększyć wydajność aplikacji.|
+|[Wskazówki dotyczące wydajności](../../../framework/performance/performance-tips.md) | W tym artykule omówiono kilka podstawowych reguł, które mogą pomóc zwiększyć wydajność aplikacji.|

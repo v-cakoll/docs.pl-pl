@@ -1,27 +1,15 @@
 ---
 title: Podczas pobierania danych binarnych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f91f23906a6d52a66a3cf972fe5636926dba4112
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 302c26571e9843a4b7c3c440969e4159ef2d10ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-binary-data"></a>Podczas pobierania danych binarnych
 Domyślnie **DataReader** ładuje dane przychodzące jako wiersz, jak cały wiersz danych jest dostępna. Duże obiekty binarne (BLOB) wymagają innego podejścia, jednak ponieważ zawierają one GB danych, które nie mogą wchodzić w jednym wierszu. **Command.ExecuteReader** metoda ma przeciążenia, które będą wymaga <xref:System.Data.CommandBehavior> argumentu, aby zmodyfikować domyślne zachowanie **DataReader**. Można przekazać <xref:System.Data.CommandBehavior.SequentialAccess> do **ExecuteReader** metodę, aby zmodyfikować domyślne zachowanie **DataReader** tak, aby zamiast ładowania wierszy danych, jego ładowanie danych sekwencyjnie odbierane. Jest to idealne rozwiązanie w przypadku ładowania obiektów blob lub inne struktury dużej ilości danych. Należy pamiętać, że takie zachowanie może zależeć od źródła danych. Na przykład zwracać obiekt BLOB z programu Microsoft Access załaduje całego obiektu BLOB ładowany do pamięci, a nie po kolei odbierane.  

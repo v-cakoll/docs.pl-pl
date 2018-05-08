@@ -1,13 +1,6 @@
 ---
-title: "Optymalizacja wydajności: zachowanie obiektu"
-ms.custom: 
+title: 'Optymalizacja wydajności: zachowanie obiektu'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12c4dc202ac4db2c21b0a45b61608f5c03c24ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1f56dec87de7a22aa8a0bfefe84222d74ba085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-object-behavior"></a>Optymalizacja wydajności: zachowanie obiektu
 Opis zachowania wewnętrznych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów pomoże Ci kompromisy prawo między funkcjonalność i wydajność.  
@@ -38,7 +26,7 @@ Opis zachowania wewnętrznych [!INCLUDE[TLA2#tla_winclient](../../../../includes
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Nie usuwanie programów obsługi zdarzeń w obiektach może Keep Alive obiektów  
  Delegat, obiekt przekazywany do jego zdarzenia skutecznie jest odwołanie do tego obiektu. W związku z tym obsługi zdarzeń może podtrzymywania obiektów dłużej niż oczekiwano. Wykonywanie czyszczenia obiekt, który został zarejestrowany do nasłuchiwania zdarzeń obiektu, jest ważne, aby usunąć ten delegat przed zwolnieniem obiektu. Utrzymywanie aktywności niepotrzebnych obiektów zwiększa wykorzystanie pamięci aplikacji. Jest to szczególnie istotne, gdy obiekt jest głównym drzewa logicznego lub wizualnego drzewa.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wprowadza wzorzec odbiornika słabe zdarzeń dla zdarzenia, które mogą być przydatne w sytuacjach, w którym są trudne do śledzenia relacje okres istnienia obiektów między źródłem i odbiornika. Niektóre istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia użycia tego wzorca. W przypadku wdrażania obiektów niestandardowych zdarzeń, ten wzorzec mogą być uwzględnione dla Ciebie. Aby uzyskać więcej informacji, zobacz [słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wprowadza wzorzec odbiornika słabe zdarzeń dla zdarzenia, które mogą być przydatne w sytuacjach, w którym są trudne do śledzenia relacje okres istnienia obiektów między źródłem i odbiornika. Niektóre istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia użycia tego wzorca. W przypadku wdrażania obiektów niestandardowych zdarzeń, ten wzorzec mogą być uwzględnione dla Ciebie. Aby uzyskać więcej informacji, zobacz [słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
   
  Istnieje kilka narzędzi, takich jak CLR Profiler i pracy Set Viewer, można zawierający informacje o użyciu pamięci przez określony proces. CLR Profiler zawiera szereg widoki przydatne profil alokacji, w tym histogram przydzielone typy wykresów alokacji i wywołanie, przedstawiający wyrzucania różnych generacji i wynikowy stanu sterty zarządzanej po osi czasu te kolekcje, a drzewo wywołań przedstawiający-metoda alokacji i załadowań zestawów. Aby uzyskać więcej informacji, zobacz [Centrum deweloperów .NET Framework](http://go.microsoft.com/fwlink/?LinkId=117435).  
   
@@ -80,8 +68,8 @@ Opis zachowania wewnętrznych [!INCLUDE[TLA2#tla_winclient](../../../../includes
   
 |**Stan**|**Rozmiar**|  
 |---------------|--------------|  
-|Zablokowane<xref:System.Windows.Media.SolidColorBrush>|212 bajtów|  
-|Zablokowane na inne niż<xref:System.Windows.Media.SolidColorBrush>|972 bajtów|  
+|Zablokowane <xref:System.Windows.Media.SolidColorBrush>|212 bajtów|  
+|Zablokowane na inne niż <xref:System.Windows.Media.SolidColorBrush>|972 bajtów|  
   
  Poniższy przykładowy kod przedstawia tę koncepcję:  
   
@@ -91,7 +79,7 @@ Opis zachowania wewnętrznych [!INCLUDE[TLA2#tla_winclient](../../../../includes
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Zmienione programów obsługi na odblokowanej obiektów Freezable może Keep Alive obiektów  
  Delegat, który przekazuje obiekt <xref:System.Windows.Freezable> obiektu <xref:System.Windows.Freezable.Changed> zdarzeń jest odwołanie do tego obiektu. W związku z tym <xref:System.Windows.Freezable.Changed> procedury obsługi zdarzeń może podtrzymywania obiektów dłużej niż oczekiwano. Podczas wykonywania oczyszczania obiektu, który został zarejestrowany do nasłuchiwania na <xref:System.Windows.Freezable> obiektu <xref:System.Windows.Freezable.Changed> zdarzeń, ważne jest, aby usunąć ten delegat przed zwolnieniem obiektu.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Przechwytuje również <xref:System.Windows.Freezable.Changed> zdarzenia wewnętrznie. Na przykład wszystkie właściwości zależności, które biorą <xref:System.Windows.Freezable> jako wartość będzie nasłuchiwać <xref:System.Windows.Freezable.Changed> zdarzeń automatycznie. <xref:System.Windows.Shapes.Shape.Fill%2A> Właściwość, która przyjmuje <xref:System.Windows.Media.Brush>, ilustruje tę koncepcję.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Przechwytuje również <xref:System.Windows.Freezable.Changed> zdarzenia wewnętrznie. Na przykład wszystkie właściwości zależności, które biorą <xref:System.Windows.Freezable> jako wartość będzie nasłuchiwać <xref:System.Windows.Freezable.Changed> zdarzeń automatycznie. <xref:System.Windows.Shapes.Shape.Fill%2A> Właściwość, która przyjmuje <xref:System.Windows.Media.Brush>, ilustruje tę koncepcję.  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
@@ -110,7 +98,7 @@ Opis zachowania wewnętrznych [!INCLUDE[TLA2#tla_winclient](../../../../includes
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Wirtualizacja interfejsu użytkownika  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]dostępne są także odmianą <xref:System.Windows.Controls.StackPanel> element, który automatycznie "Wirtualizuje" zawartość elementu podrzędnego powiązane z danymi. W tym kontekście wirtualizacji wyraz odwołuje się do technika, przez którą podzbiór obiektów są generowane na podstawie większą liczbę elementów danych oparte na elementy, które są widoczne na ekranie. Jest znacznym zarówno pod względem pamięci i procesora, aby generować dużą liczbę elementów interfejsu użytkownika, gdy tylko kilka może znajdować się na ekranie w danym momencie. <xref:System.Windows.Controls.VirtualizingStackPanel>(za pośrednictwem funkcji udostępnianych przez usługę <xref:System.Windows.Controls.VirtualizingPanel>) oblicza widocznych elementów i współdziała z <xref:System.Windows.Controls.ItemContainerGenerator> z <xref:System.Windows.Controls.ItemsControl> (takich jak <xref:System.Windows.Controls.ListBox> lub <xref:System.Windows.Controls.ListView>) można tworzyć tylko elementy dla widocznych elementów.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dostępne są także odmianą <xref:System.Windows.Controls.StackPanel> element, który automatycznie "Wirtualizuje" zawartość elementu podrzędnego powiązane z danymi. W tym kontekście wirtualizacji wyraz odwołuje się do technika, przez którą podzbiór obiektów są generowane na podstawie większą liczbę elementów danych oparte na elementy, które są widoczne na ekranie. Jest znacznym zarówno pod względem pamięci i procesora, aby generować dużą liczbę elementów interfejsu użytkownika, gdy tylko kilka może znajdować się na ekranie w danym momencie. <xref:System.Windows.Controls.VirtualizingStackPanel> (za pośrednictwem funkcji udostępnianych przez usługę <xref:System.Windows.Controls.VirtualizingPanel>) oblicza widocznych elementów i współdziała z <xref:System.Windows.Controls.ItemContainerGenerator> z <xref:System.Windows.Controls.ItemsControl> (takich jak <xref:System.Windows.Controls.ListBox> lub <xref:System.Windows.Controls.ListView>) można tworzyć tylko elementy dla widocznych elementów.  
   
  Jak zoptymalizować wydajność obiektów visual dla tych elementów są tylko wygenerowany lub utrzymywane, jeśli są one widoczne na ekranie. Gdy nie są już w widocznym obszarze formantu visual obiektów mogą zostać usunięte. To nie należy mylić z wirtualizacją danych, gdy obiekty danych nie występują wszystkie w lokalnym kolekcji-raczej strumieniowo zgodnie z potrzebami.  
   

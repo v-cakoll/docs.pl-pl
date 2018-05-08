@@ -1,36 +1,22 @@
 ---
 title: 'Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows
-W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi hostowanej przez usługę systemu Windows. Scenariusz jest zapewniana przez usługę zarządzanych systemu Windows obsługującego długo działającą opcję [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi hostowanej poza Internet Information Services (IIS) w bezpiecznym środowisku nie jest wiadomości aktywowany. Okres istnienia usługi steruje zamiast tego systemu operacyjnego. Ta opcja obsługi jest dostępna we wszystkich wersjach systemu Windows.  
+W tym temacie przedstawiono podstawowe czynności wymagane do tworzenia usług Windows Communication Foundation (WCF), obsługiwanej przez usługę systemu Windows. Scenariusz jest włączone przez usługę systemu Windows zarządzany hosting opcję długotrwałe usługi WCF hostowanej poza Internet Information Services (IIS) w bezpiecznym środowisku, który nie jest aktywowany wiadomości. Okres istnienia usługi steruje zamiast tego systemu operacyjnego. Ta opcja obsługi jest dostępna we wszystkich wersjach systemu Windows.  
   
- Usługi systemu Windows można zarządzać za pomocą Microsoft.ManagementConsole.SnapIn w konsoli Microsoft Management Console (MMC) i można skonfigurować tak, aby uruchamiała się automatycznie, gdy system jest uruchamiany. Ta opcja hostingu składa się z domeny aplikacji (AppDomain), który obsługuje rejestrowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi jako zarządzanych usług systemu Windows tak, aby okres istnienia procesu usługi jest kontrolowany przez Menedżera sterowania usługami (SCM) dla usług systemu Windows.  
+ Usługi systemu Windows można zarządzać za pomocą Microsoft.ManagementConsole.SnapIn w konsoli Microsoft Management Console (MMC) i można skonfigurować tak, aby uruchamiała się automatycznie, gdy system jest uruchamiany. Ta opcja hostingu składa się z rejestrowania domeny aplikacji (AppDomain), który jest hostem usługi WCF jako zarządzanych usług systemu Windows tak, aby okres istnienia procesu usługi jest kontrolowany przez Menedżera sterowania usługami (SCM) dla usług systemu Windows.  
   
- Kod usługi zawiera implementacji usługi, kontrakt usługi, klasa usługi systemu Windows i klasę Instalatora. Klasa implementacji usługi, `CalculatorService`, jest [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. `CalculatorWindowsService` To usługa systemu Windows. Aby zakwalifikować się jako usługa systemu Windows, dziedziczy po klasie `ServiceBase` i implementuje `OnStart` i `OnStop` metody. W `OnStart`, <xref:System.ServiceModel.ServiceHost> jest tworzona dla `CalculatorService` wpisz i otworzyć. W `OnStop`, że usługa jest zatrzymana i usunięty. Host jest również odpowiedzialność za zapewnienie adres podstawowy hosta usługi, który został skonfigurowany w ustawieniach aplikacji. Instalator klasy, która dziedziczy <xref:System.Configuration.Install.Installer>, pozwala programowi zainstalowania przez narzędzie Installutil.exe jako usługa systemu Windows.  
+ Kod usługi zawiera implementacji usługi, kontrakt usługi, klasa usługi systemu Windows i klasę Instalatora. Klasa implementacji usługi, `CalculatorService`, to usługa WCF. `CalculatorWindowsService` To usługa systemu Windows. Aby zakwalifikować się jako usługa systemu Windows, dziedziczy po klasie `ServiceBase` i implementuje `OnStart` i `OnStop` metody. W `OnStart`, <xref:System.ServiceModel.ServiceHost> jest tworzona dla `CalculatorService` wpisz i otworzyć. W `OnStop`, że usługa jest zatrzymana i usunięty. Host jest również odpowiedzialność za zapewnienie adres podstawowy hosta usługi, który został skonfigurowany w ustawieniach aplikacji. Instalator klasy, która dziedziczy <xref:System.Configuration.Install.Installer>, pozwala programowi zainstalowania przez narzędzie Installutil.exe jako usługa systemu Windows.  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>Konstruowania usługi i podaj kod hostingu  
   
@@ -135,7 +121,7 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia [!INCLU
     > [!NOTE]
     >  Jeśli nie używasz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersz polecenia, upewnij się, że `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` katalog znajduje się w ścieżce systemowej.  
   
-     Typ `services.msc` w wierszu polecenia można uzyskać dostępu do Menedżera sterowania usługami (SCM). Usługa systemu Windows powinna pojawić się w usługach jako "WCFWindowsServiceSample". [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Usługa może odpowiedzieć tylko do klientów, jeśli usługa systemu Windows jest uruchomiona. Aby uruchomić usługę, kliknij prawym przyciskiem myszy go w SCM i wybierz polecenie "Start" lub typu **net start WCFWindowsServiceSample** w wierszu polecenia.  
+     Typ `services.msc` w wierszu polecenia można uzyskać dostępu do Menedżera sterowania usługami (SCM). Usługa systemu Windows powinna pojawić się w usługach jako "WCFWindowsServiceSample". Usługi WCF może odpowiadać tylko na klientach, jeśli usługa systemu Windows jest uruchomiona. Aby uruchomić usługę, kliknij prawym przyciskiem myszy go w SCM i wybierz polecenie "Start" lub typu **net start WCFWindowsServiceSample** w wierszu polecenia.  
   
 3.  Jeśli wprowadzisz zmiany do usługi należy najpierw zatrzymaj ją i go odinstalować. Aby zatrzymać usługę, kliknij prawym przyciskiem myszy usługi w SCM i wybierz pozycję stop (Zatrzymaj)", lub **typu net stop WCFWindowsServiceSample** w wierszu polecenia. Należy pamiętać, że jeśli zatrzymać usługi systemu Windows, a następnie uruchom klienta, <xref:System.ServiceModel.EndpointNotFoundException> wyjątek występuje, gdy klient próbuje uzyskać dostęp do usługi. Aby odinstalować typu usługi systemu Windows **installutil /u bin\service.exe** w wierszu polecenia.  
   

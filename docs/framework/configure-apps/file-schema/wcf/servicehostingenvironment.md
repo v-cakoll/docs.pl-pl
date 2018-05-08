@@ -2,11 +2,11 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Ten element definiuje typ, który usługę hostingu środowiskowego dla danego transportu. Jeśli ten element jest pusta, domyślny typ jest używany. Ten element może być użyty tylko w aplikacji lub pliki konfiguracji na poziomie maszyny.  
@@ -40,7 +40,7 @@ Ten element definiuje typ, który usługę hostingu środowiskowego dla danego t
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |aspNetCompatibilityEnabled|Wartość logiczna wskazująca, czy tryb zgodności ASP.NET został włączony dla bieżącej aplikacji. Wartość domyślna to `false`.<br /><br /> Jeśli ten atrybut ma wartość `true`przepływ żądań do usługi Windows Communication Foundation (WCF) za pośrednictwem potoku HTTP programu ASP.NET i komunikacji za pośrednictwem protokołów innych niż HTTP jest zabronione. Aby uzyskać więcej informacji, zobacz [usługi WCF i platformy ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|Ustawienia minFreeMemoryPercentageToActivateService|Liczba całkowita, która określa minimalną ilość wolnej pamięci, która powinna być dostępna w systemie, zanim [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] można aktywować usługi. **Uwaga:** określania tego atrybutu wraz z częściowa relacja zaufania w pliku web.config [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi spowoduje <xref:System.Security.SecurityException> po uruchomieniu usługi.|  
+|Ustawienia minFreeMemoryPercentageToActivateService|Liczba całkowita, która określa minimalną ilość wolnej pamięci, która powinna być dostępna w systemie, w celu aktywowania usługi WCF. **Uwaga:** określania tego atrybutu wraz z częściowa relacja zaufania w pliku web.config, usługi WCF spowoduje <xref:System.Security.SecurityException> po uruchomieniu usługi.|  
 |multipleSiteBindingsEnabled|Wartość logiczna określająca, czy włączono wielokrotne powiązania usługi IIS dla każdej witryny.<br /><br /> Usługi IIS składa się z witryn sieci web, które są kontenerami dla katalogów wirtualnych zawierających aplikacje wirtualne. Za pomocą co najmniej jednego powiązania usługi IIS można uzyskać dostępu do aplikacji w lokacji. Powiązanie z usług IIS oferuje dwa rodzaje informacji: Protokół powiązania i informacje o wiązaniu. Protokół powiązania definiuje schemat, przez który dane są przesyłane, a informacje o wiązaniu są to informacje używane do uzyskania dostępu do witryny. Przykładem Protokół powiązania, które mogą być protokołu HTTP, a informacje o wiązaniu może zawierać adres IP portu nagłówek hosta, itp.<br /><br /> Usługi IIS obsługują określania wielokrotne powiązania usługi IIS dla każdej witryny, co prowadzi do wielu adresów bazowych dla każdego schematu. Jednak usługi Windows Communication Foundation (WCF) hostowanej przez witrynę umożliwia powiązanie z tylko jedną właściwość baseAddress dla każdego schematu.<br /><br /> Aby włączyć wiele powiązań dla każdej witryny usług IIS dla usługi Windows Communication Foundation (WCF), ustaw ten atrybut `true`. Należy zauważyć, że wiele powiązania witryny jest obsługiwana tylko dla protokołu HTTP. Adres punktów końcowych w pliku konfiguracji musi być pełny identyfikator URI.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  

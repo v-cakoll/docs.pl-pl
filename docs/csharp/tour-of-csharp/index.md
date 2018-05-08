@@ -1,20 +1,13 @@
 ---
 title: W samouczku języka C# — przewodnik C#
 description: Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.
-keywords: .NET, .NET core, C#, C# Elementarz, przewodnik C#
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-tour-of-the-c-language"></a>Samouczek języka C#  
 
@@ -74,12 +67,12 @@ Istnieje wiele Aby dowiedzieć się więcej o języku C#.  Poniższe tematy zawi
     - ***Tablicy*** jest strukturą danych, która zawiera szereg zmiennych, które są udostępniane przez obliczoną indeksów.
 * [Interfejsy](interfaces.md)
     - ***Interfejsu*** definiuje kontrakt może być zaimplementowany przez klasy i struktury. Interfejs może zawierać metod, właściwości, zdarzeń i indeksatorów. Interfejs nie zawiera implementacji elementów członkowskich definiuje — Określa on tylko elementy członkowskie, które muszą zostać dostarczone przez klasy lub struktury, który implementuje interfejs.
-* [Typy wyliczeniowe](enums.md)
+* [Wyliczenia](enums.md)
     - ***Typu wyliczeniowego*** jest typem unikatowych wartości przy użyciu zestawu stałe nazwane.
-* [Obiekty delegowane](delegates.md)
+* [Delegaci](delegates.md)
     - A ***typ delegata*** reprezentuje odwołania do metody z określonego parametru listę i typ zwracany. Obiekty delegowane umożliwiają traktować jako jednostek, które można przypisywać do zmiennych i przekazywane jako parametry metody. Obiekty delegowane są podobne do koncepcji znaleziono w przypadku niektórych języków innych wskaźników funkcji, ale w przeciwieństwie do wskaźników funkcji delegatów są zorientowane obiektowo i bezpieczne.
 * [Atrybuty](attributes.md)
     * ***Atrybuty*** Włącz programy określić dodatkowe deklaratywne informacji o typach, członków i inne jednostki.
 
 >[!div class="step-by-step"]
-[Dalej](program-structure.md)
+[Next](program-structure.md)

@@ -1,37 +1,23 @@
 ---
 title: 'Wskazówki: Przechowywanie wersji kontraktów danych'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Wskazówki: Przechowywanie wersji kontraktów danych
 Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych, które można łatwo rozwijać, wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Uwagi dotyczące sprawdzania poprawności schematu  
- W dyskutować przechowywanie wersji kontraktów danych, należy pamiętać, że wyeksportowane przez schematu kontraktu danych jest [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] nie ma żadnych obsługi przechowywania wersji, innego niż fakt, że elementy nie została oznaczona jako opcjonalna domyślnie.  
+ W dyskutować przechowywanie wersji kontraktów danych, to należy pamiętać, że schematu kontraktu danych wyeksportowane przez Windows Communication Foundation (WCF) nie ma żadnych obsługi przechowywania wersji, innego niż fakt, że elementy nie została oznaczona jako opcjonalna domyślnie.  
   
  Oznacza to, że nawet najbardziej typowych versioning scenariusz, takie jak dodawanie nowego elementu członkowskiego danych nie można zaimplementować w sposób zapewniający szybkie rozwiązanie w zakresie danego schematu. Nowsze wersje kontraktu danych (z nowego członka danych, na przykład) nie weryfikują przy użyciu starego schematu.  
   

@@ -1,12 +1,6 @@
 ---
 title: 'Porady: definiowanie operatora (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51921ee38204fd528ed19436806fc9433abbdc5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c759ebf38ab0727aeada218d288b5ac01e3ecd03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Porady: definiowanie operatora (Visual Basic)
 Jeśli zdefiniowano klasę lub strukturę można zdefiniować zachowanie standardowe — operator (takich jak `*`, `<>`, lub `And`) po co najmniej jeden z argumentów operacji typu klasy lub struktury.  
@@ -48,10 +39,10 @@ Jeśli zdefiniowano klasę lub strukturę można zdefiniować zachowanie standar
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury operatorów](./operator-procedures.md)  
- [Porady: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)  
- [Porady: wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)  
- [Porady: używanie klasy definiującej operatory](./how-to-use-a-class-that-defines-operators.md)  
- [Operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Porady: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Mod — Operator](../../../../visual-basic/language-reference/operators/mod-operator.md)
+ [Instrukcje: definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)  
+ [Instrukcje: wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)  
+ [Instrukcje: używanie klasy definiującej operatory](./how-to-use-a-class-that-defines-operators.md)  
+ [Operator, instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Instrukcje: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Mod, operator](../../../../visual-basic/language-reference/operators/mod-operator.md)

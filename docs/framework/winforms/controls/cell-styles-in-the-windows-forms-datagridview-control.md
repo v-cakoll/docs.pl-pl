@@ -1,28 +1,16 @@
 ---
-title: "Style komórki w formancie DataGridView formularzy systemu Windows"
-ms.custom: 
+title: Style komórki w formancie DataGridView formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463fbbffe1e88991934f08fbe7e7445b2e233081
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Style komórki w formancie DataGridView formularzy systemu Windows
 Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć własną styl, na przykład format tekstu, kolor tła kolor pierwszego planu i czcionki. Zwykle jednak wiele komórek udostępni właściwości danego stylu.  
@@ -32,17 +20,17 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
 ## <a name="the-datagridviewcellstyle-class"></a>Klasa DataGridViewCellStyle  
  <xref:System.Windows.Forms.DataGridViewCellStyle> Klasa zawiera następujące właściwości powiązanych z stylów wizualnych:  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>i<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> I <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A>i<xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> I <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  Ta klasa zawiera także następujące właściwości związane z formatowaniem:  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>i<xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> I <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>i<xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> I <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
@@ -66,7 +54,7 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
 |<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Pobiera lub ustawia domyślnych stylów komórek używanych przez naprzemiennych wierszy w formancie. Pozwala utworzyć efekt księgi podobne.|  
 |<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Pobiera lub ustawia domyślnych stylów komórek używanych przez nagłówki wierszy formantu. Zastąpione przez bieżącego motywu, jeżeli style wizualne są włączone.|  
 |<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Pobiera lub ustawia domyślnych stylów komórek używanych przez nagłówki kolumn formantu. Zastąpione przez bieżącego motywu, jeżeli style wizualne są włączone.|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>i klasy pochodne|Pobiera lub ustawia style określone na poziomie komórki. Te style przesłaniają dziedziczone z wyższego poziomu.|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> i klasy pochodne|Pobiera lub ustawia style określone na poziomie komórki. Te style przesłaniają dziedziczone z wyższego poziomu.|  
 |`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>i klasy pochodne|Pobiera wszystkie style, które są aktualnie zastosowanych komórkę, wiersz lub kolumnę, w tym style dziedziczone z wyższego poziomu.|  
   
  Jak wspomniano powyżej, pobierania wartości właściwości stylu automatycznie tworzy nową <xref:System.Windows.Forms.DataGridViewCellStyle> obiektu, jeśli właściwość nie została wcześniej ustawiona. Aby uniknąć niepotrzebnego tworzenia tych obiektów, klas wierszy i kolumn ma <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> właściwość, którą można sprawdzić, aby określić, czy <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> właściwość została ustawiona. Podobnie klasy komórki mają <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> właściwość, która wskazuje, czy <xref:System.Windows.Forms.DataGridViewCell.Style%2A> właściwość została ustawiona.  
@@ -80,7 +68,7 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
   
 2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(tylko dla komórek w wierszach nieparzystych numery indeksu)  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (tylko dla komórek w wierszach nieparzystych numery indeksu)  
   
 4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -92,7 +80,7 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
   
 1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType>lub<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> lub <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
 3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -110,7 +98,7 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
   
 1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(tylko dla komórek w wierszach nieparzystych numery indeksu)  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (tylko dla komórek w wierszach nieparzystych numery indeksu)  
   
 3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -120,7 +108,7 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
   
  W poniższej tabeli przedstawiono sposób <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> wartości właściwości dla komórki przykład jest dziedziczona z jego zawierające kolumny.  
   
-|Właściwości typu`DataGridViewCellStyle`|Przykład `ForeColor` wartość dla obiekt pobrane|  
+|właściwości typu `DataGridViewCellStyle`|Przykład `ForeColor` wartość dla obiekt pobrane|  
 |----------------------------------------------|----------------------------------------------------|  
 |<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
@@ -133,7 +121,7 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
   
  Na poniższym diagramie przedstawiono sposób różnych <xref:System.Windows.Forms.DataGridViewCellStyle> właściwości mogą dziedziczyć ich wartości z różnych miejscach.  
   
- ![DataGridView — właściwość &#45; dziedziczenie wartości](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![Właściwość DataGridView&#45;wartość dziedziczenia](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
   
  Dzięki wykorzystaniu dziedziczenia stylów, możesz podać odpowiednie style dla całego formantu bez konieczności określania tych samych informacji w kilku miejscach.  
   

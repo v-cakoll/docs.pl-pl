@@ -1,12 +1,6 @@
 ---
-title: "Imports — Instrukcja (przestrzeń nazw XML)"
+title: Imports — Instrukcja (przestrzeń nazw XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ImportsXmlns
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0fe6d37c58ead94f2c03736318209abb67cd6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports — Instrukcja (przestrzeń nazw XML)
 Importuje prefiksy przestrzeni nazw XML do użycia w literałach XML i właściwości osi XML.  
@@ -35,10 +26,10 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>Części  
  `xmlNamespacePrefix`  
- Opcjonalny. Ciąg XML, które elementy i atrybuty mogą odwoływać się do `xmlNamespaceName`. Jeśli nie `xmlNamespacePrefix` jest podany, importowanych przestrzeni nazw XML jest domyślna przestrzeń nazw XML. Musi być prawidłowym identyfikatorem XML. Aby uzyskać więcej informacji, zobacz [nazwy z zadeklarowany elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
+ Opcjonalna. Ciąg XML, które elementy i atrybuty mogą odwoływać się do `xmlNamespaceName`. Jeśli nie `xmlNamespacePrefix` jest podany, importowanych przestrzeni nazw XML jest domyślna przestrzeń nazw XML. Musi być prawidłowym identyfikatorem XML. Aby uzyskać więcej informacji, zobacz [nazwy z zadeklarowany elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
   
  `xmlNamespaceName`  
- Wymagany. Ciąg identyfikujący importowanych przestrzeni nazw XML.  
+ Wymagana. Ciąg identyfikujący importowanych przestrzeni nazw XML.  
   
 ## <a name="remarks"></a>Uwagi  
  Można użyć `Imports` instrukcji, aby zdefiniować globalnej przestrzeni nazw XML, korzystających z literały XML i właściwości osi XML lub przekazywane jako parametry do `GetXmlNamespace` operatora. (Aby uzyskać informacje o korzystaniu z `Imports` instrukcji, aby zaimportować alias, który może służyć, których nazwy typów są używane w kodzie, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Składnia deklaracji przestrzeni nazw XML przy użyciu `Imports` instrukcja jest taki sam jak składni używanej w kodzie XML. W związku z tym można skopiować deklaracja przestrzeni nazw z pliku XML i użyć go w `Imports` instrukcji.  
@@ -99,5 +90,5 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="see-also"></a>Zobacz też  
  [Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
  [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- [Nazwy deklarowanych elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace — Operator](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+ [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
+ [GetXmlNamespace, operator](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

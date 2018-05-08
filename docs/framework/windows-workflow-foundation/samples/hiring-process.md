@@ -1,29 +1,17 @@
 ---
 title: Zatrudniania procesu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>Zatrudniania procesu
 W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu działań obsługi wiadomości i dwóch przepływów pracy hostowany jako usługi przepływu pracy. Te przepływy pracy są częścią infrastruktury IT fikcyjnej firmy o nazwie Contoso, Inc.  
   
- `HiringRequest` Procesu przepływu pracy (zaimplementowane jako <xref:System.Activities.Statements.Flowchart>) żąda autoryzacji z kilku menedżerów w organizacji. Na osiągnięcie tego celu, przepływ pracy używa innych istniejących usług w organizacji (w tym przypadku, skrzynki odbiorczej usługi i danych organizacji zaimplementowane jako zwykły [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi).  
+ `HiringRequest` Procesu przepływu pracy (zaimplementowane jako <xref:System.Activities.Statements.Flowchart>) żąda autoryzacji z kilku menedżerów w organizacji. Na osiągnięcie tego celu, przepływ pracy używa innych istniejących usług w organizacji (w tym przypadku usługa skrzynki odbiorczej i Usługa danych organizacji zaimplementowane jako zwykły usług Windows Communication Foundation (WCF)).  
   
  `ResumeRequest` Przepływu pracy (zaimplementowane jako <xref:System.Activities.Statements.Sequence>) publikuje zadania w witrynie sieci Web firmy Contoso zewnętrznych możliwości podnoszenia kwalifikacji i zarządza nabycie wznawia. Publikowanie zadania jest dostępny w sieci Web zewnętrznej witryny na czas (dopóki nie zostanie przekroczony został limit wygasa) lub do pracownika z firmy Contoso decyduje o tym, aby usunąć go.  
   
@@ -64,7 +52,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
 |ContosoHR|Zawiera klasy repozytorium, obiektów biznesowych i kontraktów danych.|  
 |HiringRequestService|Zawiera definicję przepływu pracy zatrudnienia proces żądania.<br /><br /> Ten projekt jest wdrażany jako aplikacji konsoli własnym obsługującego przepływu pracy (plik xaml) jako usługa.|  
 |ResumeRequestService|Usługi przepływu pracy, która gromadzi wznawia z kandydatów do chwili osiągnięcia limitu czasu lub inna decyduje o tym, że proces musi zostać zatrzymana.<br /><br /> Ten projekt jest wdrażany jako usługa deklaracyjnego przepływu pracy (xamlx).|  
-|OrgService|Usługa, która udostępnia informacje organizacyjne (pracowników, pozycje PositionTypes i działów). Tę usługę można traktować jako modułu organizacji firmy z zasobów przedsiębiorstwa planowanie (ERP).<br /><br /> Ten projekt jest wdrażany jako aplikacja konsolowa, która udostępnia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi.|  
+|OrgService|Usługa, która udostępnia informacje organizacyjne (pracowników, pozycje PositionTypes i działów). Tę usługę można traktować jako modułu organizacji firmy z zasobów przedsiębiorstwa planowanie (ERP).<br /><br /> Ten projekt jest wdrażany jako aplikacja konsolowa, która udostępnia usługi Windows Communication Foundation (WCF).|  
 |InboxService|Skrzynka odbiorcza zawiera zadań dla pracowników.<br /><br /> Ten projekt jest wdrażany jako aplikacja konsolowa, która udostępnia usługi WCF.|  
 |InternalClient|Aplikacji sieci Web do interakcji z procesem. Użytkownicy mogą uruchomić, udziału i przeglądać ich HiringProcess przepływów pracy. Za pomocą tej aplikacji, mogą także uruchomić i monitorować procesy ResumeRequest.<br /><br /> Ta lokacja jest implementowany jako wewnętrzne sieci intranet firmy Contoso. Ten projekt jest wdrażany jako witryny sieci Web ASP.NET.|  
 |CareersWebSite|Zewnętrznej witryny sieci Web, który ujawnia Otwórz pozycje w firmie Contoso. Wszelkie potencjalne kandydata można przejść do tej witryny i przesłać Wznów.|  

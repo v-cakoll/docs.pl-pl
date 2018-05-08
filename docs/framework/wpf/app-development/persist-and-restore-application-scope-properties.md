@@ -1,13 +1,6 @@
 ---
-title: "Jak utrwalać i przywracać właściwości zakresu aplikacji między aplikacjami"
-ms.custom: 
+title: Jak utrwalać i przywracać właściwości zakresu aplikacji między aplikacjami
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - properties [WPF], restoring
 - application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 815efbe0a4adcacddeb4c1a70cc3c1fef21fed05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff95833920ead040f1812637721fdd402186898c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Jak utrwalać i przywracać właściwości zakresu aplikacji między aplikacjami
 W tym przykładzie pokazano, jak można utrwalić właściwości zakresu aplikacji podczas zamykania aplikacji i jak przywrócić właściwości zakresu aplikacji, gdy aplikacja jest następnego uruchomienia.  

@@ -1,32 +1,18 @@
 ---
 title: Przegląd integrowania z aplikacjami COM+
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, możesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.  
+Windows Communication Foundation (WCF) udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, służy WCF do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.  
   
  Gdy interfejs składnika COM + jest udostępniany jako usługa sieci Web, Specyfikacja i kontraktu usługi te są określane przez automatyczne mapowanie, które jest przeprowadzane w czasie inicjowania aplikacji. Na poniższej liście przedstawiono modelu koncepcyjnego dla tego mapowania:  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  W aplikacji klienta, metod na <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> obiekt może służyć do przekazania do obiektu w usłudze i podobnie można pobrać obiektu.  
   
 > [!NOTE]
->  Ze względu na specyfikę specyficzne dla platformy i niestandardowych podejścia serializacji jest najodpowiedniejsze do użytku między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.  
+>  Ze względu na specyfikę specyficzne dla platformy i niestandardowych podejścia serializacji jest najodpowiedniejsze do użytku między klientami programu WCF i usługi WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Wybieranie trybu hostingu  
  COM + udostępnia usługi sieci Web w jednej z następujących trybów hostingu:  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Hostowana w sieci Web  
   
-     Usługa sieci Web jest obsługiwana w ramach procesu roboczego serwera sieci Web. Ten tryb nie wymaga modelu COM + jest aktywne po odebraniu żądania początkowego. Jeśli aplikacja nie jest aktywne po odebraniu tego żądania, jest automatycznie aktywowane przed przetworzeniem żądania. Ten tryb również zapewnia usługi sieci Web i dostępu DCOM dla aplikacji serwera, ale powoduje, że proces przeskoków dla żądania usługi sieci Web. Wymaga to zwykle Włącz personifikację klienta. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], można to zrobić z <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> klasy, która jest dostępna jako właściwość ogólnego <xref:System.ServiceModel.ChannelFactory%601> klasy, jak również <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> wartości wyliczenia.  
+     Usługa sieci Web jest obsługiwana w ramach procesu roboczego serwera sieci Web. Ten tryb nie wymaga modelu COM + jest aktywne po odebraniu żądania początkowego. Jeśli aplikacja nie jest aktywne po odebraniu tego żądania, jest automatycznie aktywowane przed przetworzeniem żądania. Ten tryb również zapewnia usługi sieci Web i dostępu DCOM dla aplikacji serwera, ale powoduje, że proces przeskoków dla żądania usługi sieci Web. Wymaga to zwykle Włącz personifikację klienta. W programie WCF, można to zrobić z <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> klasy, która jest dostępna jako właściwość ogólnego <xref:System.ServiceModel.ChannelFactory%601> klasy, jak również <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> wartości wyliczenia.  
   
 -   Sieci Web hostowanych w procesie  
   
      Usługi sieci Web i logiki aplikacji COM + znajdują się w obrębie procesu roboczego serwera sieci Web. Zapewnia to automatyczną aktywację w trybie hostowanej przez sieci Web bez powodowania przeskok procesu dla żądania usługi sieci Web. Wadą jest to, czy aplikacja serwera nie jest dostępna za pośrednictwem modelu DCOM.  
   
 ### <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Takich jak inne [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, ustawienia zabezpieczeń dla usługi narażonych są zarządzane za pomocą ustawienia konfiguracji dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanału. Tradycyjny ustawienia zabezpieczeń modelu DCOM, takie jak ustawienia komputera uprawnień modelu DCOM nie są wymuszane. Aby wymusić ról aplikacji COM +, autoryzacji "kontroli dostępu na poziomie składnika" musi być włączony dla składnika.  
+ Podobnie jak inne usługi WCF ustawienia zabezpieczeń dla usługi narażonych są zarządzane za pomocą ustawień konfiguracji dla kanału WCF. Tradycyjny ustawienia zabezpieczeń modelu DCOM, takie jak ustawienia komputera uprawnień modelu DCOM nie są wymuszane. Aby wymusić ról aplikacji COM +, autoryzacji "kontroli dostępu na poziomie składnika" musi być włączony dla składnika.  
   
  Używanie powiązania nie są zabezpieczone można pozostawić komunikacji Otwórz do manipulowania lub ujawnienie informacji. Aby tego uniknąć, zaleca się użycie bezpiecznego powiązania.  
   
- Dla modelu COM +-tryby hostowanej i hostowanych w sieci Web, aplikacje klienckie muszą zezwalać na proces serwera można personifikować użytkownika klienta. Można to zrobić [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów przez ustawienie poziomu personifikacji <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ Dla modelu COM +-tryby hostowanej i hostowanych w sieci Web, aplikacje klienckie muszą zezwalać na proces serwera można personifikować użytkownika klienta. Można to zrobić w klientach WCF przez ustawienie poziomu personifikacji <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
  Internet Information Services (IIS) lub Windows Process Activation Service (WAS) przy użyciu protokołu HTTP narzędzia Httpcfg.exe można zastrzec adresu punktu końcowego transportu. W innych konfiguracji należy zapewnić ochronę przed nieautoryzowanych usług, które działa jako usługa przeznaczone. Aby zapobiec zaczynając od żądanego punktu końcowego usługi nieautoryzowanego, uzasadnionych usługi można skonfigurować do uruchamiania jako usługa NT. Dzięki temu uzasadnionych usługi do oświadczeń adres punktu końcowego przed żadnych usług nieautoryzowany.  
   

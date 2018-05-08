@@ -1,24 +1,12 @@
 ---
-title: "206 — ErrorHandlerInvoked"
-ms.custom: 
+title: 206 — ErrorHandlerInvoked
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97340f4d-4e09-4e42-a17a-982b3868dbcf
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43acd7ae7bbfc84e1d1ffb1bf4fa49a3dd3f191a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 40a92d77c57728249569a854eab8767ff371bca2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="206---errorhandlerinvoked"></a>206 — ErrorHandlerInvoked
 ## <a name="properties"></a>Właściwości  
@@ -28,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 |ID|206|  
 |Słowa kluczowe|Rozwiązywanie problemów, ServiceModel|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji Server aplikacje/analityczne|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
  To zdarzenie jest emitowany po `ErrorHandler` umożliwieniu do obsługi wyjątku, który wystąpił podczas operacji usługi.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 |Nazwa elementu danych|Typ elementu danych|Opis|  
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|Imię i nazwisko CLR typu wywołanej `ErrorHandler`.|  
-|Obsługiwane|`xs:unsignedByte`|`true`Jeśli program obsługi błędów obsługi błędu, w przeciwnym razie `false`.|  
+|Obsługiwane|`xs:unsignedByte`|`true` Jeśli program obsługi błędów obsługi błędu, w przeciwnym razie `false`.|  
 |ExceptionTypeName|`xs:string`|Element FullName CLR wyjątku, który został już obsługiwany.|  
-|HostReference|`xs:string`|W przypadku usług hostowanych w sieci Web to pole unikatowo identyfikuje usługę w hierarchii sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web &#124; Ścieżka wirtualna usługi &#124; ServiceName ". Przykład: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".|  
+|HostReference|`xs:string`|W przypadku usług hostowanych w sieci Web to pole unikatowo identyfikuje usługę w hierarchii sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web&#124;ścieżki wirtualnej usługi&#124;ServiceName". Przykład: "Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
 |Domeny aplikacji|`xs:string`|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|

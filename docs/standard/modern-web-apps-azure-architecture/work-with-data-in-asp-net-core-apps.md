@@ -4,17 +4,11 @@ description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 89df46c8e04e1826c84058e5d2a92d089eb96098
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacjach platformy ASP.NET Core
 

@@ -1,24 +1,17 @@
 ---
 title: virtual (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e1a65455df9b0a9272bc5cef257f0d00b36b500
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-c-reference"></a>virtual (odwołanie w C#)
 `virtual` — Słowo kluczowe służy do modyfikowania deklaracji — metoda, właściwość, indeksator lub zdarzenie i zezwalają na zastąpienia w klasie pochodnej. Na przykład tej metody może zostać przesłonięta przez wszystkie klasy, która dziedziczy on:  
@@ -69,6 +62,6 @@ public Cylinder(double r, double h): base(r, h) {}
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
- [abstrakcyjny](../../../csharp/language-reference/keywords/abstract.md)  
- [zastąpienie](../../../csharp/language-reference/keywords/override.md)  
- [Nowy](../../../csharp/language-reference/keywords/new.md)
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)

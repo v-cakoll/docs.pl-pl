@@ -1,13 +1,6 @@
 ---
 title: 'Porady: tworzenie prywatnej kolekcji czcionek'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 824d42c40b07e8662395e7a1286b9a5a6112c415
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Porady: tworzenie prywatnej kolekcji czcionek
 <xref:System.Drawing.Text.PrivateFontCollection> Klasa dziedziczy <xref:System.Drawing.Text.FontCollection> abstrakcyjnej klasy podstawowej. Można użyć <xref:System.Drawing.Text.PrivateFontCollection> obiektu przechowywać zestawu czcionek specjalnie dla aplikacji. Kolekcja prywatnej czcionki mogą obejmować czcionek zainstalowanego systemu, a także czcionek, które nie zostały zainstalowane na komputerze. Aby dodać plik czcionki do kolekcji czcionki prywatnych, należy wywołać <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metody <xref:System.Drawing.Text.PrivateFontCollection> obiektu.  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Czcionki tekstu](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
   
- Arial.tff (który został dodany do kolekcji prywatnych czcionki w poniższym przykładzie kodu) jest plikiem czcionki Arial stylu regularne. Należy jednak pamiętać, że program dane wyjściowe zawierają dostępne style kilka innych niż zwykła dla rodziny czcionek Arial. Jest to spowodowane tym [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można symulować pogrubienie, kursywa i bold kursywy od zwykłego stylu. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]można również utworzyć różne podkreślenia i przekreślenia od zwykłego stylu.  
+ Arial.tff (który został dodany do kolekcji prywatnych czcionki w poniższym przykładzie kodu) jest plikiem czcionki Arial stylu regularne. Należy jednak pamiętać, że program dane wyjściowe zawierają dostępne style kilka innych niż zwykła dla rodziny czcionek Arial. Jest to spowodowane tym [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można symulować pogrubienie, kursywa i bold kursywy od zwykłego stylu. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można również utworzyć różne podkreślenia i przekreślenia od zwykłego stylu.  
   
  Podobnie [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można symulować bold styl kursywą z albo bold stylu lub kursywą. Dane wyjściowe programu zawiera styl pogrubiony kursywą jest dostępna dla systemów z rodziny razy, nawet jeśli jest to jedyny TimesBd.tff (razy nowe łacińskich, pogrubione) pliku razy w kolekcji.  
   

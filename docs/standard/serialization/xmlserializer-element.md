@@ -1,29 +1,16 @@
 ---
-title: "&lt;Element xmlSerializer&gt; — Element"
-ms.custom: 
+title: '&lt;Element xmlSerializer&gt; — Element'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 059fe3661878b51ef27facc2888286ecd1aaa97a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f80d41701f3e0d62e89a056701bde6fd69ef9ecb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;Element xmlSerializer&gt; — Element
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  
@@ -54,7 +41,7 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<System.XML.serialization > — Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|Zawiera ustawienia konfiguracji dla <xref:System.Xml.Serialization.XmlSerializer> i <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.|  
+|[\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|Zawiera ustawienia konfiguracji dla <xref:System.Xml.Serialization.XmlSerializer> i <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślnie <xref:System.Xml.Serialization.XmlSerializer> zapewnia dodatkową warstwę zabezpieczeń przed potencjalnym atakom typu odmowa usługi podczas deserializacji niezaufanych danych. Robi to za pomocą próby wykrycia podczas deserializacji w pętli nieskończonej. W przypadku wykrycia takim stanie, jest zwracany wyjątek z następującym komunikatem: "Błąd wewnętrzny: Deserializacja nie powiodła się z przechodzeniem do odpowiedniego strumienia do."  
@@ -74,5 +61,5 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [\<System.XML.serialization > — Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+ [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

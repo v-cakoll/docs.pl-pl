@@ -1,32 +1,26 @@
 ---
-title: "Instrukcje skoku (odwołanie w C#)"
+title: Instrukcje skoku (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8f657f53d8781790908ef7fc1e9dd81968417ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 363e0cfa9d31479caeb8c71e2454db3e28d372bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="jump-statements-c-reference"></a>Instrukcje skoku (odwołanie w C#)
 Rozgałęzianie odbywa się przy użyciu instrukcje skoku, które powodują natychmiastowego przekazanie sterowania programu. Poniższe słowa kluczowe są używane w instrukcjach przeskoku:  
   
--   [podział](../../../csharp/language-reference/keywords/break.md)  
+-   [break](../../../csharp/language-reference/keywords/break.md)  
   
--   [Kontynuuj](../../../csharp/language-reference/keywords/continue.md)  
+-   [continue](../../../csharp/language-reference/keywords/continue.md)  
   
--   [Przejdź do](../../../csharp/language-reference/keywords/goto.md)  
+-   [goto](../../../csharp/language-reference/keywords/goto.md)  
   
--   [Zwraca](../../../csharp/language-reference/keywords/return.md)  
+-   [return](../../../csharp/language-reference/keywords/return.md)  
   
 -   [throw](../../../csharp/language-reference/keywords/throw.md)  
   

@@ -1,17 +1,12 @@
 ---
 title: Funkcje środowiska deweloperskiego F#
 description: 'Dowiedz się, jakie funkcje programu Visual Studio 2012 są obsługiwane w F #.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ea2bfa439692045647efa29b2a051eb11f9f1dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Funkcje środowiska deweloperskiego Visual F #
 
@@ -26,7 +21,7 @@ Poniższa tabela zawiera podsumowanie szablonów, które są dostępne do użyci
 |Typ szablonu|Opis|Obsługiwane szablony|
 |-------------|-----------|-------------------|
 |Szablony projektu|Typy projektów, które są dostępne w **nowy projekt** okno dialogowe.|<ul><li>Aplikacji w języku F #<br /></li><li>Biblioteki języka F #<br /></li><li>Samouczek języka F #<br /></li><li>Biblioteka przenośna F #<br /></li><ul/>|
-|Szablony elementu|Typy dostępnych w **Dodaj nowy element** okno dialogowe.|<ul><li>Źródłowy plik języka F # (.fs)<br /></li><li>Skrypt F # (.fsx)<br /></li><li>Podpis plik języka F # (.fsi)<br /></li><li>Plik konfiguracji (config)<br /></li><li>Połączenie z bazą danych SQL (LINQ do SQL dostawca typów)<br /></li><li>Połączenie z bazą danych SQL (LINQ to Entities, dostawca typów)<br /></li><li>Połączenie usługi OData (LINQ dostawca typów)<br /></li><li>Połączenie usługi WSDL (Dostawca typów)<br /></li><li>Plik XML (.xml)<br /></li><li>Plik tekstowy<br /></li><ul/>|
+|Szablony elementów|Typy dostępnych w **Dodaj nowy element** okno dialogowe.|<ul><li>Źródłowy plik języka F # (.fs)<br /></li><li>Skrypt F # (.fsx)<br /></li><li>Podpis plik języka F # (.fsi)<br /></li><li>Plik konfiguracji (config)<br /></li><li>Połączenie z bazą danych SQL (LINQ do SQL dostawca typów)<br /></li><li>Połączenie z bazą danych SQL (LINQ to Entities, dostawca typów)<br /></li><li>Połączenie usługi OData (LINQ dostawca typów)<br /></li><li>Połączenie usługi WSDL (Dostawca typów)<br /></li><li>Plik XML (.xml)<br /></li><li>Plik tekstowy<br /></li><ul/>|
 Aby utworzyć aplikację, która może działać jako autonomiczny plik wykonywalny, wybierz typ projektu aplikacji w języku F #. Aby utworzyć bibliotekę (czyli zestaw zarządzany lub. Plik DLL) do użycia na platformie pulpitu systemu Windows, wybierz biblioteki języka F #. Aby utworzyć przenośnej biblioteki, który może służyć na wszystkich obsługiwanych platformach, wybierz język F # przenośnej biblioteki. Wersja pliku FSharp.Core.dll odpowiednią do tworzenia biblioteki języka F # mogą być używane z aplikacji działających na platformach, na przykład aplikacje ze Sklepu Windows, .NET Framework 4.5, Xamarin.iOS i Xamarin.Android odwoływać się do projektów bibliotek przenośnych F #.
 
 Aby uzyskać więcej informacji na temat szablonów elementu dla dostępu do danych, zobacz [dostawców typów](../tutorials/type-providers/index.md).

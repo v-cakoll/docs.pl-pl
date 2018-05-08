@@ -1,13 +1,6 @@
 ---
-title: "Używanie modelu CodeDOM"
-ms.custom: 
+title: Używanie modelu CodeDOM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -27,16 +20,13 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cd2b8e8ecb0e5d451ebf3c6823144e4a90e0d79
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 95d28dd2255b7579cc646f8f8107b76c39cba3fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-codedom"></a>Używanie modelu CodeDOM
 Modelu CodeDOM zawiera typy, które reprezentują wiele typów wspólnych elementów kodu źródłowego. Można zaprojektować program, który tworzy modelu kodu źródłowego za pomocą modelu CodeDOM elementów do łączenia z wykresu obiektu. Ten wykres obiektu może być renderowany jako kodu źródłowego za pomocą modelu CodeDOM generator kodu dla obsługiwanych języków programowania. Modelu CodeDOM mogą służyć do kompilowania kodu źródłowego w ramach zestawu binarnego.  

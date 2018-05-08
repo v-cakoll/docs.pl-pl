@@ -1,26 +1,12 @@
 ---
 title: Ujawnianie informacji
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1f6c33787f920fbe7e795e27ff10d7a0c83db21e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="information-disclosure"></a>Ujawnianie informacji
 Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji na temat systemu. W związku z tym zawsze należy wziąć pod uwagę jakie informacje są ujawniania i czy mogą być używane przez złośliwego użytkownika. Poniżej przedstawiono informacje o możliwych ataków ujawnienie i zapewnia środki zaradcze dla każdego.  
@@ -47,7 +33,7 @@ Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji
   
 -   Odwołania do usług są uznawane jest godny zaufania. Zajmie się zawsze, gdy transfer wystąpień odwołania usługi, aby upewnić się, że ich nie zostały naruszone.  
   
--   Niektóre aplikacje mogą stanowić środowisko użytkownika, co umożliwia interakcyjne ustanowienia relacji zaufania, na podstawie danych w danych referencyjnych i zaufania usługi sprawdzonych przez hosta zdalnego. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia rozszerzeń, które punkty takiego obiektu, ale użytkownik musi zaimplementowana je.  
+-   Niektóre aplikacje mogą stanowić środowisko użytkownika, co umożliwia interakcyjne ustanowienia relacji zaufania, na podstawie danych w danych referencyjnych i zaufania usługi sprawdzonych przez hosta zdalnego. Usługi WCF udostępniają punkty rozszerzeń dla takiego obiektu, ale użytkownik musi je zaimplementowana.  
   
 ## <a name="ntlm"></a>NTLM  
  Domyślnie w środowisku domeny systemu Windows, uwierzytelnianie systemu Windows używa protokołu Kerberos do uwierzytelniania i autoryzacji użytkowników. Jeśli z jakiegoś powodu nie można użyć protokołu Kerberos i usługi NT LAN Manager (NTLM) jest używany jako rezerwowe. To zachowanie można wyłączyć, ustawiając <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwości `false`. Problemy, aby informacje dotyczące stosowanie uwierzytelniania NTLM obejmują:  

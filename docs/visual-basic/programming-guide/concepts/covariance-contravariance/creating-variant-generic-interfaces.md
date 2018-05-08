@@ -1,22 +1,12 @@
 ---
-title: "Tworzenie interfejsów ogólnych typu Variant (Visual Basic)"
-ms.custom: 
+title: Tworzenie interfejsów ogólnych typu Variant (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Tworzenie interfejsów ogólnych typu Variant (Visual Basic)
 Można zadeklarować parametry typu ogólnego w interfejsach jako kowariantnego lub kontrawariantnego. *Kowariancja* umożliwia metod interfejsu do bardziej pochodnego zwracanych typów niż określone przez parametry typu ogólnego. *Kontrawariancja* umożliwia metod interfejsu do typy argumentu są mniej pochodnego od określonej przez parametry ogólne. Ogólny interfejs, który ma kowariantnego lub kontrawariantnego parametry typu ogólnego jest nazywany *variant*.  
@@ -28,7 +18,7 @@ Można zadeklarować parametry typu ogólnego w interfejsach jako kowariantnego 
  Interfejsów ogólnych typu variant można zadeklarować przy użyciu `in` i `out` słowa kluczowe dla parametrów typu ogólnego.  
   
 > [!IMPORTANT]
->  `ByRef`Parametry w języku Visual Basic nie może być wariantem. Typy wartości nie obsługują również wariancji.  
+>  `ByRef` Parametry w języku Visual Basic nie może być wariantem. Typy wartości nie obsługują również wariancji.  
   
  Można zadeklarować parametru typu ogólnego kowariantnego przy użyciu `out` — słowo kluczowe. Kowariantnego typu muszą spełniać następujące warunki:  
   

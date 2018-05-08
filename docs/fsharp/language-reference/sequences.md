@@ -1,17 +1,12 @@
 ---
 title: Sekwencje (F#)
 description: 'Dowiedz się, jak używać F #, gdy masz duży, uporządkowanych zbierania danych, ale nie zawsze powinien korzystać ze wszystkich elementów.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ebebec3a69fd0f4fb8e3ad8d554541fa1cc8945e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequences"></a>Sekwencje
 

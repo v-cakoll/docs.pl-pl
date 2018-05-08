@@ -1,13 +1,7 @@
 ---
 title: Izolowany magazyn
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -24,21 +18,16 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-caps.latest.revision: "32"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
-<a name="top"></a>Dla [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] aplikacji izolowanych magazynów jest mechanizmu magazynowania danych, która zapewnia izolację i bezpieczeństwo, definiując standardowych metod kojarzenia kodu z zapisane dane. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.  
+<a name="top"></a> Dla [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] aplikacji izolowanych magazynów jest mechanizmu magazynowania danych, która zapewnia izolację i bezpieczeństwo, definiując standardowych metod kojarzenia kodu z zapisane dane. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.  
   
 > [!IMPORTANT]
 >  Izolowany magazyn jest niedostępny dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klasy danych aplikacji w `Windows.Storage` obszary nazw dołączane w [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API do przechowywania plików i danych lokalnych. Aby uzyskać więcej informacji, zobacz [danych aplikacji](/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów systemu Windows.  
@@ -131,9 +120,9 @@ ms.lasthandoff: 01/09/2018
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, pochodzi z <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> i zapewnia podstawowe możliwości zarządzania przechowywanej zestawu i pliki aplikacji. Wystąpienie <xref:System.IO.IsolatedStorage.IsolatedStorageFile> klasa reprezentuje jeden magazyn znajduje się w systemie plików.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>pochodną <xref:System.IO.FileStream?displayProperty=nameWithType> i zapewnia dostęp do plików w magazynie.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> pochodną <xref:System.IO.FileStream?displayProperty=nameWithType> i zapewnia dostęp do plików w magazynie.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageScope>to wyliczenie umożliwiająca tworzenie i wybierz magazyn o typie izolacji odpowiednie.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageScope> to wyliczenie umożliwiająca tworzenie i wybierz magazyn o typie izolacji odpowiednie.  
   
  Klasy wydzielonej pamięci masowej umożliwiają tworzenie, wyliczanie oraz usuwanie wydzielonej pamięci masowej. Metody wykonywania tych zadań są dostępne za pośrednictwem <xref:System.IO.IsolatedStorage.IsolatedStorageFile> obiektu. Niektóre operacje, trzeba mieć <xref:System.Security.Permissions.IsolatedStorageFilePermission> uprawnienia reprezentujący prawo do administrowania izolowanych magazynów; może być również konieczne ma systemu operacyjnego praw dostępu do pliku lub katalogu.  
   
@@ -177,7 +166,7 @@ ms.lasthandoff: 01/09/2018
 |[Instrukcje: znajdowanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Opis sposobu odczytywania struktury katalogów i plików w wydzielonej pamięci masowej.|  
 |[Instrukcje: odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Przykład zapisywania ciągu w pliku w wydzielonej pamięci masowej i odczytywania go z powrotem.|  
 |[Instrukcje: usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Opis sposobu usuwania plików i katalogów wydzielonej pamięci masowej.|  
-|[Plik i strumienia I-O](../../../docs/standard/io/index.md)|Opis sposobu synchronicznego i asynchronicznego uzyskiwania dostępu do pliku i strumienia danych.|  
+|[We/Wy plików i strumieni](../../../docs/standard/io/index.md)|Opis sposobu synchronicznego i asynchronicznego uzyskiwania dostępu do pliku i strumienia danych.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Tematy pomocy  

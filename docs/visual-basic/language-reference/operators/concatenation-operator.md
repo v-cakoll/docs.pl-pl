@@ -1,12 +1,6 @@
 ---
-title: "&amp;— Operator (Visual Basic)"
+title: '&amp; — Operator (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&
 helpviewer_keywords:
@@ -16,16 +10,13 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 76c8fc52a518dfe7850a5680b7d4f06f3d09bf73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;— Operator (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp; — Operator (Visual Basic)
 Tworzy połączenie ciągów dwóch wyrażeń.  
   
 ## <a name="syntax"></a>Składnia  
@@ -36,13 +27,13 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagany. Wszelkie `String` lub `Object` zmiennej.  
+ Wymagana. Wszelkie `String` lub `Object` zmiennej.  
   
  `expression1`  
- Wymagany. Dowolne wyrażenie z typem danych rozszerzająca do `String`.  
+ Wymagana. Dowolne wyrażenie z typem danych rozszerzająca do `String`.  
   
  `expression2`  
- Wymagany. Dowolne wyrażenie z typem danych rozszerzająca do `String`.  
+ Wymagana. Dowolne wyrażenie z typem danych rozszerzająca do `String`.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli typ danych miary `expression1` lub `expression2` nie jest `String` , ale rozszerzenie do `String`, jest konwertowana na `String`. Jeśli jeden z typów danych nie są rozszerzane `String`, kompilator generuje błąd.  
@@ -61,7 +52,7 @@ result = expression1 & expression2
  [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [& = — operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [&=, operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
  [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

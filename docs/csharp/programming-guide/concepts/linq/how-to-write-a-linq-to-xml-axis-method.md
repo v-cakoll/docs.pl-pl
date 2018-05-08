@@ -1,21 +1,12 @@
 ---
 title: 'Porady: pisanie LINQ do metody osi XML (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f66dd689e31fa7688055721b52b30380327a4977
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 51adbc9f0771f8925e5e16c61f48bbb5f8bedf05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Porady: pisanie LINQ do metody osi XML (C#)
 Można pisać własne osi metody do pobierania kolekcji z drzewa XML. Najlepsze sposoby, w tym celu jest napisanie metody rozszerzenia, która zwraca kolekcję elementów lub atrybutów. Można napisać metodę rozszerzenie do zwrócenia podzbiór elementów lub atrybutów, w zależności od wymagań aplikacji.  

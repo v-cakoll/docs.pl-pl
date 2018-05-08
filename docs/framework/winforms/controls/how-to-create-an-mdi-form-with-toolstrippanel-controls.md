@@ -1,14 +1,6 @@
 ---
 title: 'Porady: tworzenie formularza MDI za pomocą formantów ToolStripPanel'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,17 +12,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8c10c7a74e0562c59708b721f662ab95eadc23b4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 1f7da5bfea9a9864f11a32a589798dfd8a7844a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Porady: tworzenie formularza MDI za pomocą formantów ToolStripPanel
 Można utworzyć wiele formularza interfejsu (MDI) dokumentu, który ma <xref:System.Windows.Forms.ToolStrip> formanty framing go ze wszystkich czterech stron.  

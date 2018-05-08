@@ -1,26 +1,15 @@
 ---
 title: Implementacja DACL zachowania w klasie XslTransform
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c2ffa755c642b2a3c7dd47d7007bff7239f500f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementacja DACL zachowania w klasie XslTransform
 > [!NOTE]
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 |Dodawanie atrybutu na inny niż węzeł elementu.|Odzyskiwanie|7.1.3|  
 |Podczas tworzenia wystąpienia zawartości `xsl:attribute` element nie jest węzłem tekstowym.|Odzyskiwanie|7.1.3|  
 |Dwa zestawy atrybutu mają się tym samym ustawieniem pierwszeństwa importu i rozwiniętą nazwą. Mają taki sam atrybut i ma nie innych atrybutów zestaw, zawierający atrybutu wspólnego o takiej samej nazwie o wyższych ważności.|Odzyskiwanie|7.1.4|  
-|`xsl:processing-instruction`Nazwa atrybutu nie przekazuje nazwę nie dwukropka (NCName) i elementem docelowym instrukcji przetwarzania.|Odzyskiwanie|7.3|  
+|`xsl:processing-instruction` Nazwa atrybutu nie przekazuje nazwę nie dwukropka (NCName) i elementem docelowym instrukcji przetwarzania.|Odzyskiwanie|7.3|  
 |Tworzenie wystąpień zawartość `xsl:processing-instruction` tworzy węzły inne niż węzły tekstowe.|Odzyskiwanie|7.3|  
 |Wyniki tworzenia wystąpienia zawartość `xsl:processing-instruction` zawiera ciąg "`?>`".|Odzyskiwanie|7.3|  
 |Wyniki tworzenia wystąpienia zawartość `xsl:comment` zawiera ciąg "--", lub kończy się wyrazem "-".|Odzyskiwanie|7.4|  
@@ -50,11 +39,11 @@ ms.lasthandoff: 12/23/2017
 |Identyfikator fragmentu zawiera odwołanie do identyfikatora URI w dokumencie funkcji i występuje błąd podczas przetwarzania identyfikator fragmentu.|Zgłoszono wyjątek|12.1|  
 |Wiele atrybutów o tej samej nazwie, które nie są nazywane `cdata-section-elements` w `xls:output`, a tym samym ustawieniem pierwszeństwa importu te atrybuty.|Odzyskiwanie|16|  
 |Procesor nie obsługuje kodowania wartości podanej w znaków `encoding` atrybutu `xsl:output` elementu.|Odzyskiwanie|16.1|  
-|`disable-output-escaping`Służy do węzłem tekstowym, a ten węzeł tekstowy jest używany do tworzenia inną niż węzeł tekstowy w drzewie wynik.|`disable-output-escaping`atrybut jest ignorowany|16.4|  
+|`disable-output-escaping` Służy do węzłem tekstowym, a ten węzeł tekstowy jest używany do tworzenia inną niż węzeł tekstowy w drzewie wynik.|`disable-output-escaping` atrybut jest ignorowany|16.4|  
 |Konwertowanie na liczbę lub ciąg wynikowego fragmentu drzewa, jeśli wynikowego fragmentu drzewa zawiera węzeł tekstowy z danych wyjściowych anulowanie włączone.|Ignorowane|16.4|  
 |Anulowanie w danych wyjściowych jest wyłączona dla znaków, których nie można przedstawić w kodowaniu wykorzystanie procesora XSLT do danych wyjściowych.|Ignorowane|16.4|  
 |Dodawanie węzła przestrzeni nazw do elementu po elementy podrzędne zostały dodane do niego lub atrybuty zostały dodane do niego|Odzyskiwanie|E25 erracie|  
-|`xsl:number`jest wartością typu NaN, nieskończone lub mniejsza niż 0,5.|Odzyskiwanie|E24 erracie|  
+|`xsl:number` jest wartością typu NaN, nieskończone lub mniejsza niż 0,5.|Odzyskiwanie|E24 erracie|  
 |Drugi argument zestaw węzłów funkcji dokument jest pusty i odwołanie do identyfikatora URI jest względna|Odzyskiwanie|Erracie e14|  
   
  Sekcje z erracie znajdują się w sieci World Wide Web konsorcjum W3C transformacji XSL (XSLT) w wersji 1.0 specyfikacji erracie, znajdujący się w www.w3.org/1999/11/REC-xslt-19991116-errata.  
@@ -69,7 +58,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Nie wszystkie procesory XSLT obsługuje te same języki.  
   
--   W odniesieniu do języków, różnych procesorów może się różnić na ich sortowanie według określonego języka nie określono`xsl:sort.`  
+-   W odniesieniu do języków, różnych procesorów może się różnić na ich sortowanie według określonego języka nie określono `xsl:sort.`  
   
  W poniższej tabeli przedstawiono sortowania zaimplementowana dla każdego typu danych w implementacji programu .NET Framework, przekształcania, używając <xref:System.Xml.Xsl.XslTransform>.  
   
@@ -83,7 +72,7 @@ ms.lasthandoff: 12/23/2017
   
 |Funkcja|Odwołanie do lokalizacji|Uwagi|  
 |-------------|------------------------|-----------|  
-|`disable-output-escaping`atrybutu `<xsl:text...>` i `<xsl:value-of...>` tagów.|W3C XSLT 1.0 zalecenie,<br /><br /> 16.4 sekcji|`disable-output-escaping` Atrybut jest ignorowany podczas `xsl:text` lub `xsl:value-of` elementy są używane w `xsl:comment`, `xsl:processing-instruction`, lub `xsl:attribute` elementu.<br /><br /> Wynik drzewa fragmenty, zawierających tekst i tekst wyjściowy, który ma zostać zmieniona nie są obsługiwane.<br /><br /> Anulowanie dane wyjściowe wyłącz atrybut jest ignorowane w przypadku przekształcania do <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter> obiektu.|  
+|`disable-output-escaping` atrybutu `<xsl:text...>` i `<xsl:value-of...>` tagów.|W3C XSLT 1.0 zalecenie,<br /><br /> 16.4 sekcji|`disable-output-escaping` Atrybut jest ignorowany podczas `xsl:text` lub `xsl:value-of` elementy są używane w `xsl:comment`, `xsl:processing-instruction`, lub `xsl:attribute` elementu.<br /><br /> Wynik drzewa fragmenty, zawierających tekst i tekst wyjściowy, który ma zostać zmieniona nie są obsługiwane.<br /><br /> Anulowanie dane wyjściowe wyłącz atrybut jest ignorowane w przypadku przekształcania do <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter> obiektu.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Xsl.XslTransform>  

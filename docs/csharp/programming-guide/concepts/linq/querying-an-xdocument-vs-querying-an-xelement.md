@@ -1,21 +1,12 @@
 ---
 title: Kwerenda vs klasy XDocument. Wykonywanie zapytania XElement (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b315a9b298a786cbb78eb18efd4ecf3ea8e0b90c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 61d8c70b9cbaeeb487059e4acfc88dc165c45d65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Kwerenda vs klasy XDocument. Wykonywanie zapytania XElement (C#)
 Podczas ładowania dokumentu za pomocą <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, zauważysz, trzeba pisać zapytania nieco inaczej niż podczas ładowania za pośrednictwem <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  

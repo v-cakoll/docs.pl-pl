@@ -1,24 +1,14 @@
 ---
-title: "Ustawienia zasad dyrektyw środowiska uruchomieniowego"
-ms.custom: 
+title: Ustawienia zasad dyrektyw środowiska uruchomieniowego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 698e8ef926740f33f8a0a192680b5cebb45c9d79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-directive-policy-settings"></a>Ustawienia zasad dyrektyw środowiska uruchomieniowego
 > [!NOTE]
@@ -33,18 +23,18 @@ ms.lasthandoff: 12/22/2017
   
 -   Typy zasad odbicia określają, które metadane są udostępniane w czasie wykonywania w celu odbicia:  
   
-    -   `Activate`Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, aby włączyć aktywacji wystąpień.  
+    -   `Activate` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, aby włączyć aktywacji wystąpień.  
   
-    -   `Browse`Formanty wykonywania zapytania dotyczącego informacji o programie elementów.  
+    -   `Browse` Formanty wykonywania zapytania dotyczącego informacji o programie elementów.  
   
-    -   `Dynamic`Formanty środowiska uruchomieniowego dostęp do wszystkich typów i członków, aby włączyć dynamiczne programowania.  
+    -   `Dynamic` Formanty środowiska uruchomieniowego dostęp do wszystkich typów i członków, aby włączyć dynamiczne programowania.  
   
      W poniższej tabeli wymieniono odbicia typów zasad i elementów programu, które mogą być używane.  
   
     |Element|Aktywuj|Przeglądaj|dynamiczne|  
     |-------------|--------------|------------|-------------|  
     |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
     |[\<Pole >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
@@ -52,30 +42,30 @@ ms.lasthandoff: 12/22/2017
     |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
     |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
     |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
     |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
     |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 -   Typy zasad serializacji określają, które metadane są udostępniane w czasie wykonywania do serializacji i deserializacji:  
   
-    -   `Serialize`Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów można było serializować przez biblioteki innych firm, takich jak serializator Newtonsoft JSON.  
+    -   `Serialize` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów można było serializować przez biblioteki innych firm, takich jak serializator Newtonsoft JSON.  
   
-    -   `DataContractSerializer`Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
+    -   `DataContractSerializer` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
   
-    -   `DataContractJsonSerializer`Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasy.  
+    -   `DataContractJsonSerializer` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasy.  
   
-    -   `XmlSerializer`Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Xml.Serialization.XmlSerializer> klasy.  
+    -   `XmlSerializer` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Xml.Serialization.XmlSerializer> klasy.  
   
      W poniższej tabeli wymieniono serializacji typów zasad i elementów programu, które mogą być używane.  
   
     |Element|serializacji|DataContractSerializer|Klasa DataContractJsonSerializer|Element XmlSerializer|  
     |-------------|---------------|----------------------------|--------------------------------|-------------------|  
     |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
     |[\<Pole >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
@@ -83,28 +73,28 @@ ms.lasthandoff: 12/22/2017
     |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
     |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
     |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
   
 -   Typy międzyoperacyjne zasad należy ustalić metadanych, które ma zostać udostępnione w czasie wykonywania do przekazania typy odwołań, typy wartości i wskaźniki funkcji COM i środowiska wykonawczego systemu Windows:  
   
-    -   `MarshalObject`Steruje natywnym, organizowanie COM i środowiska wykonawczego systemu Windows dla typów odwołań.  
+    -   `MarshalObject` Steruje natywnym, organizowanie COM i środowiska wykonawczego systemu Windows dla typów odwołań.  
   
-    -   `MarshalDelegate`Steruje natywnym, przekazywanie typów delegatów jako wskaźników funkcji.  
+    -   `MarshalDelegate` Steruje natywnym, przekazywanie typów delegatów jako wskaźników funkcji.  
   
-    -   `MarshalStructure`Steruje natywnym, organizowanie COM i środowiska wykonawczego systemu Windows dla typów wartości.  
+    -   `MarshalStructure` Steruje natywnym, organizowanie COM i środowiska wykonawczego systemu Windows dla typów wartości.  
   
      W poniższej tabeli wymieniono typy międzyoperacyjne zasad i elementów programu, które mogą być używane.  
   
     |Element|MarshalObject|MarshalDelegate|MarshalStructure|  
     |-------------|-------------------|---------------------|----------------------|  
     |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)||||  
     |[\<Pole >](../../../docs/framework/net-native/field-element-net-native.md)||||  
@@ -112,12 +102,12 @@ ms.lasthandoff: 12/22/2017
     |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
     |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)||||  
     |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
     |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)||||  
     |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 ## <a name="policy-settings"></a>Ustawienia zasad  
@@ -126,7 +116,7 @@ ms.lasthandoff: 12/22/2017
 |Ustawienie zasad|Opis|`Assembly`, `Namespace`, `Type`, i `TypeInstantiation` elementów|`Event`, `Field`, `Method`, `MethodInstantiation`, i `Property` elementów|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|Włącza zasady dla wszystkich typów i elementów członkowskich, które nie będą usuwane łańcucha narzędzi dla platformy .NET Native.|✓||  
-|`Auto`|Określa, że zasada domyślna ma być używany dla tego typu zasad dla tego elementu programu. To jest identyczny z pominięciem zasad dla tego typu zasad. `Auto`zwykle służy do wskazywania, czy zasady są dziedziczone z elementu nadrzędnego.|✓|✓|  
+|`Auto`|Określa, że zasada domyślna ma być używany dla tego typu zasad dla tego elementu programu. To jest identyczny z pominięciem zasad dla tego typu zasad. `Auto` zwykle służy do wskazywania, czy zasady są dziedziczone z elementu nadrzędnego.|✓|✓|  
 |`Excluded`|Określa, czy zasady są wyłączone dla elementu określonego programu. Na przykład dyrektyw środowiska uruchomieniowego:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> Określa, że metadane dla `BusinessClasses.Person` klasy nie jest dostępna, albo do przeglądania lub do dynamicznie utworzyć wystąpienia i modyfikowania `Person` obiektów.|✓|✓|  
 |`Included`|Włącza zasadę, jeśli metadane dla typu nadrzędnego jest dostępna.||✓|  
 |`Public`|Włącza zasady dla typy publiczne lub elementy członkowskie, chyba że łańcucha narzędzi Określa typ lub element członkowski nie jest konieczne i w związku z tym spowoduje usunięcie jej. To ustawienie różni się od `Required Public`, co zapewnia, że metadane typy publiczne i elementów członkowskich są zawsze dostępne, nawet jeśli łańcucha narzędzi Określa, że nie jest konieczne.|✓||  

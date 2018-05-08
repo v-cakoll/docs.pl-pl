@@ -1,30 +1,18 @@
 ---
 title: Zapytania w LINQ do DataSet
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7e07da38f7a75226d48ef84cc8d2dafd48f6e795
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9334eec92ef06e5be07dae4391cdac43fed778
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queries-in-linq-to-dataset"></a>Zapytania w LINQ do DataSet
-Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są zwykle zapisywane w język kwerendy specjalnych, takich jak SQL relacyjnych baz danych i XQuery dla formatu XML. W związku z tym deweloperzy było nauczyć się nowy język kwerendy dla każdego typu źródła danych lub format danych są zapytania. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]zapewnia prostszy, spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. W [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytanie, należy zawsze działa z programowania obiektów.  
+Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są zwykle zapisywane w język kwerendy specjalnych, takich jak SQL relacyjnych baz danych i XQuery dla formatu XML. W związku z tym deweloperzy było nauczyć się nowy język kwerendy dla każdego typu źródła danych lub format danych są zapytania. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] zapewnia prostszy, spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. W [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytanie, należy zawsze działa z programowania obiektów.  
   
  A [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania operacja obejmuje trzy czynności: uzyskać źródła danych lub źródła, Utwórz zapytanie i wykonać zapytanie.  
   
@@ -37,7 +25,7 @@ Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania s�
  W przeciwieństwie do zapytań odroczonych, zwracające sekwencję wartości zapytań zwracających wartości pojedynczego wystąpienia są wykonywane natychmiast. Oto kilka przykładów pojedynczych zapytań <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, i <xref:System.Linq.Enumerable.First%2A>. Natychmiast je wykonać operacji, ponieważ wyniki zapytania są wymagane do obliczenia pojedynczego wyniku. Na przykład w celu obliczenia średniej wyniki zapytania zapytanie musi zostać wykonana, aby funkcja uśredniania ma wejściowych danych do pracy z. Można również użyć <xref:System.Linq.Enumerable.ToList%2A> lub <xref:System.Linq.Enumerable.ToArray%2A> metod na podstawie kwerendy, aby wymusić natychmiastowe wykonywania zapytania, które nie tworzy wartości pojedynczego wystąpienia. Te techniki, aby wymusić natychmiastowe wykonanie może być przydatne, gdy chcesz buforować wyniki zapytania. Aby uzyskać więcej informacji o wykonanie odroczone i bezpośrednie kwerendy, zobacz [wprowadzenie do LINQ](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
   
 ## <a name="queries"></a>Kwerendy  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]zapytania można sformułować w dwóch składnie: wyrażenie składnia zapytania i metody zapytań.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania można sformułować w dwóch składnie: wyrażenie składnia zapytania i metody zapytań.  
   
 ### <a name="query-expression-syntax"></a>Składnia wyrażenia zapytania  
  Wyrażenia zapytania są deklaratywne składnię. Ta składnia umożliwia deweloperom Pisanie zapytań w C# lub Visual Basic w formacie podobnym do bazy danych SQL. Przy użyciu składni wyrażeń zapytania, można wykonywać nawet złożone filtrowanie, kolejność i operacji grupowania na źródeł danych z minimalnym kodu. Aby uzyskać więcej informacji, zobacz [wyrażenia zapytań LINQ](http://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4) i [podstawowe operacje zapytań (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

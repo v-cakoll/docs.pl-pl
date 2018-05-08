@@ -1,13 +1,6 @@
 ---
 title: DataGrid
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid column types [WPF]
 - DataGrid scenarios [WPF]
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8f267706c1ace02b091329360779711981d01e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> Kontroli umożliwia wyświetlanie i edytowanie danych z różnych źródeł, takich jak z bazy danych SQL, zapytania LINQ lub dowolnego innego źródła danych może być powiązana. Aby uzyskać więcej informacji, zobacz [powiązanie Przegląd źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid>można dostosować wygląd, na przykład komórki czcionkę, kolor i rozmiar. <xref:System.Windows.Controls.DataGrid>obsługuje wszystkie funkcje stylami i tworzenia szablonów innych formantów WPF. <xref:System.Windows.Controls.DataGrid>zawiera także domyślne i dostosowania zachowania edycji, sortowanie i sprawdzania poprawności.  
+ <xref:System.Windows.Controls.DataGrid> można dostosować wygląd, na przykład komórki czcionkę, kolor i rozmiar. <xref:System.Windows.Controls.DataGrid> obsługuje wszystkie funkcje stylami i tworzenia szablonów innych formantów WPF. <xref:System.Windows.Controls.DataGrid> zawiera także domyślne i dostosowania zachowania edycji, sortowanie i sprawdzania poprawności.  
   
  W poniższej tabeli przedstawiono niektóre typowe zadania <xref:System.Windows.Controls.DataGrid> i sposobu ich wykonywania. Wyświetlając pokrewne interfejsu API, można znaleźć więcej informacji oraz przykładowy kod.  
   

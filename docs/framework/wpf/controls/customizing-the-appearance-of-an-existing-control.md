@@ -1,13 +1,6 @@
 ---
-title: "Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate"
-ms.custom: 
+title: Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
-<a name="introduction"></a>A <xref:System.Windows.Controls.ControlTemplate> określa visual strukturę i zachowanie visual formantu. Można dostosować wygląd formantu, zapewniając it nowy <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wygląd formant bez zmieniania jego funkcjonalność. Na przykład możesz wprowadzić przycisków w aplikacji round zamiast domyślnego kwadratu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+<a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> określa visual strukturę i zachowanie visual formantu. Można dostosować wygląd formantu, zapewniając it nowy <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wygląd formant bez zmieniania jego funkcjonalność. Na przykład możesz wprowadzić przycisków w aplikacji round zamiast domyślnego kwadratu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
   
  W tym temacie opisano różne części <xref:System.Windows.Controls.ControlTemplate>, pokazano tworzenie prostego <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.Button>oraz objaśniono sposób zrozumieć kontraktu kontroli formantu, aby dostosować wygląd. Ponieważ tworzenia <xref:System.Windows.Controls.ControlTemplate> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], można zmienić wygląd formantu, bez pisania żadnego kodu. Tworzenie szablonów niestandardowych kontroli umożliwia także projektanta, takich jak Microsoft Expression Blend. W tym temacie przedstawiono przykłady w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] który dostosowanie wyglądu <xref:System.Windows.Controls.Button> oraz przedstawia pełny przykład na końcu tego tematu. Aby uzyskać więcej informacji o używaniu Expression Blend, zobacz [stylów formantu, który obsługuje szablony](http://go.microsoft.com/fwlink/?LinkId=161153).  
   
@@ -93,7 +81,7 @@ Pole wyboru, które używa szablonu formantu niestandardowego
   
  W tym przykładzie <xref:System.Windows.Controls.Grid> ma jego <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> powiązane właściwości szablonu <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Ponieważ <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> jest szablonu powiązane, możesz utworzyć wiele przycisków używać tego samego <xref:System.Windows.Controls.ControlTemplate> i ustaw <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> różne wartości na każdym przycisku. Jeśli <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> została szablonu nie jest powiązana z właściwością elementu w <xref:System.Windows.Controls.ControlTemplate>, ustawienie <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> przycisku spowoduje nie mają wpływu na wygląd przycisku.  
   
- Należy pamiętać, że nazwy tych dwóch właściwości muszą być identyczne. W powyższym przykładzie <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> właściwość <xref:System.Windows.Controls.Button> szablonu jest powiązany z <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> właściwość <xref:System.Windows.Controls.ContentPresenter>. Dzięki temu zawartości przycisku się znajdować w poziomie. <xref:System.Windows.Controls.ContentPresenter>nie ma właściwości o nazwie `HorizontalContentAlignment`, ale <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> może być powiązana z <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Gdy szablon można powiązać właściwości, należy się upewnić, że właściwości źródłowa i docelowa są tego samego typu.  
+ Należy pamiętać, że nazwy tych dwóch właściwości muszą być identyczne. W powyższym przykładzie <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> właściwość <xref:System.Windows.Controls.Button> szablonu jest powiązany z <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> właściwość <xref:System.Windows.Controls.ContentPresenter>. Dzięki temu zawartości przycisku się znajdować w poziomie. <xref:System.Windows.Controls.ContentPresenter> nie ma właściwości o nazwie `HorizontalContentAlignment`, ale <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> może być powiązana z <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Gdy szablon można powiązać właściwości, należy się upewnić, że właściwości źródłowa i docelowa są tego samego typu.  
   
  <xref:System.Windows.Controls.Control> Klasa definiuje kilka właściwości, które mogą być używane przez szablon formantu mają wpływ na kontrolce po ich ustawieniu. Jak <xref:System.Windows.Controls.ControlTemplate> używa właściwości zależy od właściwości. <xref:System.Windows.Controls.ControlTemplate> Należy użyć właściwości w jednym z następujących sposobów:  
   
@@ -200,9 +188,9 @@ Używa szablonu kontrolki niestandardowej w stan naciśnięcia przycisku
   
 |Typ ograniczenia|Wartość z|Wartość do|  
 |-------------------------|-------------------|-----------------|  
-|Z określonego stanu do innego określonego stanu|Nazwa<xref:System.Windows.VisualState>|Nazwa<xref:System.Windows.VisualState>|  
-|Z dowolnego stanu do określonego stanu|Nie ustawiono|Nazwa<xref:System.Windows.VisualState>|  
-|Z określonego stanu do dowolnego stanu|Nazwa<xref:System.Windows.VisualState>|Nie ustawiono|  
+|Z określonego stanu do innego określonego stanu|Nazwa <xref:System.Windows.VisualState>|Nazwa <xref:System.Windows.VisualState>|  
+|Z dowolnego stanu do określonego stanu|Nie ustawiono|Nazwa <xref:System.Windows.VisualState>|  
+|Z określonego stanu do dowolnego stanu|Nazwa <xref:System.Windows.VisualState>|Nie ustawiono|  
 |Z dowolnego stanu do innego stanu|Nie ustawiono|Nie ustawiono|  
   
  Istnieje wiele <xref:System.Windows.VisualTransition> obiekty w <xref:System.Windows.VisualStateGroup> odwołujące się do tego samego stanu, ale będą stosowane w kolejności, który określa poprzedniej tabeli. W poniższym przykładzie występują dwa <xref:System.Windows.VisualTransition> obiektów. Gdy formant przechodzi z `Pressed` stan `MouseOver` stanu, <xref:System.Windows.VisualTransition> zawiera równocześnie <xref:System.Windows.VisualTransition.From%2A> i <xref:System.Windows.VisualTransition.To%2A> zestaw jest używany. Gdy kontrolka przejścia ze stanu, który nie jest `Pressed` do `MouseOver` stan, służy inny stan.  

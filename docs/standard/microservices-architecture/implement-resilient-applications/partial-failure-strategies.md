@@ -1,21 +1,14 @@
 ---
-title: "Strategie dotyczące postępowania z częściowa awarii"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Strategie dotyczące postępowania z częściowa awarii"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Strategie dotyczące postępowania z częściowa awarii
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Strategie dotyczące postępowania z częściowa awarii
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: f1b2b59af96bf28035eeb32eb15eaa4105677cf4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategie dotyczące postępowania z częściowa awarii
 

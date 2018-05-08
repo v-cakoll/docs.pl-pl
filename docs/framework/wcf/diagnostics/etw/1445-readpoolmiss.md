@@ -1,24 +1,12 @@
 ---
-title: "1445 — ReadPoolMiss"
-ms.custom: 
+title: 1445 — ReadPoolMiss
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a8fa431-42a2-4a77-9a04-a269236e83ad
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e33f18855e88544c05f05bdccff1c90e402f2f66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee65e216ce6dcf9538820a92fd96b5c1b962af43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="1445---readpoolmiss"></a>1445 — ReadPoolMiss
 ## <a name="properties"></a>Właściwości  
@@ -28,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 |ID|1445|  
 |Słowa kluczowe|limit przydziału|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji Server aplikacje/analityczne|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
  To zdarzenie jest emitowany z Chybienia odczytu puli.  

@@ -1,24 +1,12 @@
 ---
-title: "Narzędzie Contract-First"
-ms.custom: 
+title: Narzędzie Contract-First
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>Narzędzie Contract-First
 Kontrakty usług często muszą być utworzone na podstawie istniejących usług. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], klasy kontraktu danych mogą być tworzone automatycznie z istniejącymi usługami za pomocą narzędzie contract-first. Aby użyć narzędzie contract-first, plik definicji schematu XML (XSD), należy pobrać lokalnie; Narzędzie nie może zaimportować kontraktów danych zdalnych za pośrednictwem protokołu HTTP.  
@@ -72,11 +60,11 @@ Kontrakty usług często muszą być utworzone na podstawie istniejących usług
 ## <a name="configuring-contract-first-options"></a>Konfigurowanie opcji pierwszy kontraktu  
  W menu właściwości można skonfigurować opcje kontraktu pierwszy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projektu. Aby umożliwić programowanie pierwszy kontraktu, zaznacz **włączyć XSD jako język definicji typu** pole wyboru na stronie WCF w oknie właściwości projektu.  
   
- ![Opcje projektu WCF przedstawiający kontraktu &#45; pierwszej](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![Kontrakt przedstawiający opcje projektu WCF&#45;pierwszy](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  Aby skonfigurować zaawansowane właściwości, kliknij przycisk Zaawansowane.  
   
- ![Zaawansowane kontraktu &#45; Pierwszy właściwości](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![Zaawansowane kontraktu&#45;pierwszy właściwości](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  Można skonfigurować następujące ustawienia zaawansowane dla generowanie kodu na podstawie umów. Ustawienia można skonfigurować tylko dla wszystkich plików w projekcie; Nie można skonfigurować ustawień dla poszczególnych plików w tej chwili.  
   

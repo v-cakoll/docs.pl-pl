@@ -1,27 +1,15 @@
 ---
-title: "SaveFileDialog — Składnik (Formularze systemu Windows)"
-ms.custom: 
+title: SaveFileDialog — Składnik (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5b648f74d3b69a49950eb4e4c9419287aafa3f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fe9580114d6e21e698687ba398d60c0af72d57f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog — Składnik (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.SaveFileDialog> składnik jest okno dialogowe wstępnie skonfigurowane. Jest taka sama jak standardowe okno dialogowe Zapisz plik używany przez system Windows. Dziedziczy on z <xref:System.Windows.Forms.CommonDialog> klasy.  
@@ -34,7 +22,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.SaveFileDialog> składnik 
  Wyjaśniono, jak można zapisać pliku za pomocą wystąpienia <xref:System.Windows.Forms.SaveFileDialog> składnika w czasie wykonywania.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.SaveFileDialog>klasy  
+ <xref:System.Windows.Forms.SaveFileDialog> Klasy  
  Zawiera informacje o klasie i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

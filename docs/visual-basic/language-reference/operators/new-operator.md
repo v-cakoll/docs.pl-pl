@@ -1,11 +1,6 @@
 ---
-title: "New — Operator (Visual Basic)"
+title: New — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.new
 - vb.NewConstraint
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74f0352379e861ad135ea23d31ea07d638f9e6c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="new-operator-visual-basic"></a>New — Operator (Visual Basic)
 Wprowadza `New` klauzuli do utworzenia nowego wystąpienia obiektu, określa ograniczenie konstruktora dla parametru typu lub identyfikuje `Sub` procedury jako konstruktora klasy.  
@@ -46,17 +38,17 @@ Wprowadza `New` klauzuli do utworzenia nowego wystąpienia obiektu, określa ogr
   
  Aby utworzyć procedury konstruktora dla klasy, ustaw nazwę `Sub` procedura `New` — słowo kluczowe. Aby uzyskać więcej informacji, zobacz [okres istnienia obiektów: sposób obiekty są utworzone i Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
- `New` — Słowo kluczowe może być używana w tych sytuacjach:  
+ Instrukcja `New` <słowo kluczowe> może być używana w następujących kontekstach:  
   
- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Z](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [z](../../../visual-basic/language-reference/statements/of-clause.md)  
   
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.OutOfMemoryException>  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
  [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)  
  [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Okres istnienia obiektów: Sposób obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+ [Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

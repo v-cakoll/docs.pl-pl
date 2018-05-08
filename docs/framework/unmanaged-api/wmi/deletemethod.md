@@ -1,11 +1,7 @@
 ---
-title: "Funkcja DeleteMethod (niezarządzany wykaz interfejsów API)"
-description: "Funkcja DeleteMethod usuwa określonej metody z definicji klasy modelu wspólnych informacji."
+title: Funkcja DeleteMethod (niezarządzany wykaz interfejsów API)
+description: Funkcja DeleteMethod usuwa określonej metody z definicji klasy modelu wspólnych informacji.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - DeleteMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03b147d2fd76e34c6152a0b41ee14319811e9300
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deletemethod-function"></a>Funkcja DeleteMethod
 Usuwa określonej metody z definicji klasy modelu wspólnych informacji.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
 
 `wszName`  
-[in] Nazwa metody do usunięcia z tabeli klasy. `wszName`musi być wskaźnikiem do prawidłowej `LPCWSTR`.
+[in] Nazwa metody do usunięcia z tabeli klasy. `wszName` musi być wskaźnikiem do prawidłowej `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -76,7 +69,7 @@ Usuwanie — metoda nie jest obsługiwane dla [IWbemClassObject](https://msdn.mi
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

@@ -1,33 +1,19 @@
 ---
 title: 'Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1f17a5c21888a9fc778d9649f62478d43ba0e86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 823a59f53823a2480655c4f8720504dd4199d0bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją
 Rezerwację adresu URL, można ograniczyć, kto może odbierać komunikaty z adresem URL lub zestaw adresów URL. Zastrzeżenie składa się z szablonem adresu URL, listy kontroli dostępu (ACL) i zestaw flag. Szablon adresu URL definiuje adresów URL, które zastrzeżenie ma wpływ na. Aby uzyskać więcej informacji o sposobie przetwarzania adresu URL szablonów, zobacz [routingu żądań przychodzących](http://go.microsoft.com/fwlink/?LinkId=136764). Listy ACL Określa, jakie użytkownik lub grupa użytkowników może odbierać komunikaty z określonych adresów URL. Flagi informujące o powodzeniu rezerwacji Aby udzielić użytkownikowi lub grupie uprawnienia do nasłuchiwania na adresie URL bezpośrednio lub Aby delegować uprawnienia do nasłuchiwania na innym procesie.  
   
- Domyślna konfiguracja systemu operacyjnego, w ramach [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tworzy zastrzeżenie globalnie dostępny za pośrednictwem portu 80, aby umożliwić wszystkim użytkownikom na uruchamianie aplikacji, które używają podwójną powiązanie HTTP do komunikacji dupleksowej. Ponieważ listy ACL na tego zastrzeżenia dla wszystkich użytkowników, administratorów nie można jawnie Zezwalaj lub nie zezwalaj uprawnienia do nasłuchiwania na adres URL lub zestaw adresów URL. W tym temacie opisano sposób usuwania tego zastrzeżenia i jak ponownie utworzyć zastrzeżenie z ograniczeniami listy ACL.  
+ Częścią domyślnej konfiguracji systemu operacyjnego Windows Communication Foundation (WCF) tworzy zastrzeżenie globalnie dostępny za pośrednictwem portu 80, aby umożliwić wszystkim użytkownikom na uruchamianie aplikacji, które używają podwójną powiązanie HTTP do komunikacji dupleksowej. Ponieważ listy ACL na tego zastrzeżenia dla wszystkich użytkowników, administratorów nie można jawnie Zezwalaj lub nie zezwalaj uprawnienia do nasłuchiwania na adres URL lub zestaw adresów URL. W tym temacie opisano sposób usuwania tego zastrzeżenia i jak ponownie utworzyć zastrzeżenie z ograniczeniami listy ACL.  
   
- Na [!INCLUDE[wv](../../../../includes/wv-md.md)] lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)] można wyświetlić wszystkie rezerwacji adresu URL HTTP, w wierszu polecenia z podwyższonym poziomem uprawnień, wpisując `netsh http show urlacl`.  W poniższym przykładzie pokazano, co [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powinien wyglądać rezerwację adresu URL.  
+ Na [!INCLUDE[wv](../../../../includes/wv-md.md)] lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)] można wyświetlić wszystkie rezerwacji adresu URL HTTP, w wierszu polecenia z podwyższonym poziomem uprawnień, wpisując `netsh http show urlacl`.  W poniższym przykładzie pokazano, co powinno przypominać rezerwację adresu URL usługi WCF.  
   
 ```  
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -37,7 +23,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- Rezerwacja składa się z adresem URL szablon używany, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacja używa dwóch powiązanie HTTP dla komunikacji dupleksowej. Adresy URL formularza są używane dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi do wysłania wiadomości z powrotem do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta podczas komunikacji za pośrednictwem dwóch powiązanie HTTP. Wszyscy jest uprawnienie do nasłuchiwania na adresie URL, ale nie delegować nasłuchiwanie inny proces. Ponadto listy ACL jest opisany w języku definicji deskryptora zabezpieczeń (SSDL). Aby uzyskać więcej informacji na temat SSDL, zobacz [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
+ Rezerwacja składa się z szablonu adres URL używany, gdy aplikacja WCF używa podwójną powiązanie HTTP do komunikacji dupleksowej. Wysyłanie komunikatów z powrotem do klienta WCF podczas komunikacji za pośrednictwem dwóch powiązanie HTTP dla usługi WCF są używane adresy URL tego formularza. Wszyscy jest uprawnienie do nasłuchiwania na adresie URL, ale nie delegować nasłuchiwanie inny proces. Ponadto listy ACL jest opisany w języku definicji deskryptora zabezpieczeń (SSDL). Aby uzyskać więcej informacji na temat SSDL, zobacz [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
   
 ### <a name="to-delete-the-wcf-url-reservation"></a>Aby usunąć rezerwację adresu URL programu WCF  
   
@@ -48,7 +34,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3.  Jeśli rezerwacji została usunięta pomyślnie, zostanie wyświetlony następujący komunikat. **Pomyślnie usunięto rezerwację adresu URL**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>Tworzenie nowej grupy zabezpieczeń i nową rezerwację adresu URL ograniczone  
- Aby zastąpić [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rezerwację adresu URL ograniczoną rezerwacją należy najpierw utworzyć nową grupę zabezpieczeń. Można to zrobić w jeden z dwóch sposobów: z wiersza polecenia lub w konsoli zarządzania komputerem. Wystarczy wykonać jeden.  
+ Aby zastąpić rezerwację adresu URL programu WCF ograniczoną rezerwacją musi najpierw utworzyć nową grupę zabezpieczeń. Można to zrobić w jeden z dwóch sposobów: z wiersza polecenia lub w konsoli zarządzania komputerem. Wystarczy wykonać jeden.  
   
 #### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>Aby utworzyć nową grupę zabezpieczeń z wiersza polecenia  
   

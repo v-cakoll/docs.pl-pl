@@ -1,25 +1,15 @@
 ---
 title: AttributeUsage (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f358068d00c042a979216cdda51dcc7e07abbc5
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ae162c310511db160806501af895276a4a4bba5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
-Określa sposób użycia klasy atrybutu niestandardowego. `AttributeUsage`jest atrybut, który może odnosić się do definicji atrybutu niestandardowego do kontrolowania, jak można zastosować nowego atrybutu. Po zastosowaniu jawnie, domyślne ustawienia następującą postać:  
+Określa sposób użycia klasy atrybutu niestandardowego. `AttributeUsage` jest atrybut, który może odnosić się do definicji atrybutu niestandardowego do kontrolowania, jak można zastosować nowego atrybutu. Po zastosowaniu jawnie, domyślne ustawienia następującą postać:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -98,7 +88,7 @@ End Class
  W takim przypadku `Attr1` nie ma zastosowania do `DClass` za pośrednictwem dziedziczenia.  
   
 ## <a name="remarks"></a>Uwagi  
- `AttributeUsage` Jest atrybutem jednorazowy — nie można zastosować w więcej niż raz do tej samej klasy. `AttributeUsage`alias jest <xref:System.AttributeUsageAttribute>.  
+ `AttributeUsage` Jest atrybutem jednorazowy — nie można zastosować w więcej niż raz do tej samej klasy. `AttributeUsage` alias jest <xref:System.AttributeUsageAttribute>.  
   
  Aby uzyskać więcej informacji, zobacz [podczas uzyskiwania dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   

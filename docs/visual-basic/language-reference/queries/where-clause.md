@@ -1,12 +1,6 @@
 ---
 title: Where — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryWhere
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8c2572f513d00bc72e869cf28d382be799f7a303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0b61a52a366fb37a0834c9223bc8b7f099354d16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-clause-visual-basic"></a>Where — Klauzula (Visual Basic)
 Określa warunek filtrowania dla zapytania.  
@@ -34,7 +25,7 @@ Where condition
   
 ## <a name="parts"></a>Części  
  `condition`  
- Wymagany. Wyrażenie, które określa, czy wartości dla bieżącego elementu w kolekcji są dołączane do kolekcji danych wyjściowych. Wyrażenia musi być `Boolean` wartość lub odpowiednikiem `Boolean` wartość. Jeśli wynikiem warunku jest `True`, element jest uwzględnione w wynikach zapytania; w przeciwnym razie, element są wykluczane w wyniku zapytania.  
+ Wymagana. Wyrażenie, które określa, czy wartości dla bieżącego elementu w kolekcji są dołączane do kolekcji danych wyjściowych. Wyrażenia musi być `Boolean` wartość lub odpowiednikiem `Boolean` wartość. Jeśli wynikiem warunku jest `True`, element jest uwzględnione w wynikach zapytania; w przeciwnym razie, element są wykluczane w wyniku zapytania.  
   
 ## <a name="remarks"></a>Uwagi  
  `Where` Klauzuli umożliwia filtrowanie danych zapytania, wybierając tylko te elementy, które spełniają określone kryteria. Elementy, których wartości powodują `Where` klauzuli mogła zwrócić `True` znajdują się w wynikach zapytania; inne elementy są wyłączone. Wyrażenie, które jest używane w `Where` musi mieć klauzulę `Boolean` lub odpowiednikiem `Boolean`, takie jak liczba całkowita, która daje w wyniku `False` po jego wartość wynosi zero. Można połączyć wiele wyrażeń w `Where` klauzuli przy użyciu operatorów logicznych, takich jak `And`, `Or`, `AndAlso`, `OrElse`, `Is`, i `IsNot`.  
@@ -56,6 +47,6 @@ Where condition
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
- [Klauzula FROM](../../../visual-basic/language-reference/queries/from-clause.md)  
- [SELECT — klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [For Each... Next — instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+ [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

@@ -1,27 +1,15 @@
 ---
-title: "Element formatujący operacji i selektor operacji"
-ms.custom: 
+title: Element formatujący operacji i selektor operacji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Element formatujący operacji i selektor operacji
-W przykładzie pokazano, jak [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] punkty rozszerzeń może służyć do Zezwalaj komunikat danych w innym formacie z co [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oczekuje. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementy formatujące oczekiwane parametry metody do uwzględnienia w obszarze `soap:body` elementu. Przykład obejmuje implementowania niestandardowych operacji programu formatującego, zamiast tego analizuje dane parametru ciągu zapytania HTTP GET, który wywołuje metody przy użyciu tych danych.  
+W tym przykładzie pokazano, jak punkty rozszerzeń Windows Communication Foundation (WCF) może służyć do Zezwalaj komunikat danych w innym formacie z co [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oczekuje. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementy formatujące oczekiwane parametry metody do uwzględnienia w obszarze `soap:body` elementu. Przykład obejmuje implementowania niestandardowych operacji programu formatującego, zamiast tego analizuje dane parametru ciągu zapytania HTTP GET, który wywołuje metody przy użyciu tych danych.  
   
  Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. Go przedstawiono sposób dodawania, odejmowania wielokrotnie i dzielenia wiadomości, można zmienić użyć żądania HTTP GET dla żądań klienta do serwera i HTTP POST z POX wiadomości odpowiedzi serwera do klienta.  
   
@@ -31,7 +19,7 @@ W przykładzie pokazano, jak [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 -   `UriOperationSelector`, które implementuje <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> na serwerze do wykonywania operacji wysyłki na podstawie nazwy operacji w żądanie GET.  
   
--   `EnableHttpGetRequestsBehavior`punkt końcowy zachowanie (i odpowiedniej konfiguracji), która dodaje selektor operacji niezbędne do środowiska wykonawczego.  
+-   `EnableHttpGetRequestsBehavior` punkt końcowy zachowanie (i odpowiedniej konfiguracji), która dodaje selektor operacji niezbędne do środowiska wykonawczego.  
   
 -   Pokazuje, jak można wstawić nowej programu formatującego operacji w czasie wykonywania.  
   
@@ -41,7 +29,7 @@ W przykładzie pokazano, jak [!INCLUDE[indigo1](../../../../includes/indigo1-md.
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="key-concepts"></a>Podstawowe pojęcia  
- `QueryStringFormatter`Programu formatującego operacji jest składnikiem w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] odpowiada do konwertowania wiadomości na tablicę obiektów parametru i tablicę obiektów parametru do wiadomości. Ta próba polega na kliencie przy użyciu <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interfejsu i na serwerze z <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interfejsu. Te interfejsy umożliwiają użytkownikom uzyskiwanie komunikatów żądań i odpowiedzi z `Serialize` i `Deserialize` metody.  
+ `QueryStringFormatter` Programu formatującego operacji jest składnikiem w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] odpowiada do konwertowania wiadomości na tablicę obiektów parametru i tablicę obiektów parametru do wiadomości. Ta próba polega na kliencie przy użyciu <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interfejsu i na serwerze z <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interfejsu. Te interfejsy umożliwiają użytkownikom uzyskiwanie komunikatów żądań i odpowiedzi z `Serialize` i `Deserialize` metody.  
   
  W tym przykładzie `QueryStringFormatter` implementuje obu tych interfejsów i jest zaimplementowana na kliencie i serwerze.  
   
@@ -49,7 +37,7 @@ W przykładzie pokazano, jak [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 -   W przykładzie użyto <xref:System.ComponentModel.TypeConverter> klasy w celu przekonwertowania danych parametru w komunikacie żądania do i z ciągów. Jeśli <xref:System.ComponentModel.TypeConverter> nie jest dostępny dla określonego typu, program formatujący próbki zwraca wyjątek.  
   
--   W `IClientMessageFormatter.SerializeRequest` metoda na kliencie, program formatujący tworzy identyfikator URI odpowiedni adres i dołącza nazwy operacji sufiks. Ta nazwa jest używana do wysłania do odpowiednich operacji na serwerze. Następnie pobiera tablicę obiektów parametru i serializuje dane parametru ciągu zapytania identyfikatora URI przy użyciu nazwy parametrów i wartości przekonwertowane przez <xref:System.ComponentModel.TypeConverter> klasy. <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> i <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> właściwości są następnie ustaw ten identyfikator URI. <xref:System.ServiceModel.Channels.MessageProperties>jest dostępny za pośrednictwem <xref:System.ServiceModel.Channels.Message.Properties%2A> właściwości.  
+-   W `IClientMessageFormatter.SerializeRequest` metoda na kliencie, program formatujący tworzy identyfikator URI odpowiedni adres i dołącza nazwy operacji sufiks. Ta nazwa jest używana do wysłania do odpowiednich operacji na serwerze. Następnie pobiera tablicę obiektów parametru i serializuje dane parametru ciągu zapytania identyfikatora URI przy użyciu nazwy parametrów i wartości przekonwertowane przez <xref:System.ComponentModel.TypeConverter> klasy. <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> i <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> właściwości są następnie ustaw ten identyfikator URI. <xref:System.ServiceModel.Channels.MessageProperties> jest dostępny za pośrednictwem <xref:System.ServiceModel.Channels.Message.Properties%2A> właściwości.  
   
 -   W `IDispatchMessageFormatter.DeserializeRequest` metoda na serwerze, program formatujący pobiera `Via` URI we właściwościach komunikatu żądania przychodzące. Analizuje pary nazwa wartość w ciągu zapytania identyfikatora URI do nazwy i wartości parametrów, a używa nazwy parametrów i wartości do wypełnienia Tablica parametrów przekazana do metody. Należy pamiętać, że już przeprowadzono operacji wysyłania, więc sufiks nazwy operacji jest ignorowana w przypadku tej metody.  
   
@@ -177,7 +165,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
   

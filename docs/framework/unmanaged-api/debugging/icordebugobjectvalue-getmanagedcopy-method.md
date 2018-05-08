@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugObjectValue::GetManagedCopy — Metoda"
-ms.custom: 
+title: ICorDebugObjectValue::GetManagedCopy — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.GetManagedCopy
 api_location:
@@ -23,20 +15,16 @@ helpviewer_keywords:
 ms.assetid: 300af43f-b3eb-4ce5-9ead-30dbfc5fbcc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6a65cf1cbfffdb9abacd987a2417b000a464b527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0d8dc3afe188e18d0804055f869e5090ebc4224
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugobjectvaluegetmanagedcopy-method"></a>ICorDebugObjectValue::GetManagedCopy — Metoda
-`GetManagedCopy`jest przestarzała. Nie wywołuj tej metody.  
+`GetManagedCopy` jest przestarzała. Nie wywołuj tej metody.  
   
 ## <a name="syntax"></a>Składnia  
   

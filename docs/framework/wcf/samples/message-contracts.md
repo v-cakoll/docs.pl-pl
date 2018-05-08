@@ -1,27 +1,15 @@
 ---
-title: "Kontrakty komunikatów"
-ms.custom: 
+title: Kontrakty komunikatów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 07025b43b690d576b71f6f5cb7d846deccf55028
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5483c75bfe7f72b2c6155d978c006fc2050c1e2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-contracts"></a>Kontrakty komunikatów
-Ta sekcja zawiera przykłady ilustrujące kontrakty komunikatu w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Ta sekcja zawiera przykłady ilustrujące kontraktów komunikatu w systemie Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Domyślny kontrakt komunikatów](../../../../docs/framework/wcf/samples/default-message-contract.md)  

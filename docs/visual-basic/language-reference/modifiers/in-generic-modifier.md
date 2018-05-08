@@ -1,24 +1,17 @@
 ---
-title: "In (modyfikator ogólny) (Visual Basic)"
+title: In (modyfikator ogólny) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.VarianceIn
 helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (modyfikator ogólny) (Visual Basic)
 Parametry typu ogólnego `In` — słowo kluczowe Określa, że parametr typu jest kontrawariantny.  
@@ -31,7 +24,7 @@ Parametry typu ogólnego `In` — słowo kluczowe Określa, że parametr typu je
 ## <a name="rules"></a>Reguły  
  Można użyć `In` — słowo kluczowe w interfejsach i delegatów.  
   
- Parametr typu mogą być deklarowane kontrawariantnego w ogólny interfejs lub delegat, jeśli jest używany tylko jako typ argumentów metody i nie jest używany jako typ zwracany metody. `ByRef`Parametry nie mogą być kowariantnego lub kontrawariantnego.  
+ Parametr typu mogą być deklarowane kontrawariantnego w ogólny interfejs lub delegat, jeśli jest używany tylko jako typ argumentów metody i nie jest używany jako typ zwracany metody. `ByRef` Parametry nie mogą być kowariantnego lub kontrawariantnego.  
   
  Kowariancja i kontrawariancja są obsługiwane dla typów referencyjnych i nie jest obsługiwane dla typów wartości.  
   
@@ -53,5 +46,5 @@ Parametry typu ogólnego `In` — słowo kluczowe Określa, że parametr typu je
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wariancje w interfejsach](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+ [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -1,38 +1,24 @@
 ---
 title: Usługi danych WCF 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5b27a51dcec17f72b86e77a7ee2ab773aec1dc3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 148e6e50e81552b2418abba9f6655234fc023c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-45"></a>Usługi danych WCF 4.5
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](wcześniej znane jako "Usług danych ADO.NET") jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantykę [representational stanu Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Dane są dostępne i zmieniać przy użyciu standardowych poleceń HTTP z GET, PUT, POST i DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]używa konwencji Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) do udostępnienia zasobów jako zestawy jednostek, które są powiązane przez skojarzenia.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (wcześniej znane jako "Usług danych ADO.NET") jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantykę [representational stanu Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Dane są dostępne i zmieniać przy użyciu standardowych poleceń HTTP z GET, PUT, POST i DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] używa konwencji Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) do udostępnienia zasobów jako zestawy jednostek, które są powiązane przez skojarzenia.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]używa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu adresowania i aktualizowanie zasobów. W ten sposób można dostępu tych usług za pomocą dowolnego klienta, który obsługuje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]pozwala na żądanie i zapisać dane do zasobów przy użyciu formatów transferowania dobrze znanego: Atom, zbiór standardów wymiany i aktualizowanie danych jako XML i JavaScript Object Notation (JSON), format wymiany danych tekstowych bardzo często używane w aplikacji interfejsu AJAX.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu adresowania i aktualizowanie zasobów. W ten sposób można dostępu tych usług za pomocą dowolnego klienta, który obsługuje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pozwala na żądanie i zapisać dane do zasobów przy użyciu formatów transferowania dobrze znanego: Atom, zbiór standardów wymiany i aktualizowanie danych jako XML i JavaScript Object Notation (JSON), format wymiany danych tekstowych bardzo często używane w aplikacji interfejsu AJAX.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]można ujawniać dane, które pochodzą z różnych źródeł jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych. Program Visual Studio tools ułatwiają tworzenie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi przy użyciu modelu danych programu ADO.NET Entity Framework. Można również utworzyć [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych na podstawie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) klas i danych nawet późnym wiązaniem lub wyrażeniami bez typu.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] można ujawniać dane, które pochodzą z różnych źródeł jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych. Program Visual Studio tools ułatwiają tworzenie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi przy użyciu modelu danych programu ADO.NET Entity Framework. Można również utworzyć [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych na podstawie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) klas i danych nawet późnym wiązaniem lub wyrażeniami bez typu.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zawiera także zestaw bibliotek klienta, jedno dla aplikacji klienckich, ogólne .NET Framework i jedno specjalnie dla aplikacji opartych na technologii Silverlight. Te biblioteki klienta zapewniają model programowania obiektu, gdy uzyskujesz dostęp do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych ze środowisk, takich jak .NET Framework i Silverlight.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zawiera także zestaw bibliotek klienta, jedno dla aplikacji klienckich, ogólne .NET Framework i jedno specjalnie dla aplikacji opartych na technologii Silverlight. Te biblioteki klienta zapewniają model programowania obiektu, gdy uzyskujesz dostęp do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych ze środowisk, takich jak .NET Framework i Silverlight.  
   
 ## <a name="where-should-i-start"></a>Gdzie powinna zaczynać?  
  W zależności od zainteresowania, należy rozważyć wprowadzenie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] w następujących tematach.  

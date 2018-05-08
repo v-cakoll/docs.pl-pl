@@ -1,21 +1,12 @@
 ---
-title: "Porady: wywoływanie metody delegata (Visual Basic)"
-ms.custom: 
+title: 'Porady: wywoływanie metody delegata (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea94d4bb26e168667fd75c6928e52261f230c85e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Porady: wywoływanie metody delegata (Visual Basic)
 W tym przykładzie pokazano, jak można skojarzyć metodę z delegata, a następnie wywołać tej metody za pomocą obiektu delegowanego.  
@@ -51,7 +42,7 @@ W tym przykładzie pokazano, jak można skojarzyć metodę z delegata, a następ
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Delegate — instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Obiekty delegowane](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [Delegate, instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegaci](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)  
  [Aplikacje wielowątkowe](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

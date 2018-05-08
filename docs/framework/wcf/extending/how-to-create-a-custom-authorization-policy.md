@@ -1,30 +1,18 @@
 ---
 title: 'Instrukcje: Tworzenie niestandardowych zasad autoryzacji'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Instrukcje: Tworzenie niestandardowych zasad autoryzacji
-Infrastruktura modelu tożsamości w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje model autoryzacji na podstawie oświadczeń. Oświadczenia są wyodrębnione z tokenów, opcjonalnie przetworzone przez niestandardowych zasad autoryzacji i następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext> które następnie można zbadać podejmowanie decyzji dotyczących autoryzacji. Zasady niestandardowe mogą służyć do przekształcania oświadczeń z przychodzące tokeny oświadczeń oczekiwany przez aplikację. W ten sposób warstwy aplikacji mogą być wyłączone ze szczegółowe informacje o oświadczeniach różne obsługiwane przez token różne typy, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawiono implementowania niestandardowych zasad autoryzacji oraz sposobu dodawania tej zasady do kolekcji zasad używanych przez usługę.  
+Infrastruktura modelu tożsamości w systemie Windows Communication Foundation (WCF) obsługuje modelu autoryzacji na podstawie oświadczeń. Oświadczenia są wyodrębnione z tokenów, opcjonalnie przetworzone przez niestandardowych zasad autoryzacji i następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext> które następnie można zbadać podejmowanie decyzji dotyczących autoryzacji. Zasady niestandardowe mogą służyć do przekształcania oświadczeń z przychodzące tokeny oświadczeń oczekiwany przez aplikację. W ten sposób warstwy aplikacji mogą być wyłączone ze szczegółowe informacje o oświadczeniach różne obsługiwane przez token różne typy, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawiono implementowania niestandardowych zasad autoryzacji oraz sposobu dodawania tej zasady do kolekcji zasad używanych przez usługę.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Aby zaimplementować niestandardowych zasad autoryzacji  
   

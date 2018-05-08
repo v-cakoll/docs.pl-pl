@@ -1,33 +1,19 @@
 ---
 title: Projektowanie i implementowanie usług
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 02117b95cbf5a2ee16267a7b991ea9f854b813c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-implementing-services"></a>Projektowanie i implementowanie usług
 W tej sekcji przedstawiono sposób definiowania i wdrożenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umów. Kontrakt usługi określa punkt końcowy komunikuje się publicznie. Na poziomie bardziej konkretną jest oświadczenie o zestaw określonych komunikatów podzielone na wzorce wymiany wiadomości podstawowe (MEPs), takich jak żądanie/odpowiedź, jednokierunkowe i dupleksowych. Jeśli kontrakt usługi to zestaw logicznie powiązanych wymiany komunikatów, operacji usługi jest exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście zaakceptować jeden komunikat (aby wywołujący może poinformować o powitanie) i może lub nie może zwracać komunikat (w zależności od uprzejmości operacji).  
   
- Aby uzyskać więcej informacji na temat umów oraz innych podstawowych [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] pojęć, zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md). Ten temat koncentruje się na kontraktów usług. Aby uzyskać więcej informacji o sposobie budowania klientów, którzy używają kontraktów usług do nawiązania połączenia usługi, zobacz [Przegląd klienta programu WCF](../../../docs/framework/wcf/wcf-client-overview.md).  
+ Aby uzyskać więcej informacji na temat kontraktów i inne podstawowe pojęcia Windows Communication Foundation (WCF), zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md). Ten temat koncentruje się na kontraktów usług. Aby uzyskać więcej informacji o sposobie budowania klientów, którzy używają kontraktów usług do nawiązania połączenia usługi, zobacz [Przegląd klienta programu WCF](../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Omówienie  
  W tym temacie przedstawiono wysokiego poziomu orientacji koncepcyjnej na projektowanie i implementowanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług. Tematy podrzędne zawierają bardziej szczegółowe informacje o szczegółowe informacje na temat projektowania i implementacji. Przed projektowanie i implementowanie Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji, zaleca się że:  
@@ -77,7 +63,7 @@ W tej sekcji przedstawiono sposób definiowania i wdrożenie [!INCLUDE[indigo2](
   
  Zwróć uwagę, czy kontrakt wymaga pewne zagadnienia implementacji kontraktu usługi i konfigurację środowiska wykonawczego, aby dodać zachowanie sposób. Zestaw wymagań, które muszą zostać spełnione do udostępnienia usługi do użycia opiera się na poprzedni zestaw wymagań. Jeśli kontrakt sprawia, że wymagania dotyczące wdrażania, implementacja może wymagać jeszcze więcej konfiguracji i powiązania, które Włącz usługę w celu uruchomienia. Ponadto aplikacja hosta muszą również obsługiwać wszelkie wymagania, które Dodaj konfigurację usługi i powiązania.  
   
- Ten proces dodawania wymaganie jest ważne, należy wziąć pod uwagę podczas projektowania, wdrażania, konfigurowanie i hostingu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji usługi. Na przykład kontrakt można określić, że musi obsługiwać sesji. Jeśli tak, musisz skonfigurować powiązania w celu spełnienia tego wymagania umownymi lub implementacji usługi nie będą działać. Lub jeśli usługa wymaga zintegrowanego uwierzytelniania systemu Windows i znajduje się w Internet Information Services (IIS), aplikacji sieci Web, w którym znajduje się usługa musi mieć włączone zintegrowane uwierzytelnianie systemu Windows i obsługa anonimowe wyłączone. Aby uzyskać więcej informacji o funkcjach i wpływ typów aplikacji hosta innej usługi, zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
+ Ten proces dodawania wymaganie ważne jest, aby mieć na uwadze podczas projektowania, wdrażania, konfigurowanie i hosting aplikacji usługi Windows Communication Foundation (WCF). Na przykład kontrakt można określić, że musi obsługiwać sesji. Jeśli tak, musisz skonfigurować powiązania w celu spełnienia tego wymagania umownymi lub implementacji usługi nie będą działać. Lub jeśli usługa wymaga zintegrowanego uwierzytelniania systemu Windows i znajduje się w Internet Information Services (IIS), aplikacji sieci Web, w którym znajduje się usługa musi mieć włączone zintegrowane uwierzytelnianie systemu Windows i obsługa anonimowe wyłączone. Aby uzyskać więcej informacji o funkcjach i wpływ typów aplikacji hosta innej usługi, zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)  

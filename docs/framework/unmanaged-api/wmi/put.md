@@ -1,11 +1,7 @@
 ---
-title: "Funkcja Put (niezarządzany wykaz interfejsów API)"
-description: "Funkcja Put przypisuje nową wartość do nazwanej właściwości."
+title: Funkcja Put (niezarządzany wykaz interfejsów API)
+description: Funkcja Put przypisuje nową wartość do nazwanej właściwości.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>Put — funkcja
 Ustawia właściwość o nazwie na nową wartość.
@@ -93,7 +86,7 @@ Użytkownik nie można utworzyć właściwości o nazwach rozpoczynać się ani 
 
 Jeśli właściwość jest ustawiona `Put` funkcja istnieje w klasie nadrzędnej, wartością domyślną właściwości zostanie zmieniona, chyba że typ właściwości nie jest zgodny z typem klasy nadrzędnej. Jeśli właściwość nie istnieje i nie jest niezgodność typów, właściwość jest ceated.
 
-Użyj `vtType` parametru tylko podczas tworzenia nowych właściwości w definicji klasy modelu wspólnych informacji i `pVal` jest `null` lub wskazuje `VARIANT` typu `VT_NULL`. W takim przypadku `vType` parametr określa typ CIM właściwości. W każdym przypadku `vtType` musi być równa 0. `vtType`również musi wynosić 0, jeśli obiekt jest wystąpieniem (nawet jeśli `Val` jest `null`), ponieważ typ właściwości jest stała i nie można zmienić.   
+Użyj `vtType` parametru tylko podczas tworzenia nowych właściwości w definicji klasy modelu wspólnych informacji i `pVal` jest `null` lub wskazuje `VARIANT` typu `VT_NULL`. W takim przypadku `vType` parametr określa typ CIM właściwości. W każdym przypadku `vtType` musi być równa 0. `vtType` również musi wynosić 0, jeśli obiekt jest wystąpieniem (nawet jeśli `Val` jest `null`), ponieważ typ właściwości jest stała i nie można zmienić.   
 
 ## <a name="example"></a>Przykład
 
@@ -104,7 +97,7 @@ Na przykład zobacz [IWbemClassObject::Put](https://msdn.microsoft.com/library/a
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

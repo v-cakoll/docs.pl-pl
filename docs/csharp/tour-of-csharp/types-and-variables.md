@@ -1,20 +1,13 @@
 ---
-title: "C# i zmiennymi — samouczek języka C#"
-description: "Więcej informacji na temat definiowania typów i deklarowania zmiennych w języku C#"
-keywords: ".NET, csharp, typ, typ, wartość typu odwołania"
-author: BillWagner
-ms.author: wiwagn
+title: C# i zmiennymi — samouczek języka C#
+description: Więcej informacji na temat definiowania typów i deklarowania zmiennych w języku C#
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -26,29 +19,29 @@ Poniżej omówiono C# dla typu systemu.
 
 * Typy wartości
     - Typy proste
-        * Podpisana typu całkowitego: `sbyte`, `short`, `int`,`long`
-        * Typy całkowite bez znaku: `byte`, `ushort`, `uint`,`ulong`
-        * Znaki Unicode:`char`
-        * Liczba zmiennoprzecinkowa IEEE: `float`,`double`
-        * Decimal wysokiej precyzji:`decimal`
-        * Wartość logiczna:`bool`
+        * Podpisana typu całkowitego: `sbyte`, `short`, `int`, `long`
+        * Typy całkowite bez znaku: `byte`, `ushort`, `uint`, `ulong`
+        * Znaki Unicode: `char`
+        * Liczba zmiennoprzecinkowa IEEE: `float`, `double`
+        * Decimal wysokiej precyzji: `decimal`
+        * Wartość logiczna: `bool`
     - Typy wyliczeniowe
-        * Typy danych zdefiniowane przez użytkownika w postaci`enum E {...}`
+        * Typy danych zdefiniowane przez użytkownika w postaci `enum E {...}`
     - Typy struktur
-        * Typy danych zdefiniowane przez użytkownika w postaci`struct S {...}`
+        * Typy danych zdefiniowane przez użytkownika w postaci `struct S {...}`
     - typy dopuszczające wartości zerowe wartości
         * Rozszerzenia innych typów wartości za pomocą `null` wartości
 * Typy odwołań
     - Typy klas
-        * Klasa podstawowa Ultimate innych typów:`object`
-        * Ciągów Unicode:`string`
-        * Typy danych zdefiniowane przez użytkownika w postaci`class C {...}`
+        * Klasa podstawowa Ultimate innych typów: `object`
+        * Ciągów Unicode: `string`
+        * Typy danych zdefiniowane przez użytkownika w postaci `class C {...}`
     - Typy interfejsów
-        * Typy danych zdefiniowane przez użytkownika w postaci`interface I {...}`
+        * Typy danych zdefiniowane przez użytkownika w postaci `interface I {...}`
     - Typy tablic
-        * Jedno - i są one wielowymiarowe, na przykład `int[]` i`int[,]`
+        * Jedno - i są one wielowymiarowe, na przykład `int[]` i `int[,]`
     - Typy delegatów
-        * Typy danych zdefiniowane przez użytkownika w postaci`delegate int D(...)`
+        * Typy danych zdefiniowane przez użytkownika w postaci `delegate int D(...)`
 
 Typy całkowite osiem zapewniają obsługę 8-bitową, 16-bitowych, 32-bitowe i 64-bitowej wartości formularza podpisem lub bez.
 
@@ -65,18 +58,18 @@ To podsumowanie typy liczbowe C# firmy.
 * Typy całkowite podpisem
     - `sbyte`: 8 bitów, z zakresu od -128 do 127.
     - `short`: 16 bitów, z zakresu od-32 768-32 767 znaków
-    - `int`: 32-bitowy, zakresu od -2,147,483,648-2 147 483 647
-    - `long`: 64-bitowy, w zakresie od –9,223,372,036,854,775,808 do 9,223,372,036,854,775,807
+    - `int`  : 32-bitowy, zakresu od -2,147,483,648-2 147 483 647
+    - `long` : 64-bitowy, w zakresie od –9,223,372,036,854,775,808 do 9,223,372,036,854,775,807
 * Typy całkowite bez znaku
-    - `byte`: 8 bitów należeć do zakresu od 0 – 255
-    - `ushort`: 16 bitów należeć do zakresu od 0 - 65 535
-    - `uint`: 32-bitowy, należeć do zakresu od 0 - 4 294 967 295
-    - `ulong`: 64-bitowy, należeć do zakresu od 0 - 18,446,744,073,709,551,615
+    - `byte`   : 8 bitów należeć do zakresu od 0 – 255
+    - `ushort` : 16 bitów należeć do zakresu od 0 - 65 535
+    - `uint`   : 32-bitowy, należeć do zakresu od 0 - 4 294 967 295
+    - `ulong`  : 64-bitowy, należeć do zakresu od 0 - 18,446,744,073,709,551,615
 * Liczba zmiennoprzecinkowa
-    - `float`: 32-bitowy, należeć do zakresu od 1,5 x 10<sup>−45</sup> -3,4 x 10<sup>38</sup>, 7-cyfrowy dokładności
-    - `double`: 64-bitowy, należeć do zakresu od 5.0 x 10<sup>−324</sup> -1.7 x 10<sup>308</sup>, dokładności 15 cyfr
+    - `float`  : 32-bitowy, należeć do zakresu od 1,5 x 10<sup>−45</sup> -3,4 x 10<sup>38</sup>, 7-cyfrowy dokładności
+    - `double` : 64-bitowy, należeć do zakresu od 5.0 x 10<sup>−324</sup> -1.7 x 10<sup>308</sup>, dokładności 15 cyfr
 * Wartość dziesiętna
-    - `decimal`: 128 bitów, zakres jest co najmniej –7.9 x 10<sup>−28</sup> -7,9 x 10<sup>28</sup>, o co najmniej 28 cyfr precyzji
+    - `decimal` : 128 bitów, zakres jest co najmniej –7.9 x 10<sup>−28</sup> -7,9 x 10<sup>28</sup>, o co najmniej 28 cyfr precyzji
     
 C# Użyj programy *wpisz deklaracje* do tworzenia nowych typów. Deklaracja typu Określa nazwę i elementów członkowskich nowego typu. Pięć kategorii C# dla typów są definiowane przez użytkownika: klasa typy, typy struktur, typów interfejsów, Typy wyliczeniowe i typów delegatów.
 

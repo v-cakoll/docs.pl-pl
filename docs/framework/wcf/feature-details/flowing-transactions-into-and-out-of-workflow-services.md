@@ -1,24 +1,12 @@
 ---
-title: "Przepływy transakcji do i z usług przepływu pracy"
-ms.custom: 
+title: Przepływy transakcji do i z usług przepływu pracy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Przepływy transakcji do i z usług przepływu pracy
 Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operacji usługi stać się częścią transakcja otoczenia, umieść <xref:System.ServiceModel.Activities.Receive> działania w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Wywołań przez <xref:System.ServiceModel.Activities.Send> lub <xref:System.ServiceModel.Activities.SendReply> działania w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> również zostaną wprowadzone w ramach transakcja otoczenia. Aplikacja kliencka przepływu pracy można utworzyć transakcja otoczenia przy użyciu <xref:System.Activities.Statements.TransactionScope> działania i wywołania operacji usługi przy użyciu transakcja otoczenia. W tym temacie przedstawiono tworzenie usługi przepływu pracy i klienta przepływu pracy, który uczestniczyć w transakcji.  
@@ -87,7 +75,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
 ### <a name="implement-the-workflow-service"></a>Wdrożenie usługi przepływu pracy  
   
-1.  Dodaj nową [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi przepływu pracy, o nazwie `WorkflowService` do `Common` projektu. Aby zrobić to kliknij prawym przyciskiem myszy `Common` projektu, zaznacz **Dodaj**, **nowy element...** , Wybierz pozycję **przepływu pracy** w obszarze **zainstalowane szablony** i wybierz **usługi przepływu pracy WCF**.  
+1.  Dodaj nową usługę przepływu pracy WCF, nazywany `WorkflowService` do `Common` projektu. Aby zrobić to kliknij prawym przyciskiem myszy `Common` projektu, zaznacz **Dodaj**, **nowy element...** , Wybierz pozycję **przepływu pracy** w obszarze **zainstalowane szablony** i wybierz **usługi przepływu pracy WCF**.  
   
      ![Dodawanie usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -182,7 +170,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
 5.  Przeciągnij i upuść <xref:System.Activities.Statements.Sequence> działania w treści <xref:System.Activities.Statements.TransactionScope> działania.  
   
-6.  Przeciągnij i upuść `PrintTransactionInfo` działanie w<xref:System.Activities.Statements.Sequence>  
+6.  Przeciągnij i upuść `PrintTransactionInfo` działanie w <xref:System.Activities.Statements.Sequence>  
   
 7.  Przeciągnij i upuść <xref:System.Activities.Statements.WriteLine> działanie po `PrintTransactionInfo` działania i zestaw jej <xref:System.Activities.Statements.WriteLine.Text%2A> "Klienta: początku wysyłania" dla właściwości. Przepływ pracy powinien teraz wyglądać następująco:  
   

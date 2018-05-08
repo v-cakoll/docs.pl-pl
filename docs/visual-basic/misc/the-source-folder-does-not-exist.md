@@ -1,30 +1,21 @@
-﻿---
+---
 title: The source folder does not exist
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e8e831817dea857b3647b851f188a62f0a3a58c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd124ed7a03fe0fd33b39424b3e40fe56b09326e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-source-folder-does-not-exist"></a>Folder źródłowy nie istnieje
-
-Próbowano wykonać operację, która odwołuje się do folderu źródłowego, który nie istnieje. Może być to skutek podania niepoprawnej ścieżki.
-
-## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
-
-- Sprawdź, czy używasz poprawnej ścieżki, zwłaszcza w przypadku, gdy używasz ścieżek względnych.
-
-## <a name="see-also"></a>Zobacz też
-
- [Porady: analizowanie ścieżek pliku](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
- [Odczyt z plików](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+# <a name="the-source-folder-does-not-exist"></a>The source folder does not exist
+Nastąpiła próba wykonania operacji odwołującej się do folderu źródłowego, który nie istnieje. Przyczyną mogło być podanie niepoprawnej ścieżki pliku.  
+  
+## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
+  
+-   Sprawdź, czy używasz poprawnej ścieżki, zwłaszcza w przypadku korzystania ze ścieżek względnych.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Instrukcje: analizowanie ścieżek plików](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [Odczyt z plików](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  [Tworzenie, usuwanie i przenoszenie plików i katalogów](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

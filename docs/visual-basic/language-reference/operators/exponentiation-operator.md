@@ -1,12 +1,6 @@
 ---
-title: "^ — Operator (Visual Basic)"
+title: ^ — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 426c3e9913dadda1091f4ba53c66c6b65e40e768
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^ — Operator (Visual Basic)
 Podnosi liczbę do potęgi równej innej liczbie.  
@@ -40,10 +31,10 @@ number ^ exponent
   
 ## <a name="parts"></a>Części  
  `number`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagana. Dowolne wyrażenie liczbowe.  
   
  `exponent`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagana. Dowolne wyrażenie liczbowe.  
   
 ## <a name="result"></a>Wynik  
  Wynik jest `number` podniesionej do potęgi równej `exponent`, zawsze jako `Double` wartość.  
@@ -68,26 +59,26 @@ number ^ exponent
   
  Powyższy przykład tworzy następujące wyniki:  
   
- `exp1`ma ustawioną wartość 4 (kwadrat 2).  
+ `exp1` ma ustawioną wartość 4 (kwadrat 2).  
   
- `exp2`ustawiono 19683 (3 sześcian, następnie tę wartość do sześcianu).  
+ `exp2` ustawiono 19683 (3 sześcian, następnie tę wartość do sześcianu).  
   
- `exp3`ustawiono-125 (-5 do sześcianu).  
+ `exp3` ustawiono-125 (-5 do sześcianu).  
   
- `exp4`ustawiono 625 (-5 do potęgi czwarty).  
+ `exp4` ustawiono 625 (-5 do potęgi czwarty).  
   
- `exp5`wynosi 2 (główny modułu 8).  
+ `exp5` wynosi 2 (główny modułu 8).  
   
- `exp6`wynosi 0,5 (podzielona przez główny modułu 8 1.0).  
+ `exp6` wynosi 0,5 (podzielona przez główny modułu 8 1.0).  
   
  Należy zwrócić uwagę znaczenie nawiasów w wyrażeniach w poprzednim przykładzie. Z powodu *kolejność*, Visual Basic zazwyczaj wykonuje `^` operator przed innych, nawet jednoargumentowego `–` operatora. Jeśli `exp4` i `exp6` został wyliczony bez nawiasów, czy zostały utworzone następujące wyniki:  
   
- `exp4 = -5 ^ 4`oblicza — (5 do potęgi czwarty), co mogłoby spowodować-625.  
+ `exp4 = -5 ^ 4` oblicza — (5 do potęgi czwarty), co mogłoby spowodować-625.  
   
- `exp6 = 8 ^ -1.0 / 3.0`oblicza (od 8 do potęgi-1 lub 0,125) podzielony przez 3.0, co spowoduje 0.041666666666666666666666666666667.  
+ `exp6 = 8 ^ -1.0 / 3.0` oblicza (od 8 do potęgi-1 lub 0,125) podzielony przez 3.0, co spowoduje 0.041666666666666666666666666666667.  
   
 ## <a name="see-also"></a>Zobacz też  
- [^ = — Operator](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [^=, operator](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
  [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

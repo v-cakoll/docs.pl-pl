@@ -1,10 +1,6 @@
 ---
 title: Funkcje konwersji typu (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funkcje konwersji typu (Visual Basic)
 Te funkcje są skompilowaną wbudowaną, co oznacza, że kod konwersji jest częścią kodu, który wylicza wartość wyrażenia. Czasami nie istnieje żadne wywołanie procedury do wykonania konwersji, co zwiększa wydajność. Każda funkcja przekształca wyrażenie określonego typu danych.  
@@ -120,29 +113,29 @@ CUShort(expression)
   
 ## <a name="part"></a>Część  
  `expression`  
- Wymagany. Dowolne wyrażenie typu źródła danych.  
+ Wymagana. Dowolne wyrażenie typu źródła danych.  
   
 ## <a name="return-value-data-type"></a>Zwraca typ danych wartości  
  Nazwa funkcji określa typ danych wartości, która zwraca, jak pokazano w poniższej tabeli.  
   
 |Nazwa funkcji|Zwracany typ danych|Zakres dla `expression` argumentu|  
 |-------------------|----------------------|-------------------------------------|  
-|`CBool`|[Boolean — typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Wszystkie prawidłowe `Char` lub `String` lub wyrażenia liczbowego.|  
-|`CByte`|[Byte — typ danych](../../../visual-basic/language-reference/data-types/byte-data-type.md)|0 do 255 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CChar`|[CHAR — typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)|Wszystkie prawidłowe `Char` lub `String` wyrażenia, tylko pierwszy znak `String` konwersji; możliwe wartości od 0 do 65535 (bez znaku).|  
-|`CDate`|[Date — typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md)|Wszystkie prawidłowe reprezentacja daty i godziny.|  
-|`CDbl`|[Double — typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych; 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnie.|  
-|`CDec`|[Decimal — typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79,228,162,514,264,337,593,543,950,335 162 514 liczb, czyli liczby bez miejsc dziesiętnych. W przypadku numerów 28 miejsc dziesiętnych zakres jest +/-7.9228162514264337593543950335. Najmniejsza możliwa liczba niezerowa to 0,0000000000000000000000000001 (+/-1E-28).|  
-|`CInt`|[Integer — typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)|-2,147,483,648 do 2 147 483 647; są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CLng`|[Long — typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9,223,372,036,854,775,808 za pośrednictwem 9,223,372,036,854,775,807; są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CObj`|[Object — typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md)|Dowolne prawidłowe wyrażenie.|  
-|`CSByte`|[SByte — typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128 do 127; są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CShort`|[Short — typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)|-32 768 do 32 767; są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CSng`|[Single — typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38 do - 1, 401298E-45 dla wartości ujemnych; 1, 401298E-45 za pośrednictwem 3.402823E + 38 dla wartości dodatnie.|  
-|`CStr`|[String — typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)|Zwraca `CStr` są zależne od `expression` argumentu. Zobacz [zwracane wartości dla funkcji CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
-|`CUInt`|[Uinteger — typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|od 0 do 4 294 967 295 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CULng`|[Ulong — typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|od 0 do 18,446,744,073,709,551,615 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CUShort`|[Ushort — typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|od 0 do 65 535 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CBool`|[Boolean, typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Wszystkie prawidłowe `Char` lub `String` lub wyrażenia liczbowego.|  
+|`CByte`|[Byte, typ danych](../../../visual-basic/language-reference/data-types/byte-data-type.md)|0 do 255 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CChar`|[Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)|Wszystkie prawidłowe `Char` lub `String` wyrażenia, tylko pierwszy znak `String` konwersji; możliwe wartości od 0 do 65535 (bez znaku).|  
+|`CDate`|[Date, typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md)|Wszystkie prawidłowe reprezentacja daty i godziny.|  
+|`CDbl`|[Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych; 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnie.|  
+|`CDec`|[Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79,228,162,514,264,337,593,543,950,335 162 514 liczb, czyli liczby bez miejsc dziesiętnych. W przypadku numerów 28 miejsc dziesiętnych zakres jest +/-7.9228162514264337593543950335. Najmniejsza możliwa liczba niezerowa to 0,0000000000000000000000000001 (+/-1E-28).|  
+|`CInt`|[Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)|-2,147,483,648 do 2 147 483 647; są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CLng`|[Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9,223,372,036,854,775,808 za pośrednictwem 9,223,372,036,854,775,807; są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CObj`|[Object, typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md)|Dowolne prawidłowe wyrażenie.|  
+|`CSByte`|[SByte, typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128 do 127; są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CShort`|[Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)|-32 768 do 32 767; są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CSng`|[Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38 do - 1, 401298E-45 dla wartości ujemnych; 1, 401298E-45 za pośrednictwem 3.402823E + 38 dla wartości dodatnie.|  
+|`CStr`|[String, typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)|Zwraca `CStr` są zależne od `expression` argumentu. Zobacz [zwracane wartości dla funkcji CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
+|`CUInt`|[UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|od 0 do 4 294 967 295 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CULng`|[ULong, typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|od 0 do 18,446,744,073,709,551,615 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CUShort`|[UShort, typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|od 0 do 65 535 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
   
  <sup>1</sup> ułamkowych części mogą podlegać specjalny typ zaokrąglania wywołane *zaokrąglenie do zaokrąglania*. Aby uzyskać więcej informacji, zobacz "Uwagi".  
   
@@ -159,9 +152,9 @@ CUShort(expression)
   
      Jeśli część ułamkowa jest dokładnie 0,5, funkcje konwersji całkowitą zaokrąglona do najbliższej parzystej liczby całkowitej. Na przykład 0,5 zaokrągla wartość 0 i w wersji 1.5 i 2.5, który zarówno zaokrąglona do 2. Jest to czasem nazywane *zaokrąglenie do zaokrąglania*, a jej celem jest kompensacji odchylenia, który może narastać, dodając takiej liczby razem.  
   
-     `CInt`i `CLng` różnią się od <xref:Microsoft.VisualBasic.Conversion.Int%2A> i <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funkcji, które truncate, zamiast zaokrąglona ułamkową część liczby. Ponadto `Fix` i `Int` zawsze zwraca wartość typu danych podczas przemieszczania w.  
+     `CInt` i `CLng` różnią się od <xref:Microsoft.VisualBasic.Conversion.Int%2A> i <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funkcji, które truncate, zamiast zaokrąglona ułamkową część liczby. Ponadto `Fix` i `Int` zawsze zwraca wartość typu danych podczas przemieszczania w.  
   
--   **Data/Godzina konwersji.** Użyj <xref:Microsoft.VisualBasic.Information.IsDate%2A> funkcji, aby określić, jeśli można przekonwertować wartości na datę i godzinę. `CDate`rozpoznaje literałów dat i godzin, ale wartości liczbowych nie. Aby przekonwertować Visual Basic 6.0 `Date` do wartości `Date` wartość w języku Visual Basic 2005 lub nowszym, można użyć <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> — metoda.  
+-   **Data/Godzina konwersji.** Użyj <xref:Microsoft.VisualBasic.Information.IsDate%2A> funkcji, aby określić, jeśli można przekonwertować wartości na datę i godzinę. `CDate` rozpoznaje literałów dat i godzin, ale wartości liczbowych nie. Aby przekonwertować Visual Basic 6.0 `Date` do wartości `Date` wartość w języku Visual Basic 2005 lub nowszym, można użyć <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> — metoda.  
   
 -   **Neutralna wartości daty/godziny.** [Date — typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md) zawsze zawiera informacje zarówno datę i godzinę. W celu konwersji typu, Visual Basic uważa 1/1/0001 (1 stycznia 1 roku) *neutralne wartość* daty i 00:00:00 (północ) jako neutralny wartość po raz. W przypadku przekonwertowania `Date` wartość na ciąg `CStr` nie ma wartości neutralne w ciągu wynikowym. Na przykład, jeśli przekonwertujesz `#January 1, 0001 9:30:00#` na ciąg, wynikiem jest "9:30:00 AM"; informacje o dacie jest pomijane. Jednak informacje o dacie jest nadal znajdują się w oryginalnym `Date` wartości i może zostać przywrócona z funkcji takich jak <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> funkcji.  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>Przykład CDate  
- W poniższym przykładzie użyto `CDate` funkcji konwersji ciągów na `Date` wartości. Ogólnie rzecz biorąc kodować dat i godzin jako ciągi (jak pokazano w tym przykładzie) nie jest zalecane. Użyj literałów dat i godzin, takie jak #Feb 12, &#1969; i # 4:45:23 PM #, zamiast tego.  
+ W poniższym przykładzie użyto `CDate` funkcji konwersji ciągów na `Date` wartości. Ogólnie rzecz biorąc kodować dat i godzin jako ciągi (jak pokazano w tym przykładzie) nie jest zalecane. Użyj literałów dat i godzin, takie jak #Feb 12, 1969 # i # 4:45:23 PM #, zamiast tego.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`zawsze renderuje `Date` wartość w standardowym formacie krótkiej dla bieżących ustawień regionalnych, na przykład "15-6-2003 4:35:47 PM". Jednak `CStr` pomija *niezależnym od wartości* z 1/1/0001 daty i 00:00:00 czasu.  
+ `CStr` zawsze renderuje `Date` wartość w standardowym formacie krótkiej dla bieżących ustawień regionalnych, na przykład "15-6-2003 4:35:47 PM". Jednak `CStr` pomija *niezależnym od wartości* z 1/1/0001 daty i 00:00:00 czasu.  
   
  Aby uzyskać więcej szczegółów na wartości zwracanych przez `CStr`, zobacz [zwracać wartości dla funkcji CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   

@@ -1,11 +1,6 @@
 ---
 title: -warnaserror (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - warnaserror compiler option [Visual Basic]
 - /warnaserror compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ae8ed68045529e626f2788f854d8e6a6933e7e2
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 6c04bff4070b0f1c288c8853e5045fbf670d8e9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Umożliwia kompilatorowi na traktowanie pierwszego wystąpienia ostrzeżenie jako błąd.  
@@ -32,8 +27,8 @@ Umożliwia kompilatorowi na traktowanie pierwszego wystąpienia ostrzeżenie jak
   
 |Termin|Definicja|  
 |---|---|  
-|+ &#124; -|Opcjonalny. Domyślnie `-warnaserror-` jest obowiązująca; ostrzeżenia nie uniemożliwiają kompilator Tworzenie pliku wyjściowego. `-warnaserror` Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia, które będą traktowane jako błędy.|  
-|`numberList`|Opcjonalny. Rozdzielana przecinkami lista Identyfikator ostrzeżenia numery, do którego `-warnaserror` opcja ma zastosowanie. Jeśli nie ostrzeżenie określono Identyfikatora, `-warnaserror` opcja ma zastosowanie do wszystkich ostrzeżeń.|  
+|+ &#124; -|Opcjonalna. Domyślnie `-warnaserror-` jest obowiązująca; ostrzeżenia nie uniemożliwiają kompilator Tworzenie pliku wyjściowego. `-warnaserror` Opcja, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia, które będą traktowane jako błędy.|  
+|`numberList`|Opcjonalna. Rozdzielana przecinkami lista Identyfikator ostrzeżenia numery, do którego `-warnaserror` opcja ma zastosowanie. Jeśli nie ostrzeżenie określono Identyfikatora, `-warnaserror` opcja ma zastosowanie do wszystkich ostrzeżeń.|  
   
 ## <a name="remarks"></a>Uwagi  
  `-warnaserror` Opcja traktuje wszystkie ostrzeżenia jako błędy. Komunikaty, które będą zgłaszane zwykle są natomiast zgłoszonej ostrzeżenia jako błędy. Kompilator zgłasza kolejne wystąpienia tej samej ostrzeżenie jako ostrzeżenia.  

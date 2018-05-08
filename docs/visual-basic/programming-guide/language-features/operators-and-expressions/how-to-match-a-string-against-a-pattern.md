@@ -1,12 +1,6 @@
 ---
-title: "Porady: dopasowywanie ciągu do wzorca (Visual Basic)"
-ms.custom: 
+title: 'Porady: dopasowywanie ciągu do wzorca (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
 - pattern matching
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aef378bfc32d6deff431a2caac1261a6cd7520c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Porady: dopasowywanie ciągu do wzorca (Visual Basic)
 Aby sprawdzić, czy wyrażenie [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) spełnia wzorzec, a następnie można użyć [operatora Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
- `Like`przyjmuje dwa argumenty operacji. Lewy argument operacji jest wyrażeniem i prawy argument operacji ma postać ciągu zawierającego wzorzec służący do dopasowania. `Like`Zwraca `Boolean` wartość wskazującą, czy wyrażenie ciągu spełnia wzorzec.  
+ `Like` przyjmuje dwa argumenty operacji. Lewy argument operacji jest wyrażeniem i prawy argument operacji ma postać ciągu zawierającego wzorzec służący do dopasowania. `Like` Zwraca `Boolean` wartość wskazującą, czy wyrażenie ciągu spełnia wzorzec.  
   
  Można dopasować do każdego znaku wyrażenia ciągu względem określony znak symbolu wieloznacznego, listę znaku albo zakresu znaków. Pozycje specyfikacji w ciągu wzorca odpowiadają pozycji znaków w wyrażenia ciągu.  
   
@@ -72,7 +63,7 @@ Aby sprawdzić, czy wyrażenie [String — typ danych](../../../../visual-basic/
      Należy pamiętać, że tego dopasowania jest rozróżniana wielkość liter.  
   
 ## <a name="matching-empty-strings"></a>Dopasowywanie puste ciągi  
- `Like`traktuje Sekwencja `[]` jako ciąg o zerowej długości (`""`). Można użyć `[]` Aby sprawdzić, czy wyrażenie cały ciąg jest pusty, ale nie można użyć go, aby sprawdzić, czy w określonej pozycji w wyrażeniu ciąg jest pusty. Jeśli pozycja pusty jest jedną z opcji należy przeprowadzić testy dla służy `Like` więcej niż raz.  
+ `Like` traktuje Sekwencja `[]` jako ciąg o zerowej długości (`""`). Można użyć `[]` Aby sprawdzić, czy wyrażenie cały ciąg jest pusty, ale nie można użyć go, aby sprawdzić, czy w określonej pozycji w wyrażeniu ciąg jest pusty. Jeśli pozycja pusty jest jedną z opcji należy przeprowadzić testy dla służy `Like` więcej niż raz.  
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Aby uwzględnić znak w wyrażeniu ciąg z listą znaków lub nie znaku  
   
@@ -89,5 +80,5 @@ Aby sprawdzić, czy wyrażenie [String — typ danych](../../../../visual-basic/
 ## <a name="see-also"></a>Zobacz też  
  [Operatory porównania](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
  [Operatory i wyrażenia](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Like — Operator](../../../../visual-basic/language-reference/operators/like-operator.md)  
- [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+ [Like, operator](../../../../visual-basic/language-reference/operators/like-operator.md)  
+ [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)

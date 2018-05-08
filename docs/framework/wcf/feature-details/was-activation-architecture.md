@@ -1,24 +1,12 @@
 ---
 title: Architektura aktywacji WAS
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>Architektura aktywacji WAS
 W tym temacie itemizes i zawiera omówienie składników usługi Windows Process Activation Service (znanej także jako Usługa WAS).  
@@ -41,14 +29,14 @@ W tym temacie itemizes i zawiera omówienie składników usługi Windows Process
  ![Architektura została](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Odbiornik kart  
- Odbiornik karty są poszczególnych usług systemu Windows, które implementują logikę komunikacji sieciowej używany do odbierania wiadomości za pomocą protokołu sieciowego, na którym one nasłuchiwanie. W poniższej tabeli wymieniono karty odbiornika dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protokołów.  
+ Odbiornik karty są poszczególnych usług systemu Windows, które implementują logikę komunikacji sieciowej używany do odbierania wiadomości za pomocą protokołu sieciowego, na którym one nasłuchiwanie. W poniższej tabeli wymieniono kart odbiornika protokołu Windows Communication Foundation (WCF).  
   
 |Nazwa usługi adapter odbiornika|Protokół|Uwagi|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|Http|Typowe składnik Aktywacja HTTP dla obu usług IIS 7.0 i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|W3SVC|Http|Typowe składnik, który udostępnia Aktywacja HTTP dla usług IIS 7.0 i WCF.|  
 |Usługi NetTcpActivator|net.tcp|Zależy od usługi NetTcpPortSharing usługi.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|NET.MSMQ|Do użytku z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— aplikacje usługi kolejkowania komunikatów.|  
+|NetMsmqActivator|NET.MSMQ|Do użytku z aplikacjami usługi WCF na podstawie usługi kolejkowania komunikatów.|  
 |NetMsmqActivator|MSMQ.formatname|Udostępnia zapewnienia zgodności z istniejącymi aplikacjami usługi kolejkowania komunikatów.|  
   
  Adaptery odbiornika dla określonych protokołów są rejestrowane podczas instalacji w pliku applicationHost.config, jak pokazano w poniższym przykładzie XML.  

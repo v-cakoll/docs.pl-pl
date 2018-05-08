@@ -1,27 +1,15 @@
 ---
 title: Wstawianie obrazu z pliku
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a913e660292713d4c728da75e91d812a285edc51
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inserting-an-image-from-a-file"></a>Wstawianie obrazu z pliku
 Można napisać dużego obiektu binarnego (BLOB) do bazy danych jako dane binarne lub znaków, w zależności od typu pola w źródle danych. Obiekt BLOB jest ogólny termin odnoszący się do `text`, `ntext`, i `image` typy danych, które zwykle zawierają dokumenty i obrazy.  

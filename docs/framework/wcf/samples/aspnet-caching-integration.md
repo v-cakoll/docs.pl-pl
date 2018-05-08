@@ -1,24 +1,12 @@
 ---
 title: Integracja buforowania platformy ASP.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d56c435088be383821d17250e230cae848d2bab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-caching-integration"></a>Integracja buforowania platformy ASP.NET
 W tym przykładzie pokazano, jak korzystać z pamięci podręcznej danych wyjściowych programu ASP.NET z modelem programowania protokołu HTTP sieci WEB WCF. Zobacz [podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbkowania dla siebie wersji tego scenariusza, który opisano szczegółowo implementacji usługi. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych programu ASP.NET.  
@@ -31,12 +19,12 @@ W tym przykładzie pokazano, jak korzystać z pamięci podręcznej danych wyjśc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
 ## <a name="discussion"></a>Omówienie  
- W przykładzie użyto <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> mogą korzystać z ASP.NET dane wyjściowe z buforowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Jest stosowany do operacji usługi, a także nazwę profilu pamięci podręcznej w pliku konfiguracji, który ma zostać zastosowany do odpowiedzi od danej operacji.  
+ W przykładzie użyto <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> mogą korzystać z ASP.NET dane wyjściowe pamięci podręcznej z usługą Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Jest stosowany do operacji usługi, a także nazwę profilu pamięci podręcznej w pliku konfiguracji, który ma zostać zastosowany do odpowiedzi od danej operacji.  
   
  W pliku Service.cs przykładowy projekt usługi zarówno `GetCustomer` i `GetCustomers` operacji są oznaczone ikoną z <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, która zawiera nazwę profilu pamięci podręcznej "CacheFor60Seconds". W pliku Web.config projektu usługi, profil pamięci podręcznej "CacheFor60Seconds" znajduje się w obszarze <`caching`> elementu <`system.web`>. Dla tego profilu pamięci podręcznej, wartość `duration` atrybutu jest "60", dlatego skojarzone z tym profilem odpowiedzi są buforowane w pamięci podręcznej danych wyjściowych programu ASP.NET przez 60 sekund. Ponadto dla tego profilu pamięci podręcznej `varmByParam` atrybut jest ustawiony na "format" wniosek o różnych wartościach dla `format` zapytania parametr ciągu ma odpowiedzi w pamięci podręcznej oddzielnie. Ponadto pamięć podręczna profilu `varyByHeader` atrybut jest ustawiony na "Akceptuj", więc żądania za pomocą innej wartości nagłówka Accept oddzielnie buforowane odpowiedzi.  
   

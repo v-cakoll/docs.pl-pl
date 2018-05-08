@@ -1,31 +1,17 @@
 ---
-title: "ColorDialog — Informacje o składniku (Formularze systemu Windows)"
-ms.custom: 
+title: ColorDialog — Informacje o składniku (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ColorDialog
 helpviewer_keywords:
 - color dialog box [Windows Forms], about color dialog box
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5df0d7ddd16de5bd8bb052c09731df6583ca4903
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b4fb545a2ed35a9c7bad5e28c28d3ec42870860
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>ColorDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.ColorDialog> składnik jest wstępnie skonfigurowana okno dialogowe, które umożliwia użytkownikowi wybieranie koloru z palety i dodać do tej palety kolorów niestandardowych. To okno dialogowe tego samego widoczne w innych aplikacji systemu Windows, aby wybrać kolorów. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem zamiast własne okno dialogowe Konfigurowanie.  

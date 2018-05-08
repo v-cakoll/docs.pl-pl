@@ -1,28 +1,16 @@
 ---
-title: "Bezpieczeństwo i publiczne pola tablicy tylko do odczytu"
-ms.custom: 
+title: Bezpieczeństwo i publiczne pola tablicy tylko do odczytu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d86d054d3a5a4e10b8efcc3292f3a18ea37f9b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0110bb42775d8a5df9ca268b35db3abaffec84f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Bezpieczeństwo i publiczne pola tablicy tylko do odczytu
 Nigdy nie używaj tylko do odczytu publiczne pola tablicy z bibliotek zarządzanych do definiowania zachowania granic lub zabezpieczeń aplikacji, ponieważ mogą być modyfikowane tylko do odczytu publiczne pola tablicy.  

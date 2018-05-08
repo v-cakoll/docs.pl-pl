@@ -1,20 +1,12 @@
 ---
 title: Formatowanie kodu HTTP sieci Web WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>Formatowanie kodu HTTP sieci Web WCF
 Model programowania protokołu HTTP sieci Web WCF umożliwia dynamiczne określanie format najlepszy dla operacji usługi zwrócić w odpowiedzi. Obsługiwane są dwie metody, określając odpowiedni format: jawne i automatyczne.  
@@ -30,7 +22,7 @@ Model programowania protokołu HTTP sieci Web WCF umożliwia dynamiczne określa
   
 4.  Domyślny format w WebHttpBehavior.  
   
- Jeśli wiadomość dotycząca żądania zawiera nagłówek Accept [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastruktury wyszukuje typ, który go obsługuje. Jeśli `Accept` nagłówek określa priorytety dotyczące jego typów nośników znajdują się one go uznać. W przypadku znalezienia nie odpowiedni format w `Accept` nagłówka content-type komunikatu żądania jest używana. Jeśli zostanie określony nie odpowiedniego typu zawartości, jest używany domyślny format ustawienie dla tej operacji. Domyślny format ustawiono `ResponseFormat` parametr <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów. Jeśli nie domyślny format jest określony w operacji wartość <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> właściwość jest używana. Automatyczne formatowanie opiera się na <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> właściwości. Jeśli ta właściwość jest skonfigurowana `true`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury Określa format najlepszy do użycia. Automatyczne wybieranie formatu jest domyślnie wyłączona dla zapewnienia zgodności. Automatyczne wybieranie formatu można włączyć programowo lub przy użyciu konfiguracji. Poniższy przykład przedstawia sposób włączania automatycznego wyboru formatu w kodzie.  
+ Wiadomość dotycząca żądania zawiera nagłówek Accept określający infrastrukturę programu Windows Communication Foundation (WCF) wyszukuje typ, który go obsługuje. Jeśli `Accept` nagłówek określa priorytety dotyczące jego typów nośników znajdują się one go uznać. W przypadku znalezienia nie odpowiedni format w `Accept` nagłówka content-type komunikatu żądania jest używana. Jeśli zostanie określony nie odpowiedniego typu zawartości, jest używany domyślny format ustawienie dla tej operacji. Domyślny format ustawiono `ResponseFormat` parametr <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów. Jeśli nie domyślny format jest określony w operacji wartość <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> właściwość jest używana. Automatyczne formatowanie opiera się na <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> właściwości. Jeśli ta właściwość jest równa `true`, infrastruktura WCF Określa format najlepszy do użycia. Automatyczne wybieranie formatu jest domyślnie wyłączona dla zapewnienia zgodności. Automatyczne wybieranie formatu można włączyć programowo lub przy użyciu konfiguracji. Poniższy przykład przedstawia sposób włączania automatycznego wyboru formatu w kodzie.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

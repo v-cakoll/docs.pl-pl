@@ -1,24 +1,12 @@
 ---
-title: "Najlepsze rozwiązania dotyczące sesji niezawodnych"
-ms.custom: 
+title: Najlepsze rozwiązania dotyczące sesji niezawodnych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Najlepsze rozwiązania dotyczące sesji niezawodnych
 
@@ -26,7 +14,7 @@ W tym temacie omówiono najlepsze rozwiązania dla sesji niezawodnej.
 
 ## <a name="setting-maxtransferwindowsize"></a>Ustawienie MaxTransferWindowSize
 
-Niezawodne sesje w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] okno transferu służy do przechowywania wiadomości na klienta i usługi. Można skonfigurować właściwości <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> wskazuje, ile komunikatów okna transfer może przechowywać.
+Niezawodne sesje w systemie Windows Communication Foundation (WCF) okno transferu do przechowywania wiadomości na klienta i usługi. Można skonfigurować właściwości <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> wskazuje, ile komunikatów okna transfer może przechowywać.
 
 Na nadawcy oznacza to, ile komunikatów okna transfer może przechowywać podczas oczekiwania na potwierdzeń; odbiornik wskazuje ile komunikatów do buforowania dla usługi.
 
@@ -56,7 +44,7 @@ Zaleca się używać tego samego `MaxTransferWindowSize` na nadawcy i odbiorcy.
 
 *Sterowanie przepływem* mechanizm, który zapewnia nadawcę i odbiorcę bieżąco ze sobą, oznacza to, że komunikaty są używane i reagować tak szybko, jak są one tworzone. Rozmiar okna transmisji na klienta i usługi zapewnia, że nadawca i odbiorca są uzasadnione okna synchronizacji.
 
-Zaleca się ustawienie właściwości <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> do `true` Jeśli używasz niezawodnej sesji między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.
+Zaleca się ustawienie właściwości <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> do `true` Jeśli używasz niezawodnej sesji od klienta programu WCF i usługi WCF.
 
 ## <a name="setting-maxpendingchannels"></a>Ustawienie MaxPendingChannels
 

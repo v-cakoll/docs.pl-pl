@@ -1,13 +1,6 @@
 ---
-title: "RadioButton — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: RadioButton — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
 - list controls [Windows Forms], Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - radio buttons
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 206a2632221f2521992a43e72abc152923dd85a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e62f3dddb75a5652f1edb3ef5c6bfb7d8029210d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton — Formant (Formularze systemu Windows)
 Formularze systemu Windows `RadioButton` formanty wyświetlania zestawu co najmniej dwa wzajemnie wykluczających się opcji do użytkownika. Podczas gdy przycisków radiowych i pól wyboru mogą pojawiać się działają podobnie, jest istotną różnicą:, gdy użytkownik wybierze przycisk radiowy, innych przycisków radiowych w tej samej grupy nie można również wybrać.  
@@ -37,7 +25,7 @@ Formularze systemu Windows `RadioButton` formanty wyświetlania zestawu co najmn
  Wyjaśniono, jak grupa przycisków radiowych jako zestaw, z których można wybrać tylko jeden z nich.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.RadioButton>klasy  
+ <xref:System.Windows.Forms.RadioButton> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

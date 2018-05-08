@@ -1,13 +1,6 @@
 ---
 title: Krzywe kardynalne w GDI+
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9b7653e05fff241f05836624ff02273fb8c24ef6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93ae09c72415fa489e62f753e51e5a3ffcfb2425
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cardinal-splines-in-gdi"></a>Krzywe kardynalne w GDI+
 Kardynalnej krzywej składanej jest sekwencją poszczególnych krzywych przyłączone do formularza krzywej większy. Krzywej składanej jest określona przez tablicę punktów i parametr naprężenia. Kardynalnej krzywej składanej sprawnie przechodzi przez każdego punktu w tablicy; Brak nie ostre narożniki i brak niespodziewane zmian w szczelność krzywej. Na poniższej ilustracji przedstawiono zestaw punktów i kardynalnej krzywej składanej, który przechodzi przez każdego punktu w zestawie.  

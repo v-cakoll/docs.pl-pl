@@ -1,29 +1,15 @@
 ---
 title: Co&#39;s Nowość w wersji WPF 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8de8725bc48f69cdd18100d90a1bc610caa7ecfb
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4e022f75808de36666e53d3e58a0806e4f6d15ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>Co&#39;s Nowość w wersji WPF 4.5
 <a name="introduction"></a> Ten temat zawiera informacje o nowych i ulepszonych funkcjach [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wersji 4.5.  

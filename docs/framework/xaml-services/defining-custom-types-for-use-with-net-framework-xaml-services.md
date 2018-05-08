@@ -1,28 +1,14 @@
 ---
-title: "Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML"
-ms.custom: 
+title: Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
 Zdefiniuj niestandardowe typy obiektów biznesowych lub typów, które nie mają zależności na określonych platformach, brak niektórych najlepszych rozwiązań dotyczących XAML, możesz wykonać. Po wykonaniu tych rozwiązań usług .NET Framework XAML i jego czytników XAML i zapisywania XAML może odnajdywanie właściwości XAML danego typu i nadaj odpowiednie reprezentacja w strumień węzłów XAML, przy użyciu systemu typu XAML. W tym temacie opisano najlepsze rozwiązania dotyczące definicji typu, elementu członkowskiego definicje i przypisywanie CLR typów lub elementy członkowskie.  
@@ -83,7 +69,7 @@ Zdefiniuj niestandardowe typy obiektów biznesowych lub typów, które nie mają
 #### <a name="the-getpropertyname-accessor"></a>Metoda dostępu GetPropertyName  
  Podpis dla `Get` *PropertyName* akcesora musi być:  
   
- `public static object Get`*PropertyName* `(object` `target`  `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   `target` Obiektu można określić jako bardziej określonego typu w implementacji. Umożliwia to zakres użycia dołączalny element członkowski; użycia poza zakres zamierzone zgłosi Nieprawidłowe rzutowanie wyjątki, które są następnie udostępniane przez błąd analizy języka XAML. Nazwa parametru `target` nie jest wymagane, ale ma nazwę `target` przez Konwencję w większości wdrożeń.  
   
@@ -94,7 +80,7 @@ Zdefiniuj niestandardowe typy obiektów biznesowych lub typów, które nie mają
 #### <a name="the-setpropertyname-accessor"></a>Metoda dostępu SetPropertyName  
  Podpis dla zestawu*PropertyName* akcesora musi być:  
   
- `public static void Set`*PropertyName* `(object` `target` `, object` `value`    `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   `target` Obiektu można określić jako bardziej określonego typu w implementacji, z tej samej logiki i konsekwencje zgodnie z opisem w poprzedniej sekcji.  
   
@@ -103,7 +89,7 @@ Zdefiniuj niestandardowe typy obiektów biznesowych lub typów, które nie mają
  Należy pamiętać, że wartość ta metoda jest danych wejściowych przesyłanych przez użycie języka XAML, zwykle w formie atrybutu. W formie atrybutu musi być konwertera wartości obsługę składni tekstu, a atrybut na `Get` *PropertyName* metody dostępu.  
   
 ### <a name="attachable-member-stores"></a>Dołączalny element członkowski magazynów  
- Metody dostępu nie są zwykle wystarczająco, aby podać sposób umieszcza wartości dołączalny element członkowski w wykres obiektu lub pobrać wartości z wykres obiektu i serializacji je poprawnie. Do tej funkcji `target` obiektów w poprzednim sygnatur dostępu musi być zdolny do przechowywania wartości. Mechanizm magazynu powinien być zgodny z zasadą dołączalny element członkowski, który jest możliwy do dołączenia do obiektów docelowych, gdzie dołączalny element członkowski nie jest na liście elementów członkowskich. Usługi XAML .NET framework zapewnia technikę implementacji dołączalny element członkowski przechowuje za pośrednictwem interfejsów API <xref:System.Xaml.IAttachedPropertyStore> i <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore>jest używana przez autorów XAML do wykrywania Implementacja magazynu i powinny być implementowane w typie, który jest `target` z metod dostępu. Statycznych <xref:System.Xaml.AttachablePropertyServices> interfejsów API są używane w treści metody dostępu i odwoływać się do dołączalny element członkowski przez jego <xref:System.Xaml.AttachableMemberIdentifier>.  
+ Metody dostępu nie są zwykle wystarczająco, aby podać sposób umieszcza wartości dołączalny element członkowski w wykres obiektu lub pobrać wartości z wykres obiektu i serializacji je poprawnie. Do tej funkcji `target` obiektów w poprzednim sygnatur dostępu musi być zdolny do przechowywania wartości. Mechanizm magazynu powinien być zgodny z zasadą dołączalny element członkowski, który jest możliwy do dołączenia do obiektów docelowych, gdzie dołączalny element członkowski nie jest na liście elementów członkowskich. Usługi XAML .NET framework zapewnia technikę implementacji dołączalny element członkowski przechowuje za pośrednictwem interfejsów API <xref:System.Xaml.IAttachedPropertyStore> i <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> jest używana przez autorów XAML do wykrywania Implementacja magazynu i powinny być implementowane w typie, który jest `target` z metod dostępu. Statycznych <xref:System.Xaml.AttachablePropertyServices> interfejsów API są używane w treści metody dostępu i odwoływać się do dołączalny element członkowski przez jego <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>Atrybuty CLR związane z XAML  
  Przypisywanie poprawnie z typów, elementy członkowskie i zestawy ważne jest, aby raport informacji o systemie typu XAML do usług .NET Framework XAML. Ma to zastosowanie, jeśli zamierzasz typy sieci do użycia z systemami XAML, które bezpośrednio na podstawie czytników .NET Framework XAML Services XAML i zapisywania XAML lub zdefiniuj lub użyj przy użyciu języka XAML platforma, która jest oparta na tych czytników XAML i zapisywania XAML.  

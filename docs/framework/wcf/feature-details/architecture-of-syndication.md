@@ -1,26 +1,12 @@
 ---
 title: Architektura syndykacji
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecture-of-syndication"></a>Architektura syndykacji
 Interfejs API zespolonego umożliwia model programowania niezależny od formatu, który umożliwia zawartości zespolonej do zapisania do przesyłania w różnych formatach. Model danych abstrakcyjny składa się z następujących klas:  
@@ -37,16 +23,16 @@ Interfejs API zespolonego umożliwia model programowania niezależny od formatu,
   
  Te klasy mapowania ściśle konstrukcje specyfikacją Atom 1.0, mimo że niektóre nazwy są różne.  
   
- W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zespolonego źródła danych są modelowane jako inny rodzaj operacji usługi, co gdzie zwracany typ jest jedną z klas pochodnych <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Pobieranie źródło danych ma formę wymiany komunikatów żądań i odpowiedzi. Klient wysyła żądanie do usługi i usługa odpowiada. Komunikat żądania ma wartość protokołu infrastruktury (na przykład HTTP raw) i komunikat odpowiedzi zawiera ładunek, która składa się z formatu często rozpoznawanych syndication (RSS 2.0 i Atom 1.0). Usługi, które implementuje te wymiany komunikatów są określane jako usługi zespolonego.  
+ W konsoli Windows Communication Foundation (WCF) zespolonego źródła danych są modelowane jako inny rodzaj operacji usługi, co typ zwracany w przypadku jednej z klas pochodnych <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Pobieranie źródło danych ma formę wymiany komunikatów żądań i odpowiedzi. Klient wysyła żądanie do usługi i usługa odpowiada. Komunikat żądania ma wartość protokołu infrastruktury (na przykład HTTP raw) i komunikat odpowiedzi zawiera ładunek, która składa się z formatu często rozpoznawanych syndication (RSS 2.0 i Atom 1.0). Usługi, które implementuje te wymiany komunikatów są określane jako usługi zespolonego.  
   
  Kontrakt usługi zespolonego zawiera zestaw działań, które zwraca wystąpienie klasy <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> klasy. W poniższym przykładzie pokazano deklaracji interfejsu usługi zespolonego.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Obsługa zespolonego jest wbudowana nad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST definiujący <xref:System.ServiceModel.WebHttpBinding> powiązania, który jest używany w połączeniu z <xref:System.ServiceModel.Description.WebHttpBehavior> udostępnić źródła danych jako usługi. Aby uzyskać więcej informacji na temat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST, zobacz [programowania omówienie modelu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Obsługa zespolonego bazuje na Model programowania interfejsu REST usługi WCF, który definiuje <xref:System.ServiceModel.WebHttpBinding> powiązania, który jest używany w połączeniu z <xref:System.ServiceModel.Description.WebHttpBehavior> udostępnić źródła danych jako usługi. Aby uzyskać więcej informacji na temat Model programowania interfejsu REST usługi WCF, zobacz [programowania omówienie modelu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
->  Specyfikacja Atom 1.0 umożliwia sekund ułamkowa należy określić w jednym z jego konstrukcji daty. Podczas serializowania i deserializowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji ignoruje ułamkowych części sekundy.  
+>  Specyfikacja Atom 1.0 umożliwia sekund ułamkowa należy określić w jednym z jego konstrukcji daty. Podczas serializowania i deserializowania implementacji WCF ignoruje ułamkowych części sekundy.  
   
 ## <a name="object-model"></a>Model obiektu  
  Model obiektów dla zespolonego składa się z grup klas w poniższych tabelach.  
@@ -88,7 +74,7 @@ Interfejs API zespolonego umożliwia model programowania niezależny od formatu,
   
 ## <a name="extensibility"></a>Rozszerzalność  
   
--   Kluczowy element zespolony protokołów jest rozszerzalności. Zarówno Atom 1.0 i RSS 2.0 umożliwiają dodawanie atrybuty i elementy do zespolonego źródła danych, które nie są zdefiniowane w specyfikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania zespolonego udostępnia dwa sposoby pracy z atrybutów niestandardowych i rozszerzenia: wyprowadzanie nową klasą a typowaniem luźnym dostępu. Aby uzyskać więcej informacji, zobacz [rozszerzalność syndykacji](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Kluczowy element zespolony protokołów jest rozszerzalności. Zarówno Atom 1.0 i RSS 2.0 umożliwiają dodawanie atrybuty i elementy do zespolonego źródła danych, które nie są zdefiniowane w specyfikacji. Model programowania syndykacji WCF udostępnia dwa sposoby pracy z atrybutów niestandardowych i rozszerzenia: wyprowadzanie nową klasą a typowaniem luźnym dostępu. Aby uzyskać więcej informacji, zobacz [rozszerzalność syndykacji](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

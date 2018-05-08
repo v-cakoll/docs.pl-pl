@@ -1,13 +1,6 @@
 ---
 title: Zasoby i kod
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27b72d4be9012caf388c90d52a61d9837713c71f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-and-code"></a>Zasoby i kod
 To omówienie koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów można uzyskać dostępu do lub utworzone za pomocą kodu zamiast [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni. Aby uzyskać więcej informacji na temat użycia zasobów ogólne i zasoby z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] perspektywy składni, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
@@ -36,7 +24,7 @@ To omówienie koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../..
   
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Uzyskiwanie dostępu do zasobów z kodu  
- Zidentyfikuj zasoby, jeśli są one zdefiniowane za pomocą kluczy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są również używane do pobierania określonych zasobów, jeśli żądanie zasobu w kodzie. Najprostszym sposobem, aby pobrać zasobu z kodu jest wywołać albo <xref:System.Windows.FrameworkElement.FindResource%2A> lub <xref:System.Windows.FrameworkElement.TryFindResource%2A> metody z obiektów o poziomie struktury w aplikacji. Behawioralnej różnią te metody się, co się stanie, jeśli nie odnaleziono żądanego klucza. <xref:System.Windows.FrameworkElement.FindResource%2A>zgłasza wyjątek; <xref:System.Windows.FrameworkElement.TryFindResource%2A> nie generuje wyjątku lecz zwraca `null`. Każda metoda przyjmuje jako parametr wejściowy klucz zasobu i zwraca obiekt słabo typizowana. Zazwyczaj klucz zasobu jest ciągiem, ale ma typu okazjonalne użycia; zobacz [przy użyciu obiektów jako klucze](#objectaskey) sekcji, aby uzyskać szczegółowe informacje. Zwykle będzie rzutować zwróconego obiektu na typ wymagany przez właściwość ustawieniu podczas żądania do zasobu. Logika wyszukiwania do rozpoznania zasobu kodu jest taka sama jak odwołanie do zasobu dynamicznego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] case. Wyszukaj zasoby rozpoczyna się od elementu wywołującego, a następnie w dalszym ciągu elementy nadrzędne kolejnych w drzewie logicznym. Wyszukiwanie i jego nowszych wersjach nadal do zasobów aplikacji, kompozycje i zasobów systemowych, jeśli to konieczne. Żądanie kodu dla zasobu zostaną prawidłowo konto do zmiany środowiska uruchomieniowego w słownikach zasobów, które może zostały wprowadzone po tym słownik zasobów ładowana z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a także do zmiany zasobów systemu w czasie rzeczywistym.  
+ Zidentyfikuj zasoby, jeśli są one zdefiniowane za pomocą kluczy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są również używane do pobierania określonych zasobów, jeśli żądanie zasobu w kodzie. Najprostszym sposobem, aby pobrać zasobu z kodu jest wywołać albo <xref:System.Windows.FrameworkElement.FindResource%2A> lub <xref:System.Windows.FrameworkElement.TryFindResource%2A> metody z obiektów o poziomie struktury w aplikacji. Behawioralnej różnią te metody się, co się stanie, jeśli nie odnaleziono żądanego klucza. <xref:System.Windows.FrameworkElement.FindResource%2A> zgłasza wyjątek; <xref:System.Windows.FrameworkElement.TryFindResource%2A> nie generuje wyjątku lecz zwraca `null`. Każda metoda przyjmuje jako parametr wejściowy klucz zasobu i zwraca obiekt słabo typizowana. Zazwyczaj klucz zasobu jest ciągiem, ale ma typu okazjonalne użycia; zobacz [przy użyciu obiektów jako klucze](#objectaskey) sekcji, aby uzyskać szczegółowe informacje. Zwykle będzie rzutować zwróconego obiektu na typ wymagany przez właściwość ustawieniu podczas żądania do zasobu. Logika wyszukiwania do rozpoznania zasobu kodu jest taka sama jak odwołanie do zasobu dynamicznego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] case. Wyszukaj zasoby rozpoczyna się od elementu wywołującego, a następnie w dalszym ciągu elementy nadrzędne kolejnych w drzewie logicznym. Wyszukiwanie i jego nowszych wersjach nadal do zasobów aplikacji, kompozycje i zasobów systemowych, jeśli to konieczne. Żądanie kodu dla zasobu zostaną prawidłowo konto do zmiany środowiska uruchomieniowego w słownikach zasobów, które może zostały wprowadzone po tym słownik zasobów ładowana z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a także do zmiany zasobów systemu w czasie rzeczywistym.  
   
  Przykład kodu krótki, wyszukuje zasób według klucza, który używa zwrócona wartość można ustawić właściwości, zaimplementowane jako <xref:System.Windows.Controls.Primitives.ButtonBase.Click> obsługi zdarzeń.  
   

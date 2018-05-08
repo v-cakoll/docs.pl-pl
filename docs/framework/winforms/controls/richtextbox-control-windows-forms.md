@@ -1,28 +1,16 @@
 ---
-title: "RichTextBox — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: RichTextBox — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - text boxes
 - RichTextBox control [Windows Forms]
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4325fd3eb2e3d7179ddb5270d073c7ba5f0f383f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00f28abeb616006e63a45dd7922f4d5b247e8dd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox — Formant (Formularze systemu Windows)
 Formularze systemu Windows `RichTextBox` formant jest używany do wyświetlania, wprowadzania i manipulowanie formatowanie tekstu. `RichTextBox` Formant wykonuje wszystko <xref:System.Windows.Forms.TextBox> formant wykonuje, ale można również wyświetlić czcionek, kolorów i łączy; załadować z pliku; Cofnij i powtórz operacje; edytowania tekstu i obrazów osadzonych i Znajdź określonych znaków. `RichTextBox` Kontroli jest zwykle służą do udostępniania manipulowania tekstu i wyświetlić funkcje podobne do edytora aplikacji, takich jak Microsoft Word. Podobnie jak <xref:System.Windows.Forms.TextBox> kontroli, `RichTextBox` formant może wyświetlać paski przewijania; ale w przeciwieństwie do <xref:System.Windows.Forms.TextBox> kontroli, domyślnie wyświetla zarówno poziome i pionowe paski przewijania i ma ustawienia dodatkowe pasek przewijania.  
@@ -56,7 +44,7 @@ Formularze systemu Windows `RichTextBox` formant jest używany do wyświetlania,
  Opisuje sposób formatowania akapitów `RichTextBox` formantu.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.RichTextBox>klasy  
+ <xref:System.Windows.Forms.RichTextBox> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

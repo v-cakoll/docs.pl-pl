@@ -1,13 +1,6 @@
 ---
-title: "Model wątkowości typu atrament"
-ms.custom: 
+title: Model wątkowości typu atrament
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>Model wątkowości typu atrament
 Jedną z zalet pismo odręczne na komputerze typu Tablet jest, że go wydaje się znacznie zapisu przy użyciu pióra regularnych i papieru.  W tym celu pióra zbiera dane wejściowe szybkością znacznie wyższa niż myszy i renderuje pismo odręczne jako zapisy użytkownika.  Wątek interfejsu użytkownika aplikacji nie jest wystarczające do zbierania danych pióra i odręcznego renderowania, ponieważ mogą zostać zablokowane.  Aby rozwiązać, to [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacja używa dwóch dodatkowych wątków, gdy użytkownik zapisuje odręczne.  
@@ -72,11 +60,11 @@ Jedną z zalet pismo odręczne na komputerze typu Tablet jest, że go wydaje si�
   
  Na poprzedni diagram następujące zachowanie odbywa się:  
   
-1.  `StylusPlugin1`Modyfikuje wartości x i y.  
+1.  `StylusPlugin1` Modyfikuje wartości x i y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>odbiera punktów pióro zmodyfikowane i renderuje je w wątku renderowania dynamicznych.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera punktów pióro zmodyfikowane i renderuje je w wątku renderowania dynamicznych.  
   
-3.  `StylusPlugin2`odbiera punktów pióro zmodyfikowane i więcej Modyfikuje wartości x i y.  
+3.  `StylusPlugin2` odbiera punktów pióro zmodyfikowane i więcej Modyfikuje wartości x i y.  
   
 4.  Aplikacja zbiera punktów Pióro i, gdy użytkownik zakończy obrysu, statycznie renderuje pociągnięć.  
   
@@ -87,7 +75,7 @@ Jedną z zalet pismo odręczne na komputerze typu Tablet jest, że go wydaje si�
   
  Na poniższym diagramie przedstawiono związek między pióra wątku i wątku interfejsu użytkownika w odniesieniu do zdarzeń pióra <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Odręczne Modele wątkowości &#40; Interfejs użytkownika i pióro &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Modele wątkowości odręczne &#40;interfejsu użytkownika i pióra&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>Renderowanie odręcznego  
  Jako użytkownik wprowadzi obrysu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renderuje pismo odręczne na oddzielnym wątku, więc odręcznego "przepływ" z pióra nawet wtedy, gdy wątek interfejsu użytkownika jest zajęty.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Utworzy w wątku renderowania dynamicznego drzewa wizualnego zbiera pióro punktów.  Gdy użytkownik zakończy obrysu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> zapyta otrzymywać powiadomienia, gdy aplikacja nie przebiegu renderowania dalej.  Zakończone przebiegu renderowania następnej aplikacji <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> czyści jego drzewie wizualnym.  Na poniższym diagramie przedstawiono ten proces.  

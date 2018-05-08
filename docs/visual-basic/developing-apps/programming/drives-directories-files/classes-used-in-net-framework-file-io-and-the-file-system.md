@@ -1,24 +1,14 @@
 ---
-title: "Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)"
-ms.custom: 
+title: Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
 W poniższej tabeli wymieniono klasy powszechnie używane dla .NET Framework plik we/wy, podzielić na klasy używany do odczytu i zapisu do strumieni, klasy służące do tworzenia strumieni i klasy We/Wy plików.  
@@ -48,7 +38,7 @@ W poniższej tabeli wymieniono klasy powszechnie używane dla .NET Framework pli
 |Class|Opis|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Dodaje buforowania warstwy do odczytu i zapisu dla innego strumienia.|  
-|<xref:System.IO.FileStream?displayProperty=nameWithType>|Obsługuje losowe dostęp do plików za pomocą jego <xref:System.IO.FileStream.Seek%2A> metody. <xref:System.IO.FileStream>zostanie otwarte pliki synchronicznie domyślnie, ale obsługuje również operację asynchroniczną.|  
+|<xref:System.IO.FileStream?displayProperty=nameWithType>|Obsługuje losowe dostęp do plików za pomocą jego <xref:System.IO.FileStream.Seek%2A> metody. <xref:System.IO.FileStream> zostanie otwarte pliki synchronicznie domyślnie, ale obsługuje również operację asynchroniczną.|  
 |<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Tworzy strumień, którego magazynu zapasowego jest pamięć, a nie plikiem.|  
 |<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Zasadniczy strumień danych zapewnia dostęp do sieci.|  
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Definiuje strumienia, który łączy strumienie danych do przekształcenia kryptograficznych.|  
@@ -56,11 +46,11 @@ W poniższej tabeli wymieniono klasy powszechnie używane dla .NET Framework pli
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Klasy stosowane do odczytu i zapisu do strumieni  
  W poniższej tabeli przedstawiono określonej klasy, służące do odczytywanie z oraz zapisywanie do plików strumieni.  
   
-|**Klasy**|**Opis**|  
+|**Class**|**Opis**|  
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Odczytuje zakodowanego parametry i typy pierwotne danych z <xref:System.IO.FileStream>.|  
 |<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Zapisuje zakodowanego parametry i typy pierwotne danych do <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Odczytuje znaków z <xref:System.IO.FileStream>za pomocą <xref:System.IO.StreamReader.CurrentEncoding%2A> można konwertować znaków do i z bajtów. <xref:System.IO.StreamReader>ma podejmowanych w celu ustalenia odpowiedniego konstruktora <xref:System.IO.StreamReader.CurrentEncoding%2A> dla danego strumienia, na podstawie obecności <xref:System.IO.StreamReader.CurrentEncoding%2A>-określonych preambuły, takich jak znacznik kolejności bajtów.|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Odczytuje znaków z <xref:System.IO.FileStream>za pomocą <xref:System.IO.StreamReader.CurrentEncoding%2A> można konwertować znaków do i z bajtów. <xref:System.IO.StreamReader> ma podejmowanych w celu ustalenia odpowiedniego konstruktora <xref:System.IO.StreamReader.CurrentEncoding%2A> dla danego strumienia, na podstawie obecności <xref:System.IO.StreamReader.CurrentEncoding%2A>-określonych preambuły, takich jak znacznik kolejności bajtów.|  
 |<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Zapisuje znaki `FileStream`za pomocą <xref:System.IO.StreamWriter.Encoding%2A> można konwertować znaków bajtów.|  
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Odczytuje znaków z `String`. Dane wyjściowe może być strumień w kodowanie lub `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Zapisuje znaków `String`. Dane wyjściowe może być strumień w kodowanie lub `String`.|  

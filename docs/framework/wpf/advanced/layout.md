@@ -1,13 +1,6 @@
 ---
-title: "Układ"
-ms.custom: 
+title: Układ
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00c2b2bcb58e60c1a60d2d360f25089c079c0704
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] układu systemu. Zrozumienie, jak i kiedy układu obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -97,7 +85,7 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Właściwości pierwszy rozmiar natywnego <xref:System.Windows.UIElement> są oceniane, takich jak <xref:System.Windows.UIElement.Clip%2A> i <xref:System.Windows.UIElement.Visibility%2A>. Spowoduje to wygenerowanie wartość o nazwie `constraintSize` przekazywany do <xref:System.Windows.FrameworkElement.MeasureCore%2A>.  
   
- Po drugie, framework właściwości zdefiniowane w <xref:System.Windows.FrameworkElement> są przetwarzane, co ma wpływ na wartość `constraintSize`. Te właściwości ogólnie opisano właściwości rozmiaru podstawowych <xref:System.Windows.UIElement>, takie jak jego <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, i <xref:System.Windows.FrameworkElement.Style%2A>. Każdej z tych właściwości można zmienić miejsca, które są niezbędne do wyświetlania elementu. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>następnie jest wywoływana z `constraintSize` jako parametr.  
+ Po drugie, framework właściwości zdefiniowane w <xref:System.Windows.FrameworkElement> są przetwarzane, co ma wpływ na wartość `constraintSize`. Te właściwości ogólnie opisano właściwości rozmiaru podstawowych <xref:System.Windows.UIElement>, takie jak jego <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, i <xref:System.Windows.FrameworkElement.Style%2A>. Każdej z tych właściwości można zmienić miejsca, które są niezbędne do wyświetlania elementu. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> następnie jest wywoływana z `constraintSize` jako parametr.  
   
 > [!NOTE]
 >  Ma różnicy między właściwości <xref:System.Windows.FrameworkElement.Height%2A> i <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.ActualHeight%2A> i <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Na przykład <xref:System.Windows.FrameworkElement.ActualHeight%2A> właściwości jest obliczoną wartością opartej na systemie układ i inne dane wejściowe wysokość. Wartość jest ustawiana przez system układu, oparty na przebieg rzeczywiste renderowania i może w związku z tym opóźniona nieco ustaw wartość właściwości, takie jak <xref:System.Windows.FrameworkElement.Height%2A>, które stanowią podstawę wprowadzania zmian.  
@@ -108,11 +96,11 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Przebieg Rozmieść rozpoczyna się od wywołania <xref:System.Windows.UIElement.Arrange%2A> metody. W trakcie przebiegu Rozmieść nadrzędnego <xref:System.Windows.Controls.Panel> element generuje prostokąt reprezentujący granice elementu podrzędnego. Ta wartość jest przekazywana do <xref:System.Windows.FrameworkElement.ArrangeCore%2A> metody do przetwarzania.  
   
- <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Metodę <xref:System.Windows.UIElement.DesiredSize%2A> dziecka i ocenia żadne dodatkowe marginesy, które mogą mieć wpływ na rozmiar renderowanego elementu. <xref:System.Windows.FrameworkElement.ArrangeCore%2A>generuje `arrangeSize`, która jest przekazywana do <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody <xref:System.Windows.Controls.Panel> jako parametr. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>generuje `finalSize` elementu podrzędnego. Na koniec <xref:System.Windows.FrameworkElement.ArrangeCore%2A> — metoda nie końcowego obliczania właściwości offset, takie jak margines i wyrównania i umieszcza w gnieździe układu elementu podrzędnego. Obiekt podrzędny nie musi (i często nie) wypełnienia całego miejsce przydzielone. Formant jest następnie zwracany do obiektu nadrzędnego <xref:System.Windows.Controls.Panel> i zakończeniu układu.  
+ <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Metodę <xref:System.Windows.UIElement.DesiredSize%2A> dziecka i ocenia żadne dodatkowe marginesy, które mogą mieć wpływ na rozmiar renderowanego elementu. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> generuje `arrangeSize`, która jest przekazywana do <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody <xref:System.Windows.Controls.Panel> jako parametr. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> generuje `finalSize` elementu podrzędnego. Na koniec <xref:System.Windows.FrameworkElement.ArrangeCore%2A> — metoda nie końcowego obliczania właściwości offset, takie jak margines i wyrównania i umieszcza w gnieździe układu elementu podrzędnego. Obiekt podrzędny nie musi (i często nie) wypełnienia całego miejsce przydzielone. Formant jest następnie zwracany do obiektu nadrzędnego <xref:System.Windows.Controls.Panel> i zakończeniu układu.  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Elementy panelu i zachowania niestandardowego układu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera grupę elementów, które pochodzą z <xref:System.Windows.Controls.Panel>. Te <xref:System.Windows.Controls.Panel> elementy włączyć wiele układów złożonych. Na przykład układania elementów można łatwo osiągnąć za pomocą <xref:System.Windows.Controls.StackPanel> elementu, gdy bardziej złożonych wolnego przechodzenia układy i są możliwe przy użyciu <xref:System.Windows.Controls.Canvas>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera grupę elementów, które pochodzą z <xref:System.Windows.Controls.Panel>. Te <xref:System.Windows.Controls.Panel> elementy włączyć wiele układów złożonych. Na przykład układania elementów można łatwo osiągnąć za pomocą <xref:System.Windows.Controls.StackPanel> elementu, gdy bardziej złożonych wolnego przechodzenia układy i są możliwe przy użyciu <xref:System.Windows.Controls.Canvas>.  
   
  W poniższej tabeli przedstawiono dostępne układu <xref:System.Windows.Controls.Panel> elementów.  
   
@@ -133,11 +121,11 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 -   Należy pamiętać o zmian wartości właściwości, które zostanie wymuszone aktualizacji cyklicznej w systemie układu.  
   
-     Właściwości zależności, których wartości może spowodować systemu układu można było zainicjować są oznaczone ikoną z publicznego flagi. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>i <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> Podaj przydatne wskazówek określające, które właściwości zmiany wartości wymusi cyklicznej aktualizacji przez system układu. Ogólnie rzecz biorąc, powinien mieć żadnej właściwości, które mogą mieć wpływ na rozmiar elementu obwiedni <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flagi jest ustawiona na true. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Właściwości zależności, których wartości może spowodować systemu układu można było zainicjować są oznaczone ikoną z publicznego flagi. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> i <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> Podaj przydatne wskazówek określające, które właściwości zmiany wartości wymusi cyklicznej aktualizacji przez system układu. Ogólnie rzecz biorąc, powinien mieć żadnej właściwości, które mogą mieć wpływ na rozmiar elementu obwiedni <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flagi jest ustawiona na true. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
 -   Jeśli to możliwe, użyj <xref:System.Windows.UIElement.RenderTransform%2A> zamiast <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
-     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> może być bardzo przydatne sposób wpłynąć na zawartość [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Jednak jeśli efekt transformacji nie musi mieć wpływ na położenie innych elementów, najlepiej jest używać <xref:System.Windows.UIElement.RenderTransform%2A> , ponieważ <xref:System.Windows.UIElement.RenderTransform%2A> nie jest wywoływany systemu układu. <xref:System.Windows.FrameworkElement.LayoutTransform%2A>stosuje przekształcenia i wymusza aktualizację układu cykliczne, aby uwzględnić nowe położenie danego elementu.  
+     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> może być bardzo przydatne sposób wpłynąć na zawartość [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Jednak jeśli efekt transformacji nie musi mieć wpływ na położenie innych elementów, najlepiej jest używać <xref:System.Windows.UIElement.RenderTransform%2A> , ponieważ <xref:System.Windows.UIElement.RenderTransform%2A> nie jest wywoływany systemu układu. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> stosuje przekształcenia i wymusza aktualizację układu cykliczne, aby uwzględnić nowe położenie danego elementu.  
   
 -   Unikaj niepotrzebnych wywołania <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   

@@ -1,26 +1,12 @@
 ---
 title: Kolejki utraconych komunikatów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
 W tym przykładzie przedstawiono sposób obsługi i przetwarzania komunikatów, które nie powiodły dostarczania. Jest on oparty na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -182,7 +168,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Wiadomości w kolejce wiadomości utraconych są komunikaty adresowane do usługi, który przetwarza wiadomości. W związku z tym, gdy usługi utraconych wiadomości odczytuje wiadomości z kolejki, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] warstwy kanału znajduje niezgodność w punktów końcowych i wysyła wiadomość. W takim przypadku wiadomość jest skierowana do kolejność przetwarzania usługi, ale jest odbierane przez usługę utraconych wiadomości. Komunikat, która jest skierowana do innego punktu końcowego, filtr adresów, aby dopasować dowolnego adresu jest określona w `ServiceBehavior`. Jest to wymagane do pomyślnie przetwarzać komunikatów, które są odczytywane z kolejki utraconych wiadomości.  
+ Wiadomości w kolejce wiadomości utraconych są komunikaty adresowane do usługi, który przetwarza wiadomości. W związku z tym gdy usługa wiadomości utraconych odczytuje wiadomości z kolejki, warstwie kanału Windows Communication Foundation (WCF) znajduje niezgodność w punktach końcowych i nie wysyła wiadomość. W takim przypadku wiadomość jest skierowana do kolejność przetwarzania usługi, ale jest odbierane przez usługę utraconych wiadomości. Komunikat, która jest skierowana do innego punktu końcowego, filtr adresów, aby dopasować dowolnego adresu jest określona w `ServiceBehavior`. Jest to wymagane do pomyślnie przetwarzać komunikatów, które są odczytywane z kolejki utraconych wiadomości.  
   
  W tym przykładzie Usługa utraconych wiadomości ponownie wysyła komunikat Jeśli przyczyną błędu jest to, że komunikat został przekroczony. Z innych powodów wyświetla błąd dostarczania, jak pokazano w poniższym kodzie próbki:  
 
@@ -370,7 +356,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

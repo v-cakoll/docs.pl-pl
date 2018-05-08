@@ -1,13 +1,6 @@
 ---
-title: "Porady: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - tooltips [Windows Forms], delay values
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8506df062729a98adc1aa1e0dcb524aa4ec812c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20dcd941b142daa672312edb618a1c3e4597442d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Porady: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows
 Istnieje wiele wartości opóźnienia, które można ustawić dla formularzy systemu Windows <xref:System.Windows.Forms.ToolTip> składnika. Jednostka miary tych właściwości to milisekund. <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Właściwość określa, jak długo użytkownik musi wskazywać na skojarzonym formancie ciągu etykietki narzędzia i pojawienie się. <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Właściwość ustawia liczbę milisekund zajmuje kolejnych ciągów ToolTip są wyświetlane jako wskaźnik myszy są przenoszone z jednego formantu ToolTip skojarzonych na inny. <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Właściwość określa długość czasu jest wyświetlany ciąg etykietki narzędzia. Wartości te można ustawiać indywidualnie lub przez ustawienie wartości <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> właściwości; opóźnienie, na wartość przypisana do właściwości są ustawione na podstawie <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> właściwości. Na przykład, jeśli <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> ma ustawioną wartość N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> ma ustawioną wartość N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> ma ustawioną wartość <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> podzielony przez pięć (lub N/5) i <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> ma ustawioną wartość, która jest pięć razy wartość <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> właściwości (lub 5 n).  

@@ -1,14 +1,6 @@
 ---
 title: Praca programistyczna z plikami .resx
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 569f2d59bb2abf013a87bdaa694a7fcf36c70042
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>Praca programistyczna z plikami .resx
 Ponieważ pliki zasobów (resx) XML musi składać się z dobrze zdefiniowany XML, dołączeniu nagłówka, który należy wykonać określonego schematu następuje dane w pary nazwa/wartość, może się okazać, że ręczne tworzenie tych plików jest podatne na błędy. Alternatywnie pliki .resx można utworzyć programowo, używając typy i składniki w bibliotece klas programu .NET Framework. Biblioteka klas programu .NET Framework umożliwia również pobrać zasobów, które są przechowywane w plikach resx. W tym temacie wyjaśniono, jak można użyć typów i członków <xref:System.Resources> przestrzeni nazw, aby pracować z plikami .resx.  

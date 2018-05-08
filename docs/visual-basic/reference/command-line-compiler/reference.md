@@ -1,11 +1,6 @@
 ---
 title: -odwołania (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
 - r compiler option [Visual Basic]
@@ -16,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba879dd7079b35bea50c4a6c1d67da7aa57110f6
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-reference-visual-basic"></a>-odwołania (Visual Basic)
 Powoduje, że kompilator, aby udostępnić informacje o typie w określonych zestawów do projektu, które są aktualnie kompilacji.  
@@ -37,7 +32,7 @@ Powoduje, że kompilator, aby udostępnić informacje o typie w określonych zes
   
 |Termin|Definicja|  
 |---|---|  
-|`fileList`|Wymagany. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w cudzysłów.|  
+|`fileList`|Wymagana. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w cudzysłów.|  
   
 ## <a name="remarks"></a>Uwagi  
  Pliki, które należy zaimportować musi zawierać metadane zestawu. Tylko typy publiczne są widoczne poza zestaw. [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opcja importuje metadane z modułu.  

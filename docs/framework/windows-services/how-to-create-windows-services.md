@@ -1,27 +1,17 @@
 ---
-title: "Porady: tworzenie usług systemu Windows"
-ms.custom: 
+title: 'Porady: tworzenie usług systemu Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-windows-services"></a>Porady: tworzenie usług systemu Windows
 Podczas tworzenia usługi za pomocą szablonu projektu programu Visual Studio o nazwie **usługi systemu Windows**. Ten szablon automatycznie nie większość zadań można za pomocą odwołań do odpowiednich klas i przestrzenie nazw, konfigurowanie dziedziczenia z klasy podstawowej dla usług, i zastępowanie kilka metod prawdopodobnie do zastąpienia.  
@@ -55,11 +45,11 @@ Podczas tworzenia usługi za pomocą szablonu projektu programu Visual Studio o 
   
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True`Aby wskazać, że usługa będzie akceptować żądania przestanie działać; `false` aby zapobiec zatrzymania usługi.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True`Aby wskazać, że chce otrzymywać powiadomienia, gdy komputer, na którym mieszka wyłączany, co go do wywołania usługi <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> procedury.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True`Aby wskazać, że usługa będzie akceptować żądania, aby wstrzymać lub wznowić uruchomiony; `false` zapobiegające usługi wstrzymać i wznowić.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`Aby wskazać, że usługa może obsługiwać powiadomień o zmianach stanu zasilania komputera; `false` aby zapobiec powiadomienia o tych zmianach usługi.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True`na zapisywanie wpisów informacyjny w dzienniku zdarzeń aplikacji, gdy usługa wykonuje akcję; `false` wyłączenie tej funkcji. Aby uzyskać więcej informacji, zobacz [porady: dziennika informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Uwaga:** domyślnie <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ma ustawioną wartość `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` Aby wskazać, że usługa będzie akceptować żądania przestanie działać; `false` aby zapobiec zatrzymania usługi.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` Aby wskazać, że chce otrzymywać powiadomienia, gdy komputer, na którym mieszka wyłączany, co go do wywołania usługi <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> procedury.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` Aby wskazać, że usługa będzie akceptować żądania, aby wstrzymać lub wznowić uruchomiony; `false` zapobiegające usługi wstrzymać i wznowić.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` Aby wskazać, że usługa może obsługiwać powiadomień o zmianach stanu zasilania komputera; `false` aby zapobiec powiadomienia o tych zmianach usługi.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` na zapisywanie wpisów informacyjny w dzienniku zdarzeń aplikacji, gdy usługa wykonuje akcję; `false` wyłączenie tej funkcji. Aby uzyskać więcej informacji, zobacz [porady: dziennika informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Uwaga:** domyślnie <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ma ustawioną wartość `true`.|  
   
     > [!NOTE]
     >  Gdy <xref:System.ServiceProcess.ServiceBase.CanStop%2A> lub <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> ustawiono `false`, **Menedżera sterowania usługami** spowoduje wyłączenie odpowiednich opcji menu, aby zatrzymać, wstrzymać lub kontynuować korzystanie z usługi.  

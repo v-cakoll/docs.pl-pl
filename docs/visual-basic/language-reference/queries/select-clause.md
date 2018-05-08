@@ -1,12 +1,6 @@
 ---
-title: "Select — Klauzula (Visual Basic)"
+title: Select — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySelect
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9d8cabcbd8554ca2aee639eaac8a52f0485a266
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-visual-basic"></a>Select — Klauzula (Visual Basic)
 Definiuje wyniku zapytania.  
@@ -34,10 +25,10 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>Części  
  `var1`  
- Opcjonalny. Alias, który może służyć do odwołania wynik wyrażenia kolumny.  
+ Opcjonalna. Alias, który może służyć do odwołania wynik wyrażenia kolumny.  
   
  `fieldName1`  
- Wymagany. Nazwa pola, które ma zostać zwrócone w wyniku zapytania.  
+ Wymagana. Nazwa pola, które ma zostać zwrócone w wyniku zapytania.  
   
 ## <a name="remarks"></a>Uwagi  
  Można użyć `Select` klauzuli do definiowania wyników do zwrócenia z zapytania. Dzięki temu można zdefiniować elementów członkowskich nowego typu anonimowego, który jest tworzony przez zapytanie lub docelowych elementów członkowskich typu nazwanego, zwracane przez zapytanie. `Select` Klauzula nie jest wymagana dla zapytania. Jeśli nie `Select` jest określona klauzula, zapytanie zwraca typ na podstawie wszystkich elementów członkowskich zmiennych zakresu dla bieżącego zakresu. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Gdy zapytanie tworzy typ nazwany, zwróci wyniku typu <xref:System.Collections.Generic.IEnumerable%601> gdzie `T` jest utworzony typ.  
@@ -62,7 +53,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
- [Klauzula FROM](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Gdy klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Order By — klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
  [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

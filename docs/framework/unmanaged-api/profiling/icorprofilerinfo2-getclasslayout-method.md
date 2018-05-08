@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo2::GetClassLayout — Metoda"
-ms.custom: 
+title: ICorProfilerInfo2::GetClassLayout — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2.GetClassLayout
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9dcee307dd7e852719a1309d9c29202567cde2e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b826e9c30fbf7007ac6b0093608ab7d926cc499
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout — Metoda
 Pobiera informacje o układzie, w pamięci, pól zdefiniowanych przez określonej klasy. Oznacza to, że ta metoda pobiera przesunięcia pól tej klasy.  
@@ -68,7 +56,7 @@ HRESULT GetClassLayout(
 ## <a name="remarks"></a>Uwagi  
  `GetClassLayout` Metoda zwraca tylko pola zdefiniowane przez samej klasy. Jeśli klasy nadrzędnej klasy zdefiniowano także pól, należy wywołać profilera `GetClassLayout` w klasie nadrzędnej w celu uzyskania tych pól.  
   
- Jeśli używasz `GetClassLayout` z klasami ciąg, metoda zakończy się niepowodzeniem z kodem błędu E_INVALIDARG. Użyj [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) można pobrać informacji o układzie ciągu. `GetClassLayout`również zakończą się po wywołaniu z klasą tablicy.  
+ Jeśli używasz `GetClassLayout` z klasami ciąg, metoda zakończy się niepowodzeniem z kodem błędu E_INVALIDARG. Użyj [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) można pobrać informacji o układzie ciągu. `GetClassLayout` również zakończą się po wywołaniu z klasą tablicy.  
   
  Po `GetClassLayout` zwróci wartość, należy sprawdzić, czy `rFieldOffset` bufor był wystarczająco duży, aby zawierała wszystkie dostępne `COR_FIELD_OFFSET` struktury. W tym celu należy porównać wartości który `pcFieldOffset` wskazuje rozmiar `rFieldOffset` podzielonej przez rozmiar `COR_FIELD_OFFSET` struktury. Jeśli `rFieldOffset` nie jest duży, Przydziel wystarczająca, większego `rFieldOffset` buforu, zaktualizuj `cFieldOffset` z nowej, większy rozmiar i wywołanie `GetClassLayout` ponownie.  
   
@@ -81,7 +69,7 @@ HRESULT GetClassLayout(
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  

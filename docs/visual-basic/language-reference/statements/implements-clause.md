@@ -1,12 +1,6 @@
 ---
-title: "Implements — Klauzula (Visual Basic)"
+title: Implements — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ImplementsClause
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 73f66eda29e37fda15b4c838da5a0458684131da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e34245ac528e9e2463afbfd07dff91bf693830b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implements-clause-visual-basic"></a>Implements — Klauzula (Visual Basic)
 Wskazuje, że element członkowski klasy lub struktury dostarcza implementację dla elementu członkowskiego zdefiniowanego w interfejsie.  
@@ -47,13 +38,13 @@ W klasie pochodnej można reimplement elementu członkowskiego interfejsu, któr
 - Można reimplement elementu członkowskiego z inną nazwą.
 
 `Implements` — Słowo kluczowe może być używana w następujących sytuacjach:
-- [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Implements — instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Interface — instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)
+ [Implements, instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -1,30 +1,20 @@
 ---
-title: "Niezabezpieczony klient i usługa w intranecie"
-ms.custom: 
+title: Niezabezpieczony klient i usługa w intranecie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: "20"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Niezabezpieczony klient i usługa w intranecie
-Na poniższej ilustracji przedstawiono prosty [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi opracowany, aby podać informacje w sieci prywatnej bezpieczny do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Zabezpieczeń nie jest wymagana, ponieważ dane są o niskiej ważności, powinien być z założenia bezpiecznej sieci lub zabezpieczeń jest zapewniana przez warstwę poniżej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury.  
+Na poniższej ilustracji przedstawiono prosty opracowany, aby podać informacje w sieci prywatnej bezpieczny do aplikacji WCF usługi Windows Communication Foundation (WCF). Zabezpieczeń nie jest wymagana, ponieważ dane są o niskiej ważności, powinien być z założenia bezpiecznej sieci lub zabezpieczeń jest zapewniana przez warstwy poniżej infrastruktura WCF.  
   
  ![Niezabezpieczony klient sieci intranet i scenariusz obsługi](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -33,7 +23,7 @@ Na poniższej ilustracji przedstawiono prosty [!INCLUDE[indigo1](../../../../inc
 |Tryb zabezpieczeń|Brak|  
 |Transportu|TCP|  
 |Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
-|Współdziałanie|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tylko|  
+|Współdziałanie|Tylko usługi WCF|  
 |Uwierzytelnianie|Brak|  
 |Integralność|Brak|  
 |Poufność|Brak|  
@@ -92,7 +82,7 @@ Na poniższej ilustracji przedstawiono prosty [!INCLUDE[indigo1](../../../../inc
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia podstawowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, który uzyskuje dostęp do punktu końcowego niezabezpieczona przy użyciu protokołu TCP.  
+ Poniższy kod przedstawia podstawowe klienta WCF, który uzyskuje dostęp do punktu końcowego niezabezpieczona przy użyciu protokołu TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  

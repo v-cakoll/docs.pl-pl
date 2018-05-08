@@ -1,24 +1,15 @@
 ---
-title: "&lt;obejmują&gt; (Visual Basic)"
-ms.custom: 
+title: '&lt;obejmują&gt; (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22eebaa8da8ef082e132cfdf8cb68498bfe16d73
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;obejmują&gt; (Visual Basic)
 Odwołuje się do innego pliku, który opisuje typy i składniki w kodzie źródłowym.  
@@ -31,16 +22,16 @@ Odwołuje się do innego pliku, który opisuje typy i składniki w kodzie źród
   
 #### <a name="parameters"></a>Parametry  
  `filename`  
- Wymagany. Nazwa pliku zawierającego w dokumentacji. Nazwa pliku może być kwalifikowany za pomocą ścieżki. Umieść `filename` w podwójny cudzysłów ("").  
+ Wymagana. Nazwa pliku zawierającego w dokumentacji. Nazwa pliku może być kwalifikowany za pomocą ścieżki. Umieść `filename` w podwójny cudzysłów ("").  
   
  `tagpath`  
- Wymagany. Ścieżka tagów w `filename` prowadzi to do tagu `name`. Ścieżka do ujmij ją w podwójny cudzysłów ("").  
+ Wymagana. Ścieżka tagów w `filename` prowadzi to do tagu `name`. Ścieżka do ujmij ją w podwójny cudzysłów ("").  
   
  `name`  
- Wymagany. Określenie nazwy w tagu poprzedzający komentarze. `Name`będzie mieć `id`.  
+ Wymagana. Określenie nazwy w tagu poprzedzający komentarze. `Name` będzie mieć `id`.  
   
  `id`  
- Wymagany. Identyfikator znacznika poprzedzający komentarze. Umieść identyfikator w pojedynczym cudzysłowie ("").  
+ Wymagana. Identyfikator znacznika poprzedzający komentarze. Umieść identyfikator w pojedynczym cudzysłowie ("").  
   
 ## <a name="remarks"></a>Uwagi  
  Użyj `<include>` tag do odwoływania się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa do wprowadzania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.  

@@ -1,32 +1,18 @@
 ---
 title: Narzędzia programu Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e28158076fcedf8c7d14d598b1c2ba0a25ff1f8
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Narzędzia programu Windows Communication Foundation
-Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] narzędzia zaprojektowano w celu ułatwienia umożliwiające tworzenie, wdrażanie i zarządzanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji. Ta sekcja zawiera szczegółowe informacje na temat narzędzia. Należy pamiętać, że narzędzia nie są obsługiwane.  
+Narzędzia Microsoft Windows Communication Foundation (WCF) zostały zaprojektowane w celu ułatwienia umożliwiające tworzenie, wdrażanie i zarządzanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji. Ta sekcja zawiera szczegółowe informacje na temat narzędzia. Należy pamiętać, że narzędzia nie są obsługiwane.  
   
  Wszystkie narzędzia, które można uruchomić z wiersza polecenia.  
   

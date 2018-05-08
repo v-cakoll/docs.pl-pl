@@ -1,28 +1,16 @@
 ---
 title: Bezpieczne wzorce konstruktora DependencyObjects
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constructor patterns for dependency objects [WPF]
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Bezpieczne wzorce konstruktora DependencyObjects
 Ogólnie rzecz biorąc konstruktorów klasy nie powinny wywoływać wywołań zwrotnych, takich jak metody wirtualne lub delegatów, ponieważ konstruktorów można wywołać jako podstawowy inicjowania konstruktorów dla klasy pochodnej. Wprowadzanie wirtualnej może odbywać się w stanie inicjowania niekompletne dowolnego danego obiektu. Jednak sam system właściwości wywołuje i ujawnia wywołania zwrotne wewnętrznie, jako część systemu właściwości zależności. Prosta operacja jako ustawienie wartości właściwości zależności z <xref:System.Windows.DependencyObject.SetValue%2A> wywołanie potencjalnie zawiera wywołanie zwrotne gdzieś w ustalaniu. Z tego powodu należy zachować ostrożność podczas ustawiania wartości właściwości w treści konstruktora, który może stać się problemem, jeśli z danym typem jest używany jako klasa podstawowa zależności. Brak określonego wzorca wykonywania <xref:System.Windows.DependencyObject> konstruktorów, które pozwala uniknąć określonych problemów z stanów właściwości zależności i związanego z używaniem wywołania zwrotne, które opisano w tym miejscu.  

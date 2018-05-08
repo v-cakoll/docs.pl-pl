@@ -1,27 +1,15 @@
 ---
-title: "Optymistycznej współbieżności: omówienie"
-ms.custom: 
+title: 'Optymistycznej współbieżności: omówienie'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 616b035096dd636c65dba65bfe6b371db75bec8e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5b4603526896364285cb3c85d12568ed9031ed47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimistic-concurrency-overview"></a>Optymistycznej współbieżności: omówienie
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje optymistyczne sterowanie współbieżnością. W poniższej tabeli opisano terminy, które dotyczą optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje optymistyczne sterowanie współbieżnością. W poniższej tabeli opisano terminy, które dotyczą optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji:  
   
 |Warunki|Opis|  
 |-----------|-----------------|  
@@ -29,7 +17,7 @@ ms.lasthandoff: 01/17/2018
 |konflikt współbieżności|Sytuacja dwóch lub więcej użytkowników jednocześnie spróbuj przesłać wartości powodujące konflikt do jednej lub kilku kolumn w wierszu.|  
 |formant współbieżności|Technika, używany do rozwiązywania konfliktów współbieżności.|  
 |optymistyczne sterowanie współbieżnością|Tę metodę, która najpierw sprawdza, czy inne transakcje zostały zmienione wartości w wierszu przed umożliwiający zmiany do przesłania.<br /><br /> Natomiast z *sterowania współbieżnością pesymistyczne*, która blokuje rekord, aby zapobiec konfliktom współbieżności.<br /><br /> *Optymistyczne* kontroli tak jest określona, ponieważ traktuje szanse jedna transakcja konfliktu z inną za mało prawdopodobne.|  
-|Rozwiązywanie konfliktów|Proces odświeżania powodującego konflikt elementu ponownie zapytanie bazy danych, a następnie Uzgadnianie różnic.<br /><br /> Po odświeżeniu obiektu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] śledzący zmiany zawiera następujące dane:<br /><br /> -Sprawdź wartości pierwotnie pobrane z bazy danych i używany do aktualizacji.<br />-Nowej bazy danych wartości w kolejnych zapytania.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Określa, czy obiekt jest w konflikcie (to znaczy czy co najmniej jedna z wartości jego elementów członkowskich uległa zmianie). Jeśli obiekt jest w konflikcie, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obok Określa, które z jego elementów członkowskich są w konflikcie.<br /><br /> Każdy członek konfliktu, który [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] odnajduje zostanie dodany do listy konfliktów.|  
+|Rozwiązywanie konfliktów|Proces odświeżania powodującego konflikt elementu ponownie zapytanie bazy danych, a następnie Uzgadnianie różnic.<br /><br /> Po odświeżeniu obiektu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] śledzący zmiany zawiera następujące dane:<br /><br /> -Sprawdź wartości pierwotnie pobrane z bazy danych i używany do aktualizacji.<br />-Nowej bazy danych wartości w kolejnych zapytania.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Określa, czy obiekt jest w konflikcie (to znaczy czy co najmniej jedna z wartości jego elementów członkowskich uległa zmianie). Jeśli obiekt jest w konflikcie, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obok Określa, które z jego elementów członkowskich są w konflikcie.<br /><br /> Każdy członek konfliktu, który [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] odnajduje zostanie dodany do listy konfliktów.|  
   
  W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] model obiektów *konflikt optymistycznej współbieżności* występuje, gdy są spełnione oba poniższe warunki:  
   

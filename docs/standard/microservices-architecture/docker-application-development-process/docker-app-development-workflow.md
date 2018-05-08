@@ -1,21 +1,14 @@
 ---
 title: Przepływ pracy tworzenia aplikacji Docker
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przepływ pracy tworzenia aplikacji Docker
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 73d4ad82ef8c48f57aa4cceceedba862a2c9ffa4
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 2eb205e85300f22108b866e8446d6730d89ae6cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia aplikacji Docker
 
@@ -427,4 +420,4 @@ RUN powershell add-windowsfeature web-asp-net45
     [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (../net-core-single-containers-linux-windows-server-hosts/index.md)
+[Poprzednie] (index.md) [dalej] (.. / net-core-single-containers-linux-windows-server-hosts/index.md)

@@ -1,24 +1,12 @@
 ---
-title: "SQL Server integrację środowiska uruchomieniowego"
-ms.custom: 
+title: SQL Server integrację środowiska uruchomieniowego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bccf3a50aabe991f09217f501d14b6f9337d76ba
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7451ed06e8a7c9797c66fd81734eb8b6b3b81f12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server integrację środowiska uruchomieniowego
 SQL Server 2005 wprowadzono integracji składnika wspólne języka wspólnego (CLR) programu .NET Framework dla programu Microsoft Windows. Oznacza to, czy możesz zapisywać procedur składowanych, wyzwalaczy, typy danych zdefiniowane przez użytkownika, funkcjach zdefiniowanych przez użytkownika, agregacje zdefiniowane przez użytkownika i przesyłania strumieniowego funkcji zwracającej tabelę przy użyciu dowolnego języka .NET Framework, w tym programu Microsoft Visual Basic .NET i firmy Microsoft Visual C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestawu nowych interfejsów programowania aplikacji (API), dzięki czemu kod zarządzany mogą współdziałać ze środowiskiem programu Microsoft SQL Server.  

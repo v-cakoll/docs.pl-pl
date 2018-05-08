@@ -1,31 +1,19 @@
 ---
-title: "Optymalizacja wydajności: kontrolki"
-ms.custom: 
+title: 'Optymalizacja wydajności: kontrolki'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>Optymalizacja wydajności: kontrolki
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zawiera wiele wspólnych składników interfejsu użytkownika (UI), które są używane w większości aplikacji systemu Windows. Ten temat zawiera techniki zwiększanie wydajności interfejsu użytkownika.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawiera wiele wspólnych składników interfejsu użytkownika (UI), które są używane w większości aplikacji systemu Windows. Ten temat zawiera techniki zwiększanie wydajności interfejsu użytkownika.  
   
  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  Wirtualizacja interfejsu użytkownika jest ważnym aspektem kontrolki listy. Wirtualizacja interfejsu użytkownika nie należy mylić z wirtualizacji danych. Interfejs użytkownika wirtualizacji magazynów tylko widocznych elementów w pamięci, ale w przypadku wiązania danych przechowuje struktury danych w pamięci. W przypadku danych wirtualizacji przechowuje elementów danych, które są widoczne na ekranie w pamięci.  
   
- Domyślnie wirtualizacja interfejsu użytkownika jest włączona dla <xref:System.Windows.Controls.ListView> i <xref:System.Windows.Controls.ListBox> kontrolki, gdy ich elementy listy są związane z danymi. <xref:System.Windows.Controls.TreeView>można włączyć wirtualizacji przez ustawienie <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` dołączona właściwość do `true`. Jeśli chcesz włączyć wirtualizacji interfejsu użytkownika dla formantów niestandardowych, które pochodzą z <xref:System.Windows.Controls.ItemsControl> lub istniejący element określa, które używają <xref:System.Windows.Controls.StackPanel> klas, takich jak <xref:System.Windows.Controls.ComboBox>, można ustawić <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> do <xref:System.Windows.Controls.VirtualizingStackPanel> i ustaw <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> do `true`. Niestety można wyłączyć wirtualizacji interfejsu użytkownika dla tych kontrolek bez wiedzy. Poniżej znajduje się lista warunków, które wirtualizacji interfejsu użytkownika jest wyłączona.  
+ Domyślnie wirtualizacja interfejsu użytkownika jest włączona dla <xref:System.Windows.Controls.ListView> i <xref:System.Windows.Controls.ListBox> kontrolki, gdy ich elementy listy są związane z danymi. <xref:System.Windows.Controls.TreeView> można włączyć wirtualizacji przez ustawienie <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` dołączona właściwość do `true`. Jeśli chcesz włączyć wirtualizacji interfejsu użytkownika dla formantów niestandardowych, które pochodzą z <xref:System.Windows.Controls.ItemsControl> lub istniejący element określa, które używają <xref:System.Windows.Controls.StackPanel> klas, takich jak <xref:System.Windows.Controls.ComboBox>, można ustawić <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> do <xref:System.Windows.Controls.VirtualizingStackPanel> i ustaw <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> do `true`. Niestety można wyłączyć wirtualizacji interfejsu użytkownika dla tych kontrolek bez wiedzy. Poniżej znajduje się lista warunków, które wirtualizacji interfejsu użytkownika jest wyłączona.  
   
 -   Element kontenery zostaną dodane bezpośrednio do <xref:System.Windows.Controls.ItemsControl>. Na przykład, jeśli aplikacja jawnie dodaje <xref:System.Windows.Controls.ListBoxItem> obiekty do <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> nie wirtualizację <xref:System.Windows.Controls.ListBoxItem> obiektów.  
   
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>Obsługa dwukierunkowych wirtualizacji  
- <xref:System.Windows.Controls.VirtualizingStackPanel>udostępnia wbudowaną obsługę wirtualizacji interfejsu użytkownika w jednym kierunku, poziomo czy pionowo. Jeśli chcesz użyć wirtualizacji dwukierunkowego dla formantów, musi implementować niestandardowe panelu, rozszerzający <xref:System.Windows.Controls.VirtualizingStackPanel> klasy. <xref:System.Windows.Controls.VirtualizingStackPanel> Klasy udostępnia metody wirtualnej, takie jak <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, i <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Te metody wirtualne umożliwiają wykrywa zmian w widoczną część listy i odpowiednio je obsłużyć.  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> udostępnia wbudowaną obsługę wirtualizacji interfejsu użytkownika w jednym kierunku, poziomo czy pionowo. Jeśli chcesz użyć wirtualizacji dwukierunkowego dla formantów, musi implementować niestandardowe panelu, rozszerzający <xref:System.Windows.Controls.VirtualizingStackPanel> klasy. <xref:System.Windows.Controls.VirtualizingStackPanel> Klasy udostępnia metody wirtualnej, takie jak <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, i <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Te metody wirtualne umożliwiają wykrywa zmian w widoczną część listy i odpowiednio je obsłużyć.  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>Optymalizacja szablonów  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deferred-scrolling"></a>Odroczone przewijania  
  Domyślnie gdy użytkownik przeciąga stronie przycisku suwaka na pasek przewijania, widok zawartości stale aktualizuje.  Jeśli przewijanie jest powolne formantu, należy rozważyć przy użyciu odroczone przewijania.  W odroczonego przewijanie zawartości jest aktualizowany tylko wtedy, gdy użytkownik zwolni stronie przycisku suwaka.  
   
- Aby zaimplementować odroczonego przewijania, ustaw <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> właściwości `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>dołączona właściwość a może ustawić na <xref:System.Windows.Controls.ScrollViewer> i żadnego formantu, który ma <xref:System.Windows.Controls.ScrollViewer> w szablonie formantu.  
+ Aby zaimplementować odroczonego przewijania, ustaw <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> właściwości `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> dołączona właściwość a może ustawić na <xref:System.Windows.Controls.ScrollViewer> i żadnego formantu, który ma <xref:System.Windows.Controls.ScrollViewer> w szablonie formantu.  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>Formanty, które implementuje funkcje wydajności  

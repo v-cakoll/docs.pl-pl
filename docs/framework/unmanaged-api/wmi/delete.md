@@ -1,11 +1,7 @@
 ---
-title: "Usuwanie funkcji (niezarządzany wykaz interfejsów API)"
-description: "Funkcja usuwania usuwa określonej właściwości i wszystkie jego kwalifikatory z definicji klasy modelu wspólnych informacji."
+title: Usuwanie funkcji (niezarządzany wykaz interfejsów API)
+description: Funkcja usuwania usuwa określonej właściwości i wszystkie jego kwalifikatory z definicji klasy modelu wspólnych informacji.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>Usuń — funkcja
 Usuwa określonej właściwości i wszystkie jego kwalifikatory z definicji klasy modelu wspólnych informacji.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
 
 `wszName`  
-[in] Nazwa właściwości do usunięcia. `wszName`musi być wskaźnikiem do prawidłowej `LPCWSTR`.
+[in] Nazwa właściwości do usunięcia. `wszName` musi być wskaźnikiem do prawidłowej `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -80,7 +73,7 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::Delete](https://msdn.micr
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

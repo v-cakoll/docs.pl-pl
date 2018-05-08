@@ -1,11 +1,6 @@
 ---
-title: "Char — Typ danych (Visual Basic)"
+title: Char — Typ danych (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Char
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="char-data-type-visual-basic"></a>Char — Typ danych (Visual Basic)
 Punkty niepodpisanego kodu (2-bajtowych) 16-bitowych blokady z zakresu od 0 do 65 535. Każdy *punktem kodu*, lub kod znaku reprezentuje pojedynczy znak Unicode.  
@@ -54,13 +46,13 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Wartości ujemne.** `Char`jest to typ bez znaku i nie może reprezentować wartość ujemną. W żadnym przypadku nie należy używać `Char` do przechowywania wartości liczbowych.  
+-   **Wartości ujemne.** `Char` jest to typ bez znaku i nie może reprezentować wartość ujemną. W żadnym przypadku nie należy używać `Char` do przechowywania wartości liczbowych.  
   
 -   **Zagadnienia dotyczące współdziałania.** Jeśli interfejs ze składnikami, które nie są zapisywane dla programu .NET Framework dla obiektów automatyzacji lub COM przykład pamiętać, że znaki — typy są różne dane szerokości (8 bitów) w innych środowiskach. Argument 8-bitową w przypadku przekazania do tych składników, Zadeklaruj ją jako `Byte` zamiast `Char` w nowy kod Visual Basic.  
   
 -   **Rozszerzanie.** `Char` Rozszerzenie typu danych do `String`. Oznacza to, że można przekonwertować `Char` do `String` i nie wystąpi <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Znak literalny typu dołączanie `C` z ciągiem jednoznakowym literał wymusza `Char` — typ danych. `Char`nie ma identyfikatora typu znaku.  
+-   **Znaki typu.** Znak literalny typu dołączanie `C` z ciągiem jednoznakowym literał wymusza `Char` — typ danych. `Char` nie ma identyfikatora typu znaku.  
   
 -   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.Char?displayProperty=nameWithType> struktury.  
   
@@ -71,8 +63,8 @@ charVar = "Z"C
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
  <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [String — typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)  
+ [String, typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

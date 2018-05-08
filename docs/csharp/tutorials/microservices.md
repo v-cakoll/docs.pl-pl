@@ -1,20 +1,13 @@
 ---
 title: Mikrousług hostowanych w Docker - C#
 description: Dowiedz się, jak utworzyć asp.net podstawowe usługi, które są uruchamiane w kontenerach Docker
-keywords: .NET, .NET Core, Docker, C#, ASP.NET, Microservice
-author: BillWagner
-ms.author: wiwagn
 ms.date: 02/03/2017
-ms.topic: article
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: eacfa87e465e5f7737dbd2bfc4c6a77ffc5531c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Mikrousług hostowanych w Docker
 
@@ -75,7 +68,7 @@ Szablon tworzy osiem plików:
 * Plik Dockerfile. Ten skrypt tworzy obraz Docker dla aplikacji.
 * A README.md. Zawiera linki do innych zasobów platformy ASP.NET Core.
 * Plik web.config. Zawiera podstawowe informacje o konfiguracji.
-* A runtimeconfig.template.json file. Zawiera ustawienia debugowania używane przez IDEs.
+* Plik runtimeconfig.template.json. Zawiera ustawienia debugowania używane przez IDEs.
 
 Teraz możesz uruchomić aplikacji szablonu wygenerowany. Który ma odbywa się za pomocą szereg narzędzi wiersza polecenia. `dotnet` Polecenia są uruchamiane narzędzia niezbędne do tworzenia aplikacji .NET. Inne polecenie wykonuje każdego zlecenia
 

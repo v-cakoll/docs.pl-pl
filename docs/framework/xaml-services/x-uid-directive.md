@@ -1,29 +1,17 @@
 ---
-title: "x:Uid — dyrektywa"
-ms.custom: 
+title: x:Uid — dyrektywa
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], localizable content attribute
 - XAML [XAML Services], x:Uid attribute
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-caps.latest.revision: "12"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9abd4a1851ce21a1858f51ff4ce42998c20639e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 667b722097d091902cb65f2e6f0485a039f8a2ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xuid-directive"></a>x:Uid — dyrektywa
 Zawiera unikatowy identyfikator dla elementów kodu znaczników. W wielu scenariuszach ten unikatowy identyfikator jest używany przez XAML lokalizacja procesów i narzędzi.  
@@ -43,14 +31,14 @@ Zawiera unikatowy identyfikator dla elementów kodu znaczników. W wielu scenari
 ## <a name="remarks"></a>Uwagi  
  W [MS-XAML] `x:Uid` jest zdefiniowany dyrektywą. Aby uzyskać więcej informacji, zobacz [ \[MS XAML\] sekcji 5.3.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
- `x:Uid`jest odrębny z `x:Name` zarówno z powodu podane scenariusz lokalizacja XAML i tak, aby identyfikatorów, które są używane do lokalizacji nie ma żadnych zależności na skutki modelu programowania `x:Name`. Ponadto `x:Name` podlega XAML namescope; jednak `x:Uid` nie podlega żadnych koncepcji zdefiniowane języka XAML wymuszania unikatowości. Aby wymusić unikatowość nie powinny procesorów XAML szeroko (procesorów, które nie są częścią procesu lokalizacja) `x:Uid` wartości. Odpowiedzialność jest koncepcyjnie na inicjatorem wartości. Oczekuje unikatowość `x:Uid` wartości w ramach jednego źródła XAML jest uzasadnione dla konsumentów wartości, takich jak globalizacja dedykowanych procesów lub narzędzia. Model typowe unikatowości jest to, że `x:Uid` wartości są unikatowe w obrębie pliku kodowany w formacie XML, reprezentujący XAML.  
+ `x:Uid` jest odrębny z `x:Name` zarówno z powodu podane scenariusz lokalizacja XAML i tak, aby identyfikatorów, które są używane do lokalizacji nie ma żadnych zależności na skutki modelu programowania `x:Name`. Ponadto `x:Name` podlega XAML namescope; jednak `x:Uid` nie podlega żadnych koncepcji zdefiniowane języka XAML wymuszania unikatowości. Aby wymusić unikatowość nie powinny procesorów XAML szeroko (procesorów, które nie są częścią procesu lokalizacja) `x:Uid` wartości. Odpowiedzialność jest koncepcyjnie na inicjatorem wartości. Oczekuje unikatowość `x:Uid` wartości w ramach jednego źródła XAML jest uzasadnione dla konsumentów wartości, takich jak globalizacja dedykowanych procesów lub narzędzia. Model typowe unikatowości jest to, że `x:Uid` wartości są unikatowe w obrębie pliku kodowany w formacie XML, reprezentujący XAML.  
   
  Narzędzia, które posiadają znaczne wiedzę na temat określonego schematu XAML mogą być stosowane `x:Uid` tylko w przypadku true Lokalizowalny ciągi, a nie we wszystkich przypadkach, gdy napotkano wartości ciągu tekstowego w znaczniku.  
   
  Struktury można określić określonej właściwości w modelu obiektów, ich jako alias dla `x:Uid` przez zastosowanie atrybutu <xref:System.Windows.Markup.UidPropertyAttribute> typowi definiującego. Jeśli platforma określa określonej właściwości, nie jest prawidłową określić ich obu `x:Uid` i element członkowski aliasem w tym samym obiekcie. Jeśli oba `x:Uid` i podano elementu członkowskiego aliasu, interfejsu API programu .NET Framework XAML Services zwykle zgłasza <xref:System.Xaml.XamlDuplicateMemberException> dla tej sprawy.  
   
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użycia WPF  
- Aby uzyskać więcej informacji o roli `x:Uid` w procesie lokalizacji WPF i w postaci BAML XAML, zobacz [globalizacji dla WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) lub<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ Aby uzyskać więcej informacji o roli `x:Uid` w procesie lokalizacji WPF i w postaci BAML XAML, zobacz [globalizacji dla WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) lub <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  

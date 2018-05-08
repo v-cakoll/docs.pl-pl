@@ -1,27 +1,15 @@
 ---
-title: "Za pomocą obiektów DataAdapter operacji wsadowych."
-ms.custom: 
+title: Za pomocą obiektów DataAdapter operacji wsadowych.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e5c584bcd825e390b24da6c95ecb159a8280c639
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Za pomocą obiektów DataAdapter operacji wsadowych.
 Umożliwia obsługę partii w ADO.NET <xref:System.Data.Common.DataAdapter> do grupowania operacji INSERT, UPDATE i DELETE <xref:System.Data.DataSet> lub <xref:System.Data.DataTable> na serwerze, zamiast wysyłać jedną operację naraz. Zmniejszenie liczby rund do serwera zwykle powoduje znaczący wzrost wydajności. Aktualizacje wsadowe są obsługiwane dla dostawcy danych .NET dla programu SQL Server (<xref:System.Data.SqlClient>) i Oracle (<xref:System.Data.OracleClient>).  
@@ -145,7 +133,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Dostęp do zaktualizowanych wierszy  
  Podczas przetwarzania wsadowego jest wyłączona, można uzyskać dostępu do aktualizacji wiersza przy użyciu <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> właściwość <xref:System.Data.Common.RowUpdatedEventArgs> klasy.  
   
- Po włączeniu przetwarzania wsadowego, pojedynczy `RowUpdated` zdarzenie jest generowane dla wielu wierszy. W związku z tym wartość `Row` właściwości dla każdego wiersza ma wartość null. `RowUpdating`zdarzenia są nadal generowane dla każdego wiersza. <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> Metody <xref:System.Data.Common.RowUpdatedEventArgs> klasa pozwala na dostęp przez kopiowanie odwołania do wierszy w tablicy przetworzonych wierszy. Jeśli żadne wiersze są przetwarzane, `CopyToRows` zgłasza <xref:System.ArgumentNullException>. Użyj <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> właściwości Zwróć liczbę wierszy przetworzone przed wywołaniem <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> metody.  
+ Po włączeniu przetwarzania wsadowego, pojedynczy `RowUpdated` zdarzenie jest generowane dla wielu wierszy. W związku z tym wartość `Row` właściwości dla każdego wiersza ma wartość null. `RowUpdating` zdarzenia są nadal generowane dla każdego wiersza. <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> Metody <xref:System.Data.Common.RowUpdatedEventArgs> klasa pozwala na dostęp przez kopiowanie odwołania do wierszy w tablicy przetworzonych wierszy. Jeśli żadne wiersze są przetwarzane, `CopyToRows` zgłasza <xref:System.ArgumentNullException>. Użyj <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> właściwości Zwróć liczbę wierszy przetworzone przed wywołaniem <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> metody.  
   
 ### <a name="handling-data-errors"></a>Obsługa błędów danych  
  Wsadowe ma ten sam efekt co wykonanie każdej poszczególnych instrukcji. Instrukcje są wykonywane w kolejności, że instrukcje zostały dodane do wykonywania zadania wsadowego. Błędy są obsługiwane w trybie wsadowym tak samo, jak po wyłączeniu trybu partii. Każdy wiersz jest przetwarzany osobno. Tylko wiersze, które zostały pomyślnie przetworzone w bazie danych zostanie zaktualizowany w odpowiedniej <xref:System.Data.DataRow> w <xref:System.Data.DataTable>.  

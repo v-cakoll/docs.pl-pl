@@ -1,13 +1,6 @@
 ---
-title: "Formanty rysowane przez użytkownika"
-ms.custom: 
+title: Formanty rysowane przez użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +9,20 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-drawn-controls"></a>Formanty rysowane przez użytkownika
 .NET Framework umożliwia łatwy sposób tworzyć własne kontrolki. Formant użytkownika, który jest zestaw standardowych formantów powiązane przez kod, można utworzyć lub zapasową można projektować formantu od podstaw. Dziedziczenie umożliwia nawet utworzyć formant, który dziedziczy z istniejącego formantu i dodać do jego działanie związane. Niezależnie od podejście, możesz użyć programu .NET Framework udostępnia funkcje umożliwiające rysowanie niestandardowego interfejsu graficznego dla każdego formantu, którą utworzysz.  
   
  Malowanie formantu odbywa się za wykonywanie kodu w formancie <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Pojedynczy argument <xref:System.Windows.Forms.Control.OnPaint%2A> jest metoda <xref:System.Windows.Forms.PaintEventArgs> obiekt, który zawiera wszystkie informacje i funkcje wymagane do renderowania formantu. <xref:System.Windows.Forms.PaintEventArgs> Zapewnia jako właściwości dwa obiekty główne, które będą używane podczas renderowania formantu:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>Obiekt - przedstawiającą formant, który będzie rysowany prostokąta. Może to być całą formant lub część formantu w zależności od tego, jak kontrolka jest rysowane.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Obiekt - przedstawiającą formant, który będzie rysowany prostokąta. Może to być całą formant lub część formantu w zależności od tego, jak kontrolka jest rysowane.  
   
--   <xref:System.Drawing.Graphics>Obiekt - hermetyzuje kilka zorientowane na grafiki obiekty i metody udostępniające funkcje niezbędne do rysowania formantu.  
+-   <xref:System.Drawing.Graphics> Obiekt - hermetyzuje kilka zorientowane na grafiki obiekty i metody udostępniające funkcje niezbędne do rysowania formantu.  
   
  Aby uzyskać więcej informacji na temat <xref:System.Drawing.Graphics> obiektu i sposobu jego używania, zobacz [porady: Tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   

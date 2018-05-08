@@ -1,13 +1,6 @@
 ---
-title: "Różne typy formantów niestandardowych"
-ms.custom: 
+title: Różne typy formantów niestandardowych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], user controls
 - controls [Windows Forms], types of
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e7cd45c85f155da975ca17961ca49a5dc89800a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f35fdb0f82370ed3e40aeeda01b3c88f0a8c5ec0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="varieties-of-custom-controls"></a>Różne typy formantów niestandardowych
 Z programu .NET Framework mogą tworzyć i wdrożyć nowe kontrolki. Można rozszerzyć funkcjonalność kontrolki użytkownika znanych także jako istniejących formantów przez dziedziczenie. Można również napisać formantów niestandardowych, które własnych narysowania.  

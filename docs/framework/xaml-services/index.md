@@ -1,30 +1,16 @@
 ---
 title: Usługi XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], System.Xaml concepts
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fbe67e81bdc461e290b5cdbb9e1050aec32ce8fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-services"></a>Usługi XAML
 W tym temacie opisano funkcje zestawu technologii, znany jako .NET Framework XAML usług. Większość usług i interfejsów API opisanego znajdują się w zestawie System.Xaml, która jest zestawem wprowadzone w systemie [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zbiór zestawów platformy .NET core. Usługi obejmują fabryki czytelników i moduły zapisujące klasy schematu i obsługi schematu, przypisywanie klas, wewnętrzne obsługę języka XAML i inne funkcje języka XAML.  
@@ -49,7 +35,7 @@ W tym temacie opisano funkcje zestawu technologii, znany jako .NET Framework XAM
  Jeśli szukasz wprowadzające informacje na języku XAML jako język, możesz spróbować [omówienie XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Ten temat omówiono XAML na odbiorców, którzy nowego zarówno do [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] i również przy użyciu znaczników XAML i funkcje języka XAML. Innym dokumencie przydatne jest wprowadzające informacje w [specyfikacja języka XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Usługi XAML .NET framework i System.Xaml architektury .NET  
- W poprzednich wersjach [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], pomocy technicznej dla XAML — funkcje językowe został zaimplementowany przez platformy, które są oparte na [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], programu Windows Workflow Foundation i Windows Communication Foundation (WCF)) i w związku z tym zmieniona w jego zachowanie i interfejsu API używany w zależności od tego, które określonej platformy były używane. Obejmuje XAML analizatora i jego obiektu wykresu mechanizm tworzenia, funkcje wewnętrzne języka XAML, obsługi serializacji i tak dalej.  
+ W poprzednich wersjach programu Microsoft .NET Framework, obsługuje dla XAML — funkcje językowe została zaimplementowana przez platformy, które oparty na programie Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], programu Windows Workflow Foundation i Windows Communication Foundation (WCF)), a więc zróżnicowana w jego zachowanie i interfejsu API używany w zależności od tego, które określonej platformy były używane. Obejmuje XAML analizatora i jego obiektu wykresu mechanizm tworzenia, funkcje wewnętrzne języka XAML, obsługi serializacji i tak dalej.  
   
  W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], usługi XAML .NET Framework i zestawu System.Xaml zdefiniować wiele co jest potrzebne do obsługi funkcji języka XAML. Dotyczy to również klas podstawowych dla czytników XAML i zapisywania XAML. Najważniejsze funkcja dodana do usług XAML .NET Framework, która nie była obecna w innych implementacjach XAML określonej struktury jest reprezentacja system typu dla XAML. Reprezentacja typu systemu przedstawia XAML w sposób zorientowane obiektowo koncentruje się na funkcjach XAML bez konieczności przełączania zależności na określone możliwości platform.  
   

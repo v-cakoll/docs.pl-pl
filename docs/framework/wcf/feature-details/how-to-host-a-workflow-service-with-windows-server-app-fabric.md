@@ -1,26 +1,12 @@
 ---
 title: 'Instrukcje: Hostowanie usługi przepływu pracy przy użyciu rozwiązania AppFabric w systemie Windows Server'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ef60a291af39a39d3427d74b8a6ea7d00382c8d6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a1e2312beed61b340e034a48c36f739e799b1bf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Instrukcje: Hostowanie usługi przepływu pracy przy użyciu rozwiązania AppFabric w systemie Windows Server
 Hostowanie usług przepływu pracy w aplikacji sieci szkieletowej jest podobny do hostingu w środowisku usług IIS / WAS. Jedyna różnica polega na te narzędzia, które zapewnia AppFabric wdrażania, monitorowania i zarządzania usług przepływu pracy. W tym temacie korzysta z usługi przepływu pracy utworzone w [Tworzenie usługi przepływu pracy długotrwałe](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Ten temat przeprowadzi Cię przez proces tworzenia usługi przepływu pracy. W tym temacie objaśnia sposób hosta usługi przepływu pracy przy użyciu aplikacji sieci szkieletowej. Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric zobacz [dokumentacją sieci szkieletowej systemu Windows Server aplikacji](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Przed wykonaniem poniższych instrukcji upewnij się, że masz systemu Windows Server AppFabric zainstalowane.  Aby zrobić to open zapasowej Internetowe usługi informacyjne (inetmgr.exe), kliknij nazwę serwera w **połączeń** wyświetlić, kliknij przycisk witryny, a następnie kliknij przycisk **domyślna witryna sieci Web**. W prawej części ekranu powinna być widoczna sekcja o nazwie **AppFabric**. Jeśli nie widzisz tej sekcji (będzie górnej części okienka po prawej stronie) nie masz AppFabric zainstalowane. Aby uzyskać więcej informacji o instalowaniu systemu Windows Server AppFabric zobacz [Instalowanie systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136).  

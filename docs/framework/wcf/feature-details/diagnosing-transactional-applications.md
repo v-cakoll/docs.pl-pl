@@ -1,32 +1,18 @@
 ---
 title: Diagnozowanie aplikacji transakcyjnych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnozowanie aplikacji transakcyjnych
-W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcji zarządzania i diagnostyki rozwiązywać transakcyjnych aplikacji.  
+W tym temacie opisano, jak korzystać z zarządzania usługi Windows Communication Foundation (WCF) i funkcja diagnostyki rozwiązywać transakcyjnych aplikacji.  
   
 ## <a name="performance-counters"></a>Liczniki wydajności  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera standardowy zestaw liczników wydajności można mierzyć wydajność aplikacji transakcyjnej. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ Usługi WCF zawiera standardowy zestaw liczników wydajności można mierzyć wydajność aplikacji transakcyjnej. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Liczniki wydajności są ograniczone do trzech różnych poziomów: Usługa punktu końcowego, a działanie, zgodnie z opisem w poniższych tabelach.  
   
@@ -58,7 +44,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/in
 |Przepływ transakcji na sekundę|Liczba transakcji przekazanych do operacji w tym punkcie końcowym w ciągu każdej sekundy. Ten licznik jest zwiększany za każdym razem transakcji jest obecny w wiadomości, które są wysyłane do punktu końcowego.|  
   
 ## <a name="windows-management-instrumentation"></a>Instrumentacja zarządzania Windows  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI). Aby uzyskać więcej informacji na temat uzyskiwania dostępu do danych usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows dla diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Usługa WCF umożliwia danych inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy usług WCF Instrumentacji zarządzania Windows (WMI). Aby uzyskać więcej informacji na temat uzyskiwania dostępu do danych usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows dla diagnostyki](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Wiele-do-odczytu właściwości WMI wskazują ustawienia zastosowane transakcji dla usługi. W poniższych tabelach przedstawiono wszystkie te ustawienia.  
   
@@ -100,13 +86,13 @@ W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/in
 ## <a name="tracing"></a>Śledzenie  
  Ślady umożliwiają monitorowanie i analizowanie błędów w transakcyjnych aplikacji. Można włączyć śledzenie przy użyciu następujących sposobów:  
   
--   Standardowe [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] śledzenia  
+-   Standardowa śledzenia WCF  
   
-     Ten rodzaj śledzenia jest taka sama jak śledzenie żadnego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Ten rodzaj śledzenia jest taka sama jak śledzenie dowolnej aplikacji WCF. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Śledzenie protokołu WS-AtomicTransaction  
   
-     WS-AtomicTransaction śledzenie można włączyć za pomocą [narzędzia konfiguracji WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Takie śledzenie zapewnia wgląd w stan transakcji i uczestników w systemie. Należy również włączyć wewnętrznego śledzenia modelu usługi, można ustawić `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` klucza rejestru na prawidłową wartość <xref:System.Diagnostics.SourceLevels> wyliczenia. Możesz włączyć rejestrowanie w taki sam sposób jak inne komunikatów [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
+     WS-AtomicTransaction śledzenie można włączyć za pomocą [narzędzia konfiguracji WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Takie śledzenie zapewnia wgląd w stan transakcji i uczestników w systemie. Należy również włączyć wewnętrznego śledzenia modelu usługi, można ustawić `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` klucza rejestru na prawidłową wartość <xref:System.Diagnostics.SourceLevels> wyliczenia. Można włączyć rejestrowanie w taki sam sposób jak inne aplikacje WCF komunikatów.  
   
 -   `System.Transactions` Śledzenie  
   
@@ -131,7 +117,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/in
     </configuration>  
     ```  
   
-     Dzięki temu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] śledzenia, jako [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] korzysta również <xref:System.Transactions> infrastruktury.  
+     Dzięki temu śledzenia WCF, jak również korzysta z usługi WCF <xref:System.Transactions> infrastruktury.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Administracja i diagnostyka](../../../../docs/framework/wcf/diagnostics/index.md)  

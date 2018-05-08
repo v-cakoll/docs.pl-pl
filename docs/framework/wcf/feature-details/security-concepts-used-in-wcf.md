@@ -1,31 +1,19 @@
 ---
 title: Pojęcia zabezpieczeń użyte dla programu WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ac76f1742ab72de9f5180d1ea2fcbc668ec2140c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>Pojęcia zabezpieczeń użyte dla programu WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczenia jest oparty na koncepcji już w użyciu i wdrożone w różnych infrastruktur zabezpieczeń.  
+Zabezpieczenia usług Windows Communication Foundation (WCF) jest wbudowane w system pojęcia już w użyciu i wdrożone w różnych infrastruktur zabezpieczeń.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje niektóre z tych infrastruktury, takich jak Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP (HTTPS). Jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wykracza poza obsługi istniejącej infrastruktury zabezpieczeń zaimplementowanie nowszej standardów zabezpieczeń interoperacyjne (na przykład WS-Security) za pośrednictwem kodowanymi komunikatami SOAP. Zarówno w przypadku korzystania z mechanizmów istniejącego lub nowego interoperacyjne standardów zabezpieczeń pojęć zarówno są takie same. Opis pojęć dotyczących istniejącej infrastruktury i nowszej standardów jest podstawą do implementowania modelu zabezpieczeń najlepsze dla aplikacji.  
+ Usługi WCF obsługuje niektóre z tych infrastruktury, takich jak Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP (HTTPS). Jednak WCF wykracza poza obsługi istniejącej infrastruktury zabezpieczeń zaimplementowanie nowszej standardów zabezpieczeń interoperacyjne (na przykład WS-Security) za pośrednictwem kodowanymi komunikatami SOAP. Zarówno w przypadku korzystania z mechanizmów istniejącego lub nowego interoperacyjne standardów zabezpieczeń pojęć zarówno są takie same. Opis pojęć dotyczących istniejącej infrastruktury i nowszej standardów jest podstawą do implementowania modelu zabezpieczeń najlepsze dla aplikacji.  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>Wprowadzenie do zabezpieczeń dla usług sieci Web programu WCF  
  Grupę Microsoft Patterns and Practices szczegółowe oficjalny dokument został napisany na WCF wskazówki dotyczące zabezpieczeń, które można pobrać tutaj: [Przewodnik po zabezpieczeniach WCF](http://go.microsoft.com/fwlink/?LinkId=210210). Ten dokument zawiera opis podstawowych pojęć dotyczących zabezpieczeń w odniesieniu do usług sieci web, podstawowe pojęcia zabezpieczeń WCF środowisk intranetowych w aplikacji i scenariusze aplikacji internetowych.  

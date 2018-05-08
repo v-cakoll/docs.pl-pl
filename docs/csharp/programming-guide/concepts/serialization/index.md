@@ -1,22 +1,12 @@
 ---
 title: Serializacja (C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f1b7fde18b59133088d83e3bf948e26b7a7b6aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-c-"></a>Serializacja (C#)
 Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można było zapisać obiekt i przekazuje je do pamięci, bazą danych lub pliku. Głównym celem jest zapisanie stanu obiektu, aby można było utworzyć ją w razie potrzeby ponownie. Odwrotnej proces jest nazywany deserializacji.  
@@ -32,7 +22,7 @@ Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można by�
  Serializacja umożliwia deweloperowi zapisanie stanu obiektu i utwórz go ponownie zgodnie z potrzebami, przeznaczone do przechowywania obiektów, jak również wymiany danych. Za pomocą serializacji, deweloper można wykonać akcji, takich jak wysyłanie obiektu do aplikacji zdalnej przy użyciu usługi sieci Web, przekazanie obiektu z jednej domeny do innej, przekazywanie przez zaporę obiektu jako ciąg XML lub zabezpieczenie lub informacje specyficzne dla użytkownika w aplikacjach.  
   
 ### <a name="making-an-object-serializable"></a>Wprowadzenie do serializacji obiektu  
- Szeregowania obiektu, należy na można zserializować obiektu strumienia zawiera Zserializowany obiekt oraz a <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization>zawiera klasy, które są niezbędne do serializacji i deserializacji obiektów.  
+ Szeregowania obiektu, należy na można zserializować obiektu strumienia zawiera Zserializowany obiekt oraz a <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> zawiera klasy, które są niezbędne do serializacji i deserializacji obiektów.  
   
  Zastosuj <xref:System.SerializableAttribute> atrybut do typu, aby wskazać, że wystąpień tego typu może być Zserializowany. A <xref:System.Runtime.Serialization.SerializationException> jest zgłaszany wyjątek, jeśli próba serializować, ale nie ma typu <xref:System.SerializableAttribute> atrybutu.  
   
@@ -47,7 +37,7 @@ Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można by�
  Serializacja binarna używa kodowania binarnego do generowania compact serializacji dla zastosowań, takich jak pamięci masowej lub sieci opartych na gniazda strumieni.  
   
 ### <a name="xml-serialization"></a>Serializacji XML  
- Serializacja XML serializuje publiczne pola i właściwości obiektu lub parametrów i zwracanych wartościach metod, w strumieniu XML, które odpowiada określonego dokumentu schematu XML definition language (XSD). Wyniki serializacji XML w silnie typizowane klas z właściwości publiczne i pola, które są konwertowane na XML. <xref:System.Xml.Serialization>zawiera klasy, które są niezbędne do serializacji i deserializacji XML.  
+ Serializacja XML serializuje publiczne pola i właściwości obiektu lub parametrów i zwracanych wartościach metod, w strumieniu XML, które odpowiada określonego dokumentu schematu XML definition language (XSD). Wyniki serializacji XML w silnie typizowane klas z właściwości publiczne i pola, które są konwertowane na XML. <xref:System.Xml.Serialization> zawiera klasy, które są niezbędne do serializacji i deserializacji XML.  
   
  Atrybuty można zastosować do klasy i elementów członkowskich klasy, aby kontrolować sposób <xref:System.Xml.Serialization.XmlSerializer> serializuje i deserializuje wystąpienia klasy.  
   
@@ -67,7 +57,7 @@ Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można by�
 ## <a name="designer-serialization"></a>Serializacja projektanta  
  Serializacja projektanta jest specjalna forma serializacji, która obejmuje rodzaj obiektu trwałości zwykle skojarzone z narzędziami programistycznymi. Projektanta serializacji to proces konwertowania z wykresu obiektu na plik źródłowy, który później mogą być używane do odzyskania wykres obiektu. Plik źródłowy może zawierać kod, znaczników lub nawet informacji o tabeli SQL.  
   
-##  <a name="BKMK_RelatedTopics"></a>Tematy pokrewne i przykłady  
+##  <a name="BKMK_RelatedTopics"></a> Tematy pokrewne i przykłady  
  [Wskazówki: Przechowywanie obiektu w programie Visual Studio (C#)](../../../../csharp/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Pokazuje, jak serializacji może służyć do utrwalenia danych obiektu między wystąpieniami, co umożliwia przechowywanie wartości i pobrać je przy następnym utworzeniu wystąpienia obiektu.  
   

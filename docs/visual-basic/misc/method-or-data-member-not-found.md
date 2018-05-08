@@ -1,21 +1,14 @@
 ---
-title: "Nie znaleziono metody lub danych członka."
+title: Nie znaleziono metody lub danych członka.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID461
 ms.assetid: 40b178c3-7dc4-4216-8460-17ff8d9aedf1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e25e24a13e1d8e86dc28f852c23e00717e9d763
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: af6990935a8859e73bdbaf1590a9fb2c6043c0a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="method-or-data-member-not-found"></a>Nie znaleziono metody lub danych członka.
 Nie znaleziono metody lub członka danych, które próbowano uzyskać dostęp.  
@@ -25,4 +18,4 @@ Nie znaleziono metody lub członka danych, które próbowano uzyskać dostęp.
 -   Upewnij się, że nie błędnie nazwę metody lub członka danych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../visual-basic/programming-guide/language-features/error-types.md)
+ [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

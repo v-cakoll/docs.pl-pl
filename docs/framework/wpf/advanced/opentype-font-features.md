@@ -1,13 +1,6 @@
 ---
 title: OpenType funkcje czcionki
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6344fed6cf480e3d3f91a559c99b79f438afa985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8ee4107ee7db20f2948ea9a33ef853815a22665
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
 W tym temacie omówiono niektóre z kluczowych funkcji usługi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] technologii czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -34,7 +22,7 @@ W tym temacie omówiono niektóre z kluczowych funkcji usługi [!INCLUDE[TLA#tla
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Format czcionek OpenType  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Format czcionki jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format czcionki, dodawanie obsługi PostScript dane czcionek. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Format czcionki został opracowany przez wspólnie [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] i Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki i system operacyjny usług których [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki udostępniać użytkownikom prosty sposób instalacji i używania czcionki, czy czcionki zawierać [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] zawiera lub zawiera CFF (PostScript).  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Format czcionki jest rozszerzeniem [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format czcionki, dodawanie obsługi PostScript dane czcionek. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Format czcionki został opracowany przez wspólnie [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] i Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki i system operacyjny usług których [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki udostępniać użytkownikom prosty sposób instalacji i używania czcionki, czy czcionki zawierać [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] zawiera lub zawiera CFF (PostScript).  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Format czcionki uwzględniają następujące problemy developer:  
   
@@ -54,7 +42,7 @@ W tym temacie omówiono niektóre z kluczowych funkcji usługi [!INCLUDE[TLA#tla
  Zobacz [specyfikacji OpenType](http://go.microsoft.com/fwlink/?LinkId=96731) informacji o [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] format czcionki.  
   
 ### <a name="advanced-typographic-extensions"></a>Zaawansowane rozszerzeń związane z typografią  
- Zaawansowane typograficznych tabele ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tabele) rozszerzyć funkcjonalność czcionek przy użyciu jednej [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] lub CFF konturów. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Układ czcionki zawierają dodatkowe informacje, które rozszerza możliwości czcionki do obsługi międzynarodowej typografii wysokiej jakości. Większość [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek narazić tylko podzbiór całkowitej [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] funkcje dostępne. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki zawierają następujące funkcje.  
+ Zaawansowane typograficznych tabele ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tabele) rozszerzyć funkcjonalność czcionek przy użyciu jednej [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] lub CFF konturów. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Układ czcionki zawierają dodatkowe informacje, które rozszerza możliwości czcionki do obsługi międzynarodowej typografii wysokiej jakości. Większość [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek narazić tylko podzbiór całkowitej [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] funkcje dostępne. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki zawierają następujące funkcje.  
   
 -   Rozbudowane mapowanie między znaki oraz symbole, obsługujących ligatur, tj zastępców i innych podstawianie czcionek.  
   
@@ -103,7 +91,7 @@ Tekst przy użyciu OpenType indeksy górne i dolne
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>Literami  
- Wersalików to zbiór typograficzne formularze, które renderowania tekstu w wyglądzie kapitału symboli. Zwykle Po wyrenderowaniu tekstu jako wersaliki odstępów między literami może występować zbyt ścisłej i wagi, jak i część zbyt duże litery. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]obsługuje wiele formatów stylów literami, w tym kapitalików, małych wersalików, tytułowych i inwestycyjne odstępów. Formaty te style pozwala na kontrolowanie wyglądu wersalików.  
+ Wersalików to zbiór typograficzne formularze, które renderowania tekstu w wyglądzie kapitału symboli. Zwykle Po wyrenderowaniu tekstu jako wersaliki odstępów między literami może występować zbyt ścisłej i wagi, jak i część zbyt duże litery. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] obsługuje wiele formatów stylów literami, w tym kapitalików, małych wersalików, tytułowych i inwestycyjne odstępów. Formaty te style pozwala na kontrolowanie wyglądu wersalików.  
   
  Następujący tekst zawiera standardowe wielkimi literami czcionki Pescadero, a następnie liter jako "SmallCaps" i "AllSmallCaps". W takim przypadku ten sam rozmiar czcionki jest używany dla wszystkich trzech słów.  
   
@@ -136,7 +124,7 @@ Tekst przy użyciu odstępy kapitału OpenType
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Ligatur  
- Ligatury są dwa lub więcej symboli utworzonych w jednym symbolu, aby można było utworzyć bardziej czytelny i atrakcyjność tekstu. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki są obsługiwane cztery typy ligatur:  
+ Ligatury są dwa lub więcej symboli utworzonych w jednym symbolu, aby można było utworzyć bardziej czytelny i atrakcyjność tekstu. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki są obsługiwane cztery typy ligatur:  
   
 -   **Ligatury**. Zaprojektowany w celu zwiększenia czytelności. Ligatury obejmują "fi", "fl" i "one".  
   
@@ -206,7 +194,7 @@ Tekst kontekstowe symbole kaligraficzne OpenType
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Przełącza  
- Zastępcy są symbole, które mogą zastąpić standardowe symbolu. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki, takie jak Perykles czcionkę w poniższych przykładach, mogą zawierać alternatywne symbole, których można utworzyć różne typy wyglądu tekstu. Następujący tekst zawiera standardowe symboli czcionki Perykles.  
+ Zastępcy są symbole, które mogą zastąpić standardowe symbolu. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki, takie jak Perykles czcionkę w poniższych przykładach, mogą zawierać alternatywne symbole, których można utworzyć różne typy wyglądu tekstu. Następujący tekst zawiera standardowe symboli czcionki Perykles.  
   
  ![Tekst standardowy symbole OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")  
 Tekst standardowy symbole OpenType  
@@ -254,7 +242,7 @@ Tekst historyczne formy OpenType
  Czcionek OpenType obsługuje wiele funkcji, które mogą być używane z wartości liczbowe w tekście.  
   
 ### <a name="fractions"></a>Ułamków  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki obsługę ułamków, w tym przekreślonych i skumulowany style.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki obsługę ułamków, w tym przekreślonych i skumulowany style.  
   
  Następujący tekst Wyświetla ułamek style czcionki Book Antiqua.  
   
@@ -266,7 +254,7 @@ Tekst przy użyciu OpenType ukośną i ułamków piętrowych
  [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Stary styl cyfr  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki obsługuje stary styl format liczb. Ten format jest przydatne w przypadku wyświetlanie liczb w style, które nie są już standardowa. Następujący tekst Wyświetla datę 18 wieku formatów liczb standardowe i stary styl czcionki Book Antiqua.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki obsługuje stary styl format liczb. Ten format jest przydatne w przypadku wyświetlanie liczb w style, które nie są już standardowa. Następujący tekst Wyświetla datę 18 wieku formatów liczb standardowe i stary styl czcionki Book Antiqua.  
   
  ![Tekst przy użyciu OpenType starego stylu antykwy](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
 Tekst przy użyciu OpenType stary styl cyfr  
@@ -281,7 +269,7 @@ Tekst przy użyciu starego zestawy liczb OpenType stylu
  [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Rysunki proporcjonalne i tabelaryczne  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki obsługuje funkcji rysunek proporcjonalne i tabelaryczne celu sterowania wyrównaniem szerokości, korzystając z cyfr. Rysunki proporcjonalne zaliczenie o różnych szerokości każdego liczb, "1" jest mniejsza niż "5". Dane tabelaryczne są traktowane jako szerokość równości cyfry tak, aby ich wyrównane w pionie, co zwiększa czytelność informacji o typie finansowych.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki obsługuje funkcji rysunek proporcjonalne i tabelaryczne celu sterowania wyrównaniem szerokości, korzystając z cyfr. Rysunki proporcjonalne zaliczenie o różnych szerokości każdego liczb, "1" jest mniejsza niż "5". Dane tabelaryczne są traktowane jako szerokość równości cyfry tak, aby ich wyrównane w pionie, co zwiększa czytelność informacji o typie finansowych.  
   
  Następujący tekst Wyświetla dwóch liczb proporcjonalnych w pierwszej kolumnie przy użyciu czcionki Miramonte. Należy zwrócić uwagę różnicy w szerokość cyfry "5" i "1". Druga kolumna przedstawia tego samego dwóch wartości liczbowych z szerokości dostosowane przy użyciu funkcji rysunek tabelarycznych.  
   
@@ -293,7 +281,7 @@ Tekst przy użyciu OpenType proporcjonalne i tabelaryczne dane
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Przekreślone Zero  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]czcionki obsługuje przekreślonych zero format liczb do wyróżnienia różnica między litera "O" i liczb, "0". Przekreślonych zero liczb jest często używana dla identyfikatorów informacje finansowe i biznesowe.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki obsługuje przekreślonych zero format liczb do wyróżnienia różnica między litera "O" i liczb, "0". Przekreślonych zero liczb jest często używana dla identyfikatorów informacje finansowe i biznesowe.  
   
  Następujący tekst zawiera identyfikator zamówienia próbki, przy użyciu czcionki Miramonte. Pierwszy wiersz używa standardowych cyfr. Drugi wiersz używane ukośną zero cyfr, aby zapewnić lepsze kontrastu wielkiej litery "E".  
   

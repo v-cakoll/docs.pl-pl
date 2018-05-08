@@ -1,14 +1,6 @@
 ---
-title: "Label — Informacje o formancie (Formularze systemu Windows)"
-ms.custom: 
+title: Label — Informacje o formancie (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Label
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f68642eb5f996722097976e042006afbf366ae39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5ad4416703e20a8e00299d496d360e1e84005a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="label-control-overview-windows-forms"></a>Label — Informacje o formancie (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Label> formanty są używane do wyświetlania tekstu lub obrazów, które nie mogą być edytowane przez użytkownika. Są one używane do identyfikowania obiektów na formularzu — podaj opis jaką dany formant będzie wykonywać na przykład po kliknięciu lub wyświetlać informacje w odpowiedzi na zdarzenie środowiska wykonawczego lub proces w aplikacji. Na przykład można etykiety Dodawanie opisową podpisów do pól tekstowych, pola listy, pola kombi itd. Można również napisać kod, który zmienia tekst wyświetlany przez etykiety w odpowiedzi na zdarzenia w czasie wykonywania. Na przykład aplikacja zajmuje kilka minut przetwarzania zmian, można wyświetlić komunikat o stanie przetwarzania w etykiecie.  

@@ -1,24 +1,12 @@
 ---
 title: Komunikacja jednokierunkowa
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a781963205f260c82d3db316680c9e8c33045434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cb3619d56720333f23d933a8f356e8b0268c4d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way"></a>Komunikacja jednokierunkowa
 W przykładzie pokazano kontaktu usługi z usługi jednokierunkowej operacji. Klient czeka na zakończenie jak w przypadku operacji usługi dwukierunkowe operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i używa `wsHttpBinding` powiązania. Usługa w tym przykładzie jest aplikacji konsoli siebie umożliwia obserwowanie usługa, która odbiera i przetwarza żądania. Klient jest również aplikacji konsoli.  
@@ -95,7 +83,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP jest zgodnie z definicją protokołu żądań i odpowiedzi; Po wysłaniu żądania odpowiedź jest zwracana. Dotyczy to nawet w przypadku operacji jednokierunkowych usługi uwidocznionego za pośrednictwem protokołu HTTP. Po wywołaniu operacji usługi zwraca kod stanu HTTP 202 przed wykonał operacji usługi. Ten kod stanu oznacza, że żądanie zostało zaakceptowane do przetwarzania, ale przetwarzanie nie zostało jeszcze zakończone. Klient, który wywołał operację bloków, dopóki nie odbierze 202 odpowiedzi z usługi. To może spowodować niektórych nieoczekiwanego zachowania, gdy wiele jednokierunkowe komunikaty są wysyłane przy użyciu powiązania, który jest skonfigurowany do używania sesji. `wsHttpBinding` Powiązania używanego w tym przykładzie jest skonfigurowany do używania sesji, aby domyślnie ustanowić kontekst zabezpieczeń. Domyślnie wiadomości w sesji dotrą do celu w kolejności, w jakiej są wysyłane. W związku z tym gdy drugi komunikat w sesji jest wysyłany, nie został przetworzony dopóki pierwszy komunikat został przetworzony. Wynik jest, że klient odbiera 202 odpowiedzi na wiadomość dopiero po ukończeniu przetwarzania poprzedniej wiadomości. Klient jest wyświetlany w związku z tym do bloku przy każdym wywołaniu kolejnych operacji. Aby uniknąć tego zachowania, ten przykład konfiguruje środowiska uruchomieniowego do wysyłania wiadomości do jednocześnie odrębnych wystąpień do przetwarzania. Ustawia próbki <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> do `PerCall` tak, aby każdy komunikat mogą być przetwarzane przez inne wystąpienie. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>ustawiono `Multiple` zezwalająca na więcej niż jeden wątek na wysyłanie wiadomości w czasie.  
+>  HTTP jest zgodnie z definicją protokołu żądań i odpowiedzi; Po wysłaniu żądania odpowiedź jest zwracana. Dotyczy to nawet w przypadku operacji jednokierunkowych usługi uwidocznionego za pośrednictwem protokołu HTTP. Po wywołaniu operacji usługi zwraca kod stanu HTTP 202 przed wykonał operacji usługi. Ten kod stanu oznacza, że żądanie zostało zaakceptowane do przetwarzania, ale przetwarzanie nie zostało jeszcze zakończone. Klient, który wywołał operację bloków, dopóki nie odbierze 202 odpowiedzi z usługi. To może spowodować niektórych nieoczekiwanego zachowania, gdy wiele jednokierunkowe komunikaty są wysyłane przy użyciu powiązania, który jest skonfigurowany do używania sesji. `wsHttpBinding` Powiązania używanego w tym przykładzie jest skonfigurowany do używania sesji, aby domyślnie ustanowić kontekst zabezpieczeń. Domyślnie wiadomości w sesji dotrą do celu w kolejności, w jakiej są wysyłane. W związku z tym gdy drugi komunikat w sesji jest wysyłany, nie został przetworzony dopóki pierwszy komunikat został przetworzony. Wynik jest, że klient odbiera 202 odpowiedzi na wiadomość dopiero po ukończeniu przetwarzania poprzedniej wiadomości. Klient jest wyświetlany w związku z tym do bloku przy każdym wywołaniu kolejnych operacji. Aby uniknąć tego zachowania, ten przykład konfiguruje środowiska uruchomieniowego do wysyłania wiadomości do jednocześnie odrębnych wystąpień do przetwarzania. Ustawia próbki <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> do `PerCall` tak, aby każdy komunikat mogą być przetwarzane przez inne wystąpienie. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> ustawiono `Multiple` zezwalająca na więcej niż jeden wątek na wysyłanie wiadomości w czasie.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
   
@@ -113,7 +101,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   

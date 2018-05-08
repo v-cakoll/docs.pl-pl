@@ -1,29 +1,17 @@
 ---
-title: "Podsumowanie informacji o technologii formantów ToolStrip"
-ms.custom: 
+title: Podsumowanie informacji o technologii formantów ToolStrip
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], technology summary
 - status bars [Windows Forms], technology summary
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4777a6cb30f641faf2305bc6d8bca55d243c94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4f7b13590457623bbdfd6e4c07317f3a0285fd0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-technology-summary"></a>Podsumowanie informacji o technologii formantów ToolStrip
 Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klasy, które obsługują jej zastosowania.  
@@ -54,7 +42,7 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klasy, które
   
 -   Scalanie `ToolStrip` steruje przy użyciu `ToolStripPanel`.  
   
- `ToolStrip`jest rozszerzalny klasę podstawową dla `MenuStrip`, `ContextMenuStrip`, i `StatusStrip`. Te procedury są <xref:System.Windows.Forms.ToolStripItem> kontenerów, które dziedziczą wspólnego zachowania i obsługa zdarzeń rozszerzony tak, aby każda implementacja podchodzi do zachowania, które jest odpowiednie dla niego. Formanty, które pochodzą z <xref:System.Windows.Forms.ToolStripItem> są wymienione w poniższej tabeli. Podstawowym `ToolStrip` klasa obsługuje malowanie, dane wejściowe użytkownika i przeciągnij i upuść zdarzenia dla tych kontrolek.  
+ `ToolStrip` jest rozszerzalny klasę podstawową dla `MenuStrip`, `ContextMenuStrip`, i `StatusStrip`. Te procedury są <xref:System.Windows.Forms.ToolStripItem> kontenerów, które dziedziczą wspólnego zachowania i obsługa zdarzeń rozszerzony tak, aby każda implementacja podchodzi do zachowania, które jest odpowiednie dla niego. Formanty, które pochodzą z <xref:System.Windows.Forms.ToolStripItem> są wymienione w poniższej tabeli. Podstawowym `ToolStrip` klasa obsługuje malowanie, dane wejściowe użytkownika i przeciągnij i upuść zdarzenia dla tych kontrolek.  
   
  `ToolStrip`, `MenuStrip`, `ContextMenuStrip`, I `StatusStrip` formanty zastąpienie poprzednich narzędzi, menu, menu skrótów i formanty paska stanu, mimo że te rozwiązania, zostaną zachowane dla zgodności z poprzednimi wersjami.  
   
@@ -101,7 +89,7 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klasy, które
  Przykład hosting formatów, zobacz [porady: zawijanie formantu formularzy systemu Windows za pomocą elementu ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Renderowanie  
- <xref:System.Windows.Forms.ToolStrip>klasy implementować schemat renderowania, który znacznie różni się od innych formantów formularzy systemu Windows. Ten schemat można łatwo zastosować stylów i motywów.  
+ <xref:System.Windows.Forms.ToolStrip> klasy implementować schemat renderowania, który znacznie różni się od innych formantów formularzy systemu Windows. Ten schemat można łatwo zastosować stylów i motywów.  
   
  Aby zastosować styl <xref:System.Windows.Forms.ToolStrip> i wszystkie <xref:System.Windows.Forms.ToolStripItem> zawarte w nim obiekty, nie trzeba obsłużyć <xref:System.Windows.Forms.ToolStripItem.Paint> zdarzeń dla każdego elementu. Zamiast tego można ustawić <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> jedną z właściwości <xref:System.Windows.Forms.ToolStripRenderMode> wartości innych niż <xref:System.Windows.Forms.ToolStripRenderMode.Custom>. Alternatywnie, można ustawić <xref:System.Windows.Forms.ToolStrip.Renderer%2A> bezpośrednio do dowolnej klasy, która dziedziczy <xref:System.Windows.Forms.ToolStripRenderer> klasy. Ustawienie tej właściwości automatycznie ustawia <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>.  
   
@@ -110,10 +98,10 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klasy, które
  Przykłady renderowania można znaleźć [jak: utworzyć i ustawić niestandardowego modułu renderowania dla formantu ToolStrip w formularzach systemu Windows](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
   
 ## <a name="styles-and-themes"></a>Style i motywów  
- <xref:System.Windows.Forms.ToolStrip>i skojarzonych klas umożliwiają łatwe do obsługi style wizualne i wyglądu niestandardowych, które nie wymagają zastępowanie <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> metody dla każdego elementu. Użyj <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> i <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> i <xref:System.Windows.Forms.ToolStrip.Renderer%2A> właściwości.  
+ <xref:System.Windows.Forms.ToolStrip> i skojarzonych klas umożliwiają łatwe do obsługi style wizualne i wyglądu niestandardowych, które nie wymagają zastępowanie <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> metody dla każdego elementu. Użyj <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> i <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> i <xref:System.Windows.Forms.ToolStrip.Renderer%2A> właściwości.  
   
 ## <a name="rafting-and-docking"></a>Rafting i dokowanie  
- Można raft, dock lub umieść absolutnie <xref:System.Windows.Forms.ToolStrip> kontrolki. <xref:System.Windows.Forms.ToolStrip>układ elementów <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> kontenera.  
+ Można raft, dock lub umieść absolutnie <xref:System.Windows.Forms.ToolStrip> kontrolki. <xref:System.Windows.Forms.ToolStrip> układ elementów <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> kontenera.  
   
  *Rafting* jest możliwość udostępniania miejsca pozioma lub pionowa pasków narzędzi. Formularz systemu Windows może mieć <xref:System.Windows.Forms.ToolStripContainer> która z kolei ma panele na formularza lewo, prawo górnej i dolnej krawędzi pozycjonowanie i rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.StatusStrip> kontrolki. Wiele <xref:System.Windows.Forms.ToolStrip> formanty pionowo stosu umieszczenie w lewo lub w prawo <xref:System.Windows.Forms.ToolStripContainer>. One poziomie stosu umieszczenie w górny lub dolny <xref:System.Windows.Forms.ToolStripContainer>. Można użyć centralną <xref:System.Windows.Forms.ToolStripContentPanel> z <xref:System.Windows.Forms.ToolStripContainer> do tradycyjnych formanty pozycji na formularzu.  
   

@@ -1,30 +1,19 @@
 ---
-title: "Porady: tworzenie Projektant działań niestandardowych"
-ms.custom: 
+title: 'Porady: tworzenie Projektant działań niestandardowych'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4aab60a598be2d6df5546ab1c98a289b4aef04a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Porady: tworzenie Projektant działań niestandardowych
 Projektantów działań niestandardowych są zwykle implementowany ich działania skojarzone są zezwala na składanie z innymi działaniami projektantów, których można było porzucić na powierzchnię projektu z nimi. Ta funkcja wymaga, Projektant działań niestandardowych podania "strefy docelowej" rozmieszczenia dowolne działanie, a także sposób zarządzania wynikowy zbiór elementów na powierzchnię projektu. W tym temacie opisano, jak utworzyć projektanta działań niestandardowych, który zawiera strefy docelowej i jak utworzyć designer działania niestandardowego, który zapewnia, że funkcji edytowania potrzebne do zarządzania kolekcję elementów projektanta.  
   
  Zwykle dziedziczyć projektantów działań niestandardowych <xref:System.Activities.Presentation.ActivityDesigner> czyli domyślny typ projektanta działanie podstawowe dla dowolnego działania bez określonego projektanta. Ten typ zapewnia środowisko czasu projektowania interakcji z siatką właściwości i konfigurowania podstawowych aspektów, takie jak zarządzanie, kolory i ikon.  
   
- <xref:System.Activities.Presentation.ActivityDesigner>używa dwóch formantów pomocnika, <xref:System.Activities.Presentation.WorkflowItemPresenter> i <xref:System.Activities.Presentation.WorkflowItemsPresenter> ułatwiające opracowanie projektantów działań niestandardowych. Obsługują typowych funkcji, takich jak przeciąganie i upuszczanie elementów podrzędnych, usuwanie, wybór i dodanie tych elementów podrzędnych. <xref:System.Activities.Presentation.WorkflowItemPresenter> Umożliwia pojedynczy element potomny elementu interfejsu użytkownika wewnątrz "strefy docelowej", podając go podczas <xref:System.Activities.Presentation.WorkflowItemsPresenter> zapewniają obsługuje wiele elementów interfejsu użytkownika, takie jak dodatkowe funkcje, takie jak kolejność, przenoszenie i dodawanie elementów podrzędnych.  
+ <xref:System.Activities.Presentation.ActivityDesigner> używa dwóch formantów pomocnika, <xref:System.Activities.Presentation.WorkflowItemPresenter> i <xref:System.Activities.Presentation.WorkflowItemsPresenter> ułatwiające opracowanie projektantów działań niestandardowych. Obsługują typowych funkcji, takich jak przeciąganie i upuszczanie elementów podrzędnych, usuwanie, wybór i dodanie tych elementów podrzędnych. <xref:System.Activities.Presentation.WorkflowItemPresenter> Umożliwia pojedynczy element potomny elementu interfejsu użytkownika wewnątrz "strefy docelowej", podając go podczas <xref:System.Activities.Presentation.WorkflowItemsPresenter> zapewniają obsługuje wiele elementów interfejsu użytkownika, takie jak dodatkowe funkcje, takie jak kolejność, przenoszenie i dodawanie elementów podrzędnych.  
   
  Inne część klucza artykuł, który wymaga wyróżnianie w implementacji Projektant działań niestandardowych dotyczy sposób, w którym zmiany wizualne są powiązane za pomocą [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] wiązanie danych do wystąpienia przechowywane w pamięci, co możemy edycji w projektancie. Jest to osiągane przez drzewo element modelu, w którym jest również odpowiada za włączanie powiadomienia o zmianie i śledzenia zdarzeń, takich jak zmiany stanów.  
   

@@ -1,31 +1,17 @@
 ---
 title: Konfigurowanie usług i klientów za pomocą powiązań
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Konfigurowanie usług i klientów za pomocą powiązań
-Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do połączenia z punktem końcowym. W szczególności powiązania zawierają informacje o konfiguracji, który jest używany do tworzenia środowiska uruchomieniowego klienta lub usługę, definiując specyfice transportów, formatów łańcuchowych (kodowania wiadomości) i protokoły dla odpowiednich kanału klienta lub punktu końcowego. Aby utworzyć działanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi, powiązanie wymaga każdego punktu końcowego w usłudze. W tym temacie opisano powiązania są, jak są definiowane i jak określono konkretnego powiązanie dla punktu końcowego.  
+Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do połączenia z punktem końcowym. W szczególności powiązania zawierają informacje o konfiguracji, który jest używany do tworzenia środowiska uruchomieniowego klienta lub usługę, definiując specyfice transportów, formatów łańcuchowych (kodowania wiadomości) i protokoły dla odpowiednich kanału klienta lub punktu końcowego. Do utworzenia działającym usługi Windows Communication Foundation (WCF), każdy punkt końcowy usługi wymaga powiązania. W tym temacie opisano powiązania są, jak są definiowane i jak określono konkretnego powiązanie dla punktu końcowego.  
   
 ## <a name="what-a-binding-defines"></a>Definiuje powiązanie  
  Informacje w powiązaniu mogą być bardzo podstawowe lub bardzo złożone. Najbardziej podstawowa powiązanie określa tylko protokół transportu (np. HTTP), który musi być używany do łączenia się z punktem końcowym. Ogólnie rzecz biorąc powiązanie zawiera informacje o tym, jak nawiązać połączenia z punktem końcowym należy do jednej kategorii w poniższej tabeli.  

@@ -1,11 +1,6 @@
 ---
-title: "AndAlso — Operator (Visual Basic)"
+title: AndAlso — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AndAlso
 - AndAlso
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 549d14cc35d285ac2e4a02a37dd201cc669c5627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso — Operator (Visual Basic)
 Wykonuje skrótowe połączenie logiczne dwóch wyrażeń.  
@@ -38,9 +30,9 @@ result = expression1 AndAlso expression2
   
 |Termin|Definicja|  
 |---|---|  
-|`result`|Wymagany. Wszelkie `Boolean` wyrażenia. W rezultacie `Boolean` wynik porównania dwóch wyrażeń.|  
-|`expression1`|Wymagany. Wszelkie `Boolean` wyrażenia.|  
-|`expression2`|Wymagany. Wszelkie `Boolean` wyrażenia.|  
+|`result`|Wymagana. Wszelkie `Boolean` wyrażenia. W rezultacie `Boolean` wynik porównania dwóch wyrażeń.|  
+|`expression1`|Wymagana. Wszelkie `Boolean` wyrażenia.|  
+|`expression2`|Wymagana. Wszelkie `Boolean` wyrażenia.|  
   
 ## <a name="remarks"></a>Uwagi  
  Operacja logiczna jest określany jako *zwarcie* Jeśli skompilowanego kodu można pominąć obliczania jednego wyrażenia w zależności od wyniku innego wyrażenia. Jeśli wynik pierwsze wyrażenie obliczane określa końcowego wyniku operacji, jest niepotrzebna można oszacować wyrażenia drugiego, ponieważ nie można zmienić wynik końcowy. Zwarcie może zwiększyć wydajność, jeśli pominięto wyrażenie jest złożony, czy obejmuje on wywołań procedur.  
@@ -75,6 +67,6 @@ result = expression1 AndAlso expression2
  [Operatory logiczne/bitowe (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [And — Operator](../../../visual-basic/language-reference/operators/and-operator.md)  
- [IsFalse — Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [And, operator](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [IsFalse, operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
  [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

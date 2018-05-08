@@ -1,29 +1,15 @@
 ---
 title: 'Porady: Mapowanie relacji w bazie danych'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: b283c2235ce0b6b407acfb52f81b15a26a3c00a0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c3ae138134682f35ae42c99cc6434dae9ec1103d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-map-database-relationships"></a>Porady: Mapowanie relacji w bazie danych
 Może zakodować jako właściwość odwołuje się w klasie jednostki relacji między danymi, które będą zawsze taki sam. W bazie danych Northwind na przykład, ponieważ klienci zwykle składanie zamówień, istnieje zawsze relacja modelu między klientów i zamówienia.  

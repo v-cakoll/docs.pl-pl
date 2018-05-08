@@ -1,31 +1,20 @@
 ---
 title: Wytyczne dotyczące projektowania elementu członkowskiego
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
 - members [.NET Framework], design guidelines
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8f4e33735a934b1ac41c34ccb9698c172ada28e1
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="member-design-guidelines"></a>Wytyczne dotyczące projektowania elementu członkowskiego
 Metody, właściwości, zdarzenia, konstruktorów i pól zbiorowo są określane jako elementy członkowskie. Elementy członkowskie są ostatecznie oznacza za pomocą którego funkcji framework jest narażony na użytkowników końcowych RAM.  

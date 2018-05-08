@@ -1,13 +1,7 @@
 ---
-title: "Porady: przewidywanie warunków braku miejsca w izolowanym magazynie"
-ms.custom: 
+title: 'Porady: przewidywanie warunków braku miejsca w izolowanym magazynie'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,25 +22,20 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Porady: przewidywanie warunków braku miejsca w izolowanym magazynie
 Kod, który korzysta z magazynu izolowanego jest ograniczane przez [przydziału](../../../docs/standard/io/isolated-storage.md#quotas) , który określa maksymalny rozmiar dla przedziału danych, w którym odizolowane pliki i katalogi istnieją. Limit przydziału jest definiowana za pomocą zasad zabezpieczeń i jest konfigurowane przez administratorów. Jeśli maksymalny dozwolony rozmiar jest przekroczony podczas próby zapisu danych, <xref:System.IO.IsolatedStorage.IsolatedStorageException> wyjątku i kończy się niepowodzeniem. Pomaga to zapobiec złośliwymi atakami typu "odmowa usługi", które może spowodować aplikacji odrzucać żądania, ponieważ Magazyn danych jest wypełnione.  
   
  Aby ułatwić określenie, czy mogą kończyć się niepowodzeniem z tego powodu, próba zapisu danego <xref:System.IO.IsolatedStorage.IsolatedStorage> klasa udostępnia trzy właściwości tylko do odczytu: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>, i <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Te właściwości można użyć do określenia, czy zapisywanie w magazynie spowoduje, że maksymalny dozwolony rozmiar magazynu przekroczenie. Należy pamiętać, że izolowanego magazynu jest możliwy jednocześnie; w związku z tym obliczeniowe ilości pozostałego miejsca, miejsca do magazynowania może być używane podczas próby zapisu w magazynie. Jednak służy maksymalny rozmiar magazynu w celu określenia, czy górny limit na dostępny magazyn o się można nawiązać połączenia.  
   
- <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> Właściwość zależy od dowód z zestawu do poprawnego działania. Z tego powodu tej właściwości powinno pobrać tylko na <xref:System.IO.IsolatedStorage.IsolatedStorageFile> obiektów, które zostały utworzone przy użyciu <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, lub <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> metody. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>obiekty, które zostały utworzone w inny sposób (na przykład w przypadku obiektów, które zostały zwrócone z <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> metoda) nie zwróci odpowiedni rozmiar maksymalny.  
+ <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> Właściwość zależy od dowód z zestawu do poprawnego działania. Z tego powodu tej właściwości powinno pobrać tylko na <xref:System.IO.IsolatedStorage.IsolatedStorageFile> obiektów, które zostały utworzone przy użyciu <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, lub <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> metody. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> obiekty, które zostały utworzone w inny sposób (na przykład w przypadku obiektów, które zostały zwrócone z <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> metoda) nie zwróci odpowiedni rozmiar maksymalny.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykładowy kod uzyskuje izolowanego magazynu tworzy kilka plików i pobiera <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A> właściwości. Pozostałe miejsce jest zgłaszana w bajtach.  

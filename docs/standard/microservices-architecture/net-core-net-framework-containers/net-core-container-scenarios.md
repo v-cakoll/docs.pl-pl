@@ -1,21 +1,14 @@
 ---
-title: "Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d9489bca5ac69046818a1809b2f3082baea1eaa8
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 4e2585d7fdeb89e7267f2615113f819d71236dc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 

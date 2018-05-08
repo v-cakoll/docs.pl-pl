@@ -1,13 +1,6 @@
 ---
-title: "Podstawowe operacje zapytań (Visual Basic)"
-ms.custom: 
+title: Podstawowe operacje zapytań (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data sources [LINQ in Visual Basic]
 - Join clause [LINQ in Visual Basic]
@@ -22,14 +15,11 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 794d77a18b50cc1667fddbad17c46735ae91be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5587a60e97464324659b325e38a18ac25488d30d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-query-operations-visual-basic"></a>Podstawowe operacje zapytań (Visual Basic)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia w Visual Basic i niektórych typowych rodzajów operacji wykonywanych w zapytaniu. Więcej informacji znajduje się w następujących tematach:  
@@ -118,7 +108,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
   
- `Group Join`łączy kolekcji do pojedynczego hierarchiczną kolekcję, tak jak `LEFT JOIN` w języku SQL. Aby uzyskać więcej informacji, zobacz [klauzuli Join](../../../../visual-basic/language-reference/queries/join-clause.md) i [klauzuli Join grupy](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
+ `Group Join` łączy kolekcji do pojedynczego hierarchiczną kolekcję, tak jak `LEFT JOIN` w języku SQL. Aby uzyskać więcej informacji, zobacz [klauzuli Join](../../../../visual-basic/language-reference/queries/join-clause.md) i [klauzuli Join grupy](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
   
 ## <a name="grouping-data-group-by"></a>Grupowanie danych (grupuj według)  
  Możesz dodać `Group By` klauzuli grupować elementy znajdujące się w wyniku zapytania, zgodnie z polami co najmniej jeden z elementów. Na przykład następujący kod grupy studentów przez rok klasy.  

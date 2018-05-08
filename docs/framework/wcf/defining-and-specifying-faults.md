@@ -1,14 +1,6 @@
 ---
 title: Definiowanie i określanie błędów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definiowanie i określanie błędów
-Błąd warunku informacji z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjne przedstawienia błędach SOAP W tym temacie omówiono, kiedy i jak definiowanie zawartości błędów niestandardowych i określ, jakie operacje może zwracać je. Aby uzyskać więcej informacji dotyczących sposobu usługi lub klienta dupleksu może wysyłać te błędy i sposób obsługi tych błędów w aplikacji klienta lub usługi, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Omówienie obsługi błędów w [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Błąd warunku informacji z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjne przedstawienia błędach SOAP W tym temacie omówiono, kiedy i jak definiowanie zawartości błędów niestandardowych i określ, jakie operacje może zwracać je. Aby uzyskać więcej informacji dotyczących sposobu usługi lub klienta dupleksu może wysyłać te błędy i sposób obsługi tych błędów w aplikacji klienta lub usługi, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Omówienie  
  Zadeklarowany w błędach SOAP są te, w których ma operacji <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> , który określa typ niestandardowy błędu protokołu SOAP. Niezadeklarowany błędach SOAP są tymi, które nie są określone w umowie dla operacji. Ten temat pomaga zidentyfikować te warunki błędów i tworzenie usterki kontraktu usługi używanego przez klientów do poprawnie obsługiwać te warunki błędów przy powiadomieniu przez niestandardowe błędach SOAP. Podstawowe zadania znajdują się w kolejności:  

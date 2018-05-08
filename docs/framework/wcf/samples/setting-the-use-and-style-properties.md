@@ -1,24 +1,12 @@
 ---
-title: "Ustawianie właściwości Use i Style"
-ms.custom: 
+title: Ustawianie właściwości Use i Style
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f69ce60e6c9ab98ef773fa54b1c057d3c2b3b48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74d5baca77fd1af6260def762094b3ce01816179
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-use-and-style-properties"></a>Ustawianie właściwości Use i Style
 W tym przykładzie przedstawiono sposób użycia właściwości Use i Style na <xref:System.ServiceModel.XmlSerializerFormatAttribute> i <xref:System.ServiceModel.DataContractFormatAttribute>. Te właściwości mają wpływ na sposób sformatowanych komunikatów. Domyślnie treść komunikatu jest sformatowany przy użyciu stylu ustawioną <xref:System.ServiceModel.OperationFormatStyle.Document>. Te ustawienia można określić w poziomie kontrakt usługi lub na poziomie kontrakt operacji.  
@@ -84,7 +72,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- Różnice między różnymi <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> i <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ustawienia, zmodyfikuj je w usłudze, ponownie wygenerować klienta uruchomić przykładowy i zapoznaj się z plikiem c:\logs\message.logs za pomocą narzędzia podglądu śledzenia usługi. Wyświetlając http://localhost/ServiceModelSamples/service.svc?wsdl również obserwować wpływ na metadanych. Metadane dla usługi jest zwykle podzielony na wiele stron. Na stronie głównej wsdl zawiera powiązania WSDL, ale wyświetlać http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 obserwować definicje wiadomości.  
+ Różnice między różnymi <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> i <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ustawienia, zmodyfikuj je w usłudze, ponownie wygenerować klienta uruchomić przykładowy i zapoznaj się z plikiem c:\logs\message.logs za pomocą narzędzia podglądu śledzenia usługi. Również obserwować wpływ na metadane, wyświetlając http://localhost/ServiceModelSamples/service.svc?wsdl. Metadane dla usługi jest zwykle podzielony na wiele stron. Na stronie głównej wsdl zawiera powiązania WSDL, ale wyświetlać http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 obserwować definicje wiadomości.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
   
@@ -101,7 +89,7 @@ public interface IUseAndStyleCalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`  
   

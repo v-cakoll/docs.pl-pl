@@ -1,13 +1,6 @@
 ---
-title: "Pędzle i wypełnione kształty w GDI+"
-ms.custom: 
+title: Pędzle i wypełnione kształty w GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9475518a5f0422e0eac1ec521088071bb4d1c885
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pędzle i wypełnione kształty w GDI+
-Kształt zamknięty, takich jak prostokąta lub elipsy składa się z konspektu i wewnętrzne. Konspekt jest rysowane przy użyciu pióra i wewnętrznych jest wypełniony pędzla. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]udostępnia kilka klas pędzla do wypełniania wnętrza kształty zamknięte: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, i <xref:System.Drawing.Drawing2D.PathGradientBrush>. Wszystkie te klasy dziedziczy <xref:System.Drawing.Brush> klasy. Na poniższej ilustracji przedstawiono wypełniony prostokąt z pędzla pełnego koloru i elipsy wypełniany pędzla kreskowania.  
+Kształt zamknięty, takich jak prostokąta lub elipsy składa się z konspektu i wewnętrzne. Konspekt jest rysowane przy użyciu pióra i wewnętrznych jest wypełniony pędzla. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia kilka klas pędzla do wypełniania wnętrza kształty zamknięte: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, i <xref:System.Drawing.Drawing2D.PathGradientBrush>. Wszystkie te klasy dziedziczy <xref:System.Drawing.Brush> klasy. Na poniższej ilustracji przedstawiono wypełniony prostokąt z pędzla pełnego koloru i elipsy wypełniany pędzla kreskowania.  
   
  ![Wypełnione kształty](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -51,7 +39,7 @@ Kształt zamknięty, takich jak prostokąta lub elipsy składa się z konspektu 
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]zawiera więcej niż 50 Styl kreskowania; są trzy style pokazano na poniższej ilustracji <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, i <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zawiera więcej niż 50 Styl kreskowania; są trzy style pokazano na poniższej ilustracji <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, i <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Wypełnione kształty](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -70,7 +58,7 @@ Kształt zamknięty, takich jak prostokąta lub elipsy składa się z konspektu 
  ![Wypełniony kształt](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Pędzle gradientów  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]zawiera dwa rodzaje pędzle gradientów: liniowej i ścieżkę. Wypełnianie kształtów z kolor, który zmienia się stopniowo przenoszenia między kształtu w poziomie, w pionie albo pod kątem umożliwia pędzla gradientu liniowego. Poniższy przykład kodu pokazuje, jak umożliwia wypełnienie elipsy pędzla gradientów poziomie zmieni się z blue zielony, jak przenieść od lewej krawędzi elipsy do prawej krawędzi.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zawiera dwa rodzaje pędzle gradientów: liniowej i ścieżkę. Wypełnianie kształtów z kolor, który zmienia się stopniowo przenoszenia między kształtu w poziomie, w pionie albo pod kątem umożliwia pędzla gradientu liniowego. Poniższy przykład kodu pokazuje, jak umożliwia wypełnienie elipsy pędzla gradientów poziomie zmieni się z blue zielony, jak przenieść od lewej krawędzi elipsy do prawej krawędzi.  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

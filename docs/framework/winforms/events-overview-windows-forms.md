@@ -1,13 +1,6 @@
 ---
-title: "Formularze systemu Windows — przegląd zdarzeń"
-ms.custom: 
+title: Formularze systemu Windows — przegląd zdarzeń
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, event handling
 - events [Windows Forms], about events
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f73a336da5b61de90a67a8392b5cfc8f28619254
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79d1ba122bd78b33fbc675ea0b0ec681005819cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-overview-windows-forms"></a>Formularze systemu Windows — przegląd zdarzeń
 Zdarzenie jest działaniem, które mogą odpowiadać na lub "obsługi" w kodzie. Zdarzenia mogą być generowane przez działanie użytkownika, takie jak kliknięcie myszą lub naciśnięcie klawisza. w kodzie programu; czy przez system.  

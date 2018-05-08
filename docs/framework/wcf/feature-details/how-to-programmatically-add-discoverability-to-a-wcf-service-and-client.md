@@ -1,29 +1,15 @@
 ---
 title: 'Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF
-W tym temacie wyjaśniono, jak utworzyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wykrywalny usługi. Jest on oparty na [hosta samodzielnego](http://go.microsoft.com/fwlink/?LinkId=145523) próbki.  
+W tym temacie wyjaśniono, jak utworzyć wykrywalny usługi Windows Communication Foundation (WCF). Jest on oparty na [hosta samodzielnego](http://go.microsoft.com/fwlink/?LinkId=145523) próbki.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Aby skonfigurować istniejącą przykład hosta samodzielnego usługi odnajdywania  
   
@@ -105,7 +91,7 @@ W tym temacie wyjaśniono, jak utworzyć [!INCLUDE[indigo1](../../../../includes
     }  
     ```  
   
-     Ta wartość informuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] który <xref:System.ServiceModel.Discovery.DiscoveryClient> klasy standardowy punkt końcowy odnajdowania UDP powinna być używana do wysyłania i odbierania wiadomości odnajdywania.  
+     Ta wartość informuje WCF który <xref:System.ServiceModel.Discovery.DiscoveryClient> klasy standardowy punkt końcowy odnajdowania UDP powinna być używana do wysyłania i odbierania wiadomości odnajdywania.  
   
 8.  W następnym wierszu wywołać <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> — metoda i określ <xref:System.ServiceModel.Discovery.FindCriteria> wystąpienie, którego chcesz wyszukać kontraktu usługi. W takim przypadku określ `ICalculator`.  
   

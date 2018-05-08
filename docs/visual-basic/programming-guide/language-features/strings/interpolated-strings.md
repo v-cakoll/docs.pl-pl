@@ -1,17 +1,13 @@
 ---
 title: Ciągi interpolowane (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Ciągi interpolowane (odwołanie w Visual Basic)
 
@@ -61,7 +57,7 @@ Istnieją trzy niejawne konwersje typów w ciągu interpolowanym:
 
    To końcowy wynik interpretacji ciągu. Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") są konwertowane na jednym nawias klamrowy. 
 
-2. Konwersja ciągu interpolowanym do <xref:System.IFormattable> ciągi zmiennej, która umożliwia tworzenie wielu wyników z zawartością specyficzne dla kultury z jednej <xref:System.IFormattable> wystąpienia. Jest to przydatne w przypadku łącznie z czynności, takich jak poprawne formaty liczb i dat dla poszczególnych kultur.  Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostać jako podwójne nawiasy klamrowe do formatu ciągu wywołując jawnie lub niejawnie <xref:System.Object.ToString> metody.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1} i tak dalej.  
+2. Konwersja ciągu interpolowanym do <xref:System.IFormattable> ciągi zmiennej, która umożliwia tworzenie wielu wyników z zawartością specyficzne dla kultury z jednej <xref:System.IFormattable> wystąpienia. Jest to przydatne w przypadku łącznie z czynności, takich jak poprawne formaty liczb i dat dla poszczególnych kultur.  Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostać jako podwójne nawiasy klamrowe do formatu ciągu wywołując jawnie lub niejawnie <xref:System.Object.ToString> metody.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1}i tak dalej.  
 
    W poniższym przykładzie użyto odbicia, aby wyświetlić elementy członkowskie, a także wartości pola i właściwości <xref:System.IFormattable> zmiennej, która jest tworzona na podstawie ciągu interpolowanym. Przekazuje również <xref:System.IFormattable> zmienną <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metody.
 
@@ -77,7 +73,7 @@ Istnieją trzy niejawne konwersje typów w ciągu interpolowanym:
       
       - A <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, która tworzy ciąg wynik określonej kultury. 
   
-    Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostają jako podwójne nawiasy klamrowe, dopóki nie zostanie sformatowany.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1} i tak dalej.  
+    Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostają jako podwójne nawiasy klamrowe, dopóki nie zostanie sformatowany.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1}i tak dalej.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

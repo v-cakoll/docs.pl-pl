@@ -1,13 +1,6 @@
 ---
-title: "PageSetupDialog — Składnik (Formularze systemu Windows)"
-ms.custom: 
+title: PageSetupDialog — Składnik (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - printing [Windows Forms], page setup
 - margins [Windows Forms], page setup options
@@ -26,16 +19,11 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8b1f61d88b5c27c2bf07ca3ac1ef81d470a3518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 467b93043851b512427ab93d2c8a8f8030e057ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog — Składnik (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.PageSetupDialog> składnik jest wstępnie skonfigurowana okno dialogowe służy do określania szczegóły strony do wydruku w aplikacjach opartych na systemie Windows. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem dla użytkowników, aby ustawić preferencje strony zamiast własne okno dialogowe Konfigurowanie. Można umożliwić użytkownikom ustawić obramowania i dostosowania margines, nagłówki i stopki i pionowa a orientacji poziomej. Polegając na standardowe okno dialogowe systemu Windows, możesz utworzyć aplikacje, których podstawowych funkcji jest znane użytkowników.  

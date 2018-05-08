@@ -1,31 +1,20 @@
 ---
-title: "Anulowanie w zarządzanych wątkach"
-ms.custom: 
+title: Anulowanie w zarządzanych wątkach
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5407beba999ede6131adbc17f56d139396429597
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancellation-in-managed-threads"></a>Anulowanie w zarządzanych wątkach
 Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework używa ujednoliconego modelu wspólnych anulowania asynchroniczne lub długotrwałej operacji synchronicznych. Ten model jest oparty na obiekt lekkie o nazwie token anulowania. Obiekt, który wywołuje jeden lub więcej operacji można anulować, na przykład, tworząc nowe wątki i zadań, przekazuje token do każdej operacji. Poszczególnych działań z kolei może przekazać kopie tokenu do innych operacji. W późniejszym czasie obiekt, który utworzył token służy do żądania, że operacje zatrzymana, co robią. Tylko obiektu żądającego mogą wystawiać żądanie anulowania, a każdy odbiornik jest odpowiedzialny za żądanie po raz pierwszy, a odpowiadającym odpowiednią i odpowiednim w sposób.  
@@ -156,7 +145,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
   
 -   Obiekty delegowane użytkownik powinien próbować odpowiadać na żądania anulowania kod biblioteki w odpowiednim czasie.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>i <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> przedstawiono klasy, które wykonuje te wytyczne. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md)i [porady: Anulowanie zapytania PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> przedstawiono klasy, które wykonuje te wytyczne. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md)i [porady: Anulowanie zapytania PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)

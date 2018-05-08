@@ -1,22 +1,12 @@
 ---
-title: "Czysty funkcjonalności transformacji XML (Visual Basic)"
-ms.custom: 
+title: Czysty funkcjonalności transformacji XML (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 01ad228d91037de1585d1e66292fddb80c785ada
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 25719fc53235424b6a1e2b779ab4e6bdfbe6b4d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>Czysty funkcjonalności transformacji XML (Visual Basic)
 Ta sekcja zawiera samouczek funkcjonalności transformacji XML. Dotyczy to również wyjaśnienia o pojęciach i konstrukcji językowych, że rozumiesz musi używać funkcjonalności przekształcenia i przykłady użycia funkcjonalności przekształceń do manipulowania dokumentu XML. W tym samouczku zapewnia LINQ do XML przykłady kodu, jednak wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  

@@ -1,31 +1,21 @@
 ---
-title: "Zdarzenia ETW odzyskiwania pamięci"
-ms.custom: 
+title: Zdarzenia ETW odzyskiwania pamięci
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GC events
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci
-<a name="top"></a>Te zdarzenia zbierać informacje dotyczące wyrzucania elementów bezużytecznych. Pomagają w diagnostyce i debugowanie, określając, ile razy wyrzucanie elementów bezużytecznych została wykonana, ile pamięci został zwolniony podczas wyrzucanie elementów bezużytecznych i tak dalej.  
+<a name="top"></a> Te zdarzenia zbierać informacje dotyczące wyrzucania elementów bezużytecznych. Pomagają w diagnostyce i debugowanie, określając, ile razy wyrzucanie elementów bezużytecznych została wykonana, ile pamięci został zwolniony podczas wyrzucanie elementów bezużytecznych i tak dalej.  
   
  Ta kategoria obejmuje następujące zdarzenia:  
   
@@ -63,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Liczba|Windows: UInt32.| *n* Th wyrzucanie elementów bezużytecznych.|  
+|Liczba|Windows: UInt32.|*n*th wyrzucanie elementów bezużytecznych.|  
 |Głębokość|Windows: UInt32.|Generowanie zbieranych.|  
 |Przyczyna|Windows: UInt32.|Dlaczego zostało wyzwolone odzyskiwanie pamięci:<br /><br /> 0x0 - Alokacja sterty dla małego obiektu.<br /><br /> 0x1 — powstaniu.<br /><br /> 0x2 — Brak pamięci.<br /><br /> 0x3 — pusty.<br /><br /> 0x4 - Alokacja sterty dla dużego obiektu.<br /><br /> 0x5 — Brak miejsca (dla sterty małego obiektu).<br /><br /> 0x6 — Brak miejsca (dla sterty dużego obiektu).<br /><br /> 0x7 - powstaniu, ale nie wymuszono jako blokowania.|  
 |Typ|Windows: UInt32.|0x0 — blokowanie pamięci wystąpiło poza odzyskiwanie pamięci w tle.<br /><br /> 0x1 — odzyskiwanie pamięci w tle.<br /><br /> 0x2 — blokowanie wyrzucanie elementów bezużytecznych podczas odzyskiwanie pamięci w tle.|  
@@ -89,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -101,7 +91,7 @@ ms.lasthandoff: 12/22/2017
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Liczba|Windows: UInt32.| *n* Th wyrzucanie elementów bezużytecznych.|  
+|Liczba|Windows: UInt32.|*n*th wyrzucanie elementów bezużytecznych.|  
 |Głębokość|Windows: UInt32.|Generowanie, który został zebrany.|  
 |ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
   
@@ -113,7 +103,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -148,7 +138,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -175,7 +165,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -198,7 +188,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -216,7 +206,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -234,7 +224,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -258,7 +248,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia:  
   
@@ -276,7 +266,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -304,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -322,7 +312,7 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -345,8 +335,8 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
-|`ThreadingKeyword`(0x10000)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -364,8 +354,8 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Komunikat informacyjny (4)|  
-|`ThreadingKeyword`(0x10000)|Komunikat informacyjny (4)|  
+|`GCKeyword` (0x1)|Komunikat informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   

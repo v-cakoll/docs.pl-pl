@@ -1,27 +1,18 @@
 ---
-title: "Porównanie XPath i składnika LINQ to XML2"
-ms.custom: 
+title: Porównanie XPath i składnika LINQ to XML2
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0890bd7d8edb19a16c864d0b845558d3302d6139
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 64860ab538105e7e3826b29f83b8e713ca525e21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Porównanie XPath i LINQ do XML
 Wyrażenie XPath i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oferują niektórych podobnych możliwościach. Jednocześnie może służyć do badania drzewo XML zwracania wyników takich jako kolekcję elementów, Kolekcja atrybutów, kolekcja węzłów lub wartość elementu lub atrybutu. Istnieją jednak także pewne różnice.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>Różnice między XPath i LINQ do XML  
- Wyrażenie XPath nie zezwala na projekcji nowych typów. Można tylko zwraca kolekcje węzłów w drzewie, natomiast [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można wykonać zapytania i projektu wykres obiektu lub drzewo XML w nowy kształt. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapytania obejmować większą funkcjonalność i są bardziej efektywne niż wyrażenia XPath.  
+ Wyrażenie XPath nie zezwala na projekcji nowych typów. Można tylko zwraca kolekcje węzłów w drzewie, natomiast [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można wykonać zapytania i projektu wykres obiektu lub drzewo XML w nowy kształt. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania obejmować większą funkcjonalność i są bardziej efektywne niż wyrażenia XPath.  
   
  Wyrażenia XPath istnieje w izolacji w ramach ciągu. Kompilator języka C# nie może pomóc przeanalizować wyrażenia XPath w czasie kompilacji. Z kolei [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są przeanalizować i kompilowany przez kompilator języka C#. Kompilator jest w stanie catch wiele błędów zapytania.  
   

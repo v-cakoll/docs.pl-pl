@@ -1,26 +1,15 @@
 ---
-title: "Ładowanie danych z czytnika"
-ms.custom: 
+title: Ładowanie danych z czytnika
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-data-from-a-reader"></a>Ładowanie danych z czytnika
 Jeśli dokument XML został załadowany przy użyciu <xref:System.Xml.XmlDocument.Load%2A> — metoda i parametr <xref:System.Xml.XmlReader>, istnieją różnice w zachowaniu, który występuje w porównaniu do zachowania podczas ładowania danych z innych formatów. Jeśli czytnik jest w stanie początkowym <xref:System.Xml.XmlDocument.Load%2A> zużywa całą zawartość z czytnika i tworzy XML modelu DOM (Document Object) z wszystkich danych w czytniku.  

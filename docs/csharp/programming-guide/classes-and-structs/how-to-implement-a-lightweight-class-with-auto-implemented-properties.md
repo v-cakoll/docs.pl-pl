@@ -1,21 +1,15 @@
 ---
-title: "Porady: implementowanie klasy lekkiej przy użyciu automatycznie implementowanych właściwości (Przewodnik programowania w języku C#)"
+title: 'Porady: implementowanie klasy lekkiej przy użyciu automatycznie implementowanych właściwości (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Porady: implementowanie klasy lekkiej przy użyciu automatycznie implementowanych właściwości (Przewodnik programowania w języku C#)
 W tym przykładzie przedstawiono sposób tworzenia niezmienne klasy lightweight, obejmującej tylko w celu hermetyzacji zbiór właściwości zaimplementowane automatycznie. Zamiast tego rodzaju konstrukcja struktury podczas należy użyć semantykę typu odwołania.  
@@ -120,5 +114,5 @@ W tym przykładzie przedstawiono sposób tworzenia niezmienne klasy lightweight,
   
 ## <a name="see-also"></a>Zobacz też  
  [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [— Struktura](../../../csharp/language-reference/keywords/struct.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
  [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

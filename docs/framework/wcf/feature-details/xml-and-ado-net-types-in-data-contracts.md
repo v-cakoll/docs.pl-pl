@@ -1,32 +1,18 @@
 ---
 title: Typy XML i ADO.NET w kontraktach danych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7efef63668bb78bdc9a7d66654c9e33ef6c0138c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ae21174d19ad69f87165427cf5a0bfd29ac872db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Typy XML i ADO.NET w kontraktach danych
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Modelu kontraktu danych obsługuje pewnych typów, które reprezentują XML bezpośrednio. Gdy te typy są serializowane do pliku XML, serializator zapisuje poza zawartość XML w typach bez dalszego przetwarzania. Obsługiwane typy to <xref:System.Xml.XmlElement>, tablic <xref:System.Xml.XmlNode> (, ale nie `XmlNode` samego typu), a także jako typy które implementują <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> i <xref:System.Data.DataTable> typu, a także typizowane zbiory danych, są często używane w programowania bazy danych. Implementuje te typy `IXmlSerializable` interfejsu i dlatego możliwy do serializacji w danych są kontraktu modelu. Niektóre uwagi dotyczące tych typów są wyświetlane na końcu tego tematu.  
+Model kontraktu danych systemu Windows Communication Foundation (WCF) obsługuje pewnych typów, które reprezentują XML bezpośrednio. Gdy te typy są serializowane do pliku XML, serializator zapisuje poza zawartość XML w typach bez dalszego przetwarzania. Obsługiwane typy to <xref:System.Xml.XmlElement>, tablic <xref:System.Xml.XmlNode> (, ale nie `XmlNode` samego typu), a także jako typy które implementują <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> i <xref:System.Data.DataTable> typu, a także typizowane zbiory danych, są często używane w programowania bazy danych. Implementuje te typy `IXmlSerializable` interfejsu i dlatego możliwy do serializacji w danych są kontraktu modelu. Niektóre uwagi dotyczące tych typów są wyświetlane na końcu tego tematu.  
   
 ## <a name="xml-types"></a>Typy XML  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/30/2018
 </MyDataContract>  
 ```  
   
- Zwróć uwagę, że element otoki danych elementu członkowskiego `<myDataMember>` nadal występuje. Nie istnieje sposób usuwania tego elementu w modelu kontraktu danych. Serializatorów, które obsługują ten model ( <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer>) może emitować specjalne atrybuty do tego elementu otoki. Te atrybuty obejmują standardowe wystąpienie schematu XML atrybut "zero" (co `XmlElement` za `null`) i atrybutu "type" (dzięki czemu `XmlElement` używanego polymorphically). Ponadto następujące atrybuty XML są specyficzne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: "Id", "Ref", "Type" i "Zestawu". Te atrybuty mogą wysyłanego do obsługi przy użyciu `XmlElement` z trybu konserwacji obiektu wykresu włączona lub <xref:System.Runtime.Serialization.NetDataContractSerializer>. (Aby uzyskać więcej informacji o trybie konserwacji wykres obiektu, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).)  
+ Zwróć uwagę, że element otoki danych elementu członkowskiego `<myDataMember>` nadal występuje. Nie istnieje sposób usuwania tego elementu w modelu kontraktu danych. Serializatorów, które obsługują ten model ( <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer>) może emitować specjalne atrybuty do tego elementu otoki. Te atrybuty obejmują standardowe wystąpienie schematu XML atrybut "zero" (co `XmlElement` za `null`) i atrybutu "type" (dzięki czemu `XmlElement` używanego polymorphically). Ponadto następujące atrybuty XML są specyficzne dla usługi WCF: "Id", "Ref", "Type" i "Zestawu". Te atrybuty mogą wysyłanego do obsługi przy użyciu `XmlElement` z trybu konserwacji obiektu wykresu włączona lub <xref:System.Runtime.Serialization.NetDataContractSerializer>. (Aby uzyskać więcej informacji o trybie konserwacji wykres obiektu, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).)  
   
  Tablice lub kolekcje `XmlElement` dozwolone są i będą obsługiwane jako inne tablicą lub kolekcją. Jest element otoki dla całej kolekcji, a element otoki oddzielne (podobnie jak `<myDataMember>` w poprzednim przykładzie) dla każdego `XmlElement` w tablicy.  
   
@@ -88,7 +74,7 @@ ms.lasthandoff: 04/30/2018
   
  Tablica `XmlNode` powoduje nieprawidłowe dane XML nie może być serializowany. Na przykład macierzy dwa `XmlNode` pierwsza z nich jest `XmlElement` , a drugi jest <xref:System.Xml.XmlAttribute> jest nieprawidłowy, ponieważ ta sekwencja nie odpowiada na dowolne prawidłowe wystąpienie XML (Brak miejsca nie można dołączyć atrybut do).  
   
- Przy deserializacji tablicy `XmlNode`, węzły są tworzone i wypełniane przy użyciu informacji z przychodzącego pliku XML. Prawidłowego elementu nadrzędnego <xref:System.Xml.XmlDocument> odbywa się przy deserializacji. Rozszeregować we wszystkich węzłach, w tym wszystkie atrybuty w elemencie członkowskim otoki danych, ale z wyłączeniem atrybutów umieszczone w nim przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serializatorów (takich jak atrybuty służy do wskazania przypisania polimorficznych). Ostrzeżenie o definiujący wszystkie prefiksy przestrzeni nazw w fragmentu XML ma zastosowanie do deserializacji tablice `XmlNode` tak samo jak robi deserializacji `XmlElement`.  
+ Przy deserializacji tablicy `XmlNode`, węzły są tworzone i wypełniane przy użyciu informacji z przychodzącego pliku XML. Prawidłowego elementu nadrzędnego <xref:System.Xml.XmlDocument> odbywa się przy deserializacji. Rozszeregować we wszystkich węzłach, w tym wszystkie atrybuty w elemencie członkowskim danych otoki, ale z wyłączeniem atrybutów umieszczone w nim przez serializatorów WCF (takich jak atrybuty służy do wskazania przypisania polimorficznych). Ostrzeżenie o definiujący wszystkie prefiksy przestrzeni nazw w fragmentu XML ma zastosowanie do deserializacji tablice `XmlNode` tak samo jak robi deserializacji `XmlElement`.  
   
  Przy użyciu serializatorów z zachowywania wykres obiektu włączona, równość obiektu tylko zostaną zachowane na poziomie `XmlNode` tablice nie poszczególnych `XmlNode` wystąpień.  
   
@@ -142,7 +128,7 @@ ms.lasthandoff: 04/30/2018
   
  Podczas deserializacji element członkowski danych klasy typu, który implementuje `IXmlSerializable` i typu zawartości zgodnie z definicją wcześniej, pozycje Deserializator modułu odczytującego XML na element otoki dla elementu członkowskiego danych i przekazać do kontrolować <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> metody. Metoda musi odczytu cały element, w tym tagiem początkowym i końcowym. Upewnij się, że Twoje `ReadXml` kod obsługi w przypadku, gdy element jest pusty. Ponadto sieci `ReadXml` wdrożenia nie należy traktować element otoki jest o nazwie określony sposób. Nazwa jest wybierany przez serializator może się różnić.  
   
- Dozwolone jest przypisanie `IXmlSerializable` typy zawartości polymorphically, na przykład do danych elementów członkowskich typu <xref:System.Object>. Dopuszczalne jest również wystąpień typu mieć wartości null. Na koniec jest możliwość użycia `IXmlSerializable` typy z zachowywania wykres obiektu włączone i <xref:System.Runtime.Serialization.NetDataContractSerializer>. Tych funkcji wymaga [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serializator dołączyć niektóre atrybuty w element otoki ("zero" i "type" w przestrzeni nazw XML schematu wystąpienia i "Id", "Ref", "Type" i "Zestawu" w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-określonych przestrzeni nazw).  
+ Dozwolone jest przypisanie `IXmlSerializable` typy zawartości polymorphically, na przykład do danych elementów członkowskich typu <xref:System.Object>. Dopuszczalne jest również wystąpień typu mieć wartości null. Na koniec jest możliwość użycia `IXmlSerializable` typy z zachowywania wykres obiektu włączone i <xref:System.Runtime.Serialization.NetDataContractSerializer>. Funkcje te wymagają serializator WCF można dołączyć niektóre atrybuty w element otoki ("zero" i "type" w przestrzeni nazw XML schematu wystąpienia i "Id", "Ref", "Type" i "Zestawu" w przestrzeni nazw specyficzne dla usługi WCF).  
   
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>Atrybuty, aby zignorować podczas implementowania ReadXml  
  Przed przekazaniem kontroli do Twojej `ReadXml` kodu, Deserializator sprawdza, czy XML element, wykrywa te specjalne atrybuty XML i działa na nich. Na przykład, jeśli jest "zero" `true`, deserializowany jest wartość null i `ReadXml` nie jest wywoływany. W przypadku wykrycia polimorfizm zawartość elementu są rozszeregować tak, jakby była innego typu. Implementacja typu polymorphically przypisanej `ReadXml` jest wywoływana. W każdym przypadku `ReadXml` implementacji ignorować te atrybuty specjalne, ponieważ są one obsługiwane przez deserializacji.  
@@ -200,16 +186,16 @@ ms.lasthandoff: 04/30/2018
   
 -   Autorzy XML nie zezwalaj zwykle deklaracji dokumentu XML (na przykład \<? wersji xml = "1.0"? >) w trakcie wpisywania innego dokumentu. Nie można wykonać pełnego dokumentu XML i serializować go jako `Array` z `XmlNode` element członkowski danych. Aby to zrobić, masz do każdej taśmy w deklaracji dokumentu lub użyj własny schemat kodowania do reprezentowania go.  
   
--   Wszystkie składniki zapisywania XML dostarczony wraz z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Odrzuć instrukcji przetwarzania XML (\<? … ? >) i zarządzania dokumentami definicje typów (\<! … >), ponieważ nie są dozwolone w wiadomości SOAP. Ponownie można użyć własnych kodowania mechanizmu Aby uniknąć problemów tego ograniczenia. Jeśli należy uwzględnić je w wynikowy kod XML, można napisać niestandardowego kodera, który używa zapisywania XML, które je obsługują.  
+-   Odrzuć wszystkie składniki zapisywania XML dostarczonego z programem WCF instrukcji przetwarzania XML (\<? … ? >) i zarządzania dokumentami definicje typów (\<! … >), ponieważ nie są dozwolone w wiadomości SOAP. Ponownie można użyć własnych kodowania mechanizmu Aby uniknąć problemów tego ograniczenia. Jeśli należy uwzględnić je w wynikowy kod XML, można napisać niestandardowego kodera, który używa zapisywania XML, które je obsługują.  
   
--   Podczas implementowania `WriteXml`, należy unikać wywoływania <xref:System.Xml.XmlWriter.WriteRaw%2A> metoda edytora XML. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa różnych kodowań XML (takie jak dane binarne), jest bardzo trudne lub niemożliwe do użycia `WriteRaw` tak, aby można go użyć w kodowanie był wynik.  
+-   Podczas implementowania `WriteXml`, należy unikać wywoływania <xref:System.Xml.XmlWriter.WriteRaw%2A> metoda edytora XML. Usługi WCF używa różnych kodowań XML (w tym pliku binarnego), jest bardzo trudne lub niemożliwe do użycia `WriteRaw` tak, aby można go użyć w kodowanie był wynik.  
   
--   Podczas implementowania `WriteXml`, należy unikać <xref:System.Xml.XmlWriter.WriteEntityRef%2A> i <xref:System.Xml.XmlWriter.WriteNmToken%2A> metod, które nie są obsługiwane na zapisywania XML dostarczony wraz z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Podczas implementowania `WriteXml`, należy unikać <xref:System.Xml.XmlWriter.WriteEntityRef%2A> i <xref:System.Xml.XmlWriter.WriteNmToken%2A> metody, które nie są obsługiwane na dostarczone z programem WCF zapisywania XML.  
   
 ## <a name="using-dataset-typed-dataset-and-datatable"></a>Przy użyciu zestawu danych, Typizowanego obiektu DataSet i DataTable  
  Używanie tych typów jest w pełni obsługiwany w modelu kontraktu danych. Korzystając z tych typów, należy wziąć pod uwagę następujące kwestie:  
   
--   Schemat dla typu (szczególnie <xref:System.Data.DataSet> i jego typu klasy pochodne) nie może być współdziała z niektórych z systemem innym niż[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] platformy, lub mogą skutkować niską użyteczność, gdy jest używany z tych platform. Ponadto przy użyciu `DataSet` typ może mieć wpływ na wydajność. Na koniec go może utrudnić automatycznie do wersji aplikacji w przyszłości. Należy rozważyć użycie jawnie zdefiniowanych typów kontraktu zamiast `DataSet` typy w kontraktach użytkownika.  
+-   Schemat dla typu (szczególnie <xref:System.Data.DataSet> i jej typu klasy pochodne) nie może być współdziała z niektóre platformy z systemem innym niż WCF lub może spowodować niską użyteczność, gdy jest używany z tych platform. Ponadto przy użyciu `DataSet` typ może mieć wpływ na wydajność. Na koniec go może utrudnić automatycznie do wersji aplikacji w przyszłości. Należy rozważyć użycie jawnie zdefiniowanych typów kontraktu zamiast `DataSet` typy w kontraktach użytkownika.  
   
 -   Podczas importowania `DataSet` lub `DataTable` schematu, ważne jest, aby te typy referencyjne. Za pomocą narzędzia wiersza polecenia Svcutil.exe, można to zrobić przez przekazanie nazwę zestawu System.Data.dll `/reference` przełącznika. W przypadku importowania schematu typizowanego obiektu dataset musi odwoływać się typ typizowanego obiektu dataset. Z Svcutil.exe, Przekaż lokalizacji zestawu typizowany zestaw danych do `/reference` przełącznika. Aby uzyskać więcej informacji na temat odwoływanie do typów, zobacz [Importowanie schematu do generowania klasy](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   

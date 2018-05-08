@@ -1,26 +1,15 @@
 ---
-title: "Schemat blokowy działania w WF"
-ms.custom: 
+title: Schemat blokowy działania w WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73203a1279594375c14e6a62e3790e02d8c30aea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 827a3103dd28670ae9407ba434a4b2e65cbb7983
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowchart-activities-in-wf"></a>Schemat blokowy działania w WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]zawiera kilka działań dostarczane przez system kontroli wykonania i rozgałęzianie w schemacie blokowym.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera kilka działań dostarczane przez system kontroli wykonania i rozgałęzianie w schemacie blokowym.  
   
 |||  
 |-|-|  

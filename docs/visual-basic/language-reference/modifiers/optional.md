@@ -1,10 +1,6 @@
 ---
 title: Optional (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Optional
 - vb.optional
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3aa01c2c1ae731c8fe00fdee24521760db69e624
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Określa, że argument procedury można pominąć, gdy procedura jest wywoływana.  
@@ -31,13 +24,13 @@ Określa, że argument procedury można pominąć, gdy procedura jest wywoływan
   
  `Optional` Modyfikatora można używać w tych sytuacjach:  
   
--   [DECLARE — instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  Podczas wywoływania procedury z lub bez parametrów, można przekazywać argumenty, według położenia lub nazwy. Aby uzyskać więcej informacji, zobacz [przekazywanie argumentów według pozycji i według nazwy](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
@@ -73,6 +66,6 @@ End Function
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
  [Parametry opcjonalne](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

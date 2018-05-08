@@ -1,41 +1,27 @@
 ---
 title: Używanie kontraktów komunikatu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-message-contracts"></a>Używanie kontraktów komunikatu
-Zwykle podczas kompilowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji, deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy serializacji i nie trzeba zajmować się struktury wiadomości, w których odbywa się dane. W przypadku tych aplikacji prostego jest utworzenie kontraktów danych do parametrów lub zwracanych wartości. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Zazwyczaj podczas kompilowania aplikacji Windows Communication Foundation (WCF), deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy serializacji i nie trzeba zajmować się struktury wiadomości, w których odbywa się dane. W przypadku tych aplikacji prostego jest utworzenie kontraktów danych do parametrów lub zwracanych wartości. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  Jednak czasami pełną kontrolę nad struktury wiadomości SOAP jest równie ważne co kontrolę nad jego zawartość. Dotyczy to szczególnie ważne jest współdziałanie, lub aby specjalnie kontroli zabezpieczeń problemy na poziomie komunikatu lub części komunikatu. W takich przypadkach można utworzyć *kontraktu komunikatu* , umożliwia określenie struktury dokładne komunikatu protokołu SOAP wymagane.  
   
  W tym temacie omówiono tworzenie kontraktu określonego komunikatu dla operacji przy użyciu różnych atrybutów kontraktu komunikatu.  
   
 ## <a name="using-message-contracts-in-operations"></a>Używanie kontraktów komunikatu w operacji  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje operacje uformowany albo *zdalnego wywoływania (procedur RPC) styl* lub *wiadomości styl*. W przypadku operacji stylu wywołania RPC, można użyć dowolnego typu do serializacji i masz dostęp do funkcji, które są dostępne dla połączeń lokalnych, takich jak wiele parametrów i `ref` i `out` parametrów. W tym stylu formę serializacji wybrane formanty struktury danych w podstawowej komunikaty i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska uruchomieniowego tworzy komunikaty do obsługi operacji. Dzięki temu deweloperzy, którzy nie są jeszcze znane z protokołu SOAP i SOAP komunikatów szybkie i łatwe tworzenie i korzystanie z usługi aplikacji.  
+ Usługi WCF obsługuje operacje uformowany albo *zdalnego wywoływania (procedur RPC) styl* lub *wiadomości styl*. W przypadku operacji stylu wywołania RPC, można użyć dowolnego typu do serializacji i masz dostęp do funkcji, które są dostępne dla połączeń lokalnych, takich jak wiele parametrów i `ref` i `out` parametrów. W tym stylu formantu serializacji wybrany struktury danych w podstawowej wiadomości i środowiska uruchomieniowego WCF tworzy komunikaty do obsługi operacji. Dzięki temu deweloperzy, którzy nie są jeszcze znane z protokołu SOAP i SOAP komunikatów szybkie i łatwe tworzenie i korzystanie z usługi aplikacji.  
   
  Poniższy przykład kodu pokazuje operacji usługi zgodnie z modelem w stylu wywołania RPC.  
   
@@ -263,7 +249,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` Lub `Role` atrybut określa jednolity identyfikator zasobów (URI) węzła, dla którego ma określony nagłówek. `MustUnderstand` Atrybut określa, czy węzeł przetwarzania nagłówka musi go zrozumieć. `Relay` Atrybut określa, czy nagłówek jest przekazywanie węzły podrzędne. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie wykonuje żadnych przetwarzania tych atrybutów w komunikatach przychodzących, z wyjątkiem `MustUnderstand` atrybutu, jak określono w sekcji "Przechowywanie wersji kontraktów komunikatu" w dalszej części tego tematu. Jednak umożliwia odczytywanie i zapisywanie tych atrybutów, w razie potrzeby, tak jak następujący opis.  
+ `Actor` Lub `Role` atrybut określa jednolity identyfikator zasobów (URI) węzła, dla którego ma określony nagłówek. `MustUnderstand` Atrybut określa, czy węzeł przetwarzania nagłówka musi go zrozumieć. `Relay` Atrybut określa, czy nagłówek jest przekazywanie węzły podrzędne. Usługi WCF nie wykonuje żadnych przetwarzania tych atrybutów w komunikatach przychodzących, z wyjątkiem `MustUnderstand` atrybutu, jak określono w sekcji "Przechowywanie wersji kontraktów komunikatu" w dalszej części tego tematu. Jednak umożliwia odczytywanie i zapisywanie tych atrybutów, w razie potrzeby, tak jak następujący opis.  
   
  Podczas wysyłania wiadomości, te atrybuty nie są emitowane domyślnie. Można to zmienić na dwa sposoby. Najpierw, użytkownik może statycznie Ustaw atrybuty wszystkie odpowiednie wartości, zmieniając <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, i <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> właściwości, jak pokazano w poniższym przykładzie kodu. (Należy pamiętać, że ma nie `Role` właściwości; ustawienie <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> emituje właściwości `Role` atrybut, jeśli używasz protokołu SOAP 1.2).  
   
@@ -336,9 +322,9 @@ public class BankingTransaction
   
  Przechowywanie wersji nagłówków mają zastosowanie następujące reguły:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie object Brak nagłówków — odpowiednie elementy członkowskie są pozostawiane w wartości domyślnych.  
+-   Usługi WCF nie object Brak nagłówków — odpowiednie elementy członkowskie są pozostawiane w wartości domyślnych.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoruje także nieoczekiwany dodatkowych nagłówków. Jedynym wyjątkiem od tej reguły jest dodatkowy nagłówek zawiera `MustUnderstand` ustawić atrybutu `true` przychodzących wiadomości SOAP — w tym przypadku jest zwracany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozpatrywana.  
+-   Usługi WCF ignoruje także nieoczekiwany dodatkowych nagłówków. Jedynym wyjątkiem od tej reguły jest dodatkowy nagłówek zawiera `MustUnderstand` ustawić atrybutu `true` przychodzących wiadomości SOAP — w tym przypadku jest zwracany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozpatrywana.  
   
  Komunikat treści mają podobne reguły kontroli wersji — zarówno brak i dodatkowe części treści wiadomości są ignorowane.  
   
@@ -383,7 +369,7 @@ public class PatientRecord : PersonRecord
 -   Gdy za pomocą tego samego komunikatu kontraktu w wielu operacjach, wiele typów wiadomości są generowane w dokumencie WSDL. Przez dodanie liczby "2", "3" i tak dalej do celów kolejnych składają unikatowe nazwy. Podczas importowania ponownie WSDL, wiele typów kontraktu komunikatu są tworzone i są identyczne z wyjątkiem ich nazw.  
   
 ## <a name="soap-encoding-considerations"></a>Uwagi dotyczące kodowania protokołu SOAP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia przy użyciu starszej wersji styl XML, kodowania SOAP, jego użycie nie jest zalecane. Korzystając z tym stylem (przez ustawienie `Use` właściwości `Encoded` na <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> stosowane do kontraktu usługi), zastosuj następujące dodatkowe zagadnienia:  
+ Usługi WCF umożliwia przy użyciu starszej wersji styl XML, kodowania SOAP jednak jego użycie nie jest zalecane. Korzystając z tym stylem (przez ustawienie `Use` właściwości `Encoded` na <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> stosowane do kontraktu usługi), zastosuj następujące dodatkowe zagadnienia:  
   
 -   Nagłówki komunikatów są nieobsługiwane. oznacza to, że atrybut <xref:System.ServiceModel.MessageHeaderAttribute> i atrybut tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute> są niezgodne z kodowaniem protokołu SOAP.  
   

@@ -1,14 +1,6 @@
 ---
-title: "ErrorProvider — Informacje o składniku (Formularze systemu Windows)"
-ms.custom: 
+title: ErrorProvider — Informacje o składniku (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ErrorProvider
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 589735156ad4d6d639c2449d6bd693e2b3a32d50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2272220917f2d5adf15f1ba84a5d4c3d0ec07165
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) składnika służy do sprawdzania poprawności danych wejściowych użytkownika dla formularza lub kontrolki. Jest ona zwykle używana w połączeniu z sprawdzanie poprawności danych wejściowych użytkownika dla formularza lub wyświetlanie błędów w elemencie dataset. Błąd dostawcy jest lepszym niż wyświetlanie komunikat o błędzie w oknie komunikatu, ponieważ gdy zostaje zamknięte okno komunikatu, komunikat o błędzie nie jest już widoczna. <xref:System.Windows.Forms.ErrorProvider> Składnika Wyświetla ikonę błędu (![ikona ErrorProvider](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) obok odpowiednie urządzenie, takie jak pole tekstowe; gdy użytkownik umieszcza kursor myszy nad błąd, etykietka pojawi się ikona, przedstawiający ciąg z komunikatem o.  

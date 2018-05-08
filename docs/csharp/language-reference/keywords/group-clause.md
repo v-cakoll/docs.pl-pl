@@ -1,9 +1,6 @@
 ---
-title: "group — Klauzula (odwołanie w C#)"
+title: group — Klauzula (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - group
 - group_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a2f67b2c90e1cced92d6fc7d47768b58bf155360
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2674986013afccf0a61267e49ca186d2ccb380e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-clause-c-reference"></a>group — Klauzula (odwołanie w C#)
 `group` Klauzula zwraca sekwencji <xref:System.Linq.IGrouping%602> obiektów zawierających zero lub więcej elementów, które odpowiadają wartości klucza dla grupy. Na przykład można grupować sekwencję ciągi zgodnie z pierwszej litery każdego ciągu. W takim przypadku pierwszą literę jest klucz i ma typ [char](../../../csharp/language-reference/keywords/char.md)i są przechowywane w `Key` właściwości każdego <xref:System.Linq.IGrouping%602> obiektu. Kompilator wnioskuje typ klucza.  

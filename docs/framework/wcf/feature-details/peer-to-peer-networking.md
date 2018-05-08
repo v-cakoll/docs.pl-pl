@@ -1,29 +1,17 @@
 ---
-title: "Sieci równorzędne"
-ms.custom: 
+title: Sieci równorzędne
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fe3fe122e758d8460d98793cb8028ad696cb5302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-networking"></a>Sieci równorzędne
-Kanał elementu równorzędnego jest technologią komunikacji (P2P) wielopartyjnej, peer-to-peer w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Umożliwia bezpieczne i skalowalne oparta na komunikatach P2P kanał komunikacji dla deweloperów aplikacji. Jednym z typowych przykładów wielopartyjnej aplikacji, które mogą korzystać z kanału równorzędnego jest współpracy aplikacji, na przykład rozmowy, w przypadku, gdy grupa osób rozmów ze sobą w sposób peer-to-peer, bez serwerów. Kanał elementu równorzędnego umożliwia P2P współpracy, dystrybucji zawartości, równoważenia obciążenia i rozproszonego przetwarzania w scenariuszach zarówno konsumenta, jak i enterprise.  
+Kanał elementu równorzędnego jest wielopartyjnej, peer-to-peer (P2P) komunikacji technologią w systemie Windows Communication Foundation (WCF). Umożliwia bezpieczne i skalowalne oparta na komunikatach P2P kanał komunikacji dla deweloperów aplikacji. Jednym z typowych przykładów wielopartyjnej aplikacji, które mogą korzystać z kanału równorzędnego jest współpracy aplikacji, na przykład rozmowy, w przypadku, gdy grupa osób rozmów ze sobą w sposób peer-to-peer, bez serwerów. Kanał elementu równorzędnego umożliwia P2P współpracy, dystrybucji zawartości, równoważenia obciążenia i rozproszonego przetwarzania w scenariuszach zarówno konsumenta, jak i enterprise.  
   
- Kanał elementu równorzędnego jest domyślnie włączone na [!INCLUDE[wv](../../../../includes/wv-md.md)], ponieważ jest wszystkie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Dostęp do kanału równorzędnego klas, dodaj odwołania do System.ServiceModel.dll do projektu.  
+ Kanał elementu równorzędnego jest domyślnie włączone na [!INCLUDE[wv](../../../../includes/wv-md.md)], jak są wszystkie usługi WCF. Dostęp do kanału równorzędnego klas, dodaj odwołania do System.ServiceModel.dll do projektu.  
   
  Poniższe sekcje zawierają informacje dotyczące sieci peer-to-peer i korzystania z kanału równorzędnego klasy do tworzenia aplikacji w sieci równorzędnej.  
   
@@ -38,4 +26,4 @@ Kanał elementu równorzędnego jest technologią komunikacji (P2P) wielopartyjn
  [Program rozpoznawania nazw niestandardowego elementu równorzędnego kanału równorzędnego](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
   
 ## <a name="peer-channel-team-blog"></a>Blog zespołu kanału równorzędnego  
- [Blog zespołu kanału równorzędnego](http://go.microsoft.com/fwlink/?LinkID=114530) (http://go.microsoft.com/fwlink/?LinkID=114530)
+ [Blog zespołu kanału równorzędnego](http://go.microsoft.com/fwlink/?LinkID=114530) ()http://go.microsoft.com/fwlink/?LinkID=114530)

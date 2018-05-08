@@ -1,11 +1,6 @@
 ---
-title: "For...Next — Instrukcja (Visual Basic)"
+title: For...Next — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next — Instrukcja (Visual Basic)
 Powtarza określoną liczbę razy grupę instrukcji.  
@@ -57,14 +49,14 @@ Next [ counter ]
 |Część|Opis|  
 |----------|-----------------|  
 |`counter`|Wymagane w `For` instrukcji. Zmienna numeryczna. Zmienna sterująca pętli. Aby uzyskać więcej informacji, zobacz [Argument licznika](#BKMK_Counter) dalszej części tego tematu.|  
-|`datatype`|Opcjonalny. Typ danych `counter`. Aby uzyskać więcej informacji, zobacz [Argument licznika](#BKMK_Counter) dalszej części tego tematu.|  
-|`start`|Wymagany. Wyrażenie liczbowe. Początkowa wartość `counter`.|  
-|`end`|Wymagany. Wyrażenie liczbowe. Końcowa wartość `counter`.|  
-|`step`|Opcjonalny. Wyrażenie liczbowe. Wartość, o którą `counter` jest zwiększany po każdej za pomocą pętli.|  
-|`statements`|Opcjonalny. Co najmniej jeden instrukcji między `For` i `Next` uruchomioną określoną liczbę razy.|  
-|`Continue For`|Opcjonalny. Transfer kontroli do następnej iteracji pętli.|  
-|`Exit For`|Opcjonalny. Przekazuje sterowanie poza `For` pętli.|  
-|`Next`|Wymagany. Kończy definicję `For` pętli.|  
+|`datatype`|Opcjonalna. Typ danych `counter`. Aby uzyskać więcej informacji, zobacz [Argument licznika](#BKMK_Counter) dalszej części tego tematu.|  
+|`start`|Wymagana. Wyrażenie liczbowe. Początkowa wartość `counter`.|  
+|`end`|Wymagana. Wyrażenie liczbowe. Końcowa wartość `counter`.|  
+|`step`|Opcjonalna. Wyrażenie liczbowe. Wartość, o którą `counter` jest zwiększany po każdej za pomocą pętli.|  
+|`statements`|Opcjonalna. Co najmniej jeden instrukcji między `For` i `Next` uruchomioną określoną liczbę razy.|  
+|`Continue For`|Opcjonalna. Transfer kontroli do następnej iteracji pętli.|  
+|`Exit For`|Opcjonalna. Przekazuje sterowanie poza `For` pętli.|  
+|`Next`|Wymagana. Kończy definicję `For` pętli.|  
   
 > [!NOTE]
 >  `To` Słowo kluczowe jest używane w tej instrukcji, aby określić zakres licznika. Można również użyć słowa kluczowego w [wybierz... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md) w deklaracje tablicy. Aby uzyskać więcej informacji na temat deklaracje tablicy, zobacz [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  Można wprowadzić dowolną liczbę `Exit For` instrukcje w `For`...`Next` pętli. Gdy jest używany w zagnieżdżonych `For`...`Next` pętle, `Exit For` kończy tryb pętli najbardziej i przekazuje sterowanie do następnego wyższego poziomu zagnieżdżenia.  
   
- `Exit For`jest często używana po przeprowadzeniu oceny spełnienia określonego warunku (na przykład w `If`... `Then`... `Else` struktury). Możesz chcieć użyć `Exit For` następujące warunki:  
+ `Exit For` jest często używana po przeprowadzeniu oceny spełnienia określonego warunku (na przykład w `If`... `Then`... `Else` struktury). Możesz chcieć użyć `Exit For` następujące warunki:  
   
 -   Kontynuowanie wykonania iteracji jest niepotrzebne lub niemożliwe. Błędna wartość lub żądanie zakończenia może utworzenia tego warunku.  
   
@@ -132,7 +124,7 @@ Next [ counter ]
   
  Wartość domyślna `step` 1.  
   
-###  <a name="BKMK_Counter"></a>Argument licznika  
+###  <a name="BKMK_Counter"></a> Argument licznika  
  W poniższej tabeli przedstawiono czy `counter` definiuje nowej zmiennej lokalnej, która ma zakres do całej `For…Next` pętli. To jest zależny od tego, czy `datatype` istnieje i czy `counter` jest już zdefiniowany.  
   
 |Jest `datatype` obecny?|Jest `counter` już zdefiniowane?|Wynik (czy `counter` definiuje nowej zmiennej lokalnej, która ma zakres do całej `For...Next` pętli)|  

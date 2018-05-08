@@ -1,28 +1,16 @@
 ---
-title: "Splitter — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: Splitter — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multiple views
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2069d419d185cde366b463c5682f9d1395e551a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4340c4647ffda79bcd919e9bd778dcabab0fc511
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter — Formant (Formularze systemu Windows)
 Formularze systemu Windows `Splitter` formantów służą do zmiany rozmiaru formantów dokowanych w czasie wykonywania. `Splitter` Kontroli jest często używane w formularzach z formantami, które mają różne długości danych do prezentowania, takich jak Eksplorator Windows, w których okienka dane zawierają informacje o różnej szerokości w różnym czasie.  
@@ -35,7 +23,7 @@ Formularze systemu Windows `Splitter` formantów służą do zmiany rozmiaru for
  Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.Splitter>klasy  
+ <xref:System.Windows.Forms.Splitter> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

@@ -1,13 +1,6 @@
 ---
 title: Niezawodne sesje
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,19 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions"></a>Niezawodne sesje
 
-W tej sekcji opisano, co [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] niezawodna sesja jest jego przeznaczenia, jak i kiedy do korzystania z jednego, jakie konfiguracjami powiązań z jego obsługi i wskaźnikami na najlepszych rozwiązaniach dotyczących. W poniższej tabeli przedstawiono szczegółowe informacje o podstawowych punktów i Tematy pokrewne w tej sekcji.
+W tej sekcji opisano, jakie Windows Communication Foundation (WCF) niezawodna sesja jest, co umożliwia, jak i podczas użycia jednej, jakie konfiguracjami powiązań z jego obsługi oraz wskaźnikami na najlepszych rozwiązaniach dotyczących. W poniższej tabeli przedstawiono szczegółowe informacje o podstawowych punktów i Tematy pokrewne w tej sekcji.
 
-Niezawodna sesja [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia featrues zapewnienie, że komunikaty wysyłane między punktami końcowymi są transferowane za pośrednictwem pośredników SOAP lub transportu i są dostarczane tylko raz i, opcjonalnie, w tej samej kolejności, w jakiej zostały wysłane.
+Niezawodna sesja WCF zawiera featrues zapewnienie, że komunikaty wysyłane między punktami końcowymi są transferowane za pośrednictwem pośredników SOAP lub transportu i są dostarczane tylko raz i, opcjonalnie, w tej samej kolejności, w jakiej zostały wysłane.
 
-Aby użyć niezawodnej sesji z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, albo użyj jednej z powiązania dostarczane przez system w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] niezawodnej sesji obsługuje, domyślnie lub opcjonalnie lub tworzenia własnego niestandardowego powiązania, który obsługuje sesji.
+Aby użyć niezawodnej sesji z aplikacją usługi WCF, użyj jednej z powiązania dostarczane przez system w programie WCF obsługujących niezawodnej sesji domyślnie lub opcjonalnie lub tworzenia własnego niestandardowego powiązania, który obsługuje sesji.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

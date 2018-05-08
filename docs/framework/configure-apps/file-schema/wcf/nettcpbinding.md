@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Określa bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami. Domyślnie generuje środowiska uruchomieniowego stosu komunikacji z zabezpieczeniami systemu Windows dla komunikatów zabezpieczeń i uwierzytelniania, TCP dostarczanie komunikatów i kodowanie komunikatu binarnego.  
@@ -92,7 +92,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="remarks"></a>Uwagi  
  To powiązanie generuje stosu komunikacji środowiska wykonawczego domyślnie, który używa zabezpieczeń transportu TCP w celu dostarczania komunikatów i kodowanie komunikatu binarnego. To powiązanie jest odpowiednie Windows Communication Foundation (WCF) dostarczane przez system wyborem do komunikowania się za pośrednictwem intranetu.  
   
- Konfigurację domyślną dla `netTcpBinding` jest szybsza niż podana przez Konfiguracja `wsHttpBinding`, ale jest przeznaczona tylko dla [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- do -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] komunikacji. Zachowania zabezpieczeń jest można skonfigurować za pomocą opcjonalnego `securityMode` atrybutu. Korzystanie z protokołu WS-ReliableMessaging jest można skonfigurować za pomocą opcjonalnego `reliableSessionEnabled` atrybutu. Ale niezawodna obsługa komunikatów jest domyślnie wyłączone. Ogólnie rzecz biorąc, HTTP dostarczane przez system powiązań takich jak `wsHttpBinding` i `basicHttpBinding` są skonfigurowane do włączyć rzeczy domyślnie, podczas gdy `netTcpBinding` powiązanie wyłącza rzeczy domyślnie, aby należy wyrazić zgodę na uzyskać pomoc techniczną, na przykład dla jednego z WS-* specyfikacji. Oznacza to, że domyślna konfiguracja protokołu TCP dla ma szybszy w wymiana wiadomości między punktami końcowymi niż te, które domyślnie skonfigurowany dla powiązania protokołu HTTP.  
+ Konfigurację domyślną dla `netTcpBinding` jest szybsza niż podana przez Konfiguracja `wsHttpBinding`, ale jest przeznaczona tylko do komunikacji usługi WCF. Zachowania zabezpieczeń jest można skonfigurować za pomocą opcjonalnego `securityMode` atrybutu. Korzystanie z protokołu WS-ReliableMessaging jest można skonfigurować za pomocą opcjonalnego `reliableSessionEnabled` atrybutu. Ale niezawodna obsługa komunikatów jest domyślnie wyłączone. Ogólnie rzecz biorąc, HTTP dostarczane przez system powiązań takich jak `wsHttpBinding` i `basicHttpBinding` są skonfigurowane do włączyć rzeczy domyślnie, podczas gdy `netTcpBinding` powiązanie wyłącza rzeczy domyślnie, aby należy wyrazić zgodę na uzyskać pomoc techniczną, na przykład dla jednego z WS-* specyfikacji. Oznacza to, że domyślna konfiguracja protokołu TCP dla ma szybszy w wymiana wiadomości między punktami końcowymi niż te, które domyślnie skonfigurowany dla powiązania protokołu HTTP.  
   
 ## <a name="example"></a>Przykład  
  Powiązanie jest określona w plikach konfiguracji dla klienta i usługi. Typ powiązania jest określona w `binding` atrybutu `<endpoint>` elementu. Jeśli chcesz skonfigurować powiązanie netTcpBinding i zmieniania jego ustawień należy zdefiniować konfiguracji powiązania. Punkt końcowy musi odwoływać się Konfiguracja powiązania z `bindingConfiguration` atrybutu. W poniższym przykładzie zdefiniowano konfiguracji powiązania.  

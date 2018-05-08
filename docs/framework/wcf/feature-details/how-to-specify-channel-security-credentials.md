@@ -1,34 +1,22 @@
 ---
 title: 'Porady: Określ poświadczenia zabezpieczeń kanału'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Porady: Określ poświadczenia zabezpieczeń kanału
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Moniker usługi umożliwia aplikacjom COM, wywołanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług. Większość [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług wymaga od klienta określić poświadczenia dla uwierzytelniania i autoryzacji. Podczas wywoływania metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, można określić te poświadczenia w kodzie zarządzanym lub w pliku konfiguracyjnym aplikacji. Podczas wywoływania metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi z aplikacji modelu COM, możesz użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejs, aby określić poświadczenia. W tym temacie przedstawiają różne sposoby, aby określić poświadczenia, za pomocą <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  
+Moniker usługi Windows Communication Foundation (WCF) umożliwia aplikacjom COM do wywoływania usług WCF. Większość usług WCF wymaga od klienta określić poświadczenia dla uwierzytelniania i autoryzacji. Podczas wywoływania usługi WCF z klienta WCF, można określić te poświadczenia w kodzie zarządzanym lub w pliku konfiguracyjnym aplikacji. Podczas wywoływania usługi WCF z aplikacji modelu COM, można użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejs, aby określić poświadczenia. W tym temacie przedstawiają różne sposoby, aby określić poświadczenia, za pomocą <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> jest interfejs IDispatch i nie otrzyma funkcja IntelliSense w środowisku Visual Studio.  
   
- W tym artykule będzie używać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zdefiniowany w [zabezpieczenia komunikatów — przykład](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ W tym artykule, będą używać usługi WCF zdefiniowanej w [zabezpieczenia komunikatów — przykład](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Aby określić certyfikat klienta  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 03/23/2018
   
 4.  Dodaj `bindingNamespace=``http://Microsoft.ServiceModel.Samples` do tagu końcowego w pliku App.config dla usługi.  
   
-5.  Tworzenie przykładowej zabezpieczeń komunikatów i uruchamianie Service.exe. W programie Internet Explorer i przejdź do identyfikatora URI usługi (Service-http://localhost: 8000/ServiceModelSamples) aby upewnić się, że usługa jest uruchomiona.  
+5.  Tworzenie przykładowej zabezpieczeń komunikatów i uruchamianie Service.exe. W programie Internet Explorer i przejdź do identyfikatora URI usługi (http://localhost:8000/ServiceModelSamples/Service) aby upewnić się, że usługa jest uruchomiona.  
   
 6.  Otwórz program Visual Basic 6.0 i Utwórz nowy plik .exe standardowa. Dodawanie przycisku do formularza, a następnie kliknij dwukrotnie przycisk, aby dodać poniższego kodu do obsługi kliknięcia:  
   

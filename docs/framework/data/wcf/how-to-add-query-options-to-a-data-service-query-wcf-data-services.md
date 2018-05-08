@@ -1,13 +1,6 @@
 ---
-title: "Porady: Dodawanie opcje zapytania do zapytania usługi danych (usługi danych WCF)"
-ms.custom: 
+title: 'Porady: Dodawanie opcje zapytania do zapytania usługi danych (usługi danych WCF)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55ed062ce2b4464618dfdb8184be65847195280d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 330581c699ca4beede3333315844af084f27e672
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Porady: Dodawanie opcje zapytania do zapytania usługi danych (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta. Najprostsza w tym celu jest utworzenie w wyrażeniu kwerendy języka zapytań zintegrowanym (LINQ) zawiera opcje żądanego zapytania. Można również wywołać szereg metod zapytań LINQ utworzenie równoważne zapytania. Ponadto można użyć <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metody w celu dodania opcje zapytania do zapytania. W każdym z tych przypadków identyfikator URI, generowany przez klienta zawiera zestaw jednostek żądanego z opcje wybrane zapytanie zastosowane. Aby uzyskać więcej informacji, zobacz [zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta. Najprostsza w tym celu jest utworzenie w wyrażeniu kwerendy języka zapytań zintegrowanym (LINQ) zawiera opcje żądanego zapytania. Można również wywołać szereg metod zapytań LINQ utworzenie równoważne zapytania. Ponadto można użyć <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metody w celu dodania opcje zapytania do zapytania. W każdym z tych przypadków identyfikator URI, generowany przez klienta zawiera zestaw jednostek żądanego z opcje wybrane zapytanie zastosowane. Aby uzyskać więcej informacji, zobacz [zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
  Przykład, w tym temacie korzysta z Northwind przykładowych danych wygenerowany automatycznie i usługi klienta danych usługi klas. Ta usługa i klas danych klienta są tworzone po ukończeniu [szybkiego startu usługi danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   

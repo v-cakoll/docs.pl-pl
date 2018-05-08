@@ -1,24 +1,12 @@
 ---
 title: WSStreamedHttpBinding
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d6259640bae2b4be4fac73883df8945bf1db7ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 Przykład przedstawia sposób tworzenia powiązania, które umożliwia obsługę przesyłania strumieniowego scenariuszy stosowania transportu HTTP.  
@@ -31,7 +19,7 @@ Przykład przedstawia sposób tworzenia powiązania, które umożliwia obsługę
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
@@ -39,7 +27,7 @@ Przykład przedstawia sposób tworzenia powiązania, które umożliwia obsługę
   
 1.  Utwórz nowe powiązanie standardowe  
   
-     Standardowe powiązania w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] takie jak basicHttpBinding i netTcpBinding Konfigurowanie transportów podstawowej i stosu kanału dla określonych wymagań. W tym przykładzie `WSStreamedHttpBinding` konfiguruje stosu kanału w celu obsługi przesyłania strumieniowego. Domyślnie WS-Security i niezawodna obsługa komunikatów nie są dodawane do stosu kanału, ponieważ obie funkcje nie są obsługiwane przez przesyłania strumieniowego. Nowe powiązanie jest zaimplementowana w klasie `WSStreamedHttpBinding` która pochodzi z <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` Zawiera następujące elementy powiązania: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Ta klasa dostarcza `CreateBindingElements()` Metoda konfiguracji wynikowy stosu powiązanie, jak pokazano w poniższym kodzie próbki.  
+     Standardowe powiązania w systemie Windows Communication Foundation (WCF) takie jak basicHttpBinding i netTcpBinding Konfigurowanie transportów podstawowej i stosu kanału dla określonych wymagań. W tym przykładzie `WSStreamedHttpBinding` konfiguruje stosu kanału w celu obsługi przesyłania strumieniowego. Domyślnie WS-Security i niezawodna obsługa komunikatów nie są dodawane do stosu kanału, ponieważ obie funkcje nie są obsługiwane przez przesyłania strumieniowego. Nowe powiązanie jest zaimplementowana w klasie `WSStreamedHttpBinding` która pochodzi z <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` Zawiera następujące elementy powiązania: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Ta klasa dostarcza `CreateBindingElements()` Metoda konfiguracji wynikowy stosu powiązanie, jak pokazano w poniższym kodzie próbki.  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -145,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Przykładowe WSStreamedHttpBinding klienta  
- Klient, który służy do interakcji z usługi przy użyciu `WSStreamedHttpBinding` znajduje się w podkatalogu klienta. Ponieważ certyfikat użyty w tym przykładzie jest certyfikatu testowego utworzone za pomocą Makecert.exe, alert zabezpieczeń wyświetlany, gdy próbują uzyskać dostęp w przeglądarce, takie jak https://localhost/servicemodelsamples/service.svc adres HTTPS. Aby umożliwić [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, aby pracować przy użyciu certyfikatu testowego w miejscu, dodatkowy kod został dodany do klienta dla pomijania alertu zabezpieczeń. Kod i towarzyszące klasy nie są wymagane, podczas korzystania z certyfikatów w środowisku produkcyjnym.  
+ Klient, który służy do interakcji z usługi przy użyciu `WSStreamedHttpBinding` znajduje się w podkatalogu klienta. Ponieważ certyfikat użyty w tym przykładzie jest certyfikatu testowego utworzone za pomocą Makecert.exe, alert zabezpieczeń wyświetla przy próbie dostępu adres HTTPS w przeglądarce, takie jak https://localhost/servicemodelsamples/service.svc. Aby umożliwić [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, aby pracować przy użyciu certyfikatu testowego w miejscu, dodatkowy kod został dodany do klienta dla pomijania alertu zabezpieczeń. Kod i towarzyszące klasy nie są wymagane, podczas korzystania z certyfikatów w środowisku produkcyjnym.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

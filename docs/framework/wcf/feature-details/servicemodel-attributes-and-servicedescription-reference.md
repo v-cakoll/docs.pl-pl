@@ -1,36 +1,22 @@
 ---
 title: Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription
-*Drzewa opis* jest hierarchia typów (począwszy od <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> klasy) ze sobą opisują każdego aspektu działania usługi. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa opis drzewa do kompilacji do publikowania Web Services Description Language (WSDL), języka definicji schematu XML (XSD) i potwierdzeń zasad (metadanymi) o usługę, której klienci mogą używać do łączenia się i korzystać z usługi oraz moduł wykonawczy prawidłową usługę Generowanie różne reprezentacje kodem i konfiguracją pliku wartości drzewa opis.  
+*Drzewa opis* jest hierarchia typów (począwszy od <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> klasy) ze sobą opisują każdego aspektu działania usługi. Windows Communication Foundation (WCF) używa drzewa opis do środowiska wykonawczego prawidłową usługę, do publikowania w sieci Web Services Description Language (WSDL), języka definicji schematu XML (XSD) i potwierdzeń zasad (metadanymi) o usługę, której klienci mogą używać do tworzenia Nawiązywanie połączenia i korzystania z usługi i generowania różne reprezentacje kodem i konfiguracją pliku wartości drzewa opis.  
   
  W tym temacie opisano sposób kontraktu związane z właściwości są uzyskiwane z kontraktu usługi oraz sposób ich zaimplementowane i dodane do drzewa opis. W niektórych przypadkach wartości atrybutów są konwertowane na zachowanie właściwości i zachowanie zostanie wstawiony w drzewie opis. Aby uzyskać więcej informacji dotyczących sposobu wartości drzewa opis są konwertowane na metadanych, zobacz [ServiceDescription i kodu WSDL odwołanie](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Operacje mapowania do drzewa opis  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, kontraktów usług są modelowane przez interfejsy lub klasy wykorzystujące atrybuty można oznaczyć jako grupowanie operacji interfejsu lub klasy i metody. Gdy <xref:System.ServiceModel.ServiceHost> klasy jest otwarty, zostaną uwzględnione w i łączone z informacjami o konfiguracji w drzewie opis implementacji i kontrakty usług.  
+ W aplikacjach WCF kontraktów usług są modelowane przez interfejsy lub klasy wykorzystujące atrybuty można oznaczyć jako grupowanie operacji interfejsu lub klasy i metody. Gdy <xref:System.ServiceModel.ServiceHost> klasy jest otwarty, zostaną uwzględnione w i łączone z informacjami o konfiguracji w drzewie opis implementacji i kontrakty usług.  
   
- Istnieją dwa typy operacji modeli: *parametru* modelu i *kontraktu komunikatu* modelu. Model parametru używa metody zarządzanych, które ma parametr lub typ zwracanej wartości, która jest oznaczona przez <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> klasy. W tym modelu deweloperów sterowania serializacją parametrów i wartości zwracane, ale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje wartości, które są używane do wypełnienia drzewa opis dla usługi i jego kontraktu.  
+ Istnieją dwa typy operacji modeli: *parametru* modelu i *kontraktu komunikatu* modelu. Model parametru używa metody zarządzanych, które ma parametr lub typ zwracanej wartości, która jest oznaczona przez <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> klasy. W tym modelu deweloperzy sterowania serializacją parametrów i wartości zwracane, ale WCF generuje wartości, które są używane do wypełnienia drzewa opis dla usługi i jego kontraktu.  
   
  Określona w plikach konfiguracji powiązania są ładowane bezpośrednio do <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> właściwości.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Podstawowa usługa obsługi zasobów"
-ms.custom: 
+title: Podstawowa usługa obsługi zasobów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>Podstawowa usługa obsługi zasobów
-W tym przykładzie pokazano, jak wdrożenie oparte na protokole HTTP usługi za pomocą [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelu programowania REST udostępnia kolekcję klientów obsługuje pobieranie, dodawanie, usuwanie i zamienianie operacji. Ten przykład zawiera składniki 2 - własnym hostowanej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa HTTP (Service.cs) i aplikacji konsoli (program.cs), która tworzy usługi i wykonywania wywołań do niego.  
+W tym przykładzie przedstawiono sposób wdrożenia oparte na protokole HTTP usługi przy użyciu modelu programowania REST Windows Communication Foundation (WCF) udostępnia kolekcję klientów obsługuje pobieranie, dodawania, usuwania i zamienianie operacji. Ten przykład zawiera składniki 2 - własnym hostowanej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa HTTP (Service.cs) i aplikacji konsoli (program.cs), która tworzy usługi i wykonywania wywołań do niego.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Usługi udostępnia kolekcję klientów w sposób zasobów ukierunkowane/REST. Innymi słowy ten proces obejmuje o unikatowych identyfikatorów URI dla kolekcji klientów i wszystkich klientów w kolekcji. Usługa obsługuje wysyłanie HTTP `GET` w kolekcji identyfikator URI, aby pobrać całą kolekcję i HTTP `POST` w kolekcji identyfikator URI, aby dodać nowego klienta do kolekcji. Również na identyfikator URI dla poszczególnych klientów, obsługuje on HTTP `GET` Aby uzyskać szczegółowe informacje, HTTP klienta `PUT` zastąpić szczegóły klienta i HTTP `DELETE` Aby usunąć klienta z kolekcji. Po dodaniu nowego klienta do kolekcji, usługa przypisuje mu unikatowy identyfikator URI i przechowuje identyfikator URI jako część szczegóły klienta. Ponadto on komunikuje się identyfikator URI do klienta przy użyciu nagłówka HTTP lokalizacji odpowiedzi.  
@@ -45,7 +33,7 @@ W tym przykładzie pokazano, jak wdrożenie oparte na protokole HTTP usługi za 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

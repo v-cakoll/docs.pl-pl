@@ -1,13 +1,6 @@
 ---
-title: "Porady: przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)"
-ms.custom: 
+title: 'Porady: przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], accessing
 - variables [Visual Basic], object
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5d91eeaeb034a4c8b4fefcffdf2fdebe72127d66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d52d13feb0f85065c0623b5937f558b841c036dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Porady: przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)
 Jeśli często dostępu do obiektu, który wymaga ścieżką kwantyfikacji kilka metod i właściwości można przyspieszyć kodu nie powtarzając ścieżką kwantyfikacji.  
@@ -64,4 +54,4 @@ Jeśli często dostępu do obiektu, który wymaga ścieżką kwantyfikacji kilka
   
 ## <a name="see-also"></a>Zobacz też  
  [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Z... End With — instrukcja](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+ [With...End With, instrukcja](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

@@ -1,26 +1,17 @@
 ---
-title: "Porady: wykrywanie dostępności sieci i rozwiąż zmiany"
-ms.custom: 
+title: 'Porady: wykrywanie dostępności sieci i rozwiąż zmiany'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6afee9ea1528d4219d32d32fff670ddbfb3033c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9056c8b2ecf18c4a57d356e7c9698984df1558eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Porady: wykrywanie dostępności sieci i rozwiąż zmiany
 Ten przykład przedstawia sposób wykrywania zmian adresu sieciowego interfejsu.  

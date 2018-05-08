@@ -1,21 +1,15 @@
 ---
-title: "Tagi zalecane dla komentarzy do dokumentacji (Przewodnik programowania w języku C#)"
+title: Tagi zalecane dla komentarzy do dokumentacji (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-caps.latest.revision: "20"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4d558bbe58d1f4a1c290b4f36718293d5ba1c734
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54047746db672efbf626eb2d3fc301b341cc49f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Tagi zalecane dla komentarzy do dokumentacji (Przewodnik programowania w języku C#)
 Kompilator języka C# przetwarza komentarze do dokumentacji w kodzie i formatuje je jako kod XML w pliku o nazwie określonej w **/doc** opcji wiersza polecenia. Aby utworzyć końcowego dokumentację na podstawie pliku generowane przez kompilator, można utworzyć niestandardowego narzędzia, lub za pomocą narzędzia, takie jak [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -36,7 +30,7 @@ Kompilator języka C# przetwarza komentarze do dokumentacji w kodzie i formatuje
 |[\<przykład >](../../../csharp/programming-guide/xmldoc/example.md)|[\<paramref >](../../../csharp/programming-guide/xmldoc/paramref.md)|[\<podsumowania >](../../../csharp/programming-guide/xmldoc/summary.md)|  
 |[\<wyjątku >](../../../csharp/programming-guide/xmldoc/exception.md)*|[\<uprawnienie >](../../../csharp/programming-guide/xmldoc/permission.md)*|[\<typeparam >](../../../csharp/programming-guide/xmldoc/typeparam.md)*|  
 |[\<obejmują >](../../../csharp/programming-guide/xmldoc/include.md)*|[\<Remarks >](../../../csharp/programming-guide/xmldoc/remarks.md)|[\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)|  
-|[\<listy >](../../../csharp/programming-guide/xmldoc/list.md)|[\<Zwraca >](../../../csharp/programming-guide/xmldoc/returns.md)|[\<wartość >](../../../csharp/programming-guide/xmldoc/value.md)|  
+|[\<list>](../../../csharp/programming-guide/xmldoc/list.md)|[\<Zwraca >](../../../csharp/programming-guide/xmldoc/returns.md)|[\<wartość >](../../../csharp/programming-guide/xmldoc/value.md)|  
   
  (* oznacza, że kompilator sprawdza składnię.)  
   

@@ -1,10 +1,6 @@
 ---
 title: -appconfig (opcje kompilatora C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /appconfig
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a3f2c1bc9d0d3fec0635d284f64138f0432f59ef
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3fca0821b8665354d840783fca3ab90ece41b2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (opcje kompilatora C#)
 **- Appconfig** — opcja kompilatora umożliwia aplikacji C# do określenia lokalizacji pliku konfiguracyjnego (app.config) aplikacji zestawu do środowisko uruchomieniowe języka wspólnego (CLR) w czasie powiązanie zestawu.  
@@ -32,7 +25,7 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="arguments"></a>Argumenty  
  `file`  
- Wymagany. Plik konfiguracji aplikacji, który zawiera ustawienia powiązania zestawu.  
+ Wymagana. Plik konfiguracji aplikacji, który zawiera ustawienia powiązania zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
  Użycie jednego **- appconfig** jest zaawansowanych scenariuszy, w których zestawu musi odwoływać się do zarówno wersji platformy .NET i .NET Framework dla programu Silverlight wersja zestawu odwołania w szczególności w tym samym czasie. Na przykład projektanta XAML zapisywane w systemie Windows Presentation Foundation (WPF) może być konieczne odwoływać zarówno WPF pulpitu, interfejs użytkownika projektanta i podzbiór WPF dołączonej do programu Silverlight. Tego samego zestawu projektanta ma dostęp do obu zestawów. Domyślnie wystąpi błąd kompilatora spowodować oddzielne odwołań, ponieważ powiązań zestawów będzie widział dwa zestawy jako równoważne.  

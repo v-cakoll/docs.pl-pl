@@ -1,30 +1,18 @@
 ---
 title: Niezawodna komunikacja dwukierunkowa
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex"></a>Niezawodna komunikacja dwukierunkowa
 W tym przykładzie pokazano, jak instalowanie i konfigurowanie trwałe dupleksu wiadomości programu exchange przy użyciu działań obsługi wiadomości w systemie Windows Workflow Foundation (WF). Exchange trwałe komunikat dupleksu jest dwukierunkowe wiadomości programu exchange, która ma miejsce w długim okresie czasu. Okres istnienia wymiany komunikatów może być dłuższy niż okres istnienia kanał komunikacyjny i okresem istnienia w pamięci wystąpień usługi.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
- W tym przykładzie dwa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementowane za pomocą programu Windows Workflow Foundation usług są konfigurowane exchange trwałe dupleksu wiadomości. Exchange trwałe dupleksu komunikat składa się z dwóch jednokierunkowe komunikaty wysyłane przez usługę MSMQ i skorelowane przy użyciu [wymiana kontekstu .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Komunikaty są wysyłane przy użyciu <xref:System.ServiceModel.Activities.Send> i <xref:System.ServiceModel.Activities.Receive> działań dotyczących komunikatów. Wymiana kontekstu .NET jest Użyj, aby określić adres wywołania zwrotnego na wysłane wiadomości. Obie te usługi są obsługiwane przy użyciu usługi aktywacji procesów systemu Windows (WAS) i są skonfigurowane do włączenia trwałości wystąpień usługi.  
+ W tym przykładzie dwie usługi Windows Communication Foundation (WCF) implementowane za pomocą programu Windows Workflow Foundation są skonfigurowane do ma exchange trwałe dupleksu wiadomości. Exchange trwałe dupleksu komunikat składa się z dwóch jednokierunkowe komunikaty wysyłane przez usługę MSMQ i skorelowane przy użyciu [wymiana kontekstu .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Komunikaty są wysyłane przy użyciu <xref:System.ServiceModel.Activities.Send> i <xref:System.ServiceModel.Activities.Receive> działań dotyczących komunikatów. Wymiana kontekstu .NET jest Użyj, aby określić adres wywołania zwrotnego na wysłane wiadomości. Obie te usługi są obsługiwane przy użyciu usługi aktywacji procesów systemu Windows (WAS) i są skonfigurowane do włączenia trwałości wystąpień usługi.  
   
  Pierwszej usługi (Service1.xamlx) wysyła żądanie do wysyłania usługi (Service2.xamlx) do wykonania dodatkowych czynności. Po zakończeniu pracy Service2.xamlx wysyła powiadomienie do Service1.xamlx, aby wskazać, że ukończono pracę. Aplikacja konsoli przepływu pracy konfiguruje kolejki, które nasłuchują usługi na i wysyła początkowy komunikat uruchomienia aktywować Service1.xamlx. Po Service1.xamlx odbierze powiadomienie z Service2.xamlx zakończenie żądanej pracy, Service1.xamlx zapisuje wyniki w pliku XML. Podczas oczekiwania na wiadomość wywołania zwrotnego, Service1.xamlx utrwala swój stan wystąpienia, przy użyciu domyślnego <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>. Service2.xamlx utrwala swój stan wystąpienia jako część kończy pracę, żądane przez Service1.xamlx.  
   
@@ -190,6 +178,6 @@ W tym przykładzie pokazano, jak instalowanie i konfigurowanie trwałe dupleksu 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

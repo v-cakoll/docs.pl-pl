@@ -1,9 +1,6 @@
 ---
-title: "if-else (odwołanie w C#)"
+title: if-else (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - if_CSharpKeyword
 - else
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-caps.latest.revision: "32"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a0ecc915af00caffeba92a8308a60bc24198d477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb8fe4c3a02cab8f8c887ec37244bede04b8a663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-else-c-reference"></a>if-else (odwołanie w C#)
 `if` Identyfikuje instrukcji, które instrukcji do uruchomienia na podstawie wartości z `Boolean` wyrażenia. W poniższym przykładzie `Boolean` zmiennej `result` ustawiono `true` , a następnie zaewidencjonowany `if` instrukcji. Dane wyjściowe `The condition is true`.  
@@ -65,7 +59,7 @@ if (condition)
   
  [!code-csharp[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
- `Result2`jest wyświetlana, gdy warunek `(m > 10)` daje w wyniku wartość false.  
+ `Result2` jest wyświetlana, gdy warunek `(m > 10)` daje w wyniku wartość false.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie, wpisz znak z klawiatury, a program używa zagnieżdżoną `if` instrukcji, aby określić, czy znak wejściowy jest znakiem alfabetycznym. Jeśli znak wejściowy jest litera, program sprawdza, czy znak wejściowy jest małe lub wielkie litery. Pojawi się komunikat dla każdego przypadku.  
@@ -82,7 +76,7 @@ if (condition)
   
  [!code-csharp[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
- Tak samo, jak instrukcji else bloku lub następnie bloku może być dowolnym prawidłową instrukcję, używając dowolne prawidłowe wyrażenie logiczne dla warunku. Można użyć operatorów logicznych, takich jak [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md), [ & ](../../../csharp/language-reference/operators/and-operator.md), [&#124; &#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) i [!](../../../csharp/language-reference/operators/logical-negation-operator.md) Aby można było złożonych warunków. Poniższy kod przedstawia przykłady.  
+ Tak samo, jak instrukcji else bloku lub następnie bloku może być dowolnym prawidłową instrukcję, używając dowolne prawidłowe wyrażenie logiczne dla warunku. Można użyć operatorów logicznych, takich jak [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md), [ & ](../../../csharp/language-reference/operators/and-operator.md), [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md), [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) i [!](../../../csharp/language-reference/operators/logical-negation-operator.md) Aby można było złożonych warunków. Poniższy kod przedstawia przykłady.  
   
 ```csharp  
 // NOT  
@@ -138,6 +132,6 @@ if (!(m >= n || m >= p))
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [?: — Operator](../../../csharp/language-reference/operators/conditional-operator.md)  
- [if-else — instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)  
- [Przełącznik](../../../csharp/language-reference/keywords/switch.md)
+ [?:, operator](../../../csharp/language-reference/operators/conditional-operator.md)  
+ [if-else, instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)  
+ [switch](../../../csharp/language-reference/keywords/switch.md)

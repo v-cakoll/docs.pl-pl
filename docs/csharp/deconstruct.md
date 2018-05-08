@@ -1,20 +1,15 @@
 ---
 title: Deconstructing krotek i innych typów
 description: Dowiedz się, jak deconstruct krotek i innych typów.
-keywords: .NET, .NET core, C#
 author: rpetrusha
-ms-author: ronpet
+ms.author: ronpet
 ms.date: 07/18/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 726a391a4a747e5446e252e669c5b16248a5e0ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Deconstructing krotek i innych typów #
 

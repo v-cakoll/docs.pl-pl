@@ -1,24 +1,17 @@
 ---
 title: struct (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e8a848d5543291ef335e72cb7806158827e865dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5a4863bc93a115d14e791509f99b7b13bee9f68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="struct-c-reference"></a>struct (odwołanie w C#)
 A `struct` typem jest typ wartości, która jest zwykle używana w celu hermetyzacji małych grup zmienne pokrewne, takie jak współrzędne prostokąta lub właściwości elementu w magazynie. W poniższym przykładzie przedstawiono deklaracji struktury prosty:  
@@ -55,6 +48,6 @@ public struct Book
  [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [Typy](../../../csharp/language-reference/keywords/types.md)  
  [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)  
- [klasy](../../../csharp/language-reference/keywords/class.md)  
- [Interfejs](../../../csharp/language-reference/keywords/interface.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [interface](../../../csharp/language-reference/keywords/interface.md)  
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)

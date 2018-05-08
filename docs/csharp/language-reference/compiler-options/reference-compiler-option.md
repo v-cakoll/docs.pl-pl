@@ -1,10 +1,6 @@
 ---
-title: "— Odwołanie (opcje kompilatora C#)"
+title: — Odwołanie (opcje kompilatora C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /reference
 helpviewer_keywords:
@@ -17,14 +13,11 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 60a00b1cd088a051e1a58d245c455b9678a74988
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4a96da3668a73368dd98055a9082479f162b7b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-reference-c-compiler-options"></a>— Odwołanie (opcje kompilatora C#)
 **— Odwołanie** opcja powoduje, że kompilator, aby zaimportować [publicznego](../../../csharp/language-reference/keywords/public.md) wpisz informacje w określonym pliku w bieżącym projekcie, dzięki czemu można odwoływać się do metadanych z określonych plików zestawów.  

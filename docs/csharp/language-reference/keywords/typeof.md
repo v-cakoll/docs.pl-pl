@@ -21,23 +21,23 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="typeof-c-reference"></a>typeof (odwołanie w C#)
-Używany do uzyskania obiektu `System.Type` dla typu. Wyrażenie `typeof` ma następującą postać:  
+Uzywany do uzyskania obiektu `System.Type` dla typu. Wyrazenie `typeof` ma nastepujaca postac:
   
 ```  
 System.Type type = typeof(int);  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać typ run-time wyrażenia, można użyć metody .NET Framework <xref:System.Object.GetType%2A>, jak w poniższym przykładzie:  
+ Aby uzyskac typ srodowiska wykonawczego wyrazenia, mozna uzyc metody .NET Framework <xref:System.Object.GetType%2A> — jak w ponizszym przykladzie:
   
 ```  
 int i = 0;  
 System.Type type = i.GetType();  
 ```  
   
- Operator `typeof` nie może być przeciążony.  
+ Operator `typeof` nie moze byc przeciazony.
   
-Operatora `typeof` można używać na typach ogólnych. Typy z więcej niż jednym parametrem typu muszą mieć odpowiednią liczbę przecinków w specyfikacji. Poniższy przykład przedstawia sposób ustalenia, czy zwracanym typem metody jest generyczny <xref:System.Collections.Generic.IEnumerable%601>. Załóżmy, że metoda jest wystąpieniem typu MethodInfo:  
+Operatora `typeof` mozna tez uzywac na otwartych typach ogólnych. Typy z wiecej niz jednym parametrem typu musza zawierac odpowiednia liczbe przecinków w specyfikacji. W przykladzie ponizej pokazujemy, jak ustalic, czy zwracanym typem metody jest ogólny typ <xref:System.Collections.Generic.IEnumerable%601>. Zalózmy, ze metoda jest wystapieniem typu MethodInfo:
   
 ```  
 string s = method.ReturnType.GetInterface  
@@ -48,7 +48,7 @@ string s = method.ReturnType.GetInterface
  [!code-csharp[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- W przykładzie użyto metodę <xref:System.Object.GetType%2A> , aby określić typ, który jest zwracany jako wynik obliczenia liczbowego. Zależy to od wymagań przechowywania liczby, która jest wynikiem.  
+ W przykladzie uzyto metody <xref:System.Object.GetType%2A>, aby okreslic typ, który jest zwracany jako wynik obliczenia. Zalezy to od wymagan przechowywania zwiazanych z wynikowa liczba. 
   
  [!code-csharp[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   

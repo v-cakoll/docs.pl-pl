@@ -1,13 +1,6 @@
 ---
-title: "Śledzenie i instrumentacja aplikacji"
-ms.custom: 
+title: Śledzenie i instrumentacja aplikacji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
 Śledzenie jest sposobem monitorowania wykonanie aplikacji jest uruchomiona. Możesz dodać Instrumentacji śledzenia i debugowania aplikacji .NET Framework podczas jej opracowywania i zarówno podczas tworzenia aplikacji, jak i po jej wdrożeniu, można użyć tego instrumentacji. Można użyć <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> klasy do rejestrowania informacji o błędach i wykonanie aplikacji w dzienniki, pliki tekstowe lub innych urządzeń w celu późniejszej analizy.  
@@ -102,7 +92,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Użyj **kompilacji** menu wraz z **debugowania** strony **strony właściwości** okno dialogowe w **Eksploratora rozwiązań**. Użyj tego podczas kompilowania w programie Visual Studio.  
   
-         \-lub -  
+         \- lub -  
   
     -   Użyj **śledzenia** i **debugowania** dyrektywy kompilatora wiersza polecenia metody kompilacji. Aby uzyskać więcej informacji, zobacz [kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Użyj tego podczas kompilowania z wiersza polecenia.  
   
@@ -133,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |------------|------------|  
 |**Assert**|Określony tekst; lub, jeśli nie zostanie określona, wywołanie stosu. Dane wyjściowe są zapisywane tylko jeśli warunek określony jako argument w **Assert** instrukcja jest **false**.|  
 |**Niepowodzenie**|Określony tekst; lub, jeśli nie zostanie określona, wywołanie stosu.|  
-|**Zapisu**|Określony tekst.|  
+|**zapisu**|Określony tekst.|  
 |**WriteIf**|Określony tekst, jeśli warunek określony jako argument w **WriteIf** instrukcji jest spełniony.|  
 |**WriteLine**|Określony tekst i powrotu karetki.|  
 |**WriteLineIf**|Określony tekst i karetki zwracany, jeśli warunek określony jako argument w **WriteLineIf** instrukcji jest spełniony.|  

@@ -1,21 +1,12 @@
 ---
-title: "Atrybuty wspólne (C#)"
-ms.custom: 
+title: Atrybuty wspólne (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4e0a8912aa60e4c2918bb812963d83fae8d529f1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-c"></a>Atrybuty wspólne (C#)
 W tym temacie opisano atrybuty, które są najczęściej używane w programach języka C#.  
@@ -28,7 +19,7 @@ W tym temacie opisano atrybuty, które są najczęściej używane w programach j
   
 -   [Caller — atrybuty informacji](#CallerInfo)  
   
-##  <a name="Global"></a>Atrybuty globalne  
+##  <a name="Global"></a> Atrybuty globalne  
  Większość atrybutów są stosowane do określonego języka elementów, takich jak klasy lub metody; Jednak niektóre atrybuty są globalne — odnoszą się do całego zestawu lub modułu. Na przykład <xref:System.Reflection.AssemblyVersionAttribute> atrybut może służyć do osadzanie informacji o wersji w zestawie, jak to:  
   
 ```csharp  
@@ -80,7 +71,7 @@ W tym temacie opisano atrybuty, które są najczęściej używane w programach j
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Określa niestandardowy atrybut, który określa konfigurację zestawu (na przykład detalicznych lub debugowanych) dla manifest zestawu.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definiuje alias domyślne przyjazną dla manifest zestawu|  
   
-##  <a name="Obsolete"></a>Atrybut przestarzałe  
+##  <a name="Obsolete"></a> Atrybut przestarzałe  
  `Obsolete` Atrybut oznacza jednostki programu, co nie jest zalecane używanie. Każdym użyciu jednostki oznaczony jako przestarzały później spowoduje wygenerowanie ostrzeżenia lub błędu, w zależności od sposobu skonfigurowania atrybutu. Na przykład:  
   
 ```csharp  
@@ -117,9 +108,9 @@ b.NewMethod();
   
  `Obsolete` Atrybut może być używany bez argumentów, ale łącznie z wyjaśnieniem przyczyny element jest przestarzały i co należy użyć zamiast tego zaleca się.  
   
- `Obsolete` Atrybut jest atrybutem jednorazowego użytku i mogą być stosowane do dowolnej jednostki, który umożliwia atrybutów. `Obsolete`alias jest <xref:System.ObsoleteAttribute>.  
+ `Obsolete` Atrybut jest atrybutem jednorazowego użytku i mogą być stosowane do dowolnej jednostki, który umożliwia atrybutów. `Obsolete` alias jest <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a>Atrybut Conditional  
+##  <a name="Conditional"></a> Atrybut Conditional  
  `Conditional` Atrybut powoduje, że wykonanie metody są zależne od identyfikatora przetwarzania wstępnego. `Conditional` Atrybutu jest aliasem <xref:System.Diagnostics.ConditionalAttribute>, można zastosować do metody lub atrybut klasy.  
   
  W tym przykładzie `Conditional` jest zastosowany do metody, aby włączyć lub wyłączyć wyświetlanie informacji diagnostycznych programów:  
@@ -224,7 +215,7 @@ class SampleClass
 }  
 ```  
   
-##  <a name="CallerInfo"></a>Caller — atrybuty informacji  
+##  <a name="CallerInfo"></a> Caller — atrybuty informacji  
  Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę. Możesz uzyskać ścieżka pliku kodu źródłowego, numer wiersza w kodzie źródłowym i nazwę elementu członkowskiego obiektu wywołującego.  
   
  Aby uzyskać informacje o wywołującym — członek, należy użyć atrybutów, które są stosowane do parametrów opcjonalnych. Każdy parametr opcjonalny określenie wartości domyślnej. Poniższa tabela zawiera listę atrybutów wywołującego informacje, które są zdefiniowane w <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw:  

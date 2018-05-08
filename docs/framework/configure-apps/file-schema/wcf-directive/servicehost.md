@@ -2,11 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Kojarzy fabryka użyta do wyprodukowania hosta usługi z usługą ma być obsługiwana i inne aspekty programowania wymagane do uzyskania dostępu lub skompilować hostingu kod zawarty w pliku svc.  
@@ -31,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  Nazwa typu CLR fabryki hostów usług służący do uruchamiania usługi hosta. Ten atrybut jest opcjonalne. Jeśli zostanie określona, domyślnie <xref:System.ServiceModel.Activation.ServiceHostFactory> jest używana, która zwraca wystąpienie klasy <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Debugowanie  
- Wskazuje, czy usługi Windows Communication Foundation (WCF) ma być kompilowana przy użyciu symboli debugowania. `true` Jeśli [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi powinny być skompilowanych przy użyciu symboli debugowania; w przeciwnym razie `false`.  
+ Wskazuje, czy usługi Windows Communication Foundation (WCF) ma być kompilowana przy użyciu symboli debugowania. `true` Jeśli usługa WCF ma być kompilowana przy użyciu symboli debugowania; w przeciwnym razie `false`.  
   
 #### <a name="language"></a>Język  
  Określa język używany podczas kompilowania kodu wbudowanego w pliku (SVC). Wartości może reprezentować żadnego. Obsługiwane NET język, w tym C#, VB i JS, które dotyczą odpowiednio C#, Visual Basic .NET i JScript .NET. Ten atrybut jest opcjonalne.  

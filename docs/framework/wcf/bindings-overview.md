@@ -1,31 +1,17 @@
 ---
 title: Omówienie powiązań WCF (Windows Communication Foundation)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
-Powiązania są obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do nawiązania połączenia z punktów końcowych [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi. Każdy punkt końcowy w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi wymaga powiązania być poprawnie określona. W tym temacie przedstawiono typy komunikacji szczegóły definiujące powiązań, elementy powiązania, jakie powiązania są uwzględnione w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], jak można określić powiązanie dla punktu końcowego.  
+Powiązania są obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi wymaga powiązania być poprawnie określona. W tym temacie przedstawiono typy komunikacji szczegóły definiujące powiązań, elementy powiązania, jakie powiązania są uwzględnione w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], jak można określić powiązanie dla punktu końcowego.  
   
 ## <a name="what-a-binding-defines"></a>Definiuje powiązanie  
  Informacje w powiązaniu może być bardzo podstawowe lub bardzo złożonych. Najbardziej podstawowa powiązanie określa tylko protokół transportu (np. HTTP), który musi być używany do łączenia się z punktem końcowym. Ogólnie rzecz biorąc powiązanie zawiera informacje o tym, jak nawiązać połączenia z punktem końcowym należy do jednej z następujących kategorii.  

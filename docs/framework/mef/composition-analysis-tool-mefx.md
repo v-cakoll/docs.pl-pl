@@ -1,28 +1,18 @@
 ---
-title: "Narzędzie do analizy kompozycji (Mefx)"
-ms.custom: 
+title: Narzędzie do analizy kompozycji (Mefx)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Composition Analysis Tool [MEF]
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6e5ab22ff2fe382fa2a266e3180cb34f970cc48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composition-analysis-tool-mefx"></a>Narzędzie do analizy kompozycji (Mefx)
 Narzędzie do analizy kompozycji (Mefx) jest aplikacją wiersza polecenia, która analizuje biblioteki (.dll) i pliki aplikacji (.exe) zawierający części Managed Extensibility Framework (MEF). Głównym celem Mefx ma umożliwiają deweloperom diagnozowanie błędów kompozycji w swoich aplikacjach MEF bez konieczności Dodaj kod śledzenia skomplikowane do samej aplikacji. Może być również przydatne do zrozumienia składniki Report Part z biblioteki udostępnione przez innych firm. W tym temacie opisano sposób użycia Mefx i znajdują się informacje na jego składni.  
@@ -83,7 +73,7 @@ MyAddin.AddIn
 ## <a name="finding-rejected-parts"></a>Znajdowanie odrzucone części  
  Po załadowaniu dostępne części, Mefx używa aparatu kompozycji MEF ich utworzenie. Elementy, które nie mogą być składane pomyślnie są określane jako *odrzucone*. Aby wyświetlić listę wszystkich odrzucone części, użyj `/rejected` akcji.  
   
- Można użyć `/verbose` opcję z `/rejected` akcji, aby wydrukować szczegółowe informacje o odrzucone części. W poniższym przykładzie `ClassLibrary1` biblioteki DLL zawiera `AddIn` części, który importuje `MemberPart` i `ChainOne` części. `ChainOne`Importuje `ChainTwo`, ale `ChainTwo` nie istnieje. Oznacza to, że `ChainOne` zostaje odrzucona, co powoduje, że `AddIn` odrzucona.  
+ Można użyć `/verbose` opcję z `/rejected` akcji, aby wydrukować szczegółowe informacje o odrzucone części. W poniższym przykładzie `ClassLibrary1` biblioteki DLL zawiera `AddIn` części, który importuje `MemberPart` i `ChainOne` części. `ChainOne` Importuje `ChainTwo`, ale `ChainTwo` nie istnieje. Oznacza to, że `ChainOne` zostaje odrzucona, co powoduje, że `AddIn` odrzucona.  
   
 ```  
 mefx /file:ClassLibrary1.dll /rejected /verbose  

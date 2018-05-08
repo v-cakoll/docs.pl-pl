@@ -1,21 +1,12 @@
 ---
-title: "Włączanie źródła danych dla LINQ Querying1"
-ms.custom: 
+title: Włączanie źródła danych dla LINQ Querying1
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Włączanie źródła danych do zapytań LINQ
 Istnieją różne sposoby rozszerzania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] umożliwiające dowolnego źródła danych w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wzorca. Źródłem danych może być między innymi struktura danych, usługi sieci Web, system plików lub baza danych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Wzorzec ułatwia klientom zapytania źródła danych, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań jest włączony, ponieważ składnia i wzorzec zapytania nie powoduje zmiany. Sposoby, w którym [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] może zostać rozszerzony do tych danych źródła są następujące:  
@@ -39,7 +30,7 @@ Istnieją różne sposoby rozszerzania [!INCLUDE[vbteclinq](~/includes/vbteclinq
  Najlepszym rozwiązaniem umożliwiających [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyszukiwanie zdalnego źródła danych jest zaimplementowanie <xref:System.Linq.IQueryable%601> interfejsu. Jednak ta różni się od takich jak rozszerzanie dostawcę [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] dla źródła danych. Żadnych modeli dostawcy do rozszerzania istniejących [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] technologii, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], do innego typu źródła danych są dostępne w [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
   
 ## <a name="iqueryable-linq-providers"></a>Dostawy IQueryable LINQ  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]dostawców, które implementują <xref:System.Linq.IQueryable%601> mogą mieć różne powszechnie złożoności. W tej sekcji omówiono różne poziomy złożoności.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawców, które implementują <xref:System.Linq.IQueryable%601> mogą mieć różne powszechnie złożoności. W tej sekcji omówiono różne poziomy złożoności.  
   
  Mniej złożona `IQueryable` dostawcy mogą łączyć się z jednej metody usługi sieci Web. Ten typ dostawcy jest bardzo specyficzny, ponieważ oczekuje określonych informacji w kwerendach, które obsługuje. Posiada system zamkniętego typu, być może podając pojedynczy typ wyniku. Większość wykonywania zapytania występuje lokalnie, na przykład za pomocą <xref:System.Linq.Enumerable> implementacje standardowych operatorów zapytań. Mniej skomplikowany dostawca może zbadać tylko jedną metodę wyrażenie wywołania w drzewie wyrażeń, które reprezentuje zapytanie i pozwala, aby pozostała logiki kwerendy była obsługiwana gdzie indziej.  
   

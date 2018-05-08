@@ -1,24 +1,14 @@
 ---
-title: "Punkt końcowy: Wywołania zabezpieczeń bez autoryzacji na sekundę"
-ms.custom: 
+title: 'Punkt końcowy: Wywołania zabezpieczeń bez autoryzacji na sekundę'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8a1547b-986b-45c1-b302-dea0cd4b516d
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2700e46f2061818dda95b8e3977c13b62e15481b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fd7c3ab7abcc374c4ef89f9f5a0650647cf97a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a>Punkt końcowy: Wywołania zabezpieczeń bez autoryzacji na sekundę
 Nazwa licznika: Wywołania zabezpieczeń bez autoryzacji na sekundę.  

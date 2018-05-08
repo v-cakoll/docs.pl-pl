@@ -1,12 +1,6 @@
 ---
-title: "Nasłuchiwanie z gniazda"
-ms.custom: 
+title: Nasłuchiwanie z gniazda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +15,14 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6b799f57644420653b371ac0e65b414c807008b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f85b63b151bcc20db635f56ec1dfec8df6c92241
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listening-with-sockets"></a>Nasłuchiwanie z gniazda
 Gniazda odbiornika lub serwera Otwórz port w sieci, a następnie poczekaj dla klienta połączyć się z tym portem. Mimo że istnieją inne rodziny adresów sieci i protokołów, w tym przykładzie pokazano, jak można utworzyć usługi zdalnej dla sieci TCP/IP.  

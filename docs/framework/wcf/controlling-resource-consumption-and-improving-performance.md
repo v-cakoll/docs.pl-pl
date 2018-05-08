@@ -1,32 +1,18 @@
 ---
 title: Kontrolowanie zużycia zasobów i zwiększanie wydajności
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrolowanie zużycia zasobów i zwiększanie wydajności
-W tym temacie opisano różne właściwości w różnych obszarach [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architekturę, która działa kontrolowanie zużycia zasobów i wpływają na metryki wydajności.  
+W tym temacie opisano różne właściwości w różnych obszarach o architekturze Windows Communication Foundation (WCF), które współpracują w celu sterowania zużycia zasobów i wpływają na metryki wydajności.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Właściwości, które ograniczyć zużycie zasobów w programie WCF  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] zastosowanie ograniczenia dotyczące niektórych typów procesów celów zabezpieczeń i wydajności. Ograniczenia te są dostępne w dwóch głównych formularzy, przydziały i limity. *Przydziały* są limity wyzwalających osiągnięto lub przekroczono natychmiastowego wyjątek w pewnym momencie w systemie. *Ogranicza* ograniczeń, które nie powodują natychmiast wyjątków. Zamiast tego po osiągnięciu limitu ograniczania przepustowości przetwarzania nadal, ale w granicach ustawiony przez wartość tego ograniczenia. To ograniczona przetwarzanie może wyzwolić wyjątek w innym miejscu, ale zależy to od aplikacji.  
+ Windows Communication Foundation (WCF) ma zastosowanie ograniczenia dotyczące niektórych typów procesów celów zabezpieczeń i wydajności. Ograniczenia te są dostępne w dwóch głównych formularzy, przydziały i limity. *Przydziały* są limity wyzwalających osiągnięto lub przekroczono natychmiastowego wyjątek w pewnym momencie w systemie. *Ogranicza* ograniczeń, które nie powodują natychmiast wyjątków. Zamiast tego po osiągnięciu limitu ograniczania przepustowości przetwarzania nadal, ale w granicach ustawiony przez wartość tego ograniczenia. To ograniczona przetwarzanie może wyzwolić wyjątek w innym miejscu, ale zależy to od aplikacji.  
   
  Oprócz różnicy między przydziały i limity niektóre właściwości ograniczający znajdują się na poziomie serializacji, niektóre na poziomie transportu i niektóre na poziomie aplikacji. Na przykład limit przydziału <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, który jest implementowany przez wszystkie elementy powiązania transportu dostarczany przez system, jest domyślnie do 65 536 bajtów utrudnić złośliwego klientów angażowania ataku typu "odmowa usługi" Usługa powodując nadmiernego pamięci Użycie. (Zazwyczaj można zwiększyć wydajność przez zmniejszenie tej wartości.)  
   

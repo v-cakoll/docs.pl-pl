@@ -1,31 +1,17 @@
 ---
 title: SQL Server i ADO.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: de9480855038afea9f8c7f26e73818846961d633
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server i ADO.NET
 W tej sekcji opisano funkcje i zachowania, które są specyficzne dla dostawcy danych programu .NET Framework dla programu SQL Server (<xref:System.Data.SqlClient>).  
   
- <xref:System.Data.SqlClient>zapewnia dostęp do wersji programu SQL Server, który hermetyzuje protokołów specyficzny dla bazy danych. Funkcje dostawcy danych zaprojektowano w sposób podobny do dostawcy danych .NET Framework dla OLE DB i ODBC, Oracle. <xref:System.Data.SqlClient>zawiera dane tabelaryczne analizator strumienia (TDS) do bezpośredniego komunikowania się z serwerem SQL.  
+ <xref:System.Data.SqlClient> zapewnia dostęp do wersji programu SQL Server, który hermetyzuje protokołów specyficzny dla bazy danych. Funkcje dostawcy danych zaprojektowano w sposób podobny do dostawcy danych .NET Framework dla OLE DB i ODBC, Oracle. <xref:System.Data.SqlClient> zawiera dane tabelaryczne analizator strumienia (TDS) do bezpośredniego komunikowania się z serwerem SQL.  
   
 > [!NOTE]
 >  Aby użyć dostawcy danych programu .NET Framework dla programu SQL Server, musi odwoływać się aplikacji <xref:System.Data.SqlClient> przestrzeni nazw.  

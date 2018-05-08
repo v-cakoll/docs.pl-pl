@@ -1,26 +1,17 @@
 ---
-title: "Vs modyfikacji drzewa XML w pamięci. Konstrukcja funkcjonalności (LINQ do XML) (C#)"
-ms.custom: 
+title: Vs modyfikacji drzewa XML w pamięci. Konstrukcja funkcjonalności (LINQ do XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d8ff61927d6335228858b24138af074a841d779e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3e6d86ac11f10d7dbb3d270410415fb23acb2e01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Vs modyfikacji drzewa XML w pamięci. Konstrukcja funkcjonalności (LINQ do XML) (C#)
 Modyfikowanie drzewo XML w miejscu jest to tradycyjne podejście, aby zmiana kształtu dokumentu XML. Typowa aplikacja ładuje dokumentu do magazynu danych, takich jak modelu DOM lub [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; używa interfejsu programowania do wstawiania węzłów, usuń węzły lub zmienić zawartości węzłów; a następnie zapisuje w pliku XML lub przesyła go za pośrednictwem sieci.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Umożliwia innym rozwiązaniem, które są przydatne w wielu scenariuszach*: budowa funkcjonalności*. Funkcjonalności konstrukcji modyfikowanie dane są traktowane jako problem transformacji, a nie jako szczegółowe modyfikowanie magazynu danych. Jeśli możesz pobrać reprezentację dane i przetransformować je wydajnie z jednego formularza do innego, wynik jest taki sam, jakby miał jeden magazyn danych i manipulowanie go w celu podjęcia innego kształtu. Klucz do metody konstruowania funkcjonalności jest do przekazania wyników zapytania, aby <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> konstruktorów.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia innym rozwiązaniem, które są przydatne w wielu scenariuszach *: budowa funkcjonalności*. Funkcjonalności konstrukcji modyfikowanie dane są traktowane jako problem transformacji, a nie jako szczegółowe modyfikowanie magazynu danych. Jeśli możesz pobrać reprezentację dane i przetransformować je wydajnie z jednego formularza do innego, wynik jest taki sam, jakby miał jeden magazyn danych i manipulowanie go w celu podjęcia innego kształtu. Klucz do metody konstruowania funkcjonalności jest do przekazania wyników zapytania, aby <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> konstruktorów.  
   
  W wielu przypadkach można napisać transformational kod w ułamku czasu, który zajmie się do manipulowania magazynu danych, a ten kod jest bardziej niezawodny i łatwiejsze w obsłudze. W takich przypadkach mimo że transformational podejście może zająć więcej mocy obliczeniowej jest bardziej efektywny sposób modyfikowania danych. W przypadku zapoznać się z funkcjonalności podejście dewelopera, wynikowy kod w wielu przypadkach jest łatwiejsze do zrozumienia. Jest łatwe do odnalezienia kod, który modyfikuje każdej części drzewa.  
   

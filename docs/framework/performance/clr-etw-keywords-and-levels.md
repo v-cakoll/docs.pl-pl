@@ -1,32 +1,22 @@
 ---
-title: "Słowa kluczowe i poziomy ETW CLR"
-ms.custom: 
+title: Słowa kluczowe i poziomy ETW CLR
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CLR ETW keywords
 - CLR ETW levels
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8332eba909c3ebe475e3f364f81a676733e4e3d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Słowa kluczowe i poziomy ETW CLR
-<a name="top"></a>Zdarzenia śledzenia dla zdarzeń systemu Windows (ETW) można filtrować według kategorii i poziomu. Zdarzenia [słowa kluczowe CLR ETW](#keywords) włączenie filtrowania zdarzeń według kategorii; są używane w kombinacji dostawców środowiska uruchomieniowego i uwalniania. [Poziomów zdarzeń](#levels) są identyfikowane za pomocą flagi.  
+<a name="top"></a> Zdarzenia śledzenia dla zdarzeń systemu Windows (ETW) można filtrować według kategorii i poziomu. Zdarzenia [słowa kluczowe CLR ETW](#keywords) włączenie filtrowania zdarzeń według kategorii; są używane w kombinacji dostawców środowiska uruchomieniowego i uwalniania. [Poziomów zdarzeń](#levels) są identyfikowane za pomocą flagi.  
   
 <a name="keywords"></a>   
 ## <a name="clr-etw-keywords"></a>Słowa kluczowe CLR ETW  
@@ -61,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 |`ContentionKeyword`|0x00004000|Umożliwia zbieranie [zdarzenia rywalizacji](../../../docs/framework/performance/contention-etw-events.md).|  
 |`ExceptionKeyword`|0x00008000|Umożliwia zbieranie [zdarzeń wyjątków](../../../docs/framework/performance/exception-thrown-v1-etw-event.md).|  
 |`ThreadingKeyword`|0x00010000|Umożliwia zbieranie [zdarzenia puli wątków](../../../docs/framework/performance/thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0X00040000|(Dostępne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowszej.) Pomija koszty wysokiej `NGenKeyword` — słowo kluczowe i uniemożliwia generowanie zdarzeń dla metod, które znajdują się wewnątrz modułów NGen. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], należy użyć narzędzia profilowania `OverrideAndSuppressNGenEventsKeyword` i `NGenKeyword` ze sobą, aby pominąć generowanie zdarzeń dla metod w modułach NGen. Dzięki temu narzędziu profilowania umożliwia bardziej efektywne PDB NGen uzyskanie informacji na temat metod w modułach NGen. CLR w .NET Framework 4 i wcześniejsze wersje nie obsługuje tworzenia plików PDB NGen. W tych starszych wersji środowiska CLR nie rozpoznaje `OverrideAndSuppressNGenEventsKeyword` i będzie przetwarzać `NGenKeyword` generowanie zdarzeń dla metod w modułach NGen.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Dostępne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowszej.) Pomija koszty wysokiej `NGenKeyword` — słowo kluczowe i uniemożliwia generowanie zdarzeń dla metod, które znajdują się wewnątrz modułów NGen. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], należy użyć narzędzia profilowania `OverrideAndSuppressNGenEventsKeyword` i `NGenKeyword` ze sobą, aby pominąć generowanie zdarzeń dla metod w modułach NGen. Dzięki temu narzędziu profilowania umożliwia bardziej efektywne PDB NGen uzyskanie informacji na temat metod w modułach NGen. CLR w .NET Framework 4 i wcześniejsze wersje nie obsługuje tworzenia plików PDB NGen. W tych starszych wersji środowiska CLR nie rozpoznaje `OverrideAndSuppressNGenEventsKeyword` i będzie przetwarzać `NGenKeyword` generowanie zdarzeń dla metod w modułach NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Umożliwia zbieranie `ModuleLoad` i `ModuleRange` zdarzenia.|  
 |`StackKeyword`|0x40000000|Umożliwia zbieranie CLR [śledzenia zdarzeń stack](../../../docs/framework/performance/stack-etw-event.md).|  
   
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 |`EndRundownKeyword`|0x00000100|Włącza wyliczanie stanu systemu podczas uwalniania zakończenia.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Umożliwia zbieranie zdarzeń monitorowania zasobów w <xref:System.AppDomain> poziom, gdy jest używany z `StartRundownKeyword` lub `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|Umożliwia zbieranie zdarzeń puli wątków.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0X00040000|(Dostępne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowszej.) Pomija koszty wysokiej `NGenRundownKeyword` — słowo kluczowe i uniemożliwia generowanie zdarzeń dla metod, które znajdują się wewnątrz modułów NGen. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], należy użyć narzędzia profilowania `OverrideAndSuppressNGenEventsRundownKeyword` i `NGenRundownKeyword` ze sobą, aby pominąć generowanie zdarzeń dla metod w modułach NGen. Dzięki temu narzędziu profilowania umożliwia bardziej efektywne PDB NGen uzyskanie informacji na temat metod w modułach NGen. CLR w .NET Framework 4 i wcześniejsze wersje nie obsługuje tworzenia plików PDB NGen. W tych starszych wersji środowiska CLR nie rozpoznaje `OverrideAndSuppressNGenEventsRundownKeyword` i będzie przetwarzać `NGenRundownKeyword` generowanie zdarzeń dla metod w modułach NGen.|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Dostępne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowszej.) Pomija koszty wysokiej `NGenRundownKeyword` — słowo kluczowe i uniemożliwia generowanie zdarzeń dla metod, które znajdują się wewnątrz modułów NGen. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], należy użyć narzędzia profilowania `OverrideAndSuppressNGenEventsRundownKeyword` i `NGenRundownKeyword` ze sobą, aby pominąć generowanie zdarzeń dla metod w modułach NGen. Dzięki temu narzędziu profilowania umożliwia bardziej efektywne PDB NGen uzyskanie informacji na temat metod w modułach NGen. CLR w .NET Framework 4 i wcześniejsze wersje nie obsługuje tworzenia plików PDB NGen. W tych starszych wersji środowiska CLR nie rozpoznaje `OverrideAndSuppressNGenEventsRundownKeyword` i będzie przetwarzać `NGenRundownKeyword` generowanie zdarzeń dla metod w modułach NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Umożliwia zbieranie `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`, i `ModuleRangeDCEnd` zdarzenia.|  
   
  [Powrót do początku](#top)  
@@ -104,12 +94,12 @@ ms.lasthandoff: 12/22/2017
   
 |Słowa kluczowe i flagi|Domena aplikacji, zestawu, modułu DCStart/DCEnd zdarzeń|Metoda DCStart/DCEnd zdarzenia (w tym zdarzenia metod dynamicznych)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart`zdarzenia.|Brak.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd`zdarzenia.|Brak.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Brak.|`DCStart`zdarzenia.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Brak.|`DCEnd`zdarzenia.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Brak.|`DCStart`zdarzenia.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Brak.|`DCEnd`zdarzenia.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` zdarzenia.|Brak.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` zdarzenia.|Brak.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Brak.|`DCStart` zdarzenia.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Brak.|`DCEnd` zdarzenia.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Brak.|`DCStart` zdarzenia.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Brak.|`DCEnd` zdarzenia.|  
   
  [Powrót do początku](#top)  
   

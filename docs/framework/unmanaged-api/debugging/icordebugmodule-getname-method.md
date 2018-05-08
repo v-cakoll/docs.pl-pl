@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule::GetName — Metoda"
-ms.custom: 
+title: ICorDebugModule::GetName — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule.GetName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64be936277b0ebe04248ae2913a882b628ee363f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName — Metoda
 Pobiera nazwę pliku modułu.  
@@ -59,7 +47,7 @@ HRESULT GetName(
  [out] Tablica, która przechowuje nazwę zwrócony.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetName` Metoda zwraca wartość S_OK HRESULT, jeśli nazwa pliku modułu jest zgodna z nazwą na dysku. `GetName`Zwraca S_FALSE HRESULT, jeśli nazwa metalowych, takich jak moduł dynamicznej lub w pamięci.  
+ `GetName` Metoda zwraca wartość S_OK HRESULT, jeśli nazwa pliku modułu jest zgodna z nazwą na dysku. `GetName` Zwraca S_FALSE HRESULT, jeśli nazwa metalowych, takich jak moduł dynamicznej lub w pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -68,7 +56,7 @@ HRESULT GetName(
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
     

@@ -1,21 +1,14 @@
 ---
-title: "Porady: pobieranie informacji o plikach, folderach i dyskach (Przewodnik programowania w języku C#)"
+title: 'Porady: pobieranie informacji o plikach, folderach i dyskach (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d5652dda53a0192ce39be497b6e8ad3c97bef042
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c4f29cd2ae65fb05a2636ae3674c7ffd1613b0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Porady: pobieranie informacji o plikach, folderach i dyskach (Przewodnik programowania w języku C#)
 W programie .NET Framework aby dostęp do informacji o systemie plików przy użyciu następujących klas:  

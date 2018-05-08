@@ -1,18 +1,12 @@
 ---
-title: "LINQ do XML dla użytkowników XPath (C#)"
+title: LINQ do XML dla użytkowników XPath (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 69109cc8541970695d463e6163bf4d63925ca5bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ do XML dla użytkowników XPath (C#)
 Ten zestaw tematów Pokaż liczbę wyrażenia XPath i ich [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] odpowiedniki.  
@@ -23,7 +17,7 @@ Ten zestaw tematów Pokaż liczbę wyrażenia XPath i ich [!INCLUDE[sqltecxlinq]
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Porównanie XPath i LINQ do XML](../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Zawiera omówienie podobieństwa i różnice między XPath i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Porównanie metody XPath i LINQ to XML](../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Zawiera omówienie podobieństwa i różnice między XPath i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Porady: znajdowanie elementu podrzędnego (XPath-LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|Porównuje osi elementu podrzędnego XPath do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> metody.<br /><br /> Skojarzone wyrażenie XPath:`"DeliveryNotes"`.|  
 |[Porady: lista elementów podrzędnych (XPath-LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|Porównuje osi elementów podrzędnych wyrażenia XPath do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> osi.<br /><br /> Skojarzone wyrażenie XPath jest:`"./*"`|  
 |[Porady: znajdowanie elementem głównym (XPath-LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|Jak uzyskać elementu głównego z XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"/PurchaseOrders"`|  
@@ -44,4 +38,4 @@ Ten zestaw tematów Pokaż liczbę wyrażenia XPath i ich [!INCLUDE[sqltecxlinq]
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.XPath?displayProperty=nameWithType>  
  [Zapytanie drzewa XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
- [Przetwarzania danych XML przy użyciu modelu danych XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+ [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

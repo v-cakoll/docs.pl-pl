@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval::CreateValue — Metoda"
-ms.custom: 
+title: ICorDebugEval::CreateValue — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.CreateValue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64d55a951795cc5efc1bfc624dbe07575be153aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d67784daee055106f104d74d098b9926c6de2ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue — Metoda
 Tworzy wartość określonego typu o wartości początkowej zero lub wartość null.  
@@ -61,7 +49,7 @@ HRESULT CreateValue (
  [out] Wskaźnik do obiektu "ICorDebugValue", który reprezentuje wartość adresu.  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateValue`Tworzy `ICorDebugValue` obiekt danego typu wyłącznie w celu używania go w obliczania funkcji. Ten obiekt wartość może służyć do przekazywania stałe użytkownika jako parametry.  
+ `CreateValue` Tworzy `ICorDebugValue` obiekt danego typu wyłącznie w celu używania go w obliczania funkcji. Ten obiekt wartość może służyć do przekazywania stałe użytkownika jako parametry.  
   
  Jeśli typ wartości jest typu pierwotnego, jego wartość początkowa to zero lub wartość null. Użyj [ICorDebugGenericValue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) można ustawić wartości typu pierwotnego.  
   

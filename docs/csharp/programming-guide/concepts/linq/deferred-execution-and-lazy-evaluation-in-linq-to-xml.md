@@ -1,21 +1,12 @@
 ---
-title: "Wykonanie odroczone i obliczanie leniwe w składniku LINQ to XML (C#)"
-ms.custom: 
+title: Wykonanie odroczone i obliczanie leniwe w składniku LINQ to XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 847d8f830c26f54521664accc4bf569f822f255a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dd0b8413f172182edfc83f99fd418d1372984b7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Wykonanie odroczone i obliczanie leniwe w składniku LINQ to XML (C#)
 Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety wykonanie odroczone oraz pewne zagadnienia implementacji.  
@@ -45,4 +36,4 @@ Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. 
  [Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
  [Pojęcia i terminologię (funkcjonalności przekształcania) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
  [Operacje agregacji (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
- [YIELD](../../../../csharp/language-reference/keywords/yield.md)
+ [yield](../../../../csharp/language-reference/keywords/yield.md)

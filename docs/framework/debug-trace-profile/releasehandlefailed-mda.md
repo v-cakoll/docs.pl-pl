@@ -1,13 +1,6 @@
 ---
 title: releaseHandleFailed MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
 - release handle failed
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2deefc4626bf8382c7de806eb3d687d468580bf4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3e2c39416a3d09eb1b1197dbec81f40ce318a43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 `releaseHandleFailed` Zarządzanego debugowania (MDA) Asystenta jest aktywowany jest powiadomiono deweloperzy podczas <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metoda klasy pochodzące z <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> zwraca `false`.  
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="cause"></a>Przyczyna  
  Użytkownik musi podać wykonania <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metodę, jeśli tworzą klasy, która pochodzi z <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle>; w związku z tym okoliczności są specyficzne dla poszczególnych zasobów. Jednak wymagania są następujące:  
   
--   <xref:System.Runtime.InteropServices.SafeHandle>i <xref:System.Runtime.InteropServices.CriticalHandle> typy reprezentują otoki wokół procesu ważnych zasobów. Przeciek pamięci spowodowałoby procesu nie można użyć w czasie.  
+-   <xref:System.Runtime.InteropServices.SafeHandle> i <xref:System.Runtime.InteropServices.CriticalHandle> typy reprezentują otoki wokół procesu ważnych zasobów. Przeciek pamięci spowodowałoby procesu nie można użyć w czasie.  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> — Metoda nie zakończyć się niepowodzeniem do realizacji funkcji. Po proces uzyskuje taki zasób <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> jest jedynym sposobem na jego wersji. W związku z tym Niepowodzenie oznacza przecieków zasobów.  
   

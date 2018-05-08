@@ -1,14 +1,6 @@
 ---
 title: Tworzenie zestawów satelickich dla aplikacji klasycznych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,17 +23,13 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikacji do wyświetlenia ciągów, obrazy i innych danych przez użytkownika języka i kultury oraz w celu zapewnienia alternatywnych danych, jeśli zasoby dla języka dla użytkownika lub kultury są niedostępne. .NET Framework wykorzystuje model gwiazdy — Aby znaleźć i pobrać zlokalizowanych zasobów. Koncentrator jest główny zestaw zawierający kod wykonywalny niemożliwe do zlokalizowania i zasobów dla kultury pojedynczego, nazywanego zero lub domyślną kulturę. Domyślną kulturę jest kultury rezerwowej dla aplikacji; Jeśli nie są dostępne nie zlokalizowanych zasobów jest używany. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybut do wyznaczenia kultura kultury domyślnej aplikacji. Każdy gwiazdy łączy zestawu satelickiego, który zawiera zasoby dla pojedynczego kultury zlokalizowany, ale nie zawiera żadnego kodu. Ponieważ zestawów satelickich nie są częścią zestawu głównego, można łatwo aktualizacji lub zastąpienia zasobów, które odpowiadają określoną kulturę bez zastępowania główny zestaw aplikacji.  
@@ -87,11 +75,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**-docelowych:**lib|Określa, że Twoje zestawu satelickiego jest skompilowana do pliku biblioteki (.dll). Ponieważ zestaw satelicki nie zawiera kodu wykonywalnego, a nie główny zestaw aplikacji, musisz najpierw zapisać zestawy satelickie jako biblioteki dll.|  
-|**-embed:**strings.de.resources|Określa nazwę pliku zasobu do osadzenia kiedy Al.exe kompiluje zestawu. Wiele plików .resources można osadzić w zestawie satelickim, ale jeśli wykonujesz model gwiazdy — należy skompilować jednego zestawu satelickiego dla każdego kultury. Można jednak utworzyć oddzielne .resources — pliki do ciągów i obiektów.|  
-|**-kultury:**de|Określa kulturę zasobów do skompilowania. Środowisko uruchomieniowe języka wspólnego używa tych informacji podczas wyszukiwania zasobów dla określonej kultury. Jeśli zostanie pominięta, Al.exe nadal będzie kompilować zasobu, ale środowisko uruchomieniowe nie będzie można go, gdy użytkownik zażąda go.|  
-|**-out:**Example.resources.dll|Określa nazwę pliku wyjściowego. Nazwa musi występować po standard nazewnictwa *nazwę bazową*.resources. *rozszerzenie*, gdzie *nazwę bazową* jest nazwą zestawu głównego i *rozszerzenia* jest prawidłowe rozszerzenie (na przykład .dll). Należy pamiętać, że środowisko wykonawcze nie jest możliwość określenia kultury zestawu satelickiego, na podstawie jego nazwy pliku wyjściowego; należy użyć **/kultury** opcję, aby określić go.|  
-|**-szablonu:**Example.dll|Określa, z którego zestawu satelickiego będzie dziedziczyć wszystkich metadanych zestawu z wyjątkiem pola kultury zestawu. Ta opcja dotyczy zestawy satelickie tylko wtedy, gdy określ zestaw, który ma [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-docelowych:** lib|Określa, że Twoje zestawu satelickiego jest skompilowana do pliku biblioteki (.dll). Ponieważ zestaw satelicki nie zawiera kodu wykonywalnego, a nie główny zestaw aplikacji, musisz najpierw zapisać zestawy satelickie jako biblioteki dll.|  
+|**-osadzić:** strings.de.resources|Określa nazwę pliku zasobu do osadzenia kiedy Al.exe kompiluje zestawu. Wiele plików .resources można osadzić w zestawie satelickim, ale jeśli wykonujesz model gwiazdy — należy skompilować jednego zestawu satelickiego dla każdego kultury. Można jednak utworzyć oddzielne .resources — pliki do ciągów i obiektów.|  
+|**-kultury:** de|Określa kulturę zasobów do skompilowania. Środowisko uruchomieniowe języka wspólnego używa tych informacji podczas wyszukiwania zasobów dla określonej kultury. Jeśli zostanie pominięta, Al.exe nadal będzie kompilować zasobu, ale środowisko uruchomieniowe nie będzie można go, gdy użytkownik zażąda go.|  
+|**-out:** Example.resources.dll|Określa nazwę pliku wyjściowego. Nazwa musi występować po standard nazewnictwa *nazwę bazową*.resources. *rozszerzenie*, gdzie *nazwę bazową* jest nazwą zestawu głównego i *rozszerzenia* jest prawidłowe rozszerzenie (na przykład .dll). Należy pamiętać, że środowisko wykonawcze nie jest możliwość określenia kultury zestawu satelickiego, na podstawie jego nazwy pliku wyjściowego; należy użyć **/kultury** opcję, aby określić go.|  
+|**-szablonu:** Example.dll|Określa, z którego zestawu satelickiego będzie dziedziczyć wszystkich metadanych zestawu z wyjątkiem pola kultury zestawu. Ta opcja dotyczy zestawy satelickie tylko wtedy, gdy określ zestaw, który ma [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Aby uzyskać pełną listę opcji dostępnych z Al.exe zobacz [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   

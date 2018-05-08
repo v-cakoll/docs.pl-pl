@@ -1,12 +1,6 @@
 ---
 title: Wyprowadzanie z WebRequest
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -16,16 +10,14 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 83579c25c154462cb21488acf9fcf84999b9a2d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a1dd850c6534443603fbefb2c1444c85f84a31b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-from-webrequest"></a>Wyprowadzanie z WebRequest
 <xref:System.Net.WebRequest> Klasa jest abstrakcyjna klasa podstawowa, która udostępnia podstawowe metody i właściwości dla tworzenia protokołem żądania obsługi, który pasuje do modelu protokołu podłączanej .NET Framework. Aplikacje używające **WebRequest** klasy można zażądać danych, aby określić protokół używany przy użyciu obsługiwanych protokołów bez konieczności.  

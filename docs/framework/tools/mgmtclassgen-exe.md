@@ -1,13 +1,6 @@
 ---
-title: "Mgmtclassgen.exe (Zarządzanie generatorem silnie typizowanej klasy)"
-ms.custom: 
+title: Mgmtclassgen.exe (Zarządzanie generatorem silnie typizowanej klasy)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 05ab4874d025eff3eb1aba6b7a336f562159b6ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Zarządzanie generatorem silnie typizowanej klasy)
 Narzędzie Management Strongly Typed Class Generator umożliwia szybkie generowanie wcześnie powiązanych klas zarządzanych dla określonej klasy Instrumentacji zarządzania Windows (WMI). Wygenerowana klasa upraszcza kod, który trzeba napisać, aby uzyskać dostęp do wystąpienia klasy WMI.  
@@ -47,7 +37,7 @@ WMIClass [options]
 |------------|-----------------|  
 |**/l***języka* |Określa język, w którym ma zostać wygenerowana wcześnie powiązana klasa zarządzana. Można określić **CS** (C#; domyślna), **VB** (Visual Basic), **MC** (C++), lub **JS** (JScript) jako argumentu języka.|  
 |**/m***maszyny* |Określa komputer, z którym należy nawiązać połączenie (na tym komputerze znajduje się klasa WMI). Wartością domyślną jest komputer lokalny.|  
-|**/n**  *Ścieżka*|Określa ścieżkę do przestrzeni nazw usługi WMI zawierającej odpowiednią klasę WMI. Jeśli ta opcja nie zostanie określony, narzędzie generuje kod dla *WMIClass* w domyślnym **Root\cimv2** przestrzeni nazw.|  
+|**/n***ścieżki* |Określa ścieżkę do przestrzeni nazw usługi WMI zawierającej odpowiednią klasę WMI. Jeśli ta opcja nie zostanie określony, narzędzie generuje kod dla *WMIClass* w domyślnym **Root\cimv2** przestrzeni nazw.|  
 |**/o***classnamespace* |Określa przestrzeń nazw platformy .NET, w której ma zostać wygenerowana klasa kodu zarządzanego. Jeśli ta opcja nie zostanie określona, narzędzie wygeneruje przestrzeń nazw, używając przestrzeni nazw usługi WMI i prefiksu schematu. Prefiks schematu jest częścią nazwy klasy poprzedzającą znak podkreślenia. Na przykład w przypadku **Win32_OperatingSystem** klasy w **Root\cimv2** przestrzeni nazw, narzędzie może wygenerować klasy w **głównego. CIMV2. Win32**.|  
 |**/p***filepath* |Określa ścieżkę do pliku, w którym ma zostać zapisany wygenerowany kod. Jeśli ta opcja nie zostanie określona, narzędzie utworzy plik w bieżącym katalogu. Jego nazwy klas i plików, w którym generuje klasy przy użyciu *WMIClass* argumentu. Nazwa klasy i pliku są takie same jak nazwa *WMIClass.* Jeśli *WMIClass* zawiera znak podkreślenia narzędzie korzysta z części nazwy klasy po znaku podkreślenia. Na przykład jeśli *WMIClass* nazwa jest w formacie **Win32_LogicalDisk**, pliku i wygenerowane klasy ma nazwę "dysk logiczny". Jeżeli plik już istnieje, narzędzie zastąpi istniejący plik.|  
 |**/PW***hasła* |Określa hasło do użycia podczas logowania na komputerze określonym przez **/m** opcji.|  
@@ -63,8 +53,8 @@ WMIClass [options]
   
 |Typ modelu CIM|Typ danych w generowanej klasie|  
 |--------------|--------------------------------------|  
-|CIM_SINT8|**Sbyte —**|  
-|CIM_UINT8|**Bajtów**|  
+|CIM_SINT8|**SByte**|  
+|CIM_UINT8|**Byte**|  
 |CIM_SINT16|**Int16**|  
 |CIM_UINT16|**UInt16**|  
 |CIM_SINT32|**Int32**|  
@@ -72,12 +62,12 @@ WMIClass [options]
 |CIM_SINT64|**Int64**|  
 |CIM_UINT64|**UInt64 —**|  
 |CIM_REAL32|**Pojedynczy**|  
-|CIM_REAL64|**O podwójnej precyzji**|  
-|CIM_BOOLEAN|**Wartość logiczna**|  
+|CIM_REAL64|**Double**|  
+|CIM_BOOLEAN|**Boolean**|  
 |CIM_String|**Ciąg**|  
 |CIM_DATETIME|**Data i godzina** lub **TimeSpan**|  
 |CIM_REFERENCE|**Element ManagementPath**|  
-|CIM_CHAR16|**Char**|  
+|CIM_CHAR16|**char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
 |CIM_IUNKNOWN|**Obiekt**|  
 |CIM_ARRAY|Tablica wymienionych powyżej obiektów|  
@@ -109,7 +99,7 @@ WMIClass [options]
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
- W poniższym przykładzie kodu pokazano, w jaki sposób można programowo używać wygenerowanej klasy. Najpierw jest wyliczane wystąpienie klasy i jest drukowana ścieżka. Następnie za pomocą wystąpienia usługi WMI jest tworzone wystąpienie wygenerowanej klasy, które ma zostać zainicjowane. `Process`jest to klasa wygenerowany dla **Win32_Process** i `LogicalDisk` jest generowane dla klasy **Win32_LogicalDisk** w **Root\cimv2** przestrzeni nazw.  
+ W poniższym przykładzie kodu pokazano, w jaki sposób można programowo używać wygenerowanej klasy. Najpierw jest wyliczane wystąpienie klasy i jest drukowana ścieżka. Następnie za pomocą wystąpienia usługi WMI jest tworzone wystąpienie wygenerowanej klasy, które ma zostać zainicjowane. `Process` jest to klasa wygenerowany dla **Win32_Process** i `LogicalDisk` jest generowane dla klasy **Win32_LogicalDisk** w **Root\cimv2** przestrzeni nazw.  
   
 ```vb  
 Imports System  

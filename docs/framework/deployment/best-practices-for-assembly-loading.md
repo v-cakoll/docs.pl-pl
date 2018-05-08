@@ -1,13 +1,6 @@
 ---
-title: "Najlepsze praktyki dotyczące ładowania zestawu"
-ms.custom: 
+title: Najlepsze praktyki dotyczące ładowania zestawu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies,binding
 - LoadFrom method
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb6671af34c22d824368de014362452ac9014279
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b05ec604f8493ba773d9de9af19acc70c023b8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-assembly-loading"></a>Najlepsze praktyki dotyczące ładowania zestawu
 W tym artykule opisano sposób, aby uniknąć problemów tożsamości typu, który może prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>oraz innych błędów. W tym artykule omówiono następujące zalecenia:  
@@ -79,7 +69,7 @@ W tym artykule opisano sposób, aby uniknąć problemów tożsamości typu, któ
   
 -   Jeśli zestaw jest ładowany z <xref:System.Reflection.Assembly.LoadFrom%2A>, i ścieżki próbkowania zawiera zestaw o tej samej tożsamości, ale w innej lokalizacji, <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, lub mogą występować inne nieoczekiwane zachowania.  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A>wymagania <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> i <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, lub <xref:System.Net.WebPermission>, w określonej ścieżce.  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A> wymagania <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> i <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, lub <xref:System.Net.WebPermission>, w określonej ścieżce.  
   
 -   Jeśli zestaw obrazu macierzystego, nie jest używane.  
   

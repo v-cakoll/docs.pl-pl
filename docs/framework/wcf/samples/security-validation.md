@@ -1,24 +1,14 @@
 ---
-title: "Walidacja zabezpieczeń"
-ms.custom: 
+title: Walidacja zabezpieczeń
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-caps.latest.revision: "35"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 86a10a4117a5bbeb48e9d1d15b1ce8da9d7c7751
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f77b01633f214d3a8c4ad8d7226375c3ed2368fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-validation"></a>Walidacja zabezpieczeń
 W tym przykładzie przedstawiono sposób użycia niestandardowego zachowania do sprawdzania poprawności usług na komputerze, aby upewnić się, że spełniają określone kryteria. W tym przykładzie usług są weryfikowane przez niestandardowe działanie przez skanowanie za pomocą każdego punktu końcowego w usłudze i sprawdzanie, czy zawierają one elementy bezpiecznego powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -88,7 +78,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Podczas dodawania zachowania do wszystkich usług, zalecane jest aby utworzyć kopię zapasową pliku Machine.config przed wprowadzeniem zmian.  
   
- Teraz z klientem w katalogu client\bin tego przykładu. Wyjątek ma występuje następujący komunikat o błędzie: "żądanej usługi nie można aktywować"http://localhost/servicemodelsamples/service.svc"." Oczekuje się, ponieważ przyjęto, że punkt końcowy jest niebezpieczne przez punkt końcowy, sprawdzanie poprawności zachowania i uniemożliwia uruchomienie usługi. Zachowanie również zgłasza wyjątek wewnętrzny, który opisano, który punkt końcowy jest niebezpieczne i zapisuje komunikat do systemu Podglądu zdarzeń w źródle "System.ServiceModel 4.0.0.0" oraz kategorii "WebHost". Użytkownik może również włączyć śledzenie usługi, w tym przykładzie. Dzięki temu użytkownikowi na wyświetlanie wyjątki wyrzucane przez działanie sprawdzania poprawności punktu końcowego, otwierając wynikowy ślady usługi za pomocą narzędzia podglądu śledzenia usługi.  
+ Teraz z klientem w katalogu client\bin tego przykładu. Wyjątek ma występuje następujący komunikat o błędzie: "żądanej usługi"http://localhost/servicemodelsamples/service.svc"nie można aktywować." Oczekuje się, ponieważ przyjęto, że punkt końcowy jest niebezpieczne przez punkt końcowy, sprawdzanie poprawności zachowania i uniemożliwia uruchomienie usługi. Zachowanie również zgłasza wyjątek wewnętrzny, który opisano, który punkt końcowy jest niebezpieczne i zapisuje komunikat do systemu Podglądu zdarzeń w źródle "System.ServiceModel 4.0.0.0" oraz kategorii "WebHost". Użytkownik może również włączyć śledzenie usługi, w tym przykładzie. Dzięki temu użytkownikowi na wyświetlanie wyjątki wyrzucane przez działanie sprawdzania poprawności punktu końcowego, otwierając wynikowy ślady usługi za pomocą narzędzia podglądu śledzenia usługi.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Aby wyświetlić nie powiodło się komunikaty o wyjątku weryfikacji punktu końcowego w Podglądzie zdarzeń  
   
@@ -113,7 +103,7 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   

@@ -1,39 +1,33 @@
 ---
-title: "Tabela niejawnych konwersji liczbowych (odwołanie w C#)"
+title: Tabela niejawnych konwersji liczbowych (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6b1705dca357fd2a155fc1ea9c7fe0f65bad8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d417a2020656f300de0517526742679388f262e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela niejawnych konwersji liczbowych (odwołanie w C#)
 W poniższej tabeli przedstawiono wstępnie zdefiniowane niejawne konwersje liczbowe. Niejawne konwersje może wystąpić w wielu sytuacjach, w tym instrukcje metody wywoływania i przypisanie.  
   
 |Z|Do|  
 |----------|--------|  
-|[sbyte —](../../../csharp/language-reference/keywords/sbyte.md)|`short`, `int`, `long`, `float`, `double`, lub`decimal`|  
-|[bajtów](../../../csharp/language-reference/keywords/byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub`decimal`|  
-|[krótki](../../../csharp/language-reference/keywords/short.md)|`int`, `long`, `float`, `double`, lub`decimal`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, lub`decimal`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`long`, `float`, `double`, lub`decimal`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`long`, `ulong`, `float`, `double`, lub`decimal`|  
-|[długa](../../../csharp/language-reference/keywords/long.md)|`float`, `double`, lub`decimal`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub`decimal`|  
+|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`short`, `int`, `long`, `float`, `double`, lub `decimal`|  
+|[byte](../../../csharp/language-reference/keywords/byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[short](../../../csharp/language-reference/keywords/short.md)|`int`, `long`, `float`, `double`, lub `decimal`|  
+|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[int](../../../csharp/language-reference/keywords/int.md)|`long`, `float`, `double`, lub `decimal`|  
+|[uint](../../../csharp/language-reference/keywords/uint.md)|`long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double`, lub `decimal`|  
+|[char](../../../csharp/language-reference/keywords/char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double`, lub`decimal`|  
+|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double`, lub `decimal`|  
   
 ## <a name="remarks"></a>Uwagi  
   

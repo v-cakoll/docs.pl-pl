@@ -1,22 +1,16 @@
 ---
-title: "Porady: użycie globalnych aliasów przestrzeni nazw (Przewodnik programowania w języku C#)"
+title: 'Porady: użycie globalnych aliasów przestrzeni nazw (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-caps.latest.revision: "23"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f2a854d2f963578cb8b89da445af660f3c029fae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74f51d18ddda1ae4706b78aaf713683d2e505d2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Porady: użycie globalnych aliasów przestrzeni nazw (Przewodnik programowania w języku C#)
 Umożliwia uzyskiwanie dostępu do członka w globalnej [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) jest przydatne, gdy element członkowski może być ukryty przez inną jednostkę o takiej samej nazwie.  
@@ -52,6 +46,6 @@ Umożliwia uzyskiwanie dostępu do członka w globalnej [przestrzeni nazw](../..
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
- [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)  
- [:: — Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+ [. operator](../../../csharp/language-reference/operators/member-access-operator.md)  
+ [::, operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
  [extern](../../../csharp/language-reference/keywords/extern.md)

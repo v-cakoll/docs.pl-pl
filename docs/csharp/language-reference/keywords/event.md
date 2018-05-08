@@ -1,10 +1,6 @@
 ---
 title: event (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - event
 - remove
@@ -13,14 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-caps.latest.revision: 28
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f7e7f9f96714f8988eb91d77c63cc4f017d040f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 55ccabaea4fcb7716378d92964030f7025202e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-c-reference"></a>event (odwołanie w C#)
 `event` — Słowo kluczowe służy do deklarowania zdarzenia w klasie wydawcy.  
@@ -39,10 +32,10 @@ ms.lasthandoff: 11/21/2017
   
 |Słowo kluczowe|Opis|Więcej informacji|  
 |-------------|-----------------|--------------------------|  
-|[statyczne](../../../csharp/language-reference/keywords/static.md)|Udostępnia zdarzenia dotyczące obiektów wywołujących w dowolnym momencie, nawet jeśli nie ma wystąpień klasy.|[Klasy statyczne i statyczni członkowie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
-|[wirtualny](../../../csharp/language-reference/keywords/virtual.md)|Umożliwia klasy pochodne zastąpić zachowanie zdarzeń za pomocą [zastąpienia](../../../csharp/language-reference/keywords/override.md) — słowo kluczowe.|[Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
-|[zapieczętowane](../../../csharp/language-reference/keywords/sealed.md)|Określa, że dla klas pochodnych nie jest już wirtualnego.||  
-|[abstrakcyjny](../../../csharp/language-reference/keywords/abstract.md)|Kompilator nie będą generowane `add` i `remove` bloków metody dostępu zdarzeń i w związku z tym pochodne podać własne implementacji.||  
+|[static](../../../csharp/language-reference/keywords/static.md)|Udostępnia zdarzenia dotyczące obiektów wywołujących w dowolnym momencie, nawet jeśli nie ma wystąpień klasy.|[Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
+|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Umożliwia klasy pochodne zastąpić zachowanie zdarzeń za pomocą [zastąpienia](../../../csharp/language-reference/keywords/override.md) — słowo kluczowe.|[Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
+|[sealed](../../../csharp/language-reference/keywords/sealed.md)|Określa, że dla klas pochodnych nie jest już wirtualnego.||  
+|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Kompilator nie będą generowane `add` i `remove` bloków metody dostępu zdarzeń i w związku z tym pochodne podać własne implementacji.||  
   
  Zdarzenia mogą być deklarowane jako statyczne zdarzenie przy użyciu [statycznych](../../../csharp/language-reference/keywords/static.md) — słowo kluczowe. To udostępnienie zdarzenia dotyczące obiektów wywołujących w dowolnym momencie, nawet jeśli nie ma wystąpień klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statycznych elementów członkowskich klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
@@ -55,7 +48,7 @@ ms.lasthandoff: 11/21/2017
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Dodaj](../../../csharp/language-reference/keywords/add.md)  
- [Usuń](../../../csharp/language-reference/keywords/remove.md)  
+ [add](../../../csharp/language-reference/keywords/add.md)  
+ [remove](../../../csharp/language-reference/keywords/remove.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
  [Porady: łączenie obiektów delegowanych (obiekty delegowane multiemisji)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

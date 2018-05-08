@@ -1,21 +1,12 @@
 ---
 title: Operacje rzutowania (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4a05a4f228e64405ba24d967193d9e7a487ae473
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a044982c21246fd4e8c1cbdbb9801ae7b29d05c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projection-operations-c"></a>Operacje rzutowania (C#)
 Projekcja odwołuje się do operacji przekształcania obiektu na nowy formularz, który często składa się tylko z tych właściwości, które zostaną następnie użyte. Przy użyciu projekcji, można utworzyć nowy typ, który składa się z każdego obiektu. Możesz właściwości projektu i funkcji matematycznych w nim. Można także wyświetlać oryginalny obiekt, bez jego zmiany.  
@@ -79,17 +70,17 @@ foreach (string s in query)
 ```  
   
 ## <a name="select-versus-selectmany"></a>Wybierz, a operacja SelectMany  
- Praca obu `Select()` i `SelectMany()` ma wartość wyniku (lub wartości) z wartości źródła. `Select()`tworzy jedną wartość wyniku dla każdej wartości źródła. Wynik ogólny w związku z tym jest kolekcja, która ma taką samą liczbę elementów jako kolekcji źródłowej. Z kolei `SelectMany()` tworzy jeden wynik ogólny zawierający połączonych podkolekcji od każdej wartości źródła. Przekazywany jako argument do funkcji przekształcenia `SelectMany()` musi zwracać wyliczalny sekwencji wartości dla każdej wartości źródła. Te wyliczalny sekwencje są następnie połączonych przez `SelectMany()` można utworzyć jedną dużą sekwencji.  
+ Praca obu `Select()` i `SelectMany()` ma wartość wyniku (lub wartości) z wartości źródła. `Select()` tworzy jedną wartość wyniku dla każdej wartości źródła. Wynik ogólny w związku z tym jest kolekcja, która ma taką samą liczbę elementów jako kolekcji źródłowej. Z kolei `SelectMany()` tworzy jeden wynik ogólny zawierający połączonych podkolekcji od każdej wartości źródła. Przekazywany jako argument do funkcji przekształcenia `SelectMany()` musi zwracać wyliczalny sekwencji wartości dla każdej wartości źródła. Te wyliczalny sekwencje są następnie połączonych przez `SelectMany()` można utworzyć jedną dużą sekwencji.  
   
  Na poniższych ilustracjach dwóch przedstawiono koncepcyjnej różnica między działaniami te dwie metody. W każdym przypadku założono, że funkcja selektora (transform) wybiera tablicy kwiatów z każdej wartości źródła.  
   
  Ta ilustracja przedstawia sposób `Select()` zwraca kolekcję, która ma taką samą liczbę elementów jako kolekcji źródłowej.  
   
- ![Ilustracja akcji wybierz &#40; &#41; ] (../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Ilustracja akcji wybierz&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
   
  Ta ilustracja przedstawia sposób `SelectMany()` łączy pośredniego sekwencji tablic w jedną wartość wynik końcowy zawierający wartość każdej z poszczególnych pośrednia tablicy.  
   
- ![Grafika przedstawiająca akcji operacja SelectMany &#40; &#41;. ] (../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "Operacja SelectMany")  
+ ![Grafika przedstawiająca akcji operacja SelectMany&#40;&#41;. ] (../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "Operacja SelectMany")  
   
 ### <a name="code-example"></a>Przykład kodu  
  Poniższy przykład porównuje zachowanie `Select()` i `SelectMany()`. Kod tworzy "bouquet" kwiatów, wykonując dwóch pierwszych elementów z każdej listy nazw kwiat w kolekcji źródłowej. W tym przykładzie "pojedyncza wartość" który funkcji przekształcenia <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> używa jest kolekcją wartości. Wymaga to nadmiarowe `foreach` pętli, aby można było wyliczyć każdy ciąg w każdej podrzędnej sekwencji.  
@@ -170,6 +161,6 @@ static void SelectVsSelectMany()
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Linq>  
  [Operatory standardowe zapytań — omówienie (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [SELECT — klauzula](../../../../csharp/language-reference/keywords/select-clause.md)  
+ [select, klauzula](../../../../csharp/language-reference/keywords/select-clause.md)  
  [Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
  [Porady: dzielenie pliku na wiele plików za pomocą grup (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

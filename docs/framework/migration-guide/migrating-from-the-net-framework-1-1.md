@@ -1,30 +1,20 @@
 ---
 title: Migracja z programu .NET Framework 1.1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d54fac935e7b1fad6b07a3a6cf2031dbca702cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc181d0aecd6a0c7c0800544ea00a818573c954c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migracja z programu .NET Framework 1.1
-[!INCLUDE[win7](../../../includes/win7-md.md)]i nowszych wersjach systemu operacyjnego Windows nie obsługują [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. W związku z tym aplikacje których docelowe [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] nie będzie działać bez żadnych modyfikacji na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowsze wersje systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchomienia aplikacji, którego element docelowy [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [systemem 1.1 aplikacji programu .NET Framework w systemie Windows 8 i nowszych wersjach](../../../docs/framework/install/run-net-framework-1-1-apps.md).  
+[!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows nie obsługują [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. W związku z tym aplikacje których docelowe [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] nie będzie działać bez żadnych modyfikacji na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowsze wersje systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchomienia aplikacji, którego element docelowy [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [systemem 1.1 aplikacji programu .NET Framework w systemie Windows 8 i nowszych wersjach](../../../docs/framework/install/run-net-framework-1-1-apps.md).  
   
 ## <a name="retargeting-or-recompiling"></a>Przekierowania lub ponownej kompilacji  
  Istnieją dwa sposoby uzyskania aplikacji, która została skompilowana przy użyciu [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] do uruchamiania na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszego systemu operacyjnego Windows:  

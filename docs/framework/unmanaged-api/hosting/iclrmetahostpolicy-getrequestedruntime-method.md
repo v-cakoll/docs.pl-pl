@@ -1,14 +1,6 @@
 ---
-title: "ICLRMetaHostPolicy::GetRequestedRuntime — Metoda"
-ms.custom: 
+title: ICLRMetaHostPolicy::GetRequestedRuntime — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHostPolicy.GetRequestedRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0501e104b2ed74656de125e668b7234efcbc9997
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e01affb5edb8b0766edf8548ae34cf8220bcc62d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime — Metoda
 Udostępnia interfejs do preferowanego wersji środowisko uruchomieniowe języka wspólnego (CLR) na podstawie zasad hostingu, zestaw zarządzany, ciąg wersji i konfiguracji strumienia. Ta metoda nie faktycznie obciążenia lub aktywować CLR, ale po prostu zwraca [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejs, który reprezentuje wyników zasad. Ta metoda zastępuje [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md), i [GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) metody.  
@@ -72,11 +60,11 @@ HRESULT GetRequestedRuntime(
 ## <a name="remarks"></a>Uwagi  
  Gdy ta metoda zakończy się powodzeniem, składa się z efektem ubocznym łączenia dodatkowe flagi z flagami bieżącego uruchomienia domyślnego interfejsu środowiska wykonawczego zwrócony tylko wtedy, gdy co najmniej jedna z następujących elementów istnieje w strumieniu konfiguracji w ramach `<configuration><runtime>` sekcja:  
   
--   `<gcServer enabled="true"/>`powoduje, że `STARTUP_SERVER_GC` należy ustawić wartość.  
+-   `<gcServer enabled="true"/>` powoduje, że `STARTUP_SERVER_GC` należy ustawić wartość.  
   
--   `<etwEnable enabled="true"/>`powoduje, że `STARTUP_ETW` należy ustawić wartość.  
+-   `<etwEnable enabled="true"/>` powoduje, że `STARTUP_ETW` należy ustawić wartość.  
   
--   `<appDomainResourceMonitoring enabled="true"/>`powoduje, że `STARTUP_ARM` należy ustawić wartość.  
+-   `<appDomainResourceMonitoring enabled="true"/>` powoduje, że `STARTUP_ARM` należy ustawić wartość.  
   
  Wynikowa domyślne `STARTUP_FLAGS` bitowe połączenie lub wartości, które są ustawione wymienionych na liście z flagami uruchamiania domyślną wartość.  
   
@@ -86,10 +74,10 @@ HRESULT GetRequestedRuntime(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pwzVersion`nie ma wartości null i `pcchVersion` ma wartość null.<br /><br /> —lub—<br /><br /> `pwzImageVersion`nie ma wartości null i `pcchImageVersion` ma wartość null.|  
-|E_INVALIDARG|`dwPolicyFlags`nie określono `METAHOST_POLICY_HIGHCOMPAT`.|  
+|E_POINTER|`pwzVersion` nie ma wartości null i `pcchVersion` ma wartość null.<br /><br /> —lub—<br /><br /> `pwzImageVersion` nie ma wartości null i `pcchImageVersion` ma wartość null.|  
+|E_INVALIDARG|`dwPolicyFlags` nie określono `METAHOST_POLICY_HIGHCOMPAT`.|  
 |ERROR_INSUFFICIENT_BUFFER|Ilość pamięci przydzielona do `pwzVerison` jest nieodpowiedni.<br /><br /> —lub—<br /><br /> Ilość pamięci przydzielona do `pwzImageVerison` jest nieodpowiedni.|  
-|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags`obejmuje METAHOST_POLICY_APPLY_UPGRADE_POLICY i obie `pwzVersion` i `pcchVersion` mają wartość null.|  
+|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` obejmuje METAHOST_POLICY_APPLY_UPGRADE_POLICY i obie `pwzVersion` i `pcchVersion` mają wartość null.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -98,7 +86,7 @@ HRESULT GetRequestedRuntime(
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRMetaHostPolicy, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  

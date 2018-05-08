@@ -1,9 +1,6 @@
 ---
-title: "Dziedziczenie (Przewodnik programowania w języku C#)"
+title: Dziedziczenie (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
@@ -32,7 +26,7 @@ Dziedziczenie, wraz z hermetyzacji i polimorfizm, jest jednym z trzech właściw
   
  Po zdefiniowaniu klasy pochodzić z innej klasy pochodnej klasy niejawnie uzyskuje wszystkich elementów członkowskich klasy podstawowej, z wyjątkiem jej konstruktorów i finalizatory. Klasy pochodne mogą co ponowne użycie kodu w klasie podstawowej bez konieczności jej ponownego zdefiniowania. W klasie pochodnej możesz dodać więcej elementów członkowskich. W ten sposób klasy pochodnej, rozszerzający funkcje klasy podstawowej.  
   
- Na poniższej ilustracji przedstawiono klasy `WorkItem` reprezentujący element pracy w niektórych procesów biznesowych. Podobnie jak wszystkie klasy dziedziczy <xref:System.Object?displayProperty=nameWithType> i wszystkie jego metody dziedziczy. `WorkItem`dodaje pięciu członków własnych. Obejmują one konstruktora, ponieważ nie są dziedziczone przez konstruktorów. Klasa `ChangeRequest` dziedziczy `WorkItem` i reprezentuje określonego typu elementu roboczego. `ChangeRequest`dodaje dwa więcej elementów członkowskich do elementów członkowskich, które dziedziczy on z `WorkItem` i z <xref:System.Object>. Należy dodać własną konstruktora, a także dodaje `originalItemID`. Właściwość `originalItemID` umożliwia `ChangeRequest` wystąpienia, które mają być skojarzone z oryginalnym `WorkItem` którego dotyczy żądanie zmiany.  
+ Na poniższej ilustracji przedstawiono klasy `WorkItem` reprezentujący element pracy w niektórych procesów biznesowych. Podobnie jak wszystkie klasy dziedziczy <xref:System.Object?displayProperty=nameWithType> i wszystkie jego metody dziedziczy. `WorkItem` dodaje pięciu członków własnych. Obejmują one konstruktora, ponieważ nie są dziedziczone przez konstruktorów. Klasa `ChangeRequest` dziedziczy `WorkItem` i reprezentuje określonego typu elementu roboczego. `ChangeRequest` dodaje dwa więcej elementów członkowskich do elementów członkowskich, które dziedziczy on z `WorkItem` i z <xref:System.Object>. Należy dodać własną konstruktora, a także dodaje `originalItemID`. Właściwość `originalItemID` umożliwia `ChangeRequest` wystąpienia, które mają być skojarzone z oryginalnym `WorkItem` którego dotyczy żądanie zmiany.  
   
  ![Dziedziczenie klas](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 Dziedziczenie klas  
@@ -50,7 +44,7 @@ Dziedziczenie klas
 ## <a name="interfaces"></a>Interfejsy  
  *Interfejsu* jest typem referencyjnym, który przypomina trochę abstrakcyjna klasa podstawowa, która składa się z tylko abstrakcyjne elementy członkowskie. Gdy klasa implementuje interfejs, musi zapewniać implementację, dla wszystkich członków interfejsu. Klasę można zaimplementować wiele interfejsów, nawet jeśli mogą dziedziczyć z tylko jednym bezpośredniej klasie podstawowej.  
   
- Interfejsy są używane do definiowania możliwości dla klas, które nie muszą być "to" relacji. Na przykład <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsu może być zaimplementowany przez klasy lub struktury, aby włączyć kod klienta w celu ustalenia, czy dwa obiekty tego typu są równoważne (jednak typ definiuje równoważność). <xref:System.IEquatable%601>nie oznacza taki sam rodzaj "jest" relację między klasą bazową i Klasa pochodna (na przykład `Mammal` jest `Animal`). Aby uzyskać więcej informacji, zobacz [interfejsów](../../../csharp/programming-guide/interfaces/index.md).  
+ Interfejsy są używane do definiowania możliwości dla klas, które nie muszą być "to" relacji. Na przykład <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsu może być zaimplementowany przez klasy lub struktury, aby włączyć kod klienta w celu ustalenia, czy dwa obiekty tego typu są równoważne (jednak typ definiuje równoważność). <xref:System.IEquatable%601> nie oznacza taki sam rodzaj "jest" relację między klasą bazową i Klasa pochodna (na przykład `Mammal` jest `Animal`). Aby uzyskać więcej informacji, zobacz [interfejsów](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Uniemożliwia dalsze wyprowadzenia  
  Klasę można uniemożliwić dziedziczenie z niej, lub z dowolnego z jego elementów członkowskich przez zadeklarowanie siebie lub element członkowski jako innych klas [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md). Aby uzyskać więcej informacji, zobacz [abstrakcyjne i zapieczętowane klasy oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
@@ -61,5 +55,5 @@ Dziedziczenie klas
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [klasy](../../../csharp/language-reference/keywords/class.md)  
- [— Struktura](../../../csharp/language-reference/keywords/struct.md)
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)

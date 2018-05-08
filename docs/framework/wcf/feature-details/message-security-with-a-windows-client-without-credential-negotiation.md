@@ -1,32 +1,20 @@
 ---
 title: Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
-Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta i usługi zabezpieczonej przez protokół Kerberos.  
+Poniższy scenariusz przedstawia klienta usługi Windows Communication Foundation (WCF) i usługi zabezpieczonej przez protokół Kerberos.  
   
  Zarówno usługa, jak i klienta znajdują się w tej samej domenie lub domenach zaufanych.  
   
@@ -59,9 +47,9 @@ Poniżej przedstawiono scenariusz [!INCLUDE[indigo1](../../../../includes/indigo
 > [!NOTE]
 >  Aby użyć typu poświadczeń systemu Windows bez negocjowania, konto użytkownika usługi musi mieć dostęp do nazwy głównej usługi (SPN), która jest zarejestrowana do domeny usługi Active Directory. Można to zrobić na dwa sposoby:  
   
-1.  Użyj `NetworkService` lub `LocalSystem` konto uruchamiania usługi. Ponieważ te konta ma dostęp do komputera, nazwę SPN, który zostanie nawiązane, gdy komputer jest dołączany domeny usługi Active Directory [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatycznie generuje prawidłowego elementu SPN w punkt końcowy usługi w metadanych usługi (usługi sieci Web Język opisu lub WSDL).  
+1.  Użyj `NetworkService` lub `LocalSystem` konto uruchamiania usługi. Ponieważ te konta dostępu do komputera, nazwę SPN, który zostanie nawiązane, gdy komputer jest dołączany do domeny usługi Active Directory, usługi WCF automatycznie generuje prawidłowego elementu SPN w punkt końcowy usługi w metadanych usługi (Web Services Description Język lub WSDL).  
   
-2.  Użyj dowolnego konta domeny usługi Active Directory do uruchomienia usługi. W takim przypadku należy ustanowić nazwę SPN dla tego konta domeny. Jednym ze sposobów realizacji tego jest narzędzie Narzędzie Setspn.exe. Po utworzeniu nazwy SPN dla konta usługi należy skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do opublikowania tej nazwy SPN do obsługi klientów za pośrednictwem jego metadanych (WSDL). Odbywa się przez ustawienie tożsamość punktu końcowego dla dostępnego punktu końcowego, albo jeśli pliku konfiguracji aplikacji lub kodu. Poniższy przykład publikuje tożsamość programowo.  
+2.  Użyj dowolnego konta domeny usługi Active Directory do uruchomienia usługi. W takim przypadku należy ustanowić nazwę SPN dla tego konta domeny. Jednym ze sposobów realizacji tego jest narzędzie Narzędzie Setspn.exe. Po utworzeniu nazwy SPN dla konta usługi należy skonfigurować usług WCF do opublikowania tej nazwy SPN do obsługi klientów za pośrednictwem jego metadanych (WSDL). Odbywa się przez ustawienie tożsamość punktu końcowego dla dostępnego punktu końcowego, albo jeśli pliku konfiguracji aplikacji lub kodu. Poniższy przykład publikuje tożsamość programowo.  
   
  Aby uzyskać więcej informacji na temat nazw SPN, protokołu Kerberos i usługi Active Directory, zobacz [Kerberos techniczne dodatku dla systemu Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Aby uzyskać więcej informacji o tożsamości punktu końcowego, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

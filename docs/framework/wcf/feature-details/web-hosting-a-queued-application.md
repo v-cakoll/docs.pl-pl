@@ -1,29 +1,15 @@
 ---
 title: Sieć Web hostująca aplikację zakolejkowaną
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Sieć Web hostująca aplikację zakolejkowaną
-Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji obsługujących [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług. Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesu dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług jednoczesne używanie protokołów HTTP i protokołów innych niż HTTP, na przykład net.msmq i msmq.formatname w środowisku macierzystym, który obsługuje aktywacji opartej na komunikat i oferuje możliwość obsługi dużej liczby aplikacji na danym komputerze.  
+Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesu dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF jednoczesne używanie protokołów HTTP i protokołów innych niż HTTP, na przykład net.msmq i msmq.formatname w środowisku macierzystym, który obsługuje aktywacji opartej na komunikat i oferuje możliwość obsługi dużej liczby aplikacji na danym komputerze.  
   
  ZOSTAŁ obejmują usługę aktywacji usługi kolejkowania komunikatów (MSMQ), który uaktywnia umieszczonych w kolejce aplikacji, gdy jeden lub więcej komunikatów są umieszczane w jednym z kolejek używany przez aplikację. Usługa aktywacji usługi MSMQ jest usługi NT, który jest automatycznie uruchamiane domyślnie.  
   
@@ -49,7 +35,7 @@ Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacji i okresem 
  Usługa MSMQ activation działa jako usługa sieciowa. To usługa, która monitoruje kolejki, aby aktywować aplikacje. Na jej aktywowania aplikacji z kolejki należy podać kolejki usług sieci dostęp do wglądu dla wiadomości w listy kontroli dostępu (ACL).  
   
 ### <a name="poison-messaging"></a>Zanieczyszczonych komunikatów  
- Trująca wiadomość została obsługa w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest obsługiwany przez kanał nie tylko wykryje, że wiadomość jest intoksykowane, ale wybiera dyspozycji, na podstawie konfiguracji użytkownika. W związku z tym jest pojedynczą wiadomość w kolejce. Aplikacja oparta na sieci Web przerywa razy w kolejnych i wiadomość zostanie przeniesiona do kolejki ponawiania. W punkcie ustawieniem Opóźnienie ponownych prób cyklu wiadomość zostanie przeniesiona z kolejki ponawiania do kolejki głównej aby spróbować ponownie. Ale wymaga to zwrócony jako aktywne. Jeśli aplikacja jest ponownego przetworzenia przez WAS, następnie komunikat pozostaje w kolejka ponownych prób do momentu kolejną wiadomość dociera do kolejki głównej do aktywowania aplikacji w kolejce. W takim przypadku obejście jest powrót komunikat ręcznie z kolejka ponownych prób do kolejki głównej do ponownego aktywowania aplikacji.  
+ Trująca wiadomość została obsługi w programie WCF jest obsługiwany przez kanał nie tylko wykryje, że wiadomość jest intoksykowane, ale wybiera dyspozycji, na podstawie konfiguracji użytkownika. W związku z tym jest pojedynczą wiadomość w kolejce. Aplikacja oparta na sieci Web przerywa razy w kolejnych i wiadomość zostanie przeniesiona do kolejki ponawiania. W punkcie ustawieniem Opóźnienie ponownych prób cyklu wiadomość zostanie przeniesiona z kolejki ponawiania do kolejki głównej aby spróbować ponownie. Ale wymaga to zwrócony jako aktywne. Jeśli aplikacja jest ponownego przetworzenia przez WAS, następnie komunikat pozostaje w kolejka ponownych prób do momentu kolejną wiadomość dociera do kolejki głównej do aktywowania aplikacji w kolejce. W takim przypadku obejście jest powrót komunikat ręcznie z kolejka ponownych prób do kolejki głównej do ponownego aktywowania aplikacji.  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>Podkolejki i zastrzeżenie systemu kolejki:  
  Nie można uaktywnić aplikacji usługi hostowanej WAS oparte na wiadomości w kolejce systemu, takich jak kolejki utraconych wiadomości systemowe lub podrzędnej kolejki, takie jak skażone kolejki podrzędne. Jest to ograniczenie dla tej wersji produktu.  

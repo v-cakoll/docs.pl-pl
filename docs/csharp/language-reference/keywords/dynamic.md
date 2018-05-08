@@ -1,24 +1,17 @@
 ---
-title: "dynamic (odwołanie w C#)"
+title: dynamic (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - dynamic_CSharpKeyword
 helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e3bf51ab62e195f7a5d1f0641f62380977c731ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59957ce6b2a26c1d24dc1178630eef8551db3340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-c-reference"></a>dynamic (odwołanie w C#)
 `dynamic` Typ umożliwia operacje, w których występuje Pomiń sprawdzanie typów w czasie kompilacji. Jednak te operacje zostaną rozwiązane w czasie wykonywania. `dynamic` Typu ułatwiają dostęp do interfejsów API modelu COM, takich jak Office interfejsów API automatyzacji i również do dynamicznego interfejsów API, takich jak biblioteki IronPython oraz do HTML modelu DOM (Document Object).  
@@ -70,9 +63,9 @@ obj = obj + 3;
  <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
  <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
  [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [obiekt](../../../csharp/language-reference/keywords/object.md)  
- [jest](../../../csharp/language-reference/keywords/is.md)  
- [jako](../../../csharp/language-reference/keywords/as.md)  
- [TypeOf](../../../csharp/language-reference/keywords/typeof.md)  
- [Porady: bezpieczne rzutowanie za pomocą jako operatorów i is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+ [object](../../../csharp/language-reference/keywords/object.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [as](../../../csharp/language-reference/keywords/as.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+ [Instrukcje: bezpieczne rzutowanie za pomocą operatorów as i is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
  [Wskazówki: Tworzenie obiektów dynamicznych i posługiwanie](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

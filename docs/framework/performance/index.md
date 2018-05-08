@@ -1,29 +1,17 @@
 ---
 title: Wydajność środowiska .NET Framework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aa4db0e3e136eee1d2037ad6041ac6945d313776
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ebfe03ea99f7a9c66fb46f01b37f85daf9e919d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-performance"></a>Wydajność środowiska .NET Framework
 Jeśli chcesz utworzyć aplikacje o bardzo dużej wydajności, projektowanie i Planowanie wydajności tylko innych funkcji aplikacji czy projektu. Można używać narzędzi dostarczanych przez firmę Microsoft do mierzenia wydajności aplikacji i, w razie potrzeby poprawiają wykorzystanie pamięci, kod przepływności i czasu odpowiedzi. W tym temacie wymieniono narzędzia analizy wydajności firmy Microsoft zapewnia i łącza do innych tematów, które obejmują wydajność dla określonych obszarach tworzenia aplikacji.  
@@ -57,7 +45,7 @@ Jeśli chcesz utworzyć aplikacje o bardzo dużej wydajności, projektowanie i P
 |Typ aplikacji|Zobacz|  
 |--------------|---------|  
 |Aplikacje środowiska .NET framework dla wszystkich platform|[Odzyskiwanie pamięci i wydajność](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Wskazówki dotyczące wydajności](../../../docs/framework/performance/performance-tips.md)|  
-|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]aplikacji napisanych w języku C++, C# i Visual Basic|[Najlepsze praktyki wydajności dla aplikacji ze Sklepu Windows przy użyciu języka C++, C# i Visual Basic](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)|  
+|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji napisanych w języku C++, C# i Visual Basic|[Najlepsze praktyki wydajności dla aplikacji ze Sklepu Windows przy użyciu języka C++, C# i Visual Basic](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)|  
 |Windows Phone|[Zagadnienia dotyczące wydajności aplikacji Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Analiza aplikacji Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [Pobierz aplikacje Windows Phone w witrynie Marketplace szybsze](http://msdn.microsoft.com/magazine/hh781024.aspx)|  
 |Windows Presentation Foundation (WPF)|[Pakiet wydajności WPF](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
 |Silverlight|[Porady dotyczące wydajności](http://msdn.microsoft.com/library/cc189071\(v=vs.95\).aspx)|  

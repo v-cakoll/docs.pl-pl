@@ -1,20 +1,13 @@
 ---
-title: "System.Delegate i słowo kluczowe \"delegate\""
-description: "Więcej informacji na temat klas w programie .NET Framework, które obsługują delegatów oraz sposobu mapowania tych — słowo kluczowe \"delegowanie\"."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate i `delegate` — słowo kluczowe
+description: Więcej informacji na temat klas w programie .NET Framework, które obsługują delegatów oraz sposobu mapowania tych — słowo kluczowe "delegowanie".
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate i `delegate` — słowo kluczowe
 
@@ -136,8 +129,8 @@ Mimo że nie można utworzyć klasy pochodne bezpośrednio, używasz metody zdef
 
 Po pierwsze, najważniejsze do zapamiętania to czy jest pochodną co delegata pracować z `MulticastDelegate`. Delegat multiemisji oznacza, że więcej niż jeden cel metoda może być wywoływana podczas wywoływania za pośrednictwem pełnomocnika. Oryginalny projekt uznawane za różnice między delegatów, gdzie można podłączony i wywołać metody tylko jeden obiekt docelowy i delegatów, gdzie można dołączyć i wywołać wielu metod docelowych. Różnica w tym okazały się mniej użyteczny w praktyce niż pierwotnie traktować. Dwoma różnymi klasami zostały już utworzone, a zostały w ramach początkowego wydania publicznych.
 
-Metody, które będą używane najczęściej z delegatów są `Invoke()` i `BeginInvoke()`  /  `EndInvoke()`. `Invoke()`wywoła wszystkie metody, które zostały dołączone do wystąpienia określonego delegata. Jak przedstawiono powyżej, zazwyczaj należy wywołać delegatów za pomocą składni wywołań metody zmiennej obiektu delegowanego. Jak można zauważyć [dalej w tej serii](delegates-patterns.md), istnieją wzorców, które współpracują bezpośrednio z tych metod.
+Metody, które będą używane najczęściej z delegatów są `Invoke()` i `BeginInvoke()`  /  `EndInvoke()`. `Invoke()` wywoła wszystkie metody, które zostały dołączone do wystąpienia określonego delegata. Jak przedstawiono powyżej, zazwyczaj należy wywołać delegatów za pomocą składni wywołań metody zmiennej obiektu delegowanego. Jak można zauważyć [dalej w tej serii](delegates-patterns.md), istnieją wzorców, które współpracują bezpośrednio z tych metod.
 
 Skoro już znasz składni języka i klas, które obsługują delegatów Przeanalizujmy jak jednoznacznie delegatów są używane, tworzone i wywoływane.
 
-[Dalej](delegates-strongly-typed.md)
+[Next](delegates-strongly-typed.md)

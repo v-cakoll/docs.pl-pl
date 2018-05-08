@@ -1,29 +1,17 @@
 ---
 title: Korzystanie z personifikacji z zabezpieczeniami transportu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: 12
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a4b05031061183cf0dddd82c900065155b1e561
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Korzystanie z personifikacji z zabezpieczeniami transportu
-*Personifikacja* to funkcja aplikacji serwera do podjęcia tożsamości klienta. Jest typowe dla usługi, aby podczas sprawdzania dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, dzięki czemu kontroli dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest to mechanizm przekazywania poświadczeń i zabezpieczania komunikacji przy użyciu tych poświadczeń. W tym temacie opisano za pomocą zabezpieczeń transportu w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] z funkcją personifikacji. Aby uzyskać więcej informacji o personifikacji korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Personifikacja* to funkcja aplikacji serwera do podjęcia tożsamości klienta. Jest typowe dla usługi, aby podczas sprawdzania dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, dzięki czemu kontroli dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest to mechanizm przekazywania poświadczeń i zabezpieczania komunikacji przy użyciu tych poświadczeń. W tym temacie opisano, za pomocą zabezpieczeń transportu w systemie Windows Communication Foundation (WCF) z funkcją personifikacji. Aby uzyskać więcej informacji o personifikacji korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Pięć poziomów personifikacji  
  Zabezpieczenia transportu korzysta z pięciu poziomów personifikacji, zgodnie z opisem w poniższej tabeli.  
@@ -32,7 +20,7 @@ ms.lasthandoff: 04/30/2018
 |-------------------------|-----------------|  
 |Brak|Aplikacja serwera nie próbuje dokonać personifikacji klienta.|  
 |Anonimowe|Aplikacja serwera może wykonywać kontroli dostępu przed poświadczenia klienta, ale nie otrzymuje żadnych informacji o tożsamości klienta. Ten poziom personifikacji ma znaczenie tylko do komunikacji na komputerze, takich jak nazwanych potoków. Przy użyciu `Anonymous` z połączenia zdalnego wspiera poziom personifikacji identyfikowanie.|  
-|Zidentyfikuj|Aplikacja serwera zna tożsamości klienta i przeprowadzić weryfikację dostępu pod kątem poświadczenia klienta, ale nie można spersonifikować klienta. Zidentyfikuj jest to domyślny poziom personifikacji, który jest używany z poświadczeniami SSPI w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] chyba, że dostawca tokenu zapewnia poziom personifikacji różnych.|  
+|Zidentyfikuj|Aplikacja serwera zna tożsamości klienta i przeprowadzić weryfikację dostępu pod kątem poświadczenia klienta, ale nie można spersonifikować klienta. Zidentyfikuj jest to domyślny poziom personifikacji używane z poświadczeniami SSPI w programie WCF, chyba że dostawcę tokenów zapewnia poziom personifikacji inny.|  
 |Impersonate|Aplikacja serwera może uzyskiwać dostęp do zasobów na komputerze z serwerem jako klienta oprócz przeprowadzania kontroli dostępu. Aplikacja serwera nie może uzyskać dostęp do zasobów na komputerach zdalnych przy użyciu tożsamości klienta, ponieważ token personifikowanej nie ma poświadczeń sieciowych|  
 |Delegate|Oprócz mających takie same możliwości jak `Impersonate`, poziomu personifikacji delegowanie umożliwia również aplikacji serwera na dostęp do zasobów na komputerach zdalnych przy użyciu tożsamości klienta i do przekazania tożsamości do innych aplikacji.<br /><br /> **Ważne** konto domeny serwera muszą być oznaczone jako zaufane dla delegowania na kontrolerze domeny, aby korzystać z dodatkowych funkcji. Ten poziom personifikacji nie można używać z konta domeny klienta oznaczony jako poufne.|  
   
@@ -41,12 +29,12 @@ ms.lasthandoff: 04/30/2018
  Korzystanie z personifikacji na `Impersonate` lub `Delegate` poziomy wymaga aplikacji serwera, aby `SeImpersonatePrivilege` uprawnień. Aplikacja ma to uprawnienie domyślnie, jeśli została uruchomiona przy użyciu konta w grupie Administratorzy lub przy użyciu konta o identyfikatorze SID Service (Usługa sieciowa, Usługa lokalna lub systemu lokalnego). Personifikacja nie wymaga wzajemnego uwierzytelniania klienta i serwera. Nie można używać niektórych schematy uwierzytelniania, które obsługuje personifikacji, takich jak uwierzytelnianie NTLM i przez uwierzytelnianie wzajemne.  
   
 ## <a name="transport-specific-issues-with-impersonation"></a>Problemy specyficzne dla transportu z personifikacji  
- Wybór transportu w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wpływa na możliwe opcje personifikacji. Ta sekcja zawiera opis zagadnień wpływających na standardowego protokołu HTTP i o nazwie transportów potoku w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Niestandardowe transportów mają własne ograniczeń na obsługę personifikacji.  
+ Wybór transportu programu WCF wpływa na możliwe opcje personifikacji. Ta sekcja zawiera opis zagadnień wpływających na standardowego protokołu HTTP i nazwanych potoków transporty w programie WCF. Niestandardowe transportów mają własne ograniczeń na obsługę personifikacji.  
   
 ### <a name="named-pipe-transport"></a>O nazwie transportu potoku  
  Następujące elementy są używane z transportu nazwanego potoku:  
   
--   Transportu nazwanego potoku jest przeznaczony do użytku tylko na komputerze lokalnym. Transportu nazwanego potoku w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jawnie nie zezwala na połączenia między komputerami.  
+-   Transportu nazwanego potoku jest przeznaczony do użytku tylko na komputerze lokalnym. Transportu nazwanego potoku w programie WCF nie jawnie zezwala na połączenia między komputerami.  
   
 -   Nazwane potoki nie można używać z `Impersonate` lub `Delegate` poziom personifikacji. Nazwany potok nie można wymusić na komputerze gwarancji te poziomy personifikacji.  
   

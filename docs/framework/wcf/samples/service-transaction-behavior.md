@@ -1,28 +1,14 @@
 ---
-title: "Zachowanie transakcji usługi"
-ms.custom: 
+title: Zachowanie transakcji usługi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a4c7c9c78b821f7457f193d24bae031d49b301ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-transaction-behavior"></a>Zachowanie transakcji usługi
 W przykładzie pokazano użycie transakcji koordynowane przez klienta i ustawienia atrybutu ServiceBehaviorAttribute i OperationBehaviorAttribute można kontrolować zachowanie transakcji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementuje usługi Kalkulator, ale jest rozszerzony do obsługi serwera dziennik działań wykonywanych w tabeli bazy danych i stanowego Suma operacji Kalkulator bieżąca. Utrwalonych zapisuje dane w tabeli dziennika serwera są zależne od wyniku transakcji klienta koordynowane — Jeśli transakcja klienta nie zostanie ukończone, transakcja usługi sieci Web zapewnia aktualizacji do bazy danych nie są przekazywane.  
@@ -225,7 +211,7 @@ Creating new service instance...
   
 3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Po uruchomieniu próbki na komputerach, należy skonfigurować MSDTC Microsoft Distributed Transaction Coordinator () do włączenia przepływu transakcji sieci i włączyć za pomocą narzędzia WsatConfig.exe [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transakcji sieci pomocy technicznej.  
+ Po uruchomieniu próbki na komputerach, należy skonfigurować MSDTC Microsoft Distributed Transaction Coordinator () do włączenia przepływu transakcji sieci i włącz sieć transakcji Windows Communication Foundation (WCF) za pomocą narzędzia WsatConfig.exe Obsługa.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Aby skonfigurować MSDTC Microsoft Distributed Transaction Coordinator () do obsługi systemem próbki na komputerach  
   
@@ -274,7 +260,7 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   

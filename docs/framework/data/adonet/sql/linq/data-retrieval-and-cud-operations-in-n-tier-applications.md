@@ -1,34 +1,22 @@
 ---
 title: Pobieranie danych i CUD operacje w aplikacjach warstwowych (LINQ to SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Pobieranie danych i CUD operacje w aplikacjach warstwowych (LINQ to SQL)
 Podczas obiekty obiektów, takich jak klienci lub zamówienia klienta za pośrednictwem sieci, podmioty są odłączone od ich kontekstu danych. Kontekst danych śledzi już ich zmiany i ich powiązania z innych obiektów. Nie jest to problem, tak długo, jak klienci są tylko do odczytu danych. Jest również stosunkowo proste umożliwić klientom dodawać nowe wiersze do bazy danych. Jednak jeśli aplikacja wymaga, aby klienci mogli aktualizować lub usuwać dane, następnie należy dołączyć jednostek do nowy kontekst danych przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Ponadto jeśli sprawdzenie optymistycznej współbieżności korzystają z oryginalnych wartości, następnie należy również sposób zapewniające bazy danych oryginalna jednostka i jednostki zmienione. `Attach` Metody są dostarczane do umożliwiają poddane jednostek nowy kontekst danych po ich odłączony.  
   
  Nawet jeśli są serializacji obiektów pośredniczących zamiast [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jednostek, nadal jest konieczne utworzenia obiektu w warstwie dostępu do danych (DAL) i dołączenie go do nowego <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, aby przesłać dane do bazy danych.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]jest całkowicie Obojętność o jak jednostki są serializowane. Aby uzyskać więcej informacji o sposobie używania [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] i SQLMetal narzędzia do generowania klasy, które są do serializacji przy użyciu systemu Windows Communication Foundation (WCF), zobacz [jak: utworzyć serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest całkowicie Obojętność o jak jednostki są serializowane. Aby uzyskać więcej informacji o sposobie używania [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] i SQLMetal narzędzia do generowania klasy, które są do serializacji przy użyciu systemu Windows Communication Foundation (WCF), zobacz [jak: utworzyć serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Wywoływać tylko `Attach` metody w nowych lub zdeserializowany jednostek. Jedynym sposobem dla jednostki odłączenia od jego oryginalnej kontekst danych jest dla niego do serializacji. Jeśli próby dołączenia undetached jednostkę do nowego kontekstu danych, a jednostkę nadal wstrzymał ładowarki z jego poprzedni kontekst danych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zostanie zgłoszony wyjątek. Jednostka z opóźnieniem ładowarki z dwóch kontekstów danych może spowodować niepożądane wyniki podczas wykonywania insert, update i operacji usuwania dla tej jednostki. Aby uzyskać więcej informacji na temat odroczonego ładowarki zobacz [odroczone i ładowania bezpośredniego](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
@@ -219,7 +207,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>Aktualizowanie danych  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje aktualizacje w tych scenariuszach obejmujących optymistycznej współbieżności:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje aktualizacje w tych scenariuszach obejmujących optymistycznej współbieżności:  
   
 -   Na podstawie sygnatury czasowe lub numery RowVersion optymistycznej współbieżności.  
   

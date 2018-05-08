@@ -1,24 +1,15 @@
 ---
-title: "Składnia zapytania i metody w technologii LINQ (C#)"
-ms.custom: 
+title: Składnia zapytania i metody w technologii LINQ (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: "30"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Składnia zapytania i metody w technologii LINQ (C#)
 Większość zapytań w zapytaniu zintegrowane wprowadzające języka ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) dokumentacji zostały napisane przy użyciu składni deklaratywne zapytania LINQ. Jednak składnia zapytania musi można przetłumaczyć jej na wywołania metody dla platformy .NET środowisko uruchomieniowe języka wspólnego (CLR) podczas kompilowania kodu. Standardowe operatory zapytań, które mają nazwy, takie jak wywołania tych wywołań metody `Where`, `Select`, `GroupBy`, `Join`, `Max`, i `Average`. Możesz je wywołać bezpośrednio, używając składni metody zamiast składni zapytań.  
@@ -48,7 +39,7 @@ Większość zapytań w zapytaniu zintegrowane wprowadzające języka ([!INCLUDE
  Aby rozpocząć korzystanie z [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], nie trzeba używać wyrażeń lambda często. Jednak niektóre kwerendy można wyrazić tylko wtedy w składni metody i niektóre z tych wymagają wyrażenia lambda. Po więcej zapoznanie się z wyrażenia lambda znajdziesz się wystarczająco wydajny i elastyczny narzędzia w Twojej [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przybornika. Aby uzyskać więcej informacji, zobacz [wyrażenia Lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Możliwości tworzenia zapytań  
- W poprzednim przykładzie kodu, należy pamiętać, że `OrderBy` metoda jest wywoływana przy użyciu operatora kropki w wywołaniu `Where`. `Where`Tworzy sekwencję filtrowane, a następnie `Orderby` działa w tej kolejności, sortując go. Ponieważ kwerendy zwracają `IEnumerable`, je utworzyć w składni metody przez tworzenie łańcucha wywołań metody razem. Jest to, jak kompilator działa w tle podczas pisania zapytania przy użyciu składni zapytania. I ponieważ zmienną zapytania nie zapisuje wyniki zapytania, można go zmodyfikować lub używać go jako podstawę dla nowego zapytania w dowolnym momencie, nawet po zostało uruchomione.  
+ W poprzednim przykładzie kodu, należy pamiętać, że `OrderBy` metoda jest wywoływana przy użyciu operatora kropki w wywołaniu `Where`. `Where` Tworzy sekwencję filtrowane, a następnie `Orderby` działa w tej kolejności, sortując go. Ponieważ kwerendy zwracają `IEnumerable`, je utworzyć w składni metody przez tworzenie łańcucha wywołań metody razem. Jest to, jak kompilator działa w tle podczas pisania zapytania przy użyciu składni zapytania. I ponieważ zmienną zapytania nie zapisuje wyniki zapytania, można go zmodyfikować lub używać go jako podstawę dla nowego zapytania w dowolnym momencie, nawet po zostało uruchomione.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

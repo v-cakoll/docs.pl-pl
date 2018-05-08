@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Tabela"
-ms.custom: 
+title: Przegląd Tabela
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 631a14ae8eb17713186f7db66700026cc476024e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="table-overview"></a>Przegląd Tabela
-<xref:System.Windows.Documents.Table>jest elementem poziomu bloku, który obsługuje oparte na siatce prezentacji zawartości dokumentu przepływu. Elastyczność tego elementu ułatwia bardzo przydatne, ale również umożliwia bardziej skomplikowane zrozumieniu i użytkowaniu poprawnie.  
+<xref:System.Windows.Documents.Table> jest elementem poziomu bloku, który obsługuje oparte na siatce prezentacji zawartości dokumentu przepływu. Elastyczność tego elementu ułatwia bardzo przydatne, ale również umożliwia bardziej skomplikowane zrozumieniu i użytkowaniu poprawnie.  
   
  Ten temat zawiera następujące sekcje.  
   
@@ -55,11 +43,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>W jaki sposób innej tabeli, a następnie siatki?  
- <xref:System.Windows.Documents.Table>i <xref:System.Windows.Controls.Grid> udostępnianie niektóre typowe funkcje, ale każda jest najbardziej odpowiednie dla różnych scenariuszy. A <xref:System.Windows.Documents.Table> jest przeznaczony do użytku w dowolnej zawartości (zobacz [przepływu dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md) uzyskać więcej informacji o dowolnej zawartości). Najlepiej sprawdzają siatki wewnątrz formularzy (zasadniczo dowolnym poza przepływ zawartości). W ramach <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> obsługuje przepływ zachowania zawartości, takie jak podział na strony, ze zmianą ułożenia kolumn i wybór zawartości podczas <xref:System.Windows.Controls.Grid> nie. A <xref:System.Windows.Controls.Grid> z drugiej strony najlepiej jest używana poza <xref:System.Windows.Documents.FlowDocument> wielu powodów, takich jak <xref:System.Windows.Controls.Grid> dodaje elementy oparte na indeks wierszy i kolumn <xref:System.Windows.Documents.Table> nie. <xref:System.Windows.Controls.Grid> Element umożliwia warstwy zawartość elementu podrzędnego, dzięki czemu więcej niż jeden element istnieje w jednym "komórki." <xref:System.Windows.Documents.Table>nie obsługuje tworzenie warstw. Elementy podrzędne <xref:System.Windows.Controls.Grid> można bezwzględnego względem obszaru ich granice "komórki". <xref:System.Windows.Documents.Table>nie obsługuje tej funkcji. Na koniec <xref:System.Windows.Controls.Grid> wymaga mniej zasobów, a następnie <xref:System.Windows.Documents.Table> tak, rozważ użycie <xref:System.Windows.Controls.Grid> do zwiększenia wydajności.  
+ <xref:System.Windows.Documents.Table> i <xref:System.Windows.Controls.Grid> udostępnianie niektóre typowe funkcje, ale każda jest najbardziej odpowiednie dla różnych scenariuszy. A <xref:System.Windows.Documents.Table> jest przeznaczony do użytku w dowolnej zawartości (zobacz [przepływu dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md) uzyskać więcej informacji o dowolnej zawartości). Najlepiej sprawdzają siatki wewnątrz formularzy (zasadniczo dowolnym poza przepływ zawartości). W ramach <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> obsługuje przepływ zachowania zawartości, takie jak podział na strony, ze zmianą ułożenia kolumn i wybór zawartości podczas <xref:System.Windows.Controls.Grid> nie. A <xref:System.Windows.Controls.Grid> z drugiej strony najlepiej jest używana poza <xref:System.Windows.Documents.FlowDocument> wielu powodów, takich jak <xref:System.Windows.Controls.Grid> dodaje elementy oparte na indeks wierszy i kolumn <xref:System.Windows.Documents.Table> nie. <xref:System.Windows.Controls.Grid> Element umożliwia warstwy zawartość elementu podrzędnego, dzięki czemu więcej niż jeden element istnieje w jednym "komórki." <xref:System.Windows.Documents.Table> nie obsługuje tworzenie warstw. Elementy podrzędne <xref:System.Windows.Controls.Grid> można bezwzględnego względem obszaru ich granice "komórki". <xref:System.Windows.Documents.Table> nie obsługuje tej funkcji. Na koniec <xref:System.Windows.Controls.Grid> wymaga mniej zasobów, a następnie <xref:System.Windows.Documents.Table> tak, rozważ użycie <xref:System.Windows.Controls.Grid> do zwiększenia wydajności.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>Struktura tabeli podstawowej  
- <xref:System.Windows.Documents.Table>zapewnia oparte na siatce prezentacji składający się z kolumn (reprezentowane przez <xref:System.Windows.Documents.TableColumn> elementy), jak i wiersze (reprezentowane przez <xref:System.Windows.Documents.TableRow> elementów). <xref:System.Windows.Documents.TableColumn>elementy nie obsługują zawartość; po prostu definiują, kolumny i właściwości kolumn. <xref:System.Windows.Documents.TableRow>elementy muszą być hostowane w <xref:System.Windows.Documents.TableRowGroup> element, który definiuje grupowania wierszy dla tabeli. <xref:System.Windows.Documents.TableCell>elementów, które zawierają rzeczywiste zawartości będą widoczne w tabeli, musi być obsługiwana przez <xref:System.Windows.Documents.TableRow> elementu. <xref:System.Windows.Documents.TableCell>może zawierać tylko elementy, które pochodzą z <xref:System.Windows.Documents.Block>.  Elementy podrzędne prawidłowy dla <xref:System.Windows.Documents.TableCell> obejmują.  
+ <xref:System.Windows.Documents.Table> zapewnia oparte na siatce prezentacji składający się z kolumn (reprezentowane przez <xref:System.Windows.Documents.TableColumn> elementy), jak i wiersze (reprezentowane przez <xref:System.Windows.Documents.TableRow> elementów). <xref:System.Windows.Documents.TableColumn> elementy nie obsługują zawartość; po prostu definiują, kolumny i właściwości kolumn. <xref:System.Windows.Documents.TableRow> elementy muszą być hostowane w <xref:System.Windows.Documents.TableRowGroup> element, który definiuje grupowania wierszy dla tabeli. <xref:System.Windows.Documents.TableCell> elementów, które zawierają rzeczywiste zawartości będą widoczne w tabeli, musi być obsługiwana przez <xref:System.Windows.Documents.TableRow> elementu. <xref:System.Windows.Documents.TableCell> może zawierać tylko elementy, które pochodzą z <xref:System.Windows.Documents.Block>.  Elementy podrzędne prawidłowy dla <xref:System.Windows.Documents.TableCell> obejmują.  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -72,10 +60,10 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell>elementy nie mogą bezpośrednio hostem zawartości tekstowej. Aby uzyskać więcej informacji o regułach zawierania dla przepływu elementów zawartości, takich jak <xref:System.Windows.Documents.TableCell>, zobacz [przepływu dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+>  <xref:System.Windows.Documents.TableCell> elementy nie mogą bezpośrednio hostem zawartości tekstowej. Aby uzyskać więcej informacji o regułach zawierania dla przepływu elementów zawartości, takich jak <xref:System.Windows.Documents.TableCell>, zobacz [przepływu dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table>przypomina <xref:System.Windows.Controls.Grid> element a ma więcej możliwości i, w związku z tym wymaga większe obciążenie zasobów.  
+>  <xref:System.Windows.Documents.Table> przypomina <xref:System.Windows.Controls.Grid> element a ma więcej możliwości i, w związku z tym wymaga większe obciążenie zasobów.  
   
  W poniższym przykładzie zdefiniowano prostą tabelę 2 x 3 z [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Zawieranie tabeli  
- <xref:System.Windows.Documents.Table>pochodną <xref:System.Windows.Documents.Block> element i stosuje wspólne zasady dla <xref:System.Windows.Documents.Block> poziomu elementów.  A <xref:System.Windows.Documents.Table> elementu mogą znajdować się za pomocą dowolnej z następujących elementów:  
+ <xref:System.Windows.Documents.Table> pochodną <xref:System.Windows.Documents.Block> element i stosuje wspólne zasady dla <xref:System.Windows.Documents.Block> poziomu elementów.  A <xref:System.Windows.Documents.Table> elementu mogą znajdować się za pomocą dowolnej z następujących elementów:  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   
@@ -135,7 +123,7 @@ ms.lasthandoff: 12/22/2017
   
  Na poniższej ilustracji przedstawiono, jak w tym przykładzie powoduje (tylko kolory tła przedstawiający).  
   
- ![Zrzut ekranu: Tabela z &#45; kolejność](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")  
+ ![Zrzut ekranu: Tabela z&#45;kolejności](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")  
   
 <a name="spanning_rows_or_columns"></a>   
 ### <a name="spanning-rows-or-columns"></a>Łączenie węzłów wierszy lub kolumn  

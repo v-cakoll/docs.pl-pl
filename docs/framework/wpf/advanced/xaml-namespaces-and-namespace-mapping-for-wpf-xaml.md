@@ -1,13 +1,6 @@
 ---
-title: "Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML"
-ms.custom: 
+title: Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80f152f8cdf459f920d723df66756af680b4bcea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf9c9c16488a58a07aa29d16b3d00dd83c7c232
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 Dalej w tym temacie opisano obecności i celem dwóch mapowania przestrzeni nazw XAML tyle razy, znaleziony w tagu głównym pliku XAML w WPF. Również zawiera opis sposobu tworzenia podobne mapowania dla przy użyciu elementów zdefiniowanych w swoim własnym kodem i/lub w ramach oddzielne zestawy.  
@@ -59,9 +47,9 @@ Dalej w tym temacie opisano obecności i celem dwóch mapowania przestrzeni nazw
   
  Składnia przyjmuje następujące możliwe tokeny nazwane i następujące wartości:  
   
- `clr-namespace:`Przestrzeń nazw środowiska CLR zadeklarowany w obrębie zestawu, który zawiera typy publiczne jako elementy.  
+ `clr-namespace:` Przestrzeń nazw środowiska CLR zadeklarowany w obrębie zestawu, który zawiera typy publiczne jako elementy.  
   
- `assembly=`Zestaw zawierający niektóre lub wszystkie przywoływana [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeni nazw. Ta wartość jest zazwyczaj tylko nazwę zestawu, a nie ścieżkę i nie ma rozszerzenia (takie jak .dll lub .exe). Ścieżka do tego zestawu, należy ustanowić jako odwołanie do projektu w pliku projektu, który zawiera XAML próbujesz mapy. Aby włączyć przechowywanie wersji i podpisywanie silną nazwą, `assembly` wartość może być ciągiem, zgodnie z definicją w <xref:System.Reflection.AssemblyName>, a nie nazwę prostego ciągu.  
+ `assembly=` Zestaw zawierający niektóre lub wszystkie przywoływana [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeni nazw. Ta wartość jest zazwyczaj tylko nazwę zestawu, a nie ścieżkę i nie ma rozszerzenia (takie jak .dll lub .exe). Ścieżka do tego zestawu, należy ustanowić jako odwołanie do projektu w pliku projektu, który zawiera XAML próbujesz mapy. Aby włączyć przechowywanie wersji i podpisywanie silną nazwą, `assembly` wartość może być ciągiem, zgodnie z definicją w <xref:System.Reflection.AssemblyName>, a nie nazwę prostego ciągu.  
   
  Należy pamiętać, że znak oddzielanie `clr-namespace` tokenu z jego wartość jest dwukropkiem (:) oddzielanie znak `assembly` tokenu z jego wartość jest znak równości (=). Znak między tych dwóch tokenów jest średnikiem. Ponadto nie zawierają żadnych spacji dowolne miejsce w deklaracji.  
   
@@ -111,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>Mapowanie do bieżącego zestawów  
- `assembly`można pominąć, jeśli `clr-namespace` przywoływanego mieści się w tym samym zestawie co kod aplikacji, która odwołuje się do klas niestandardowych. Lub równoważne składni dla tej sprawy jest określenie `assembly=`, nie tokenem ciągu po znaku równości.  
+ `assembly` można pominąć, jeśli `clr-namespace` przywoływanego mieści się w tym samym zestawie co kod aplikacji, która odwołuje się do klas niestandardowych. Lub równoważne składni dla tej sprawy jest określenie `assembly=`, nie tokenem ciągu po znaku równości.  
   
  Nie można użyć niestandardowej klasy jako element główny strony, jeśli została zdefiniowana w tym samym zestawie. Klasy częściowe nie muszą być mapowane; tylko klasy, które nie są częściowej klasy strony w potrzeb aplikacji można mapować, jeśli zamierzasz odwoływać je jako elementy w języku XAML.  
   
@@ -124,9 +112,9 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Projektanta obszary nazw i inne prefiksy z szablonów XAML  
  Podczas pracy z środowisk deweloperskich i/lub narzędzia do projektowania dla WPF XAML, można zauważyć, że istnieją inne określonych przestrzeni nazw XAML / prefiksy w kodzie XAML.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]używa projektanta przestrzeni nazw, która zwykle jest zamapowana na prefiks `d:`. Nowych szablonów projektu dla WPF mogą być mapowane wstępnie tej przestrzeni nazw XAML do obsługi wymiany XAML między [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] i innych środowisk projektowania. Ta przestrzeń nazw XAML projektu jest używany do widoczny przy obsłudze często stan projektu podczas roundtripping opartych na języku XAML interfejsu użytkownika w projektancie. Jest również używana w przypadku funkcji takich jak `d:IsDataSource`, umożliwiające środowiska uruchomieniowego źródeł danych w projektancie.  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] używa projektanta przestrzeni nazw, która zwykle jest zamapowana na prefiks `d:`. Nowych szablonów projektu dla WPF mogą być mapowane wstępnie tej przestrzeni nazw XAML do obsługi wymiany XAML między [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] i innych środowisk projektowania. Ta przestrzeń nazw XAML projektu jest używany do widoczny przy obsłudze często stan projektu podczas roundtripping opartych na języku XAML interfejsu użytkownika w projektancie. Jest również używana w przypadku funkcji takich jak `d:IsDataSource`, umożliwiające środowiska uruchomieniowego źródeł danych w projektancie.  
   
- Inny prefiks można napotkać mapowany jest `mc:`. `mc:`dla znaczników zgodności i polega na wykorzystaniu wzorca zgodności znaczników, który nie jest zawsze specyficzne dla języka XAML. W pewnym stopniu zgodności znaczników, funkcje mogą być używane do wymiany XAML między struktury lub inne bariery implementacji zapasowy pracy między kontekst schematu XAML, zapewniają zgodność dla trybów ograniczony w projektantach i tak dalej. Aby uzyskać więcej informacji na znaczników zgodności pojęcia i ich relacji z WPF, zobacz [zgodności znaczników (mc:) Funkcje języka](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
+ Inny prefiks można napotkać mapowany jest `mc:`. `mc:` dla znaczników zgodności i polega na wykorzystaniu wzorca zgodności znaczników, który nie jest zawsze specyficzne dla języka XAML. W pewnym stopniu zgodności znaczników, funkcje mogą być używane do wymiany XAML między struktury lub inne bariery implementacji zapasowy pracy między kontekst schematu XAML, zapewniają zgodność dla trybów ograniczony w projektantach i tak dalej. Aby uzyskać więcej informacji na znaczników zgodności pojęcia i ich relacji z WPF, zobacz [zgodności znaczników (mc:) Funkcje języka](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF i ładowania zestawu  
  Kontekst schematu WPF XAML integruje się z modelem aplikacji WPF, który z kolei używa pojęcie zdefiniowane CLR <xref:System.AppDomain>. Następująca sekwencja opisano, jak kontekst schematu XAML interpretuje jak ładowanie zestawów albo znaleźć typów w czasie wykonywania lub projektu, na podstawie z użyciem WPF <xref:System.AppDomain> i innych czynników.  

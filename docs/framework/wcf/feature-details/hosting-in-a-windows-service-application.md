@@ -1,53 +1,39 @@
 ---
 title: Hostowanie w aplikacji usługi systemu Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e440961055ccd40bf56b4b88ea73d167f1903245
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
 Usługi systemu Windows (wcześniej znane jako usługi systemu Windows NT) zapewniają proces modelu szczególnie nadaje się do aplikacji, musi istnieć w pliku wykonywalnym długotrwałe, które nie są wyświetlane wszystkie formularza interfejsu użytkownika. Okres istnienia procesu systemu Windows, usługi aplikacja jest zarządzana przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i wstrzymywanie aplikacji usług systemu Windows. Można skonfigurować do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko macierzyste dla aplikacji "zawsze włączone" proces usługi systemu Windows. Aby uzyskać więcej informacji o aplikacji usług systemu Windows, zobacz [aplikacji usług systemu Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
   
- Aplikacje obsługujące długotrwałe [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług mają wiele właściwości usługami wdrażania systemu Windows. W szczególności [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi są długotrwałe plików wykonywalnych serwera, które nie wchodzą w interakcje bezpośrednio z użytkownikiem i w związku z tym nie należy implementować dowolnej formy interfejsu użytkownika. W efekcie hosting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług wewnątrz aplikacji usługi systemu Windows jest jedną z opcji tworzenia niezawodne, długotrwałą, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
+ Aplikacje obsługujące długotrwałe usług Windows Communication Foundation (WCF) mają wiele właściwości, usługami wdrażania systemu Windows. W szczególności usług WCF jest długotrwałe plików wykonywalnych serwera, które nie wchodzą w interakcje bezpośrednio z użytkownikiem i w związku z tym nie należy implementować dowolnej formy interfejsu użytkownika. Hosting usług WCF wewnątrz aplikacji usługi systemu Windows tak, jest jedną z opcji tworzenia aplikacji WCF niezawodne, długotrwałą.  
   
- Często [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deweloperzy należy zdecydować, czy do obsługi ich [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji wewnątrz aplikacji usługi systemu Windows lub w środowisku macierzystym Internet Information Services (IIS) lub usługi aktywacji procesów systemu Windows (WAS). Należy rozważyć użycie aplikacji usług systemu Windows w następujących warunkach:  
+ Często deweloperów usług WCF należy zdecydować, czy do hostowania aplikacji WCF wewnątrz aplikacji usługi systemu Windows lub w środowisku macierzystym Internet Information Services (IIS) lub usługi aktywacji procesów systemu Windows (WAS). Należy rozważyć użycie aplikacji usług systemu Windows w następujących warunkach:  
   
 -   Aplikacja wymaga jawnego aktywacji. Na przykład podczas aplikacji musi zaczynać się automatycznie podczas uruchamiania serwera zamiast dynamicznie uruchamiany w odpowiedzi na pierwszy komunikat przychodzący należy używać usług systemu Windows.  
   
 -   Proces, który jest hostem aplikacji może zostać wyłączony, po uruchomieniu. Po rozpoczęciu procesu usługi systemu Windows jest uruchomiona, chyba że jawnie zamykanie przez administratora serwera przy użyciu Menedżera kontroli usług. Aplikacje hostowane w usługach IIS lub WAS może być uruchamiania i zatrzymywania dynamicznie optymalne wykorzystanie zasobów systemowych. Aplikacje, które wymagają jawne kontroli w okresie istnienia procesu hostingu powinien używać usług systemu Windows zamiast usług IIS lub WAS.  
   
--   Twoje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi należy uruchomić w systemie Windows Server 2003 i korzystać z transportu innego niż HTTP. W systemie Windows Server 2003 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] środowisko macierzyste jest ograniczone do komunikacji HTTP tylko. Aplikacje usług systemu Windows nie są to ograniczenie i można użyć dowolnego transportu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje, w tym net.tcp, net.pipe i net.msmq.  
+-   Usługi WCF, należy uruchomić w systemie Windows Server 2003 i używają transportu innego niż HTTP. W systemie Windows Server 2003 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] środowisko macierzyste jest ograniczone do komunikacji HTTP tylko. Aplikacje usług systemu Windows nie są to ograniczenie i można użyć dowolnego transport obsługuje WCF, w tym net.tcp, net.pipe i net.msmq.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Na hoście WCF wewnątrz aplikacji usługi systemu Windows  
   
 1.  Utwórz aplikację usługi systemu Windows. Aplikacje usług systemu Windows może zapisać w kodzie zarządzanym przy użyciu klas w <xref:System.ServiceProcess> przestrzeni nazw. Ta aplikacja musi zawierać jedną klasę, która dziedziczy <xref:System.ServiceProcess.ServiceBase>.  
   
-2.  Okres istnienia Link [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług systemu Windows przez czas ich istnienia aplikacji usługi. Zwykle ma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi hostowanej w aplikacji usługi systemu Windows staje się aktywny po uruchomieniu usługi hostingu, Zatrzymano nasłuchiwanie wiadomości po zatrzymaniu usługi hostingu i zamykania hostingu podczas przetwarzania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa napotka błąd. Można to zrobić w następujący sposób:  
+2.  Łącze okres istnienia usługi WCF do użytkowania aplikacji usług systemu Windows. Zwykle ma usług WCF hostowanych w aplikacji usługi systemu Windows, aby stają się aktywne po uruchomieniu usługi hostingu, Zatrzymaj nasłuchuje wiadomości po zatrzymaniu usługi hostingu i zamknąć procesu hostingu, gdy usługa WCF napotka błąd. Można to zrobić w następujący sposób:  
   
-    -   Zastąpienie <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> do otwarcia jednego lub więcej wystąpień <xref:System.ServiceModel.ServiceHost>. Pojedynczy aplikację usługi systemu Windows można zarządzać wieloma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, których uruchamianie i zatrzymywanie jako grupa.  
+    -   Zastąpienie <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> do otwarcia jednego lub więcej wystąpień <xref:System.ServiceModel.ServiceHost>. Pojedynczy aplikację usługi systemu Windows może obsługiwać wiele usług WCF, których uruchamianie i zatrzymywanie jako grupa.  
   
-    -   Zastąpienie <xref:System.ServiceProcess.ServiceBase.OnStop%2A> do wywołania <xref:System.ServiceModel.Channels.CommunicationObject.Closed> na <xref:System.ServiceModel.ServiceHost> wszelkie uruchomione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, które zostały uruchomione podczas <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.  
+    -   Zastąpienie <xref:System.ServiceProcess.ServiceBase.OnStop%2A> do wywołania <xref:System.ServiceModel.Channels.CommunicationObject.Closed> na <xref:System.ServiceModel.ServiceHost> uruchomionych usług WCF, które zostały uruchomione podczas <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.  
   
     -   Subskrybuj <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> zdarzenie <xref:System.ServiceModel.ServiceHost> i użyj <xref:System.ServiceProcess.ServiceController> klasę, aby zamknąć aplikację usługi systemu Windows w przypadku błędu.  
   
-     Aplikacje usług systemu Windows, że host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi są wdrażane i zarządzane w taki sam sposób jak użycie aplikacji usług systemu Windows, które nie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Aplikacji usług systemu Windows, które prowadzą hosting usług WCF są wdrażane i zarządzane w taki sam sposób jak aplikacje usług systemu Windows, które nie używa usługi WCF.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceProcess>  

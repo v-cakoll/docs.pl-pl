@@ -1,10 +1,6 @@
 ---
 title: -langversion (opcje kompilatora C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /langversion
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-caps.latest.revision: 33
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f1088221a96d0176f08b4c01044e20ab6238fc13
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 523636663744acbbc85a08ebe3535f066e7dc160
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opcje kompilatora C#)
 Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się w wybranym specyfikacja języka C#.  
@@ -44,7 +37,7 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
 |5|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 5.0 lub niższy <sup id="TCS5"> [CS5](#FCS5)</sup>|
 |6|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 6.0 lub niższy <sup id="TCS6"> [CS6](#FCS6)</sup>|
 |7|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 7.0 lub niższy <sup id="TCS7"> [CS7](#FCS7)</sup>|
-|najnowsze|Kompilator akceptuje wszystkie składni odpowiedni język, który może obsługiwać. <sup id="TLatest">[Latest](#FLatest)</sup>|
+|najnowsze|Kompilator akceptuje wszystkie składni odpowiedni język, który może obsługiwać. <sup id="TLatest">[najnowsze](#FLatest)</sup>|
 <!--- Uncomment and move these above
 |latest| once they're officially released
 |7.1|The compiler accepts only syntax that is included in C# 7.1 or lower <sup id="TCS71">[CS71](#FCS71)</sup>|

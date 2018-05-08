@@ -1,23 +1,12 @@
 ---
-title: "LINQ do obiektów działania"
-ms.custom: 
+title: LINQ do obiektów działania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 403c82e8-7f2b-42f6-93cd-95c35bc76ead
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff77211000cfdda9c35e5a0dcbc69fc0eaf5c3be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2c2be52a88d8f9a886f0e59c027e1d6c737497c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-objects-activity"></a>LINQ do obiektów działania
 Ten przykład przedstawia sposób tworzenia działania na potrzeby LINQ do obiektów z kwerendy elementów w kolekcji.  
@@ -29,8 +18,8 @@ Ten przykład przedstawia sposób tworzenia działania na potrzeby LINQ do obiek
   
 |Właściwości lub wartości zwracanej|Opis|  
 |------------------------------|-----------------|  
-|`Collection`Właściwość|Wymaganą właściwość, która określa kolekcji źródłowej.|  
-|`Predicate`Właściwość|Wymaganą właściwość, która określa filtr do kolekcji w postaci wyrażenia lambda.|  
+|`Collection` Właściwość|Wymaganą właściwość, która określa kolekcji źródłowej.|  
+|`Predicate` Właściwość|Wymaganą właściwość, która określa filtr do kolekcji w postaci wyrażenia lambda.|  
 |Wartość zwracana|Filtrowane kolekcji.|  
   
 ## <a name="code-sample-that-uses-the-custom-activity"></a>Przykładem kodu, który używa działania niestandardowe  
@@ -119,7 +108,7 @@ Activity sampleWorkflow = new Sequence
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Linq\LinqToObjects`  
   

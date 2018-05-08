@@ -1,13 +1,6 @@
 ---
-title: "Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości"
-ms.custom: 
+title: Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
-Autoryzacja jest proces określania, które mają uprawnienia do zmiany, Wyświetl lub dostęp do zasobu komputera, w przeciwnym razie. Na przykład w firmie, tylko menedżerowie mogą dozwolony dostęp do plików pracownikom. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]obsługuje dwa mechanizmy do wykonywania przetwarzania autoryzacji. Pierwszy mechanizm umożliwia sterowanie autoryzacji przy użyciu istniejących typowych konstrukcji języka wspólnego (CLR). Drugim jest znany jako modelu opartego na oświadczeniach *modelu tożsamości*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa modelu tożsamości można utworzyć oświadczenia na podstawie wiadomości przychodzących. Obsługuje nowe typy oświadczeń autoryzacji niestandardowej schematów można rozszerzyć klasy modelu tożsamości. Ten temat zawiera omówienie główne pojęcia dotyczące programowania funkcji modelu tożsamości, a także listę najważniejszych klas, które korzysta z funkcji.  
+Autoryzacja jest proces określania, które mają uprawnienia do zmiany, Wyświetl lub dostęp do zasobu komputera, w przeciwnym razie. Na przykład w firmie, tylko menedżerowie mogą dozwolony dostęp do plików pracownikom. Windows Communication Foundation (WCF) obsługuje dwa mechanizmy do wykonywania przetwarzania autoryzacji. Pierwszy mechanizm umożliwia sterowanie autoryzacji przy użyciu istniejących typowych konstrukcji języka wspólnego (CLR). Drugim jest znany jako modelu opartego na oświadczeniach *modelu tożsamości*. Usługi WCF używa modelu tożsamości można utworzyć oświadczenia na podstawie wiadomości przychodzących. Obsługuje nowe typy oświadczeń autoryzacji niestandardowej schematów można rozszerzyć klasy modelu tożsamości. Ten temat zawiera omówienie główne pojęcia dotyczące programowania funkcji modelu tożsamości, a także listę najważniejszych klas, które korzysta z funkcji.  
   
 ## <a name="identity-model-scenarios"></a>Scenariusze modelu tożsamości  
  Następujące scenariusze reprezentują Użyj modelu tożsamości.  
@@ -136,7 +124,7 @@ Autoryzacja jest proces określania, które mają uprawnienia do zmiany, Wyświe
  ![Zarządzanie oświadczeniami i autoryzacją](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>Program WCF i modelu tożsamości  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa infrastruktury modelu tożsamości jako podstawy do wykonywania autoryzacji. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> klasa pozwala na określenie *autoryzacji* zasad jako część usługi. Te zasady autoryzacji są określane jako *zasady autoryzacji zewnętrznych*, i mogą wykonywać przetwarzania oświadczenia na podstawie zasad lokalnych lub wyniku interakcji z usługi zdalnej. Menedżer autoryzacji reprezentowany przez <xref:System.ServiceModel.ServiceAuthorizationManager> klasy ocenia zasady autoryzacji zewnętrznych wraz z zasady autoryzacji, które rozpoznają poświadczeń różnych typów (tokeny) i wypełnia, co jest nazywane  *kontekst autoryzacji* z oświadczeniami odpowiednie do przychodzącego komunikatu. Kontekst autoryzacji jest reprezentowana przez <xref:System.IdentityModel.Policy.AuthorizationContext> klasy.  
+ Usługi WCF używa infrastruktury modelu tożsamości jako podstawy do wykonywania autoryzacji. W programie WCF <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> klasa pozwala na określenie *autoryzacji* zasad jako część usługi. Te zasady autoryzacji są określane jako *zasady autoryzacji zewnętrznych*, i mogą wykonywać przetwarzania oświadczenia na podstawie zasad lokalnych lub wyniku interakcji z usługi zdalnej. Menedżer autoryzacji reprezentowany przez <xref:System.ServiceModel.ServiceAuthorizationManager> klasy ocenia zasady autoryzacji zewnętrznych wraz z zasady autoryzacji, które rozpoznają poświadczeń różnych typów (tokeny) i wypełnia, co jest nazywane  *kontekst autoryzacji* z oświadczeniami odpowiednie do przychodzącego komunikatu. Kontekst autoryzacji jest reprezentowana przez <xref:System.IdentityModel.Policy.AuthorizationContext> klasy.  
   
 ## <a name="identity-model-programming"></a>Tożsamość Model programowania  
  W poniższej tabeli opisano model obiektów używany do rozszerzenia modelu tożsamości programów. Te wszystkie klasy istnieje albo <xref:System.IdentityModel.Policy> lub <xref:System.IdentityModel.Claims> przestrzeni nazw.  

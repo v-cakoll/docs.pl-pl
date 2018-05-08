@@ -1,27 +1,15 @@
 ---
-title: "Używanie ustawień aplikacji i ustawień użytkownika"
-ms.custom: 
+title: Używanie ustawień aplikacji i ustawień użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5231ecc9fb3898d60241ea8a53b509daced8a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-application-settings-and-user-settings"></a>Używanie ustawień aplikacji i ustawień użytkownika
 Począwszy od programu .NET Framework 2.0, można utworzyć i zapisać wartości, które są zachowywane między sesjami wykonywania aplikacji. Wartości te są nazywane *ustawienia*. Ustawienia reprezentują preferencji użytkownika lub cenne informacje aplikacja powinna być używana. Na przykład utworzyć szereg ustawień, na których są przechowywane preferencje użytkownika dotyczące schemat kolorów aplikacji. Lub może przechowywać parametry połączenia, które określa bazę danych używanych przez aplikację. Ustawienia białej można zarówno utrwalić informacje, które są krytyczne dla aplikacji poza kod, aby utworzyć profile, których są przechowywane preferencje poszczególnych użytkowników.  

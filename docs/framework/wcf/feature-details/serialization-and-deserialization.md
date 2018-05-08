@@ -1,38 +1,24 @@
 ---
 title: Serializacja i deserializacja
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 754b09b3b90399c242ddbaf968242f969cb27b8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serializacja i deserializacja
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML w obu kierunkach. W tym temacie wyjaśniono, jak działa serializatora.  
+Windows Communication Foundation (WCF) obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML w obu kierunkach. W tym temacie wyjaśniono, jak działa serializatora.  
   
  Podczas serializowania [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów, serializator zrozumienie różnych serializacji programowania modeli, w tym nowe *kontraktu danych* modelu. Aby uzyskać pełną listę obsługiwanych typów, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Aby obejrzeć wprowadzenie do kontraktów danych, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Podczas deserializacji XML, używa serializator <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> klasy. Obsługuje ona również <xref:System.Xml.XmlDictionaryReader> i <xref:System.Xml.XmlDictionaryWriter> klasy, aby włączyć go do produkcji zoptymalizowanych pod kątem XML w niektórych przypadkach, takich jak przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] binarny format XML.  
+ Podczas deserializacji XML, używa serializator <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> klasy. Obsługuje ona również <xref:System.Xml.XmlDictionaryReader> i <xref:System.Xml.XmlDictionaryWriter> klasy, aby włączyć go do produkcji zoptymalizowanych pod kątem XML w niektórych przypadkach, takich jak podczas formatowania przy użyciu programu WCF Binarny XML.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera również element serializujący Pomocnika <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Jest podobny do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializatorów ponieważ również emituje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wpisz nazwy w ramach danych serializacji. Jest używany, gdy te same typy są udostępniane na serializacja i deserializacja zakończenia. Zarówno <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer> pochodzi od wspólna klasa podstawowa <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ WCF zawiera również element serializujący Pomocnika <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Jest podobny do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializatorów ponieważ również emituje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wpisz nazwy w ramach danych serializacji. Jest używany, gdy te same typy są udostępniane na serializacja i deserializacja zakończenia. Zarówno <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer> pochodzi od wspólna klasa podstawowa <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> Serializuje ciągi zawierające znaki kontrolne o wartości szesnastkowej poniżej 20 jako jednostki XML. Może to spowodować problem z klienta z systemem innym niż WCF podczas wysyłania tych danych do usługi WCF.  
@@ -128,7 +114,7 @@ ms.lasthandoff: 04/30/2018
   
 -   Semantyki. Czasami jest ważne zachować fakt, że są dwa odwołania do tego samego obiektu, a nie dwa obiekty identyczne.  
   
- Te powodów, niektóre `DataContractSerializer` mają przeciążenia konstruktora `preserveObjectReferences` parametr (wartość domyślna to `false`). Jeśli ten parametr jest równa `true`, odwołuje się specjalnej metody obiekt kodowania, które tylko [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rozumie, jest używany. Jeśli wartość `true`, przykładowy kod XML jest teraz podobny do następującego.  
+ Te powodów, niektóre `DataContractSerializer` mają przeciążenia konstruktora `preserveObjectReferences` parametr (wartość domyślna to `false`). Jeśli ten parametr jest równa `true`, specjalnej metody kodowania odwołania do obiektów, które rozumie tylko WCF, jest używany. Jeśli wartość `true`, przykładowy kod XML jest teraz podobny do następującego.  
   
 ```xml  
 <PurchaseOrder ser:id="1">  

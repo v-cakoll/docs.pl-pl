@@ -1,21 +1,15 @@
 ---
-title: "Porady: bezpieczne rzutowanie bool? na bool (Przewodnik programowania w języku C#)"
+title: 'Porady: bezpieczne rzutowanie bool? na bool (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-caps.latest.revision: "9"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1a6fa65c15bb5f1da9960dbc17bd25b4087ab862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 18f44018621182427199dee56146f29b8d3068f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Porady: bezpieczne rzutowanie bool? na bool (Przewodnik programowania w języku C#)
 `bool?` Typ dopuszczający wartość null, mogą zawierać trzy różne wartości: `true`, `false`, i `null`. W związku z tym `bool?` typu nie można używać w warunków, takich jak z `if`, `for`, lub `while`. Na przykład następujący kod powoduje błąd kompilatora.  
@@ -50,5 +44,5 @@ if((bool)test) //now this cast is safe
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe literału](../../../csharp/language-reference/keywords/literal-keywords.md)  
- [Typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md)  
- [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)
+ [Typy dopuszczające wartości null](../../../csharp/programming-guide/nullable-types/index.md)  
+ [??, operator](../../../csharp/language-reference/operators/null-conditional-operator.md)

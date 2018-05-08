@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Geometria"
-ms.custom: 
+title: Przegląd Geometria
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>Przegląd Geometria
 Ten przegląd zawiera opis sposobu używania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> klas opisujących kształtów. W tym temacie uwidocznia także różnice między <xref:System.Windows.Media.Geometry> obiektów i <xref:System.Windows.Shapes.Shape> elementy.  
@@ -34,7 +22,7 @@ Ten przegląd zawiera opis sposobu używania [!INCLUDE[TLA#tla_winclient](../../
 ## <a name="what-is-a-geometry"></a>Co to jest geometrię?  
  <xref:System.Windows.Media.Geometry> Klasa i klasy, które dziedziczą z niego, takich jak <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, i <xref:System.Windows.Media.CombinedGeometry>, umożliwiają opisano geometrii kształtu 2-D. Poniższe opisy geometrycznych ma wielu zastosowań, takich definiowanie kształtu do malowania do ekranu lub Definiowanie trafień testu i klip regionów. Można nawet umożliwia geometrię zdefiniował ścieżki animacji.  
   
- <xref:System.Windows.Media.Geometry>obiekty mogą być prosty, takie jak prostokąty i okręgi lub złożone, utworzone na podstawie co najmniej dwa obiekty geometrii.  Można tworzyć bardziej złożone mają geometrię przy użyciu <xref:System.Windows.Media.PathGeometry> i <xref:System.Windows.Media.StreamGeometry> klasy, które umożliwiają opisano łuki i krzywych.  
+ <xref:System.Windows.Media.Geometry> obiekty mogą być prosty, takie jak prostokąty i okręgi lub złożone, utworzone na podstawie co najmniej dwa obiekty geometrii.  Można tworzyć bardziej złożone mają geometrię przy użyciu <xref:System.Windows.Media.PathGeometry> i <xref:System.Windows.Media.StreamGeometry> klasy, które umożliwiają opisano łuki i krzywych.  
   
  Ponieważ <xref:System.Windows.Media.Geometry> jest typem <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Geometry> obiektów udostępnia kilka funkcje specjalne: mogą być deklarowane jako [zasobów](../../../../docs/framework/wpf/advanced/xaml-resources.md)współużytkowanych przez wiele obiektów, aby zwiększyć wydajność, sklonowany, jest tylko do odczytu i wprowadzone wątkowo. Aby uzyskać więcej informacji o różnych funkcjach dostarczonych przez <xref:System.Windows.Freezable> obiekty, zobacz [obiektu Freezable Przegląd obiektów](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
@@ -187,7 +175,7 @@ PathGeometry z wielu wartości
 ## <a name="composite-geometries"></a>Złożone mają geometrię  
  Obiekty złożone geometrii mogą być tworzone przy użyciu <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, lub przez wywołanie metody statycznych <xref:System.Windows.Media.Geometry> — metoda <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   <xref:System.Windows.Media.CombinedGeometry> Obiektu i <xref:System.Windows.Media.Geometry.Combine%2A> metoda przeprowadza operacja logiczna połączyć obszar zdefiniowany przez dwa mają geometrię. <xref:System.Windows.Media.Geometry>obiektów, które ma obszaru są odrzucane. Tylko dwa <xref:System.Windows.Media.Geometry> obiekty można łączyć (mimo że te dwa mają geometrię może być również złożone mają geometrię).  
+-   <xref:System.Windows.Media.CombinedGeometry> Obiektu i <xref:System.Windows.Media.Geometry.Combine%2A> metoda przeprowadza operacja logiczna połączyć obszar zdefiniowany przez dwa mają geometrię. <xref:System.Windows.Media.Geometry> obiektów, które ma obszaru są odrzucane. Tylko dwa <xref:System.Windows.Media.Geometry> obiekty można łączyć (mimo że te dwa mają geometrię może być również złożone mają geometrię).  
   
 -   <xref:System.Windows.Media.GeometryGroup> Klasy tworzy połączenie <xref:System.Windows.Media.Geometry> obiekty zawiera bez łączenie ich obszaru. Dowolną liczbę <xref:System.Windows.Media.Geometry> obiekty mogą być dodawane do <xref:System.Windows.Media.GeometryGroup>. Na przykład zobacz [Tworzenie złożonego kształtu](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md).  
   
@@ -219,11 +207,11 @@ PathGeometry z wielu wartości
 ## <a name="other-geometry-features"></a>Inne funkcje geometrii  
  <xref:System.Windows.Media.Geometry> Klasa udostępnia również metody narzędziowe przydatne, takie jak następujące:  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>-Pobiera obszar <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> -Pobiera obszar <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>— Określa, czy geometrii zawiera inny <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> — Określa, czy geometrii zawiera inny <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>— Określa, czy obrysu <xref:System.Windows.Media.Geometry> zawiera określony punkt.  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> — Określa, czy obrysu <xref:System.Windows.Media.Geometry> zawiera określony punkt.  
   
  Zobacz <xref:System.Windows.Media.Geometry> klasy, aby uzyskać pełną listę metod.  
   

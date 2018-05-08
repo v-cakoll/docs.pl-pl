@@ -1,38 +1,26 @@
 ---
-title: "Model programowania protokołu HTTP sieci Web w programie WCF"
-ms.custom: 
+title: Model programowania protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - web services programming model [WCF]
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model"></a>Model programowania protokołu HTTP sieci Web w programie WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Modelu programowania protokołu HTTP sieci Web umożliwia deweloperom ujawnia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi operacje punktów końcowych z systemem innym niż SOAP. Tematy w tej sekcji Sprawdź, czy funkcja szczegółowo.  
+Modelu programowania protokołu HTTP sieci Web Windows Communication Foundation (WCF) umożliwia deweloperom ujawnia operacji usługi WCF do punktów końcowych z protokołem SOAP. Tematy w tej sekcji Sprawdź, czy funkcja szczegółowo.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Zawiera omówienie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelu programowania protokołu HTTP sieci Web.  
+ Omówienie modelu programowania protokołu HTTP sieci Web Windows Communication Foundation (WCF).  
   
  [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- W tym artykule omówiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelu programowania protokołu HTTP sieci Web i jej działania.  
+ Omówienie modelu programowania protokołu HTTP sieci Web Windows Communication Foundation (WCF) oraz jej działania.  
   
  [Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  Opisuje sposób zapisania podstawowe usługi, która udostępnia punkt końcowy z systemem innym niż SOAP.  

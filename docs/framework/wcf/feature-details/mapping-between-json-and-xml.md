@@ -1,35 +1,23 @@
 ---
-title: "Mapowanie między formatami JSON i XML"
-ms.custom: 
+title: Mapowanie między formatami JSON i XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>Mapowanie między formatami JSON i XML
-Czytniki i zapisywania utworzonego przez <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> dostarczać interfejs API XML nad zawartością JavaScript Object Notation (JSON). JSON koduje dane przy użyciu podzbiór literałów obiektu języka JavaScript. Czytniki i zapisywania utworzonego przez tej fabryki są również używane podczas zawartość JSON są wysyłane lub odbierane przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> lub <xref:System.ServiceModel.WebHttpBinding>.  
+Czytniki i zapisywania utworzonego przez <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> dostarczać interfejs API XML nad zawartością JavaScript Object Notation (JSON). JSON koduje dane przy użyciu podzbiór literałów obiektu języka JavaScript. Czytniki i zapisywania utworzonego przez tej fabryki są również używane podczas zawartość JSON są wysyłane lub odbierane przez aplikacji Windows Communication Foundation (WCF) przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> lub <xref:System.ServiceModel.WebHttpBinding>.  
   
  Po zainicjowaniu z zawartością JSON, czytnika JSON działa w taki sam sposób, który obsługuje tekstową modułu odczytującego XML za pośrednictwem wystąpienia XML. Składnik zapisywania JSON, gdy sekwencję wywołań, która na tekstową modułu odczytującego XML tworzy określone wystąpienie XML, zapisuje zawartość JSON. Mapowanie między to wystąpienie XML i zawartość JSON jest opisana w tym temacie do użycia w zaawansowanych scenariuszach.  
   
- Wewnętrznie JSON jest reprezentowany jako XML typu infoset sprawdzonych podczas przetwarzania przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Zwykle nie trzeba dotyczą tej reprezentacji wewnętrznej jako mapowanie jest tylko logiczne: JSON jest zwykle nie fizycznie przekonwertowany do formatu XML w pamięci lub konwersji do formatu JSON z pliku XML. Mapowanie oznacza, że XML interfejsów API umożliwiają dostęp do zawartości JSON.  
+ Wewnętrznie JSON jest reprezentowany jako XML typu infoset sprawdzonych podczas przetwarzania przez usługę WCF. Zwykle nie trzeba dotyczą tej reprezentacji wewnętrznej jako mapowanie jest tylko logiczne: JSON jest zwykle nie fizycznie przekonwertowany do formatu XML w pamięci lub konwersji do formatu JSON z pliku XML. Mapowanie oznacza, że XML interfejsów API umożliwiają dostęp do zawartości JSON.  
   
- Gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa formatu JSON, zwykle scenariuszu jest to, że <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> automatycznie jest podłączony przez <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> zachowanie, lub <xref:System.ServiceModel.Description.WebHttpBehavior> zachowanie, gdy jest to konieczne. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Rozumie mapowanie między formatami JSON i XML typu infoset sprawdzonych i działa tak, jakby jego bezpośrednio zajmuje się JSON. (Można użyć <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> z modułu odczytującego XML lub składnik zapisywania, pamiętając, że plik XML odpowiada następującego mapowania.)  
+ Gdy WCF używa formatu JSON, zwykle scenariuszu jest to, że <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> automatycznie jest podłączony przez <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> zachowanie, lub <xref:System.ServiceModel.Description.WebHttpBehavior> zachowanie, gdy jest to konieczne. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Rozumie mapowanie między formatami JSON i XML typu infoset sprawdzonych i działa tak, jakby jego bezpośrednio zajmuje się JSON. (Można użyć <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> z modułu odczytującego XML lub składnik zapisywania, pamiętając, że plik XML odpowiada następującego mapowania.)  
   
- W zaawansowanych scenariuszach może on stać się niezbędne do uzyskania bezpośredniego dostępu do następującego mapowania. Te scenariusze wystąpić, gdy chcesz serializacji i deserializacji JSON w niestandardowy sposób, bez polegania na <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, lub podczas pracy nad <xref:System.ServiceModel.Channels.Message> typu bezpośrednio dla wiadomości zawierające JSON. Mapowanie JSON XML służy także do rejestrowania komunikatów. Podczas używania funkcji rejestrowania komunikatów w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], komunikaty JSON jest rejestrowany jako XML zgodnie z mapowania opisany w następnej sekcji.  
+ W zaawansowanych scenariuszach może on stać się niezbędne do uzyskania bezpośredniego dostępu do następującego mapowania. Te scenariusze wystąpić, gdy chcesz serializacji i deserializacji JSON w niestandardowy sposób, bez polegania na <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, lub podczas pracy nad <xref:System.ServiceModel.Channels.Message> typu bezpośrednio dla wiadomości zawierające JSON. Mapowanie JSON XML służy także do rejestrowania komunikatów. Korzystając z funkcji rejestrowania komunikatów w programie WCF, komunikaty JSON jest rejestrowany jako XML zgodnie z mapowania opisany w następnej sekcji.  
   
  Poniższy przykład jest wyjaśnienie pojęcia mapowania, dokumentu JSON.  
   
@@ -46,7 +34,7 @@ Czytniki i zapisywania utworzonego przez <xref:System.Runtime.Serialization.Json
 </root>  
 ```  
   
- Ponadto, jeśli komunikat JSON w przykładzie jest odbierany przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i rejestrowania, można zobaczyć fragmentem kodu XML w poprzednim dzienniku.  
+ Ponadto jeśli komunikat JSON w przykładzie jest odbierany przez usługę WCF i rejestrowane, zobacz fragmentem kodu XML w poprzednim dzienniku.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Mapowanie między formatami JSON i XML typu infoset sprawdzonych  
  Formalnie, jest mapowanie między JSON zgodnie z opisem w [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (z wyjątkiem z pewnymi ograniczeniami swobodna i niektórych innych ograniczeń dodany) oraz XML typu infoset (i nie tekstowy XML) jako opisane w [informacje XML Ustaw](http://go.microsoft.com/fwlink/?LinkId=98809) . Ten temat dla definicji *elementów informacji* i pól w [kwadratowych].  
@@ -105,7 +93,7 @@ Czytniki i zapisywania utworzonego przez <xref:System.Runtime.Serialization.Json
   
 -   Dane kontraktu atrybut Name ("__type") zgodnie z opisem dalej. Ten atrybut jest tylko mogą być obecne, jeśli atrybut typu JSON jest również obecne i jego [wartość znormalizowaną] "object". Ten atrybut jest używany przez `DataContractJsonSerializer` zachować kontraktu danych informacji o typie — na przykład w przypadku polimorficznym gdzie typem pochodnym jest serializowany i gdzie oczekiwany jest typ podstawowy. Jeśli nie pracujesz z `DataContractJsonSerializer`, w większości przypadków ten atrybut jest ignorowany.  
   
--   [w zakresie przestrzeni nazw] zawiera powiązanie "xml" do "http://www.w3.org/XML/1998/namespace" upoważnieni przez specyfikację typu infoset.  
+-   [w zakresie przestrzeni nazw] zawiera powiązanie "xml" do "http://www.w3.org/XML/1998/namespace" nieużywanie w specyfikacji typu infoset.  
   
 -   [elementy podrzędne], [atrybuty] i [w zakresie przestrzeni nazw] nie może mieć żadnych elementów innych niż określone wcześniej oraz [przestrzeń nazw atrybutów] musi mieć żadnych elementów członkowskich, ale nie należy polegać na następujące fakty podczas odczytywania pliku XML zamapowana z formatu JSON.  
   
@@ -157,7 +145,7 @@ Czytniki i zapisywania utworzonego przez <xref:System.Runtime.Serialization.Json
   
 |[wartość znormalizowany] z `JSON Type Attribute`w AII|Dozwolone [] elementów podrzędnych odpowiedniego EII|Mapowanie do ciągu JSON|  
 |---------------------------------------------------------|---------------------------------------------------|---------------------|  
-|`string`(lub Brak typu JSON AII)<br /><br /> A `string` i braku typu JSON AII są tego samego ułatwia `string` domyślny.<br /><br /> Tak `<root> string1</root>` mapuje JSON `string` "ciąg1".|0 lub więcej CIIs|JSON `string` (RFC JSON sekcji 2.5). Każdy `char` jest znak odpowiadający [kod znaku] z CII. Jeśli nie ma żadnych CIIs, mapuje on pusty JSON `string`.<br /><br /> Przykład: Następujący element mapy do fragmentu JSON:<br /><br /> `<root type="string">42</root>`<br /><br /> JSON fragment jest "42".<br /><br /> W pliku XML do mapowania JSON znaków, które muszą być zmienione znaczenie mapy zmienionym znaków, mapowania wszystkie inne znaki, które nie są anulowane. Znak "/" to specjalne — zostanie zmienione jego znaczenie, nawet jeśli nie ma być (napisane się jako "\\/").<br /><br /> Przykład: Następujący element mapy do fragmentu JSON.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> Fragment JSON " \\" da\\/ta\\"".<br /><br /> W formacie JSON do pliku XML wszelkie znaki zmienionym i znaki, które nie są wyjściowym mapy poprawnie do odpowiedniego [kod znaku].<br /><br /> Przykład: Fragmentu JSON "\u0041BC" mapuje do następujących elementów XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Ciąg może być ujęte w spacji ("ws" w sekcji 2 JSON RFC) nie pobrać zamapowane do pliku XML.<br /><br /> Przykład: JSON fragmentu "ABC", (występują spacje przed pierwszym podwójnego cudzysłowu), mapy do następujących elementów XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Mapuje żadnych spacji w kodzie XML odstępu w formacie JSON.<br /><br /> Przykład: Następujący element XML mapuje do fragmentu JSON.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON fragment jest "BC".|  
+|`string` (lub Brak typu JSON AII)<br /><br /> A `string` i braku typu JSON AII są tego samego ułatwia `string` domyślny.<br /><br /> Tak `<root> string1</root>` mapuje JSON `string` "ciąg1".|0 lub więcej CIIs|JSON `string` (RFC JSON sekcji 2.5). Każdy `char` jest znak odpowiadający [kod znaku] z CII. Jeśli nie ma żadnych CIIs, mapuje on pusty JSON `string`.<br /><br /> Przykład: Następujący element mapy do fragmentu JSON:<br /><br /> `<root type="string">42</root>`<br /><br /> JSON fragment jest "42".<br /><br /> W pliku XML do mapowania JSON znaków, które muszą być zmienione znaczenie mapy zmienionym znaków, mapowania wszystkie inne znaki, które nie są anulowane. Znak "/" to specjalne — zostanie zmienione jego znaczenie, nawet jeśli nie ma być (napisane się jako "\\/").<br /><br /> Przykład: Następujący element mapy do fragmentu JSON.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> Fragment JSON " \\" da\\/ta\\"".<br /><br /> W formacie JSON do pliku XML wszelkie znaki zmienionym i znaki, które nie są wyjściowym mapy poprawnie do odpowiedniego [kod znaku].<br /><br /> Przykład: Fragmentu JSON "\u0041BC" mapuje do następujących elementów XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Ciąg może być ujęte w spacji ("ws" w sekcji 2 JSON RFC) nie pobrać zamapowane do pliku XML.<br /><br /> Przykład: JSON fragmentu "ABC", (występują spacje przed pierwszym podwójnego cudzysłowu), mapy do następujących elementów XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Mapuje żadnych spacji w kodzie XML odstępu w formacie JSON.<br /><br /> Przykład: Następujący element XML mapuje do fragmentu JSON.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON fragment jest "BC".|  
 |`number`|CIIs 1 lub więcej|JSON `number` (RFC JSON, sekcji 2.4), prawdopodobnie otoczona odstępu. Każdy znak w połączeniu numer/spacji jest znak odpowiadający [kod znaku] z CII.<br /><br /> Przykład: Następujący element mapy do fragmentu JSON.<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON fragment jest 42<br /><br /> (Spacji jest zachowane).|  
 |`boolean`|CIIs 4 i 5 (które odpowiada `true` lub `false`), prawdopodobnie otoczone dodatkowe odstępem CIIs.|Sekwencję CII, która odnosi się do ciągu "true" jest zamapowany na literał `true`, oraz sekwencję CII, która odnosi się do ciągu "false" jest zamapowany na literał `false`. Zachowana jest otaczającego odstępu.<br /><br /> Przykład: Następujący element mapy do fragmentu JSON.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> Fragment JSON `false`.|  
 |`null`|Zezwalaj na Brak.|Literał `null`. W formacie JSON do pliku XML `null` otoczona spacji ("ws" w sekcji 2) nie pobrać zamapowane do pliku XML.<br /><br /> Przykład: Następujący element mapy do fragmentu JSON.<br /><br /> `<root type="null"/>`<br /><br /> lub<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> Fragment JSON w obu przypadkach `Null`.|  
@@ -209,7 +197,7 @@ promień "|0 lub więcej EIIs|Begin — tablicą (otwierający nawias kwadratowy
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  Brak nie krok kodowania XML w poprzednim mapowania. W związku z tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje tylko dokumenty JSON, gdzie wszystkie znaki w nazwach kluczy są prawidłowe znaki w nazwach elementów XML. Na przykład dokument JSON {"<": ""} nie jest obsługiwana, ponieważ < nie jest prawidłową nazwą elementu XML.  
+>  Brak nie krok kodowania XML w poprzednim mapowania. W związku z tym WCF obsługuje tylko dokumenty JSON, gdzie wszystkie znaki w nazwach kluczy są prawidłowe znaki w nazwach elementów XML. Na przykład dokument JSON {"<": ""} nie jest obsługiwana, ponieważ < nie jest prawidłową nazwą elementu XML.  
   
  Sytuacja odwrotna (znaki nieprawidłowe w XML, ale nie w formacie JSON) nie powoduje żadnych problemów, ponieważ poprzednie mapowanie zawiera kroki anulowanie unescaping JSON.  
   

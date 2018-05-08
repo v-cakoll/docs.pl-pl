@@ -1,12 +1,6 @@
 ---
-title: "Zarządzanie połączeniami"
-ms.custom: 
+title: Zarządzanie połączeniami
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,23 +17,21 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a4d0ca3b6aed1213405dc24f322b53a21dbd4fbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-connections"></a>Zarządzanie połączeniami
 Aplikacje, które łączą się z zasobami danych przy użyciu protokołu HTTP można używać programu .NET Framework <xref:System.Net.ServicePoint> i <xref:System.Net.ServicePointManager> klasy można zarządzać połączenia z Internetem i pomóc im uzyskać optymalne skalowalność i wydajność.  
   
  **ServicePoint** klasa udostępnia aplikacji z punktem końcowym, z którym aplikacji może nawiązać połączenie dostępu do zasobów Internetu. Każdy **ServicePoint** zawiera informacje, że pomaga zoptymalizować połączenia na internetowym serwerze za pomocą udostępniania informacji optymalizacji między połączenia w celu zwiększenia wydajności.  
   
- Każdy **ServicePoint** są identyfikowane przez zasób identyfikator URI (Uniform) i uporządkowane według fragmenty identyfikator i hosta schemat identyfikatora URI. Na przykład taką **ServicePoint** wystąpienia zapewni żądań http://www.contoso.com/index.htm identyfikatorów URI i http://www.contoso.com/news.htm?date=today, ponieważ mają one tego samego identyfikatora schemat (http) i host fragmenty (www.contoso.com). Jeśli aplikacja już ma trwałe połączenie www.contoso.com serwera, używa tego połączenia do pobrania obu żądania, dzięki czemu nie trzeba tworzyć dwa połączenia.  
+ Każdy **ServicePoint** są identyfikowane przez zasób identyfikator URI (Uniform) i uporządkowane według fragmenty identyfikator i hosta schemat identyfikatora URI. Na przykład taką **ServicePoint** wystąpienia zapewni żądań identyfikatory URI http://www.contoso.com/index.htm i http://www.contoso.com/news.htm?date=today , ponieważ mają one tego samego identyfikatora schemat (http) i host fragmenty (www.contoso.com). Jeśli aplikacja już ma trwałe połączenie www.contoso.com serwera, używa tego połączenia do pobrania obu żądania, dzięki czemu nie trzeba tworzyć dwa połączenia.  
   
  **Element ServicePointManager** jest statycznej klasy, która zarządza tworzeniem i zniszczenie **ServicePoint** wystąpień. **ServicePointManager —** tworzy **ServicePoint** gdy aplikacja żąda zasobu internetowego, który nie znajduje się w kolekcji istniejących **ServicePoint** wystąpienia. **ServicePoint** zostaną zniszczone wystąpień, gdy przekraczają maksymalny czas bezczynności lub liczba istniejących **ServicePoint** wystąpień przekracza maksymalną liczbę **ServicePoint**wystąpień dla aplikacji. Użytkownik może kontrolować zarówno maksymalny czas bezczynności i maksymalną liczbę **ServicePoint** wystąpień przez ustawienie <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> i <xref:System.Net.ServicePointManager.MaxServicePoints%2A> właściwości **ServicePointManager —**.  
   
@@ -60,7 +52,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- Zmiana **ServicePointManager.DefaultConnectionLimit** właściwości nie wpływa na wcześniej zainicjowana **ServicePoint** wystąpień. Poniższy kod ilustruje, Zmiana limitu połączeń na istniejącym **ServicePoint** dla http://www.contoso.com serwera do wartości przechowywanej w `newLimit`.  
+ Zmiana **ServicePointManager.DefaultConnectionLimit** właściwości nie wpływa na wcześniej zainicjowana **ServicePoint** wystąpień. Poniższy kod ilustruje, Zmiana limitu połączeń na istniejącym **ServicePoint** serwera http://www.contoso.com do wartości przechowywanej w `newLimit`.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

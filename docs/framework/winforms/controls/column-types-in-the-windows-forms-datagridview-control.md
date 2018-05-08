@@ -1,28 +1,16 @@
 ---
 title: Typy kolumn w formancie DataGridView formularzy systemu Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Typy kolumn w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Kontrola korzysta kilka typów kolumn do wyświetlania jego informacji i umożliwiają użytkownikom modyfikowanie lub dodawanie informacji.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  Typ danych wartości komórki kolumny jest określona w <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> właściwości kolumny.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> Jest używany z <xref:System.Boolean> i <xref:System.Windows.Forms.CheckState> wartości. <xref:System.Boolean>Wyświetl wartości jako dwa lub trzy stanu pola wyboru, w zależności od wartości <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> właściwości. Jeśli kolumna jest powiązany z <xref:System.Windows.Forms.CheckState> wartości, <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> wartość właściwości jest `true` domyślnie.  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> Jest używany z <xref:System.Boolean> i <xref:System.Windows.Forms.CheckState> wartości. <xref:System.Boolean> Wyświetl wartości jako dwa lub trzy stanu pola wyboru, w zależności od wartości <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> właściwości. Jeśli kolumna jest powiązany z <xref:System.Windows.Forms.CheckState> wartości, <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> wartość właściwości jest `true` domyślnie.  
   
  Zazwyczaj wartości komórek pola wyboru są przeznaczone dla magazynu, takich jak innych danych, lub dla operacji zbiorczej. Jeśli chcesz odpowiedzieć natychmiast po kliknięciu komórki pola wyboru, może obsługiwać <xref:System.Windows.Forms.DataGridView.CellClick> zdarzeń, ale to zdarzenie występuje przed zaktualizowaniem wartość komórki. Jeśli potrzebujesz nowej wartości w czasie kliknij jedną z opcji jest można obliczyć, co będzie oczekiwanej wartości na podstawie bieżącej wartości. Innym rozwiązaniem jest natychmiast Zatwierdź zmiany i obsługiwać <xref:System.Windows.Forms.DataGridView.CellValueChanged> zdarzeń odpowiedzieć. Aby zatwierdzić zmiany po kliknięciu komórki, musi obsługiwać <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> zdarzeń. W obsłudze, jeśli bieżąca komórka jest pole wyboru, wywołanie <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> — metoda i przekaż <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> wartość.  
   

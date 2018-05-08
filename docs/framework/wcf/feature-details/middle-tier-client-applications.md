@@ -1,44 +1,32 @@
 ---
-title: "Aplikacje klienckie warstwy środkowej"
-ms.custom: 
+title: Aplikacje klienckie warstwy środkowej
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13399243994943ddf853447e2e29f3695702aa35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cca832266b2eb2ab7b1b4eb1a5fe937525db97d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="middle-tier-client-applications"></a>Aplikacje klienckie warstwy środkowej
-W tym temacie omówiono różne kwestie związane z aplikacje klienckie warstwy środkowej, które używają [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+W tym temacie omówiono różne kwestie związane z aplikacje klienckie warstwy środkowej, które używają usług Windows Communication Foundation (WCF).  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Zwiększanie wydajności klienckie warstwy środkowej  
- W porównaniu do poprzednich technologii komunikacji, takich jak usługi sieci Web przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], tworzenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wystąpienie klienta może być bardziej skomplikowane, gdyż zestaw zaawansowanych funkcji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Na przykład, jeśli <xref:System.ServiceModel.ChannelFactory%601> otworzyć obiektu może nawiązać bezpiecznej sesji przy użyciu usługi, procedury, która zwiększa czas uruchamiania dla wystąpienia klienta. Zazwyczaj te możliwości dodatkowych funkcji nie mają wpływu na aplikacje klienckie znacznie w porównaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klient wykonuje wiele wywołań, a następnie zamyka.  
+ W porównaniu do poprzednich technologii komunikacji, takich jak usługi sieci Web przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], utworzenie wystąpienia klienta WCF może być bardziej skomplikowane, gdyż zestaw zaawansowanych funkcji WCF. Na przykład, jeśli <xref:System.ServiceModel.ChannelFactory%601> otworzyć obiektu może nawiązać bezpiecznej sesji przy użyciu usługi, procedury, która zwiększa czas uruchamiania dla wystąpienia klienta. Zazwyczaj te możliwości dodatkowych funkcji nie wpływa na aplikacje klienckie znacznie od klienta WCF kilka wywołań, a następnie zamyka.  
   
- Aplikacje klienckie warstwy środkowej, jednak można utworzyć wiele [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiekty klienta szybko i w związku z tym wystąpić inicjowania zwiększone wymagania. Istnieją dwa główne podejścia do zwiększenia wydajności warstwy środkowej aplikacji podczas wywoływania usługi:  
+ Aplikacje klienckie warstwy środkowej, jednak można szybko utworzyć wiele obiektów klienta WCF i, w związku z tym wystąpić inicjowania zwiększone wymagania. Istnieją dwa główne podejścia do zwiększenia wydajności warstwy środkowej aplikacji podczas wywoływania usługi:  
   
--   Pamięć podręczna [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta obiektu i użyć go ponownie dla kolejnych wywołań w miarę możliwości.  
+-   Buforowanie obiektu klienta WCF i użyć go ponownie dla kolejnych wywołań w miarę możliwości.  
   
--   Utwórz <xref:System.ServiceModel.ChannelFactory%601> obiekt, a następnie użyj tego obiektu, aby utworzyć nowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiekty kanału klienta dla każdego wywołania.  
+-   Utwórz <xref:System.ServiceModel.ChannelFactory%601> obiekt, a następnie użyj obiektu do utworzenia nowego klienta WCF obiektów kanał dla każdego wywołania.  
   
  Zagadnienia do rozważenia przy użyciu tych metod obejmują:  
   
--   Jeśli usługa jest obsługę stanu specyficzne dla klienta przy użyciu sesji, a następnie nie można użyć ponownie warstwy środkowej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta z warstwą klienta wielu żądań, ponieważ stan usługi jest powiązany z klienckie warstwy środkowej.  
+-   Jeśli usługa jest obsługę stanu specyficzne dla klienta przy użyciu sesji, następnie możesz ponownie użyć klienta WCF warstwy środkowej warstwy klienta wiele żądań, ponieważ stan usługi jest powiązany z klienckie warstwy środkowej.  
   
--   Jeśli usługa musi wykonać uwierzytelnianie na poszczególnych klientów, należy utworzyć nowego klienta dla każdego żądania przychodzącego na warstwy środkowej, zamiast ponownego użycia warstwy środkowej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta (lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu kanału klienta) ponieważ klienta poświadczenia warstwy środkowej nie można zmodyfikować po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta (lub <xref:System.ServiceModel.ChannelFactory%601>) został utworzony.  
+-   Jeśli usługa musi wykonać uwierzytelnianie na poszczególnych klientów, należy utworzyć nowego klienta dla każdego żądania przychodzącego na warstwy środkowej, zamiast ponownego użycia warstwy środkowej klienta WCF (lub obiekt kanału klienta WCF), ponieważ poświadczenia klienta warstwy środkowej Nie można zmodyfikować po klienta WCF (lub <xref:System.ServiceModel.ChannelFactory%601>) został utworzony.  
   
--   Kanałów i klientów utworzone przez kanały są bezpieczne wątkowo, ich może nie obsługiwać zapisywania więcej niż jeden komunikat można przewodowo jednocześnie. W przypadku wysyłania dużych wiadomości, zwłaszcza w wypadku przesyłania strumieniowego, operacji wysyłania mogą blokować oczekiwanie na inny Wyślij, aby zakończyć. Powoduje to, że dwa rodzaje problemów: Brak współbieżności i możliwość zakleszczenia, jeśli zwróci przepływu sterowania usługą ponowne użycie kanału (oznacza to, udostępnionych klient wywołuje usługi których wyniki ścieżki kodu w wywołaniu zwrotnym do udostępnionego klienta). Dotyczy to niezależnie od typu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta można użyć ponownie.  
+-   Kanałów i klientów utworzone przez kanały są bezpieczne wątkowo, ich może nie obsługiwać zapisywania więcej niż jeden komunikat można przewodowo jednocześnie. W przypadku wysyłania dużych wiadomości, zwłaszcza w wypadku przesyłania strumieniowego, operacji wysyłania mogą blokować oczekiwanie na inny Wyślij, aby zakończyć. Powoduje to, że dwa rodzaje problemów: Brak współbieżności i możliwość zakleszczenia, jeśli zwróci przepływu sterowania usługą ponowne użycie kanału (oznacza to, udostępnionych klient wywołuje usługi których wyniki ścieżki kodu w wywołaniu zwrotnym do udostępnionego klienta). Dotyczy to niezależnie od typu klienta WCF, których można użyć ponownie.  
   
 -   Musi obsługiwać błędnej kanały niezależnie od tego, czy udział kanału. Gdy kanały są używane ponownie, jednak źle działający kanału można wyłączyć więcej niż jedno oczekujące żądanie lub wysyłania.  
   

@@ -1,34 +1,22 @@
 ---
-title: "Instrukcje: Konfigurowanie usługi WCF na potrzeby współdziałania z klientami usługi ASP.NET w sieci Web"
-ms.custom: 
+title: 'Instrukcje: Konfigurowanie usługi WCF na potrzeby współdziałania z klientami usługi ASP.NET w sieci Web'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 12c5645b53e8e931edabc1a13fc1749e40538044
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Instrukcje: Konfigurowanie usługi WCF na potrzeby współdziałania z klientami usługi ASP.NET w sieci Web
-Aby skonfigurować [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] punktu końcowego usługi do współdziałać z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web, użyj <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> typu powiązanie dla punktu końcowego usługi.  
+Aby skonfigurować punkt końcowy usługi Windows Communication Foundation (WCF) do współdziałać z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web, użyj <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> typu powiązanie dla punktu końcowego usługi.  
   
- Opcjonalnie można włączyć obsługę uwierzytelniania klienta na poziomie transportu dla powiązania i HTTPS. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Klienci usługi sieci Web nie obsługują kodowanie komunikatu MTOM więc <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> właściwości powinny pozostać jako jego wartość domyślna, czyli <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Klienci usługi sieci Web ASP.Net nie obsługują WS-Security, więc <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> powinien być ustawiony na <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ Opcjonalnie można włączyć obsługę uwierzytelniania klienta na poziomie transportu dla powiązania i HTTPS. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Klienci usługi sieci Web nie obsługują kodowanie komunikatu MTOM więc <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> właściwości powinny pozostać jako jego wartość domyślna, czyli <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Klienci usługi sieci Web ASP.Net nie obsługują WS-Security, więc <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> powinien być ustawiony na <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Aby uzyskać metadanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostępnych usług do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sieci Web narzędzia Generowanie serwera proxy usługi (oznacza to, [narzędzia języka opisu usługi sieci Web (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [narzędzia odnajdywania usług sieci Web ( DISCO.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)i Dodaj odwołanie sieci Web w Visual Studio), powinny ujawniać punkt końcowy metadanych HTTP/GET.  
+ Aby udostępnić metadanych dla usługi WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sieci Web narzędzia Generowanie serwera proxy usługi (to znaczy [narzędzia języka opisu usługi sieci Web (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [narzędzia odnajdywania usług sieci Web (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)i Dodaj odwołanie sieci Web w Visual Studio), powinny ujawniać punkt końcowy metadanych HTTP/GET.  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Można dodać punktu końcowego WCF, która jest zgodna z klientami usługi sieci Web ASP.NET w kodzie  
   
@@ -51,7 +39,7 @@ Aby skonfigurować [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] punkt
 4.  Włącz HTTP/GET punktu końcowego metadanych usługi. Aby uzyskać więcej informacji, zobacz [porady: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia sposób dodawania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktu końcowego, który jest zgodny z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sieci Web obsługi klientów w kodzie i również w plikach konfiguracji.  
+ Poniższy przykładowy kod przedstawia sposób dodawania punktu końcowego WCF, która jest zgodna z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sieci Web obsługi klientów w kodzie i również w plikach konfiguracji.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 

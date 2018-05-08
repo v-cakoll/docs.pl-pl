@@ -1,31 +1,17 @@
 ---
 title: Liczniki wydajności programu WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-performance-counters"></a>Liczniki wydajności programu WCF
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]zawiera duży zbiór liczników wydajności, aby ocenić wydajność aplikacji.  
+Windows Communication Foundation (WCF) zawiera duży zbiór liczników wydajności, aby ocenić wydajność aplikacji.  
   
 ## <a name="enabling-performance-counters"></a>Włączanie liczników wydajności  
  Można włączyć liczniki wydajności dla [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] za pośrednictwem pliku konfiguracyjnego app.config [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi w następujący sposób:  
@@ -70,7 +56,7 @@ config.Save();
 >  Wystąpienia liczników wydajności może zostać zwolniony przed ostatnim wiadomości są przetwarzane przez Dyspozytor punktu końcowego. Może to spowodować danych wydajności nie przechwycone kilka komunikatów.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Zwiększyć rozmiar pamięci dla liczników wydajności  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]używa oddzielnych Pamięć współużytkowana dla jego kategorii licznika wydajności.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] używa oddzielnych Pamięć współużytkowana dla jego kategorii licznika wydajności.  
   
  Domyślnie oddzielne pamięci współużytkowanej ustawiono kwartału rozmiar pamięci liczników wydajności globalnego. Domyślna pamięć licznika wydajności globalnego jest 524,288 bajtów. W związku z tym trzech [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kategorii licznika wydajności ma domyślny rozmiar około 128 KB. W zależności od właściwości środowisko uruchomieniowe [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplikacji na maszynie pamięci liczników wydajności mogą wyczerpane. W takim przypadku [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zapisuje komunikat o błędzie w dzienniku zdarzeń aplikacji. Stany zawartości błędu nie można załadować licznika wydajności, czy wyjątek zawiera wpis "System.InvalidOperationException: za mało pamięci dla widoku pliku liczników niestandardowych." Jeśli śledzenie jest włączone na poziomie błąd, ten błąd jest również śledzone. Jeśli wyczerpaniu pamięci liczników wydajności nadal uruchamiany z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplikacji za pomocą włączone liczniki wydajności może spowodować zmniejszenie wydajności. Jeśli jesteś administratorem komputera, należy skonfigurować ją przydzielić wystarczającej ilości pamięci do obsługi maksymalnie liczniki wydajności, które może występować w dowolnym momencie.  
   

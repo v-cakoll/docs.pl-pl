@@ -1,23 +1,16 @@
 ---
 title: interface (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - interface_CSharpKeyword
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-caps.latest.revision: 29
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: aba9ee66a90216066a47f22e251182caad465818
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0320b1e287f8c7a3eb7751b68b40120f74e8f61c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-c-reference"></a>interface (odwołanie w C#)
 Interfejs zawiera tylko sygnatur [metody](../../../csharp/programming-guide/classes-and-structs/methods.md), [właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md), [zdarzenia](../../../csharp/programming-guide/events/index.md) lub [indeksatory](../../../csharp/programming-guide/indexers/index.md). Klasy lub struktury, która implementuje interfejs musi implementować członków interfejsu, które są określone w definicji interfejsu. W poniższym przykładzie klasa `ImplementationClass` musi implementować metodę o nazwie `SampleMethod` czy nie ma parametrów i zwraca `void`.  
@@ -59,8 +52,8 @@ Interfejs zawiera tylko sygnatur [metody](../../../csharp/programming-guide/clas
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
  [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)  
- [Przy użyciu właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [Używanie właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
  [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)  
- [klasy](../../../csharp/language-reference/keywords/class.md)  
- [— Struktura](../../../csharp/language-reference/keywords/struct.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
  [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)

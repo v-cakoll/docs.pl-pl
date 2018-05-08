@@ -1,14 +1,6 @@
 ---
-title: "Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania"
-ms.custom: 
+title: Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - EHMDA
 helpviewer_keywords:
@@ -37,17 +29,13 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16a039a5edb0e1023551f97deefbf7874a19638b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania
 Asystenci debugowania zarządzanego (mda) debugowania pomocy, które działają w połączeniu z środowisko uruchomieniowe języka wspólnego (CLR), aby podać informacje dotyczące stanu czasu wykonywania. Asystenci Generowanie komunikaty o zdarzeniach środowiska uruchomieniowego, które w przeciwnym razie nie komunikat pułapki. Mda można użyć do izolowania usterki twarde do znalezienia aplikacji, występujących podczas przejścia między zarządzanymi i niezarządzanymi kodu. Można włączyć lub wyłączyć wszystkie mda przez dodanie klucza do rejestru systemu Windows lub przez ustawienie zmiennej środowiskowej. Można włączyć mda określone przy użyciu ustawienia konfiguracji aplikacji. Dodatkowe ustawienia konfiguracji dla niektórych poszczególnych mda można ustawić w pliku konfiguracji aplikacji. Ponieważ te pliki konfiguracji są w sytuacji, gdy załadowano środowiska uruchomieniowego, należy włączyć MDA przed uruchomieniem aplikacji zarządzanej. Nie można go włączyć dla aplikacji, które zostało już rozpoczęte.  
@@ -134,21 +122,21 @@ Windows Registry Editor Version 5.00
 ### <a name="enabling-and-disabling-mdas-by-using-an-environment-variable"></a>Włączanie i wyłączanie mda za pomocą zmiennej środowiskowej  
  MDA aktywacji można również kontrolowane przez zmienną środowiskową COMPLUS_MDA, zastępująca klucza rejestru. Ciąg COMPLUS_MDA jest bez uwzględniania wielkości liter, Rozdzielana średnikami lista nazw MDA lub inne ciągi kontroli. Uruchamianie w debugerze zarządzane lub niezarządzane udostępnia zestaw mda domyślnie. Jest to realizowane dołączając niejawnie Rozdzielana średnikami lista mda domyślnie włączone w obszarze debugery do wartości środowiskowej zmiennej lub klucza rejestru. Ciągi kontroli specjalne są następujące:  
   
--   `0`-Dezaktywuje mda wszystkie.  
+-   `0` -Dezaktywuje mda wszystkie.  
   
--   `1`-Odczytuje ustawienia MDA z *ApplicationName*. mda.config.  
+-   `1` -Odczytuje ustawienia MDA z *ApplicationName*. mda.config.  
   
--   `managedDebugger`-Jawnie aktywuje wszystkie mda, niejawnie aktywowanych przy uruchamianiu zarządzanego pliku wykonywalnego w debugerze.  
+-   `managedDebugger` -Jawnie aktywuje wszystkie mda, niejawnie aktywowanych przy uruchamianiu zarządzanego pliku wykonywalnego w debugerze.  
   
--   `unmanagedDebugger`-Jawnie aktywuje wszystkie mda, niejawnie aktywowanych przy uruchamianiu niezarządzany plik wykonywalny w debugerze.  
+-   `unmanagedDebugger` -Jawnie aktywuje wszystkie mda, niejawnie aktywowanych przy uruchamianiu niezarządzany plik wykonywalny w debugerze.  
   
  W przypadku wystąpienia konfliktu ustawień ostatnio używanych ustawień zastąpić poprzednie ustawienia:  
   
--   `COMPLUS_MDA=0`Wyłącza wszystkie mda, w tym niejawnie włączone w debugerze.  
+-   `COMPLUS_MDA=0` Wyłącza wszystkie mda, w tym niejawnie włączone w debugerze.  
   
--   `COMPLUS_MDA=gcUnmanagedToManaged`Włącza `gcUnmanagedToManaged` oprócz żadnych mda, które są domyślnie włączone w debugerze.  
+-   `COMPLUS_MDA=gcUnmanagedToManaged` Włącza `gcUnmanagedToManaged` oprócz żadnych mda, które są domyślnie włączone w debugerze.  
   
--   `COMPLUS_MDA=0;gcUnmanagedToManaged`Włącza `gcUnmanagedToManaged` , ale wyłącza mda, które w przeciwnym razie mogłyby być niejawnie włączone w debugerze.  
+-   `COMPLUS_MDA=0;gcUnmanagedToManaged` Włącza `gcUnmanagedToManaged` , ale wyłącza mda, które w przeciwnym razie mogłyby być niejawnie włączone w debugerze.  
   
 <a name="appConfig"></a>   
 ### <a name="enabling-and-disabling-mdas-by-using-application-specific-configuration-settings"></a>Włączanie i wyłączanie mda przy użyciu ustawień konfiguracji specyficznych dla aplikacji  

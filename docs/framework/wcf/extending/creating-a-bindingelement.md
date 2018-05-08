@@ -1,30 +1,18 @@
 ---
 title: Tworzenie elementu BindingElement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-bindingelement"></a>Tworzenie elementu BindingElement
-Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>odpowiednio) są miejsce gdzie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] model aplikacji jest skojarzony z fabryk kanałów i odbiorników kanału. Bez powiązania, za pomocą niestandardowych kanałów wymaga programowania na poziomie kanału zgodnie z opisem w [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) i [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). W tym temacie omówiono wymagania minimalne, aby włączyć za pomocą kanału w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], rozwoju <xref:System.ServiceModel.Channels.BindingElement> kanału i Włącz użycie z aplikacji, zgodnie z opisem w kroku 4 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>odpowiednio) są na miejscu, gdzie jest skojarzony z fabryk kanałów i odbiorników kanału modelu aplikacji Windows Communication Foundation (WCF). Bez powiązania, za pomocą niestandardowych kanałów wymaga programowania na poziomie kanału zgodnie z opisem w [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) i [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). W tym temacie omówiono wymagania minimalne, aby włączyć za pomocą kanału w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], rozwoju <xref:System.ServiceModel.Channels.BindingElement> kanału i Włącz użycie z aplikacji, zgodnie z opisem w kroku 4 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Omówienie  
- Tworzenie <xref:System.ServiceModel.Channels.BindingElement> dla kanału umożliwia deweloperom korzystanie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. <xref:System.ServiceModel.Channels.BindingElement>obiekty mogą być używane z <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> klasy nawiązać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji do kanału bez konieczności informacje dokładny typ kanału.  
+ Tworzenie <xref:System.ServiceModel.Channels.BindingElement> dla kanału umożliwia deweloperom korzystanie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. <xref:System.ServiceModel.Channels.BindingElement> obiekty mogą być używane z <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> klasy nawiązać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji do kanału bez konieczności informacje dokładny typ kanału.  
   
  Raz <xref:System.ServiceModel.Channels.BindingElement> został utworzony, można włączyć więcej funkcji, wykonując pozostałe kroki tworzenia kanału opisanego w zależności od wymagań [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
@@ -33,9 +21,9 @@ Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.Ser
   
  A `ChunkingBindingElement` odpowiedzialną za tworzenie `ChunkingChannelFactory` i `ChunkingChannelListener`. Zastępuje on <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory%2A> i <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener%2A> implementacji i sprawdza, czy parametr typu jest <xref:System.ServiceModel.Channels.IDuplexSessionChannel> (w naszym przykładzie jest to tylko kształtu kanału obsługiwane przez `ChunkingChannel`) i inne elementy powiązania powiązanie obsługuje to kształtu kanału.  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A>najpierw sprawdza, czy mogą być wbudowane żądanego kształtu kanału, a następnie pobiera listę komunikatów akcje fragmentarycznego można. Następnie tworzy nowy `ChunkingChannelFactory`, przekazanie jej wewnętrzna fabryka kanałów. (Jeśli tworzysz element powiązania transportu tego elementu jest ostatnim w stosie powiązania i dlatego należy utworzyć odbiornik kanału lub fabryki kanałów.)  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> najpierw sprawdza, czy mogą być wbudowane żądanego kształtu kanału, a następnie pobiera listę komunikatów akcje fragmentarycznego można. Następnie tworzy nowy `ChunkingChannelFactory`, przekazanie jej wewnętrzna fabryka kanałów. (Jeśli tworzysz element powiązania transportu tego elementu jest ostatnim w stosie powiązania i dlatego należy utworzyć odbiornik kanału lub fabryki kanałów.)  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A>implementacją podobne do tworzenia `ChunkingChannelListener` i przekazanie jej przez odbiornik kanału wewnętrzny.  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> implementacją podobne do tworzenia `ChunkingChannelListener` i przekazanie jej przez odbiornik kanału wewnętrzny.  
   
  Innym przykładem za pomocą kanał transportu [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) przykład zawiera następujące zastąpienia.  
   
@@ -58,23 +46,23 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="protocol-binding-elements"></a>Elementy powiązania protokołu  
  Nowe elementy powiązania można zastąpić lub rozszerzyć elementy powiązania dołączone, dodawanie nowych transportów, kodowania i protokoły wyższego poziomu. Aby utworzyć nowy Element powiązania protokołu, Rozpocznij od rozszerzanie <xref:System.ServiceModel.Channels.BindingElement> klasy. Co najmniej, następnie należy zaimplementować <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> i wdrożenie `ChannelProtectionRequirements` przy użyciu <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>. To polecenie zwróci <xref:System.ServiceModel.Security.ChannelProtectionRequirements> dla tego elementu powiązania.  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>powinien zwrócić świeżą kopię tego elementu powiązania. Najlepszym rozwiązaniem, zaleca się wdrożenie autorów elementu powiązania <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> przy użyciu konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, następnie klonów dodatkowe pola w tej klasie.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> powinien zwrócić świeżą kopię tego elementu powiązania. Najlepszym rozwiązaniem, zaleca się wdrożenie autorów elementu powiązania <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> przy użyciu konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, następnie klonów dodatkowe pola w tej klasie.  
   
 #### <a name="transport-binding-elements"></a>Elementy powiązania transportu  
  Aby utworzyć nowy Element powiązania transportu, rozszerzanie <xref:System.ServiceModel.Channels.TransportBindingElement> interfejsu. Co najmniej, następnie należy zaimplementować <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> — metoda i <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A?displayProperty=nameWithType> właściwości.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>— Powinna zwrócić świeżą kopię tego elementu powiązania.  Najlepszym rozwiązaniem zaleca się, że autorów elementu powiązania wdrożyć klonu i konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, a następnie klonów dodatkowe pola w tej klasie.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> — Powinna zwrócić świeżą kopię tego elementu powiązania.  Najlepszym rozwiązaniem zaleca się, że autorów elementu powiązania wdrożyć klonu i konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, a następnie klonów dodatkowe pola w tej klasie.  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A>— <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Pobierz właściwość zwraca schemat identyfikatora URI reprezentowany przez element powiązania protokołu transportu. Na przykład <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> zwrócić "http" i "net.tcp" z odpowiednich <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> właściwości.  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> — <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Pobierz właściwość zwraca schemat identyfikatora URI reprezentowany przez element powiązania protokołu transportu. Na przykład <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> zwrócić "http" i "net.tcp" z odpowiednich <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> właściwości.  
   
 #### <a name="encoding-binding-elements"></a>Kodowanie elementów wiązania  
  Do tworzenia nowych kodowanie powiązania elementów, Rozpocznij od rozszerzanie <xref:System.ServiceModel.Channels.BindingElement> klasy i wdrażanie <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> klasy. Co najmniej, następnie należy zaimplementować <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> metod i <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> właściwości.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>., Zwraca nową kopię tego elementu powiązania. Najlepszym rozwiązaniem, zaleca się wdrożenie autorów elementu powiązania <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> przy użyciu konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, następnie klonów dodatkowe pola w tej klasie.  
+-   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Zwraca nową kopię tego elementu powiązania. Najlepszym rozwiązaniem, zaleca się wdrożenie autorów elementu powiązania <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> przy użyciu konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, następnie klonów dodatkowe pola w tej klasie.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>., Zwraca <xref:System.ServiceModel.Channels.MessageEncoderFactory>, zapewniające dojścia do rzeczywistego klasa implementuje kodera nowy i który powinien być rozszerzany <xref:System.ServiceModel.Channels.MessageEncoder>. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Channels.MessageEncoderFactory> i <xref:System.ServiceModel.Channels.MessageEncoder>.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Zwraca <xref:System.ServiceModel.Channels.MessageEncoderFactory>, zapewniające dojścia do rzeczywistego klasa implementuje kodera nowy i który powinien być rozszerzany <xref:System.ServiceModel.Channels.MessageEncoder>. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Channels.MessageEncoderFactory> i <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>., Zwraca <xref:System.ServiceModel.Channels.MessageVersion> używane kodowanie, który reprezentuje wersje protokołu SOAP i WS-Addressing w użyciu.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Zwraca <xref:System.ServiceModel.Channels.MessageVersion> używane kodowanie, który reprezentuje wersje protokołu SOAP i WS-Addressing w użyciu.  
   
  Pełna lista opcjonalny metody i właściwości zdefiniowane przez użytkownika elementy powiązania kodowania, zobacz <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   

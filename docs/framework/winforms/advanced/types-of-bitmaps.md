@@ -1,13 +1,6 @@
 ---
 title: Typy map bitowych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>Typy map bitowych
 Mapy bitowej jest tablicą bitów, które określają koloru każdego piksela w tablicy regularnej pikseli. Liczba bitów przeznaczonych do danego piksela określa liczbę kolorów, które można przypisać do piksela. Na przykład jeśli każdego piksela jest reprezentowana przez 4 bity, następnie danego pikseli można przypisać jedną 16 kolorów różnych (2 ^ 4 = 16). W poniższej tabeli przedstawiono kilka przykładów liczbę kolorów, które można przypisać do piksela reprezentowany przez daną liczbę bitów.  
@@ -64,7 +52,7 @@ Mapy bitowej jest tablicą bitów, które określają koloru każdego piksela w 
  ![Próbki mapy bitowej](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formaty plików graficznych  
- Istnieje wiele standardowych formatów Zapisywanie map bitowych w plikach na dysku. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]obsługuje grafiki plików opisane w sekcjach.  
+ Istnieje wiele standardowych formatów Zapisywanie map bitowych w plikach na dysku. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obsługuje grafiki plików opisane w sekcjach.  
   
 ### <a name="bmp"></a>BMP  
  BMP jest to standardowy format używany przez system Windows do przechowywania obrazów niezależne od urządzenia i aplikacji. Liczba bitów na piksel (1, 4, 8, 15, 24, 32 lub 64) dla danego pliku BMP jest określona w nagłówku pliku. Pliki BMP z 24 bitów na piksel są często używane. Pliki BMP nie zwykle są kompresowane i, w związku z tym nie są dobrze nadają się do przeniesienia w Internecie.  

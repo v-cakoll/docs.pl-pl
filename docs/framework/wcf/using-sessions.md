@@ -1,34 +1,20 @@
 ---
 title: Korzystanie z sesji
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
-W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są powiązane z grupą wiadomości do konwersacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sesje są inne niż dostępna w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji, obsługuje różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje, które sesji umożliwiają w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i sposobu ich używania.  
+W aplikacji Windows Communication Foundation (WCF) *sesji* są powiązane z grupą wiadomości do konwersacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sesje są inne niż dostępna w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji, obsługuje różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje, które sesji umożliwiają w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i sposobu ich używania.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Sesje w aplikacjach programu Windows Communication Foundation  
  Gdy kontrakt usługi określa, że wymaga ona sesji, umowy jest określenie, że wszystkie wywołania (to znaczy podstawowej wymiany komunikatów obsługujących wywołania) musi być częścią jednej konwersacji. Jeśli kontrakt Określa, że umożliwia sesji, ale nie wymaga jednego, klienci mogą łączyć się i albo ustanowienia sesji lub nie ustanowienia sesji. Jeśli sesja zakończy się oraz komunikat jest wysyłany za pośrednictwem tego samego kanału, który jest zwracany wyjątek.  

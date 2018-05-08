@@ -1,35 +1,23 @@
 ---
 title: Terminologia dotycząca zabezpieczeń programu WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologia dotycząca zabezpieczeń programu WCF
 Niektóre z terminologią używaną w opisach zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektóre pojęcia dotyczące zabezpieczeń, ale nie mają na celu dostarczenie wyczerpujące dla każdego elementu.  
   
- Aby uzyskać więcej informacji na temat pojęć używanych w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dokumentacji, zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Aby uzyskać więcej informacji na temat terminów używanych w dokumentacji systemu Windows Communication Foundation (WCF), zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  listy kontroli dostępu (ACL)  
  Lista zabezpieczeń obiektu. (Obiekt może być pliku, procesu, zdarzenia lub niczego else o deskryptora zabezpieczeń). Wpis na liście kontroli dostępu jest wpisu kontroli dostępu (ACE). Istnieją dwa typy list kontroli dostępu: DACL i systemu.  
@@ -189,7 +177,7 @@ Niektóre z terminologią używaną w opisach zabezpieczeń mogą być nieznane.
  Nazwa konta użytkownika (czasem nazywane *nazwa logowania użytkownika*) i nazwa domeny identyfikującej domenę, w której znajduje się konto użytkownika. Jest to standardowy używana do logowania do domeny systemu Windows. Format: someone@example.com (podobnie jak w przypadku adresu e-mail).  
   
 > [!NOTE]
->  Oprócz standardowego formularza UPN [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] akceptuje nazwy UPN w formie niskiego poziomu, na przykład cohowinery.com\someone.  
+>  Oprócz standardowego formularza UPN WCF akceptuje nazwy UPN w formie niskiego poziomu, na przykład cohowinery.com\someone.  
   
  X.509  
  Uznanych standard certyfikatów definiujący ich wymagane części.  

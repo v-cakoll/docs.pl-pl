@@ -1,14 +1,6 @@
 ---
 title: 'Porady: Tworzenie usługi danych WCF działającą na serwerze IIS'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9df38d200be864ab24efdb0d002fe7b75cfc3e4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c9b0128de6459c65e42fc2935222aecc643ec1d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Porady: Tworzenie usługi danych WCF działającą na serwerze IIS
 W tym temacie przedstawiono sposób użycia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Aby utworzyć usługę danych, która jest oparta na bazie danych Northwind hostowanej przez aplikacji sieci Web ASP.NET, która działa na Internet Information Services (IIS). Na przykład sposobu tworzenia tej samej usługi danych Northwind jako aplikacji sieci Web ASP.NET, która działa w ASP.NET Development Server zobacz [szybkiego startu usługi danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

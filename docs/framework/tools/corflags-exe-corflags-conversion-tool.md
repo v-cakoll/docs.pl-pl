@@ -1,28 +1,18 @@
 ---
-title: "CorFlags.exe (Narzędzie konwersji CorFlags)"
-ms.custom: 
+title: CorFlags.exe (Narzędzie konwersji CorFlags)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CorFlags conversion tool
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 111c697d4d62cd52cd7913039e3c17e8a25ab50d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4a5b6d490387f2da441ad95bdf369f700cf2e9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Narzędzie konwersji CorFlags)
 Narzędzie do konwersji CorFlags pozwala na konfigurowanie sekcji CorFlags w nagłówku przenośnego obrazu wykonywalnego.  
@@ -51,7 +41,7 @@ CorFlags.exe assembly [options]
 |**/32BITPREF-**|Czyści flagę 32BITPREFERRED.<br /><br /> Nowość w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/ Force**|Wymusza aktualizację, nawet jeśli jest to zestaw z silną nazwą. **Ważne:** po zaktualizowaniu zestawu z silną nazwą, musisz zarejestrować go ponownie przed wykonaniem jego kodu.|  
-|**/ Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/ILONLY+**|Ustawia flagę ILONLY.|  
 |**/ILONLY-**|Czyści flagę ILONLY.|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  

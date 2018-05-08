@@ -1,26 +1,17 @@
 ---
-title: "Porady: Catch analizowanie błędów (C#)"
-ms.custom: 
+title: 'Porady: Catch analizowanie błędów (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e541a004833ccd2aaecfd4ea13652b03a1270186
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 037e490fa7b0600b906ec310201e5d33c2f55baa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Porady: Catch analizowanie błędów (C#)
 W tym temacie przedstawiono sposób wykrywania źle sformułowany lub nieprawidłowy XML.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]jest implementowane za pomocą <xref:System.Xml.XmlReader>. Jeśli źle sformułowany lub nieprawidłowy kod XML jest przekazany do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], podstawowa <xref:System.Xml.XmlReader> klasy spowoduje zgłoszenie wyjątku. Różne metody analizy kodu XML, takich jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, nie Przechwytuj wyjątków; wyjątek może być następnie zgłoszony przez aplikację.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowane za pomocą <xref:System.Xml.XmlReader>. Jeśli źle sformułowany lub nieprawidłowy kod XML jest przekazany do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], podstawowa <xref:System.Xml.XmlReader> klasy spowoduje zgłoszenie wyjątku. Różne metody analizy kodu XML, takich jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, nie Przechwytuj wyjątków; wyjątek może być następnie zgłoszony przez aplikację.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod próbuje nieprawidłowe dane XML analizy:  

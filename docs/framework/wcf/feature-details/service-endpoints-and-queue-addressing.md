@@ -1,33 +1,19 @@
 ---
 title: Punkty końcowe usługi i adresowanie kolejki
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a2f4807e447482ee790f2ca9a2ab4dbde531b1c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
-W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z kolejek oraz sposobu mapowania punktów końcowych usługi kolejki. Dla przypomnienia, na poniższej ilustracji przedstawiono klasycznego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wdrożenia aplikacji w kolejce.  
+W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z kolejek oraz sposobu mapowania punktów końcowych usługi kolejki. Na poniższej ilustracji przedstawiono przypomnieniem, klasycznego się, że wdrożenie aplikacji w kolejce Windows Communication Foundation (WCF).  
   
  ![Diagram aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "rozproszonych kolejki — rysunek")  
   
- Dla klienta, który można wysłać wiadomości do usługi Klient adresów wiadomości do kolejki docelowej. Dla usługi do czytania wiadomości z kolejki ustawia jego adres nasłuchiwania do kolejki docelowej. Adresowanie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest oparta na protokole Uniform Resource Identifier URI podczas nazwy kolejki usługi kolejkowania komunikatów (MSMQ) nie są oparte na identyfikator URI. Bardzo w związku z tym ważne jest zrozumienie, jak adres kolejki utworzone za pomocą usługi MSMQ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Dla klienta, który można wysłać wiadomości do usługi Klient adresów wiadomości do kolejki docelowej. Dla usługi do czytania wiadomości z kolejki ustawia jego adres nasłuchiwania do kolejki docelowej. Adresowanie w programie WCF jest oparte na Uniform Resource Identifier URI podczas nazwy kolejki usługi kolejkowania komunikatów (MSMQ) nie są oparte na identyfikator URI. W związku z tym ważne jest zrozumienie, jak rozwiązywać kolejki utworzone w usłudze MSMQ za pomocą usługi WCF.  
   
 ## <a name="msmq-addressing"></a>Adresowanie usługi MSMQ  
  Usługa MSMQ używana ścieżki i nazwy formatu kolejki. Ścieżki Określ nazwę hosta i `QueueName`. Opcjonalnie można `Private$` między nazwą hosta i `QueueName` wskazująca kolejki prywatnej, która nie jest publikowany w usłudze katalogowej Active Directory.  
@@ -37,11 +23,11 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
  Aby uzyskać więcej informacji o nazwach ścieżki i formatu MSMQ, zobacz [o usługi kolejkowania komunikatów](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding i adresowania usługi  
- Podczas adresowania wiadomości do usługi, schemat w identyfikatorze URI zostanie wybrany na podstawie transportu używany do komunikacji. Każdy transport w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ma unikatowy schemat. Schemat musi odzwierciedlać rodzaj transportu używany do komunikacji. Na przykład net.tcp, net.pipe, HTTP i tak dalej.  
+ Podczas adresowania wiadomości do usługi, schemat w identyfikatorze URI zostanie wybrany na podstawie transportu używany do komunikacji. Każdy transportu WCF ma unikatowy schemat. Schemat musi odzwierciedlać rodzaj transportu używany do komunikacji. Na przykład net.tcp, net.pipe, HTTP i tak dalej.  
   
- Transport kolejki usługi MSMQ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przedstawia schemat net.msmq. Dowolny komunikat reagować, wykonując Schemat net.msmq są wysyłane przy użyciu `NetMsmqBinding` kanałem transport z kolejką usługi MSMQ.  
+ Usługi MSMQ w kolejce transportu WCF ujawnia Schemat net.msmq. Dowolny komunikat reagować, wykonując Schemat net.msmq są wysyłane przy użyciu `NetMsmqBinding` kanałem transport z kolejką usługi MSMQ.  
   
- Adresowanie kolejki w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opiera się na następujący wzór:  
+ Adresowanie kolejki programu WCF jest oparty na następujący wzór:  
   
  NET.MSMQ: / / \< *nazwy hosta*> / [prywatnej /] \< *Nazwa kolejki*>  
   
@@ -49,7 +35,7 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
   
 -   \<*Nazwa hosta*> jest nazwą komputera obsługującego kolejki docelowej.  
   
--   [prywatnej] jest opcjonalna. Jest używany podczas adresowanie kolejki docelowej, która jest kolejki prywatnej. Aby zaadresować kolejkę publiczną, nie można określać prywatnych. Należy zauważyć, że w przeciwieństwie do ścieżek usługi MSMQ nie jest "$" w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formularza identyfikatora URI.  
+-   [prywatnej] jest opcjonalna. Jest używany podczas adresowanie kolejki docelowej, która jest kolejki prywatnej. Aby zaadresować kolejkę publiczną, nie można określać prywatnych. Należy zauważyć, że w przeciwieństwie do ścieżki MSMQ nie jest "$" w formie identyfikatora URI usługi WCF.  
   
 -   \<*Nazwa kolejki*> jest nazwą kolejki. Nazwa kolejki może również dotyczyć podkolejki. W związku z tym \< *Nazwa kolejki*> = \< *nazwy z kolejki*> [; *podrzędne queue nazwa*].  
   
@@ -102,10 +88,10 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
   
  NET.MSMQ: //localhost/ [prywatnej /] \< *niestandardowe wiadomości list kolejki nazwa-*>.  
   
- A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi sprawdza, czy wszystkie komunikaty o otrzymaniu zostały skierowane do określonej kolejki jest nasłuchiwanie. Kolejki docelowej wiadomości niezgodna kolejki, który znajduje się w usługa nie przetwarza wiadomości. Jest to problem, który musi adresów usług nasłuchujących do kolejki utraconych wiadomości, ponieważ wszystkie wiadomości w kolejce wiadomości utraconych miały mają być dostarczone w innym miejscu. Aby odczytać wiadomości z kolejki utraconych wiadomości lub skażone kolejki, `ServiceBehavior` z <xref:System.ServiceModel.AddressFilterMode.Any> parametr musi być używany. Na przykład zobacz [kolejki utraconych wiadomości](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Usługi WCF sprawdza, czy wszystkie komunikaty, które otrzymuje zostały skierowane do określonej kolejki, który prowadzi nasłuchu na. Kolejki docelowej wiadomości niezgodna kolejki, który znajduje się w usługa nie przetwarza wiadomości. Jest to problem, który musi adresów usług nasłuchujących do kolejki utraconych wiadomości, ponieważ wszystkie wiadomości w kolejce wiadomości utraconych miały mają być dostarczone w innym miejscu. Aby odczytać wiadomości z kolejki utraconych wiadomości lub skażone kolejki, `ServiceBehavior` z <xref:System.ServiceModel.AddressFilterMode.Any> parametr musi być używany. Na przykład zobacz [kolejki utraconych wiadomości](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding i adresowania usługi  
- `MsmqIntegrationBinding` Jest używany do komunikacji z tradycyjne aplikacje usługi MSMQ. Aby ułatwić współdziałanie z istniejącej aplikacji usługi MSMQ, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje tylko format nazw adresowania. W związku z tym komunikatów wysyłanych za pomocą tego powiązania musi odpowiadać schemat identyfikatora URI:  
+ `MsmqIntegrationBinding` Jest używany do komunikacji z tradycyjne aplikacje usługi MSMQ. Aby ułatwić współdziałanie z istniejącej aplikacji usługi MSMQ, WCF obsługuje tylko format nazw adresowania. W związku z tym komunikatów wysyłanych za pomocą tego powiązania musi odpowiadać schemat identyfikatora URI:  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
@@ -115,7 +101,7 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
   
  Podczas adresowania za pomocą SRMP `MsmqIntegrationBinding`, nie jest wymagane do dodania /msmq/ w bezpośredniej nazwy formatu ułatwiające wysyłki Internet Information Services (IIS). Na przykład: gdy adresowanie kolejki przy użyciu SRMP abc protokołu, zamiast bezpośredniego =http://adatum.com/msmq/private$/ abc, należy użyć DIRECT =http://adatum.com/private$/ abc.  
   
- Należy pamiętać, że nie można użyć net.msmq:// adresowania z `MsmqIntegrationBinding`. Ponieważ `MsmqIntegrationBinding` obsługuje dowolnych MSMQ format nazwy addressing, można użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która używa tego powiązania do funkcji multiemisji i dystrybucji listy w usłudze MSMQ. Jedynym wyjątkiem jest określenie `CustomDeadLetterQueue` przy użyciu `MsmqIntegrationBinding`. Musi to być net.msmq:// formularza, podobnie jak jest określona za pomocą `NetMsmqBinding`.  
+ Należy pamiętać, że nie można użyć net.msmq:// adresowania z `MsmqIntegrationBinding`. Ponieważ `MsmqIntegrationBinding` obsługuje dowolnych MSMQ format nazwy addressing, można użyć usługi WCF, która używa tego powiązania do funkcji multiemisji i dystrybucji listy w usłudze MSMQ. Jedynym wyjątkiem jest określenie `CustomDeadLetterQueue` przy użyciu `MsmqIntegrationBinding`. Musi to być net.msmq:// formularza, podobnie jak jest określona za pomocą `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

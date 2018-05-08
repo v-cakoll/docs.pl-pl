@@ -1,27 +1,15 @@
 ---
-title: "Modyfikowanie dużej wartości (wartość maksymalna) danych ADO.NET"
-ms.custom: 
+title: Modyfikowanie dużej wartości (wartość maksymalna) danych ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modyfikowanie dużej wartości (wartość maksymalna) danych ADO.NET
 Typy danych dużego obiektu (LOB) to przekracza maksymalny rozmiar wiersza 8 kilobajtów (KB). Program SQL Server stanowi `max` specyfikatora `varchar`, `nvarchar`, i `varbinary` typy danych umożliwiają przechowywanie wartości tak duże jak 2 ^ 32 bajtów. Kolumny tabeli i zmienne języka Transact-SQL może określać `varchar(max)`, `nvarchar(max)`, lub `varbinary(max)` typów danych. W ADO.NET `max` typy danych mogą być pobierane przez `DataReader`, a także można określić jako wartości obu parametrów wejściowych i wyjściowych bez żadnej specjalnej obsługi. Dla dużych `varchar` typy danych, dane można je pobrać i zaktualizować przyrostowo.  
@@ -44,7 +32,7 @@ Typy danych dużego obiektu (LOB) to przekracza maksymalny rozmiar wiersza 8 kil
 -   Duże `varchar` kolumn nie można używać jako kolumny klucza partycji.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Praca z typami duża wartość w języku Transact-SQL  
- Języka Transact-SQL `OPENROWSET` funkcja to jednorazowe metoda łączenia i uzyskiwania dostępu do danych zdalnych. Zawiera wszystkie informacje o połączeniu niezbędnych do uzyskania dostępu zdalnego danych ze źródła danych OLE DB. `OPENROWSET`może być przywoływany w klauzuli FROM zapytania tak, jakby była nazwą tabeli. Jego mogą się też odwoływać jako do tabeli docelowej instrukcji INSERT, UPDATE, lub usuń instrukcji, zależnie od możliwości dostawcy OLE DB.  
+ Języka Transact-SQL `OPENROWSET` funkcja to jednorazowe metoda łączenia i uzyskiwania dostępu do danych zdalnych. Zawiera wszystkie informacje o połączeniu niezbędnych do uzyskania dostępu zdalnego danych ze źródła danych OLE DB. `OPENROWSET` może być przywoływany w klauzuli FROM zapytania tak, jakby była nazwą tabeli. Jego mogą się też odwoływać jako do tabeli docelowej instrukcji INSERT, UPDATE, lub usuń instrukcji, zależnie od możliwości dostawcy OLE DB.  
   
  `OPENROWSET` Funkcja zawiera `BULK` dostawca zestawów wierszy, dzięki czemu można odczytać danych bezpośrednio z pliku bez ładowania danych do tabeli docelowej. Pozwala na użycie `OPENROWSET` w prostej instrukcji INSERT SELECT.  
   
@@ -78,10 +66,10 @@ FROM OPENROWSET
   
 |IF|Następnie|  
 |--------|----------|  
-|Wyrażenie ma wartość NULL|`@Length`jest ignorowana, a wartością w *column_name* został obcięty w określonym `@Offset`.|  
-|`@Offset`ma wartość NULL|Operacja aktualizacji dołącza wyrażenia na końcu istniejące *column_name* wartość i `@Length` jest ignorowana.|  
-|`@Offset`jest większa niż długość wartości nazwa_kolumny|Program SQL Server zwraca błąd.|  
-|`@Length`ma wartość NULL|Operacja aktualizacji powoduje usunięcie wszystkich danych z `@Offset` na końcu `column_name` wartość.|  
+|Wyrażenie ma wartość NULL|`@Length` jest ignorowana, a wartością w *column_name* został obcięty w określonym `@Offset`.|  
+|`@Offset` ma wartość NULL|Operacja aktualizacji dołącza wyrażenia na końcu istniejące *column_name* wartość i `@Length` jest ignorowana.|  
+|`@Offset` jest większa niż długość wartości nazwa_kolumny|Program SQL Server zwraca błąd.|  
+|`@Length` ma wartość NULL|Operacja aktualizacji powoduje usunięcie wszystkich danych z `@Offset` na końcu `column_name` wartość.|  
   
 > [!NOTE]
 >  Ani `@Offset` ani `@Length` może być liczbą ujemną.  

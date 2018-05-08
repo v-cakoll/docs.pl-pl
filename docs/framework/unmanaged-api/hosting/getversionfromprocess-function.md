@@ -1,14 +1,6 @@
 ---
-title: "GetVersionFromProcess — Funkcja"
-ms.custom: 
+title: GetVersionFromProcess — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetVersionFromProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess — Funkcja
 Pobiera środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z uchwytu procesu określonego numeru wersji.  
@@ -70,8 +58,8 @@ HRESULT GetVersionFromProcess (
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|`pVersion`ma wartość null i `cchBuffer` nie ma wartości null, lub na odwrót.<br /><br /> —lub—<br /><br /> `hProcess`nie jest prawidłowym dojściem do procesu.<br /><br /> —lub—<br /><br /> Nie załadowano środowiska CLR.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`to wartość zerową lub mniejszą niż długość ciągu wersji.|  
+|E_INVALIDARG|`pVersion` ma wartość null i `cchBuffer` nie ma wartości null, lub na odwrót.<br /><br /> —lub—<br /><br /> `hProcess` nie jest prawidłowym dojściem do procesu.<br /><br /> —lub—<br /><br /> Nie załadowano środowiska CLR.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` to wartość zerową lub mniejszą niż długość ciągu wersji.|  
 |E_NOTIMPL|Ta metoda nie jest dostępna w systemie operacyjnym Microsoft Windows 95, Microsoft Windows 98 lub Microsoft Windows Millennium Edition.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -81,7 +69,7 @@ HRESULT GetVersionFromProcess (
   
  **Biblioteka:** biblioteki MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [GetRequestedRuntimeInfo, funkcja](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  

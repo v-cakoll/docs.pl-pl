@@ -1,20 +1,13 @@
 ---
 title: Delegaci i zdarzenia
-description: "Zobacz, gdzie można znaleźć w dokumentacji programu .NET Core informacji na temat delegaci i zdarzenia."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+description: Zobacz, gdzie można znaleźć w dokumentacji programu .NET Core informacji na temat delegaci i zdarzenia.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates--events"></a>Delegaci i zdarzenia
 
@@ -28,7 +21,7 @@ W tym temacie zostaną objęte następujące artykuły:
 
     W tym artykule omówiono klas w programie .NET Framework Core, że delegatów pomocy technicznej i jak mapuje do `delegate` — słowo kluczowe.
 
-3. [Jednoznacznie delegatów](delegates-strongly-typed.md)
+3. [Delegaty o jednoznacznie określonym typie](delegates-strongly-typed.md)
 
     W tym artykule opisano typy i techniki za pomocą silnie typizowanej delegatów.
 
@@ -40,11 +33,11 @@ W tym temacie zostaną objęte następujące artykuły:
 
     W tym artykule przedstawiono przegląd zdarzeń programu .NET.
 
-6. [Standardowe wzorce zdarzenia platformy .NET](event-pattern.md)
+6. [Standardowe wzorce zdarzeń platformy .NET](event-pattern.md)
 
     W tym artykule omówiono wzorzec zdarzeń w wersji standard programu .NET.
 
-7. [Wzorzec zdarzeń zaktualizowanej platformy .NET](modern-events.md)
+7. [Zaktualizowane wzorce zdarzeń platformy .NET](modern-events.md)
 
     W tym artykule opisano kilka aktualizacji w celu wzorzec zdarzenia platformy .NET w najnowszych wersjach.
 

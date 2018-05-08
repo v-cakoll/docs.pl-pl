@@ -1,11 +1,7 @@
 ---
-title: "Funkcja ConnectServerWmi (niezarządzany wykaz interfejsów API)"
-description: "Funkcja ConnectServerWmi używa modelu DCOM, aby utworzyć połączenie do przestrzeni nazw usługi WMI."
+title: Funkcja ConnectServerWmi (niezarządzany wykaz interfejsów API)
+description: Funkcja ConnectServerWmi używa modelu DCOM, aby utworzyć połączenie do przestrzeni nazw usługi WMI.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ConnectServerWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dc821bddf1d33ea1144fef0821b81cf027d8f92f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de8447b9b090fc7f53df23346d61932bcb4dd6ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connectserverwmi-function"></a>Funkcja ConnectServerWmi
 Tworzy połączenie przy użyciu modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze.  
@@ -52,22 +45,22 @@ HRESULT ConnectServerWmi (
 ```  
 ## <a name="parameters"></a>Parametry
 
-`strNetworkResource`[in] Wskaźnik do prawidłowej `BSTR` zawierający ścieżkę obiektu poprawną przestrzeń nazw usługi WMI. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+`strNetworkResource` [in] Wskaźnik do prawidłowej `BSTR` zawierający ścieżkę obiektu poprawną przestrzeń nazw usługi WMI. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
-`strUser`[in] Wskaźnik do prawidłowej `BSTR` zawierający nazwę użytkownika. A `null` wartość wskazuje bieżący kontekst zabezpieczeń. Jeśli użytkownik jest z innej domeny niż bieżąca `strUser` może również zawierać nazwę domeny i użytkownika oddzielone od ukośnika odwrotnego. `strUser`można również być w użytkownika nazwy głównej (UPN) sformatować, suhc jako  *userName@domainName* . Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+`strUser` [in] Wskaźnik do prawidłowej `BSTR` zawierający nazwę użytkownika. A `null` wartość wskazuje bieżący kontekst zabezpieczeń. Jeśli użytkownik jest z innej domeny niż bieżąca `strUser` może również zawierać nazwę domeny i użytkownika oddzielone od ukośnika odwrotnego. `strUser` można również być w użytkownika nazwy głównej (UPN) sformatować, suhc jako *userName@domainName*. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
-`strPassword`[in] Wskaźnik do prawidłowej `BSTR` zawiera hasło. A `null` wskazuje bieżący kontekst zabezpieczeń. Ciąg pusty ("") wskazuje prawidłowe hasło o zerowej długości.
+`strPassword` [in] Wskaźnik do prawidłowej `BSTR` zawiera hasło. A `null` wskazuje bieżący kontekst zabezpieczeń. Ciąg pusty ("") wskazuje prawidłowe hasło o zerowej długości.
 
-`strLocale`[in] Wskaźnik do prawidłowej `BSTR` wskazujące poprawne ustawienia regionalne pobierania informacji. Identyfikatorów ustawień regionalnych firmy Microsoft jest format ciągu "MS\_*xxx*", gdzie *xxx* jest ciągiem w postaci szesnastkowej, która wskazuje identyfikator ustawień regionalnych (LCID). Jeśli określono nieprawidłowe ustawienia regionalne, metoda zwraca `WBEM_E_INVALID_PARAMETER` z wyjątkiem systemu Windows 7, gdzie domyślnych ustawień regionalnych serwera zamiast niego jest używana. Jeśli "null1, bieżących ustawień regionalnych jest używany. 
+`strLocale` [in] Wskaźnik do prawidłowej `BSTR` wskazujące poprawne ustawienia regionalne pobierania informacji. Identyfikatorów ustawień regionalnych firmy Microsoft jest format ciągu "MS\_*xxx*", gdzie *xxx* jest ciągiem w postaci szesnastkowej, która wskazuje identyfikator ustawień regionalnych (LCID). Jeśli określono nieprawidłowe ustawienia regionalne, metoda zwraca `WBEM_E_INVALID_PARAMETER` z wyjątkiem systemu Windows 7, gdzie domyślnych ustawień regionalnych serwera zamiast niego jest używana. Jeśli "null1, bieżących ustawień regionalnych jest używany. 
  
-`lSecurityFlags`[in] Flagi do przekazania do `ConnectServerWmi` metody. Wartość zero (0) tego parametru powoduje wywołanie `ConnectServerWmi` zwracanie tylko po nawiązaniu połączenia z serwerem. Może to spowodować, że aplikacja nie odpowiada je nieskończoność Jeśli serwer jest uszkodzona. Prawidłowe wartości to:
+`lSecurityFlags` [in] Flagi do przekazania do `ConnectServerWmi` metody. Wartość zero (0) tego parametru powoduje wywołanie `ConnectServerWmi` zwracanie tylko po nawiązaniu połączenia z serwerem. Może to spowodować, że aplikacja nie odpowiada je nieskończoność Jeśli serwer jest uszkodzona. Prawidłowe wartości to:
 
 | Stała  | Wartość  | Opis  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | Zarezerwowany do użytku wewnętrznego. Nie używać. |
-| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi`Zwraca w ciągu 2 minut lub mniej. |
+| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Zwraca w ciągu 2 minut lub mniej. |
 
-`strAuthority`[in] Nazwa domeny użytkownika. Może mieć następujące wartości:
+`strAuthority` [in] Nazwa domeny użytkownika. Może mieć następujące wartości:
 
 | Wartość | Opis |
 |---------|---------|
@@ -104,7 +97,7 @@ Ta funkcja jest zawijana wywołanie [IWbemLocator::ConnectServer](https://msdn.m
 
  Lokalnego dostępu do domyślnej przestrzeni nazw `strNetworkResource` może być ścieżką prostego obiektu: "root\default" lub "\\.\root\default". Aby uzyskać dostęp do domyślnej przestrzeni nazw na komputerze zdalnym przy użyciu modelu COM lub zgodny z programem Microsoft sieci, dołączyć nazwę komputera: "\\myserver\root\default". Nazwa komputera może również zawierać nazwę DNS lub adres IP. `ConnectServerWmi` Funkcja umożliwia też łączność z komputerami z systemem IPv6 przy użyciu adresu IPv6.
 
-`strUser`nie może być pustym ciągiem. Jeśli zostanie określona domena, w `strAuthority`, go nie może również być uwzględniony w `strUser`, lub funkcja zwraca `WBEM_E_INVALID_PARAMETER`.
+`strUser` nie może być pustym ciągiem. Jeśli zostanie określona domena, w `strAuthority`, go nie może również być uwzględniony w `strUser`, lub funkcja zwraca `WBEM_E_INVALID_PARAMETER`.
 
 
 ## <a name="requirements"></a>Wymagania  
@@ -112,7 +105,7 @@ Ta funkcja jest zawijana wywołanie [IWbemLocator::ConnectServer](https://msdn.m
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

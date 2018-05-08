@@ -1,31 +1,17 @@
 ---
-title: "Walidacja danych użytkownika w formularzach systemu Windows"
-ms.custom: 
+title: Walidacja danych użytkownika w formularzach systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Podczas wprowadzania danych do aplikacji, można sprawdzić poprawność danych przed aplikacja używa go. Może wymagać pewnych pól tekstowych konieczności o zerowej długości, że pole można sformatować jako numer telefonu lub inny typ danych poprawnie sformułowany lub że ciąg nie zawiera znaków niebezpieczne, które mogą służyć do naruszenia zabezpieczeń bazy danych. Formularze systemu Windows udostępnia kilka metod można sprawdzić poprawności danych wejściowych w aplikacji.  
@@ -56,7 +42,7 @@ Podczas wprowadzania danych do aplikacji, można sprawdzić poprawność danych 
  Użycie wiązania danych, danych formantu jest zsynchronizowany ze źródłem danych podczas wykonywania <xref:System.Windows.Forms.Control.Validating> zdarzeń. Jeśli anulujesz <xref:System.Windows.Forms.Control.Validating> zdarzenia, dane nie będą synchronizowane ze źródłem danych.  
   
 > [!IMPORTANT]
->  Jeśli masz walidacji niestandardowej, która ma miejsce po <xref:System.Windows.Forms.Control.Validating> zdarzenia nie wpłynie powiązania danych. Na przykład, jeśli masz kod <xref:System.Windows.Forms.Control.Validated> zdarzenia, które próbuje anulować wiązania danych, wiązania danych nastąpi. W tym przypadku do wykonywania sprawdzania poprawności w <xref:System.Windows.Forms.Control.Validated> zdarzeń, zmień formantu **trybu aktualizacji źródła danych** właściwości (**w obszarze (Databindings)**\\**(zaawansowane)** ) z **OnValidation** do **nigdy**i Dodaj *kontroli*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` kodu sprawdzania poprawności.  
+>  Jeśli masz walidacji niestandardowej, która ma miejsce po <xref:System.Windows.Forms.Control.Validating> zdarzenia nie wpłynie powiązania danych. Na przykład, jeśli masz kod <xref:System.Windows.Forms.Control.Validated> zdarzenia, które próbuje anulować wiązania danych, wiązania danych nastąpi. W tym przypadku do wykonywania sprawdzania poprawności w <xref:System.Windows.Forms.Control.Validated> zdarzeń, zmień formantu **trybu aktualizacji źródła danych** właściwości (**w obszarze (Databindings)**\\ **(zaawansowane)** ) z **OnValidation** do **nigdy**i Dodaj *kontroli*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` kodu sprawdzania poprawności.  
   
 ### <a name="implicit-and-explicit-validation"></a>Sprawdzanie poprawności jawne i niejawne  
  Dlatego po formantu uzyskać sprawdzana poprawność danych? To zależy od użytkownika, dewelopera. Korzystając z niejawnym lub jawnym argumentem weryfikacji, w zależności od potrzeb aplikacji.  

@@ -1,23 +1,15 @@
 ---
 title: Zintegrowane uwierzytelnianie systemu Windows z ochrony rozszerzonej
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a453a2142ee8c3d1ab8d8d00e84e1ead60c46d91
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88170162e4149580d532129666348d226540aced
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Zintegrowane uwierzytelnianie systemu Windows z ochrony rozszerzonej
 Wprowadzono ulepszenia, które mają wpływ na sposób zintegrowane z systemem Windows uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, i powiązanych klas w <xref:System.Net> i związanych z przestrzeni nazw. Dodano obsługę ochrony rozszerzonej zwiększyć bezpieczeństwo.  
@@ -126,7 +118,7 @@ Wprowadzono ulepszenia, które mają wpływ na sposób zintegrowane z systemem W
  <xref:System.Net.Mail.SmtpClient.TargetName%2A> Właściwości można ustawić niestandardowe nazwę SPN, aby używać zintegrowanego uwierzytelniania systemu Windows dla połączeń SMTP.  
   
 ## <a name="extended-protection-for-server-applications"></a>Ochrona rozszerzona na potrzeby aplikacji serwera  
- <xref:System.Net.HttpListener>automatycznie zapewnia mechanizmów sprawdzania poprawności powiązania, przeprowadzania uwierzytelniania HTTP.  
+ <xref:System.Net.HttpListener> automatycznie zapewnia mechanizmów sprawdzania poprawności powiązania, przeprowadzania uwierzytelniania HTTP.  
   
  Najbezpieczniejszą scenariusz jest umożliwienie ochrona rozszerzona na potrzeby prefiksy HTTPS://. W takim przypadku należy ustawić <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> do <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> z <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> ustawioną <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> lub <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, i <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> ustawioną <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> wartość <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> umieszcza <xref:System.Net.HttpListener> w trybie zaostrzonym częściowo podczas <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> odpowiada pełni zaostrzony tryb.  
   

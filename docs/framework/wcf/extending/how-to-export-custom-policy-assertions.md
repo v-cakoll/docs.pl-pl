@@ -1,30 +1,18 @@
 ---
 title: 'Instrukcje: Eksportowanie niestandardowych asercji zasad'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4182007d32ea857aa333542b4df29da18b8062df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: Eksportowanie niestandardowych asercji zasad
-Potwierdzenia zasad opisano wymagania punktu końcowego usługi. Aplikacje usługi mogą używać niestandardowych asercji zasad w metadanych usługi do komunikowania się punkt końcowy, powiązanie lub kontrakt informacje o dostosowaniu do aplikacji klienckiej. Można użyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] można wyeksportować potwierdzenia w wyrażeniach zasad dołączona w powiązania WSDL na punkt końcowy, operacji lub komunikat tematów, w zależności od możliwości lub wymagania komunikują się.  
+Potwierdzenia zasad opisano wymagania punktu końcowego usługi. Aplikacje usługi mogą używać niestandardowych asercji zasad w metadanych usługi do komunikowania się punkt końcowy, powiązanie lub kontrakt informacje o dostosowaniu do aplikacji klienckiej. Windows Communication Foundation (WCF) służy do potwierdzenia w wyrażeniach zasad dołączona w powiązania WSDL na punkt końcowy, operacji lub komunikat tematów, w zależności od możliwości lub wymagania, które komunikują się wyeksportować.  
   
  Niestandardowych asercji zasad są eksportowane z zastosowaniem <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interfejs w <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> i wstawianie element powiązania bezpośrednio do powiązania punktu końcowego usługi lub poprzez zarejestrowanie element powiązania w aplikacji plik konfiguracji. Implementacji eksportu zasad należy dodać potwierdzenia Twojej zasad niestandardowych jako <xref:System.Xml.XmlElement?displayProperty=nameWithType> wystąpienie do odpowiedniego <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> na <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> przekazany <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> metody.  
   

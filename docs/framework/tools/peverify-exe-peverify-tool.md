@@ -1,13 +1,6 @@
 ---
-title: "Peverify.exe (narzędzie PEVerify)"
-ms.custom: 
+title: Peverify.exe (narzędzie PEVerify)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - portable executable files, PEVerify
 - verifying MSIL and metadata
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5acb6da7c68f899daa4144e897e9ec31fcfa868a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e70324192f56214d273ae2a819a9c08be7d49b1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
 Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
@@ -55,7 +45,7 @@ peverify filename [options]
 |**/hresult**|Wyświetla kody błędów w formacie szesnastkowym.|  
 |**/ Ignoruj =** *hex.code* [, *hex.code*]|Ignoruje wymienione kody błędów.|  
 |**/ Ignoruj = @** *responseFile*|Ignoruje kody błędów wymienione w określonym pliku odpowiedzi.|  
-|**/il**|Sprawdza MSIL typu bezpieczeństwa weryfikacji dla metod zaimplementowanych w zestawie określony przez *filename*. Narzędzie zwraca szczegółowy opis każdego problemu znaleziono, chyba że zostanie **/quiet** opcji.|  
+|**/Il**|Sprawdza MSIL typu bezpieczeństwa weryfikacji dla metod zaimplementowanych w zestawie określony przez *filename*. Narzędzie zwraca szczegółowy opis każdego problemu znaleziono, chyba że zostanie **/quiet** opcji.|  
 |**/md**|Przeprowadza weryfikację metadanych dla zestawu określony przez *filename*. Oznacza to przejrzenie pełnej struktury metadanych w pliku i raportowanie wszystkich napotkanych problemów.|  
 |**/nologo**|Pomija wyświetlanie informacji o wersji i prawach autorskich produktu.|  
 |**/nosymbols**|W wersji 2.0 .NET Framework wyłącza numery wierszy w celu zapewnienia zgodności z poprzednimi wersjami.|  

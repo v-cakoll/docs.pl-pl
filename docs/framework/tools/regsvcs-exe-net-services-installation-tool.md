@@ -1,13 +1,6 @@
 ---
-title: "Regsvcs.exe (Narzędzie instalacji usług .NET)"
-ms.custom: 
+title: Regsvcs.exe (Narzędzie instalacji usług .NET)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Regsvcs.exe
 - .NET Services Installation tool
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bfe7c3e34c2ceaf01f89c1e54f930991ee7e0a2b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a13912d006b522e86997fc7850befb996db4b7bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Narzędzie instalacji usług .NET)
 Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:  
@@ -59,7 +49,7 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
 |**/appdir:** *ścieżki*|Określa katalog główny aplikacji.|  
 |**elementów/appname:** *applicationName*|Określa nazwę aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
 |**/c**|Tworzy aplikację docelową.|  
-|**/componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
+|**componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
 |**/exapp**|Określa, że narzędzie ma oczekiwać istniejącej aplikacji.|  
 |**/extlb**|Używa istniejącej biblioteki typów.|  
 |**/fc**|Znajduje lub tworzy aplikację docelową.|  

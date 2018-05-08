@@ -1,34 +1,22 @@
 ---
 title: 'Instrukcje: Bezpieczne punkty końcowe metadanych'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: 13
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50a62366063123de9e1773b2926f79b76a1b1c3b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Instrukcje: Bezpieczne punkty końcowe metadanych
 Metadane usługi mogą zawierać poufne informacje o aplikacji, która złośliwy użytkownik może wykorzystać. Konsumentów usługi może wymagać mechanizm bezpiecznego uzyskiwania metadanych dotyczących usługi. W związku z tym czasami jest niezbędne do opublikowania metadanych przy użyciu bezpiecznego punktu końcowego.  
   
- Punkty końcowe metadanych są zwykle chronione przy użyciu mechanizmów zabezpieczeń standardowe zdefiniowane w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczania punkty końcowe aplikacji. (Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Punkty końcowe metadanych zazwyczaj są zabezpieczone za pomocą mechanizmów zabezpieczeń standardowe zdefiniowane w systemie Windows Communication Foundation (WCF) do zabezpieczania punkty końcowe aplikacji. (Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  W tym temacie przedstawiono kroki, aby utworzyć punkt końcowy zabezpieczone przez certyfikat Secure Sockets Layer (SSL) lub innymi słowy, punkt końcowy HTTPS.  
   

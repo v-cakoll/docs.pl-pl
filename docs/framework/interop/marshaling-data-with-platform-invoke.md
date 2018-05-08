@@ -1,14 +1,6 @@
 ---
 title: Marshaling danych w wywołaniu platformy
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling danych w wywołaniu platformy
 Aby wywoływać funkcje wyeksportowane z biblioteki niezarządzane, aplikacji programu .NET Framework wymaga prototypu funkcji w kodzie zarządzanym, który reprezentuje niezarządzanej funkcji. Aby utworzyć prototyp, który umożliwia platformie wywołania do organizowania danych prawidłowo, należy wykonać następujące czynności:  
@@ -61,7 +49,7 @@ Aby wywoływać funkcje wyeksportowane z biblioteki niezarządzane, aplikacji pr
 |**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji ze standardem Unicode.|  
 |**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji ze standardem Unicode.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32-bitowy|  
-|**DOUBLE**|**O podwójnej precyzji**|<xref:System.Double?displayProperty=nameWithType>|64-bitowy|  
+|**O PODWÓJNEJ PRECYZJI**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64-bitowy|  
   
  Dla odpowiednich typów w [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# i C++, zobacz [wprowadzenie do Biblioteka klas programu .NET Framework](../../../docs/standard/class-library-overview.md).  
   

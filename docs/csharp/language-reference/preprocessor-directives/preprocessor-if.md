@@ -1,22 +1,16 @@
 ---
-title: "#Jeśli dyrektywy preprocesora (odwołanie w C#)"
+title: '#Jeśli dyrektywy preprocesora (odwołanie w C#)'
 ms.date: 02/13/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 710452d6fddea239cb2e65901fd5ce56d6be699f
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
 
@@ -28,7 +22,7 @@ Gdy wystąpi kompilatora C# `#if` dyrektywy, a następnie po pewnym czasie przez
 #endif
 ```
 
-Można używać operatorów [ == ](../operators/equality-comparison-operator.md) (równości) i [! =](../operators/not-equal-operator.md) (nierówność) tylko do testowania [true](../keywords/true.md) lub [false](../keywords/false.md). PRAWDA oznacza, że jest zdefiniowany symbol. Instrukcja `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można używać operatorów [ && ](../operators/conditional-and-operator.md) (a), [&#124; &#124;](../operators/conditional-or-operator.md) (lub) i [!](../operators/logical-negation-operator.md) (nie) do oceny, czy zdefiniowano wiele symboli. Można także grupować symbole i operatory w nawiasach.
+Można używać operatorów [ == ](../operators/equality-comparison-operator.md) (równości) i [! =](../operators/not-equal-operator.md) (nierówność) tylko do testowania [true](../keywords/true.md) lub [false](../keywords/false.md). PRAWDA oznacza, że jest zdefiniowany symbol. Instrukcja `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można używać operatorów [ && ](../operators/conditional-and-operator.md) (a), [ &#124; &#124; ](../operators/conditional-or-operator.md) (lub) i [!](../operators/logical-negation-operator.md) (nie) do oceny, czy zdefiniowano wiele symboli. Można także grupować symbole i operatory w nawiasach.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -38,7 +32,7 @@ Warunkowe początku dyrektywy z `#if` dyrektywa musi być jawnie zakończona z `
 
 `#define` Umożliwia zdefiniowanie symbolu. Za pomocą symbolu wyrażenie przekazane do `#if` dyrektywy, wyrażenie daje w wyniku `true`.
 
-Możesz również definiować symbol [/ define](../compiler-options/define-compiler-option.md) — opcja kompilatora. Można nie zdefiniowany symbol [#undef](preprocessor-undef.md).
+Możesz również zdefiniować symbol za pomocą opcji kompilatora [/define](../compiler-options/define-compiler-option.md). Aby anulować definicję symbolu, użyj dyrektywy [#undef](preprocessor-undef.md).
 
 Symbol, który definiuje z `/define` lub `#define` nie koliduje to z zmienna o takiej samej nazwie. To, że nazwa zmiennej nie powinien zostać przekazany do dyrektywy preprocesora i symbol będzie możliwe tylko w dyrektywie preprocesora.
 

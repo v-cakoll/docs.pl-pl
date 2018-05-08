@@ -1,38 +1,24 @@
 ---
 title: 'Instrukcje: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c0022e6ce3a63c1f497eeee82ca959cec1046cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Instrukcje: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego
-Jedna funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest możliwość tworzenia usługi, który korzysta ze wzorca komunikacji dupleksowej. Ten wzorzec umożliwia usługi do komunikacji z klientem za pośrednictwem wywołania zwrotnego. W tym temacie przedstawiono kroki, aby utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta w klasie klienta, który implementuje interfejs wywołania zwrotnego.  
+Jedna z funkcji Windows Communication Foundation (WCF) jest możliwość tworzenia usługi, który korzysta ze wzorca komunikacji dupleksowej. Ten wzorzec umożliwia usługi do komunikacji z klientem za pośrednictwem wywołania zwrotnego. W tym temacie przedstawiono kroki, aby utworzyć klienta WCF w klasie klienta, który implementuje interfejs wywołania zwrotnego.  
   
  Dwa powiązania udostępnia adres IP klienta do usługi. Klienta należy użyć zabezpieczeń, aby upewnić się, że go tylko łączy się z usługami go relacji zaufania.  
   
- Samouczek dotyczący tworzenia podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi i klienta, zobacz [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md).  
+ Samouczek dotyczący tworzenia podstawowej usługi WCF i klienta, zobacz [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md).  
   
 ### <a name="to-access-a-duplex-service"></a>Dostęp do usługi dupleksu  
   
@@ -80,7 +66,7 @@ Jedna funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest możl
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  Utwórz wystąpienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta przy użyciu konstruktora, który wymaga <xref:System.ServiceModel.InstanceContext> obiektu. Drugi parametr konstruktora jest nazwa punktu końcowego znalezione w pliku konfiguracji.  
+6.  Utwórz wystąpienie klienta WCF, za pomocą konstruktora, który wymaga <xref:System.ServiceModel.InstanceContext> obiektu. Drugi parametr konstruktora jest nazwa punktu końcowego znalezione w pliku konfiguracji.  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -91,7 +77,7 @@ Jedna funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest możl
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  Wywołanie metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta zgodnie z potrzebami.  
+7.  Wywołanie metody klienta WCF, zgodnie z wymaganiami.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykładowy kod przedstawia sposób tworzenia klasy klienta, który uzyskuje dostęp do kontraktu dwukierunkowego.  

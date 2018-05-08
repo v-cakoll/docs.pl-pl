@@ -1,17 +1,12 @@
 ---
 title: 'Wyjątki: try...with — Wyrażenie (F#)'
 description: 'Dowiedz się, jak użyć F # "try... with" wyrażenia dla obsługi wyjątków.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5e6e16d5fba88841d567512ba7e08a2e8d17bdba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>Wyjątki: try...with — Wyrażenie
 

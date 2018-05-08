@@ -1,24 +1,12 @@
 ---
 title: Zasady autoryzacji
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 W tym przykładzie pokazano, jak wdrożyć zasady autoryzacji oświadczeń i skojarzona usługa niestandardowych Menedżera autoryzacji. Jest to przydatne, sprawdza oparta na oświadczeniach dostępu do operacji usługi i przed kontroli dostępu umożliwia usługi przyznaje wywołującego pewne prawa. W tym przykładzie pokazano proces dodawania oświadczeń, a także proces ten kontrolę dostępu przed ukończone zestaw oświadczeń. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i zaszyfrowane. Domyślnie z `wsHttpBinding` powiązanie, nazwę użytkownika i hasło podane przez klienta są używane do logowania się do prawidłowego konta systemu Windows NT. W tym przykładzie pokazano, jak korzystać z niestandardowego <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` do uwierzytelniania klienta. Ponadto w tym przykładzie pokazano klienta uwierzytelniania w usłudze przy użyciu certyfikatu X.509. Ten przykład przedstawia implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> i <xref:System.ServiceModel.ServiceAuthorizationManager>, które między nimi udzielić dostępu do określonych metod usługi dla określonych użytkowników. Ten przykład jest oparty na [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md), ale pokazano, jak wykonać przekształcania oświadczeń, przed <xref:System.ServiceModel.ServiceAuthorizationManager> wywoływane.  
@@ -292,9 +280,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia bogate modelu opartego na oświadczeniach do wykonywania kontroli dostępu. <xref:System.ServiceModel.ServiceAuthorizationManager> Obiekt jest używany do wykonywania kontroli dostępu i ustalić, czy oświadczeń skojarzone z klientami spełniają wymagania niezbędne do uzyskania dostępu do metody usługi.  
+ Windows Communication Foundation (WCF) zapewnia zaawansowane modelu opartego na oświadczeniach do wykonywania kontroli dostępu. <xref:System.ServiceModel.ServiceAuthorizationManager> Obiekt jest używany do wykonywania kontroli dostępu i ustalić, czy oświadczeń skojarzone z klientami spełniają wymagania niezbędne do uzyskania dostępu do metody usługi.  
   
- Dla celów demonstracyjnych, w tym przykładzie pokazano implementacja <xref:System.ServiceModel.ServiceAuthorizationManager> implementującej <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodę, aby zezwolić na dostęp użytkownika do metod na podstawie oświadczeń z którego wartość jest akcja http://example.com/claims/allowedoperation typu Identyfikator URI operacji, który może zostać wywołana.  
+ Dla celów demonstracyjnych, w tym przykładzie pokazano implementacja <xref:System.ServiceModel.ServiceAuthorizationManager> implementującej <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodę, aby zezwolić na dostęp użytkownika do metod na podstawie oświadczeń typu http://example.com/claims/allowedoperation którego wartość jest identyfikatorem URI akcji działania, który jest może zostać wywołana.  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  

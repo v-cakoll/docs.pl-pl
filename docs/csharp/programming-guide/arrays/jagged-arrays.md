@@ -1,21 +1,15 @@
 ---
-title: "Tablice nieregularne (Przewodnik programowania w języku C#)"
+title: Tablice nieregularne (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f74eaf5334e8e2198f7a058717a4eb2ff0c1e775
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Tablice nieregularne (Przewodnik programowania w języku C#)
 Nieregularna tablica to ta, której elementy są tablicami. Elementy tablicy nieregularnej mogą być różne wymiary i rozmiary. Tablicy nieregularnej jest czasami nazywany "tablicy tablic." Poniższe przykłady pokazują, jak zadeklarować, zainicjować i tablice nieregularne dostępu.  

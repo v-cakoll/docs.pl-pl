@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugging::OpenVirtualProcess — Metoda"
-ms.custom: 
+title: ICLRDebugging::OpenVirtualProcess — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess — Metoda
 Pobiera interfejs ICorDebugProcess, który odpowiada wspólny języka wspólnego (CLR) moduł załadowany w procesie.  
@@ -85,9 +73,9 @@ HRESULT OpenVirtualProcess(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pDataTarget`jest `null`.|  
+|E_POINTER|`pDataTarget` jest `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[Iclrdebugginglibraryprovider —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) wywołania zwrotnego zwraca błąd lub nie ma prawidłowego dojścia.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`nie implementuje interfejsów docelowy wymagane dane dla tej wersji środowiska uruchomieniowego.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` nie implementuje interfejsów docelowy wymagane dane dla tej wersji środowiska uruchomieniowego.|  
 |CORDBG_E_NOT_CLR|Wskazany modułu nie jest modułem CLR. Ta wartość HRESULT jest także zwracany, jeśli nie można wykryć modułu CLR, ponieważ uszkodzona pamięć, moduł nie jest dostępna lub wersja środowiska CLR jest nowsza niż wersja podkładki.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Ta wersja środowiska uruchomieniowego nie obsługuje ten model debugowania. Obecnie model debugowania nie jest obsługiwany przez wersje CLR przed [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Parametr wyjściowy nadal jest ustawione na prawidłową wartość po tym błędzie.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Wersja środowiska CLR jest nowsza niż wersja, ten debuger oświadczenia do obsługi. `pwszVersion` Parametr wyjściowy nadal jest ustawione na prawidłową wartość po tym błędzie.|  
@@ -105,7 +93,7 @@ HRESULT OpenVirtualProcess(
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

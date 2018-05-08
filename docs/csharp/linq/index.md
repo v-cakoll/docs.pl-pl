@@ -1,20 +1,13 @@
 ---
 title: Język zapytania zintegrowanym (LINQ)
 description: Wprowadza języka zintegrowane zapytania (LINQ) w języku C#
-keywords: .NET, .NET core, LINQ, C#
-author: BillWagner
-ms.author: wiwagn
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: c4c26e2b7b0693ec940958a9b7d2d306001090e7
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4afcc33f39d3b71f97bca358f7c6f8bc57439767
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="language-integrated-query-linq"></a>Język zapytania zintegrowanym (LINQ)
 
@@ -42,7 +35,7 @@ Poniższy przykład przedstawia operację pełnej kwerendy. Ukończenia operacji
   
 -   Zapytanie niektóre operacje, takie jak <xref:System.Linq.Enumerable.Count%2A> lub <xref:System.Linq.Enumerable.Max%2A>, nie generują braku klauzuli wyrażenia zapytania równoważne oraz w związku z tym muszą być wyrażone jako wywołania metody. Składnia metody można łączyć z składnia zapytania na różne sposoby. Aby uzyskać więcej informacji, zobacz [składnia zapytania i metody w technologii LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
--   Wyrażenia zapytania mogą być kompilowane na drzewa wyrażeń lub do delegatów, w zależności od typu dotyczy zapytanie. <xref:System.Collections.Generic.IEnumerable%601>zapytania są kompilowane do delegatów. <xref:System.Linq.IQueryable>i <xref:System.Linq.IQueryable%601> zapytania są kompilowane na drzewa wyrażeń. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](../expression-trees.md).  
+-   Wyrażenia zapytania mogą być kompilowane na drzewa wyrażeń lub do delegatów, w zależności od typu dotyczy zapytanie. <xref:System.Collections.Generic.IEnumerable%601> zapytania są kompilowane do delegatów. <xref:System.Linq.IQueryable> i <xref:System.Linq.IQueryable%601> zapytania są kompilowane na drzewa wyrażeń. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](../expression-trees.md).  
 
 ## <a name="next-steps"></a>Następne kroki
 

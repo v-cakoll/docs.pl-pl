@@ -21,14 +21,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>++ — Operator (odwołanie w C#)
-Operator inkrementacji (`++`) zwiększa wartośc jego operandu o 1. Operator inkrementacji może występować przed lub po jego argumencie: `++variable` i `variable++`.  
+Operator inkrementacji (`++`) zwieksza wartosc argumentu operacji o 1. Operator inkrementacji moze wystepowac przed argumentem operacji lub po nim: `++variable` i `variable++`.
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszą formą jest inkrementacja prefiksowa. Wynikiem tej operacji jest wartość operandu po zwiększeniu.  
+ Pierwsza forma to inkrementacja prefiksowa. Wynikiem tej operacji jest wartosc argumentu po zwiekszeniu.
   
-Drugą formą jest inkrementacja postfiksowa. Wynikiem tej operacji jest wartość operandu przed jej zwiększeniem.  
+Druga forma to inkrementacja odwrotna. Wynikiem tej operacji jest wartosc argumentu przed zwiekszeniem. 
   
- Typy numeryczne i wyliczenia mają wstępnie zdefiniowane operatory inkrementacji. W typach definiowanych przez użytkownika można przeciążać operator `++`. Operacje na typach całkowitych w wyliczeniach są zazwyczaj dozwolone.  
+ Typy numeryczne i wyliczenia maja wstepnie zdefiniowane operatory inkrementacji. W typach definiowanych przez uzytkownika mozna przeciazac operator `++`. Operacje na typach calkowitych w wyliczeniach sa zazwyczaj dozwolone.
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  

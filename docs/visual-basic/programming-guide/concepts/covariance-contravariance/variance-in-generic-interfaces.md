@@ -1,39 +1,29 @@
 ---
 title: Wariancje w interfejsach (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d05ccdc97efd5dd193bbbe0d15dd227ec71910d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Wariancje w interfejsach (Visual Basic)
 .NET framework 4 wprowadzono obsługę wariancji w kilku interfejsach istniejących. Obsługa wariancję umożliwia niejawna konwersja klas implementujących tych interfejsów. Następujące interfejsy są teraz wariant:  
   
--   <xref:System.Collections.Generic.IEnumerable%601>(T jest kowariantny)  
+-   <xref:System.Collections.Generic.IEnumerable%601> (T jest kowariantny)  
   
--   <xref:System.Collections.Generic.IEnumerator%601>(T jest kowariantny)  
+-   <xref:System.Collections.Generic.IEnumerator%601> (T jest kowariantny)  
   
--   <xref:System.Linq.IQueryable%601>(T jest kowariantny)  
+-   <xref:System.Linq.IQueryable%601> (T jest kowariantny)  
   
--   <xref:System.Linq.IGrouping%602>(`TKey` i `TElement` są kowariantnego)  
+-   <xref:System.Linq.IGrouping%602> (`TKey` i `TElement` są kowariantnego)  
   
--   <xref:System.Collections.Generic.IComparer%601>(T jest kontrawariantny)  
+-   <xref:System.Collections.Generic.IComparer%601> (T jest kontrawariantny)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>(T jest kontrawariantny)  
+-   <xref:System.Collections.Generic.IEqualityComparer%601> (T jest kontrawariantny)  
   
--   <xref:System.IComparable%601>(T jest kontrawariantny)  
+-   <xref:System.IComparable%601> (T jest kontrawariantny)  
   
  Kowariancja zezwala na metodę typem zwracanym bardziej pochodny niż określone przez parametr typu ogólnego interfejsu. Aby zilustrować funkcji KOWARIANCJA, należy wziąć pod uwagę następujące interfejsy ogólne: `IEnumerable(Of Object)` i `IEnumerable(Of String)`. `IEnumerable(Of String)` Interfejsu nie dziedziczy `IEnumerable(Of Object)` interfejsu. Jednak `String` typ dziedziczy `Object` typu, a w niektórych przypadkach można przypisać obiekty te interfejsy do siebie. Przedstawiono to w poniższym przykładzie kodu.  
   

@@ -1,22 +1,14 @@
 ---
 title: Właściwość lub wywołanie metody nie może zawierać odwołania do obiektu prywatnego jako do argumentu lub jako do wartości zwracanej
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cce2bc67beb7e4ac0664b5b7240f5eb3ea0204f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f36526eab1bc0964bf89398b6e0f3e74d09fdc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>Właściwość lub wywołanie metody nie może zawierać odwołania do obiektu prywatnego jako do argumentu lub jako do wartości zwracanej
 Wśród możliwych przyczyn tego błędu są:  
@@ -34,4 +26,4 @@ Wśród możliwych przyczyn tego błędu są:
 1.  Usuń odwołanie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)

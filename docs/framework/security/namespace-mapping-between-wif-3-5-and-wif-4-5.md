@@ -1,24 +1,14 @@
 ---
-title: "Namespace mapowanie między WIF 3.5 i WIF 4.5"
-ms.custom: 
+title: Namespace mapowanie między WIF 3.5 i WIF 4.5
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b8d27385a08c58c61983315da41f27f4dcb29368
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a120347d20de5b881ccb60d03da482856d9e68a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>Namespace mapowanie między WIF 3.5 i WIF 4.5
 Począwszy od platformy .NET 4.5, Windows Identity Foundation (WIF) zostało pełni zintegrowane programu .NET Framework. Integracja ta powstałe zmiany nazwy i niektóre konsolidacji WIF obszary nazw i powierzchni interfejsu API. Ten temat zawiera instrukcje oraz ogólne mapowania między przestrzenie nazw WIF 3.5 i przestrzenie nazw WIF 4.5. Nie ma być wyczerpujące, ale raczej Podaj ogólne informacje o tym, gdzie można znaleźć klasy WIF 3.5 znanych w wersji WIF 4.5. Aby uzyskać szczegółowe informacje o różnicach między WIF 3.5 i WIF 4.5, zobacz [What's New in Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md). Aby uzyskać wskazówki dotyczące migracji aplikacji utworzony za pomocą WIF 3.5 WIF 4.5, zobacz [wskazówki dotyczące migrowania aplikacji utworzony za pomocą programu WIF 3.5 WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -34,7 +24,7 @@ Począwszy od platformy .NET 4.5, Windows Identity Foundation (WIF) zostało pe�
 |**WIF 3.5 Namespace**|**WIF 4.5 Namespace**|**Komentarze**|  
 |-|-|-|  
 |`Microsoft.IdentityModel`|<xref:System.IdentityModel?displayProperty=nameWithType>|-Nie zaimplementowano większość klas, które reprezentują stałe.<br />-Klasy, które są używane do tworzenia usługi tokenu zabezpieczeń zostały przeniesione z `Microsoft.IdentityModel.SecurityTokenService` do <xref:System.IdentityModel?displayProperty=nameWithType>.<br />-Klas w `Microsoft.IdentityModel.Threading` zostały przeniesione do <xref:System.IdentityModel?displayProperty=nameWithType>.<br />- `ExceptionMapper` i `MruSecurityTokenCache` klasy nie jest zaimplementowana.|  
-|`Microsoft.IdentityModel.Claims`|<xref:System.Security.Claims?displayProperty=nameWithType>|- `IClaimsPrincipal` i `IClaimsIdentity` interfejsy nie są zaimplementowane w wersji WIF 4.5. Zamiast tego <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> i <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> są teraz klas podstawowych, z których większość .NET główna i pochodzi z klasy tożsamości. Oznacza to, nie jest konieczne specjalne oświadczenia podmiotu zabezpieczeń i tożsamość klas takich jak `Microsoft.IdentityModel.Claims.WindowsClaimsPrincipal` i `Microsoft.IdentityModel.Claims.WindowsClaimsIdentity` w wersji WIF 4.5, użyj <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> i <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> zamiast tego. To samo dotyczy dla innych dla innych specjalne oświadczenia podmiotu zabezpieczeń i tożsamości klasy, które były dostępne w programie WIF 3.5.<br />- `Microsoft.IdentityModel.Claims.ClaimsCollection` Klasy nie jest zaimplementowana w wersji WIF 4.5. Zamiast tego kolekcji oświadczenia są widoczne jako wyliczalny kolekcji tego typu <xref:System.Security.Claims.Claim?displayProperty=nameWithType>.<br />-   <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>i <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> podania metod, które obecnie obsługują w pełni LINQ.|  
+|`Microsoft.IdentityModel.Claims`|<xref:System.Security.Claims?displayProperty=nameWithType>|- `IClaimsPrincipal` i `IClaimsIdentity` interfejsy nie są zaimplementowane w wersji WIF 4.5. Zamiast tego <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> i <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> są teraz klas podstawowych, z których większość .NET główna i pochodzi z klasy tożsamości. Oznacza to, nie jest konieczne specjalne oświadczenia podmiotu zabezpieczeń i tożsamość klas takich jak `Microsoft.IdentityModel.Claims.WindowsClaimsPrincipal` i `Microsoft.IdentityModel.Claims.WindowsClaimsIdentity` w wersji WIF 4.5, użyj <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> i <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> zamiast tego. To samo dotyczy dla innych dla innych specjalne oświadczenia podmiotu zabezpieczeń i tożsamości klasy, które były dostępne w programie WIF 3.5.<br />- `Microsoft.IdentityModel.Claims.ClaimsCollection` Klasy nie jest zaimplementowana w wersji WIF 4.5. Zamiast tego kolekcji oświadczenia są widoczne jako wyliczalny kolekcji tego typu <xref:System.Security.Claims.Claim?displayProperty=nameWithType>.<br />-   <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> i <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> podania metod, które obecnie obsługują w pełni LINQ.|  
 |`Microsoft.IdentityModel.Configuration`|<xref:System.IdentityModel.Configuration?displayProperty=nameWithType>|Niektóre elementy i klasy przeszły zmiany nazwy i niektóre zostały usunięte w wersji WIF 4.5; na przykład `Microsoft.IdentityModel.Configuraiton.ServiceConfiguration` jest teraz <xref:System.IdentityModel.Configuration.IdentityConfiguration?displayProperty=nameWithType>.|  
 |`Microsoft.IdentityModel.Protocols`|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|-|  
 |`Microsoft.IdentityModel.Protocols.WSFederation`|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|-|  

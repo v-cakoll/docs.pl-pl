@@ -1,28 +1,19 @@
 ---
-title: "Wyrażenia lambda nie są prawidłowe w pierwszym wyrażeniu &#39; Wybierz przypadek &#39; — Instrukcja"
+title: Wyrażenia lambda nie są prawidłowe w pierwszym wyrażeniu &#39;Select Case&#39; — instrukcja
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Wyrażenia lambda nie są prawidłowe w pierwszym wyrażeniu &#39; Wybierz przypadek &#39; — Instrukcja
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Wyrażenia lambda nie są prawidłowe w pierwszym wyrażeniu &#39;Select Case&#39; — instrukcja
 Nie można użyć wyrażenia lambda wyrażenia testu w `Select Case` instrukcji. Definicje wyrażenia lambda zwrócić funkcje i wyrażenie testu `Select Case` instrukcja musi być typem podstawowym danych.  
   
  Poniższy kod przyczyny tego błędu:  
@@ -50,5 +41,5 @@ End Select
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [IF... Następnie... Else — instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Wybierz... Case-instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md)
+ [If...Then...Else, instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [Select...Case, instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md)

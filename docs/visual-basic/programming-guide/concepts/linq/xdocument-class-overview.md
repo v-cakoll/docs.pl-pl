@@ -1,22 +1,12 @@
 ---
-title: "Przegląd klasy XDocument (Visual Basic)"
-ms.custom: 
+title: Przegląd klasy XDocument (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 41b09335ae124ac290d8cd51afda71dfd935b7ff
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 98ab095d67add2375eaf912ade71114c022b2ebb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>Przegląd klasy XDocument (Visual Basic)
 W tym temacie przedstawiono <xref:System.Xml.Linq.XDocument> klasy.  
@@ -26,12 +16,12 @@ W tym temacie przedstawiono <xref:System.Xml.Linq.XDocument> klasy.
   
  Należy pamiętać, że należy utworzyć <xref:System.Xml.Linq.XDocument> obiekty, jeśli są wymagane określone funkcje udostępniane przez <xref:System.Xml.Linq.XDocument> klasy. W wielu sytuacjach może współpracować bezpośrednio z <xref:System.Xml.Linq.XElement>. Praca bezpośrednio z <xref:System.Xml.Linq.XElement> jest prostszy model programowania.  
   
- <xref:System.Xml.Linq.XDocument>pochodną <xref:System.Xml.Linq.XContainer>. W związku z tym może zawierać węzłów podrzędnych. Jednak <xref:System.Xml.Linq.XDocument> obiekty mogą mieć tylko jeden element podrzędny <xref:System.Xml.Linq.XElement> węzła. Ta właściwość odzwierciedla standardu XML, że może istnieć tylko jeden element główny dokumentu XML.  
+ <xref:System.Xml.Linq.XDocument> pochodną <xref:System.Xml.Linq.XContainer>. W związku z tym może zawierać węzłów podrzędnych. Jednak <xref:System.Xml.Linq.XDocument> obiekty mogą mieć tylko jeden element podrzędny <xref:System.Xml.Linq.XElement> węzła. Ta właściwość odzwierciedla standardu XML, że może istnieć tylko jeden element główny dokumentu XML.  
   
 ## <a name="components-of-xdocument"></a>Składniki XDocument  
  <xref:System.Xml.Linq.XDocument> Może zawierać następujące elementy:  
   
--   Jeden <xref:System.Xml.Linq.XDeclaration> obiektu. <xref:System.Xml.Linq.XDeclaration>Umożliwia określenie odpowiednich części deklaracji XML: Wersja XML, kodowania dokumentu, oraz czy dokument XML jest autonomiczny.  
+-   Jeden <xref:System.Xml.Linq.XDeclaration> obiektu. <xref:System.Xml.Linq.XDeclaration> Umożliwia określenie odpowiednich części deklaracji XML: Wersja XML, kodowania dokumentu, oraz czy dokument XML jest autonomiczny.  
   
 -   Jeden <xref:System.Xml.Linq.XElement> obiektu. To jest węzeł główny dokumentu XML.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania"
-ms.custom: 
+title: 'Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b87c46b2182884f90b427498b9af696d14acac96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania
 Podczas tworzenia niestandardowego formantu będzie często jest konieczne do debugowania swojego zachowania w czasie projektowania. Jest to szczególnie w przypadku tworzenia niestandardowych projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie funkcje systemu Windows formularze kontroli czy ma korzystać z programu Visual Studio czasu projektowania](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  

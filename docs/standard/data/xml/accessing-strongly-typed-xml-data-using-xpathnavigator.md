@@ -1,29 +1,18 @@
 ---
-title: "Uzyskiwanie dostępu do silnie typu danych XML przy użyciu parametrem XPathNavigator"
-ms.custom: 
+title: Uzyskiwanie dostępu do silnie typu danych XML przy użyciu parametrem XPathNavigator
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 040a137f9b7c26c4484a69313e1f405699a19b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do silnie typu danych XML przy użyciu parametrem XPathNavigator
 Jako wystąpienie modelu danych XPath 2.0 <xref:System.Xml.XPath.XPathNavigator> klasy może zawierać jednoznacznie danych, który jest mapowany na typowych języka wspólnego (CLR). Zgodnie z modelem danych XPath 2.0 tylko elementy i atrybuty mogą zawierać silnie typizowane dane. <xref:System.Xml.XPath.XPathNavigator> Klasy zawiera mechanizmy do uzyskiwania dostępu do danych w ramach <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu jako silnie typizowane dane, a także mechanizmy do konwertowania z jednego typu danych.  

@@ -1,13 +1,6 @@
 ---
-title: "Certmgr.exe (Menedżer certyfikatów)"
-ms.custom: 
+title: Certmgr.exe (Menedżer certyfikatów)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c303a9d91d12305bd8be4e111aaa8d6ac13eb77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96edfd0f94240d51a224f4522573a450ab027330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Menedżer certyfikatów)
 Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listami zaufania certyfikatów (CTL) oraz listami odwołania certyfikatów (CRL).  
@@ -71,9 +61,9 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
 |**/e** *encodingType*|Określa typ kodowania certyfikatu. Wartość domyślna to `X509_ASN_ENCODING`.|  
 |**/f** *wartość elementu dwFlags*|Określa flagę otwarcia magazynu. Jest to *wartość elementu dwFlags* parametr przekazany do **wywołanie funkcji CertOpenStore**. Wartość domyślna to CERT_SYSTEM_STORE_CURRENT_USER. Ta opcja jest uznawany za tylko wtedy, gdy **/y** jest używana opcja.|  
 |**/h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/n***nam*|Określa wspólną nazwę certyfikatu do dodania, usunięcia lub zapisania. Tej opcji można używać tylko z certyfikatami; nie można używać jej z listami CTL i CRL.|  
+|**/n** *nam*|Określa wspólną nazwę certyfikatu do dodania, usunięcia lub zapisania. Tej opcji można używać tylko z certyfikatami; nie można używać jej z listami CTL i CRL.|  
 |**/ put**|Zapisuje certyfikat X.509, listę CTL lub CRL z magazynu certyfikatów w pliku. Plik jest zapisywany w formacie X.509. Można użyć **/7** opcję z **/put** opcję, aby zapisać plik w formacie PKCS #7. **/Put** opcja musi następować albo **/c**, **/CTL**, lub **/CRL**. **/All** nie można użyć opcji **/put**.|  
-|**/r** *lokalizacji*|Określa lokalizację w rejestrze magazynu systemowego. Ta opcja jest uznawany za tylko w przypadku określenia **/s** opcji. *Lokalizacja* musi mieć jedną z następujących czynności:<br /><br /> -   `currentUser`Wskazuje, że magazyn certyfikatów jest w kluczu HKEY_CURRENT_USER. Domyślnie włączone.<br />-   `localMachine`Wskazuje, że magazyn certyfikatów jest w kluczu HKEY_LOCAL_MACHINE.|  
+|**/r** *lokalizacji*|Określa lokalizację w rejestrze magazynu systemowego. Ta opcja jest uznawany za tylko w przypadku określenia **/s** opcji. *Lokalizacja* musi mieć jedną z następujących czynności:<br /><br /> -   `currentUser` Wskazuje, że magazyn certyfikatów jest w kluczu HKEY_CURRENT_USER. Domyślnie włączone.<br />-   `localMachine` Wskazuje, że magazyn certyfikatów jest w kluczu HKEY_LOCAL_MACHINE.|  
 |**/ s**|Wskazuje, że magazyn certyfikatów jest magazynem systemowym. Jeśli ta opcja nie zostanie określony, magazynie jest uważany za **StoreFile**.|  
 |**/SHA1** *sha1Hash*|Określa skrót SHA1 certyfikatu, listy CTL lub CRL do dodania, usunięcia lub zapisania.|  
 |**/v**|Określa tryb pełny; wyświetla szczegółowe informacje dotyczące certyfikatu oraz list CTL i CRL. Nie można użyć tej opcji z **/ add**, **/del**, lub **/put** opcje.|  

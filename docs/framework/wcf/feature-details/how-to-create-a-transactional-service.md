@@ -1,26 +1,12 @@
 ---
 title: 'Instrukcje: Tworzenie usługi transakcyjnej'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d59c0b96b766f0692c7b84a02deed55e32dc655a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Instrukcje: Tworzenie usługi transakcyjnej
 W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej i użycie transakcji inicjowanych przez klienta do koordynowania operacji usługi.  
@@ -104,7 +90,7 @@ W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Obsługa wielu protokoły transakcji  
   
-1.  Aby uzyskać optymalną wydajność, należy używać protokołu OleTransactions dla scenariuszy obejmujących klienta i usługi napisane przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Jednak protokołu WS-AtomicTransaction (WS-AT) jest przydatne w scenariuszach, gdy wymagane jest współdziałanie z stosy protokołu innych firm. Można skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, aby zaakceptować oba protokoły przez zapewnienie wiele punktów końcowych z odpowiednich powiązań protokołem, jak pokazano w poniższych Przykładowa konfiguracja.  
+1.  Aby uzyskać optymalną wydajność należy używać protokołu OleTransactions dla scenariuszy obejmujących klienta i usługi napisane przy użyciu usługi Windows Communication Foundation (WCF). Jednak protokołu WS-AtomicTransaction (WS-AT) jest przydatne w scenariuszach, gdy wymagane jest współdziałanie z stosy protokołu innych firm. Można skonfigurować usługi WCF do akceptowania obu tych protokołów podając odpowiednie protokołem powiązań, wiele punktów końcowych, jak pokazano w poniższych Przykładowa konfiguracja.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -139,7 +125,7 @@ W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>Kontrolowanie ukończenia transakcji  
   
-1.  Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] operacji automatycznie realizacji transakcji, jeśli nie nieobsługiwane wyjątki są zgłaszane. To zachowanie można zmienić za pomocą <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwości i <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> metody. Podczas operacji jest wymagany w tej samej transakcji, jak inna operacja (na przykład operację debetowa i środki), można wyłączyć zachowanie funkcji autocomplete przez ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwości `false` jak pokazano w następującym `Debit` przykład operację. Transakcja `Debit` używa operacji nie jest ukończona, dopóki metodę o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> ustawioną właściwość `true` nosi nazwę, jak pokazano w operacji `Credit1`, lub gdy <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> wywoływana jest metoda jawnie oznaczyć jako ukończonych, jak pokazano w operacji transakcji `Credit2`. Należy pamiętać, że środki dwóch operacji są wyświetlane w celach ilustracyjnych i że pojedynczy karty kredytowej operacji będzie bardziej typowego.  
+1.  Domyślnie operacje WCF automatycznie realizacji transakcji, jeśli nie nieobsługiwane wyjątki są zgłaszane. To zachowanie można zmienić za pomocą <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwości i <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> metody. Podczas operacji jest wymagany w tej samej transakcji, jak inna operacja (na przykład operację debetowa i środki), można wyłączyć zachowanie funkcji autocomplete przez ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwości `false` jak pokazano w następującym `Debit` przykład operację. Transakcja `Debit` używa operacji nie jest ukończona, dopóki metodę o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> ustawioną właściwość `true` nosi nazwę, jak pokazano w operacji `Credit1`, lub gdy <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> wywoływana jest metoda jawnie oznaczyć jako ukończonych, jak pokazano w operacji transakcji `Credit2`. Należy pamiętać, że środki dwóch operacji są wyświetlane w celach ilustracyjnych i że pojedynczy karty kredytowej operacji będzie bardziej typowego.  
   
     ```  
     [ServiceBehavior]  
@@ -195,7 +181,7 @@ W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Kontrolowanie okres istnienia wystąpienia usługi transakcyjnej  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości w celu określenia, czy źródłowy wystąpienie usługi jest zwolnione po zakończeniu transakcji. Od tej wartości domyślnie przyjmowana `true`, chyba że zostaną skonfigurowane, w przeciwnym razie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] spowoduje zachowanie wydajne i przewidywalne aktywacji "just-in-time". Zapewni nowego wystąpienia usługi z nie wszystkie elementy poprzedniej transakcji Państwo wywołań usługi kolejnych transakcji. Często jest to przydatne, czasami można do zarządzania stanem w wystąpieniu usługi, po zakończeniu transakcji. Przykładem tego może dochodzić do stanu wymagane lub dojść do zasobów jest dość kosztowna można pobrać lub odtworzenia. Można to zrobić przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości `false`. Z tego ustawienia, wystąpienia i każdy stan skojarzony będą dostępne w kolejnych wywołaniach. Korzystając z tego, rozważyć zachować ostrożność podczas i jak stanu i transakcji zostanie wyczyszczona i zakończone. W poniższym przykładzie pokazano, jak to zrobić przez wystąpienie o zachowaniu `runningTotal` zmiennej.  
+1.  Używa WCF <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości w celu określenia, czy źródłowy wystąpienie usługi jest zwolnione po zakończeniu transakcji. Od tej wartości domyślnie przyjmowana `true`, chyba że zostaną skonfigurowane, w przeciwnym razie zachowanie aktywacji programu WCF dowody wydajne i przewidywalne "just-in-time". Zapewni nowego wystąpienia usługi z nie wszystkie elementy poprzedniej transakcji Państwo wywołań usługi kolejnych transakcji. Często jest to przydatne, czasami można do zarządzania stanem w wystąpieniu usługi, po zakończeniu transakcji. Przykładem tego może dochodzić do stanu wymagane lub dojść do zasobów jest dość kosztowna można pobrać lub odtworzenia. Można to zrobić przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości `false`. Z tego ustawienia, wystąpienia i każdy stan skojarzony będą dostępne w kolejnych wywołaniach. Korzystając z tego, rozważyć zachować ostrożność podczas i jak stanu i transakcji zostanie wyczyszczona i zakończone. W poniższym przykładzie pokazano, jak to zrobić przez wystąpienie o zachowaniu `runningTotal` zmiennej.  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

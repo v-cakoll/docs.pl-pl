@@ -1,31 +1,17 @@
 ---
 title: Usługa routingu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>Usługa routingu
 Usługa routingu jest ogólny pośrednik SOAP, który działa jako router wiadomości. Do podstawowych funkcji usługi routingu jest możliwość przesyłania wiadomości, na podstawie zawartości komunikatu, dzięki czemu wiadomości do przekazania do punktu końcowego klienta na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.  
   
- <xref:System.ServiceModel.Routing.RoutingService> Jest zaimplementowany jako [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] w <xref:System.ServiceModel.Routing> przestrzeni nazw. Usługa routingu przedstawia jedną lub więcej punktów końcowych usługi który odbiera komunikaty, a następnie trasy każdy komunikat do punktów końcowych klienta na podstawie zawartości wiadomości. Usługa zawiera następujące funkcje:  
+ <xref:System.ServiceModel.Routing.RoutingService> Jest zaimplementowany jako usługi Windows Communication Foundation (WCF) w <xref:System.ServiceModel.Routing> przestrzeni nazw. Usługa routingu przedstawia jedną lub więcej punktów końcowych usługi który odbiera komunikaty, a następnie trasy każdy komunikat do punktów końcowych klienta na podstawie zawartości wiadomości. Usługa zawiera następujące funkcje:  
   
 -   Routing na podstawie zawartości  
   
@@ -47,10 +33,10 @@ Usługa routingu jest ogólny pośrednik SOAP, który działa jako router wiadom
   
  Istnieje możliwość tworzenia usługi pośredniczącej, która wykonuje co najmniej jednego z tych celów, często takie implementacja jest związany z konkretnych sytuacji lub rozwiązanie i nie można łatwo zastosować do nowych aplikacji.  
   
- Usługa routingu umożliwia ogólny, można dynamicznie konfigurować, podłączane pośrednik SOAP, który jest zgodny z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi i kanału modeli i umożliwia wykonywanie na podstawie zawartości routingu opartego na protokole SOAP komunikatów.  
+ Usługa routingu zawiera ogólne, można dynamicznie konfigurować, podłączane pośrednik SOAP, jest zgodna z modelami usług WCF i kanał, który umożliwia wykonywanie na podstawie zawartości routingu opartego na protokole SOAP komunikatów.  
   
 > [!NOTE]
->  Usługa routingu nie obsługuje obecnie routing [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi REST.  Aby rozesłać wywołań REST, należy rozważyć użycie <xref:System.Web.Routing> lub [Routing żądań aplikacji](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Usługa routingu nie obsługuje obecnie routingu usług WCF REST.  Aby rozesłać wywołań REST, należy rozważyć użycie <xref:System.Web.Routing> lub [Routing żądań aplikacji](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Routing na podstawie zawartości  
  Na podstawie zawartości routingu jest możliwość kierowania wiadomości na podstawie jednego lub więcej wartości zawartych w komunikacie. Usługa routingu sprawdza każdego komunikatów i tras go do docelowego punktu końcowego na podstawie treść wiadomości i logiki routingu, którą utworzysz. Routing na podstawie zawartości stanowi podstawę dla usługi agregacji, przechowywanie wersji usługi i priorytet routingu.  

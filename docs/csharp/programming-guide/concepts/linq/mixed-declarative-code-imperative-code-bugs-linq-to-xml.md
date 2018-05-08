@@ -1,24 +1,15 @@
 ---
 title: Mieszane usterki deklaratywne kodu Imperatywne kodu (LINQ do XML) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 328a266d910e57dc089991ead5fe09a87e722688
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: efc58aac69c53cda724e5fe348560a99311e8d4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Mieszane usterki kodu deklaratywne kodu/Imperatywne (LINQ do XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera różne metody, dzięki którym można bezpośrednio modyfikować drzewo XML. Można dodawać elementów, usuń elementy, zmienić zawartość elementu, dodać atrybuty i itd. Ten interfejs programowania jest opisany w [modyfikowanie drzew XML (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Jeśli użytkownik są iteracji w jednej osi, takie jak <xref:System.Xml.Linq.XContainer.Elements%2A>i modyfikujesz drzewa XML jako iterację osi, można na końcu niektóre dziwne usterki.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera różne metody, dzięki którym można bezpośrednio modyfikować drzewo XML. Można dodawać elementów, usuń elementy, zmienić zawartość elementu, dodać atrybuty i itd. Ten interfejs programowania jest opisany w [modyfikowanie drzew XML (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Jeśli użytkownik są iteracji w jednej osi, takie jak <xref:System.Xml.Linq.XContainer.Elements%2A>i modyfikujesz drzewa XML jako iterację osi, można na końcu niektóre dziwne usterki.  
   
  Ten problem jest czasami określany jako "Problemu Halloween".  
   

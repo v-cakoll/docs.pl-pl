@@ -1,24 +1,12 @@
 ---
-title: "Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe"
-ms.custom: 
+title: Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
 W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzia konfiguracji WS-AtomicTransaction (wsatConfig.exe) i zalecane akcje do wykonania.  
@@ -32,7 +20,7 @@ W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzi
 |2|Wystąpił nieoczekiwany błąd podczas próby skontaktowania się z usługi MSDTC, aby pobrać jego ustawień zabezpieczeń.|Upewnij się, że usługa MSDTC nie jest wyłączone i rozwiąż wszystkie problemy na liście zwrócony wyjątek.|  
 |3|Konto, z którego uruchomiono WsatConfig.exe nie miał wystarczających uprawnień do odczytu ustawień zabezpieczeń sieci.|Wykonanie WsatConfig.exe przy użyciu konta użytkownika Administrator.|  
 |4|Włącz "Usługa DTC Network Access" dla usługi MSDTC, przed podjęciem próby włączyć obsługę protokołu WS-AT.|Włącz "Usługa DTC Network Access" dla usługi MSDTC i uruchom ponownie narzędzie.|  
-|5|Wprowadzona portu jest poza zakresem. Wartość musi należeć do zakresu od 1 do 65535.|Popraw`-port:<portNum>`<br /><br /> Opcja wiersza polecenia opisane w komunikacie o błędzie.|  
+|5|Wprowadzona portu jest poza zakresem. Wartość musi należeć do zakresu od 1 do 65535.|Popraw `-port:<portNum>`<br /><br /> Opcja wiersza polecenia opisane w komunikacie o błędzie.|  
 |6|Certyfikat nieprawidłowy punkt końcowy został określony w wierszu polecenia.  Nie można odnaleźć certyfikatu lub nie przeszedł pomyślnie weryfikacji.|Popraw `-endpointCert` opcji wiersza polecenia. Upewnij się, że certyfikat ma klucz prywatny, jest przeznaczona do użycia dla uwierzytelniania klienta i ServerAuthentication jest zainstalowany w magazynie certyfikatów LocalMachine\MY i jest w pełni zaufany.|  
 |7|Certyfikat nieprawidłowe konta została określona w wierszu polecenia.|Popraw `-accountsCerts` opcji wiersza polecenia. Określony certyfikat został niepoprawnie określone lub nie można go znaleźć.|  
 |8|Domyślny limit czasu został określony do zakresu od 1 do 3600 sekund.|Wprowadź poprawną domyślną wartość limitu czasu wskazane.|  
@@ -46,9 +34,9 @@ W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzi
 |17|Konfiguracja pliku http.sys nie powiodło się. Nie można usunąć powiązania certyfikatu SSL z poprzedniego portu.|Użyj kod błędu zwrócony komunikat o błędzie do mapowania na błąd odpowiednie systemu. Jeśli to konieczne, umożliwia httpcfg.exe lub netsh.exe usunięcie rezerwacji portu błędne.|  
 |18|Konfiguracja pliku http.sys nie powiodło się. Nie można powiązać określonego certyfikatu do portu, ponieważ poprzednie SSL powiązanie już istnieje.|Inna aplikacja miała już prawa własności określonego portu. Zmień na inny port lub Odinstaluj lub ponownie skonfigurować bieżącej aplikacji.|  
 |19|Ponowne uruchamianie usługi MSDTC nie powiodło się.|Ręcznie uruchom ponownie usługi MSDTC, jeśli to konieczne. Jeśli problem będzie się powtarzać, skontaktuj się z firmy Microsoft.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|Zainstaluj [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] na tym komputerze.|  
+|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|Zainstaluj [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] na tym komputerze.|  
 |21|Konfigurowanie zdalnego nie powiodło się z powodu przekroczenia limitu czasu operacji.|Wywołanie do skonfigurowania na maszynie zdalnej usługi WS-AT powinno trwać dłużej niż 90 sekund.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|Zainstaluj [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] na tym komputerze.|  
+|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|Zainstaluj [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] na tym komputerze.|  
 |23|Konfiguracja zdalnego nie powiodła się z powodu wyjątku na komputerze zdalnym.|Sprawdź komunikat o błędzie dla elementów z możliwością wykonania akcji|  
 |26|Do WsatConfig.exe przekazano nieprawidłowy argument.|Sprawdź wiersz polecenia dla błędów.|  
 |27|`-accounts` Opcji wiersza polecenia jest nieprawidłowy.|Popraw`accounts` opcji wiersza polecenia, aby prawidłowo określić konto użytkownika.|  

@@ -1,29 +1,17 @@
 ---
-title: "Jak zaokrąglić rogi RectangleGeometry"
-ms.custom: 
+title: Jak zaokrąglić rogi RectangleGeometry
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - corners [WPF], rounding
 - RectangleGeometry class [WPF], rounding corners
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92a51b3c610d3755583f8a39314f45d3980ee1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4f1d37e2c0f26967affff14ed6475fc8c0cb28c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Jak zaokrąglić rogi RectangleGeometry
 Do zaokrąglania narożników <xref:System.Windows.Media.RectangleGeometry>, ustaw jej <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> i <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> właściwości na wartość większą niż zero. Im większa wartości, bardziej okrągłe prostokąta.  
@@ -33,7 +21,7 @@ Do zaokrąglania narożników <xref:System.Windows.Media.RectangleGeometry>, ust
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRoundedRectangleGeometryExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/RectangleGeometryRoundedCornerExample.xaml#graphicsmmroundedrectanglegeometryexamplewholepage)]  
   
- ![Prostokąty o różnych RadiusX &#47; Ustawienia radiusY](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "graphicsmm_rounded")  
+ ![Prostokąty o różnych RadiusX&#47;RadiusY ustawienia](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "graphicsmm_rounded")  
 Prostokąty z zaokrąglonymi narożnikami  
   
 ## <a name="see-also"></a>Zobacz też  

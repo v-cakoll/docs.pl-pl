@@ -1,10 +1,6 @@
 ---
 title: Organizowanie domyślne dotyczące tablic
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,17 +8,13 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 84f4015fd9bc5eb2de11b71530115d20c583d21d
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>Domyślny marshaling dla tablic
 W aplikacji, składające się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablic jako we/wy parametrów. Z kolei międzyoperacyjnego organizatora przekazuje tablicy, tak jak parametry domyślnie.  
@@ -64,7 +56,7 @@ W aplikacji, składające się wyłącznie z kodu zarządzanego środowisko uruc
 |Typ niezarządzany|Zaimportowany typ|  
 |--------------------|-------------------|  
 |**SafeArray (** *typu* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ranga = 1, dolna granica = 0. Rozmiar jest znany, tylko jeśli są dostępne w zarządzanego podpisu. Tablice bezpieczne, które nie są rangi = 1 lub dolna granica = 0, nie mogą być przekazywane jako **SZARRAY**.|  
-|*Typ***]** |**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ranga = 1, dolna granica = 0. Rozmiar jest znany, tylko jeśli są dostępne w zarządzanego podpisu.|  
+|*Typ***]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ranga = 1, dolna granica = 0. Rozmiar jest znany, tylko jeśli są dostępne w zarządzanego podpisu.|  
   
 ### <a name="safe-arrays"></a>Tablice bezpieczne  
  Po zaimportowaniu bezpiecznej tablicy z biblioteki typów na zestaw .NET tablicy jest konwertowana na tablicą jednowymiarową znanego typu (takich jak **int**). Tej samej reguły konwersji typów, które są stosowane do parametrów dotyczą również elementów tablicy. Na przykład bezpieczną tablicą o **BSTR** typy staje się tablicy ciągów i bezpieczną tablicą typu Variant staje się zarządzanych Tablica obiektów. **SAFEARRAY** typ elementu zostaną zebrane z biblioteki typów i zapisywane w **SAFEARRAY** wartość <xref:System.Runtime.InteropServices.UnmanagedType> wyliczenia.  

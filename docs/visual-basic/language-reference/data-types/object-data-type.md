@@ -1,10 +1,6 @@
 ---
-title: "Object — typ danych"
+title: Object — typ danych
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object — typ danych
 Przechowuje adresy, które odwołują się do obiektów. Można przypisać do dowolnego typu odwołanie (ciąg, tablic, klasy lub interfejsu) `Object` zmiennej. `Object` Zmiennej znajdują się dane dowolnego typu wartość (numeryczną, `Boolean`, `Char`, `Date`, struktury lub wyliczenia).  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      Jednak po konwersji między typami wartości i `Object`, Visual Basic wykonuje operacje o nazwie *boxing* i *rozpakowującej*, udostępniają wykonywania wolniej.  
   
--   **Znaki typu.** `Object`nie ma znak literalny typu ani znak typu identyfikator.  
+-   **Znaki typu.** `Object` nie ma znak literalny typu ani znak typu identyfikator.  
   
 -   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.Object?displayProperty=nameWithType> klasy.  
   
@@ -78,5 +71,5 @@ objDb = myCollection.Item(1)
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Porady: Określanie, czy dwa obiekty są powiązane](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Porady: Określanie, czy dwa obiekty są identyczne](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+ [Instrukcje: określanie, czy dwa obiekty są powiązane](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
+ [Instrukcje: określanie, czy dwa obiekty są jednakowe](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

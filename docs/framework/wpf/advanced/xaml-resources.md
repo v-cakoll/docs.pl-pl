@@ -1,29 +1,17 @@
 ---
 title: Zasoby XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reusing resources [WPF]
 - resources [WPF], reusing
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b917b13909c463cd9d518d79bf8ce2683591dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiekt, który mogą być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i style. Ten przegląd zawiera opis sposobu korzystania z zasobów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodu i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasobów i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -162,7 +150,7 @@ Zasób jest obiekt, który mogą być ponownie używane w różnych miejscach w 
   
  Niejawne klucze style są stosowane w formancie, gdy <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> jest `true` (również należy pamiętać, że <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> może być ustawiony jako część natywnego zachowanie klasy formantu zamiast jawnie na wystąpienie kontrolki). Również, aby zapewnić obsługę niejawne kluczy dla scenariuszy klasy pochodnej, kontrolki musi zastąpić <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (wszystkie istniejące formanty w ramach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to zrobić). Aby uzyskać więcej informacji na temat style, kompozycje i projektu kontroli, zobacz [wskazówki dotyczące projektowania formantów Stylable](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   
- <xref:System.Windows.DataTemplate>również ma niejawne klucza. Niejawne klucz dla <xref:System.Windows.DataTemplate> jest <xref:System.Windows.DataTemplate.DataType%2A> wartości właściwości. <xref:System.Windows.DataTemplate.DataType%2A>można również określić jako nazwa typu zamiast jawnie [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Aby uzyskać więcej informacji, zobacz [omówienie tworzenia szablonów danych](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ <xref:System.Windows.DataTemplate> również ma niejawne klucza. Niejawne klucz dla <xref:System.Windows.DataTemplate> jest <xref:System.Windows.DataTemplate.DataType%2A> wartości właściwości. <xref:System.Windows.DataTemplate.DataType%2A> można również określić jako nazwa typu zamiast jawnie [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Aby uzyskać więcej informacji, zobacz [omówienie tworzenia szablonów danych](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.ResourceDictionary>  

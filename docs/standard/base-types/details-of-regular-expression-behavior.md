@@ -1,13 +1,7 @@
 ---
-title: "Szczegóły zachowania dotyczącego wyrażeń regularnych"
-ms.custom: 
+title: Szczegóły zachowania dotyczącego wyrażeń regularnych
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania dotyczącego wyrażeń regularnych
 Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowania wyrażenia regularnego, uwzględniająca tradycyjnych aparat niedeterministyczne skończoną Automaton ds takim Perl, Python, Emacs i Tcl. To odróżnia go od szybsze, ale bardziej ograniczone, czysty wyrażenia regularnego aparaty deterministyczne Automaton ograniczone (DFA) takich jak awk, egrep lub lex. Ma to również odróżniać z znormalizowanych, ale wolniej, POSIX NFAs. Poniższej sekcji opisano trzy typy aparatów wyrażenia regularnego i objaśniono, dlaczego wyrażeń regularnych w programie .NET Framework są implementowane przy użyciu tradycyjnych aparat NFA.  
@@ -48,7 +37,7 @@ Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowa
   
  Inne funkcje aparatu wyrażeń regularnych programu .NET Framework są następujące:  
   
--   Kwantyfikatory opóźniające: `??`, `*?`, `+?`, `{`  *n*  `,` *m*`}?`. Te konstrukcje Poinformuj backtracking aparat wyszukiwania z minimalną liczbą powtórzeń najpierw. Z kolei zwykłej Kwantyfikatory intensywnie spróbuj odpowiadające maksymalną liczbę powtórzeń. Poniższy przykład przedstawia różnice między nimi. Wyrażenie regularne dopasowuje zdania, które kończy się liczbą i przechwytywania grupy jest przeznaczony do wyodrębnienia ten numer. Wyrażenie regularne `.+(\d+)\.` obejmuje intensywnie kwantyfikatora `.+`, co powoduje, że aparat wyrażeń regularnych do przechwytywania tylko ostatnich cyfr numeru. Z drugiej strony, wyrażenie regularne `.+?(\d+)\.` obejmuje opóźnieniem kwantyfikatora `.+?`, co powoduje, że aparat wyrażeń regularnych do przechwytywania całą liczbę.  
+-   Kwantyfikatory opóźniające: `??`, `*?`, `+?`, `{` *n*`,`*m*`}?`. Te konstrukcje Poinformuj backtracking aparat wyszukiwania z minimalną liczbą powtórzeń najpierw. Z kolei zwykłej Kwantyfikatory intensywnie spróbuj odpowiadające maksymalną liczbę powtórzeń. Poniższy przykład przedstawia różnice między nimi. Wyrażenie regularne dopasowuje zdania, które kończy się liczbą i przechwytywania grupy jest przeznaczony do wyodrębnienia ten numer. Wyrażenie regularne `.+(\d+)\.` obejmuje intensywnie kwantyfikatora `.+`, co powoduje, że aparat wyrażeń regularnych do przechwytywania tylko ostatnich cyfr numeru. Z drugiej strony, wyrażenie regularne `.+?(\d+)\.` obejmuje opóźnieniem kwantyfikatora `.+?`, co powoduje, że aparat wyrażeń regularnych do przechwytywania całą liczbę.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
@@ -139,13 +128,13 @@ Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowa
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     Wyrażenie regularne `^[A-Z0-9]([-!#$%&'.*+/=?^`{} | ~ \w])* (? < = [A-Z0-9]) $"jest zdefiniowany, jak pokazano w poniższej tabeli.  
+     Wyrażenie regularne `^[A-Z0-9]([-!#$%&'.*+/=?^` {}| ~ \w])* (? < = [A-Z0-9]) $"jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
     |Wzorzec|Opis|  
     |-------------|-----------------|  
     |`^`|Rozpocznij dopasowania na początku ciąg.|  
     |`[A-Z0-9]`|Dopasowuje dowolny znak numeryczne lub alfanumeryczne. (Porównanie jest bez uwzględniania wielkości liter).|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Zgodne zero lub więcej wystąpień dowolny znak słowa lub dowolny z następujących znaków:-,!, #, $, % &, ',., *, +, /, =,?, ^, \`, {,}, &#124; lub ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Zgodne zero lub więcej wystąpień dowolny znak słowa lub dowolny z następujących znaków:-,!, #, $, % &, ',., *, +, /, =,?, ^, \`, {,}, &#124;, lub ~.|  
     |`(?<=[A-Z0-9])`|Szukaj za do poprzedniego znaku, który musi być numeryczne lub alfanumeryczne. (Porównanie jest bez uwzględniania wielkości liter).|  
     |`$`|Zakończenie dopasowuje koniec ciągu.|  
   

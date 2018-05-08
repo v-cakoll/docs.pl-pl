@@ -1,11 +1,7 @@
 ---
-title: "Funkcja QualifierSet_Put (niezarządzany wykaz interfejsów API)"
-description: "Funkcja QualifierSet_Put zapisuje kwalifikator nazwane i jej wartość."
+title: Funkcja QualifierSet_Put (niezarządzany wykaz interfejsów API)
+description: Funkcja QualifierSet_Put zapisuje kwalifikator nazwane i jej wartość.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetput-function"></a>Funkcja QualifierSet_Put
 Zapisuje kwalifikator o nazwie i wartości. Nowy kwalifikator spowoduje zastąpienie poprzedniej wartości o takiej samej nazwie. Jeśli kwalifikator nie istnieje, jest tworzony. 
@@ -57,9 +50,9 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in] Nazwa kwalifikatora do zapisu.
 
-`pVal`[in] Wskaźnik do prawidłowej `VARIANT` zawierający kwalifikator do zapisu. Ten parametr nie może być `null`.
+`pVal` [in] Wskaźnik do prawidłowej `VARIANT` zawierający kwalifikator do zapisu. Ten parametr nie może być `null`.
 
-`lFlavor`[in] Jeden z następujących stałych, które definiuje odmian kwalifikator odpowiednią dla tego kwalifikatora. Wartość domyślna to `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor` [in] Jeden z następujących stałych, które definiuje odmian kwalifikator odpowiednią dla tego kwalifikatora. Wartość domyślna to `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -90,7 +83,7 @@ Ta funkcja jest zawijana wywołanie [IWbemQualifierSet::Put](https://msdn.micros
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

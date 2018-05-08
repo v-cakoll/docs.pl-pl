@@ -1,29 +1,18 @@
 ---
-title: "Windows Workflow Foundation funkcji charakterystykę"
-ms.custom: 
+title: Windows Workflow Foundation funkcji charakterystykę
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6943a7eaeaecf8f11de7c10237979067c83c24d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation funkcji charakterystykę
-[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]Dodaje liczbę funkcji do systemu Windows Workflow Foundation. Ten dokument opisano kilka nowych funkcji i zwraca szczegółowe informacje o scenariuszach, w których mogą być przydatne.  
+[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] Dodaje liczbę funkcji do systemu Windows Workflow Foundation. Ten dokument opisano kilka nowych funkcji i zwraca szczegółowe informacje o scenariuszach, w których mogą być przydatne.  
   
 ## <a name="messaging-activities"></a>Działania dotyczące komunikatów  
- Działania obsługi komunikatów (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) są używane do wysyłania i odbierania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] komunikaty z przepływu pracy.  <xref:System.ServiceModel.Activities.Receive>i <xref:System.ServiceModel.Activities.SendReply> działania są używane do formularza [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] operacja uwidocznionego za pośrednictwem WSDL, podobnie jak standardowy usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług sieci web.  <xref:System.ServiceModel.Activities.Send>i <xref:System.ServiceModel.Activities.ReceiveReply> są używane do pracy z usługą sieci web podobny do programu WCF <xref:System.ServiceModel.ChannelFactory>; **Dodaj odwołanie do usługi** istnieje również środowiska dla programu Workflow Foundation generuje wstępnie skonfigurowane działania.  
+ Działania obsługi komunikatów (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) są używane do wysyłania i odbierania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] komunikaty z przepływu pracy.  <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> działania są używane do operacji usługi Windows Communication Foundation (WCF) uwidocznionego za pośrednictwem WSDL, podobnie jak standardowy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług sieci web.  <xref:System.ServiceModel.Activities.Send> i <xref:System.ServiceModel.Activities.ReceiveReply> są używane do pracy z usługą sieci web podobny do programu WCF <xref:System.ServiceModel.ChannelFactory>; **Dodaj odwołanie do usługi** istnieje również środowiska dla programu Workflow Foundation generuje wstępnie skonfigurowane działania.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Wprowadzenie do działania obsługi wiadomości  
   
@@ -251,7 +240,7 @@ ms.lasthandoff: 12/22/2017
 -   Metoda musi wywoływanej na starszą wersję obiektu CLR. Zamiast tworzenia działań niestandardowych do opakowywania wywołanie tej klasy starszej wersji, jeśli znajduje się w zakresie podczas wykonywania przepływu pracy <xref:System.Activities.Statements.InvokeMethod> mogą być używane.  
   
 ## <a name="error-handling-activities"></a>Błąd obsługi działań  
- <xref:System.Activities.Statements.TryCatch> Działania udostępnia mechanizm przechwytywanie wyjątków występujących podczas wykonywania zbiór działań zawartych w niej (podobnie jak konstrukcja Try/Catch w C# /VB). <xref:System.Activities.Statements.TryCatch>zapewnia obsługi na poziomie przepływu pracy wyjątków. Gdy jest nieobsługiwany wyjątek, przepływu pracy zostało przerwane i nie można wykonać na koniec bloku. To zachowanie jest zgodne z C#.  
+ <xref:System.Activities.Statements.TryCatch> Działania udostępnia mechanizm przechwytywanie wyjątków występujących podczas wykonywania zbiór działań zawartych w niej (podobnie jak konstrukcja Try/Catch w C# /VB). <xref:System.Activities.Statements.TryCatch> zapewnia obsługi na poziomie przepływu pracy wyjątków. Gdy jest nieobsługiwany wyjątek, przepływu pracy zostało przerwane i nie można wykonać na koniec bloku. To zachowanie jest zgodne z C#.  
   
 ### <a name="getting-started"></a>Wprowadzenie  
   
@@ -269,7 +258,7 @@ ms.lasthandoff: 12/22/2017
  Zbiór działań ma zostać wykonana, a logika charakterystyczna musi być wykonywana w przypadku wystąpienia błędu. Jeśli podczas tego błędu obsługi logiki okaże się, że błąd nie jest możliwe do odzyskania, zostanie zgłoszony wyjątek i działania nadrzędnego (lub hosta) będzie rozwiązać problem.  
   
 ## <a name="pick-activity"></a>Wybierz działanie  
- <xref:System.Activities.Statements.Pick> Działania udostępnia modelowanie w WF przepływu sterowania opartego na zdarzeniach. <xref:System.Activities.Statements.Pick>zawiera wiele gałęzi, w której każda gałąź czeka na wystąpienie określonego zdarzenia wystąpić przed uruchomieniem. W tej konfiguracji <xref:System.Activities.Statements.Pick> działa podobnie do <xref:System.Activities.Statements.Switch%601> do której działanie będzie wykonywane tylko jeden zestaw zdarzeń odbywa się nasłuchiwanie. Każda gałąź jest zdarzeniami i zdarzenia, które wystąpiło uruchamia odpowiednie gałęzi najpierw. Wszystkie inne gałęzie Anuluj i Zatrzymaj nasłuchiwanie zdarzeń.  
+ <xref:System.Activities.Statements.Pick> Działania udostępnia modelowanie w WF przepływu sterowania opartego na zdarzeniach. <xref:System.Activities.Statements.Pick> zawiera wiele gałęzi, w której każda gałąź czeka na wystąpienie określonego zdarzenia wystąpić przed uruchomieniem. W tej konfiguracji <xref:System.Activities.Statements.Pick> działa podobnie do <xref:System.Activities.Statements.Switch%601> do której działanie będzie wykonywane tylko jeden zestaw zdarzeń odbywa się nasłuchiwanie. Każda gałąź jest zdarzeniami i zdarzenia, które wystąpiło uruchamia odpowiednie gałęzi najpierw. Wszystkie inne gałęzie Anuluj i Zatrzymaj nasłuchiwanie zdarzeń.  
   
 ### <a name="getting-started"></a>Wprowadzenie  
   
@@ -305,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Dokumentacja: [routingu](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  Przykłady: [routingu usługi &#91; Przykłady WCF &#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  Przykłady: [usługi routingu &#91;przykłady WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
 3.  Blog: [reguły routingu!](http://go.microsoft.com/fwlink/?LinkId=204956)  
   
@@ -323,7 +312,7 @@ ms.lasthandoff: 12/22/2017
 -   Klientów można włączyć być bardziej niezawodne, Niepowodzenie lub niedostępności usługi.  
   
 ## <a name="wcf-discovery"></a>Odnajdywanie w programie WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Odnajdywanie to technologia framework, która umożliwia włączenie mechanizmu odnajdywania infrastruktury aplikacji. Służy do utworzenia usługi wykrywalny i skonfiguruj klientów do wyszukiwania usług. Klienci nie muszą już trudno kodowanego z punktem końcowym, tworzenie aplikacji bardziej niezawodne i odporność na uszkodzenia. Odnajdywanie jest idealna platforma do tworzenia funkcji automatycznej konfiguracji do aplikacji.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Odnajdywanie to technologia framework, która umożliwia włączenie mechanizmu odnajdywania infrastruktury aplikacji. Służy do utworzenia usługi wykrywalny i skonfiguruj klientów do wyszukiwania usług. Klienci nie muszą już trudno kodowanego z punktem końcowym, tworzenie aplikacji bardziej niezawodne i odporność na uszkodzenia. Odnajdywanie jest idealna platforma do tworzenia funkcji automatycznej konfiguracji do aplikacji.  
   
  Produkt jest oparty na standard WS-Discovery. Ma ona być interoperacyjne, rozszerzalne i rodzajowy. Produkt obsługuje dwa tryby działania:  
   

@@ -1,21 +1,15 @@
 ---
-title: "Porady: przesłanianie metody ToString (Przewodnik programowania w języku C#)"
+title: 'Porady: przesłanianie metody ToString (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-caps.latest.revision: "21"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5b0f7bf35e5bd565e0bfa46fe91cf86aedcd2d8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86394f5fed55f57df8928648548fcfca117b00d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Porady: przesłanianie metody ToString (Przewodnik programowania w języku C#)
 Każdej klasie lub strukturze w języku C# niejawnie dziedziczy <xref:System.Object> klasy. W związku z tym każdy obiekt w języku C# pobiera <xref:System.Object.ToString%2A> metodę, która zwraca reprezentację ciągu tego obiektu. Na przykład wszystkie zmienne typu `int` ma `ToString` metodę, która pozwala na zwrócenie ich zawartość jako ciąg:  
@@ -52,8 +46,8 @@ Każdej klasie lub strukturze w języku C# niejawnie dziedziczy <xref:System.Obj
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Ciągi](../../../csharp/programming-guide/strings/index.md)  
- [ciąg](../../../csharp/language-reference/keywords/string.md)  
- [Nowy](../../../csharp/language-reference/keywords/new.md)  
- [zastąpienie](../../../csharp/language-reference/keywords/override.md)  
- [wirtualny](../../../csharp/language-reference/keywords/virtual.md)  
- [Formatowanie tekstu](../../../standard/base-types/formatting-types.md)
+ [string](../../../csharp/language-reference/keywords/string.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [Formatowanie typów](../../../standard/base-types/formatting-types.md)

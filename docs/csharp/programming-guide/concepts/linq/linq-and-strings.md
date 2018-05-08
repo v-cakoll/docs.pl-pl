@@ -1,21 +1,12 @@
 ---
-title: "LINQ i ciągi (C#)"
-ms.custom: 
+title: LINQ i ciągi (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c7219c3b968f68d9a6c280749ffa6e8a1cb6938d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a297aec0a33893c643be337c356e304cdcd375ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-and-strings-c"></a>LINQ i ciągi (C#)
 LINQ może służyć do wykonywania zapytań i przekształcanie ciągów i kolekcji ciągów. Może być szczególnie przydatne w przypadku częściowo ustrukturyzowanych danych w plikach tekstowych. Zapytania LINQ można łączyć z funkcje tradycyjnych ciągów i wyrażenia regularne. Na przykład można użyć <xref:System.String.Split%2A> lub <xref:System.Text.RegularExpressions.Regex.Split%2A> metodę w celu utworzenia tablicy ciągów, które można zbadać lub zmodyfikować za pomocą LINQ. Można użyć <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metoda `where` klauzuli zapytania LINQ. I użyj rozszerzenia LINQ, aby zapytań, lub zmodyfikuj <xref:System.Text.RegularExpressions.MatchCollection> wyników zwróconych w wyniku wyrażenia regularnego.  
@@ -68,4 +59,4 @@ LINQ może służyć do wykonywania zapytań i przekształcanie ciągów i kolek
   
 ## <a name="see-also"></a>Zobacz też  
  [Zapytanie o języku zintegrowanym (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
- [Porady: generowanie kodu XML z plików CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+ [Instrukcje: generowanie kodu XML z plików CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

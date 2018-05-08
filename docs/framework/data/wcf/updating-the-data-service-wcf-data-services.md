@@ -1,13 +1,6 @@
 ---
-title: "Aktualizowanie usługi danych (usługi danych WCF)"
-ms.custom: 
+title: Aktualizowanie usługi danych (usługi danych WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bbe74fdeb0af5d7095b0b1a57fb8bd475032ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualizowanie usługi danych (usługi danych WCF)
 Jeśli używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta użycie [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, biblioteki tłumaczy wpisy w źródle danych do wystąpienia klasy usługi danych klienta. Klasy usługi te dane są śledzone za pomocą <xref:System.Data.Services.Client.DataServiceContext> do którego <xref:System.Data.Services.Client.DataServiceQuery%601> należy. Klient śledzi zmiany do jednostki, które raportu za pomocą metod na <xref:System.Data.Services.Client.DataServiceContext>. Te metody włączyć klienta do śledzenia jednostek dodany i usunięty, a także zmiany wprowadzone do wartości właściwości lub relacje między wystąpieniami jednostki. Rejestrowane są wysyłane do usługi data jako opartego na interfejsie REST operacje podczas wywoływania <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody.  
@@ -78,13 +66,13 @@ Jeśli używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibl
 ## <a name="creating-and-modifying-relationship-links"></a>Tworzenie i modyfikowanie łącza relacji  
  Podczas dodawania nowego obiektu przy użyciu <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> metody lub odpowiednie *AddTo* metody <xref:System.Data.Services.Client.DataServiceContext> klasy, która **Dodaj odwołanie do usługi** okna dialogowego generuje żadnych relacji między nimi i powiązanych jednostek nie są automatycznie zdefiniowane.  
   
- Można utworzyć i zmienić relacje między wystąpieniami jednostki i biblioteki klienta odzwierciedlenia tych zmian w usłudze danych. Relacje między obiektami są zdefiniowane jako skojarzenia w modelu i <xref:System.Data.Services.Client.DataServiceContext> śledzi każdej relacji w postaci obiektu łącza w tym kontekście. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]udostępnia następujące metody na <xref:System.Data.Services.Client.DataServiceContext> klasa do tworzenia, modyfikowania i usuwania tych łączy:  
+ Można utworzyć i zmienić relacje między wystąpieniami jednostki i biblioteki klienta odzwierciedlenia tych zmian w usłudze danych. Relacje między obiektami są zdefiniowane jako skojarzenia w modelu i <xref:System.Data.Services.Client.DataServiceContext> śledzi każdej relacji w postaci obiektu łącza w tym kontekście. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] udostępnia następujące metody na <xref:System.Data.Services.Client.DataServiceContext> klasa do tworzenia, modyfikowania i usuwania tych łączy:  
   
 |Metoda|Opis|  
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Tworzy nowy link między dwoma obiektami powiązanej jednostki. Wywołanie tej metody jest odpowiednikiem wywołania <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> i <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> do utworzenia nowego obiektu i definiowanie relacji do istniejącego obiektu.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Tworzy nowy link między dwoma obiektami powiązanej jednostki.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualizuje istniejące łącze między dwoma obiektami powiązanej jednostki. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>Umożliwia również usunąć łącza z Kardynalność zero lub jeden do jeden (`0..1:1`) i jeden do jednego (`1:1`). Można to zrobić, ustawiając dla obiekt pokrewny `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualizuje istniejące łącze między dwoma obiektami powiązanej jednostki. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> Umożliwia również usunąć łącza z Kardynalność zero lub jeden do jeden (`0..1:1`) i jeden do jednego (`1:1`). Można to zrobić, ustawiając dla obiekt pokrewny `null`.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Oznacza łącze kontekst śledzi do usunięcia podczas <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metoda jest wywoływana. Użyj tej metody, podczas usuwania obiektu pokrewnego lub zmienić relacji, najpierw usunięcie łącza do istniejącego obiektu, a następnie dodanie łącza do nowego obiektu pokrewnego.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Powiadamia o kontekście istniejące łącze między dwoma obiektami jednostki. Kontekst przyjęto założenie, że ta relacja już istnieje w usłudze danych i nie będzie próbował utworzyć łącze podczas wywoływania <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody. Użyj tej metody, gdy dołączyć do kontekstu obiektów, musisz również dołączyć łącze między nimi. Jeśli definiujesz nową relację, należy zamiast tego użyć <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Zatrzymuje śledzenia określone łącze w kontekście. Ta metoda służy do usuwania jeden do wielu (`*:*`) relacji. Łączy relacji o wartości cardinality jednego, zamiast niej należy użyć <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.|  

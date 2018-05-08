@@ -1,13 +1,6 @@
 ---
 title: Malowanie obrazami, rysowaniem i Visual
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Malowanie obrazami, rysowaniem i Visual
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> obiektów namalować obszar wraz z obrazem <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ Obiekty rysowane przez DrawingBrush
   
  A <xref:System.Windows.Media.DrawingBrush> rysują obszar o <xref:System.Windows.Media.Drawing> obiektu. A <xref:System.Windows.Media.Drawing> obiektu opisuje widocznej zawartości, takich jak kształtu, mapy bitowej, wideo lub wiersza tekstu. Różne typy rysunki opis różnych typów zawartości. Poniżej znajduje się lista różnych typów obiektów rysowania.  
   
--   <xref:System.Windows.Media.GeometryDrawing>— Rysuje kształt.  
+-   <xref:System.Windows.Media.GeometryDrawing> — Rysuje kształt.  
   
--   <xref:System.Windows.Media.ImageDrawing>— Rysuje obraz.  
+-   <xref:System.Windows.Media.ImageDrawing> — Rysuje obraz.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>— Rysuje tekst.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> — Rysuje tekst.  
   
--   <xref:System.Windows.Media.VideoDrawing>— Odtwarza plik audio i wideo.  
+-   <xref:System.Windows.Media.VideoDrawing> — Odtwarza plik audio i wideo.  
   
--   <xref:System.Windows.Media.DrawingGroup>— Rysuje inne rysunki. Użyj grupy rysunku, aby połączyć inne rysunki w jeden złożonego.  
+-   <xref:System.Windows.Media.DrawingGroup> — Rysuje inne rysunki. Użyj grupy rysunku, aby połączyć inne rysunki w jeden złożonego.  
   
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Drawing> obiekty, zobacz [Przegląd obiektów rysunku](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -133,7 +121,7 @@ Obiekt Visual odbite
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Funkcje TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> typów <xref:System.Windows.Media.TileBrush> obiektów. <xref:System.Windows.Media.TileBrush>udostępnia obiekty z dużym stopniem kontrolę nad jak obszar jest rysowane przy użyciu obrazu, rysunku lub visual. Na przykład zamiast tylko malowanie obszar o jeden obraz rozciągnięty, można malować obszar o serię kafelków obrazu, tworzące wzorzec.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> typów <xref:System.Windows.Media.TileBrush> obiektów. <xref:System.Windows.Media.TileBrush> udostępnia obiekty z dużym stopniem kontrolę nad jak obszar jest rysowane przy użyciu obrazu, rysunku lub visual. Na przykład zamiast tylko malowanie obszar o jeden obraz rozciągnięty, można malować obszar o serię kafelków obrazu, tworzące wzorzec.  
   
  A <xref:System.Windows.Media.TileBrush> ma trzy główne składniki: zawartość, Kafelki i do obszaru wyjściowego.  
   

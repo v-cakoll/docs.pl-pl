@@ -1,28 +1,16 @@
 ---
 title: Ograniczenia serializacji XamlWriter.Save
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XamlWriter.Save [WPF], serialization limitations of
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c6f22b112807876102dbcb934698d18d85cd51c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe8d517b8794f6aae7190457a077422d235acb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Ograniczenia serializacji XamlWriter.Save
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> Może służyć do serializacji zawartość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji jako [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pliku. Istnieją pewne ważne ograniczenia dotyczące dokładnie co serializacji. W tym temacie opisano następujące ograniczenia oraz pewne ogólne zagadnienia.  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>Obsługa zdarzeń jest nie są zachowywane  
- Podczas obsługi zdarzeń, które zostały dodane za pośrednictwem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są serializowane, ich nie są zachowywane. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bez kodu powiązanego (i również mechanizm pokrewne x: Code) nie ma możliwości szeregowania logiki procedurach środowiska wykonawczego. Serializacja jest niezależna i ograniczona do drzewa logicznego, nie istnieje żadne funkcje do przechowywania obsługi zdarzeń. W związku z tym atrybutów programu obsługi zdarzeń, zarówno atrybut sam, jak i wartości ciągu, których nazwy programu obsługi są usuwane z danych wyjściowych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Podczas obsługi zdarzeń, które zostały dodane za pośrednictwem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są serializowane, ich nie są zachowywane. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bez kodu powiązanego (i również mechanizm pokrewne x: Code) nie ma możliwości szeregowania logiki procedurach środowiska wykonawczego. Serializacja jest niezależna i ograniczona do drzewa logicznego, nie istnieje żadne funkcje do przechowywania obsługi zdarzeń. W związku z tym atrybutów programu obsługi zdarzeń, zarówno atrybut sam, jak i wartości ciągu, których nazwy programu obsługi są usuwane z danych wyjściowych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Scenariusze realistyczne XAMLWriter.Save do użytku  

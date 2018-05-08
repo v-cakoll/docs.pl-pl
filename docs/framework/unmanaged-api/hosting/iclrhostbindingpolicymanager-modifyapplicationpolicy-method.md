@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostBindingPolicyManager::ModifyApplicationPolicy — Metoda"
-ms.custom: 
+title: ICLRHostBindingPolicyManager::ModifyApplicationPolicy — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.ModifyApplicationPolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 018dc40895a79788a9eef20082d764db0b2265c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy — Metoda
 Modyfikuje zasady powiązanie dla określonego zestawu i tworzy nową wersję zasad.  
@@ -79,8 +67,8 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Zasada została pomyślnie zmodyfikowana.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`lub `pwzTargetAssemblyIdentity` miał odwołanie o wartości null.|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`jest za mały.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` lub `pwzTargetAssemblyIdentity` miał odwołanie o wartości null.|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` jest za mały.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -97,7 +85,7 @@ HRESULT  ModifyApplicationPolicy (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRHostBindingPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

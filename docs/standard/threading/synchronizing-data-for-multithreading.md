@@ -1,30 +1,19 @@
 ---
-title: "Synchronizowanie danych na potrzeby wielowątkowości"
-ms.custom: 
+title: Synchronizowanie danych na potrzeby wielowątkowości
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET Framework], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4e1e123b8c8440b766e5b8903170c8cb392f154a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 Wiele wątków może wykonywać wywołania do właściwości i metod pojedynczego obiektu, jest krytyczne zsynchronizowania wywołań. W przeciwnym razie jeden wątek może przerwać czynności inny wątek, a obiekt może pozostać w nieprawidłowym stanie. Klasa, której członkami są chronione przed przerw w zasilaniu nosi nazwę wątkowo.  
@@ -64,7 +53,7 @@ Wiele wątków może wykonywać wywołania do właściwości i metod pojedynczeg
   
  Można również dekoracji metodę o **MethodImplAttribute** i **MethodImplOptions.Synchronized**, który zawiera ten sam efekt co przy użyciu **Monitor** lub jednego z kompilatora słowa kluczowe do blokowania całej treści metody.  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>można przerwać wątek poza blokowania operacji, takich jak oczekiwania na dostęp do regionu zsynchronizowane kodu. **Thread.Interrupt** służy również do przerywanie wątków poza operacje, takie jak <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> można przerwać wątek poza blokowania operacji, takich jak oczekiwania na dostęp do regionu zsynchronizowane kodu. **Thread.Interrupt** służy również do przerywanie wątków poza operacje, takie jak <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 >  Nie należy blokować typ — oznacza to, `typeof(MyType)` w języku C# `GetType(MyType)` w języku Visual Basic lub `MyType::typeid` w języku C++ — aby chronić `static` metod (`Shared` metod w języku Visual Basic). W zamian użyj prywatnego statycznego obiektu. Podobnie, nie używaj `this` w języku C# (`Me` w języku Visual Basic) do metody wystąpienia blokady. W zamian użyj prywatnego obiektu. Klasy lub wystąpienia może być zablokowane przez kodu innego niż własny, może powodować zakleszczenie lub problemów z wydajnością.  

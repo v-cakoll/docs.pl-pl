@@ -1,32 +1,20 @@
 ---
-title: "Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows"
-ms.custom: 
+title: Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, secure calls to Windows API
 - security [Windows Forms]
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a1d8606eb972a6e3bea52f6230cb893a4bbb5aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytyczne zasoby lokalne jako system plików, sieci i niezarządzane interfejsy API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API Win32 firmy Microsoft lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczeń dotyczy również inne aspekty aplikacji, łącznie z dostępem do plików i danych i drukowania. Aby uzyskać więcej informacji na temat dostępu do plików i danych w środowisku częściowej relacji zaufania, zobacz [więcej Zabezpieczanie plików i dostępu do danych w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat drukowania w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowania w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytyczne zasoby lokalne jako system plików, sieci i niezarządzane interfejsy API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API Win32 firmy Microsoft lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczeń dotyczy również inne aspekty aplikacji, łącznie z dostępem do plików i danych i drukowania. Aby uzyskać więcej informacji na temat dostępu do plików i danych w środowisku częściowej relacji zaufania, zobacz [więcej Zabezpieczanie plików i dostępu do danych w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat drukowania w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowania w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
   
  W poniższych sekcjach omówiono, jak pracować z Schowka, wykonywanie manipulowania okna i wywołania interfejsu API Win32 z aplikacji, które są uruchomione w środowisku częściowej relacji zaufania.  
   
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  Każdy poziom uprawnień identyfikowane przez <xref:System.Security.Permissions.UIPermissionWindow> wyliczenie umożliwia akcje mniej niż poziom wyżej. Następujące tabele wskazują akcje, które są ograniczone przez <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> i <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> wartości. Dokładne uprawnienia, które są wymagane dla każdego elementu członkowskiego zobacz dokumentację dla tego elementu członkowskiego w dokumentacji biblioteki klas programu .NET Framework.  
   
- <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>uprawnienie ogranicza akcji wymienionych w poniższej tabeli.  
+ <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> uprawnienie ogranicza akcji wymienionych w poniższej tabeli.  
   
 |Składnik|Akcje z ograniczeniami|  
 |---------------|------------------------|  
@@ -87,13 +75,13 @@ ms.lasthandoff: 01/19/2018
   
 |Składnik|Element członkowski|  
 |---------------|------------|  
-|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A>— Metoda<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>Właściwość<br />-   `Exit`— Metoda<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A>— Metoda<br />-   <xref:System.Windows.Forms.Application.ThreadException>zdarzenia|  
-|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A>— Metoda<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ — metoda<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A>— Metoda<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>— Metoda|  
-|<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A>— Metoda<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A>— Metoda<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A>— Metoda<br />-   <xref:System.Windows.Forms.Control.WndProc%2A>— Metoda|  
-|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A>metody<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A>— Metoda|  
-|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow>klasy|  
-|<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A>— Metoda|  
-|<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A>— Metoda<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A>— Metoda|  
+|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> — Metoda<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> Właściwość<br />-   `Exit` — Metoda<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> — Metoda<br />-   <xref:System.Windows.Forms.Application.ThreadException> Zdarzenia|  
+|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> — Metoda<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ — metoda<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> — Metoda<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> — Metoda|  
+|<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A> — Metoda<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A> — Metoda<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A> — Metoda<br />-   <xref:System.Windows.Forms.Control.WndProc%2A> — Metoda|  
+|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A> Metody<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> — Metoda|  
+|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> Klasy|  
+|<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> — Metoda|  
+|<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> — Metoda<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> — Metoda|  
   
  Jeśli aplikacja nie ma uprawnienia do wywoływania kodu niezarządzanego, aplikacja musi żądać <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnień lub należy wziąć pod uwagę alternatywny sposób wdrażania funkcji; w wielu przypadkach formularzy systemu Windows zapewnia zarządzanych alternatywę do interfejsu API Win32 funkcje. Jeśli nie ma innego oznacza, że istnieje i aplikacji muszą uzyskać dostęp do kodu niezarządzanego, konieczne będzie podniesienia poziomu uprawnień dla aplikacji.  
   

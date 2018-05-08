@@ -1,32 +1,20 @@
 ---
-title: "Używanie kontraktów w przepływie pracy"
-ms.custom: 
+title: Używanie kontraktów w przepływie pracy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1ff40241bd48a4355738ca93ef2c80ceec55db11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1772c61147bb8a96f3f78b4226a1d341df3eb9d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-contracts-in-workflow"></a>Używanie kontraktów w przepływie pracy
-Podczas wdrażania usługi, należy określić numer kontraktów opisujących usługę i wysyła i odbiera dane. Dane są reprezentowane jako kontraktów danych i kontrakty komunikatu; zarówno [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i usług przepływu pracy Użyj definicji kontraktu danych kontraktu i komunikatu jako części opisy usług. Sama usługa przedstawia metadanych (w formie WSDL) w celu opisania działania usługi. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], usługa kontrakty i kontrakty operacji usługi i operacje, obsługuje on definiować. Jednak w usłudze przepływu pracy, umowy te są częścią procesu biznesowego. są one widoczne w metadanych przez proces, nazywany wnioskowania kontraktu.  
+Podczas wdrażania usługi, należy określić numer kontraktów opisujących usługę i wysyła i odbiera dane. Dane są reprezentowane jako kontraktów danych i kontrakty komunikatu; usługi WCF, zarówno i przepływu pracy Użyj definicje kontraktu danych kontraktu i wiadomości jako części opisy usług. Sama usługa przedstawia metadanych (w formie WSDL) w celu opisania działania usługi. W programie WCF kontraktów usług i kontrakty operacji definiują usługi i operacje, które obsługuje. Jednak w usłudze przepływu pracy, umowy te są częścią procesu biznesowego. są one widoczne w metadanych przez proces, nazywany wnioskowania kontraktu.  
   
 ## <a name="contract-inference"></a>Kontrakt wnioskowania  
  Gdy usługa przepływu pracy jest obsługiwana przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>, definicji przepływu pracy się zbadana i kontrakt jest generowany na podstawie zestawu działań w przepływie pracy do obsługi komunikatów. W szczególności następujące działania i właściwości są używane do generowania kontraktu:  
   
- <xref:System.ServiceModel.Activities.Receive>Działanie  
+ <xref:System.ServiceModel.Activities.Receive> Działanie  
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
@@ -34,11 +22,11 @@ Podczas wdrażania usługi, należy określić numer kontraktów opisujących us
   
 -   <xref:System.ServiceModel.Activities.Receive.Action%2A>   
  
- <xref:System.ServiceModel.Activities.SendReply>Działanie  
+ <xref:System.ServiceModel.Activities.SendReply> Działanie  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
- <xref:System.ServiceModel.Activities.TransactedReceiveScope>Działanie  
+ <xref:System.ServiceModel.Activities.TransactedReceiveScope> Działanie  
   
  W rezultacie wnioskowania kontraktu jest opis usługi przy użyciu tych samych struktur danych jako WCF kontraktów usługi i działania. Te informacje jest następnie używane do udostępnienia WSDL usługi przepływu pracy.  
   

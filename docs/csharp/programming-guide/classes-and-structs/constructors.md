@@ -1,22 +1,16 @@
 ---
-title: "Konstruktorzy (Przewodnik programowania w języku C#)"
+title: Konstruktorzy (Przewodnik programowania w języku C#)
 ms.date: 05/05/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-caps.latest.revision: "23"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5897dd1c843633d38707112850a4be1151626185
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 40e3b73221159e191bd34c928e7513f715fa3370
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
 Zawsze, gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzona, jest nazywany jego konstruktora. Klasy lub struktury może mieć wiele konstruktorów przyjmujących różnych argumentów. Konstruktory Włącz programisty ustawić wartości domyślne, ograniczyć wystąpienia i pisania kodu, który jest elastyczny i łatwy do odczytania. Aby uzyskać dodatkowe informacje i przykłady, zobacz [za pomocą konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) i [konstruktorów wystąpienia](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  

@@ -1,30 +1,18 @@
 ---
-title: "Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe"
-ms.custom: 
+title: 'Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - primary interop assemblies, generating
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bdf39da2a597d75479a2a3ed3d60132a0f7e7def
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 Istnieją dwa sposoby Generowanie podstawowego zestawu międzyoperacyjnego:  
@@ -49,7 +37,7 @@ Istnieją dwa sposoby Generowanie podstawowego zestawu międzyoperacyjnego:
   
 1.  W wierszu polecenia wpisz polecenie:  
   
-     **tlbimp** *tlbfile***/primary/KeyFile:** *filename* **/out:** *assemblyname*   
+     **tlbimp** *tlbfile***/primary/KeyFile:** *filename* **/out:** *assemblyname*  
   
      W tym poleceniu *tlbfile* jest plik zawierający biblioteki typów COM *filename* to nazwa kontenera lub plik, który zawiera pary kluczy i *assemblyname* jest Nazwa logowania przy użyciu silnej nazwy zestawu.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF"
-ms.custom: 
+title: 'Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF
-Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. W tym temacie omówiono przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelu programowania pakietu sieci WEB HTTP do tworzenia takiej usługi. Ta usługa ma jedną operację, która zwraca strumienia.  
+Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Jest to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwany przez usługi WCF. W tym temacie omówiono za pomocą modelu programowania protokołu HTTP sieci WEB WCF do tworzenia takiej usługi. Ta usługa ma jedną operację, która zwraca strumienia.  
   
 ### <a name="to-implement-the-service-contract"></a>Aby zaimplementować kontrakt usługi  
   
@@ -36,7 +24,7 @@ Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z ope
         }  
     ```  
   
-     Ponieważ metoda zwraca <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] założono, że operacja ma pełną kontrolę nad bajtów, które zostaną zwrócone z operacji usługi i dotyczy bez formatowania danych, która jest zwracana.  
+     Ponieważ metoda zwraca <xref:System.IO.Stream>, WCF przyjęto założenie, że operacja ma pełną kontrolę nad bajtów, które zostaną zwrócone z operacji usługi i są one stosowane bez formatowania danych, która jest zwracana.  
   
 2.  Implementowanie kontraktu usługi. Kontrakt ma tylko jedną operację (`GetImage`). Ta metoda generuje mapę bitową, a następnie zapisz go na <xref:System.IO.MemoryStream> w formacie jpg. Następnie operacja zwraca strumieniu do obiektu wywołującego.  
   
@@ -62,7 +50,7 @@ Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z ope
        }  
     ```  
   
-     Zwróć uwagę drugiego do ostatniego wiersza kodu:`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Zwróć uwagę drugiego do ostatniego wiersza kodu: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      To ustawienie nagłówek typu zawartości `"image/jpeg"`. Chociaż ten przykład przedstawia sposób zwrócenia pliku jpg, może być modyfikowany do zwrócenia dowolnego typu danych, który jest wymagany, w dowolnym formacie. Operacja musi pobrać lub wygenerowane dane i zapisać go do strumienia.  
   

@@ -1,14 +1,6 @@
 ---
-title: "_EFN_StackTrace — Funkcja"
-ms.custom: 
+title: _EFN_StackTrace — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _EFN_StackTrace
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 905a44ee3187bc920d9342b043383a1500c28985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace — Funkcja
 Udostępnia reprezentację tekst ślad stosu zarządzanych i tablicę `CONTEXT` rejestruje, jeden dla każdego przejścia między niezarządzanych i kod zarządzany.  
@@ -86,7 +74,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 -   Jeśli `pTransitionContexts` jest niezerowa, funkcja traktuje ją jako tablica struktury o długości `puiTransitionContextCount`. Rozmiar struktury jest określany przez `uiSizeOfContext`, a musi być rozmiar [simplecontext —](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) lub `CONTEXT` dla architektury.  
   
--   `wszTextOut`są zapisywane w następującym formacie:  
+-   `wszTextOut` są zapisywane w następującym formacie:  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -110,7 +98,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
  **Nagłówek:** SOS_Stacktrace.h  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

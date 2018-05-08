@@ -1,10 +1,6 @@
 ---
-title: "Typ danych — Podsumowanie (Visual Basic)"
+title: Typ danych — Podsumowanie (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,33 +37,30 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>Typ danych — Podsumowanie (Visual Basic)
 W poniższej tabeli przedstawiono typy danych Visual Basic, typy obsługi środowiska uruchomieniowego języka wspólnego ich Alokacja magazynu nominalnego i ich zakresów wartości.  
   
 |Typ Visual Basic|Wspólna struktura typu środowiska uruchomieniowego języka|Alokacja magazynu nominalnego|Zakres wartości|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
-|[Wartość logiczna](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Zależy od implementacji platformy|`True`lub`False`|  
-|[Bajtów](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 bajt|0 do 255 (bez znaku)|  
+|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Zależy od implementacji platformy|`True` lub `False`|  
+|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 bajt|0 do 255 (bez znaku)|  
 |[CHAR](../../../visual-basic/language-reference/data-types/char-data-type.md) (pojedynczy znak)|<xref:System.Char>|2 bajty|od 0 do 65535 (bez znaku)|  
 |[Data](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 bajtów|0:00:00 (północ) 1 stycznia 0001 do 11:59:59 PM 31 grudnia 9999 r|  
 |[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 bajtów|od 0 do +/-79,228,162,514,264,337,593,543,950,335 (+/-7,9... E + 28) <sup>†</sup> bez punktu dziesiętnego; 0 za pośrednictwem +/-7.9228162514264337593543950335 28 miejsc z prawej strony dziesiętnego;<br /><br /> najmniejszą liczbę różną od zera jest +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
 |[Podwójna](../../../visual-basic/language-reference/data-types/double-data-type.md) (podwójnej precyzji zmiennoprzecinkowe)|<xref:System.Double>|8 bajtów|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 <sup>†</sup> dla wartości ujemnych;<br /><br /> 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 <sup>†</sup> dla wartości dodatnie|  
 |[Liczba całkowita](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 bajty|-2,147,483,648 do 2 147 483 647 (ze znakiem)|  
 |[Długie](../../../visual-basic/language-reference/data-types/long-data-type.md) (długich liczb całkowitych)|<xref:System.Int64>|8 bajtów|-9,223,372,036,854,775,808 za pośrednictwem 9,223,372,036,854,775,807 (9.2... E + 18 <sup>†</sup>) (ze znakiem)|  
-|[Obiekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>(klasa)|4 bajty na platformie 32-bitowych<br /><br /> 8 bajtów na 64-bitowej platformy|Dowolnego typu mogą być przechowywane w zmiennej typu`Object`|  
-|[Sbyte —](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 bajt|-128 do 127 znaków (ze znakiem)|  
+|[Obiekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (klasa)|4 bajty na platformie 32-bitowych<br /><br /> 8 bajtów na 64-bitowej platformy|Dowolnego typu mogą być przechowywane w zmiennej typu `Object`|  
+|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 bajt|-128 do 127 znaków (ze znakiem)|  
 |[Krótki](../../../visual-basic/language-reference/data-types/short-data-type.md) (krótka liczba całkowita)|<xref:System.Int16>|2 bajty|-32 768 do 32 767 (ze znakiem)|  
 |[Pojedynczy](../../../visual-basic/language-reference/data-types/single-data-type.md) (pojedynczej precyzji zmiennoprzecinkowe)|<xref:System.Single>|4 bajty|-3.4028235E + 38 do - 1, 401298E-45 <sup>†</sup> dla wartości ujemnych;<br /><br /> 1, 401298E-45 za pośrednictwem 3.4028235E + 38 <sup>†</sup> dla wartości dodatnie|  
-|[Ciąg](../../../visual-basic/language-reference/data-types/string-data-type.md) (zmiennej długości)|<xref:System.String>(klasa)|Zależy od implementacji platformy|0, aby około 2 miliardów znaków Unicode|  
+|[Ciąg](../../../visual-basic/language-reference/data-types/string-data-type.md) (zmiennej długości)|<xref:System.String> (klasa)|Zależy od implementacji platformy|0, aby około 2 miliardów znaków Unicode|  
 |[Uinteger —](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 bajty|od 0 do 4 294 967 295 (bez znaku)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 bajtów|od 0 do 18,446,744,073,709,551,615 (1.8... E + 19 <sup>†</sup>) (bez znaku)|  
 |[Zdefiniowane przez użytkownika](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (struktury)|(dziedziczy <xref:System.ValueType>)|Zależy od implementacji platformy|Każdy element członkowski struktury ma zakres określony przez jego typu danych i niezależnie od innych członków określonych zakresów|  

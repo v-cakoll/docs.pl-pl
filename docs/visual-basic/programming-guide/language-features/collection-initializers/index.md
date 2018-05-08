@@ -1,26 +1,16 @@
 ---
 title: Inicjatory kolekcji (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CollectionInitializer
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ec0179df50df453d6058a4b910d17561394140d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-initializers-visual-basic"></a>Inicjatory kolekcji (Visual Basic)
 *Inicjatory kolekcji* Podaj skróconą składnię, która umożliwia tworzenie kolekcji i wypełnić ją początkowego zestawu wartości. Inicjatory kolekcji są przydatne podczas tworzenia kolekcji z zestawu znane wartości, na przykład listę opcji menu lub kategorii, początkowego zestawu wartości liczbowe, natomiast statyczną listę ciągów, takich jak nazwy dnia i miesiąca lub lokalizacje geograficzne, takie jak Lista stanów, który jest używany do sprawdzania poprawności.  
@@ -82,17 +72,17 @@ ms.lasthandoff: 11/21/2017
   
 |Tytuł|Opis|  
 |---|---|  
-|[Porady: tworzenie Dodawanie metody rozszerzania wykorzystywanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Przedstawia sposób tworzenia metodę rozszerzenia o nazwie `Add` można wypełnić kolekcji wartościami z inicjatora kolekcji.|  
-|[Porady: tworzenie kolekcji wykorzystywanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Pokazuje, jak włączyć korzystanie z inicjatora kolekcji, umieszczając w niej `Add` metodę w klasie kolekcji, który implementuje `IEnumerable`.|  
+|[Instrukcje: tworzenie i dodawanie metody rozszerzenia używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Przedstawia sposób tworzenia metodę rozszerzenia o nazwie `Add` można wypełnić kolekcji wartościami z inicjatora kolekcji.|  
+|[Instrukcje: tworzenie kolekcji używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Pokazuje, jak włączyć korzystanie z inicjatora kolekcji, umieszczając w niej `Add` metodę w klasie kolekcji, który implementuje `IEnumerable`.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kolekcje](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [New — Operator](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Właściwości zaimplementowane automatycznie](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
  [Porady: inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
  [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Porady: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+ [Instrukcje: tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

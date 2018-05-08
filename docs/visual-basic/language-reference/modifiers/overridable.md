@@ -1,10 +1,6 @@
 ---
 title: Overridable (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Overridable
 - vb.Overridable
@@ -20,14 +16,11 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4844bf7f3ecf23335715b950a96be15e54ebc601
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
 Określa, że właściwość lub procedura może być zastąpiona przez o identycznej nazwie właściwość lub procedura w klasie pochodnej.  
@@ -53,17 +46,17 @@ Określa, że właściwość lub procedura może być zastąpiona przez o identy
 ## <a name="usage"></a>Użycie  
  `Overridable` Modyfikatora można używać w tych sytuacjach:  
   
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Modyfikatory](../../../visual-basic/language-reference/modifiers/index.md)  
  [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Zastąpienia](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
  [Przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

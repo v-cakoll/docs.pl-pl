@@ -1,6 +1,12 @@
- ---
-Tytuł: ms.custom "Biblioteka działań": "" ms.date: "2017-03/30" ms.prod: ms.reviewer ".net framework": "" ms.suite: "" ms.tgt_pltfrm: "" ms.topic: "artykuł" ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: 7 Autor: "dotnet bot "ms.author: Menedżer"dotnetcontent":"wpickett"ms.workload: 
-  - "dotnet"
+---
+title: Biblioteka działań
+ms.date: 03/30/2017
+ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
+ms.openlocfilehash: 75a7f0203b27e331f9c33fa95be7f6fb95354b7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-library"></a>Biblioteka działań
 Ta sekcja zawiera przykłady ilustrujące zaawansowane działań niestandardowych w systemie Windows Workflow Foundation (WF).  

@@ -1,11 +1,6 @@
 ---
-title: "From — Klauzula (Visual Basic)"
+title: From — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>From — Klauzula (Visual Basic)
 Określa co najmniej jednej zmiennej zakresu i kolekcji do zapytania.  
@@ -38,9 +30,9 @@ From element [ As type ] In collection [ _ ]
   
 |Termin|Definicja|  
 |---|---|  
-|`element`|Wymagany. A *zmiennej zakresu* używany do iterowania po elementach kolekcji. Zmienna zakresu jest używana do odwoływania się do każdego elementu członkowskiego `collection` jako zapytanie iteruje `collection`. Musi być typem wyliczenia.|  
-|`type`|Opcjonalny. Typ `element`. Jeśli nie `type` jest określony typ `element` jest wywnioskowany na podstawie `collection`.|  
-|`collection`|Wymagany. Odnosi się do kolekcji można wykonać zapytania. Musi być typem wyliczenia.|  
+|`element`|Wymagana. A *zmiennej zakresu* używany do iterowania po elementach kolekcji. Zmienna zakresu jest używana do odwoływania się do każdego elementu członkowskiego `collection` jako zapytanie iteruje `collection`. Musi być typem wyliczenia.|  
+|`type`|Opcjonalna. Typ `element`. Jeśli nie `type` jest określony typ `element` jest wywnioskowany na podstawie `collection`.|  
+|`collection`|Wymagana. Odnosi się do kolekcji można wykonać zapytania. Musi być typem wyliczenia.|  
   
 ## <a name="remarks"></a>Uwagi  
  `From` Klauzuli służy do identyfikowania źródło danych pod kątem zapytania i zmienne, które są używane do odwoływania się do elementu z kolekcji źródłowej. Te zmienne są nazywane *zmienne zakresu*. `From` Klauzuli jest wymagany dla zapytania, chyba że `Aggregate` klauzuli służy do identyfikowania czy zwraca tylko zagregowane wyników zapytania. Aby uzyskać więcej informacji, zobacz [Aggregate — klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
@@ -79,17 +71,17 @@ From element [ As type ] In collection [ _ ]
 ## <a name="see-also"></a>Zobacz też  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [For Each... Next — instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Dla... Next — instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [SELECT — klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Gdy klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
- [AGGREGATE — klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [DISTINCT — klauzula](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [JOIN — klauzula](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join — klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Order By — klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Let — klauzula](../../../visual-basic/language-reference/queries/let-clause.md)  
- [SKIP — klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Take — klauzula](../../../visual-basic/language-reference/queries/take-clause.md)  
- [SKIP While — klauzula](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take While — klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)
+ [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Distinct, klauzula](../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [Join, klauzula](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Let, klauzula](../../../visual-basic/language-reference/queries/let-clause.md)  
+ [Skip, klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Take, klauzula](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [Skip While, klauzula](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [Take While, klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)

@@ -1,32 +1,20 @@
 ---
 title: Zabezpieczanie transportu za pomocą anonimowego klienta
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Zabezpieczanie transportu za pomocą anonimowego klienta
-To [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] scenariuszu zapewnienie poufności i integralności zabezpieczeń transportowych (HTTPS). Serwer musi zostać uwierzytelniony przy użyciu certyfikatu protokołu Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatu serwera. Klient nie został uwierzytelniony przy użyciu dowolnego mechanizmu i jest anonimowy.  
+W tym scenariuszu Windows Communication Foundation (WCF) używane zabezpieczeń transportowych (HTTPS), aby zapewnić poufności i integralności. Serwer musi zostać uwierzytelniony przy użyciu certyfikatu protokołu Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatu serwera. Klient nie został uwierzytelniony przy użyciu dowolnego mechanizmu i jest anonimowy.  
   
  Przykładową aplikację, zobacz [zabezpieczenia transportu WS](../../../../docs/framework/wcf/samples/ws-transport-security.md). Aby uzyskać więcej informacji na temat zabezpieczeń transportu, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
@@ -38,7 +26,7 @@ To [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] scenariuszu zapewnien
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Transportu|  
 |Współdziałanie|Z istniejącymi usługami sieci Web i klientami|  
-|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak<br /><br /> Poziom aplikacji (nie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje)|  
+|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak<br /><br /> Poziom aplikacji (bez obsługi WCF)|  
 |Integralność|Tak|  
 |Poufność|Tak|  
 |Transportu|HTTPS|  

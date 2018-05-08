@@ -1,9 +1,6 @@
 ---
-title: "try-catch (odwołanie w C#)"
+title: try-catch (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - try
 - try_CSharpKeyword
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-caps.latest.revision: "45"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 753beb554796ad0aa2c5e15c715240453de9a3e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="try-catch-c-reference"></a>try-catch (odwołanie w C#)
 Instrukcji try-catch składa się z `try` bloku, po której następuje co najmniej jeden `catch` postanowienia Określ obsługę różnych wyjątków.  
@@ -170,8 +164,8 @@ static void Main()
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Spróbuj, throw i catch instrukcji (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [Instrukcje try, throw i catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
  [Instrukcje obsługi wyjątków](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [throw](../../../csharp/language-reference/keywords/throw.md)  
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [Porady: jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+ [Instrukcje: Jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

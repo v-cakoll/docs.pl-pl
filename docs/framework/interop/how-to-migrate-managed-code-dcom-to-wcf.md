@@ -1,24 +1,14 @@
 ---
-title: "Instrukcje: migrowanie zarządzanego kodu DCOM do WCF"
-ms.custom: 
+title: 'Instrukcje: migrowanie zarządzanego kodu DCOM do WCF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d97a7d855d6c5ccd0545d8bf95ebe7bcece88656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 187bff7c75ba2a0887e3c5728a484a9231936511
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Instrukcje: migrowanie zarządzanego kodu DCOM do WCF
 Windows Communication Foundation (WCF) jest rozwiązaniem zalecanym i bezpieczne za pośrednictwem rozproszonej Component Object Model (DCOM) dla kodu zarządzanego połączeń między serwerami i klientami w środowisku rozproszonym. W tym artykule przedstawiono sposób można migrować kodu z modelu DCOM do WCF w następujących scenariuszach.  
@@ -311,7 +301,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Poniżej znajduje się wdrożenia tej usługi. Ta implementacja obsługuje pojedyncze fabryki kanałów do tworzenia obiektów sesyjnych.  Gdy `GetInstanceAddress` jest nazywane, tworzy kanału i tworzy <xref:System.ServiceModel.EndpointAddress10> obiekt, który wskazuje zdalny adres skojarzony z tym kanale.   <xref:System.ServiceModel.EndpointAddress10>ma typ danych, który może być zwracany do klienta przez wartość.  
+ Poniżej znajduje się wdrożenia tej usługi. Ta implementacja obsługuje pojedyncze fabryki kanałów do tworzenia obiektów sesyjnych.  Gdy `GetInstanceAddress` jest nazywane, tworzy kanału i tworzy <xref:System.ServiceModel.EndpointAddress10> obiekt, który wskazuje zdalny adres skojarzony z tym kanale.   <xref:System.ServiceModel.EndpointAddress10> ma typ danych, który może być zwracany do klienta przez wartość.  
   
 ```  
 public class SessionBoundFactory : ISessionBoundFactory  

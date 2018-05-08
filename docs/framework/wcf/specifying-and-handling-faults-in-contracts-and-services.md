@@ -1,31 +1,17 @@
 ---
 title: Określanie i obsługa błędów w kontraktach i usługach
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: fc5fa03b723a35c4748fc16db8946277266e3b0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Określanie i obsługa błędów w kontraktach i usługach
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacje obsługują sytuacjach błędu przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, jak zwrócić takie błędy jako część implementacji usługi i jak klienci catch takie błędy.  
+Aplikacje systemu Windows Communication Foundation (WCF) obsługują wystąpienia błędu przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, jak zwrócić takie błędy jako część implementacji usługi i jak klienci catch takie błędy.  
   
 ## <a name="error-handling-overview"></a>Omówienie obsługi błędów  
  We wszystkich aplikacjach zarządzanych błędy przetwarzania są reprezentowane przez <xref:System.Exception> obiektów. W aplikacjach opartego na protokole SOAP, takich jak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] komunikacji metody usług aplikacji, przetwarzania przy użyciu protokołu SOAP komunikatów "fault" informacje o błędzie. Błędach SOAP są typy wiadomości, które są zawarte w metadanych dla operacji usługi i dlatego utworzyć kontrakt błędu, której klienci mogą używać, aby ich operacja bardziej niezawodne lub interaktywnego. Ponadto, ponieważ błędach SOAP są wyrażane klientom w postaci XML, jest to bardzo interoperacyjne typu system używany przez klientów na dowolnej platformie SOAP można zwiększyć zasięg Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.  

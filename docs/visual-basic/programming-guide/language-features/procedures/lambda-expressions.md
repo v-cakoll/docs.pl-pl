@@ -1,13 +1,6 @@
 ---
-title: "Lambda — Wyrażenia (Visual Basic)"
-ms.custom: 
+title: Lambda — Wyrażenia (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda — Wyrażenia (Visual Basic)
 A *wyrażenia lambda* jest funkcją lub podprocedury bez nazwy, który może służyć wszędzie tam, gdzie delegata jest prawidłowy. Wyrażenia lambda można używać funkcji lub procedury i może być jednym lub wielu linii. Wyrażenie lambda, można przekazać wartości z bieżącego zakresu.  
@@ -70,7 +60,7 @@ A *wyrażenia lambda* jest funkcją lub podprocedury bez nazwy, który może sł
   
 -   Można określić typ danych parametru wyrażenia lambda za pomocą `As` można wywnioskować — słowo kluczowe lub typ danych parametru. Albo wszystkie parametry muszą określono można wywnioskować typów danych lub wszystkich.  
   
--   `Optional`i `Paramarray` parametry są niedozwolone.  
+-   `Optional` i `Paramarray` parametry są niedozwolone.  
   
 -   Parametry ogólne są niedozwolone.  
   
@@ -118,7 +108,7 @@ End Class
   
  Aby uzyskać więcej informacji o sposobie tworzenia i używania metody asynchroniczne, zobacz [programowanie asynchroniczne z Async i Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a>Kontekst  
+##  <a name="context"></a> Kontekst  
  Wyrażenia lambda udostępnia kontekst zakresu, w którym jest zdefiniowany. Ma te same prawa dostępu jako dowolny kod napisany w zawierający zakres. Obejmuje to dostęp do zmiennych Członkowskich, funkcje i subskrypcji, `Me`i parametrów i zmiennych lokalnych w zawierającym zasięgu.  
   
  Dostęp do zmiennych lokalnych i parametrów w zakresie zawierającym mogą wykraczać poza okres istnienia tego zakresu. Tak długo, jak delegata odwołujących się do wyrażenia lambda nie jest dostępny dla wyrzucanie elementów bezużytecznych, dostęp do zmiennych w oryginalne środowisko jest przechowywane. W poniższym przykładzie zmienna `target` jest lokalny dla `makeTheGame`, metody, w którym wyrażenie lambda `playTheGame` jest zdefiniowany. Należy pamiętać, że wyrażenie lambda zwrócony przypisane do `takeAGuess` w `Main`, ma nadal dostęp do zmiennej lokalnej `target`.  
@@ -127,15 +117,15 @@ End Class
   
  W poniższym przykładzie pokazano szeroką gamę praw dostępu wyrażenia lambda zagnieżdżonych. Po wykonaniu wyrażenia lambda zwrócony z `Main` jako `aDel`, uzyskuje dostęp do tych elementów:  
   
--   To pole klasy, w którym jest zdefiniowany:`aField`  
+-   To pole klasy, w którym jest zdefiniowany: `aField`  
   
--   Właściwość klasy, w którym jest zdefiniowana:`aProp`  
+-   Właściwość klasy, w którym jest zdefiniowana: `aProp`  
   
--   Parametr metody `functionWithNestedLambda`, w którym jest zdefiniowana:`level1`  
+-   Parametr metody `functionWithNestedLambda`, w którym jest zdefiniowana: `level1`  
   
--   Zmienna lokalna o `functionWithNestedLambda`:`localVar`  
+-   Zmienna lokalna o `functionWithNestedLambda`: `localVar`  
   
--   Parametr wyrażenia lambda, w którym jest zagnieżdżony:`level2`  
+-   Parametr wyrażenia lambda, w którym jest zagnieżdżony: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
@@ -163,10 +153,10 @@ End Class
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
  [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Obiekty delegowane](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Function — instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub — instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Typy dopuszczające wartości zerowe wartości](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [Delegaci](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Typy wartości dopuszczających wartości null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Porady: przekazywanie procedur do innej procedury w Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Porady: Tworzenie wyrażenia Lambda](./how-to-create-a-lambda-expression.md)  
+ [Instrukcje: tworzenie wyrażenia lambda](./how-to-create-a-lambda-expression.md)  
  [Swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

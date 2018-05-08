@@ -1,11 +1,6 @@
 ---
-title: "Option Compare — Instrukcja"
+title: Option Compare — Instrukcja
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Compare
 - vb.OptionCompare
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 00753eddb641c07ef9c6e6282fe00c5e8d00547a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 675ad649650d9fbc6f2c0f1dc689aa682ca6103c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="option-compare-statement"></a>Option Compare — Instrukcja
 Deklaruje domyślną metodę porównywania do używania przy porównywaniu danych ciągów.  
@@ -45,8 +37,8 @@ Option Compare { Binary | Text }
   
 |Termin|Definicja|  
 |---|---|  
-|`Binary`|Opcjonalny. Wynikiem porównania ciągu oparte na kolejność sortowania, pochodzi z wewnętrznego reprezentacje binarne znaków.<br /><br /> Ten typ porównania jest szczególnie przydatny w przypadku ciągi mogą zawierać znaki, które nie mają być interpretowane jako tekst. W takim przypadku nie chcesz odchylenia porównania z alfabetyczną ekwiwalenty, takich jak ignorowanie wielkości liter.|  
-|`Text`|Opcjonalny. Wynikiem porównania ciągu oparte na porządek sortowania bez uwzględniania wielkości liter tekstu ustaleniami ustawień regionalnych systemu.<br /><br /> Jeśli Twoje ciągi zawiera wszystkie znaki tekstu i chcesz porównać je z uwzględnieniem konta ekwiwalenty alfabetyczne, takich jak liter i cyfr blisko związane przydaje porównania tego typu. Na przykład, warto rozważyć `A` i `a` równe, i `Ä` i `ä` przed `B` i `b`.|  
+|`Binary`|Opcjonalna. Wynikiem porównania ciągu oparte na kolejność sortowania, pochodzi z wewnętrznego reprezentacje binarne znaków.<br /><br /> Ten typ porównania jest szczególnie przydatny w przypadku ciągi mogą zawierać znaki, które nie mają być interpretowane jako tekst. W takim przypadku nie chcesz odchylenia porównania z alfabetyczną ekwiwalenty, takich jak ignorowanie wielkości liter.|  
+|`Text`|Opcjonalna. Wynikiem porównania ciągu oparte na porządek sortowania bez uwzględniania wielkości liter tekstu ustaleniami ustawień regionalnych systemu.<br /><br /> Jeśli Twoje ciągi zawiera wszystkie znaki tekstu i chcesz porównać je z uwzględnieniem konta ekwiwalenty alfabetyczne, takich jak liter i cyfr blisko związane przydaje porównania tego typu. Na przykład, warto rozważyć `A` i `a` równe, i `Ä` i `ä` przed `B` i `b`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli używana, `Option Compare` instrukcji musi występować w pliku przed wszystkimi innymi instrukcjami kodu źródłowego.  

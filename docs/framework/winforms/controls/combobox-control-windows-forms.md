@@ -1,13 +1,6 @@
 ---
-title: "ComboBox — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: ComboBox — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drop-down lists [Windows Forms], Windows Forms
 - list controls [Windows Forms], Windows Forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0d8ee3a2c51cf05f0669573170c5e15d4e9346e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a86c904150a0d0321405517ad88dffd0a6e4721
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox — Formant (Formularze systemu Windows)
 Formularze systemu Windows `ComboBox` formant jest używana do wyświetlania danych w polu kombi listy rozwijanej. Domyślnie `ComboBox` formant jest widoczny w dwóch częściach: górnej części jest polem tekstowym, który zezwala użytkownikowi na typ elementu listy. Druga część to pole listy, które wyświetla listę elementów, z których użytkownik może wybrać jeden.  
@@ -39,7 +27,7 @@ Formularze systemu Windows `ComboBox` formant jest używana do wyświetlania dan
  Pokazuje Rysowanie niestandardowego tekstu w `ComboBox` formantu.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.ComboBox>klasy  
+ <xref:System.Windows.Forms.ComboBox> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

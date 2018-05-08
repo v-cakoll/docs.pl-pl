@@ -1,11 +1,6 @@
 ---
 title: Protected (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Protected
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d0cc7a0cb626a9ec8e2a0e47abc02e5268aed56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3866e7dd72b9e7145cf76f480bb5ffc6239a775e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie swojej klasy lub z klasy pochodnej.  
@@ -46,34 +38,34 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
   
  `Protected` Modyfikatora można używać w tych sytuacjach:  
   
- [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Const — instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [DECLARE — instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Delegate — instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum, instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface — instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
  [Poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

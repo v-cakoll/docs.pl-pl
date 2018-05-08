@@ -1,24 +1,12 @@
 ---
-title: "Instrukcje instalacji certyfikatu serwera Internetowych usług informacyjnych"
-ms.custom: 
+title: Instrukcje instalacji certyfikatu serwera Internetowych usług informacyjnych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instrukcje instalacji certyfikatu serwera Internetowych usług informacyjnych
 Aby uruchomić przykłady, które bezpiecznego komunikowania się z programu Internet Information Services (IIS), należy utworzyć i instalowania certyfikatu serwera.  
@@ -47,7 +35,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![Kreator certyfikatów usług IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Testowanie dostępu do usługi w przeglądarce przy użyciu https://localhost/servicemodelsamples/service.svc adres HTTPS.  
+6.  Testowanie dostępu do usługi w przeglądarce przy użyciu adresu HTTPS https://localhost/servicemodelsamples/service.svc.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Jeśli protokół SSL został uprzednio skonfigurowany przy użyciu Httpcfg.exe  
   
@@ -76,7 +64,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5.  Wybierz **ServiceModelSamples HTTPS serwera** z **certyfikat SSL** listy rozwijanej i kliknij przycisk **OK**.  
   
-6.  Testowanie dostępu do usługi w przeglądarce przy użyciu https://localhost/servicemodelsamples/service.svc adres HTTPS.  
+6.  Testowanie dostępu do usługi w przeglądarce przy użyciu adresu HTTPS https://localhost/servicemodelsamples/service.svc.  
   
 > [!NOTE]
 >  Ponieważ certyfikat testowy, który został właśnie zainstalowany, nie jest zaufany certyfikat, mogą wystąpić dodatkowe ostrzeżenia dotyczące zabezpieczeń programu Internet Explorer podczas przeglądania do lokalnego adresy sieci Web zabezpieczone przy użyciu tego certyfikatu.  

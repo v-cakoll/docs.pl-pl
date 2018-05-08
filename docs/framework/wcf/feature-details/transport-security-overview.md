@@ -1,35 +1,23 @@
 ---
 title: Przegląd zabezpieczeń transportu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b697dc6a227c3b2a5646f4fcb11a39fd9d6339ff
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
-Mechanizmy zabezpieczeń transportu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] są zależne od powiązania i transportu są używane. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy, transport HTTP i podstawowego mechanizmu zabezpieczanie transportu Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, często nazywane HTTPS. W tym temacie omówiono mechanizmy zabezpieczeń transportu główne używane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania dostarczane przez system.  
+Mechanizmy zabezpieczeń transportu w systemie Windows Communication Foundation (WCF) są zależne od powiązania i transportu są używane. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy, transport HTTP i podstawowego mechanizmu zabezpieczanie transportu Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, często nazywane HTTPS. W tym temacie omówiono mechanizmy zabezpieczeń transportu główne używane WCF powiązania dostarczane przez system.  
   
 > [!NOTE]
->  Stosowania zabezpieczeń SSL z programem .NET Framework 3.5 lub nowszym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klient używa zarówno certyfikaty pośrednie w magazynie certyfikatów i certyfikaty pośrednie otrzymał podczas negocjacji w protokole SSL podczas weryfikacji łańcucha certyfikatu certyfikat usługi. .NET framework 3.0 używa tylko certyfikaty pośrednie zainstalowane w lokalnym magazynie certyfikatów.  
+>  Gdy zabezpieczeń SSL jest używany z programem .NET Framework 3.5 lub nowszym klienta platformy WCF używa certyfikaty pośrednie w magazynie certyfikatów i certyfikaty pośrednie otrzymał podczas negocjacji w protokole SSL podczas weryfikacji łańcucha certyfikatu usługi certyfikat. .NET framework 3.0 używa tylko certyfikaty pośrednie zainstalowane w lokalnym magazynie certyfikatów.  
   
 > [!WARNING]
 >  Gdy używane są zabezpieczenia transportu <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` właściwości mogą zostać nadpisane. Aby temu zapobiec występowaniu zestaw <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` None. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> jest to zachowanie usługi, które można ustawić opisu usługi.  
@@ -75,7 +63,7 @@ Mechanizmy zabezpieczeń transportu [!INCLUDE[indigo1](../../../../includes/indi
  Dzięki temu serwer służącego do uwierzytelniania NTLM, jeżeli protokół Kerberos nie powiedzie się. Aby uzyskać więcej informacji o konfigurowaniu usługi IIS w [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [wymuszania uwierzytelnianie NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Aby uzyskać [!INCLUDE[iisver](../../../../includes/iisver-md.md)], uwierzytelnianie systemu Windows zawiera uwierzytelniania NTLM. Aby uzyskać więcej informacji, zobacz [usług IIS 7.0 Beta: Konfigurowanie certyfikatów serwerów w usługach IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> Klasy zaprojektowano pod kątem współpracy z usługami, które implementują WS-* specyfikacji. Zabezpieczenia transportu dla tego powiązania jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP lub HTTPS. Aby utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, która używa protokołu SSL, używać usług IIS do hostowania aplikacji. Alternatywnie Jeśli tworzysz aplikację hostowanie Samoobsługowe narzędzie HttpCfg.exe powiązać certyfikat X.509 do określonego portu na komputerze. Numer portu jest określony jako część [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji jako adresu punktu końcowego. W trybie transportu adres punktu końcowego musi zawierać nazwę protokołu HTTPS lub zostanie wygenerowany wyjątek w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ <xref:System.ServiceModel.WSHttpBinding> Klasy zaprojektowano pod kątem współpracy z usługami, które implementują WS-* specyfikacji. Zabezpieczenia transportu dla tego powiązania jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP lub HTTPS. Aby utworzyć aplikację usługi WCF, która używa protokołu SSL, należy używać usług IIS do hostowania aplikacji. Alternatywnie Jeśli tworzysz aplikację hostowanie Samoobsługowe narzędzie HttpCfg.exe powiązać certyfikat X.509 do określonego portu na komputerze. Numer portu jest określony jako część aplikacji WCF jako adresu punktu końcowego. W trybie transportu adres punktu końcowego musi zawierać nazwę protokołu HTTPS lub zostanie wygenerowany wyjątek w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Uwierzytelnianie klienta, można ustawić <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> właściwość <xref:System.ServiceModel.HttpTransportSecurity> klasy do jednego z <xref:System.ServiceModel.HttpClientCredentialType> wartości wyliczenia. Wartości wyliczenia są takie same jak typy poświadczeń klienta dla <xref:System.ServiceModel.BasicHttpBinding> i mają być obsługiwane z usługami IIS.  
   

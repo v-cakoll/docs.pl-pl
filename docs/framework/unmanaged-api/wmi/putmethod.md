@@ -1,11 +1,7 @@
 ---
-title: "Funkcja PutMethod (niezarządzany wykaz interfejsów API)"
-description: "Funkcja PutMethod tworzy metodę."
+title: Funkcja PutMethod (niezarządzany wykaz interfejsów API)
+description: Funkcja PutMethod tworzy metodę.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7e97ffcf44a738234f67d9736382c46c42e5b61e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f74b0d30a1a8899d3c8d0a2bf0f108ea11165cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putmethod-function"></a>Funkcja PutMethod
 Tworzy metodę.
@@ -105,7 +98,7 @@ Na przykład zobacz [IWbemClassObject::PutMethod](https://msdn.microsoft.com/lib
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

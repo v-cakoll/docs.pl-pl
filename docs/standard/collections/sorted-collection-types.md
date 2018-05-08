@@ -1,13 +1,7 @@
 ---
-title: "Sortowane typów kolekcji"
-ms.custom: 
+title: Sortowane typów kolekcji
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SortedDictionary collection type
 - SortedList class, grouping data in collections
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7efe53d472e1789d49acc3973acdf190c8ff6662
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 31b40167be4f2760eb7c88155e1733266e34d11d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorted-collection-types"></a>Sortowane typów kolekcji
 <xref:System.Collections.SortedList?displayProperty=nameWithType> Klasy <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> klasy ogólnej i <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> klasy ogólnej są podobne do <xref:System.Collections.Hashtable> klasy i <xref:System.Collections.Generic.Dictionary%602> ogólnej klasy w tym wdrażają <xref:System.Collections.IDictionary> interfejsu, ale obsługa ich kolejność elementów w sortowania według klucza, a nie mają O(1) wstawiania i pobierania charakterystycznych dla tablic skrótów. Trzy klasy mają kilka funkcji cechy wspólne:  
@@ -44,7 +33,7 @@ ms.lasthandoff: 12/23/2017
   
  W poniższej tabeli przedstawiono niektóre różnice między dwoma klasami posortowaną listę i <xref:System.Collections.Generic.SortedDictionary%602> klasy.  
   
-|<xref:System.Collections.SortedList>Klasa nierodzajowe i <xref:System.Collections.Generic.SortedList%602> klasy ogólnej|<xref:System.Collections.Generic.SortedDictionary%602>Klasa ogólna|  
+|<xref:System.Collections.SortedList> Klasa nierodzajowe i <xref:System.Collections.Generic.SortedList%602> klasy ogólnej|<xref:System.Collections.Generic.SortedDictionary%602> Klasa ogólna|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |Właściwości, które zwracają kluczy i wartości są indeksowane, umożliwiając wydajne indeksowana pobierania.|Nie indeksowanego pobierania.|  
 |Pobieranie jest O (dziennika `n`).|Pobieranie jest O (dziennika `n`).|  

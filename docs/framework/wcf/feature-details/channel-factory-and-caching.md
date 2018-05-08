@@ -1,24 +1,12 @@
 ---
-title: "Fabryka kanałów i buforowanie"
-ms.custom: 
+title: Fabryka kanałów i buforowanie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1bf8e3fe4833b662f16bd6311056fda8609dd9d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="channel-factory-and-caching"></a>Fabryka kanałów i buforowanie
 Aplikacje klienta WCF <xref:System.ServiceModel.ChannelFactory%601> klasę, aby utworzyć kanał komunikacji z usługą WCF.  Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień powoduje pewne nadmiarowe obciążenie, ponieważ obejmuje ona następujące operacje:  
@@ -36,7 +24,7 @@ Aplikacje klienta WCF <xref:System.ServiceModel.ChannelFactory%601> klasę, aby 
 > [!TIP]
 >  Masz bezpośrednią kontrolę nad tworzenie fabryki kanału, korzystając z <xref:System.ServiceModel.ChannelFactory%601> bezpośrednio klasa.  
   
- Serwery proxy klienta WCF wygenerowane z [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pochodne <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601>Definiuje statycznego <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> właściwość, która definiuje zachowanie buforowania fabryki kanałów. Ustawienia pamięci podręcznej są wykonywane dla określonego typu. Na przykład ustawienie `ClientBase<ITest>.CacheSettings` jedną z wartości zdefiniowanych poniżej obejmie tylko tych proxy/obiektu ClientBase typu `ITest`. Ustawienie pamięci podręcznej dla określonego <xref:System.ServiceModel.ClientBase%601> nie można modyfikować natychmiast po utworzeniu pierwszego wystąpienia serwera proxy/obiektu ClientBase.  
+ Serwery proxy klienta WCF wygenerowane z [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pochodne <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> Definiuje statycznego <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> właściwość, która definiuje zachowanie buforowania fabryki kanałów. Ustawienia pamięci podręcznej są wykonywane dla określonego typu. Na przykład ustawienie `ClientBase<ITest>.CacheSettings` jedną z wartości zdefiniowanych poniżej obejmie tylko tych proxy/obiektu ClientBase typu `ITest`. Ustawienie pamięci podręcznej dla określonego <xref:System.ServiceModel.ClientBase%601> nie można modyfikować natychmiast po utworzeniu pierwszego wystąpienia serwera proxy/obiektu ClientBase.  
   
 ## <a name="specifying-caching-behavior"></a>Określanie zachowania buforowania  
  Zachowanie buforowania jest określany przez ustawienie <xref:System.ServiceModel.ClientBase%601.CacheSetting> właściwość na jedną z następujących wartości.  

@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::GetCurrentTask — Metoda"
-ms.custom: 
+title: IHostTaskManager::GetCurrentTask — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.GetCurrentTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3ba8cbaac28df49a2df70492c1a292ee8cd287e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2420ddb5cf9be2cfb08f89d27d9aa277305e7ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask — Metoda
 Pobiera wskaźnika interfejsu do zadania, które jest obecnie wykonywane w wątku systemu operacyjnego, z której dokonywane jest to wywołanie.  
@@ -54,13 +42,13 @@ HRESULT GetCurrentTask (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask`zwrócona pomyślnie.|  
+|S_OK|`GetCurrentTask` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
 |HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|`GetCurrentTask`została wywołana w wątku systemu operacyjnego poza kontrolą hosta.|  
+|HOST_E_INVALIDOPERATION|`GetCurrentTask` została wywołana w wątku systemu operacyjnego poza kontrolą hosta.|  
   
 ## <a name="remarks"></a>Uwagi  
  Hosta można również ustawić `pTask` parametru na wartość null, aby uniemożliwić wprowadzenie CLR zadań, która nie została zainicjowana.  
@@ -72,7 +60,7 @@ HRESULT GetCurrentTask (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

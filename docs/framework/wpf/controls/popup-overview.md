@@ -1,27 +1,15 @@
 ---
-title: "Przegląd Okna podręczne"
-ms.custom: 
+title: Przegląd Okna podręczne
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
 <xref:System.Windows.Controls.Primitives.Popup> Kontroli umożliwia wyświetlanie zawartości w oddzielnym oknie, który jest wyświetlany nad bieżące okno aplikacji względem wyznaczonych współrzędnych elementu lub ekranu. W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i udostępnia informacje na temat jego używania.  
@@ -47,13 +35,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="controls-that-implement-a-popup"></a>Formanty, które implementują element Popup  
  Można tworzyć <xref:System.Windows.Controls.Primitives.Popup> kontrolek w inne formanty. Implementuje następujące formanty <xref:System.Windows.Controls.Primitives.Popup> formantu do określonych celów:  
   
--   <xref:System.Windows.Controls.ToolTip>., Jeśli chcesz utworzyć etykietkę narzędzia dla elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [omówienie ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietkę narzędzia dla elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [omówienie ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>., Jeśli chcesz utworzyć menu kontekstowe dla elementu, użyj <xref:System.Windows.Controls.ContextMenu> formantu. Aby uzyskać więcej informacji, zobacz [omówienie ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>. Jeśli chcesz utworzyć menu kontekstowe dla elementu, użyj <xref:System.Windows.Controls.ContextMenu> formantu. Aby uzyskać więcej informacji, zobacz [omówienie ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>., Jeśli chcesz utworzyć formant wyboru, która znajduje się pole listy rozwijanej, które mogą być widoczne czy ukryte, użyj <xref:System.Windows.Controls.ComboBox> formantu.  
+-   <xref:System.Windows.Controls.ComboBox>. Jeśli chcesz utworzyć formant wyboru, która znajduje się pole listy rozwijanej, które mogą być widoczne czy ukryte, użyj <xref:System.Windows.Controls.ComboBox> formantu.  
   
--   <xref:System.Windows.Controls.Expander>., Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o obszarze zwijanej, który wyświetla zawartość, użyj <xref:System.Windows.Controls.Expander> formantu. Aby uzyskać więcej informacji, zobacz [omówienie Expander](../../../../docs/framework/wpf/controls/expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o obszarze zwijanej, który wyświetla zawartość, użyj <xref:System.Windows.Controls.Expander> formantu. Aby uzyskać więcej informacji, zobacz [omówienie Expander](../../../../docs/framework/wpf/controls/expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Menu podręczne zachowania i wyglądu  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="popup-size"></a>Rozmiar menu podręczne  
  Domyślnie <xref:System.Windows.Controls.Primitives.Popup> jest automatycznie dopasowywany do jego zawartości. W przypadku zmiany rozmiaru automatycznie niektóre efekty mapy bitowej może być ukryty, ponieważ domyślny rozmiar obszaru ekranu, który jest zdefiniowany dla <xref:System.Windows.Controls.Primitives.Popup> zawartości nie ma wystarczającej ilości miejsca dla efekty mapy bitowej do wyświetlenia.  
   
- <xref:System.Windows.Controls.Primitives.Popup>zawartość może być zasłonięty również po ustawieniu <xref:System.Windows.UIElement.RenderTransform%2A> zawartości. W tym scenariuszu niektóre zawartości mogą być ukryte, jeśli zawartość przekształcone <xref:System.Windows.Controls.Primitives.Popup> wykracza poza obszar oryginalnej <xref:System.Windows.Controls.Primitives.Popup>. Jeśli efekt mapy bitowej lub Przekształcanie wymaga więcej miejsca, można zdefiniować margines wokół <xref:System.Windows.Controls.Primitives.Popup> zawartości w celu zapewnienia obszaru więcej dla formantu.  
+ <xref:System.Windows.Controls.Primitives.Popup> zawartość może być zasłonięty również po ustawieniu <xref:System.Windows.UIElement.RenderTransform%2A> zawartości. W tym scenariuszu niektóre zawartości mogą być ukryte, jeśli zawartość przekształcone <xref:System.Windows.Controls.Primitives.Popup> wykracza poza obszar oryginalnej <xref:System.Windows.Controls.Primitives.Popup>. Jeśli efekt mapy bitowej lub Przekształcanie wymaga więcej miejsca, można zdefiniować margines wokół <xref:System.Windows.Controls.Primitives.Popup> zawartości w celu zapewnienia obszaru więcej dla formantu.  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Definiowanie pozycja podręcznego  

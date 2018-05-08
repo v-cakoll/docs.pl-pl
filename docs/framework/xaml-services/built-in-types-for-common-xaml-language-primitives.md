@@ -1,13 +1,6 @@
 ---
-title: "Typy wbudowane dla wspólnych elementów podstawowych języka XAML"
-ms.custom: 
+title: Typy wbudowane dla wspólnych elementów podstawowych języka XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML language primitives [XAML Services]
 - XAML [XAML Services], built-in types
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-caps.latest.revision: "11"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c359a9a7f9797fc03ce20c453905af01f925d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Typy wbudowane dla wspólnych elementów podstawowych języka XAML
-XAML 2009 wprowadzono obsługę poziom języka XAML dla kilku typów danych, które są często używanych elementów podstawowych, środowisko uruchomieniowe języka wspólnego (CLR) i w innych językach programowania. XAML 2009 dodaje obsługę tych podstawowych: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, i`x:Array`  
+XAML 2009 wprowadzono obsługę poziom języka XAML dla kilku typów danych, które są często używanych elementów podstawowych, środowisko uruchomieniowe języka wspólnego (CLR) i w innych językach programowania. XAML 2009 dodaje obsługę tych podstawowych: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, i `x:Array`  
   
 <a name="previous_techniques_for_language_primitives_in_xaml_markup"></a>   
 ## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>Poprzednie techniki elementów podstawowych języka w kodzie XAML  
@@ -86,7 +74,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Oprócz wartości liczbowych składnię tekst `x:Single` umożliwia również tokeny `Infinity`, `-Infinity`, i `NaN`. Tokeny te są traktowane jako wielkość liter.  
   
- `x:Single`Możliwe wartości w formie wykładniczej jest pierwszy znak w składni tekstu `e` lub `E`.  
+ `x:Single` Możliwe wartości w formie wykładniczej jest pierwszy znak w składni tekstu `e` lub `E`.  
   
  Dla definicji specyfikacji języka XAML, zobacz [ \[MS XAML\] sekcje 5.2.8 i 5.4.2](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -95,7 +83,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Oprócz wartości liczbowych składnię tekst `x:Double` pozwala na tokeny `Infinity`, `-Infinity`, i `NaN`. Tokeny te są traktowane jako wielkość liter.  
   
- `x:Double`Możliwe wartości w formie wykładniczej. Użyć znaku `e` lub `E` wprowadzenie wykładnika części.  
+ `x:Double` Możliwe wartości w formie wykładniczej. Użyć znaku `e` lub `E` wprowadzenie wykładnika części.  
   
  Dla definicji specyfikacji języka XAML, zobacz [ \[MS XAML\] sekcje 5.2.9 i 5.4.3](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -105,12 +93,12 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
  Dla definicji specyfikacji języka XAML, zobacz [ \[MS XAML\] sekcje 5.2.11 i 5.4.5](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint32"></a>x: Int32  
- Dla zapasowy CLR `x:Int32` pierwotnych odpowiada <xref:System.Int32>. `x:Int32`jest traktowany jako podpisany. W języku XAML, Brak znaku plus (`+`) logowania w składni tekst jest domniemane jako dodatnią podpisem.  
+ Dla zapasowy CLR `x:Int32` pierwotnych odpowiada <xref:System.Int32>. `x:Int32` jest traktowany jako podpisany. W języku XAML, Brak znaku plus (`+`) logowania w składni tekst jest domniemane jako dodatnią podpisem.  
   
  Dla definicji specyfikacji języka XAML, zobacz [ \[MS XAML\] sekcje ppkt 5.2.12 i 5.4.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint64"></a>x: Int64.  
- Dla zapasowy CLR `x:Int64` pierwotnych odpowiada <xref:System.Int64>. `x:Int64`jest traktowany jako podpisany. W języku XAML, Brak znaku plus (`+`) logowania w składni tekst jest domniemane jako dodatnią podpisem.  
+ Dla zapasowy CLR `x:Int64` pierwotnych odpowiada <xref:System.Int64>. `x:Int64` jest traktowany jako podpisany. W języku XAML, Brak znaku plus (`+`) logowania w składni tekst jest domniemane jako dodatnią podpisem.  
   
  Dla definicji specyfikacji języka XAML, zobacz [ \[MS XAML\] sekcje ppkt 5.2.13 i 5.4.7](http://go.microsoft.com/fwlink/?LinkId=114525).  
   

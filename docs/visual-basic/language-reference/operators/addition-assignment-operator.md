@@ -1,12 +1,6 @@
 ---
 title: += — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ac8f5679aa90c50c15c33a957cfc75d9ccecde6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f12a0560d984f871110c02f1df2c2ec42b68809b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+= — Operator (Visual Basic)
 Dodaje wartość wyrażenia liczbowego wartość liczbowa zmiennej lub właściwości i przypisuje wynik do zmiennej lub właściwości. Może również służyć do łączenia `String` wyrażenie `String` zmienna lub właściwość i przypisz wynik do zmiennej lub właściwości.  
@@ -36,10 +27,10 @@ variableorproperty += expression
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagany. Wszelkie liczbowe lub `String` zmienna lub właściwość.  
+ Wymagana. Wszelkie liczbowe lub `String` zmienna lub właściwość.  
   
  `expression`  
- Wymagany. Wszelkie liczbowe lub `String` wyrażenia.  
+ Wymagana. Wszelkie liczbowe lub `String` wyrażenia.  
   
 ## <a name="remarks"></a>Uwagi  
  Element po lewej stronie `+=` operator może być zmienną skalarną proste, właściwością lub element tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
@@ -66,7 +57,7 @@ variableorproperty += expression
  Wartość `num1` jest teraz 13 i wartość `str1` jest teraz "103".  
   
 ## <a name="see-also"></a>Zobacz też  
- [+ — Operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [+, operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
  [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)  
  [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)  

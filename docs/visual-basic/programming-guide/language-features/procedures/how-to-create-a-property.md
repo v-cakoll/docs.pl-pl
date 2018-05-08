@@ -1,26 +1,17 @@
 ---
-title: "Porady: tworzenie właściwości (Visual Basic)"
-ms.custom: 
+title: 'Porady: tworzenie właściwości (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d140e6a10061f7fabe3d12c6cce5d0c201e103d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e3faed9880b6417f17ab8fe84bc5162e803c437
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Porady: tworzenie właściwości (Visual Basic)
 Umieść definicji właściwości między `Property` instrukcji i `End Property` instrukcji. W ramach tej definicji zdefiniujesz `Get` procedury `Set` procedury lub oba. Wszystkie właściwości kod znajduje się w ramach tych procedur.  
@@ -70,11 +61,11 @@ Umieść definicji właściwości między `Property` instrukcji i `End Property`
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
  [Różnice pomiędzy właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)  
- [Porady: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Porady: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
+ [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
  [Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Porady: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
- [Porady: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+ [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
+ [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

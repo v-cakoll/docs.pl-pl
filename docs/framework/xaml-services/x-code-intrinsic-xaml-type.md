@@ -1,13 +1,6 @@
 ---
-title: "x:Code — Typ funkcji XAML"
-ms.custom: 
+title: x:Code — Typ funkcji XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Code
 - x:Code
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-caps.latest.revision: "19"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d39249a5d1c0e230d21e6d889b92d0b57c98e2ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92be0b3b0fd1212c4254a449f902b85e998aa148
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code — Typ funkcji XAML
 Umożliwia umieszczanie kod w produkcji XAML. Taki kod albo mogą być kompilowane przez kompilowany XAML, lub do lewej w środowisku produkcyjnym XAML dla nowszej zastosowań, takich jak interpretacji przez środowisko uruchomieniowe implementacji procesora XAML.  
@@ -42,7 +30,7 @@ Umożliwia umieszczanie kod w produkcji XAML. Taki kod albo mogą być kompilowa
 ## <a name="remarks"></a>Uwagi  
  Kod w `x:Code` element dyrektywy XAML jest nadal interpretowana w głównej przestrzeni nazw XML i przestrzeni nazw XAML, pod warunkiem. W związku z tym jest zazwyczaj konieczne do kod używany do `x:Code` wewnątrz `CDATA` segmentu.  
   
- `x:Code`nie jest dozwolona dla wszystkich mechanizmów wdrażania produkcji XAML. W określonych platform (na przykład WPF) musi być skompilowany kod. W innych platform `x:Code` obciążenie może być zwykle niedozwolone.  
+ `x:Code` nie jest dozwolona dla wszystkich mechanizmów wdrażania produkcji XAML. W określonych platform (na przykład WPF) musi być skompilowany kod. W innych platform `x:Code` obciążenie może być zwykle niedozwolone.  
   
  Dla struktur, pozwalające zarządzanych `x:Code` zawartości kompilatora właściwy język do użycia na potrzeby `x:Code` zawartości jest określany przez ustawienia i elementy docelowe projektu zawierającego, która jest używana do kompilowania aplikacji.  
   

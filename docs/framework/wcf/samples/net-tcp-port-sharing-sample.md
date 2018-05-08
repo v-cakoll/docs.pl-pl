@@ -1,26 +1,12 @@
 ---
 title: Przykład współużytkowania portów Net.TCP
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Przykład współużytkowania portów Net.TCP
 Protokół TCP/IP używa 16-bitową liczbę zwanej portem do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomiona na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie może nasłuchiwać na tym porcie w tym samym czasie.  
@@ -30,13 +16,13 @@ Protokół TCP/IP używa 16-bitową liczbę zwanej portem do rozróżniania poł
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  Wiele protokołów ma standard lub domyślny numer portu, które korzystają z. Na przykład protokołu HTTP zazwyczaj używa portu TCP 80. Internet Information Services (IIS) ma odbiornika Udostępnianie portów między wiele aplikacji HTTP. Usługi IIS nasłuchuje na porcie bezpośrednio i przekazuje dalej wiadomości do odpowiedniej aplikacji na podstawie informacji w strumieniu wiadomości. Dzięki temu wiele aplikacji HTTP użyć tego samego numeru portu bez konieczności konkurować zarezerwować portu do odbierania wiadomości.  
   
- Udostępnianie portów NetTcp jest [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]funkcja umożliwiająca podobnie wiele aplikacji sieci może współużytkować jeden port. Usługa udostępniania portów NetTcp akceptuje połączenia za pomocą protokołu net.tcp i przekazuje dalej wiadomości na podstawie ich adresu docelowego.  
+ Udostępnianie portów NetTcp jest funkcja Windows Communication Foundation (WCF), która umożliwia podobnie wiele aplikacji sieci może współużytkować jeden port. Usługa udostępniania portów NetTcp akceptuje połączenia za pomocą protokołu net.tcp i przekazuje dalej wiadomości na podstawie ich adresu docelowego.  
   
  Nie włączono usługi udostępniania portów NetTcp domyślnie. Przed uruchomieniem tego przykładu, musisz ręcznie włączyć usługę. Aby uzyskać więcej informacji, zobacz [porady: Włączanie usługi udostępniania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa zostanie wyłączona, jest wyjątek po uruchomieniu aplikacji serwera.  
   

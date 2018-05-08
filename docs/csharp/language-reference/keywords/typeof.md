@@ -1,4 +1,3 @@
----
 title: typeof (odwołanie w C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -55,3 +54,4 @@ string s = method.ReturnType.GetInterface
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [is](../../../csharp/language-reference/keywords/is.md)  
  [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)
+

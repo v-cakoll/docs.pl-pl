@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Dodatki WPF"
-ms.custom: 
+title: Przegląd Dodatki WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
 - add-ins overview [WPF]
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 942f5706a83a9f9e9cd969701ed5625c57b76f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
-<a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługują rozszerzalności w dodatku. Ten model dodatku umożliwia tworzenie dodatków, które integrują się z i rozszerzanie funkcjonalności aplikacji. W niektórych scenariuszach aplikacji również należy wyświetlić [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są dostarczane przez dodatki. W tym temacie przedstawiono sposób [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wspomaga [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu dodatku, aby włączyć te scenariusze, architektura za nią korzyści i jego ograniczenia.  
+<a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługują rozszerzalności w dodatku. Ten model dodatku umożliwia tworzenie dodatków, które integrują się z i rozszerzanie funkcjonalności aplikacji. W niektórych scenariuszach aplikacji również należy wyświetlić [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są dostarczane przez dodatki. W tym temacie przedstawiono sposób [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wspomaga [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu dodatku, aby włączyć te scenariusze, architektura za nią korzyści i jego ograniczenia.  
   
 
   
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Typy nie są wykonywane zdalnie. Aby rozwiązać ten problem, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerza [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu dodatku, aby włączyć [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] utworzone przez dodatki mają być wyświetlane w aplikacji hosta. Te są obsługiwane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przez dwa typy: <xref:System.AddIn.Contract.INativeHandleContract> interfejsu i dwie metody statyczne implementowane przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters> klasy: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Na wysokim poziomie te typy i metody są używane w następujący sposób:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]wymaga, aby [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] dostarczonych przez dodatki są klas pochodzących od bezpośrednio lub pośrednio <xref:System.Windows.FrameworkElement>, na przykład kształtów, kontrolek, kontrolek użytkownika, panele układu i strony.  
+1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wymaga, aby [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] dostarczonych przez dodatki są klas pochodzących od bezpośrednio lub pośrednio <xref:System.Windows.FrameworkElement>, na przykład kształtów, kontrolek, kontrolek użytkownika, panele układu i strony.  
   
 2.  Wszędzie tam, gdzie kontrakt deklaruje, że interfejs użytkownika będą przekazywane między dodatek a host, musi być zadeklarowany jako <xref:System.AddIn.Contract.INativeHandleContract> (nie <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> odzwierciedla może być zastosowana zdalnie dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mogą być przekazywane przez granice obszarów izolowanych.  
   
@@ -178,7 +166,7 @@ ms.lasthandoff: 01/19/2018
  Te zadania opisano szczegółowo w poniższych podsekcjach.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Konfigurowanie potoku i Add-In for wdrażania ClickOnce  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]pobrana i uruchom z folderu bezpieczne w [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenia w pamięci podręcznej. Aby [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] do hostowania dodatku, potoku i Dodaj w zestawie musi zostać pobrana do folderu bezpieczne. Aby to osiągnąć, należy skonfigurować manifestu aplikacji obejmują potoku i zestawu dodatku do pobrania. Jest to łatwo zrobić [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], mimo że zestawu potoku i dodatek musi być na hoście [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] katalogu głównym projektu, aby [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do wykrywania zestawy potoku.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] pobrana i uruchom z folderu bezpieczne w [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenia w pamięci podręcznej. Aby [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] do hostowania dodatku, potoku i Dodaj w zestawie musi zostać pobrana do folderu bezpieczne. Aby to osiągnąć, należy skonfigurować manifestu aplikacji obejmują potoku i zestawu dodatku do pobrania. Jest to łatwo zrobić [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], mimo że zestawu potoku i dodatek musi być na hoście [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] katalogu głównym projektu, aby [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do wykrywania zestawy potoku.  
   
  W związku z tym, pierwszym krokiem jest utworzenie potoku i zestawu dodatku do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] głównego projektu przez ustawienie każdego potoku dane wyjściowe kompilacji zestawu i dodatek zestaw projektów. W poniższej tabeli przedstawiono kompilacji dane wyjściowe ścieżki potoku zestaw projektów i projekt zestawu dodatku znajdujących się w tym samym folderze rozwiązania i głównego jako host [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu.  
   
@@ -202,7 +190,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  Kliknij prawym przyciskiem myszy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu, kliknij przycisk **właściwości**, kliknij przycisk **publikowania**, a następnie kliknij przycisk **pliki aplikacji** przycisku.  
   
-2.  W **pliki aplikacji** okno dialogowe, zestaw **stan publikowania** każdego potoku i biblioteki DLL dodatku **Include (automatycznie)**i ustaw **grupy pobierania** dla każdego potoku i DLL dodatku do **(wymagane)**.  
+2.  W **pliki aplikacji** okno dialogowe, zestaw **stan publikowania** każdego potoku i biblioteki DLL dodatku **Include (automatycznie)** i ustaw **grupy pobierania** dla każdego potoku i DLL dodatku do **(wymagane)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Za pomocą potoku i dodać od podstawy aplikacji  
  Jeśli skonfigurowana potoku i Dodaj do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenia, są one pobierane do tej samej [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] folder pamięci podręcznej jako [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Aby użyć potoku i dodatek z [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kod należy pobrać je z aplikacji podstawowej. Różne typy i elementy członkowskie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatku modelu przy użyciu potoków i dodatki zapewniają obsługę specjalne dla tego scenariusza. Po pierwsze, ścieżka jest określana przez <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartości wyliczenia. Możesz Użyj tej wartości z przeciążeń odpowiednich członków dodatku przy użyciu potoki, które obejmują następujące czynności:  
@@ -230,7 +218,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Na stronie aplikacji hosta [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przepakowuje <xref:System.Windows.Interop.HwndSource> jako wewnętrznego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] klasą pochodzącą z <xref:System.Windows.Interop.HwndHost> i wykorzystuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> do aplikacji hosta.  
   
- <xref:System.Windows.Interop.HwndHost>istnieje, aby wyświetlić [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identyfikowane przez uchwytów okien z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Aby uzyskać więcej informacji, zobacz [WPF i współdziałanie Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> istnieje, aby wyświetlić [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identyfikowane przez uchwytów okien z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Aby uzyskać więcej informacji, zobacz [WPF i współdziałanie Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
  Podsumowując <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> umożliwiających uchwytu okna dla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] przekazany z dodatku do aplikacji hosta, w której jest hermetyzowany przez <xref:System.Windows.Interop.HwndHost> i wyświetlane hosta aplikacji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   

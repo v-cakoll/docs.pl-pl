@@ -1,34 +1,24 @@
 ---
 title: '&lt;Stany&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c73ff606d9b8cdaf069b65f7faa48431a974123
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe02106d8d7f70cb328214c7e464d80a41b75528
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstatesgt"></a>&lt;Stany&gt;
 Reprezentuje kolekcję subskrybowanego stanów z wystąpienia śledzonych przepływu pracy podczas tworzenia rekordów śledzenia.  
   
  Aby uzyskać więcej informacji na zapytania dotyczące profilu śledzenia, zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Śledzenie >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<przepływ pracy >  
-\<workflowInstanceQueries >  
+\<workflowInstanceQueries>  
 \<workflowInstanceQuery >  
 \<Stany >  
   
@@ -66,7 +56,7 @@ Reprezentuje kolekcję subskrybowanego stanów z wystąpienia śledzonych przep�
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Kwerenda, która śledzi zmiany cyklu życia wystąpienia przepływu pracy, takich jak zdarzenia rozpoczęte lub zostało zakończone.|  
+|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Kwerenda, która śledzi zmiany cyklu życia wystąpienia przepływu pracy, takich jak zdarzenia rozpoczęte lub zostało zakończone.|  
   
 ## <a name="remarks"></a>Uwagi  
  Zwracane rekordy są filtrowane według stanów w tej kolekcji.  

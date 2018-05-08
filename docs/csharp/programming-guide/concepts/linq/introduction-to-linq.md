@@ -1,21 +1,12 @@
 ---
 title: Wprowadzenie do LINQ (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cc654dd020d3a20b028cd6545b00de84193174ac
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3c32c20efec55568a668c5dba55baf8f3ebbee7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-linq-c"></a>Wprowadzenie do LINQ (C#)
 Zapytanie języku zintegrowanym (LINQ) jest innowacje wprowadzone w programie .NET Framework w wersji 3.5 który zawiera odstęp między world obiektów i world danych.  

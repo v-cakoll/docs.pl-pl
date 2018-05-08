@@ -1,24 +1,14 @@
 ---
-title: "Zabezpieczenia odnajdywania — przykład"
-ms.custom: 
+title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f50334c8477b8823ef1dfb6abcae640e439d5ddd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie wymaga czy punkty końcowe, które uczestniczą w procesie odnajdywania należy zabezpieczyć. Udoskonalanie komunikaty odnajdywania z zabezpieczeniami zmniejsza różnych rodzajów ataków (komunikatu zmiany, odmowę usługi, powtarzania, fałszowania). W tym przykładzie implementuje kanałów niestandardowych, które obliczeniowe i weryfikowania podpisów wiadomości w formacie kompaktowym podpisu (opisanej w sekcji 8.2 specyfikacji WS-Discovery). Przykład obsługuje zarówno [specyfikacji odnajdywania 2005](http://go.microsoft.com/fwlink/?LinkId=177912) i [wersji 1.1](http://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -48,7 +38,7 @@ Specyfikacja odnajdywania nie wymaga czy punkty końcowe, które uczestniczą w 
 > [!NOTE]
 >  `PrefixList` Został dodany w protokole 2008 w wersji odnajdywania.  
   
- Można obliczyć podpisu, próbki określa elementy rozszerzonej podpisu. Podpis XML (`SignedInfo`) jest tworzony przy użyciu `ds` prefiks przestrzeni nazw, co jest wymagane przez specyfikację WS-Discovery. Treść i wszystkich nagłówków odnajdywania i przestrzeni nazw adresowania odwołuje się podpisu, więc nie może być naruszona z. Każdy element do którego istnieje odwołanie jest przekształcana przy użyciu wyłącznego zapewniania kanoniczności (http://www.w3.org/2001/10/xml-exc-c14n#), a następnie wartość skrótu SHA-1 jest obliczana (http://www.w3.org/2000/09/xmldsig#sha1). Na podstawie wszystkich elementów i ich wartości, wartość podpisu jest obliczana, przy użyciu algorytmu RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1).  
+ Można obliczyć podpisu, próbki określa elementy rozszerzonej podpisu. Podpis XML (`SignedInfo`) jest tworzony przy użyciu `ds` prefiks przestrzeni nazw, co jest wymagane przez specyfikację WS-Discovery. Treść i wszystkich nagłówków odnajdywania i przestrzeni nazw adresowania odwołuje się podpisu, więc nie może być naruszona z. Każdy element do którego istnieje odwołanie jest przekształcana przy użyciu wyłącznego zapewniania kanoniczności (http://www.w3.org/2001/10/xml-exc-c14n# ), a następnie jest obliczana wartość skrótu SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). Na podstawie wszystkich elementów i ich wartości skrótu, podpisu wartość jest obliczana przy użyciu algorytmu RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  Komunikaty są podpisane za pomocą certyfikatu określonego przez klienta. Lokalizacja magazynu, nazwę i nazwa podmiotu certyfikatu należy określić podczas tworzenia elementu powiązania. `KeyId` w podpisie compact reprezentuje identyfikator klucza podpisywania tokenu i identyfikator klucza podmiotu (SKI) podpisywania tokenu jest lub (Jeśli nie ma SKI) wartości skrótu SHA-1 podpisywania tokenu klucza publicznego.  
   
@@ -82,7 +72,7 @@ Specyfikacja odnajdywania nie wymaga czy punkty końcowe, które uczestniczą w 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

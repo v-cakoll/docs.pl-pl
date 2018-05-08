@@ -1,11 +1,6 @@
 ---
-title: "Date — Typ danych (Visual Basic)"
+title: Date — Typ danych (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Date
 helpviewer_keywords:
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 190b40888dc4a42075b7b6b27bdb1bd403a7efb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-data-type-visual-basic"></a>Date — Typ danych (Visual Basic)
 Przechowuje wartości (8-bajtowych) IEEE 64-bitowe, które reprezentują z zakresu od 1 stycznia 0001 roku do 31 grudnia 9999 roku daty i godziny od 00:00:00: 00 (północ) za pośrednictwem 11:59:59.9999999 PM. Jednostka reprezentuje 100 nanosekundach czas, który upłynął od początku 1 stycznia 1 rok kalendarza gregoriańskiego. Maksymalna wartość reprezentuje 100 nanosekundach przed rozpoczęciem 1 stycznia roku 10000.  
@@ -70,7 +62,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 -   **Zagadnienia dotyczące współdziałania.** Jeśli są relacje ze składników, które nie są zapisywane dla programu .NET Framework, na przykład obiektów automatyzacji lub COM, należy pamiętać, że typy w innych środowiskach daty i godziny nie są zgodne z programem Visual Basic `Date` typu. Jeśli argument daty/godziny jest przekazywany do takich składników, Zadeklaruj ją jako `Double` zamiast `Date` w nowego języka Visual Basic code, a za pomocą metody konwersji <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> i <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Znaki typu.** `Date`nie ma znak literalny typu ani znak typu identyfikator. Jednak kompilator traktuje literały ujęta w znaki numeru (`# #`) jako `Date`.  
+-   **Znaki typu.** `Date` nie ma znak literalny typu ani znak typu identyfikator. Jednak kompilator traktuje literały ujęta w znaki numeru (`# #`) jako `Date`.  
   
 -   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.DateTime?displayProperty=nameWithType> struktury.  
   
@@ -84,8 +76,8 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.DateTime?displayProperty=nameWithType>  
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Ciągi formatujące standardowa Data i godzina](../../../standard/base-types/standard-date-and-time-format-strings.md)  
- [Niestandardowa data i godzina ciągi formatujące](../../../standard/base-types/custom-date-and-time-format-strings.md)  
+ [Standardowe ciągi formatujące datę i godzinę](../../../standard/base-types/standard-date-and-time-format-strings.md)  
+ [Niestandardowe ciągi formatujące datę i godzinę](../../../standard/base-types/custom-date-and-time-format-strings.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

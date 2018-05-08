@@ -1,21 +1,15 @@
 ---
 title: Kompilacji wiersza polecenia z csc.exe
 ms.date: 04/19/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3cd49a17991f3d7606b0364a83be2b2e30ba0cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>Kompilacji wiersza polecenia z csc.exe
 Można wywołać kompilatora C#, wpisując nazwę jego pliku wykonywalnego (*csc.exe*) w wierszu polecenia.

@@ -1,28 +1,19 @@
 ---
-title: "Implementacja wzorca formantu wywołania automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Implementacja wzorca formantu wywołania automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-caps.latest.revision: "31"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1d40bc94887df604577c025181ae7f5f2776cdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac28b481dc9e0749762a411502c8f9660cd0cd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementacja wzorca kontrolki wywołania automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Wywoływanie formantu zwykle odbywa się przez kliknięcie dwukrotne kliknięcie lub naciśnięcie klawisza ENTER, skrót klawiaturowy wstępnie zdefiniowanych lub alternatywne kombinacji klawiszy.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>jest uruchamiany w formancie, który został aktywowany (w odpowiedzi na jego skojarzony akcji formantu). Jeśli to możliwe zdarzenia powinien być zgłaszany po ukończył akcję kontrolki i zwracane bez blokowania. Zdarzenie Invoked powinien być wywoływany przed obsługi żądania Invoke w następujących scenariuszach:  
+-   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> jest uruchamiany w formancie, który został aktywowany (w odpowiedzi na jego skojarzony akcji formantu). Jeśli to możliwe zdarzenia powinien być zgłaszany po ukończył akcję kontrolki i zwracane bez blokowania. Zdarzenie Invoked powinien być wywoływany przed obsługi żądania Invoke w następujących scenariuszach:  
   
     -   Nie jest możliwe lub praktyczne poczekaj aż zakończy się akcja.  
   
@@ -59,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Element może zniknąć z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa natychmiast po wywoływany. Żąda informacji z elementu udostępniane przez wywołanie zwrotne zdarzeń może zakończyć się niepowodzeniem w wyniku. Pobierania buforowanych informacji jest zalecaną praktyką.  
   
--   Formanty można zaimplementować wiele wzorców formantu. Na przykład kontrolka kolor wypełnienia w [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] narzędzi implementuje zarówno <xref:System.Windows.Automation.InvokePattern> i <xref:System.Windows.Automation.ExpandCollapsePattern> kontrolować wzorce. <xref:System.Windows.Automation.ExpandCollapsePattern>Udostępnia menu i <xref:System.Windows.Automation.InvokePattern> wypełnia active zaznaczenie z wybranego koloru.  
+-   Formanty można zaimplementować wiele wzorców formantu. Na przykład kontrolka kolor wypełnienia w [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] narzędzi implementuje zarówno <xref:System.Windows.Automation.InvokePattern> i <xref:System.Windows.Automation.ExpandCollapsePattern> kontrolować wzorce. <xref:System.Windows.Automation.ExpandCollapsePattern> Udostępnia menu i <xref:System.Windows.Automation.InvokePattern> wypełnia active zaznaczenie z wybranego koloru.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Wymagane elementy IInvokeProvider  
@@ -67,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|— metoda|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>to wywołanie asynchroniczne i musi zwracać natychmiast bez blokowania.<br /><br /> To zachowanie jest szczególnie istotne dla formantów, które bezpośrednio lub pośrednio, uruchom modalnego okna dialogowego, gdy została wywołana. Automatyzacja interfejsu użytkownika klienta, który zainicjowanego zdarzenia pozostanie zablokowane do czasu zamknięcia modalnego okna dialogowego.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|— metoda|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> to wywołanie asynchroniczne i musi zwracać natychmiast bez blokowania.<br /><br /> To zachowanie jest szczególnie istotne dla formantów, które bezpośrednio lub pośrednio, uruchom modalnego okna dialogowego, gdy została wywołana. Automatyzacja interfejsu użytkownika klienta, który zainicjowanego zdarzenia pozostanie zablokowane do czasu zamknięcia modalnego okna dialogowego.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  

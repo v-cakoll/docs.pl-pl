@@ -1,31 +1,17 @@
 ---
 title: Niestandardowe kodery
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>Niestandardowe kodery
 W tym temacie omówiono tworzenie niestandardowe kodery.  
   
- W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], możesz użyć *powiązania* do określenia sposobu transferu danych za pośrednictwem sieci między punktami końcowymi. Powiązanie składa się z sekwencji *elementów wiązania*. Powiązanie zawiera opcjonalne protokołu powiązania elementów, takich jak zabezpieczeń wymaganą *kodera wiadomości* element powiązania, a element powiązania transportu wymagane. Koder komunikatów jest reprezentowana przez powiązanie element kodowania komunikatu. Trzy koderów wiadomości są uwzględnione w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: Binary, mechanizmu optymalizacji transmisji wiadomości (MTOM) i tekstu.  
+ W systemie Windows Communication Foundation (WCF), użyj *powiązania* do określenia sposobu transferu danych za pośrednictwem sieci między punktami końcowymi. Powiązanie składa się z sekwencji *elementów wiązania*. Powiązanie zawiera opcjonalne protokołu powiązania elementów, takich jak zabezpieczeń wymaganą *kodera wiadomości* element powiązania, a element powiązania transportu wymagane. Koder komunikatów jest reprezentowana przez powiązanie element kodowania komunikatu. Trzy koderów wiadomości są uwzględnione w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: Binary, mechanizmu optymalizacji transmisji wiadomości (MTOM) i tekstu.  
   
  Komunikat kodowania element powiązania serializuje wychodzące <xref:System.ServiceModel.Channels.Message> i przekazuje je do transportu, lub odbiera serializacji formę komunikat z transportu i przekazuje ją do warstwy protokołu, jeśli istnieje, lub do aplikacji, jeśli nie są zainstalowane.  
   

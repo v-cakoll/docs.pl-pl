@@ -1,29 +1,15 @@
 ---
 title: Statystyki dostawcy dla programu SQL Server
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 27346f483251231f16abfa1d0fc5001e156ca8ea
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f32b1c9f800a1ec2d80511cbbf46aba9840075d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statystyki dostawcy dla programu SQL Server
 W programie .NET Framework w wersji 2.0, .NET Framework Data Provider for SQL Server obsługuje statystyk czasu wykonywania. Należy włączyć statystyki przez ustawienie <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> do obiektu `True` po poprawnego obiektu połączenia utworzone. Po włączeniu statystyki można przeglądać je jako "migawka w czasie" pobierając <xref:System.Collections.IDictionary> odwoływać się za pośrednictwem <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu. Wyliczanie za pośrednictwem listy jako zbiór wpisy słownika pary nazwa/wartość. Tych par nazwa/wartość są nieuporządkowane. W dowolnym momencie można wywołać <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu do resetowania liczników. Jeśli nie włączono zbieranie statystyk, wyjątek nie zostanie wygenerowany. Ponadto jeśli <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> jest wywoływana bez <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> o najpierw wywołuje, wartości pobierane są wartości początkowe dla każdego wpisu. Po włączeniu statystyki uruchomienie aplikacji przez pewien czas i Wyłącz statystyk, wartości pobierane odpowiada wartości zebranych do punktu wyłączonym statystyk. Wszystkie wartości statystyczne zebrane znajdują się na poszczególnych połączeń.  

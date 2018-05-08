@@ -1,21 +1,12 @@
 ---
 title: 'Porady: wpisywanie danych o obiektach do pliku XML (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43075c0b4d04ff935e7a29ed270b348209d17b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Porady: wpisywanie danych o obiektach do pliku XML (C#)
 W tym przykładzie zapisuje obiekt z klasy w pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  

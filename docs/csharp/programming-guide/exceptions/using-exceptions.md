@@ -1,21 +1,15 @@
 ---
-title: "Używanie wyjątków (Przewodnik programowania w języku C#)"
+title: Używanie wyjątków (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 55c2cc0c6a1f852bd286b98927cc69f81119aeee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43012ec1190117b1905b5e44010d5f57a1e543aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Używanie wyjątków (Przewodnik programowania w języku C#)
 W języku C# błędów w programie w czasie wykonywania są propagowane za pośrednictwem programu przy użyciu mechanizmu o nazwie wyjątków. Wyjątki są zgłaszane przez kod, który wystąpi błąd i przechwycony przez kod, który może poprawić ten błąd. Wyjątki może zostać wygenerowany przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) lub kodu w programie. Po wyjątku rozprzestrzenia się górę stosu wywołań do `catch` instrukcji dla wyjątku został znaleziony. Nieprzechwyconych wyjątków są obsługiwane przez program obsługi wyjątków ogólnych obsługiwanych przez system, który wyświetla okno dialogowe.  
@@ -24,7 +18,7 @@ W języku C# błędów w programie w czasie wykonywania są propagowane za pośr
   
  [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- Po wyjątek środowiska uruchomieniowego sprawdza bieżącej instrukcji, aby zobaczyć, czy znajduje się w `try` bloku. Jeśli tak jest, wszelkie `catch` bloki skojarzone z `try` bloku jest sprawdzenie, czy ich catch wyjątku. `Catch`bloki zazwyczaj określić typy wyjątków; Jeśli typ `catch` blok jest taki sam typ jak wyjątek lub klasę podstawową wyjątku, `catch` bloku może obsługiwać metodę. Na przykład:  
+ Po wyjątek środowiska uruchomieniowego sprawdza bieżącej instrukcji, aby zobaczyć, czy znajduje się w `try` bloku. Jeśli tak jest, wszelkie `catch` bloki skojarzone z `try` bloku jest sprawdzenie, czy ich catch wyjątku. `Catch` bloki zazwyczaj określić typy wyjątków; Jeśli typ `catch` blok jest taki sam typ jak wyjątek lub klasę podstawową wyjątku, `catch` bloku może obsługiwać metodę. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
@@ -34,7 +28,7 @@ W języku C# błędów w programie w czasie wykonywania są propagowane za pośr
   
  [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- Przed `catch` wykonaniu bloku środowiska uruchomieniowego sprawdza, czy `finally` bloków. `Finally`bloki włączyć programisty wyczyścić niejednoznaczne stan może być pozostałe z przerwane `try` bloku, lub aby zwolnić dowolnych zasobów zewnętrznych (na przykład grafiki dojść, połączenia z bazą danych lub plików strumieni) bez oczekiwania na odzyskiwanie Moduł zbierający w środowisku uruchomieniowym finalize obiektów. Na przykład:  
+ Przed `catch` wykonaniu bloku środowiska uruchomieniowego sprawdza, czy `finally` bloków. `Finally` bloki włączyć programisty wyczyścić niejednoznaczne stan może być pozostałe z przerwane `try` bloku, lub aby zwolnić dowolnych zasobów zewnętrznych (na przykład grafiki dojść, połączenia z bazą danych lub plików strumieni) bez oczekiwania na odzyskiwanie Moduł zbierający w środowisku uruchomieniowym finalize obiektów. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   

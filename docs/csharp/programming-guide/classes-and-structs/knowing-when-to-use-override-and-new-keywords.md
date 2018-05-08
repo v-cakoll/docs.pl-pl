@@ -1,27 +1,21 @@
 ---
-title: "Użycie przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)"
+title: Użycie przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-caps.latest.revision: "16"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b4d53f16f046839d56bc1dc37f7b2d8816c5956f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Użycie przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 W języku C# metody w klasie pochodnej może mieć taką samą nazwę jak metody w klasie podstawowej. Można określić sposób interakcji metody przy użyciu [nowe](../../../csharp/language-reference/keywords/new.md) i [zastąpienia](../../../csharp/language-reference/keywords/override.md) słów kluczowych. `override` Modyfikator *rozszerza* metody klasy podstawowej i `new` modyfikator *ukrywa* go. Różnice przedstawiono w przykładach w niniejszym temacie.  
   
- W aplikacji konsoli, należy zadeklarować następujące dwie klasy `BaseClass` i `DerivedClass`. `DerivedClass`dziedziczy `BaseClass`.  
+ W aplikacji konsoli, należy zadeklarować następujące dwie klasy `BaseClass` i `DerivedClass`. `DerivedClass` dziedziczy `BaseClass`.  
   
 ```csharp  
 class BaseClass  
@@ -43,11 +37,11 @@ class DerivedClass : BaseClass
   
  W `Main` metody, Zadeklaruj zmienne `bc`, `dc`, i `bcdc`.  
   
--   `bc`Typ jest `BaseClass`, a jego wartość jest typu `BaseClass`.  
+-   `bc` Typ jest `BaseClass`, a jego wartość jest typu `BaseClass`.  
   
--   `dc`Typ jest `DerivedClass`, a jego wartość jest typu `DerivedClass`.  
+-   `dc` Typ jest `DerivedClass`, a jego wartość jest typu `DerivedClass`.  
   
--   `bcdc`Typ jest `BaseClass`, a jego wartość jest typu `DerivedClass`. Jest to zmienna, aby zwrócić uwagę na.  
+-   `bcdc` Typ jest `BaseClass`, a jego wartość jest typu `DerivedClass`. Jest to zmienna, aby zwrócić uwagę na.  
   
  Ponieważ `bc` i `bcdc` ma typ `BaseClass`, tylko bezpośrednio uzyskać dostęp do `Method1`, chyba że używasz rzutowania. Zmienna `dc` dostęp zarówno do `Method1` i `Method2`. Te relacje są wyświetlane w poniższym kodzie.  
   
@@ -292,7 +286,7 @@ public static void TestCars1()
 }  
 ```  
   
- `TestCars1`tworzy następujące dane wyjściowe. Zwróć uwagę, szczególnie wyniki dla `car2`, które są prawdopodobnie niż oczekiwano. Typ obiektu jest `ConvertibleCar`, ale `DescribeCar` nie dostępu do wersji `ShowDetails` zdefiniowanego w `ConvertibleCar` klasy, ponieważ ta metoda jest zadeklarowany za pomocą `new` modyfikator, nie `override` modyfikator. W związku z tym `ConvertibleCar` obiekt wyświetla ten sam opis co `Car` obiektu. Natomiast wyników dla `car3`, która jest `Minivan` obiektu. W takim przypadku `ShowDetails` metodę, która jest zadeklarowana w `Minivan` klasy zastąpienia `ShowDetails` metodę, która jest zadeklarowana w `Car` klasy i opis, który jest wyświetlany w tym artykule opisano Mały furgon.  
+ `TestCars1` tworzy następujące dane wyjściowe. Zwróć uwagę, szczególnie wyniki dla `car2`, które są prawdopodobnie niż oczekiwano. Typ obiektu jest `ConvertibleCar`, ale `DescribeCar` nie dostępu do wersji `ShowDetails` zdefiniowanego w `ConvertibleCar` klasy, ponieważ ta metoda jest zadeklarowany za pomocą `new` modyfikator, nie `override` modyfikator. W związku z tym `ConvertibleCar` obiekt wyświetla ten sam opis co `Car` obiektu. Natomiast wyników dla `car3`, która jest `Minivan` obiektu. W takim przypadku `ShowDetails` metodę, która jest zadeklarowana w `Minivan` klasy zastąpienia `ShowDetails` metodę, która jest zadeklarowana w `Car` klasy i opis, który jest wyświetlany w tym artykule opisano Mały furgon.  
   
 ```csharp  
 // TestCars1  
@@ -308,7 +302,7 @@ public static void TestCars1()
 // ----------  
 ```  
   
- `TestCars2`Tworzy listę obiektów, które mają typ `Car`. Wartości te obiekty są utworzone z `Car`, `ConvertibleCar`, i `Minivan` klasy. `DescribeCar`jest wywoływana dla każdego elementu listy. Poniższy kod przedstawia definicję `TestCars2`.  
+ `TestCars2` Tworzy listę obiektów, które mają typ `Car`. Wartości te obiekty są utworzone z `Car`, `ConvertibleCar`, i `Minivan` klasy. `DescribeCar` jest wywoływana dla każdego elementu listy. Poniższy kod przedstawia definicję `TestCars2`.  
   
 ```csharp  
 public static void TestCars2()  
@@ -550,5 +544,5 @@ namespace OverrideAndNew2
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
- [Podstawa](../../../csharp/language-reference/keywords/base.md)  
- [abstrakcyjny](../../../csharp/language-reference/keywords/abstract.md)
+ [base](../../../csharp/language-reference/keywords/base.md)  
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)

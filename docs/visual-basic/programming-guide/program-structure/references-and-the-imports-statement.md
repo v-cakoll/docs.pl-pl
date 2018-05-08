@@ -1,13 +1,6 @@
 ---
 title: Referencje i importy — Instrukcja (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - assemblies [Visual Basic], namespaces
 - references [Visual Basic], assembly
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 051351c2fa0648de54bbfd36b1630ec1cd49d6f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d767f42f8c836995064623b4aca15c86c98ec643
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Referencje i importy — Instrukcja (Visual Basic)
 Można udostępnić obiektów zewnętrznych do projektu, wybierając **Dodaj odwołanie** na **projektu** menu. Zestawy, które są takie jak biblioteki typów, ale zawierają więcej informacji może wskazywać odwołań w języku Visual Basic.  

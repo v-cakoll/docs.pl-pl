@@ -1,21 +1,15 @@
 ---
-title: "Konstruktory prywatne (Przewodnik programowania w języku C#)"
+title: Konstruktory prywatne (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 79660cd4545fff43ac3dd6ab797fd20c0f882e05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8f1f097a62f022d305987800e89353b038f42ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="private-constructors-c-programming-guide"></a>Konstruktory prywatne (Przewodnik programowania w języku C#)
 Konstruktor prywatny jest konstruktor wystąpienia specjalnego. Jest zwykle używany w klasach, które zawierają tylko statyczne elementy członkowskie. Jeśli klasa ma co najmniej jeden konstruktory prywatne i nie konstruktorów publicznych, innych klas (z wyjątkiem klasy zagnieżdżone) nie można utworzyć wystąpienia tej klasy. Na przykład:  
@@ -43,5 +37,5 @@ Konstruktor prywatny jest konstruktor wystąpienia specjalnego. Jest zwykle uży
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
  [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [prywatne](../../../csharp/language-reference/keywords/private.md)  
- [publiczny](../../../csharp/language-reference/keywords/public.md)
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)

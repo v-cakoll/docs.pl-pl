@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::CreateDomainSetup — Metoda"
-ms.custom: 
+title: ICorRuntimeHost::CreateDomainSetup — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.CreateDomainSetup
 api_location:
@@ -23,20 +15,16 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e15f40402b222037f7ed8b23be3df36acafc73c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf3aff2c3c4d10c4ee805a6110561d6fdcd63a55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup — Metoda
-Pobiera typ wskaźnika interfejsu z IAppDomainSetup do <xref:System.AppDomainSetup?displayProperty=nameWithType> wystąpienia. `IAppDomainSetup`udostępnia metody, aby skonfigurować aspektów domeny aplikacji, zanim zostanie on utworzony.  
+Pobiera typ wskaźnika interfejsu z IAppDomainSetup do <xref:System.AppDomainSetup?displayProperty=nameWithType> wystąpienia. `IAppDomainSetup` udostępnia metody, aby skonfigurować aspektów domeny aplikacji, zanim zostanie on utworzony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,7 +43,7 @@ HRESULT CreateDomainSetup (
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Operacja powiodła się.|  
-|WARTOŚCI S_FALSE|Nie można ukończyć operacji.|  
+|S_FALSE|Nie można ukończyć operacji.|  
 |E_FAIL|Wystąpił nieznany, poważnej awarii. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie będzie już można używać w procesie. Kolejne wywołania żadnych hostingu interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
   

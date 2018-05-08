@@ -1,31 +1,19 @@
 ---
 title: Zabezpieczenia komunikatów z anonimowością
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-caps.latest.revision: 52
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: c93aacbe5af47c9094dccdaa15828bfa9fda79c5
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4805b4f111e950c18a34822ebfb48eca4134b0da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-anonymous"></a>Zabezpieczenia komunikatów z anonimowością
-Komunikat zabezpieczeń anonimowe przykładzie pokazano, jak do zaimplementowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji używającej zabezpieczenia na poziomie komunikatu bez uwierzytelniania klienta, ale który wymaga uwierzytelniania serwera za pomocą certyfikatu X.509 serwera. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i zaszyfrowane. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) próbki. W tym przykładzie składa się z konsoli programu klienckiego (.exe) i usługi biblioteki (.dll), obsługiwane przez Internet Information Services (IIS). Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
+Komunikat zabezpieczeń anonimowe przykładzie pokazano sposób aby wdrożenie aplikacji Windows Communication Foundation (WCF), który używa zabezpieczenia na poziomie komunikatu bez uwierzytelniania klienta, ale który wymaga uwierzytelniania serwera za pomocą serwera X.509 certyfikat. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i zaszyfrowane. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) próbki. W tym przykładzie składa się z konsoli programu klienckiego (.exe) i usługi biblioteki (.dll), obsługiwane przez Internet Information Services (IIS). Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -251,6 +239,6 @@ Press <ENTER> to terminate client.
 -   Uruchamianie Cleanup.bat w folderze Przykłady po ukończeniu działania próbki.  
   
 > [!NOTE]
->  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania na komputerach w przykładzie. Jeśli uruchomiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] przykłady, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`  
+>  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania na komputerach w przykładzie. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`  
   
 ## <a name="see-also"></a>Zobacz też

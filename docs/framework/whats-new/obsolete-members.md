@@ -1,11 +1,7 @@
 ---
-title: "Przestarzali członkowie w programie .NET Framework"
+title: Przestarzali członkowie w programie .NET Framework
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete members
 - members, obsolete in .NET Framework 4.5
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d40c33295e1cd21815a426dc23f3621991d1f14
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w programie .NET Framework
 W tabelach w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowszymi wersjami uporządkowane według zestawu. Użyj następujących łączy, aby wyświetlić listę przestarzałych elementów członkowskich i zalecanych rozwiązań alternatywnych w każdym zestawie. Ten temat nie zawiera członków przestarzałe typy. Aby uzyskać listę przestarzałe typy, zobacz [przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -307,7 +300,7 @@ W tabelach w tym artykule przedstawiono elementy członkowskie typu, które są 
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|Zastępuje <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>.|  
   
 <a name="Act"></a>   
-### <a name="assembly-systemactivitiesdll"></a>Assembly: System.Activities.dll  
+### <a name="assembly-systemactivitiesdll"></a>Zestaw: System.Activities.dll  
   
 |Typ|Element członkowski|Komunikat|  
 |----------|------------|-------------|  
@@ -330,7 +323,7 @@ W tabelach w tym artykule przedstawiono elementy członkowskie typu, które są 
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=nameWithType>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> Nie należy używać tej właściwości. Zamiast nich należy używać słów kluczowych <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>.|  
   
 <a name="core"></a>   
-### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll  
+### <a name="assembly-systemcoredll"></a>Zestaw: System.Core.dll  
   
 |Typ|Element członkowski|Komunikat|  
 |----------|------------|-------------|  
@@ -748,7 +741,7 @@ W tabelach w tym artykule przedstawiono elementy członkowskie typu, które są 
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|Zalecaną alternatywą jest <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>. <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> przyjmuje jako wskaźnik interfejsu — importer <xref:System.IntPtr?displayProperty=nameWithType> zamiast <xref:System.Int32?displayProperty=nameWithType>i w związku z tym działa na architekturze zarówno 32-bitowe i 64-bitowych.|  
   
 <a name="conversion"></a>   
-### <a name="assembly-microsoftbuildconversionv40dll"></a>Assembly: Microsoft.Build.Conversion.v4.0.dll  
+### <a name="assembly-microsoftbuildconversionv40dll"></a>Zestaw: Microsoft.Build.Conversion.v4.0.dll  
   
 |Typ|Element członkowski|Komunikat|  
 |----------|------------|-------------|  

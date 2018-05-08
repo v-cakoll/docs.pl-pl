@@ -1,23 +1,12 @@
 ---
-title: "Potwierdź automatycznie wzorca"
-ms.custom: 
+title: Potwierdź automatycznie wzorca
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3595e501341f64883ce2552f0a3c0850691f38c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b30703ffba3b721ac544ea6471ec47ce7f746d2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auto-confirm-pattern"></a>Potwierdź automatycznie wzorca
 W tym przykładzie składa się z trzech scenariuszy systemem pokazujący niestandardowego `AutoConfirmScope` działania. Pierwszy pokazano pomyślne wykonanie sekwencji działań compensable cztery gdzie drugie i trzecie są zagnieżdżone w `AutoConfirmScope`. Druga próba zawiera takiej samej kolejności z powodu wyjątku występujących po wykonaniu czwarty <xref:System.Activities.Statements.CompensableActivity>. Trzeci scenariusz zawiera takiej samej kolejności z powodu wyjątku występujące w obrębie `AutoConfirmScope` po drugim <xref:System.Activities.Statements.CompensableActivity> zakończeniu.  
@@ -45,6 +34,6 @@ W tym przykładzie składa się z trzech scenariuszy systemem pokazujący niesta
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

@@ -1,14 +1,6 @@
 ---
-title: "CoEEShutDownCOM — Funkcja"
-ms.custom: 
+title: CoEEShutDownCOM — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CoEEShutDownCOM
 api_location:
@@ -25,17 +17,13 @@ helpviewer_keywords:
 ms.assetid: b634cae2-632f-4737-9be4-92d0652844d7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ae339310c2bfd186cae798ff603d69735abeefd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM — Funkcja
 Wymusza środowisko uruchomieniowe języka wspólnego (CLR), aby zwolnić wszystkie wskaźniki interfejsu, którą przechowuje wewnątrz wywoływane otoki środowiska uruchomieniowego (otoki RCW). To ustawienie zwalnia wszystkie otoki RCW pamięci podręcznych. Ta funkcja globalna jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. W zamian użyj punkt wejścia dla określonego środowiska wykonawczego.  
@@ -61,7 +49,7 @@ void CoEEShutDownCOM ();
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

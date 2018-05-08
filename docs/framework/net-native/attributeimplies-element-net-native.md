@@ -1,24 +1,14 @@
 ---
 title: Element &lt;AttributeImplies&gt; (architektura .NET Native)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92a886ab09978aef6694c37d74af49b27c37c6c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 960ee5716b9760ab82628a8d21728cd6675e5215
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltattributeimpliesgt-element-net-native"></a>Element &lt;AttributeImplies&gt; (architektura .NET Native)
 Definiuje zasady dla elementów kodu, zawierającego atrybut jest stosowany do.  
@@ -69,7 +59,7 @@ Definiuje zasady dla elementów kodu, zawierającego atrybut jest stosowany do.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu i jej elementów członkowskich.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<AttributeImplies>` Element jest używany, jeśli jej typ zawierający jest atrybut (to znaczy klasą pochodną <xref:System.Attribute?displayProperty=nameWithType>). Jeśli atrybut jest stosowany do elementu określonego programu, zasady zdefiniowane przez `<AttributeImplies>` element ma zastosowanie do tego elementu programu.  

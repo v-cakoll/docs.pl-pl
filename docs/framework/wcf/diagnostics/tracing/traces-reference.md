@@ -1,27 +1,15 @@
 ---
-title: "Informacje o śladach"
-ms.custom: 
+title: Informacje o śladach
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd960851-162d-4dcc-8c0c-0ec8f455d56d
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15b4add8e40d59c86c1cc9c53fd58eed8788935d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4883bd5a38efee5cfeefddf76cbc3e53cf0b5d9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traces-reference"></a>Informacje o śladach
-Ta sekcja zawiera listę wszystkich śladów generowane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Ta sekcja zawiera wszystkie ślady generowane przez Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  `Administration`  

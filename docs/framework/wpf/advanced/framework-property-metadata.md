@@ -1,27 +1,15 @@
 ---
-title: "Metadane właściwości szablonu"
-ms.custom: 
+title: Metadane właściwości szablonu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d968bc7a3033bd994590520c5cd5062d3c212b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-property-metadata"></a>Metadane właściwości szablonu
 Opcje metadanych właściwości Framework są zgłaszane dla właściwości elementów obiektu uważane za w ramach WPF w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] architektury. Generalnie oznaczenie poziomie struktury WPF pociąga za sobą tej funkcji, takich jak renderowania danych powiązania, a właściwość uściślenia systemu są obsługiwane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prezentacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i plików wykonywalnych. Metadane właściwości Framework otrzymuje tych systemów, aby określić właściwości właściwych dla funkcji właściwości określonego elementu.  
@@ -40,7 +28,7 @@ Opcje metadanych właściwości Framework są zgłaszane dla właściwości elem
   
 -   Raportowanie właściwości układu, które mają wpływ na element nadrzędny elementu (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Przykłady, których te flagi są ustawiane domyślnie <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> i <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>., Domyślnie właściwości zależności nie dziedziczy wartości. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>Umożliwia również dziedziczenia również przejść do drzewa wizualnego, które są niezbędne dla niektórych scenariuszy składania kontroli.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Domyślnie właściwości zależności nie dziedziczy wartości. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> Umożliwia również dziedziczenia również przejść do drzewa wizualnego, które są niezbędne dla niektórych scenariuszy składania kontroli.  
   
     > [!NOTE]
     >  Termin "inherits" w kontekście właściwości wartości oznacza, że coś określonych dla właściwości zależności; oznacza to, że elementy podrzędne można dziedziczą wartość właściwości rzeczywistych zależności z elementy nadrzędne z powodu możliwości poziomie struktury WPF [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Go nie ma nic robić bezpośrednio z kodu zarządzanego typu i elementów członkowskich dziedziczenie przez typy pochodne. Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
@@ -69,13 +57,13 @@ Opcje metadanych właściwości Framework są zgłaszane dla właściwości elem
 ## <a name="framework-property-metadata-merge-behavior"></a>Zachowanie metadanych scalania właściwość Framework  
  Aby zastąpić właściwość framework — metadane, właściwości metadanych są scalane lub wymiany.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>scalania. Po dodaniu nowego <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, wywołanie zwrotne jest przechowywany w metadanych. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> jest podwyższany jako odwołanie z najbliższym elemencie nadrzędnym on określony w metadanych.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> scalania. Po dodaniu nowego <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, wywołanie zwrotne jest przechowywany w metadanych. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> jest podwyższany jako odwołanie z najbliższym elemencie nadrzędnym on określony w metadanych.  
   
 -   Właściwość rzeczywiste zachowanie systemowe dla <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> to implementacji dla wszystkich właścicieli metadanych w hierarchii są zachowywane i dodawane do tabeli, z kolejność wykonywania przez system właściwości podpisu wywołania zwrotne klasy pochodnej najbardziej głęboko wywołane najpierw. Wywołania zwrotne dziedziczone uruchomić tylko raz, liczy się jako właścicielem klasy, który umieścić je w metadanych.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>zostanie zastąpiony. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.DefaultValue%2A> pochodzi z najbliższym elemencie nadrzędnym on określony w metadanych.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> zostanie zastąpiony. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.DefaultValue%2A> pochodzi z najbliższym elemencie nadrzędnym on określony w metadanych.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>implementacje zostaną zastąpione. Po dodaniu nowego <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, wywołanie zwrotne jest przechowywany w metadanych. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> jest podwyższany jako odwołanie z najbliższym elemencie nadrzędnym on określony w metadanych.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> implementacje zostaną zastąpione. Po dodaniu nowego <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, wywołanie zwrotne jest przechowywany w metadanych. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> jest podwyższany jako odwołanie z najbliższym elemencie nadrzędnym on określony w metadanych.  
   
 -   Zachowanie systemu właściwość jest tylko <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> w bezpośrednim metadanych jest wywoływany. Nie odwołania do innych <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> implementacji w hierarchii są zachowywane.  
   

@@ -1,31 +1,17 @@
 ---
-title: "Jak poprawić wydajność TreeView"
-ms.custom: 
+title: Jak poprawić wydajność TreeView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2c13a9c89bdcb149df61f26177ea8705e502402f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75f17c770af89f08fedfd3c8193a916901fe6f79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-the-performance-of-a-treeview"></a>Jak poprawić wydajność TreeView
 Jeśli <xref:System.Windows.Controls.TreeView> zawiera wiele pozycji, czas potrzebny do załadowania może powodować znaczne opóźnienie w interfejsie użytkownika. Można zwiększyć czas ładowania, ustawiając `VirtualizingStackPanel.IsVirtualizing` dołączona właściwość do `true`.  Interfejs użytkownika może też być powolne reagować, gdy użytkownik przewinie <xref:System.Windows.Controls.TreeView> za pomocą kółka myszy lub przeciąganie przycisku paska przewijania. Można zwiększyć wydajność <xref:System.Windows.Controls.TreeView> gdy użytkownik przewija widok przez ustawienie `VirtualizingStackPanel.VirtualizationMode` dołączona właściwość do <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  

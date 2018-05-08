@@ -1,26 +1,14 @@
 ---
 title: Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a316cd8ed82f9833b23fe313b8f4c4903bd0a433
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] zawiera statyczny kompilacji aplikacji w Sklepie Windows lub na komputerze dewelopera. Ta różni się od kompilacji dynamicznej wykonywane dla aplikacji ze Sklepu Windows za pomocą kompilatora just-in-time (JIT) lub [Generator obrazu natywnego (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic [!INCLUDE[net_native](../../../includes/net-native-md.md)] próbuje zachować zgodność z [.NET dla Sklepu Windows apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). W większości przypadków rzeczy, które działają w aplikacjach .NET dla Sklepu Windows również współpracować z [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Jednak w niektórych przypadkach może się pojawić zmiany zachowania. W tym dokumencie omówiono następujące różnice między standardowych aplikacji .NET dla Sklepu Windows i [!INCLUDE[net_native](../../../includes/net-native-md.md)] w następujących obszarach:  
@@ -110,7 +98,7 @@ ms.lasthandoff: 03/26/2018
   
 -   [HttpClient](#HttpClient)  
   
--   [Interop](#Interop)  
+-   [Współdziałanie](#Interop)  
   
 -   [Nieobsługiwany interfejsów API](#APIs)  
   

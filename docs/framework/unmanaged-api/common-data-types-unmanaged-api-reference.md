@@ -1,24 +1,14 @@
 ---
-title: "Standardowe typy danych (niezarządzana dokumentacja interfejsu API)"
-ms.custom: 
+title: Standardowe typy danych (niezarządzana dokumentacja interfejsu API)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a565ec6ded0a82ed4ab3c0fd03b082d996369ddc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c359c9b14452e82b7fd2425409b373ead430d3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Standardowe typy danych (niezarządzana dokumentacja interfejsu API)
 Ten temat zawiera listę typów proste danych używany przez niezarządzane interfejsy API programu .NET Framework, które są definiowane przez C/C++ `typedef` instrukcje. Te typy danych są zazwyczaj aliasów dla typów pierwotnych danych C/C++. Zazwyczaj wartości te typy danych są nieprzezroczyste; oznacza to, że są zwracane przez określonej funkcji lub metody, dzięki czemu mogą być przekazywane do innych funkcji lub metody bez żadnych modyfikacji.  

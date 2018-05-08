@@ -1,29 +1,18 @@
 ---
-title: "Porady: hostowanie wielu wersji przepływu pracy Side-by-Side"
-ms.custom: 
+title: 'Porady: hostowanie wielu wersji przepływu pracy Side-by-Side'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fef8523f827ab91729054ee87544879b1f1aa3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Porady: hostowanie wielu wersji przepływu pracy Side-by-Side
-`WorkflowIdentity`Umożliwia deweloperom aplikacji przepływu pracy skojarzyć nazwę i wersję z definicji przepływu pracy, a te informacje mają być skojarzone z wystąpieniem przepływu pracy utrwalonych. Informacje o tożsamości mogą posłużyć deweloperzy aplikacji przepływu pracy na potrzeby scenariuszy, takich jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i udostępnia inne funkcje, takie jak aktualizacja dynamiczna podstawy. Ten krok samouczka przedstawiono sposób użycia `WorkflowIdentity` do obsługi wielu wersji przepływu pracy w tym samym czasie.  
+`WorkflowIdentity` Umożliwia deweloperom aplikacji przepływu pracy skojarzyć nazwę i wersję z definicji przepływu pracy, a te informacje mają być skojarzone z wystąpieniem przepływu pracy utrwalonych. Informacje o tożsamości mogą posłużyć deweloperzy aplikacji przepływu pracy na potrzeby scenariuszy, takich jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i udostępnia inne funkcje, takie jak aktualizacja dynamiczna podstawy. Ten krok samouczka przedstawiono sposób użycia `WorkflowIdentity` do obsługi wielu wersji przepływu pracy w tym samym czasie.  
   
 > [!NOTE]
 >  Aby pobrać wersję zakończone lub wyświetlić Przewodnik wideo samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Każdy krok samouczka Wprowadzenie zależy od poprzednich kroków. Jeśli poprzednie kroki nie została ukończona, można pobrać ukończoną wersję samouczek z [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
-###  <a name="BKMK_BackupCopy"></a>Aby utworzyć kopię projektu NumberGuessWorkflowActivities  
+###  <a name="BKMK_BackupCopy"></a> Aby utworzyć kopię projektu NumberGuessWorkflowActivities  
   
 1.  Otwórz **WF45GettingStartedTutorial** rozwiązania [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] Jeśli nie jest otwarty.  
   
@@ -74,10 +63,10 @@ ms.lasthandoff: 12/22/2017
   
 9. Otwórz ponownie **WF45GettingStartedTutorial** rozwiązania [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-###  <a name="BKMK_UpdateWorkflows"></a>Aby zaktualizować przepływy pracy  
+###  <a name="BKMK_UpdateWorkflows"></a> Aby zaktualizować przepływy pracy  
  W tej sekcji zaktualizowano definicji przepływu pracy. Dwa `WriteLine` działań, które Prześlij opinię na temat wynik użytkownika są zaktualizowane, a nowy `WriteLine` działania zostanie dodany, który udostępnia dodatkowe informacje o gry po odgadnąć jest liczba.  
   
-####  <a name="BKMK_UpdateStateMachine"></a>Aby zaktualizować StateMachine przepływu pracy  
+####  <a name="BKMK_UpdateStateMachine"></a> Aby zaktualizować StateMachine przepływu pracy  
   
 1.  W **Eksploratora rozwiązań**w obszarze **NumberGuessWorkflowActivities** projektu, kliknij dwukrotnie **StateMachineNumberGuessWorkflow.xaml**.  
   
@@ -119,7 +108,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateFlowchart"></a>Aby zaktualizować schemat blokowy przepływu pracy  
+####  <a name="BKMK_UpdateFlowchart"></a> Aby zaktualizować schemat blokowy przepływu pracy  
   
 1.  W **Eksploratora rozwiązań**w obszarze **NumberGuessWorkflowActivities** projektu, kliknij dwukrotnie **FlowchartNumberGuessWorkflow.xaml**.  
   
@@ -155,7 +144,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateSequential"></a>Aby zaktualizować sekwencyjnego przepływu pracy  
+####  <a name="BKMK_UpdateSequential"></a> Aby zaktualizować sekwencyjnego przepływu pracy  
   
 1.  W **Eksploratora rozwiązań**w obszarze **NumberGuessWorkflowActivities** projektu, kliknij dwukrotnie **SequentialNumberGuessWorkflow.xaml**.  
   
@@ -191,7 +180,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>Aby zaktualizować WorkflowVersionMap uwzględnienie poprzednie wersje przepływu pracy  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Aby zaktualizować WorkflowVersionMap uwzględnienie poprzednie wersje przepływu pracy  
   
 1.  Kliknij dwukrotnie **WorkflowVersionMap.cs** (lub **WorkflowVersionMap.vb**) w obszarze **NumberGuessWorkflowHost** projektu, aby go otworzyć.  
   
@@ -559,7 +548,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Aby skompilować i uruchomić aplikację  
+###  <a name="BKMK_BuildAndRun"></a> Aby skompilować i uruchomić aplikację  
   
 1.  Naciśnij klawisze CTRL + SHIFT + B do skompilowania aplikacji, a następnie klawisz CTRL + F5, aby rozpocząć.  
   

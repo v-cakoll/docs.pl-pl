@@ -1,31 +1,17 @@
 ---
 title: 'Porady: Pobieranie odcisku palca certyfikatu'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0fe3635b73e17123e410f43efc8d382e0df85641
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d827c2c5f407c3041a31efbc06fcfed205bef458
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Porady: Pobieranie odcisku palca certyfikatu
-Podczas zapisywania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji, która używa certyfikatu X.509 do uwierzytelniania, często jest niezbędne do określenia oświadczenia, znalezione w certyfikacie. Na przykład, należy podać oświadczenie odcisk palca podczas przy użyciu <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> wyliczanie w <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody. Znajdowanie wartość oświadczenia wymaga wykonania dwóch kroków. Po pierwsze Otwórz przystawkę Microsoft Management Console (MMC) dla certyfikatów. (Zobacz [porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Po drugie zgodnie z opisem w tym miejscu, Znajdź odpowiedni certyfikat i skopiuj jego odcisk palca (lub inne wartości oświadczenia).  
+Podczas pisania aplikacji Windows Communication Foundation (WCF), który korzysta z certyfikatu X.509 do uwierzytelniania, często jest niezbędne do określenia oświadczenia znalezione w certyfikacie. Na przykład, należy podać oświadczenie odcisk palca podczas przy użyciu <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> wyliczanie w <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody. Znajdowanie wartość oświadczenia wymaga wykonania dwóch kroków. Po pierwsze Otwórz przystawkę Microsoft Management Console (MMC) dla certyfikatów. (Zobacz [porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Po drugie zgodnie z opisem w tym miejscu, Znajdź odpowiedni certyfikat i skopiuj jego odcisk palca (lub inne wartości oświadczenia).  
   
  Jeśli używasz certyfikatu dla usługi uwierzytelniania, ważne jest, aby Zanotuj wartość ustawienia **wystawiony** kolumny (pierwszej kolumny w konsoli). Gdy przy użyciu protokołu Secure Sockets Layer (SSL), zgodnie z zabezpieczeń transportu, jeden najpierw sprawdza, czy wykonywane jest porównanie bazie adres URI Uniform Resource Identifier () do usługi **wystawiony** wartość. Wartości muszą być zgodne, lub proces uwierzytelniania jest zatrzymany.  
   

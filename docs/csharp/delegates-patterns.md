@@ -1,20 +1,13 @@
 ---
-title: "Wspólne wzorce dla delegatów"
-description: "Więcej informacji na temat wspólne wzorce dla używanie delegatów w kodzie, aby uniknąć silne sprzężenia między elementami."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+title: Wspólne wzorce dla delegatów
+description: Więcej informacji na temat wspólne wzorce dla używanie delegatów w kodzie, aby uniknąć silne sprzężenia między elementami.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Wspólne wzorce dla delegatów
 
@@ -242,4 +235,4 @@ Przedstawiono początku składnik dziennika, który może zostać rozszerzony o 
 
 Klasa rejestratora wprowadzić dowolną liczbę ulepszenia lub zmiany bez wprowadzania zmian, które psuły. Podobnie jak wszystkie klasy nie można zmodyfikować publiczny interfejs API bez ryzyka fundamentalne zmiany. Jednak ponieważ sprzężenia między rejestratora i wszelkie aparatami danych wyjściowych jest tylko za pośrednictwem pełnomocnika, są związane z żadnych innych typów (na przykład interfejsów lub klas podstawowych). Sprzężenia jest możliwie jak najmniejszy.
 
-[Dalej](events-overview.md)
+[Next](events-overview.md)

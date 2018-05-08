@@ -1,27 +1,15 @@
 ---
-title: "Rozszerzanie śledzenia"
-ms.custom: 
+title: Rozszerzanie śledzenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c92aa17f25271173ca0bcbad1a8a180c9129abc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-tracing"></a>Rozszerzanie śledzenia
-W tym przykładzie pokazano, jak rozszerzyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcja śledzenia pisząc śledzenia zdefiniowanych przez użytkownika działań w kod klienta i usługi. Dzięki temu użytkownikowi na tworzenie śledzenia działań i grupować dane śledzenia w logiczne jednostki pracy. Istnieje również możliwość służące do skorelowania działań za pośrednictwem transferu (w ramach tego samego punktu końcowego) i propagacji (za pośrednictwem punktów końcowych). W tym przykładzie śledzenie jest włączone dla klienta i usługi. Aby uzyskać więcej informacji o sposobie włączania śledzenia w plikach konfiguracji klienta i usługi, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+W tym przykładzie pokazano, jak rozszerzyć funkcję śledzenia usług Windows Communication Foundation (WCF) pisząc śledzenia zdefiniowanych przez użytkownika działań w kod klienta i usługi. Dzięki temu użytkownikowi na tworzenie śledzenia działań i grupować dane śledzenia w logiczne jednostki pracy. Istnieje również możliwość służące do skorelowania działań za pośrednictwem transferu (w ramach tego samego punktu końcowego) i propagacji (za pośrednictwem punktów końcowych). W tym przykładzie śledzenie jest włączone dla klienta i usługi. Aby uzyskać więcej informacji o sposobie włączania śledzenia w plikach konfiguracji klienta i usługi, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
  Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
@@ -33,7 +21,7 @@ W tym przykładzie pokazano, jak rozszerzyć [!INCLUDE[indigo1](../../../../incl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   

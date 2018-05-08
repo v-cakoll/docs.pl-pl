@@ -1,21 +1,14 @@
 ---
 title: Mikrousług .NET. Architektura aplikacji .NET konteneryzowanych
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wstępne
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 ![](./media/cover.png)
 
@@ -41,7 +34,7 @@ Ten podręcznik podano "jako — jest" i odzwierciedla widoków i opinie autora.
 
 Niektóre przedstawione przykłady są udostępniane tylko do celów ilustracyjnych i są fikcyjne. Żadne rzeczywiste skojarzenia ani połączenia jest przeznaczony lub powinny być zakładane.
 
-Microsoft i znakami, znajduje się na http://www.microsoft.com na stronie sieci Web "Znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znakami, znajduje się na http://www.microsoft.com na stronie sieci Web "Znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
 Mac i system macOS są znakami towarowymi firmy Apple Inc.
 
@@ -53,7 +46,7 @@ Współautorzy:
 
 > **Cesarowi de la Torre**, Sr. PM zespołu produktu .NET, Microsoft Corp.
 >
-> **Rachunek Wagnera**, Sr. Content Developer, C+E, Microsoft Corp.
+> **Rachunek Wagnera**, Sr. Deweloper zawartości, C + E, Microsoft Corp.
 >
 > **Jan Rousos**, inżynier oprogramowania podmiot zabezpieczeń, zespołu DevDiv CAT, Microsoft
 
@@ -131,7 +124,7 @@ Ten przewodnik nie skupić się na cyklu życia aplikacji, metodyki DevOps, poto
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami** (do pobrania Książka elektroniczna) [ *https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami** (do pobrania Książka elektroniczna) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien używać ten przewodnik
 

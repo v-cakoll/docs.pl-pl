@@ -1,28 +1,19 @@
 ---
-title: "Implementacja wzorca formantu MultipleView dla automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Implementacja wzorca formantu MultipleView dla automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, MultipleView control pattern
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5ff185ddb145d51fe8bc32ac10f3a45b57ec954c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 777f529b3b925a965b24cf1a4b38b9d3b9adae7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementacja wzorca kontrolki MultipleView dla automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -38,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
  Gdy implementacja wzorca kontrolki widoku wielu, należy zwrócić uwagę następujące wskazówki i konwencje:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider>powinny zostać wdrożone również na kontenerze, który zarządza bieżący widok, jeśli różni się od formant, który umożliwia bieżącego widoku. Na przykład Eksploratora Windows zawiera formant listy bieżącej zawartości folderu, gdy wyświetlanie formantu odbywa się z aplikacji Eksploratora Windows.  
+-   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> powinny zostać wdrożone również na kontenerze, który zarządza bieżący widok, jeśli różni się od formant, który umożliwia bieżącego widoku. Na przykład Eksploratora Windows zawiera formant listy bieżącej zawartości folderu, gdy wyświetlanie formantu odbywa się z aplikacji Eksploratora Windows.  
   
 -   Formant, który może sortować jego zawartość nie jest uważana za obsługuje wiele widoków.  
   

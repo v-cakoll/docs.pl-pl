@@ -1,18 +1,12 @@
 ---
-title: "Nowości w języku C# 7.1"
-description: "Przegląd nowych funkcji w języku C# 7.1."
-keywords: "C# język projektu, 7.1, Visual Studio 2017 r."
-author: billwagner
-ms.author: wiwagn
+title: Nowości w języku C# 7.1
+description: Przegląd nowych funkcji w języku C# 7.1.
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: 02f1f8fc8f0a3221e00e2a3c43ce06423ca43672
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 00baec45d7582d3ac12c7b0865241f5cd8159246
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-in-c-71"></a>Nowości w języku C# 7.1
 
@@ -22,9 +16,9 @@ C# 7.1 dodaje [wybór wersji języka](#language-version-selection) element konfi
 
 Dostępne są następujące nowe funkcje językowe w tej wersji:
 
-* [`async``Main` — metoda](#async-main)
+* [`async` `Main` — Metoda](#async-main)
   - Punkt wejścia dla aplikacji może mieć `async` modyfikator.
-* [`default`Wyrażenia dosłowne](#default-literal-expressions)
+* [`default` Wyrażenia dosłowne](#default-literal-expressions)
   - Gdy typ docelowy można wywnioskować, można użyć wyrażenia dosłowne domyślne w wyrażeniach wartości domyślne.
 * [Nazwy elementów wywnioskowanych spójnej kolekcji](#inferred-tuple-element-names)
   - Od zainicjowania spójnej kolekcji w wielu przypadkach można wywnioskować nazwy elementów spójnej kolekcji.

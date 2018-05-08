@@ -1,21 +1,14 @@
 ---
 title: using — Instrukcja (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1fdf37e1bfc57bf850b332f167e57d3e05d23e78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa27039e8444090c8a516b92ba5ab62c7f93c51a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-c-reference"></a>using — Instrukcja (odwołanie w C#)
 Umożliwia wygodne składnię, która zapewnia prawidłowe użycie <xref:System.IDisposable> obiektów.  
@@ -26,7 +19,7 @@ Umożliwia wygodne składnię, która zapewnia prawidłowe użycie <xref:System.
  [!code-csharp[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
   
 ## <a name="remarks"></a>Uwagi  
- <xref:System.IO.File>i <xref:System.Drawing.Font> przedstawiono przykładowe typy zarządzane, które uzyskują dostęp do zasobów niezarządzanych (w tym dojścia do plików w przypadku i konteksty urządzenia). Istnieje wiele rodzajów zasoby niezarządzane i klasy biblioteki typów, które hermetyzują je. Takich typów musi implementować <xref:System.IDisposable> interfejsu.  
+ <xref:System.IO.File> i <xref:System.Drawing.Font> przedstawiono przykładowe typy zarządzane, które uzyskują dostęp do zasobów niezarządzanych (w tym dojścia do plików w przypadku i konteksty urządzenia). Istnieje wiele rodzajów zasoby niezarządzane i klasy biblioteki typów, które hermetyzują je. Takich typów musi implementować <xref:System.IDisposable> interfejsu.  
   
 Jeśli okres istnienia `IDisposable` obiektu jest ograniczony do pojedynczej metody, należy zadeklarować i utworzyć w `using` instrukcji. `using` Wywołania instrukcji <xref:System.IDisposable.Dispose%2A> metody dla obiekt w prawidłowy sposób i (gdy jest używany jak pokazano wcześniej) powoduje także obiekt, aby znaleźć poza zakresem natychmiast <xref:System.IDisposable.Dispose%2A> jest wywoływana. W ramach `using` bloku, obiekt jest tylko do odczytu i nie można zmodyfikować lub ponownie przypisany.  
   
@@ -51,7 +44,7 @@ Aby uzyskać więcej informacji na temat usuwania `IDisposable` obiekty, zobacz 
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Using — Dyrektywa](../../../csharp/language-reference/keywords/using-directive.md)  
- [Wyrzucanie elementów bezużytecznych](../../../standard/garbage-collection/index.md)  
+ [using, dyrektywa](../../../csharp/language-reference/keywords/using-directive.md)  
+ [Odzyskiwanie pamięci](../../../standard/garbage-collection/index.md)  
  [Używanie obiektów implementujących interfejs IDisposable](../../../standard/garbage-collection/using-objects.md)  
  [Interfejs IDisposable](xref:System.IDisposable)

@@ -1,31 +1,20 @@
 ---
-title: "Monitorowanie zasobów domen aplikacji"
-ms.custom: 
+title: Monitorowanie zasobów domen aplikacji
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - monitoring managed memory use by application domain
 - application domains, memory use
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 648f8b86ecf73a7da5f3f33d71fb8617bacccee1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitorowanie zasobów domen aplikacji
 Zasobów domen aplikacji monitorowania (ARM) umożliwia hostom monitorowanie użycia procesora CPU i pamięci według domeny aplikacji. Jest to przydatne dla hostów, takich jak ASP.NET, korzystających z wielu domen aplikacji w procesie długotrwałe. Hosta można wyładować domeny aplikacji, aplikacji, która jest negatywnego wpływu na wydajność całego procesu, ale tylko wtedy, jeśli można zidentyfikować problematyczne aplikacji. ARM zawiera informacje, które mogą służyć do celów podczas podejmowania decyzji.  
@@ -96,5 +85,5 @@ Zasobów domen aplikacji monitorowania (ARM) umożliwia hostom monitorowanie uż
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
  [ICLRAppDomainResourceMonitor, interfejs](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [\<appdomainresourcemonitoring — >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+ [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
  [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

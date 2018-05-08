@@ -1,29 +1,18 @@
 ---
-title: "Działania kontroli drzewa"
-ms.custom: 
+title: Działania kontroli drzewa
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efb7f8f1603de67f21aee7e1746670e324d5e238
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f2ca6bff27cfe0e3362e2a3b95cd08a0f8d5297
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-tree-inspection"></a>Działania kontroli drzewa
 Działanie drzewa kontroli jest używany przez autorów aplikacji przepływu pracy do zbadania przepływów pracy obsługiwanych przez aplikację. Za pomocą <xref:System.Activities.WorkflowInspectionServices>, przepływy pracy mogą być wyszukiwane działań podrzędnych określonych, poszczególne działania mogą być wyliczane ich właściwości i mogą być buforowane metadane środowiska wykonawczego działań w określonym czasie. Ten temat zawiera omówienie <xref:System.Activities.WorkflowInspectionServices> i jak z niego korzystać do zbadania drzewem działań.  
   
 ## <a name="using-workflowinspectionservices"></a>Przy użyciu WorkflowInspectionServices  
- <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> Metoda jest używana do wszystkich działań w drzewie określonego działania. <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>Zwraca moduł wyliczający, który go dotyka wszystkie działania w obrębie drzewa, w tym elementy podrzędne, obsługi delegata, zmiennej wartości domyślne i wyrażenia argumentów. W poniższym przykładzie definicji przepływu pracy jest tworzona przy użyciu <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.WriteLine>i wyrażenia. Po utworzeniu definicji przepływu pracy jest wywoływana, a następnie `InspectActivity` metoda jest wywoływana.  
+ <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> Metoda jest używana do wszystkich działań w drzewie określonego działania. <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> Zwraca moduł wyliczający, który go dotyka wszystkie działania w obrębie drzewa, w tym elementy podrzędne, obsługi delegata, zmiennej wartości domyślne i wyrażenia argumentów. W poniższym przykładzie definicji przepływu pracy jest tworzona przy użyciu <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.WriteLine>i wyrażenia. Po utworzeniu definicji przepływu pracy jest wywoływana, a następnie `InspectActivity` metoda jest wywoływana.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#45](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#45)]  
   
@@ -41,7 +30,7 @@ Działanie drzewa kontroli jest używany przez autorów aplikacji przepływu pra
 **Elementy dodane do kolekcji.**   
 **Sekwencja**   
  **Literał < lista\<ciąg >>**  
- **While**  
+ **Podczas**  
  **AddToCollection\<ciąg >**  
  **VariableValue < ICollection\<ciąg >>**  
  **LambdaValue\<ciąg >**  

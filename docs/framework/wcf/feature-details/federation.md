@@ -1,14 +1,6 @@
 ---
 title: Federacja
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>Federacja
-Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Opisano również [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługę wdrażania architektury zabezpieczeń. Przykładową aplikację prezentującą federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
+Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Omówiono także obsługa wdrażania architektury zabezpieczeń systemu Windows Communication Foundation (WCF). Przykładową aplikację prezentującą federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Definicja zabezpieczeń  
  Zabezpieczeń umożliwia czyste rozdzielenie klient uzyskuje dostęp do usługi i skojarzone procedury uwierzytelniania i autoryzacji. Zabezpieczeń umożliwia także współpracy w wielu systemów, sieci i organizacji w obszarach różnych zaufania.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia tworzenie i wdrażanie systemów rozproszonych, korzystających z federacyjnego zabezpieczenia.  
+ WCF umożliwia tworzenie i wdrażanie systemów rozproszonych, korzystających z federacyjnego zabezpieczenia.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Elementy architektury zabezpieczeń  
  Architektura zabezpieczeń ma trzy kluczowe elementy, zgodnie z opisem w poniższej tabeli.  
@@ -80,7 +66,7 @@ Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Opisano również [
  Gdy użytkownicy uzyskują tokenu zabezpieczającego z STS A, ich obecny token do usługi STS B. organizacji B będzie kontynuowane do wykonania autoryzację żądań użytkowników i wystawia token zabezpieczający dla użytkowników z własny zestaw tokenów zabezpieczających. Użytkownicy można prezentować swoje token do zasobu w organizacji B i uzyskania dostępu do usługi.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Obsługa zabezpieczeń w programie WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia obsługę gotowe do wdrożenia architektury zabezpieczeń za pomocą [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ Usługi WCF zapewnia obsługę gotowe do wdrożenia architektury zabezpieczeń za pomocą [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element zapewnia bezpieczne, niezawodne i interoperacyjne powiązanie, które powoduje użycie protokołu HTTP jako podstawowy mechanizm transportu dla stylu komunikacji "żądanie-odpowiedź" wykorzystujące tekst i kodu XML, ponieważ format kodowania danych przesyłanych w sieci.  
   
@@ -98,10 +84,10 @@ Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Opisano również [
 -   Przedstawia token do usługi, aby uzyskać dostęp do usługi.  
   
 ### <a name="phase-2-run-time-phase"></a>Faza 2: Faza środowiska wykonawczego  
- Podczas fazy środowiska wykonawczego klient tworzy wystąpienie obiektu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta i sprawia, że wywołanie za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. Struktura podstawowej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje opisane powyżej kroki we wzorcu federacyjnego zabezpieczenia komunikacji i umożliwia klientowi bezproblemowo korzystanie z usługi.  
+ Podczas fazy środowiska wykonawczego klient tworzy obiekt klasy klienta WCF i nawiązuje połączenie za pomocą klienta WCF. Zakresie podstawowej struktury WCF obsługuje opisane powyżej kroki we wzorcu federacyjnego zabezpieczenia komunikacji i umożliwia klientowi bezproblemowo korzystanie z usługi.  
   
 ## <a name="sample-implementation-using-wcf"></a>Przykładowe zastosowanie przy użyciu programu WCF  
- Na poniższej ilustracji przedstawiono przykładowe zastosowanie dla architektury zabezpieczeń przy użyciu natywnej obsługi z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Na poniższej ilustracji przedstawiono przykładowe zastosowanie dla architektury zabezpieczeń przy użyciu natywnej obsługi z WCF.  
   
  ![Federacyjna zabezpieczeń w programie WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![Federacyjna](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Podsumowanie  
- Zabezpieczeń zawiera jasny podział odpowiedzialności i ułatwia tworzenie architektur bezpiecznego, skalowalnego usługi. Jako platformę umożliwiającą tworzenie i wdrażanie aplikacji rozproszonych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia macierzystą obsługę wdrażania zabezpieczeń.  
+ Zabezpieczeń zawiera jasny podział odpowiedzialności i ułatwia tworzenie architektur bezpiecznego, skalowalnego usługi. Jako platformę umożliwiającą tworzenie i wdrażanie aplikacji rozproszonych WCF zapewnia macierzystą obsługę wdrażania zabezpieczeń.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)

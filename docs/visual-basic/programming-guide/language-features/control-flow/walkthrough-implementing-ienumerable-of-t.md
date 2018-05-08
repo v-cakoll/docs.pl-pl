@@ -1,27 +1,17 @@
 ---
 title: Implementacja interfejsu IEnumerable w języku Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic]
 - enumerable interfaces
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4645153f9c830bc96b7ec55367f46f09098eb78d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2c2012261f38bccb704fe1a0300d496785e2129c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Wskazówki: wdrażanie IEnumerable(Of T) w Visual Basic
 <xref:System.Collections.Generic.IEnumerable%601> Interfejs jest implementowany przez klasy, które może zwracać sekwencję wartości jeden element w czasie. Zaletą przekazujących dane, które jest jeden element w czasie, że nie masz załadować pełny zestaw danych w pamięci, aby pracować z nim. Aby załadować jednego elementu danych z wystarczającą ilość pamięci tylko ma. Klasy, które implementują `IEnumerable(T)` interfejsu może być używany z `For Each` pętli lub zapytań LINQ.  

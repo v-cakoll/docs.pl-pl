@@ -1,14 +1,6 @@
 ---
-title: "ListView — Informacje o formancie [Formularze systemu Windows]"
-ms.custom: 
+title: ListView — Informacje o formancie [Formularze systemu Windows]
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.ListView> formantu zostanie wyświetlona lista elementy z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takie jak okienku po prawej stronie Eksploratora Windows. Kontrolka ma cztery trybów wyświetlania: widoku LargeIcon, SmallIcon, listy i szczegółów.  
@@ -42,21 +28,21 @@ Formularze systemu Windows <xref:System.Windows.Forms.ListView> formantu zostani
   
 |Element członkowski ListView|Widok|  
 |---------------------|----------|  
-|<xref:System.Windows.Forms.ListView.Alignment%2A>Właściwość|<xref:System.Windows.Forms.View.SmallIcon>lub<xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoArrange%2A>Właściwość|<xref:System.Windows.Forms.View.SmallIcon>lub<xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>— Metoda|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.Columns%2A>Właściwość|<xref:System.Windows.Forms.View.Details>lub<xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.DrawSubItem>zdarzenia|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A>— Metoda|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>, lub<xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.FindNearestItem%2A>— Metoda|<xref:System.Windows.Forms.View.SmallIcon>lub<xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.GetItemAt%2A>— Metoda|<xref:System.Windows.Forms.View.Details>lub<xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A>Właściwość|Wszystkie widoki, z wyjątkiem<xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A>Właściwość|<xref:System.Windows.Forms.View.Details>.|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A>Właściwość|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, lub<xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Alignment%2A> Właściwość|<xref:System.Windows.Forms.View.SmallIcon> lub <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoArrange%2A> Właściwość|<xref:System.Windows.Forms.View.SmallIcon> lub <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> — Metoda|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.Columns%2A> Właściwość|<xref:System.Windows.Forms.View.Details> lub <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.DrawSubItem> Zdarzenia|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> — Metoda|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>, lub <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindNearestItem%2A> — Metoda|<xref:System.Windows.Forms.View.SmallIcon> lub <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.GetItemAt%2A> — Metoda|<xref:System.Windows.Forms.View.Details> lub <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> Właściwość|Wszystkie widoki, z wyjątkiem <xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> Właściwość|<xref:System.Windows.Forms.View.Details>.|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A> Właściwość|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, lub <xref:System.Windows.Forms.View.Tile>|  
   
  Właściwość klucza <xref:System.Windows.Forms.ListView> formant jest <xref:System.Windows.Forms.ListView.Items%2A>, który zawiera elementy wyświetlany przez formant. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Właściwość zawiera kolekcję elementów aktualnie zaznaczony w formancie. Użytkownik może wybrać wiele elementów, na przykład w celu przeciągnij i upuść kilka elementów jednocześnie do innego formantu, jeśli <xref:System.Windows.Forms.ListView.MultiSelect%2A> właściwość jest ustawiona na `true`. <xref:System.Windows.Forms.ListView> Formant może wyświetlać pola wyboru obok elementów, jeśli <xref:System.Windows.Forms.ListView.CheckBoxes%2A> właściwość jest ustawiona na `true`.  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> Właściwość określa typ akcji użytkownika należy wykonać, aby uaktywnić element na liście: dostępne są następujące opcje <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, i <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>Aktywacja wymaga jednego kliknięcia, aby aktywować elementu. <xref:System.Windows.Forms.ItemActivation.TwoClick>Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby uaktywnić element; jednym kliknięciem zmienia kolor tekstu elementu. <xref:System.Windows.Forms.ItemActivation.Standard>Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby aktywować elementu, ale element nie zmienia wygląd.  
+ <xref:System.Windows.Forms.ListView.Activation%2A> Właściwość określa typ akcji użytkownika należy wykonać, aby uaktywnić element na liście: dostępne są następujące opcje <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, i <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> Aktywacja wymaga jednego kliknięcia, aby aktywować elementu. <xref:System.Windows.Forms.ItemActivation.TwoClick> Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby uaktywnić element; jednym kliknięciem zmienia kolor tekstu elementu. <xref:System.Windows.Forms.ItemActivation.Standard> Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby aktywować elementu, ale element nie zmienia wygląd.  
   
  <xref:System.Windows.Forms.ListView> Formantu obsługuje również style wizualne i inne funkcje, które są dostępne na platformie Windows XP, w tym grupowania, widoku tile i znaczniki wstawiania. Aby uzyskać więcej informacji, zobacz [funkcji systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   

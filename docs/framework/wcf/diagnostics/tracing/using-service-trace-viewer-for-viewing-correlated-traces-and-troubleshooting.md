@@ -1,30 +1,18 @@
 ---
-title: "Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów"
-ms.custom: 
+title: Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 W tym temacie opisano format danych śledzenia, jak wyświetlać i metod korzystających z przeglądarki śledzenia usługi Rozwiązywanie problemów z aplikacją.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Za pomocą narzędzia podglądu śledzenia usługi  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Narzędzia podglądu śledzenia usługi pomaga skorelowania dane śledzenia diagnostycznego utworzonego przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] odbiorników można znaleźć katalogu głównego. Przyczyna błędu. Narzędzie pozwala na przeglądanie, grupy i ślady filtru, dzięki czemu można diagnozować, naprawy i sprawdź problemy z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług. Aby uzyskać więcej informacji na temat stosowania tego narzędzia, zobacz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) pomaga skorelowania dane śledzenia diagnostycznego utworzonego przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] odbiorników można znaleźć katalogu głównego. Przyczyna błędu. Narzędzie pozwala na przeglądanie, grupy i ślady filtru, dzięki czemu można diagnozować, naprawy i sprawdź problemy z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług. Aby uzyskać więcej informacji na temat stosowania tego narzędzia, zobacz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Ten temat zawiera zrzuty ekranu śladów generowane przez uruchomienie [śledzenie i rejestrowanie komunikatów](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbkowania, podczas wyświetlania przy użyciu [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). W tym temacie przedstawiono sposób śledzenia zawartości, działań i ich korelacji i analizowania dużych ilości danych śledzenia podczas rozwiązywania problemów.  
   
@@ -146,7 +134,7 @@ Działania klienta WCF, wymienionych według godzina utworzenia (lewego panelu) 
   
  Gdy firma Microsoft wybierz działanie, w lewym panelu, firma Microsoft Zobacz zagnieżdżonych działań i dane śledzenia w górnym prawym panelu. W związku z tym jest to obniżonej hierarchiczny widok listy działań po lewej stronie, na podstawie wybranej nadrzędnej działania. Ponieważ wybranej akcji procesu dodaj to pierwsze żądanie, to działanie zawiera działanie ustawić zapasowej bezpieczną sesję (przesyłanie danych do przeniesienia od) i śledzi rzeczywiste przetwarzanie akcji Dodaj.  
   
- Kliknij dwukrotnie działanie procesu Dodaj działania w lewym panelu, możemy stwierdzić graficzną reprezentację klienta [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] działania związane z Dodaj. Pierwsze działanie po lewej stronie jest działanie główne (0000), która jest domyślne działanie. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]transfery poza działanie otoczenia. Jeśli to nie jest zdefiniowany, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transferów poza 0000. W tym miejscu drugi działania. Dodaj działania procesu transferu poza 0. Następnie sprawdź ustawienia bezpieczną sesję.  
+ Kliknij dwukrotnie działanie procesu Dodaj działania w lewym panelu, możemy stwierdzić graficzną reprezentację klienta [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] działania związane z Dodaj. Pierwsze działanie po lewej stronie jest działanie główne (0000), która jest domyślne działanie. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transfery poza działanie otoczenia. Jeśli to nie jest zdefiniowany, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transferów poza 0000. W tym miejscu drugi działania. Dodaj działania procesu transferu poza 0. Następnie sprawdź ustawienia bezpieczną sesję.  
   
  ![Przy użyciu przeglądarki śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 Wykres widoku działania klienta WCF: działanie otoczenia (tutaj 0), proces działania i ustawić zapasowej bezpieczną sesję  

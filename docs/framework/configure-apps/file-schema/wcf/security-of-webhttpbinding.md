@@ -1,24 +1,14 @@
 ---
 title: '&lt;security&gt; w &lt;webHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dc7edf528f509c725672036329989f9b7a9bfec2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2df10c0a35a5547dc2f1dafc6a2b9c0f9bbdc0a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;security&gt; w &lt;webHttpBinding&gt;
 Określa wymagań zabezpieczeń dotyczących punkt końcowy skonfigurowany [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -27,7 +17,7 @@ Określa wymagań zabezpieczeń dotyczących punkt końcowy skonfigurowany [ \<w
 \<powiązania >  
 \<webHttpBinding>  
 \<Powiązanie >  
-\<security>  
+\<Zabezpieczenia >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,7 +52,7 @@ Określa wymagań zabezpieczeń dotyczących punkt końcowy skonfigurowany [ \<w
 |-----------|-----------------|  
 |Brak|Zabezpieczenia są wyłączone.|  
 |Transportu|Zabezpieczenia przy użyciu protokołu HTTPS. Usługa musi być skonfigurowany z certyfikatów SSL. Komunikat jest całkowicie zabezpieczone przy użyciu protokołu HTTPS, a usługa jest uwierzytelniany przez klienta przy użyciu certyfikatu SSL usługi. Uwierzytelnianie klienta są kontrolowane poprzez `ClientCredentialType` atrybutu [ \<transportu >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).|  
-|TransportCredentialOnly|W tym trybie nie zapewnia integralności i poufności. Zapewnia uwierzytelnianie oparte na protokole HTTP klienta. Tego trybu należy używać ostrożnie. Tej opcji należy używać w środowiskach, gdzie zabezpieczeń transportu jest świadczona w inny sposób (na przykład IPSec), a tylko uwierzytelnianie klienta jest zapewniana przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] infrastruktury.|  
+|TransportCredentialOnly|W tym trybie nie zapewnia integralności i poufności. Zapewnia uwierzytelnianie oparte na protokole HTTP klienta. Tego trybu należy używać ostrożnie. Można stosować w środowiskach, gdzie zabezpieczeń transportu jest świadczona w inny sposób (na przykład IPSec), a tylko uwierzytelnianie klienta jest zapewniana przez infrastrukturę programu WCF.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -74,7 +64,7 @@ Określa wymagań zabezpieczeń dotyczących punkt końcowy skonfigurowany [ \<w
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Element powiązania, który jest używany do konfigurowania punktów końcowych dla [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tego odpowiada na żądania HTTP zamiast na wiadomości SOAP usług sieci Web.|  
+|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Element powiązania, który jest używany do konfigurowania punktów końcowych dla tego odpowiada na żądania HTTP zamiast na wiadomości SOAP usług sieci Web Windows Communication Foundation (WCF).|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  

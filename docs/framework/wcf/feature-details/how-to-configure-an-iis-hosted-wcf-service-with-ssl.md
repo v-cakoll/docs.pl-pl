@@ -1,24 +1,12 @@
 ---
-title: "Porady: Konfigurowanie usługi WCF hostowanych przez usługi IIS przy użyciu protokołu SSL"
-ms.custom: 
+title: 'Porady: Konfigurowanie usługi WCF hostowanych przez usługi IIS przy użyciu protokołu SSL'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b16ca5b4cfe615eedd9e532b12f61394806829bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Porady: Konfigurowanie usługi WCF hostowanych przez usługi IIS przy użyciu protokołu SSL
 W tym temacie opisano konfigurowanie usługi WCF hostowanych przez usługi IIS, aby użyć zabezpieczeń transportu HTTP. Zabezpieczenia transportu HTTP wymaga certyfikatu SSL do zarejestrowana w programie IIS. Jeśli nie ma certyfikatu SSL można używać usług IIS do wygenerowania certyfikatu testowego. Następnie musi dodać powiązanie protokołu SSL do witryny sieci web i skonfiguruj właściwości uwierzytelniania witryny sieci web. Na koniec należy skonfigurować usługi WCF do używania protokołu HTTPS.  
@@ -31,11 +19,11 @@ W tym temacie opisano konfigurowanie usługi WCF hostowanych przez usługi IIS, 
   
 2.  Kliknij w oknie Certyfikaty serwera **Tworzenie certyfikatu z podpisem własnym...** Łącze.  
   
-     ![Tworzenie własnym &#45; podpisany certyfikat z programem IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![Tworzenie własnym&#45;podpisanego certyfikatu z programem IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
 3.  Wprowadź przyjazną nazwę certyfikatu z podpisem własnym, a następnie kliknij przycisk **OK**.  
   
-     ![Utwórz własny &#45; Okno dialogowe certyfikatu podpisanego](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Tworzenie własnych&#45;okna dialogowego certyfikatu podpisanego](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
      Szczegóły nowo utworzonego certyfikatu z podpisem własnym są wyświetlane w **certyfikaty serwera** okna.  
   

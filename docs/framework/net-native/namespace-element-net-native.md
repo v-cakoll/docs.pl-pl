@@ -1,24 +1,14 @@
 ---
 title: Element &lt;Namespace&gt; (architektura .NET Native)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed448ea3af702706b45e27e923ebe540d83de868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnamespacegt-element-net-native"></a>Element &lt;Namespace&gt; (architektura .NET Native)
 Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonej przestrzeni nazw.  
@@ -75,15 +65,15 @@ Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonej przest
 |Element|Opis|  
 |-------------|-----------------|  
 |`<Namespace>`|Zastosowanie zasad wykonywania odbicia dla wszystkich typów w nadrzędną przestrzeń nazw.|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu.|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) element może mieć wartość zero, co najmniej jeden [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) elementów.|  
-|[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonym zestawie.|  
+|[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonym zestawie.|  
 |[\<Biblioteka >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć wartość zero lub jeden [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) elementu.|  
 |`<Namespace>`|Stosuje zasady odbicia do wszystkich typów w nadrzędną przestrzeń nazw.|  
   

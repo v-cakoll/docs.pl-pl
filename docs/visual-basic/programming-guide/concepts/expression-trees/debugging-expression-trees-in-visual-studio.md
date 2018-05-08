@@ -1,22 +1,12 @@
 ---
-title: "Debugowanie drzew wyrażeń w programie Visual Studio (Visual Basic)"
-ms.custom: 
+title: Debugowanie drzew wyrażeń w programie Visual Studio (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ff1bee9c3c3fdeafab24368d2c7e8376d4ff7b97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2addba2654067eaaf6c621c927e0992308879ae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debugowanie drzew wyrażeń w programie Visual Studio (Visual Basic)
 Można analizować struktury i zawartości drzew wyrażeń podczas debugowania aplikacji. Aby uzyskać szybki przegląd struktury drzewa wyrażenia, można użyć `DebugView` właściwość, która jest dostępna tylko w trybie debugowania. Aby uzyskać więcej informacji na temat debugowania, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
@@ -34,7 +24,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
  Każdy typ wyrażenia jest wyświetlany w wizualizatora, zgodnie z opisem w poniższych sekcjach.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression>nazwy zmiennych są wyświetlane przy użyciu symbolu "$" na początku.  
+ <xref:System.Linq.Expressions.ParameterExpression> nazwy zmiennych są wyświetlane przy użyciu symbolu "$" na początku.  
   
  Jeśli parametr nie ma nazwy, przypisano użyciem nazwy wygenerowanej automatycznie, takich jak `$var1` lub `$var2`.  
   
@@ -47,7 +37,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Parameter(GetType(Integer), "num")  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `$num`  
   
@@ -58,7 +48,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Parameter(GetType(Integer))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `$var1`  
   
@@ -74,7 +64,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Dim expr As ConstantExpression = Expression.Constant(num)  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      10  
   
@@ -85,7 +75,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Dim expr As ConstantExpression = Expression.Constant(num)  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      10D  
   
@@ -100,7 +90,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `.Block() {`  
   
@@ -115,7 +105,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Block(GetType(Object), Expression.Constant("test"))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `.Block<System.Object>() {`  
   
@@ -124,7 +114,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
      `}`  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression>obiekty są wyświetlane wraz z ich typy delegowane.  
+ <xref:System.Linq.Expressions.LambdaExpression> obiekty są wyświetlane wraz z ich typy delegowane.  
   
  Jeśli wyrażenie lambda nie ma nazwy, przypisano użyciem nazwy wygenerowanej automatycznie, takich jak `#Lambda1` lub `#Lambda2`.  
   
@@ -137,7 +127,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `.Lambda #Lambda1<System.Func'1[System.Int32]>() {`  
   
@@ -152,7 +142,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1), "SampleLamda", Nothing)  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `.Lambda SampleLambda<System.Func'1[System.Int32]>() {`  
   
@@ -178,7 +168,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Label(target, Expression.Constant(-1)))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `.Block() {`  
   
@@ -200,7 +190,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Goto(target), Expression.Label(target))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `.Block() {`  
   
@@ -224,7 +214,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Constant(1), Expression.Constant(2))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `1 #+ 2`  
   
@@ -235,7 +225,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
     Expression.Constant(10.0), GetType(Integer))  
     ```  
   
-     `DebugView`Właściwość  
+     `DebugView` Właściwość  
   
      `#(System.Int32)10D`  
   

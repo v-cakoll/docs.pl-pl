@@ -1,21 +1,12 @@
 ---
-title: "Wydajność kwerend łańcuchowa (LINQ do XML) (C#)"
-ms.custom: 
+title: Wydajność kwerend łańcuchowa (LINQ do XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1014b7790f0ea465e10cf8fc03e59ca4d3f2d55c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dca2fa37a18209c5970172cb084151a58ea4ebc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Wydajność kwerend łańcuchowa (LINQ do XML) (C#)
 Jest jedną z najważniejszych zalet LINQ (i LINQ do XML), czy łańcuchowa zapytania można wykonywać oraz pojedynczego zapytania większych i bardziej skomplikowane.  
@@ -50,7 +41,7 @@ foreach (var i in query2)
   
  To zapytanie łańcuchowa zawiera ten sam profil wydajności jako iteracja listy połączonej.  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A> Osi jest zasadniczo ta sama wydajność co iteracja listy połączonej. <xref:System.Xml.Linq.XContainer.Elements%2A>jest implementowany jako iteratora o wykonanie odroczone. Oznacza to, że go działa niektórych dodatkowo iteracja listy połączonej, takich jak przydzielanie obiektu iteratora i rejestrowanie informacji o stanie do wykonania. Tę pracę można podzielić na dwie kategorie: pracy, którą można wykonać w czasie, o których skonfigurowano iteratora i pracy, który jest wykonywane podczas każdej iteracji. Praca Instalatora jest mały, stały ilość pracy oraz pracy wykonanej w każdej iteracji jest proporcjonalny do liczby elementów w kolekcji źródłowej.  
+-   <xref:System.Xml.Linq.XContainer.Elements%2A> Osi jest zasadniczo ta sama wydajność co iteracja listy połączonej. <xref:System.Xml.Linq.XContainer.Elements%2A> jest implementowany jako iteratora o wykonanie odroczone. Oznacza to, że go działa niektórych dodatkowo iteracja listy połączonej, takich jak przydzielanie obiektu iteratora i rejestrowanie informacji o stanie do wykonania. Tę pracę można podzielić na dwie kategorie: pracy, którą można wykonać w czasie, o których skonfigurowano iteratora i pracy, który jest wykonywane podczas każdej iteracji. Praca Instalatora jest mały, stały ilość pracy oraz pracy wykonanej w każdej iteracji jest proporcjonalny do liczby elementów w kolekcji źródłowej.  
   
 -   W `query1`, `where` klauzuli powoduje wykonanie zapytania w celu wywołania <xref:System.Linq.Enumerable.Where%2A> metody. Ta metoda również jest implementowany jako iteratora. Praca Instalatora składa się z tworzenia wystąpienia delegata, który będzie odwoływać się do wyrażenia lambda, a także normalnej konfiguracji dla iteratora. A każda iteracja delegat nazywa się do wykonywania predykatu. Praca Instalatora i pracy w każdej iteracji jest podobny do pracy wykonanej podczas iteracji osi.  
   

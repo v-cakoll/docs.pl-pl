@@ -1,9 +1,6 @@
 ---
-title: "&lt;obejmują&gt; (C# przewodnik programowania w języku)"
+title: '&lt;obejmują&gt; (C# przewodnik programowania w języku)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - include
 - <include>
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f4df6a23b2fe33b2390aef86891aedc6b04e464d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a681a2fcbb874d67b82c8bda73d92dd993928bbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;obejmują&gt; (C# przewodnik programowania w języku)
 ## <a name="syntax"></a>Składnia  

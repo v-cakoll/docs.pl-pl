@@ -1,28 +1,18 @@
 ---
 title: Interfejsy profilowania
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
+ms.date: 04/10/2018
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], profiling
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-caps.latest.revision: "31"
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-interfaces"></a>Interfejsy profilowania
 W tej sekcji opisano niezarządzane interfejsy, które umożliwiają profilu program, który jest wykonywany przez środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -54,7 +44,13 @@ W tej sekcji opisano niezarządzane interfejsy, które umożliwiają profilu pro
   
  [ICorProfilerCallback7, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  Udostępnia metody wywołania zwrotnego, która środowisko uruchomieniowe języka wspólnego używa do powiadamiania profilera zaktualizowaniu strumienia symbol skojarzone z modułu w pamięci.  
-  
+
+[Interfejs ICorProfilerCallback8](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+Udostępnia metody wywołania zwrotnego, używane przez środowisko uruchomieniowe języka wspólnego powiadomiono profiler kompilacji JIT metody dynamicznej ma rozpoczęcia i zakończenia.
+
+[Interfejs ICorProfilerCallback9](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+Udostępnia metody wywołania zwrotnego, która środowisko uruchomieniowe języka wspólnego używa powiadomiono dynamiczna metoda jest Odzyskiwanie zbierane i następnie zwalnianie profiler.
+
  [ICorProfilerFunctionControl, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Udostępnia metody umożliwiające profilującego do komunikowania się z CLR, aby kontrolować sposób przy użyciu kompilatora JIT powinna generować kod ponowną kompilację określonej metody.  
   

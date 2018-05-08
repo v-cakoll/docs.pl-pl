@@ -1,26 +1,12 @@
 ---
 title: Wprowadzenie do routingu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólne podłączany SOAP pośredniczące umożliwiającej przesyłania wiadomości, na podstawie zawartości wiadomości. Usługa routingu umożliwia tworzenie złożonej logiki routingu, która umożliwia Implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi routingu priorytet i routing multiemisji. Usługa routingu znajdują się również błąd obsługi, który pozwala zdefiniować listę kopii zapasowych punktów końcowych, do której komunikaty są wysyłane, jeśli wystąpi błąd podczas wysyłania do głównej docelowego punktu końcowego.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Ten przykład konfiguruje usługi routingu do udostępnienia jeden punkt końcowy adres "http://localhost: 8000/obiektu routingservice/routera", który jest używany do odbierania wiadomości przesłana. Ponieważ komunikaty są kierowane do punktów końcowych żądanie odpowiedź, korzysta z punktem końcowym usługi <xref:System.ServiceModel.Routing.IRequestReplyRouter> kontraktu. Ta konfiguracja definiuje również punkt końcowy jednego klienta "http://localhost: 8000/servicemodelsample/usługi" wiadomości są kierowane do. Tabela filtru (tego nie pokazano) o nazwie "routingTable1" zawiera logikę routingu umożliwia rozsyłanie wiadomości i jest skojarzona z punktu końcowego usługi za pomocą **RoutingBehavior** (w przypadku pliku konfiguracji) lub  **Konfigurację** (dla trybu).  
+ Ten przykład konfiguruje usługi routingu do udostępnienia jeden punkt końcowy o adresie "http://localhost:8000/routingservice/router", który jest używany do odbierania wiadomości przesłana. Ponieważ komunikaty są kierowane do punktów końcowych żądanie odpowiedź, korzysta z punktem końcowym usługi <xref:System.ServiceModel.Routing.IRequestReplyRouter> kontraktu. Ta konfiguracja określa również punkt końcowy jednego klienta "http://localhost:8000/servicemodelsample/service" czy komunikaty są kierowane do. Tabela filtru (tego nie pokazano) o nazwie "routingTable1" zawiera logikę routingu umożliwia rozsyłanie wiadomości i jest skojarzona z punktu końcowego usługi za pomocą **RoutingBehavior** (w przypadku pliku konfiguracji) lub  **Konfigurację** (dla trybu).  
   
 ### <a name="routing-logic"></a>Logiki routingu  
  Aby zdefiniować routingu logikę używaną do wyznaczania tras wiadomościom, należy określić danych zawartych w wiadomości przychodzących, które można jednoznacznie reagować. Na przykład jeśli wszystkich miejsce docelowe punktów końcowych, które są routingu, aby udostępnić te same akcje SOAP wartość akcję zawarte w wiadomości nie jest dobry wskaźnik określonego punktu końcowego, które wiadomości powinny być kierowane do. Jeśli wiadomości musi jednoznacznie kierować do określonych punktów końcowych, należy filtrować na danych, który unikatowo identyfikuje docelowego punktu końcowego, że wiadomość jest kierowany do.  
@@ -165,7 +151,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  Domyślnie usługa routingu oblicza tylko nagłówki komunikatu. Aby umożliwić filtry, aby uzyskać dostęp do treści komunikatu, należy ustawić <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> do `false`.  
   
- **Multicast**  
+ **Multiemisji**  
   
  Gdy wielu konfiguracji usługa routingu, użyj logiki wyłączny filtr, który kieruje komunikaty do tylko jednej określonego punktu końcowego, konieczne może być kierować danej wiadomości do wielu punktów końcowych docelowego. Do obsługi multiemisji wiadomości do wielu miejsc docelowych muszą być spełnione następujące warunki:  
   
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Wiele filtrów musi zwracać `true` podczas oceniania wiadomości.  
   
- Jeśli te warunki są spełnione, wiadomość jest kierowany do wszystkich punktów końcowych wszystkie filtry, których ocena ma `true`. W poniższym przykładzie zdefiniowano konfiguracji routingu, która powoduje występowanie rozsyłane do obu punktów końcowych, jeśli adres punktu końcowego w komunikacie jest http://localhost: 8000/obiektu routingservice/routera/zaokrąglania.  
+ Jeśli te warunki są spełnione, wiadomość jest kierowany do wszystkich punktów końcowych wszystkie filtry, których ocena ma `true`. W poniższym przykładzie zdefiniowano konfiguracji routingu, która powoduje występowanie rozsyłane do obu punktów końcowych, jeśli adres punktu końcowego w komunikacie http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  

@@ -1,1 +1,0 @@
-Aby uzyskać więcej informacji na temat elementu, który reprezentuje ta klasa, zobacz następującą specyfikację: [metadanych dla języka OASIS Security Assertion znaczników języka (SAML) 2.0](http://go.microsoft.com/fwlink/?LinkId=231291) (http://go.microsoft.com/fwlink/?LinkId=231291).

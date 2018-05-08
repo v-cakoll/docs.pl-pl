@@ -1,13 +1,7 @@
 ---
-title: "Niestandardowe ciągi formatujące TimeSpan"
-ms.custom: 
+title: Niestandardowe ciągi formatujące TimeSpan
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-timespan-format-strings"></a>Niestandardowe ciągi formatujące TimeSpan
 A <xref:System.TimeSpan> ciąg formatu definiuje reprezentację ciągu <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Niestandardowy ciąg formatu, który składa się z co najmniej jeden niestandardowy <xref:System.TimeSpan> sformatować specyfikatory wraz z dowolnej liczby znaków literału. Dowolny ciąg, który nie jest [standardowy ciąg formatu TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md) jest interpretowana jako niestandardowego <xref:System.TimeSpan> ciąg formatu.  
@@ -50,7 +39,7 @@ A <xref:System.TimeSpan> ciąg formatu definiuje reprezentację ciągu <xref:Sys
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
   
-<a name="table"></a>W poniższej tabeli opisano niestandardowa data i godzina specyfikatory formatu.  
+<a name="table"></a> W poniższej tabeli opisano niestandardowa data i godzina specyfikatory formatu.  
   
 |Specyfikator formatu|Opis|Przykład|  
 |----------------------|-----------------|-------------|  

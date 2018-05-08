@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::FindMethod — Metoda"
-ms.custom: 
+title: IMetaDataImport::FindMethod — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindMethod
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e59cc440ba004545c31d6b25d36cca4fdfb58899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b68d4e3d51fdb50290319de804a78c1a78a07a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod — Metoda
 Pobiera wskaźnik do elementu MethodDef token metodę, która jest zawarta w określonym <xref:System.Type> z określoną sygnaturą nazwy i metadanych.  
@@ -71,7 +59,7 @@ HRESULT FindMethod (
   
  Podpis przekazany do `FindMethod` musi został wygenerowany w bieżącym zakresie, ponieważ podpisy są powiązane z określonego zakresu. Podpis osadzić token, który identyfikuje typ otaczający klasy lub wartości. Token jest indeks do lokalnej tabeli TypeDef. Nie można skompilować podpisu środowiska wykonawczego poza kontekstem bieżącego zakresu i używania jako danych wejściowych do danych wejściowych do tego podpisu `FindMethod`.  
   
- `FindMethod`znajduje tylko metody, które zostały zdefiniowane bezpośrednio w klasy lub interfejsu; nie odnajdzie dziedziczonej metody.  
+ `FindMethod` znajduje tylko metody, które zostały zdefiniowane bezpośrednio w klasy lub interfejsu; nie odnajdzie dziedziczonej metody.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,7 +68,7 @@ HRESULT FindMethod (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Reflection.MethodInfo>  

@@ -1,26 +1,12 @@
 ---
 title: Transakcyjne powiązanie MSMQ
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: 50
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7c7be275dca35e30f5176518cfb4c1842af0210a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transacted-msmq-binding"></a>Transakcyjne powiązanie MSMQ
 W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ).  
@@ -102,7 +88,7 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatorów ukośnika w jego ścieżki, podczas tworzenia kolejki, przy użyciu <xref:System.Messaging>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Punktu końcowego używa adres kolejki z Schemat net.msmq, używa "localhost", określający komputera lokalnego i używa przekazywania ukośniki w swojej ścieżce.  
+>  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatorów ukośnika w jego ścieżki, podczas tworzenia kolejki, przy użyciu <xref:System.Messaging>. Punkt końcowy usługi Windows Communication Foundation (WCF) używa adres kolejki z Schemat net.msmq, wykorzystuje "localhost" do oznaczania na komputerze lokalnym, a następnie używa ukośniki w swojej ścieżce.  
   
  Klient tworzy zakresu transakcji. Komunikacja z kolejki odbywa się w zakresie transakcji, co powoduje traktowane jako Atomowej jednostki, w którym wszystkie komunikaty są wysyłane do kolejki lub brak komunikaty są wysyłane do kolejki. Transakcja zostaje zatwierdzona przez wywołanie metody <xref:System.Transactions.TransactionScope.Complete%2A> w zakresie transakcji.  
 
@@ -247,7 +233,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
   

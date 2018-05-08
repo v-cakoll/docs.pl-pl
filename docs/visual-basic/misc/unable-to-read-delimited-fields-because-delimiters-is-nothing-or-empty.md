@@ -1,21 +1,14 @@
 ---
-title: "Nie można odczytać rozdzielonych pól, ponieważ parametr Delimiters jest Nothing lub jest pusty"
+title: Nie można odczytać rozdzielonych pól, ponieważ parametr Delimiters jest Nothing lub jest pusty
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 88d68c81a016882f06cf729947d78939a882273b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 210b00a17b054ed9b9311b6b83da01eef1a12597
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>Nie można odczytać rozdzielonych pól, ponieważ parametr Delimiters jest Nothing lub jest pusty
 `TextFieldParser` Nie może odczytać z pliku, ponieważ `Delimiters` właściwość jest ustawiona na `Nothing` lub jest pusty.  

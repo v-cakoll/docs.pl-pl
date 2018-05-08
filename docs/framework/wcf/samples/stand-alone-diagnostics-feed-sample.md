@@ -1,29 +1,17 @@
 ---
-title: "Przykład autonomicznego kanału diagnostycznego"
-ms.custom: 
+title: Przykład autonomicznego kanału diagnostycznego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Przykład autonomicznego kanału diagnostycznego
-Ten przykład przedstawia sposób tworzenia źródła danych dla zespolonego z RSS/Atom [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Jest podstawowy program "Hello World", który zawiera podstawowe informacje o modelu obiektów oraz jak je skonfigurować na [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi.  
+Ten przykład przedstawia sposób tworzenia RSS/źródło danych Atom dla zespolonego z usługi Windows Communication Foundation (WCF). Jest podstawowe program "Hello World", który zawiera podstawowe informacje o modelu obiektów oraz sposobu konfigurowania usługi Windows Communication Foundation (WCF).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]modele zespolonego źródła danych jako operacji usługi, które zwracają specjalnego typu danych, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Wystąpienia <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> może serializować źródło danych do formatów RSS 2.0 i Atom 1.0. Następujący przykładowy kod przedstawia kontraktu używane.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modele zespolonego źródła danych jako operacji usługi, które zwracają specjalnego typu danych, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Wystąpienia <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> może serializować źródło danych do formatów RSS 2.0 i Atom 1.0. Następujący przykładowy kod przedstawia kontraktu używane.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -60,7 +48,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Ponieważ ta usługa odbiera żądania przy użyciu standardowych HTTP GET, można użyć dowolnego źródła danych RSS lub obsługujący ATOM klienta do uzyskania dostępu do usługi. Na przykład możesz wyświetlić dane wyjściowe tej usługi przechodząc do kanał-http://localhost: 8000/diagnostyczny /? format = atom lub kanał-http://localhost: 8000/diagnostyczny /? format = rss obsługujących funkcję RSS przeglądarki, takich jak program Internet Explorer 7.  
+ Ponieważ ta usługa odbiera żądania przy użyciu standardowych HTTP GET, można użyć dowolnego źródła danych RSS lub obsługujący ATOM klienta do uzyskania dostępu do usługi. Na przykład można wyświetlić dane wyjściowe tej usługi, przechodząc do http://localhost:8000/diagnostics/feed/?format=atom lub http://localhost:8000/diagnostics/feed/?format=rss obsługujących funkcję RSS przeglądarki, takich jak program Internet Explorer 7.  
   
  Można również użyć [jak WCF zespolonego obiektu modelu mapy Atom i RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) do odczytywania danych zespolonej i przetwarzanie za pomocą kodu nadrzędnych.  
   
@@ -93,14 +81,14 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  Uruchom aplikację konsolową.  
   
-4.  Po uruchomieniu aplikacji konsoli przejdź do http://localhost: 8000/Diagnostyka/kanału informacyjnego /? format = atom lub kanał-http://localhost: 8000/diagnostyczny /? format = rss za pomocą przeglądarki obsługującej funkcję RSS.  
+4.  Po uruchomieniu aplikacji konsoli przejdź do http://localhost:8000/diagnostics/feed/?format=atom lub http://localhost:8000/diagnostics/feed/?format=rss za pomocą przeglądarki obsługującej funkcję RSS.  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   

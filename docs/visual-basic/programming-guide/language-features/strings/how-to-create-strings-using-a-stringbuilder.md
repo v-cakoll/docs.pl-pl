@@ -1,21 +1,15 @@
 ---
 title: 'Porady: tworzenie ciągów za pomocą StringBuilder w Visual Basic'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - StringBuilder class
 - strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c0e15c7df07822ee104a88525c209768c05470e3
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 49f3271d41e9e858c6ecafe1dde5330ebff767f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Porady: tworzenie ciągów za pomocą StringBuilder w Visual Basic
 Ten przykład tworzy ciąg z dużo mniejszym ciągów za pomocą <xref:System.Text.StringBuilder> klasy. <xref:System.Text.StringBuilder> Klasy jest bardziej efektywne niż `&=` operator łączenie wielu ciągów.  

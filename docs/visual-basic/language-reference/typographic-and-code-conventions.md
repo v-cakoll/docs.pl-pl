@@ -1,9 +1,6 @@
 ---
-title: "Konwencje związane z typografią i kodami (Visual Basic)"
+title: Konwencje związane z typografią i kodami (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Konwencje związane z typografią i kodami (Visual Basic)
 Dokumentacja języka Visual Basic korzysta z następujących czynności związane z typografią i konwencje związane z kodami.  
@@ -31,8 +25,8 @@ Dokumentacja języka Visual Basic korzysta z następujących czynności związan
 |-------------|-----------------|  
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Słowa kluczowe specyficzne dla języka i środowiska uruchomieniowego elementów członkowskich mają początkowej wielkich liter i są sformatowane, jak pokazano w poniższym przykładzie.|  
 |**SmallProject**, **ButtonCollection**|Słów i wyrażeń, które należy wpisać są sformatowane, jak pokazano w poniższym przykładzie.|  
-|[Module — instrukcja](../../visual-basic/language-reference/statements/module-statement.md)|W poniższym przykładzie są formacie łącza, które można kliknąć, aby przejść do innej strony pomocy.|  
-|*obiekt*, *nazwa_zmiennej*,`argumentList`|Symbole zastępcze podawane informacje są sformatowane, jak pokazano w poniższym przykładzie.|  
+|[Module, instrukcja](../../visual-basic/language-reference/statements/module-statement.md)|W poniższym przykładzie są formacie łącza, które można kliknąć, aby przejść do innej strony pomocy.|  
+|*obiekt*, *nazwa_zmiennej*, `argumentList`|Symbole zastępcze podawane informacje są sformatowane, jak pokazano w poniższym przykładzie.|  
 |[Shadows], [ *expressionList* ]|W składni elementy opcjonalne są ujęte w nawiasy kwadratowe.|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|W składni podczas wybór między dwa lub więcej elementów, należy się upewnić elementy są ujęte w nawiasy klamrowe i oddzielone pionowych słupków.<br /><br /> Musisz wybrać jeden i tylko jeden z elementów.|  
 |[ `Protected` &#124; `Friend` ]|W składni przypadku możliwość wyboru między dwa lub więcej elementów, elementy są ujęte w nawiasy kwadratowe i oddzielone pionowych słupków.<br /><br /> Można wybrać dowolną kombinację elementy lub żadnego elementu.|  
@@ -54,7 +48,7 @@ Dokumentacja języka Visual Basic korzysta z następujących czynności związan
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)  
  [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)  
- [Elementy członkowskie biblioteki wykonawczej języka Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)  
+ [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)  
  [Visual Basic — konwencje nazewnictwa](../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- [Porady: przerywanie i łączenie instrukcji w Code](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+ [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
  [Komentarze w kodzie](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

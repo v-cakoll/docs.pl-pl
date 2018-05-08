@@ -1,17 +1,12 @@
 ---
 title: do — Powiązania w klasach (F#)
 description: 'Dowiedz się, jak używać F # "do" powiązanie w definicji klasy, która wykonuje akcje podczas konstruowania obiektu lub przy pierwszym użyciu typu.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 27c2372328c8b23b91239517271c0d71a672a34d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 779b33c44b1518135f4c7f270173ec8124fec101
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="do-bindings-in-classes"></a>do — Powiązania w klasach
 

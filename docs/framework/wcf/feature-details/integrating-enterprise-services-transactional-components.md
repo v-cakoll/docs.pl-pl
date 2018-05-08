@@ -1,27 +1,15 @@
 ---
-title: "Integrowanie składników transakcyjnych usług dla przedsiębiorstw"
-ms.custom: 
+title: Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8453b4199f5e6eae263ebc3fc1c457429c868d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrowanie składników transakcyjnych usług dla przedsiębiorstw
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia mechanizm automatycznego do integracji z usługami przedsiębiorstwa (zobacz [współdziałanie z aplikacjami COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Może być jednak elastyczność tworzenia usług używających wewnętrznie składników transakcyjnych hostowanych w ramach usług dla przedsiębiorstw. Ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funkcji transakcji jest oparty na <xref:System.Transactions> infrastruktury, proces Integrowanie usług dla przedsiębiorstw o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest identyczna jak służący do określania współdziałanie <xref:System.Transactions> i Enterprise Usługi w sposób opisany w [współdziałanie z usługami przedsiębiorstwa i transakcje COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
+Windows Communication Foundation (WCF) zapewnia mechanizm automatycznego do integracji z usługami przedsiębiorstwa (zobacz [współdziałanie z aplikacjami COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Może być jednak elastyczność tworzenia usług używających wewnętrznie składników transakcyjnych hostowanych w ramach usług dla przedsiębiorstw. Ponieważ funkcja transakcji WCF jest oparty na <xref:System.Transactions> infrastruktury, proces integracji usług dla przedsiębiorstw z WCF jest identyczna jak służący do określania współdziałanie <xref:System.Transactions> i usług dla przedsiębiorstw, w sposób opisany w [Współdziałanie z usługami przedsiębiorstwa i transakcje COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
   
  Aby zapewnić żądany poziom współdziałanie transakcji przychodzącej i transakcji kontekstu modelu COM +, należy utworzyć implementacji usługi <xref:System.Transactions.TransactionScope> wystąpienia i użyj odpowiednią wartość z <xref:System.Transactions.EnterpriseServicesInteropOption> wyliczenia.  
   

@@ -1,33 +1,21 @@
 ---
 title: Zabezpieczanie usług
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>Zabezpieczanie usług
-Bezpieczeństwo [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługa obejmuje dwa podstawowe wymagania: transfer zabezpieczeń i autoryzacji. (Trzeci wymaganie, przeprowadzanie inspekcji zdarzeń zabezpieczeń jest opisany w [inspekcji](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Krótko mówiąc transfer zabezpieczeń obejmuje uwierzytelniania (weryfikacji tożsamości klienta i usługi), poufność (szyfrowanie wiadomości) i integralności (cyfrowego podpisywania przed naruszeniem). Autoryzacja jest kontrola dostępu do zasobów, na przykład, dzięki czemu tylko użytkownicy o odpowiednich uprawnieniach do odczytu pliku. Przy użyciu funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], łatwo zostały zaimplementowane dwa podstawowe wymagania.  
+Obejmuje dwa podstawowe wymagania zabezpieczeń usługi Windows Communication Foundation (WCF): transfer zabezpieczeń i autoryzacji. (Trzeci wymaganie, przeprowadzanie inspekcji zdarzeń zabezpieczeń jest opisany w [inspekcji](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Krótko mówiąc transfer zabezpieczeń obejmuje uwierzytelniania (weryfikacji tożsamości klienta i usługi), poufność (szyfrowanie wiadomości) i integralności (cyfrowego podpisywania przed naruszeniem). Autoryzacja jest kontrola dostępu do zasobów, na przykład, dzięki czemu tylko użytkownicy o odpowiednich uprawnieniach do odczytu pliku. Przy użyciu funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], łatwo zostały zaimplementowane dwa podstawowe wymagania.  
   
  Z wyjątkiem produktów <xref:System.ServiceModel.BasicHttpBinding> klasy (lub [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element w konfiguracji), transfer zabezpieczeń jest domyślnie włączona dla wszystkich wstępnie zdefiniowanych powiązań. Tematy w tej sekcji opisano dwa podstawowe scenariusze: implementacja transfer zabezpieczeń oraz autoryzacji intranet usługi hostowanej na Internet Information Services (IIS) i implementowanie zabezpieczeń transfer i autoryzacji w usłudze hostowanej w usługach IIS.  
   

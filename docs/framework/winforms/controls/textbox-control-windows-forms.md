@@ -1,27 +1,15 @@
 ---
-title: "TextBox — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: TextBox — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d606140a5be2b1770bc5a16159e96e20b0fccdd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe5bafa5c21a3946df33821d358185f3aba67222
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox — Formant (Formularze systemu Windows)
 Pola tekstowe formularzy systemu Windows są używane, aby pobrać dane wejściowe użytkownika lub do wyświetlania tekstu. `TextBox` Kontroli jest zazwyczaj używana do edycji tekstu, mimo że można również on tylko do odczytu. Pola tekstowe można wyświetlać wiele wierszy, zawijać tekst, który ma rozmiar formantu i dodać podstawowe formatowanie. `TextBox` Kontroli umożliwia jeden format tekstu wyświetlane lub wprowadzony w formancie.  
@@ -49,7 +37,7 @@ Pola tekstowe formularzy systemu Windows są używane, aby pobrać dane wejścio
  Opisuje sposób wprowadzania przewijanego pola tekstowego.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.TextBox>klasy  
+ <xref:System.Windows.Forms.TextBox> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

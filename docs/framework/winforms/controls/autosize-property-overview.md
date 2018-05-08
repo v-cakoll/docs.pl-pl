@@ -1,29 +1,17 @@
 ---
-title: "AutoSize — Przegląd właściwości"
-ms.custom: 
+title: AutoSize — Przegląd właściwości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - layout [Windows Forms], AutoSize
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34f92bdc80f62225efe5e008f0893905f49da970
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d7502d11c6cad526c5b19ea2d98e39756d518b98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autosize-property-overview"></a>AutoSize — Przegląd właściwości
 <xref:System.Windows.Forms.Control.AutoSize%2A> Właściwość umożliwia, aby zmienić jego rozmiar, jeśli to konieczne osiągnąć wartość określoną przez <xref:System.Windows.Forms.Control.PreferredSize%2A> właściwości. Dostosuj zachowanie ustalania rozmiaru formantów określonego przez ustawienie `AutoSizeMode` właściwości.  
@@ -58,8 +46,8 @@ ms.lasthandoff: 12/22/2017
   
 |Obsługa automatycznego dopasowania rozmiaru|Typ formantu|  
 |----------------------|------------------|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A>Właściwość jest obsługiwana.<br />-Nie `AutoSizeMode` właściwości.|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <xref:System.Windows.Forms.MaskedTextBox>(<xref:System.Windows.Forms.TextBox> podstawowy)<br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A>Właściwość jest obsługiwana.<br />-   `AutoSizeMode`Właściwość jest obsługiwana.|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> Właściwość jest obsługiwana.<br />-Nie `AutoSizeMode` właściwości.|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <xref:System.Windows.Forms.MaskedTextBox> (<xref:System.Windows.Forms.TextBox> podstawowy)<br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> Właściwość jest obsługiwana.<br />-   `AutoSizeMode` Właściwość jest obsługiwana.|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
 |-Nie <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości.|<xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.ComboBox><br /><br /> <xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DateTimePicker><br /><br /> <xref:System.Windows.Forms.ListBox><br /><br /> <xref:System.Windows.Forms.ListView><br /><br /> <xref:System.Windows.Forms.MaskedTextBox><br /><br /> <xref:System.Windows.Forms.MonthCalendar><br /><br /> <xref:System.Windows.Forms.ProgressBar><br /><br /> <xref:System.Windows.Forms.PropertyGrid><br /><br /> <xref:System.Windows.Forms.RichTextBox><br /><br /> <xref:System.Windows.Forms.SplitContainer><br /><br /> <xref:System.Windows.Forms.TabControl><br /><br /> <xref:System.Windows.Forms.TabPage><br /><br /> <xref:System.Windows.Forms.TreeView><br /><br /> <xref:System.Windows.Forms.WebBrowser><br /><br /> <xref:System.Windows.Forms.ScrollBar>|  
   
 ## <a name="autosize-in-the-design-environment"></a>AutoSize w środowisku projektowania programu  

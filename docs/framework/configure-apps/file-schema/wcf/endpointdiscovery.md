@@ -1,31 +1,19 @@
 ---
 title: '&lt;endpointDiscovery&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7a997ddffa2267cdeb9e54bb98d4122db254104d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5971ce79ac2f03fbdc91653d5d282804e98cf8a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wykrywalność, zakresy i wszystkich jego rozszerzenia niestandardowe dla jego metadanych.  
   
-\<System. ServiceModel >  
+\<system.ServiceModel>  
 \<zachowania >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<zachowanie >  
 \<endpointDiscovery >  
   

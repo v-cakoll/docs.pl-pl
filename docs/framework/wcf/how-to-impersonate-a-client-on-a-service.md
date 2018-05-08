@@ -1,14 +1,6 @@
 ---
 title: 'Instrukcje: Personifikowanie klienta w usłudze'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 096a3dd1ae5035f6b015ec88ccd8f1ada1dc55ea
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 991792b22dbef42e6f244f33f3a82550c02ddeba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Instrukcje: Personifikowanie klienta w usłudze
-Personifikowanie klienta na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi włącza usługę w celu wykonania zadań w imieniu klienta. Dla akcji może ulec dostępu formantu listy (ACL) sprawdza, takich jak dostęp do katalogów i plików na komputerze lub dostępu do bazy danych programu SQL Server, sprawdź listę kontroli dostępu jest konta użytkownika klienta. W tym temacie przedstawiono podstawowe czynności wymagane do włączenia klienta w domenie systemu Windows ustawić poziom personifikacji klienta. Na przykład pracy tego, zobacz [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md). Aby uzyskać więcej informacji na temat personifikacja klienta, zobacz [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+Personifikowanie klienta usługi Windows Communication Foundation (WCF) włącza usługę w celu wykonania zadań w imieniu klienta. Dla akcji może ulec dostępu formantu listy (ACL) sprawdza, takich jak dostęp do katalogów i plików na komputerze lub dostępu do bazy danych programu SQL Server, sprawdź listę kontroli dostępu jest konta użytkownika klienta. W tym temacie przedstawiono podstawowe czynności wymagane do włączenia klienta w domenie systemu Windows ustawić poziom personifikacji klienta. Na przykład pracy tego, zobacz [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md). Aby uzyskać więcej informacji na temat personifikacja klienta, zobacz [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
 >  Gdy klient i usługa są uruchomione na tym samym komputerze i na kliencie jest uruchomiony na koncie systemu (czyli `Local System` lub `Network Service`), nie można spersonifikować klienta podczas nawiązywania bezpiecznej sesji jest nawiązywane z stanowe tokenów kontekstów zabezpieczeń. Aplikacja WinForms lub konsoli zwykle jest uruchamiane na koncie aktualnie zalogowanego, dzięki czemu mogą być personifikowani konto domyślne. Jednakże, gdy klient jest [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] i tej strony znajduje się w [!INCLUDE[iis601](../../../includes/iis601-md.md)] lub usług IIS 7.0, a następnie klient jest uruchamiany w `Network Service` konto domyślne. Domyślnie wszystkie powiązania dostarczane przez system, które obsługują bezpiecznej sesji używają bezstanowych token kontekstu zabezpieczeń. Jednak jeśli klient jest [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony i bezpieczne sesje z stanowe tokenów kontekstów zabezpieczeń są używane, nie można spersonifikować klienta. Aby uzyskać więcej informacji o używaniu stanowe tokenów kontekstów zabezpieczeń w ramach bezpiecznej sesji, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  

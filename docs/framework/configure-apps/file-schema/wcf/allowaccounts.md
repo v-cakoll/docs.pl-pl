@@ -1,29 +1,17 @@
 ---
 title: '&lt;allowAccounts&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a1716aa77808b2a9f8f3ca903dabf81b21b8f709
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 097112a8b54467843554047882e55b62d7813c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
-Zawiera kolekcję elementów konfiguracyjnych określających konta użytkowników dla procesów obsługujących [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usług i przyznano im dostęp do połączenia z usługą udostępniania.  
+Zawiera kolekcję elementów konfiguracji, które określają użytkownika konta dla procesów hostujących usługi Windows Communication Foundation (WCF) i przyznano im dostęp do połączenia do udostępniania usługi.  
   
- \<system.serviceModel.activation >  
+ \<system.serviceModel.activation>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +31,7 @@ Zawiera kolekcję elementów konfiguracyjnych określających konta użytkownik�
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[\<Dodaj >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|Dodaje konto użytkownika dla procesów obsługujących [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług i przyznano im dostęp do połączenia z usługą udostępniania|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|Dodaje konto użytkownika dla procesów, które host usługi WCF i przyznano im dostęp do połączenia z usługą udostępniania|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

@@ -1,29 +1,15 @@
 ---
 title: Klasa XMLSerializer — przykład
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: af051dffa93aea6586adaea1e49081ddc357a210
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlserializer-sample"></a>Klasa XMLSerializer — przykład
-W tym przykładzie pokazano, jak serializacji i deserializacji typy, które są zgodne z <xref:System.Xml.Serialization.XmlSerializer>. Wartość domyślna [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] element formatujący <xref:System.Runtime.Serialization.DataContractSerializer> klasy. <xref:System.Xml.Serialization.XmlSerializer> Klasa może być używana w celu serializacji i deserializacji typy kiedy <xref:System.Runtime.Serialization.DataContractSerializer> klasa nie może być używana. To sytuacja często ścisła kontrola nad XML jest wymagany — na przykład, jeśli element danych musi być atrybut XML i nie jest elementem XML. Ponadto <xref:System.Xml.Serialization.XmlSerializer> często automatycznie pobiera wybierany w przypadku tworzenia klientów z systemem innym niż[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.  
+W tym przykładzie pokazano, jak serializacji i deserializacji typy, które są zgodne z <xref:System.Xml.Serialization.XmlSerializer>. Domyślny element formatujący Windows Communication Foundation (WCF) jest <xref:System.Runtime.Serialization.DataContractSerializer> klasy. <xref:System.Xml.Serialization.XmlSerializer> Klasa może być używana w celu serializacji i deserializacji typy kiedy <xref:System.Runtime.Serialization.DataContractSerializer> klasa nie może być używana. To sytuacja często ścisła kontrola nad XML jest wymagany — na przykład, jeśli element danych musi być atrybut XML i nie jest elementem XML. Ponadto <xref:System.Xml.Serialization.XmlSerializer> często automatycznie pobiera wybierany w przypadku tworzenia klientów z systemem innym niż[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.  
   
  W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS).  
   
@@ -143,7 +129,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   

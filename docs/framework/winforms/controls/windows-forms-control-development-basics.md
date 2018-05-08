@@ -1,28 +1,16 @@
 ---
-title: "Podstawowe informacje o opracowywaniu formantów formularzy systemu Windows"
-ms.custom: 
+title: Podstawowe informacje o opracowywaniu formantów formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], derivation types
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455912468376d2f5de0ac1f30b4fcab5bb93309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-control-development-basics"></a>Podstawowe informacje o opracowywaniu formantów formularzy systemu Windows
 Formant formularzy systemu Windows jest klasą pochodną bezpośrednio lub pośrednio <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Na poniższej liście opisano typowe scenariusze związane z opracowywaniem formanty formularzy systemu Windows:  
@@ -39,7 +27,7 @@ Formant formularzy systemu Windows jest klasą pochodną bezpośrednio lub pośr
   
      W tym scenariuszu pochodzi formantu od klasy podstawowej <xref:System.Windows.Forms.Control>. Można dodać oraz jak zastąpienie właściwości, metod i zdarzeń klasy podstawowej. Aby rozpocząć, zobacz [porady: opracowywanie prostego formantu formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
- Klasa podstawowa dla formantów formularzy systemu Windows, <xref:System.Windows.Forms.Control>, zapewnia żmudne procesy wymagane do wyświetlania w aplikacji systemu Windows po stronie klienta. <xref:System.Windows.Forms.Control>udostępnia uchwyt okna, obsługuje routing wiadomości i zapewnia zdarzeń myszy i klawiatury, a także wiele innych użytkowników zdarzenia interfejsu. Udostępnia zaawansowane układu i ma właściwości specyficzne dla wyświetlania, takich jak <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>i wiele innych. Ponadto zapewnia zabezpieczeń, wątki pomocy technicznej i współdziałanie z formantami ActiveX. Ponieważ duża część infrastruktury jest dostarczany przez klasę podstawową, jest stosunkowo łatwa do opracowywania własnych formanty formularzy systemu Windows.  
+ Klasa podstawowa dla formantów formularzy systemu Windows, <xref:System.Windows.Forms.Control>, zapewnia żmudne procesy wymagane do wyświetlania w aplikacji systemu Windows po stronie klienta. <xref:System.Windows.Forms.Control> udostępnia uchwyt okna, obsługuje routing wiadomości i zapewnia zdarzeń myszy i klawiatury, a także wiele innych użytkowników zdarzenia interfejsu. Udostępnia zaawansowane układu i ma właściwości specyficzne dla wyświetlania, takich jak <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>i wiele innych. Ponadto zapewnia zabezpieczeń, wątki pomocy technicznej i współdziałanie z formantami ActiveX. Ponieważ duża część infrastruktury jest dostarczany przez klasę podstawową, jest stosunkowo łatwa do opracowywania własnych formanty formularzy systemu Windows.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: opracowywanie prostej kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

@@ -1,14 +1,6 @@
 ---
 title: Grafika i multimedia
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,21 +12,15 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 013ae46e2d90a9eda42d33e95e590812489fa04b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74375c468170d58cfa79031ab0030477c29bd445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-and-multimedia"></a>Grafika i multimedia
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia obsługę multimediów, grafiki wektorowej, animacji i zawartości kompozycji, dzięki czemu deweloperzy mogą tworzyć interesujące interfejsów użytkownika i zawartości. Przy użyciu [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], można utworzyć grafiki wektorowej lub złożonych animacji i integracji nośnika w aplikacji.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę multimediów, grafiki wektorowej, animacji i zawartości kompozycji, dzięki czemu deweloperzy mogą tworzyć interesujące interfejsów użytkownika i zawartości. Przy użyciu [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], można utworzyć grafiki wektorowej lub złożonych animacji i integracji nośnika w aplikacji.  
   
  W tym temacie przedstawiono funkcje grafiki, animacji i multimediów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], które umożliwiają dodanie grafiki, efekty przejścia dźwięku i wideo do aplikacji.  
   
@@ -66,7 +52,7 @@ ms.lasthandoff: 01/19/2018
  WPF obsługuje grafiki 2-D wysokiej jakości. Funkcje obejmują pędzle, mają geometrię, obrazy, kształty i przekształcenia. Aby uzyskać więcej informacji, zobacz [grafiki](../../../../docs/framework/wpf/graphics-multimedia/graphics.md). Renderowanie elementów graficznego opiera się na <xref:System.Windows.Media.Visual> klasy. Struktura obiektów visual na ekranie została opisana w drzewie wizualnym. Aby uzyskać więcej informacji, zobacz [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
 ### <a name="2-d-shapes"></a>Kształty 2-D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]zawiera bibliotekę często używane, rysowane wektor [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] kształtów, takich jak prostokąty i wielokropek, które na poniższej ilustracji przedstawiono.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera bibliotekę często używane, rysowane wektor [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] kształtów, takich jak prostokąty i wielokropek, które na poniższej ilustracji przedstawiono.  
   
  ![Wielokropki i prostokąty](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
@@ -102,7 +88,7 @@ End Class
   
  Na poniższej ilustracji przedstawiono dane wyjściowe poprzedniego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i związane z kodem.  
   
- ![Okno z tekstem "kliknięto przycisk wielokropka &33;" ] (../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![Okno z tekstem "kliknięto przycisk wielokropka&#33;"](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
  Aby uzyskać więcej informacji, zobacz [kształtów i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md). Dla przykładu wprowadzające, zobacz [przykładowe elementy kształtu](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
@@ -114,7 +100,7 @@ End Class
  Aby uzyskać więcej informacji, zobacz [omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md). Dla przykładu wprowadzające, zobacz [próbki mają geometrię](http://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Efekty 2-D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]zawiera bibliotekę [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] klasy, które umożliwia tworzenie wielu efektów. [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] Możliwości renderowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, które mają gradientów, mapy bitowe, rysunki i wideo; i manipulowania nimi przy użyciu obracanie, skalowanie i pochylanie. Na poniższej ilustracji przedstawiono przykładowy wiele efektów można osiągnąć za pomocą [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Pędzle.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera bibliotekę [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] klasy, które umożliwia tworzenie wielu efektów. [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] Możliwości renderowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, które mają gradientów, mapy bitowe, rysunki i wideo; i manipulowania nimi przy użyciu obracanie, skalowanie i pochylanie. Na poniższej ilustracji przedstawiono przykładowy wiele efektów można osiągnąć za pomocą [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Pędzle.  
   
  ![Ilustracja różnych pędzli](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
@@ -122,7 +108,7 @@ End Class
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>Renderowanie 3-D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]zawiera zestaw [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] możliwości renderowania, które integrują się z [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obsługuje grafiki w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w kolejności do tworzenia układu ciekawsze [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacja danych. Na jednym końcu widma [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Umożliwia renderowanie [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obrazów na powierzchni [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] kształtów, co pokazano na poniższej ilustracji.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera zestaw [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] możliwości renderowania, które integrują się z [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obsługuje grafiki w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w kolejności do tworzenia układu ciekawsze [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacja danych. Na jednym końcu widma [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Umożliwia renderowanie [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obrazów na powierzchni [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] kształtów, co pokazano na poniższej ilustracji.  
   
  ![Zrzut ekranu przedstawiający przykładowy Visual3D](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
@@ -154,7 +140,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement>ma możliwość odtwarzania audio i wideo i jest rozszerzalny, aby umożliwić łatwe tworzenie niestandardowych [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
+ <xref:System.Windows.Controls.MediaElement> ma możliwość odtwarzania audio i wideo i jest rozszerzalny, aby umożliwić łatwe tworzenie niestandardowych [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
   
  Aby uzyskać więcej informacji, zobacz [omówienie Multimedia](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md).  
   

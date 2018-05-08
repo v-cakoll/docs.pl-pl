@@ -1,26 +1,12 @@
 ---
 title: ADO.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: cebd146505cd714a77c30cffe8fd3440c2d9f3cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5869cbe62f8f3dd1b81dd176cf95a4a0a5491967
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET to zestaw klas, które udostępniają usługi dostępu do danych dla programistów platformy .NET Framework. ADO.NET zapewnia bogaty zestaw składników do tworzenia aplikacji rozproszonej, udostępnianie danych. Jest integralną częścią programu .NET Framework, zapewniając dostęp do relacyjnych, XML i dane aplikacji. ADO.NET obsługuje wiele różnych potrzeb, w tym tworzenie klientów frontonu bazy danych i obiektów biznesowym warstwy środkowej używanych przez aplikacje, narzędzia, języki lub przeglądarek internetowych.  

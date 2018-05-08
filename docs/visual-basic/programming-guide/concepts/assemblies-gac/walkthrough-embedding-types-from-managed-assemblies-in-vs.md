@@ -1,22 +1,12 @@
 ---
-title: "Wskazówki: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)"
-ms.custom: 
+title: 'Wskazówki: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4411b40d8ffbdf2b74c49152db675286d91b43ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Wskazówki: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)
 Osadzenie informacji o typie z zarządzanego zestawu o silnej nazwie słabo można połączyć typów w aplikacji w celu osiągnięcia niezależność od wersji. Oznacza to, że program mogą być zapisywane na użyć typów z wielu wersji biblioteki zarządzanej, bez konieczności ponownie skompilowana dla każdej wersji.  
@@ -233,6 +223,6 @@ End Function
   
 ## <a name="see-also"></a>Zobacz też  
  [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Koncepcje programowania](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)  
  [Programowanie za pomocą zestawów](../../../../framework/app-domains/programming-with-assemblies.md)  
  [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)

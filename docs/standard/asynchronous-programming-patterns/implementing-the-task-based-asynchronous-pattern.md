@@ -1,9 +1,6 @@
 ---
 title: Implementacja wzorca asynchronicznego opartego na zadaniach
 ms.date: 06/14/2017
-ms.prod: .net
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,18 +11,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zadaniach
 Oparty na zadaniach asynchronicznej wzorca (TAP) można wdrożyć na trzy sposoby: za pomocą Kompilatory języka C# i Visual Basic w programie Visual Studio, ręcznie lub za pomocą kombinacji metod kompilatora i ręcznie. W poniższych sekcjach omówiono każdej metody szczegółowo. Wzorzec NACIŚNIJ umożliwia implementować zarówno powiązane z obliczeń, jak i I/E-powiązane z operacji asynchronicznych. [Obciążeń](#workloads) sekcji omówiono każdego typu działania.
@@ -49,8 +41,8 @@ Może wdrożyć wzorcem NACIŚNIJ ręcznie lepszą kontrolę nad implementacji. 
 
  Jest innym przypadku, gdy taki delegowania jest przydatne w przypadku jest implementacja optymalizacji fast-path i chcesz zwracać buforowane zadania.
 
-## <a name="workloads"></a>Obciążeń
-Zarówno powiązane z obliczeń, jak i I/E-powiązane z operacji asynchronicznych może wdrożyć jako wybranie metody. Jednak gdy wybranie metody są udostępniane publicznie z biblioteki, powinny one dostępne tylko dla obciążeń, które obejmują operacje I/E-granica (one mogą również obejmować obliczeń, ale nie może być całkowicie obliczeniową). Jeśli metoda jest wyłącznie obliczeń wiązaniem, powinny zostać ujawnione tylko jako synchroniczne implementacji. Kod, który wykorzystuje ona może następnie wybrać, czy powodującą otoczenie wywołania tej metody synchroniczne zadanie odciążania pracy do innego wątku lub osiągnięcie równoległości. A jeśli metoda jest związany z we/wy, powinny zostać ujawnione tylko jako implementacja asynchronicznego.
+## <a name="workloads"></a>Pakiety robocze
+Zarówno powiązane z obliczeń, jak i I/E-powiązane z operacji asynchronicznych może wdrożyć jako wybranie metody. Jednak gdy wybranie metody są udostępniane publicznie z biblioteki, powinny one dostępne tylko dla obciążeń, które obejmują operacje I/E-granica (one mogą również obejmować obliczeń, ale nie może być całkowicie obliczeniową). Jeśli metoda jest wyłącznie obliczeń wiązaniem, powinny zostać ujawnione tylko jako synchroniczne implementacji. Kod, który wykorzystuje ona może następnie wybrać, czy powodującą otoczenie wywołania tej metody synchroniczne zadanie odciążania pracy do innego wątku lub osiągnięcie równoległości. A jeśli metoda I/E-granica, powinny zostać ujawnione tylko jako implementacja asynchronicznego.
 
 ### <a name="compute-bound-tasks"></a>Zadania powiązane z obliczeń
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Klasy doskonale nadaje się do reprezentujący praktyce intensywne operacje. Domyślnie, jego zalet specjalną obsługę w <xref:System.Threading.ThreadPool> klasy aby zapewnić efektywne wykonanie, a także zapewnia znaczną kontrolę nad tym, kiedy, jak i gdzie wykonywanie obliczeń asynchronicznych.

@@ -1,27 +1,15 @@
 ---
-title: "Podstawowe wiadomości: Kanały transportu HTTP i HTTPS"
-ms.custom: 
+title: 'Podstawowe wiadomości: Kanały transportu HTTP i HTTPS'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Podstawowe wiadomości: Kanały transportu HTTP/HTTPS
-W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] kanały transportu HTTP/HTTPS.  
+W tym temacie wymieniono wszystkie wyjątki generowane przez kanały programu Windows Communication Foundation (WCF) transportu HTTP/HTTPS.  
   
 ## <a name="exception-list"></a>Listy wyjątków  
   

@@ -1,24 +1,12 @@
 ---
-title: "Mechanizmy rozpoznawania elementów równorzędnych"
-ms.custom: 
+title: Mechanizmy rozpoznawania elementów równorzędnych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych
 Aby można było nawiązać siatkę, węzła równorzędnego wymaga adresów IP innych węzłów. Adresy IP są uzyskiwane poprzez bezpośredni kontakt z usługi rozpoznawania nazw, która przyjmuje identyfikator sieci i zwraca listę adresów odpowiadającego do węzłów w zarejestrowany ten identyfikator określonego siatki. Mechanizm rozpoznawania przechowuje listę zarejestrowanych adresów, które tworzy się przez każdy węzeł w siatce przeprowadzić rejestrację w usłudze.  
@@ -28,7 +16,7 @@ Aby można było nawiązać siatkę, węzła równorzędnego wymaga adresów IP 
 ## <a name="supported-peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych obsługiwane  
  Kanał elementu równorzędnego obsługuje dwa rodzaje rozwiązujący: rozpoznawania protokołu PNRP (Peer Name) i usługi niestandardowego programu rozpoznawania nazw.  
   
- Domyślnie kanału równorzędnego korzysta z usługi rozpoznawania nazw równorzędnych PNRP odnajdywania elementów równorzędnych i sąsiadów w siatce. Dla sytuacji/platform, których usługa PNRP nie jest dostępne lub możliwe [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia usługę alternatywną, na serwerze odnajdywania - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Można również jawnie zdefiniować usługi niestandardowego programu rozpoznawania nazw, pisząc klasy, która implementuje <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interfejsu.  
+ Domyślnie kanału równorzędnego korzysta z usługi rozpoznawania nazw równorzędnych PNRP odnajdywania elementów równorzędnych i sąsiadów w siatce. Dla sytuacji/platform, w których usługa PNRP nie jest dostępne lub możliwe, Windows Communication Foundation (WCF) udostępnia usługę alternatywną, na serwerze odnajdywania - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Można również jawnie zdefiniować usługi niestandardowego programu rozpoznawania nazw, pisząc klasy, która implementuje <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interfejsu.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Protokołu rozpoznawania nazw równorzędnych (PNRP)  
  Usługa PNRP, domyślny program rozpoznawania nazw dla [!INCLUDE[wv](../../../../includes/wv-md.md)], jest rozproszonych, niekorzystającą usługi rozpoznawania nazw. Usługa PNRP może być również używany na [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] instalując pakiet zaawansowane sieci. Wszyscy klienci dwóch uruchomiona ta sama wersja PNRP można znaleźć wzajemny dostęp przy użyciu tego protokołu, pod warunkiem spełniają pewne warunki (np. Brak pośrednicząca Zapora firmowej). Należy pamiętać, że wersja usługi PNRP, który dostarczany z [!INCLUDE[wv](../../../../includes/wv-md.md)] jest nowsza niż wersja zawarte w pakiecie zaawansowane sieci. Sprawdź Microsoft Download Center aktualizacje PNRP dla [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  

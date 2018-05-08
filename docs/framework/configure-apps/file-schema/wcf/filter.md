@@ -1,28 +1,16 @@
 ---
 title: '&lt;Filtr&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 186c511cd8a69cef5e30e369641628a10a0972d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93d47fc6b25a75eedae43cd70582abc863a74e6c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt"></a>&lt;Filtr&gt;
 
-Określa filtr routingu, która określa typ [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również obsługujących danych lub parametrów wymaganych przez filtr.
+Określa filtr routingu, który określa typ Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również obsługujących danych lub parametrów wymaganych przez filtr.
 
 \<system.serviceModel > \<routingu > \<Filtry > \<filtru >
 
@@ -47,7 +35,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 | Atrybut  | Opis |
 | ---------- | ----------- |
-| customtype — | Ciąg zawierający nazwę FQDN typu niestandardowego typu ma być używany jako filtr. Jeśli `filterType` ma ustawioną wartość `custom`, ten atrybut zawiera typu w pełni kwalifikowaną nazwę klasy w celu utworzenia.  `filterData`może również zawierać wartości, które mają być użyte podczas obliczania filtru typu niestandardowego. |
+| customtype — | Ciąg zawierający nazwę FQDN typu niestandardowego typu ma być używany jako filtr. Jeśli `filterType` ma ustawioną wartość `custom`, ten atrybut zawiera typu w pełni kwalifikowaną nazwę klasy w celu utworzenia.  `filterData` może również zawierać wartości, które mają być użyte podczas obliczania filtru typu niestandardowego. |
 | danych filtru | Ciąg zawierający dane filtru. Aby uzyskać więcej informacji dotyczących sposobu określania tego atrybutu, zobacz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | filterType | Ciąg zawierający typ filtru. Ten atrybut jest <xref:System.ServiceModel.Routing.Configuration.FilterType> typu.  Aby uzyskać więcej informacji na temat sposobu wykonywania z `filterData` atrybutów, zobacz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | nazwa       | Ciąg zawierający unikatową nazwę tego elementu filtru. |
@@ -60,7 +48,7 @@ Brak.
 
 | Element | Opis |
 | ------- | ----------- |
-| [\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ [!INCLUDE[ indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących. |
+| [\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących. |
 
 ## <a name="see-also"></a>Zobacz także
 

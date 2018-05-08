@@ -1,22 +1,16 @@
 ---
-title: "Porady: wykonywanie czyszczenia kodu za pomocą instrukcji finally (Przewodnik programowania w języku C#)"
+title: 'Porady: wykonywanie czyszczenia kodu za pomocą instrukcji finally (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-caps.latest.revision: "21"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 682a40bfde47a33dd192d525037ed38f59edf107
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 948281af45d04714ed6fc308b60341e87abeb830
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Porady: wykonywanie czyszczenia kodu za pomocą instrukcji finally (Przewodnik programowania w języku C#)
 Celem `finally` instrukcji ma upewnij się, że niezbędne obiektów, zwykle obiektów, które są zawierający zasobów zewnętrznych, przeprowadzane jest oczyszczanie natychmiast, nawet wtedy, gdy jest zgłaszany wyjątek. Przykładem takich oczyszczania powoduje wywołanie <xref:System.IO.Stream.Close%2A> na <xref:System.IO.FileStream> natychmiast po użyciu zamiast czekać na obiekt jako bezużytecznych przez środowisko uruchomieniowe języka wspólnego, w następujący sposób:  
@@ -36,7 +30,7 @@ Celem `finally` instrukcji ma upewnij się, że niezbędne obiektów, zwykle obi
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)  
  [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)  
- [Using — instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
+ [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

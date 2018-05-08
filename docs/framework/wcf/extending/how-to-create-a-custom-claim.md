@@ -1,30 +1,18 @@
 ---
-title: "Instrukcje: Tworzenie oświadczenia niestandardowego"
-ms.custom: 
+title: 'Instrukcje: Tworzenie oświadczenia niestandardowego'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92420b993a1959b03090181944a34a32ab500733
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>Instrukcje: Tworzenie oświadczenia niestandardowego
-Infrastruktura modelu tożsamości w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia funkcje pomocnicze zestaw wbudowanych oświadczenia i prawa do tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w kliencie poświadczeń typy, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenie składa się z typu oświadczenia, zasobów, dla której oświadczenia dotyczy i praw potwierdzona za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
+Infrastruktury modelu tożsamości w systemie Windows Communication Foundation (WCF) zawiera zestaw wbudowanych oświadczenia i prawa o funkcje pomocnicze do tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w kliencie poświadczeń typy, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenie składa się z typu oświadczenia, zasobów, dla której oświadczenia dotyczy i praw potwierdzona za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Aby tworzenie oświadczenia niestandardowego, który jest oparty na typie danych pierwotnych  
   

@@ -1,24 +1,14 @@
 ---
 title: '&lt;security&gt; w &lt;ws2007HttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-caps.latest.revision: "10"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fa650731b729b3b527ffe8087ae0316960cf30f3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b7644e0cf9148cb489618b352ad09901799ceaa6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltws2007httpbindinggt"></a>&lt;security&gt; w &lt;ws2007HttpBinding&gt;
 Reprezentuje ustawienia zabezpieczeń używane dla [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.  
@@ -27,7 +17,7 @@ Reprezentuje ustawienia zabezpieczeń używane dla [ \<ws2007HttpBinding >](../.
 \<powiązania >  
 \<ws2007HttpBinding>  
 \<Powiązanie >  
-\<security>  
+\<Zabezpieczenia >  
   
 ## <a name="syntax"></a>Składnia  
   

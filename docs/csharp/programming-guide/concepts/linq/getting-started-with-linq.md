@@ -1,26 +1,17 @@
 ---
 title: Wprowadzenie do korzystania z LINQ w C#
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#]
 - queries [LINQ in C#]
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1e8f520f1fa5146f68bae0b634f8b2b1d5d875d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-linq-in-c"></a>Wprowadzenie do korzystania z LINQ w C#
 Ta sekcja zawiera ogólne informacje, które ułatwią zrozumienie reszty LINQ dokumentacja i przykłady.  
@@ -38,7 +29,7 @@ Ta sekcja zawiera ogólne informacje, które ułatwią zrozumienie reszty LINQ d
  [Przekształcanie danych za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
  W tym artykule opisano różne sposoby, że można przekształcać dane pobierane w zapytaniach.  
   
- [Relacje typu w operacjach zapytań LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+ [Relacje typów w operacjach zapytań LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
  Opisuje sposób typy są zachowywane i/lub przekształcone w trzech części operacji zapytania LINQ  
   
  [Składnia zapytania i metody w technologii LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  

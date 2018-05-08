@@ -1,26 +1,17 @@
 ---
-title: "Porady: zapisywanie tekstu do plików w Visual Basic"
-ms.custom: 
+title: 'Porady: zapisywanie tekstu do plików w Visual Basic'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], writing to
 - text, writing to files
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4fbbe0ec007911460dc2bda8c681775da9a6cb91
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e8d0fa0a3705fa843c9209c6959ddc9a453b8807
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Porady: zapisywanie tekstu do plików w Visual Basic
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Metody umożliwia zapisywanie tekstu do plików. Jeśli określony plik nie istnieje, jest tworzony.  
@@ -48,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `File`wskazuje na ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).  
+-   `File` wskazuje na ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).  
   
 -   Plik jest używany przez inny proces lub błąd We/Wy (<xref:System.IO.IOException>).  
   

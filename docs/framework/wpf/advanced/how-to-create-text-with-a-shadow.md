@@ -1,28 +1,16 @@
 ---
-title: "Jak utworzyć tekst z cieniem"
-ms.custom: 
+title: Jak utworzyć tekst z cieniem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], shadow effects
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b031b0dce8e1fd06399ded0b6d612a23323ae837
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b7740284afcda6eab41fb68be3b4a2f032cc77d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>Jak utworzyć tekst z cieniem
 Przykłady w tej sekcji pokazano, jak utworzyć efekt cieniowania dla wyświetlanego tekstu.  

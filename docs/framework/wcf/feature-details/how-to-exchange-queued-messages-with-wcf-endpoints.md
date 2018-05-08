@@ -1,34 +1,20 @@
 ---
 title: 'Instrukcje: Wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Instrukcje: Wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF
-Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić między klientem a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi, nawet jeśli usługa nie jest dostępna w tym czasie komunikacji. Poniższe procedury pokazują, jak zapewnić niezawodna komunikacja między klientem a usługą przy użyciu standardu w kolejce powiązania podczas implementowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+Kolejek upewnij się, że niezawodna obsługa komunikatów może wystąpić między klientem i usługą Windows Communication Foundation (WCF) nawet, jeśli usługa nie jest dostępna podczas komunikacji. Poniższe procedury przedstawiają sposób zapewnienia niezawodna komunikacja między klientem a usługą przy użyciu standardu Zakolejkowane powiązanie podczas wdrażania usługi WCF.  
   
- W tej sekcji opisano sposób korzystania <xref:System.ServiceModel.NetMsmqBinding> umieszczonych w kolejce komunikacji między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+ W tej sekcji opisano sposób korzystania <xref:System.ServiceModel.NetMsmqBinding> umieszczonych w kolejce komunikacji między klienta WCF i usługi WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Aby użyć usługi kolejkowania wiadomości usługi WCF  
   
@@ -54,7 +40,7 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Zdefiniuj <xref:System.ServiceModel.Description.ServiceEndpoint> w konfiguracji, który określa adres usługi i korzysta ze standardu <xref:System.ServiceModel.NetMsmqBinding> powiązania. Aby uzyskać więcej informacji o korzystaniu z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfiguracji, zobacz [Konfigurowanie aplikacji systemu Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Zdefiniuj <xref:System.ServiceModel.Description.ServiceEndpoint> w konfiguracji, który określa adres usługi i korzysta ze standardu <xref:System.ServiceModel.NetMsmqBinding> powiązania. Aby uzyskać więcej informacji o korzystaniu z konfiguracji usługi WCF, zobacz [Konfigurowanie aplikacji systemu Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -65,7 +51,7 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Aby utworzyć klienta usługi kolejki  
   
-1.  Poniższy przykład przedstawia sposób uruchomienia hostingu aplikacji i korzystać z narzędzia Svcutil.exe do utworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta.  
+1.  Poniższy przykład pokazuje, jak można uruchomić hostingu aplikacji i korzystać z narzędzia Svcutil.exe można utworzyć klienta WCF.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
   
   
   
-3.  Tworzenie zakresu transakcji można zapisać do kolejki transakcyjnej wywołania `SubmitPurchaseOrder` operacji, a następnie Zamknij [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, jak pokazano w poniższym przykładzie.  
+3.  Tworzenie zakresu transakcji można zapisać do kolejki transakcyjnej wywołania `SubmitPurchaseOrder` operacji, a następnie Zamknij klienta WCF, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

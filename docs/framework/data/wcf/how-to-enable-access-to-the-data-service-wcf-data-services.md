@@ -1,31 +1,17 @@
 ---
-title: "Porady: Zapewnianie dostępu do usługi Data (usługi danych WCF)"
-ms.custom: 
+title: 'Porady: Zapewnianie dostępu do usługi Data (usługi danych WCF)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f481a3a918282bf598277dcd4e1bf29d63edddc1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e383fd493326b417002818d8cf32dc5251bd9c6d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Porady: Zapewnianie dostępu do usługi Data (usługi danych WCF)
 W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], należy jawnie zezwolić na dostęp do zasobów, które są udostępniane przez usługi danych. Oznacza to, że po utworzeniu nowej usługi danych musi nadal jawnie Podaj, dostęp do poszczególnych zasobów jako zestawy jednostek. W tym temacie przedstawiono sposób włączania odczytu i zapisu do pięciu jednostki ustawia w usłudze danych Northwind, który jest tworzony po zakończeniu [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Ponieważ <xref:System.Data.Services.EntitySetRights> wyliczenie zdefiniowano przy użyciu <xref:System.FlagsAttribute>, można użyć logiczną lub ustaw operatora, aby określić wiele uprawnienia dla pojedynczej jednostki.  

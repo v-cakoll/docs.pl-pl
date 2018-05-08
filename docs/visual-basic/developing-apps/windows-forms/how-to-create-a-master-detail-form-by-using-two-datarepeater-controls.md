@@ -1,22 +1,14 @@
 ---
 title: 'Porady: Tworzenie formularza wzorzec szczegół za pomocą dwóch formantów DataRepeater (Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - DataRepeater, master/detail tables
 ms.assetid: eec43ae3-05d8-45a1-8d41-3803c6359dbe
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f17cb86c3ea0ea056291a51becd7ecf9f73d0a73
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 84639a5d49a3fa4a8c6845793c39fc8a67c31e02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a>Porady: tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataRepeater (Visual Studio)
 Powiązane dane można wyświetlić przy użyciu co najmniej dwóch <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> na tworzenie formularza wzorzec/szczegół formantów. Na przykład możesz wyświetlić listę klientów w jednym <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>i gdy użytkownik wybierze klienta, wyświetlona zostanie lista klienta na sekundę <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  

@@ -1,30 +1,17 @@
 ---
-title: "Porady: Użyj narzędzia definicji schematu XML do generowania klasy i dokumentach schematów XML."
-ms.custom: 
+title: 'Porady: Użyj narzędzia definicji schematu XML do generowania klasy i dokumentach schematów XML.'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
 - generating XML Schema Document using XML Schema Definition tool
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0e390b808f9eaa5d6b305284e1abe28f45f4d104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169a3068b240e8d4d1cdb1d307938ee113066fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Porady: Użyj narzędzia definicji schematu XML do generowania klasy i dokumentach schematów XML.
 Narzędzie definicji schematu XML (Xsd.exe) służy do generowania schematu XML, która opisuje klasę lub do generowania klasy zdefiniowane przez schemat XML. Poniższe procedury pokazują, jak wykonywać te operacje.  
@@ -39,7 +26,7 @@ Narzędzie definicji schematu XML (Xsd.exe) służy do generowania schematu XML,
     xsd mySchema.xsd  
     ```  
   
-     To narzędzie może przetwarzać tylko schematy, które odwołują się do specyfikacji XML konsorcjum World Wide Web 16 marca 2001. Innymi słowy przestrzeń nazw schematu XML musi być "http://www.w3.org/2001/XMLSchema", jak pokazano w poniższym przykładzie.  
+     To narzędzie może przetwarzać tylko schematy, które odwołują się do specyfikacji XML konsorcjum World Wide Web 16 marca 2001. Innymi słowy, przestrzeń nazw schematu XML musi być "http://www.w3.org/2001/XMLSchema" jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  

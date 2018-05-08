@@ -1,29 +1,17 @@
 ---
-title: "Porady: grupowanie formantów RadioButton formularzy systemu Windows, aby działały jak zestaw"
-ms.custom: 
+title: 'Porady: grupowanie formantów RadioButton formularzy systemu Windows, aby działały jak zestaw'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - radio buttons [Windows Forms], grouping
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c92048374941f735568bcd758ed475eba78b81e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbc6ab410fa2ab9d89255f82863e51aad36f8c18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Porady: grupowanie formantów RadioButton formularzy systemu Windows, aby działały jak zestaw
 Formularze systemu Windows <xref:System.Windows.Forms.RadioButton> formanty mają na celu zapewniają użytkownikom wybór między co najmniej dwa ustawienia, których można przypisać tylko jeden z nich do procedury lub obiektu. Na przykład grupa <xref:System.Windows.Forms.RadioButton> formanty mogą być wyświetlane wybór pakietu nośniki zamówienia, ale tylko jeden z nośników będą używane. W związku z tym tylko jeden <xref:System.Windows.Forms.RadioButton> jednocześnie można wybrać, nawet jeśli jest częścią grupy funkcjonalne.  

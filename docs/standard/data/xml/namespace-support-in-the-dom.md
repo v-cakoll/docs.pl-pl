@@ -1,26 +1,15 @@
 ---
-title: "Obsługa Namespace w modelu DOM"
-ms.custom: 
+title: Obsługa Namespace w modelu DOM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2b8135a55c537f480e0d595e127c2cad55e977ca
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-support-in-the-dom"></a>Obsługa Namespace w modelu DOM
 XML modelu DOM (Document Object) jest całkowicie przestrzeni nazw aware. Obsługiwane są tylko dokumenty obsługujących przestrzeń nazw XML. Sieci World Wide Web konsorcjum W3C Określa, czy aplikacje modelu DOM, które implementują poziomu 1 może być nie rozpoznający — przestrzeń nazw i funkcje DOM poziomu 2 rozpoznają przestrzeni nazw. Jednak są wszystkie funkcje w modelu DOM XML obsługujących przestrzeń nazw, niezależnie od tego, czy metoda jest z poziomu 1 lub poziom 2 DOM zalecenie.  

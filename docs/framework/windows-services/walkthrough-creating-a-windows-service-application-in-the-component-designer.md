@@ -1,9 +1,6 @@
 ---
-title: "Wskazówki: tworzenie aplikacji usługowej systemu Windows w Projektancie składników"
+title: 'Wskazówki: tworzenie aplikacji usługowej systemu Windows w Projektancie składników'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - Windows Service applications, walkthroughs
 - Windows Service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-caps.latest.revision: "57"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Wskazówki: tworzenie aplikacji usługowej systemu Windows w Projektancie składników
 W tym artykule pokazano, jak utworzyć prostą aplikację usługi systemu Windows w programie Visual Studio, który zapisuje komunikaty do dziennika zdarzeń. Poniżej przedstawiono podstawowe kroki, które należy wykonać w celu tworzenia i używania usługi:  
@@ -64,7 +58,7 @@ W tym artykule pokazano, jak utworzyć prostą aplikację usługi systemu Window
   
 3.  Na **Edytuj** menu, wybierz **Znajdź i Zamień**, **Znajdź w plikach** (klawiatury: Ctrl + Shift + F). Zmień wszystkie wystąpienia `Service1` do `MyNewService`. Można znaleźć wystąpień w Service1.cs, pliku Program.cs i Service1.Designer.cs (lub odpowiedniki .vb).  
   
-4.  W **właściwości** w oknie **Service1.cs [projekt]** lub **Service1.vb [projekt]**ustaw <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> i **(nazwa)** Właściwość `Service1` do **MyNewService**, jeśli jeszcze nie jest ustawiona.  
+4.  W **właściwości** w oknie **Service1.cs [projekt]** lub **Service1.vb [projekt]** ustaw <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> i **(nazwa)** Właściwość `Service1` do **MyNewService**, jeśli jeszcze nie jest ustawiona.  
   
 5.  W Eksploratorze rozwiązań, Zmień nazwę **Service1.cs** do **MyNewService.cs**, lub **Service1.vb** do **MyNewService.vb**.  
   

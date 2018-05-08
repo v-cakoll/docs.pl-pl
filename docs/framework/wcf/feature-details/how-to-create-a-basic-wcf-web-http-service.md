@@ -1,30 +1,18 @@
 ---
-title: "Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF"
-ms.custom: 
+title: 'Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Służy do tworzenia usługi, która udostępnia punkt końcowy sieci Web. Punktów końcowych sieci Web wysyłać dane XML lub JSON, nie istnieje żadne koperty protokołu SOAP. W tym temacie przedstawiono sposób ujawniać punkt końcowy.  
+Windows Communication Foundation (WCF) służy do tworzenia usługi, która udostępnia punkt końcowy sieci Web. Punktów końcowych sieci Web wysyłać dane XML lub JSON, nie istnieje żadne koperty protokołu SOAP. W tym temacie przedstawiono sposób ujawniać punkt końcowy.  
   
 > [!NOTE]
 >  Jedynym sposobem, aby zabezpieczyć punkt końcowy sieci Web jest je ujawnić za pośrednictwem protokołu HTTPS, za pomocą zabezpieczeń transportu. Podczas korzystania z zabezpieczeń wiadomości, informacje o zabezpieczeniach zazwyczaj znajduje się w nagłówkach protokołu SOAP i dlatego komunikaty wysyłane do punktów końcowych SOAP nie zawiera żadnych koperty protokołu SOAP, nie nigdzie nie można umieścić informacji o zabezpieczeniach i konieczne jest zastosowanie zabezpieczeń transportu.  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htBasicService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]  
   
     > [!NOTE]
-    >  Domyślnie <xref:System.ServiceModel.Web.WebInvokeAttribute> mapuje wywołania operacji POST. Można jednak określić metodę HTTP (na przykład HEAD, PUT lub usuń) do mapowania na operację, określając "metody =" parametru. <xref:System.ServiceModel.Web.WebGetAttribute>nie ma "metody =" parametru i map tylko GET wywołania do operacji usługi.  
+    >  Domyślnie <xref:System.ServiceModel.Web.WebInvokeAttribute> mapuje wywołania operacji POST. Można jednak określić metodę HTTP (na przykład HEAD, PUT lub usuń) do mapowania na operację, określając "metody =" parametru. <xref:System.ServiceModel.Web.WebGetAttribute> nie ma "metody =" parametru i map tylko GET wywołania do operacji usługi.  
   
 2.  Implementowanie kontraktu usługi.  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-host-the-service"></a>Do obsługi usługi  
   
-1.  Utwórz <xref:System.ServiceModel.Web.WebServiceHost> obiektu.  
+1.  Tworzy obiekt <xref:System.ServiceModel.Web.WebServiceHost>.  
   
      [!code-csharp[htBasicService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#2)]
      [!code-vb[htBasicService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#2)]  
@@ -57,9 +45,9 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htBasicService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]  
   
     > [!NOTE]
-    >  Jeśli nie zostanie dodany punkt końcowy <xref:System.ServiceModel.Web.WebServiceHost> automatycznie tworzy domyślny punkt końcowy. <xref:System.ServiceModel.Web.WebServiceHost>dodaje również <xref:System.ServiceModel.Description.WebHttpBehavior> i wyłącza strona pomocy HTTP oraz funkcje GET Web Services Description Language (WSDL), aby punkt końcowy metadanych nie zakłóca domyślny punkt końcowy HTTP.  
+    >  Jeśli nie zostanie dodany punkt końcowy <xref:System.ServiceModel.Web.WebServiceHost> automatycznie tworzy domyślny punkt końcowy. <xref:System.ServiceModel.Web.WebServiceHost> dodaje również <xref:System.ServiceModel.Description.WebHttpBehavior> i wyłącza strona pomocy HTTP oraz funkcje GET Web Services Description Language (WSDL), aby punkt końcowy metadanych nie zakłóca domyślny punkt końcowy HTTP.  
     >   
-    >  Dodawanie punktu końcowego z systemem innym niż SOAP z adresu URL "" powoduje, że nieoczekiwanego zachowania podczas próby wywołania operacji w punkcie końcowym. Przyczyną tego jest nasłuchiwania URI punktu końcowego jest taki sam jak identyfikator URI strony pomocy (strona, która jest wyświetlana podczas przeglądania adres bazowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi).  
+    >  Dodawanie punktu końcowego z systemem innym niż SOAP z adresu URL "" powoduje, że nieoczekiwanego zachowania podczas próby wywołania operacji w punkcie końcowym. Przyczyną tego jest nasłuchiwania, identyfikator URI punktu końcowego jest taki sam jak identyfikator URI strony pomocy (strona jest wyświetlana podczas przeglądania adres podstawowy usługi WCF).  
   
      Możesz wybrać jedną z następujących czynności, aby zapobiec to:  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Do wywołania operacji usługi mapowane na GET w programie Internet Explorer  
   
-1.  Otwórz program Internet Explorer i wpisz "`http://localhost:8000/EchoWithGet?s=Hello, world!`" i naciśnij klawisz ENTER. Adres URL zawiera adres podstawowy usługi ("http://localhost: 8000 /"), względny adres punktu końcowego (""), usługi operację wywołania ("EchoWithGet") i znak zapytania następuje lista parametrów nazwanych oddzielonymi znakiem handlowego "i" (&).  
+1.  Otwórz program Internet Explorer i wpisz "`http://localhost:8000/EchoWithGet?s=Hello, world!`" i naciśnij klawisz ENTER. Adres URL zawiera adres podstawowy usługi ("http://localhost:8000/"), względny adres punktu końcowego (""), usługi operację wywołania ("EchoWithGet") i znak zapytania następuje lista parametrów nazwanych oddzielonymi znakiem handlowego "i" (&).  
   
 ### <a name="to-call-service-operations-in-code"></a>Do wywołania operacji usługi w kodzie  
   

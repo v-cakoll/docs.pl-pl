@@ -1,28 +1,17 @@
 ---
-title: "Zarządzane stany wątków"
-ms.custom: 
+title: Zarządzane stany wątków
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], states
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 956472ef0e3b0bab85a4eb0b5585f1a4d1e0a991
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4266aea9bf206d127e2837955dcc00cc23f4119b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-thread-states"></a>Zarządzane stany wątków
 Właściwość <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> zapewnia maska bitowa, która wskazuje bieżący stan wątku. Wątek jest zawsze w co najmniej jedną z możliwych stanów w <xref:System.Threading.ThreadState> wyliczenia i może mieć różne stany w tym samym czasie.  
@@ -46,7 +35,7 @@ Właściwość <xref:System.Threading.Thread.ThreadState%2A?displayProperty=name
 |Wątek odpowiada <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> żądania.|<xref:System.Threading.ThreadState.Suspended>|  
 |Inny wątek wywołania <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Running>|  
 |Inny wątek wywołania <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.AbortRequested>|  
-|Wątek odpowiada <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Aborted>, następnie<xref:System.Threading.ThreadState.Stopped>|  
+|Wątek odpowiada <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Aborted>, następnie <xref:System.Threading.ThreadState.Stopped>|  
   
  Ponieważ <xref:System.Threading.ThreadState.Running> stan ma wartość 0, nie można wykonać bitowych testów, aby odnaleźć ten stan. Zamiast tego można użyć następującego testu (w pseudo-kodzie):  
   

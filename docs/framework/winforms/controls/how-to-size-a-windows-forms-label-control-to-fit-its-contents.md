@@ -1,13 +1,6 @@
 ---
-title: "Porady: rozmiar formantu etykiety (Formularze systemu Windows) pasujący do jego zawartości"
-ms.custom: 
+title: 'Porady: rozmiar formantu etykiety (Formularze systemu Windows) pasujący do jego zawartości'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - captions [Windows Forms], sizing
 - sizing controls
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2c34506ca33af80b83f365893e56a5a9d437b89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e067966b606d77ceb9d11d2784c0d5f73ad332a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Porady: rozmiar formantu etykiety (Formularze systemu Windows) pasujący do jego zawartości
 Formularze systemu Windows <xref:System.Windows.Forms.Label> formant może być jednym lub wielu linii, które mogą być stałym rozmiarze lub można automatycznie zmieniany aby zmieścił się w jego podpis. <xref:System.Windows.Forms.Label.AutoSize%2A> Właściwość pomaga rozmiaru formantów w celu dopasowania większy lub mniejszy podpisów, która jest szczególnie przydatne, jeśli zmieni podpis w czasie wykonywania.  

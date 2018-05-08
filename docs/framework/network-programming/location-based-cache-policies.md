@@ -1,12 +1,6 @@
 ---
-title: "Zasady oparte na lokalizacji pamięci podręcznej"
-ms.custom: 
+title: Zasady oparte na lokalizacji pamięci podręcznej
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -21,16 +15,14 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4109cef8d527d397903854e05a2204a3e551938
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="location-based-cache-policies"></a>Zasady oparte na lokalizacji pamięci podręcznej
 Zasady oparte na lokalizacji pamięci podręcznej definiuje świeżości prawidłowych wpisów pamięci podręcznej podstawę, z którego można pobrać żądanego zasobu. Zasób pamięci podręcznej jest nieprawidłowy w przypadku korzystania z niego nie narusza wymagania określony serwer ponownego sprawdzania poprawności. Zasady oparte na lokalizacji pamięci podręcznej jest tworzona programowo przy użyciu <xref:System.Net.Cache.RequestCachePolicy> lub <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora klasy. Typ zasad na podstawie lokalizacji jest przekazywany do konstruktora przy użyciu <xref:System.Net.Cache.RequestCacheLevel> lub <xref:System.Net.Cache.HttpRequestCacheLevel> wartości wyliczenia. Przykłady kodu, które utworzyć zasady oparte na lokalizacji pamięci podręcznej można znaleźć [porady: ustawienia zasad oparte na lokalizacji pamięci podręcznej aplikacji](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). W poniższych sekcjach opisano każdego typu zasad na podstawie lokalizacji pamięci podręcznej dla zasobów Hypertext Transfer Protocol (protokół http i https).  

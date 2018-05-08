@@ -1,9 +1,7 @@
 ---
 title: 'Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - TPL dataflow library, in Windows Forms
 - Task Parallel Library, dataflows
@@ -11,15 +9,11 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8100f986a98c9e4712603c45a88d48cbb93be649
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 919dc097d32451c6123e68f8bf4b8f41808f89da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms
 Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzania obrazu w aplikacji formularzy systemu Windows.  

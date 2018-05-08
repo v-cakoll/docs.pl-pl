@@ -1,27 +1,15 @@
 ---
-title: "Zagadnienia dotyczące zabezpieczeń XAML"
-ms.custom: 
+title: Zagadnienia dotyczące zabezpieczeń XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef47e7e370082a2050406710edcb62d0967df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XAML
 W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacji, korzystając z języka XAML i .NET Framework XAML Services API.  
@@ -29,7 +17,7 @@ W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacj
 ## <a name="untrusted-xaml-in-applications"></a>Niezaufane XAML w aplikacjach  
  W tym sensie, najbardziej ogólnym niezaufanej XAML jest dowolnego źródła XAML, które aplikacji nie zostały nie obejmują lub emisji.  
   
- XAML skompilowany w lub przechowywane jako `resx`— typ zasobu w zestawie zaufanych i podpisem nie jest z założenia niezaufanych. Można ufać XAML, jak zaufania zestawu jako całość. W większości przypadków dotyczy tylko aspekty zaufania utracić XAML, która jest źródłem XAML, że zostały załadowane z strumienia lub inne we/wy. Utracić XAML nie jest określony składnik lub funkcji z wdrażanie i opakowanie infrastruktury modelu aplikacji. Jednak zestaw może zastosować zachowania, które obejmuje ładowanie utracić XAML.  
+ XAML skompilowany w lub przechowywane jako `resx`— typ zasobu w zestawie zaufanych i podpisem nie jest z założenia niezaufanych. Można ufać XAML, jak zaufania zestawu jako całość. W większości przypadków dotyczy tylko aspekty zaufania utracić XAML, która jest źródłem XAML, że zostały załadowane z strumienia lub innych operacji We/Wy. Utracić XAML nie jest określony składnik lub funkcji z wdrażanie i opakowanie infrastruktury modelu aplikacji. Jednak zestaw może zastosować zachowania, które obejmuje ładowanie utracić XAML.  
   
  Dla XAML niezaufanych należy traktować go ogólnie takie same tak, jakby była kodzie niezaufanym. Aby uniemożliwić dostęp do zaufanego kodu XAML prawdopodobnie niezaufanych, należy użyć sandboxing lub innych metafory.  
   

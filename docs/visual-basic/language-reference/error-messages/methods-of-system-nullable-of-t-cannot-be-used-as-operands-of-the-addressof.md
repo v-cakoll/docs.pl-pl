@@ -1,28 +1,19 @@
 ---
-title: "Metody &#39; System.Nullable (Of T) &#39; Nie można używać jako argumentów &#39; AddressOf &#39; operator"
+title: Metody &#39;System.Nullable (Of T)&#39; nie można używać jako argumentów &#39;AddressOf&#39; — operator
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc32126
 - bc32126
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ce0e9bc6abd71f22e3f6c3486ef40493e74d820f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3a3e4fc033f47fb6a72076dff79f1eece8d01a30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Metody &#39; System.Nullable (Of T) &#39; Nie można używać jako argumentów &#39; AddressOf &#39; operator
+# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Metody &#39;System.Nullable (Of T)&#39; nie można używać jako argumentów &#39;AddressOf&#39; — operator
 Używa instrukcji `AddressOf` operatora z argumentem, który reprezentuje procedurę <xref:System.Nullable%601> struktury.  
   
  **Identyfikator błędu:** BC32126  
@@ -71,6 +62,6 @@ End Module
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Nullable%601>  
- [AddressOf — Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Typy dopuszczające wartości zerowe wartości](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

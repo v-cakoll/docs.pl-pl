@@ -1,23 +1,12 @@
 ---
-title: "Działanie obiektu WorkflowApplication ReadLine hosta"
-ms.custom: 
+title: Działanie obiektu WorkflowApplication ReadLine hosta
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8426dd3835f53eeb85711a691c878ce2b877d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflowapplication-readline-host"></a>Działanie obiektu WorkflowApplication ReadLine hosta
 Ten przykład jest hostem ReadLine ogólnego. Można załadować i uruchomić każdy przepływ pracy, przy użyciu dołączonej `ReadLine` działania (lub innych działań podoba Ci się pobierające dane z zakładek przywrócone ciągi). Dane wyjściowe z `WriteLine` działania lub jakikolwiek zapisywania <xref:System.Activities.Statements.WriteLine.TextWriter%2A> rozszerzenia jest kierowany do okna hosta. Gdy wystąpienie jest w stanie bezczynności, dostępne zakładki dla danego wystąpienia są wyświetlane w polu kombi. Zakładki, wybierając wprowadzanie za tekstem i naciskając przycisk zakładki Wznów kontynuować wykonywanie przepływu pracy. Można również anulować, przerwania lub przerywania wybrany przepływ pracy. Trwałości jest domyślnie — można zamknąć hosta i przywrócić go, a lista wystąpień jest wypełniana wystąpień w bazie danych. Jest używane śledzenie danych wyjściowych <xref:System.Activities.WorkflowApplication>— poziom zdarzenia do hosta z opcją, aby dodać szczegółowe śledzenie na poziomie działania.  
@@ -66,6 +55,6 @@ Ten przykład jest hostem ReadLine ogólnego. Można załadować i uruchomić ka
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

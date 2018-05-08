@@ -1,30 +1,16 @@
 ---
 title: Słabe wzorce zdarzeń
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4b1e8649e5d550ffa2c7ee614cb9102f86a83ff8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W aplikacjach istnieje możliwość, że programy obsługi, które są dołączone do źródła zdarzeń nie zostaną usunięte w połączeniu z obiektu odbiornika, który dołączyć program obsługi do źródła. Taka sytuacja może prowadzić do przecieki pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadza wzorzec projektowania, który może służyć do rozwiązania tego problemu, zapewniając klasy Menedżera dedykowane dla konkretnego zdarzenia i implementowanie interfejsu na odbiorników dla tego zdarzenia. Ten wzorzec projektowy nosi nazwę *wzorzec słabe zdarzeń*.  

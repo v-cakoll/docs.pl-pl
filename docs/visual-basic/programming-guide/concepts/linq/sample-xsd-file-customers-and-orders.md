@@ -1,22 +1,12 @@
 ---
-title: "Przykładowy plik XSD: Klienci i Orders2"
-ms.custom: 
+title: 'Przykładowy plik XSD: Klienci i Orders2'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a0c0b414-c8e1-45e4-bb67-b5e650c97130
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2894970ab279ca73178876234762a6c139950e17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5679aa39b1b5ee0b08cb9e7caa23cc01d43b7b50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Przykładowy plik XSD: Klienci i zamówienia
 Następujący plik XSD jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera definicję schematu [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md). Schemat używa `xs:key` i `xs:keyref` funkcje XSD ustalenie, czy `CustomerID` atrybutu `Customer` element jest klucz oraz do ustanawiania relacji między `CustomerID` elementu w każdym `Order` element i `CustomerID` atrybutu w każdym `Customer` elementu.  
@@ -103,4 +93,4 @@ Następujący plik XSD jest używany w różnych przykłady w [!INCLUDE[sqltecxl
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dokumenty XML próbki (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ [Przykładowe dokumenty XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

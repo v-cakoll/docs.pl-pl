@@ -1,22 +1,12 @@
 ---
-title: "Składnia wyrażeń dla standardowych operatorów zapytań (Visual Basic)"
-ms.custom: 
+title: Składnia wyrażeń dla standardowych operatorów zapytań (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c68e924b88b312ef17b8bb83de0def21ea621824
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f0a32ca2e76122aa13e4ad44c4b69838af26cdb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Składnia wyrażeń dla standardowych operatorów zapytań (Visual Basic)
 Niektóre z często używanych standardowych operatorów zapytań są wyposażone w dedykowane składni słowa kluczowego języka Visual Basic umożliwiające można wywołać w ramach *zapytania wyrażenia*. Wyrażenia zapytania jest inny, bardziej czytelny formularz wyrażenia zapytania niż jego *oparte na metodzie* równoważne. Klauzule wyrażenia zapytania są przekształcane na wywołania metody zapytań w czasie kompilacji.  

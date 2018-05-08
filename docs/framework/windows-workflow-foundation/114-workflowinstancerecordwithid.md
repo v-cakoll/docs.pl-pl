@@ -1,23 +1,12 @@
 ---
 title: 114 - WorkflowInstanceRecordWithId
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2bd8b4a1-b210-4c07-8156-f19392318c08
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7535a37574f3f42a4de4eea8d1e1cdf67b2a995e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 739b86a0c7c64ebc17cbbc882576788fe0e4bb9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="114---workflowinstancerecordwithid"></a>114 - WorkflowInstanceRecordWithId
 ## <a name="properties"></a>Właściwości  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 |ID|114|  
 |Słowa kluczowe|HealthMonitoring, WFTracking|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji Server aplikacje/analityczne|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
  To zdarzenie jest emitowane przez uczestnika śledzenia zdarzeń systemu Windows, gdy wystąpienia przepływu pracy emituje WorkflowInstanceRecord dla stanów przepływu pracy: rozpoczęto wznowione, utrwalone, w stanie bezczynności, usunięty, zakończona, anulowana, zwalnianie, Anulowano.  

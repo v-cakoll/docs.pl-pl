@@ -1,28 +1,16 @@
 ---
-title: "FontDialog — Składnik (Formularze systemu Windows)"
-ms.custom: 
+title: FontDialog — Składnik (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - fonts [Windows Forms], dialog box
 - FontDialog component [Windows Forms]
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97f2db18737578087f4db151669d6d3b05cf3598
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c30f6029c35e9a96b3defde73925f555f1440cd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog — Składnik (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest okno dialogowe wstępnie skonfigurowane. Jest to ten sam **czcionki** okno dialogowe udostępnianych przez system operacyjny Windows. Składnik dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.  

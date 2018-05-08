@@ -1,13 +1,6 @@
 ---
 title: 'Porady: tworzenie rodzin czcionek i czcionek'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e152c525550554082d7d6c38a972ccc150adabb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceace5950ec135ea4d52081da7d1de7a820583ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Porady: tworzenie rodzin czcionek i czcionek
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]grupuje czcionek z tej samej krój, ale różnych stylów do rodziny czcionek. Na przykład rodziny czcionek Arial zawiera następujące czcionki:  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] grupuje czcionek z tej samej krój, ale różnych stylów do rodziny czcionek. Na przykład rodziny czcionek Arial zawiera następujące czcionki:  
   
 -   Regularne Arial  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Arial pogrubienie, kursywa  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]używa czterech stylów do formularza rodzin: regularne, pogrubienie, kursywa i pogrubienie, kursywa. Określeniem, takich jak *zawęzić* i *zaokrąglona* nie są uznawane za style; a nie są one częścią nazwę rodziny. Na przykład Arial Narrow jest rodzinę czcionek z następujących członków:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa czterech stylów do formularza rodzin: regularne, pogrubienie, kursywa i pogrubienie, kursywa. Określeniem, takich jak *zawęzić* i *zaokrąglona* nie są uznawane za style; a nie są one częścią nazwę rodziny. Na przykład Arial Narrow jest rodzinę czcionek z następujących członków:  
   
 -   Arial Regular wąskie  
   
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy regularne styl czcionki Arial o rozmiarze 16 pikseli. W poniższym kodzie pierwszy argument przekazany do <xref:System.Drawing.Font.%23ctor%2A> Konstruktor jest <xref:System.Drawing.FontFamily> obiektu. Drugi argument określa rozmiar czcionki, mierzona w jednostkach identyfikowane przez czwarty argument. Trzeci argument określa styl.  
   
- <xref:System.Drawing.GraphicsUnit.Pixel>jest elementem członkowskim <xref:System.Drawing.GraphicsUnit> wyliczenia, i <xref:System.Drawing.FontStyle.Regular> jest elementem członkowskim <xref:System.Drawing.FontStyle> wyliczenia.  
+ <xref:System.Drawing.GraphicsUnit.Pixel> jest elementem członkowskim <xref:System.Drawing.GraphicsUnit> wyliczenia, i <xref:System.Drawing.FontStyle.Regular> jest elementem członkowskim <xref:System.Drawing.FontStyle> wyliczenia.  
   
  [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  

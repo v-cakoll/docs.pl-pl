@@ -1,13 +1,6 @@
 ---
-title: "&lt;defaultProxy —&gt; — Element (ustawienia sieciowe)"
-ms.custom: 
+title: '&lt;defaultProxy —&gt; — Element (ustawienia sieciowe)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d0b09f5c845fc9a18c2a1dd919272c2924478eaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a91775ff9f46eba772a959cfac3115c9720ac5ab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy —&gt; — Element (ustawienia sieciowe)
 Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).  
   
  \<Konfiguracja >  
-\<System.NET >  
+\<system.net>  
 \<defaultProxy — >  
   
 ## <a name="syntax"></a>Składnia  

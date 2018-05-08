@@ -1,30 +1,18 @@
 ---
-title: "Wywołania operacji usługi (usługi danych WCF)"
-ms.custom: 
+title: Wywołania operacji usługi (usługi danych WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3411cec01295986438664cf0d51d3f15e960e411
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82bba149f06fc68f2f01e0e7641d98ebb861dbe6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Wywołania operacji usługi (usługi danych WCF)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Definiuje operacji usługi dla usługi danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Umożliwia zdefiniowanie takich operacji jako metody w usłudze danych. Podobnie jak inne zasoby usługi danych tych operacji usługi są adresowane za pomocą identyfikatorów URI. Operacja usługi może zwrócić kolekcji typów jednostek, wystąpień typów pojedynczej jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi można także wrócić `null` (`Nothing` w języku Visual Basic). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta mogą być używane do dostępu operacji usługi, które obsługują żądania HTTP GET. Tego rodzaju operacje usług są zdefiniowane jako metody, które mają <xref:System.ServiceModel.Web.WebGetAttribute> zastosowane. Aby uzyskać więcej informacji, zobacz [operacji usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
+[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Definiuje operacji usługi dla usługi danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie takich operacji jako metody w usłudze danych. Podobnie jak inne zasoby usługi danych tych operacji usługi są adresowane za pomocą identyfikatorów URI. Operacja usługi może zwrócić kolekcji typów jednostek, wystąpień typów pojedynczej jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi można także wrócić `null` (`Nothing` w języku Visual Basic). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta mogą być używane do dostępu operacji usługi, które obsługują żądania HTTP GET. Tego rodzaju operacje usług są zdefiniowane jako metody, które mają <xref:System.ServiceModel.Web.WebGetAttribute> zastosowane. Aby uzyskać więcej informacji, zobacz [operacji usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
   
  Operacje usług są widoczne w metadane zwrócony przez usługę danych, który implementuje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. W metadanych, operacje usług są reprezentowane jako `FunctionImport` elementów. Podczas generowania jednoznacznie <xref:System.Data.Services.Client.DataServiceContext>, Dodaj odwołanie do usługi i DataSvcUtil.exe narzędzia ignorowania tego elementu. W związku z tym nie będzie zawierał metody w kontekście, który może służyć do wywołania operacji usługi bezpośrednio. Jednakże, nadal można [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta do wywołania operacji usługi w jeden z tych dwóch sposobów:  
   

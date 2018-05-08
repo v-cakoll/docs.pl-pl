@@ -1,39 +1,28 @@
 ---
 title: CountdownEvent
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 144bcde6c4c8fb227773fe613da8445f100ce66d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f98e2388cb31e62d974c8b0bae0bdf833f5963a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="countdownevent"></a>CountdownEvent
-<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>jest prymitywu synchronizacji, który odblokowuje wątków oczekiwania, po przeprowadzeniu sygnalizowane wiele razy. <xref:System.Threading.CountdownEvent>jest przeznaczony do scenariuszy, w których mogłyby w przeciwnym razie należy użyć <xref:System.Threading.ManualResetEvent> lub <xref:System.Threading.ManualResetEventSlim> i ręcznie dekrementacji zmiennej przed sygnalizowania zdarzenia. Na przykład w przypadku rozwidlenia/sprzężenia, po prostu utworzeniem <xref:System.Threading.CountdownEvent> mający sygnału liczbę 5, a następnie start pięć elementów roboczych w wątku puli i mieć każdego wywołania elementu roboczego <xref:System.Threading.CountdownEvent.Signal%2A> po zakończeniu wykonywania. Każde wywołanie <xref:System.Threading.CountdownEvent.Signal%2A> zmniejsza liczba sygnał o 1. W głównym wątku wywołanie <xref:System.Threading.CountdownEvent.Wait%2A> zablokuje dopóki liczba sygnałów wynosi zero.  
+<xref:System.Threading.CountdownEvent?displayProperty=nameWithType> jest prymitywu synchronizacji, który odblokowuje wątków oczekiwania, po przeprowadzeniu sygnalizowane wiele razy. <xref:System.Threading.CountdownEvent> jest przeznaczony do scenariuszy, w których mogłyby w przeciwnym razie należy użyć <xref:System.Threading.ManualResetEvent> lub <xref:System.Threading.ManualResetEventSlim> i ręcznie dekrementacji zmiennej przed sygnalizowania zdarzenia. Na przykład w przypadku rozwidlenia/sprzężenia, po prostu utworzeniem <xref:System.Threading.CountdownEvent> mający sygnału liczbę 5, a następnie start pięć elementów roboczych w wątku puli i mieć każdego wywołania elementu roboczego <xref:System.Threading.CountdownEvent.Signal%2A> po zakończeniu wykonywania. Każde wywołanie <xref:System.Threading.CountdownEvent.Signal%2A> zmniejsza liczba sygnał o 1. W głównym wątku wywołanie <xref:System.Threading.CountdownEvent.Wait%2A> zablokuje dopóki liczba sygnałów wynosi zero.  
   
 > [!NOTE]
 >  Kod, który nie ma na interakcję z starszej wersji .NET Framework synchronizacji interfejsów API, należy rozważyć użycie <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> obiektów lub <xref:System.Threading.Tasks.Parallel.Invoke%2A> metody łatwiejsze podejścia do wyrażania równoległości rozwidlenia sprzężenia.  
   
- <xref:System.Threading.CountdownEvent>ma następujące dodatkowe funkcje:  
+ <xref:System.Threading.CountdownEvent> ma następujące dodatkowe funkcje:  
   
 -   Za pomocą tokenów anulowania można anulować operacji oczekiwania.  
   

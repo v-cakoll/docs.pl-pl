@@ -1,21 +1,12 @@
 ---
 title: Kolekcje (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: get-started-article
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-visual-basic"></a>Kolekcje (Visual Basic)
 Dla wielu aplikacji, dla których chcesz Utwórz i Zarządzaj grupami powiązanych obiektów. Istnieją dwa sposoby do obiektów grup: tworzenie tablic obiektów oraz tworzenie kolekcji obiektów.  
@@ -39,7 +30,7 @@ Dla wielu aplikacji, dla których chcesz Utwórz i Zarządzaj grupami powiązany
   
     -   [System.Collections.Generic Classes](#BKMK_Generic)  
   
-    -   [System.Collections.Concurrent Classes](#BKMK_Concurrent)  
+    -   [Klasy System.Collections.Concurrent](#BKMK_Concurrent)  
   
     -   [System.Collections — klasy](#BKMK_Collections)  
   
@@ -184,11 +175,11 @@ End Class
   
  W tej sekcji opisano niektóre typowe klasy kolekcji:  
   
--   <xref:System.Collections.Generic>klasy  
+-   <xref:System.Collections.Generic> Klasy  
   
--   <xref:System.Collections.Concurrent>klasy  
+-   <xref:System.Collections.Concurrent> Klasy  
   
--   <xref:System.Collections>klasy  
+-   <xref:System.Collections> Klasy  
   
 -   Visual Basic `Collection` — klasa  
   
@@ -476,7 +467,7 @@ End Class
   
  W poniższym przykładzie zdefiniowano klasę kolekcji niestandardowej o nazwie `AllColors`. Ta klasa implementuje <xref:System.Collections.IEnumerable> interfejs, który wymaga, aby <xref:System.Collections.IEnumerable.GetEnumerator%2A> metoda zaimplementowana.  
   
- `GetEnumerator` Metoda zwraca wystąpienie klasy `ColorEnumerator` klasy. `ColorEnumerator`implementuje <xref:System.Collections.IEnumerator> interfejs, który wymaga, aby <xref:System.Collections.IEnumerator.Current%2A> właściwość <xref:System.Collections.IEnumerator.MoveNext%2A> metody i <xref:System.Collections.IEnumerator.Reset%2A> metoda zaimplementowana.  
+ `GetEnumerator` Metoda zwraca wystąpienie klasy `ColorEnumerator` klasy. `ColorEnumerator` implementuje <xref:System.Collections.IEnumerator> interfejs, który wymaga, aby <xref:System.Collections.IEnumerator.Current%2A> właściwość <xref:System.Collections.IEnumerator.MoveNext%2A> metody i <xref:System.Collections.IEnumerator.Reset%2A> metoda zaimplementowana.  
   
 ```vb  
 Public Sub ListColors()  

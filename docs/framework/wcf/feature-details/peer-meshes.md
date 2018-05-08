@@ -1,24 +1,12 @@
 ---
-title: "Siatki elementów równorzędnych"
-ms.custom: 
+title: Siatki elementów równorzędnych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f70c1dfba6ceb53cd674726702c471dbe508d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-meshes"></a>Siatki elementów równorzędnych
 A *siatki* jest w nazwanej kolekcji (wykres połączonych) węzły równorzędne, który może komunikować się między sobą i które są identyfikowane przez identyfikator unikatowy siatki. Każdy węzeł jest podłączony do wielu innych węzłów. W dobrze połączonych sieci jest ścieżką żadnych dwóch węzłów z małej liczbie przeskoków między węzłami w ostatniej krawędzi siatkę, i siatkę pozostanie połączonych, nawet jeśli niektóre węzły lub połączeń porzucić. Aktywnych węzłów w siatce publikowanie informacji o ich punktu końcowego z odpowiedni identyfikator sieci, dzięki czemu można je znaleźć innych elementów równorzędnych.  

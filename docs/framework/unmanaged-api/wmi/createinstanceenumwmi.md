@@ -1,11 +1,7 @@
 ---
-title: "Funkcja CreateInstanceEnumWmi (niezarządzany wykaz interfejsów API)"
-description: "Funkcja CreateInstanceEnumWmi zwraca moduł wyliczający zawierający wystąpień określonej klasy, które spełniają kryteria wyboru."
+title: Funkcja CreateInstanceEnumWmi (niezarządzany wykaz interfejsów API)
+description: Funkcja CreateInstanceEnumWmi zwraca moduł wyliczający zawierający wystąpień określonej klasy, które spełniają kryteria wyboru.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CreateInstanceEnumWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b796771b07dee28470d37ca3e4292c0a244e056b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f9297d34b01c03075db67bd904a81e589bfcc10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createinstanceenumwmi-function"></a>Funkcja CreateInstanceEnumWmi
 Zwraca moduł wyliczający, który zwraca wystąpienia określonej klasy, które spełniają kryteria wyboru określony. 
@@ -79,7 +72,7 @@ Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` naj
 `authLevel`  
 [in] Poziom autoryzacji.
 
-`impLevel`[in] Poziom personifikacji.
+`impLevel` [in] Poziom personifikacji.
 
 `pCurrentNamespace`   
 [in] Wskaźnik do [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) obiekt, który reprezentuje bieżącej przestrzeni nazw.
@@ -101,7 +94,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Użytkownik nie ma uprawnień do wyświetlania wystąpienia określonej klasy. |
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił nieokreślony błąd. |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strFilter`nie istnieje. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strFilter` nie istnieje. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Usługa WMI jest prawdopodobnie zatrzymana i ponownie uruchomić. Wywołanie [ConnectServerWmi](connectserverwmi.md) ponownie. |
@@ -121,7 +114,7 @@ Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje 
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

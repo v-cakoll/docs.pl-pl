@@ -1,24 +1,12 @@
 ---
 title: Zabezpieczenia (LINQ do DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 305ff1232b21def3c8e7dcb1bec529f81c4e701a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 43d529b6f74b58783cc2aaa7a81b2f75790b4e40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-linq-to-dataset"></a>Zabezpieczenia (LINQ do DataSet)
 W tym temacie omówiono problemy z zabezpieczeniami w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -29,9 +17,9 @@ W tym temacie omówiono problemy z zabezpieczeniami w [!INCLUDE[linq_dataset](..
  Oznacza to, że przekazując odwołanie do zapytania do innego fragmentu kodu składnika odbieranie zapytania jest jest zaufana z dostępem do wszystkich publicznych i prywatnych elementów członkowskich, które zapytanie odwołuje się do. Ogólnie rzecz biorąc [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania nie powinny być przekazywane do niezaufanych składników, jeśli zapytanie ma dokładnie skonstruowane tak, aby nie uwidacznia informacje, które powinny być przechowywane w prywatnej.  
   
 ## <a name="external-input"></a>Zewnętrzny  
- Aplikacje często zająć zewnętrzny (od użytkownika lub innego agenta zewnętrznych) i wykonywania akcji w oparciu o te dane wejściowe.  W przypadku liczby [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], aplikacja może utworzyć kwerendy w określony sposób, na podstawie zewnętrzny lub Użyj zewnętrznego danych wejściowych w zapytaniu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]zapytania akceptuje wszędzie parametrów, że literały są akceptowane. Deweloperzy aplikacji należy używać sparametryzowanych zapytań, zamiast iniekcję literały z zewnętrznego agenta bezpośrednio do zapytania.  
+ Aplikacje często zająć zewnętrzny (od użytkownika lub innego agenta zewnętrznych) i wykonywania akcji w oparciu o te dane wejściowe.  W przypadku liczby [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], aplikacja może utworzyć kwerendy w określony sposób, na podstawie zewnętrzny lub Użyj zewnętrznego danych wejściowych w zapytaniu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania akceptuje wszędzie parametrów, że literały są akceptowane. Deweloperzy aplikacji należy używać sparametryzowanych zapytań, zamiast iniekcję literały z zewnętrznego agenta bezpośrednio do zapytania.  
   
- Wszystkie wejściowych bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartość, która używa składni języka docelowego w celu wykonania akcji nieautoryzowanego. Jest to nazywane atak iniekcji kodu SQL o nazwie po wzorzec ataku, gdzie jest języka Transact-SQL w języku docelowym. Dane wejściowe użytkownika bezpośrednio do zapytania służy do tabeli bazy danych, "odmowa usługi" lub modyfikowania rodzaj wykonywanej operacji. Mimo że zapytanie jest możliwe w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], odbywa się za pośrednictwem interfejsu API modelu obiektu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]zapytania nie składają się przy użyciu manipulowanie ciągami lub łączenia, w języku Transact-SQL, i nie są podatne na ataki w tym sensie, tradycyjnych.  
+ Wszystkie wejściowych bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartość, która używa składni języka docelowego w celu wykonania akcji nieautoryzowanego. Jest to nazywane atak iniekcji kodu SQL o nazwie po wzorzec ataku, gdzie jest języka Transact-SQL w języku docelowym. Dane wejściowe użytkownika bezpośrednio do zapytania służy do tabeli bazy danych, "odmowa usługi" lub modyfikowania rodzaj wykonywanej operacji. Mimo że zapytanie jest możliwe w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], odbywa się za pośrednictwem interfejsu API modelu obiektu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania nie składają się przy użyciu manipulowanie ciągami lub łączenia, w języku Transact-SQL, i nie są podatne na ataki w tym sensie, tradycyjnych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

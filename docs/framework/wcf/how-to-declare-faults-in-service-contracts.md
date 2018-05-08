@@ -1,30 +1,18 @@
 ---
-title: "Porady: deklarowanie błędów w kontraktach usług"
-ms.custom: 
+title: 'Porady: deklarowanie błędów w kontraktach usług'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Porady: deklarowanie błędów w kontraktach usług
-W kodzie zarządzanym wyjątki są zgłaszane w przypadku wystąpienia błędów. W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, jednak kontraktów usług określ, jakie informacje o błędzie są zwracane do klientów przez zadeklarowanie błędach SOAP w kontrakcie usługi. Omówienie relacji między wyjątków i błędów, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+W kodzie zarządzanym wyjątki są zgłaszane w przypadku wystąpienia błędów. W aplikacji Windows Communication Foundation (WCF) jednak kontraktów usług określić informacje o błędach, jakie są zwracane do klientów przez zadeklarowanie błędach SOAP w kontrakcie usługi. Omówienie relacji między wyjątków i błędów, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Tworzenie kontraktu usługi, która określa błędu protokołu SOAP  
   

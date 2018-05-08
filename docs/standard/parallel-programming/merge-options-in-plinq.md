@@ -1,31 +1,20 @@
 ---
 title: Opcje scalania w PLINQ
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e155ee8de2846fc3c8c767a77f365127923f757
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merge-options-in-plinq"></a>Opcje scalania w PLINQ
 Gdy kwerendy jest wykonywany jako równoległe, partycje PLINQ sekwencji źródłowej tak, aby wiele wątków może działać na różnych części jednocześnie, zwykle w oddzielnych wątkach. Jeśli wyniki mają być używane w jednym wątku, na przykład w `foreach` (`For Each` w języku Visual Basic) w pętli, a następnie wyniki każdego wątku musi być scalone jedną sekwencję. Rodzaj operacji scalania, który wykonuje PLINQ zależy od operatory, które znajdują się w zapytaniu. Na przykład operatory, które nakładają zamówienie nowe wyniki musi bufor wszystkie elementy ze wszystkich wątków. Z perspektywy odbierającą wątku (która jest również użytkownik aplikacji) pełni buforowane zapytanie może działać zauważalne okres czasu, po upływie generuje jego pierwszego wyniku. Inne operatory domyślnie są częściowo buforowane; dają one ich wyniki w partiach. Jeden operator <xref:System.Linq.ParallelEnumerable.ForAll%2A> nie jest buforowana domyślnie. Go zwraca wszystkie elementy ze wszystkich wątków natychmiast.  

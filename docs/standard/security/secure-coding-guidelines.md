@@ -1,13 +1,7 @@
 ---
-title: "Wytyczne dotyczące bezpiecznego programowania"
-ms.custom: 
+title: Wytyczne dotyczące bezpiecznego programowania
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed wrapper to native code implementation
 - secure coding
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - security-neutral code
 - security [.NET Framework], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3e75f3c74c5966ce5ce22b23f7ba179e903d37aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f8d61e76a657c7341ec7dfcede6d7dc9943d4659
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines"></a>Wytyczne dotyczące bezpiecznego programowania
 Zabezpieczenia oparte na dowód i zabezpieczenia dostępu kodu zapewniają mechanizmy bardzo zaawansowane, jawnej implementacji zabezpieczeń. Większość kodu aplikacji można po prostu użyć infrastruktury wdrożone przez program .NET Framework. W niektórych przypadkach dodatkowe zabezpieczenia aplikacji jest wymagana, utworzony przez rozszerzanie systemu zabezpieczeń lub przy użyciu nowych metod ad hoc.  

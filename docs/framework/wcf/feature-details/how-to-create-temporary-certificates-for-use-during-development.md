@@ -1,32 +1,18 @@
 ---
 title: 'Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
-Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], jest często przekazać certyfikat X.509 mają być używane jako poświadczenie. Certyfikat jest zwykle częścią łańcucha certyfikatów przy użyciu głównego urzędu został znaleziony w magazynie zaufanych głównych urzędów certyfikacji komputera. Posiadanie łańcuch certyfikatów umożliwia określania zakresu zestawu certyfikatów, w których zwykle głównego urzędu certyfikacji jest od swojej organizacji lub jednostki biznesowej. Aby emulować to w czasie tworzenia, możesz utworzyć dwa certyfikaty by spełnić ich wymagań zabezpieczeń. Pierwsza to certyfikatu z podpisem własnym, który jest umieszczony w magazynie zaufanych głównych urzędów certyfikacji i drugiego certyfikatu jest tworzona na podstawie pierwszego i znajduje się w magazynie osobistym lokalizacji komputera lokalnego lub w magazynie osobistym Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono kroki, aby utworzyć tych dwóch certyfikatów przy użyciu [narzędzie tworzenia certyfikatów (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), które są dostarczane przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zestawu SDK.  
+Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu usługi Windows Communication Foundation (WCF), często należy podać certyfikat X.509 mają być używane jako poświadczenie. Certyfikat jest zwykle częścią łańcucha certyfikatów przy użyciu głównego urzędu został znaleziony w magazynie zaufanych głównych urzędów certyfikacji komputera. Posiadanie łańcuch certyfikatów umożliwia określania zakresu zestawu certyfikatów, w których zwykle głównego urzędu certyfikacji jest od swojej organizacji lub jednostki biznesowej. Aby emulować to w czasie tworzenia, możesz utworzyć dwa certyfikaty by spełnić ich wymagań zabezpieczeń. Pierwsza to certyfikatu z podpisem własnym, który jest umieszczony w magazynie zaufanych głównych urzędów certyfikacji i drugiego certyfikatu jest tworzona na podstawie pierwszego i znajduje się w magazynie osobistym lokalizacji komputera lokalnego lub w magazynie osobistym Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono kroki, aby utworzyć tych dwóch certyfikatów przy użyciu [narzędzie tworzenia certyfikatów (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), które są dostarczane przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zestawu SDK.  
   
 > [!IMPORTANT]
 >  Narzędzie do tworzenia certyfikacji generuje certyfikaty są udostępniane tylko do celów testowych. Podczas wdrażania usługi lub klienta, należy użyć odpowiedni certyfikat dostarczony przez urząd certyfikacji. Może to być albo z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] certyfikatów serwera w organizacji lub innych firm.  

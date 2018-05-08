@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager::SetSecurityContext — Metoda"
-ms.custom: 
+title: IHostSecurityManager::SetSecurityContext — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.SetSecurityContext
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e4372384-ee69-48d7-97e0-8fab7866597a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29a7652e20c08b9de584a9e11ac343ad92f40653
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e07edd75e80db2c275821a64bef5213da60ee853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanagersetsecuritycontext-method"></a>IHostSecurityManager::SetSecurityContext — Metoda
 Ustawia kontekst zabezpieczeń aktualnie wykonywane wątku.  
@@ -58,7 +46,7 @@ HRESULT SetSecurityContext (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetSecurityContext`zwrócona pomyślnie.|  
+|S_OK|`SetSecurityContext` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -77,7 +65,7 @@ HRESULT SetSecurityContext (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  

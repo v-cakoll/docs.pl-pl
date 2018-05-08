@@ -1,21 +1,14 @@
 ---
-title: "Porównywanie równości (Przewodnik programowania w języku C#)"
+title: Porównywanie równości (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c1abee8636cf540d42d92eb7496fb078f06e6e0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Porównywanie równości (Przewodnik programowania w języku C#)
 Czasami jest niezbędne do porównywania dwóch wartości pod kątem równości. W niektórych przypadkach testowych dla *wartość równości*, znanej także jako *ekwiwalencji*, co oznacza, że wartości, które znajdują się w dwóch zmiennych są takie same. W innych przypadkach należy ustalić, czy dwie zmienne odwoływać się do tego samego obiektu źródłowego w pamięci. Równości tego typu jest nazywana *odwołania równości*, lub *tożsamości*. W tym temacie opisano te dwa rodzaje równości oraz zawiera łącza do innych tematów, aby uzyskać więcej informacji.  
@@ -54,8 +47,8 @@ if( b == a)
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: testowanie równości odwołań (tożsamości)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Opisuje sposób określenia, czy dwie zmienne mają równości odwołań.|  
-|[Porady: Definiowanie równości wartości dla typu](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Opisuje sposób zawierają niestandardowe definicje równości wartości dla typu.|  
+|[Instrukcje: testowanie równości odwołań (tożsamości)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Opisuje sposób określenia, czy dwie zmienne mają równości odwołań.|  
+|[Instrukcje: definiowanie równości wartości dla typu](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Opisuje sposób zawierają niestandardowe definicje równości wartości dla typu.|  
 |[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)|Zawiera linki do szczegółowych informacji o ważnych funkcji języka C# i funkcje, które są dostępne dla C# za pomocą programu .NET Framework.|  
 |[Typy](../../../csharp/programming-guide/types/index.md)|Zawiera informacje o systemie typów języka C# i linki do dodatkowych informacji.|  
   

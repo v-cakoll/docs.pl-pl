@@ -1,31 +1,19 @@
 ---
 title: Wskazówki dotyczące migrowania aplikacji utworzony za pomocą programu WIF 3.5 do wersji WIF 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 87443a83b80440a30e942b30bd98cce09816f25f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 60e9dd96824b2c9bef81d236bab8f577f9fb2062
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Wskazówki dotyczące migrowania aplikacji utworzony za pomocą programu WIF 3.5 do wersji WIF 4.5
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF) 3.5 and 4.5.  
+-   Microsoft Windows® Identity Foundation (WIF) 3.5 i 4.5.  
   
 ## <a name="overview"></a>Omówienie  
  Windows Identity Foundation (WIF) pierwotnie został wydany w przedziale czasu .NET 3.5 z dodatkiem SP1. Ta wersja programu WIF nazywa się WIF 3.5. Został wydany jako oddzielne środowiska uruchomieniowego i zestawu SDK, co oznaczało, że każdy komputer, na którym uruchomiono aplikację z obsługą WIF musiała mieć zainstalowane środowisko uruchomieniowe WIF i deweloperzy należało pobrać i zainstalować WIF zestawu SDK można pobrać szablony programu Visual Studio i narzędzi, które włączone programowanie aplikacji obsługujących WIF. Począwszy od platformy .NET 4.5, WIF zostało pełni zintegrowane programu .NET Framework. Oddzielne środowiska uruchomieniowego nie są już potrzebne, i narzędzi WIF można zainstalować w programie Visual Studio 2012 za pomocą Menedżera rozszerzeń programu Visual Studio. Ta wersja programu WIF nazywa się WIF 4.5.  

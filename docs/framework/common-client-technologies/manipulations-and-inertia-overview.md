@@ -1,24 +1,12 @@
 ---
-title: "Omówienie manipulacji i bezwładności"
-ms.custom: 
+title: Omówienie manipulacji i bezwładności
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6a0b8b62b997ab0dc7ff21375e82bda7e05d3c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7aec2756bfc3a7d4ccd394d54f19428d73b44fcb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manipulations-and-inertia-overview"></a>Omówienie manipulacji i bezwładności
 *Manipulacje* umożliwić użytkownikom przenoszenie, obracanie i zmień rozmiar elementów interfejsu użytkownika przy użyciu *manipulatory*. Manipulatora reprezentuje myszy lub (w scenariuszu z obsługą dotyku) pióro lub linii papilarnych.  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  Dla aplikacji do dołączenia wejściowego podstawowego procesu manipulowania tworzy <xref:System.Windows.Input.Manipulations.Manipulator2D> strukturę na podstawie danych wejściowych pierwotny i przekazuje struktury przy użyciu procesora manipulowania <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> — metoda. Procesor manipulacji następnie wywołuje zdarzenia, które aplikacja musi obsługiwać aktualizacji programu visual component w odpowiedni sposób.  
   
- ![Przepływ manipulacje direct &#45; model zastosowania. ] (../../../docs/framework/common-client-technologies/media/manipulation-flow.png "Manipulation_Flow")  
+ ![Przepływ bezpośrednio manipulacje&#45;model zastosowania. ] (../../../docs/framework/common-client-technologies/media/manipulation-flow.png "Manipulation_Flow")  
   
  Manipulowanie przetwarzania modelu  
   

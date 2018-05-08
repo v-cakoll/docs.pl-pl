@@ -1,32 +1,18 @@
 ---
 title: 'Instrukcje: Publikowanie metadanych dla usługi przy użyciu kodu'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c3d2fd1222539ec8017846069e7eda9a2c503f22
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bef5421d377bcae6e8c56b0117ebbe22a861de86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Instrukcje: Publikowanie metadanych dla usługi przy użyciu kodu
-Jest to jeden z dwóch tematy porad dotyczących Publikowanie metadanych dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi. Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i kod. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu kodu.  
+Jest to jeden z dwóch tematy porad dotyczących Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i kod. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu kodu.  
   
 > [!CAUTION]
 >  W tym temacie pokazano, jak publikować metadane w sposób niezabezpieczonych. Dowolny klient może pobrać metadanych usługi. Jeśli wymagana jest usługa Publikowanie metadanych w bezpieczny sposób. zobacz [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
@@ -94,7 +80,7 @@ Jest to jeden z dwóch tematy porad dotyczących Publikowanie metadanych dla [!I
 11. Aby przejść do podstawowego adresu usługi w programie Internet Explorer (http://localhost:8001/MetadataSample w tym przykładzie) i sprawdź, czy Publikowanie metadanych jest włączony. Powinna zostać wyświetlona strona sieci Web wyświetlane, stwierdzający "Simple Service" u góry i natychmiast poniżej "Utworzono usługę." Jeśli nie, zostanie wyświetlony komunikat w górnej części strony wynikowy: "Publikowanie metadanych dla tej usługi jest obecnie wyłączona."  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia implementację podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która umożliwia publikowanie metadanych dla usługi w kodzie.  
+ Poniższy przykładowy kod przedstawia implementację podstawowe usługi WCF, która publikuje metadane dla usługi w kodzie.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  

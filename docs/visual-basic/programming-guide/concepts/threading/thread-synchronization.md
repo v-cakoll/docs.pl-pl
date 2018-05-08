@@ -1,22 +1,12 @@
 ---
-title: "Synchronizacja wątku (Visual Basic)"
-ms.custom: 
+title: Synchronizacja wątku (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-synchronization-visual-basic"></a>Synchronizacja wątku (Visual Basic)
 W poniższych sekcjach opisano funkcje i klasy, które mogą służyć do synchronizowania dostęp do zasobów w aplikacjach wielowątkowych.  
@@ -33,7 +23,7 @@ W poniższych sekcjach opisano funkcje i klasy, które mogą służyć do synchr
   
 -   [Używanie wątków i wątkowości](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [Zarządzana wątkowość — najlepsze praktyki](../../../../standard/threading/managed-threading-best-practices.md)  
+-   [Zarządzana wątkowość — najlepsze rozwiązania](../../../../standard/threading/managed-threading-best-practices.md)  
   
 ## <a name="the-lock-and-synclock-keywords"></a>Blokowanie i SyncLock słowa kluczowe  
  Visual Basic `SyncLock` instrukcja może być używana przez inne wątki aby upewnić się, że bloku kodu jest uruchamiane w celu ukończenia bez przeszkód. Jest to osiągane przez uzyskanie blokady wzajemnego wykluczeń dla danego obiektu w czasie trwania blok kodu.  
@@ -58,7 +48,7 @@ End Class
   
  Aby uzyskać więcej informacji na temat `SyncLock` instrukcji, zobacz następujące tematy:  
   
--   [SyncLock — instrukcja](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
+-   [SyncLock, instrukcja](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
   
 -   <xref:System.Threading.Monitor>  
   
@@ -90,7 +80,7 @@ End Try
   
  Istnieją dwa rodzaje zdarzeń synchronizacji: <xref:System.Threading.AutoResetEvent>, i <xref:System.Threading.ManualResetEvent>. Różnią się tylko w tym <xref:System.Threading.AutoResetEvent> zmiany z sygnalizowane do unsignaled automatycznie każdy razem aktywuje wątku. Z drugiej strony <xref:System.Threading.ManualResetEvent> umożliwia dowolną liczbę wątków, aby być aktywowany przez stanu sygnałowego i tylko powróci do unsignaled jeśli jego <xref:System.Threading.EventWaitHandle.Reset%2A> metoda jest wywoływana.  
   
- Wątków jest możliwe oczekiwanie na zdarzenia przez wywołanie metody oczekiwania, takich jak <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, lub <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>powoduje, że wątek poczekać, aż sygnalizowane staje się pojedyncze zdarzenie, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> blokuje wątku, dopóki co najmniej jednego zdarzenia wskazanych stają się sygnalizuje, i <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> blokuje wątek, dopóki wszystkie zdarzenia wskazanych stają się sygnalizowane. Zdarzenie jest sygnalizowane po jego <xref:System.Threading.EventWaitHandle.Set%2A> metoda jest wywoływana.  
+ Wątków jest możliwe oczekiwanie na zdarzenia przez wywołanie metody oczekiwania, takich jak <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, lub <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType> powoduje, że wątek poczekać, aż sygnalizowane staje się pojedyncze zdarzenie, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> blokuje wątku, dopóki co najmniej jednego zdarzenia wskazanych stają się sygnalizuje, i <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> blokuje wątek, dopóki wszystkie zdarzenia wskazanych stają się sygnalizowane. Zdarzenie jest sygnalizowane po jego <xref:System.Threading.EventWaitHandle.Set%2A> metoda jest wywoływana.  
   
  W poniższym przykładzie jest tworzony i uruchomione przez wątek `Main` funkcji. Nowego wątku oczekiwania na zdarzenie przy użyciu <xref:System.Threading.WaitHandle.WaitOne%2A> metody. Wątek jest zawieszony aż do zdarzenia staje się zgłoszony przez podstawowy wątku, który jest wykonywany `Main` funkcji. Gdy zdarzenie jest sygnalizowane, zwraca wątek pomocniczy. W takim przypadku ponieważ zdarzenie jest używana tylko jeden wątek aktywacji, albo <xref:System.Threading.AutoResetEvent> lub <xref:System.Threading.ManualResetEvent> klasy może być używane.  
   
@@ -157,8 +147,8 @@ End Module
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
  [Aplikacje wielowątkowe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
- [SyncLock — instrukcja](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
+ [SyncLock, instrukcja](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Muteksy](../../../../standard/threading/mutexes.md)  
  [Operacje blokowane](../../../../standard/threading/interlocked-operations.md)  
- [Autoresetevent —](../../../../standard/threading/autoresetevent.md)  
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
  [Synchronizowanie danych na potrzeby wielowątkowości](../../../../standard/threading/synchronizing-data-for-multithreading.md)

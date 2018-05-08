@@ -1,34 +1,22 @@
 ---
 title: Aktywacja oparta na konfiguracji
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d520a46bc3380fc5dff76f5df866ae3411d5a6a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation"></a>Aktywacja oparta na konfiguracji
-W tym przykładzie pokazano, jak aktywować [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług bez konieczności pliku svc.  
+W tym przykładzie pokazano, jak można aktywować usługi Windows Communication Foundation (WCF) bez konieczności pliku svc.  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
@@ -41,7 +29,7 @@ W tym przykładzie pokazano, jak aktywować [!INCLUDE[indigo1](../../../../inclu
 ### <a name="activation-of-services-without-requiring-a-svc-file"></a>Aktywacja usług bez konieczności pliku svc  
  W [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], pliku svc nie jest wymagana do aktywacji usługi. Przyczyną narzut na dodatkowe zarządzanie, ponieważ dodatkowy plik nie jest wymagana, aby wdrożyć i przechowywane wraz z aplikacji. Wraz z wydaniem [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], można skonfigurować składniki aktywacji przy użyciu pliku konfiguracji aplikacji.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]wprowadzono nowy element konfiguracji (<xref:System.ServiceModel.Configuration.ServiceActivationElement>) w <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> pliku konfiguracyjnego aplikacji. <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> Kolekcja akceptuje kolekcja usług do aktywacji, jak pokazano w poniższym przykładzie kodu.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wprowadzono nowy element konfiguracji (<xref:System.ServiceModel.Configuration.ServiceActivationElement>) w <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> pliku konfiguracyjnego aplikacji. <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> Kolekcja akceptuje kolekcja usług do aktywacji, jak pokazano w poniższym przykładzie kodu.  
   
 ```xml  
 <serviceActivations>  
@@ -71,7 +59,7 @@ W tym przykładzie pokazano, jak aktywować [!INCLUDE[indigo1](../../../../inclu
   
 7.  Naciśnij klawisze CTRL + SHIFT + A, aby ustawić adres usługi.  
   
-8.  Ustawić adres http://localhost/ServiceModelSamples/Calculator.svc.  
+8.  Ustaw adres http://localhost/ServiceModelSamples/Calculator.svc.  
   
 9. Wykonaj `Add` operacji. Ustaw wartość na `n1` parametru 10 i ustaw wartość na `n2` parametru do 15.  
   

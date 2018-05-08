@@ -1,27 +1,15 @@
 ---
-title: "Konfigurowanie śledzenia przepływu komunikatów"
-ms.custom: 
+title: Konfigurowanie śledzenia przepływu komunikatów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bfba8ababc6ddc0b2ddd78e879058cfa9e8ebb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-flow-tracing"></a>Konfigurowanie śledzenia przepływu komunikatów
-Gdy [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] czynność śledzenia jest włączona, End-To-End identyfikatory aktywności są przypisane do logicznego działań w całym [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosu. W [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], jest teraz wyższą wersję wydajności tej funkcji, która działa z zdarzenia śledzenia dla systemu Windows (ETW) o nazwie śledzenia przepływu komunikatów. Po włączeniu End-To-End identyfikatory aktywności są pobierane z (lub przypisane do, jeśli puste) wiadomości przychodzących i są propagowane do wszystkich zdarzeń śledzenia, które są emitowane po wiadomość ma został odczytany przez kanał. Klientów można użyć tej funkcji odtworzenie po dekodowania przepływów wiadomości z dziennikami śledzenia z różnych usług.  
+Po włączeniu śledzenie działania Windows Communication Foundation (WCF) End-To-End identyfikatory aktywności są przypisane do logicznego działań w całej [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosu. W [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], jest teraz wyższą wersję wydajności tej funkcji, która działa z zdarzenia śledzenia dla systemu Windows (ETW) o nazwie śledzenia przepływu komunikatów. Po włączeniu End-To-End identyfikatory aktywności są pobierane z (lub przypisane do, jeśli puste) wiadomości przychodzących i są propagowane do wszystkich zdarzeń śledzenia, które są emitowane po wiadomość ma został odczytany przez kanał. Klientów można użyć tej funkcji odtworzenie po dekodowania przepływów wiadomości z dziennikami śledzenia z różnych usług.  
   
  Śledzenie można włączona po zostanie wykryty problem z aplikacją i następnie wyłączone, po usunięciu problemu.  
   

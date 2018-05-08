@@ -1,29 +1,17 @@
 ---
-title: "TreeView — Kontrolka (Formularze systemu Windows)"
-ms.custom: 
+title: TreeView — Kontrolka (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
 - list controls [Windows Forms], Windows Forms
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2183954363c03064d9d41480bb63e32cca58b857
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView — Kontrolka (Formularze systemu Windows)
 Formularze systemu Windows `TreeView` kontrolka Wyświetla hierarchię węzłów, tak jak w sposób pliki i foldery są wyświetlane w okienku po lewej stronie Eksploratora Windows funkcji w systemach operacyjnych Windows.  
@@ -53,7 +41,7 @@ Formularze systemu Windows `TreeView` kontrolka Wyświetla hierarchię węzłów
  Zobacz też [porady: Dodawanie i usuwanie węzłów za pomocą systemu Windows Forms TreeView formantu przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233651\(v=vs.110\)), [porady: dołączanie Menu skrótów do TreeNode przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms171708\(v=vs.110\)).  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.TreeView>klasy  
+ <xref:System.Windows.Forms.TreeView> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

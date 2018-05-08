@@ -1,23 +1,14 @@
 ---
 title: Zmienna używa typu automatyzacji, który nie jest obsługiwany przez język Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID458
 ms.assetid: bde4f4da-493b-452c-b6e4-1d370edba4cd
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1143cfa040c61f206a96842668a40d5cd73c792f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: cda67199b3862699a668abd00b14dabc4ddb32e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Zmienna używa typu automatyzacji, który nie jest obsługiwany przez język Visual Basic
 Próbowano użyć zmiennej zdefiniowanej w biblioteki typów lub biblioteki, który ma typ danych nie jest obsługiwana przez program Visual Basic.  

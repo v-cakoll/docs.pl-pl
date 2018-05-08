@@ -1,33 +1,23 @@
 ---
 title: '&lt;security&gt; w &lt;basicHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-caps.latest.revision: "16"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 8d61075bc96427736f7e6f5a39302bbd59d434f9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e39d32a9cc689905bed42f56e4f998bbd8c6e038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;security&gt; w &lt;basicHttpBinding&gt;
 Możliwości zabezpieczeń definiuje [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  \<system.ServiceModel>  
 \<powiązania >  
-\<basicHttpBinding>  
+\<basicHttpBinding >  
 \<Powiązanie >  
-\<security>  
+\<Zabezpieczenia >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,7 +40,7 @@ Możliwości zabezpieczeń definiuje [ \<basicHttpBinding >](../../../../../docs
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Opcjonalny. Określa typ zabezpieczeń, który jest używany. Wartość domyślna to `None`. Ten atrybut jest typu <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
+|tryb|Opcjonalna. Określa typ zabezpieczeń, który jest używany. Wartość domyślna to `None`. Ten atrybut jest typu <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Tryb atrybutu  
   
@@ -60,7 +50,7 @@ Możliwości zabezpieczeń definiuje [ \<basicHttpBinding >](../../../../../docs
 |Transportu|Zabezpieczenia transportu HTTPS. Wiadomości SOAP są chronione przy użyciu protokołu HTTPS. Usługa jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 usługi. Klient jest uwierzytelniany przy użyciu ClientCredentialType dostarczony. Zobacz [ \<transportu >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
 |Komunikat|Zabezpieczenia korzystanie z zabezpieczeń komunikatów SOAP. Domyślnie treści zostaje zaszyfrowany i podpisany. Dla tego powiązania system wymaga podania certyfikatu serwera do klienta poza pasmem. Jedyne prawidłowe `ClientCredentialType` dla tego powiązania jest `Certificate`.|  
 |TransportWithMessageCredential|Uwierzytelnianie integralności i poufności serwera są udostępniane za pośrednictwem zabezpieczeń transportu. Uwierzytelnianie klienta znajduje się za pomocą zabezpieczeń wiadomości protokołu SOAP. Ten tryb jest istotne, gdy uwierzytelnia użytkownika przy użyciu nazwy użytkownika i hasła i ma istniejącego wdrożenia protokołu HTTP do zabezpieczania transferu komunikatów.|  
-|TransportCredentialOnly|W tym trybie nie zapewnia integralności i poufności. Zapewnia uwierzytelnianie oparte na protokole http klienta. Tego trybu należy używać ostrożnie. Tej opcji należy używać w środowiskach, gdzie zabezpieczeń transportu jest świadczona w inny sposób (na przykład IPSec), a tylko uwierzytelnianie klienta jest zapewniana przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] infrastruktury.|  
+|TransportCredentialOnly|W tym trybie nie zapewnia integralności i poufności. Zapewnia uwierzytelnianie oparte na protokole http klienta. Tego trybu należy używać ostrożnie. Można stosować w środowiskach, gdzie zabezpieczeń transportu jest świadczona w inny sposób (na przykład IPSec), a tylko uwierzytelnianie klienta jest zapewniana przez infrastrukturę programu WCF.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

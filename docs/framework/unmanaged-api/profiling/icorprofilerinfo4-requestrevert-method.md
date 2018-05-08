@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo4::RequestRevert — Metoda"
-ms.custom: 
+title: ICorProfilerInfo4::RequestRevert — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.RequestRevert
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8f0bf926bc6ba458745231bc17ce20dbe5cdbd1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43a1954d75d37f68eb967eb714070a097573100a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert — Metoda
 Przywraca wszystkie wystąpienia określonych funkcji, do ich oryginalnej wersji.  
@@ -69,7 +57,7 @@ HRESULT RequestRevert (
 |S_OK|Podjęto próbę przywrócenia wszystkich żądań; jednak zwrócony stan tablicy musi być zaznaczone do określenia, jakie funkcje zostały pomyślnie przywrócone.|  
 |CORPROF_E_CALLBACK4_REQUIRED|Profiler musi implementować [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interfejs dla tego wywołania do obsługi.|  
 |CORPROF_E_REJIT_NOT_ENABLED|Nie włączono ponownej kompilacji JIT. Należy włączyć ponownej kompilacji JIT podczas inicjowania przy użyciu [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodę, aby ustawić `COR_PRF_ENABLE_REJIT` flagi.|  
-|E_INVALIDARG|`cFunctions`ma wartość 0, lub `moduleIds` lub `methodIds` jest `NULL`.|  
+|E_INVALIDARG|`cFunctions` ma wartość 0, lub `moduleIds` lub `methodIds` jest `NULL`.|  
 |E_OUTOFMEMORY|Środowisko CLR nie może wykonać żądania, ponieważ zabrakło pamięci.|  
   
 ## <a name="status-hresults"></a>Stan wyników HRESULT  
@@ -93,7 +81,7 @@ HRESULT RequestRevert (
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  

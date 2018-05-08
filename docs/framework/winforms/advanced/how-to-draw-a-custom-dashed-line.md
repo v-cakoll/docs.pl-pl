@@ -1,13 +1,6 @@
 ---
 title: 'Porady: rysowanie niestandardowej linii kreskowanej'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770ce290b21f7d0094a487c30079063b79a7c08d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39dde3bb45165783171326b79e98744807350952
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Porady: rysowanie niestandardowej linii kreskowanej
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]dostępnych jest kilka typów kreska, które są wymienione w <xref:System.Drawing.Drawing2D.DashStyle> wyliczenia. Jeśli te style standard dash nie własnych potrzeb, można utworzyć niestandardowego wzorze.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dostępnych jest kilka typów kreska, które są wymienione w <xref:System.Drawing.Drawing2D.DashStyle> wyliczenia. Jeśli te style standard dash nie własnych potrzeb, można utworzyć niestandardowego wzorze.  
   
 ## <a name="example"></a>Przykład  
  Rysowanie niestandardowej linii kreskowanej, umieść długości kresek i spacji w tablicy i przypisz tablicy jako wartość <xref:System.Drawing.Pen.DashPattern%2A> właściwość <xref:System.Drawing.Pen> obiektu. Poniższy przykład rysuje niestandardowej linii kreskowanej oparte na tablicy `{5, 2, 15, 4}`. Jeśli elementy tablicy pomnożenia szerokość pióra 5, możesz uzyskać `{25, 10, 75, 20}`. Łączniki wyświetlanych alternatywny długości między 25 i 75 i przestrzeni alternatywny o długości od 10 do 20.  

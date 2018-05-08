@@ -1,30 +1,18 @@
 ---
 title: '&lt;serviceHostingEnvironment&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Ten element definiuje typ, który usługę hostingu środowiskowego dla danego transportu. Jeśli ten element jest pusta, domyślny typ jest używany. Ten element może być użyty tylko w aplikacji lub pliki konfiguracji na poziomie maszyny.  
   
- \<System. ServiceModel >  
-\<ServiceHostingEnvironment >  
+ \<system.ServiceModel>  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,9 +39,9 @@ Ten element definiuje typ, który usługę hostingu środowiskowego dla danego t
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Wartość logiczna wskazująca, czy tryb zgodności ASP.NET został włączony dla bieżącej aplikacji. Wartość domyślna to `false`.<br /><br /> Jeśli ten atrybut ma wartość `true`, żądania do [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] przepływu usług za pośrednictwem potoku HTTP programu ASP.NET i komunikacji za pośrednictwem protokołów innych niż HTTP jest zabronione. Aby uzyskać więcej informacji, zobacz [usługi WCF i platformy ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|Ustawienia minFreeMemoryPercentageToActivateService|Liczba całkowita, która określa minimalną ilość wolnej pamięci, która powinna być dostępna w systemie, zanim [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] można aktywować usługi. **Uwaga:** określania tego atrybutu wraz z częściowa relacja zaufania w pliku web.config [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi spowoduje <xref:System.Security.SecurityException> po uruchomieniu usługi.|  
-|multipleSiteBindingsEnabled|Wartość logiczna określająca, czy włączono wielokrotne powiązania usługi IIS dla każdej witryny.<br /><br /> Usługi IIS składa się z witryn sieci web, które są kontenerami dla katalogów wirtualnych zawierających aplikacje wirtualne. Za pomocą co najmniej jednego powiązania usługi IIS można uzyskać dostępu do aplikacji w lokacji. Powiązanie z usług IIS oferuje dwa rodzaje informacji: Protokół powiązania i informacje o wiązaniu. Protokół powiązania definiuje schemat, przez który dane są przesyłane, a informacje o wiązaniu są to informacje używane do uzyskania dostępu do witryny. Przykładem Protokół powiązania, które mogą być protokołu HTTP, a informacje o wiązaniu może zawierać adres IP portu nagłówek hosta, itp.<br /><br /> Usługi IIS obsługują określania wielokrotne powiązania usługi IIS dla każdej witryny, co prowadzi do wielu adresów bazowych dla każdego schematu. Jednak [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usługi hostowanej przez witrynę umożliwia powiązanie z tylko jedną właściwość baseAddress dla każdego schematu.<br /><br /> Aby włączyć wielokrotne powiązania usługi IIS dla każdej witryny dla [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usługi, ustaw ten atrybut `true`. Należy zauważyć, że wiele powiązania witryny jest obsługiwana tylko dla protokołu HTTP. Adres punktów końcowych w pliku konfiguracji musi być pełny identyfikator URI.|  
+|aspNetCompatibilityEnabled|Wartość logiczna wskazująca, czy tryb zgodności ASP.NET został włączony dla bieżącej aplikacji. Wartość domyślna to `false`.<br /><br /> Jeśli ten atrybut ma wartość `true`przepływ żądań do usługi Windows Communication Foundation (WCF) za pośrednictwem potoku HTTP programu ASP.NET i komunikacji za pośrednictwem protokołów innych niż HTTP jest zabronione. Aby uzyskać więcej informacji, zobacz [usługi WCF i platformy ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|Ustawienia minFreeMemoryPercentageToActivateService|Liczba całkowita, która określa minimalną ilość wolnej pamięci, która powinna być dostępna w systemie, w celu aktywowania usługi WCF. **Uwaga:** określania tego atrybutu wraz z częściowa relacja zaufania w pliku web.config, usługi WCF spowoduje <xref:System.Security.SecurityException> po uruchomieniu usługi.|  
+|multipleSiteBindingsEnabled|Wartość logiczna określająca, czy włączono wielokrotne powiązania usługi IIS dla każdej witryny.<br /><br /> Usługi IIS składa się z witryn sieci web, które są kontenerami dla katalogów wirtualnych zawierających aplikacje wirtualne. Za pomocą co najmniej jednego powiązania usługi IIS można uzyskać dostępu do aplikacji w lokacji. Powiązanie z usług IIS oferuje dwa rodzaje informacji: Protokół powiązania i informacje o wiązaniu. Protokół powiązania definiuje schemat, przez który dane są przesyłane, a informacje o wiązaniu są to informacje używane do uzyskania dostępu do witryny. Przykładem Protokół powiązania, które mogą być protokołu HTTP, a informacje o wiązaniu może zawierać adres IP portu nagłówek hosta, itp.<br /><br /> Usługi IIS obsługują określania wielokrotne powiązania usługi IIS dla każdej witryny, co prowadzi do wielu adresów bazowych dla każdego schematu. Jednak usługi Windows Communication Foundation (WCF) hostowanej przez witrynę umożliwia powiązanie z tylko jedną właściwość baseAddress dla każdego schematu.<br /><br /> Aby włączyć wiele powiązań dla każdej witryny usług IIS dla usługi Windows Communication Foundation (WCF), ustaw ten atrybut `true`. Należy zauważyć, że wiele powiązania witryny jest obsługiwana tylko dla protokołu HTTP. Adres punktów końcowych w pliku konfiguracji musi być pełny identyfikator URI.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

@@ -1,11 +1,7 @@
 ---
-title: "Funkcja QualifierSet_BeginEnumeration (niezarządzany wykaz interfejsów API)"
-description: "Funkcja QualifierSet_BeginEnumeration resetuje moduł wyliczający kwalifikatory obiektu."
+title: Funkcja QualifierSet_BeginEnumeration (niezarządzany wykaz interfejsów API)
+description: Funkcja QualifierSet_BeginEnumeration resetuje moduł wyliczający kwalifikatory obiektu.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440dde03f4ed138a33eb6f817723d7c5c74f6d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fac897f743ca452c38282143cdf822b682df1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>Funkcja QualifierSet_BeginEnumeration
 Resetuje moduł wyliczający kwalifikatory obiekt na początek wyliczenia.  
@@ -85,7 +78,7 @@ Flagi, które mogą być przekazywane jako `lEnumFlags` argumentu są zdefiniowa
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

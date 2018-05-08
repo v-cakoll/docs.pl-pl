@@ -1,13 +1,6 @@
 ---
-title: "Porady: wiązanie danych do systemu Windows Presentation Foundation elementów (usługi danych WCF)"
-ms.custom: 
+title: 'Porady: wiązanie danych do systemu Windows Presentation Foundation elementów (usługi danych WCF)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5d8fbd1b6502bc011f78e17a3e9d1c112be73d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da89eebb366cebca9933a30b4753e1fbbe2707c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Porady: wiązanie danych do systemu Windows Presentation Foundation elementów (usługi danych WCF)
 Z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można powiązać Windows Presentation Foundation (WPF) elementów, takich jak <xref:System.Windows.Controls.ListBox>"lub <xref:System.Windows.Controls.ComboBox> na wystąpienie <xref:System.Data.Services.Client.DataServiceCollection%601>, który obsługuje zdarzenia wygenerowane przez formanty, aby zachować <xref:System.Data.Services.Client.DataServiceContext> zsynchronizowany ze zmianami wprowadzone dane w formantach. Aby uzyskać więcej informacji, zobacz [wiązanie danych do kontrolek](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

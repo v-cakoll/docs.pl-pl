@@ -1,23 +1,16 @@
 ---
-title: Plik &#39; &lt;filename&gt;&#39; nie znaleziono
+title: Plik &#39; &lt;filename&gt; &#39; nie znaleziono
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFileSystem_FileNotFound1
 ms.assetid: b45bffc9-5b16-4b9b-a413-98a8d726e226
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3397357853684ab99f182660984cd862bba3a14
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cc157576bbd305f2a1d3dc3bcf396e52da86a4c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="file-39ltfilenamegt39-not-found"></a>Plik &#39; &lt;filename&gt;&#39; nie znaleziono
+# <a name="file-39ltfilenamegt39-not-found"></a>Plik &#39; &lt;filename&gt; &#39; nie znaleziono
 Nazwa pliku jest nieprawidłowa lub plik nie istnieje.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
@@ -25,4 +18,4 @@ Nazwa pliku jest nieprawidłowa lub plik nie istnieje.
 1.  Upewnij się, że nazwa pliku jest poprawna i czy istnieje.  
   
 ## <a name="see-also"></a>Zobacz też  
- [My.Computer.FileSystem —](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+ [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

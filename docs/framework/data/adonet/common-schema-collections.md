@@ -1,26 +1,12 @@
 ---
 title: Typowe kolekcje schematów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fc8b581a127fbef0f32cdee53eaa62d241e4ae31
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-schema-collections"></a>Typowe kolekcje schematów
 Typowe kolekcje schematów są kolekcji schematu, które są implementowane przez każdego z dostawców zarządzane w programie .NET Framework. Można zbadać zarządzanego dostawcy .NET Framework, można ustalić listy kolekcji schematu obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcji obsługiwanych schematu, liczba ograniczeń obsługiwanych przez każdy z nich i części identyfikatora, które korzystają z. Te kolekcje, opis wszystkich wymaganych kolumn. Aby dodać dodatkowe kolumny, jeśli chcą mogą dostawców. Na przykład `SqlClient` i `OracleClient` ParameterName można dodać do kolekcji ograniczeń.  
@@ -51,7 +37,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 |IdentifierPattern|string|Wyrażenie regularne, który jest zgodny z identyfikatorem i ma wartość dopasowania identyfikatora. Na przykład "[A-Za-z0-9_ #$]".|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Wskazuje, czy-cytowane identyfikatory są traktowane jako wielkość liter, czy nie.|  
 |OrderByColumnsInSelect|bool|Określa, czy na liście wyboru musi być kolumn w klauzuli ORDER BY. Wartość true wskazuje, że są one wymagane na liście wybierz wartość false wskazuje, nie są wymagane się na liście wyboru.|  
-|ParameterMarkerFormat|string|Ciąg formatu, który reprezentuje sposób formatowania parametr.<br /><br /> Jeśli nazwane parametry są obsługiwane przez źródło danych, pierwszego symbolu zastępczego w tym ciągu powinna być gdzie powinien być sformatowany nazwę parametru.<br /><br /> Na przykład, jeśli źródło danych oczekuje parametrów o nazwie i jest poprzedzony prefiksem ":" to ": {0}". Podczas formatowania to nazwa parametru "p1" powstałe w ten sposób jest ciąg ": p1".<br /><br /> Jeśli źródło danych oczekuje parametrów się prefiksem "@", ale nazwy już je uwzględnić, będzie to wartość równa "{0}" i wynik formatowania parametr o nazwie "@p1"po prostu byłoby"@p1".<br /><br /> Dla źródeł danych, które nie oczekują nazwane parametry i oczekują użycie "?" Ciąg formatu, który można określić tylko znak "?", który będzie ignorować nazwę parametru. Dla OLE DB zwróconych '?'.|  
+|ParameterMarkerFormat|string|Ciąg formatu, który reprezentuje sposób formatowania parametr.<br /><br /> Jeśli nazwane parametry są obsługiwane przez źródło danych, pierwszego symbolu zastępczego w tym ciągu powinna być gdzie powinien być sformatowany nazwę parametru.<br /><br /> Na przykład, jeśli źródło danych oczekuje parametrów o nazwie i jest poprzedzony prefiksem ":" to ":{0}". Podczas formatowania to nazwa parametru "p1" powstałe w ten sposób jest ciąg ": p1".<br /><br /> Jeśli źródło danych oczekuje parametrów się prefiksem "@", ale nazwy już je uwzględnić, będzie to "{0}" i wynik formatowania parametr o nazwie "@p1"po prostu może być"@p1".<br /><br /> Dla źródeł danych, które nie oczekują nazwane parametry i oczekują użycie "?" Ciąg formatu, który można określić tylko znak "?", który będzie ignorować nazwę parametru. Dla OLE DB zwróconych '?'.|  
 |ParameterMarkerPattern|string|Wyrażenie regularne dopasowuje znacznika parametru. Jeśli będzie mieć wartość dopasowania nazwę parametru.<br /><br /> Na przykład, jeśli nazwane parametry są obsługiwane przez "@" wiodącego znak, który zostanie uwzględniony w nazwie parametru to: "(@[A-Za-z0-9_ ##] *)".<br /><br /> Jednak jeśli nazwane parametry są obsługiwane przez ":" jak wiodącego znaków i nie jest częścią nazwy parametru, to: ": ([A-Za-z0-9_$ #]\*)".<br /><br /> Oczywiście jeśli źródło danych nie obsługuje parametrów nazwanych, po prostu to "?".|  
 |ParameterNameMaxLength|int|Maksymalna długość nazwy parametru w znakach. Visual Studio oczekuje, że jeśli nazwy parametrów są obsługiwane, wartość minimalna długość jest 30 znaków.<br /><br /> Jeśli źródło danych nie obsługuje parametrów nazwanych, ta właściwość zwraca zero.|  
 |ParameterNamePattern|string|Wyrażenie regularne pasuje do nazw poprawny parametr. Różnych źródeł danych mają różne zasady dotyczące znaków, które mogą być używane dla nazw parametrów.<br /><br /> Visual Studio oczekuje, że jeśli nazwy parametrów są obsługiwane, znaki "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" są obsługiwane minimalnego zestawu znaków, które są prawidłowe dla nazw parametrów.|  
@@ -69,8 +55,8 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 |TypeName|string|Nazwa typu danych specyficznych dla dostawcy.|  
 |ProviderDbType|int|Wartość typu specyficznych dla dostawcy, które mają być używane podczas określania typu parametru. Na przykład SqlDbType.Money lub OracleType.Blob.|  
 |ColumnSize|long|Długość nieliczbowy kolumna lub parametr odwołuje się do maksymalnej lub długość dla tego typu zdefiniowano przez dostawcę.<br /><br /> Dla danych znakowych jest maksymalną lub zdefiniowana długość w jednostkach, zdefiniowany przez źródło danych. Oracle korzysta z koncepcji określania długości, a następnie określając rozmiar rzeczywisty magazyn dla niektórych typów danych znakowych. To definiuje tylko w jednostkach dla programu Oracle.<br /><br /> Dla typów danych daty i godziny to długość ciągu reprezentującego (przy założeniu dozwolonych precyzja maksymalna części ułamkowych części sekundy).<br /><br /> Jeśli typ danych liczbowych, jest górna granica precyzja maksymalna typu danych.|  
-|CreateFormat|string|Ciąg formatu, który reprezentuje jak dodać tę kolumnę do instrukcji definicji danych, takie jak CREATE TABLE. Każdy element tablicy tworzenie powinny być reprezentowane przez "parametr znacznik" w ciągu formatu.<br /><br /> Na przykład SQL typu danych dziesiętnych musi dokładności i skali. Ciąg formatu, który będzie w tym przypadku "DECIMAL({0},{1})".|  
-|CreateParameters|string|Parametry tworzenia, które można określić podczas tworzenia tego typu danych kolumny. Każdy parametr tworzenia znajduje się w ciągu, rozdzielone przecinkami w kolejności, które mają być dostarczone.<br /><br /> Na przykład SQL typu danych dziesiętnych musi dokładności i skali. W takim przypadku parametry tworzenia powinny zawierać ciąg "dokładność, skala".<br /><br /> W poleceniu tekstowym, aby utworzyć kolumnę DZIESIĘTNĄ z 10 dokładności i skali 2, wartość kolumny CreateFormat może być DECIMAL({0},{1}) "i specyfikacja typu pełną byłaby DECIMAL(10,2).|  
+|CreateFormat|string|Ciąg formatu, który reprezentuje jak dodać tę kolumnę do instrukcji definicji danych, takie jak CREATE TABLE. Każdy element tablicy tworzenie powinny być reprezentowane przez "parametr znacznik" w ciągu formatu.<br /><br /> Na przykład SQL typu danych dziesiętnych musi dokładności i skali. W takim wypadku byłoby ciąg formatu "DECIMAL ({0},{1})".|  
+|CreateParameters|string|Parametry tworzenia, które można określić podczas tworzenia tego typu danych kolumny. Każdy parametr tworzenia znajduje się w ciągu, rozdzielone przecinkami w kolejności, które mają być dostarczone.<br /><br /> Na przykład SQL typu danych dziesiętnych musi dokładności i skali. W takim przypadku parametry tworzenia powinny zawierać ciąg "dokładność, skala".<br /><br /> W poleceniu tekstowym, aby utworzyć kolumnę DZIESIĘTNĄ z 10 dokładności i skali 2, wartość kolumny CreateFormat może być liczbą DZIESIĘTNĄ ({0},{1}) "i specyfikacja typu pełną byłaby DECIMAL(10,2).|  
 |Typ danych|string|Nazwa typu .NET Framework typu danych.|  
 |IsAutoincrementable|bool|TRUE — wartości tego typu danych może być zwiększany automatycznie.<br /><br /> FALSE — wartości tego typu danych nie może być zwiększany automatycznie.<br /><br /> Należy pamiętać, że to jedynie wskazuje, czy kolumny tego typu danych mogą być automatycznie zwiększany nie że wszystkie kolumny tego typu są automatycznie przyrostową.|  
 |IsBestMatch|bool|TRUE — typ danych jest najlepszego dopasowania wszystkich typów danych w magazynie danych i typ danych .NET Framework, określony przez wartość w kolumnie typu danych.<br /><br /> FALSE — typ danych nie jest najlepsze dopasowanie.<br /><br /> Dla każdego zestawu wierszy, w których wartość elementu DataType kolumny jest taka sama kolumna IsBestMatch ma ustawioną wartość true tylko w jednym wierszu.|  
@@ -78,7 +64,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 |IsFixedLength|bool|TRUE — kolumny tego typu danych utworzone za pomocą języka definicji danych (DDL) będą miały o stałej długości.<br /><br /> FALSE — będzie kolumny tego typu danych utworzone przy użyciu kodu DDL o zmiennej długości.<br /><br /> DBNull.Value—It nie jest znany, czy dostawca przypisze to pole z kolumną o stałej długości lub o zmiennej długości.|  
 |IsFixedPrecisionScale|bool|TRUE — typ danych ma stały precyzję i skalę.<br /><br /> FALSE — typ danych nie ma stałej precyzję i skalę.|  
 |IsLong|bool|TRUE — typ danych zawiera bardzo dużo danych. Definicja bardzo dużo danych jest specyficznych dla dostawcy.<br /><br /> FALSE — typ danych nie zawiera bardzo dużo danych.|  
-|IsNullable|bool|TRUE — typ danych dopuszcza wartość null.<br /><br /> FALSE — typ danych nie jest dopuszczalna.<br /><br /> DBNull.Value—It nie jest znany, czy typ danych dopuszcza wartość null.|  
+|isNullable|bool|TRUE — typ danych dopuszcza wartość null.<br /><br /> FALSE — typ danych nie jest dopuszczalna.<br /><br /> DBNull.Value—It nie jest znany, czy typ danych dopuszcza wartość null.|  
 |IsSearchable|bool|TRUE — typ danych może służyć w klauzuli WHERE z dowolnego operatora except w predykacie LIKE.<br /><br /> FALSE — typ danych nie można używać w klauzuli WHERE z dowolnego operatora except w predykacie LIKE.|  
 |IsSearchableWithLike|bool|TRUE — typu danych można używać z klauzulą LIKE<br /><br /> FALSE — typ danych nie można używać z klauzulą LIKE.|  
 |IsUnsigned|bool|TRUE — typ danych nie jest podpisany.<br /><br /> FALSE — typ danych jest podpisany.<br /><br /> DBNull.Value—Not dla typu danych.|  

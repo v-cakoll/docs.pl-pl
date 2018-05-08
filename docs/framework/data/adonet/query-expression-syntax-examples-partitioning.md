@@ -1,27 +1,15 @@
 ---
-title: "Przykłady składni wyrażeń zapytania: Partycjonowanie (LINQ do DataSet)"
-ms.custom: 
+title: 'Przykłady składni wyrażeń zapytania: Partycjonowanie (LINQ do DataSet)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 25ff52a29843b2e169c9033ee1907eb4084b0e71
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 118174f2c303ccfb67d49ca1f338dcff36804a26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Partycjonowanie (LINQ do DataSet)
 Przykłady w tym temacie przedstawiają sposób użycia <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metod do badania <xref:System.Data.DataSet> przy użyciu składni wyrażenia zapytania.  

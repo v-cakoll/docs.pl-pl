@@ -1,28 +1,19 @@
 ---
-title: "Implementacja wzorca formantu wartości automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Implementacja wzorca formantu wartości automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Value
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5f74b103092032e35cce47d893f9e3b6e9d7727b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b9c748ccc695ae67306c293c10248c4f3f22c043
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementacja wzorca kontrolki wartości automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -45,9 +36,9 @@ Przykład edytowalny element listy
   
 -   Aby pobrać zawartość tekstową kontrolkę edycji wiele wierszy, musi implementować formantu <xref:System.Windows.Automation.Provider.ITextProvider>. Jednak <xref:System.Windows.Automation.Provider.ITextProvider> nie obsługuje ustawiania wartości formantu.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider>nie obsługuje pobierania formatowania informacji lub podciągu wartości. Implementowanie <xref:System.Windows.Automation.Provider.ITextProvider> w tych scenariuszach.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> nie obsługuje pobierania formatowania informacji lub podciągu wartości. Implementowanie <xref:System.Windows.Automation.Provider.ITextProvider> w tych scenariuszach.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider>musi być implementowana przez formanty takie jak **próbnika kolorów** formant wyboru z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (ilustrowane poniżej), który obsługuje ciąg mapowanie między wartości koloru (na przykład "żółty") i równoważne wewnętrzny[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]struktury.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> musi być implementowana przez formanty takie jak **próbnika kolorów** formant wyboru z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (ilustrowane poniżej), który obsługuje ciąg mapowanie między wartości koloru (na przykład "żółty") i równoważne wewnętrzny[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]struktury.  
   
  ![Selektor kolorów z wyróżnionym żółty. ] (../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Przykładowe mapowanie ciągu próbnika kolorów  

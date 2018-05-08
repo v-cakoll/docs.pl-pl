@@ -1,10 +1,6 @@
 ---
 title: Wdrażanie aplikacji międzyoperacyjnych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
 - strong-named assemblies, interop applications
@@ -20,14 +16,11 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8271a30d2258214defd5a15816813875cf594c8b
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: d4689c52dee84e2a310f0ddb39d0874c273081bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-an-interop-application"></a>Wdrażanie aplikacji międzyoperacyjnych
 Międzyoperacyjne aplikacji zwykle obejmuje zestaw klienta .NET, co najmniej jeden zestawy międzyoperacyjne reprezentujących różne COM biblioteki typów i co najmniej jeden zarejestrowany składników COM. Visual Studio i [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] zapewniają narzędzia do importowania i skonwertować biblioteki typów na zestaw międzyoperacyjny zgodnie z opisem w [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md). Istnieją dwa sposoby wdrażania aplikacji międzyoperacyjnych:  

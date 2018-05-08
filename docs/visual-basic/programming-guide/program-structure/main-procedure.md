@@ -1,13 +1,6 @@
 ---
-title: "Procedura główna w Visual Basic"
-ms.custom: 
+title: Procedura główna w Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,19 +8,16 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedura główna w Visual Basic
 Każda aplikacja Visual Basic musi zawierać wywołuje procedurę `Main`. Ta procedura służy jako początkowy punkt i ogólnej kontroli aplikacji. Wywołania .NET Framework z `Main` procedury po załadowaniu aplikacji i jest gotowy do przekazania do formantu. Jeśli tworzysz aplikacji formularzy systemu Windows, należy napisać `Main` procedury dla aplikacji działających na ich własnych.  
   
- `Main`zawiera kod, który jest uruchamiany pierwszy. W `Main`, można określić postać, która ma być załadowany najpierw, po uruchomieniu programu, dowiedzieć się, czy kopia aplikacji już działa w systemie, ustanowić zestaw zmiennych dla aplikacji lub otworzyć bazy danych, która wymaga aplikacji.  
+ `Main` zawiera kod, który jest uruchamiany pierwszy. W `Main`, można określić postać, która ma być załadowany najpierw, po uruchomieniu programu, dowiedzieć się, czy kopia aplikacji już działa w systemie, ustanowić zestaw zmiennych dla aplikacji lub otworzyć bazy danych, która wymaga aplikacji.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Wymagania dotyczące procedury głównej  
  Plik, który jest uruchamiany na jego własnej (zwykle z rozszerzeniem .exe) musi zawierać `Main` procedury. Nie działa w jego własnej biblioteki (na przykład z rozszerzeniem dll) i nie wymaga `Main` procedury. Wymagania dla różnych typów projektów można utworzyć są następujące:  
@@ -56,7 +46,7 @@ Każda aplikacja Visual Basic musi zawierać wywołuje procedurę `Main`. Ta pro
     End Module  
     ```  
   
--   `Main`można także wrócić `Integer` wartość, która korzysta z systemu operacyjnego jako kod zakończenia programu do. Inne programy można przetestować tego kodu, sprawdzając wartość ERRORLEVEL systemu Windows. Aby przywrócić kod zakończenia, należy zadeklarować `Main` jako `Function` procedury zamiast `Sub` procedury.  
+-   `Main` można także wrócić `Integer` wartość, która korzysta z systemu operacyjnego jako kod zakończenia programu do. Inne programy można przetestować tego kodu, sprawdzając wartość ERRORLEVEL systemu Windows. Aby przywrócić kod zakończenia, należy zadeklarować `Main` jako `Function` procedury zamiast `Sub` procedury.  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ Każda aplikacja Visual Basic musi zawierać wywołuje procedurę `Main`. Ta pro
     End Module  
     ```  
   
--   `Main`możliwe jest również `String` tablic jako argumentu. Każdy ciąg w tablicy zawiera jeden z argumentów wiersza polecenia używane do wywołania programu. Można wykonać różne akcje zależnie od ich wartości.  
+-   `Main` możliwe jest również `String` tablic jako argumentu. Każdy ciąg w tablicy zawiera jeden z argumentów wiersza polecenia używane do wywołania programu. Można wykonać różne akcje zależnie od ich wartości.  
   
     ```  
     Module mainModule  

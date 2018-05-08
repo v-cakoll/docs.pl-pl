@@ -1,31 +1,19 @@
 ---
-title: "Informacje o kodzie zarządzanym GDI+"
-ms.custom: 
+title: Informacje o kodzie zarządzanym GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI+, about GDI+
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 913654b98eb8bf72fe43b744886a28e0f675a5c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-gdi-managed-code"></a>Informacje o kodzie zarządzanym GDI+
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]jest to część systemu operacyjnego grafiki wektorowej dwuwymiarowa, przetwarzanie obrazu i typografii. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]zwiększa na [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (graficzny interfejs urządzenia dołączone do wcześniejszych wersji systemu Windows) przez dodawanie nowych funkcji i optymalizowanie istniejące funkcje.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest to część systemu operacyjnego grafiki wektorowej dwuwymiarowa, przetwarzanie obrazu i typografii. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zwiększa na [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (graficzny interfejs urządzenia dołączone do wcześniejszych wersji systemu Windows) przez dodawanie nowych funkcji i optymalizowanie istniejące funkcje.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zarządzanej klasy interfejsu (zestaw otoki) jest częścią [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], środowisko tworzenie, wdrażanie i uruchamianie usług XML sieci Web i inne aplikacje.  
   

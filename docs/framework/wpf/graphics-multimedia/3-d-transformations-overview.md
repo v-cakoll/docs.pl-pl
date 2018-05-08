@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Przekształcenia 3-D"
-ms.custom: 
+title: Przegląd Przekształcenia 3-D
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0fb859905327b30c0ea509e5d07072b81dcf30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-transformations-overview"></a>Przegląd Przekształcenia 3-D
 W tym temacie opisano sposób stosowania przekształcenia do modeli 3-w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu grafiki. Przekształcenia umożliwiają deweloperom położenia, zmienianie rozmiaru i zmienić orientację modeli bez zmiany podstawowego wartości, które je zdefiniować.  
@@ -49,7 +37,7 @@ Porównanie współrzędnych
 ## <a name="translation-transformations"></a>Przekształcenia tłumaczenia  
  3-przekształcenia dziedziczyć abstrakcyjna klasa podstawowa <xref:System.Windows.Media.Media3D.Transform3D>; należą do klasy affine — przekształcenia <xref:System.Windows.Media.Media3D.TranslateTransform3D>, <xref:System.Windows.Media.Media3D.ScaleTransform3D>, i <xref:System.Windows.Media.Media3D.RotateTransform3D>. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3-w systemie są także <xref:System.Windows.Media.Media3D.MatrixTransform3D> klasy, która pozwala określić przekształcenia w bardziej zwięzły operacji macierzy.  
   
- <xref:System.Windows.Media.Media3D.TranslateTransform3D>Przenosi wszystkie punkty w Model3D w kierunku przesunięcia wektora z <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, i <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> właściwości. Na przykład mając jednego wierzchołka modułu w (2,2,2), przesunięcia wektora (0,1.6,1) przeniosłaby tego wierzchołków (2,2,2) do (2,3.6,3). Wierzchołki modułu jest nadal miejsca (2,2,2) w modelu, ale teraz miejsca modelu została zmieniona jego relacji przestrzeni świata tak, aby miejsca (2,2,2) w modelu (2,3.6,3) w przestrzeni świata.  
+ <xref:System.Windows.Media.Media3D.TranslateTransform3D> Przenosi wszystkie punkty w Model3D w kierunku przesunięcia wektora z <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, i <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> właściwości. Na przykład mając jednego wierzchołka modułu w (2,2,2), przesunięcia wektora (0,1.6,1) przeniosłaby tego wierzchołków (2,2,2) do (2,3.6,3). Wierzchołki modułu jest nadal miejsca (2,2,2) w modelu, ale teraz miejsca modelu została zmieniona jego relacji przestrzeni świata tak, aby miejsca (2,2,2) w modelu (2,3.6,3) w przestrzeni świata.  
   
  ![Rysunek tłumaczenia](../../../../docs/framework/wpf/graphics-multimedia/media/transforms-translate.png "tłumaczenie transformacji")  
 Tłumaczenie z przesunięciem  
@@ -59,7 +47,7 @@ Tłumaczenie z przesunięciem
  [!code-xaml[animation3dgallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="scale-transformations"></a>Przekształcenia skali  
- <xref:System.Windows.Media.Media3D.ScaleTransform3D>zmiany skali modelu wektor określona Skala odwołaniem do punktu centralnego. Określ skalę uniform skaluje modelu przez tę samą wartość w osi X, Y i Z, aby zmienić rozmiar modelu proporcjonalnie. Na przykład ustawienie przekształcenia <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, i <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> właściwości 0,5 połowy rozmiar modelu; ustawienie tej samej właściwości 2 podwaja jego skali w wszystkie trzy osie.  
+ <xref:System.Windows.Media.Media3D.ScaleTransform3D> zmiany skali modelu wektor określona Skala odwołaniem do punktu centralnego. Określ skalę uniform skaluje modelu przez tę samą wartość w osi X, Y i Z, aby zmienić rozmiar modelu proporcjonalnie. Na przykład ustawienie przekształcenia <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, i <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> właściwości 0,5 połowy rozmiar modelu; ustawienie tej samej właściwości 2 podwaja jego skali w wszystkie trzy osie.  
   
  ![Jednolite obiekt ScaleTransform3D](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 Przykład ScaleVector  
@@ -87,7 +75,7 @@ Obrót o nowe Centrum określony
   
  Aby Obróć model "w miejscu", należy określić center rzeczywiste modelu jako środek obrotu. Ponieważ geometrii zwykle jest modelowana o punkt początkowy, najpierw rozmiary modelu (skalowanie go), a następnie ustawienie orientacji (obrót) i finally przenoszenia go do odpowiedniej lokalizacji (oczekiwany wynik zestaw przekształcenia najczęściej można uzyskać Translacja go).  
   
- ![Obrót o 60 stopni w x &#45; t &#45; i osie](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
+ ![Obrót o 60 stopni w x&#45; i y&#45;osi](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
 Przykład obrotu  
   
  Obrotów kąt osi działa dobrze w przypadku przekształcenia statycznego i niektórych animacji. Jednak wziąć pod uwagę obracanie model sześcianu 60 stopni wokół osi X, a następnie 45 stopni wokół osi Z. Można opisać tej transformacji jako dwa osobne affine — przekształcenia lub macierzy. Jednak może być trudne do animowania bezproblemowe obracanie, zdefiniowane w ten sposób. Mimo że początkowy i końcowy pozycji modelu obliczone przez albo podejścia są takie same, pośrednie stanowiska podjęte przez model pewności praktyce. Quaternions reprezentuje alternatywny sposób obliczeniowe interpolacji między rozpoczęcia i zakończenia obrotu.  

@@ -1,24 +1,17 @@
 ---
-title: "char (odwołanie w C#)"
+title: char (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - char
 - char_CSharpKeyword
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 41f672e9b12481fa5cce78015e95d2c5245a26db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 67efc4b9600d7d722ebbef83819e143506a93c26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="char-c-reference"></a>char (odwołanie w C#)
 `char` — Słowo kluczowe służy do deklarowania wystąpienia <xref:System.Char?displayProperty=nameWithType> struktury, który używa programu .NET Framework do reprezentowania znaku Unicode. Wartość `Char` obiektu jest wartością numeryczną 16-bitowych (numer).  
@@ -51,5 +44,5 @@ ms.lasthandoff: 11/21/2017
  [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
- [Typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md)  
+ [Typy dopuszczające wartości null](../../../csharp/programming-guide/nullable-types/index.md)  
  [Ciągi](../../../csharp/programming-guide/strings/index.md)

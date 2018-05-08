@@ -1,11 +1,7 @@
 ---
-title: "Funkcja ExecNotificationQueryWmi (niezarządzany wykaz interfejsów API)"
-description: "Funkcja ExecNotificationQueryWmi wykonuje zapytanie w celu odbierania zdarzeń."
+title: Funkcja ExecNotificationQueryWmi (niezarządzany wykaz interfejsów API)
+description: Funkcja ExecNotificationQueryWmi wykonuje zapytanie w celu odbierania zdarzeń.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>Funkcja ExecNotificationQueryWmi
 Wykonuje zapytanie w celu odbierania zdarzeń. Wywołanie zwraca natychmiast, a obiekt wywołujący można sondować zwrócony modułu wyliczającego dla zdarzeń przychodzących. Zwalnianie zwrócony modułu wyliczającego anuluje zapytania.  
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] Poziom autoryzacji.
 
-`impLevel`[in] Poziom personifikacji.
+`impLevel` [in] Poziom personifikacji.
 
 `pCurrentNamespace`   
 [in] Wskaźnik do [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) obiekt, który reprezentuje bieżącej przestrzeni nazw.
@@ -127,7 +120,7 @@ Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje 
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

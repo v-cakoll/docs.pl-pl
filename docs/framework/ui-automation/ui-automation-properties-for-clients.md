@@ -1,13 +1,6 @@
 ---
-title: "Właściwości automatyzacji interfejsu użytkownika dla klientów"
-ms.custom: 
+title: Właściwości automatyzacji interfejsu użytkownika dla klientów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fdd748da4bb414726e2eae88dcab59cf60259a13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ae453a8b82ea78acfb0dc423bce546324f901f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-properties-for-clients"></a>Właściwości automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
@@ -36,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
  Wzorce formantu ma również właściwości. Właściwości wzorców formantu są specyficzne dla wzorca. Na przykład <xref:System.Windows.Automation.ScrollPattern> ma właściwości, które umożliwiają aplikacji klienckiej dowiedzieć się, czy okno jest przewijanej w poziomie czy w pionie i jakie są bieżącymi rozmiarami widoku i pozycji przewijania. Wzorce formantu ujawnia ich właściwości przez strukturę; na przykład <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]właściwości są tylko do odczytu. Aby ustawić właściwości formantu, należy użyć metody wzorzec właściwej opcji kontroli. Na przykład użyć <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> w celu zmiany wartości pozycji przewijania okna.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości są tylko do odczytu. Aby ustawić właściwości formantu, należy użyć metody wzorzec właściwej opcji kontroli. Na przykład użyć <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> w celu zmiany wartości pozycji przewijania okna.  
   
  Aby zwiększyć wydajność, wartości właściwości formantów i wzorce kontrolki mogą być buforowane podczas <xref:System.Windows.Automation.AutomationElement> obiekty są pobierane. Aby uzyskać więcej informacji, zobacz [buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   

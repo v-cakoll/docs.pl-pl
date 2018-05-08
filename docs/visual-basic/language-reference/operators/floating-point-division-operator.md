@@ -1,12 +1,6 @@
 ---
-title: "/ — Operator (Visual Basic)"
+title: / — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/ — Operator (Visual Basic)
 Dzieli dwie liczby i zwraca wynik zmiennoprzecinkowy.  
@@ -42,10 +33,10 @@ expression1 / expression2
   
 ## <a name="parts"></a>Części  
  `expression1`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagana. Dowolne wyrażenie liczbowe.  
   
  `expression2`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagana. Dowolne wyrażenie liczbowe.  
   
 ## <a name="supported-types"></a>Obsługiwane typy  
  Wszystkie typy liczbowe w tym typy bez znaku i liczb zmiennoprzecinkowych i `Decimal`.  
@@ -75,8 +66,8 @@ expression1 / expression2
 |Argument operacji typy danych|Zachowanie Jeśli `expression2` wynosi zero|  
 |------------------------|---------------------------------------|  
 |Zmiennoprzecinkowe (`Single` lub `Double`)|Zwraca infinity (<xref:System.Double.PositiveInfinity> lub <xref:System.Double.NegativeInfinity>), lub <xref:System.Double.NaN> (nie liczba) Jeśli `expression1` również wynosi zero|  
-|`Decimal`|Zgłasza wyjątek<xref:System.DivideByZeroException>|  
-|Typy całkowite (podpisane lub bez znaku)|Próba konwersji do typu całkowitego zgłasza <xref:System.OverflowException> ponieważ typy całkowite nie akceptuje <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, lub<xref:System.Double.NaN>|  
+|`Decimal`|Zgłasza wyjątek <xref:System.DivideByZeroException>|  
+|Typy całkowite (podpisane lub bez znaku)|Próba konwersji do typu całkowitego zgłasza <xref:System.OverflowException> ponieważ typy całkowite nie akceptuje <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, lub <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  `/` Operator może być *przeciążony*, co oznacza, że klasy lub struktury ponownie zdefiniować jego zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla klasy lub struktury, upewnij się, że rozumiesz ponownie zdefiniowany zachowania. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

@@ -1,29 +1,17 @@
 ---
-title: "Określanie niestandardowego algorytmu kryptograficznego"
-ms.custom: 
+title: Określanie niestandardowego algorytmu kryptograficznego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Określanie niestandardowego algorytmu kryptograficznego
 Usługi WCF pozwala określić niestandardowy algorytm kryptograficzny do użycia podczas szyfrowania danych lub obliczeniowych podpisów cyfrowych. Można to zrobić przez następujące kroki:  
   
-1.  Klasa wyprowadzona z<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1.  Klasa wyprowadzona z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  Rejestrowanie algorytmu  
   
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- W sekcji <`cryptoClasses`> elementu tworzy mapowanie między SHA256CryptoServiceProvider i alias "SHA256CSP". <`nameEntry`> Elementu tworzy mapowanie między alias "SHA256CSP" i określonego adresu URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).  
+ W sekcji <`cryptoClasses`> elementu tworzy mapowanie między SHA256CryptoServiceProvider i alias "SHA256CSP". <`nameEntry`> Elementu tworzy mapowanie między alias "SHA256CSP" i określonego adresu URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Aby zarejestrować niestandardowy algorytm używany kod <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> metody. Ta metoda tworzy oba mapowania. Poniższy przykład przedstawia sposób wywołania tej metody:  
   

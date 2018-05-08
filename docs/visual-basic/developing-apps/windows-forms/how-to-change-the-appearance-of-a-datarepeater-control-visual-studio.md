@@ -1,10 +1,6 @@
 ---
-title: "Porady: zmienianie wyglądu formantu DataRepeater (Visual Studio)"
+title: 'Porady: zmienianie wyglądu formantu DataRepeater (Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, customizing
 - DataRepeater, changing run time appearance
 ms.assetid: 2af6dfce-760b-489e-b863-8da967f315c3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 585ff4c942185f3199fe6e9e47a4ebd9f1f0a478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9863d9343ffcecc1e4aae7f6bc16dae39ef76385
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>Porady: zmienianie wyglądu formantu DataRepeater (Visual Studio)
 Można zmienić wygląd <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu w czasie projektowania, ustawiając właściwości lub w czasie wykonywania Obsługa <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> zdarzeń.  
@@ -54,8 +47,8 @@ Można zmienić wygląd <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> for
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>  
- [Wprowadzenie do formantu DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Rozwiązywanie problemów z formantem DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
- [Porady: wyświetlanie powiązanych danych w formancie Datarepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
- [Porady: wyświetlanie formantów niepowiązanych w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [Porady: wyświetlanie nagłówków elementów w formancie Datarepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
+ [Wprowadzenie do kontrolki DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Rozwiązywanie problemów z kontrolką DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyświetlanie powiązanych danych w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyświetlanie niepowiązanych kontrolek w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyświetlanie nagłówków elementów w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)

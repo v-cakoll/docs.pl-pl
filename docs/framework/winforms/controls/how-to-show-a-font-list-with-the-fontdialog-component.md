@@ -1,14 +1,6 @@
 ---
 title: 'Porady: pokazywanie listy czcionek przy użyciu składnika FontDialog'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +13,11 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b8efd576ac33005694ae11ea0530f86673ee858
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fe291df1648da5002ce3173a68208bbad659705d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Porady: pokazywanie listy czcionek przy użyciu składnika FontDialog
 [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) składnika umożliwia użytkownikom wybierz czcionkę, a także zmienić aspektów wyświetlanej takie jak wagi i rozmiaru.  

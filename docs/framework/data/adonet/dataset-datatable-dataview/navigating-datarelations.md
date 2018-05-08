@@ -1,27 +1,15 @@
 ---
 title: Nawigowanie po DataRelations
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 84272a24dde909205d01f4ced5a57450c5fdbd7f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c46007fb86a76405fd99d6e943779238d6885aa8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="navigating-datarelations"></a>Nawigowanie po DataRelations
 Jeden z podstawowych funkcji <xref:System.Data.DataRelation> jest umożliwienie nawigacji z jednego <xref:System.Data.DataTable> do drugiej w ramach <xref:System.Data.DataSet>. Dzięki temu można pobrać wszystkich odnośnych <xref:System.Data.DataRow> obiektów w jednym **DataTable** , gdy jeden **DataRow** z powiązanego **DataTable**. Na przykład po ustanowieniu **DataRelation** między spisu klientów i tabela zamówienia, możesz pobrać wszystkie wiersze kolejności dla wiersza określonego klienta przy użyciu **GetChildRows**.  

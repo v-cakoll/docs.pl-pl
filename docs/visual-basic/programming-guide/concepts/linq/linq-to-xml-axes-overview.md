@@ -1,22 +1,12 @@
 ---
-title: "LINQ do XML-Przegląd osie (Visual Basic)"
-ms.custom: 
+title: LINQ do XML-Przegląd osie (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae01d8c7257eb03d091a9e249475ef46a67a1c44
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9164dcff118c5fa3d15a5fe673b2174a4002e9d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ do XML-Przegląd osie (Visual Basic)
 Po drzewo XML utworzony lub załadowany dokumentu XML na drzewo XML można wykonać zapytanie, aby znaleźć elementy i atrybuty lub pobrać wartości. Pobrać kolekcji za pomocą *metody osi*, nazywany również *osi*. Niektóre z osi są metod w <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klas, które zwraca <xref:System.Collections.Generic.IEnumerable%601> kolekcji. Niektóre z osi są metody rozszerzenia w <xref:System.Xml.Linq.Extensions> klasy. Osie, które są wdrażane jako metody rozszerzenia działać w kolekcjach, a następnie wróć kolekcji.  
@@ -25,7 +15,7 @@ Po drzewo XML utworzony lub załadowany dokumentu XML na drzewo XML można wykon
   
  Oprócz metody osi, które zwraca kolekcje, istnieją dwie metody więcej, które będą najczęściej używane w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania. <xref:System.Xml.Linq.XContainer.Element%2A> Metoda zwraca pojedynczą <xref:System.Xml.Linq.XElement>. <xref:System.Xml.Linq.XElement.Attribute%2A> Metoda zwraca pojedynczą <xref:System.Xml.Linq.XAttribute>.  
   
- Dla wielu celów [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy zapewniają najbardziej wydajny sposób do badania drzewa, wyodrębniania danych i przekształcenie go. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]zapytania działać na obiekty, które implementują <xref:System.Collections.Generic.IEnumerable%601>i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] osi powrotu <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> kolekcje, i <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XAttribute> kolekcji. Należy tych kolekcji do wykonywania zapytań.  
+ Dla wielu celów [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy zapewniają najbardziej wydajny sposób do badania drzewa, wyodrębniania danych i przekształcenie go. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania działać na obiekty, które implementują <xref:System.Collections.Generic.IEnumerable%601>i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] osi powrotu <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> kolekcje, i <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XAttribute> kolekcji. Należy tych kolekcji do wykonywania zapytań.  
   
  Oprócz metody osi pobrać kolekcji elementów i atrybutów istnieją metody osi, które umożliwiają Iterowanie drzewa szczegółowo. Na przykład zamiast zajmowanie elementów i atrybutów, można pracować z węzłami drzewa. Węzły są bardziej precyzyjną poziom szczegółowości niż elementów i atrybutów. Podczas pracy z węzłów, można sprawdzić komentarze XML, węzły tekstowe przetwarzania instrukcje i inne. Ta funkcja jest ważne, na przykład do osoby, która zapisuje edytorze tekstów i chce zapisywanie dokumentów w formacie XML. Jednak większość programistów XML są przede wszystkim elementy, atrybuty i wartości.  
   

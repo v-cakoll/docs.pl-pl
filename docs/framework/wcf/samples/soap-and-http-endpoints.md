@@ -1,24 +1,12 @@
 ---
-title: "Punkty końcowe protokołów SOAP i HTTP"
-ms.custom: 
+title: Punkty końcowe protokołów SOAP i HTTP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef5059a886012c00d3d33327baeaae49a9d5b54c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="soap-and-http-endpoints"></a>Punkty końcowe protokołów SOAP i HTTP
 W tym przykładzie przedstawiono sposób implementacji usługi opartego na protokole RPC i udostępnić go w formacie protokołu SOAP i formatowanie "Zwykły starego pliku XML" (POX) przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania sieci Web. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) przykładowa, aby uzyskać więcej informacji o powiązanie HTTP dla usługi. Ten przykład dotyczy przede wszystkim szczegółowe informacje, które odnoszą się do udostępnianie tych samych usług za pośrednictwem protokołu SOAP i HTTP przy użyciu różnych powiązań.  
@@ -72,6 +60,6 @@ W tym przykładzie przedstawiono sposób implementacji usługi opartego na proto
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`

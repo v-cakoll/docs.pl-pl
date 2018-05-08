@@ -1,14 +1,6 @@
 ---
 title: 'Instrukcje: Tworzenie tokenu niestandardowego'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,22 +10,16 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Instrukcje: Tworzenie tokenu niestandardowego
 W tym temacie przedstawiono sposób tworzenia tokenu zabezpieczeń niestandardowych przy użyciu <xref:System.IdentityModel.Tokens.SecurityToken> klasy i jak zintegrować ją z dostawcy tokenów zabezpieczających niestandardowych i wystawcy uwierzytelnienia. Pełny przykład kodu dla [niestandardowy Token](../../../../docs/framework/wcf/samples/custom-token.md) próbki.  
   
- A *tokenu zabezpieczającego* jest zasadniczo element XML, który jest używany przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] framework zabezpieczeń do reprezentowania oświadczenia dotyczące nadawcy wiadomości protokołu SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funkcja zabezpieczenia oferuje różne tokenów do tryby uwierzytelniania dostarczane przez system. Przykłady obejmują tokenu zabezpieczającego certyfikatu X.509 reprezentowany przez <xref:System.IdentityModel.Tokens.X509SecurityToken> klasy lub tokenu zabezpieczającego nazwy użytkownika reprezentowanego przez <xref:System.IdentityModel.Tokens.UserNameSecurityToken> klasy.  
+ A *tokenu zabezpieczającego* jest zasadniczo element XML, który jest używany przez strukturę zabezpieczeń systemu Windows Communication Foundation (WCF) do reprezentowania oświadczenia dotyczące nadawcy wiadomości protokołu SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funkcja zabezpieczenia oferuje różne tokenów do tryby uwierzytelniania dostarczane przez system. Przykłady obejmują tokenu zabezpieczającego certyfikatu X.509 reprezentowany przez <xref:System.IdentityModel.Tokens.X509SecurityToken> klasy lub tokenu zabezpieczającego nazwy użytkownika reprezentowanego przez <xref:System.IdentityModel.Tokens.UserNameSecurityToken> klasy.  
   
  Czasami tryb uwierzytelniania lub poświadczenia nie jest obsługiwany przez udostępnionych typów. W takim przypadku jest niezbędne do utworzenia tokenu zabezpieczającego niestandardowych zapewnienie reprezentację XML niestandardowego poświadczenia wewnątrz komunikatu protokołu SOAP.  
   

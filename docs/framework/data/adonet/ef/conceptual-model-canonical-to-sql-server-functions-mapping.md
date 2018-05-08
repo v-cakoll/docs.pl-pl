@@ -1,24 +1,12 @@
 ---
 title: Model koncepcyjny Canonical do mapowania funkcji serwera SQL
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5c408b64beec87c62b2bb8274fe985187ba7e5e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3dd655e7acf924fa1bf0c09f0da82826e69482d5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>Model koncepcyjny Canonical do mapowania funkcji serwera SQL
 W tym temacie opisano sposób koncepcyjny modelu funkcji kanonicznej mapę, aby odpowiednie funkcje programu SQL Server.  
@@ -40,9 +28,9 @@ W tym temacie opisano sposób koncepcyjny modelu funkcji kanonicznej mapę, aby 
 |[CreateDateTime (roku, miesiąc, dzień, godzinę, minutę, sekundę)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Dla programu SQL Server 2000 i SQL Server 2005 `datetime` sformatowana wartość jest tworzona na serwerze. Dla programu SQL Server 2008 i nowszych wersjach `datetime2` wartość jest tworzona na serwerze.|  
 |[CreateDateTimeOffset (roku, miesiąc, dzień, godzinę, minutę, sekundę, tzoffset)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|A `datetimeoffset` sformatowana wartość jest tworzona na serwerze.<br /><br /> Nie są obsługiwane w programie SQL Server 2000 lub SQL Server 2005.|  
 |[CreateTime (godzina, minuty, sekundy)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|A `time` sformatowana wartość jest tworzona na serwerze.<br /><br /> Nie są obsługiwane w programie SQL Server 2000 lub SQL Server 2005.|  
-|[CurrentDateTime()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTime()`2008 SQLServer.<br /><br /> `GetDate()`w przypadku SQLServer 2000 i SQL 2005.|  
-|[CurrentDateTimeOffset()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()`w programie SQL Server 2008.<br /><br /> Nie są obsługiwane w programie SQL Server 2000 lub SQL Server 2005.|  
-|[CurrentUtcDateTime()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysUtcDateTime()`2008 SQLServer. `GetUtcDate()`w programie SQL Server 2000 i SQL Server 2005.|  
+|[CurrentDateTime()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTime()` 2008 SQLServer.<br /><br /> `GetDate()` w przypadku SQLServer 2000 i SQL 2005.|  
+|[CurrentDateTimeOffset()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()` w programie SQL Server 2008.<br /><br /> Nie są obsługiwane w programie SQL Server 2000 lub SQL Server 2005.|  
+|[CurrentUtcDateTime()](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysUtcDateTime()` 2008 SQLServer. `GetUtcDate()` w programie SQL Server 2000 i SQL Server 2005.|  
 |[DayOfYear(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
 |[Day(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
 |[DiffDays (startExpression, endExpression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
@@ -55,8 +43,8 @@ W tym temacie opisano sposób koncepcyjny modelu funkcji kanonicznej mapę, aby 
 |[DiffYears (startExpression, endExpression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(year, startdate, enddate)`|  
 |[GetTotalOffsetMinutes(DateTimeOffset)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(tzoffset, expression)`|  
 |[Hour(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(hour, expression)`|  
-|[Millisecond(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
-|[Minute(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
+|[Millisecond(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
+|[MINUTE(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
 |[Month(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
 |[Second(Expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
 |[Truncate(expression)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Dla programu SQL Server 2000 i SQL Server 2005, skróconą `datetime` sformatowana wartość jest tworzona na serwerze. Dla programu SQL Server 2008 i nowszych wersji, skróconą `datetime2` lub `datetimeoffset` wartość jest tworzona na serwerze.|  
@@ -97,7 +85,7 @@ W tym temacie opisano sposób koncepcyjny modelu funkcji kanonicznej mapę, aby 
 |-------------------------|--------------------------|  
 |[Contains(String, TARGET)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
 |[Concat (ciąg1, ciąg2)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|ciąg1 + ciąg2|  
-|[EndsWith (string, docelowy)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **Uwaga** `CHARINDEX` funkcja zwraca `false` Jeśli `string` jest przechowywany w kolumnie ciągu o stałej długości i `target` jest stałą. W takim przypadku cały ciąg będzie przeszukiwana, w tym wszelkie uzupełnienia spacje końcowe. Możliwym obejściem jest przyciąć danych w ciągu o stałej długości przed przekazaniem ciąg `EndsWith` funkcji, jak w poniższym przykładzie:`EndsWith(TRIM(string), target)`|  
+|[EndsWith (string, docelowy)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **Uwaga** `CHARINDEX` funkcja zwraca `false` Jeśli `string` jest przechowywany w kolumnie ciągu o stałej długości i `target` jest stałą. W takim przypadku cały ciąg będzie przeszukiwana, w tym wszelkie uzupełnienia spacje końcowe. Możliwym obejściem jest przyciąć danych w ciągu o stałej długości przed przekazaniem ciąg `EndsWith` funkcji, jak w poniższym przykładzie: `EndsWith(TRIM(string), target)`|  
 |[IndexOf (docelowej, ciąg2)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
 |[LEFT (ciąg1, długość)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
 |[Długość (ciąg)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
@@ -119,5 +107,5 @@ W tym temacie opisano sposób koncepcyjny modelu funkcji kanonicznej mapę, aby 
 |-------------------------|--------------------------|  
 |[BitWiseAnd (wartość1, wartość2)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Wartość1 & wartość2|  
 |[BitWiseNot (wartość)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|~ wartość|  
-|[BitWiseOr (wartość1, wartość2)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Wartość1 &#124; wartość2|  
+|[BitWiseOr (wartość1, wartość2)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|wartość1 &#124; wartość2|  
 |[BitWiseXor (wartość1, wartość2)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Wartość1 ^ wartość2|

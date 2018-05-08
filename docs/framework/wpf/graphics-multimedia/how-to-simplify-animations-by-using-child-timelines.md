@@ -1,28 +1,16 @@
 ---
-title: "Jak uprościć animacje przy użyciu podrzędnych szeregów czasowych"
-ms.custom: 
+title: Jak uprościć animacje przy użyciu podrzędnych szeregów czasowych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - simplifying animations by child timelines [WPF]
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d3b8f1ca1dbf7ba5452acffc62fdf0b655c9c12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 57ea558b167f647ec7597ba95382abb0e48f699f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Jak uprościć animacje przy użyciu podrzędnych szeregów czasowych
 W tym przykładzie pokazano, jak uprościć animacji za pomocą podrzędnej <xref:System.Windows.Media.Animation.ParallelTimeline> obiektów. A <xref:System.Windows.Media.Animation.Storyboard> jest typem <xref:System.Windows.Media.Animation.Timeline> udostępniająca informacje określania wartości docelowej dla osi czasu, zawiera. Użyj <xref:System.Windows.Media.Animation.Storyboard> zapewnienie kierowanie informacji, w tym informacje o obiekcie i właściwości osi czasu.  

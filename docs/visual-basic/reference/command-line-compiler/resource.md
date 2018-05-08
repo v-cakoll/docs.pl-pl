@@ -1,11 +1,6 @@
 ---
 title: -zasobów (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /resource compiler option [Visual Basic]
 - -resource compiler option [Visual Basic]
@@ -16,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0de09ec0c778ac55ac7d93aa6d344e2067c46116
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: ab5593455546e65bdd760d9e60532031dc1f12a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-resource-visual-basic"></a>-zasobów (Visual Basic)
 Osadza zarządzanego zasobu w zestawie.  
@@ -37,8 +32,8 @@ Osadza zarządzanego zasobu w zestawie.
   
 |Termin|Definicja|  
 |---|---|  
-|`filename`|Wymagany. Nazwa pliku zasobu do osadzenia w pliku wyjściowym. Domyślnie `filename` jest publiczny w zestawie. Nazwę pliku należy ująć w cudzysłów ("") zawiera spację.|  
-|`identifier`|Opcjonalny. Nazwa logiczna zasobu; Nazwa używana go załadować. Wartość domyślna to nazwa pliku. Opcjonalnie można określić, czy zasób jest publicznych lub prywatnych w manifeście zestawu następującym kodem: `-res:filename.res, myname.res, public`|  
+|`filename`|Wymagana. Nazwa pliku zasobu do osadzenia w pliku wyjściowym. Domyślnie `filename` jest publiczny w zestawie. Nazwę pliku należy ująć w cudzysłów ("") zawiera spację.|  
+|`identifier`|Opcjonalna. Nazwa logiczna zasobu; Nazwa używana go załadować. Wartość domyślna to nazwa pliku. Opcjonalnie można określić, czy zasób jest publicznych lub prywatnych w manifeście zestawu następującym kodem: `-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>Uwagi  
  Użyj `-linkresource` połączyć zasób zestawu bez wprowadzania do pliku zasobów w pliku wyjściowym.  

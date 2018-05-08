@@ -1,36 +1,24 @@
 ---
 title: Filtrowanie
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering"></a>Filtrowanie
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Filtrowania systemu umożliwia deklaratywne filtry zgodne wiadomości i podejmowanie decyzji operacyjnych. Filtry można służą do określania, co należy zrobić z następującym komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znane nagłówka do ustalenia, czy można przenieść komunikatu z przodu kolejki.  
+Windows Communication Foundation (WCF) filtrowania systemu umożliwia deklaratywne filtry zgodne wiadomości i podejmowanie decyzji operacyjnych. Filtry można służą do określania, co należy zrobić z następującym komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znane nagłówka do ustalenia, czy można przenieść komunikatu z przodu kolejki.  
   
- System filtrowania składa się z zestaw klas, których można efektywnie ustalić, który zestaw filtrów są `true` dla określonego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości.  
+ System filtrowania składa się z zestaw klas, których można efektywnie ustalić, który zestaw filtrów są `true` dla danego komunikatu WCF.  
   
- Filtrowania system jest podstawowym składnikiem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości; jest przeznaczony do bardzo szybkiego działania. Każda implementacja filtru został zoptymalizowany do określonego rodzaju dopasowania przed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości.  
+ Filtrowania systemu jest podstawowym składnikiem obsługi wiadomości WCF; jest on przeznaczony do bardzo szybkiego działania. Każda implementacja filtru został zoptymalizowany do określonego rodzaju zgodne wiadomości WCF.  
   
  Filtrowania system nie jest bezpieczne dla wątków. Aplikacja musi obsługiwać żadnych semantyką blokowania. Jednak obsługuje wielu czytnika, jednego składnika zapisywania.  
   
 ## <a name="where-filtering-fits"></a>Gdzie pasuje do filtrowania  
- Filtrowanie odbywa się po komunikat jest odbierany i wchodzi w skład procesu podczas wysyłania komunikatu do składnika odpowiednia aplikacja. Projekt filtrowania systemu rozwiązuje kilka wymagań [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podsystemów, w tym wiadomości, routing, zabezpieczenia, obsługi zdarzeń i zarządzanie systemem.  
+ Filtrowanie odbywa się po komunikat jest odbierany i wchodzi w skład procesu podczas wysyłania komunikatu do składnika odpowiednia aplikacja. Podczas projektowania systemu filtrowania adresów wymagania kilka podsystemy WCF, w tym wiadomości, routing, zabezpieczenia, obsługi zdarzeń i zarządzanie systemem.  
   
 ## <a name="filters"></a>Filtry  
  Aparat filtr ma dwa podstawowe składniki, filtrów i tabele filtru. Filtr sprawia, że logiczna decyzji dotyczących komunikatów, na podstawie warunków logicznych określone przez użytkownika. Implementowanie filtry <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="prefix-endpoint-address-filters"></a>Prefiks filtry adres punktu końcowego  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> Podobnie do funkcji <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtrować, z wyjątkiem tego dopasowania może zawierać prefiks URI wiadomości. Na przykład filtr określający http://www.adatum.com adresu pasuje komunikaty adresowane do http://www.adatum.com/userA.  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> Podobnie do funkcji <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtrować, z wyjątkiem tego dopasowania może zawierać prefiks URI wiadomości. Na przykład filtr określenie adresu http://www.adatum.com odpowiada komunikaty adresowane do http://www.adatum.com/userA.  
   
 ### <a name="xpath-message-filters"></a>Filtry komunikatów XPath  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> Używa wyrażenia XPath do sprawdzenia, czy dokument XML zawiera określone elementy, atrybuty, tekst, tworzy innych składni XML. Filtr jest zoptymalizowany się bardzo wydajny podzbiór strict XPath. XML Path Language jest opisany w [specyfikacji W3C XML Path Language 1.0](http://go.microsoft.com/fwlink/?LinkId=94779).  
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> Klasy optymalizuje dopasowywanie podzbiór XPath obejmuje większość scenariuszy wysyłania komunikatów, który również obsługuje pełne gramatyki XPath 1.0. Algorytmy wydajne dopasowanie równoległych optymalizacji.  
   
- Ta tabela ma kilka specjalne `Match` metod, które działają na <xref:System.Xml.XPath.XPathNavigator> i <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. A <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> rozszerza <xref:System.Xml.XPath.XPathNavigator> klasy, dodając <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> właściwości. Ta właściwość umożliwia pozycji w dokumencie XML na zapisywanie i szybko załadowany bez konieczności sklonować Nawigatora alokacji pamięci kosztowne który <xref:System.Xml.XPath.XPathNavigator> wymaga dla tych operacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Aparat XPath często muszą rejestrować pozycji kursora w trakcie wykonywania zapytania w dokumentach XML, więc <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> zawiera ważne optymalizacji dla przetwarzania komunikatów.  
+ Ta tabela ma kilka specjalne `Match` metod, które działają na <xref:System.Xml.XPath.XPathNavigator> i <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. A <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> rozszerza <xref:System.Xml.XPath.XPathNavigator> klasy, dodając <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> właściwości. Ta właściwość umożliwia pozycji w dokumencie XML na zapisywanie i szybko załadowany bez konieczności sklonować Nawigatora alokacji pamięci kosztowne który <xref:System.Xml.XPath.XPathNavigator> wymaga dla tych operacji. Aparat WCF XPath często muszą rejestrować pozycji kursora w trakcie wykonywania zapytania w dokumentach XML, więc <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> zawiera ważne optymalizacji dla przetwarzania komunikatów.  
   
 ## <a name="customer-scenarios"></a>Scenariusze klienta  
  Umożliwia filtrowanie w dowolnym momencie chcesz wysłać komunikat do modułów przetwarzania różne w zależności od danych zawartych w wiadomości. Dwa typowe scenariusze są routingu komunikat na podstawie jego działania kodu i zwalnia Multipleksowanie strumienia komunikatów na podstawie adresu punktu końcowego wiadomości.  

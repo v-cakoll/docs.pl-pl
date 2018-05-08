@@ -1,32 +1,21 @@
 ---
-title: "Tworzenie asynchroniczne działania WF"
-ms.custom: 
+title: Tworzenie asynchroniczne działania WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Tworzenie asynchroniczne działania WF
-<xref:System.Activities.AsyncCodeActivity>udostępnia klasę podstawową do użycia, że umożliwia pochodnych działań do wykonania operacji asynchronicznych logiki autorów działania. Jest to przydatne dla działań niestandardowych, które należy wykonać zadanie asynchroniczne bez zawierający wątku harmonogramu przepływu pracy i blokuje żadnych działań, które można uruchomić równolegle. Ten temat zawiera omówienie sposobu tworzenia działań niestandardowych asynchronicznych za pomocą <xref:System.Activities.AsyncCodeActivity>.  
+<xref:System.Activities.AsyncCodeActivity> udostępnia klasę podstawową do użycia, że umożliwia pochodnych działań do wykonania operacji asynchronicznych logiki autorów działania. Jest to przydatne dla działań niestandardowych, które należy wykonać zadanie asynchroniczne bez zawierający wątku harmonogramu przepływu pracy i blokuje żadnych działań, które można uruchomić równolegle. Ten temat zawiera omówienie sposobu tworzenia działań niestandardowych asynchronicznych za pomocą <xref:System.Activities.AsyncCodeActivity>.  
   
 ## <a name="using-asynccodeactivity"></a>Przy użyciu AsyncCodeActivity  
- <xref:System.Activities?displayProperty=nameWithType>zapewnia autorów działań niestandardowych z różnych klas podstawowych wymagania dotyczące tworzenia różnych działań. Każda z nich niesie semantycznego określonego i zapewnia Autor przepływu pracy (i środowiska uruchomieniowego działania) odpowiedniego kontraktu. <xref:System.Activities.AsyncCodeActivity> Działanie, które wykonuje pracę asynchronicznie względem harmonogramu jest oparte na działanie wątku i którego logiki wykonywania jest wyrażoną w kodzie zarządzanym. Wyniku przechodzi do asynchronicznego, <xref:System.Activities.AsyncCodeActivity> może wywoływać punkt bezczynne podczas wykonywania. Ze względu na specyfikę volatile asynchroniczne pracy <xref:System.Activities.AsyncCodeActivity> zawsze tworzy bloku nietrwałości dla wykonywania działania. Zapobiega utrwalanie wystąpienia przepływu pracy w środku asynchroniczne pracy środowiska uruchomieniowego przepływu pracy i uniemożliwia także programowi wystąpienia przepływu pracy z podczas zwalniania wykonuje asynchroniczne kodu.  
+ <xref:System.Activities?displayProperty=nameWithType> zapewnia autorów działań niestandardowych z różnych klas podstawowych wymagania dotyczące tworzenia różnych działań. Każda z nich niesie semantycznego określonego i zapewnia Autor przepływu pracy (i środowiska uruchomieniowego działania) odpowiedniego kontraktu. <xref:System.Activities.AsyncCodeActivity> Działanie, które wykonuje pracę asynchronicznie względem harmonogramu jest oparte na działanie wątku i którego logiki wykonywania jest wyrażoną w kodzie zarządzanym. Wyniku przechodzi do asynchronicznego, <xref:System.Activities.AsyncCodeActivity> może wywoływać punkt bezczynne podczas wykonywania. Ze względu na specyfikę volatile asynchroniczne pracy <xref:System.Activities.AsyncCodeActivity> zawsze tworzy bloku nietrwałości dla wykonywania działania. Zapobiega utrwalanie wystąpienia przepływu pracy w środku asynchroniczne pracy środowiska uruchomieniowego przepływu pracy i uniemożliwia także programowi wystąpienia przepływu pracy z podczas zwalniania wykonuje asynchroniczne kodu.  
   
 ### <a name="asynccodeactivity-methods"></a>Metody AsyncCodeActivity  
- Działania, które pochodzą z <xref:System.Activities.AsyncCodeActivity> można utworzyć logiki wykonywania asynchronicznych przez zastąpienie <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> i <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> metody o niestandardowych kodów. Po wywołaniu przez środowisko uruchomieniowe, te metody są przekazywane <xref:System.Activities.AsyncCodeActivityContext>. <xref:System.Activities.AsyncCodeActivityContext>umożliwia autorowi działania zapewniające udostępniania stanu między <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> w tym kontekście <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> właściwości. W poniższym przykładzie `GenerateRandom` działania generuje losową liczbę asynchronicznie.  
+ Działania, które pochodzą z <xref:System.Activities.AsyncCodeActivity> można utworzyć logiki wykonywania asynchronicznych przez zastąpienie <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> i <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> metody o niestandardowych kodów. Po wywołaniu przez środowisko uruchomieniowe, te metody są przekazywane <xref:System.Activities.AsyncCodeActivityContext>. <xref:System.Activities.AsyncCodeActivityContext> umożliwia autorowi działania zapewniające udostępniania stanu między <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> w tym kontekście <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> właściwości. W poniższym przykładzie `GenerateRandom` działania generuje losową liczbę asynchronicznie.  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   
@@ -36,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  Należy pamiętać, że ponieważ brak wartości zwracanej nie `DisplayRandom` używa <xref:System.Action> zamiast <xref:System.Func%602> można wywołać jej delegata i delegat nie zwraca żadnej wartości.  
   
- <xref:System.Activities.AsyncCodeActivity>dostępne są także <xref:System.Activities.AsyncCodeActivity.Cancel%2A> zastąpienia. Gdy <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> i <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> są wymagane zastąpienia <xref:System.Activities.AsyncCodeActivity.Cancel%2A> jest opcjonalny i może zostać zastąpiona tak działania można wyczyścić stanu oczekujących asynchronicznych, gdy jest on anulowana lub przerwana. Jeśli oczyszczania jest możliwe i `AsyncCodeActivity.ExecutingActivityInstance.IsCancellationRequested` jest `true`, powinny wywoływać działania <xref:System.Activities.AsyncCodeActivityContext.MarkCanceled%2A>. Wszelkie wyjątki zgłaszane przez tę metodę jest krytyczny do wystąpienia przepływu pracy.  
+ <xref:System.Activities.AsyncCodeActivity> dostępne są także <xref:System.Activities.AsyncCodeActivity.Cancel%2A> zastąpienia. Gdy <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> i <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> są wymagane zastąpienia <xref:System.Activities.AsyncCodeActivity.Cancel%2A> jest opcjonalny i może zostać zastąpiona tak działania można wyczyścić stanu oczekujących asynchronicznych, gdy jest on anulowana lub przerwana. Jeśli oczyszczania jest możliwe i `AsyncCodeActivity.ExecutingActivityInstance.IsCancellationRequested` jest `true`, powinny wywoływać działania <xref:System.Activities.AsyncCodeActivityContext.MarkCanceled%2A>. Wszelkie wyjątki zgłaszane przez tę metodę jest krytyczny do wystąpienia przepływu pracy.  
   
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
@@ -54,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Planowanie akcje lub przy użyciu AsyncCodeActivity działania podrzędne  
- <xref:System.Activities.AsyncCodeActivity>pochodne działań niestandardowych udostępnia metody wykonywania pracy asynchronicznie w odniesieniu do wątku przepływu pracy, ale nie zapewniają możliwość planować działań podrzędnych lub akcji. Jednak asynchroniczne zachowanie można włączyć planowania działań podrzędnych za pomocą kompozycji. Asynchroniczne działania można utworzyć, a następnie składa się z <xref:System.Activities.Activity> lub <xref:System.Activities.NativeActivity> pochodzi z działania, aby zapewnić zachowanie asynchroniczne i planowania działań podrzędnych lub akcji. Na przykład można utworzyć działania pochodzącego od <xref:System.Activities.Activity>i jako jego implementacja <xref:System.Activities.Statements.Sequence> zawierające działanie asynchroniczne, jak również innych działań, które implementują logikę działania. Więcej przykładów dotyczących tworzenia działania przy użyciu <xref:System.Activities.Activity> i <xref:System.Activities.NativeActivity>, zobacz [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), [opcje tworzenia działania](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)i [złożone](../../../docs/framework/windows-workflow-foundation/samples/composite.md) przykłady działania.  
+ <xref:System.Activities.AsyncCodeActivity> pochodne działań niestandardowych udostępnia metody wykonywania pracy asynchronicznie w odniesieniu do wątku przepływu pracy, ale nie zapewniają możliwość planować działań podrzędnych lub akcji. Jednak asynchroniczne zachowanie można włączyć planowania działań podrzędnych za pomocą kompozycji. Asynchroniczne działania można utworzyć, a następnie składa się z <xref:System.Activities.Activity> lub <xref:System.Activities.NativeActivity> pochodzi z działania, aby zapewnić zachowanie asynchroniczne i planowania działań podrzędnych lub akcji. Na przykład można utworzyć działania pochodzącego od <xref:System.Activities.Activity>i jako jego implementacja <xref:System.Activities.Statements.Sequence> zawierające działanie asynchroniczne, jak również innych działań, które implementują logikę działania. Więcej przykładów dotyczących tworzenia działania przy użyciu <xref:System.Activities.Activity> i <xref:System.Activities.NativeActivity>, zobacz [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), [opcje tworzenia działania](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)i [złożone](../../../docs/framework/windows-workflow-foundation/samples/composite.md) przykłady działania.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Action>  

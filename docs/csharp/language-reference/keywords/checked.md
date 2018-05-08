@@ -1,24 +1,17 @@
 ---
 title: checked (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - checked_CSharpKeyword
 - checked
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-caps.latest.revision: 24
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0ae77894cdc94e41dfa281b92ed3304e0dc25731
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b05af798217a4f312bcf134d531135713efa8c66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checked-c-reference"></a>checked (odwołanie w C#)
 `checked` Słowo kluczowe jest używane do jawnie włączyć sprawdzanie operacji arytmetycznych typem całkowitym i konwersje przepełnienia.  
@@ -47,5 +40,5 @@ ms.lasthandoff: 11/21/2017
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Zaznaczony i niezaznaczony](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+ [Checked i Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md)

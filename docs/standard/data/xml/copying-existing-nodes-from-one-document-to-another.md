@@ -1,26 +1,15 @@
 ---
 title: Kopiowanie istniejących węzłów z jednego dokumentu do innego
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ca36ffdd2eb5eb3acfbacbd543eebf17cfffb5d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopiowanie istniejących węzłów z jednego dokumentu do innego
 **ImportNode** metody to mechanizm, za pomocą którego węzeł lub całego węzła poddrzewo zostaną skopiowane z jednego **XmlDocument** na inny. Węzeł zwracana z wywołania jest kopią węzła w dokumencie źródłowym, w tym wartości atrybutów, nazwa węzła typu węzła i wszystkie atrybuty związane z przestrzeni nazw, takie jak prefiks, nazwę lokalną i przestrzeń nazw identyfikatora URI (Uniform Resource). Dokument źródłowy nie zostanie zmieniona. Po zaimportowaniu tego węzła, musisz dodać je do drzewa przy użyciu jednej z metod służy do wstawiania węzłów.  

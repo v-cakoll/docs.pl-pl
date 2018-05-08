@@ -1,13 +1,6 @@
 ---
-title: "Porady: zmienianie stylów obramowania i linii siatki w formancie DataGridView formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: zmienianie stylów obramowania i linii siatki w formancie DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a31bfc6fb3fa8a3c549a10fd0db017abde66539f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94e5ae11d7fb2b67e028f368183246f8d8543a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Porady: zmienianie stylów obramowania i linii siatki w formancie DataGridView formularzy systemu Windows
 Z <xref:System.Windows.Forms.DataGridView> sterowania, można dostosować wygląd obramowania i linii siatki, aby ulepszyć środowisko użytkownika formantu. Można zmodyfikować kolor linii siatki i styl obramowania formantu oprócz style obramowania komórek w formancie. Można także zastosować dla innej komórki Style obramowania komórek zwykłej, komórek nagłówka wiersza i komórki nagłówka kolumny.  

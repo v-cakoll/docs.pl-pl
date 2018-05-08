@@ -1,21 +1,12 @@
 ---
-title: "Porady: znajdowanie Element z elementu podrzędnego określonego (C#)"
-ms.custom: 
+title: 'Porady: znajdowanie Element z elementu podrzędnego określonego (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7d4d865b6e412f6f039df3578340db046ca59fa6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e7528784f898f0f9ba84095b080eb82f8458424e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Porady: znajdowanie Element z elementu podrzędnego określonego (C#)
 W tym temacie pokazano, jak można znaleźć określonego elementu, który ma element podrzędny o określonej wartości.  

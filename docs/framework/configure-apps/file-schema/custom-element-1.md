@@ -1,10 +1,6 @@
 ---
 title: Niestandardowy element SingleTagSectionHandler
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
 helpviewer_keywords:
@@ -12,21 +8,18 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ee722c7d5db9d58ab1a91f4b1299912981510af
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 07bc0d9560546f4946d34413697fb0adcf84c58d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Niestandardowy element SingleTagSectionHandler
 
 Definiuje ustawienia w sekcji Konfiguracja niestandardowa, która jest definiowana za pomocą <section> element i używa <xref:System.Configuration.SingleTagSectionHandler> klasy.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName>*
+&nbsp;&nbsp;*\<sectionName >*
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,7 +43,7 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
- **\<SectionName >** element jest elementem niestandardowe zdefiniowane przez [  **\<sekcji >** ](~/docs/framework/configure-apps/file-schema/section-element.md) tagów w [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) elementu. System konfiguracji zwraca <xref:System.Collections.IDictionary> obiektu po wywołaniu <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+**\<SectionName >** element jest elementem niestandardowe zdefiniowane przez [  **\<sekcji >** ](~/docs/framework/configure-apps/file-schema/section-element.md) tagów w [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) elementu. System konfiguracji zwraca <xref:System.Collections.IDictionary> obiektu po wywołaniu <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 

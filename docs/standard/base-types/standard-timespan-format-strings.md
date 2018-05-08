@@ -1,13 +1,7 @@
 ---
-title: "Standardowe ciągi formatujące TimeSpan"
-ms.custom: 
+title: Standardowe ciągi formatujące TimeSpan
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,21 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
-<a name="Top"></a>Standard <xref:System.TimeSpan> ciąg formatu używa specyfikator jeden format w celu zdefiniowania Reprezentacja tekstowa typu <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Interpretowany jako niestandardowego ciągu formatu, który zawiera więcej niż jeden znak odstępu, w tym <xref:System.TimeSpan> ciąg formatu. Aby uzyskać więcej informacji, zobacz [ciągi formatujące TimeSpan niestandardowe](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
+<a name="Top"></a> Standard <xref:System.TimeSpan> ciąg formatu używa specyfikator jeden format w celu zdefiniowania Reprezentacja tekstowa typu <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Interpretowany jako niestandardowego ciągu formatu, który zawiera więcej niż jeden znak odstępu, w tym <xref:System.TimeSpan> ciąg formatu. Aby uzyskać więcej informacji, zobacz [ciągi formatujące TimeSpan niestandardowe](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
   
  Reprezentacji ciągu <xref:System.TimeSpan> wartości są produkowane przez wywołania przeciążenia metody <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> metody, a także jako metodami, które obsługuje złożone, takich jak <xref:System.String.Format%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [typy formatowania](../../../docs/standard/base-types/formatting-types.md) i [złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md). Poniższy przykład przedstawia użycie standardowe ciągi formatujące w operacji formatowania.  
   
@@ -49,19 +38,19 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a>W poniższej tabeli wymieniono specyfikatory formatu interwał czasu standardowego.  
+<a name="top"></a> W poniższej tabeli wymieniono specyfikatory formatu interwał czasu standardowego.  
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Stałe formatu (niezmiennego)|Specyfikator to nie jest zależne od kultury. Ma formę `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> ("T" i "T" ciągi formatujące utworzyć takie same wyniki).<br /><br /> Więcej informacji: [stałych ("c") specyfikator formatu](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|„g”|Ogólny format krótki|To specyfikator danych wyjściowych, co jest wymagane tylko. Jest zależne od kultury i ma postać `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [ogólne krótkich ("g") specyfikator formatu](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)`-> 1:3:16:50.5 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)`-> 1:3:16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3:16:50.599 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3:16:50, 599 (fr-FR)|  
-|„G”|Ogólny format długi|To specyfikator zawsze generuje dni i siedmiu cyfr ułamkowych. Jest zależne od kultury i ma postać `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Więcej informacji: [ogólne długi ("G") specyfikator formatu](#GeneralLong).|`New TimeSpan(18, 30, 0)`-> 0:18:30:00.0000000 (en US)<br /><br /> `New TimeSpan(18, 30, 0)`-> 0:18:30:00, 0000000 (fr-FR)|  
+|„g”|Ogólny format krótki|To specyfikator danych wyjściowych, co jest wymagane tylko. Jest zależne od kultury i ma postać `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [ogólne krótkich ("g") specyfikator formatu](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50, 599 (fr-FR)|  
+|„G”|Ogólny format długi|To specyfikator zawsze generuje dni i siedmiu cyfr ułamkowych. Jest zależne od kultury i ma postać `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Więcej informacji: [ogólne długi ("G") specyfikator formatu](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00, 0000000 (fr-FR)|  
   
 <a name="Constant"></a>   
 ## <a name="the-constant-c-format-specifier"></a>Specyfikator formatu ("c") w stałej  
  Specyfikator formatu "c" zwraca reprezentację ciągu <xref:System.TimeSpan> wartość w następującym formacie:  
   
- [-] [*d*.] *hh*:*mm*:*ss*[. *fffffff*]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Kropka (.) i dwukropka (:) są symbolami literału. W poniższej tabeli opisano wszystkie pozostałe elementy.  
   
@@ -77,7 +66,7 @@ ms.lasthandoff: 12/23/2017
  W odróżnieniu od "g" i "G" specyfikatory formatu specyfikator formatu "c" nie jest zależne od kultury. Generuje reprezentację ciągu <xref:System.TimeSpan> wartość jest niezmienne i który jest wspólny dla wszystkich poprzednich wersji programu .NET Framework, przed [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Wartość domyślna to "c" <xref:System.TimeSpan> ciąg formatu; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metody formatuje wartość interwału czasu za pomocą ciągu formatu "c".  
   
 > [!NOTE]
->  <xref:System.TimeSpan>obsługuje również "t" i "T" standardowe ciągi formatujące, które są takie same jak w zachowanie standardowego formatu ciągu "c".  
+>  <xref:System.TimeSpan> obsługuje również "t" i "T" standardowe ciągi formatujące, które są takie same jak w zachowanie standardowego formatu ciągu "c".  
   
  Poniższy przykład tworzy dwa <xref:System.TimeSpan> obiektów, używa ich do wykonania operacji arytmetycznych i wyświetla wyniki. W każdym przypadku używa złożone formatowanie do wyświetlenia <xref:System.TimeSpan> wartość przy użyciu specyfikatora formatu "c".  
   

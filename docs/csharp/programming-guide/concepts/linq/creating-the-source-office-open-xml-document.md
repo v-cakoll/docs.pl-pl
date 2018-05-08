@@ -1,21 +1,12 @@
 ---
-title: "Tworzenie dokumentu źródłowego Office Open XML (C#)"
-ms.custom: 
+title: Tworzenie dokumentu źródłowego Office Open XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 378a83db02c6e07a070fb3770b042ed657860560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c5884d1e34558d01be4c873c3f44222396e588ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Tworzenie dokumentu źródłowego Office Open XML (C#)
 W tym temacie przedstawiono sposób tworzenia dokumentu schemat WordprocessingML Office Open XML używanego przez inne przykłady w tym samouczku. Jeśli wykonaj te instrukcje, danych wyjściowych będzie zgodny w każdym przykładzie danych wyjściowych.  

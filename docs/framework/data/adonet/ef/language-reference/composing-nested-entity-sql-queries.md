@@ -1,27 +1,15 @@
 ---
-title: "Tworzenie zapytań SQL zagnieżdżonych jednostki"
-ms.custom: 
+title: Tworzenie zapytań SQL zagnieżdżonych jednostki
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 92e3153350787ef75c48ee52f1b6c68e09e15b4b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Tworzenie zapytań SQL zagnieżdżonych jednostki
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]jest bogaty język funkcjonalności. Blokiem konstrukcyjnym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażenie. W przeciwieństwie do konwencjonalnych SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczone do zestawu wyników tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartość w wyrażeniu można sparametryzowanych lub składa się z niektórych innych wyrażenia.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bogaty język funkcjonalności. Blokiem konstrukcyjnym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażenie. W przeciwieństwie do konwencjonalnych SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczone do zestawu wyników tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartość w wyrażeniu można sparametryzowanych lub składa się z niektórych innych wyrażenia.  
   
 ## <a name="nested-expressions"></a>Zagnieżdżone wyrażenia  
  Zagnieżdżone wyrażenia można umieścić w dowolnym wartości typu, zwracana jest akceptowany. Na przykład:  

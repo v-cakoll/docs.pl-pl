@@ -1,28 +1,14 @@
 ---
 title: '&lt;netTcpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 057baf6d18cba61c0ceeb7d5152edcf082392310
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Określa bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami. Domyślnie generuje środowiska uruchomieniowego stosu komunikacji z zabezpieczeniami systemu Windows dla komunikatów zabezpieczeń i uwierzytelniania, TCP dostarczanie komunikatów i kodowanie komunikatu binarnego.  
@@ -75,8 +61,8 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |---------------|-----------------|  
 |closeTimeout|A <xref:System.TimeSpan> wartość, która określa interwał przeznaczony na zakończenie operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
 |hostnameComparisonMode|Określa tryb porównania nazw hostów HTTP używany do przeprowadzenia analizy identyfikatorów URI. Ten atrybut jest typu `System.ServiceModel.HostnameComparisonMode`, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to `StrongWildcard`, który ignoruje nazwy hosta w dopasowania.|  
-|listenBacklog|Dodatnia liczba całkowita, która określa maksymalną liczbę kanałów oczekujących na akceptację na odbiornika. Połączenia przekracza ten limit są umieszczane w kolejce, dopóki nie będzie dostępne miejsce poniżej limitu. `connectionTimeout` Atrybut ogranicza czas, klient będzie czekać do podłączenia przed zgłaszanie wyjątek połączenia. Wartość domyślna to 10.|  
-|maxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 512 * 1024 bajty. Bufory za pomocą wielu części programu Windows Communication Foundation (WCF). Tworzenie i niszczenie buforów za każdym razem, gdy są one używane jest kosztowne i odzyskiwanie pamięci dla buforów również jest kosztowna. Używając puli buforów można podjąć buforu z puli, ten jest używany i zwracać do puli, gdy wszystko będzie gotowe. W związku z tym jest unikać obciążenie związane z tworzeniem i niszczenie buforów.|  
+|ListenBacklog|Dodatnia liczba całkowita, która określa maksymalną liczbę kanałów oczekujących na akceptację na odbiornika. Połączenia przekracza ten limit są umieszczane w kolejce, dopóki nie będzie dostępne miejsce poniżej limitu. `connectionTimeout` Atrybut ogranicza czas, klient będzie czekać do podłączenia przed zgłaszanie wyjątek połączenia. Wartość domyślna to 10.|  
+|MaxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 512 * 1024 bajty. Bufory za pomocą wielu części programu Windows Communication Foundation (WCF). Tworzenie i niszczenie buforów za każdym razem, gdy są one używane jest kosztowne i odzyskiwanie pamięci dla buforów również jest kosztowna. Używając puli buforów można podjąć buforu z puli, ten jest używany i zwracać do puli, gdy wszystko będzie gotowe. W związku z tym jest unikać obciążenie związane z tworzeniem i niszczenie buforów.|  
 |wartość maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar w bajtach buforu używany do przechowywania wiadomości w pamięci.<br /><br /> Jeśli `transferMode` atrybutu jest równa `Buffered`, ten atrybut powinien być równy `maxReceivedMessageSize` wartość atrybutu.<br /><br /> Jeśli `transferMode` atrybutu jest równa `Streamed`, ten atrybut nie może być więcej niż `maxReceivedMessageSize` wartość atrybutu, a powinien być co najmniej rozmiar nagłówków.<br /><br /> Wartość domyślna to 65536. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
 |maxConnections|Liczba całkowita określająca maksymalną liczbę połączeń wychodzące i przychodzące usługi Utwórz/akceptuje. Połączenia przychodzące i wychodzące są uwzględniane w oddzielnych określonym przez atrybut.<br /><br /> Połączenia przychodzące poza limitem są umieszczane w kolejce, dopóki nie będzie dostępne miejsce poniżej limitu.<br /><br /> Połączenia wychodzące poza limitem są umieszczane w kolejce, dopóki nie będzie dostępne miejsce poniżej limitu.<br /><br /> Wartość domyślna to 10.|  
 |maxReceivedMessageSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar wiadomości, w bajtach, włącznie z nagłówkami, odebranych z kanału skonfigurowane dla tego wiązania. Nadawcy wiadomości przekracza ten limit, zostanie wyświetlony błąd protokołu SOAP. Odbiornik porzuca wiadomości i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536.|  
@@ -93,7 +79,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
 |[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Określa, czy niezawodnej sesji są połączenia między punktami końcowymi kanału.|  
   
@@ -104,9 +90,9 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- To powiązanie generuje stosu komunikacji środowiska wykonawczego domyślnie, który używa zabezpieczeń transportu TCP w celu dostarczania komunikatów i kodowanie komunikatu binarnego. To powiązanie jest [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] wybór dostarczane przez system do komunikowania się za pośrednictwem intranetu.  
+ To powiązanie generuje stosu komunikacji środowiska wykonawczego domyślnie, który używa zabezpieczeń transportu TCP w celu dostarczania komunikatów i kodowanie komunikatu binarnego. To powiązanie jest odpowiednie Windows Communication Foundation (WCF) dostarczane przez system wyborem do komunikowania się za pośrednictwem intranetu.  
   
- Konfigurację domyślną dla `netTcpBinding` jest szybsza niż podana przez Konfiguracja `wsHttpBinding`, ale jest przeznaczona tylko dla [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- do -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] komunikacji. Zachowania zabezpieczeń jest można skonfigurować za pomocą opcjonalnego `securityMode` atrybutu. Korzystanie z protokołu WS-ReliableMessaging jest można skonfigurować za pomocą opcjonalnego `reliableSessionEnabled` atrybutu. Ale niezawodna obsługa komunikatów jest domyślnie wyłączone. Ogólnie rzecz biorąc, HTTP dostarczane przez system powiązań takich jak `wsHttpBinding` i `basicHttpBinding` są skonfigurowane do włączyć rzeczy domyślnie, podczas gdy `netTcpBinding` powiązanie wyłącza rzeczy domyślnie, aby należy wyrazić zgodę na uzyskać pomoc techniczną, na przykład dla jednego z WS-* specyfikacji. Oznacza to, że domyślna konfiguracja protokołu TCP dla ma szybszy w wymiana wiadomości między punktami końcowymi niż te, które domyślnie skonfigurowany dla powiązania protokołu HTTP.  
+ Konfigurację domyślną dla `netTcpBinding` jest szybsza niż podana przez Konfiguracja `wsHttpBinding`, ale jest przeznaczona tylko do komunikacji usługi WCF. Zachowania zabezpieczeń jest można skonfigurować za pomocą opcjonalnego `securityMode` atrybutu. Korzystanie z protokołu WS-ReliableMessaging jest można skonfigurować za pomocą opcjonalnego `reliableSessionEnabled` atrybutu. Ale niezawodna obsługa komunikatów jest domyślnie wyłączone. Ogólnie rzecz biorąc, HTTP dostarczane przez system powiązań takich jak `wsHttpBinding` i `basicHttpBinding` są skonfigurowane do włączyć rzeczy domyślnie, podczas gdy `netTcpBinding` powiązanie wyłącza rzeczy domyślnie, aby należy wyrazić zgodę na uzyskać pomoc techniczną, na przykład dla jednego z WS-* specyfikacji. Oznacza to, że domyślna konfiguracja protokołu TCP dla ma szybszy w wymiana wiadomości między punktami końcowymi niż te, które domyślnie skonfigurowany dla powiązania protokołu HTTP.  
   
 ## <a name="example"></a>Przykład  
  Powiązanie jest określona w plikach konfiguracji dla klienta i usługi. Typ powiązania jest określona w `binding` atrybutu `<endpoint>` elementu. Jeśli chcesz skonfigurować powiązanie netTcpBinding i zmieniania jego ustawień należy zdefiniować konfiguracji powiązania. Punkt końcowy musi odwoływać się Konfiguracja powiązania z `bindingConfiguration` atrybutu. W poniższym przykładzie zdefiniowano konfiguracji powiązania.  

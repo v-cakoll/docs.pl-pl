@@ -1,11 +1,7 @@
 ---
-title: "GetMethod — funkcja (niezarządzany wykaz interfejsów API)"
-description: "Funkcja GetMethod pobiera informacje dotyczące metody."
+title: GetMethod — funkcja (niezarządzany wykaz interfejsów API)
+description: Funkcja GetMethod pobiera informacje dotyczące metody.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f22a2dfa7aae411cac960cbad2017718df8057e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethod-function"></a>GetMethod — funkcja
 Pobiera informacje o określonej metody.
@@ -83,14 +76,14 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetMethod](https://msdn.m
 
 Zarządzanie systemem Windows można ustawić [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wskaźnik do `null` Jeśli metoda nie ma w parametrów.
 
-W `ppInSignature` i `ppOutSignature` opisano parametry, wejściowe i wyjściowe odpowiednio właściwości w `IWbemClassObject` wystąpienia klasy systemu [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Właściwości w `ppInsignature` są nazywane **Param***n*, gdzie  *n*  to pozycja parametru w podpisie metody (np. jako `Param1`, `Param2`itp.). Właściwości w `ppOutSignature` są również nazywane **Param***n*, i nosi nazwę wartości zwracanej **ReturnValue**. Aby uzyskać więcej informacji i przykład zobacz [metody IWbemClassObject::GetMethod](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
+W `ppInSignature` i `ppOutSignature` opisano parametry, wejściowe i wyjściowe odpowiednio właściwości w `IWbemClassObject` wystąpienia klasy systemu [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Właściwości w `ppInsignature` są nazywane **Param *** n*, gdzie *n* to pozycja parametru w podpisie metody (takie jak `Param1`, `Param2`itp.). Właściwości w `ppOutSignature` są również nazywane **Param *** n*, i nosi nazwę wartości zwracanej **ReturnValue**. Aby uzyskać więcej informacji i przykład zobacz [metody IWbemClassObject::GetMethod](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
 
 ## <a name="requirements"></a>Wymagania  
 **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

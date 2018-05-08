@@ -1,27 +1,15 @@
 ---
-title: "Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework"
-ms.custom: 
+title: Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework
 Formanty formularzy systemu Windows są składniki wielokrotnego użytku, Hermetyzowanie funkcji interfejsu użytkownika, które są używane w aplikacjach opartych na systemie Windows po stronie klienta. Nie tylko formularze systemu Windows udostępnia wiele gotowych do użycia formantów, również zapewnia infrastrukturę do tworzenia własnych formantów. Można połączyć istniejących formantów, rozszerzanie istniejących formantów lub tworzenie Kontrolki niestandardowe. Ta sekcja zawiera informacje i przykłady ułatwiające opracowanie formanty formularzy systemu Windows.  

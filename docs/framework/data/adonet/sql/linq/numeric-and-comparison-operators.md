@@ -1,24 +1,12 @@
 ---
-title: "Numeryczne i operatory porównania"
-ms.custom: 
+title: Numeryczne i operatory porównania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56558e790b8aee300da0a75ade7c0ac451a0eca1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a1ce13225d72b4286982434d52998a1913814abb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numeric-and-comparison-operators"></a>Numeryczne i operatory porównania
 Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środowisko uruchomieniowe języka wspólnego (CLR) z wyjątkiem w następujący sposób:  
@@ -30,13 +18,13 @@ Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środow
 -   Operatory inkrementacji i dekrementacji powodować efekty uboczne, podczas ich używać w wyrażeniach, które nie mogą być replikowane w języku SQL i w związku z tym nie obsługują.  
   
 ## <a name="supported-operators"></a>Operatory obsługiwane  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje następujące operatory.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje następujące operatory.  
   
 -   Operatory arytmetyczne podstawowe:  
   
     -   `+`  
   
-    -   `-`(odejmowanie)  
+    -   `-` (odejmowanie)  
   
     -   `*`  
   
@@ -44,21 +32,21 @@ Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środow
   
     -   Dzielenie liczby całkowitej Visual Basic (`\`)  
   
-    -   `%`(Visual Basic `Mod`)  
+    -   `%` (Visual Basic `Mod`)  
   
     -   `<<`  
   
     -   `>>`  
   
-    -   `-`(jednoargumentowy negacji)  
+    -   `-` (jednoargumentowy negacji)  
   
 -   Operatory porównania podstawowe:  
   
-    -   Visual Basic `=` i C#`==`  
+    -   Visual Basic `=` i C# `==`  
   
-    -   Visual Basic `<>` i C#`!=`  
+    -   Visual Basic `<>` i C# `!=`  
   
-    -   Visual Basic`Is/IsNot`  
+    -   Visual Basic `Is/IsNot`  
   
     -   `<`  
   

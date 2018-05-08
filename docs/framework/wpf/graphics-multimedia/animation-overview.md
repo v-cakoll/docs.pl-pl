@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Animacja"
-ms.custom: 
+title: Przegląd Animacja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>Przegląd Animacja
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia zaawansowany zestaw funkcji grafiki i układu, które umożliwiają tworzenie interfejsów użytkownika atrakcyjne i atrakcyjne dokumentów. Animacji można wprowadzać atrakcyjny interfejs jeszcze bardziej znaczny i można go użyć. Przez właśnie animacji kolor tła lub animowany <xref:System.Windows.Media.Transform>, można utworzyć przejścia znacznej ekranu lub podaj przydatne wizualnych.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia zaawansowany zestaw funkcji grafiki i układu, które umożliwiają tworzenie interfejsów użytkownika atrakcyjne i atrakcyjne dokumentów. Animacji można wprowadzać atrakcyjny interfejs jeszcze bardziej znaczny i można go użyć. Przez właśnie animacji kolor tła lub animowany <xref:System.Windows.Media.Transform>, można utworzyć przejścia znacznej ekranu lub podaj przydatne wizualnych.  
   
  Ten przegląd zawiera wprowadzenie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji i czasu systemu. Dotyczy on animacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów przy użyciu scenorys.  
 
@@ -46,9 +34,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Następnie program aktualizuje prostokąt z nową wartością i ponownie go rysuje.  
   
- Przed [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] deweloperzy było tworzyć i zarządzać systemów chronometrażu lub Użyj specjalnych niestandardowych bibliotek. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obejmuje system chronometrażu wydajne, który jest uwidaczniany za pomocą kodu zarządzanego i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i jest ściśle zintegrowana do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]animacji można łatwo Animuj formanty i innych obiektów graficznych.  
+ Przed [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] deweloperzy było tworzyć i zarządzać systemów chronometrażu lub Użyj specjalnych niestandardowych bibliotek. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obejmuje system chronometrażu wydajne, który jest uwidaczniany za pomocą kodu zarządzanego i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i jest ściśle zintegrowana do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji można łatwo Animuj formanty i innych obiektów graficznych.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obsługuje wszystkie wewnętrznych pracy zarządzania systemem chronometrażu i efektywnie ponownego narysowania ekranu. Zawiera klasy chronometrażu, które pozwalają skupić się na efekty, który chcesz utworzyć, zamiast mechanika osiągnięcie tych skutków. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ułatwia także do tworzenia własnych animacji w przypadku wystawianego animacji klas podstawowych, z których może dziedziczyć z klasy, aby wygenerować dostosowany animacji. Te niestandardowe animacje uzyskać wiele korzyści w zakresie wydajności klas standardowe animacji.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje wszystkie wewnętrznych pracy zarządzania systemem chronometrażu i efektywnie ponownego narysowania ekranu. Zawiera klasy chronometrażu, które pozwalają skupić się na efekty, który chcesz utworzyć, zamiast mechanika osiągnięcie tych skutków. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ułatwia także do tworzenia własnych animacji w przypadku wystawianego animacji klas podstawowych, z których może dziedziczyć z klasy, aby wygenerować dostosowany animacji. Te niestandardowe animacje uzyskać wiele korzyści w zakresie wydajności klas standardowe animacji.  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>System animacji właściwość WPF  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Musi istnieć typu zgodny animacji dostępne. (Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie ma jednego, Utwórz swój własny. Zobacz [omówienie animacji niestandardowej](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera wiele obiektów, które mają <xref:System.Windows.Media.Animation.IAnimatable> właściwości. Formanty, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TabControl>, a także <xref:System.Windows.Controls.Panel> i <xref:System.Windows.Shapes.Shape> obiekty dziedziczyć <xref:System.Windows.DependencyObject>. Większość jego właściwości są właściwości zależności.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wiele obiektów, które mają <xref:System.Windows.Media.Animation.IAnimatable> właściwości. Formanty, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TabControl>, a także <xref:System.Windows.Controls.Panel> i <xref:System.Windows.Shapes.Shape> obiekty dziedziczyć <xref:System.Windows.DependencyObject>. Większość jego właściwości są właściwości zależności.  
   
  Możesz użyć animacji niemal dowolnego miejsca, w tym style i szablony formantu. Animacji musi być visual; obiekty, które nie są częścią interfejsu użytkownika, jeśli spełniają kryteria, które zostały opisane w tej sekcji można animować.  
   
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>Stosowanie animacji do właściwości  
- W poprzednich sekcjach opisano różne typy animacji i ich właściwości chronometrażu. W tej sekcji przedstawiono sposób zastosowania animacji dla właściwości, które mają być animowane. <xref:System.Windows.Media.Animation.Storyboard>obiekty Podaj jedną z metod do zastosowania animacji do właściwości. A <xref:System.Windows.Media.Animation.Storyboard> jest *osi czasu kontenera* zawierające informacje określania wartości docelowej dla animacji zawiera.  
+ W poprzednich sekcjach opisano różne typy animacji i ich właściwości chronometrażu. W tej sekcji przedstawiono sposób zastosowania animacji dla właściwości, które mają być animowane. <xref:System.Windows.Media.Animation.Storyboard> obiekty Podaj jedną z metod do zastosowania animacji do właściwości. A <xref:System.Windows.Media.Animation.Storyboard> jest *osi czasu kontenera* zawierające informacje określania wartości docelowej dla animacji zawiera.  
   
 ### <a name="targeting-objects-and-properties"></a>Obiekty docelowe i właściwości  
  <xref:System.Windows.Media.Animation.Storyboard> Klasa udostępnia <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> i <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> dołączone właściwości. Przez ustawienie tych właściwości dla animacji, można sprawdzić animacji co animacji. Jednak przed animacji można wybrać obiektu, obiekt muszą zwykle mieć nazwę.  

@@ -1,31 +1,20 @@
 ---
-title: "Porady: używanie struktury SpinLock do synchronizacji niskiego poziomu"
-ms.custom: 
+title: 'Porady: używanie struktury SpinLock do synchronizacji niskiego poziomu'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 11d41a1fd04039fd08d945a72a37a479f79449a5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7795b25ca8e9337a53fc67ebc6f56130237d0764
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Porady: używanie struktury SpinLock do synchronizacji niskiego poziomu
 W poniższym przykładzie pokazano sposób użycia <xref:System.Threading.SpinLock>.  
@@ -36,7 +25,7 @@ W poniższym przykładzie pokazano sposób użycia <xref:System.Threading.SpinLo
  [!code-csharp[CDS_SpinLock#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#02)]
  [!code-vb[CDS_SpinLock#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_vb.vb#02)]  
   
- <xref:System.Threading.SpinLock>mogą być przydatne, jeśli Blokada zasobu udostępnionego nie będzie można przechowywać na bardzo długi. W takich przypadkach na komputerach z procesorami wielordzeniowymi może być wydajne na pokrętła przez kilka cykli do czasu zwolnienia blokady zablokowanych wątku. Przez Obracająca, wątek nie zablokowanie, które jest procesem użycie Procesora CPU. <xref:System.Threading.SpinLock>przestanie Obracająca pewnych warunkach, aby uniknąć zablokowania procesorów logicznych lub odwracanie priorytet w systemach z funkcją Hyper-Threading.  
+ <xref:System.Threading.SpinLock> mogą być przydatne, jeśli Blokada zasobu udostępnionego nie będzie można przechowywać na bardzo długi. W takich przypadkach na komputerach z procesorami wielordzeniowymi może być wydajne na pokrętła przez kilka cykli do czasu zwolnienia blokady zablokowanych wątku. Przez Obracająca, wątek nie zablokowanie, które jest procesem użycie Procesora CPU. <xref:System.Threading.SpinLock> przestanie Obracająca pewnych warunkach, aby uniknąć zablokowania procesorów logicznych lub odwracanie priorytet w systemach z funkcją Hyper-Threading.  
   
  W tym przykładzie użyto <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> klasy, która wymaga synchronizacji użytkowników dla wielowątkowych dostęp. W aplikacjach przeznaczonych dla platformy .NET Framework w wersji 4, inną opcją jest użycie <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>, co nie wymaga żadnych blokady użytkownika.  
   

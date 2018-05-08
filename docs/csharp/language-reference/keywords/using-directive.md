@@ -1,21 +1,14 @@
 ---
 title: using — Dyrektywa (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>using — Dyrektywa (odwołanie w C#)
 `using` Dyrektywy ma trzy zastosowań:  
@@ -88,8 +81,8 @@ class Program
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Używanie usługi przestrzenie nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+ [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Słowa kluczowe Namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)  
  [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
- [Using — instrukcja](../../../csharp/language-reference/keywords/using-statement.md)
+ [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)

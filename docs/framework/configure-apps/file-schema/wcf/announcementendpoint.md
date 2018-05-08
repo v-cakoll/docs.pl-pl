@@ -1,29 +1,17 @@
 ---
-title: '&lt;announcementEndpoint&gt;'
-ms.custom: 
+title: '&lt;AnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae03b5d4a82c08978a3456e80428ba6ad8ac532a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15d60cd277b77fd52b2b77bfcdf4d0da1de7167a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem zawiadomieniowym. Usługi można opcjonalnie ogłaszamy jego dostępność, wysyłając wiadomość online i offline powiadomienia, gdy jest otwarty lub zamknięty odpowiednio. A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usługi określa punktów końcowych powiadomienia w [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element i używa AnnouncementClient przeprowadzić anonsów. Chcą nasłuchiwania dla anonsu z innej usługi rzeczywiście działa jako klient [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi; w związku z tym należy skonfigurować punktów końcowych powiadomienia dla tego klienta w [ \<usługi >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sekcji.  
+# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem zawiadomieniowym. Usługi można opcjonalnie ogłaszamy jego dostępność, wysyłając wiadomość online i offline powiadomienia, gdy jest otwarty lub zamknięty odpowiednio. Usługi Windows Communication Foundation (WCF) określa punktów końcowych powiadomienia w [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element i używa AnnouncementClient przeprowadzić anonsów. Klient chcą nasłuchiwania anonsu z innej usługi rzeczywiście działa jako usługa WCF; w związku z tym należy skonfigurować punktów końcowych powiadomienia dla tego klienta w [ \<usługi >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sekcji.  
   
-\<System. ServiceModel >  
+\<system.ServiceModel>  
 \<standardEndpoints >  
   
 ## <a name="syntax"></a>Składnia  

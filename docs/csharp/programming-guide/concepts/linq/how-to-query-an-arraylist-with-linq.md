@@ -1,22 +1,12 @@
 ---
-title: "Porady: zapytanie w ArrayList za pomocą LINQ (C#)"
-ms.custom: 
+title: 'Porady: zapytanie w ArrayList za pomocą LINQ (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f32fcca4504ce3d3f297cfc1b81529dd027f9a6
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 8aaf90843fa85cf20a92a40644f085769404aa85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Porady: zapytanie w ArrayList za pomocą LINQ (C#)
 W przypadku używania LINQ do zapytania nieogólnego <xref:System.Collections.IEnumerable> kolekcji, takie jak <xref:System.Collections.ArrayList>, musisz jawnie zadeklarować typu zmienną zakresu w celu odzwierciedlenia określonego typu obiektu w kolekcji. Na przykład, jeśli masz <xref:System.Collections.ArrayList> z `Student` obiektów, z [klauzuli from](../../../../csharp/language-reference/keywords/from-clause.md) powinna wyglądać następująco:  

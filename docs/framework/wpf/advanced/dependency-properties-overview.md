@@ -1,10 +1,7 @@
 ---
-title: "Przegląd właściwości zależności"
-description: "Właściwość, która nie jest obsługiwana przez system właściwości WPF jest określany jako właściwość zależności. Ten przegląd zawiera opis systemu właściwość WPF i możliwości właściwości zależności."
+title: Przegląd właściwości zależności
+description: Właściwość, która nie jest obsługiwana przez system właściwości WPF jest określany jako właściwość zależności. Ten przegląd zawiera opis systemu właściwość WPF i możliwości właściwości zależności.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +14,15 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>Przegląd właściwości zależności
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia to zestaw usług, których można użyć, aby rozszerzyć funkcjonalność programu [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Zbiorczo te usługi są zwykle nazywane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Właściwość, która nie jest obsługiwana przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu jest znany jako właściwość zależności. Ten przegląd zawiera opis [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu oraz możliwości właściwości zależności. Dotyczy to również sposób użycia istniejącej właściwości zależności w kodzie XAML i w kodzie. To omówienie wprowadza również specjalne aspektów właściwości zależności, takich jak metadanych właściwości zależności oraz sposobu tworzenia własnych właściwości zależności w niestandardowej klasy.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia to zestaw usług, których można użyć, aby rozszerzyć funkcjonalność programu [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Zbiorczo te usługi są zwykle nazywane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Właściwość, która nie jest obsługiwana przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu jest znany jako właściwość zależności. Ten przegląd zawiera opis [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu oraz możliwości właściwości zależności. Dotyczy to również sposób użycia istniejącej właściwości zależności w kodzie XAML i w kodzie. To omówienie wprowadza również specjalne aspektów właściwości zależności, takich jak metadanych właściwości zależności oraz sposobu tworzenia własnych właściwości zależności w niestandardowej klasy.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 W tym temacie założono, że niektóre podstawową wiedzę na temat [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] i programowanie zorientowane obiektowo. Aby można było wykonać przykłady w tym temacie, należy również zapoznać się [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i wiedzieć, jak napisać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [wskazówki: Moje pierwszą aplikację pulpitu WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
@@ -43,7 +35,7 @@ Celem właściwości zależności jest zapewnienie sposobem obliczenia wartości
 Odwołanie do zestawu SDK można określić, która właściwość jest właściwością zależności w obecności sekcji informacje dotyczące właściwości zależności na stronie zarządzane odniesienia dla tej właściwości. Sekcja informacje dotyczące właściwości zależności zawiera łącze do <xref:System.Windows.DependencyProperty> identyfikatora pola dla danej właściwości zależności i zawiera także listę opcji metadanych, które są ustawione dla tej właściwości, według klasy zastąpienie informacji i inne szczegóły.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Właściwości zależności kopii CLR właściwości
-Właściwości zależności i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu na poszerzanie funkcjonalności właściwości zapewniając typu, aby utworzyć kopię zapasową właściwość, jako alternatywnej implementacji standardowego wzorca zapisywania kopii właściwość z polem prywatnych. Nazwa tego typu jest <xref:System.Windows.DependencyProperty>. Ważne typu, który definiuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwość system jest <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>definiuje klasę podstawową, która można rejestrować i własnej właściwości zależności.
+Właściwości zależności i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu na poszerzanie funkcjonalności właściwości zapewniając typu, aby utworzyć kopię zapasową właściwość, jako alternatywnej implementacji standardowego wzorca zapisywania kopii właściwość z polem prywatnych. Nazwa tego typu jest <xref:System.Windows.DependencyProperty>. Ważne typu, który definiuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwość system jest <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiuje klasę podstawową, która można rejestrować i własnej właściwości zależności.
 
 Poniżej znajduje się podsumowanie terminologii, który jest używany w tym [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] dokumentacji Omawiając właściwości zależności:
 
@@ -106,7 +98,7 @@ Właściwości zależności zawiera funkcje, które rozszerza funkcjonalność w
 
 - [Integracja projektanta WPF](#wpf-designer-integration)
 
-### <a name="resources"></a>Resources
+### <a name="resources"></a>Zasoby
 Za pomocą odwołań do zasobu można ustawić wartości właściwości zależności. Zasoby są zazwyczaj określana jako `Resources` wartości właściwości elementu głównego strony lub aplikacji (jak najdogodniejszy dostęp do zasobu włączyć te lokalizacje). Poniższy przykład przedstawia sposób definiowania <xref:System.Windows.Media.SolidColorBrush> zasobów.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]

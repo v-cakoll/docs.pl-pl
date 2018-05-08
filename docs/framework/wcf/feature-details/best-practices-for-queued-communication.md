@@ -1,32 +1,18 @@
 ---
 title: Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek
-W tym temacie przedstawiono zalecane praktyki dla komunikacji z obsługą kolejek w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. W poniższych sekcjach omówiono zalecane praktyki z punktu widzenia scenariusza.  
+Ten temat zawiera rozwiązania dla komunikacji z obsługą kolejek w systemie Windows Communication Foundation (WCF). W poniższych sekcjach omówiono zalecane praktyki z punktu widzenia scenariusza.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Szybkie optymalnych w kolejce obsługi wiadomości  
  Scenariusze wymagające zapewnia oddzielenie, który obsługi wiadomości w kolejce i szybko i wysokiej wydajności wiadomości zapewnienia optymalnych Użyj nietransakcyjnej kolejki i ustaw <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> właściwości `false`.  
@@ -69,7 +55,7 @@ W tym temacie przedstawiono zalecane praktyki dla komunikacji z obsługą koleje
   
  Podczas korzystania z przetwarzania wsadowego, należy pamiętać, że współbieżności i ograniczania przepustowości przełożyć na partie współbieżnych.  
   
- Aby osiągnąć wyższy przepływności i dostępności, użyj farma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, które zapoznały się z kolejki. Wymaga to, że wszystkie te usługi narazić ten sam kontrakt, w tym samym punkcie końcowym. To rozwiązanie farmy jest najlepsza dla aplikacji, które mają produkcji wysokiej szybkości wiadomości, ponieważ dzięki liczbę usług do wszystkich odczytywać z tej samej kolejki.  
+ Aby osiągnąć wyższy przepływności i dostępności, użyj farmy usług WCF, które zapoznały się z kolejki. Wymaga to, że wszystkie te usługi narazić ten sam kontrakt, w tym samym punkcie końcowym. To rozwiązanie farmy jest najlepsza dla aplikacji, które mają produkcji wysokiej szybkości wiadomości, ponieważ dzięki liczbę usług do wszystkich odczytywać z tej samej kolejki.  
   
  Podczas korzystania z farmy, należy pamiętać, usługa MSMQ 3.0 nie obsługuje zdalnego odczyty transakcyjne. MSMQ 4.0 obsługuje zdalne odczyty transakcyjne.  
   
@@ -84,11 +70,11 @@ W tym temacie przedstawiono zalecane praktyki dla komunikacji z obsługą koleje
  Chociaż kolejki są zwykle jednokierunkowe, w niektórych sytuacjach może zajść potrzeba dopasowania odpowiedzi otrzymanych na żądanie wysłane wcześniej. Jeśli potrzebujesz takie korelacji zaleca się stosowanie własnych nagłówek komunikatu protokołu SOAP, zawierający informacje o powiązaniu z komunikatem. Zazwyczaj nadawca dołącza ten nagłówek z komunikatem i odbiornik, podczas przetwarzania komunikatu i odpowiedzi z powrotem nowej wiadomości w kolejce odpowiedzi, dołączenie nadawcy wiadomości nagłówek, który zawiera informacje o powiązaniu, dlatego można nadawcy Określ komunikat odpowiedzi z komunikatu żądania.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Współdziałanie z aplikacjami z systemem innym niż WCF  
- Użyj `MsmqIntegrationBinding` składników podczas integrowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług lub klientom z systemem innym niż[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług lub klientów. Nienależących[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji mogą być napisane przy użyciu System.Messaging, COM +, Visual Basic lub C++ aplikacji usługi MSMQ.  
+ Użyj `MsmqIntegrationBinding` składników podczas integrowania usługi WCF lub klientami z usługi WCF nie lub klientów. Aplikacja WCF nie może być MSMQ aplikacji napisanych z użyciem System.Messaging, COM +, Visual Basic lub C++.  
   
  Korzystając z `MsmqIntegrationBinding`, należy pamiętać o następujących czynności:  
   
--   A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] treść komunikatu nie jest taka sama jak treść wiadomości MSMQ. Podczas wysyłania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] komunikatów za pomocą powiązania kolejkowanego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] treści wiadomości znajduje się wewnątrz wiadomości MSMQ. Infrastruktura usługi MSMQ jest oblivious do tych informacji dodatkowych; widzi ona tylko wiadomości MSMQ.  
+-   Treść wiadomości WCF nie jest taka sama jak treść wiadomości MSMQ. Podczas wysyłania wiadomości WCF za pomocą powiązania kolejkowanego, treści wiadomości WCF znajduje się wewnątrz wiadomości MSMQ. Infrastruktura usługi MSMQ jest oblivious do tych informacji dodatkowych; widzi ona tylko wiadomości MSMQ.  
   
 -   `MsmqIntegrationBinding` obsługuje serializacji popularnych typów. Na podstawie typu serializacji, typ treści komunikat ogólny <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, przyjmuje parametry innego typu. Na przykład <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> wymaga `MsmqMessage\<byte[]>` i <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> wymaga `MsmqMessage<Stream>`.  
   

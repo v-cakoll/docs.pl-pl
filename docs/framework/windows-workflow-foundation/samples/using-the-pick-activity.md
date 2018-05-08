@@ -1,23 +1,12 @@
 ---
-title: "Przy użyciu działaniu wybierz"
-ms.custom: 
+title: Przy użyciu działaniu wybierz
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01cad73bfe5e741c104a8c8e5e9d66f7564c7067
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9617949d72fb1489f66fec205b260b807d011177
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-pick-activity"></a>Przy użyciu działaniu wybierz
 W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Statements.Pick> działania.  
@@ -27,7 +16,7 @@ W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Stateme
  W tym przykładzie monituje użytkownika o wpisanie nazwy na konsoli w danym okresie. <xref:System.Activities.Statements.Pick> Działanie w próbce ma dwie gałęzie, które są ustalane na podstawie tego, czy użytkownik wpisze w ich imieniu w ciągu 5 sekund, czy nie. Jeśli użytkownik wpisze w ich imieniu w ciągu 5 sekund, jest wykonywane pierwszej gałęzi, który zawiera niestandardowy `ReadLine` działanie; w przeciwnym razie innej gałęzi jest wykonywane, który zawiera <xref:System.Activities.Statements.Delay> działania. Gdy nazwa użytkownika jest wpisany w konsoli, nazwa użytkownika jest drukowane na konsoli. Jeśli dane wejściowe nie została wprowadzona w ciągu 5 sekund, jest upłynął limit czasu operacji.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- <xref:System.Activities.Statements.Pick>działanie.  
+ <xref:System.Activities.Statements.Pick> działanie.  
   
 ## <a name="discussion"></a>Omówienie  
  Przykład zawiera projektanta przepływów pracy i kodowanego przepływu pracy.  
@@ -61,6 +50,6 @@ W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Stateme
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

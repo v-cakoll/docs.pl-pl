@@ -1,11 +1,7 @@
 ---
-title: "Funkcja GetQualifierSet (niezarządzany wykaz interfejsów API)"
-description: "Funkcja GetQualifierSet pobiera kwalifikator dla klasy lub wystąpienia."
+title: Funkcja GetQualifierSet (niezarządzany wykaz interfejsów API)
+description: Funkcja GetQualifierSet pobiera kwalifikator dla klasy lub wystąpienia.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127e7862d0cb0d204e91cd5ee36f2d32f1453a8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b50befa4346e17048598afd3d018dbde2fe8572
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getqualifierset-function"></a>Funkcja GetQualifierSet
 Pobiera kwalifikator dla wystąpienia klasy lub definicji klasy.
@@ -53,7 +46,7 @@ HRESULT GetQualifierSet (
 [in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
 
 `ppQualSet`  
-[out] Uzyskuje wskaźnik interfejsu, który zezwala na dostęp do kwalifikatory klasy obiektu. `ppQualSet`nie może być `null`. Jeśli wystąpi błąd, nowego obiektu nie są zwracane, a wskaźnik myszy pozostanie niezmieniona. 
+[out] Uzyskuje wskaźnik interfejsu, który zezwala na dostęp do kwalifikatory klasy obiektu. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowego obiektu nie są zwracane, a wskaźnik myszy pozostanie niezmieniona. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -78,7 +71,7 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetQualifierSet](https://
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

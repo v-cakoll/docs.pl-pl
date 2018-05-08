@@ -1,13 +1,7 @@
 ---
 title: Typy izolacji
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6a7e9b28601970aecd139d2027bc0ebc73e869fc
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c0c888181b5f2150c37a87957cd932e10a36f7f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do magazynu izolowanego zawsze jest ograniczony do użytkownika, który go utworzył. Aby wdrożyć ten typ izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, która rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod po otwarciu Sklepu. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować tożsamości bieżącego użytkownika można zmienić dynamicznie.  

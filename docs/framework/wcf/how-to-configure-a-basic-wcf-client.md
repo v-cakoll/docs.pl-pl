@@ -1,33 +1,19 @@
 ---
 title: 'Instrukcje: Konfigurowanie podstawowego klienta WCF (Windows Communication Foundation)'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bde13abeac782da1c553afa290943eeff925fa4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c03bf37c737a19b0a90f12e7ad5db78b75323f5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Instrukcje: Konfigurowanie podstawowego klienta WCF (Windows Communication Foundation)
-To jest piątym sześciu zadania wymagane do tworzenia prostej [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
+To jest piątym sześciu zadania wymagane do tworzenia podstawowej aplikacji Windows Communication Foundation (WCF). Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
   
- Ten temat disuccess pliku konfiguracji klienta, który został wygenerowany za pomocą funkcji Dodaj odwołanie do usługi [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] lub [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Konfigurowanie klienta obejmuje określenie punktu końcowego, który klient używa do uzyskania dostępu do usługi. Punkt końcowy ma adres, powiązania i kontrakt i każdego z nich musi być określona podczas konfigurowania klienta.  
+ W tym temacie omówiono pliku konfiguracji klienta, który został wygenerowany za pomocą funkcji Dodaj odwołanie do usługi [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] lub [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Konfigurowanie klienta obejmuje określenie punktu końcowego, który klient używa do uzyskania dostępu do usługi. Punkt końcowy ma adres, powiązania i kontrakt i każdego z nich musi być określona podczas konfigurowania klienta.  
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>Aby skonfigurować klienta Windows Communication Foundation  
   

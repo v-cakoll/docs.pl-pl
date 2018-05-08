@@ -1,13 +1,6 @@
 ---
-title: "Linie, krzywe i kształty"
-ms.custom: 
+title: Linie, krzywe i kształty
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - shapes [Windows Forms], filling
 - splines [Windows Forms], drawing
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 04d93203f98c91b0d5bbed5f833745a9bb9ab1d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f37e30959d5d802376f17a0537188bfcbd6a196e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lines-curves-and-shapes"></a>Linie, krzywe i kształty
 Grafika wektorowa część [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest używany do rysowania linii, rysowanie krzywych oraz do rysowania i wypełniania kształtów.  

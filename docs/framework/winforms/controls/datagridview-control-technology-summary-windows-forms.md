@@ -1,27 +1,15 @@
 ---
-title: "Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)"
-ms.custom: 
+title: Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cafd832e7105540ae684dd1feb4b33ab74f72836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)
 Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klasy, które obsługują jej zastosowania.  
@@ -63,8 +51,8 @@ Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klasy, kt�
 |Obszar technologii|Elementy klasy/interfejsy/konfiguracji|  
 |---------------------|-------------------------------------------------|  
 |Powiązanie danych|<xref:System.Windows.Forms.BindingSource>|  
-|Prezentacja danych|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell>i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewRow>i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView>Rozszerzalność|<xref:System.Windows.Forms.DataGridViewCell>i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>i klasy pochodne<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|Prezentacja danych|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<xref:System.Windows.Forms.DataGridView> Rozszerzalność|<xref:System.Windows.Forms.DataGridViewCell> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Nowości  
  <xref:System.Windows.Forms.DataGridView> Kontrolki została zaprojektowana jako kompletnego rozwiązania do wyświetlania danych tabelarycznych w formularzach systemu Windows. Należy rozważyć użycie <xref:System.Windows.Forms.DataGridView> kontrolować przed innych rozwiązań, takich jak <xref:System.Windows.Forms.DataGrid>, podczas tworzenia nowej aplikacji. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  

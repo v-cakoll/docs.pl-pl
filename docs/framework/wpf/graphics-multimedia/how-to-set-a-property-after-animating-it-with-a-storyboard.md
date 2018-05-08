@@ -1,31 +1,17 @@
 ---
-title: "Jak ustawić właściwość po zanimowaniu jej za pomocą scenorysu"
-ms.custom: 
+title: Jak ustawić właściwość po zanimowaniu jej za pomocą scenorysu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Jak ustawić właściwość po zanimowaniu jej za pomocą scenorysu
 W niektórych przypadkach może się pojawić, nie można zmienić wartości właściwości po ma zostać animowany.  
@@ -43,7 +29,7 @@ W niektórych przypadkach może się pojawić, nie można zmienić wartości wł
   
  Poprzedni kod wygląda na niczego robić: żółty, pozostaje pędzla, które jest wartością dostarczonych przez <xref:System.Windows.Media.Animation.ColorAnimation> który animowany pędzla. Odpowiednia wartość właściwości (wartości podstawowej) faktycznie jest zmieniany na niebieski. Jednak nadal żółty wartość skuteczne lub bieżących, ponieważ <xref:System.Windows.Media.Animation.ColorAnimation> nadal przesłaniają wartości podstawowej. Wartość podstawowa znów wartość, należy zatrzymać animacji z wpływające na właściwość. Istnieją trzy sposoby, w tym animacje scenorysu:  
   
--   Ustawienie animacji <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> właściwości<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   Ustawienie animacji <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> właściwości <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   Usuń całą scenorysu.  
   

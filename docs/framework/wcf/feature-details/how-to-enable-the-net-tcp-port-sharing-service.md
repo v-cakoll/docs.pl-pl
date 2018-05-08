@@ -1,30 +1,18 @@
 ---
-title: "Instrukcje: Włączanie usługi współużytkowania portów Net.TCP"
-ms.custom: 
+title: 'Instrukcje: Włączanie usługi współużytkowania portów Net.TCP'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5a18e11d9fc15f23b5353883a63d838face58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Instrukcje: Włączanie usługi współużytkowania portów Net.TCP
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]używa usługi systemu Windows o nazwie usługi udostępniania portów Net.TCP ułatwia udostępnianie portów TCP wielu procesom. Ta usługa jest instalowana jako część [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ale usługa nie jest włączona domyślnie w celu zapewnienia bezpieczeństwa i dlatego muszą być włączone ręcznie przed pierwszym użyciu. W tym temacie opisano sposób konfigurowania sieci TCP Port do udostępniania usługi za pomocą przystawki Microsoft Management Console (MMC).  
+Windows Communication Foundation (WCF) używa usługi systemu Windows o nazwie usługi udostępniania portów Net.TCP ułatwia udostępnianie portów TCP wielu procesom. Ta usługa jest instalowana jako część usługi WCF, ale usługa nie jest włączona domyślnie w celu zapewnienia bezpieczeństwa i dlatego muszą być włączone ręcznie przed pierwszym użyciem. W tym temacie opisano sposób konfigurowania sieci TCP Port do udostępniania usługi za pomocą przystawki Microsoft Management Console (MMC).  
   
  Po włączyć usługi udostępniania portów Net.TCP i uruchomić go ręcznie, zobacz [porady: Konfigurowanie usługi WCF na potrzeby współużytkowania portów użyj](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) informacji o sposobie konfigurowania usługi do tej usługi.  
   

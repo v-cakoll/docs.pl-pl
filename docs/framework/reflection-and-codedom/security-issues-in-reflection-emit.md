@@ -1,13 +1,6 @@
 ---
-title: "Problemy związane z zabezpieczeniami w emisji odbicia"
-ms.custom: 
+title: Problemy związane z zabezpieczeniami w emisji odbicia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - partially trusted code
 - emitting dynamic assemblies, security
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2319ab244b2c2a296966692342df1f4967b85729
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 57db77b64ddcbe282fed035b52bb122901383ca4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemy związane z zabezpieczeniami w emisji odbicia
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Udostępnia trzy sposoby Emituj Microsoft pośredniego language (MSIL), każdy z własną problemy z zabezpieczeniami:  
@@ -153,7 +143,7 @@ ms.lasthandoff: 12/22/2017
  Począwszy od [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga nie jest już wymagany podczas emitowanie dynamicznych zestawów i metod dynamicznych. Ta flaga jest wymagane we wszystkich wcześniejszych wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission>z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga jest domyślnie włączone w `FullTrust` i `LocalIntranet` ustawia uprawnienia nazwanego, ale nie w `Internet` zestaw uprawnień. W związku z tym w starszych wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], biblioteki mogą być używane z Internetu uprawnienia tylko w przypadku wykonywania <xref:System.Security.PermissionSet.Assert%2A> dla <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Takie biblioteki wymagają przeglądu zabezpieczeń zachować ostrożność, ponieważ błędy kodowania może skutkować luk w zabezpieczeniach. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] Umożliwia kod, aby emitować w scenariuszach częściowo zaufanych bez wystawiania wszystkie żądania kontroli zabezpieczeń, ponieważ generowanie kodu nie jest z założenia uprzywilejowanych operacji. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Dzięki temu biblioteki, w których Emituj kod jest przezroczysta pod względem zabezpieczeń i eliminuje potrzebę do potwierdzenia <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, który upraszcza zapisywanie bezpiecznego biblioteki.  
+>  <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga jest domyślnie włączone w `FullTrust` i `LocalIntranet` ustawia uprawnienia nazwanego, ale nie w `Internet` zestaw uprawnień. W związku z tym w starszych wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], biblioteki mogą być używane z Internetu uprawnienia tylko w przypadku wykonywania <xref:System.Security.PermissionSet.Assert%2A> dla <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Takie biblioteki wymagają przeglądu zabezpieczeń zachować ostrożność, ponieważ błędy kodowania może skutkować luk w zabezpieczeniach. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] Umożliwia kod, aby emitować w scenariuszach częściowo zaufanych bez wystawiania wszystkie żądania kontroli zabezpieczeń, ponieważ generowanie kodu nie jest z założenia uprzywilejowanych operacji. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Dzięki temu biblioteki, w których Emituj kod jest przezroczysta pod względem zabezpieczeń i eliminuje potrzebę do potwierdzenia <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, który upraszcza zapisywanie bezpiecznego biblioteki.  
   
  Ponadto [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] wprowadza <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi do uzyskiwania dostępu do niepubliczne typy i składniki z częściowo zaufanego metod dynamicznych. Starsze niż [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagę dla metod dynamicznych, których dostęp niepubliczne typy i składniki; to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufany kod.  
   

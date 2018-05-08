@@ -1,13 +1,6 @@
 ---
 title: Ilasm.exe (Asembler IL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Asembler IL)
 
@@ -52,38 +42,38 @@ ilasm [options] filename [[options]filename...]
 | Opcja | Opis |
 | ------ | ----------- |
 |**/32bitpreferred**|Tworzy obraz 32-bitowy (PE32).|
-|**/ Alignment:**`integer`|Ustawia wartość określoną przez FileAlignment `integer` w nagłówku NT opcjonalne. Jeśli dyrektywa języka IL .alignment została określona w pliku, ta opcja zastępuje ją.|
+|**/ Alignment:** `integer`|Ustawia wartość określoną przez FileAlignment `integer` w nagłówku NT opcjonalne. Jeśli dyrektywa języka IL .alignment została określona w pliku, ta opcja zastępuje ją.|
 |**/appcontainer**|Tworzy *.dll* lub *.exe* pliku, który jest uruchamiany w kontenerze aplikacji systemu Windows jako dane wyjściowe.|
 |**/ARM**|Określa procesor Advanced RISC Machine (ARM) jako procesor docelowy.<br /><br /> Jeśli liczba bitów nie obrazu jest określony, wartością domyślną jest **/32bitpreferred**.|
-|**/ base:**`integer`|Ustawia wartość określoną przez Baza obrazu `integer` w nagłówku NT opcjonalne. Jeśli dyrektywa języka IL .imagebase została określona w pliku, ta opcja zastępuje ją.|
+|**/Base:** `integer`|Ustawia wartość określoną przez Baza obrazu `integer` w nagłówku NT opcjonalne. Jeśli dyrektywa języka IL .imagebase została określona w pliku, ta opcja zastępuje ją.|
 |**/Clock**|Mierzy i raportuje następujące czasy kompilacji (w milisekundach) dla określonego pliku źródłowego il:<br /><br /> **Łączna liczba Uruchom**: całkowity czas poświęcony na wykonywanie kolejnych określonej operacji.<br /><br /> **Uruchamianie**: ładowanie i otworzyć plik.<br /><br /> **Emitowanie MD**: emitowania metadanych.<br /><br /> **Odwołanie do rozpoznawania Def**: rozpoznawania odwołań do definicji w pliku.<br /><br /> **Generowanie pliku CEE**: generowanie pliku obrazu w pamięci.<br /><br /> **Zapisywanie pliku PE**: zapisywania obraz pliku PE.|
-|**/ debug**[:**IMPL**&#124; **OPT**]|Dołącza informacje o debugowaniu (zmienne lokalne, nazwy argumentów i numery wierszy). Tworzy plik PDB.<br /><br /> **/ debug** bez dodatkowych wartości powoduje wyłączenie optymalizację JIT i korzysta z pliku PDB punkty sekwencji.<br /><br /> **IMPL** wyłącza optymalizację JIT i używa punktów niejawne sekwencji.<br /><br /> **OPT** włącza optymalizację JIT i używa punktów niejawne sekwencji.|
+|**/ debug**[:**IMPL**&#124;**OPT**]|Dołącza informacje o debugowaniu (zmienne lokalne, nazwy argumentów i numery wierszy). Tworzy plik PDB.<br /><br /> **/ debug** bez dodatkowych wartości powoduje wyłączenie optymalizację JIT i korzysta z pliku PDB punkty sekwencji.<br /><br /> **IMPL** wyłącza optymalizację JIT i używa punktów niejawne sekwencji.<br /><br /> **OPT** włącza optymalizację JIT i używa punktów niejawne sekwencji.|
 |**/ dll**|Tworzy *.dll* pliku jako dane wyjściowe.|
-|**/ENC:**`file`|Tworzy plik różnic Edytuj-i-Kontynuuj z określonego pliku źródłowego.<br /><br /> Ten argument jest tylko do użytku akademickiego i nie jest obsługiwany w użytku komercyjnym.|
+|**/ENC:** `file`|Tworzy plik różnic Edytuj-i-Kontynuuj z określonego pliku źródłowego.<br /><br /> Ten argument jest tylko do użytku akademickiego i nie jest obsługiwany w użytku komercyjnym.|
 |**/exe**|Tworzy plik wykonywalny jako dane wyjściowe. Domyślnie włączone.|
-|**/ flags:**`integer`|Ustawia wartość określoną przez ImageFlags `integer` w nagłówku środowiska uruchomieniowego języka wspólnego. Jeśli dyrektywa języka IL .corflags została określona w pliku, ta opcja zastępuje ją. Zobacz CorHdr.h, COMIMAGE_FLAGS, aby uzyskać listę prawidłowych wartości dla *całkowitą*.|
+|**Flags:** `integer`|Ustawia wartość określoną przez ImageFlags `integer` w nagłówku środowiska uruchomieniowego języka wspólnego. Jeśli dyrektywa języka IL .corflags została określona w pliku, ta opcja zastępuje ją. Zobacz CorHdr.h, COMIMAGE_FLAGS, aby uzyskać listę prawidłowych wartości dla *całkowitą*.|
 |**/fold**|Składa identyczne treści metod w jedną.|
 |/**highentropyva**|Tworzy wyjściowy plik wykonywalny, który obsługuje generowanie losowe układów przestrzeni adresowej (ASLR) o wysokiej entropii. (Wartość domyślna **/appcontainer**.)|
-|**/ include:**`includePath`|Ustawia ścieżkę wyszukiwania plików uwzględnionych w `#include`.|
+|**/ include:** `includePath`|Ustawia ścieżkę wyszukiwania plików uwzględnionych w `#include`.|
 |**/Itanium**|Określa procesor Intel Itanium jako procesor docelowy.<br /><br /> Jeśli liczba bitów nie obrazu jest określony, wartością domyślną jest **/pe64**.|
-|**/ klucz:**`keyFile`|Kompiluje `filename` za pomocą mocnej sygnatury przy użyciu klucza prywatnego zawarte w `keyFile`.|
+|**następujący/key:** `keyFile`|Kompiluje `filename` za pomocą mocnej sygnatury przy użyciu klucza prywatnego zawarte w `keyFile`.|
 |**następujący/key:** @`keySource`|Kompiluje `filename` za pomocą mocnej sygnatury utworzony przy użyciu klucza prywatnego w `keySource`.|
 |**/ wystawienie**|Tworzy plik listy w standardowym wyjściu. Jeśli ta opcja zostanie pominięta, plik listy nie zostanie utworzony.<br /><br /> Ten parametr nie jest obsługiwany w programie .NET Framework 2.0 i nowszych.|
-|**/MDV:**`versionString`|Ustawia ciąg wersji metadanych.|
+|**/MDV:** `versionString`|Ustawia ciąg wersji metadanych.|
 |**/mSv:** `major`.`minor`|Ustawia wersję strumienia metadanych, gdy `major` i `minor` są liczbami całkowitymi.|
 |**/noautoinherit**|Wyłącza domyślnej dziedziczenia z <xref:System.Object> gdy został określony parametr klasy podstawowej.|
 |**/nocorstub**|Powoduje pominięcie generowania procedury wejścia CORExeMain.|
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
-|**/ output:**`file.ext`|Określa nazwę i rozszerzenie pliku wyjściowego. Domyślnie nazwa pliku wyjściowego jest taka sama jak nazwa pierwszego pliku źródłowego. To domyślne rozszerzenie *.exe*. Jeśli określisz **/dll** opcja, to domyślne rozszerzenie *.dll*. **Uwaga:** określanie **/output**: myfile.dll nie ustawia **/dll** opcji. Jeśli nie określisz **/dll**, wynikiem będzie pliku wykonywalnego o nazwie *myfile.dll*.|
+|**/ Output:** `file.ext`|Określa nazwę i rozszerzenie pliku wyjściowego. Domyślnie nazwa pliku wyjściowego jest taka sama jak nazwa pierwszego pliku źródłowego. To domyślne rozszerzenie *.exe*. Jeśli określisz **/dll** opcja, to domyślne rozszerzenie *.dll*. **Uwaga:** określanie **/output**: myfile.dll nie ustawia **/dll** opcji. Jeśli nie określisz **/dll**, wynikiem będzie pliku wykonywalnego o nazwie *myfile.dll*.|
 |**/optimize**|Optymalizuje długie instrukcje, co powoduje zamianę ich na krótkie. Na przykład `br` do `br.s`.|
 |**/pe64**|Tworzy obraz 64-bitowy (PE32+).<br /><br /> Jeśli nie procesor docelowy jest określony, wartością domyślną jest `/itanium`.|
 |**/ PDB**|Tworzy plik PDB bez włączania śledzenia informacji o debugowaniu.|
 |**/quiet**|Określa tryb cichy; nie zgłasza postępów zestawu.|
-|**/ Resource:**`file.res`|Zawiera plik zasobu określonego w \*format .res w wynikowym *.exe* lub *.dll* pliku. Za pomocą można określić tylko jeden plik .res **/Resource** opcji.|
+|**/ Resource:** `file.res`|Zawiera plik zasobu określonego w \*format .res w wynikowym *.exe* lub *.dll* pliku. Za pomocą można określić tylko jeden plik .res **/Resource** opcji.|
 |**/ssver:** `int`.`int`|Ustawia numer wersji podsystemu w opcjonalnym nagłówku NT. Aby uzyskać **/appcontainer** i **/arm** numer wersji jest 6.02.|
-|**/ stack:**`stackSize`|Ustawia wartość SizeOfStackReserve w nagłówku NT opcjonalne `stackSize`.|
+|**/Stack:** `stackSize`|Ustawia wartość SizeOfStackReserve w nagłówku NT opcjonalne `stackSize`.|
 |**/stripreloc**|Określa, że nie są potrzebne relokacje podstawowe.|
-|**Opcja/Subsystem:**`integer`|Ustawia wartość określoną przez podsystem `integer` w nagłówku NT opcjonalne. Jeśli dyrektywa języka IL .subsystem została określona w pliku, to polecenie zastępuje ją. Zobacz pliku winnt.h, IMAGE_SUBSYSTEM, aby uzyskać listę prawidłowych wartości dla `integer`.|
+|**Opcja/Subsystem:** `integer`|Ustawia wartość określoną przez podsystem `integer` w nagłówku NT opcjonalne. Jeśli dyrektywa języka IL .subsystem została określona w pliku, to polecenie zastępuje ją. Zobacz pliku winnt.h, IMAGE_SUBSYSTEM, aby uzyskać listę prawidłowych wartości dla `integer`.|
 |**/x64**|Określa 64-bitowy procesor firmy AMD jako procesor docelowy.<br /><br /> Jeśli liczba bitów nie obrazu jest określony, wartością domyślną jest **/pe64**.|
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|
 

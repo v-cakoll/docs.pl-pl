@@ -1,17 +1,12 @@
 ---
 title: Jednostki miary (F#)
 description: 'Dowiedz się, jak zmiennoprzecinkowych i podpisane liczby całkowite w języku F # można skojarzyć jednostki miary, które zwykle są używane do wskazywania długość, wielkości i masowej.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 336a1e04426fb39f5ceb98e06a06cd7eadc36e85
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e47c92100c1dd99161be709a065913f501854f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="units-of-measure"></a>Jednostki miary
 

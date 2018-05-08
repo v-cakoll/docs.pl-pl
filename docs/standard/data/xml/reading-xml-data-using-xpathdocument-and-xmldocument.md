@@ -1,29 +1,18 @@
 ---
-title: "Odczytywanie danych XML przy użyciu XPathDocument i XmlDocument"
-ms.custom: 
+title: Odczytywanie danych XML przy użyciu XPathDocument i XmlDocument
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9282742669c8e3d8b4a856694c76db834282dbf9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dc8e1b85543fca0281b6433dd5c87c28b37818db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Odczytywanie danych XML przy użyciu XPathDocument i XmlDocument
 Istnieją dwa sposoby przeczytaj dokument XML w <xref:System.Xml.XPath?displayProperty=nameWithType> przestrzeni nazw. Jeden jest przeznaczony do odczytu dokumentu XML przy użyciu tylko do odczytu <xref:System.Xml.XPath.XPathDocument> klasy, a druga jest do odczytu dokumentu XML przy użyciu edytowalne <xref:System.Xml.XmlDocument> klasy w <xref:System.Xml?displayProperty=nameWithType> przestrzeni nazw.  
@@ -77,7 +66,7 @@ document.Load("books.xml");
   
  W poniższej tabeli opisano wartość <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwości dla każdej klasy.  
   
-|<xref:System.Xml.XPath.IXPathNavigable>Implementacja|<xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>Wartość|  
+|<xref:System.Xml.XPath.IXPathNavigable> Implementacja|<xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> Wartość|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Xml.XPath.XPathDocument>|`false`|  
 |<xref:System.Xml.XmlDocument>|`true`|  

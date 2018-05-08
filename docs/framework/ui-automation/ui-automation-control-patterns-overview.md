@@ -1,27 +1,18 @@
 ---
-title: "Wzorce formantów automatyzacji interfejsu użytkownika — omówienie"
-ms.custom: 
+title: Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e675681d1de3aa46645047da61ae8aac2ea0ba31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b02618676a1162681c67d34a2c6f43def07893c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
@@ -29,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
  W tym omówieniu przedstawiono [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kontrolować wzorce. Wzorce formantu umożliwiają klasyfikowanie i udostępniać funkcje formantu niezależnie od typu formantu lub wygląd formantu.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]używa kontroli wzorców do reprezentowania zachowań wspólnych formantu. Na przykład użyć Invoke — wzorzec formantu dla formantów, które mogą być wywoływane (takie jak przyciski) i wzorca formantu przewijania dla formantów, które mają paski przewijania (np. pola listy, widoki list lub pól kombi). Ponieważ każdy — wzorzec formantu reprezentuje osobne funkcje, można je łączyć do opisania pełnego zestawu funkcji oferowanych przez określonego formantu.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] używa kontroli wzorców do reprezentowania zachowań wspólnych formantu. Na przykład użyć Invoke — wzorzec formantu dla formantów, które mogą być wywoływane (takie jak przyciski) i wzorca formantu przewijania dla formantów, które mają paski przewijania (np. pola listy, widoki list lub pól kombi). Ponieważ każdy — wzorzec formantu reprezentuje osobne funkcje, można je łączyć do opisania pełnego zestawu funkcji oferowanych przez określonego formantu.  
   
 > [!NOTE]
 >  Formanty agregacji — skompilowanej za pomocą formantów podrzędnych, które zapewniają [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] dla funkcji udostępnianych przez nadrzędny — powinien implementować wszystkich wzorców formantu zwykle skojarzone z każdym kontrolki podrzędnej. Z kolei tych samym wzorców formantu nie są wymagane do zaimplementowania przez formantów podrzędnych.  

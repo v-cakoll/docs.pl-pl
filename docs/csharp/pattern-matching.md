@@ -1,19 +1,13 @@
 ---
 title: Dopasowanie wzorca — przewodnik C#
 description: Dowiedz się więcej o wzorzec dopasowany wyrażenia w języku C#
-keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
-ms.author: wiwagn
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 7bdb41085a1a110f5a097ad3fa2cb645237fcefd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca #
 

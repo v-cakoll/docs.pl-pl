@@ -1,13 +1,6 @@
 ---
-title: "Porady: wyświetlanie przycisków opcji w formancie MenuStrip (Formularze systemu Windows)"
-ms.custom: 
+title: 'Porady: wyświetlanie przycisków opcji w formancie MenuStrip (Formularze systemu Windows)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0de3b8596bc06c79f391141ef85fec65ac343d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da2bb7edceaf83aa5178618fd4098631d65a7d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Porady: wyświetlanie przycisków opcji w formancie MenuStrip (Formularze systemu Windows)
 Przyciski opcji, znanej także jako przyciski radiowe, są podobne do pola wyboru z wyjątkiem tego, czy użytkownicy mogą wybrać tylko jeden z nich. Mimo że domyślnie <xref:System.Windows.Forms.ToolStripMenuItem> klasa nie zapewnia zachowanie przycisk opcji, klasa zapewnia zachowanie pola wyboru, które można dostosować, aby zaimplementować zachowanie przycisk opcji dla elementów menu w <xref:System.Windows.Forms.MenuStrip> formantu.  

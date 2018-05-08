@@ -1,24 +1,17 @@
 ---
 title: Opcje kompilatora C# w porządku alfabetycznym
 ms.date: 04/12/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
 - C# language, compiler options listed alphabitically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: 25
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: deffa6556d02cd5449d4bc91cf051a591b1c333e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista kategorii, [C# kompilatora opcje rozbiciu na kategorie](listed-by-category.md).  
@@ -39,7 +32,7 @@ Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista
 |[-debug](debug-compiler-option.md)|Emituje informacje o debugowaniu.|  
 |[-define](define-compiler-option.md)|Definiuje symbole kompilacji warunkowej.|  
 |[-delaysign](delaysign-compiler-option.md)|Opóźnienie znaki zestawu za pomocą tylko publicznej części klucza silnej nazwy.|  
-|[-deterministyczna](deterministic-compiler-option.md)|Powoduje, że kompilator output zestawu, którego zawartość binarna jest identyczna w kompilacji, jeśli dane wejściowe są identyczne.|
+|[-deterministic](deterministic-compiler-option.md)|Powoduje, że kompilator output zestawu, którego zawartość binarna jest identyczna w kompilacji, jeśli dane wejściowe są identyczne.|
 |[-doc](doc-compiler-option.md)|Określa plik dokumentacji XML do wygenerowania.|  
 |[-errorreport](errorreport-compiler-option.md)|Określa sposób obsługiwać wewnętrzne błędy kompilatora: wiersza, Wyślij lub none. Domyślna wartość to Brak.|  
 |[-filealign](filealign-compiler-option.md)|Określa wyrównanie używane w sekcjach pliku wyjściowego.|  

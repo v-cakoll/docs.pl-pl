@@ -1,27 +1,17 @@
 ---
-title: "Informacje o zdarzeniach ETW środowiska uruchomieniowego"
-ms.custom: 
+title: Informacje o zdarzeniach ETW środowiska uruchomieniowego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5262d778151cfe0a0d7ed1750e0b71d4c9214a64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4244196a957c67a807cdb705f6d74ee2b41869d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-information-etw-events"></a>Informacje o zdarzeniach ETW środowiska uruchomieniowego
 Te zdarzenia ETW dziennika informacji na temat środowiska uruchomieniowego, jednostka SKU, numer wersji, sposób, w którym środowiska wykonawczego został aktywowany, w tym parametry wiersza polecenia, który został uruchomiony z identyfikatorem GUID (jeśli dotyczy) oraz inne istotne informacje. Jeśli wiele środowisk uruchomieniowych są wykonywane w ramach procesu, informacji dostarczonych przez te zdarzenia (ClrInstanceID) pomaga odróżnić środowisk uruchomieniowych.  

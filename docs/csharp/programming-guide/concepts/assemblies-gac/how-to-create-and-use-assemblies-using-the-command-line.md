@@ -1,21 +1,12 @@
 ---
-title: "Porady: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia (C#)"
-ms.custom: 
+title: 'Porady: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d59988ec4899b4115d8d0fd7172e0c8ff8802378
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef872992f17eaaeacf451fa10ef792c47445df80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Porady: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia (C#)
 Zestaw lub dynamicznej biblioteki połączeń (DLL), jest połączony z programu w czasie wykonywania. Aby zademonstrować, tworzenie i używanie biblioteki DLL, rozważmy następujący scenariusz:  

@@ -1,33 +1,21 @@
 ---
-title: "Co można zrobić za pomocą LINQ do SQL"
-ms.custom: 
+title: Co można zrobić za pomocą LINQ do SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d8393866d8a13121913348404edd8e356f691b7e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 719c2e5c97d3f8c64de53831ac50b2e7156a38fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Co można zrobić za pomocą LINQ do SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje wszystkie funkcje klucza, który można oczekiwać Deweloper SQL. Można wyszukiwać informacje i wstawiania, aktualizacji i usuwania informacji z tabel.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje wszystkie funkcje klucza, który można oczekiwać Deweloper SQL. Można wyszukiwać informacje i wstawiania, aktualizacji i usuwania informacji z tabel.  
   
 ## <a name="selecting"></a>Wybieranie  
- Wybieranie (*projekcji*) jest to osiągane przez właśnie zapisywania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] kwerendy w języku programowania, a następnie wykonywanie tej kwerendy można pobrać wyników. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]przekłada się wszelkie niezbędne działania na potrzeby operacji SQL, które znasz. Aby uzyskać więcej informacji, zobacz [LINQ do SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Wybieranie (*projekcji*) jest to osiągane przez właśnie zapisywania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] kwerendy w języku programowania, a następnie wykonywanie tej kwerendy można pobrać wyników. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przekłada się wszelkie niezbędne działania na potrzeby operacji SQL, które znasz. Aby uzyskać więcej informacji, zobacz [LINQ do SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
  W poniższym przykładzie nazwy firm klientów z Londynu są pobierane i wyświetlane w oknie konsoli.  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 01/17/2018
  Aby `Delete` elementu, Usuń element z kolekcji, do której należy, a następnie wywołania <xref:System.Data.Linq.DataContext.SubmitChanges%2A> na <xref:System.Data.Linq.DataContext> można zatwierdzić zmiany.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie rozpoznaje operacjami usuwania kaskadowego. Jeśli chcesz usunąć wiersz w tabeli, która ma ograniczenia na nim, zobacz [porady: usuwanie wierszy z bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie rozpoznaje operacjami usuwania kaskadowego. Jeśli chcesz usunąć wiersz w tabeli, która ma ograniczenia na nim, zobacz [porady: usuwanie wierszy z bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
  W poniższym przykładzie klienta, który ma `CustomerID` z `98128` są pobierane z bazy danych. Po potwierdzeniu, że pobrano wiersza klienta, a następnie <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> jest wywoływana, aby usunąć ten obiekt z kolekcji. Na koniec <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana w celu przekazywania do usunięcia bazy danych.  
   

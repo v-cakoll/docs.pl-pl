@@ -1,26 +1,12 @@
 ---
 title: Wybieranie filtra
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 91b3802217a920ef3eeeccb5c4f85c66afee2430
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
 Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i skonfigurować je do pozwalają zapewnić dokładne dopasowania przed wiadomości, które otrzymujesz. Jeśli wybrane filtry są zbyt szerokie w ich odpowiedniki lub są niepoprawnie skonfigurowane, komunikaty są kierowane niepoprawnie. Jeśli filtry są zbyt restrykcyjne, nie masz żadnych prawidłowy trasy dostępne dla niektórych wiadomości.  

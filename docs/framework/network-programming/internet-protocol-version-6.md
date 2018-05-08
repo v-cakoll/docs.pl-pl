@@ -1,12 +1,6 @@
 ---
-title: "Protokół internetowy w wersji 6"
-ms.custom: 
+title: Protokół internetowy w wersji 6
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -14,16 +8,14 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 333fbb452cb1f24b5e62d1106eff4560b26267b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 995bc2075a7df5c9a37cc68e812f62c9de2e53c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-protocol-version-6"></a>Protokół internetowy w wersji 6
 Internet Protocol w wersji 6 (IPv6) to nowy zestaw standardowych protokołów warstwy sieciowej Internetu. Protokół IPv6 jest przeznaczona do rozwiązuje wiele problemów w bieżącej wersji pakietu protokołu internetowego (nazywane IPv4) w odniesieniu do adresów wyczerpanie, zabezpieczeń, automatycznej konfiguracji, rozszerzalności i tak dalej. IPv6 rozszerza możliwości Internet umożliwiające nowych typów aplikacji, w tym aplikacje peer-to-peer i przenośnych. Poniżej przedstawiono główne kwestie bieżącego protokołu IPv4:  

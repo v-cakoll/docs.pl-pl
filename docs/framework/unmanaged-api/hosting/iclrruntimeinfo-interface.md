@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeInfo — Interfejs"
-ms.custom: 
+title: ICLRRuntimeInfo — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeInfo
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 287e5ede-b3a7-4ef8-a756-4fca3f285a82
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 11976e8c147b2c5cab2dd67946b561d703028c8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc8225b6612c7bf07d220b20d515f64a346b9691
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo — Interfejs
 Udostępnia metody, które zwracają informacje o określonych środowisko uruchomieniowe języka wspólnego (CLR), w tym wersja, katalogu i stanie obciążenia. Ten interfejs udostępnia funkcje środowiska uruchomieniowego bez podczas inicjowania środowiska uruchomieniowego. Obejmuje ona względna środowiska uruchomieniowego [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metoda, środowiska wykonawczego specyficzne dla modułu [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) — metoda i wprowadzone do środowiska wykonawczego interfejsy za pośrednictwem [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)metody.  
@@ -61,7 +49,7 @@ Udostępnia metody, które zwracają informacje o określonych środowisko uruch
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

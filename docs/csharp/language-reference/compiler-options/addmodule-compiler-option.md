@@ -1,10 +1,6 @@
 ---
 title: -addmodule (opcje kompilatora C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /addmodule
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: db440b58862e372e443c9c51961b0c3cc2dd211e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a5b0824774dabd4e0dd26dd1753eaba658299fbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (opcje kompilatora C#)
 Ta opcja dodaje moduł, który został utworzony z opcją docelowych: moduł do bieżącej kompilacji.  
@@ -37,7 +30,7 @@ Ta opcja dodaje moduł, który został utworzony z opcją docelowych: moduł do 
 ## <a name="remarks"></a>Uwagi  
  Wszystkie moduły dodawane z **- addmodule** musi być w tym samym katalogu co plik wyjściowy w czasie wykonywania. Oznacza to można określić modułu w dowolnym katalogu w czasie kompilacji, ale moduł musi znajdować się w katalogu aplikacji w czasie wykonywania. Jeśli moduł nie jest w katalogu aplikacji w czasie wykonywania, otrzymasz <xref:System.TypeLoadException>.  
   
- `file`nie może zawierać zestawu. Na przykład, jeśli utworzono plik wyjściowy [-docelowych: moduł](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), jego metadane mogą być importowane przy **- addmodule**.  
+ `file` nie może zawierać zestawu. Na przykład, jeśli utworzono plik wyjściowy [-docelowych: moduł](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), jego metadane mogą być importowane przy **- addmodule**.  
   
  Jeśli utworzono plik wyjściowy **— docelowy** opcji innych niż **— docelowych: moduł**, nie można zaimportować metadanych z **- addmodule** , ale mogą być importowane przy [— odwołanie](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   

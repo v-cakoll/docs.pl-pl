@@ -1,13 +1,6 @@
 ---
-title: "DateTime — Składnia XAML"
-ms.custom: 
+title: DateTime — Składnia XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DateTime XAML syntax [WPF], strings for
 - DateTime XAML syntax [WPF], where used
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 286117cc0cce9fb54ea2c372360b13865fba77ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime — Składnia XAML
 Niektóre formanty, takie jak <xref:System.Windows.Controls.Calendar> i <xref:System.Windows.Controls.DatePicker>, właściwości, które używają <xref:System.DateTime> typu. Mimo że początkowej daty lub godziny dla tych kontrolek zazwyczaj określić w kodem w czasie wykonywania, można określić początkowej daty lub godziny w języku XAML. WPF XAML parser obsługuje analizowania <xref:System.DateTime> wartości przy użyciu składni wbudowanego tekstu XAML. W tym temacie opisano specyfice <xref:System.DateTime> składni tekstu XAML.  
@@ -36,11 +24,11 @@ Niektóre formanty, takie jak <xref:System.Windows.Controls.Calendar> i <xref:Sy
  Ustawienie daty w języku XAML nie zawsze jest konieczne i może nawet być niepożądane. Na przykład można użyć <xref:System.DateTime.Now%2A?displayProperty=nameWithType> właściwość w celu zainicjowania datę w czasie wykonywania, lub wykonaj wszystkie zmiany daty kalendarza w kodem oparte na danych wejściowych użytkownika. Istnieją jednak scenariusze, w których warto dat kodowane w <xref:System.Windows.Controls.Calendar> i <xref:System.Windows.Controls.DatePicker> w szablonie formantu. <xref:System.DateTime> Do tych scenariuszy należy użyć składni języka XAML.  
   
 ### <a name="datetime-xaml-syntax-is-a-native-behavior"></a>Składnia XAML DateTime jest zachowanie natywnego  
- <xref:System.DateTime>jest klasa, która jest zdefiniowana w klasie podstawowej bibliotekach środowiska CLR. Z powodu jak biblioteki klasy podstawowej są powiązane z resztą środowiska CLR, nie jest możliwa do stosowania <xref:System.ComponentModel.TypeConverterAttribute> klasy i użycia konwertera typu, aby przetworzyć ciągów z XAML i przekonwertować je na <xref:System.DateTime> w modelu obiektów czasu wykonywania. Brak nie `DateTimeConverter` klasy zapewnia zachowanie konwersji; macierzysty analizator WPF XAML zachowanie konwersji opisanych w tym temacie.  
+ <xref:System.DateTime> jest klasa, która jest zdefiniowana w klasie podstawowej bibliotekach środowiska CLR. Z powodu jak biblioteki klasy podstawowej są powiązane z resztą środowiska CLR, nie jest możliwa do stosowania <xref:System.ComponentModel.TypeConverterAttribute> klasy i użycia konwertera typu, aby przetworzyć ciągów z XAML i przekonwertować je na <xref:System.DateTime> w modelu obiektów czasu wykonywania. Brak nie `DateTimeConverter` klasy zapewnia zachowanie konwersji; macierzysty analizator WPF XAML zachowanie konwersji opisanych w tym temacie.  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
 ## <a name="format-strings-for-datetime-xaml-syntax"></a>Ciągi formatujące składnię daty/godziny XAML  
- Można określić format <xref:System.DateTime> zawierające ciąg formatu. Ciągi formatujące formalnego składni tekst, który może służyć do tworzenia wartości. <xref:System.DateTime>wartości dla istniejącego WPF steruje użyciem zwykle tylko składniki daty <xref:System.DateTime> i nie składniki czasu.  
+ Można określić format <xref:System.DateTime> zawierające ciąg formatu. Ciągi formatujące formalnego składni tekst, który może służyć do tworzenia wartości. <xref:System.DateTime> wartości dla istniejącego WPF steruje użyciem zwykle tylko składniki daty <xref:System.DateTime> i nie składniki czasu.  
   
  Podczas określania <xref:System.DateTime> w języku XAML, będzie można użyć dowolnego z ciągi formatujące zamiennie.  
   

@@ -1,12 +1,6 @@
 ---
-title: "Wyrażenia logiczne (Visual Basic)"
-ms.custom: 
+title: Wyrażenia logiczne (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -20,17 +14,14 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 48071c6833f9841fa42311dda59d6959c0645ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ff5843c815658468ac69fe5d62a9ea4cac2be830
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-expressions-visual-basic"></a>Wyrażenia logiczne (Visual Basic)
-A *wyrażenie warunkowe* wyrażenie obliczane do wartości [— typ danych logicznych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` lub `False`. `Boolean`wyrażenia może potrwać kilka formularzy. Najprostszą jest bezpośrednie porównanie wartości `Boolean` zmienną `Boolean` literal, jak pokazano w poniższym przykładzie.  
+A *wyrażenie warunkowe* wyrażenie obliczane do wartości [— typ danych logicznych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` lub `False`. `Boolean` wyrażenia może potrwać kilka formularzy. Najprostszą jest bezpośrednie porównanie wartości `Boolean` zmienną `Boolean` literal, jak pokazano w poniższym przykładzie.  
   
  [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
@@ -81,4 +72,4 @@ A *wyrażenie warunkowe* wyrażenie obliczane do wartości [— typ danych logic
  [Operatory porównania](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
  [Skuteczna kombinacja operatorów](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Boolean — typ danych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)
+ [Boolean, typ danych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)

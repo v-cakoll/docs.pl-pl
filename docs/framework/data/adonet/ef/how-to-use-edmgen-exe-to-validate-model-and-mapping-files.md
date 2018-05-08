@@ -1,24 +1,12 @@
 ---
-title: "Porady: używanie EdmGen.exe do walidacji modelu i mapowania plików"
-ms.custom: 
+title: 'Porady: używanie EdmGen.exe do walidacji modelu i mapowania plików'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae70c90fc20265334cdfb55e4a0f88724284d822
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 197af6ae86de4057b864ef211c36f19aad83b003
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>Porady: używanie EdmGen.exe do walidacji modelu i mapowania plików
 W tym temacie przedstawiono sposób użycia [Generator EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) narzędzie do sprawdzania poprawności modelu i mapowania plików. Aby uzyskać więcej informacji, zobacz [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  

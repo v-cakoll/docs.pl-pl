@@ -1,30 +1,18 @@
 ---
-title: "Działanie"
-ms.custom: 
+title: Działanie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>Działanie
-W tym temacie opisano działania śledzenia w [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] śledzenie modelu. Działania są przetwarzania jednostki, które pomagają użytkownikowi zawęzić zakres awarii. Błędy występujące w tej samej działania są bezpośrednio powiązane. Na przykład kończy się niepowodzeniem, ponieważ odszyfrowywania wiadomości nie powiodło się. Ślady za działanie i błąd odszyfrowywania wiadomości są wyświetlane w to samo działanie przedstawiający bezpośredniego korelacja błędu odszyfrowywania Błąd żądania.  
+W tym temacie opisano działania śledzenia w modelu śledzenia usług Windows Communication Foundation (WCF). Działania są przetwarzania jednostki, które pomagają użytkownikowi zawęzić zakres awarii. Błędy występujące w tej samej działania są bezpośrednio powiązane. Na przykład kończy się niepowodzeniem, ponieważ odszyfrowywania wiadomości nie powiodło się. Ślady za działanie i błąd odszyfrowywania wiadomości są wyświetlane w to samo działanie przedstawiający bezpośredniego korelacja błędu odszyfrowywania Błąd żądania.  
   
 ## <a name="configuring-activity-tracing"></a>Konfigurowanie śledzenia działania  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]udostępnia wstępnie zdefiniowane działań do przetwarzania aplikacji (zobacz [lista działania](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Działania można również definiować programowo do grupy użytkowników śladów. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] udostępnia wstępnie zdefiniowane działań do przetwarzania aplikacji (zobacz [lista działania](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Działania można również definiować programowo do grupy użytkowników śladów. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
  Aby wysyłać ślady działania w czasie wykonywania, należy użyć `ActivityTracing` ustawienie `System.ServiceModel` śledzenia źródła lub inne [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] lub źródła śledzenia niestandardowych, jak pokazano w następującym kodem konfiguracji.  
   
@@ -49,9 +37,9 @@ W tym temacie opisano działania śledzenia w [!INCLUDE[indigo1](../../../../../
 ## <a name="defining-the-scope-of-an-activity"></a>Definiowanie zakresu działania  
  Działanie jest definiowany w czasie projektowania i oznacza jednostkę logiczną pracy. Ślady emitowany z tego samego identyfikatora działania są bezpośrednio powiązane, są częścią tego samego działania. Ponieważ działania mogą przechodzić przez granice punktu końcowego (żądanie), są zdefiniowane dwa zakresy dla działania.  
   
--   `Global`zakres na aplikację. W tym zakresie działanie jest identyfikowane przez jego działania globalnie unikatowy identyfikator 128-bitowego gAId. GAid to, co to są propagowane w obrębie punktów końcowych.  
+-   `Global` zakres na aplikację. W tym zakresie działanie jest identyfikowane przez jego działania globalnie unikatowy identyfikator 128-bitowego gAId. GAid to, co to są propagowane w obrębie punktów końcowych.  
   
--   `Local`zakres na punkt końcowy. W tym zakresie działanie jest identyfikowane przez jego gAId, oraz nazwę źródła śledzenia śledzenia działań i identyfikator procesu. Ta Trzykolumnowa stanowi identyfikator działania lokalnych, którego układ określa. Ustalonymi służy do definiowania (local) granice działania.  
+-   `Local` zakres na punkt końcowy. W tym zakresie działanie jest identyfikowane przez jego gAId, oraz nazwę źródła śledzenia śledzenia działań i identyfikator procesu. Ta Trzykolumnowa stanowi identyfikator działania lokalnych, którego układ określa. Ustalonymi służy do definiowania (local) granice działania.  
   
 ## <a name="trace-schema"></a>Schemat śledzenia  
  Dane śledzenia może być wysyłany przy użyciu dowolnego schematu i na platformach firmy Microsoft. "e2e" (dla "pełny") jest często używane schematu. Ten schemat zawiera identyfikator 128-bitowego (gAId), nazwa źródła śledzenia i identyfikatora procesu. W kodzie zarządzanym <xref:System.Diagnostics.XmlWriterTraceListener> emituje dane śledzenia w schemacie E2E.  

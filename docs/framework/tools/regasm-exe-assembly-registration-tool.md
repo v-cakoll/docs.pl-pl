@@ -1,29 +1,19 @@
 ---
-title: "Regasm.exe (Narzędzie rejestracji zestawów)"
-ms.custom: 
+title: Regasm.exe (Narzędzie rejestracji zestawów)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Narzędzie rejestracji zestawów)
 Narzędzie do rejestracji zestawów czyta metadane w zestawie i dodaje niezbędne wpisy do rejestru, co umożliwia klientom COM przejrzyste tworzenie klas .NET Framework. Po zarejestrowaniu klasy dowolny klient COM może jej używać tak, jakby była klasą modelu COM. Klasa jest rejestrowana tylko raz, kiedy zestaw jest instalowany. Nie można utworzyć wystąpień klas w zestawie z COM, dopóki nie zostaną one faktycznie zarejestrowane.  
@@ -42,7 +32,7 @@ regasm assemblyFile [options]
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|*assemblyFile*|Zestaw do rejestracji w modelu COM.|  
+|*AssemblyFile*|Zestaw do rejestracji w modelu COM.|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** lub   **/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 > [!NOTE]
->  W opcjach wiersza polecenia programu Regasm.exe nie jest rozróżniana wielkość liter. Wystarczy podać część nazwy opcji umożliwiającą jej jednoznaczną identyfikację. Na przykład  **/n**  jest odpowiednikiem **/nologo** i **/t:** *outfile.tlb* jest odpowiednikiem   **/TLB:**  *outfile.tlb*.  
+>  W opcjach wiersza polecenia programu Regasm.exe nie jest rozróżniana wielkość liter. Wystarczy podać część nazwy opcji umożliwiającą jej jednoznaczną identyfikację. Na przykład **/n** jest odpowiednikiem **/nologo** i **/t:** *outfile.tlb* jest odpowiednikiem **/TLB:**  *outfile.tlb*.  
   
 ## <a name="remarks"></a>Uwagi  
  Można użyć **/RegFile** opcję, aby wygenerować plik .reg, który zawiera wpisy rejestru zamiast wprowadzania zmian bezpośrednio do rejestru. Można zaktualizować rejestr na komputerze przez zaimportowanie pliku reg za pomocą narzędzia Edytora rejestru (Regedit.exe). Należy zauważyć, że plik reg nie zawiera żadnych aktualizacji rejestru, które mogą być wykonane przez funkcje rejestru zdefiniowane przez użytkownika.  Należy pamiętać, że **/RegFile** opcji emituje tylko wpisy rejestru dla klas zarządzanych.  Ta opcja nie Emituj wpisy dla `TypeLibID`s lub `InterfaceID`s.  

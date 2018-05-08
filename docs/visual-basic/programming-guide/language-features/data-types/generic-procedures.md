@@ -1,12 +1,6 @@
 ---
-title: "Procedury ogólne w Visual Basic"
-ms.custom: 
+title: Procedury ogólne w Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - generic methods [Visual Basic], type inference
 - generics [Visual Basic], type inference
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e019ca32277f93f798e99e996a3670c8302ba9b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 686087e4520ea5e6e69e5906c628af3ad54749da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedury ogólne w Visual Basic
 A *ogólnego procedury*, nazywany również *Metoda ogólna*, jest to procedura zdefiniowane z co najmniej jeden typ parametru. Dzięki temu kod wywołujący dostosować typy danych do jej wymagania dotyczące zawsze wywołuje procedurę.  
@@ -76,9 +67,9 @@ A *ogólnego procedury*, nazywany również *Metoda ogólna*, jest to procedura 
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Porady: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [Porady: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Instrukcje: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+ [Instrukcje: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
  [Procedury](../../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Parametry i argumenty procedur](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
  [Lista typów](../../../../visual-basic/language-reference/statements/type-list.md)  
- [Listy parametrów](../../../../visual-basic/language-reference/statements/parameter-list.md)
+ [Lista parametrów](../../../../visual-basic/language-reference/statements/parameter-list.md)

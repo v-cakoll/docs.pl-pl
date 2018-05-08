@@ -1,13 +1,7 @@
 ---
 title: Złożone formatowanie
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
 Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu złożonego jako dane wejściowe. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
@@ -123,19 +112,19 @@ Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Kolejność przetwarzania  
- Jeśli wywołanie złożone formatowanie metoda zawiera <xref:System.IFormatProvider> argumentu, którego wartość nie jest `null`, wywołania środowiska uruchomieniowego jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody, aby zażądać <xref:System.ICustomFormatter> implementacji. Jeśli metoda jest może zwrócić <xref:System.ICustomFormatter> implementacji, jest buforowany do późniejszego użycia.  
+ Jeśli wywołanie złożone formatowanie metoda zawiera <xref:System.IFormatProvider> argumentu, którego wartość nie jest `null`, wywołania środowiska uruchomieniowego jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody, aby zażądać <xref:System.ICustomFormatter> implementacji. Jeśli metoda jest może zwrócić <xref:System.ICustomFormatter> implementacji jest buforowana na czas trwania wywołania złożone formatowanie metody.
   
- Każda wartość na liście parametrów, która odpowiada elementowi formatu, jest konwertowana na ciąg przez wykonanie wymienionych poniżej kroków. Jeśli dowolny warunek z pierwszych trzech kroków będzie spełniony, reprezentacja ciągu dla wartości zostanie zwrócona w tym kroku, a kolejne kroki nie zostaną wykonane.  
+ Każda wartość na liście parametrów, umożliwiająca elementu formatu jest konwertowana na ciąg w następujący sposób:  
   
-1.  Jeśli wartość zostanie sformatowany jest `null`, ciąg pusty ("") jest zwracany.  
+1.  Jeśli wartość zostanie sformatowany jest `null`, ciągiem pustym <xref:System.String.Empty?displayProperty=nameWithType> jest zwracany.  
   
-2.  Jeśli <xref:System.ICustomFormatter> implementacja jest dostępna, wywołania środowiska uruchomieniowego jego <xref:System.ICustomFormatter.Format%2A> metody. Przekazuje metody w element formatu *formatString* wartość, jeśli jest dostępny, lub `null` Jeśli nie, wraz z <xref:System.IFormatProvider> implementacji.  
+2.  Jeśli <xref:System.ICustomFormatter> implementacja jest dostępna, wywołania środowiska uruchomieniowego jego <xref:System.ICustomFormatter.Format%2A> metody. Przekazuje metody w element formatu *formatString* wartość, jeśli jest dostępny, lub `null` Jeśli nie, wraz z <xref:System.IFormatProvider> implementacji. Jeśli wywołanie <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> metoda zwraca `null`, wykonanie przechodzi do następnego kroku; w przeciwnym razie wynik <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> jest zwracana wywołania.
   
 3.  Jeśli wartość implementuje <xref:System.IFormattable> interfejsu, interfejsu <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> metoda jest wywoływana. Metoda jest przekazywana *formatString* wartość, jeśli jest obecny w elemencie formatu lub `null` Jeśli nie jest. <xref:System.IFormatProvider> Argument jest określane w następujący sposób:  
   
-    -   Wartości liczbowe, jeśli złożone formatowanie metody z inną niż null <xref:System.IFormatProvider> argumentu po wywołaniu żądania środowiska uruchomieniowego <xref:System.Globalization.NumberFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> — metoda. Jeśli nie można podać, jeśli wartość argumentu jest `null`, lub jeśli złożone formatowanie — metoda nie ma <xref:System.IFormatProvider> parametru <xref:System.Globalization.NumberFormatInfo> obiektu dla bieżącej kultury wątku jest używana.  
+    -   Wartości liczbowe, jeśli złożone formatowanie metody z inną niż null <xref:System.IFormatProvider> argumentu po wywołaniu żądania środowiska uruchomieniowego <xref:System.Globalization.NumberFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> — metoda. Jeśli go nie może go, jeśli wartość argumentu jest `null`, lub jeśli nie ma złożone formatowanie metody <xref:System.IFormatProvider> parametru <xref:System.Globalization.NumberFormatInfo> obiektu dla bieżącej kultury wątku jest używana.  
   
-    -   Wartości daty i godziny, jeśli złożone formatowanie metody z inną niż null <xref:System.IFormatProvider> argumentu po wywołaniu żądania obsługi <xref:System.Globalization.DateTimeFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli nie można podać, jeśli wartość argumentu jest `null`, lub jeśli złożone formatowanie — metoda nie ma <xref:System.IFormatProvider> parametru <xref:System.Globalization.DateTimeFormatInfo> obiektu dla bieżącej kultury wątku jest używana.  
+    -   Wartości daty i godziny, jeśli złożone formatowanie metody z inną niż null <xref:System.IFormatProvider> argumentu po wywołaniu żądania obsługi <xref:System.Globalization.DateTimeFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli go nie może go, jeśli wartość argumentu jest `null`, lub jeśli nie ma złożone formatowanie metody <xref:System.IFormatProvider> parametru <xref:System.Globalization.DateTimeFormatInfo> obiektu dla bieżącej kultury wątku jest używana.  
   
     -   Dla obiektów z innych typów, jeśli złożone formatowanie metoda jest wywoływana z <xref:System.IFormatProvider> argument, jego wartość jest przekazywany bezpośrednio do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji. W przeciwnym razie `null` jest przekazywana do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji.  
   

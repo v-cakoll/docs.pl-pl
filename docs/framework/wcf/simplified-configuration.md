@@ -1,27 +1,15 @@
 ---
 title: Uproszczona konfiguracja
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration"></a>Uproszczona konfiguracja
-Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi może być złożonym zadaniem. Istnieje wiele różnych opcji, a nie zawsze jest łatwa do ustalenia, jakie ustawienia są wymagane. Podczas konfiguracji plików zwiększyć elastyczność [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług, również są źródła dla wielu trudne do znalezienia problemów. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]te problemy zostały rozwiązane oraz przedstawiono sposób, aby zmniejszyć rozmiar i złożoność konfiguracji usługi.  
+Konfigurowanie usług Windows Communication Foundation (WCF) może być złożonym zadaniem. Istnieje wiele różnych opcji, a nie zawsze jest łatwa do ustalenia, jakie ustawienia są wymagane. Podczas konfiguracji plików zwiększyć elastyczność [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług, również są źródła dla wielu trudne do znalezienia problemów. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] te problemy zostały rozwiązane oraz przedstawiono sposób, aby zmniejszyć rozmiar i złożoność konfiguracji usługi.  
   
 ## <a name="simplified-configuration"></a>Uproszczona konfiguracja  
  W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pliki konfiguracji usługi <`system.serviceModel`> zawiera sekcji <`service`> element dla każdej usługi hostowanej. <`service`> Kolekcja zawiera element <`endpoint`> elementy, które określ punkty końcowe udostępniane dla każdej usługi i opcjonalnie zestaw zachowań usługi. <`endpoint`> Elementy Podaj adres, powiązanie, i kontraktu udostępniane przez punkt końcowy i opcjonalnie powiązania konfiguracji i zachowania punktu końcowego. <`system.serviceModel`> Sekcja zawiera również <`behaviors`> element, który pozwala na określenie zachowania usługi lub punktu końcowego. W poniższym przykładzie przedstawiono <`system.serviceModel`> pliku konfiguracji.  
@@ -57,7 +45,7 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi moż
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]Umożliwia konfigurowanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługę, łatwiejsze usuwając konieczność <`service`> elementu. Jeśli nie dodasz <`service`> sekcji lub dodać żadnych punktów końcowych w <`service`> sekcji, a usługą nie programowo definiuje żadnych punktów końcowych, a następnie zestaw domyślnych punktów końcowych są automatycznie dodawane do usługi, po jednej dla każdego adres podstawowy usługi i dla każdej umowy zaimplementowana przez usługę. W każdym z tych punktów końcowych odpowiada adres podstawowy adres punktu końcowego, powiązania jest określany przez adres podstawowy schemat i kontrakt jest implementowany przez usługę. Nie trzeba określać żadnych punktów końcowych lub zachowania usługi lub zmiany ustawienia powiązania, nie trzeba określić cały plik konfiguracji usługi. Jeśli zaimplementowano dwa kontrakty i hosta umożliwia transportu HTTP i TCP hosta usługi tworzy cztery domyślne punkty końcowe, jeden dla każdej umowy każdego transportu. Aby utworzyć domyślne punkty końcowe usługi hosta musi znać jakie powiązania do użycia. Te ustawienia są określone w <`protocolMappings`> sekcji w <`system.serviceModel`> sekcji. <`protocolMappings`> Sekcja zawiera listę zamapowane na typy powiązanie schematami protokołu transportu. Host usługi używa adres podstawowy przekazywania w celu określenia powiązania, które do użycia. W poniższym przykładzie użyto <`protocolMappings`> elementu.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Umożliwia konfigurowanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługę, łatwiejsze usuwając konieczność <`service`> elementu. Jeśli nie dodasz <`service`> sekcji lub dodać żadnych punktów końcowych w <`service`> sekcji, a usługą nie programowo definiuje żadnych punktów końcowych, a następnie zestaw domyślnych punktów końcowych są automatycznie dodawane do usługi, po jednej dla każdego adres podstawowy usługi i dla każdej umowy zaimplementowana przez usługę. W każdym z tych punktów końcowych odpowiada adres podstawowy adres punktu końcowego, powiązania jest określany przez adres podstawowy schemat i kontrakt jest implementowany przez usługę. Nie trzeba określać żadnych punktów końcowych lub zachowania usługi lub zmiany ustawienia powiązania, nie trzeba określić cały plik konfiguracji usługi. Jeśli zaimplementowano dwa kontrakty i hosta umożliwia transportu HTTP i TCP hosta usługi tworzy cztery domyślne punkty końcowe, jeden dla każdej umowy każdego transportu. Aby utworzyć domyślne punkty końcowe usługi hosta musi znać jakie powiązania do użycia. Te ustawienia są określone w <`protocolMappings`> sekcji w <`system.serviceModel`> sekcji. <`protocolMappings`> Sekcja zawiera listę zamapowane na typy powiązanie schematami protokołu transportu. Host usługi używa adres podstawowy przekazywania w celu określenia powiązania, które do użycia. W poniższym przykładzie użyto <`protocolMappings`> elementu.  
   
 > [!WARNING]
 >  Zmiana domyślnego elementów konfiguracji, takich jak powiązania lub zachowania, może mieć wpływ na usługi zdefiniowane w niższych poziomach hierarchii konfiguracji, ponieważ może korzystać z tych powiązań domyślne i zachowania. W związku z tym, kto zmiany domyślnego powiązania i zachowania musi należy pamiętać, że te zmiany mogą mieć wpływ na inne usługi w hierarchii.  

@@ -1,29 +1,15 @@
 ---
 title: Składnia dyrektyw programu WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34ea3b412af75f136255c7e95cc4f321bafe075b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18cc3eda23154af143cdae5e3861242e20d64d50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-directive-syntax"></a>Składnia dyrektyw programu WCF
-Określa ustawienia używane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] dyrektywy w pliku svc przekierować kompilatory. Dyrektywy każdy może zawierać jeden lub więcej atrybutów (łączyć się z wartościami), które są specyficzne dla tej dyrektywy. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]ma tylko [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
+Określa ustawienia używane przez Windows Communication Foundation (WCF) dyrektywy w pliku svc przekierować kompilatory. Dyrektywy każdy może zawierać jeden lub więcej atrybutów (łączyć się z wartościami), które są specyficzne dla tej dyrektywy. Usługi WCF ma tylko [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  

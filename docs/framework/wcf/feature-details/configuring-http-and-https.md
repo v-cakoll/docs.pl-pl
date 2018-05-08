@@ -1,28 +1,14 @@
 ---
 title: Konfigurowanie protokołów HTTP i HTTPS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>Konfigurowanie protokołów HTTP i HTTPS
 Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołu HTTP i HTTPS. Ustawienia HTTP i HTTPS są skonfigurowane przy użyciu usługi Internet Information Services (IIS) lub za pomocą narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w ustawieniach usług IIS HTTP lub HTTPS można skonfigurować w ramach usług IIS (przy użyciu narzędzia inetmgr.exe). Jeśli usługa WCF jest samodzielnie hostowana, ustawienia protokołu HTTP lub HTTPS są konfigurowane za pomocą narzędzia wiersza polecenia.  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  Aby uzyskać instrukcje, zobacz [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="configuring-the-ip-listen-list"></a>Konfigurowanie na liście nasłuchiwania adresów IP  
- Interfejsu API serwera HTTP jest powiązany z adresu IP i portu tylko gdy użytkownik rejestruje adresu URL. Domyślnie interfejsu API serwera HTTP wiąże się z portem w adresie URL, dla wszystkich adresów IP maszyny. Wystąpi konflikt, jeśli aplikacja, która nie używa interfejsu API serwera HTTP ma wcześniej powiązany z tym kombinację adresu IP i portu. Na liście nasłuchiwania adresów IP umożliwia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług współistnienie w aplikacji, które używają portu dla niektórych adresów IP maszyny. Jeśli na liście nasłuchiwania adresów IP zawiera wszystkie pozycje, interfejsu API serwera HTTP wiąże tylko tych adresów IP, które określają listy. Modyfikowanie na liście nasłuchiwania adresów IP wymaga uprawnień administracyjnych.  
+ Interfejsu API serwera HTTP jest powiązany z adresu IP i portu tylko gdy użytkownik rejestruje adresu URL. Domyślnie interfejsu API serwera HTTP wiąże się z portem w adresie URL, dla wszystkich adresów IP maszyny. Wystąpi konflikt, jeśli aplikacja, która nie używa interfejsu API serwera HTTP ma wcześniej powiązany z tym kombinację adresu IP i portu. Na liście nasłuchiwania adresów IP umożliwia usług WCF pod kątem współistnieć z aplikacji, które używają portu dla niektórych adresów IP maszyny. Jeśli na liście nasłuchiwania adresów IP zawiera wszystkie pozycje, interfejsu API serwera HTTP wiąże tylko tych adresów IP, które określają listy. Modyfikowanie na liście nasłuchiwania adresów IP wymaga uprawnień administracyjnych.  
   
 ### <a name="running-windows-xp-or-server-2003"></a>Uruchomiony system Windows XP lub Server 2003  
  Użyj narzędzia tak, aby na liście adresów IP nasłuchiwania, jak pokazano w poniższym przykładzie. [Dokumentacji narzędzia obsługi systemu Windows](http://go.microsoft.com/fwlink/?LinkId=94840) opisano składnię narzędzia httpcfg.exe.  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  Interfejs API serwera HTTP ma niektóre ustawienia konfiguracji zaawansowanej, które nie są dostępne za pośrednictwem tak. Te ustawienia są przechowywane w rejestrze i dotyczą wszystkich aplikacji działających w systemach, które używają interfejsów API serwera HTTP. Aby uzyskać informacje o tych ustawieniach, zobacz [ustawień rejestru Http.sys w usługach IIS](http://go.microsoft.com/fwlink/?LinkId=94843). Aby zmienić te ustawienia nie konieczne większości użytkowników.  
   
 ## <a name="issues-specific-to-windows-xp"></a>Problemy specyficzne dla systemu Windows XP  
- Usługi IIS nie obsługuje udostępniania portów na [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Jeśli uruchomiony jest program IIS oraz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa próbuje użyć przestrzeni nazw z tego samego portu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie można uruchomić usługi. Usługi IIS i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] domyślnie używa portu 80. Zmień przypisania portów dla usług lub użyj na liście nasłuchiwania adresów IP można przypisać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi do karty sieciowej nie jest używany przez usługi IIS. Usługi IIS 6.0 lub nowszym przeprojektowano użycia interfejsów API serwera HTTP.  
+ Usługi IIS nie obsługuje udostępniania portów na [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Jeśli uruchomiony jest program IIS i usługi WCF próbuje użyć przestrzeni nazw z tego samego portu, usługi WCF nie powiedzie się. Usługi IIS i WCF jest domyślnie używa portu 80. Zmiana przypisania portów dla usług albo użyj na liście nasłuchiwania adresów IP można przypisać do karty sieciowej nie jest używany przez usługi IIS usługi WCF. Usługi IIS 6.0 lub nowszym przeprojektowano użycia interfejsów API serwera HTTP.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.WSDualHttpBinding>  

@@ -1,14 +1,6 @@
 ---
 title: Administracja i diagnostyka
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>Administracja i diagnostyka
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera bogaty zestaw funkcji, które ułatwiają monitorowanie różnych etapach cyklu życia aplikacji. Na przykład można użyć konfiguracji do skonfigurowania usług i klientów na wdrożenie. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera duży zbiór liczników wydajności, aby ocenić wydajność aplikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia również kontroli danych w czasie wykonywania za pośrednictwem usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI). Gdy aplikacja ulegnie awarii lub rozpoczyna się działający nieprawidłowo, umożliwia dziennika zdarzeń czy znaczących niczego pojawił się w temacie. Umożliwia także rejestrowanie komunikatów i śledzenie, aby zobaczyć, jakie zdarzenia są w toku end-to-end w aplikacji. Funkcje te pomagają zarówno deweloperów i specjalistów IT, aby rozwiązać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, gdy jest nie działa prawidłowo.  
+Windows Communication Foundation (WCF) zawiera bogaty zestaw funkcji, które ułatwiają monitorowanie różnych etapach cyklu życia aplikacji. Na przykład można użyć konfiguracji do skonfigurowania usług i klientów na wdrożenie. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera duży zbiór liczników wydajności, aby ocenić wydajność aplikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia również kontroli danych w czasie wykonywania za pośrednictwem usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI). Gdy aplikacja ulegnie awarii lub rozpoczyna się działający nieprawidłowo, umożliwia dziennika zdarzeń czy znaczących niczego pojawił się w temacie. Umożliwia także rejestrowanie komunikatów i śledzenie, aby zobaczyć, jakie zdarzenia są w toku end-to-end w aplikacji. Funkcje te pomagają zarówno deweloperów i specjalistów IT, aby rozwiązać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, gdy jest nie działa prawidłowo.  
   
 > [!NOTE]
 >  Jeśli otrzymujesz błędy bez informacji o określone informacje szczegółowe, należy włączyć `includeExceptionDetailInFaults` atrybutu [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) element konfiguracji. To powoduje, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wysłać szczegóły wyjątku do klientów, które pozwala wykrywać wiele typowych problemów bez konieczności bardziej zaawansowanych diagnostyki. Aby uzyskać więcej informacji, zobacz [wysyłanie i odbieranie błędów](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  

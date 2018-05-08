@@ -1,24 +1,12 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 W przykładzie pokazano, używanie i konfigurację awansowanej właściwości w magazynie wystąpień przepływu pracy SQL. W magazynie wystąpień przepływu pracy SQL jest implementacją SQL na podstawie wystąpienia magazynu. Umożliwia on wystąpienie do zapisywania stanu i ładowania stanu do i z bazy danych programu SQL Server lub SQL Server Express. Funkcja rozszerzalność magazyn zezwala użytkownikowi na definiowanie właściwości, które są przechowywane w magazynie wystąpień. Te właściwości są wyświetlane w widoku awansowanej właściwości, które umożliwia użytkownikowi zapytania dla nich.  
@@ -84,7 +72,7 @@ W przykładzie pokazano, używanie i konfigurację awansowanej właściwości w 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   

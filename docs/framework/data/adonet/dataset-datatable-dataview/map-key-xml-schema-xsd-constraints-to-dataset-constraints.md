@@ -1,24 +1,12 @@
 ---
 title: Mapowanie klucz ograniczenia schematu XML (XSD) do ograniczenia zestawu danych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6b999e6b1d6d73f107b7e1f4cb0d7e14c099a1f6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ad39fd75a3f8872ed2c24a65481209e3c772a638
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie klucz ograniczenia schematu XML (XSD) do ograniczenia zestawu danych
 W schemacie, można określić ograniczenie klucza dla elementu lub atrybutu przy użyciu **klucza** elementu. Element lub atrybut, w którym określono ograniczenie klucza muszą mieć unikatowe wartości w żadnym wystąpieniu schematu, a nie może mieć wartości null.  

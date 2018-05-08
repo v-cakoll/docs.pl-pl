@@ -1,13 +1,6 @@
 ---
-title: "Porady: podłączanie delegata za pomocą odbicia"
-ms.custom: 
+title: 'Porady: podłączanie delegata za pomocą odbicia'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ff800eb78b07fc79193c2aa8cb71a461be2fc1d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d16c80dacbe71bb9052df1caa65fbd31e433957e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Porady: podłączanie delegata za pomocą odbicia
 Gdy używasz odbicia do ładowania i uruchamiania zestawy, nie można używać funkcji języka, takich jak C# `+=` operator lub Visual Basic [AddHandler — instrukcja](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do podpinanie zdarzeń. Poniższe procedury pokazują, jak Podłączanie istniejącą metodę do zdarzenia, uzyskując wszystkie wymagane typy przez odbicie i tworzenie dynamicznych metoda, za pomocą odbicia Emituj i podłącz go do zdarzenia.  

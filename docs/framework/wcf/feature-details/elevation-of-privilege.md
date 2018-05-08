@@ -1,29 +1,15 @@
 ---
 title: Podniesienie uprawnień
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="elevation-of-privilege"></a>Podniesienie uprawnień
 *Podniesienie uprawnień* wynikiem nadanie uprawnień poza tymi początkowo nadanego pozwolenia osoby atakującej. Na przykład osoba atakująca z zestawem uprawnień uprawnienia "tylko do odczytu" jakiś sposób eksponuje zestaw "odczytu i zapisu."  
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="switching-identity-without-a-security-context"></a>Przełączanie tożsamości bez kontekstu zabezpieczeń  
  Następujące dotyczą tylko [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
- Po nawiązaniu połączenia między klientem a serwerem, tożsamość klienta nie ulega zmianie, z wyjątkiem sytuacji jeden: po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta jest otwarty, jeśli spełnione są wszystkie poniższe warunki:  
+ Po nawiązaniu połączenia między klientem a serwerem, tożsamość klienta nie ulega zmianie, z wyjątkiem sytuacji jeden: po otwarciu klienta platformy WCF, jeśli spełnione są wszystkie poniższe warunki:  
   
 -   Procedury, aby ustanowić kontekst zabezpieczeń (za pomocą zabezpieczeń transportu, sesji lub sesji zabezpieczeń wiadomości) jest wyłączany (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> ma ustawioną wartość właściwości `false` w przypadku zabezpieczenia komunikatów lub nie mogą ustanawianie zabezpieczeń transportu sesje są używane w przypadku zabezpieczeń transportu. Przykładem takiego transportu jest HTTPS).  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Usługi w kontekście zabezpieczeń personifikowanej są wywoływania.  
   
- Jeśli te warunki są spełnione, tożsamość używany do uwierzytelniania klienta do usługi może być zmiana (może nie być personifikowanej tożsamości, ale tożsamość procesu zamiast) po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta jest otwarty. Dzieje się tak, ponieważ poświadczenia systemu Windows używane do uwierzytelniania klienta do usługi jest przekazywany z każdej wiadomości i poświadczeń używanych do uwierzytelniania są uzyskiwane z bieżącego wątku tożsamości systemu Windows. Zmiana tożsamości systemu Windows w bieżącym wątku (na przykład przez personifikacji wywołującego różnych) również może zmienić poświadczeń, który jest dołączony do wiadomości i używany do uwierzytelniania klienta do usługi.  
+ Jeśli te warunki są spełnione, mogą ulec zmianie tożsamości używanej do uwierzytelniania klienta do usługi (może nie być personifikowanej tożsamości, ale tożsamość procesu zamiast) po otwarciu klienta platformy WCF. Dzieje się tak, ponieważ poświadczenia systemu Windows używane do uwierzytelniania klienta do usługi jest przekazywany z każdej wiadomości i poświadczeń używanych do uwierzytelniania są uzyskiwane z bieżącego wątku tożsamości systemu Windows. Zmiana tożsamości systemu Windows w bieżącym wątku (na przykład przez personifikacji wywołującego różnych) również może zmienić poświadczeń, który jest dołączony do wiadomości i używany do uwierzytelniania klienta do usługi.  
   
  Jeśli mają deterministyczne zachowanie, gdy jest używane uwierzytelnianie systemu Windows wraz z personifikacji należy jawnie ustawić poświadczenia systemu Windows lub należy ustanowić kontekst zabezpieczeń w usłudze. Aby to zrobić, użyj sesji zabezpieczeń wiadomości lub sesji zabezpieczeń transportu. Na przykład transportu net.tcp zapewniają sesji zabezpieczeń transportu. Ponadto należy używać synchroniczną wersję operacje klienta podczas wywoływania usługi. Po nawiązaniu kontekstu zabezpieczeń wiadomości nie Zachowaj połączenie z usługą Otwórz dłuższy niż okres odnawiania skonfigurowanych sesji, ponieważ tożsamość można również zmienić podczas procesu odnowienia sesji.  
   
@@ -59,9 +45,9 @@ ms.lasthandoff: 04/28/2018
 >  Korzystając z `BeginOpen` metody, nie można zagwarantować poświadczenia przechwycone się poświadczenia proces, który wywołuje metodę.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Zezwalaj na tokenu pamięć podręczną powtarzania przy użyciu danych przestarzałe  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa urzędu zabezpieczeń lokalnych (LSA) `LogonUser` funkcji do uwierzytelniania użytkowników według nazwy użytkownika i hasła. Ponieważ funkcja logowania jest kosztowna operacja, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pozwala na tokeny pamięci podręcznej, które reprezentują uwierzytelnionych użytkowników w celu zwiększenia wydajności. Mechanizm buforowania zapisuje wyniki z `LogonUser` dla kolejnych zastosowań. Ten mechanizm jest domyślnie wyłączona; Aby go włączyć, ustaw <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> właściwości `true`, lub użyj `cacheLogonTokens` atrybutu [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ Urząd zabezpieczeń lokalnych (LSA) używa WCF `LogonUser` funkcji do uwierzytelniania użytkowników według nazwy użytkownika i hasła. Ponieważ funkcja logowania jest kosztowna operacja, WCF pozwala na tokeny pamięci podręcznej, które reprezentują uwierzytelnionych użytkowników w celu zwiększenia wydajności. Mechanizm buforowania zapisuje wyniki z `LogonUser` dla kolejnych zastosowań. Ten mechanizm jest domyślnie wyłączona; Aby go włączyć, ustaw <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> właściwości `true`, lub użyj `cacheLogonTokens` atrybutu [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
- Można ustawić czas wygaśnięcia (TTL) dla pamięci podręcznej tokenów przez ustawienie <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> właściwości <xref:System.TimeSpan>, lub użyj `cachedLogonTokenLifetime` atrybutu `userNameAuthentication` element; wartość domyślna to 15 minut. Należy pamiętać, że podczas tokenu są buforowane, każdy klient, który przedstawia informacje o tej samej nazwy użytkownika i hasła można użyć tokenu, nawet jeśli konto użytkownika zostanie usunięte z systemu Windows lub jego hasło zostało zmienione. Dopiero po wygaśnięciu czas wygaśnięcia i token zostanie usunięty z pamięci podręcznej, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umożliwia uwierzytelnienia użytkownika (potencjalnie szkodliwymi).  
+ Można ustawić czas wygaśnięcia (TTL) dla pamięci podręcznej tokenów przez ustawienie <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> właściwości <xref:System.TimeSpan>, lub użyj `cachedLogonTokenLifetime` atrybutu `userNameAuthentication` element; wartość domyślna to 15 minut. Należy pamiętać, że podczas tokenu są buforowane, każdy klient, który przedstawia informacje o tej samej nazwy użytkownika i hasła można użyć tokenu, nawet jeśli konto użytkownika zostanie usunięte z systemu Windows lub jego hasło zostało zmienione. Dopiero po wygaśnięciu czas wygaśnięcia i token zostanie usunięty z pamięci podręcznej, WCF umożliwia uwierzytelnienia użytkownika (potencjalnie szkodliwymi).  
   
  Aby temu zaradzić: zmniejszyć okno ataku przez ustawienie `cachedLogonTokenLifetime` wartość najkrótszym czasie span potrzeb użytkowników.  
   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Komputer z usługą zawiera co najmniej dwa certyfikaty z tym samym kluczem publicznym, ale mogą zawierać różne informacje.  
   
--   Usługa pobiera certyfikat, który jest zgodny z identyfikatorem klucza podmiotu, ale nie jest ten, który klient przeznaczonych do użycia. Gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] odbiera wiadomości i weryfikuje podpis, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mapuje dane niezamierzone certyfikatu X.509 do zestawu oświadczeń, które są różne i potencjalnie z podwyższonym poziomem uprawnień z oczekiwaniami klienta.  
+-   Usługa pobiera certyfikat, który jest zgodny z identyfikatorem klucza podmiotu, ale nie jest ten, który klient przeznaczonych do użycia. Gdy WCF odbiera wiadomości i weryfikuje podpis, WCF mapuje informacje w niezamierzone certyfikatu X.509 do zestawu oświadczeń, które są różne i potencjalnie z podwyższonym poziomem uprawnień z klienta oczekuje.  
   
  Aby temu zaradzić, X.509 odwołania certyfikatów w inny sposób, na przykład za pomocą <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

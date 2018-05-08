@@ -1,21 +1,12 @@
 ---
-title: "Omówienie przestrzenie nazw (LINQ do XML)"
-ms.custom: 
+title: Omówienie przestrzenie nazw (LINQ do XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d2aa60f10e9d4cf1b1db4d2e81d94e5ea8e1302a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Omówienie przestrzenie nazw (LINQ do XML)
 W tym temacie przedstawiono obszary nazw, <xref:System.Xml.Linq.XName> klasy, a <xref:System.Xml.Linq.XNamespace> klasy.  
@@ -27,7 +18,7 @@ W tym temacie przedstawiono obszary nazw, <xref:System.Xml.Linq.XName> klasy, a 
   
  Jedną z zalet funkcji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] języku C# jest, że nie trzeba używać prefiksów XML. Gdy [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ładuje lub analizuje dokument XML prefiksami XML nie zostanie rozwiązany do jego odpowiedniej przestrzeni nazw XML. Po wykonaniu tej podczas pracy z dokumentu, który używa przestrzeni nazw, możesz prawie zawsze dostęp do przestrzeni nazw przez identyfikator URI przestrzeni nazw, a nie przez prefiks przestrzeni nazw. Podczas pracy deweloperów z nazw XML w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawsze pracują z nazwą XML pełną (to, że przestrzeń nazw XML i nazwa lokalna). Jednakże, gdy jest to konieczne, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] służy do pracy z i kontrolować prefiksy przestrzeni nazw.  
   
- W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], jest klasa, która reprezentuje nazw XML <xref:System.Xml.Linq.XName>. Nazwy XML często są wyświetlane w całym [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu API, i wszędzie tam, gdzie nazwa XML jest wymagana, można znaleźć <xref:System.Xml.Linq.XName> parametru. Jednak rzadko pracę bezpośrednio z <xref:System.Xml.Linq.XName>. <xref:System.Xml.Linq.XName>zawiera niejawna konwersja z ciągu.  
+ W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], jest klasa, która reprezentuje nazw XML <xref:System.Xml.Linq.XName>. Nazwy XML często są wyświetlane w całym [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu API, i wszędzie tam, gdzie nazwa XML jest wymagana, można znaleźć <xref:System.Xml.Linq.XName> parametru. Jednak rzadko pracę bezpośrednio z <xref:System.Xml.Linq.XName>. <xref:System.Xml.Linq.XName> zawiera niejawna konwersja z ciągu.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XNamespace> i <xref:System.Xml.Linq.XName>.  
   

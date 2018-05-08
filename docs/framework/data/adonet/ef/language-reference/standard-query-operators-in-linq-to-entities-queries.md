@@ -1,24 +1,12 @@
 ---
-title: "Standardowe operatory zapytań w składniku LINQ to Entities zapytań"
-ms.custom: 
+title: Standardowe operatory zapytań w składniku LINQ to Entities zapytań
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a65f759ef51d34cc3ac6d37fe3575b9e89aadf7c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w składniku LINQ to Entities zapytań
 W zapytaniu możesz określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje sortowania, grupowane i w kształcie przed zwróceniem jest. LINQ udostępnia zestaw metod standardowych zapytania, które można użyć w zapytaniu. Większość tych metod działać na sekwencji; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcja zapytania operatorów standardowej kwerendy obejmuje filtrowania, projekcji agregacji, sortowanie, grupowanie, stronicowania i więcej. Standardowe operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania zapytań niektórych często używane. Wyrażenia zapytania jest inny, bardziej czytelny sposobem express zapytania niż równoważne oparte na metodzie. Klauzule wyrażenia zapytania są przekształcane na wywołania metody zapytań w czasie kompilacji. Listę standardowych operatorów zapytań zawierających klauzule wyrażenia zapytania równoważne zawiera [standardowe operatory zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -80,7 +68,7 @@ W zapytaniu możesz określić informacje, które mają zostać pobrane ze źró
 ## <a name="type-methods"></a>Metody typu  
  Te dwie metody LINQ, które zajmują się konwersji typu i testowania są obsługiwane w kontekście [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Oznacza to, że tylko obsługiwane typy to typy, które mapują do odpowiedniego [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] typu. Aby uzyskać listę tych typów, zobacz [typu modelu koncepcyjnego (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Metody typu są `Convert` i `OfType`.  
   
- `OfType`jest obsługiwana dla typów jednostek. `Convert`jest obsługiwana dla typów pierwotnych modelu koncepcyjnego.  C# `is` i `as` metody również są obsługiwane.  
+ `OfType` jest obsługiwana dla typów jednostek. `Convert` jest obsługiwana dla typów pierwotnych modelu koncepcyjnego.  C# `is` i `as` metody również są obsługiwane.  
   
 ## <a name="paging-methods"></a>Metody stronicowania  
  Operacja stronicowania zwrócić element jednej, określonej sekwencji. Metody elementu `ElementAt`, `First`, `FirstOrDefault`, `Last`, `LastOrDefault`, `Single`, `Skip`, `Take`, `TakeWhile`.  

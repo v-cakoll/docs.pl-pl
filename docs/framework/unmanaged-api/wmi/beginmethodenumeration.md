@@ -1,11 +1,7 @@
 ---
-title: "Funkcja BeginMethodEnumeration (niezarządzany wykaz interfejsów API)"
+title: Funkcja BeginMethodEnumeration (niezarządzany wykaz interfejsów API)
 description: Funkcja BeginMethodEnumeration rozpoczyna wyliczenie metody obiektu
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginMethodEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d843c40a8ab0dd1c48a08126b8c7472505a1732
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>Funkcja Beingenumeration
 Rozpoczyna się wyliczenia metod dla obiekt.  
@@ -66,7 +59,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`jest różna od zera i nie jest jednym z określonych flag. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` jest różna od zera i nie jest jednym z określonych flag. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
@@ -80,7 +73,7 @@ Wywołanie tej metody jest obsługiwana tylko, jeśli bieżący obiekt jest defi
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

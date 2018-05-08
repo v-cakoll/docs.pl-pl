@@ -1,13 +1,7 @@
 ---
-title: "Zarządzana pula wątków"
-ms.custom: 
+title: Zarządzana pula wątków
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-managed-thread-pool"></a>Zarządzana pula wątków
 <xref:System.Threading.ThreadPool> Klasa udostępnia aplikacji dla puli wątków roboczych, które są zarządzane przez system, umożliwiając skoncentrować się na zadania aplikacji, a nie wątku zarządzania. Jeśli masz krótkie zadania, które wymagają przetwarzania w tle zarządzana Pula wątków to prosty sposób korzystać z wielu wątków. Na przykład, począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] można utworzyć <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty, do których wykonywania zadań asynchronicznych w wątku puli wątków.  
@@ -93,7 +82,7 @@ ms.lasthandoff: 12/23/2017
 >  Można użyć <xref:System.Threading.ThreadPool.SetMinThreads%2A> metodę, aby zwiększyć minimalna liczba wątków bezczynności. Jednak niepotrzebnie zwiększenie tych wartości może spowodować problemy z wydajnością. Jeśli zbyt wiele zadań jest uruchomiona w tym samym czasie, wszystkie z nich wydaje się powoli. W większości przypadków puli wątków będą działać lepiej z własną algorytmu alokacji wątków.  
   
 ## <a name="skipping-security-checks"></a>Pomijanie sprawdzania zabezpieczeń  
- Udostępnia również puli wątków <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> i <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> metody. Użyj tych metod, tylko wtedy, gdy masz pewność, że stos wywołującego nie ma znaczenia kontroli zabezpieczeń wykonywane podczas wykonywania zadań w kolejce. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>i <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> zarówno przechwytywania wywołującego stosu, w którym jest scalany stosu wątku puli wątków, po rozpoczęciu wątku do wykonania zadania. Jeśli wymagana jest kontrola zabezpieczeń, cały stos musi być zaznaczone. Chociaż kontroli bezpieczeństwa, ma także na wydajność.  
+ Udostępnia również puli wątków <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> i <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> metody. Użyj tych metod, tylko wtedy, gdy masz pewność, że stos wywołującego nie ma znaczenia kontroli zabezpieczeń wykonywane podczas wykonywania zadań w kolejce. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> i <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> zarówno przechwytywania wywołującego stosu, w którym jest scalany stosu wątku puli wątków, po rozpoczęciu wątku do wykonania zadania. Jeśli wymagana jest kontrola zabezpieczeń, cały stos musi być zaznaczone. Chociaż kontroli bezpieczeństwa, ma także na wydajność.  
   
 ## <a name="using-the-thread-pool"></a>Przy użyciu puli wątków  
  Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], najłatwiejszym sposobem na korzystanie z puli wątków jest użycie [zadań biblioteki równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). Domyślnie równoległych biblioteki typów, takich jak <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> umożliwia uruchamianie zadań wątków z puli wątków. Umożliwia także puli wątków wywołując <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> z kodu zarządzanego (lub `CorQueueUserWorkItem` z kodem niezarządzanym) i przekazywanie <xref:System.Threading.WaitCallback> delegata reprezentującego metodę, która wykonuje zadanie. Innym sposobem użycia puli wątków jest do kolejki elementów pracy, które są powiązane z operacją oczekiwania przy użyciu <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> — metoda i przekazywanie <xref:System.Threading.WaitHandle> , gdy sygnalizowane lub gdy został przekroczony, wywołuje metodę reprezentowany przez <xref:System.Threading.WaitOrTimerCallback> delegowanie. Wątków z puli wątków są używane do wywołania metody wywołania zwrotnego.  

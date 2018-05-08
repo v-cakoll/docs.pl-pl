@@ -1,37 +1,23 @@
 ---
 title: Konfigurowanie usługi aktywacji procesów systemu Windows do użycia z programem Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 727ad032482829350b5cf88175c34d8ccc7b98b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3a4d771c3f2d5e7e6ec4fd6a1e229548e063a6d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Konfigurowanie usługi aktywacji procesów systemu Windows do użycia z programem Windows Communication Foundation
-W tym temacie opisano kroki wymagane do skonfigurowania Windows Process Activation Service (znanej także jako Usługa WAS) w [!INCLUDE[wv](../../../../includes/wv-md.md)] hosta [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protokoły sieciowe usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano czynności dla tej konfiguracji:  
+W tym temacie opisano kroki wymagane do skonfigurowania Windows Process Activation Service (znanej także jako Usługa WAS) w [!INCLUDE[wv](../../../../includes/wv-md.md)] do obsługi systemu Windows Communication Foundation (WCF) protokołów sieciowych usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano czynności dla tej konfiguracji:  
   
--   Zainstaluj (lub potwierdź instalacji) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymagane składniki aktywacji.  
+-   Zainstaluj (lub potwierdź instalacji) składników aktywacji programu WCF, które są wymagane.  
   
 -   Utwórz witrynę WAS z powiązań protokołów sieciowych, które mają być używane, lub Dodaj nowe powiązanie protokołu do istniejącej lokacji.  
   
 -   Utwórz aplikację do obsługi usług i Włącz tej aplikacji do korzystania z protokołów sieciowych wymaganych.  
   
--   Tworzenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi udostępniającej punkt końcowy protokołu HTTP.  
+-   Tworzenie usługi WCF ujawniający punkt końcowy protokołu HTTP.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Konfigurowanie lokacji z powiązaniami bez HTTP  
  Aby używać powiązania protokołu HTTP z WAS, należy dodać powiązania witryny konfiguracji WAS. Magazyn konfiguracji dla WAS jest plik applicationHost.config, znajduje się w katalogu %windir%\system32\inetsrv\config. Tego magazynu konfiguracji jest współużytkowany przez usługi IIS 7.0 i WAS.  
@@ -107,7 +93,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Tworzenie usługi WCF usługi czy używa DOTYCZYŁO Aktywacja bez HTTP  
  Po wykonaniu czynności, aby zainstalować i skonfigurować WAS (zobacz [porady: Instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), skonfigurowanie usługi do użycia WAS aktywacji jest podobne do konfigurowania usługi hostowanej w usługach IIS.  
   
- Szczegółowe instrukcje dotyczące tworzenia aktywowany WAS [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Aby uzyskać szczegółowe instrukcje dotyczące tworzenia usługi WAS została aktywowana WCF, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting w usłudze aktywacji procesów systemu Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  

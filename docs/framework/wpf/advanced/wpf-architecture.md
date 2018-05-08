@@ -1,14 +1,6 @@
 ---
 title: Architektura WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
 - attached properties [WPF]
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera przewodnik hierarchii klas Windows Presentation Foundation (WPF). Obejmuje on większość głównych podsystemami [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]i opisano sposób ich interakcji. Szczegóły także niektóre wybory dokonane przez architektów z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -64,7 +50,7 @@ Ten temat zawiera przewodnik hierarchii klas Windows Presentation Foundation (WP
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  Jeden z podstawowej architektury filozofiami używane w budynku [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] został preferencji właściwości za pośrednictwem metody lub zdarzenia. Właściwości deklaratywne i zezwala na bardziej łatwo określić zamiar zamiast akcji. Obsługiwany również modelu zmiennych lub danych obsługiwanego systemu w celu wyświetlania zawartości interfejsu użytkownika. Tej zasady klas w efekcie zamierzone tworzenia więcej właściwości, które można powiązać, aby lepiej kontrolować zachowanie aplikacji.  
   
- Aby uzyskać więcej systemu regulowane przez właściwości, bardziej zaawansowane funkcje systemu właściwość niż co [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zapewnia było wymagane. Prosty przykład tego siłę jest powiadomienia o zmianie. Aby włączyć dwie wiążących, należy obie strony powiązania obsługuje powiadomienie o zmianie. W celu zachowania związana z wartości właściwości, musisz otrzymać powiadomienie, gdy wartość właściwości. [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] Ma interfejs **INotifyPropertyChange**, obiekt, aby opublikować powiadomienia o zmianie, co pozwala jednak jest to pozycja opcjonalna.  
+ Aby uzyskać więcej systemu regulowane przez właściwości, bardziej zaawansowane funkcje systemu właściwość niż co [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zapewnia było wymagane. Prosty przykład tego siłę jest powiadomienia o zmianie. Aby włączyć dwie wiążących, należy obie strony powiązania obsługuje powiadomienie o zmianie. W celu zachowania związana z wartości właściwości, musisz otrzymać powiadomienie, gdy wartość właściwości. Microsoft .NET Framework ma interfejs **INotifyPropertyChange**, obiekt, aby opublikować powiadomienia o zmianie, co pozwala jednak jest to pozycja opcjonalna.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia bardziej rozbudowane system właściwość pochodnych <xref:System.Windows.DependencyObject> typu. Właściwości systemu to naprawdę system właściwości "zależności", ponieważ śledzi zależności między wyrażeń właściwości i automatycznie revalidates wartości właściwości zależności zmiany. Na przykład, jeśli właściwość, która dziedziczy (takie jak <xref:System.Windows.Controls.Control.FontSize%2A>), system jest automatycznie aktualizowany, jeśli właściwość zmieni się na element nadrzędny elementu, który dziedziczy wartości.  
   

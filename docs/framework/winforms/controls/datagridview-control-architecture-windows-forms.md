@@ -1,28 +1,14 @@
 ---
-title: "DataGridView — Architektura formantu (Formularze systemu Windows)"
-ms.custom: 
+title: DataGridView — Architektura formantu (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9fc1707b1691266d1844c411a08e7e8f35514ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView — Architektura formantu (Formularze systemu Windows)
 <xref:System.Windows.Forms.DataGridView> Kontroli oraz ich powiązanymi klasami, które są zaprojektowane jako elastyczny i rozszerzalny system do wyświetlania i edytowania danych tabelarycznych. Te klasy są zawarte w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw, a ich są nazywane z prefiksem "DataGridView".  
@@ -67,9 +53,9 @@ Model obiektu DataGridViewElement
  ![Obiekt DataGridViewCell modelu](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 Model obiektu DataGridViewCell  
   
- <xref:System.Windows.Forms.DataGridViewCell> Typu jest abstrakcyjna klasa podstawowa, z którego pochodzi wszystkie typy komórki. <xref:System.Windows.Forms.DataGridViewCell>i jego typów pochodnych nie są formanty formularzy systemu Windows, ale niektóre formanty formularzy systemu Windows hosta. Wszystkie funkcje edytowania obsługiwane przez komórki jest zazwyczaj obsługiwane przez formant hostowanej.  
+ <xref:System.Windows.Forms.DataGridViewCell> Typu jest abstrakcyjna klasa podstawowa, z którego pochodzi wszystkie typy komórki. <xref:System.Windows.Forms.DataGridViewCell> i jego typów pochodnych nie są formanty formularzy systemu Windows, ale niektóre formanty formularzy systemu Windows hosta. Wszystkie funkcje edytowania obsługiwane przez komórki jest zazwyczaj obsługiwane przez formant hostowanej.  
   
- <xref:System.Windows.Forms.DataGridViewCell>obiekty nie kontroli własnych wygląd i funkcje malowania w taki sam sposób jak formanty formularzy systemu Windows. Zamiast tego <xref:System.Windows.Forms.DataGridView> jest odpowiedzialny za wygląd jego <xref:System.Windows.Forms.DataGridViewCell> obiektów. Użytkownik może znacząco wpłynąć na wygląd i zachowanie komórki za pomocą <xref:System.Windows.Forms.DataGridView> właściwości i zdarzeń formantu. Jeśli masz specjalne wymagania dotyczące dostosowania, które są poza możliwościami <xref:System.Windows.Forms.DataGridView> sterowania, można zaimplementować własne klasy, która pochodzi z <xref:System.Windows.Forms.DataGridViewCell> lub jednej z jej klas podrzędnych.  
+ <xref:System.Windows.Forms.DataGridViewCell> obiekty nie kontroli własnych wygląd i funkcje malowania w taki sam sposób jak formanty formularzy systemu Windows. Zamiast tego <xref:System.Windows.Forms.DataGridView> jest odpowiedzialny za wygląd jego <xref:System.Windows.Forms.DataGridViewCell> obiektów. Użytkownik może znacząco wpłynąć na wygląd i zachowanie komórki za pomocą <xref:System.Windows.Forms.DataGridView> właściwości i zdarzeń formantu. Jeśli masz specjalne wymagania dotyczące dostosowania, które są poza możliwościami <xref:System.Windows.Forms.DataGridView> sterowania, można zaimplementować własne klasy, która pochodzi z <xref:System.Windows.Forms.DataGridViewCell> lub jednej z jej klas podrzędnych.  
   
  Poniższa lista zawiera klasy pochodne od <xref:System.Windows.Forms.DataGridViewCell>:  
   

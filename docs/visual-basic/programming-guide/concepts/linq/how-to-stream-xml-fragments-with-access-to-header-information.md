@@ -1,22 +1,12 @@
 ---
-title: "Porady: strumienia fragmenty XML z dostępem do informacji w nagłówku (Visual Basic)"
-ms.custom: 
+title: 'Porady: strumienia fragmenty XML z dostępem do informacji w nagłówku (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 60ec63c33d20fa38bed32d9c46c4acfe649ecd15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Porady: strumienia fragmenty XML z dostępem do informacji w nagłówku (Visual Basic)
 Czasami trzeba arbitralnie duże pliki XML do odczytu i zapisu aplikacji, dzięki czemu zużycie pamięci aplikacji jest atrybutem wartości prognozowanych. Przy próbie wypełnić drzewo XML z dużego pliku XML, użycie pamięci będzie proporcjonalny do rozmiaru pliku — to znaczy nadmierne. W związku z tym należy w zamian użyj technika przesyłania strumieniowego.  

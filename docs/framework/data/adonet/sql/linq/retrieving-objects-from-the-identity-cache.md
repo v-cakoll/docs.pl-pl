@@ -1,27 +1,15 @@
 ---
-title: "Pobieranie obiektów z pamięci podręcznej tożsamości"
-ms.custom: 
+title: Pobieranie obiektów z pamięci podręcznej tożsamości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e7677f2fcfe854aad5d01c0e024955da2480c375
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Pobieranie obiektów z pamięci podręcznej tożsamości
 W tym temacie opisano typy LINQ do zapytania SQL, które zwracają obiekt z pamięci podręcznej tożsamości zarządzanych przez <xref:System.Data.Linq.DataContext>.  
@@ -41,7 +29,7 @@ W tym temacie opisano typy LINQ do zapytania SQL, które zwracają obiekt z pami
   
  W tych formularze ogólne `Function1`, `Function2`, i `predicate` są zdefiniowane w następujący sposób.  
   
- `Function1`może być jedną z następujących czynności:  
+ `Function1` może być jedną z następujących czynności:  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -53,7 +41,7 @@ W tym temacie opisano typy LINQ do zapytania SQL, które zwracają obiekt z pami
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2`może być jedną z następujących czynności:  
+ `Function2` może być jedną z następujących czynności:  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -63,7 +51,7 @@ W tym temacie opisano typy LINQ do zapytania SQL, które zwracają obiekt z pami
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate`musi być wyrażeniem, w którym właściwości klucza podstawowego obiektu ma ustawioną wartość stałą. Jeśli obiekt ma zdefiniowany przez więcej niż jedną właściwość klucza podstawowego, każda właściwość klucza podstawowego musi mieć ustawioną wartość stałą. Poniżej podano przykłady formularza `predicate` należy wykonać:  
+ `predicate` musi być wyrażeniem, w którym właściwości klucza podstawowego obiektu ma ustawioną wartość stałą. Jeśli obiekt ma zdefiniowany przez więcej niż jedną właściwość klucza podstawowego, każda właściwość klucza podstawowego musi mieć ustawioną wartość stałą. Poniżej podano przykłady formularza `predicate` należy wykonać:  
   
 -   `c => c.PK == constant_value`  
   

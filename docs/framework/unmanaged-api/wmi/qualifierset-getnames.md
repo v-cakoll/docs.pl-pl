@@ -1,11 +1,7 @@
 ---
-title: "Funkcja QualifierSet_GetNames (niezarządzany wykaz interfejsów API)"
-description: "Funkcja QualifierSet_GetNames pobiera nazwy kwalifikatory z obiektu lub właściwości."
+title: Funkcja QualifierSet_GetNames (niezarządzany wykaz interfejsów API)
+description: Funkcja QualifierSet_GetNames pobiera nazwy kwalifikatory z obiektu lub właściwości.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6077b448c2644f68d12679cf208ee921c2af119a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetgetnames-function"></a>Funkcja QualifierSet_GetNames
 Pobiera nazwy wszystkich kwalifikatorów lub niektórych kwalifikatorów, które są dostępne z bieżącego obiektu lub właściwości. 
@@ -62,7 +55,7 @@ HRESULT QualifierSet_GetNames (
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwraca tylko nazwy kwalifikatory określonych bieżącą właściwość lub obiekt. <br/> Dla właściwości: zwracać tylko kwalifikatory określonego we właściwości (w tym zastąpień), a nie te kwalifikatory propagowane z definicji klasy. <br/> Dla wystąpienia obiektu: zwraca tylko nazwy kwalifikator danego wystąpienia. <br/> Dla klasy: przywrócenie tylko kwalifikatory określonych beiong klasy pochodnej.
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Powrót propagowane tylko nazwy kwalifikatory z innego obiektu. <br/> Dla właściwości: zwracane tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> Dla wystąpienia obiektu: Powrót propagowane tylko tych kwalifikatory z definicji klasy. <br/> Dla klasy: zwracane tylko nazwy kwalifikator odziedziczona z klasy nadrzędnej. |
 
-`pstrNames`[out] Nowy `SAFEARRAY` zawierający żądanej nazwy. Tablica może mieć elementów 0. Jeśli wystąpi błąd, nowy `SAFEARRAY` nie są zwracane.
+`pstrNames` [out] Nowy `SAFEARRAY` zawierający żądanej nazwy. Tablica może mieć elementów 0. Jeśli wystąpi błąd, nowy `SAFEARRAY` nie są zwracane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -87,7 +80,7 @@ Nie jest błąd dla danego obiektu mieć zerowej kwalifikatory tak liczba parame
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

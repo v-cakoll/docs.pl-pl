@@ -1,28 +1,16 @@
 ---
-title: "Jak określić kierunek łączenia"
-ms.custom: 
+title: Jak określić kierunek łączenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - direction of binding [WPF]
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9944ff214a9dfe12b21e005c4e1998c249bf72b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 100130f3dc099d1cf1f216c841e7e1dc1d083f39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Jak określić kierunek łączenia
 Ten przykład przedstawia sposób określić, czy powiązanie aktualizować tylko właściwość target (docelowy) powiązania powiązania właściwości source (źródło), lub zarówno właściwość target właściwości oraz źródła.  
@@ -30,15 +18,15 @@ Ten przykład przedstawia sposób określić, czy powiązanie aktualizować tylk
 ## <a name="example"></a>Przykład  
  Możesz użyć <xref:System.Windows.Data.Binding.Mode%2A> właściwości do określania kierunku powiązania. Na poniższej liście wyliczenia przedstawia dostępne opcje aktualizacji powiązania:  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>aktualizuje właściwość docelowego lub zmianie właściwości target lub właściwości source.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> aktualizuje właściwość docelowego lub zmianie właściwości target lub właściwości source.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>Właściwość target aktualizacji, tylko wtedy, gdy zmienia się właściwości source.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> Właściwość target aktualizacji, tylko wtedy, gdy zmienia się właściwości source.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime>aktualizuje właściwość target tylko podczas uruchamiania aplikacji lub <xref:System.Windows.FrameworkElement.DataContext%2A> ulega zmianie.  
+-   <xref:System.Windows.Data.BindingMode.OneTime> aktualizuje właściwość target tylko podczas uruchamiania aplikacji lub <xref:System.Windows.FrameworkElement.DataContext%2A> ulega zmianie.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>Aktualizuje właściwości source po zmianie właściwości target.  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> Aktualizuje właściwości source po zmianie właściwości target.  
   
--   <xref:System.Windows.Data.BindingMode.Default>powoduje, że wartość domyślna <xref:System.Windows.Data.Binding.Mode%2A> wartości właściwości docelowej do użycia.  
+-   <xref:System.Windows.Data.BindingMode.Default> powoduje, że wartość domyślna <xref:System.Windows.Data.Binding.Mode%2A> wartości właściwości docelowej do użycia.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Data.BindingMode> wyliczenia.  
   

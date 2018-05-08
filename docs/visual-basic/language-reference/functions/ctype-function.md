@@ -1,11 +1,6 @@
 ---
-title: "CType — Funkcja (Visual Basic)"
+title: CType — Funkcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CType
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7b1c7ae2a0126bf7cd487df4e9a7364c98e1c695
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctype-function-visual-basic"></a>CType — Funkcja (Visual Basic)
 Zwraca wynik jawnej konwersji wyrażenia do określonego typu danych, obiektu, struktury, klasy lub interfejsu.  
@@ -47,7 +39,7 @@ CType(expression, typename)
 >  -   Funkcje konwersji wpisz na przykład `CByte`, `CDbl`, i `CInt` który wykonania konwersji na typ danych. Aby uzyskać więcej informacji, zobacz [funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
 > -   [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) lub [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md). Operatory te wymagają, że jeden typ dziedziczył lub implementował z innego typu. Udostępniają one nieco większą wydajność niż `CType` podczas konwersji do i z `Object` — typ danych.  
   
- `CType`jest skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który wylicza wartość wyrażenia. W niektórych przypadkach kod działa szybciej, ponieważ nie procedur są wywoływane w celu wykonania konwersji.  
+ `CType` jest skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który wylicza wartość wyrażenia. W niektórych przypadkach kod działa szybciej, ponieważ nie procedur są wywoływane w celu wykonania konwersji.  
   
  Jeśli zdefiniowano brak konwersji z `expression` do `typename` (na przykład z `Integer` do `Date`), Visual Basic wyświetla komunikat o błędzie kompilacji.  
   

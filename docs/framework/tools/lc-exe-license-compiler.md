@@ -1,13 +1,6 @@
 ---
 title: Lc.exe (Kompilator licencji)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Lc.exe
 - .licx file
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e890ff68967d04d5c0f487508c9ce559f377e56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Kompilator licencji)
 Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowaniu i tworzy plik binarny, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego.  
@@ -58,7 +46,7 @@ Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowan
 |**firmy:** *ścieżki*|Określa katalog, w którym ma zostać umieszczony wyjściowy plik licenses.|  
 |**/ target:** *targetPE*|Określa plik wykonywalny, dla którego jest generowany plik licenses.|  
 |**/v**|Określa tryb pełny; wyświetla informacje o postępie kompilacji.|  
-|**@***pliku*|Określa plik odpowiedzi (.rsp —).|  
+|**@** *Plik*|Określa plik odpowiedzi (.rsp —).|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="example"></a>Przykład  

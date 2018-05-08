@@ -1,14 +1,6 @@
 ---
-title: "ICLRGCManager::Collect — Metoda"
-ms.custom: 
+title: ICLRGCManager::Collect — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRGCManager.Collect
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2fdb66008a6bbe315f39a0d3fae293219d6b6c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b9c3899c4319c623bc991d0775945f0a4dc09e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect — Metoda
 Wymusza wyrzucania elementów bezużytecznych dla określonej generacji.  
@@ -54,7 +42,7 @@ HRESULT Collect (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`Collect`zwrócona pomyślnie.|  
+|S_OK|`Collect` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -71,7 +59,7 @@ HRESULT Collect (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Automatyczne zarządzanie pamięcią](../../../../docs/standard/automatic-memory-management.md)  

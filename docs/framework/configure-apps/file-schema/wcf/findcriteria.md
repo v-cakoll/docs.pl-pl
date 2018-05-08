@@ -1,29 +1,17 @@
 ---
-title: '&lt;kryteria znajdowania&gt;'
-ms.custom: 
+title: '&lt;Kryteria znajdowania&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f804cdb57355b62db25a559dc3c5db7d4d69369e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc9cd3b87d0f47ae0f16b5c5bfcaa4a1167bae9f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltfindcriteriagt"></a>&lt;kryteria znajdowania&gt;
+# <a name="ltfindcriteriagt"></a>&lt;Kryteria znajdowania&gt;
 Element konfiguracji, który dostarcza zestaw kryteriów używanych przez aplikację kliencką do wyszukiwania usługi odkrywania. Kryteria można grupować w kryteriów wyszukiwania (Określanie usług szukasz) i zakończenie odnalezienie (jak długo wyszukiwanie powinno trwać).  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<standardEndpoints >  
   
 ## <a name="syntax"></a>Składnia  

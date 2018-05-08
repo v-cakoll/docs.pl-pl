@@ -1,26 +1,17 @@
 ---
 title: 'Wystąpił błąd podczas zapisywania tymczasowego pliku zasobów Win32 &#39; &lt;filename&gt;&#39;: &lt;komunikat o błędzie&gt;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30137
 - vbc30137
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e2e4bbc095e419ae0af6eecf9ae4863d3cbd4bce
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20f11a2600388319ae1f476034cf046c6ecd13b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Wystąpił błąd podczas zapisywania tymczasowego pliku zasobów Win32 &#39; &lt;filename&gt;&#39;: &lt;komunikat o błędzie&gt;
 Kompilator Visual Basic wywołuje konsolidator zestawów (znanej także jako Alink Al.exe), można wygenerować zestawu z manifestu. Konsolidator zgłosił błąd uzyskiwania nazwę pliku do użycia podczas zapisywania zasobu w pamięci.  

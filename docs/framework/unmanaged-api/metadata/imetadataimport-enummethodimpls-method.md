@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumMethodImpls — Metoda"
-ms.custom: 
+title: IMetaDataImport::EnumMethodImpls — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMethodImpls
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3350fb4513604a0edc47cbf47e257648ff0d75a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls — Metoda
 Wylicza MethodBody i MethodDeclaration tokeny reprezentujący metody określonego typu.  
@@ -74,7 +62,7 @@ HRESULT EnumMethodImpls (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`zwrócona pomyślnie.|  
+|`S_OK`|`EnumMethodImpls` zwrócona pomyślnie.|  
 |`S_FALSE`|Nie ma żadnych tokenów — metoda wyliczania. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -84,7 +72,7 @@ HRESULT EnumMethodImpls (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

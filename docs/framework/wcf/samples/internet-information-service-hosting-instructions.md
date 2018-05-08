@@ -1,24 +1,12 @@
 ---
-title: "Instrukcje dotyczące hostowania internetowej usługi informacyjnej"
-ms.custom: 
+title: Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de7dc897aa435d62c04c2e6a3ca82adf3a637a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d315fa482e423461eab171a19746b6ea792aac5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 Aby uruchomić przykłady, które są obsługiwane przez Internet Information Services (IIS), należy się upewnić, że usługi IIS jest poprawnie zainstalowany i działa.  

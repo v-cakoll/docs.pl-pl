@@ -1,31 +1,17 @@
 ---
 title: 'Porady: Pobieranie metadanych i implementacji usługi zgodne'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ae888f5a9569ef51be52b91ea019fea897597b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Porady: Pobieranie metadanych i implementacji usługi zgodne
-Ta sama osoba nie często, projektowania i implementacji usługi. W środowiskach, w którym współpracy aplikacje są ważne kontrakty można zaprojektowane lub opisanego w sieci Web Services Description Language (WSDL) oraz deweloper musi implementować to usługa, która spełnia podane kontraktu. Można również migrować istniejącą usługę do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , ale zachować format danych przesyłanych w sieci. Ponadto kontrakty dwukierunkowe wymaga wywołań zaimplementować kontrakt wywołania zwrotnego, jak również.  
+Ta sama osoba nie często, projektowania i implementacji usługi. W środowiskach, w którym współpracy aplikacje są ważne kontrakty można zaprojektowane lub opisanego w sieci Web Services Description Language (WSDL) oraz deweloper musi implementować to usługa, która spełnia podane kontraktu. Można także migracji istniejącej usługi do usługi Windows Communication Foundation (WCF), ale zachować format danych przesyłanych w sieci. Ponadto kontrakty dwukierunkowe wymaga wywołań zaimplementować kontrakt wywołania zwrotnego, jak również.  
   
- W takich sytuacjach należy użyć [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (lub równoważne narzędzie) do generowania interfejsu kontraktu usługi w języku zarządzanych, które można zaimplementować w celu spełnienia wymagań kontrakt. Zazwyczaj [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) jest używany do uzyskiwania kontraktu usługi, która jest używana z fabryki kanałów lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typ klienta, jak również danych z pliku konfiguracji klienta, który konfiguruje prawidłowe powiązanie i adres. Aby użyć pliku konfiguracji wygenerowanego, muszą go zmienić w pliku konfiguracji usługi. Należy również zmodyfikować kontraktu usługi.  
+ W takich sytuacjach należy użyć [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (lub równoważne narzędzie) do generowania interfejsu kontraktu usługi w języku zarządzanych, które można zaimplementować w celu spełnienia wymagań kontrakt. Zazwyczaj [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) jest używany do uzyskiwania kontraktu usługi, który jest używany z fabryki kanałów lub typ klienta WCF, a także z pliku konfiguracji klienta, który konfiguruje poprawne powiązanie i adres. Aby użyć pliku konfiguracji wygenerowanego, muszą go zmienić w pliku konfiguracji usługi. Należy również zmodyfikować kontraktu usługi.  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>Aby pobrać dane i implementacji usługi zgodne  
   

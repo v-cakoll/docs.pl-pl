@@ -1,14 +1,6 @@
 ---
 title: Przekierowywanie wersji zestawu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - assembly binding, redirection
 - redirecting assembly binding to earlier version
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-caps.latest.revision: 26
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24343e1ee2e95cbeb7613d3b22dd7cdac848903b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 Można przekierować powiązanie kompilacji odwołania do zestawów platformy .NET Framework, zestawy innych firm lub zestawy własnych aplikacji. Można przekierować aplikację, aby użyć innej wersji zestawu na kilka sposobów: za pomocą zasad wydawcy, za pomocą pliku konfiguracji aplikacji; lub za pomocą pliku konfiguracji komputera. W tym artykule omówiono sposób działania powiązań zestawów w programie .NET Framework i jak można je skonfigurować.  

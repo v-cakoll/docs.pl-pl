@@ -1,28 +1,17 @@
 ---
-title: "Eskalacja zarządzania transakcji"
-ms.custom: 
+title: Eskalacja zarządzania transakcji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d076b93774282fbfa52acfacb6a1c9f3231a972
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a5592cc9ebf0ddfc49f38da9404c81d11a29cf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-management-escalation"></a>Eskalacja zarządzania transakcji
 System Windows obsługuje zestaw usług i moduły, które razem stanowią Menedżera transakcji. Eskalacja zarządzania transakcji opisano proces migrację transakcji z jeden ze składników Menedżera transakcji na inny.  
   
- <xref:System.Transactions>zawiera składnik menedżera transakcji, która koordynuje transakcji związanej z co najwyżej jednego zasobu trwałe lub wiele zasobów volatile. Ponieważ menedżera transakcji używa tylko wywołania domeny należącymi do tej aplikacji, zapewni najlepszą wydajność. Deweloperzy muszą nie komunikują się z menedżerem transakcji bezpośrednio. Zamiast tego wspólnej infrastruktury, definiujący interfejsów, wspólnego zachowania i klasy pomocy są dostarczane przez <xref:System.Transactions> przestrzeni nazw.  
+ <xref:System.Transactions> zawiera składnik menedżera transakcji, która koordynuje transakcji związanej z co najwyżej jednego zasobu trwałe lub wiele zasobów volatile. Ponieważ menedżera transakcji używa tylko wywołania domeny należącymi do tej aplikacji, zapewni najlepszą wydajność. Deweloperzy muszą nie komunikują się z menedżerem transakcji bezpośrednio. Zamiast tego wspólnej infrastruktury, definiujący interfejsów, wspólnego zachowania i klasy pomocy są dostarczane przez <xref:System.Transactions> przestrzeni nazw.  
   
  Jeśli chcesz podać transakcji do obiektu w innej domenie aplikacji (w tym w granicach procesu i komputera) na tym samym komputerze <xref:System.Transactions> infrastruktury automatycznie Eskalowanie transakcji, które mają być zarządzane przez firmę Microsoft Koordynator transakcji rozproszonych (MSDTC). Eskalacji ma miejsce, gdy zarejestrować innego menedżera zasobów trwałe. Gdy przekazany, transakcja pozostaje zarządzanych w stanie z podwyższonym poziomem uprawnień do momentu jego zakończenia.  
   

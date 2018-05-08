@@ -1,29 +1,18 @@
 ---
-title: "XsltArgumentList parametry arkusza stylów i rozszerzenia obiektów"
-ms.custom: 
+title: XsltArgumentList parametry arkusza stylów i rozszerzenia obiektów
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b14365266d5a477b32dbbe177d9644596b9e3b38
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 808d21ae0eabdc7502ef97facc3d45f2220883af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList parametry arkusza stylów i rozszerzenia obiektów
 <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera Extensible Stylesheet Language parametrów przekształcenia XSLT (), a obiekty rozszerzenia XSLT. Gdy dane są przekazywane do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenia obiekty mogą być wywoływane z arkuszy stylów.  
@@ -150,7 +139,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Dane wejściowe  
- ORDER.XML  
+ order.xml  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -318,7 +307,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Dane wejściowe  
- Number.XML  
+ number.xml  
   
 ```xml  
 <?xml version='1.0'?>  

@@ -1,13 +1,6 @@
 ---
-title: "Przegląd zdarzeń automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Przegląd zdarzeń automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - UI Automation, events
@@ -16,28 +9,26 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2190e404479a940e638d6ee8b9fd7135d8fc0109
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-events-overview"></a>Przegląd zdarzeń automatyzacji interfejsu użytkownika
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]powiadomienie o zdarzeniu jest kluczowym elementem technologiami ułatwień dostępu, takich jak czytniki i powiększające. Te zdarzenia śledzenia klientów automatyzacji interfejsu użytkownika, zgłaszanych przez dostawców automatyzacji interfejsu użytkownika, gdy wydarzy się coś w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] i użyć tych informacji w celu powiadomienia użytkowników końcowych.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] powiadomienie o zdarzeniu jest kluczowym elementem technologiami ułatwień dostępu, takich jak czytniki i powiększające. Te zdarzenia śledzenia klientów automatyzacji interfejsu użytkownika, zgłaszanych przez dostawców automatyzacji interfejsu użytkownika, gdy wydarzy się coś w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] i użyć tych informacji w celu powiadomienia użytkowników końcowych.  
   
  Zwiększona wydajność zezwalając dostawcy aplikacjom wywoływanie zdarzeń selektywnie, w zależności od tego, czy wszyscy klienci subskrybowanych z tymi zdarzeniami lub wcale, jeśli klienci nie nasłuchują żadnych zdarzeń.  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>Typy zdarzeń  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zdarzenia można podzielić na następujące kategorie.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia można podzielić na następujące kategorie.  
   
 |Zdarzenie|Opis|  
 |-----------|-----------------|  
@@ -50,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  Następujące zdarzenia może zostać zgłoszone, nawet wtedy, gdy stan interfejsu użytkownika nie została zmieniona.  
   
--   `AutomationPropertyChangedEvent`(w zależności od właściwości, które uległy zmianie)  
+-   `AutomationPropertyChangedEvent` (w zależności od właściwości, które uległy zmianie)  
   
 -   `ElementSelectedEvent`  
   
@@ -60,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>Identyfikatory zdarzeń automatyzacji interfejsu użytkownika  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]zdarzenia są identyfikowane za pomocą <xref:System.Windows.Automation.AutomationEvent> obiektów. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Właściwość zawiera wartość, która unikatowo identyfikuje rodzaj zdarzenia.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] zdarzenia są identyfikowane za pomocą <xref:System.Windows.Automation.AutomationEvent> obiektów. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Właściwość zawiera wartość, która unikatowo identyfikuje rodzaj zdarzenia.  
   
  Możliwe wartości <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> są podane w poniższej tabeli, wraz z typ użyty dla argumentów zdarzenia. Należy pamiętać, że identyfikatory używane przez klientów i dostawców, są tak samo o nazwie pola z różnych klas.  
   

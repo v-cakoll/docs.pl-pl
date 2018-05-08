@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Szczegóły|W programie .NET 4.5 domyślny limit cofania dla pola tekstowego WPF wynosi 100 (w przeciwieństwie do ich w .NET 4.0)|
+|Szczegóły|W programie .NET Framework 4.5 domyślny limit cofania dla pola tekstowego WPF wynosi 100 (w przeciwieństwie do ich w programie .NET Framework 4.0)|
 |Sugestia|Jeśli limit 100 cofania jest zbyt niska, limit można ustawić jawnie z <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit>|
 |Zakres|Krawędź|
 |Wersja|4.5|

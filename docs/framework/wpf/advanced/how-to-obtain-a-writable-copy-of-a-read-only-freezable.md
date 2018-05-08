@@ -1,13 +1,6 @@
 ---
-title: "Jak uzyskać zapisywalną kopię Freezable tylko do odczytu"
-ms.custom: 
+title: Jak uzyskać zapisywalną kopię Freezable tylko do odczytu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - cloning Freezable objects [WPF]
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fe22e49ee28de60bc76d7a4f543462bbcfac48c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 894a2e42ca3f5cbb159c3129227f4b03e71fc4ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Jak uzyskać zapisywalną kopię Freezable tylko do odczytu
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Freezable.Clone%2A> metodę, aby utworzyć kopię zapisu tylko do odczytu <xref:System.Windows.Freezable>.  

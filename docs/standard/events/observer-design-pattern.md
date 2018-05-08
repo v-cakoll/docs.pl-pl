@@ -1,13 +1,7 @@
 ---
 title: Wzorzec projektowy obserwatora
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="observer-design-pattern"></a>Wzorzec projektowy obserwatora
 Wzorzec projektowy obserwatora umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy. Jest to odpowiednie dla dowolnego scenariusz, który wymaga wypychania powiadomień. Definiuje wzorzec *dostawcy* (znanej także jako *podmiotu* lub *według*) i zero, co najmniej jeden *obserwatorów*. Obserwatorów Zarejestruj dostawcę i zawsze, gdy wstępnie zdefiniowanego warunku, zdarzenia lub zmiana stanu występuje, dostawca automatycznie powiadamia wszystkich obserwatorów przez wywołanie metody ich. W tym wywołaniu metody dostawcę można też podać informacje o bieżącym stanie do obserwatorów. W programie .NET Framework wzorzec projektowy obserwatora jest stosowany przez zastosowanie ogólnego <xref:System.IObservable%601?displayProperty=nameWithType> i <xref:System.IObserver%601?displayProperty=nameWithType> interfejsów. Parametr typu ogólnego reprezentuje typ, który zawiera informacje powiadomień.  
@@ -66,9 +55,9 @@ Wzorzec projektowy obserwatora umożliwia subskrybenta do rejestrowania i odbier
   
  A `BaggageHandler` klasy jest odpowiedzialny za informacje o lotach nadchodzących i bagażu oświadczenia carousels. Wewnętrznie ta funkcja obsługuje dwie kolekcje:  
   
--   `observers`-Kolekcję klientów, którzy będą otrzymywać zaktualizowane informacje.  
+-   `observers` -Kolekcję klientów, którzy będą otrzymywać zaktualizowane informacje.  
   
--   `flights`-Kolekcja lotach i ich carousels przypisane.  
+-   `flights` -Kolekcja lotach i ich carousels przypisane.  
   
  Obie kolekcje są reprezentowane przez ogólny <xref:System.Collections.Generic.List%601> obiektów, które są tworzone w `BaggageHandler` konstruktora klasy. Kod źródłowy `BaggageHandler` klasy przedstawiono w poniższym przykładzie.  
   
@@ -91,7 +80,7 @@ Wzorzec projektowy obserwatora umożliwia subskrybenta do rejestrowania i odbier
  [!code-csharp[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/observer.cs#4)]
  [!code-vb[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/observer.vb#4)]  
   
- `ArrivalsMonitor` Klasa zawiera `Subscribe` i `Unsubscribe` metody. `Subscribe` Metoda umożliwia klasę, aby zapisać <xref:System.IDisposable> implementacji zwrócony przez wywołanie <xref:System.IObservable%601.Subscribe%2A> prywatnej zmiennej. `Unsubscribe` Metoda umożliwia klasę, aby zrezygnować z powiadomień przez wywołanie dostawcy <xref:System.IDisposable.Dispose%2A> implementacji. `ArrivalsMonitor`dostępne są także implementacje <xref:System.IObserver%601.OnNext%2A>, <xref:System.IObserver%601.OnError%2A>, i <xref:System.IObserver%601.OnCompleted%2A> metody. Tylko <xref:System.IObserver%601.OnNext%2A> implementacja zawiera znaczną ilość kodu. Metoda współpracuje z ogólnego prywatne, posortowane, <xref:System.Collections.Generic.List%601> obiekt, który przechowuje informacje o lotniskach pochodzenia w nadchodzących lotach i carousels, na których jest dostępna ich bagażu. Jeśli `BaggageHandler` klasa raportuje nowego odbioru transmitowane <xref:System.IObserver%601.OnNext%2A> implementacji metody dodaje informacje o tym transmitowane do listy. Jeśli `BaggageHandler` klasy raporty, aby transmitowane bagażu został zwolniony, <xref:System.IObserver%601.OnNext%2A> metoda usuwa ten lot z listy. Zawsze, gdy zostaną zmienione, lista jest sortowana i wyświetlane w konsoli.  
+ `ArrivalsMonitor` Klasa zawiera `Subscribe` i `Unsubscribe` metody. `Subscribe` Metoda umożliwia klasę, aby zapisać <xref:System.IDisposable> implementacji zwrócony przez wywołanie <xref:System.IObservable%601.Subscribe%2A> prywatnej zmiennej. `Unsubscribe` Metoda umożliwia klasę, aby zrezygnować z powiadomień przez wywołanie dostawcy <xref:System.IDisposable.Dispose%2A> implementacji. `ArrivalsMonitor` dostępne są także implementacje <xref:System.IObserver%601.OnNext%2A>, <xref:System.IObserver%601.OnError%2A>, i <xref:System.IObserver%601.OnCompleted%2A> metody. Tylko <xref:System.IObserver%601.OnNext%2A> implementacja zawiera znaczną ilość kodu. Metoda współpracuje z ogólnego prywatne, posortowane, <xref:System.Collections.Generic.List%601> obiekt, który przechowuje informacje o lotniskach pochodzenia w nadchodzących lotach i carousels, na których jest dostępna ich bagażu. Jeśli `BaggageHandler` klasa raportuje nowego odbioru transmitowane <xref:System.IObserver%601.OnNext%2A> implementacji metody dodaje informacje o tym transmitowane do listy. Jeśli `BaggageHandler` klasy raporty, aby transmitowane bagażu został zwolniony, <xref:System.IObserver%601.OnNext%2A> metoda usuwa ten lot z listy. Zawsze, gdy zostaną zmienione, lista jest sortowana i wyświetlane w konsoli.  
   
  Poniżej przedstawiono przykład zawierający punkt wejścia aplikacji, która tworzy `BaggageHandler` klasy oraz dwa wystąpienia `ArrivalsMonitor` klasy i używa `BaggageHandler.BaggageStatus` metody do dodawania i usuwania informacji o nadchodzących lotach. W każdym przypadku obserwatorów otrzymywać aktualizacje i poprawnie wyświetlić informacje o bagażu.  
   

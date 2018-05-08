@@ -1,24 +1,17 @@
 ---
 title: '&lt;&lt;= — Operator (odwołanie w C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - <<=_CSharpKeyword
 helpviewer_keywords:
 - <<= operator (left-shift assignment) [C#]
 - left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b5c2a177182561075442afc3f1b76603c6646bd6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e2dbf693f7bee16c2ce97ccc7d52a318b8a3906
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;= — Operator (odwołanie w C#)
 Operator przypisania przesunięcia w lewo.  
@@ -46,4 +39,4 @@ x = x << y
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Operatory C#](../../../csharp/language-reference/operators/index.md)
+ [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

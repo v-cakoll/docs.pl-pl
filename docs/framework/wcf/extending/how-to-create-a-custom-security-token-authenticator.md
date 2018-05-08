@@ -1,36 +1,24 @@
 ---
-title: "Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń"
-ms.custom: 
+title: 'Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń
 W tym temacie pokazano, jak utworzyć wystawcy uwierzytelnienia tokenu zabezpieczeń niestandardowych oraz jak zintegrować ją z Menedżer tokenów zabezpieczających niestandardowych. Wystawcę uwierzytelnienia tokenów zabezpieczających sprawdza poprawność zawartości tokenu zabezpieczającego dostarczane z komunikatu przychodzącego. Jeśli weryfikacja zakończy się powodzeniem, serwer uwierzytelniający zwraca kolekcję <xref:System.IdentityModel.Policy.IAuthorizationPolicy> obiektów, po obliczeniu zwraca zestaw oświadczeń.  
   
- Aby użyć niestandardowej wystawcę uwierzytelnienia tokenów zabezpieczających w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], należy najpierw utworzyć niestandardowe poświadczenia i zabezpieczeń implementacje Menedżer tokenów. Aby uzyskać więcej informacji na temat tworzenia niestandardowych poświadczeń i zabezpieczeń Menedżer tokenów, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Aby uzyskać więcej informacji o poświadczenia, Menedżer tokenów zabezpieczających oraz klasy dostawcy i uwierzytelniania, zobacz [Architektura zabezpieczeń](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Aby użyć wystawcy uwierzytelnienia tokenu zabezpieczeń niestandardowych w systemie Windows Communication Foundation (WCF), należy najpierw utworzyć niestandardowych poświadczeń i zabezpieczeń implementacje Menedżer tokenów. Aby uzyskać więcej informacji na temat tworzenia niestandardowych poświadczeń i zabezpieczeń Menedżer tokenów, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Aby uzyskać więcej informacji o poświadczenia, Menedżer tokenów zabezpieczających oraz klasy dostawcy i uwierzytelniania, zobacz [Architektura zabezpieczeń](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Procedury  
   
@@ -45,7 +33,7 @@ W tym temacie pokazano, jak utworzyć wystawcy uwierzytelnienia tokenu zabezpiec
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- Poprzedni kod zwraca kolekcję zasad autoryzacji w <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> metody. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie ma publicznego implementację tego interfejsu. Poniższa procedura pokazuje, jak w tym celu do własnych wymagań.  
+ Poprzedni kod zwraca kolekcję zasad autoryzacji w <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> metody. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie ma publicznego implementację tego interfejsu. Poniższa procedura pokazuje, jak w tym celu do własnych wymagań.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Do tworzenia niestandardowych zasad autoryzacji  
   

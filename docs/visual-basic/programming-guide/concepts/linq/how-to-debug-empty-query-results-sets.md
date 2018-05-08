@@ -1,22 +1,12 @@
 ---
-title: "Porady: debugowanie zestawów wyników zapytania pusty (Visual Basic)"
-ms.custom: 
+title: 'Porady: debugowanie zestawów wyników zapytania pusty (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1c483153f8ff41c08cfaa0141fed056de7f5f680
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 33dcfe9b0c0ad41353ca845ed4d8e21ff77292df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Porady: debugowanie zestawów wyników zapytania pusty (Visual Basic)
 Jest jedną z najczęściej występujących problemów podczas wykonywania zapytania drzewa XML, że jeśli drzewo składni XML ma domyślnej przestrzeni nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie zostały w przestrzeni nazw.  

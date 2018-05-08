@@ -1,21 +1,12 @@
 ---
-title: "Porady: sortowanie elementów (C#)"
-ms.custom: 
+title: 'Porady: sortowanie elementów (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2a9fba878a5f760996566a566cee94a2ca16dcee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a49b4fea8410075ca8b28f2ef7792738d063e256
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-elements-c"></a>Porady: sortowanie elementów (C#)
 Ten przykład przedstawia, jak napisać zapytanie sortujące wyniki.  

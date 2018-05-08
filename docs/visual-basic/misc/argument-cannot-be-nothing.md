@@ -1,21 +1,14 @@
 ---
-title: "Argument nie może być nic"
+title: Argument nie może być nic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrGeneral_ArgumentNullException
 ms.assetid: 2abd995b-36a5-45f0-b3c1-6e0c3b31a875
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5de506c4a24f787dbb9e2d96f0e9e228f7e92288
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7b08dd41f638138df4c2f92fbe9f05f1312c2d03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="argument-cannot-be-nothing"></a>Argument nie może być nic
 Argumentu musi mieć wartość zostały podane wartości null.  

@@ -1,29 +1,17 @@
 ---
 title: '&lt;endpoint&gt; w &lt;client&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 351f49c346cb8126cdd9d540a4db382bf5f4e721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; w &lt;client&gt;
 Określa kontrakt, powiązanie i właściwości adresu punktu końcowego kanału, który jest używany przez klientów nawiązywania połączenia z usługą punktów końcowych na serwerze.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<Klient >  
 \<punkt końcowy >  
   
@@ -49,7 +37,7 @@ Określa kontrakt, powiązanie i właściwości adresu punktu końcowego kanału
 |adres|Atrybut wymaganych parametrów.<br /><br /> Określa adres punktu końcowego. Wartość domyślna to ciąg pusty. Adres musi być bezwzględnym identyfikatorem URI.|  
 |behaviorConfiguration|Ciąg zawierający nazwę zachowania zachowania, które ma być używany do utworzenia wystąpienia punktu końcowego. Nazwa zachowania musi być w zakresie w punkcie, który usługa została zdefiniowana. Wartość domyślna to ciąg pusty.|  
 |powiązanie|Atrybut wymaganych parametrów.<br /><br /> Ciąg określający typ powiązania do użycia. Typ musi mieć sekcję konfiguracji zarejestrowanych, aby można było odwoływać się. Ten typ jest zarejestrowany przez nazwę sekcji zamiast nazwą typu powiązania.|  
-|bindingConfiguration|Opcjonalny. Ciąg zawierający nazwę konfiguracji powiązania ma być używany podczas tworzenia wystąpienia klasy punktu końcowego. Konfiguracja powiązania musi należeć do zakresu na punktu, w którym zdefiniowano punktu końcowego. Wartość domyślna to ciąg pusty.<br /><br /> Ten atrybut jest używany w połączeniu z `binding` do odwołania konfigurację powiązania określonych w pliku konfiguracji. Ustaw ten atrybut, jeśli chcesz użyć niestandardowego powiązania. W przeciwnym razie może być wyjątek.|  
+|bindingConfiguration|Opcjonalna. Ciąg zawierający nazwę konfiguracji powiązania ma być używany podczas tworzenia wystąpienia klasy punktu końcowego. Konfiguracja powiązania musi należeć do zakresu na punktu, w którym zdefiniowano punktu końcowego. Wartość domyślna to ciąg pusty.<br /><br /> Ten atrybut jest używany w połączeniu z `binding` do odwołania konfigurację powiązania określonych w pliku konfiguracji. Ustaw ten atrybut, jeśli chcesz użyć niestandardowego powiązania. W przeciwnym razie może być wyjątek.|  
 |kontrakt|Atrybut wymaganych parametrów.<br /><br /> Ciąg znaków wskazujący, który kontrakt jest ujawniany ten punkt końcowy. Zestaw musi implementować typ kontraktu.|  
 |endpointConfiguration|Ciąg określający nazwę standardowego punktu końcowego, który jest uporządkowany według `kind` atrybut, który odwołuje się do informacji dodatkowej konfiguracji tego standardowego punktu końcowego. Taką samą nazwę, muszą być zdefiniowane w `<standardEndpoints>` sekcji.|  
 |rodzaj|Ciąg określający typ stosowanego standardowego punktu końcowego. Typ musi być zarejestrowana w `<extensions>` sekcji lub w pliku machine.config. Jeśli nie określono żadnej wartości, jest tworzona wspólnego punktu końcowego kanału.|  

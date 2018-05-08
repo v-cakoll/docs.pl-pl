@@ -1,24 +1,12 @@
 ---
-title: "Trasa według treści"
-ms.custom: 
+title: Trasa według treści
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: defd3a3e9df273739aaf3440fd34fad2cad44cd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="route-by-body"></a>Trasa według treści
 W tym przykładzie pokazano, jak wdrożyć usługi, która akceptuje obiekty komunikatów z dowolną akcję SOAP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. Usługa implementuje pojedynczy `Calculate` operacja, która akceptuje <xref:System.ServiceModel.Channels.Message> żądań parametrów i zwraca <xref:System.ServiceModel.Channels.Message> odpowiedzi.  
@@ -28,7 +16,7 @@ W tym przykładzie pokazano, jak wdrożyć usługi, która akceptuje obiekty kom
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W przykładzie pokazano wysyłania wiadomości na podstawie zawartości treści. Wbudowane [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mechanizmu wysyłania wiadomości modelu usługi jest oparta na komunikat akcji. Istnieją jednak wielu istniejących usług sieci Web, definiujące wszystkich ich operacji z wartością Action = "". Nie jest możliwe kompilacji usługi oparte na WSDL, który przechowuje wysyła komunikaty żądań informacje o akcji. W przykładzie pokazano umowy serwisowej, która jest oparta na WSDL (WSDL znajduje się w Service.wsdl dołączonego przykładu). Kontrakt usługi jest Kalkulator, podobnie jak używaną w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Jednak `[OperationContract]` Określa `Action=""` dla wszystkich operacji.  
+ W przykładzie pokazano wysyłania wiadomości na podstawie zawartości treści. Wbudowany komunikat modelu usługi Windows Communication Foundation (WCF): wysyłania mechanizm jest oparta na komunikat akcji. Istnieją jednak wielu istniejących usług sieci Web, definiujące wszystkich ich operacji z wartością Action = "". Nie jest możliwe kompilacji usługi oparte na WSDL, który przechowuje wysyła komunikaty żądań informacje o akcji. W przykładzie pokazano umowy serwisowej, która jest oparta na WSDL (WSDL znajduje się w Service.wsdl dołączonego przykładu). Kontrakt usługi jest Kalkulator, podobnie jak używaną w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Jednak `[OperationContract]` Określa `Action=""` dla wszystkich operacji.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -46,7 +34,7 @@ W tym przykładzie pokazano, jak wdrożyć usługi, która akceptuje obiekty kom
     }  
 ```  
   
- Biorąc pod uwagę kontrakt, usługa wymaga zachowania wysyłania niestandardowych `DispatchByBodyBehavior` wiadomości wysyłanych między operacjami. To zachowanie wysyłania inicjuje `DispatchByBodyElementOperationSelector` selektor operacji niestandardowych z tabelą nazw operacji, wyznaczaną przez QName otoki odpowiednich elementów. `DispatchByBodyElementOperationSelector`przegląda tagu początkowego pierwszego elementu podrzędnego treści i wybiera operację, używając w tabeli powyżej.  
+ Biorąc pod uwagę kontrakt, usługa wymaga zachowania wysyłania niestandardowych `DispatchByBodyBehavior` wiadomości wysyłanych między operacjami. To zachowanie wysyłania inicjuje `DispatchByBodyElementOperationSelector` selektor operacji niestandardowych z tabelą nazw operacji, wyznaczaną przez QName otoki odpowiednich elementów. `DispatchByBodyElementOperationSelector` przegląda tagu początkowego pierwszego elementu podrzędnego treści i wybiera operację, używając w tabeli powyżej.  
   
  Klient korzysta z serwera proxy automatycznie generowanej z WSDL wyeksportowane za pomocą usługi [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -80,7 +68,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

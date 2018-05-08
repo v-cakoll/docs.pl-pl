@@ -2,10 +2,6 @@
 title: Get — funkcja (niezarządzany wykaz interfejsów API)
 description: Funkcja Get pobiera wartość określonej właściwości.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get — funkcja
 Pobiera wartość określonej właściwości, jeśli istnieje.
@@ -59,13 +52,13 @@ HRESULT Get (
 `wszName`  
 [in] Nazwa właściwości.
 
-`lFlags`[in] Zastrzeżone. Ten parametr musi wynosić 0.
+`lFlags` [in] Zastrzeżone. Ten parametr musi wynosić 0.
 
-`pVal`[out] Jeśli funkcja zwraca pomyślnie, zawiera wartość `wszName` właściwości. `pval` Argumentu przypisano poprawny typ i wartość kwalifikatora.
+`pVal` [out] Jeśli funkcja zwraca pomyślnie, zawiera wartość `wszName` właściwości. `pval` Argumentu przypisano poprawny typ i wartość kwalifikatora.
 
-`pvtType`[out] Jeśli funkcja zwraca pomyślnie, zawiera [stała typ CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) wskazujące typ właściwości. Można też wartość `null`. 
+`pvtType` [out] Jeśli funkcja zwraca pomyślnie, zawiera [stała typ CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) wskazujące typ właściwości. Można też wartość `null`. 
 
-`plFlavor`[out] Jeśli funkcja zwraca pomyślnie, otrzymuje informacje o źródła właściwości. Wartość może być `null`, lub jeden z następujących stałych WBEM_FLAVOR_TYPE zdefiniowanych w *WbemCli.h* plik nagłówka: 
+`plFlavor` [out] Jeśli funkcja zwraca pomyślnie, otrzymuje informacje o źródła właściwości. Wartość może być `null`, lub jeden z następujących stałych WBEM_FLAVOR_TYPE zdefiniowanych w *WbemCli.h* plik nagłówka: 
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -98,7 +91,7 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::Get](https://msdn.microso
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

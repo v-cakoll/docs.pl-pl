@@ -1,32 +1,20 @@
 ---
-title: "Porady: bezpośrednie wykonywanie zapytań SQL"
-ms.custom: 
+title: 'Porady: bezpośrednie wykonywanie zapytań SQL'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 000a7c50edacbae09675a9f9069f56aa6cd211f6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7a468ccbdf63ec5e74238ac4e59a2f385d2562b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Porady: bezpośrednie wykonywanie zapytań SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]tłumaczy zapytania zostanie zapisany w sparametryzowane zapytania SQL (w postaci tekstu) i wysyła je do serwera SQL w celu przetwarzania.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy zapytania zostanie zapisany w sparametryzowane zapytania SQL (w postaci tekstu) i wysyła je do serwera SQL w celu przetwarzania.  
   
- SQL nie można wykonać różnych metod, które mogą być dostępne lokalnie do aplikacji. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]podejmuje próbę przekonwertowania te metody lokalne na równoważne operacji i funkcje, które są dostępne w środowisku SQL. Większość metod i operatory w [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] wbudowanych typów ma bezpośredni tłumaczenia poleceń SQL. Niektóre można wyprodukować z funkcji, które są dostępne. Te, które nie mogą być tworzone Generowanie wyjątki czasu wykonywania. Aby uzyskać więcej informacji, zobacz [mapowanie typu środowiska CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ SQL nie można wykonać różnych metod, które mogą być dostępne lokalnie do aplikacji. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] podejmuje próbę przekonwertowania te metody lokalne na równoważne operacji i funkcje, które są dostępne w środowisku SQL. Większość metod i operatory w [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] wbudowanych typów ma bezpośredni tłumaczenia poleceń SQL. Niektóre można wyprodukować z funkcji, które są dostępne. Te, które nie mogą być tworzone Generowanie wyjątki czasu wykonywania. Aby uzyskać więcej informacji, zobacz [mapowanie typu środowiska CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
  W przypadkach, gdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania jest niewystarczający dla specjalnych zadań, możesz użyć <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> metodę, aby wykonać zapytania SQL, a następnie wykonać konwersję wyników kwerendy bezpośrednio do obiektów.  
   

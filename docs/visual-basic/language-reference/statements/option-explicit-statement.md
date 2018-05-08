@@ -1,11 +1,6 @@
 ---
-title: "Option Explicit — Instrukcja (Visual Basic)"
+title: Option Explicit — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Explicit
 - vb.OptionExplicit
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f3d4c9cd3310e0ec3943c4e2b5e28be5b9a393db
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 3a2d81b1441052c132e4739dfe6045f8c3a026d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit — Instrukcja (Visual Basic)
 Wymusza jawnej deklaracji wszystkich zmiennych w pliku lub zezwala na niejawne deklaracji zmiennych.  
@@ -36,10 +28,10 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Części  
  `On`  
- Opcjonalny. Włącza `Option Explicit` sprawdzania. Jeśli `On` lub `Off` nie zostanie określony, wartością domyślną jest `On`.  
+ Opcjonalna. Włącza `Option Explicit` sprawdzania. Jeśli `On` lub `Off` nie zostanie określony, wartością domyślną jest `On`.  
   
  `Off`  
- Opcjonalny. Wyłącza `Option Explicit` sprawdzania.  
+ Opcjonalna. Wyłącza `Option Explicit` sprawdzania.  
   
 ## <a name="remarks"></a>Uwagi  
  Gdy `Option Explicit On` lub `Option Explicit` pojawia się w pliku, musisz jawnie zadeklarować wszystkie zmienne przy użyciu `Dim` lub `ReDim` instrukcje. Jeśli spróbujesz użyć niezadeklarowanego nazwę zmiennej, wystąpi błąd w czasie kompilacji. `Option Explicit Off` Instrukcji zezwala na niejawne deklaracji zmiennych.  

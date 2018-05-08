@@ -1,13 +1,6 @@
 ---
-title: "&lt;linkedconfiguration —&gt; — element"
-ms.custom: 
+title: '&lt;linkedconfiguration —&gt; — element'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding/linkedConfiguration
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#linkedConfiguration
@@ -18,16 +11,14 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dffff7fefa80f420e61045b21b0e0c1a170e2911
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedconfiguration — > — element
 
@@ -61,10 +52,10 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
- **\<Linkedconfiguration — >** element upraszcza obsługi dla zestawów składników. Użycie zestawu, który zawiera plik konfiguracji znajdujących się w dobrze znanej lokalizacji, co najmniej jednej aplikacji można użyć pliki konfiguracji aplikacji, które używają zestawu  **\<linkedconfiguration — >** element do uwzględnienia w pliku konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwana, aktualizowania typowych plik konfiguracji zawiera informacje zaktualizowanej konfiguracji we wszystkich aplikacjach korzystających z zestawu.
+**\<Linkedconfiguration — >** element upraszcza obsługi dla zestawów składników. Użycie zestawu, który zawiera plik konfiguracji znajdujących się w dobrze znanej lokalizacji, co najmniej jednej aplikacji można użyć pliki konfiguracji aplikacji, które używają zestawu  **\<linkedconfiguration — >** element do uwzględnienia w pliku konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwana, aktualizowania typowych plik konfiguracji zawiera informacje zaktualizowanej konfiguracji we wszystkich aplikacjach korzystających z zestawu.
 
 > [!NOTE]
->  **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o manifestów side-by-side systemu Windows.
+> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o manifestów side-by-side systemu Windows.
 
 Następujące reguły kontrolować używanie powiązane pliki konfiguracji:
 
@@ -76,7 +67,7 @@ Następujące reguły kontrolować używanie powiązane pliki konfiguracji:
 
 - Wszystkie powiązane pliki konfiguracji zostaną scalone tworzą jeden plik podobne do zachowania `#include` dyrektywy języka C/C++.
 
--  **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
+- **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
 
 - Odwołania cykliczne są wykrywane i zakończone. Oznacza to, że jeśli  **\<linkedconfiguration — >** elementy z szeregu plików konfiguracyjnych tworzą pętlę, pętli są wykrywane i zatrzymać.
 

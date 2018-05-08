@@ -1,24 +1,12 @@
 ---
 title: TOP (jednostka SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 10967ac87fa8f8504dc9a6a29be99401e620085e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 25afda64aafcd5a97dee7ad4cee25b152ef55907
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="top-entity-sql"></a>TOP (jednostka SQL)
 Klauzula SELECT może mieć opcjonalne TOP Podklauzula następujące opcjonalne modyfikator ALL/DISTINCT. Klauzul podrzędnych TOP Określa, że tylko pierwszy zestaw wierszy zostaną zwrócone w wyniku zapytania.  
@@ -31,7 +19,7 @@ Klauzula SELECT może mieć opcjonalne TOP Podklauzula następujące opcjonalne 
   
 ## <a name="arguments"></a>Argumenty  
  `n`  
- Wyrażenie liczbowe, która określa liczbę wierszy, które mają zostać zwrócone. `n`może to być literał liczbowy jednego lub jeden parametr.  
+ Wyrażenie liczbowe, która określa liczbę wierszy, które mają zostać zwrócone. `n` może to być literał liczbowy jednego lub jeden parametr.  
   
 ## <a name="remarks"></a>Uwagi  
  Wyrażenia TOP musi być jednym literałem lub jeden parametr. Jeśli używana jest literałem stałej, typ literału musi być niejawnie Awansowanie do Edm.Int64 (byte, int16, int32 lub int64 lub dowolnego typu dostawcy, który jest mapowany na typ, który jest Awansowanie do Edm.Int64) i jego wartość musi być większa lub równa zero. W przeciwnym razie zostanie wygenerowany wyjątek. Jeśli parametr jest używany jako wyrażenie, typ parametru musi być również niejawnie Awansowanie do Edm.Int64, ale nie będzie żadnych weryfikację wartości rzeczywisty parametr podczas kompilacji ponieważ wartości parametrów opóźnienia jest ograniczone.  

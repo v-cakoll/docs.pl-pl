@@ -1,28 +1,14 @@
 ---
-title: "Odwołanie do zdarzenia śledzenia analitycznego"
-ms.custom: 
+title: Odwołanie do zdarzenia śledzenia analitycznego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a07aed6ade7d5eb806b666711a49c0b9507d3ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9066f3cde47f95773596fbbf1c6cc36b71d3f3ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analytic-trace-event-reference"></a>Odwołanie do zdarzenia śledzenia analitycznego
 W poniższej tabeli opisano poziomów zdarzeń, identyfikatory, oraz komunikatów związanych z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] śledzenie danych analitycznych.  

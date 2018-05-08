@@ -3,18 +3,12 @@ title: Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WM
 description: Podsumowuje programu .NET Framework niezarządzanych API usługi WMI i wydajności informacji licznika.
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
 ms.date: 11/06/2017
-ms.topic: reference
-ms.prod: .net-framework
-ms.devlang: cpp
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7959d6b6b7bafd728db5a579ff1376e686c5b74
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 2007c8aa74e1ccf3c4753343ac633b67a36daeb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumentacja zarządzania Windows (WMI) i liczniki wydajności (niezarządzany wykaz interfejsów API)
 
@@ -61,8 +55,8 @@ Interfejs API zawiera następujące funkcje:
 | [Funkcja Next](next.md) | Pobiera dalej właściwości w wyliczeniu. | 
 | [Funkcja NextMethod](nextmethod.md) | Pobiera metodę dalej w wyliczeniu. |
 | [Put — funkcja](put.md) | Ustawia właściwość o nazwie na nową wartość. |
-| [PutClassWmi function](putclasswmi.md) | Tworzy nową klasę lub aktualizuje istniejący zestaw. |
-| [PutInstanceWmi function](putinstancewmi.md) | Tworzy lub aktualizuje wystąpienia istniejącej klasy. Wystąpienie jest zapisywany w repozytorium WMI. |
+| [Funkcja PutClassWmi](putclasswmi.md) | Tworzy nową klasę lub aktualizuje istniejący zestaw. |
+| [Funkcja PutInstanceWmi](putinstancewmi.md) | Tworzy lub aktualizuje wystąpienia istniejącej klasy. Wystąpienie jest zapisywany w repozytorium WMI. |
 | [Funkcja PutMethod](putmethod.md) | Tworzy metodę. |
 | [Funkcja QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) | Resetuje moduł wyliczający kwalifikatory obiekt na początek wyliczenia. |
 | [Funkcja QualifierSet_Delete](qualifierset-delete.md) | Usuwa określony kwalifikatora według nazwy.  |

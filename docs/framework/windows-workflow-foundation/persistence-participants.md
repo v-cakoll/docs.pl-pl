@@ -1,23 +1,12 @@
 ---
-title: "Uczestnicy trwałości"
-ms.custom: 
+title: Uczestnicy trwałości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2875ead24e4c072d267a8bb6cddddc7f9b96d86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-participants"></a>Uczestnicy trwałości
 Uczestnika trwałości mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwalane przez hosta aplikacji. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, które służy do tworzenia uczestnika trwałości. Uczestnika trwałości pochodzi z jednego z tych klas, implementuje metody zainteresowań, a następnie dodanie wystąpienia klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może wyglądać dla tych rozszerzeń przepływu pracy po trwałym wystąpienia przepływu pracy i wywołać odpowiednie metody uczestnika trwałości w odpowiednim czasie.  
@@ -34,11 +23,11 @@ Uczestnika trwałości mogą uczestniczyć w operacji trwałości (Zapisz lub ob
   
 5.  Utrwalić lub zapisać ten przepływ pracy w magazynie informacji o trwałości.  
   
-6.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metody dla wszystkich uczestników we/wy trwałości. Jeśli go nie ma uczestnika we/wy, to zadanie zostanie pominięte. Jeśli epizodu trwałości jest transakcyjna, transakcja jest świadczona w Właściwość Transaction.Current.  
+6.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metody dla wszystkich uczestników trwałości we/wy. Jeśli go nie ma uczestnika we/wy, to zadanie zostanie pominięte. Jeśli epizodu trwałości jest transakcyjna, transakcja jest świadczona w Właściwość Transaction.Current.  
   
 7.  Czeka na zakończenie wszystkich uczestników trwałości. W przypadku wszystkich uczestników w trwałych danych wystąpienia, zatwierdza transakcji.  
   
- Uczestnika trwałości pochodną **PersistenceParticipant** klasy i może wdrożyć **obiektu CollectValues** i **obiektu MapValues** metody. We/Wy uczestnika trwałości pochodną **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnSave** metodę oprócz wykonania **obiektu CollectValues**i **obiektu MapValues** metody.  
+ Uczestnika trwałości pochodną **PersistenceParticipant** klasy i może wdrożyć **obiektu CollectValues** i **obiektu MapValues** metody. Uczestnika trwałości we/wy jest pochodną **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnSave** metodę oprócz wykonania **obiektu CollectValues**i **obiektu MapValues** metody.  
   
  Na każdym z etapów zostało ukończone przed rozpoczęciem kolejnego etapu. Na przykład wartości pochodzą z **wszystkie** uczestników trwałości podczas pierwszego etapu. Następnie wszystkie wartości zebranych podczas pierwszego etapu są przekazywane do wszystkich uczestników trwałości w drugim etapie mapowania. Następnie wszystkie wartości zbierane i zamapowana pierwszego i drugiego etapu są dostarczane do dostawcy trwałości w trzecim etapie i tak dalej.  
   
@@ -48,13 +37,13 @@ Uczestnika trwałości mogą uczestniczyć w operacji trwałości (Zapisz lub ob
   
 2.  Ładuje przepływu pracy w sklepie trwałości.  
   
-3.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> dla wszystkich uczestników we/wy trwałości i czeka na wszystkich uczestników trwałości do wykonania. Jeśli epizodu trwałości jest transakcyjna, transakcja znajduje się w operacji Transaction.Current.  
+3.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> dla wszystkich uczestników trwałości We/Wy i czeka na wszystkich uczestników trwałości do wykonania. Jeśli epizodu trwałości jest transakcyjna, transakcja znajduje się w operacji Transaction.Current.  
   
 4.  Ładuje wystąpienia przepływu pracy w pamięci na podstawie danych pobrana z magazynu trwałości.  
   
 5.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> na każdym uczestnika trwałości.  
   
- Uczestnika trwałości pochodną **PersistenceParticipant** klasy i może wdrożyć **PublishValues** metody. We/Wy uczestnika trwałości pochodną **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnLoad** metodę oprócz wykonania **PublishValues**metody.  
+ Uczestnika trwałości pochodną **PersistenceParticipant** klasy i może wdrożyć **PublishValues** metody. Uczestnika trwałości we/wy jest pochodną **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnLoad** metodę oprócz wykonania **PublishValues**metody.  
   
  Podczas ładowania wystąpienia przepływu pracy dostawca trwałości tworzy blokady w tym wystąpieniu. Uniemożliwia to wystąpienie ładowany przez więcej niż jednego hosta w scenariuszu z wieloma węzłami. Jeśli próba załadowania wystąpienia przepływu pracy, który został zablokowany w sposób zobaczysz wyjątek podobnie do następującej: wyjątek "System.ServiceModel.Persistence.InstanceLockException: nie można ukończyć żądanej operacji, ponieważ blokady dla wystąpienia" 00000000-0000-0000-0000-000000000000 "nie można uzyskać". Ten błąd występuje, gdy wystąpi jedno z następujących czynności:  
   

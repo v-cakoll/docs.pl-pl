@@ -1,13 +1,6 @@
 ---
-title: "Porady: podpisywanie zestawu silną nazwą"
-ms.custom: 
+title: 'Porady: podpisywanie zestawu silną nazwą'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fe5fbb5299c8e9c130538f99fe13081f8f26a55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45f8ad3bd9226ffd821fc792cdd4d0a6dac1a414
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Porady: podpisywanie zestawu silną nazwą
 Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:  

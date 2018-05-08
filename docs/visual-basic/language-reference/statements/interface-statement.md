@@ -1,24 +1,17 @@
 ---
-title: "Interface — Instrukcja (Visual Basic)"
+title: Interface — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Interface — Instrukcja (Visual Basic)
 Deklaruje nazwę interfejsu i wprowadza definicje elementów członkowskich, które obejmuje interfejsu.  
@@ -43,33 +36,33 @@ End Interface
   
 |Termin|Definicja|  
 |---|---|  
-|`attributelist`|Opcjonalny. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcjonalny. Może to być jedna z następujących czynności:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcjonalny. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`name`|Wymagany. Nazwa tego interfejsu. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Opcjonalny. Określa, że jest to interfejs generyczny.|  
+|`attributelist`|Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Opcjonalna. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`name`|Wymagana. Nazwa tego interfejsu. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|Opcjonalna. Określa, że jest to interfejs generyczny.|  
 |`typelist`|Wymagane w przypadku użycia [z](../../../visual-basic/language-reference/statements/of-clause.md) — słowo kluczowe. Lista parametrów typu dla tego interfejsu. Opcjonalnie, każdy parametr typu mogą być deklarowane variant przy użyciu `In` i `Out` ogólnego modyfikatorów. Zobacz [typu listy](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Opcjonalny. Wskazuje, że ten interfejs dziedziczy atrybuty i elementy członkowskie innego interfejsu lub interfejsów. Zobacz [Inherits — instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Inherits`|Opcjonalna. Wskazuje, że ten interfejs dziedziczy atrybuty i elementy członkowskie innego interfejsu lub interfejsów. Zobacz [Inherits — instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`interfacenames`|Wymagane w przypadku użycia `Inherits` instrukcji. Nazwy interfejsów, spośród których pochodzi ten interfejs.|  
-|`modifiers`|Opcjonalny. Modyfikatory odpowiednie dla elementu członkowskiego interfejsu, jest zdefiniowany.|  
-|`Property`|Opcjonalny. Definiuje właściwości, która jest elementem członkowskim interfejsu.|  
-|`Function`|Opcjonalny. Definiuje `Function` procedury, która jest elementem członkowskim interfejsu.|  
-|`Sub`|Opcjonalny. Definiuje `Sub` procedury, która jest elementem członkowskim interfejsu.|  
-|`Event`|Opcjonalny. Definiuje zdarzenia, które jest elementem członkowskim interfejsu.|  
-|`Interface`|Opcjonalny. Definiuje interfejs, który jest zagnieżdżony w obrębie tego interfejsu. Definicja interfejsu zagnieżdżonych musi kończyć się `End Interface` instrukcji.|  
-|`Class`|Opcjonalny. Definiuje klasę, która jest elementem członkowskim interfejsu. Definicji elementu członkowskiego klasy musi kończyć się `End Class` instrukcji.|  
-|`Structure`|Opcjonalny. Definiuje strukturę, która jest elementem członkowskim interfejsu. Definicji elementu członkowskiego struktury musi kończyć się `End Structure` instrukcji.|  
+|`modifiers`|Opcjonalna. Modyfikatory odpowiednie dla elementu członkowskiego interfejsu, jest zdefiniowany.|  
+|`Property`|Opcjonalna. Definiuje właściwości, która jest elementem członkowskim interfejsu.|  
+|`Function`|Opcjonalna. Definiuje `Function` procedury, która jest elementem członkowskim interfejsu.|  
+|`Sub`|Opcjonalna. Definiuje `Sub` procedury, która jest elementem członkowskim interfejsu.|  
+|`Event`|Opcjonalna. Definiuje zdarzenia, które jest elementem członkowskim interfejsu.|  
+|`Interface`|Opcjonalna. Definiuje interfejs, który jest zagnieżdżony w obrębie tego interfejsu. Definicja interfejsu zagnieżdżonych musi kończyć się `End Interface` instrukcji.|  
+|`Class`|Opcjonalna. Definiuje klasę, która jest elementem członkowskim interfejsu. Definicji elementu członkowskiego klasy musi kończyć się `End Class` instrukcji.|  
+|`Structure`|Opcjonalna. Definiuje strukturę, która jest elementem członkowskim interfejsu. Definicji elementu członkowskiego struktury musi kończyć się `End Structure` instrukcji.|  
 |`membername`|Wymagany dla każdej właściwości, procedury, zdarzenia, interfejsu, klasy lub struktury zdefiniowany jako element członkowski interfejsu. Nazwa elementu członkowskiego.|  
-|`End Interface`|Kończy `Interface` definicji.|  
+|`End Interface`|Kończy definicję `Interface`.|  
   
 ## <a name="remarks"></a>Uwagi  
  *Interfejsu* definiuje zestaw elementów członkowskich, takich jak zaimplementować procedur, które klasy i struktury i właściwości. Interfejs definiuje tylko podpisy elementów członkowskich, a nie ich wewnętrzne działanie.  
   
  Klasy lub struktury implementuje interfejs, podając kod dla każdego elementu członkowskiego zdefiniowany przez interfejs. Na koniec gdy aplikacja tworzy wystąpienie z tej klasy lub struktury, obiekt istnieje i jest uruchamiany w pamięci. Aby uzyskać więcej informacji, zobacz [obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) i [interfejsów](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Można użyć `Interface` tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekście deklaracji* przez interfejs musi zawierać plik źródłowy, przestrzeni nazw, klasy, struktury, modułu lub interfejsu i nie może być procedurę lub blok. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Można użyć `Interface` tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekście deklaracji* przez interfejs musi zawierać plik źródłowy, przestrzeni nazw, klasy, struktury, modułu lub interfejsu i nie może być procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
- Interfejsy domyślną [Friend](../../../visual-basic/language-reference/modifiers/friend.md) dostępu. Można dostosować ich poziomy dostępu z modyfikatorów dostępu. Aby uzyskać więcej informacji, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Interfejsy domyślną [Friend](../../../visual-basic/language-reference/modifiers/friend.md) dostępu. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Reguły  
   
@@ -120,13 +113,13 @@ End Interface
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Wariancje w interfejsach](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+ [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

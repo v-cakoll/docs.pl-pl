@@ -1,14 +1,6 @@
 ---
-title: "CorLocalRefPreservation — Wyliczenie"
-ms.custom: 
+title: CorLocalRefPreservation — Wyliczenie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorLocalRefPreservation
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c35bbfef62f65a9a401d00f9ae56e2f4c00bb0b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation — Wyliczenie
 Zawiera wartości flagi dla przetwarzania lokalnego odwołania.  
@@ -61,7 +49,7 @@ typedef enum CorLocalRefPreservation
   
  **Nagłówek:** CorHdr.h  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

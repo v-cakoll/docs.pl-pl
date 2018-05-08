@@ -1,23 +1,12 @@
 ---
-title: "Wykonania przepływu pracy w TransactionScope Imperatywne"
-ms.custom: 
+title: Wykonania przepływu pracy w TransactionScope Imperatywne
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd0e8686-c1d0-4400-a541-da94ed03afc7
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 530a590931a1cb3994406e5605f8da2853ceddaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44efc13efaa45274068fb44cc154b515bd774a35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a>Wykonania przepływu pracy w TransactionScope Imperatywne
 W tym przykładzie pokazano, jak wykonywanie przepływu pracy za pomocą <xref:System.Activities.WorkflowInvoker> w obszarze <xref:System.Transactions.Transaction> z natury kodu C#.  
@@ -44,6 +33,6 @@ W tym przykładzie pokazano, jak wykonywanie przepływu pracy za pomocą <xref:S
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\ImperativeTransaction`

@@ -1,31 +1,21 @@
 ---
 title: '&lt;issuerTokenResolver&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e859f99768eae5c931618d5902caf40dfad95d54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 646833f277c3ef4675a835ca0af3daf647e01224
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Rejestruje mechanizm rozpoznawania tokenów wystawcy, używanego przez programy obsługi zdarzeń w kolekcji programu obsługi tokenów. Program rozpoznawania nazw tokenów wystawcy jest używany do rozpoznawania token podpisujący na przychodzące tokeny i komunikatów.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration >  
 \<issuerTokenResolver >  
   
@@ -51,7 +41,7 @@ Rejestruje mechanizm rozpoznawania tokenów wystawcy, używanego przez programy 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Określa typ wystawcy program rozpoznawania nazw tokenów. Musi być równa albo <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy lub typu pochodzącego od <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy. Wymagany.|  
+|— typ|Określa typ wystawcy program rozpoznawania nazw tokenów. Musi być równa albo <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy lub typu pochodzącego od <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy. Wymagana.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  

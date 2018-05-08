@@ -1,21 +1,14 @@
 ---
 title: Projektowanie modelu domeny mikrousługi
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie modelu domeny mikrousługi
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 

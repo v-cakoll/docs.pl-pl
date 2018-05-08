@@ -1,35 +1,23 @@
 ---
-title: "Funkcje agregujące (jednostka SQL)"
-ms.custom: 
+title: Funkcje agregujące (jednostka SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1ed9a7532269a149f6f522e8fe9c6161e1aae27
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funkcje agregujące (jednostka SQL)
-Wartość zagregowana jest konstrukcji języka, który pozwala zapisać kolekcji do skalarnej w ramach operacji grupy. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]agregacje są dostępne w dwóch formach:  
+Wartość zagregowana jest konstrukcji języka, który pozwala zapisać kolekcji do skalarnej w ramach operacji grupy. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] agregacje są dostępne w dwóch formach:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Kolekcja funkcji, które mogą być używane w dowolnym miejscu w wyrażeniu. W tym za pomocą funkcji agregujących w projekcjach i predykatów, które działają w kolekcjach. Funkcji kolekcji jest preferowanym trybem określania wartości zagregowanych w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Kolekcja funkcji, które mogą być używane w dowolnym miejscu w wyrażeniu. W tym za pomocą funkcji agregujących w projekcjach i predykatów, które działają w kolekcjach. Funkcji kolekcji jest preferowanym trybem określania wartości zagregowanych w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 -   Grupuj wartości zagregowanych w wyrażeniach zapytań, które mają klauzuli GROUP BY. Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregacje grupy Zaakceptuj DISTINCT, a wszystkie jako modyfikatory do agregacji danych wejściowych.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]po raz pierwszy próbuje zinterpretować wyrażenia w funkcji kolekcji i jeśli wyrażenie jest w kontekście wyrażenia SELECT zinterpretuje ją jako agregacja grupy.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] po raz pierwszy próbuje zinterpretować wyrażenia w funkcji kolekcji i jeśli wyrażenie jest w kontekście wyrażenia SELECT zinterpretuje ją jako agregacja grupy.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Definiuje specjalne operatora agregacji o nazwie [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Ten operator pozwala uzyskać odwołania do zestawu wejściowego grupowanych. Umożliwia to bardziej zaawansowanych zapytań, grupowanie, gdzie można wyniki w klauzuli GROUP BY w miejscach innych niż agregacji grup lub kolekcji funkcji.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Definiuje specjalne operatora agregacji o nazwie [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Ten operator pozwala uzyskać odwołania do zestawu wejściowego grupowanych. Umożliwia to bardziej zaawansowanych zapytań, grupowanie, gdzie można wyniki w klauzuli GROUP BY w miejscach innych niż agregacji grup lub kolekcji funkcji.  
   
 ## <a name="collection-functions"></a>Kolekcja funkcji  
  Kolekcja funkcji działać w kolekcjach i zwracać wartość skalarną. Na przykład jeśli `orders` to zbiór wszystkich `orders`, można obliczyć Najwcześniejsza data wysyłki z następującym wyrażeniem:  

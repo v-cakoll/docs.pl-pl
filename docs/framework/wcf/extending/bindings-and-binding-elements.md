@@ -1,28 +1,14 @@
 ---
-title: "Powiązania i elementy powiązań"
-ms.custom: 
+title: Powiązania i elementy powiązań
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Powiązania i elementy powiązań
 Powiązania są kolekcjami elementów konfiguracji specjalnych, nazywany *elementów wiązania*, które są oceniane przez środowisko wykonawcze usługi zawsze, gdy klient lub punktu końcowego usługi jest tworzona. Typ i kolejność elementów powiązania w powiązaniu Określa wybór i kolejność kanały transportu i protokół punktu końcowego kanału stosu.  
@@ -32,7 +18,7 @@ Powiązania są kolekcjami elementów konfiguracji specjalnych, nazywany *elemen
  Powiązanie musi zawierać dokładnie jeden element powiązania transportu. Każdy element powiązania transportu oznacza komunikat domyślny kodowanie elementu powiązania, która może być zastąpiona przez dodanie co najwyżej jeden element powiązania do powiązania kodowania komunikatu. Oprócz transportu i elementy wiązań kodera powiązania może zawierać dowolną liczbę elementy powiązania protokołu implementujących funkcje niezbędne do usługi i wysyłać wiadomości protokołu SOAP z jeden punkt końcowy do innego. Aby uzyskać więcej informacji, zobacz [za pomocą powiązania do konfigurowania usług i klientów](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Rozszerzanie powiązań i elementów wiązania  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zawiera powiązania dostarczane przez system, które obejmują szeroki zakres scenariuszy. (Aby uzyskać więcej informacji, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).) Może to być sytuacji, gdy są potrzebne do utworzenia i użycia powiązania, które nie są uwzględnione w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Następujące scenariusze wymagają utworzenia nowego powiązania.  
+ Windows Communication Foundation (WCF) obejmuje powiązania dostarczane przez system, które obejmują szeroki zakres scenariuszy. (Aby uzyskać więcej informacji, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).) Może to być sytuacji, gdy są potrzebne do utworzenia i użycia powiązania, które nie są uwzględnione w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Następujące scenariusze wymagają utworzenia nowego powiązania.  
   
 -   Aby użyć nowego elementu powiązania (na przykład nowy transport, kodowanie lub elementu powiązania protokołu), należy utworzyć nowe powiązanie, który zawiera ten element powiązania. Na przykład jeśli dodano niestandardową `UdpTransportBindingElement` dla transportu UDP, należy utworzyć nowe powiązanie, aby z niego korzystać. Informacje dotyczące wykonywania tego zachowania przy użyciu <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> typu, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter2::DefineLocalVariable2 — Metoda"
-ms.custom: 
+title: ISymUnmanagedWriter2::DefineLocalVariable2 — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter2.DefineLocalVariable2
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1124b57bed16e349c753be872c1b709a287e6237
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53f02499bbc64f1502951ff9fbf16a848e77f0ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 — Metoda
 Definiuje pojedynczą zmienną w bieżącym zakresie leksykalne. Tę metodę można wywoływać wielokrotnie dla zmiennej o tej samej nazwie, który ma wiele domach w całym zakresie. W tym przypadku jednak wartości `startOffset` i `endOffset` parametrów nie może nakładać się na.  

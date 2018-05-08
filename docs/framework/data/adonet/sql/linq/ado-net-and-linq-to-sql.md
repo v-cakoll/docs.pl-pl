@@ -1,30 +1,18 @@
 ---
 title: ADO.NET i LINQ do SQL
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c95a84bafcb32861e299135feb0b89b931d11165
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b2be963862b6bd7a0cd5643245606763907a5b72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET i LINQ do SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wchodzi w skład [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rodziny technologii. Jest on oparty na usług świadczonych przez [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] dostawcy modelu. W związku z tym można łączyć [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu z istniejącym [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] aplikacji i przeprowadzić migrację bieżącego [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rozwiązania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Poniższa ilustracja przedstawia ogólny widok relacji.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wchodzi w skład [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rodziny technologii. Jest on oparty na usług świadczonych przez [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] dostawcy modelu. W związku z tym można łączyć [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu z istniejącym [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] aplikacji i przeprowadzić migrację bieżącego [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rozwiązania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Poniższa ilustracja przedstawia ogólny widok relacji.  
   
  ![LINQ do SQL i ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 01/17/2018
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  Parametry są wyrażane w tekst zapytania przy użyciu tego samego notacji klamrowych używanych przez `Console.WriteLine()` i `String.Format()`. `String.Format()`pobiera ciąg zapytania, podaj i zastępuje takich jak parametry nawiasach klamrowych z nazwy parametru wygenerowanego `@p0`, `@p1` ..., `@p(n)`.  
+>  Parametry są wyrażane w tekst zapytania przy użyciu tego samego notacji klamrowych używanych przez `Console.WriteLine()` i `String.Format()`. `String.Format()` pobiera ciąg zapytania, podaj i zastępuje takich jak parametry nawiasach klamrowych z nazwy parametru wygenerowanego `@p0`, `@p1` ..., `@p(n)`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  

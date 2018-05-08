@@ -1,17 +1,12 @@
 ---
 title: Rozszerzenia typu (F#)
 description: 'Dowiedz się, jak rozszerzenia typu F # zezwala na dodawanie nowych elementów członkowskich do typu wcześniej zdefiniowanego obiektu.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 3399778799fbf0f8eee56e332135656150918a60
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 

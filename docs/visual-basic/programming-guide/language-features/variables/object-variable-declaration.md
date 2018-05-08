@@ -1,13 +1,6 @@
 ---
 title: Deklaracja zmiennej obiektu (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - early binding [Visual Basic]
 - declarations [Visual Basic], class
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cdca188d778e9884f918d97eba492a29c64af826
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f5f77b81380d997e078a9f52ac4aae6f6e975575
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Deklaracja zmiennej obiektu (Visual Basic)
 Instrukcja deklaracji normalne umożliwia deklarowanie zmiennej obiektu. Dla typu danych, należy określić albo `Object` (to znaczy [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)) lub więcej określonej klasy, z którego ma być utworzony obiekt.  
@@ -139,7 +129,7 @@ Dim anyForm As System.Windows.Forms.Form
  [Przypisanie zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
  [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
  [Porady: deklarowanie zmiennej obiektu i przydzielanie obiektu do niego w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [Porady: dostęp do elementów członkowskich obiektu](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [New — Operator](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Instrukcje: dostęp do elementów członkowskich obiektu](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
+ [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

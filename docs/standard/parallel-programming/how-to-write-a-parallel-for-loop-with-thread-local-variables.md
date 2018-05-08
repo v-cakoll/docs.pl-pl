@@ -1,31 +1,20 @@
 ---
-title: "Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku"
-ms.custom: 
+title: 'Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a70b8e3d1f56eafc04b97a19a1582d9c664e587d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku
 W tym przykładzie przedstawiono użycie zmiennych thread-local do przechowywania i pobierania stanu w każdej oddzielne zadanie, które jest tworzony przez <xref:System.Threading.Tasks.Parallel.For%2A> pętli. Przy użyciu danych lokalnych wątku, można uniknąć obciążenie synchronizowania dużej liczby operacji uzyskania dostępu do stanu udostępnionego. Zamiast zapisywania do udostępnionego zasobu w każdej iteracji, obliczania i przechowywania wartości do momentu zakończenia wszystkich iteracji dla zadania. Można następnie jednokrotnego zapisu wynik końcowy udostępnianego zasobu lub przekaż go do innej metody.  

@@ -1,30 +1,16 @@
 ---
 title: Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09de427980ecfb515b8d341d0d7833b878140286
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana
 Zanim administratorzy mogą wdrażać aplikacje platformy Microsoft .NET Framework w systemie, ich muszą potwierdzić występuje środowiska uruchomieniowego .NET Framework. Ten temat zawiera skrypt napisany w języku HTML/JavaScript umożliwiają administratorom czy programu .NET Framework jest obecne w systemie.  

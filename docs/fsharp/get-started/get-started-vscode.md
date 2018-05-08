@@ -1,17 +1,12 @@
 ---
 title: 'Rozpoczynanie pracy z F # w kodzie programu Visual Studio'
 description: 'Dowiedz się, jak używanie F # za pomocą programu Visual Studio Code i Ionide suite wtyczki.'
-author: cartermp
-ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 43fed76a57bd7749a7f22a2039ad625e3d26d132
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 71cc0abfd8420794485d38e91efd9819379e3f55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy z F # w kodzie programu Visual Studio
 

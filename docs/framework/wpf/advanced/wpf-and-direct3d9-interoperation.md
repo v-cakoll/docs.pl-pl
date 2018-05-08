@@ -1,31 +1,17 @@
 ---
-title: "WPF i Direct3D9 — Współdziałanie"
-ms.custom: 
+title: WPF i Direct3D9 — Współdziałanie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abfdeb4dbf72d0173b020e201f85a30b57cfb3e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a66f37e26d8d86e29e81161ea4585737140441ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF i Direct3D9 — Współdziałanie
 W aplikacji Windows Presentation Foundation (WPF) może zawierać Direct3D9 treść. W tym temacie opisano, jak utworzyć Direct3D9 zawartość, tak aby wydajnie współdziała również z WPF.  

@@ -1,13 +1,6 @@
 ---
 title: 'Instrukcje: Konfigurowanie lokalnego wystawcy'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,30 +8,25 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Instrukcje: Konfigurowanie lokalnego wystawcy
 W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokalnego dla wystawionych tokenów.  
   
  Często gdy klient komunikuje się z usługi federacyjnej, usługi Określa adres zabezpieczeń używanych tokenu usługi, która oczekuje można wystawić tokenu klienta do samodzielnego uwierzytelnienia usługi federacyjnej. W niektórych sytuacjach klienta może być skonfigurowany do użycia *wystawcy lokalnego*.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]używa wystawcy lokalnego w przypadkach, gdy adres wystawcy wiązania federacyjnego jest http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous lub `null`. W takiej sytuacji należy skonfigurować <xref:System.ServiceModel.Description.ClientCredentials> adres wystawcy lokalnego i powiązania, które używają do komunikowania się z tym wystawcą.  
+ Windows Communication Foundation (WCF) używa wystawcy lokalnego w przypadkach, gdy jest adres wystawcy wiązania federacyjnego http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous lub `null`. W takiej sytuacji należy skonfigurować <xref:System.ServiceModel.Description.ClientCredentials> adres wystawcy lokalnego i powiązania, które używają do komunikowania się z tym wystawcą.  
   
 > [!NOTE]
 >  Jeśli <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> właściwość `ClientCredentials` ustawiono klasy `true`, adres wystawcy lokalnego nie jest określony, a adres wystawcy określony przez [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) lub innych powiązania federacyjnego jest http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, lub jest `null`, następnie Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] wystawcy jest używany.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Aby skonfigurować wystawcy lokalnego w kodzie  
   
-1.  Utwórz zmienną typu<xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1.  Utwórz zmienną typu <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
 2.  Ustaw zmienną na wystąpienie zwrócony z <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> właściwość `ClientCredentials` klasy. To wystąpienie jest zwracany przez <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwości klienta (dziedziczone z <xref:System.ServiceModel.ClientBase%601>) lub <xref:System.ServiceModel.ChannelFactory.Credentials%2A> właściwości <xref:System.ServiceModel.ChannelFactory>:  
   
@@ -65,7 +53,7 @@ W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokal
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5.  Opcjonalny. Dodawanie zachowania punktu końcowego skonfigurowanego dla wystawcy lokalnego przez dodanie takiego zachowania do kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości.  
+5.  Opcjonalna. Dodawanie zachowania punktu końcowego skonfigurowanego dla wystawcy lokalnego przez dodanie takiego zachowania do kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości.  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
@@ -78,9 +66,9 @@ W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokal
   
 3.  Ustaw `binding` i `bindingConfiguration` atrybuty do wartości, które odwołują się do powiązania odpowiednie do użycia przy komunikacji z punktem końcowym wystawcy lokalnego.  
   
-4.  Opcjonalny. Ustaw [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) element jako element podrzędny <`localIssuer`> element i określ informacje o tożsamości wystawcy lokalnego.  
+4.  Opcjonalna. Ustaw [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) element jako element podrzędny <`localIssuer`> element i określ informacje o tożsamości wystawcy lokalnego.  
   
-5.  Opcjonalny. Ustaw [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) element jako element podrzędny <`localIssuer`> element i określ dodatkowych nagłówków, które są wymagane do prawidłowego adresowania wystawcy lokalnego.  
+5.  Opcjonalna. Ustaw [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) element jako element podrzędny <`localIssuer`> element i określ dodatkowych nagłówków, które są wymagane do prawidłowego adresowania wystawcy lokalnego.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Należy pamiętać o tym, czy jeśli wystawcy adres i powiązanie zostały określone dla danego powiązania, wystawcy lokalnego nie jest używany przez punkty końcowe korzystające z tego wiązania. Klienci, którzy oczekują, że zawsze używaj wystawcy lokalnego powinien upewnij się, że nie używaj takiego powiązania lub czy zmodyfikuj powiązanie, tak aby adres wystawcy jest `null`.  

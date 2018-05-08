@@ -1,31 +1,20 @@
 ---
 title: Niestandardowe partycjonery dla PLINQ i TPL
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bc409a528dd095d3defb0026a48430b10a3ba6f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Niestandardowe partycjonery dla PLINQ i TPL
 Do parallelize operacji na źródle danych, jest jednym z podstawowych kroków do *partycji* źródła do sekcje, które mogą być jednocześnie udostępniane przez wiele wątków. PLINQ i zadania biblioteki równoległych (TPL) zapewniają partycjonery domyślne, które działają w sposób przezroczysty podczas pisania zapytania równoległe lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. Dla bardziej zaawansowanych scenariuszy można dodać własne partycjonera.  
@@ -97,10 +86,10 @@ Do parallelize operacji na źródle danych, jest jednym z podstawowych kroków d
 |----------------------|-------------------------------------------|----------------------------------------|-----------------|  
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Używa partycjonowania zakresu|Używa fragmentu partycjonowania zoptymalizowane pod kątem list dla partitionCount określony|Używa fragmentu partycjonowania tworząc statycznych liczby partycji.|  
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=nameWithType>|Obsługiwane nie zgłasza wyjątku|Używa fragmentu partycjonowania zoptymalizowane pod kątem list i partycji dynamicznych|Używa fragmentu partycjonowania przez tworzenie dynamiczne liczby partycji.|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|Zwraca`true`|Zwraca`true`|Zwraca`true`|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|Zwraca`true`|Zwraca`false`|Zwraca`false`|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|Zwraca`true`|Zwraca`true`|Zwraca`true`|  
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Zwraca`false`|Zwraca`true`|Zwraca`true`|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|Zwraca `true`|Zwraca `true`|Zwraca `true`|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|Zwraca `true`|Zwraca `false`|Zwraca `false`|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|Zwraca `true`|Zwraca `true`|Zwraca `true`|  
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Zwraca `false`|Zwraca `true`|Zwraca `true`|  
   
 ### <a name="dynamic-partitions"></a>Partycje dynamiczne  
  Jeśli planujesz partycjonera do użycia w <xref:System.Threading.Tasks.Parallel.ForEach%2A> metody, musi być może zwrócić dynamiczne liczby partycji. Oznacza to, że obiekt partitioner można podać moduł wyliczający dla nowej partycji na żądanie w czasie wykonywania pętli. Zasadniczo przy każdym pętli dodaje nowe zadanie równoległe, żądań nową partycję do tego zadania. Jeśli potrzebujesz danych należy zamówić, następnie pochodzi od <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> tak, aby każdy element każda partycja jest przypisany unikatowy indeks.  
@@ -112,7 +101,7 @@ Do parallelize operacji na źródle danych, jest jednym z podstawowych kroków d
   
 -   Jeśli <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> jest wywołana z nieprawidłowym argumentem zero lub mniej dla `partitionsCount`, throw <xref:System.ArgumentOutOfRangeException>. Chociaż PLINQ i TPL nigdy nie będzie przekazywać w `partitionCount` równa 0, jednak zaleca się ochronić możliwości.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> zawsze powinna zwrócić `partitionsCount` liczba partycji. Jeśli obiekt partitioner zabraknie danych i nie można utworzyć dowolną liczbę partycji zgodnie z wymaganiami, metoda powinna zwrócić pusty moduł wyliczający dla każdej z pozostałych partycji. W przeciwnym razie zgłosi zarówno PLINQ i TPL <xref:System.InvalidOperationException>.  
+-   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> zawsze powinna zwrócić `partitionsCount` liczba partycji. Jeśli obiekt partitioner zabraknie danych i nie można utworzyć dowolną liczbę partycji zgodnie z wymaganiami, metoda powinna zwrócić pusty moduł wyliczający dla każdej z pozostałych partycji. W przeciwnym razie zgłosi zarówno PLINQ i TPL <xref:System.InvalidOperationException>.  
   
 -   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> nigdy nie powinien zwrócić `null` (`Nothing` w języku Visual Basic). Jeśli nie, PLINQ / zgłosi TPL <xref:System.InvalidOperationException>.  
   

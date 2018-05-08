@@ -1,26 +1,12 @@
 ---
 title: 'Porady: dostosowywanie klas jednostek za pomocą edytora kodu'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: f57b07d03297347561b6b2e2634038aa1f29bc40
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 58544441ec722e5cf0e18c113bbce0bbf40b92bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Porady: dostosowywanie klas jednostek za pomocą edytora kodu
 Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do tworzenia lub dostosowywania ich klas jednostek.  

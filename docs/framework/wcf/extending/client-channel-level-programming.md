@@ -1,30 +1,18 @@
 ---
-title: "Programowanie na poziomie kanału klienta"
-ms.custom: 
+title: Programowanie na poziomie kanału klienta
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-level-programming"></a>Programowanie na poziomie kanału klienta
-W tym temacie opisano sposób zapisania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji klienckiej bez użycia <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> klasy i jego skojarzony obiekt modelu.  
+W tym temacie opisano, jak napisać aplikację klienta usługi Windows Communication Foundation (WCF) bez użycia <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> klasy i jego skojarzony obiekt modelu.  
   
 ## <a name="sending-messages"></a>Wysyłanie wiadomości  
  Aby mógł wysyłać i odbierać i przetwarzać odpowiedzi, wymagane są następujące kroki:  

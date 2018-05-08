@@ -1,26 +1,15 @@
 ---
-title: "Osadzony w dokumencie dyrektywy arkusza stylów"
-ms.custom: 
+title: Osadzony w dokumencie dyrektywy arkusza stylów
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b0d4589dc73b4effeff553e5b7bf5562a7602c2d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2fa671304c611db571b160cd1d960b83bf451c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Osadzony w dokumencie dyrektywy arkusza stylów
 Czasami istniejący kod XML zawiera dyrektywy arkusz stylów z `<?xml:stylesheet?>`. Program Microsoft Internet Explorer akceptuje, to zamiast `<?xml-stylesheet?>` składni. Jeśli dane XML zawiera `<?xml:stylesheet?>` dyrektywy, jak przedstawiono w następujących danych próby załadowania tych danych do XML modelu DOM (Document Object) zgłasza wyjątek.  

@@ -1,12 +1,6 @@
 ---
-title: "Function — Instrukcja (Visual Basic)"
+title: Function — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function — Instrukcja (Visual Basic)
 Deklaruje nazwę, parametry i kod, który definiuje `Function` procedury.  
@@ -61,11 +52,11 @@ End Function
   
 -   `attributelist`  
   
-     Opcjonalny. Zobacz [listę atrybutów](attribute-list.md).  
+     Opcjonalna. Zobacz temat [Lista atrybutów](attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Opcjonalny. Może to być jedna z następujących czynności:  
+     Opcjonalna. Może to być jeden z następujących elementów:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -77,11 +68,11 @@ End Function
   
     -   `Protected Friend`  
   
-     Zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `proceduremodifiers`  
   
-     Opcjonalny. Może to być jedna z następujących czynności:  
+     Opcjonalna. Może to być jeden z następujących elementów:  
   
     -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -99,31 +90,31 @@ End Function
   
 -   `Shared`  
   
-     Opcjonalny. Zobacz [udostępnionych](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Opcjonalna. Zobacz [udostępnionych](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Opcjonalny. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Async`  
   
-     Opcjonalny. Zobacz [Async](../../../visual-basic/language-reference/modifiers/async.md).  
+     Opcjonalna. Zobacz [Async](../../../visual-basic/language-reference/modifiers/async.md).  
   
 -   `Iterator`  
   
-     Opcjonalny. Zobacz [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Opcjonalna. Zobacz [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
-     Wymagany. Nazwa procedury. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Wymagana. Nazwa procedury. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `typeparamlist`  
   
-     Opcjonalny. Lista parametrów typu ogólnego procedurę. Zobacz [typu listy](type-list.md).  
+     Opcjonalna. Lista parametrów typu ogólnego procedurę. Zobacz [typu listy](type-list.md).  
   
 -   `parameterlist`  
   
-     Opcjonalny. Lista nazwy zmiennych lokalnych reprezentujący parametry tej procedury. Zobacz [listy parametrów](parameter-list.md).  
+     Opcjonalna. Lista nazwy zmiennych lokalnych reprezentujący parametry tej procedury. Zobacz [listy parametrów](parameter-list.md).  
   
 -   `returntype`  
   
@@ -131,7 +122,7 @@ End Function
   
 -   `Implements`  
   
-     Opcjonalny. Wskazuje, że ta procedura implementuje co najmniej jeden `Function` procedur, każdą z nich zdefiniowane w interfejsie zaimplementowany przez klasę lub strukturę zawierającego tę procedurę. Zobacz [implementuje instrukcji](implements-statement.md).  
+     Opcjonalna. Wskazuje, że ta procedura implementuje co najmniej jeden `Function` procedur, każdą z nich zdefiniowane w interfejsie zaimplementowany przez klasę lub strukturę zawierającego tę procedurę. Zobacz [implementuje instrukcji](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -145,12 +136,12 @@ End Function
   
     |Część|Opis|  
     |---|---|  
-    |`interface`|Wymagany. Nazwa interfejsu implementowanego przez tej procedury zawierający klasy lub struktury.|  
-    |`definedname`|Wymagany. Za pomocą którego procedura została określona w nazwie `interface`.|  
+    |`interface`|Wymagana. Nazwa interfejsu implementowanego przez tej procedury zawierający klasy lub struktury.|  
+    |`definedname`|Wymagana. Za pomocą którego procedura została określona w nazwie `interface`.|  
   
 -   `Handles`  
   
-     Opcjonalny. Wskazuje, że ta procedura może obsługiwać jeden lub więcej określonych zdarzeń. Zobacz [obsługuje](handles-clause.md).  
+     Opcjonalna. Wskazuje, że ta procedura może obsługiwać jeden lub więcej określonych zdarzeń. Zobacz [obsługuje](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -164,12 +155,12 @@ End Function
   
     |Część|Opis|  
     |---|---|  
-    |`eventvariable`|Wymagany. Zmienna obiektu zadeklarowane z typem danych klasy lub struktury, który wywołuje zdarzenie.|  
-    |`event`|Wymagany. Nazwa zdarzenia, które obsługuje tę procedurę.|  
+    |`eventvariable`|Wymagana. Zmienna obiektu zadeklarowane z typem danych klasy lub struktury, który wywołuje zdarzenie.|  
+    |`event`|Wymagana. Nazwa zdarzenia, które obsługuje tę procedurę.|  
   
 -   `statements`  
   
-     Opcjonalny. Blok instrukcji do wykonania w ramach tej procedury.  
+     Opcjonalna. Blok instrukcji do wykonania w ramach tej procedury.  
   
 -   `End Function`  
   
@@ -181,9 +172,9 @@ End Function
  Aby zwrócić wartość do wywołującego kodu, użyj `Function` procedury; w przeciwnym razie użyj `Sub` procedury.  
   
 ## <a name="defining-a-function"></a>Definiowanie funkcji  
- Można zdefiniować `Function` procedury tylko na poziomie modułu. W związku z tym kontekście deklaracji funkcji musi być klasą, strukturą, modułu lub interfejsu i nie może być plik źródłowy, przestrzeni nazw, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](declaration-contexts-and-default-access-levels.md).  
+ Można zdefiniować `Function` procedury tylko na poziomie modułu. W związku z tym kontekście deklaracji funkcji musi być klasą, strukturą, modułu lub interfejsu i nie może być plik źródłowy, przestrzeni nazw, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
- `Function`Domyślnie procedur dostępu publicznego. Można dostosować ich poziomy dostępu z modyfikatorów dostępu.  
+ `Function` Domyślnie procedur dostępu publicznego. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu.  
   
  A `Function` procedury mogą zadeklarować typ danych wartości, która zwraca procedury. Można określić dowolny typ danych lub nazwa wyliczenia, struktury, klasy lub interfejsu. Jeśli nie określisz `returntype` zwraca procedury parametru `Object`.  
   
@@ -254,7 +245,7 @@ End Function
  [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `DelayAsync` jest `Async``Function` mający typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync`ma `Return` instrukcji, która zwraca liczbę całkowitą. W związku z tym funkcja deklaracja `DelayAsync` musi mieć typ zwracany `Task(Of Integer)`. Ponieważ typ zwracany jest `Task(Of Integer)`, oceny `Await` wyrażenie w `DoSomethingAsync` tworzy liczbą całkowitą. Zostało to przedstawione w tej instrukcji: `Dim result As Integer = Await delayTask`.  
+ W poniższym przykładzie `DelayAsync` jest `Async``Function` mający typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ma `Return` instrukcji, która zwraca liczbę całkowitą. W związku z tym funkcja deklaracja `DelayAsync` musi mieć typ zwracany `Task(Of Integer)`. Ponieważ typ zwracany jest `Task(Of Integer)`, oceny `Await` wyrażenie w `DoSomethingAsync` tworzy liczbą całkowitą. Zostało to przedstawione w tej instrukcji: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Procedura jest przykładem `Async Sub` procedury. Ponieważ `DoSomethingAsync` jest `Async` funkcji, zadanie dla wywołania `DoSomethingAsync` musi być oczekiwane, jak pokazano następująca instrukcja: `Await DoSomethingAsync()`. `startButton_Click``Sub` Procedury musi być zdefiniowany za pomocą `Async` modyfikator ponieważ ma ona `Await` wyrażenia.  
   
@@ -266,7 +257,7 @@ End Function
  [Lista parametrów](parameter-list.md)  
  [Dim, instrukcja](dim-statement.md)  
  [Call, instrukcja](call-statement.md)  
- [Z](of-clause.md)  
+ [z](of-clause.md)  
  [Tablice parametrów](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
  [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
  [Rozwiązywanie problemów z procedurami](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  

@@ -1,24 +1,12 @@
 ---
-title: "Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego"
-ms.custom: 
+title: Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
 W tym temacie opisano działania i transferów w scenariuszach różnych synchroniczne żądania/odpowiedzi, za pomocą klienta jednowątkowe, przy użyciu protokołu HTTP, TCP lub nazwany potok. Zobacz [scenariusze asynchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) uzyskać więcej informacji dotyczących żądań wielowątkowych.  
@@ -56,9 +44,9 @@ W tym temacie opisano działania i transferów w scenariuszach różnych synchro
 #### <a name="closing-a-service-host"></a>Zamykanie hosta usługi  
  Zamknij działania ServiceHost (Z) jest tworzony z otaczającym działania.  
   
- ![Scenariusze synchroniczne z zastosowaniem protokołu HTTP &#47; TCP &#47; Nazwane potoki](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "synchronizacji")  
+ ![Scenariusze synchroniczne z zastosowaniem protokołu HTTP&#47;TCP&#47; potoków nazwanych](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "synchronizacji")  
   
- W \<A: name >, `A` to symbol skrótu, który opisuje działania poprzedniego tekstu i w tabeli 3. `Name`jest skróconą nazwę działania.  
+ W \<A: name >, `A` to symbol skrótu, który opisuje działania poprzedniego tekstu i w tabeli 3. `Name` jest skróconą nazwę działania.  
   
  Jeśli `propagateActivity` = `true`, proces akcji na kliencie i usługi mają ten sam identyfikator działania.  
   

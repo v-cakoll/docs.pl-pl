@@ -1,23 +1,12 @@
 ---
 title: Projektant ReHosting
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 44577450bb81e255caf22f306dcd0276821d262c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3caff782dcb7ce2434960e24c4586877788da653
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designer-rehosting"></a>Projektant ReHosting
 Rehosting projektanta jest typowym scenariuszem odnoszący się do hostingu obszaru projektu przepływu pracy wewnątrz aplikacji niestandardowej. Hostingu aplikacji, którą osoby większość zapoznali się z jest Visual Studio, jednak istnieje wiele scenariuszy, w którym przedstawiający projektanta przepływów pracy w aplikacji może być przydatna:  
@@ -50,7 +39,7 @@ Rehosting projektanta jest typowym scenariuszem odnoszący się do hostingu obsz
 </Grid>  
 ```  
   
- Następnie tworzy projektanta próbki i kojarzy jego podstawowym <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> z odpowiedniego kontenera w interfejsie użytkownika. Istnieje kilka dodatkowych wierszy kodu w poniższym przykładzie, które wymagają wyjaśnień. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Wywołanie jest wymagane do skojarzenia z projektantami działań domyślny dla działania dostarczone z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>nazywa się do przekazania w elemencie WF do edycji. Na koniec <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (podstawowy kanwy) i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (siatki właściwości) są umieszczane na powierzchnię interfejsu użytkownika.  
+ Następnie tworzy projektanta próbki i kojarzy jego podstawowym <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> z odpowiedniego kontenera w interfejsie użytkownika. Istnieje kilka dodatkowych wierszy kodu w poniższym przykładzie, które wymagają wyjaśnień. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Wywołanie jest wymagane do skojarzenia z projektantami działań domyślny dla działania dostarczone z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> nazywa się do przekazania w elemencie WF do edycji. Na koniec <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (podstawowy kanwy) i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (siatki właściwości) są umieszczane na powierzchnię interfejsu użytkownika.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -135,6 +124,6 @@ protected override void OnInitialized(EventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

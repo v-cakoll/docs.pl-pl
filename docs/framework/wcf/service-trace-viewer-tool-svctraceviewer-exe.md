@@ -1,27 +1,15 @@
 ---
-title: "Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)"
-ms.custom: 
+title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Usługi Trace Viewer Tool pomaga analizować dane śledzenia diagnostycznego, które są generowane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, widoków i filtrować komunikaty śledzenia w dzienniku, tak aby zdiagnozować, naprawy i sprawdź [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi problemy.  
+Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, widoków i filtrować komunikaty śledzenia w dzienniku, tak aby zdiagnozować, naprawy i sprawdź [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi problemy.  
   
 ## <a name="configuring-tracing"></a>Konfigurowanie śledzenia  
  Dane śledzenia diagnostycznego udostępnić informacje, które wskazują na to, co dzieje się w całej aplikacji operacji. Jak nazwa wskazuje, można wykonać operacji z ich źródła do miejsca docelowego, a także pośrednich punktów.  
@@ -67,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Otwieranie i wyświetlanie plików śledzenia WCF  
  Przeglądarka śledzenia usługi obsługuje trzy typy plików:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Śledzenie plików (.svcLog)  
+-   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Śledzenie plików (.svcLog)  
   
 -   Zdarzenia śledzenia w pliku (ETL)  
   
@@ -116,7 +104,7 @@ ms.lasthandoff: 01/19/2018
 -   W **projektu** karcie, możesz dodać pliki do projektu.  
   
 ### <a name="viewing-wcf-traces"></a>Wyświetlanie śledzenia WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]emituje danych śledzenia przy użyciu formatu śledzenie działania. W modelu śledzenie działania indywidualnych ślady są pogrupowane w działania zgodnie z ich przeznaczenie. Przepływ sterowania logiczne są przesyłane między działaniami. Na przykład przez cały okres istnienia aplikacji, wiele "działania wysyłania komunikatu" pojawiają się i znikają. Aby uzyskać więcej informacji o wyświetlaniu zbyt śladów i działań i interfejsu użytkownika podglądu śledzenia usługi, zobacz [przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] emituje danych śledzenia przy użyciu formatu śledzenie działania. W modelu śledzenie działania indywidualnych ślady są pogrupowane w działania zgodnie z ich przeznaczenie. Przepływ sterowania logiczne są przesyłane między działaniami. Na przykład przez cały okres istnienia aplikacji, wiele "działania wysyłania komunikatu" pojawiają się i znikają. Aby uzyskać więcej informacji o wyświetlaniu zbyt śladów i działań i interfejsu użytkownika podglądu śledzenia usługi, zobacz [przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Przełączanie do innych widoków  
  Przeglądarka śledzenia usługi udostępnia następujące widoki. Są wyświetlane jako karty w lewym okienku Podgląd i mogą również uzyskiwać z **widoku** menu.  
@@ -272,7 +260,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  Widok drzewa po lewej stronie wyświetla strukturę rekord śledzenia, który wybrano w kroku 1. Przejdź do elementu, aby utworzyć warunek. W tym przykładzie, przejdź do ThreadID się znajdować w wyrażeniu XPath: /E2ETraceEvent/System/Execution/@ThreadID węzła. Kliknij dwukrotnie atrybut Identyfikator wątku w widoku drzewa. Spowoduje to utworzenie wyrażenia dla atrybutu po prawej stronie okna dialogowego.  
   
-5.  Zmiany w tym polu parametru warunek identyfikator wątku niż Brak do {0}. Ten krok powoduje włączenie identyfikator wątku wartość do skonfigurowania, gdy jest stosowany filtr. (Zobacz porady Zastosuj filtr sekcji) Można określić maksymalnie cztery parametry. Warunki są łączone przy użyciu operatora OR.  
+5.  Zmiany w tym polu parametru warunek identyfikator wątku z Brak, aby "{0}". Ten krok powoduje włączenie identyfikator wątku wartość do skonfigurowania, gdy jest stosowany filtr. (Zobacz porady Zastosuj filtr sekcji) Można określić maksymalnie cztery parametry. Warunki są łączone przy użyciu operatora OR.  
   
 6.  Kliknij przycisk **Ok** do tworzenia filtru.  
   
@@ -297,7 +285,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  Kliknij przycisk **filtru teraz**i obserwować wyniki operacji.  
   
- Jeśli z filtrem używa wiele parametrów, wprowadź je za pomocą ";" jako separator w **Znajdź** pola. Na przykład, następujący ciąg definiuje 3 parametry: "1; findValue tekst". Podgląd komunikatów o dotyczy parametru {0} filtru '1'. 'findValue' i 'text' są stosowane odpowiednio do {1} i {2}.  
+ Jeśli z filtrem używa wiele parametrów, wprowadź je za pomocą ";" jako separator w **Znajdź** pola. Na przykład, następujący ciąg definiuje 3 parametry: "1; findValue tekst". Podgląd komunikatów o zastosowanie '1' {0} parametr filtru. 'findValue' i 'text' są stosowane do {1} i {2} odpowiednio.  
   
 ###### <a name="sharing-custom-filters"></a>Udostępnianie filtry niestandardowe  
  Filtry niestandardowe mogą udostępniać różne sesje i różnych użytkowników. Można wyeksportować do pliku definicji filtrów i zaimportować ten plik w innej lokalizacji.  
@@ -437,14 +425,14 @@ ms.lasthandoff: 01/19/2018
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działanie: Wskazuje, że bieżące działanie jest ogólne działanie.|  
+|![Działanie](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działanie: Wskazuje, że bieżące działanie jest ogólne działanie.|  
 |![Działanie główne](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Działania głównego: wskazuje działania głównego procesu.|  
   
 ### <a name="wcf-activities"></a>Działania programu WCF  
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Environment activity](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta lub klienta. Błędy, które wystąpiło podczas fazy te będą wyświetlane w tego działania.|  
+|![Działanie środowiska](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta lub klienta. Błędy, które wystąpiło podczas fazy te będą wyświetlane w tego działania.|  
 |![Nasłuchiwanie działania](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Nasłuchiwanie działania: działanie, które dzienniki śledzenia związane z odbiornik. Wewnątrz tego działania możemy wyświetlić żądania odbiornika informacji i połączenia.|  
 |![Odbieranie bajtów działania](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Działanie bajtów odbierania: działania, który grupuje wszystkie ślady dotyczące odbierania bajtów przychodzących na połączenie między dwoma punktami końcowymi. To działanie ma zasadnicze znaczenie korelacji z działaniami transportu, propagujące ich identyfikator działania, takie jak sterownik http.sys. Błędy połączenia, takie jak przerwań pojawi się tego działania.|  
 |![Przetwarzanie komunikatów działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Przetwarzanie działania komunikatu: działania, który grupuje dane śledzenia dotyczących tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wiadomości. Błędy z powodu nieprawidłowych koperty lub źle sformułowane wiadomości będą wyświetlane w tym działania. Wewnątrz tego działania możemy sprawdzić nagłówki komunikatów, aby sprawdzić, czy identyfikator działania pochodzi z obiektu wywołującego. Jeśli to PRAWDA, gdy przekazywane do procesu akcji działania (dalej), firma Microsoft można także przypisać dla danego działania propagowany działania identyfikator korelacji między wywołującego i ślady wywołującej.|  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModuleBreakpoint::GetModule — Metoda"
-ms.custom: 
+title: ICorDebugModuleBreakpoint::GetModule — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModuleBreakpoint.GetModule
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ffd5d9ec-4564-4200-b625-b306eec0ebd7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 91e014a16420ea6790b592efe1ac57df960d2237
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cbb1aa9c81101eb818a9e7829c777efd3923b5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a>ICorDebugModuleBreakpoint::GetModule — Metoda
 Pobiera wskaźnika interfejsu do "ICorDebugModule", który odwołuje się do modułu, w którym ten punkt przerwania jest ustawiony.  
@@ -57,7 +45,7 @@ HRESULT GetModule (
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  

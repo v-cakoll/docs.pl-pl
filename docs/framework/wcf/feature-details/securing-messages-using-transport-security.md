@@ -1,24 +1,14 @@
 ---
-title: "Ochrona komunikatów za pomocą zabezpieczeń transportu"
-ms.custom: 
+title: Ochrona komunikatów za pomocą zabezpieczeń transportu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-caps.latest.revision: "21"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>Ochrona komunikatów za pomocą zabezpieczeń transportu
 W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikatów (MSMQ), który służy do zabezpieczania komunikatów wysłanych do kolejki.  
@@ -26,11 +16,11 @@ W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikat�
 > [!NOTE]
 >  Przed przeczytaniem za pośrednictwem tego tematu, zaleca się przeczytanie [pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- Następująca ilustracja przedstawia model koncepcyjny umieszczonych w kolejce komunikacji przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Ta ilustracja i terminologia służy do opisano pojęcia zabezpieczeń transportu.  
+ Następująca ilustracja przedstawia model koncepcyjny umieszczonych w kolejce komunikacji przy użyciu usługi Windows Communication Foundation (WCF). Ta ilustracja i terminologia służy do opisano pojęcia zabezpieczeń transportu.  
   
  ![Diagram aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "rozproszonych kolejki — rysunek")  
   
- Podczas wysyłania wiadomości z kolejki przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z <xref:System.ServiceModel.NetMsmqBinding>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości jest dołączony jako treść wiadomości MSMQ. Zabezpieczenia transportu zabezpiecza cały wiadomości MSMQ (nagłówki wiadomości usługi MSMQ lub właściwości i treść komunikatu). Treść wiadomości MSMQ, dlatego też za pomocą zabezpieczeń transportu zabezpiecza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości.  
+ Podczas wysyłania wiadomości z kolejki przy użyciu programu WCF z <xref:System.ServiceModel.NetMsmqBinding>, wiadomości WCF jest dołączony jako treść wiadomości MSMQ. Zabezpieczenia transportu zabezpiecza cały wiadomości MSMQ (nagłówki wiadomości usługi MSMQ lub właściwości i treść komunikatu). Treść wiadomości MSMQ, dlatego też za pomocą zabezpieczeń transportu zabezpiecza wiadomości WCF.  
   
  Koncepcja klucza za zabezpieczeń transportu jest, że klient musi spełniać wymagania dotyczące zabezpieczeń na komunikat do kolejki docelowej. W przeciwieństwie do zabezpieczenia komunikatów to, gdy wiadomość jest zabezpieczona dla aplikacji, która odbiera wiadomości.  
   
@@ -49,19 +39,19 @@ W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikat�
   
  Usługa MSMQ także możliwość dołączenia certyfikatu z komunikat, który nie jest zarejestrowany w usłudze Active Directory. W takim przypadku gwarantuje, że komunikat był podpisany przy użyciu certyfikatu dołączone.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia obie te opcje jako część usługi MSMQ transportu zabezpieczeń i są one klucza pivot zabezpieczeń transportu.  
+ Usługi WCF zapewnia obie te opcje jako część zabezpieczeń transportu MSMQ i są one klucza pivot zabezpieczeń transportu.  
   
  Zabezpieczenia transportu jest domyślnie włączona.  
   
  Podana tych podstaw, w poniższych sekcjach przedstawiono właściwości zabezpieczeń transportu szczegółów powiązany z <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
   
 #### <a name="msmq-authentication-mode"></a>Tryb uwierzytelniania usługi MSMQ  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> Określa, czy ma być używany do zabezpieczenia wiadomości zabezpieczeń domeny systemu Windows lub zewnętrznego zabezpieczeń oparte na certyfikatach. W obu tych trybach uwierzytelniania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa kanał transportu umieszczonych w kolejce `CertificateValidationMode` określony w konfiguracji usługi. Tryb walidacji certyfikatu określa mechanizm używany do sprawdzania poprawności certyfikatu.  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> Określa, czy ma być używany do zabezpieczenia wiadomości zabezpieczeń domeny systemu Windows lub zewnętrznego zabezpieczeń oparte na certyfikatach. W obu tych trybach uwierzytelniania, używa kanału transport z kolejką usługi WCF `CertificateValidationMode` określony w konfiguracji usługi. Tryb walidacji certyfikatu określa mechanizm używany do sprawdzania poprawności certyfikatu.  
   
  Po włączeniu zabezpieczeń transportu jest ustawieniem domyślnym <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="windows-domain-authentication-mode"></a>Tryb uwierzytelniania domeny systemu Windows  
- Wybór przy użyciu zabezpieczeń systemu Windows wymaga integracji usługi Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>jest to domyślny tryb zabezpieczeń transport. Gdy ta opcja jest ustawiona, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanału dołącza do wiadomości MSMQ identyfikatora SID systemu Windows i używa swojego certyfikatu wewnętrznego uzyskane z usługi Active Directory. Usługa MSMQ używa tego certyfikatu wewnętrznego do zabezpieczenia wiadomości. Odbierającego menedżera kolejek używa usługi Active Directory można wyszukiwać i znalezienia zgodnego certyfikatu uwierzytelniania klienta i sprawdza, czy identyfikator SID również zgodna z wersją klienta. Ten krok uwierzytelniania jest wykonywana w przypadku certyfikatu, albo zostały wygenerowane wewnętrznie w odniesieniu `WindowsDomain` tryb uwierzytelniania lub zewnętrznie wygenerowanych w odniesieniu `Certificate` tryb uwierzytelniania jest dołączony do wiadomości, nawet jeśli jest kolejka docelowa nie jest oznaczone jako wymagające uwierzytelniania.  
+ Wybór przy użyciu zabezpieczeń systemu Windows wymaga integracji usługi Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> jest to domyślny tryb zabezpieczeń transport. Gdy ta opcja jest ustawiona, kanału WCF dołącza do wiadomości MSMQ identyfikatora SID systemu Windows i używa swojego certyfikatu wewnętrznego uzyskane z usługi Active Directory. Usługa MSMQ używa tego certyfikatu wewnętrznego do zabezpieczenia wiadomości. Odbierającego menedżera kolejek używa usługi Active Directory można wyszukiwać i znalezienia zgodnego certyfikatu uwierzytelniania klienta i sprawdza, czy identyfikator SID również zgodna z wersją klienta. Ten krok uwierzytelniania jest wykonywana w przypadku certyfikatu, albo zostały wygenerowane wewnętrznie w odniesieniu `WindowsDomain` tryb uwierzytelniania lub zewnętrznie wygenerowanych w odniesieniu `Certificate` tryb uwierzytelniania jest dołączony do wiadomości, nawet jeśli jest kolejka docelowa nie jest oznaczone jako wymagające uwierzytelniania.  
   
 > [!NOTE]
 >  Podczas tworzenia kolejki, kolejki można oznaczyć jako uwierzytelniony kolejki, aby wskazać, że kolejka wymaga uwierzytelnienia klienta, wysyłanie komunikatów do kolejki. Dzięki temu, że nie nieuwierzytelnione komunikaty są akceptowane w kolejce.  
@@ -71,9 +61,9 @@ W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikat�
 #### <a name="certificate-authentication-mode"></a>Tryb uwierzytelniania certyfikatów  
  Wybór przy użyciu trybu uwierzytelniania certyfikatu nie wymaga integracji usługi Active Directory. W rzeczywistości w niektórych przypadkach, takich jak kiedy usługa MSMQ jest zainstalowana w trybie grupy roboczej (bez integracji usługi Active Directory) lub gdy przy użyciu protokołu SOAP Reliable Messaging Protocol (SRMP) transfer protocol do wysyłania wiadomości do kolejki, tylko <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> działa.  
   
- Podczas wysyłania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] komunikatów z <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanału nie dołączyć identyfikatora SID systemu Windows do wiadomości MSMQ. Tak, kolejka docelowa ACL musi umożliwić `Anonymous` użytkownikowi dostęp do wysyłania do kolejki. Odbierającego menedżera kolejek sprawdza, czy wiadomości MSMQ została podpisana przy użyciu certyfikatu, ale nie wykonuje żadnego uwierzytelniania.  
+ Podczas wysyłania wiadomości WCF z <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>, kanału WCF nie dołączyć identyfikatora SID systemu Windows do wiadomości MSMQ. Tak, kolejka docelowa ACL musi umożliwić `Anonymous` użytkownikowi dostęp do wysyłania do kolejki. Odbierającego menedżera kolejek sprawdza, czy wiadomości MSMQ została podpisana przy użyciu certyfikatu, ale nie wykonuje żadnego uwierzytelniania.  
   
- Certyfikat z jego oświadczenia i informacje o tożsamości jest wypełniana w <xref:System.ServiceModel.ServiceSecurityContext> przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w kolejce kanał transportu. Usługa może wykorzystać te informacje do jego własnej uwierzytelniania nadawcy.  
+ Certyfikat z jego oświadczenia i informacje o tożsamości jest wypełniana w <xref:System.ServiceModel.ServiceSecurityContext> przez transport z kolejką kanału WCF. Usługa może wykorzystać te informacje do jego własnej uwierzytelniania nadawcy.  
   
 ### <a name="msmq-protection-level"></a>Poziom ochrony usługi MSMQ  
  Poziom ochrony mówią, jak chronić wiadomości MSMQ, aby upewnić się, że nie jest modyfikowany od. Jest on określony w <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> właściwości. Wartość domyślna to <xref:System.Net.Security.ProtectionLevel.Sign>.  

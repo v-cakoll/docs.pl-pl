@@ -1,14 +1,6 @@
 ---
-title: "ICLRErrorReportingManager — Interfejs"
-ms.custom: 
+title: ICLRErrorReportingManager — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRErrorReportingManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ac362432a5d0c613f4ee1409ee15d92bfef3aeb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf9e04ed1d3a68fed120c4c13ad992af1f777244
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager — Interfejs
 Udostępnia metody umożliwiające hosta skonfigurować zrzuty stosu niestandardowych dla usługi raportowania błędów.  
@@ -58,7 +46,7 @@ Udostępnia metody umożliwiające hosta skonfigurować zrzuty stosu niestandard
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ECustomDumpItemKind, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  

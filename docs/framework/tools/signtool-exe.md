@@ -1,27 +1,17 @@
 ---
-title: "SignTool.exe (Narzędzie podpisu)"
-ms.custom: 
+title: SignTool.exe (Narzędzie podpisu)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 326b952b742dc3400b7a84ba35594b61aeaabb6c
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Narzędzie podpisu)
 Narzędzie podpisywania to narzędzie wiersza polecenia, które cyfrowo podpisuje pliki, weryfikuje podpisy w plikach i oznacza pliki znacznikami czasu.  
@@ -68,7 +58,7 @@ signtool [command] [options] [file_name | ...]
 |Opcja polecenia Catdb|Opis|  
 |------------------|-----------------|  
 |`/d`|Określa, że domyślna baza danych wykazów jest aktualizowana. Jeśli żadna `/d` ani `/g` jest używana opcja, narzędzie podpisu aktualizuje bazę danych systemu składników i sterowników.|  
-|`/g`*IDENTYFIKATOR GUID*|Określa, że baza danych katalogu identyfikowane przez unikatowy identyfikator globalny *GUID* jest aktualizowany.|  
+|`/g` *IDENTYFIKATOR GUID*|Określa, że baza danych katalogu identyfikowane przez unikatowy identyfikator globalny *GUID* jest aktualizowany.|  
 |`/r`|Usuwa określone wykazy z bazy danych wykazów. Jeśli ta opcja nie jest określona, narzędzie podpisywania dodaje określone wykazy do bazy danych wykazów.|  
 |`/u`|Określa, że dla dodawanych plików wykazów unikatowe nazwy są generowane automatycznie. W razie potrzeby nazwy plików wykazów są zmieniane, aby zapobiec konfliktom nazw z istniejącymi plikami wykazów. Jeśli ta opcja nie jest określona, narzędzie podpisywania zastępuje wszelkie istniejące wykazy, które mają taką samą nazwę jak wykaz dodawany.|  
   
@@ -79,11 +69,11 @@ signtool [command] [options] [file_name | ...]
 |Opcja polecenia Sign|Opis|  
 |-------------------------|-----------------|  
 |`/a`|Automatycznie wybiera najlepszy certyfikat podpisywania. Narzędzie podpisywania znajdzie wszystkie ważne certyfikaty, które spełniają wszystkie określone warunki, i wybierze ten, którego okres ważności jest najdłuższy. Jeśli ta opcja nie jest określona, narzędzie podpisywania spodziewa się znaleźć tylko jeden ważny certyfikat podpisywania.|  
-|`/ac`  *plik*|Dodaje dodatkowy certyfikat z *pliku* blok podpisu.|  
+|`/ac`  *Plik*|Dodaje dodatkowy certyfikat z *pliku* blok podpisu.|  
 |`/as`|Dołącza ten podpis. Jeśli nie jest określony podpis podstawowy, ten podpis jest ustawiany jako podpis podstawowy.|  
 |`/c`  *CertTemplateName*|Określa nazwę szablonu certyfikatu (rozszerzenie Microsoft) dla certyfikatu podpisywania.|  
 |`/csp`  *NazwaCSP*|Określa dostawcę usług kryptograficznych (CSP), który zawiera kontener klucza prywatnego.|  
-|`/d`  *Desc*|Określa opis podpisanej zawartości.|  
+|`/d`  *desc*|Określa opis podpisanej zawartości.|  
 |`/du`  *ADRES URL*|Określa adres URL (Uniform Resource Locator) rozszerzonego opisu podpisanej zawartości.|  
 |`/f`  *SignCertFile*|Określa certyfikat podpisywania w pliku. Jeśli plik jest w formacie wymiany informacji osobistych (PFX) i chroniony hasłem, użyj `/p` opcję, aby określić hasło. Jeśli plik nie zawiera kluczy prywatnych, należy użyć `/csp` i `/kc` opcji, aby określić dostawcę usług Kryptograficznych i nazwy kontenera kluczy prywatnych.|  
 |`/fd`|Określa algorytm tworzenia skrótu pliku na potrzeby tworzenia podpisów plików. Domyślnie jest to algorytm SHA1.|  
@@ -92,12 +82,12 @@ signtool [command] [options] [file_name | ...]
 |`/n`  *SubjectName*|Określa nazwę podmiotu certyfikatu podpisywania. Ta wartość może być podciągiem całej nazwy podmiotu.|  
 |`/nph`|Jeśli jest obsługiwana, pomija skróty stron dla plików wykonywalnych. Wartość domyślna jest określana przez zmienną środowiskową SIGNTOOL_PAGE_HASHES i wersję pliku wintrust.dll. Ta opcja jest ignorowana dla plików innych niż PE.|  
 |`/p`  *Hasło*|Określa hasło używane podczas otwierania pliku PFX. (Użyj `/f` opcję, aby określić plik PFX.)|  
-|`/p7`*Ścieżki*|Określa, że plik PKCS (Public Key Cryptography Standards) #7 jest generowany dla każdego określonego pliku zawartości. Pliki PKCS #7 są nazywane *ścieżki*\\*filename*.p7.|  
-|`/p7ce`*Wartość*|Określa opcje dla podpisanej zawartości PKCS #7. Ustaw *wartość* "Osadzone", aby osadzić podpisanej zawartości w pliku PKCS #7 lub "DetachedSignedData", aby wygenerować podpisane dane część odłączyć pliku PKCS #7. Jeśli `/p7ce` nie jest używana opcja, podpisanej zawartości jest osadzony domyślnie.|  
-|`/p7co` *\<OID >*|Określa identyfikator obiektu (OID), który identyfikuje podpisaną zawartość PKCS #7.|  
+|`/p7` *Ścieżka*|Określa, że plik PKCS (Public Key Cryptography Standards) #7 jest generowany dla każdego określonego pliku zawartości. Pliki PKCS #7 są nazywane *ścieżki*\\*filename*.p7.|  
+|`/p7ce` *Wartość*|Określa opcje dla podpisanej zawartości PKCS #7. Ustaw *wartość* "Osadzone", aby osadzić podpisanej zawartości w pliku PKCS #7 lub "DetachedSignedData", aby wygenerować podpisane dane część odłączyć pliku PKCS #7. Jeśli `/p7ce` nie jest używana opcja, podpisanej zawartości jest osadzony domyślnie.|  
+|`/p7co` *\<IDENTYFIKATOR OID &GT;*|Określa identyfikator obiektu (OID), który identyfikuje podpisaną zawartość PKCS #7.|  
 |`/ph`|Jeśli jest obsługiwana, generuje skróty stron dla plików wykonywalnych.|  
 |`/r`  *RootSubjectName*|Określa nazwę podmiotu certyfikatu głównego, z którym musi zostać połączony certyfikat podpisywania. Ta wartość może być podciągiem całej nazwy podmiotu certyfikatu głównego.|  
-|`/s`  *StoreName*|Określa magazyn otwierany podczas wyszukiwania certyfikatu. Jeśli ta opcja nie jest określona, `My` otworzyć magazynu.|  
+|`/s`  *storeName*|Określa magazyn otwierany podczas wyszukiwania certyfikatu. Jeśli ta opcja nie jest określona, `My` otworzyć magazynu.|  
 |`/sha1`  *Wyznaczania wartości skrótu*|Określa skrót SHA1 certyfikatu podpisywania. Skrót SHA1 jest zazwyczaj określany, jeśli wiele certyfikatów spełnia kryteria określone przez pozostałe przełączniki.|  
 |`/sm`|Określa, że jest używany magazyn komputera, a nie magazyn użytkownika.|  
 |`/t`  *ADRES URL*|Określa adres URL serwera znaczników czasu. Jeśli ta opcja (lub `/tr`) jest nieobecna, podpisany plik nie będzie z sygnaturą czasową. Jeśli oznaczanie znacznikiem czasu nie powiedzie się, jest generowane ostrzeżenie. Nie można użyć tej opcji z `/tr` opcji.|  
@@ -116,8 +106,8 @@ signtool [command] [options] [file_name | ...]
 |----------------------|-----------------|  
 |`/p7`|Oznacza pliki PKCS #7 znacznikami czasu.|  
 |`/t`  *ADRES URL*|Określa adres URL serwera znaczników czasu. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. Albo `/t` lub `/tr` opcja jest wymagana.|  
-|`/td`  *alg*|Żąda algorytmu tworzenia skrótu używanego przez serwer znaczników czasu RFC 3161. `/td`jest używany z `/tr` opcji.|  
-|`/tp`*indeksu*|Sygnatury czasowe podpisu w *indeksu*.|  
+|`/td`  *alg*|Żąda algorytmu tworzenia skrótu używanego przez serwer znaczników czasu RFC 3161. `/td` jest używany z `/tr` opcji.|  
+|`/tp` *Indeks*|Sygnatury czasowe podpisu w *indeksu*.|  
 |`/tr`  *ADRES URL*|Określa adres URL serwera znaczników czasu RFC 3161. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. Albo `/tr` lub `/t` opcja jest wymagana.|  
   
  Na przykład użycia, zobacz [Dodawanie sygnatury czasowe wcześniej podpisane pliki](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx).  
@@ -129,21 +119,21 @@ signtool [command] [options] [file_name | ...]
 |-------------------|-----------------|  
 |`/a`|Określa, że w celu weryfikacji pliku można użyć wszystkich metod. Najpierw bazy danych wykazów są przeszukiwane w celu ustalenia, czy plik jest podpisany w wykazie. Jeśli plik nie jest podpisany w żadnym wykazie, narzędzie podpisywania próbuje zweryfikować podpis osadzony w pliku. Ta opcja jest zalecana w przypadku weryfikowania plików, które mogą, ale nie muszą, być podpisane w wykazie. Przykładami tych plików są pliki lub sterowniki systemu Windows.|  
 |`/ad`|Znajduje wykaz przy użyciu domyślnej bazy danych wykazów.|  
-|`/ag`*CatDBGUID*|Wyszukuje wykazu w katalogu bazy danych, identyfikowany przez *CatDBGUID*.|  
+|`/ag` *CatDBGUID*|Wyszukuje wykazu w katalogu bazy danych, identyfikowany przez *CatDBGUID*.|  
 |`/all`|Weryfikuje wszystkie podpisy w pliku, który zawiera wiele podpisów.|  
 |`/as`|Znajduje wykaz przy użyciu bazy danych wykazów składników systemu (sterowniki).|  
-|`/c`*CatFile*|Określa plik wykazu według nazwy.|  
+|`/c` *CatFile*|Określa plik wykazu według nazwy.|  
 |`/d`|Określa, że narzędzie podpisywania powinno drukować opis i adres URL opisu.|  
 |`/ds`  *Indeks*|Weryfikuje podpis w określonej pozycji.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Określa opcjonalny algorytm wyznaczania wartości skrótu, który ma być używany podczas wyszukiwania pliku w wykazie.|  
 |`/kp`|Określa, że weryfikacja powinna być wykonywana przy użyciu zasad podpisywania sterowników trybu jądra.|  
 |`/ms`|Używa wielu semantyk weryfikacji. Jest to domyślne zachowanie [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) wywołać [!INCLUDE[win8](../../../includes/win8-md.md)] i powyżej.|  
-|`/o`*Wersji*|Weryfikuje plik na podstawie wersji systemu operacyjnego. *Wersja* ma następujący format: *PlatformID*:*VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* reprezentuje podstawową wartość <xref:System.PlatformID> element członkowski wyliczenia. **Ważne:** stosowania `/o` przełącznik jest zalecane. Jeśli `/o` nie zostanie określony, SignTool.exe może zwrócić nieoczekiwane wyniki. Na przykład, jeśli nie zostanie uwzględniony `/o` przełącznika, wykazów systemowych, które zweryfikować poprawnie w starszych systemów operacyjnych może być sprawdzany poprawnie na nowszego systemu operacyjnego.|  
+|`/o` *Wersja*|Weryfikuje plik na podstawie wersji systemu operacyjnego. *Wersja* ma następujący format: *PlatformID*:*VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* reprezentuje podstawową wartość <xref:System.PlatformID> element członkowski wyliczenia. **Ważne:** stosowania `/o` przełącznik jest zalecane. Jeśli `/o` nie zostanie określony, SignTool.exe może zwrócić nieoczekiwane wyniki. Na przykład, jeśli nie zostanie uwzględniony `/o` przełącznika, wykazów systemowych, które zweryfikować poprawnie w starszych systemów operacyjnych może być sprawdzany poprawnie na nowszego systemu operacyjnego.|  
 |`/p7`|Weryfikuje pliki PKCS #7. Żadne z istniejących zasad nie są używane do weryfikacji plików PKCS #7. Podpis jest sprawdzany i zostaje utworzony łańcuch dla certyfikatu podpisywania.|  
 |`/pa`|Określa, że mają być używane domyślne zasady weryfikacji Authenticode. Jeśli `/pa` opcji nie zostanie określony, narzędzie używane są zasady weryfikacji sterowników systemu Windows. Nie można użyć tej opcji z `catdb` opcje.|  
-|`/pg`*PolicyGUID*|Określa zasady weryfikacji według identyfikatora GUID. *PolicyGUID* odpowiada ActionID zasad weryfikacji. Nie można użyć tej opcji z `catdb` opcje.|  
+|`/pg` *PolicyGUID*|Określa zasady weryfikacji według identyfikatora GUID. *PolicyGUID* odpowiada ActionID zasad weryfikacji. Nie można użyć tej opcji z `catdb` opcje.|  
 |`/ph`|Określa, że narzędzie podpisywania powinno drukować i weryfikować wartości skrótu stron.|  
-|`/r`*RootSubjectName*|Określa nazwę podmiotu certyfikatu głównego, z którym musi zostać połączony certyfikat podpisywania. Ta wartość może być podciągiem całej nazwy podmiotu certyfikatu głównego.|  
+|`/r` *RootSubjectName*|Określa nazwę podmiotu certyfikatu głównego, z którym musi zostać połączony certyfikat podpisywania. Ta wartość może być podciągiem całej nazwy podmiotu certyfikatu głównego.|  
 |`/tw`|Określa, że ma być generowane ostrzeżenie, jeśli podpis nie ma znacznika czasu.|  
   
  Przykłady użycia można znaleźć [przy użyciu SignTool można zweryfikować podpisu pliku](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx).  

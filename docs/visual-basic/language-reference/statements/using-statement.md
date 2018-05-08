@@ -1,12 +1,6 @@
 ---
 title: Using — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Using — Instrukcja (Visual Basic)
 Deklaruje początku `Using` blokować i opcjonalnie uzyskuje zasobów systemowych, które kontroluje bloku.  
@@ -41,8 +32,8 @@ End Using
 |---|---|  
 |`resourcelist`|Wymagane, jeśli nie podasz `resourceexpression`. Lista zasobów systemowych, co najmniej jeden tego `Using` blokowania formantów, oddzielonych przecinkami.|  
 |`resourceexpression`|Wymagane, jeśli nie podasz `resourcelist`. Odwołanie do zmiennej lub wyrażenie odwołuje się do zasobu systemu kontrolowany przez to `Using` bloku.|  
-|`statements`|Opcjonalny. Blok instrukcji który `Using` blokowanie działa.|  
-|`End Using`|Wymagany. Kończy definicję `Using` bloku i usuwa wszystkie zasoby, które kontroluje.|  
+|`statements`|Opcjonalna. Blok instrukcji który `Using` blokowanie działa.|  
+|`End Using`|Wymagana. Kończy definicję `Using` bloku i usuwa wszystkie zasoby, które kontroluje.|  
   
  Każdy zasób w `resourcelist` części ma następujące składni i części:  
   
@@ -56,11 +47,11 @@ End Using
   
 |Termin|Definicja|  
 |---|---|  
-|`resourcename`|Wymagany. Odwołanie do zmiennej, która odwołuje się do zasobu systemu który `Using` blokowania formantów.|  
+|`resourcename`|Wymagana. Odwołanie do zmiennej, która odwołuje się do zasobu systemu który `Using` blokowania formantów.|  
 |`New`|Jeśli wymagane `Using` instrukcji uzyskuje zasobu. Jeśli już zostały nabyte zasobu, należy użyć drugiej alternatywnej składni.|  
-|`resourcetype`|Wymagany. Klasa zasobu. Klasa musi implementować <xref:System.IDisposable> interfejsu.|  
-|`arglist`|Opcjonalny. Lista argumentów jest przekazywany do konstruktora w celu utworzenia wystąpienia `resourcetype`. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`resourceexpression`|Wymagany. Zmiennej lub wyrażenie odwołujących się do zasobu systemu spełniających wymagania `resourcetype`. Użycie drugiej alternatywnej składni, należy uzyskać zasobu przed przekazaniem kontroli do `Using` instrukcji.|  
+|`resourcetype`|Wymagana. Klasa zasobu. Klasa musi implementować <xref:System.IDisposable> interfejsu.|  
+|`arglist`|Opcjonalna. Lista argumentów jest przekazywany do konstruktora w celu utworzenia wystąpienia `resourcetype`. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`resourceexpression`|Wymagana. Zmiennej lub wyrażenie odwołujących się do zasobu systemu spełniających wymagania `resourcetype`. Użycie drugiej alternatywnej składni, należy uzyskać zasobu przed przekazaniem kontroli do `Using` instrukcji.|  
   
 ## <a name="remarks"></a>Uwagi  
  Czasami kodu wymaga zasób niezarządzany, np. dojście do pliku, otoki COM lub połączenia SQL. A `Using` bloku gwarantuje usuwania jeden lub więcej takich zasobów, po zakończeniu kodu z nimi. Udostępnia je dla innych kodu do użycia.  
@@ -119,5 +110,5 @@ End Try
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IDisposable>  
- [Try... CATCH... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Porady: usuwanie zasobu systemu](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)
+ [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Instrukcje: usuwanie zasobu systemu](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

@@ -1,13 +1,6 @@
 ---
-title: "Podstawy programowania przy użyciu programu WCF"
-ms.custom: 
+title: Podstawy programowania przy użyciu programu WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - basic programming [WCF]
 - WCF [WCF], basic programming
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0635ff85c89f2e2758dc156bcb31e4cfeaf2466
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: de56725f926ec9f6d4cc39c8160fa7af0f3ab80a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-wcf-programming"></a>Podstawy programowania przy użyciu programu WCF
-W tej sekcji przedstawiono podstawowe informacje dotyczące tworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji.  
+W tej sekcji przedstawiono podstawowe informacje dotyczące tworzenia aplikacji systemu Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)  

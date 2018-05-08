@@ -1,14 +1,6 @@
 ---
 title: Debugowanie, śledzenie i profilowanie
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - debugging [.NET Framework]
 - .NET Framework application configuration, debugging
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-caps.latest.revision: 28
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4368ce1256e1e0637907768b3698ca7dab97c5f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 481360f731297e1c287c969e6524c68e0c9c0b7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debugowanie, śledzenie i profilowanie
 Do debugowania aplikacji .NET Framework, kompilatora i środowiska uruchomieniowego musi być skonfigurowane do włączenia debugera dołączyć do aplikacji i zarówno symbole i linii mapy, jeśli to możliwe, aplikacji i jej odpowiednie Microsoft pośredni język (MSIL). Po zarządzanej aplikacji został debugowania, mogą być profilowane zwiększania wydajności. Profilowanie ocenia i opisuje wierszy kodu źródłowego z generowaniem kodu najczęściej wykonywane, i ile czasu potrzebnego na ich wykonanie.  

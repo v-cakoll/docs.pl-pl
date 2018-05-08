@@ -4,15 +4,11 @@ description: Więcej informacji na temat identyfikatora środowiska uruchomienio
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 81f9e5f65385bbd81c7fdae7f75c62d11b6f6319
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID katalogu
 

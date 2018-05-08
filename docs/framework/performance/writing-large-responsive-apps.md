@@ -1,24 +1,14 @@
 ---
-title: "Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework"
-ms.custom: 
+title: Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-manager: wpickett
-ms.workload: wiwagn
-ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takich jak pliki lub bazy danych. Te wskazówki pochodzi z ponowne zapisywanie C# i Visual Basic kompilatory w kodzie zarządzanym i ten artykuł zawiera kilka przykładów rzeczywistych kompilatora C#.  
@@ -94,7 +84,7 @@ public class BoxingExample
 var s = id.ToString() + ':' + size.ToString();  
 ```  
   
- Jednak wiersza kodu wprowadzono alokacji pakującej, ponieważ kompiluje się do <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>.  .NET Framework musi polu znak literału do wywołania`Concat`  
+ Jednak wiersza kodu wprowadzono alokacji pakującej, ponieważ kompiluje się do <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>.  .NET Framework musi polu znak literału do wywołania `Concat`  
   
  **Na przykład rozwiązać 1**  
   
@@ -175,7 +165,7 @@ public void WriteFormattedDocComment(string text)
   
  W pierwszym wierszu wewnątrz `WriteFormattedDocComment`, `text.Split` wywołanie za każdym razem, gdy jest ona wywoływana przydziela nowej tablicy elementu trzech jako argument.  Kompilator ma Emituj kod, aby przydzielić tej tablicy zawsze.  Wynika to z faktu kompilator nie może ustalić, czy <xref:System.String.Split%2A> przechowuje tablicy miejsce gdzie tablicy mogą zostać zmodyfikowane innego kodu, co może wpływać na nowsze wywołania `WriteFormattedDocComment`.  Wywołanie <xref:System.String.Split%2A> również przydziela ciąg dla każdego wiersza w `text` i przydziela innych pamięci do wykonania tej operacji.  
   
- `WriteFormattedDocComment`ma trzy wywołania <xref:System.String.TrimStart%2A> metody.  Dwa znajdują się w wewnętrznej pętle, zawierające zduplikowane pracy i alokacji.  Aby co gorsza sprawach, wywoływania <xref:System.String.TrimStart%2A> metody bez argumentów przydziela pustą tablicę (dla `params` parametru) oprócz wynik ciągu.  
+ `WriteFormattedDocComment` ma trzy wywołania <xref:System.String.TrimStart%2A> metody.  Dwa znajdują się w wewnętrznej pętle, zawierające zduplikowane pracy i alokacji.  Aby co gorsza sprawach, wywoływania <xref:System.String.TrimStart%2A> metody bez argumentów przydziela pustą tablicę (dla `params` parametru) oprócz wynik ciągu.  
   
  Ponadto jest to wywołanie <xref:System.String.Substring%2A> metodę, która zwykle przydziela nowe parametry.  
   
@@ -279,7 +269,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  Użyj pola statyczne dla wątku, nowe kompilatory używają wątków, tych implementacji (<xref:System.ThreadStaticAttribute> atrybut) do pamięci podręcznej <xref:System.Text.StringBuilder>, i prawdopodobnie można uniknąć `ThreadStatic` deklaracji.  Pole statyczne dla wątku zawiera unikatową wartość dla każdego wątku, który wykonuje ten kod.  
   
- `AcquireBuilder()`Zwraca buforowane <xref:System.Text.StringBuilder> wystąpienia, jeśli istnieje, po wyczyszczeniem i ustawienie pola lub pamięci podręcznej na wartość null.  W przeciwnym razie `AcquireBuilder()` tworzy nowe wystąpienie i zwraca go, pozostawiając pole lub pamięci podręcznej zestawu wartości null.  
+ `AcquireBuilder()` Zwraca buforowane <xref:System.Text.StringBuilder> wystąpienia, jeśli istnieje, po wyczyszczeniem i ustawienie pola lub pamięci podręcznej na wartość null.  W przeciwnym razie `AcquireBuilder()` tworzy nowe wystąpienie i zwraca go, pozostawiając pole lub pamięci podręcznej zestawu wartości null.  
   
  Po zakończeniu z <xref:System.Text.StringBuilder> , należy wywołać `GetStringAndReleaseBuilder()` można pobrać wyniku ciągu, Zapisz <xref:System.Text.StringBuilder> wystąpienia w polu lub pamięci podręcznej, a następnie zwracają wynik.  Istnieje możliwość wykonywania ponowne wprowadzenie tego kodu i utworzyć wiele <xref:System.Text.StringBuilder> obiektów (chociaż tak się rzadko stanie).  Zapisuje kod wydane tylko ostatnich <xref:System.Text.StringBuilder> wystąpienie do późniejszego użycia.  To proste strategii buforowania znacznie zmniejszyć alokacji w nowych kompilatory.  Części programu .NET Framework i program MSBuild ("MSBuild") użyć technika podobne do zwiększenia wydajności.  
   
@@ -417,7 +407,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Zobacz, czy nowy kod z buforowaniem ma `SyntaxTree` pola o nazwie `cachedResult`.  Gdy to pole ma wartość null, `GetSyntaxTreeAsync()` wykonuje pracę i zapisuje go w pamięci podręcznej.  `GetSyntaxTreeAsync()`Zwraca `SyntaxTree` obiektu.  Problem występuje wtedy, gdy masz `async` — funkcja typu `Task<SyntaxTree>`, i zwracać wartość typu `SyntaxTree`, kompilator emituje kod, aby przydzielić zadania do przechowywania wynik (przy użyciu `Task<SyntaxTree>.FromResult()`).  Zadanie zostanie oznaczone jako wykonane, a wynik jest natychmiast dostępna.  W kodzie dla nowego kompilatorów <xref:System.Threading.Tasks.Task> obiektów, które zostały już wykonane wystąpił, dlatego często oznacza ustalające tych przydziałów poprawia czas odpowiedzi znacznie.  
+ Zobacz, czy nowy kod z buforowaniem ma `SyntaxTree` pola o nazwie `cachedResult`.  Gdy to pole ma wartość null, `GetSyntaxTreeAsync()` wykonuje pracę i zapisuje go w pamięci podręcznej.  `GetSyntaxTreeAsync()` Zwraca `SyntaxTree` obiektu.  Problem występuje wtedy, gdy masz `async` — funkcja typu `Task<SyntaxTree>`, i zwracać wartość typu `SyntaxTree`, kompilator emituje kod, aby przydzielić zadania do przechowywania wynik (przy użyciu `Task<SyntaxTree>.FromResult()`).  Zadanie zostanie oznaczone jako wykonane, a wynik jest natychmiast dostępna.  W kodzie dla nowego kompilatorów <xref:System.Threading.Tasks.Task> obiektów, które zostały już wykonane wystąpił, dlatego często oznacza ustalające tych przydziałów poprawia czas odpowiedzi znacznie.  
   
  **Na przykład rozwiązać 6**  
   
@@ -443,12 +433,12 @@ class Compilation { /*...*/
 }  
 ```  
   
- Ten kod zmienia typ `cachedResult` do `Task<SyntaxTree>` i wykorzystuje `async` funkcji Pomocnik, która przechowuje oryginalny kod z `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()`używa teraz [null operatora łączącego](~/docs/csharp/language-reference/operators/null-conditional-operator.md) do zwrócenia `cachedResult` Jeśli nie ma wartości null.  Jeśli `cachedResult` ma wartość null, następnie `GetSyntaxTreeAsync()` wywołania `GetSyntaxTreeUncachedAsync()` i buforuje wynik.  Zwróć uwagę, że `GetSyntaxTreeAsync()` nie await wywołanie `GetSyntaxTreeUncachedAsync()` jako kod normalnie.  Nie używa await oznacza że w przypadku `GetSyntaxTreeUncachedAsync()` zwraca jego <xref:System.Threading.Tasks.Task> obiektu `GetSyntaxTreeAsync()` natychmiast zwraca <xref:System.Threading.Tasks.Task>.  Teraz jest buforowanego zestawu wyników <xref:System.Threading.Tasks.Task>, więc nie nie przydziału do zwrócenia wyniku pamięci podręcznej.  
+ Ten kod zmienia typ `cachedResult` do `Task<SyntaxTree>` i wykorzystuje `async` funkcji Pomocnik, która przechowuje oryginalny kod z `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` używa teraz [null operatora łączącego](~/docs/csharp/language-reference/operators/null-conditional-operator.md) do zwrócenia `cachedResult` Jeśli nie ma wartości null.  Jeśli `cachedResult` ma wartość null, następnie `GetSyntaxTreeAsync()` wywołania `GetSyntaxTreeUncachedAsync()` i buforuje wynik.  Zwróć uwagę, że `GetSyntaxTreeAsync()` nie await wywołanie `GetSyntaxTreeUncachedAsync()` jako kod normalnie.  Nie używa await oznacza że w przypadku `GetSyntaxTreeUncachedAsync()` zwraca jego <xref:System.Threading.Tasks.Task> obiektu `GetSyntaxTreeAsync()` natychmiast zwraca <xref:System.Threading.Tasks.Task>.  Teraz jest buforowanego zestawu wyników <xref:System.Threading.Tasks.Task>, więc nie nie przydziału do zwrócenia wyniku pamięci podręcznej.  
   
 ### <a name="additional-considerations"></a>Dodatkowe uwagi  
  Oto kilka punktów więcej o potencjalnych problemach w dużych aplikacji lub aplikacji, które przetwarzają dużą ilość danych.  
   
- **Słowników**  
+ **słowników**  
   
  Słowniki są używane ubiquitously w wielu programach i jednak słowniki są bardzo wygodny i z założenia wydajne.  Jednak są często używane niewłaściwie.  W Visual Studio i nowych kompilatory analizy wskazuje, że wiele słowników zawiera pojedynczy element lub były puste.  Pusta <xref:System.Collections.Generic.Dictionary%602> ma dziesięć pól i zajmuje 48 bajtów w stercie na x86 maszyny.  Słowniki są doskonałe gdy będziesz potrzebować mapowania lub asocjacyjnych struktury danych z stała czas wyszukiwania.  Jednak jeśli masz tylko kilka elementów można odpady dużo miejsca za pomocą słownika.  Zamiast tego, na przykład można wielokrotnie powtarzane dostępne za pośrednictwem `List<KeyValuePair\<K,V>>`, jak szybki.  Jeśli używasz słownik tylko do ładowania danych i następnie odczytanie z niego (bardzo typowy wzorzec) przy użyciu tablicy posortowane w usłudze wyszukiwania N(log(N)) może być niemal jako szybkiego, w zależności od liczby elementów, którego używasz.  
   
@@ -456,7 +446,7 @@ class Compilation { /*...*/
   
  Klasy i struktury w sposób, podaj zależnościami klasycznego miejsca i godziny dla Dostrajanie aplikacji.  Klasy pociągnąć za sobą 12 bajtów obciążenie x86 komputera nawet wtedy, gdy mają one nie ma pól, ale są one niedrogich do przekazania wokół, ponieważ trwa tylko wskaźnik do odwoływania się do wystąpienia klasy.  Struktury pociągnąć za sobą nie Alokacje sterty, jeśli nie są one opakowany, ale podczas przekazywania dużych struktury jako argumenty funkcji lub wartości zwracane, czas procesora CPU automatycznie skopiować wszystkie elementy członkowskie danych struktury.  Zwróć uwagę na powtarzane wywołania do właściwości, które zwraca struktury i pamięci podręcznej wartość właściwości w zmiennej lokalnej, aby uniknąć nadmiernego dane kopiowanie.  
   
- **Caches**  
+ **Pamięci podręczne**  
   
  Typowe lewy wydajności jest wyniki pamięci podręcznej.  Jednak bez zakończenia lub usuwania zasad rozmiar pamięci podręcznej może być przeciek pamięci.  Podczas przetwarzania dużych ilości danych, jeśli mają celu dużej ilości pamięci w pamięci podręcznej, może spowodować wyrzucanie elementów bezużytecznych do przesłonięcia korzyści z pamięci podręcznej wyszukiwania.  
   

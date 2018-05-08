@@ -1,31 +1,17 @@
 ---
 title: Transport WS z poświadczeniami komunikatu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>Transport WS z poświadczeniami komunikatu
 W przykładzie pokazano użycie zabezpieczenia transportowe protokołu SSL w połączeniu z poświadczeniami klienta odbywa się w komunikacie. W przykładzie użyto `wsHttpBinding` powiązania.  
   
- Domyślnie `wsHttpBinding` powiązania zapewnia komunikację HTTP. Gdy skonfigurowany pod kątem zabezpieczeń transportu, wiązanie obsługuje komunikację HTTPS. Protokół HTTPS oferuje poufności i ochrony integralność komunikatów, które są przesyłane przez sieć. Jednakże zestaw mechanizmów uwierzytelniania, które mogą służyć do uwierzytelniania klienta do usługi jest ograniczone do obsługuje transportu HTTPS. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferuje `TransportWithMessageCredential` tryb zabezpieczeń, której celem jest obejść to ograniczenie. Po skonfigurowaniu tego trybu zabezpieczeń transportu używane zabezpieczenia zapewnienie poufności i integralności wiadomości przesyłane i do uwierzytelniania usługi. Jednak uwierzytelnianie klienta jest wykonywane przez wprowadzenie poświadczeń klienta bezpośrednio w komunikacie. Dzięki temu można użyć dowolnego typu poświadczeń, która jest obsługiwana przez tryb zabezpieczeń wiadomości do uwierzytelniania klientów przy zachowaniu wydajności zaletą tryb zabezpieczeń transport.  
+ Domyślnie `wsHttpBinding` powiązania zapewnia komunikację HTTP. Gdy skonfigurowany pod kątem zabezpieczeń transportu, wiązanie obsługuje komunikację HTTPS. Protokół HTTPS oferuje poufności i ochrony integralność komunikatów, które są przesyłane przez sieć. Jednakże zestaw mechanizmów uwierzytelniania, które mogą służyć do uwierzytelniania klienta do usługi jest ograniczone do obsługuje transportu HTTPS. Windows Communication Foundation (WCF) oferuje `TransportWithMessageCredential` tryb zabezpieczeń, której celem jest obejść to ograniczenie. Po skonfigurowaniu tego trybu zabezpieczeń transportu używane zabezpieczenia zapewnienie poufności i integralności wiadomości przesyłane i do uwierzytelniania usługi. Jednak uwierzytelnianie klienta jest wykonywane przez wprowadzenie poświadczeń klienta bezpośrednio w komunikacie. Dzięki temu można użyć dowolnego typu poświadczeń, która jest obsługiwana przez tryb zabezpieczeń wiadomości do uwierzytelniania klientów przy zachowaniu wydajności zaletą tryb zabezpieczeń transport.  
   
  W tym przykładzie `UserName` typ poświadczeń jest używany do uwierzytelniania klienta do usługi.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje: Tworzenie dwukierunkowego powiązania federacyjnego"
-ms.custom: 
+title: 'Instrukcje: Tworzenie dwukierunkowego powiązania federacyjnego'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d40d13ca861cd18cf5f2a72e94d1aca146c2c19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d736d0119f3e938d81a15d57bb6d97ca2a1990fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Instrukcje: Tworzenie dwukierunkowego powiązania federacyjnego
-<xref:System.ServiceModel.WSFederationHttpBinding>obsługuje tylko kontraktami wymiany wiadomość datagramu i żądanie/odpowiedź. Aby użyć kontraktu dwustronnego wiadomości programu exchange, należy utworzyć niestandardowego powiązania. Poniższe procedury pokazują, jak to zrobić w konfiguracji przy użyciu wiadomości tryb zabezpieczeń dla transportu HTTP i TCP i zabezpieczeń w trybie mieszanym dla transportu TCP. Przykładowy kod, przedstawiający wszystkie powiązania 3 znajduje się na końcu tego tematu.  
+<xref:System.ServiceModel.WSFederationHttpBinding> obsługuje tylko kontraktami wymiany wiadomość datagramu i żądanie/odpowiedź. Aby użyć kontraktu dwustronnego wiadomości programu exchange, należy utworzyć niestandardowego powiązania. Poniższe procedury pokazują, jak to zrobić w konfiguracji przy użyciu wiadomości tryb zabezpieczeń dla transportu HTTP i TCP i zabezpieczeń w trybie mieszanym dla transportu TCP. Przykładowy kod, przedstawiający wszystkie powiązania 3 znajduje się na końcu tego tematu.  
   
  Można również utworzyć powiązanie w kodzie. Opis stosu powiązania elementów do tworzenia, zobacz [porady: Tworzenie powiązań niestandardowych za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   

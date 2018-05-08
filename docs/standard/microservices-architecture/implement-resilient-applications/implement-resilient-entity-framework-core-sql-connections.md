@@ -1,21 +1,14 @@
 ---
-title: "Implementowanie odporność połączeń Entity Framework Core SQL"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie odporność połączeń Entity Framework Core SQL"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Implementowanie odporność połączeń Entity Framework Core SQL
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie odporność połączeń Entity Framework Core SQL
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b37d2c5683aff44165d0330c8d42fc881effbb76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54d0df517514c359c155de35d34e1e0f56eed4eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Implementowanie odporność połączeń Entity Framework Core SQL
 

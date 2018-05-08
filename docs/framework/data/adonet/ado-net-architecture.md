@@ -1,24 +1,12 @@
 ---
 title: Architektura ADO.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d1f09901ef6eb30fe3f43ee19ab17ceaaa2b78e8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych ma tradycyjnie zależał przede wszystkim od modelu opartego na połączeniach, dwuwarstwowa. Ponieważ przetwarzanie danych używa coraz wielowarstwowych architekturach, programistów przełączenie się do odłączonego rozwiązanie zapewniające lepszą skalowalność dla swoich aplikacji.  
@@ -60,12 +48,12 @@ Architektura ADO.NET
  ADO.NET Entity Framework umożliwia deweloperom tworzenie aplikacji dostęp do danych przez Programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu. Celem jest, aby zmniejszyć ilość kodu i konserwacja wymagane przez aplikacje zorientowane na danych. Aby uzyskać więcej informacji, zobacz [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
 ## <a name="wcf-data-services"></a>Usługi danych WCF  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Służy do wdrażania usług danych w sieci Web lub intranet. Dane mają strukturę jako jednostki i relacje zgodnie ze specyfikacją modelu danych jednostki. Adresowane przez standardowego protokołu HTTP jest wdrożony w tym modelu danych. Aby uzyskać więcej informacji, zobacz [4.5 usługi danych WCF](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Służy do wdrażania usług danych w sieci Web lub intranet. Dane mają strukturę jako jednostki i relacje zgodnie ze specyfikacją modelu danych jednostki. Adresowane przez standardowego protokołu HTTP jest wdrożony w tym modelu danych. Aby uzyskać więcej informacji, zobacz [4.5 usługi danych WCF](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML i ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]wykorzystuje możliwości XML w celu zapewnienia odłączonego dostępu do danych. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]została zaprojektowana ręcznie dostępnych z klasami XML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; oba są składnikami architektury pojedynczego.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] wykorzystuje możliwości XML w celu zapewnienia odłączonego dostępu do danych. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] została zaprojektowana ręcznie dostępnych z klasami XML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; oba są składnikami architektury pojedynczego.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]i klasy XML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zbieżne w `DataSet` obiektu. `DataSet` Można wypełniać za pomocą danych z źródła XML pliku lub strumienia XML. `DataSet` Mogą być zapisywane jako World Wide Web konsorcjum W3C XML zgodnego ze obejmuje schematem XML schematu definition language (XSD) Schema, niezależnie od tego źródła danych w `DataSet`. Ze względu na format serializacji natywnej `DataSet` XML, jest doskonałym średni przenoszenie danych między warstwami, co `DataSet` optymalny wybór dla kontekstu danych i schematu usług zdalnych do i z usługi XML sieci Web. Aby uzyskać więcej informacji, zobacz [dokumenty XML i dane](../../../../docs/standard/data/xml/index.md).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] i klasy XML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zbieżne w `DataSet` obiektu. `DataSet` Można wypełniać za pomocą danych z źródła XML pliku lub strumienia XML. `DataSet` Mogą być zapisywane jako World Wide Web konsorcjum W3C XML zgodnego ze obejmuje schematem XML schematu definition language (XSD) Schema, niezależnie od tego źródła danych w `DataSet`. Ze względu na format serializacji natywnej `DataSet` XML, jest doskonałym średni przenoszenie danych między warstwami, co `DataSet` optymalny wybór dla kontekstu danych i schematu usług zdalnych do i z usługi XML sieci Web. Aby uzyskać więcej informacji, zobacz [dokumenty XML i dane](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  

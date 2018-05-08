@@ -1,13 +1,6 @@
 ---
-title: "Porady: wykonywanie zapytań usługi danych (usługi danych WCF)"
-ms.custom: 
+title: 'Porady: wykonywanie zapytań usługi danych (usługi danych WCF)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ed40236fd902536a45e821abea768d5117fafde
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 574818c694b07775c4263dca066e0d2e462be27f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Porady: wykonywanie zapytań usługi danych (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta. Można wykonywać zapytania przy użyciu jednej z następujących metod:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta. Można wykonywać zapytania przy użyciu jednej z następujących metod:  
   
 -   Wykonywanie zapytania LINQ przed nazwany <xref:System.Data.Services.Client.DataServiceQuery%601> uzyskanej od <xref:System.Data.Services.Client.DataServiceContext> który `Add Data Service Reference` narzędzie.  
   

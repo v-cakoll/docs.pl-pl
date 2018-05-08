@@ -1,34 +1,20 @@
 ---
 title: Określanie adresu punktu końcowego
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
-Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi odbywa się przez jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą, a adres Określa, gdzie można znaleźć usługi. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowana przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera zasób identyfikator URI (Uniform) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, reprezentuje tożsamości zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają bardziej szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Na przykład nagłówków można wskazać sposobu przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania komunikat przychodzący z konkretnego użytkownika, jeśli dostępnych jest wiele wystąpień.  
+Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą, a adres Określa, gdzie można znaleźć usługi. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowana przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera zasób identyfikator URI (Uniform) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, reprezentuje tożsamości zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają bardziej szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Na przykład nagłówków można wskazać sposobu przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania komunikat przychodzący z konkretnego użytkownika, jeśli dostępnych jest wiele wystąpień.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Definicja adresu punktu końcowego  
  W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], <xref:System.ServiceModel.EndpointAddress> modele odwołanie do punktu końcowego (EPR) zgodnie z definicją w standardzie WS-Addressing.  

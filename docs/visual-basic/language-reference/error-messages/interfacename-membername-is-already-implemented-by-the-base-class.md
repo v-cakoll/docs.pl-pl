@@ -1,28 +1,19 @@
 ---
-title: "&#39; &lt;interfacename&gt;.&lt; membername&gt;&#39; został już zaimplementowany przez klasę podstawową &#39;&lt; baseclassname&gt;&#39;. Ponowną implementację elementu &lt;typu&gt; założono, że"
+title: '&#39;&lt;InterfaceName&gt;.&lt; membername&gt; &#39; został już zaimplementowany przez klasę podstawową &#39; &lt;baseclassname&gt;&#39;. Ponowną implementację elementu &lt;typu&gt; założono, że'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42015
 - bc42015
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69884ed567e0046da5cf5c51b3e83e57e890d49f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9054c293ede9db4637f23579407f2f76db29f2ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39; &lt;interfacename&gt;.&lt; membername&gt;&#39; został już zaimplementowany przez klasę podstawową &#39;&lt; baseclassname&gt;&#39;. Ponowną implementację elementu &lt;typu&gt; założono, że
+# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;InterfaceName&gt;.&lt; membername&gt; &#39; został już zaimplementowany przez klasę podstawową &#39; &lt;baseclassname&gt;&#39;. Ponowną implementację elementu &lt;typu&gt; założono, że
 Właściwość, procedura lub zdarzenia w klasie pochodnej używa `Implements` klauzuli Określanie elementu członkowskiego interfejsu, który jest już zaimplementowana w klasie podstawowej.  
   
  Klasa pochodna może reimplement elementu członkowskiego interfejsu, który jest implementowany przez jej klasa podstawowa. Nie jest taka sama jak zastępowanie implementacji klasy podstawowej. Aby uzyskać więcej informacji, zobacz [implementuje](../../../visual-basic/language-reference/statements/implements-clause.md).  

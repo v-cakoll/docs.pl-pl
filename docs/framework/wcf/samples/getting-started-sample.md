@@ -1,34 +1,20 @@
 ---
-title: "Wprowadzenie — przykład"
-ms.custom: 
+title: Wprowadzenie — przykład
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>Wprowadzenie — przykład
-Uruchamianie przykładowych pokazano, jak do zaimplementowania typowych usługi i typowego klienta przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. W tym przykładzie stanowi podstawę dla wszystkich innych przykładów podstawową technologię.  
+Uruchamianie przykładowych pokazano, jak do zaimplementowania typowych usługi i typowego klienta za pomocą usługi Windows Communication Foundation (WCF). W tym przykładzie stanowi podstawę dla wszystkich innych przykładów podstawową technologię.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -38,7 +24,7 @@ Uruchamianie przykładowych pokazano, jak do zaimplementowania typowych usługi 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -154,7 +140,7 @@ public class CalculatorService : ICalculator
   
  Usługa udostępnia punkt końcowy pod adresem podstawowa podał hosta usług IIS lub WAS. Powiązanie jest skonfigurowane z normą <xref:System.ServiceModel.WSHttpBinding>, co umożliwia komunikacji HTTP i standardowe protokoły usług sieci Web adresowanie i zabezpieczeń. Kontrakt jest `ICalculator` zaimplementowanych przez usługę.  
   
- Zgodnie z konfiguracją, usługi są dostępne w http://localhost/servicemodelsamples/service.svc przez klienta na tym samym komputerze. W przypadku klientów dostępu zdalnego computersto usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost.  
+ Zgodnie z konfiguracją, usługi mogą być wyświetlane w http://localhost/servicemodelsamples/service.svc przez klienta na tym samym komputerze. W przypadku klientów dostępu zdalnego computersto usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost.  
   
  Domyślnie platformę nie ujawnia metadanych. W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i udostępnia punktu końcowego (MEX) wymiany metadanych w http://localhost/servicemodelsamples/service.svc/mex. Następująca konfiguracja pokazano to.  
   

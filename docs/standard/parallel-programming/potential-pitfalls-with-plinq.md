@@ -1,31 +1,20 @@
 ---
-title: "Potencjalne pułapki związane z PLINQ"
-ms.custom: 
+title: Potencjalne pułapki związane z PLINQ
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 972734b1275c82141c9057398268d068f5eaf3e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Potencjalne pułapki związane z PLINQ
 W wielu przypadkach PLINQ można zapewnia znaczną poprawę wydajności za pośrednictwem sekwencyjnych LINQ do obiektów zapytań. Jednak pracy parallelizing wykonywania zapytania wprowadza złożoności, który może prowadzić do problemów, które w kolejnych kodu nie są jako wspólne lub w ogóle nie wystąpi. W tym temacie wymieniono niektóre praktyki, których należy unikać podczas pisania zapytania dotyczące technologii PLINQ.  
@@ -81,7 +70,7 @@ a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
   
  Ten sam problem dotyczy <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> innymi słowy, `source.AsParallel().Where().ForAll(...)` powinny być silnie preferowana względem  
   
- `Parallel.ForEach(source.AsParallel().Where(), ...)`.,  
+ `Parallel.ForEach(source.AsParallel().Where(), ...)`.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Należy pamiętać o problemy koligacji wątku  
  Niektóre technologie, na przykład współdziałanie COM dla składników Single-Threaded Apartment (STA), formularze systemu Windows i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątków, które wymagają kodu do uruchomienia na konkretnym wątkiem. Na przykład w formularzach systemu Windows i WPF formantu można uzyskać tylko w wątku, w którym został utworzony. Jeśli spróbujesz uzyskać dostępu do udostępnionych stan formantu formularzy systemu Windows w zapytaniu PLINQ jest zgłoszony wyjątek, jeśli używasz w debugerze. (To ustawienie można wyłączyć.) Jednak zapytania jest używany w wątku interfejsu użytkownika, następnie można przejść do formantu z `foreach` wyników pętli, które wylicza zapytania, ponieważ ten kod wykonywany tylko jednego wątku.  

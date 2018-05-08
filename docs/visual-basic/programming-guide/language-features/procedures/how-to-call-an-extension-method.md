@@ -1,24 +1,15 @@
 ---
-title: "Porady: wywoływanie metody rozszerzenia (Visual Basic)"
-ms.custom: 
+title: 'Porady: wywoływanie metody rozszerzenia (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 25b5a86af15694e6f64f96a5d5d645a01f8f1f12
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 32691183bcd1632a82b1e9a2668790abbf8f80fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Porady: wywoływanie metody rozszerzenia (Visual Basic)
 Metody rozszerzenia umożliwiają dodawanie metody do istniejącej klasy. Po — metoda rozszerzenia został zadeklarowany i dostosowane do zakresu, można wywołać go jak metodą wystąpienia typu, który rozszerza. Aby uzyskać więcej informacji na temat pisania metodę rozszerzenia, zobacz [porady: zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md).  
@@ -103,6 +94,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md)  
- [Metody rozszerzenia](./extension-methods.md)  
+ [Instrukcje: zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md)  
+ [Metody rozszerzeń](./extension-methods.md)  
  [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

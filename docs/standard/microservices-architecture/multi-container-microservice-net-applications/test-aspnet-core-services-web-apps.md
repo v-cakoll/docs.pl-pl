@@ -1,21 +1,14 @@
 ---
 title: Testowanie platformy ASP.NET Core usług i aplikacji sieci web
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Testowanie platformy ASP.NET Core usług i aplikacji sieci web
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie platformy ASP.NET Core usług i aplikacji sieci web
 
@@ -130,4 +123,4 @@ Istnieje kilka metod, których można użyć. W plik docker-compose.yml, który 
 Po skonfigurowaniu i uruchomieniu aplikacji tworzenia może potrwać z punktów przerwania i wyjątków zalet Jeśli używasz programu Visual Studio. Lub uruchom testy integracji automatycznie planowaną CI w Visual Studio Team Services lub inny system CI/CD, który obsługuje kontenery Docker.
 
 >[!div class="step-by-step"]
-[Previous] (subscribe-events.md) [Next] (../microservice-ddd-cqrs-patterns/index.md)
+[Poprzednie] (subskrypcja events.md) [dalej] (.. /microservice-ddd-cqrs-patterns/index.MD)

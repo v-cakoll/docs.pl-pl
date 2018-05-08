@@ -4,16 +4,11 @@ description: Pomoc dotyczącą właściciele projektu do skompilowania ich rozwi
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 5e2b56c325f54f49bf53b00c74a0e89137928c03
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e6cd9c6d66996d9fd24fe71d48091723143e5849
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organizowanie projektu do obsługi środowiska .NET Framework i .NET Core
 

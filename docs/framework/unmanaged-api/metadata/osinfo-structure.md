@@ -1,14 +1,6 @@
 ---
-title: "OSINFO — Struktura"
-ms.custom: 
+title: OSINFO — Struktura
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - OSINFO
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd30fe7904fa6c0685dd9c39931cc545e4e30583
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c5bc63da7ebe86b653c9bef7caeb1cf28d3a7f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="osinfo-structure"></a>OSINFO — Struktura
 Zawiera szczegółowe informacje dotyczące systemu operacyjnego dla zestawu lub modułu.  
@@ -56,7 +44,7 @@ typedef struct {
 |`dwOSMinorVersion`|Wersja pomocnicza systemu operacyjnego, lub wartość NULL, aby wskazać dowolnej wersji.|  
   
 ## <a name="remarks"></a>Uwagi  
- `OSINFO`jest oparta na `OSVERSIONINFOEX` struktury który jest używany w wywołań funkcji platform Microsoft Windows `GetVersionEx`. Ta struktura jest używany przez assemblymetadata — struktura w celu wskazania jego obsługę systemu operacyjnego.  
+ `OSINFO` jest oparta na `OSVERSIONINFOEX` struktury który jest używany w wywołań funkcji platform Microsoft Windows `GetVersionEx`. Ta struktura jest używany przez assemblymetadata — struktura w celu wskazania jego obsługę systemu operacyjnego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -65,7 +53,7 @@ typedef struct {
   
  **Biblioteka:** używany jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Struktury metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  

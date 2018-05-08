@@ -1,24 +1,17 @@
 ---
 title: sealed (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - sealed
 - sealed_CSharpKeyword
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8248b451f0431286fdaba3583fc2031eb6cdbcd7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cfeb77021aaf1b0eb23401be4d5f6fd50a40b03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sealed-c-reference"></a>sealed (odwołanie w C#)
 Po zastosowaniu do klasy, `sealed` modyfikator uniemożliwia innym klasom dziedziczenie z tego. W poniższym przykładzie klasa `B` dziedziczy z klasy `A`, ale klasa nie może dziedziczyć po klasie `B`.  
@@ -72,9 +65,9 @@ sealed class B : A {}
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Klasy statyczne i statyczni członkowie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [Klasy abstrakcyjne i zapieczętowane oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+ [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
  [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
- [zastąpienie](../../../csharp/language-reference/keywords/override.md)  
- [wirtualny](../../../csharp/language-reference/keywords/virtual.md)
+ [override](../../../csharp/language-reference/keywords/override.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)

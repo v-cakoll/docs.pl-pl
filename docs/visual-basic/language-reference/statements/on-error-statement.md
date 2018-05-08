@@ -1,12 +1,6 @@
 ---
-title: "On Error — Instrukcja (Visual Basic)"
+title: On Error — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error — Instrukcja (Visual Basic)
 Włącza procedurę obsługi błędu, i określa lokalizację procedury w ramach procedury; można również wyłączyć procedury obsługi błędów.  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Zwróć uwagę, że `On Error GoTo` instrukcji traps wszystkie błędy, niezależnie od klasy wyjątku.  
   
 ## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next`powoduje wykonanie kontynuować z instrukcją bezpośrednio po instrukcji, która spowodowała błąd czasu wykonywania, lub z instrukcją bezpośrednio po ostatnim wywołać poza zawierająca procedurę `On Error Resume Next` instrukcji. Ta instrukcja zezwala na wykonywanie kontynuowanie działania pomimo błędów czasu wykonywania. Można umieścić procedurę obsługi błędu, w których może wystąpić błąd, a nie transferowanie formantu do innej lokalizacji w ramach procedury. `On Error Resume Next` Instrukcji staje się nieaktywny, gdy jest wywoływana innej procedury, dlatego należy wykonać `On Error Resume Next` instrukcji w każdym nazywanych procedury obsługi w ramach tej procedury błędów w tekście.  
+ `On Error Resume Next` powoduje wykonanie kontynuować z instrukcją bezpośrednio po instrukcji, która spowodowała błąd czasu wykonywania, lub z instrukcją bezpośrednio po ostatnim wywołać poza zawierająca procedurę `On Error Resume Next` instrukcji. Ta instrukcja zezwala na wykonywanie kontynuowanie działania pomimo błędów czasu wykonywania. Można umieścić procedurę obsługi błędu, w których może wystąpić błąd, a nie transferowanie formantu do innej lokalizacji w ramach procedury. `On Error Resume Next` Instrukcji staje się nieaktywny, gdy jest wywoływana innej procedury, dlatego należy wykonać `On Error Resume Next` instrukcji w każdym nazywanych procedury obsługi w ramach tej procedury błędów w tekście.  
   
 > [!NOTE]
 >  `On Error Resume Next` Konstrukcja może być wskazane `On Error GoTo` podczas obsługi błędów wygenerowanych podczas dostępu do innych obiektów. Sprawdzanie `Err` po każdej interakcji z obiektem usuwa niejednoznaczności o tym, które obiekt uzyskano dostęp przez kod. Można zapewnić, że obiekt umieścić kod błędu w `Err.Number`, a także obiektu, który pierwotnie wygenerował błąd (obiekt określony w `Err.Source`).  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0`powoduje wyłączenie obsługi błędów w bieżącej procedurze. Nie go Określ wiersz 0 jako początku kodu obsługi błędu, nawet wtedy, gdy procedura zawiera wiersz numerowane 0. Bez `On Error GoTo 0` instrukcji, program obsługi błędów jest automatycznie wyłączana podczas procedury zostanie zakończone.  
+ `On Error GoTo 0` powoduje wyłączenie obsługi błędów w bieżącej procedurze. Nie go Określ wiersz 0 jako początku kodu obsługi błędu, nawet wtedy, gdy procedura zawiera wiersz numerowane 0. Bez `On Error GoTo 0` instrukcji, program obsługi błędów jest automatycznie wyłączana podczas procedury zostanie zakończone.  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo -1  
- `On Error GoTo -1`Wyłącza wyjątek w bieżącej procedurze. Nawet jeśli procedura zawiera wiersz numerowane -1 nie określa wiersza -1 jako początku kodu obsługi błędu. Bez `On Error GoTo -1` instrukcji, wyjątek jest automatycznie wyłączana podczas procedury zostanie zakończone.  
+ `On Error GoTo -1` Wyłącza wyjątek w bieżącej procedurze. Nawet jeśli procedura zawiera wiersz numerowane -1 nie określa wiersza -1 jako początku kodu obsługi błędu. Bez `On Error GoTo -1` instrukcji, wyjątek jest automatycznie wyłączana podczas procedury zostanie zakończone.  
   
  Aby zapobiec uruchomiony, gdy wystąpił błąd braku obsługi błędów kodu, umieszczenie `Exit Sub`, `Exit Function`, lub `Exit Property` instrukcji bezpośrednio przed procedury obsługi błędów, jak poniższy fragment:  
   
@@ -131,7 +122,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [End, instrukcja](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)  
  [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [Resume, instrukcja](../../../visual-basic/language-reference/statements/resume-statement.md)  
  [Komunikaty o błędach](../../../visual-basic/language-reference/error-messages/index.md)  

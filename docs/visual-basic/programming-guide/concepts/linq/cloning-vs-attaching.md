@@ -1,22 +1,12 @@
 ---
-title: "Vs w klonowania. Dołączenia (Visual Basic)"
-ms.custom: 
+title: Vs w klonowania. Dołączenia (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 811e0b9d6359287d779a8352482f5dc56a3b0035
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a265d2aaef40977a9a6b89d174e9a585c525c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Vs w klonowania. Dołączenia (Visual Basic)
 Podczas dodawania <xref:System.Xml.Linq.XNode> (łącznie z <xref:System.Xml.Linq.XElement>) lub <xref:System.Xml.Linq.XAttribute> obiekty do nowego drzewa, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty są po prostu dołączyć do drzewa XML. Jeśli już nowej zawartości jest elementem nadrzędnym i jest częścią innego drzewa XML, został sklonowany nową zawartość. Nowo sklonowanego zawartość jest następnie dołączony do drzewa XML.  

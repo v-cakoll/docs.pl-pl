@@ -1,14 +1,6 @@
 ---
 title: Kompilowanie aplikacji z architekturą .NET Native
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - native compilation
 - .NET and native code
@@ -16,20 +8,16 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-caps.latest.revision: 27
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilowanie aplikacji z architekturą .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]jest to technologia wstępnej kompilacji umożliwiające tworzenie i wdrażanie aplikacji systemu Windows, która jest dołączana do programu Visual Studio 2015 i nowszych wersjach. Kompiluje automatycznie wersji aplikacji, które są zapisywane w kodu zarządzanego (C# lub Visual Basic), że docelowej platformy .NET Framework i Windows 10 do kodu natywnego.  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] jest to technologia wstępnej kompilacji umożliwiające tworzenie i wdrażanie aplikacji systemu Windows, która jest dołączana do programu Visual Studio 2015 i nowszych wersjach. Kompiluje automatycznie wersji aplikacji, które są zapisywane w kodu zarządzanego (C# lub Visual Basic), że docelowej platformy .NET Framework i Windows 10 do kodu natywnego.  
   
  Zwykle aplikacje, które odnoszą się do programu .NET Framework są kompilowane do języku pośrednim (IL). W czasie wykonywania przy użyciu kompilatora just in time (JIT) tłumaczy IL do kodu natywnego. Z kolei [!INCLUDE[net_native](../../../includes/net-native-md.md)] kompiluje aplikacji systemu Windows bezpośrednio do kodu natywnego. Dla deweloperów oznacza to:  
   
@@ -58,9 +46,9 @@ Ale [!INCLUDE[net_native](../../../includes/net-native-md.md)] obejmuje więcej 
   
 -   [!INCLUDE[net_native](../../../includes/net-native-md.md)] Środowiska uruchomieniowego jest zoptymalizowana pod kątem statycznych wstępnej kompilacji i w większość przypadków oferuje lepszą wydajność. W tym samym czasie zachowuje podstawowe funkcje odbicia, które tak produktywności deweloperów.  
   
--   [!INCLUDE[net_native](../../../includes/net-native-md.md)]używa takie same wstecz końcowy jako kompilatora języka C++, która jest zoptymalizowana pod kątem scenariuszy wstępnej kompilacji statycznych.  
+-   [!INCLUDE[net_native](../../../includes/net-native-md.md)] używa takie same wstecz końcowy jako kompilatora języka C++, która jest zoptymalizowana pod kątem scenariuszy wstępnej kompilacji statycznych.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)]jest w stanie można wyświetlić zwiększenia wydajności C++ deweloperom kodu zarządzanego, ponieważ używa narzędzia takie same lub podobne jako C++ pod maską, jak pokazano w poniższej tabeli.  
+ [!INCLUDE[net_native](../../../includes/net-native-md.md)] jest w stanie można wyświetlić zwiększenia wydajności C++ deweloperom kodu zarządzanego, ponieważ używa narzędzia takie same lub podobne jako C++ pod maską, jak pokazano w poniższej tabeli.  
   
 ||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|C++|  
 |-|----------------------------------------------------------------|-----------|  

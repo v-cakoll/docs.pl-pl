@@ -1,27 +1,15 @@
 ---
-title: "GetSchema i kolekcje schematów"
-ms.custom: 
+title: GetSchema i kolekcje schematów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5c622dde5e73c84c3b317ffc2652c79632be89e2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1694a6de515e5326264f345f50d0730fe2a62e4f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema i kolekcje schematów
 **Połączenia** klasy w każdej implementacji zarządzanego dostawcy .NET Framework **GetSchema** metodę, która służy do pobierania informacji dotyczących bazy danych, który jest obecnie połączony, schematów i informacje o schemacie zwrócony z **GetSchema** metody jest dostarczany w formie <xref:System.Data.DataTable>. **GetSchema** metody jest przeciążona metoda, która zapewnia następujące parametry opcjonalne określanie kolekcji schematów, aby wrócić i ograniczanie ilość zwracanych informacji.  

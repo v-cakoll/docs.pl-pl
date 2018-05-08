@@ -1,20 +1,16 @@
 ---
 title: Elementy członkowskie zabudowanych wyrażenia (C# przewodnik programowania w języku)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 800280ed9ceaf69b825bb2a3c2c3d0d5f829922d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Elementy członkowskie zabudowanych wyrażenia (C# Podręcznik programowania)
 Wyrażenie treści definicji umożliwiają implementacji członka w postaci bardzo krótkie, który może zostać odczytany. Możesz użyć definicji treści wyrażenia zawsze, gdy logiki żadnego z obsługiwanych elementów, takich jak metody lub właściwości, składa się z jednego wyrażenia. Definicja treść wyrażenia ma następującą składnię ogólne:

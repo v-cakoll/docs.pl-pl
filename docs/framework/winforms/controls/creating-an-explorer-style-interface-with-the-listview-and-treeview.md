@@ -1,13 +1,6 @@
 ---
-title: "Wskazówki: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant"
-ms.custom: 
+title: 'Wskazówki: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Wskazówki: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant
 Jedną z korzyści programu Visual Studio jest możliwość tworzenia profesjonalnych aplikacji formularzy systemu Windows w krótkim czasie. Typowy scenariusz tworzy interfejs użytkownika (UI) z <xref:System.Windows.Forms.ListView> i <xref:System.Windows.Forms.TreeView> formantów, które pełni podobną funkcję Eksploratora Windows, systemów operacyjnych Windows. Eksplorator Windows wyświetla strukturę hierarchiczną plików i folderów na komputerze użytkownika.  
@@ -57,7 +45,7 @@ Jedną z korzyści programu Visual Studio jest możliwość tworzenia profesjona
   
     1.  Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Ustaw <xref:System.Windows.Forms.TreeView.ImageList%2A> właściwości`imagelist1.`  
+    2.  Ustaw <xref:System.Windows.Forms.TreeView.ImageList%2A> właściwości `imagelist1.`  
   
 7.  Dodaj <xref:System.Windows.Forms.ListView> formantu o nazwie `listView1` do formularza i umieść go w prawej części <xref:System.Windows.Forms.SplitContainer> formantu. W oknie dialogowym właściwości `listview1` wykonaj następujące czynności:  
   
@@ -65,9 +53,9 @@ Jedną z korzyści programu Visual Studio jest możliwość tworzenia profesjona
   
     2.  Ustaw <xref:System.Windows.Forms.ListView.View%2A> właściwości <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Otwórz Edytor kolekcji ColumnHeader, klikając przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) w <xref:System.Windows.Forms.ListView.Columns%2A> właściwości**.** Dodaj trzy kolumny i ustawić ich <xref:System.Windows.Forms.ColumnHeader.Text%2A> właściwości `Name`, `Type`, i `Last Modified`odpowiednio. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    3.  Otwórz Edytor kolekcji ColumnHeader, klikając przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) w <xref:System.Windows.Forms.ListView.Columns%2A> właściwości **.** Dodaj trzy kolumny i ustawić ich <xref:System.Windows.Forms.ColumnHeader.Text%2A> właściwości `Name`, `Type`, i `Last Modified`odpowiednio. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-    4.  Ustaw <xref:System.Windows.Forms.ListView.SmallImageList%2A> właściwości`imageList1.`  
+    4.  Ustaw <xref:System.Windows.Forms.ListView.SmallImageList%2A> właściwości `imageList1.`  
   
 8.  Zaimplementuj kod, aby wypełnić <xref:System.Windows.Forms.TreeView> z węzłów i węzły podrzędne. Dodaj ten kod do `Form1` klasy.  
   

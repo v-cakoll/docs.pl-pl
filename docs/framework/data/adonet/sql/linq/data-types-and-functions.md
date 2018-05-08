@@ -1,24 +1,12 @@
 ---
 title: Typy danych i funkcje
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f9f97f0ae0a75dd15edcb2256d991e987388f1ae
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a7205d7fbdeb2b6cffcf49fb30e2ff2a25137403
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-types-and-functions"></a>Typy danych i funkcje
 Tematy wymienione w poniższej tabeli opisano LINQ do SQL obsługę elementów członkowskich, konstrukcji i rzutowania środowisko uruchomieniowe języka wspólnego (CLR). Obsługiwane elementy Członkowskie oraz elementów składowych są dostępne do użycia w Twojej LINQ do zapytania SQL.  

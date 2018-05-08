@@ -1,34 +1,20 @@
 ---
-title: "Porady: Konfigurowanie ustawień usług COM +"
-ms.custom: 
+title: 'Porady: Konfigurowanie ustawień usług COM +'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-com-service-settings"></a>Porady: Konfigurowanie ustawień usług COM +
 Interfejs aplikacji jest dodania lub usunięcia za pomocą narzędzia konfiguracji usług COM +, konfiguracji usługi sieci Web jest aktualizowana w pliku konfiguracji aplikacji. W trybie COM + hostowanej pliku Application.config znajduje się w katalogu głównym aplikacji (aplikacje %PROGRAMFILES%\ComPlus\\{appid} jest ustawieniem domyślnym). W obu trybach hostowanych w sieci Web w katalogu określonego vroot znajduje się plik Web.config.  
   
 > [!NOTE]
->  Podpisywanie komunikatów należy chronić je przed naruszeniem wiadomości między klientem a serwerem. Można również używać szyfrowania warstwy transportu lub wiadomości do ochrony przed ujawnieniem informacji z wiadomości między klientem serwerem. W przypadku [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi, należy używać ograniczania ograniczyć liczbę współbieżnych wywołań, połączeń, wystąpienia i oczekujących operacji. Pomaga to zapobiec nadmierne zużycie zasobów. Ograniczanie zachowanie jest określany za pośrednictwem ustawień pliku konfiguracji usługi.  
+>  Podpisywanie komunikatów należy chronić je przed naruszeniem wiadomości między klientem a serwerem. Można również używać szyfrowania warstwy transportu lub wiadomości do ochrony przed ujawnieniem informacji z wiadomości między klientem serwerem. Podobnie jak w przypadku usług Windows Communication Foundation (WCF), należy używać ograniczania ograniczyć liczbę współbieżnych wywołań, połączeń, wystąpienia i oczekujących operacji. Pomaga to zapobiec nadmierne zużycie zasobów. Ograniczanie zachowanie jest określany za pośrednictwem ustawień pliku konfiguracji usługi.  
   
 ## <a name="example"></a>Przykład  
  Należy wziąć pod uwagę składnika, który implementuje interfejs następujące:  
@@ -62,13 +48,13 @@ public interface IFinancesContract : IDisposable
   
  Aplikacje klienckie, które używają tej usługi musi być zgodna z tym kontraktem, oraz za pomocą powiązania, który jest zgodny z określoną w konfiguracji aplikacji.  
   
- Poniższy przykład kodu pokazuje domyślny plik konfiguracji. Trwa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi sieci Web to odpowiada konfiguracji schematu modelu standardowe usługi i można je edytować w taki sam sposób jak inne [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] plików konfiguracji usług.  
+ Poniższy przykład kodu pokazuje domyślny plik konfiguracji. Usługi sieci Web Windows Communication Foundation (WCF), to odpowiada schemat konfiguracji modelu usług standardowa i można je edytować w taki sam sposób jak inne pliki konfiguracji usługi WCF.  
   
  Typowy modyfikacje obejmują:  
   
 -   Zmiana adresu punktu końcowego z domyślnego formularza ApplicationName/NazwaSkładnika/InterfaceName na bardziej użytecznej postaci.  
   
--   Modyfikowanie przestrzeni nazw usługi z domyślnego formularza "http://tempuri.org/InterfaceID" do bardziej odpowiednie formularza.  
+-   Modyfikowanie przestrzeni nazw usługi z domyślnego "http://tempuri.org/InterfaceID" formularza, aby lepiej dopasowane formularza.  
   
 -   Zmiana punktu końcowego do użycia powiązania innego transportu.  
   

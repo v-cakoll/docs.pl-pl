@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Szczegóły|W programie .NET Framework 4.6, jeśli komunikat o wyjątku <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> lub <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=name> kończy się niepowodzeniem do serializacji lub deserializacji z powodu braku "znane typy" zostały uproszczone.|
-|Sugestia|Aplikacje nie należy uwzględniać komunikaty określony wyjątek. Jeśli aplikacja w zależności od tego komunikatu, albo zaktualizuj go oczekiwać nowej wiadomości lub (zalecane) Zmień, aby tylko zależą od typu wyjątku.|
+|Sugestia|Aplikacje nie należy uwzględniać komunikaty określony wyjątek. Jeśli aplikacja jest zależna od tego komunikatu, albo zaktualizować spodziewać się nowy komunikat lub (zalecane) Zmień, aby tylko zależą od typu wyjątku.|
 |Zakres|Krawędź|
 |Wersja|4.6|
 |Typ|Środowisko uruchomieniowe|

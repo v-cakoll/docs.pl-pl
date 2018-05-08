@@ -1,12 +1,6 @@
 ---
-title: "Return — Instrukcja (Visual Basic)"
+title: Return — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Return
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b66d16a249164b8989f05f10c785b97055bfde9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f614045be1b91b9c747d961cdefd526ba1bab98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="return-statement-visual-basic"></a>Return — Instrukcja (Visual Basic)
 Zwraca sterowania do kodu, który wywołał `Function`, `Sub`, `Get`, `Set`, lub `Operator` procedury.  
@@ -55,11 +46,11 @@ Return expression
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Get — instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Set — instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit — instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Try... CATCH... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

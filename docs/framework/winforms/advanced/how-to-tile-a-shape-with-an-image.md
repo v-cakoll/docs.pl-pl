@@ -1,13 +1,6 @@
 ---
-title: "Porady: wypełnianie kafelków w obrębie kształtu obrazem"
-ms.custom: 
+title: 'Porady: wypełnianie kafelków w obrębie kształtu obrazem'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0905f29b0f74c72979e252cf94e677d1c7e0525d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Porady: wypełnianie kafelków w obrębie kształtu obrazem
 Tak samo, jak kafelki mogą być umieszczone obok siebie, aby pokrywał piętra, prostokątne obrazów mogą być umieszczone obok siebie do wypełnienia kształtu (kafelka). Na kafelku wewnątrz kształtu, użyj pędzla tekstury. Podczas konstruowania <xref:System.Drawing.TextureBrush> obiektu, jeden z argumentów przekazać do konstruktora jest <xref:System.Drawing.Image> obiektu. Pędzel tekstury umożliwia malowanie wnętrza kształtu, kształt jest wypełniony powtarzane kopii tego obrazu.  

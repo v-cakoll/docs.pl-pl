@@ -1,25 +1,15 @@
 ---
-title: "Porady: dostęp do elementów członkowskich obiektu (Visual Basic)"
-ms.custom: 
+title: 'Porady: dostęp do elementów członkowskich obiektu (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 85fa4932b449bf7b9ecb3902fc17fd954ea8cfac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 62be2955bd1f62fa5af4e54fb0af5e7dca29c421
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Porady: dostęp do elementów członkowskich obiektu (Visual Basic)
 Jeśli masz zmiennej obiektu, który odwołuje się do obiektu często chcesz pracować z elementami członkowskimi tego obiektu, takie jak metod, właściwości, pól i zdarzeń. Na przykład po utworzeniu nowego <xref:System.Windows.Forms.Form> obiektu, należy ustawić jej <xref:System.Windows.Forms.Control.Text%2A> właściwość lub wywołanie jego <xref:System.Windows.Forms.Control.Focus%2A> metody.  
@@ -85,5 +75,5 @@ Jeśli masz zmiennej obiektu, który odwołuje się do obiektu często chcesz pr
  <xref:System.MemberAccessException>  
  [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [Deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

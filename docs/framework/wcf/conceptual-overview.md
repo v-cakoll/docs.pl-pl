@@ -1,30 +1,18 @@
 ---
-title: "Omówienie pojęć"
-ms.custom: 
+title: Omówienie pojęć
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837ba9cbc5885c5d586ee1d65627b2d1424b4924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 93c0411c8d261e40bd4e8f1cd11d8a51d4f0edb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conceptual-overview"></a>Omówienie pojęć
-Ten temat zawiera podsumowanie informacji o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] systemu i klasy, które obsługuje jej użycia do obsługi komunikatów.  
+Ten temat zawiera podsumowanie informacji o systemie Windows Communication Foundation (WCF) systemu i klasy, które obsługuje jej użycia do obsługi komunikatów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

@@ -1,20 +1,13 @@
 ---
-title: "Dokumentowanie kodu za pomocą komentarze XML"
-description: "Dowiedz się, jak dokumentowanie kodu za pomocą komentarze dokumentacji XML i generowania pliku dokumentacji XML w czasie kompilacji."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+title: Dokumentowanie kodu za pomocą komentarze XML
+description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarze dokumentacji XML i generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu za pomocą komentarze XML
 
@@ -80,14 +73,14 @@ Jak wcześniej, poniższy przykład przedstawia `<returns>` tag pierwszego `Add`
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-### <a name="ltvaluegt"></a>&lt;wartość&gt;
+### <a name="ltvaluegt"></a>&lt;value&gt;
 
 `<value>` Tag jest podobny do `<returns>` tagów, z wyjątkiem tego, że używasz dla właściwości.
 Zakładając, że Twoje `Math` biblioteka ma właściwości statycznej o nazwie `PI`, Oto jak użyje tego tagu:
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-### <a name="ltexamplegt"></a>&lt;przykład&gt;
+### <a name="ltexamplegt"></a>&lt;Przykład&gt;
 
 Możesz użyć `<example>` znacznik w celu uwzględnienia przykładem w dokumentacji XML.
 Obejmuje to przy użyciu elementu podrzędnego `<code>` tagu.
@@ -96,9 +89,9 @@ Obejmuje to przy użyciu elementu podrzędnego `<code>` tagu.
 
 `code` Tag zachowuje podziały wiersza i wcięcia dłuższego przykłady.
 
-### <a name="ltparagt"></a>&lt;para&gt;
+### <a name="ltparagt"></a>&lt;Para&gt;
 
-Możesz użyć `<para>` znacznik w celu formatowania zawartości w tagu nadrzędnym. `<para>`jest zwykle używany wewnątrz tagu, takich jak `<remarks>` lub `<returns>`, aby podzielić tekst na akapitów.
+Możesz użyć `<para>` znacznik w celu formatowania zawartości w tagu nadrzędnym. `<para>` jest zwykle używany wewnątrz tagu, takich jak `<remarks>` lub `<returns>`, aby podzielić tekst na akapitów.
 Zawartość można sformatować `<remarks>` tag definicji klasy.
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
@@ -111,7 +104,7 @@ Ta funkcja pozwala zaktualizować dokumentację dla `Math` klasy.
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-### <a name="ltexceptiongt"></a>&lt;wyjątek&gt;
+### <a name="ltexceptiongt"></a>&lt;Wyjątek&gt;
 
 Za pomocą `<exception>` tagu let deweloperów wiedzieć, że metoda może zgłosić określonych wyjątków.
 Spojrzenie na Twojej `Math` biblioteki, można stwierdzić, że oba `Add` metody zgłosić wyjątek, jeśli określony warunek jest spełniony. Nie jest tak oczywiste, że liczba całkowita `Divide` metoda zgłasza, a także jeśli `b` parametru wynosi zero. Teraz należy dodać wyjątek dokumentacji do tej metody.
@@ -138,7 +131,7 @@ Możesz użyć `<seealso>` tag w taki sam sposób jak `<see>` tagu. Jedyna róż
 `cref` Atrybut reprezentuje odwołanie do typu lub jego element członkowski, który jest dostępny w bieżącym środowisku kompilacji.
 Może to być dowolny typ zdefiniowany w projekcie lub przywoływanego zestawu.
 
-### <a name="ltparamgt"></a>&lt;param&gt;
+### <a name="ltparamgt"></a>&lt;Param&gt;
 
 Możesz użyć `<param>` tag do opisywania parametry metody. Oto przykład na podwójnego `Add` — metoda: określono parametr tag opisano w **wymagane** `name` atrybutu.
 
@@ -164,7 +157,7 @@ Można użyć tej samej metody ogólnej utworzonych wcześniej.
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;Lista&gt;
+### <a name="ltlistgt"></a>&lt;list&gt;
 
 Możesz użyć `<list>` tag do dokumentacji informacji o formacie listy uporządkowanej, Lista nieuporządkowana lub tabeli.
 Wprowadź nieuporządkowaną listę każdej operacji matematycznych Twojej `Math` obsługuje biblioteki.
@@ -182,7 +175,7 @@ Jeśli już zostały wykonane w tym samouczku i zastosować znaczniki w kodzie, 
 W kodzie można wygenerować szczegółowa dokumentacja witryny sieci Web z odsyłacze aktywne. Ale jest skierowany w innym problemów z: kod stał się trudny do odczytania.
 Ma tak dużej ilości informacji do przesiania, to ma być nightmare dla Każdy deweloper, który chce przyczyniają się do tego kodu. Brak thankfully tagu XML, które mogą pomóc biznesowych w radzeniu sobie z tym:
 
-### <a name="ltincludegt"></a>&lt;obejmują&gt;
+### <a name="ltincludegt"></a>&lt;include&gt;
 
 `<include>` Należy odwoływać się do komentarzy w osobnym pliku XML, które opisują typy i elementy członkowskie w kodzie źródłowym, w przeciwieństwie do wprowadzania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.
 

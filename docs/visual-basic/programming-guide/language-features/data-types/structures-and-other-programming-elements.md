@@ -1,12 +1,6 @@
 ---
 title: Struktury oraz inne elementy programowania (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic], arrays
 - procedures [Visual Basic], structures as arguments to
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Struktury oraz inne elementy programowania (Visual Basic)
 Struktury można użyć w połączeniu z tablic, obiektów i procedur, a także ze sobą. Interakcje używać tej samej składni jak te elementy pojedynczo.  
@@ -132,12 +123,12 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Podstawowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Typy wartości i typy referencyjne](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Porady: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Instrukcje: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
  [Zmienne struktur](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
  [Struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)
+ [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -1,22 +1,14 @@
 ---
-title: "My.Log — Obiekt"
+title: My.Log — Obiekt
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 521e578f6785f845d986913a18f4e82bc93e0fa7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d37c42bc7d67c66a3aa29a425a86a7fd7cd0349c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mylog-object"></a>My.Log — Obiekt
 Udostępnia właściwości i metody dla zapisywania informacji o zdarzeń i wyjątków na odbiorniki dzienników aplikacji.  
@@ -27,8 +19,8 @@ Udostępnia właściwości i metody dla zapisywania informacji o zdarzeń i wyj�
  `My.Log` Obiekt jest dostępny tylko w aplikacji ASP.NET. Dla aplikacji klienckich, należy użyć [My.Application.log — obiekt](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:**<xref:Microsoft.VisualBasic.Logging>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Klasa:**<xref:Microsoft.VisualBasic.Logging.AspLog>  
+ **Klasy:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **Zestaw:**[!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]
+ **Zestaw:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]

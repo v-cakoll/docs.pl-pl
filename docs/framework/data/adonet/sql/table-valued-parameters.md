@@ -1,29 +1,15 @@
 ---
 title: Parametry przechowywanymi w tabeli
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01b19d49ee82a884247e4eb260f659f19f124cee
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="table-valued-parameters"></a>Parametry przechowywanymi w tabeli
 Parametry przechowywanymi w tabeli umożliwiają łatwe do organizowania wielu wierszy danych z aplikacji klienta do programu SQL Server bez konieczności wiele rund lub specjalną logikę po stronie serwera do przetwarzania danych. Hermetyzuj wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowane, mogą używać parametrów przechowywanymi w tabeli. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która następnie może być obsługiwany przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  

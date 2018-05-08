@@ -1,0 +1,11 @@
+### <a name="contextmenustripsourcecontrol-property-contains-a-valid-control-in-the-case-of-nested-toolstripmenuitems"></a>Właściwość ContextMenuStrip.SourceControl zawiera nieprawidłowy formant w przypadku zagnieżdżonych ToolStripMenuItems
+
+|   |   |
+|---|---|
+|Szczegóły|W poprzednich wersjach i .NET Framework 4.7.1 <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> właściwości nieprawidłowo zagnieżdżona zwraca wartość null, gdy użytkownik otwiera menu z <xref:System.Windows.Forms.ToolStripMenuItem> formantów. W programie .NET Framework 4.7.2 lub nowszego oraz <xref:System.Windows.Forms.ContextMenuStrip.SourceControl> właściwość ma zawsze wartość do kontroli źródła rzeczywistych.|
+|Sugestia|<strong>Jak zgłosić do lub z tych zmian do</strong>w kolejności dla aplikacji, aby korzystać z tych zmian, należy uruchomić w programie .NET Framework 4.7.2 lub nowszym. Aplikacji mogą korzystać z tych zmian w jednym z następujących sposobów:<ul><li>.NET Framework 4.7.2 ona dotyczy. Ta zmiana jest domyślnie włączona w aplikacji formularzy systemu Windows, które odnoszą się do programu .NET Framework 4.7.2 lub nowszej.</li><li>Dotyczy programu .NET Framework 4.7.1 lub starszej wersji i wyłącza funkcję zachowania starszych ułatwień dostępu przez dodanie poniższego [przełącznika AppContext](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) do <code>&lt;runtime&gt;</code> sekcji w pliku app.config i ustawieniem dla niego <code>false</code>, jak pokazano na poniższym przykładzie.</li></ul><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Aplikacje, które odnoszą się do programu .NET Framework 4.7.2 lub później i chcesz zachować starszego zachowanie zgodzić się na wartości kontroli źródła starszej wersji, jawnie ustawiając tego przełącznika AppContext na <code>true</code>.|
+|Zakres|Krawędź|
+|Wersja|4.7.2|
+|Typ|Przekierowania|
+|Dotyczy interfejsów API|<ul><li><xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType></li></ul>|
+

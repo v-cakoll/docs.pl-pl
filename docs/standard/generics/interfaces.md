@@ -1,31 +1,20 @@
 ---
-title: "Interfejsy ogólne"
-ms.custom: 
+title: Interfejsy ogólne
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - generic interfaces [.NET Framework]
 - equality comparisons [.NET Framework]
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b0735718db6317716055b9ee59cf90e869f2015c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-interfaces"></a>Interfejsy ogólne
 Ten temat zawiera omówienie interfejsach zapewniające często używane funkcje w rodzin typów ogólnych.  
@@ -44,7 +33,7 @@ Ten temat zawiera omówienie interfejsach zapewniające często używane funkcje
  <xref:System.Collections.Generic.Comparer%601> i <xref:System.Collections.Generic.EqualityComparer%601> klasy ogólne Podaj klas podstawowych implementacji <xref:System.Collections.Generic.IComparer%601> i <xref:System.Collections.Generic.IEqualityComparer%601> interfejsy ogólne i również udostępniać domyślne porównania porządkowania i o równość za pomocą odpowiednich <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> i <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> właściwości.  
   
 ### <a name="collection-functionality"></a>Kolekcja funkcji  
- <xref:System.Collections.Generic.ICollection%601> Interfejs generyczny jest podstawowy interfejs dla typów kolekcji ogólnej. Dodawanie, usuwanie, kopiowanie i wyliczania elementów zapewnia podstawowe funkcje. <xref:System.Collections.Generic.ICollection%601>dziedziczy zarówno ogólnego <xref:System.Collections.Generic.IEnumerable%601> i nierodzajowe <xref:System.Collections.IEnumerable>.  
+ <xref:System.Collections.Generic.ICollection%601> Interfejs generyczny jest podstawowy interfejs dla typów kolekcji ogólnej. Dodawanie, usuwanie, kopiowanie i wyliczania elementów zapewnia podstawowe funkcje. <xref:System.Collections.Generic.ICollection%601> dziedziczy zarówno ogólnego <xref:System.Collections.Generic.IEnumerable%601> i nierodzajowe <xref:System.Collections.IEnumerable>.  
   
  <xref:System.Collections.Generic.IList%601> Rozszerza interfejs ogólny <xref:System.Collections.Generic.ICollection%601> ogólny interfejs za pomocą metod pobierania indeksowanego.  
   

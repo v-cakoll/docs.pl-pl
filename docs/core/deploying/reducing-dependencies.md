@@ -4,16 +4,11 @@ description: Zmniejszenie zależności pakietu, podczas tworzenia biblioteki na 
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 647d850c1629cddc1584a2044174838930b2fb1d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Zmniejszenie zależności pakietu z pliku project.json
 

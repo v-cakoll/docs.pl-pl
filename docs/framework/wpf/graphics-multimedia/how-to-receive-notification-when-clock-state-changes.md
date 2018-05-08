@@ -1,13 +1,6 @@
 ---
-title: "Porady: odbieranie powiadomień podczas zegar &#39; s zmiany stanu"
-ms.custom: 
+title: 'Porady: otrzymywać powiadomienie, gdy zegar&#39;s zmiany stanu'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +8,13 @@ helpviewer_keywords:
 - clocks [WPF], notification of state changes
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 396e2c51894ad5ed11f8953bceb1bd36899cfc62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0eaca4d2a05d01e686efc15dfceebb6de4f4b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Porady: odbieranie powiadomień podczas zegar &#39; s zmiany stanu
+# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Porady: otrzymywać powiadomienie, gdy zegar&#39;s zmiany stanu
 Zegar <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> zdarzenie po jego <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> staje się nieprawidłowy, np. gdy zegar uruchomienia lub zatrzymania. Możesz zarejestrować dla tego zdarzenia z bezpośrednio za pomocą <xref:System.Windows.Media.Animation.Clock>, lub możesz zarejestrować za pomocą <xref:System.Windows.Media.Animation.Timeline>.  
   
  W poniższym przykładzie <xref:System.Windows.Media.Animation.Storyboard> i dwa <xref:System.Windows.Media.Animation.DoubleAnimation> obiekty służą do animowania szerokość dwóch prostokątów. <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Zdarzeń służy do nasłuchiwania zmian stanu zegara.  

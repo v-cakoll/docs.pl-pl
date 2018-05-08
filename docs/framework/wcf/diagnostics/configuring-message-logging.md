@@ -1,34 +1,20 @@
 ---
 title: Konfigurowanie rejestrowania komunikatów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla różnych scenariuszy.  
   
 ## <a name="enabling-message-logging"></a>Włączanie rejestrowania komunikatów  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rejestruje komunikaty domyślnie. Aby włączyć rejestrowanie komunikatów, należy dodać odbiornik śledzenia do `System.ServiceModel.MessageLogging` źródło śledzenia i ustawić atrybuty `<messagelogging>` w pliku konfiguracji.  
+ Windows Communication Foundation (WCF) nie rejestruje komunikaty domyślnie. Aby włączyć rejestrowanie komunikatów, należy dodać odbiornik śledzenia do `System.ServiceModel.MessageLogging` źródło śledzenia i ustawić atrybuty `<messagelogging>` w pliku konfiguracji.  
   
  Poniższy przykład pokazuje, jak włączyć rejestrowanie i określ opcje dodatkowe.  
   

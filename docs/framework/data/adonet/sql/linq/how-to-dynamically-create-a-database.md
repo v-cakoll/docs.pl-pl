@@ -1,27 +1,15 @@
 ---
 title: 'Porady: dynamiczne tworzenie bazy danych'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f92d34276855a7b7473dd15dd3828c4ea91c64d1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 122eb705838da00fedd77a01a5d8c4bd3b5f774e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Porady: dynamiczne tworzenie bazy danych
 W składniku LINQ to SQL model obiektów jest mapowany relacyjnej bazy danych. Mapowanie jest włączane przy użyciu mapowania na podstawie atrybutów lub plik mapowania zewnętrznych do opisania struktury relacyjnej bazy danych. W obu przypadkach ma wystarczającej ilości informacji o relacyjnej bazy danych, możesz utworzyć nowe wystąpienie klasy przy użyciu bazy danych <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody.  
@@ -34,7 +22,7 @@ W składniku LINQ to SQL model obiektów jest mapowany relacyjnej bazy danych. M
   
 -   Tworzysz aplikacji klienckiej, która wymaga lokalnej bazy danych można zapisać stanu w trybie offline.  
   
- Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody z programem SQL Server przy użyciu pliku .mdf lub nazwę katalogu, w zależności od parametrów połączenia. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]używa parametrów połączenia, aby zdefiniować bazy danych ma zostać utworzony, a na serwer, który ma być tworzony bazy danych.  
+ Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody z programem SQL Server przy użyciu pliku .mdf lub nazwę katalogu, w zależności od parametrów połączenia. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] używa parametrów połączenia, aby zdefiniować bazy danych ma zostać utworzony, a na serwer, który ma być tworzony bazy danych.  
   
 > [!NOTE]
 >  Jeśli to możliwe, Użyj zintegrowanych zabezpieczeń systemu Windows do łączenia z bazą danych, dzięki czemu hasła nie są wymagane w ciągu połączenia.  

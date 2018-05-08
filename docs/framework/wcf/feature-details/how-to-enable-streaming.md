@@ -1,30 +1,18 @@
 ---
-title: "Instrukcje: Włączanie przesyłania strumieniowego"
-ms.custom: 
+title: 'Instrukcje: Włączanie przesyłania strumieniowego'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b75fe67d99fa611f248c8d5dbb779f47e2bc717d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b28764c4bad88511096ab09fd71cc2a73c735096
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-streaming"></a>Instrukcje: Włączanie przesyłania strumieniowego
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]można wysyłać wiadomości przy użyciu transferu buforowane lub przesyłany strumieniowo. W domyślnym trybie buforowane transferu wiadomości musi być całkowicie dostarczana przed odbiorca może go odczytać. W tryb przesyłania strumieniowego odbiornika można rozpocząć przetworzyć komunikatu przed przekazaniem całkowicie. Tryb strumieniowy jest przydatne, gdy informacje przekazywane jest obszerne i mogą być przetwarzane pojedynczo. Tryb strumieniowy jest również przydatne, gdy komunikat jest zbyt duży, aby całkowicie buforowany.  
+Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu transferu buforowane lub przesyłany strumieniowo. W domyślnym trybie buforowane transferu wiadomości musi być całkowicie dostarczana przed odbiorca może go odczytać. W tryb przesyłania strumieniowego odbiornika można rozpocząć przetworzyć komunikatu przed przekazaniem całkowicie. Tryb strumieniowy jest przydatne, gdy informacje przekazywane jest obszerne i mogą być przetwarzane pojedynczo. Tryb strumieniowy jest również przydatne, gdy komunikat jest zbyt duży, aby całkowicie buforowany.  
   
  Do przesyłania strumieniowego, zdefiniuj `OperationContract` odpowiednio i przesyłania strumieniowego na poziomie transportu.  
   
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     `GetStream` Operacji odbiera niektórych buforowanych danych wejściowych jako `string`, które są buforowane oraz zwraca `Stream`, który przesyłane strumieniowo. Z drugiej strony `UploadStream` przyjmuje `Stream` (przesyłane strumieniowo) i zwraca `bool` (buforowanej). `EchoStream`pobiera i zwraca `Stream` jest przykładem operacji których dane wejściowe i komunikaty wyjściowe zarówno strumieniowo. Na koniec `GetReversedStream` przyjmuje nie dane wejściowe i zwraca `Stream` (przesyłane strumieniowo).  
+     `GetStream` Operacji odbiera niektórych buforowanych danych wejściowych jako `string`, które są buforowane oraz zwraca `Stream`, który przesyłane strumieniowo. Z drugiej strony `UploadStream` przyjmuje `Stream` (przesyłane strumieniowo) i zwraca `bool` (buforowanej). `EchoStream` pobiera i zwraca `Stream` jest przykładem operacji których dane wejściowe i komunikaty wyjściowe zarówno strumieniowo. Na koniec `GetReversedStream` przyjmuje nie dane wejściowe i zwraca `Stream` (przesyłane strumieniowo).  
   
 2.  Przesyłania strumieniowego musi być włączony dla powiązania. Możesz ustawić `TransferMode` właściwości, które można wykonać jedną z następujących wartości:  
   
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Aby wykonywać specjalnego przetwarzania dla każdego fragmentu strumień danych jest wysyłane lub odbierane, klasa wyprowadzona z niestandardowych strumieni <xref:System.IO.Stream>. Na przykład niestandardowych strumieni poniższy kod zawiera `GetReversedStream` — metoda i `ReverseStream` klasy —.  
   
-     `GetReversedStream`Tworzy i zwraca nowe wystąpienie klasy `ReverseStream`. Aktualnie przetwarzanego się stanie, jak system odczytuje z `ReverseStream` obiektu. `ReverseStream.Read` Metoda odczytuje fragmentu bajtów z pliku źródłowego, odwraca je, a następnie zwraca odwróconej bajtów. Ta metoda nie wstecznego zawartości całego pliku; Odwraca ono jednym fragmencie bajtów w czasie. W tym przykładzie pokazano, jak wykonać przetwarzającym strumień zawartości jest do odczytu lub zapisu ze strumienia.  
+     `GetReversedStream` Tworzy i zwraca nowe wystąpienie klasy `ReverseStream`. Aktualnie przetwarzanego się stanie, jak system odczytuje z `ReverseStream` obiektu. `ReverseStream.Read` Metoda odczytuje fragmentu bajtów z pliku źródłowego, odwraca je, a następnie zwraca odwróconej bajtów. Ta metoda nie wstecznego zawartości całego pliku; Odwraca ono jednym fragmencie bajtów w czasie. W tym przykładzie pokazano, jak wykonać przetwarzającym strumień zawartości jest do odczytu lub zapisu ze strumienia.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  

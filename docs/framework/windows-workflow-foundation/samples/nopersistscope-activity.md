@@ -1,32 +1,21 @@
 ---
-title: "Działanie NoPersistScope"
-ms.custom: 
+title: Działanie NoPersistScope
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bfc651403988fa7558f79a4c99e42fb776efec4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4779bf28fc2fc1341cce5134a872b108278611c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nopersistscope-activity"></a>Działanie NoPersistScope
 W tym przykładzie pokazano, jak do manipulowania nie można serializować i możliwe do rozporządzania stanu w przepływie pracy. Jest ważne, przepływy pracy nie należy próbować zachować nie można serializować stanu, a także jest ważna w przypadku obiekty możliwe do rozporządzania na oczyszczenie po są one używane w przepływie pracy.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- `NoPersistScope`Niestandardowe działania i projektanta.  
+ `NoPersistScope` Niestandardowe działania i projektanta.  
   
 ## <a name="using-the-nopersistzone-activity"></a>Za pomocą działania NoPersistZone  
- Po uruchomieniu przykładowego przepływu pracy działania niestandardowego o nazwie `CreateTextWriter` tworzy obiekt typu <xref:System.IO.TextWriter> i zapisuje je w zmiennej przepływu pracy. <xref:System.IO.TextWriter>jest <xref:System.IDisposable> obiektu. To <xref:System.IO.TextWriter>, która jest skonfigurowana do zapisu w pliku o nazwie "out.txt" w katalogu, w której jest uruchamiana próbki, jest używany przez <xref:System.Activities.Statements.WriteLine> działania echa dowolny tekst, wpisz w konsoli.  
+ Po uruchomieniu przykładowego przepływu pracy działania niestandardowego o nazwie `CreateTextWriter` tworzy obiekt typu <xref:System.IO.TextWriter> i zapisuje je w zmiennej przepływu pracy. <xref:System.IO.TextWriter> jest <xref:System.IDisposable> obiektu. To <xref:System.IO.TextWriter>, która jest skonfigurowana do zapisu w pliku o nazwie "out.txt" w katalogu, w której jest uruchamiana próbki, jest używany przez <xref:System.Activities.Statements.WriteLine> działania echa dowolny tekst, wpisz w konsoli.  
   
  Logika echo jest uruchamiany w ramach `NoPersistScope` działania (dla kodu jest również częścią tego przykładu), co zapobiega przepływu pracy są zachowywane. W przypadku wpisania w `unload` za pomocą konsoli hosta próby potrzebna na utrwalenie wystąpienia przepływu pracy, ale ponieważ przepływ pracy pozostaje w ramach limitu czasu tej operacji `NoPersistScope`. Przepływ pracy używa również niestandardowego działania o nazwie `Dispose` można zlikwidować <xref:System.IO.TextWriter> obiekt po zakończeniu przepływu pracy przy jej użyciu. `Dispose` Działanie znajduje się w obrębie <xref:System.Activities.Statements.TryCatch.Finally%2A> zablokować z <xref:System.Activities.Statements.TryCatch> działania, w którym <xref:System.IO.TextWriter> zmienna została zadeklarowana, aby upewnić się, że działa nawet wtedy, gdy wystąpią Wystąpił wyjątek podczas wykonywania bloku Try.  
   
@@ -49,6 +38,6 @@ W tym przykładzie pokazano, jak do manipulowania nie można serializować i mo�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NoPersistScope`

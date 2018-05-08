@@ -1,14 +1,6 @@
 ---
-title: "ICLRSyncManager::DeleteRWLockOwnerIterator — Metoda"
-ms.custom: 
+title: ICLRSyncManager::DeleteRWLockOwnerIterator — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRSyncManager.DeleteRWLockOwnerIterator
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fcfd340a-b7d6-44e4-8167-2c05b789d483
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dce6699dc625c5c867befe1bc2e307cfaea7719a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ee4a09902be093bdbfe0b367f4add35bdda571c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>ICLRSyncManager::DeleteRWLockOwnerIterator — Metoda
 Żąda, że środowisko uruchomieniowe języka wspólnego (CLR) zniszczyć iterację, która została utworzona przez wywołanie do [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  
@@ -54,7 +42,7 @@ HRESULT DeleteRWLockOwnerIterator (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`DeleteRWLockOwnerIterator`zwrócona pomyślnie.|  
+|S_OK|`DeleteRWLockOwnerIterator` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -71,7 +59,7 @@ HRESULT DeleteRWLockOwnerIterator (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

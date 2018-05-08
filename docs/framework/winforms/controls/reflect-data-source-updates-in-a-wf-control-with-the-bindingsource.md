@@ -1,14 +1,6 @@
 ---
 title: 'Porady: odzwierciedlanie aktualizacji źródła danych w formancie formularzy systemu Windows za pomocą elementu BindingSource'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,17 +12,11 @@ helpviewer_keywords:
 - data sources [Windows Forms], updating
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9d31aefea9cef2d88d7189cb1882eb9c6ace8988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9db077ba230ab46b6398bd8714e7eb53cba676c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Porady: odzwierciedlanie aktualizacji źródła danych w formancie formularzy systemu Windows za pomocą elementu BindingSource
 Korzystając z formantów powiązanych z danymi, czasami trzeba reagowania na zmiany w źródle danych, gdy źródło danych nie wygenerował zdarzenia zmiany listy. Jeśli używasz <xref:System.Windows.Forms.BindingSource> składnika można powiązać źródła danych do formantu formularzy systemu Windows może powiadomić formant, który źródła danych został zmieniony przez wywołanie metody <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> — metoda.  

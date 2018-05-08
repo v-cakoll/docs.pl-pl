@@ -1,12 +1,6 @@
 ---
-title: "With...End With — Instrukcja (Visual Basic)"
+title: With...End With — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.With
 helpviewer_keywords:
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa1f416e1bfdf6cdb51b098c0e2bd5e9912cb309
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c50d03454860979e3475cb381fefc2acc07cece
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With — Instrukcja (Visual Basic)
 Wykonuje szereg instrukcji, które wielokrotnie odwołują się do pojedynczego obiektu lub struktury, dzięki czemu instrukcje mogą używać uproszczonej składni podczas uzyskiwania dostępu do członków obiektu lub struktury.  Podczas używania struktury można odczytać wartości elementów członkowskich lub tylko wywołania metod i występuje błąd, Jeśli spróbujesz przypisać wartości do elementów członkowskich struktury używane w `With...End With` instrukcji.  
@@ -45,9 +36,9 @@ End With
   
 |Termin|Definicja|  
 |---|---|  
-|`objectExpression`|Wymagany. Wyrażenie, które zostaje oszacowane do obiektu. Wyrażenie może być dowolnie złożone i jest sprawdzane tylko raz. Wyrażenie może być dowolnego typu danych, w tym typów podstawowych.|  
-|`statements`|Opcjonalny. Co najmniej jeden instrukcji między `With` i `End With` może odwołujące się do elementów członkowskich obiektu, który jest generowany przez ocenę `objectExpression`.|  
-|`End With`|Wymagany. Kończy definicję `With` bloku.|  
+|`objectExpression`|Wymagana. Wyrażenie, które zostaje oszacowane do obiektu. Wyrażenie może być dowolnie złożone i jest sprawdzane tylko raz. Wyrażenie może być dowolnego typu danych, w tym typów podstawowych.|  
+|`statements`|Opcjonalna. Co najmniej jeden instrukcji między `With` i `End With` może odwołujące się do elementów członkowskich obiektu, który jest generowany przez ocenę `objectExpression`.|  
+|`End With`|Wymagana. Kończy definicję `With` bloku.|  
   
 ## <a name="remarks"></a>Uwagi  
  Przy użyciu `With...End With`, można wykonać serię instrukcji na określony obiekt bez określania nazwy obiektu wiele razy. W ramach `With` blok instrukcji, można określić elementu członkowskiego obiektu, rozpoczynając od okresu, tak jakby `With` obiektu instrukcji poprzedzające go.  
@@ -90,5 +81,5 @@ End With
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Collections.Generic.List%601>  
  [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Inicjatory obiektów: typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -1,29 +1,15 @@
 ---
 title: Obsługa błędów protokołu HTTP sieci Web w programie WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Obsługa błędów protokołu HTTP sieci Web umożliwia zwracanie błędów z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług HTTP w sieci Web, określające stan HTTP kodu i zwracać szczegóły błędu przy użyciu tego samego formatu co operacji (na przykład, XML lub JSON).  
+Obsługa błędów protokołu HTTP sieci Web Windows Communication Foundation (WCF) umożliwia zwracanie błędów z usług WCF Web HTTP, które określają kod stanu HTTP i zwracać szczegóły błędu przy użyciu tego samego formatu co operacji (na przykład, XML lub JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF  
  <xref:System.ServiceModel.Web.WebFaultException> Klasa definiuje konstruktora, który pozwala określić kod stanu HTTP. Ten kod stanu jest następnie zwracany do klienta. Ogólny wersji <xref:System.ServiceModel.Web.WebFaultException> klasy <xref:System.ServiceModel.Web.WebFaultException%601> pozwala na zwracany typ zdefiniowane przez użytkownika, który zawiera informacje o błędzie, który wystąpił. Ten obiekt niestandardowy jest serializowany w formacie określonym przez operację i zwracany do klienta. Poniższy przykład przedstawia sposób zwrócenia kod stanu HTTP.  

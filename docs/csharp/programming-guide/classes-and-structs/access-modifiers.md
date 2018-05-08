@@ -1,35 +1,28 @@
 ---
 title: Modyfikatory dostępu (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziomu ułatwień dostępu, który kontroluje, czy może być używany z innymi kodu z zestawu lub innych zestawów. Następujących modyfikatorów dostępu służy do określenia dostępności typu lub elementu członkowskiego przy deklarowaniu go:  
   
- [publiczny](../../../csharp/language-reference/keywords/public.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
  Typ lub element członkowski jest możliwy przez inny kod, w tym samym zestawie lub innego zestawu, który odwołuje się on. 
   
- [prywatne](../../../csharp/language-reference/keywords/private.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
  Typ lub element członkowski jest możliwy tylko przez kod w tej samej klasie lub strukturze.  
   
- [chronione](../../../csharp/language-reference/keywords/protected.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
  Typ lub element członkowski jest możliwy tylko przez kod w tej samej klasy lub klasa, która jest pochodną klasy.  
- [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
  Typ lub element członkowski jest możliwy przez dowolny kod w tym samym zestawie, ale nie z innego zestawu.  
   
  [chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md) typu lub elementu członkowskiego można uzyskać, sprawdzając dowolny kod w zestawie, w którym jest zadeklarowany lub z klasy pochodnej w innym zestawie. 
@@ -83,12 +76,12 @@ Wszystkie typy i elementy członkowskie typu ma poziomu ułatwień dostępu, kt�
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)  
- [prywatne](../../../csharp/language-reference/keywords/private.md)  
- [publiczny](../../../csharp/language-reference/keywords/public.md)  
- [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)  
- [chronione](../../../csharp/language-reference/keywords/protected.md)  
- [chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md)  
- [prywatne chronione](../../../csharp/language-reference/keywords/private-protected.md)  
- [klasy](../../../csharp/language-reference/keywords/class.md)  
- [— Struktura](../../../csharp/language-reference/keywords/struct.md)  
- [Interfejs](../../../csharp/language-reference/keywords/interface.md)
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)  
+ [private protected](../../../csharp/language-reference/keywords/private-protected.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
+ [interface](../../../csharp/language-reference/keywords/interface.md)

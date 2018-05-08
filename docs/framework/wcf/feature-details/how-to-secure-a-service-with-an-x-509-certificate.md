@@ -1,32 +1,20 @@
 ---
 title: 'Instrukcje: Zabezpieczanie usługi za pomocą certyfikatu X.509'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: 8
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 73fd9919d1403ef592e5b81c11b6eb659baea669
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Instrukcje: Zabezpieczanie usługi za pomocą certyfikatu X.509
-Zabezpieczanie usługi za pomocą certyfikatu X.509 to technika podstawowe który większości powiązania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] użycia. W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowana usługa za pomocą certyfikatu X.509.  
+Zabezpieczanie usługi za pomocą certyfikatu X.509 to technika podstawowe, używanego przez większość powiązania w systemie Windows Communication Foundation (WCF). W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowana usługa za pomocą certyfikatu X.509.  
   
  Warunkiem wstępnym jest ważny certyfikat, który może służyć do uwierzytelniania serwera. Certyfikat musi wystawiony na serwerze przez zaufany urząd certyfikacji. Jeśli certyfikat nie jest prawidłowy, każdy klient próbuje użyć usługi nie ufa usługi, a w związku z tym połączenie nie zostanie ustanowione. Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -44,7 +32,7 @@ Zabezpieczanie usługi za pomocą certyfikatu X.509 to technika podstawowe któr
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Utwórz wystąpienie <xref:System.Uri> klasy dla podstawowego adresu usługi. Ponieważ `WSHttpBinding` używa transportu HTTP, jednolity identyfikator zasobów (URI) musi zaczynać się od tego schematu lub [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] spowoduje zgłoszenie wyjątku, gdy usługa jest otwarty.  
+4.  Utwórz wystąpienie <xref:System.Uri> klasy dla podstawowego adresu usługi. Ponieważ `WSHttpBinding` używa transportu HTTP, jednolity identyfikator zasobów (URI) musi zaczynać się od tego schematu lub Windows Communication Foundation (WCF) spowoduje zgłoszenie wyjątku, gdy usługa jest otwarty.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  

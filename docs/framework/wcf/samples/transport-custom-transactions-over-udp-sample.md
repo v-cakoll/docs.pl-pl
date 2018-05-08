@@ -1,27 +1,15 @@
 ---
-title: "Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP"
-ms.custom: 
+title: 'Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7e26d0c25879b3b1b6ed873543f051de989ddd92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP
-Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) przykładowa w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md). Rozszerza próbki transportu UDP do obsługi przepływu transakcji niestandardowe i pokazuje użycie <xref:System.ServiceModel.Channels.TransactionMessageProperty> właściwości.  
+Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) przykład w systemie Windows Communication Foundation (WCF)[rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md). Rozszerza próbki transportu UDP do obsługi przepływu transakcji niestandardowe i pokazuje użycie <xref:System.ServiceModel.Channels.TransactionMessageProperty> właściwości.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Zmiany kodu w przykładowym transportu UDP  
  Aby zademonstrować przepływu transakcji, próbki zmienia umowy serwisowej dla `ICalculatorContract` wymagające zakresu transakcji dla `CalculatorService.Add()`. Próbki dodaje również dodatkową `System.Guid` parametru umowy `Add` operacji. Ten parametr jest używany do przekazania identyfikator transakcji klienta do usługi.  
@@ -57,7 +45,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer`to metoda pomocnika, która zawiera nową funkcję tokenu propagacji dla bieżącej transakcji z jednostką wiadomości i umieszczenie go w buforze.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` to metoda pomocnika, która zawiera nową funkcję tokenu propagacji dla bieżącej transakcji z jednostką wiadomości i umieszczenie go w buforze.  
   
  Dla transportu przepływu transakcji niestandardowych, implementacja klienta musi wiedzieć, jakie operacje usługi wymaga przepływu transakcji oraz przekazywanie tych informacji do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Należy również mechanizm przekazywania transakcji użytkownika do warstwy transportowej. W przykładzie użyto "[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inspektorzy komunikatów" Aby uzyskać te informacje. Klienta komunikat Inspektor zaimplementowano, która jest wywoływana `TransactionFlowInspector`, wykonuje następujące zadania:  
   
@@ -170,7 +158,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()`jest to metoda pomocnika odwraca proces serializacji wykonywane przez `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` jest to metoda pomocnika odwraca proces serializacji wykonywane przez `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
   
  Jeśli transakcja została skierowana w, jest dołączany do wiadomości w `TransactionMessageProperty`.  
   
@@ -269,7 +257,7 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   

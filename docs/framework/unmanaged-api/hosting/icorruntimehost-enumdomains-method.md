@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::EnumDomains — Metoda"
-ms.custom: 
+title: ICorRuntimeHost::EnumDomains — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.EnumDomains
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96b74995-0cde-4876-b6df-7fc164e6a5d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f12135134e38b3f52c66aa951d61a3da7cf5fa50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 688e7a0fa32650aa0f626ddf40283f73ceb57156
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains — Metoda
 Pobiera moduł wyliczający dla domen w bieżącym procesie.  
@@ -55,7 +43,7 @@ HRESULT EnumDomains (
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Operacja powiodła się.|  
-|WARTOŚCI S_FALSE|Nie można ukończyć operacji.|  
+|S_FALSE|Nie można ukończyć operacji.|  
 |E_FAIL|Wystąpił nieznany, poważnej awarii. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie będzie już można używać w procesie. Kolejne wywołania żadnych hostingu interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
   

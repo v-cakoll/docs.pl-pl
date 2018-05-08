@@ -1,13 +1,6 @@
 ---
-title: "Źródła danych obsługiwane przez formularze systemu Windows"
-ms.custom: 
+title: Źródła danych obsługiwane przez formularze systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie wiązania danych został użyty w aplikacjach mógł korzystać z danych przechowywanych w bazach danych. Wiązanie danych formularzy systemu Windows, umożliwia dostęp do danych z baz danych, a także dane w inne struktury, takich jak kolekcje i tablic tak długo, jak zostały spełnione pewne wymagania minimalne.  
@@ -50,13 +38,13 @@ Tradycyjnie wiązania danych został użyty w aplikacjach mógł korzystać z da
  tablicą lub kolekcją  
  Do działania jako źródło danych, musi implementować listy <xref:System.Collections.IList> interfejsu; przykładem może być tablicę, która jest wystąpieniem <xref:System.Array> klasy. Aby uzyskać więcej informacji na tablice, zobacz [porady: tworzenie tablicy obiektów (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- Ogólnie rzecz biorąc, należy użyć <xref:System.ComponentModel.BindingList%601> podczas tworzenia list obiektów dla powiązania danych. <xref:System.ComponentModel.BindingList%601>jest ogólny wersja <xref:System.ComponentModel.IBindingList> interfejsu. <xref:System.ComponentModel.IBindingList> Rozszerza interfejs <xref:System.Collections.IList> interfejsu przez dodanie właściwości, metody i wymaganych przez powiązanie dwukierunkowe danych zdarzenia.  
+ Ogólnie rzecz biorąc, należy użyć <xref:System.ComponentModel.BindingList%601> podczas tworzenia list obiektów dla powiązania danych. <xref:System.ComponentModel.BindingList%601> jest ogólny wersja <xref:System.ComponentModel.IBindingList> interfejsu. <xref:System.ComponentModel.IBindingList> Rozszerza interfejs <xref:System.Collections.IList> interfejsu przez dodanie właściwości, metody i wymaganych przez powiązanie dwukierunkowe danych zdarzenia.  
   
  <xref:System.Collections.IEnumerable>  
  Formanty formularzy systemu Windows może być powiązana ze źródłami danych, które obsługują tylko <xref:System.Collections.IEnumerable> interfejsu, jeśli są one powiązane za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnika.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]obiekty danych  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]udostępnia szereg struktur danych jest odpowiedni dla powiązania. Każdy różni się w jego wiedzy i złożoności.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] obiekty danych  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] udostępnia szereg struktur danych jest odpowiedni dla powiązania. Każdy różni się w jego wiedzy i złożoności.  
   
 -   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> jest istotne blokiem konstrukcyjnym <xref:System.Data.DataTable>, w tym liczbę kolumn w skład tabeli. Każdy <xref:System.Data.DataColumn> ma <xref:System.Data.DataColumn.DataType%2A> właściwość, która określa rodzaj danych blokad kolumny (na przykład utworzyć samochodów w tabelę opisującą samochodów). Możesz można prosty — wiązanie formantu (takich jak <xref:System.Windows.Forms.TextBox> formantu <xref:System.Windows.Forms.Control.Text%2A> właściwości) do kolumny w tabeli danych.  
   

@@ -1,26 +1,17 @@
 ---
-title: "Wyrażenie jest wartością i dlatego nie może być elementem docelowym przypisania"
+title: Wyrażenie jest wartością i dlatego nie może być elementem docelowym przypisania
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30068
 - vbc30068
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bec3e2d298160bd0b459dc3b7ef93b94648e439a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dd5618bd0533f885a6aef8229b2d8cb1bc34c237
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Wyrażenie jest wartością i dlatego nie może być elementem docelowym przypisania
 Instrukcja podejmuje próbę przypisania wartości dla wyrażenia. Można przypisać wartość tylko do zapisu zmienną, właściwością lub element tablicy w czasie wykonywania. Poniższy przykład przedstawia, jak ten błąd może wystąpić.  
@@ -68,4 +59,4 @@ exitButton.Location = exitLocation
 ## <a name="see-also"></a>Zobacz też  
  [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
  [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Procedury rozwiązywania problemów](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+ [Rozwiązywanie problemów z procedurami](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

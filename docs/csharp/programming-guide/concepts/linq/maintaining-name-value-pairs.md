@@ -1,31 +1,22 @@
 ---
-title: "Obsługa pary nazwa wartość (C#)"
-ms.custom: 
+title: Obsługa pary nazwa wartość (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 998cfad22c28248eb22fef5141caa96035d2d0b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac1e6464618c00cba4ded92492fe4a687e1a25f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Obsługa pary nazwa/wartość (C#)
-Wiele aplikacji ma do przechowywania informacji, które najlepiej jest przechowywane jako pary nazwa/wartość. Informacje te mogą być informacje o konfiguracji lub ustawień globalnych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera niektórych metod, które ułatwiają Zachowaj zestaw par nazwa/wartość. Możesz zachować informacje jako atrybuty lub zbiór podrzędnych elementów.  
+Wiele aplikacji ma do przechowywania informacji, które najlepiej jest przechowywane jako pary nazwa/wartość. Informacje te mogą być informacje o konfiguracji lub ustawień globalnych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera niektórych metod, które ułatwiają Zachowaj zestaw par nazwa/wartość. Możesz zachować informacje jako atrybuty lub zbiór podrzędnych elementów.  
   
  Jeden różnica między jednoczesnym zachowaniu bezpieczeństwa informacji jako atrybuty lub jako elementy podrzędne jest atrybuty ograniczenia, że może istnieć tylko jeden atrybut o określonej nazwie dla elementu. To ograniczenie nie ma zastosowania do elementów podrzędnych.  
   
 ## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue i SetElementValue  
  Te dwie metody, które ułatwiają utrzymanie par nazwa/wartość są <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> i <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Te dwie metody mają podobne semantyki.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>można dodać, modyfikowanie lub usuwanie atrybutów elementu.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> można dodać, modyfikowanie lub usuwanie atrybutów elementu.  
   
 -   Jeśli należy wywołać <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą atrybutu, który nie istnieje, metoda tworzy nowy atrybut i dodaje go do określonego elementu.  
   
@@ -33,7 +24,7 @@ Wiele aplikacji ma do przechowywania informacji, które najlepiej jest przechowy
   
 -   Wywołanie <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu, a następnie określ wartość null dla zawartości, atrybut jest usuwany po swoim obiekcie nadrzędnym.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>można dodać, modyfikowanie lub usuwanie elementów podrzędnych danego elementu.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A> można dodać, modyfikowanie lub usuwanie elementów podrzędnych danego elementu.  
   
 -   Jeśli należy wywołać <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą elementu podrzędnego, który nie istnieje, metoda tworzy nowy element i dodaje go do określonego elementu.  
   

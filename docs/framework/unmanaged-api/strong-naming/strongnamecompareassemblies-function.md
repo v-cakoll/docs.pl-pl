@@ -1,14 +1,6 @@
 ---
-title: "StrongNameCompareAssemblies — Funkcja"
-ms.custom: 
+title: StrongNameCompareAssemblies — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameCompareAssemblies
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ed98b1713427a71c73c30ddd64188f61d51045c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies — Funkcja
 Określa, czy dwa zestawy różnią się tylko ich podpisów silnej nazwy.  
@@ -59,14 +47,14 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Jedna z następujących wartości:  
   
--   `SN_CMP_DIFFERENT`(0) — określa, czy zestawy zawierać innych danych.  
+-   `SN_CMP_DIFFERENT` (0) — określa, czy zestawy zawierać innych danych.  
   
--   `SN_CMP_IDENTICAL`(1) — określa, czy zestawy są dokładnie takie same, w tym ich podpisów i sumy kontrolnej.  
+-   `SN_CMP_IDENTICAL` (1) — określa, czy zestawy są dokładnie takie same, w tym ich podpisów i sumy kontrolnej.  
   
--   `SN_CMP_SIGONLY`(2) — określa, czy zestawy różnią się jedynie podpisu i sumy kontrolnej.  
+-   `SN_CMP_SIGONLY` (2) — określa, czy zestawy różnią się jedynie podpisu i sumy kontrolnej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
+ `true` Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,7 +63,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Uwagi  
  Podpis silnej nazwy zestawu składa się z zestawu tekst nazwę, wersję, kulturę i token klucza publicznego.  

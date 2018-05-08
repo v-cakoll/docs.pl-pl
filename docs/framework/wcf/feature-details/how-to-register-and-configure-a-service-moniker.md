@@ -1,36 +1,22 @@
 ---
 title: 'Porady: zarejestrować i skonfigurować krótkiej nazwy'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Porady: zarejestrować i skonfigurować krótkiej nazwy
-Przed użyciem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] krótkiej nazwy w aplikacji modelu COM z typu kontraktu, musisz zarejestrować wymagane typy oparte na atrybutach w modelu COM i skonfigurować za pomocą konfiguracji powiązania wymaganych aplikacji modelu COM i krótka nazwa.  
+Przed użyciem moniker usługi Windows Communication Foundation (WCF) w aplikacji modelu COM z typu kontraktu, musisz zarejestrować wymagane typy oparte na atrybutach w modelu COM i skonfigurować aplikacji modelu COM i krótka nazwa wymaganego powiązania Konfiguracja.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Aby zarejestrować wymagane typy oparte na atrybutach w modelu COM  
   
-1.  Użyj [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do pobierania metadanych umowy z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Generuje kod źródłowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zestaw klienta i pliku konfiguracji aplikacji klienta.  
+1.  Użyj [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do pobierania metadanych kontraktu usługi WCF. Spowoduje to wygenerowanie kodu źródłowego dla zestawu klienta WCF i pliku konfiguracji aplikacji klienta.  
   
 2.  Upewnij się, że typy w zestawie są oznaczone jako `ComVisible`. Aby to zrobić, Dodaj następujący atrybut w pliku AssemblyInfo.cs w projektu programu Visual Studio.  
   
@@ -38,7 +24,7 @@ Przed użyciem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] krótkiej
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Kompiluj zarządzanej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta jako zestawu o silnej nazwie. Wymaga podpisywania za pomocą klucza kryptograficznego. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu o silnej nazwie](http://go.microsoft.com/fwlink/?LinkId=94874) w Podręczniku dewelopera programu .NET.  
+3.  Kompiluj zarządzanego klienta WCF jako zestawu o silnej nazwie. Wymaga podpisywania za pomocą klucza kryptograficznego. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu o silnej nazwie](http://go.microsoft.com/fwlink/?LinkId=94874) w Podręczniku dewelopera programu .NET.  
   
 4.  Użyj narzędzia do rejestrowania zestawów (Regasm.exe) z `/tlb` możliwość zarejestrowania typów w zestawie z modelu COM.  
   
@@ -49,7 +35,7 @@ Przed użyciem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] krótkiej
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Aby skonfigurować za pomocą konfiguracji powiązania wymaganych aplikacji modelu COM i krótka nazwa  
   
--   Umieść definicje powiązania (generowane przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w pliku konfiguracyjnym aplikacji wygenerowanego klienta) w pliku konfiguracyjnym aplikacji klienta. Na przykład dla programu Visual Basic 6.0 pliku wykonywalnego o nazwie CallCenterClient.exe, Konfiguracja powinna zostać umieszczona w pliku o nazwie CallCenterConfig.exe.config w tym samym katalogu co plik wykonywalny. Aplikacja kliencka można teraz używać krótkiej nazwy. Należy pamiętać, że konfiguracja powiązania nie jest wymagane, jeśli przy użyciu jednej ze standardowych typów dostarczanych przez powiązanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Umieść definicje powiązania (generowane przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w pliku konfiguracyjnym aplikacji wygenerowanego klienta) w pliku konfiguracyjnym aplikacji klienta. Na przykład dla programu Visual Basic 6.0 pliku wykonywalnego o nazwie CallCenterClient.exe, Konfiguracja powinna zostać umieszczona w pliku o nazwie CallCenterConfig.exe.config w tym samym katalogu co plik wykonywalny. Aplikacja kliencka można teraz używać krótkiej nazwy. Należy pamiętać, że konfiguracja powiązania nie jest wymagane, jeśli przy użyciu jednej ze standardowych powiązanie typów dostarczanych przez usługę WCF.  
   
      Następujący typ jest zarejestrowany.  
   

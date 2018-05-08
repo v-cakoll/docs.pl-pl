@@ -1,13 +1,6 @@
 ---
-title: "Użyj właściwości AutomationID"
-ms.custom: 
+title: Użyj właściwości AutomationID
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bd5985dd531b13ca91efd9c0aa7987ff6a57e56a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
@@ -33,16 +24,16 @@ ms.lasthandoff: 01/19/2018
   
  Ten temat zawiera scenariusze i przykładowy kod, które pokazują, jak i kiedy <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> może służyć do zlokalizowania w elemencie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Unikatowy identyfikator elementu automatyzacji interfejsu użytkownika z jego elementów równorzędnych. Aby uzyskać więcej informacji na identyfikatorach właściwości związane z kontroli identyfikacji, zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Unikatowy identyfikator elementu automatyzacji interfejsu użytkownika z jego elementów równorzędnych. Aby uzyskać więcej informacji na identyfikatorach właściwości związane z kontroli identyfikacji, zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>nie gwarantuje unikatową tożsamość w drzewie; potrzebuje zazwyczaj kontenera i informacje o zakresie użyteczne. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei ma wiele elementów menu podrzędnego. Te elementy menu dodatkowej mogą zostać zidentyfikowane na podstawie ogólnego schemat, takiego jak "Item1", "Elementu 2" i tak dalej, dzięki czemu zduplikowane identyfikatory elementów podrzędnych dla elementów menu najwyższego poziomu.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> nie gwarantuje unikatową tożsamość w drzewie; potrzebuje zazwyczaj kontenera i informacje o zakresie użyteczne. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei ma wiele elementów menu podrzędnego. Te elementy menu dodatkowej mogą zostać zidentyfikowane na podstawie ogólnego schemat, takiego jak "Item1", "Elementu 2" i tak dalej, dzięki czemu zduplikowane identyfikatory elementów podrzędnych dla elementów menu najwyższego poziomu.  
   
 ## <a name="scenarios"></a>Scenariusze  
  Trzy podstawowe scenariusze aplikacji klienta automatyzacji interfejsu użytkownika zostały określone, które wymagają użycia <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> do osiągnięcia dokładne i spójne wyniki podczas wyszukiwania elementów.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>jest obsługiwana przez wszystkie elementy automatyzacji interfejsu użytkownika w widoku kontrolki z wyjątkiem najwyższego poziomu aplikacji systemu windows, elementach automatyzacji interfejsu użytkownika pochodzące z [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] formantów, które nie mają Identyfikatora lub x: Uid i elementów automatyzacji interfejsu użytkownika pochodzące z [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] formantów, które nie ma identyfikatora formantu.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> jest obsługiwana przez wszystkie elementy automatyzacji interfejsu użytkownika w widoku kontrolki z wyjątkiem najwyższego poziomu aplikacji systemu windows, elementach automatyzacji interfejsu użytkownika pochodzące z [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] formantów, które nie mają Identyfikatora lub x: Uid i elementów automatyzacji interfejsu użytkownika pochodzące z [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] formantów, które nie ma identyfikatora formantu.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Użyj AutomationID unikatowy i wykrywalny można znaleźć określonego elementu w drzewie automatyzacji interfejsu użytkownika  
   

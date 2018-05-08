@@ -1,24 +1,12 @@
 ---
 title: Niestandardowe kryteria znajdowania
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b57a9535b34441a8f1c86beeffa94046cf8944f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c9363add13e38ded75685e4115a5084629d6505
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-find-criteria"></a>Niestandardowe kryteria znajdowania
 Przykładzie pokazano, jak utworzyć niestandardowy zakres dopasowania przy użyciu logiki i sposobu implementacji usługi odnajdywania niestandardowych. Klienci używają niestandardowy zakres funkcji dopasowywania uściślić i dalsze bazując funkcje Znajdź dostarczane przez system odnajdywania WCF. Scenariusz, które obejmuje ten przykład jest następujący:  
@@ -56,7 +44,7 @@ Przykładzie pokazano, jak utworzyć niestandardowy zakres dopasowania przy uży
   
      Tej niestandardowej logiki przechodzi przez wszystkie zakresy na każdym z punktów końcowych, które w usłudze. Jeśli żadnego punktu końcowego zakresy zgodny z żadną z zakresów dostarczonych przez klienta usługi odnajdywania dodaje tego punktu końcowego do odpowiedzi, który jest wysyłany do klienta.  
   
-3.  **CustomDiscoveryExtension.cs**: ostatni krok w przypadku implementowania usługi odnajdywania jest podłączenie tej implementacji niestandardowego odnajdywanie usługi hosta usługi. Klasa pomocnika używany w tym miejscu jest `CustomDiscoveryExtension` klasy. Ta klasa rozszerza <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> klasy. Użytkownik musi przesłonić <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> metody. W tym przypadku metoda zwraca wystąpienie usługi odnajdywania niestandardowego, który został utworzony przed. `PublishedEndpoints`jest <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> zawierający wszystkie punkty końcowe aplikacji, które są dodawane do <xref:System.ServiceModel.ServiceHost>. Usługi odnajdywania niestandardowe używa go do wypełnienia listy wewnętrznej. Użytkownik może dodać inne metadane punktu końcowego.  
+3.  **CustomDiscoveryExtension.cs**: ostatni krok w przypadku implementowania usługi odnajdywania jest podłączenie tej implementacji niestandardowego odnajdywanie usługi hosta usługi. Klasa pomocnika używany w tym miejscu jest `CustomDiscoveryExtension` klasy. Ta klasa rozszerza <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> klasy. Użytkownik musi przesłonić <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> metody. W tym przypadku metoda zwraca wystąpienie usługi odnajdywania niestandardowego, który został utworzony przed. `PublishedEndpoints` jest <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> zawierający wszystkie punkty końcowe aplikacji, które są dodawane do <xref:System.ServiceModel.ServiceHost>. Usługi odnajdywania niestandardowe używa go do wypełnienia listy wewnętrznej. Użytkownik może dodać inne metadane punktu końcowego.  
   
  Na koniec Otwórz plik Program.cs. Należy pamiętać, że zarówno <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> i `CustomDiscoveryExtension` zostaną dodane do hosta. Gdy odbywa się i host ma punkt końcowy służącym do odbierania wiadomości odnajdywania, aplikacja może korzystać z usługi odnajdywania niestandardowych.  
   
@@ -77,6 +65,6 @@ Przykładzie pokazano, jak utworzyć niestandardowy zakres dopasowania przy uży
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

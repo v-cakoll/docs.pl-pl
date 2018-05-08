@@ -1,10 +1,7 @@
 ---
-title: "Jaki &#39; s przestarzałe w bibliotece klas programu .NET Framework"
+title: Co&#39;s przestarzałe w bibliotece klas programu .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
@@ -12,15 +9,13 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Jaki &#39; s przestarzałe w bibliotece klas programu .NET Framework
+# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Co&#39;s przestarzałe w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i elementy członkowskie typu, które zapewniają nowe funkcje. Istniejących typów i ich elementy członkowskie także ulec zmianie. Na przykład niektóre typy stają się mniej ważne technologii, które obsługują zastępuje to nowa technologia, a niektóre metody są zastępowane przez nowszą metod, które są bardziej wygodne lub zaawansowanych funkcji.  
   
  .NET Framework i środowisko uruchomieniowe języka wspólnego dążyć do obsługi zgodności z poprzednimi wersjami (dzięki czemu aplikacje, które zostały opracowane z jednej wersji programu .NET Framework do uruchamiania na następną wersję programu .NET Framework). Utrudnia to po prostu usuń typu lub elementu członkowskiego typu. Zamiast tego programu .NET Framework wskazuje, czy typ lub element członkowski typu powinna już być używana przez oznaczenie jej jako przestarzałe lub przestarzałe. Wycofano typ lub element członkowski obejmuje oznaczenie go tak, aby deweloperzy wiedzą zostanie zniknie i czas odpowiedzieć na jego usunięcia. Jednak istniejący kod, który używa typu lub elementu członkowskiego jest nadal uruchomione w nowej wersji programu .NET Framework.  
@@ -60,9 +55,9 @@ ms.lasthandoff: 12/22/2017
   
  W poniższej tabeli wymieniono wartości ciągów, które można przypisać do `version` atrybutu pod kątem określonej wersji programu .NET Framework.  
   
-|Wersja programu .NET Framework|`version`ciąg|
+|Wersja programu .NET Framework|`version` Ciąg|
 |-|-|  
-|4.7 (w tym 4.7.1)|wersja 4.0|  
+|4.7 (w tym 4.7.1 i 4.7.2)|wersja 4.0|  
 |4.6 (w tym 4.6.1 i 4.6.2)|wersja 4.0|  
 |4.5 (w tym 4.5.1 i 4.5.2)|wersja 4.0|  
 |4|wersja 4.0|  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |1.1|V1.1.4322|  
 |1.0|V1.0.3705|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Przestarzałe list dla programu .NET Framework 4.5 i 4.6  
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Przestarzałe list dla platformy .NET Framework 4.5 lub nowszy  
  [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)  
   
  [Przestarzałe elementy członkowskie](../../../docs/framework/whats-new/obsolete-members.md)  

@@ -1,14 +1,6 @@
 ---
 title: Jak wykryć czy zadanie drukowania może zostać zrealizowane o tej porze dnia
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e5ea5ad3bcb10bfbc091f0b5852ee181a2c3fa8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Jak wykryć czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne przez 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład zarezerwować drukarek do wyłącznego użytku niektórych działu po 17: 00. Działu musi innej kolejki drukarki niż aplikacje innych działów obsługi użycia. Czy można ustawić kolejki dla innych działów będzie dostępny od 17: 00, gdy kolejka działu favored można ustawić jako dostępne przez cały czas.  

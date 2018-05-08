@@ -1,23 +1,12 @@
 ---
-title: "Element TransactionScope można zagnieżdżać w ramach usługi"
-ms.custom: 
+title: Element TransactionScope można zagnieżdżać w ramach usługi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c4e51f65df010f466f43c2018d9b1eec6e4ca58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c556df417548ab348d1dd5bc642928ae68d8878
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Element TransactionScope można zagnieżdżać w ramach usługi
 W tym przykładzie składa się z dwóch scenariuszy uruchomienia przedstawiający sposób obsługi <xref:System.Activities.Statements.TransactionScope> wystąpienia działania w ramach usługi. Najpierw transakcja jest inicjowana przy użyciu <xref:System.Activities.Statements.TransactionScope> działanie, aby utworzyć nową transakcję na kliencie i <xref:System.ServiceModel.Activities.TransactedReceiveScope> otrzymywanie i zakres okres istnienia transakcji na serwerze. Pierwszego scenariusza, w ramach usługi uruchamia dodatkowej <xref:System.Activities.Statements.TransactionScope> działania, aby zademonstrować zagnieżdżanie <xref:System.Activities.Statements.TransactionScope> działań w ramach usługi. Drugi scenariusz pokazuje, jak są przestrzegane limitów czasu w zagnieżdżonych <xref:System.Activities.Statements.TransactionScope> działań.  
@@ -43,6 +32,6 @@ W tym przykładzie składa się z dwóch scenariuszy uruchomienia przedstawiają
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TRSComposability`

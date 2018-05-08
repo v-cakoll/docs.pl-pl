@@ -1,23 +1,12 @@
 ---
-title: "Śledzenie przepływu pracy"
-ms.custom: 
+title: Śledzenie przepływu pracy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-tracing"></a>Śledzenie przepływu pracy
 Śledzenie przepływu pracy daje możliwość przechwytywania informacji diagnostycznych za pomocą obiektów nasłuchujących śledzenia .NET Framework. Śledzenie można włączone, jeśli zostanie wykryty problem z aplikacją i następnie wyłączone ponownie po usunięciu problemu. Istnieją dwa sposoby można włączyć śledzenie debugowania dla przepływów pracy. Można skonfigurować przy użyciu przeglądarki śledzenia zdarzeń lub użyć <xref:System.Diagnostics> do wysyłania zdarzeń śledzenia w pliku.  
@@ -33,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Domyślny rozmiar buforu śledzenia analitycznego jest tylko 4 kilobajtów (KB); Zaleca się zwiększenie rozmiaru 32 KB. Aby to zrobić, wykonaj następujące czynności.  
   
-    1.  Uruchom następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203):`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Uruchom następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  Zmień \<bufferSize > wartość w pliku Windows.ApplicationServer.Applications.man 32 znaków.  
   
@@ -45,10 +34,10 @@ ms.lasthandoff: 12/22/2017
                   </channel>  
         ```  
   
-    3.  Uruchom następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203):`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Uruchom następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  Jeśli używasz platformy .NET Framework 4 Client Profile, najpierw należy zarejestrować ETW manifest, uruchamiając następujące polecenie z katalogu programu .NET Framework 4:`ServiceModelReg.exe –i –c:etw`  
+>  Jeśli używasz platformy .NET Framework 4 Client Profile, najpierw należy zarejestrować ETW manifest, uruchamiając następujące polecenie z katalogu programu .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Włączanie debugowania śledzenia przy użyciu System.Diagnostics  
  Te odbiorniki można skonfigurować w pliku App.config aplikacji przepływu pracy lub w pliku Web.config dla usługi przepływu pracy. W tym przykładzie [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) jest skonfigurowany, aby zapisać informacje śledzenia do pliku MyTraceLog.txt w bieżącym katalogu.  

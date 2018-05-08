@@ -1,14 +1,6 @@
 ---
 title: Profilery CLR i aplikacji ze Sklepu Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacji ze Sklepu Windows
 W tym temacie omówiono, jakie trzeba myśleć o podczas pisania narzędzia diagnostyczne analizy zarządzanego kodu uruchamianego w aplikacji ze Sklepu Windows.  Udostępnia również wytyczne do modyfikowania istniejących narzędzi rozwoju, aby nadal działa podczas wykonywania dla aplikacji ze Sklepu Windows.  Aby zrozumieć te informacje, najlepiej, jeśli znasz wspólnego języka środowiska uruchomieniowego profilowania API, już używane tego interfejsu API w narzędzia diagnostycznego, że działa prawidłowo, przed aplikacji klasycznych systemu Windows, a teraz jest zainteresowani modyfikowanie narzędzie jest do poprawnego działania względem aplikacji ze Sklepu Windows.  
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Wybieranie do profilu aplikacji ze Sklepu Windows**  
  Najpierw należy poprosić użytkownika programu profiler do uruchomienia aplikacji Sklepu Windows.  Dla aplikacji klasycznych prawdopodobnie będzie wyświetlić okna dialogowego przeglądania plików, a użytkownik może znaleźć i wybrać plik .exe.  Jednak aplikacje ze Sklepu Windows są różne, a za pomocą okna dialogowego przeglądania nie ma sensu.  Zamiast tego lepiej jest wyświetlane użytkownikowi listę zainstalowane dla danego użytkownika można wybierać aplikacje ze Sklepu Windows.  
   
- Można użyć [klasy PackageManager](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) do generowania tej listy.  `PackageManager`jest klasą środowiska wykonawczego systemu Windows, która jest dostępna dla aplikacji klasycznych, a w rzeczywistości jest *tylko* dostępne dla aplikacji klasycznych.  
+ Można użyć [klasy PackageManager](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) do generowania tej listy.  `PackageManager` jest klasą środowiska wykonawczego systemu Windows, która jest dostępna dla aplikacji klasycznych, a w rzeczywistości jest *tylko* dostępne dla aplikacji klasycznych.  
   
  W poniższym przykładzie kod produktu z hipotetyczny interfejsu użytkownika programu profilującego zapisywane jako aplikacji klasycznej w języku C# yses `PackageManager` aby wygenerować listę aplikacji systemu Windows:  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  Istnieje kilka elementów, które będą potrzebne, aby uzyskać prawo:  
   
--   `packageFullName`można określić podczas Iterowanie za pośrednictwem pakietów i przechwytywanie `package.Id.FullName`.  
+-   `packageFullName` można określić podczas Iterowanie za pośrednictwem pakietów i przechwytywanie `package.Id.FullName`.  
   
--   `debuggerCommandLine`jest bardziej interesujące.  Aby przekazać blok środowiska niestandardowych do aplikacji ze Sklepu Windows, należy napisać własny, simplistic fikcyjny debugera.  Tarła Windows aplikacji ze Sklepu Windows zawieszone, a następnie dołącza debuger przez uruchamianie debugera przy użyciu wiersza polecenia takich jak w tym przykładzie:  
+-   `debuggerCommandLine` jest bardziej interesujące.  Aby przekazać blok środowiska niestandardowych do aplikacji ze Sklepu Windows, należy napisać własny, simplistic fikcyjny debugera.  Tarła Windows aplikacji ze Sklepu Windows zawieszone, a następnie dołącza debuger przez uruchamianie debugera przy użyciu wiersza polecenia takich jak w tym przykładzie:  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`jest identyfikator SID AppContainer aplikacji do Sklepu Windows.  Wcześniejszej sekcji tego tematu pokazano, jak przejść przez pakiety zainstalowane dla bieżącego użytkownika.  W tym przykładowym kodzie mogą uzyskać packageId.  I z pakietu, można uzyskać `<acSid>` z kodem podobny do następującego:  
+ `<acSid>` jest identyfikator SID AppContainer aplikacji do Sklepu Windows.  Wcześniejszej sekcji tego tematu pokazano, jak przejść przez pakiety zainstalowane dla bieżącego użytkownika.  W tym przykładowym kodzie mogą uzyskać packageId.  I z pakietu, można uzyskać `<acSid>` z kodem podobny do następującego:  
   
 ```csharp  
 IntPtr acPSID;  
@@ -421,7 +409,7 @@ GetAppContainerFolderPath(acSid, out acDir);
  Istnieje możliwość analizy kodu zarządzanego działającego w aplikacji ze Sklepu Windows za pomocą interfejsu API profilowania środowiska CLR.  W rzeczywistości można podjąć istniejących profilera, który projektujesz i wprowadzić kilka zmian określonych, dzięki czemu można kierować aplikacji ze Sklepu Windows.   Profiler interfejsu użytkownika należy używać nowych interfejsów API do aktywacji w trybie debugowania aplikacji ze Sklepu Windows.  Upewnij się, że biblioteki DLL profilera wykorzystuje tylko API odpowiednich dla aplikacji ze Sklepu Windows.  Mechanizm komunikacji między profilera interfejsu użytkownika i biblioteki DLL profilera, na których mają być zapisywane z ograniczenia interfejsu API aplikacji Sklepu Windows na uwadze i świadomości ograniczone uprawnienia w przypadku aplikacji ze Sklepu Windows.  Biblioteki DLL profilera należy zwrócić uwagę sposób CLR traktuje metadanych Winmd, i jak moduł Garbage Collector jest różny w odniesieniu do zarządzanych wątków.  
   
 <a name="Resources"></a>   
-## <a name="resources"></a>Resources  
+## <a name="resources"></a>Zasoby  
  **Środowisko uruchomieniowe języka wspólnego**  
  -   [Dokumentacja interfejsu API profilowania CLR](../../../../docs/framework/unmanaged-api/profiling/index.md)  
   

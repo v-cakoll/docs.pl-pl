@@ -1,27 +1,15 @@
 ---
 title: Ograniczenia schematu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f5b004b70716c61af8ac37fef76f660c488e5a74
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c62f934561fa4a6c352ff84b8c1201461c42de39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-restrictions"></a>Ograniczenia schematu
 Drugi parametr opcjonalny **GetSchema** metoda jest zwracane ograniczenia, które są używane w celu ograniczenia ilości informacji o schemacie, a jest przekazywana do **GetSchema** metodę jako tablica ciągów . Pozycja w tablicy określa wartości, które mogą upłynąć, a jest to równoważne numer ograniczeń.  
@@ -148,7 +136,7 @@ class Program
   
 |Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_Name|@Name|nazwa|1|  
+|Nazwa_użytkownika|@Name|nazwa|1|  
   
 ### <a name="databases"></a>Bazy danych  
   
@@ -240,7 +228,7 @@ class Program
   
 |Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|assembly_name|@AssemblyName|assemblies.name|1|  
+|nazwa_zestawu|@AssemblyName|assemblies.name|1|  
 |udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>ForeignKeys  

@@ -1,13 +1,6 @@
 ---
 title: Czas uruchamiania aplikacji
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - splash screen [WPF], startup time
 - WPF [WPF], startup time
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af07e1876666351d72eada56e7af3e787ccc90f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu wymaganego do uruchomienia aplikacji WPF mogą się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegana i rzeczywistych dla aplikacji Windows Presentation Foundation (WPF).  
@@ -76,7 +64,7 @@ Ilość czasu wymaganego do uruchomienia aplikacji WPF mogą się znacznie róż
  Zarówno Ngen i JIT moduły mogą mieć wpływ najgorszy. To dlatego mscorjit.dll muszą zostać załadowane, a podczas przy użyciu kompilatora JIT działa w kodzie, liczbę stron w obrazów Ngen muszą być dostępne, gdy przy użyciu kompilatora JIT odczytuje metadane te zestawy.  
   
 ### <a name="ngen-and-clickonce"></a>Narzędzie ngen i ClickOnce  
- Sposób planowania wdrażania aplikacji można również ustawić różnica w czasie ładowania. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]wdrożenie aplikacji nie obsługuje narzędzia Ngen. Jeśli zdecydujesz się użyć Ngen.exe dla aplikacji, należy użyć innego mechanizmu wdrażania, takich jak Instalator Windows.  
+ Sposób planowania wdrażania aplikacji można również ustawić różnica w czasie ładowania. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] wdrożenie aplikacji nie obsługuje narzędzia Ngen. Jeśli zdecydujesz się użyć Ngen.exe dla aplikacji, należy użyć innego mechanizmu wdrażania, takich jak Instalator Windows.  
   
  Aby uzyskać więcej informacji, zobacz [Ngen.exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   

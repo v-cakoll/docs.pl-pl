@@ -1,32 +1,22 @@
 ---
-title: "Pisanie zapytań w języku Visual Basic"
-ms.custom: 
+title: Pisanie zapytań w języku Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: "70"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Wskazówki: Pisanie zapytań w Visual Basic
 W tym przewodniku przedstawiono sposób użycia funkcje języka Visual Basic można zapisać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia zapytań. Instruktaż pokazuje, jak tworzyć zapytania na liście obiektów dla użytkowników domowych, jak uruchamiać zapytania i sposobu ich modyfikacji. Zapytania zastosować kilka funkcji w tym inicjatory obiektów, wnioskowanie o typie lokalnym i typy anonimowe.  
   
- Po ukończeniu tego przewodnika, wszystko będzie gotowe do przeniesienia przykłady i dokumentację dla konkretnych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] w dostawcy. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]obejmują dostawców [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Po ukończeniu tego przewodnika, wszystko będzie gotowe do przeniesienia przykłady i dokumentację dla konkretnych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] w dostawcy. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] obejmują dostawców [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="create-a-project"></a>Tworzenie projektu  
   

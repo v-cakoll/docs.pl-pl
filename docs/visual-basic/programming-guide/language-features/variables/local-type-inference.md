@@ -1,13 +1,6 @@
 ---
 title: Wnioskowanie o typie lokalnym (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>Wnioskowanie o typie lokalnym (Visual Basic)
 Kompilator Visual Basic używa *wnioskowanie* do określania typów danych zmienna lokalna zadeklarowana bez `As` klauzuli. Kompilator wnioskuje typ zmiennej typu wyrażenia inicjowania. Dzięki temu można zadeklarować zmienne bez jawne określenie typu, jak pokazano w poniższym przykładzie. W wyniku deklaracjami zarówno `num1` i `num2` są silnie typizowane liczbami całkowitymi.  
@@ -68,7 +58,7 @@ Kompilator Visual Basic używa *wnioskowanie* do określania typów danych zmien
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer`Ta funkcja umożliwia określenie, czy wnioskowanie o typie lokalnym jest dozwolone w pliku. Aby włączyć lub opcji, wpisz jedno z następujących instrukcji na początku pliku.  
+ `Option Infer` Ta funkcja umożliwia określenie, czy wnioskowanie o typie lokalnym jest dozwolone w pliku. Aby włączyć lub opcji, wpisz jedno z następujących instrukcji na początku pliku.  
   
  `Option Infer On`  
   
@@ -83,8 +73,8 @@ Kompilator Visual Basic używa *wnioskowanie* do określania typów danych zmien
 ## <a name="see-also"></a>Zobacz też  
  [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [Wczesne i późne powiązania](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [For Each... Next — instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Dla... Next — instrukcja](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Option Infer — instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [/ optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [For Each...Next, instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For...Next, instrukcja](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

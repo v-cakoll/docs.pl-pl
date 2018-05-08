@@ -1,23 +1,16 @@
 ---
 title: value (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - value_CSharpKeyword
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2501bc8964ed76534dba6c7cc519e095c57cb898
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c8f808540385552f6222566f23251f6cbd6e86df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-c-reference"></a>value (odwołanie w C#)
 Kontekstowe słowo kluczowe `value` jest używany w metodzie dostępu set w deklaracjach zwykłej właściwości. Jest on podobny do parametru wejściowego dla metody. Wyraz `value` odwołuje się do wartości, który próbuje kod klienta można przypisać do właściwości. W poniższym przykładzie `MyDerivedClass` ma właściwość o nazwie `Name` używającą `value` parametr, aby przypisać nowe parametry do pola zapasowy `name`. Z punktu widzenia kodu klienta operacji są zapisywane jako przypisanie proste.  

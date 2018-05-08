@@ -1,29 +1,15 @@
 ---
 title: Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e60d28314c47907cc825871b88a0dc771cd0511
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: fcf2d204d9d59a29024ff09d92be2a7b9339fce9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest dostępna opcja Tryb zgodności ASP.NET umożliwiające [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji zaprogramowane i skonfigurować usługi sieci Web ASP.NET, takich jak i naśladować ich zachowanie. Poniższe sekcje Porównanie usług sieci Web ASP.NET i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oparte na co jest wymagane do tworzenia aplikacji za pomocą obu tych technologii.  
+Windows Communication Foundation (WCF) ma opcję Tryb zgodności ASP.NET umożliwiają aplikacjom WCF zaprogramowane i skonfigurowane tak jak usług sieci Web ASP.NET i naśladować ich zachowanie. Poniższe sekcje Porównanie usług sieci Web ASP.NET i WCF oparte na co jest wymagane do tworzenia aplikacji za pomocą obu tych technologii.  
   
 ## <a name="data-representation"></a>Reprezentacja wartości danych  
  Rozwój usługi sieci Web ASP.NET zazwyczaj rozpoczyna się od zdefiniowania wszystkich typów złożonych danych, które usługa ma używać. Program ASP.NET korzysta z <xref:System.Xml.Serialization.XmlSerializer> tłumaczenie dane reprezentowane przez typy .NET Framework do pliku XML do przesłania do lub z usługą i translację danych otrzymanych w formacie XML na obiekty .NET Framework. Definiowanie typów złożonych danych, które jest użycie usługi ASP.NET wymaga definicji programu .NET Framework klasy, która <xref:System.Xml.Serialization.XmlSerializer> można serializować do i z pliku XML. Takich klas mogą być zapisywane ręcznie lub generowane na podstawie definicji typu w schemacie XML przy użyciu wiersza polecenia XML schematy/danych typów obsługę narzędzia, xsd.exe.  
@@ -38,9 +24,9 @@ ms.lasthandoff: 04/09/2018
   
 -   Świetnie typy w wielu atrybutów <xref:System.Xml.Serialization> przestrzeni nazw można dodać do klasy .NET Framework i jej elementów członkowskich, aby kontrolować sposób wystąpień klasy są reprezentowane w formacie XML.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Projektowanie aplikacji zwykle również rozpoczyna się od definicji typów złożonych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] możliwe do używania takich samych typach .NET Framework jako usługi sieci Web ASP.NET.  
+ Projektowanie aplikacji WCF zwykle również rozpoczyna się od definicji typów złożonych. Usługi WCF, będzie możliwe do używania takich samych typach .NET Framework jako usługi sieci Web ASP.NET.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> mogą być dodawane do typów .NET Framework do wskazania, że wystąpienie typu zserializowana XML i określonego pola lub właściwości typu mają być serializowane, jak pokazano w następującym przykładowym Kod.  
+ Usługi WCF<xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> mogą być dodawane do typów .NET Framework do wskazania, że wystąpienie typu zserializowana XML i określonego pola lub właściwości typu mają być serializowany, jak pokazano w poniższym kodzie próbki.  
   
 ```  
 //Example One:   
@@ -156,7 +142,7 @@ public class LineItem
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractAttribute> Oznacza, że zero lub więcej pól lub właściwości typu mają być serializowana, podczas gdy <xref:System.Runtime.Serialization.DataMemberAttribute> oznacza określonego pola lub właściwości do serializacji. <xref:System.Runtime.Serialization.DataContractAttribute> Można zastosować do klasy lub struktury. <xref:System.Runtime.Serialization.DataMemberAttribute> Może odnosić się do pola lub właściwości i pola i właściwości, do których zastosowano atrybut może być publicznych lub prywatnych. Wystąpienia typów, które mają <xref:System.Runtime.Serialization.DataContractAttribute> zastosować do nich są określane jako kontraktów danych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Są one serializowane w formacie XML przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ <xref:System.Runtime.Serialization.DataContractAttribute> Oznacza, że zero lub więcej pól lub właściwości typu mają być serializowana, podczas gdy <xref:System.Runtime.Serialization.DataMemberAttribute> oznacza określonego pola lub właściwości do serializacji. <xref:System.Runtime.Serialization.DataContractAttribute> Można zastosować do klasy lub struktury. <xref:System.Runtime.Serialization.DataMemberAttribute> Może odnosić się do pola lub właściwości i pola i właściwości, do których zastosowano atrybut może być publicznych lub prywatnych. Wystąpienia typów, które mają <xref:System.Runtime.Serialization.DataContractAttribute> zastosować do nich są określane jako kontraktów danych programu WCF. Są one serializowane w formacie XML przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  Poniżej przedstawiono listę istotnych różnic między <xref:System.Runtime.Serialization.DataContractSerializer> i przy użyciu <xref:System.Xml.Serialization.XmlSerializer> i różnych atrybutów <xref:System.Xml.Serialization> przestrzeni nazw.  
   
@@ -215,7 +201,7 @@ public class LineItem
  Zestaw Windows software development kit (SDK) zawiera narzędzie wiersza polecenia o nazwie [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Narzędzie xsd.exe używane z usługami sieci Web ASP.NET, takich jak Svcutil.exe wygenerować definicje typów danych .NET na podstawie schematu XML. Typy są kontraktów danych, jeśli <xref:System.Runtime.Serialization.DataContractSerializer> może emitować XML w formacie zdefiniowane przez schemat XML; w przeciwnym razie są one przeznaczone do serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer>. Svcutil.exe może również spowodować wygenerowanie schematu XML kontraktów danych przy użyciu jego `dataContractOnly` przełącznika.  
   
 > [!NOTE]
->  Mimo że użycia usług sieci Web ASP.NET <xref:System.Xml.Serialization.XmlSerializer>, i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawia, że tryb zgodności ASP.NET [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług naśladować zachowanie usług sieci Web ASP.NET, opcji zgodności ASP.NET nie ogranicza jedną przy użyciu <xref:System.Xml.Serialization.XmlSerializer>. Co można nadal używać <xref:System.Runtime.Serialization.DataContractSerializer> z usługi są uruchomione w trybie zgodności ASP.NET.  
+>  Mimo że użycia usług sieci Web ASP.NET <xref:System.Xml.Serialization.XmlSerializer>i tryb zgodności WCF ASP.NET sprawia, że usługi WCF naśladować zachowanie usług sieci Web ASP.NET, opcji zgodności ASP.NET nie ogranicza jedną przy użyciu <xref:System.Xml.Serialization.XmlSerializer>. Co można nadal używać <xref:System.Runtime.Serialization.DataContractSerializer> z usługi są uruchomione w trybie zgodności ASP.NET.  
   
 ## <a name="service-development"></a>Projektowanie usługi  
  Aby opracować usługi przy użyciu platformy ASP.NET, został zwyczajowe, aby dodać <xref:System.Web.Services.WebService> atrybutu do klasy i <xref:System.Web.Services.WebMethodAttribute> do dowolnej z metod tej klasy, które mają być operacje usługi:  
@@ -254,7 +240,7 @@ public class Service : IEcho
   
  Użycie tej opcji zaleca się, ponieważ interfejs <xref:System.Web.Services.WebService> atrybutu stanowi kontraktu dla operacji wykonywanych przez usługę mogą być ponownie używane z różnymi klasami, które mogą implementować ten sam kontrakt na różne sposoby.  
   
- A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa jest udostępniona przez zdefiniowanie co najmniej jednego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych. Punkt końcowy jest określony przez adres i powiązanie kontraktu usługi. Adres Określa, gdzie usługa się znajduje. Powiązanie określa sposób komunikowania się z usługą. Kontrakt usługi określa operacje, które można wykonać usługi.  
+ Usługa WCF jest dostarczana przez zdefiniowanie jednego lub więcej punktów końcowych WCF. Punkt końcowy jest określony przez adres i powiązanie kontraktu usługi. Adres Określa, gdzie usługa się znajduje. Powiązanie określa sposób komunikowania się z usługą. Kontrakt usługi określa operacje, które można wykonać usługi.  
   
  Kontrakt usługi są zazwyczaj zdefiniowane, dodając <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> do interfejsu:  
   
@@ -267,7 +253,7 @@ public interface IEcho
 }  
 ```  
   
- <xref:System.ServiceModel.ServiceContractAttribute> Określa, że interfejs definiuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kontrakt usługi i <xref:System.ServiceModel.OperationContractAttribute> wskazuje, jeśli taki występuje, metod interfejsu definiującą operacji kontraktu usługi.  
+ <xref:System.ServiceModel.ServiceContractAttribute> Określa, że interfejs definiuje kontrakt usługi WCF i <xref:System.ServiceModel.OperationContractAttribute> wskazuje, jeśli taki występuje, metod interfejsu definiującą operacji kontraktu usługi.  
   
  Po zdefiniowaniu kontraktu usługi jest zaimplementowana w klasie, konfigurując klasa implementuje interfejs, za pomocą której zdefiniowano kontraktu usługi:  
   
@@ -281,9 +267,9 @@ public class Service : IEcho
 }  
 ```  
   
- Klasa, która implementuje kontraktu usługi jest określany jako typ usługi w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Klasa, która implementuje kontraktu usługi jest określane jako usługa typu w programie WCF.  
   
- Następnym krokiem jest można skojarzyć adres i powiązanie z typem usługi. Które zwykle odbywa się w pliku konfiguracji, edytując plik bezpośrednio lub za pomocą edytora konfiguracji wyposażone [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Oto przykładowy plik konfiguracji.  
+ Następnym krokiem jest można skojarzyć adres i powiązanie z typem usługi. Które zwykle odbywa się w pliku konfiguracji, edytując plik bezpośrednio lub za pomocą edytora konfiguracji dostarczone z programem WCF. Oto przykładowy plik konfiguracji.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -309,15 +295,15 @@ public class Service : IEcho
 |WSHttpBinding|Współdziałanie z usługami sieci Web i klientów, które obsługuje WS-* protokołów za pośrednictwem protokołu HTTP.|  
 |WSDualHttpBinding|Komunikację dupleksową HTTP za pomocą którego nie odpowiedzieć bezpośrednio początkowej nadawcy odbiorcy wiadomości początkowej, ale może przekazać dowolną liczbę odpowiedzi przez pewien czas za pośrednictwem protokołu HTTP, zgodnie z WS-* protokołów.|  
 |WSFederationBinding|Komunikacji HTTP, w którym można kontrolować dostęp do zasobów usługi na podstawie poświadczeń wystawiony przez dostawcę jawnie określone poświadczenie.|  
-|NetTcpBinding|Zabezpieczenia, niezawodne i wysoko wydajnych komunikacji między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oprogramowania jednostek w sieci.|  
-|NetNamedPipeBinding|Zabezpieczenia, niezawodne i wysoko wydajnych komunikacji między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jednostek oprogramowania na tym samym komputerze.|  
-|NetMsmqBinding|Komunikacja między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jednostek oprogramowania przy użyciu usługi MSMQ.|  
-|MsmqIntegrationBinding|Komunikacja między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jednostki oprogramowania i inną jednostkę oprogramowania przy użyciu usługi MSMQ.|  
-|NetPeerTcpBinding|Komunikacja między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jednostek oprogramowania przy użyciu sieci Peer-to-Peer systemu Windows.|  
+|NetTcpBinding|Bezpieczne, niezawodne i wysoko wydajnych komunikację między jednostkami oprogramowania WCF w sieci.|  
+|NetNamedPipeBinding|Bezpieczne, niezawodne i wysoko wydajnych komunikację między jednostkami oprogramowania WCF na tym samym komputerze.|  
+|NetMsmqBinding|Komunikacja między jednostkami oprogramowania WCF za pomocą usługi MSMQ.|  
+|MsmqIntegrationBinding|Komunikacja między jednostki oprogramowania WCF i inną jednostkę oprogramowania przy użyciu usługi MSMQ.|  
+|NetPeerTcpBinding|Komunikacja między jednostkami oprogramowania WCF za pomocą sieci Peer-to-Peer systemu Windows.|  
   
  Powiązania dostarczane przez system <xref:System.ServiceModel.BasicHttpBinding>, zawiera zestaw protokołów obsługiwanych przez usługi sieci Web ASP.NET.  
   
- Powiązania niestandardowe dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji łatwo są zdefiniowane zgodnie z kolekcji element powiązania klas, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa do implementacji poszczególnych protokołów. Nowe elementy powiązania można pisać do reprezentowania dodatkowych protokołów.  
+ Powiązania niestandardowe dla aplikacji WCF łatwo są definiowane jako kolekcji klasy element powiązania, które używa usługi WCF do implementacji poszczególnych protokołów. Nowe elementy powiązania można pisać do reprezentowania dodatkowych protokołów.  
   
  Wewnętrzne zachowanie typu usługi można dostosować za pomocą właściwości rodzina klasy o nazwie zachowania. W tym miejscu <xref:System.ServiceModel.ServiceBehaviorAttribute> klasa jest używana do określenia, czy typ usługi ma być wielowątkowych.  
   
@@ -339,7 +325,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
   
  Pliku usługi jest kopiowana do katalog główny aplikacji ASP.NET w Internet Information Services (IIS) i zestaw jest kopiowana do podkatalogu \bin tego katalogu głównego aplikacji. Aplikacja jest dostępna za pomocą adres URL (adres URL) usługi pliku w katalogu głównym aplikacji.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] łatwo mogą być hostowane usługi, usługi IIS 5.1 i 6.0, Windows Process Activation Service (WAS), który w ramach usług IIS 7.0 i w ramach dowolnej aplikacji .NET. Do hostowania w usługach IIS 5.1 i 6.0, usługa musi używać protokołu HTTP jako protokołu transportowego komunikacji.  
+ Łatwo mogą być hostowane usługi WCF, usługi IIS 5.1 i 6.0, Windows Process Activation Service (WAS), który w ramach usług IIS 7.0 i w ramach dowolnej aplikacji .NET. Do hostowania w usługach IIS 5.1 i 6.0, usługa musi używać protokołu HTTP jako protokołu transportowego komunikacji.  
   
  Aby obsługiwać usługę w ramach usługi IIS 5.1 w wersji 6.0 lub WAS, wykonaj kroki następujące:  
   
@@ -357,7 +343,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
   
  Aplikacja jest dostępna przy użyciu adresu URL usługi pliku w katalogu głównym aplikacji.  
   
- Na hoście [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi aplikacji .NET, skompiluj typ usługi, w ramach zestawu biblioteki klasy odwołuje się aplikacji i programów aplikacji do hosta przy użyciu usługi <xref:System.ServiceModel.ServiceHost> klasy. Poniżej przedstawiono przykład podstawy programowania wymagane:  
+ Hostowanie usługi WCF w ramach aplikacji .NET, skompilować typ usługi, w ramach zestawu biblioteki klasy odwołuje się aplikacji i program w aplikacji hosta usługi przy użyciu <xref:System.ServiceModel.ServiceHost> klasy. Poniżej przedstawiono przykład podstawy programowania wymagane:  
   
 ```  
 string httpBaseAddress = "http://www.contoso.com:8000/";  
@@ -382,9 +368,9 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  W tym przykładzie pokazano, jak adresy dla jednego lub więcej protokołów transportu są określone w konstrukcji <xref:System.ServiceModel.ServiceHost>. Te adresy są określane jako adres podstawowy.  
   
- Podany adres dla dowolnego punktu końcowego z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi jest adresem określany względem adresu podstawowego hosta punktu końcowego. Host może mieć jeden adres podstawowy dla każdego protokołu transportu komunikacji. W konfiguracji próbki w pliku konfiguracyjnym poprzedniego <xref:System.ServiceModel.BasicHttpBinding> wybrane do używany przez punkt końcowy HTTP jako protokół transportu, dlatego adres punktu końcowego, `EchoService`, jest określany względem adresu podstawowego HTTP hosta. W przypadku hostów w poprzednim przykładzie, jest podstawowy adres HTTP http://www.contoso.com:8000/. Usługi hostowane w usługach IIS lub WAS podstawowy adres jest adresem URL usługi pliku usługi.  
+ Podany adres dla dowolnego punktu końcowego usługi WCF jest określany względem adresu podstawowego hosta punktu końcowego adresu. Host może mieć jeden adres podstawowy dla każdego protokołu transportu komunikacji. W konfiguracji próbki w pliku konfiguracyjnym poprzedniego <xref:System.ServiceModel.BasicHttpBinding> wybrane do używany przez punkt końcowy HTTP jako protokół transportu, dlatego adres punktu końcowego, `EchoService`, jest określany względem adresu podstawowego HTTP hosta. W przypadku hostów w poprzednim przykładzie, jest podstawowy adres HTTP http://www.contoso.com:8000/. Usługi hostowane w usługach IIS lub WAS podstawowy adres jest adresem URL usługi pliku usługi.  
   
- Tylko usługi hostowanej w usługach IIS lub WAS i które korzystają z protokołu HTTP jako protokołu transportowego wyłącznie, może również użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opcja Tryb zgodności ASP.NET. Włączenie tej opcji wymaga wykonania następujących czynności.  
+ Tylko usługi hostowanej w usługach IIS lub WAS i które korzystają z protokołu HTTP jako protokołu transportowego wyłącznie, będzie możliwe użycie opcji Tryb zgodności WCF ASP.NET. Włączenie tej opcji wymaga wykonania następujących czynności.  
   
 1.  Należy dodać programistę <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> atrybutu typu usługi i określ, czy tryb zgodności ASP.NET jest dozwolona lub wymagana.  
   
@@ -407,7 +393,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
     </configuration>  
     ```  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacje można również skonfigurować do używania .asmx jako rozszerzenie ich pliki usługi zamiast .svc.  
+     Można również skonfigurować aplikacji WCF do użycia .asmx jako rozszerzenie ich pliki usługi zamiast .svc.  
   
     ```xml  
     <system.web>  
@@ -427,14 +413,14 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
     </system.web>  
     ```  
   
-     Czy opcja może zaoszczędzić z konieczności modyfikowania klientów, które są skonfigurowane do używania adresów URL plików usługi .asmx podczas modyfikowania usługi do użycia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Ta opcja może zaoszczędzić z konieczności modyfikowania klientów, które są skonfigurowane do używania adresów URL plików usługi .asmx podczas modyfikowania usługi do użycia usługi WCF.  
   
 ## <a name="client-development"></a>Programowanie klienta  
- Klienci dla usług sieci Web ASP.NET są generowane przy użyciu narzędzia wiersza polecenia WSDL.exe, który zawiera adres URL pliku .asmx jako dane wejściowe. Narzędzia udostępniane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Generuje kod moduł o definicję kontraktu usługi, jak i definicja [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta. Generuje plik konfiguracji z adres i powiązanie usługi.  
+ Klienci dla usług sieci Web ASP.NET są generowane przy użyciu narzędzia wiersza polecenia WSDL.exe, który zawiera adres URL pliku .asmx jako dane wejściowe. Narzędzia udostępniane przez usługi WCF jest [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Generuje kod moduł o definicję kontraktu usługi, jak i definicja klasy klienta WCF. Generuje plik konfiguracji z adres i powiązanie usługi.  
   
  W programowanie klienta usługi zdalnej jest ogólnie zaleca się do programu zgodnie z wzorca asynchronicznego. Kod wygenerowany przez narzędzie WSDL.exe zawsze zawiera dla synchroniczne i asynchroniczne domyślnie. Kod wygenerowany przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można zapewnić albo wzorzec. Zapewnia on synchroniczne wzorzec domyślnie. Jeśli narzędzie jest wykonywane z `/async` przełącznika, a następnie udostępnia wygenerowany kod dla wzorca asynchronicznego.  
   
- Nie ma żadnej gwarancji, że nazwy w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta generowane przez program ASP. Narzędzie WSDL.exe w sieci, domyślnie odpowiadają nazwom w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wygenerowany przez narzędzie Svcutil.exe klasy klienta. W szczególności nazwy właściwości klasy zawierających serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> domyślnie podano sufiks właściwości w kod wygenerowany przez narzędzie Svcutil.exe, które nie jest to za pomocą narzędzia WSDL.exe.  
+ Nie ma żadnej gwarancji, że nazwy klas klienta WCF generowane przez program ASP. Narzędzie WSDL.exe w sieci, domyślnie odpowiadają nazwom w klasach klienta WCF wygenerowany przez narzędzie Svcutil.exe. W szczególności nazwy właściwości klasy zawierających serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> domyślnie podano sufiks właściwości w kod wygenerowany przez narzędzie Svcutil.exe, które nie jest to za pomocą narzędzia WSDL.exe.  
   
 ## <a name="message-representation"></a>Reprezentacja komunikatu  
  Nagłówki SOAP komunikatów wysyłanych i odbieranych przez usługi sieci Web platformy ASP.NET można dostosować. Klasa pochodzi od <xref:System.Web.Services.Protocols.SoapHeader> do definiowania struktury nagłówek, a następnie <xref:System.Web.Services.Protocols.SoapHeaderAttribute> służy do wskazania obecności nagłówka.  
@@ -484,7 +470,7 @@ public class Service: WebService, IEcho
 }  
 ```  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Zawiera atrybuty, <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, i <xref:System.ServiceModel.MessageBodyMemberAttribute> do opisania struktury SOAP komunikatów wysyłanych i odbieranych przez usługę.  
+ Usługi WCF zawiera atrybuty, <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, i <xref:System.ServiceModel.MessageBodyMemberAttribute> do opisania struktury SOAP komunikatów wysyłanych i odbieranych przez usługę.  
   
 ```  
 [DataContract]  
@@ -524,7 +510,7 @@ public interface IItemService
 }  
 ```  
   
- Ta składnia daje jawne reprezentację struktury komunikatów, natomiast struktury wiadomości jest implikowana przez kod usługi sieci Web ASP.NET. Ponadto w składni ASP.NET nagłówki komunikatów są reprezentowane jako właściwości usługi, takie jak `ProtocolHeader` właściwości w poprzednim przykładzie, natomiast w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składni, są one dokładniej reprezentowana jako właściwości wiadomości. Ponadto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umożliwia nagłówków komunikatów, które mają zostać dodane do konfiguracji punktów końcowych.  
+ Ta składnia daje jawne reprezentację struktury komunikatów, natomiast struktury wiadomości jest implikowana przez kod usługi sieci Web ASP.NET. Ponadto w składni ASP.NET nagłówki komunikatów są reprezentowane jako właściwości usługi, takie jak `ProtocolHeader` właściwości w poprzednim przykładzie w składni WCF są dokładniej reprezentowana jako właściwości wiadomości. Ponadto WCF umożliwia nagłówków komunikatów, które mają zostać dodane do konfiguracji punktów końcowych.  
   
 ```xml  
 <service name="Service ">  
@@ -559,11 +545,11 @@ public interface IEcho
   
  Można dostosować WSDL, generujący ASP.NET dla usługi. Dostosowania są wprowadzane przy tworzeniu klasy pochodnej z <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> do dodawania elementów WSDL.  
   
- Wystawienie żądania HTTP GET z zapytaniem WSDL dla pliku svc z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi z punktu końcowego HTTP hostowany w 51 usług IIS 6.0 lub przyczyny WAS [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z WSDL usługi. Wystawiania żądania HTTP GET z zapytaniem WSDL podstawowy adres HTTP z usługą hostowaną w aplikacji platformy .NET ma ten sam efekt, jeśli httpGetEnabled jest ustawiona na true.  
+ Wystawianie żądanie HTTP GET z zapytaniem WSDL w pliku svc usługi WCF z punktem końcowym HTTP obsługiwany przez usługi IIS 51, 6.0 lub WAS powoduje WCF z WSDL usługi. Wystawiania żądania HTTP GET z zapytaniem WSDL podstawowy adres HTTP z usługą hostowaną w aplikacji platformy .NET ma ten sam efekt, jeśli httpGetEnabled jest ustawiona na true.  
   
- Jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również odpowiada na żądania WS-MetadataExchange z WSDL, który generuje do opisu usługi. Usługi sieci Web programu ASP.NET nie ma wbudowaną obsługę protokołu WS-MetadataExchange żądań.  
+ Jednak WCF również odpowiada na żądania WS-MetadataExchange z WSDL, który generuje do opisu usługi. Usługi sieci Web programu ASP.NET nie ma wbudowaną obsługę protokołu WS-MetadataExchange żądań.  
   
- WSDL który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje można dostosować, często. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Klasa udostępnia niektóre urządzenia do dostosowywania WSDL. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Można również skonfigurować nie Generowanie języka WSDL, ale raczej przy użyciu statycznego pliku WSDL pod danym adresem URL.  
+ Często można dostosować WSDL, który generuje WCF. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Klasa udostępnia niektóre urządzenia do dostosowywania WSDL. Usługi WCF można również skonfigurować nie Generowanie języka WSDL, ale raczej przy użyciu statycznego pliku WSDL pod danym adresem URL.  
   
 ```xml  
 <behaviors>  
@@ -581,7 +567,7 @@ public interface IEcho
 ## <a name="exception-handling"></a>Obsługa wyjątków  
  W usługach sieci Web ASP.NET nieobsługiwanych wyjątków są jako błędach SOAP zwracanych do klientów. Można również jawnie throw wystąpienia <xref:System.Web.Services.Protocols.SoapException> klasy i większą kontrolę nad zawartością błędu protokołu SOAP, który pobiera przesłanych do klienta.  
   
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, nieobsługiwanych wyjątków nie są zwracane do klientów jako błędach SOAP, aby zapobiec przypadkowym przypadkowo za pośrednictwem wyjątki informacji poufnych. Ustawienie konfiguracji zapewnia ma nieobsługiwane wyjątki zwracanych do klientów na potrzeby debugowania.  
+ W usługach WCF nieobsługiwanych wyjątków nie są zwracane do klientów jako błędach SOAP, aby zapobiec przypadkowym przypadkowo za pośrednictwem wyjątki informacji poufnych. Ustawienie konfiguracji zapewnia ma nieobsługiwane wyjątki zwracanych do klientów na potrzeby debugowania.  
   
  Aby przywrócić błędach SOAP klientów, może zgłosić wystąpienia typu ogólnego <xref:System.ServiceModel.FaultException%601>za pomocą ogólnego typu kontraktu danych. Można również dodać <xref:System.ServiceModel.FaultContractAttribute> atrybuty do operacji, aby określić błędów, które może dać operacji.  
   
@@ -638,9 +624,9 @@ public class Service : WebService, IEcho
   
  Program ASP.NET zapewnia znaczną kontrolę nad którym sesja stanu informacje dostępne za pośrednictwem właściwości sesji <xref:System.Web.HttpContext> są przechowywane. Może ona przechowywana w plikach cookie, w bazie danych, w pamięci bieżącego serwera lub w pamięci wyznaczonym serwerze. Wybór jest przeprowadzane w pliku konfiguracji usługi.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Udostępnia obiekty rozszerzalne dla zarządzania stanem. Obiekty rozszerzalne są obiektów implementujących <xref:System.ServiceModel.IExtensibleObject%601>. Obiekty rozszerzalne najważniejsze są <xref:System.ServiceModel.ServiceHostBase> i <xref:System.ServiceModel.InstanceContext>. `ServiceHostBase` pozwala zachować dostęp do stanu, że typy wszystkich wystąpień wszystkich usługi na tym samym hoście, podczas gdy `InstanceContext` służy do zarządzania stanem, który można uzyskać, sprawdzając dowolny kod uruchomiony w ramach tego samego wystąpienia typu usługi.  
+ Usługi WCF udostępnia obiekty rozszerzalne dla zarządzania stanem. Obiekty rozszerzalne są obiektów implementujących <xref:System.ServiceModel.IExtensibleObject%601>. Obiekty rozszerzalne najważniejsze są <xref:System.ServiceModel.ServiceHostBase> i <xref:System.ServiceModel.InstanceContext>. `ServiceHostBase` pozwala zachować dostęp do stanu, że typy wszystkich wystąpień wszystkich usługi na tym samym hoście, podczas gdy `InstanceContext` służy do zarządzania stanem, który można uzyskać, sprawdzając dowolny kod uruchomiony w ramach tego samego wystąpienia typu usługi.  
   
- Tutaj, typ usługi `TradingSystem`, ma <xref:System.ServiceModel.ServiceBehaviorAttribute> Określa, że wszystkie wywołania z tej samej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wystąpienie klienta są kierowane do tego samego wystąpienia typu usługi.  
+ Tutaj, typ usługi `TradingSystem`, ma <xref:System.ServiceModel.ServiceBehaviorAttribute> Określa, że wszystkie wywołania z tego samego wystąpienia klienta WCF są kierowane do tego samego wystąpienia typu usługi.  
   
 ```  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -679,18 +665,18 @@ void ITradingService.AddTrade(Trade trade)
 }  
 ```  
   
- ASP.NET zapewnia kontrolę nad, gdy stan informacji w <xref:System.Web.HttpContext> przechowywane klasy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], co najmniej w wersji początkowej sterowanie nie jest dostępne za pośrednictwem przechowywania obiekty rozszerzalne. Który stanowi bardzo najważniejsze przyczyny wybierając tryb zgodności ASP.NET dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Jeśli konieczne jest zarządzanie stanem można skonfigurować, a następnie umożliwia wybór tryb zgodności ASP.NET, przy użyciu urządzeń z <xref:System.Web.HttpContext> klasy dokładnie tak, jak są one używane w programie ASP.NET, a także skonfigurować gdzie stan informacje zarządzane za pomocą <xref:System.Web.HttpContext> klasy jest przechowywany.  
+ ASP.NET zapewnia kontrolę nad, gdy stan informacji w <xref:System.Web.HttpContext> przechowywane klasy usługi WCF, co najmniej w wersji początkowej sterowanie nie jest dostępne za pośrednictwem przechowywania obiekty rozszerzalne. Który stanowi bardzo najważniejsze przyczyny wybierając tryb zgodności ASP.NET dla usługi WCF. Jeśli konieczne jest zarządzanie stanem można skonfigurować, a następnie umożliwia wybór tryb zgodności ASP.NET, przy użyciu urządzeń z <xref:System.Web.HttpContext> klasy dokładnie tak, jak są one używane w programie ASP.NET, a także skonfigurować gdzie stan informacje zarządzane za pomocą <xref:System.Web.HttpContext> klasy jest przechowywany.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Opcje dotyczące zabezpieczania usługi sieci Web platformy ASP.NET to zabezpieczanie dowolnej aplikacji usług IIS. Ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacje mogą być przechowywane na nie jedynie w ramach usług IIS, ale także w dowolnym pliku wykonywalnego, .NET opcje ochrony [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacje muszą być wprowadzane niezależne od funkcji usług IIS. Jednak urządzenia podana dla usług sieci Web ASP.NET są także dostępne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi działające w trybie zgodności ASP.NET.  
+ Opcje dotyczące zabezpieczania usługi sieci Web platformy ASP.NET to zabezpieczanie dowolnej aplikacji usług IIS. Ponieważ aplikacje WCF może znajdować się nie tylko w ramach usług IIS, ale także w ramach każdego pliku wykonywalnego, .NET, opcje zabezpieczania aplikacji WCF muszą być wprowadzane niezależne od funkcji usług IIS. Jednak urządzenia podana dla usług sieci Web ASP.NET również są dostępne dla usług WCF w trybie zgodności ASP.NET.  
   
 ### <a name="security-authentication"></a>Zabezpieczenia: uwierzytelnianie  
- Usługi IIS oferują urządzenia do kontrolowania dostępu do aplikacji za pomocą których można wybrać dostęp anonimowy lub różne tryby uwierzytelniania: uwierzytelnianie systemu Windows, uwierzytelniania szyfrowanego, uwierzytelnianie podstawowe i uwierzytelnianie usługi .NET Passport. Opcja uwierzytelniania systemu Windows może służyć do kontrolowania dostępu do usług sieci Web ASP.NET. Jednakże, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji są obsługiwane w ramach usług IIS, usługi IIS muszą być skonfigurowane do zezwolenie na dostęp anonimowy do aplikacji, więc uwierzytelniania mogą być zarządzane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] siebie, które obsługują uwierzytelnianie systemu Windows między różnymi innych Opcje. Inne opcje, które są wbudowane obejmują username tokeny, certyfikaty X.509 tokeny SAML i CardSpace karty, ale może być także definiowane niestandardowych mechanizmów uwierzytelniania.  
+ Usługi IIS oferują urządzenia do kontrolowania dostępu do aplikacji za pomocą których można wybrać dostęp anonimowy lub różne tryby uwierzytelniania: uwierzytelnianie systemu Windows, uwierzytelniania szyfrowanego, uwierzytelnianie podstawowe i uwierzytelnianie usługi .NET Passport. Opcja uwierzytelniania systemu Windows może służyć do kontrolowania dostępu do usług sieci Web ASP.NET. Jednak podczas aplikacji WCF hostowanych w usługach IIS, usługi IIS muszą być skonfigurowane Aby zezwolić na anonimowy dostęp do aplikacji, więc uwierzytelniania mogą być zarządzane przez WCF, które obsługują uwierzytelnianie systemu Windows między różnymi innych opcji. Inne opcje, które są wbudowane obejmują username tokeny, certyfikaty X.509 tokeny SAML i CardSpace karty, ale może być także definiowane niestandardowych mechanizmów uwierzytelniania.  
   
 ### <a name="security-impersonation"></a>Zabezpieczenia: personifikacji  
- Program ASP.NET udostępnia element tożsamości przez usługę sieci Web ASP.NET może się personifikować określonego użytkownika lub poświadczenia innego użytkownika są dostarczane z bieżącego żądania. Ten element służy do konfigurowania personifikacji w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji działających w trybie zgodności ASP.NET.  
+ Program ASP.NET udostępnia element tożsamości przez usługę sieci Web ASP.NET może się personifikować określonego użytkownika lub poświadczenia innego użytkownika są dostarczane z bieżącego żądania. Ten element może służyć do konfigurowania personifikacji WCF aplikacji uruchomionych w tryb zgodności ASP.NET.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] System konfiguracji udostępnia własnego elementu tożsamości wyznaczania personifikować określonego użytkownika. Ponadto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów i usług można niezależnie skonfigurowane dla personifikacji. Klientów można skonfigurować do personifikacji bieżącego użytkownika podczas ich przesyłania żądań.  
+ System konfiguracji usługi WCF udostępnia własnego elementu tożsamości wyznaczania personifikować określonego użytkownika. Ponadto klienci WCF i usług można niezależnie skonfigurować personifikacji. Klientów można skonfigurować do personifikacji bieżącego użytkownika podczas ich przesyłania żądań.  
   
 ```xml  
 <behaviors>  
@@ -710,14 +696,14 @@ public void Receive(Message input)
 ```  
   
 ### <a name="security-authorization-using-access-control-lists"></a>Zabezpieczeń: Przy użyciu list kontroli dostępu autoryzacji  
- Listy kontroli dostępu (ACL) może służyć do ograniczania dostępu do plików .asmx. Jednak listy ACL na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pliki SVC są ignorowane, z wyjątkiem w trybie zgodności ASP.NET.  
+ Listy kontroli dostępu (ACL) może służyć do ograniczania dostępu do plików .asmx. Jednak list kontroli dostępu do plików .svc WCF są ignorowane z wyjątkiem w trybie zgodności ASP.NET.  
   
 ### <a name="security-role-based-authorization"></a>Zabezpieczeń: Autoryzacji opartej na rolach  
  Opcję Uwierzytelnianie systemu Windows usług IIS umożliwia w połączeniu z elementem autoryzacji udostępniane przez język konfiguracji ASP.NET ułatwienia autoryzacji opartej na rolach dla usługi sieci Web programu ASP.NET na podstawie grup systemu Windows, do których użytkownicy nie są przypisani . Platforma ASP.NET 2.0 wprowadzono bardziej ogólne mechanizmu autoryzacji opartej na rolach: dostawców ról.  
   
  Dostawcy roli są klasy wszystkie wdrożenia podstawowy interfejs dla badające o rolach, do których użytkownik jest przypisany, że każdy dostawca roli potrafi można pobrać informacji z innego źródła. Program ASP.NET 2.0 zapewnia dostawcy roli, który można pobrać przypisania roli z bazy danych programu Microsoft SQL Server, a inny, który można pobrać przypisania roli z Menedżera autoryzacji systemu Windows Server 2003.  
   
- Mechanizm dostawcy roli faktycznie mogą być używane niezależnie od platformy ASP.NET, w dowolnej aplikacji .NET, w tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Następujące przykładowe konfiguracji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji pokazuje, jak używanie dostawcy ról ASP.NET to opcja wybrana za pomocą klasy <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.  
+ Mechanizm dostawcy roli faktycznie można niezależnie od platformy ASP.NET w dowolnej aplikacji .NET, w tym aplikacji WCF. Następujące Przykładowa konfiguracja aplikacji WCF pokazuje, jak używanie dostawcy ról ASP.NET to opcja wybrana za pomocą klasy <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.  
   
 ```xml  
 <system.serviceModel>  
@@ -739,9 +725,9 @@ public void Receive(Message input)
 ```  
   
 ### <a name="security-claims-based-authorization"></a>Zabezpieczeń: Autoryzacji opartej na oświadczeniach  
- Jedną z najważniejszych innowacji z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest jego obsługę szczegółowej autoryzacji dostępu do chronionych zasobów na podstawie oświadczeń. Oświadczeń składa się z typem, prawo i wartość licencji sterowników, na przykład. Powoduje to dodanie zestaw oświadczeń o elementu nośnego, z których jeden jest elementu nośnego datę urodzenia. Typ tego oświadczenia jest data urodzenia, gdy wartość oświadczenia jest data urodzenia sterownika. Uprawnienia, który przyznaje oświadczenie przenoszącej Określa, co można zrobić elementu nośnego z wartości oświadczenia. W przypadku oświadczeń sterownika daty urodzenia, prawo jest posiadanie: posiada sterownika, że data urodzenia ale nie można na przykład, zmienienia go. Autoryzacji opartej na oświadczeniach umieszcza autoryzacji opartej na rolach, ponieważ role są typu oświadczenia.  
+ Jedną z najważniejszych innowacji programu WCF jest jego obsługę szczegółowej autoryzacji dostępu do chronionych zasobów na podstawie oświadczeń. Oświadczeń składa się z typem, prawo i wartość licencji sterowników, na przykład. Powoduje to dodanie zestaw oświadczeń o elementu nośnego, z których jeden jest elementu nośnego datę urodzenia. Typ tego oświadczenia jest data urodzenia, gdy wartość oświadczenia jest data urodzenia sterownika. Uprawnienia, który przyznaje oświadczenie przenoszącej Określa, co można zrobić elementu nośnego z wartości oświadczenia. W przypadku oświadczeń sterownika daty urodzenia, prawo jest posiadanie: posiada sterownika, że data urodzenia ale nie można na przykład, zmienienia go. Autoryzacji opartej na oświadczeniach umieszcza autoryzacji opartej na rolach, ponieważ role są typu oświadczenia.  
   
- Na podstawie oświadczeń autoryzacji odbywa się przez porównanie zestaw oświadczeń uzyskiwania operacji i, w zależności od wyniku tego porównania, przyznawanie lub odbieranie praw dostępu do operacji. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], można określić klasę ma być używana do uruchamiania autoryzacji opartej na oświadczeniach, ponownie przez przypisanie wartości do `ServiceAuthorizationManager` właściwość <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.  
+ Na podstawie oświadczeń autoryzacji odbywa się przez porównanie zestaw oświadczeń uzyskiwania operacji i, w zależności od wyniku tego porównania, przyznawanie lub odbieranie praw dostępu do operacji. W programie WCF, można określić klasę ma być używana do uruchamiania autoryzacji opartej na oświadczeniach, ponownie przez przypisanie wartości do `ServiceAuthorizationManager` właściwość <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.  
   
 ```xml  
 <behaviors>  
@@ -753,15 +739,15 @@ public void Receive(Message input)
 </behaviors>  
 ```  
   
- Klasy służące do uruchamiania autoryzacji opartej na oświadczeniach muszą pochodzić od <xref:System.ServiceModel.ServiceAuthorizationManager>, która zawiera tylko jedną metodę do zastąpienia, `AccessCheck()`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywołuje tę metodę, za każdym razem operacja usługi jest wywoływany i udostępnia <xref:System.ServiceModel.OperationContext> obiektu, który ma oświadczenia dla użytkownika w jego `ServiceSecurityContext.AuthorizationContext` właściwości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wykonuje pracę składania roszczeń o użytkowniku z tokenu zabezpieczeń, niezależnie od użytkownika podane dla uwierzytelniania, co pozostawia zadania oceny, czy te oświadczenia są wystarczające dla danej operacji.  
+ Klasy służące do uruchamiania autoryzacji opartej na oświadczeniach muszą pochodzić od <xref:System.ServiceModel.ServiceAuthorizationManager>, która zawiera tylko jedną metodę do zastąpienia, `AccessCheck()`. WCF wywołania tej metody, za każdym razem operacja usługi jest wywoływany i udostępnia <xref:System.ServiceModel.OperationContext> obiektu, który ma oświadczenia dla użytkownika w jego `ServiceSecurityContext.AuthorizationContext` właściwości. Usługi WCF wykonuje pracę składania roszczeń o użytkowniku z tokenu zabezpieczeń, niezależnie od użytkownika podane dla uwierzytelniania, co pozostawia zadania oceny, czy te oświadczenia są wystarczające dla danej operacji.  
   
- Czy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatycznie składana oświadczeń z dowolnego rodzaju zabezpieczeń token jest bardzo istotne innowacji, ponieważ sprawia, że kod autoryzacji na podstawie oświadczeń całkowicie niezależna od mechanizmu uwierzytelniania. Z kolei autoryzację za pomocą listy kontroli dostępu lub ról w programie ASP.NET jest ściśle związany z uwierzytelnianiem systemu Windows.  
+ Czy WCF automatycznie składana oświadczeń z dowolnego rodzaju zabezpieczeń tokenu jest bardzo istotne innowacji, ponieważ sprawia, że kod autoryzacji na podstawie całkowicie niezależna od mechanizmu uwierzytelniania oświadczeń. Z kolei autoryzację za pomocą listy kontroli dostępu lub ról w programie ASP.NET jest ściśle związany z uwierzytelnianiem systemu Windows.  
   
 ### <a name="security-confidentiality"></a>Zabezpieczenia: poufności  
- Poufność wiadomości wymieniane z usługami sieci Web platformy ASP.NET można zapewnić na poziomie transportu przez skonfigurowanie aplikacji w ramach usług IIS do używania Secure Hypertext Transfer Protocol (HTTPS). Można to zrobić dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacje hostowane w usługach IIS. Jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacje hostowane poza usług IIS można również skonfigurować do używania protokołu bezpiecznego transportu. Większe znaczenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji można również skonfigurować do zabezpieczania komunikatów przed ich transportu, za pomocą protokołu WS-Security. Zabezpieczanie po prostu treść wiadomości przy użyciu WS-Security umożliwi się jako poufne przesyłane przez pośredników przed dotarciem do ostatecznego miejsca przeznaczenia.  
+ Poufność wiadomości wymieniane z usługami sieci Web platformy ASP.NET można zapewnić na poziomie transportu przez skonfigurowanie aplikacji w ramach usług IIS do używania Secure Hypertext Transfer Protocol (HTTPS). Taki sam zarówno WCF hostowanych w usługach IIS. Jednak WCF hostowanych poza usług IIS można również skonfigurować do używania protokołu bezpiecznego transportu. Większe znaczenie aplikacji WCF można również skonfigurować do zabezpieczania komunikatów przed ich transportu, za pomocą protokołu WS-Security. Zabezpieczanie po prostu treść wiadomości przy użyciu WS-Security umożliwi się jako poufne przesyłane przez pośredników przed dotarciem do ostatecznego miejsca przeznaczenia.  
   
 ## <a name="globalization"></a>Globalizacja  
- Język konfiguracji ASP.NET umożliwia określenie kultury dla poszczególnych usług. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Nie obsługuje tego ustawienia konfiguracji, z wyjątkiem w trybie zgodności ASP.NET. Aby zlokalizować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która nie używa tryb zgodności ASP.NET, skompilować typ usługi do zestawów specyficzne dla kultury i ma oddzielne punkty końcowe specyficzne dla kultury dla każdego zestawu specyficzne dla kultury.  
+ Język konfiguracji ASP.NET umożliwia określenie kultury dla poszczególnych usług. Usługi WCF nie obsługuje tego ustawienia konfiguracji, z wyjątkiem w trybie zgodności ASP.NET. Do zlokalizowania usługi WCF, która nie używa tryb zgodności ASP.NET, skompiluj typ usługi do zestawów specyficzne dla kultury i mieć osobne specyficzne dla kultury punktów końcowych dla każdego zestawu specyficzne dla kultury.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Porównanie usług internetowych platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

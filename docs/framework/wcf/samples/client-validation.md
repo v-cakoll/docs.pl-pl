@@ -1,31 +1,19 @@
 ---
 title: Walidacja klienta
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>Walidacja klienta
 Usługi często Publikowanie metadanych, aby włączyć automatyczne generowanie i konfigurowanie typów serwera proxy klienta. Jeśli usługa nie jest zaufany, aplikacje klienckie należy zweryfikować, że metadane odpowiada aplikacji klienckiej zasad dotyczących zabezpieczeń, transakcje, typ kontraktu usługi i tak dalej. W poniższym przykładzie pokazano, jak napisać klienta zachowania punktu końcowego, która weryfikuje punktu końcowego usługi, aby upewnić się, że tego punktu końcowego usługi jest bezpiecznie korzystać.  
   
  Usługa udostępnia cztery punkty końcowe usługi. Pierwszym punktem końcowym używa WSDualHttpBinding, drugiego punktu końcowego jest używane uwierzytelnianie NTLM, trzeci punktu końcowego umożliwia przepływu transakcji, a czwarta punkt końcowy korzysta z uwierzytelniania opartego na certyfikatach.  
   
- Klient używa <xref:System.ServiceModel.Description.MetadataResolver> klasy do pobierania metadanych dla usługi. Klient wymusza zasady zabronienia dwustronnego wiązań, uwierzytelnianie NTLM i za pomocą zachowania sprawdzania poprawności przepływu transakcji. Dla każdego <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia zaimportowane z metadanych usługi, aplikacja kliencka dodaje wystąpienie `InternetClientValidatorBehavior` zachowania punktu końcowego do <xref:System.ServiceModel.Description.ServiceEndpoint> przed próbą użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] połączenia klienta z punktem końcowym. To zachowanie `Validate` metody jest uruchamiany przed są nazywane żadnych operacji w usłudze i wymusza zasady klienta przez zgłaszanie `InvalidOperationExceptions`.  
+ Klient używa <xref:System.ServiceModel.Description.MetadataResolver> klasy do pobierania metadanych dla usługi. Klient wymusza zasady zabronienia dwustronnego wiązań, uwierzytelnianie NTLM i za pomocą zachowania sprawdzania poprawności przepływu transakcji. Dla każdego <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia zaimportowane z metadanych usługi, aplikacja kliencka dodaje wystąpienie `InternetClientValidatorBehavior` zachowania punktu końcowego do <xref:System.ServiceModel.Description.ServiceEndpoint> przed podjęciem próby nawiązania połączenia za pomocą klienta usługi Windows Communication Foundation (WCF) punkt końcowy. To zachowanie `Validate` metody jest uruchamiany przed są nazywane żadnych operacji w usłudze i wymusza zasady klienta przez zgłaszanie `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>Aby samodzielnie tworzyć przykładowy  
   

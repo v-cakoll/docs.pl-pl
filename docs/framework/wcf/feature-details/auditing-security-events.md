@@ -1,42 +1,30 @@
 ---
 title: Inspekcja zdarzeń dotyczących zabezpieczeń
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
-Aplikacje utworzone przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] może rejestrować zdarzeń zabezpieczeń (sukces, Niepowodzenie lub obie) z funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  
+Aplikacje utworzone z usługi Windows Communication Foundation (WCF) może rejestrować zdarzeń zabezpieczeń (sukces, Niepowodzenie lub obie) przy użyciu funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  
   
  Inspekcja umożliwia administratorowi wykrycia ataku, który już wystąpił, lub jest w toku. Ponadto inspekcja może ułatwić deweloperom debugowanie problemów związanych z zabezpieczeniami. Na przykład jeśli wystąpił błąd w konfiguracji autoryzacji lub Sprawdzanie, czy zasady przypadkowo nie zezwala na dostęp do autoryzowanych użytkowników, dewelopera można szybko odnajdywanie i izolowanie przyczynę tego błędu, sprawdzając dziennik zdarzeń.  
   
- Aby uzyskać więcej informacji na temat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania w języku [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Aby uzyskać więcej informacji o zabezpieczeniach WCF, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania WCF, zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Poziom inspekcji i zachowania  
  Istnieją dwa poziomy inspekcji zabezpieczeń:  
   
 -   Poziom autoryzacji usługi, w którym obiekt wywołujący jest autoryzowany.  
   
--   Komunikat poziomu, w którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawdza poprawność wiadomości i uwierzytelnia wywołującego.  
+-   Poziom komunikatu, w którym WCF sprawdza poprawność wiadomości i uwierzytelnia wywołującego.  
   
  Można sprawdzić zarówno inspekcji poziomy powodzenie lub niepowodzenie, znany jako *inspekcji zachowanie*.  
   

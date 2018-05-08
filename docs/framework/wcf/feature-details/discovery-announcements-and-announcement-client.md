@@ -1,27 +1,15 @@
 ---
-title: "Anonse odnajdywania i klient anonsów"
-ms.custom: 
+title: Anonse odnajdywania i klient anonsów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Anonse odnajdywania i klient anonsów
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Odnajdywania funkcja umożliwia składniki poinformować ich dostępności. Jeśli skonfigurowana, aby to zrobić, usługa wysyła Hello i Bye anonsów. Klientów ani innych składników można nasłuchiwać takie komunikaty anonsów i działają na nich. Zapewnia to alternatywna metoda klientów pod uwagę usług. Funkcje anons ma kilka zastosowań, na przykład usługi wprowadź, pozostaw sieci często anonsów może być lepszym niż w przypadku usługi wyszukiwania. Takie podejście zmniejsza ruch w sieci i klienta można zapoznać się obecności lub wysyłki usługi jak Anonse są odbierane.  
+Funkcja odnajdywania WCF umożliwia składniki poinformować ich dostępności. Jeśli skonfigurowana, aby to zrobić, usługa wysyła Hello i Bye anonsów. Klientów ani innych składników można nasłuchiwać takie komunikaty anonsów i działają na nich. Zapewnia to alternatywna metoda klientów pod uwagę usług. Funkcje anons ma kilka zastosowań, na przykład usługi wprowadź, pozostaw sieci często anonsów może być lepszym niż w przypadku usługi wyszukiwania. Takie podejście zmniejsza ruch w sieci i klienta można zapoznać się obecności lub wysyłki usługi jak Anonse są odbierane.  
   
 ## <a name="discovery-announcements"></a>Anonse odnajdywania  
  Gdy Usługa skonfigurowana dla anonsów łączy sieci i staje się wykrywalny, wysyła wiadomość Hello informującą jego dostępność do nasłuchiwania klientów. Komunikat zawiera odnajdywanie powiązane informacje o usłudze, takich jak jej kontrakt adres punktu końcowego i skojarzone zakresów. Można określić, gdzie komunikat powiadomienia są wysyłane z <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> klasy. Jeśli punkt końcowy powiadomienia jest <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> Hello i Bye są odpowiednio multiemisji lub punkt końcowy powiadomienia w przypadku emisji pojedynczej, komunikaty są wysyłane bezpośrednio do określonego punktu końcowego.  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 > [!TIP]
 >  Można dostosować funkcje anons, co umożliwia wysyłanie powiadomień, zawsze, gdy zostanie wybrana.  
   
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]definiuje <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> jako standardowych punktów końcowych, aby umożliwić usług i klientów w celu łatwego wysyłania anonsów Hello i Bye.  
+ [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] definiuje <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> jako standardowych punktów końcowych, aby umożliwić usług i klientów w celu łatwego wysyłania anonsów Hello i Bye.  
   
 ### <a name="announcements-on-the-service"></a>Anonsy w usłudze  
  Aby skonfigurować usługę, aby wysłać powiadomienia, Dodaj <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> z punktem końcowym anonsu. Poniższy przykład przedstawia sposób programowego dodawania tego zachowania do hosta usługi. W tym przykładzie użyto `UdpAnnouncementEndpoint`, co oznacza, że anonsy są multiemisji do lokalizacji określonej przez tego standardowego punktu końcowego.  

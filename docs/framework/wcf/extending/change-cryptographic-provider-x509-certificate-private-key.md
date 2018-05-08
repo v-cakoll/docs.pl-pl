@@ -1,14 +1,6 @@
 ---
 title: 'Porady: zmienianie dostawcy kryptograficznego dla certyfikatu X.509&#39;s klucza prywatnego'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e7dea9834b654be0b86155e18524053efa4b778b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Porady: zmienianie dostawcy kryptograficznego dla certyfikatu X.509&#39;s klucza prywatnego
-W tym temacie pokazano, jak zmienić umożliwiające uzyskanie klucza prywatnego certyfikatu X.509 dostawcy usług kryptograficznych i sposobu integracji dostawcy do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] strukturę zabezpieczeń. Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+W tym temacie pokazano sposób zintegrować dostawcy przez strukturę zabezpieczeń systemu Windows Communication Foundation (WCF) oraz sposobu zmiany dostawcy usług kryptograficznych, umożliwiające uzyskanie klucza prywatnego certyfikatu X.509. Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Strukturę zabezpieczeń umożliwia wprowadzenie nowych typów tokenu zabezpieczeń, zgodnie z opisem w [porady: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Użytkownik może również używać niestandardowy token, aby zastąpić istniejące typy tokenów dostarczane przez system.  
   
@@ -50,7 +36,7 @@ W tym temacie pokazano, jak zmienić umożliwiające uzyskanie klucza prywatnego
   
 4.  Zastąpienie <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> metody. Ta metoda jest wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń platformę, by uzyskać wystąpienia <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasa, która reprezentuje dostawcy usług kryptograficznych dla jego certyfikat prywatny lub publiczny klucz, w zależności od parametrów przekazane do metody.  
   
-5.  Opcjonalny. Zastąpienie <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> metody. Przesłonić tę metodę, jeśli różne implementacje <xref:System.Security.Cryptography.HashAlgorithm> klasa jest wymagana.  
+5.  Opcjonalna. Zastąpienie <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> metody. Przesłonić tę metodę, jeśli różne implementacje <xref:System.Security.Cryptography.HashAlgorithm> klasa jest wymagana.  
   
 6.  Zastąpienie <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> metody. Ta metoda zwraca wystąpienie klasy <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> klasy, która jest skojarzona z klucza prywatnego certyfikatu.  
   

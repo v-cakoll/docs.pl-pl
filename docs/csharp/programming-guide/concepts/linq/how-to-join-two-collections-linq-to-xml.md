@@ -1,21 +1,12 @@
 ---
-title: "Porady: Dołącz dwie kolekcje (LINQ do XML) (C#)"
-ms.custom: 
+title: 'Porady: Dołącz dwie kolekcje (LINQ do XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9fdbd442e0974dfcf5183a237eecd94c4c925ee4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d4e7c73262cce234dc8373d42b2a8cb366316622
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Porady: Dołącz dwie kolekcje (LINQ do XML) (C#)
 Element lub atrybut w dokumencie XML czasami mogą odwoływać się do innego elementu lub atrybutu. Na przykład [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) dokument XML zawiera listę klientów i listę zleceń. Każdy `Customer` zawiera element `CustomerID` atrybutu. Każdy `Order` zawiera element `CustomerID` elementu. `CustomerID` Elementu w każdej kolejności odwołuje się do `CustomerID` atrybutu w klienta.  

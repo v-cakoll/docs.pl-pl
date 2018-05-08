@@ -1,13 +1,6 @@
 ---
-title: "Porady: tworzenie i inicjowanie obiektów nasłuchujących śledzenia"
-ms.custom: 
+title: 'Porady: tworzenie i inicjowanie obiektów nasłuchujących śledzenia'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1ebc50e4075a5793c344cbc017eb60247c1c8774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943621b953fbe158b3be6ae0695ba7692b7c517f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Porady: tworzenie i inicjowanie obiektów nasłuchujących śledzenia
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> i <xref:System.Diagnostics.Trace?displayProperty=nameWithType> klasy wysyłania komunikatów do obiektów o nazwie nasłuchujących odbierały i przetwarzały tych wiadomości. Jeden taki odbiornika <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, jest automatycznie tworzony i inicjowana, gdy jest włączone śledzenia i debugowania. Jeśli chcesz <xref:System.Diagnostics.Trace> lub <xref:System.Diagnostics.Debug> dane wyjściowe będą kierowane do wszelkich dodatkowych źródeł, należy utworzyć i Inicjowanie obiektów nasłuchujących śledzenia dodatkowe.  

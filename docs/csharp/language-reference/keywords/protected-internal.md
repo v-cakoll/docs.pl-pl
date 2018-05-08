@@ -1,16 +1,12 @@
 ---
-title: "chronionych wewnętrznych (odwołanie w C#)"
+title: chronionych wewnętrznych (odwołanie w C#)
 ms.date: 11/15/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 author: sputier
-ms.author: wiwagn
-ms.openlocfilehash: f9004a5e8d65179c9ff2e30688e63c14c95ab431
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: a2a649f0fdb924c26380e7261bd935be736f0665
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protected-internal-c-reference"></a>chronionych wewnętrznych (odwołanie w C#)
 `protected internal` Kombinacja słów kluczowych jest modyfikator dostępu elementu członkowskiego. Chroniony element członkowski wewnętrznego jest dostępny, z bieżącego zestawu lub typów pochodzących od klasy zawierającego. Porównanie `protected internal` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). 
@@ -55,7 +51,7 @@ class DerivedClass : BaseClass
     }
 } 
 ```  
- Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly2.cs`. Pierwszy plik zawiera klasę podstawową publicznego `BaseClass`, a inna klasa `TestAccess`. `BaseClass`właścicielem członka chronionego wewnętrzny `myValue`, który jest dostępny po `TestAccess` typu. W drugim pliku, próba uzyskania dostępu do `myValue` za pośrednictwem wystąpienia `BaseClass` utworzy wystąpił błąd podczas dostępu do tego elementu członkowskiego przez wystąpienie klasy pochodnej, `DerivedClass` powiedzie się. 
+ Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly2.cs`. Pierwszy plik zawiera klasę podstawową publicznego `BaseClass`, a inna klasa `TestAccess`. `BaseClass` właścicielem członka chronionego wewnętrzny `myValue`, który jest dostępny po `TestAccess` typu. W drugim pliku, próba uzyskania dostępu do `myValue` za pośrednictwem wystąpienia `BaseClass` utworzy wystąpił błąd podczas dostępu do tego elementu członkowskiego przez wystąpienie klasy pochodnej, `DerivedClass` powiedzie się. 
 
  Członkowie struktury nie mogą być `protected internal` ponieważ struktury nie może być dziedziczona.  
   
@@ -69,7 +65,7 @@ class DerivedClass : BaseClass
  [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)   
- [publiczny](../../../csharp/language-reference/keywords/public.md)   
- [prywatne](../../../csharp/language-reference/keywords/private.md)   
+ [Publiczna](../../../csharp/language-reference/keywords/public.md)   
+ [Prywatne](../../../csharp/language-reference/keywords/private.md)   
  [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)   
  [Problemy z zabezpieczeniami dla wewnętrznego wirtualnego słowa kluczowe](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

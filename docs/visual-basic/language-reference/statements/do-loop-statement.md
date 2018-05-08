@@ -1,17 +1,12 @@
 ---
-title: "Do...Loop — Instrukcja (Visual Basic)"
+title: Do...Loop — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop — Instrukcja (Visual Basic)
 Powtarza blok instrukcji podczas `Boolean` warunek jest `True` lub warunek staje się `True`.  
@@ -61,14 +53,14 @@ Loop { While | Until } condition
   
 |Termin|Definicja|  
 |---|---|  
-|`Do`|Wymagany. Uruchamia definicji `Do` pętli.|  
+|`Do`|Wymagana. Uruchamia definicji `Do` pętli.|  
 |`While`|Wymagany, chyba że `Until` jest używany. Powtórz pętli do `condition` jest `False`.|  
 |`Until`|Wymagany, chyba że `While` jest używany. Powtórz pętli do `condition` jest `True`.|  
-|`condition`|Opcjonalny. `Boolean`wyrażenie. Jeśli `condition` jest `Nothing`, Visual Basic traktuje ją jako `False`.|  
-|`statements`|Opcjonalny. Co najmniej jeden instrukcji, które są powtarzane podczas lub do momentu, `condition` jest `True`.|  
-|`Continue Do`|Opcjonalny. Przekazuje sterowanie do następnej iteracji `Do` pętli.|  
-|`Exit Do`|Opcjonalny. Przekazuje sterowanie poza `Do` pętli.|  
-|`Loop`|Wymagany. Kończy definicję `Do` pętli.|  
+|`condition`|Opcjonalna. `Boolean` Wyrażenie. Jeśli `condition` jest `Nothing`, Visual Basic traktuje ją jako `False`.|  
+|`statements`|Opcjonalna. Co najmniej jeden instrukcji, które są powtarzane podczas lub do momentu, `condition` jest `True`.|  
+|`Continue Do`|Opcjonalna. Przekazuje sterowanie do następnej iteracji `Do` pętli.|  
+|`Exit Do`|Opcjonalna. Przekazuje sterowanie poza `Do` pętli.|  
+|`Loop`|Wymagana. Kończy definicję `Do` pętli.|  
   
 ## <a name="remarks"></a>Uwagi  
  Użyj `Do...Loop` struktury, gdy ma zostać powtórzony zestaw instrukcji o nieograniczonej liczby godzin, dopóki spełniony jest warunek. Jeśli chcesz powtarzać instrukcje jest określona liczba razy, [dla... Następna instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md) jest zwykle lepszym rozwiązaniem.  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  `Do...Loop` Struktura zapewnia większą elastyczność niż [podczas... Instrukcji End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) ponieważ umożliwia podjęcie decyzji o zakończenie pętli podczas `condition` przestanie być `True` lub po raz pierwszy staje się `True`. Można również do testowania `condition` na początek lub koniec pętli.  
   
 ## <a name="exit-do"></a>Czy zakończyć  
- [Zakończyć czy](../../../visual-basic/language-reference/statements/exit-statement.md) instrukcji zapewnia alternatywny sposób, aby zakończyć `Do…Loop`. `Exit Do`natychmiast przenosi formantu do instrukcji następującej `Loop` instrukcji.  
+ [Zakończyć czy](../../../visual-basic/language-reference/statements/exit-statement.md) instrukcji zapewnia alternatywny sposób, aby zakończyć `Do…Loop`. `Exit Do` natychmiast przenosi formantu do instrukcji następującej `Loop` instrukcji.  
   
- `Exit Do`jest często używana po spełnienia określonego warunku jest obliczane, na przykład w `If...Then...Else` struktury. Możesz zamknąć pętlę Jeśli wykryć warunek, który ułatwia niepotrzebnych lub nie można kontynuować iteracja, takich jak Błędna wartość lub zakończenia żądania. Jedno użycie `Exit Do` służy do testowania dla warunku, który może powodować *nieskończonej pętli*, która jest pętli, które można uruchomić dużych lub nawet nieskończoną liczbę razy. Można użyć `Exit Do` wyjścia z pętli.  
+ `Exit Do` jest często używana po spełnienia określonego warunku jest obliczane, na przykład w `If...Then...Else` struktury. Możesz zamknąć pętlę Jeśli wykryć warunek, który ułatwia niepotrzebnych lub nie można kontynuować iteracja, takich jak Błędna wartość lub zakończenia żądania. Jedno użycie `Exit Do` służy do testowania dla warunku, który może powodować *nieskończonej pętli*, która jest pętli, które można uruchomić dużych lub nawet nieskończoną liczbę razy. Można użyć `Exit Do` wyjścia z pętli.  
   
  Może zawierać dowolną liczbę `Exit Do` instrukcje w `Do…Loop`.  
   
@@ -115,8 +107,8 @@ Loop { While | Until } condition
   
 ## <a name="see-also"></a>Zobacz też  
  [Struktury pętli](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Dla... Next — instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Boolean — typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Boolean, typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
  [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Exit — instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [While... End While — instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+ [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [While...End While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

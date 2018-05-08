@@ -1,23 +1,17 @@
 ---
-title: "Porady: uzyskiwanie wartości zmiennej wskaźnikowej (Przewodnik programowania w języku C#)"
+title: 'Porady: uzyskiwanie wartości zmiennej wskaźnikowej (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointer expressions [C#], indirection
 - pointers [C#], indirection
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8065c10bec737789f13dcbafe147b50eedb9da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c53026149837681235c6d1001707a25b9c8b40b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Porady: uzyskiwanie wartości zmiennej wskaźnikowej (Przewodnik programowania w języku C#)
 Operator pośredni wskaźnik umożliwia uzyskanie zmiennej w lokalizacji wskazywanej przez kursor. Wyrażenie ma następującą postać, gdzie `p` jest typem wskaźnika:  
@@ -44,8 +38,8 @@ Operator pośredni wskaźnik umożliwia uzyskanie zmiennej w lokalizacji wskazyw
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wyrażenia wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [Typy wskaźnika](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+ [Typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
  [Typy](../../../csharp/language-reference/keywords/types.md)  
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [Fixed — instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [fixed, instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

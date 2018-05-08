@@ -1,27 +1,17 @@
 ---
-title: "Metody rozszerzeń (Visual Basic)"
-ms.custom: 
+title: Metody rozszerzeń (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
 Metody rozszerzenia umożliwiają deweloperom dodania funkcji niestandardowych do typów danych, które zostały już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzenia umożliwiają napisanie metody, która może być wywołana tak, jakby była metodą wystąpienia istniejącego typu.  
@@ -38,7 +28,7 @@ Metody rozszerzenia umożliwiają deweloperom dodania funkcji niestandardowych d
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Zwróć uwagę, że definicji — metoda rozszerzenia jest oznaczony atrybutem rozszerzenia `<Extension()>`. Oznaczenie modułu, w którym zdefiniowana jest metoda jest opcjonalne, ale każda metoda rozszerzenia musi być oznaczona. <xref:System.Runtime.CompilerServices>należy zaimportować tak, aby uzyskać dostęp do atrybutu rozszerzenia.  
+ Zwróć uwagę, że definicji — metoda rozszerzenia jest oznaczony atrybutem rozszerzenia `<Extension()>`. Oznaczenie modułu, w którym zdefiniowana jest metoda jest opcjonalne, ale każda metoda rozszerzenia musi być oznaczona. <xref:System.Runtime.CompilerServices> należy zaimportować tak, aby uzyskać dostęp do atrybutu rozszerzenia.  
   
  Metody rozszerzenia mogą być deklarowane tylko w modułach. Zazwyczaj modułu, w którym jest zdefiniowany — metoda rozszerzenia nie jest tym samym module, w którym jest wywoływana. Zamiast tego należy moduł, który zawiera metody rozszerzenia są importowane, jeśli wymagane jest, aby przełączyć go do zakresu. Po moduł, który zawiera `Print` jest w zakresie, można wywołać metody, tak jakby był on metodę zwykłej wystąpienia, który nie przyjmuje żadnych argumentów, takich jak `ToUpper`:  
   
@@ -48,9 +38,9 @@ Metody rozszerzenia umożliwiają deweloperom dodania funkcji niestandardowych d
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- Metoda jest wywoływana przez wysyłanie argument ciągu `punc`:`example.PrintAndPunctuate(".")`  
+ Metoda jest wywoływana przez wysyłanie argument ciągu `punc`: `example.PrintAndPunctuate(".")`  
   
- W poniższym przykładzie przedstawiono `Print` i `PrintAndPunctuate` zdefiniowany i wywołać. <xref:System.Runtime.CompilerServices>zostaną zaimportowane w module definicji w celu umożliwienia dostępu do atrybutu rozszerzenia.  
+ W poniższym przykładzie przedstawiono `Print` i `PrintAndPunctuate` zdefiniowany i wywołać. <xref:System.Runtime.CompilerServices> zostaną zaimportowane w module definicji w celu umożliwienia dostępu do atrybutu rozszerzenia.  
   
 ### <a name="code"></a>Kod  
   
@@ -186,8 +176,8 @@ End Module
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.CompilerServices>  
  <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
- [Metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Module — instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [Module, instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
  [Parametry opcjonalne](./optional-parameters.md)  
  [Tablice parametrów](./parameter-arrays.md)  

@@ -1,28 +1,18 @@
 ---
-title: "Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika"
-ms.custom: 
+title: 'Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8679e930b1f12119211a6463289fb37a18692d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika
 Wspólny system aktywacji języka wspólnego (CLR) określa wersję środowiska CLR, która będzie służyć do uruchamiania kodu aplikacji zarządzanych. W niektórych przypadkach system aktywacji nie można znaleźć wersji środowiska CLR do załadowania. Ta sytuacja zwykle występuje, gdy aplikacja wymaga wersji środowiska CLR, która jest nieprawidłowa lub nie została zainstalowana na danym komputerze. Jeśli nie odnaleziono żądanej wersji, system aktywacji CLR zwraca kod błędu HRESULT z funkcji lub interfejs, który został wywołany i może być wyświetlany komunikat o błędzie do użytkownika, który jest uruchomiona aplikacja. Ten artykuł zawiera listę kodów HRESULT i objaśniono, w jaki sposób można zapobiec komunikat o błędzie wyświetlany.  
@@ -79,11 +69,11 @@ Typowym komunikatem o błędzie dla błędów inicjowania
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Zarządzany host EXE|Powoduje uruchomienie zarządzanych plików exe.|Jest wyświetlany w przypadku brakujących wersja programu .NET Framework|Nie|  
 |Zarządzany host COM|Ładunki zarządzane składniki COM do procesu.|Jest wyświetlany w przypadku brakujących wersja programu .NET Framework|Tak, ustawiając parametr SEM_FAILCRITICALERRORS Flaga|  
-|ClickOnce host|Uruchamia aplikacji ClickOnce.|Jest wyświetlany w przypadku brakujących wersji programu .NET Framework, począwszy od[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
-|XBAP hosta|Uruchamia aplikacje WPF XBAP.|Jest wyświetlany w przypadku brakujących wersji programu .NET Framework, począwszy od[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
+|ClickOnce host|Uruchamia aplikacji ClickOnce.|Jest wyświetlany w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
+|XBAP hosta|Uruchamia aplikacje WPF XBAP.|Jest wyświetlany w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
   
-## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)]Zachowanie i interfejsu użytkownika  
- System aktywacji CLR zapewnia te same zachowania i interfejsu użytkownika na [!INCLUDE[win8](../../../includes/win8-md.md)] jak w innych wersjach systemu operacyjnego Windows, chyba że w przypadku napotkania problemów podczas ładowania CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)]zawiera [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], który używa CLR 4.5. Jednak [!INCLUDE[win8](../../../includes/win8-md.md)] nie ma programu .NET Framework 2.0, 3.0 lub 3.5, która Użyj CLR 2.0. W związku z tym aplikacje, które są zależne od CLR 2.0 nie należy uruchamiać na [!INCLUDE[win8](../../../includes/win8-md.md)] domyślnie. Zamiast tego wyświetlane następujące okno dialogowe, aby umożliwić użytkownikom instalowanie programu .NET Framework 3.5. Użytkownicy mogą również włączyć .NET Framework 3.5 w Panelu sterowania. Obie te opcje są omówionych w artykule [zainstalować program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).  
+## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)] Zachowanie i interfejsu użytkownika  
+ System aktywacji CLR zapewnia te same zachowania i interfejsu użytkownika na [!INCLUDE[win8](../../../includes/win8-md.md)] jak w innych wersjach systemu operacyjnego Windows, chyba że w przypadku napotkania problemów podczas ładowania CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] zawiera [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], który używa CLR 4.5. Jednak [!INCLUDE[win8](../../../includes/win8-md.md)] nie ma programu .NET Framework 2.0, 3.0 lub 3.5, która Użyj CLR 2.0. W związku z tym aplikacje, które są zależne od CLR 2.0 nie należy uruchamiać na [!INCLUDE[win8](../../../includes/win8-md.md)] domyślnie. Zamiast tego wyświetlane następujące okno dialogowe, aby umożliwić użytkownikom instalowanie programu .NET Framework 3.5. Użytkownicy mogą również włączyć .NET Framework 3.5 w Panelu sterowania. Obie te opcje są omówionych w artykule [zainstalować program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).  
   
  ![Okno dialogowe instalacji 3.5 w systemie Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
 Monituj o instalowanie programu .NET Framework 3.5 na żądanie  

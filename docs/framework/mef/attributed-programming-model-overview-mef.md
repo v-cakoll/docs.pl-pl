@@ -1,9 +1,6 @@
 ---
-title: "Omówienie modelu programowania opartego na atrybutach (MEF)"
+title: Omówienie modelu programowania opartego na atrybutach (MEF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Omówienie modelu programowania opartego na atrybutach (MEF)
 W Managed Extensibility Framework (MEF), *model programowania* jest określonego sposobu definiowania zestawu obiektów pojęciach, na których działa MEF. Te obiekty koncepcyjnej obejmują części, importu i eksportu. MEF używa tych obiektów, ale nie określa, jak powinny być reprezentowane. W związku z tym szerokiej gamy modele programowania są możliwe, w tym dostosowane modele programowania.  
@@ -407,7 +401,7 @@ public class MyClass
 ## <a name="avoiding-discovery"></a>Unikanie odnajdywania  
  W niektórych przypadkach można zapobiec odnajdywane jako część wykaz części. Na przykład część może być klasą podstawową mają być dziedziczone z, ale nie używane. Istnieją dwa sposoby, w tym celu. Najpierw należy użyć `abstract` — słowo kluczowe w klasie części. Klasy abstrakcyjne nigdy nie podawaj eksportu, mimo że zapewniają one eksportu odziedziczone do klasy, które pochodzą z nich.  
   
- Jeżeli klasa abstrakcyjna, można go przy użyciu dekoracji `PartNotDiscoverable` atrybutu. Części ozdobione ten atrybut nie będą uwzględniane w dowolnym katalogów. W poniższym przykładzie pokazano tych wzorców. `DataOne`zostaną odnalezione przez wykaz. Ponieważ `DataTwo` jest abstrakcyjna, go nie zostaną odnalezione. Ponieważ `DataThree` używane `PartNotDiscoverable` atrybutu, nie zostaną odnalezione.  
+ Jeżeli klasa abstrakcyjna, można go przy użyciu dekoracji `PartNotDiscoverable` atrybutu. Części ozdobione ten atrybut nie będą uwzględniane w dowolnym katalogów. W poniższym przykładzie pokazano tych wzorców. `DataOne` zostaną odnalezione przez wykaz. Ponieważ `DataTwo` jest abstrakcyjna, go nie zostaną odnalezione. Ponieważ `DataThree` używane `PartNotDiscoverable` atrybutu, nie zostaną odnalezione.  
   
 ```vb  
 <Export()>  
@@ -588,7 +582,7 @@ public class User
   
  Eksporty zadeklarowana przy użyciu `Export` atrybutów nie są dziedziczone przez podklasy. Jednak części można wyeksportować się za pomocą `InheritedExport` atrybutu. Podklasy części będzie dziedziczyć i podaj tego samego eksportu, łącznie z nazwą kontraktu i typ kontraktu. W odróżnieniu od `Export` atrybut `InheritedExport` może odnosić się tylko na poziomie klasy, a nie na poziomie elementu członkowskiego. W związku z tym poziomie członka eksportuje nigdy nie mogą być dziedziczone.  
   
- Następujące klasy cztery zademonstrować zasady importowania i eksportowania dziedziczenia. `NumTwo`dziedziczy `NumOne`, więc `NumTwo` zaimportuje `IMyData`. Zwykłe eksporty nie są dziedziczone, więc `NumTwo` nie eksportuje żadnych elementów. `NumFour`dziedziczy `NumThree`. Ponieważ `NumThree` używane `InheritedExport`, `NumFour` ma jeden Eksport kontraktu typu `NumThree`. Eksportowanie na poziomie członka nigdy nie są dziedziczone, więc `IMyData` nie jest eksportowany.  
+ Następujące klasy cztery zademonstrować zasady importowania i eksportowania dziedziczenia. `NumTwo` dziedziczy `NumOne`, więc `NumTwo` zaimportuje `IMyData`. Zwykłe eksporty nie są dziedziczone, więc `NumTwo` nie eksportuje żadnych elementów. `NumFour` dziedziczy `NumThree`. Ponieważ `NumThree` używane `InheritedExport`, `NumFour` ma jeden Eksport kontraktu typu `NumThree`. Eksportowanie na poziomie członka nigdy nie są dziedziczone, więc `IMyData` nie jest eksportowany.  
   
 ```vb  
 <Export()>  
@@ -812,7 +806,7 @@ public MyAddin myAddin { get; set; }
   
  Zarówno importu i eksportu można określić zasady tworzenia części, spośród wartości `Shared`, `NonShared`, lub `Any`. Wartość domyślna to `Any` zarówno importuje i eksportuje. Export, która określa `Shared` lub `NonShared` spowoduje dopasowanie tylko importu, który określa takie same, lub Określa `Any`. Podobnie, import, która określa `Shared` lub `NonShared` spowoduje dopasowanie tylko eksportu, który określa takie same lub określający `Any`. Importu i eksportu z niezgodną tworzenia zasady nie są uznawane za zgodne, w taki sam sposób jak importu i eksportu, którego nazwa lub kontrakt typ kontraktu nie są dopasowania. Jeśli określono zarówno importowanie i eksportowanie `Any`, lub nie określaj zasadę tworzenia i domyślnie `Any`, domyślnie zostanie ustawiona do udostępnionego zasady tworzenia.  
   
- W poniższym przykładzie pokazano zarówno importuje i eksportuje określania zasad tworzenia. `PartOne`nie określono zasadę tworzenia, wartość domyślna to `Any`. `PartTwo`nie określono zasadę tworzenia, wartość domyślna to `Any`. Ponieważ zarówno importowanie i eksportowanie domyślną `Any`, `PartOne` zostaną udostępnione. `PartThree`Określa `Shared` Tworzenie zasad, więc `PartTwo` i `PartThree` współużytkują tę samą kopię `PartOne`. `PartFour`Określa `NonShared` Tworzenie zasad, więc `PartFour` będzie nieudostępnione w `PartFive`. `PartSix`Określa `NonShared` tworzenia zasad. `PartFive`i `PartSix` każdego otrzymają osobne kopie `PartFour`. `PartSeven`Określa `Shared` tworzenia zasad. Ponieważ istnieje nr wyeksportowane `PartFour` z zasadami tworzenia `Shared`, `PartSeven` importu nie jest zgodna z niczego i nie zostanie wypełnione.  
+ W poniższym przykładzie pokazano zarówno importuje i eksportuje określania zasad tworzenia. `PartOne` nie określono zasadę tworzenia, wartość domyślna to `Any`. `PartTwo` nie określono zasadę tworzenia, wartość domyślna to `Any`. Ponieważ zarówno importowanie i eksportowanie domyślną `Any`, `PartOne` zostaną udostępnione. `PartThree` Określa `Shared` Tworzenie zasad, więc `PartTwo` i `PartThree` współużytkują tę samą kopię `PartOne`. `PartFour` Określa `NonShared` Tworzenie zasad, więc `PartFour` będzie nieudostępnione w `PartFive`. `PartSix` Określa `NonShared` tworzenia zasad. `PartFive` i `PartSix` każdego otrzymają osobne kopie `PartFour`. `PartSeven` Określa `Shared` tworzenia zasad. Ponieważ istnieje nr wyeksportowane `PartFour` z zasadami tworzenia `Shared`, `PartSeven` importu nie jest zgodna z niczego i nie zostanie wypełnione.  
   
 ```vb  
 <Export()>  
@@ -959,7 +953,7 @@ public class PartSeven
   
  Kontenery długotrwałe kompozycji użycie pamięci przez części z zasadami tworzenia nieudostępnione może stać się problem. Te częściami nieudostępnionymi można tworzyć wiele razy i nie będzie usunięty, dopóki sam pojemnik zostanie usunięty. Aby poradzić sobie z tym, zapewnia kontener `ReleaseExport` metody. Wywołanie tej metody w eksportu nieudostępnione usuwa tego eksportu z kontenera kompozycji i usuwa go. Elementy, które są używane tylko usunięte eksportu, i tak dalej niżej na drzewie są również usuwane i usunięty. W ten sposób można odzyskać zasoby bez usuwania samego kontenera kompozycji.  
   
- `IPartImportsSatisfiedNotification`zawiera jedną metodę o nazwie `OnImportsSatisfied`. Ta metoda jest wywoływana przez kontener kompozycji na żadnych części, które implementują interfejs, gdy kompozycja została ukończona i Importy części są gotowe do użycia. Elementy są tworzone przez aparat kompozycji do wypełnienia importów z innymi częściami. Przed zestawu importów części nie może wykonać inicjowanie zależy od lub manipuluje importowanych wartości w Konstruktorze części, chyba że te wartości zostały określone jako wymagania wstępne przy użyciu `ImportingConstructor` atrybutu. Zazwyczaj jest to preferowana metoda, ale w niektórych przypadkach iniekcji konstruktora nie mogą być dostępne. W takich przypadkach można wykonać inicjowania w `OnImportsSatisfied`, a część powinny implementować `IPartImportsSatisfiedNotification`.  
+ `IPartImportsSatisfiedNotification` zawiera jedną metodę o nazwie `OnImportsSatisfied`. Ta metoda jest wywoływana przez kontener kompozycji na żadnych części, które implementują interfejs, gdy kompozycja została ukończona i Importy części są gotowe do użycia. Elementy są tworzone przez aparat kompozycji do wypełnienia importów z innymi częściami. Przed zestawu importów części nie może wykonać inicjowanie zależy od lub manipuluje importowanych wartości w Konstruktorze części, chyba że te wartości zostały określone jako wymagania wstępne przy użyciu `ImportingConstructor` atrybutu. Zazwyczaj jest to preferowana metoda, ale w niektórych przypadkach iniekcji konstruktora nie mogą być dostępne. W takich przypadkach można wykonać inicjowania w `OnImportsSatisfied`, a część powinny implementować `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wideo Channel 9: Otwarcie aplikacji przy użyciu Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  

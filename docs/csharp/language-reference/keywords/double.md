@@ -1,24 +1,17 @@
 ---
-title: "double (odwołanie w C#)"
+title: double (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - double
 - double_CSharpKeyword
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 232dd97e152f943137604074f24b5de779168e59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2524c907781bd3ce618acb0bdd087acb4b10f75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-c-reference"></a>double (odwołanie w C#)
 `double` — Słowo kluczowe oznacza typu prostego, która przechowuje 64-bitowych wartości zmiennoprzecinkowych. W poniższej tabeli przedstawiono dokładność i zakres przybliżonej `double` typu.  

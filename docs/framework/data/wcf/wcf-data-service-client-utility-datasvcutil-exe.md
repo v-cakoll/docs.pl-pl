@@ -1,28 +1,16 @@
 ---
-title: "Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)"
-ms.custom: 
+title: Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)
 DataSvcUtil.exe jest udostępniane przez narzędzie wiersza polecenia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] która zużywa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych i wygeneruje klasy usługi danych klienta, które są niezbędne do uzyskania dostępu do usługi danych z aplikacją kliencką programu .NET Framework. To narzędzie można wygenerować klas danych przy użyciu następujących źródeł metadanych:  
@@ -49,10 +37,10 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |------------|-----------------|  
 |`/dataservicecollection`|Określa, że generowane jest również kod wymagany do powiązanie obiektów z formantami.|  
 |`/help`<br /><br /> —lub—<br /><br /> `/?`|Wyświetla składnię polecenia i opcje narzędzia.|  
-|`/in:` *\<pliku >*|Określa plik .csdl lub edmx lub katalog, w którym znajduje się plik.|  
-|`/language:`[VB &#124; CSharp]|Określa język dla plików źródłowych wygenerowanego kodu. Wartością domyślną języka C#.|  
+|`/in:` *\<Plik >*|Określa plik .csdl lub edmx lub katalog, w którym znajduje się plik.|  
+|`/language:`[VB&#124;CSharp]|Określa język dla plików źródłowych wygenerowanego kodu. Wartością domyślną języka C#.|  
 |`/nologo`|Pomija wyświetlanie komunikaty o prawach autorskich.|  
-|`/out:` *\<pliku >*|Określa nazwę pliku kodu źródłowego, który zawiera klasy usługi danych wygenerowanego klienta.|  
+|`/out:` *\<Plik >*|Określa nazwę pliku kodu źródłowego, który zawiera klasy usługi danych wygenerowanego klienta.|  
 |`/uri:` *\<ciąg >*|Identyfikator URI [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.|  
 |`/version:`[1.0&#124;2.0]|Określa wersję najwyższy zaakceptowane [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Wersja jest określana na podstawie `DataServiceVersion` atrybutu element DataService w metadanych usługi zwracanych danych. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md). Po określeniu `/dataservicecollection` parametru, należy także określić `/version:2.0` do włączenia możliwości wiązania danych.|  
   

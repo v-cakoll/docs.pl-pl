@@ -1,27 +1,15 @@
 ---
 title: Tryby wyboru w formancie DataGridView formularzy systemu Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0d605b7ee7e48ad0ed2e693f0e71e5f1c25e022
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43f3648a9c7d64fb4fb900c7df3f01bc18d729b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyboru w formancie DataGridView formularzy systemu Windows
 Czasami ma aplikacji do wykonywania akcji na podstawie wybranych użytkowników w ramach <xref:System.Windows.Forms.DataGridView> formantu. W zależności od akcji których chcesz ograniczyć rodzaje wybór, które są możliwe. Na przykład załóżmy, że aplikację można wydrukować raportu dla aktualnie wybranego rekordu. W takim przypadku można skonfigurować <xref:System.Windows.Forms.DataGridView> sterowania, aby klikanie wiersza zawsze wybiera cały wiersz i tak aby tylko jeden wiersz jednocześnie można wybrać.  

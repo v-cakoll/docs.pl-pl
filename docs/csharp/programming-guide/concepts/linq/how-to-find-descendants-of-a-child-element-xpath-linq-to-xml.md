@@ -1,21 +1,12 @@
 ---
-title: "Porady: znajdowanie elementów podrzędnych elementu podrzędnego (XPath-LINQ do XML) (C#)"
-ms.custom: 
+title: 'Porady: znajdowanie elementów podrzędnych elementu podrzędnego (XPath-LINQ do XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 873cfe6a725a932ac4616e7ccf0ea11e3f6479f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 548ec3f76a17ef8575e7e5e90ef4cbf8d2666a64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Porady: znajdowanie elementów podrzędnych elementu podrzędnego (XPath-LINQ do XML) (C#)
 W tym temacie pokazano, jak można uzyskać elementów podrzędnych elementu podrzędnego o określonej nazwie.  

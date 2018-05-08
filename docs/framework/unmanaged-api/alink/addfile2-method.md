@@ -1,14 +1,6 @@
 ---
-title: "AddFile2 — Metoda"
-ms.custom: 
+title: AddFile2 — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - AddFile2
 - IALink2.AddFile2
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04b8435c7296b1c7b097ab426d103adaa0e993
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4735103f277d710dd23adfa19c475c425feaa36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addfile2-method"></a>AddFile2 — Metoda
 Dodaje pliki do zestawu. Można również utworzyć niezwiązanego moduły.  
@@ -58,7 +46,7 @@ HRESULT AddFile2(
  Nazwa pliku do dodania.  
   
  `dwFlags`  
- COM + `FileDef` flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags`jest przekazywana do [DefineFile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ COM + `FileDef` flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przekazywana do [DefineFile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
  Interfejs do [IMetaDataEmit2 — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfejsu.  

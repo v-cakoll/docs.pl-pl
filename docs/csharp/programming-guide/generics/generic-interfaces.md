@@ -1,26 +1,20 @@
 ---
-title: "Interfejsy ogólne (Przewodnik programowania w języku C#)"
+title: Interfejsy ogólne (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0326a7bc459c641cbfafe39fe36525a947051c16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 72f48aa1d70e6cf81b20adc547e2d418c4497256
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfejsy ogólne (Przewodnik programowania w języku C#)
 Często jest przydatne do definiowania interfejsów dla klasy rodzajowej kolekcji lub dla klasy ogólne, które reprezentują elementów w kolekcji. Preferencje dla klas ogólnych jest używać interfejsów ogólnych, takich jak <xref:System.IComparable%601> zamiast <xref:System.IComparable>, aby uniknąć konwersja boxing i rozpakowywanie operacji w typach wartości. Biblioteka klas programu .NET Framework definiuje kilku interfejsach służących do klasy kolekcji w <xref:System.Collections.Generic> przestrzeni nazw.  
   
- Gdy interfejs jest określony jako ograniczenia dla parametru typu, może służyć tylko typy, które implementują interfejs. Poniższy kod przedstawia przykład `SortedList<T>` klasą pochodzącą z `GenericList<T>` klasy. Aby uzyskać więcej informacji, zobacz [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md). `SortedList<T>`dodaje ograniczenie `where T : IComparable<T>`. Dzięki temu `BubbleSort` metody w `SortedList<T>` do ogólnego użycia <xref:System.IComparable%601.CompareTo%2A> metody dla elementów listy. W tym przykładzie elementy listy są prostą klasę `Person`, który implementuje `IComparable<Person>`.  
+ Gdy interfejs jest określony jako ograniczenia dla parametru typu, może służyć tylko typy, które implementują interfejs. Poniższy kod przedstawia przykład `SortedList<T>` klasą pochodzącą z `GenericList<T>` klasy. Aby uzyskać więcej informacji, zobacz [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md). `SortedList<T>` dodaje ograniczenie `where T : IComparable<T>`. Dzięki temu `BubbleSort` metody w `SortedList<T>` do ogólnego użycia <xref:System.IComparable%601.CompareTo%2A> metody dla elementów listy. W tym przykładzie elementy listy są prostą klasę `Person`, który implementuje `IComparable<Person>`.  
   
  [!code-csharp[csProgGuideGenerics#29](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_1.cs)]  
   
@@ -51,5 +45,5 @@ Często jest przydatne do definiowania interfejsów dla klasy rodzajowej kolekcj
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Interfejs](../../../csharp/language-reference/keywords/interface.md)  
+ [interface](../../../csharp/language-reference/keywords/interface.md)  
  [Typy ogólne](~/docs/standard/generics/index.md)

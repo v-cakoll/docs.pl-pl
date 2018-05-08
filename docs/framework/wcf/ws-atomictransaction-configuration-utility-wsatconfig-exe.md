@@ -1,24 +1,12 @@
 ---
-title: "Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)"
-ms.custom: 
+title: Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adb44bfee98d01594c9babcf19e19fbf11ba3878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef2f34a6700d72c01977ea449041669a88c35e6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 Narzędzia konfiguracji WS-AtomicTransaction służy do konfigurowania podstawowych ustawień obsługi protokołu WS-AtomicTransaction.  
@@ -46,16 +34,16 @@ wsatConfig [Options]
 |Opcje|Opis|  
 |-------------|-----------------|  
 |-kont:\<konta >|Określa rozdzielaną przecinkami listę kont, które mogą uczestniczyć w WS-AtomicTransaction. Ważność tych kont nie jest zaznaczone.|  
-|-accountsCerts:\<thumb > &#124; " Issuer\SubjectName">|Określa rozdzielaną przecinkami listę certyfikatów, które mogą uczestniczyć w WS-AtomicTransaction. Certyfikaty są wskazane przez odcisk palca lub parę Issuer\SubjectName. Użyj wartości {EMPTY} dla nazwy podmiotu, jeśli jest pusty.|  
-|-endpointCert: < maszynę &#124; \<thumb > &#124; " Issuer\SubjectName">|Używa certyfikatu komputera lub innego lokalnego certyfikatu punktu końcowego określonego przez odcisk palca lub parę Issuer\SubjectName. Używa {EMPTY} jako nazwę podmiotu, jeśli jest pusty.|  
+|-accountsCerts:\<thumb >&#124;"Issuer\SubjectName" >|Określa rozdzielaną przecinkami listę certyfikatów, które mogą uczestniczyć w WS-AtomicTransaction. Certyfikaty są wskazane przez odcisk palca lub parę Issuer\SubjectName. Użyj wartości {EMPTY} dla nazwy podmiotu, jeśli jest pusty.|  
+|-endpointCert: < maszyny&#124;\<thumb >&#124;"Issuer\SubjectName" >|Używa certyfikatu komputera lub innego lokalnego certyfikatu punktu końcowego określonego przez odcisk palca lub parę Issuer\SubjectName. Używa {EMPTY} jako nazwę podmiotu, jeśli jest pusty.|  
 |-maxTimeout:\<s >|Określa maksymalny limit czasu w sekundach. Prawidłowe wartości to od 0 do 3600.|  
-|— sieć:\<Włącz &#124; Wyłącz >|Włącza lub wyłącza obsługę sieci WS-AtomicTransaction.|  
+|— sieć:\<włączyć&#124;wyłączyć >|Włącza lub wyłącza obsługę sieci WS-AtomicTransaction.|  
 |— port:\<portNum >|Ustawia HTTPS port dla protokołu WS-AtomicTransaction.<br /><br /> Jeśli została już włączona zapora, przed uruchomieniem tego narzędzia, numer portu jest automatycznie rejestrowane na liście wyjątków. Jeśli Zapora jest wyłączone przed uruchomieniem tego narzędzia, żadne dodatkowe skonfigurowano dotyczące zapory.<br /><br /> Po skonfigurowaniu usługi WS-AT zostanie włączona zapora, należy ponownie uruchomić to narzędzie i podaj numer portu, za pomocą tego parametru. Wyłączenie zapory po skonfigurowaniu, WS-AT w dalszym ciągu działać bez dodatkowych danych wejściowych.|  
 |-timeout:\<s >|Określa domyślny limit czasu w sekundach. Prawidłowe są wartości z zakresu od 1 do 3600.|  
-|-traceActivity:\<Włącz &#124; Wyłącz >|Włącza lub wyłącza śledzenie zdarzeń aktywności.|  
-|-traceLevel:\<poza &#124; Błąd &#124; Krytyczne &#124; Ostrzeżenie &#124; informacje o &#124; Pełne &#124; Wszystkie >}|Określa poziom śledzenia.|  
-|-tracePII:\<Włącz &#124; Wyłącz >|Włącza lub wyłącza śledzenie informacji umożliwiających identyfikację użytkownika.|  
-|-traceProp:\<Włącz &#124; Wyłącz >|Włącza lub wyłącza śledzenie zdarzeń propagacji.|  
+|-traceActivity:\<włączyć&#124;wyłączyć >|Włącza lub wyłącza śledzenie zdarzeń aktywności.|  
+|-traceLevel:\<poza&#124;błąd&#124;krytyczne&#124;ostrzeżenie&#124;informacji&#124; pełne&#124;wszystkie >}|Określa poziom śledzenia.|  
+|-tracePII:\<włączyć&#124;wyłączyć >|Włącza lub wyłącza śledzenie informacji umożliwiających identyfikację użytkownika.|  
+|-traceProp:\<włączyć&#124;wyłączyć >|Włącza lub wyłącza śledzenie zdarzeń propagacji.|  
 |— ponowne uruchomienie|Ponownie uruchamia usługę MSDTC w celu aktywowania zmian natychmiast. Jeśli nie zostanie określony, zmiany zaczynają obowiązywać po ponownym uruchomieniu usługi MSDTC.|  
 |— Pokaż|Wyświetla bieżące ustawienia protokołu WS-AtomicTransaction.|  
 |-SerwerWirtualny:\<SerwerWirtualny >|Określa nazwę klastra zasobu DTC.|  

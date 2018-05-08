@@ -1,27 +1,15 @@
 ---
 title: Dodawanie DataRelations
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4650ccc5324489fb5c577cf2542ae95e1904441a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 451ee0eee466efca86345ea7112e9b178a2c66e2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-datarelations"></a>Dodawanie DataRelations
 W <xref:System.Data.DataSet> w wielu <xref:System.Data.DataTable> obiekty, można użyć <xref:System.Data.DataRelation> obiektów do powiązania z jednej tabeli do innego, przejdź do tabel i zwracanie wszystkich wierszy podrzędnej lub nadrzędnej z powiązanej tabeli.  

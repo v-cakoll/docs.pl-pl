@@ -1,23 +1,15 @@
 ---
 title: Omówienie modelu aplikacji Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5194810574f594e2c117fef8d8998b7ecebbc981
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Omówienie modelu aplikacji Visual Basic
 Visual Basic udostępnia model dobrze zdefiniowany sterujące zachowaniem aplikacji formularzy systemu Windows: model aplikacji Visual Basic. Ten model zawiera zdarzenia do obsługi aplikacji uruchomienia i zamknięcia, a także zdarzenia połowowe nieobsługiwanych wyjątków. Zapewnia również obsługę do opracowywania aplikacji w jednym wystąpieniu. Model aplikacji jest otwarty, więc deweloperów, które muszą mieć większą kontrolę, można dostosować jego nadpisywalnych metod.  

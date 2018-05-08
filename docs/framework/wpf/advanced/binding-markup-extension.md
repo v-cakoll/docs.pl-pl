@@ -1,31 +1,17 @@
 ---
-title: "Rozszerzenie znaczników powiązania"
-ms.custom: 
+title: Rozszerzenie znaczników powiązania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>Rozszerzenie znaczników powiązania
 Różni się wartość właściwości wartość powiązane z danymi, tworzenie obiektu będącego wyrażeniem pośrednie i interpretowanie kontekstu danych, która ma zastosowanie do elementu i jego powiązanie w czasie wykonywania.  
@@ -125,15 +111,15 @@ Różni się wartość właściwości wartość powiązane z danymi, tworzenie o
  W tym temacie nie opisano opisujący wiązanie danych na poziomie podstawowym. Zobacz [powiązanie przegląd danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>i <xref:System.Windows.Data.PriorityBinding> nie obsługują [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składni rozszerzenia. Zamiast tego użyj właściwości elementów. Zobacz tematy dokumentacji dla <xref:System.Windows.Data.MultiBinding> i <xref:System.Windows.Data.PriorityBinding>.  
+>  <xref:System.Windows.Data.MultiBinding> i <xref:System.Windows.Data.PriorityBinding> nie obsługują [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składni rozszerzenia. Zamiast tego użyj właściwości elementów. Zobacz tematy dokumentacji dla <xref:System.Windows.Data.MultiBinding> i <xref:System.Windows.Data.PriorityBinding>.  
   
  Wartości logiczna dla XAML są bez uwzględniania wielkości liter. Na przykład można określić albo `{Binding NotifyOnValidationError=true}` lub `{Binding NotifyOnValidationError=True}`.  
   
  Powiązania obejmujących sprawdzanie poprawności danych zazwyczaj są określane przez jawne `Binding` elementu, a nie jako `{Binding ...}` wyrażenie i ustawienie <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> lub <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> w wyrażeniu jest rzadko. Jest to spowodowane właściwości <xref:System.Windows.Data.Binding.ValidationRules%2A> nie można łatwo ustawić w postaci wyrażenia. Aby uzyskać więcej informacji, zobacz [weryfikacji powiązanie wdrożenie](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md).  
   
- `Binding`to rozszerzenie znacznika. Rozszerzenia znaczników zwykle są implementowane, gdy jest wymagany, aby wprowadzić wartości atrybutów, aby być inna niż wartości literału lub obsługi nazwy i wymagane jest bardziej globalnego niż konwertery typu na niektórych typów lub właściwości. Wszystkie rozszerzenia znaczników w XAML, użyj `{` i `}` znaków w ich składni atrybutu Konwencji, za pomocą którego procesora XAML rozpoznaje, że rozszerzenie znacznika musi przetworzyć zawartości ciągu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `Binding` to rozszerzenie znacznika. Rozszerzenia znaczników zwykle są implementowane, gdy jest wymagany, aby wprowadzić wartości atrybutów, aby być inna niż wartości literału lub obsługi nazwy i wymagane jest bardziej globalnego niż konwertery typu na niektórych typów lub właściwości. Wszystkie rozszerzenia znaczników w XAML, użyj `{` i `}` znaków w ich składni atrybutu Konwencji, za pomocą którego procesora XAML rozpoznaje, że rozszerzenie znacznika musi przetworzyć zawartości ciągu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- `Binding`to rozszerzenie znacznika nietypowe w tym <xref:System.Windows.Data.Binding> klasy, która implementuje funkcje rozszerzenia dla implementacji XAML w WPF implementuje również kilka innych metod i właściwości, które nie są związane z XAML. O innych elementach członkowskich mają na celu upewnij <xref:System.Windows.Data.Binding> bardziej elastyczne i autonomiczną klasę, która może rozwiązać wiele scenariusze wiązania danych oprócz działa jako rozszerzenie znaczników w XAML.  
+ `Binding` to rozszerzenie znacznika nietypowe w tym <xref:System.Windows.Data.Binding> klasy, która implementuje funkcje rozszerzenia dla implementacji XAML w WPF implementuje również kilka innych metod i właściwości, które nie są związane z XAML. O innych elementach członkowskich mają na celu upewnij <xref:System.Windows.Data.Binding> bardziej elastyczne i autonomiczną klasę, która może rozwiązać wiele scenariusze wiązania danych oprócz działa jako rozszerzenie znaczników w XAML.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Data.Binding>  

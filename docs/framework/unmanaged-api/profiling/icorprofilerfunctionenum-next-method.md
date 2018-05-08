@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerFunctionEnum::Next — Metoda"
-ms.custom: 
+title: ICorProfilerFunctionEnum::Next — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerFunctionEnum.Next Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fd9c01e014ee19c5e30fdc293d39787638e8b1d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30e0dbb6b22c7278c0bc207ae60214a582d35e9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next — Metoda
 Pobiera określoną liczbę funkcji ciągłego z sekwencyjną kolekcją funkcji, zaczynając od modułu wyliczającego bieżącej pozycji w sekwencji.  
@@ -62,8 +50,8 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`celt`elementy zostały zwrócone.|  
-|WARTOŚCI S_FALSE|Mniej niż `celt` elementy zostały zwrócone, co oznacza, że wyliczenia została zakończona.|  
+|S_OK|`celt` elementy zostały zwrócone.|  
+|S_FALSE|Mniej niż `celt` elementy zostały zwrócone, co oznacza, że wyliczenia została zakończona.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,7 +60,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  

@@ -1,22 +1,12 @@
 ---
 title: 'Porady: kontrolowanie prefiksy Namespace (LINQ do XML) (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a48feeb25cc8d28d57edc7421f73b2829f8c19ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f60f90ef6742dfd725f51ff7e760436117346e85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Porady: kontrolowanie prefiksy Namespace (LINQ do XML) (Visual Basic)
 W tym temacie opisano, jak można kontrolować prefiksy przestrzeni nazw.  

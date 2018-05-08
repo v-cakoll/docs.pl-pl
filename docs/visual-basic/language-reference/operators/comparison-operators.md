@@ -1,11 +1,6 @@
 ---
-title: "Operatory porównania (Visual Basic)"
+title: Operatory porównania (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,35 +30,32 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Operatory porównania (Visual Basic)
 Poniżej przedstawiono operatory porównania zdefiniowany w języku Visual Basic.  
   
- `<`operator  
+ `<` Operator  
   
- `<=`operator  
+ `<=` Operator  
   
- `>`operator  
+ `>` Operator  
   
- `>=`operator  
+ `>=` Operator  
   
- `=`operator  
+ `=` Operator  
   
- `<>`operator  
+ `<>` Operator  
   
- [Is — Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)  
   
- [IsNot — Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
   
- [Like — Operator](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)  
   
  Te operatory porównania dwóch wyrażeń w celu ustalenia, czy są równe, a jeśli nie, jak różnią się one. `Is`, `IsNot`, i `Like` opisano szczegółowo na oddzielnych stronach pomocy. Operatory relacyjne opisano szczegółowo na tej stronie.  
   
@@ -77,34 +69,34 @@ result = string Like pattern
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagany. A `Boolean` wartość reprezentująca wynik porównania.  
+ Wymagana. A `Boolean` wartość reprezentująca wynik porównania.  
   
  `expression`  
- Wymagany. Dowolne wyrażenie.  
+ Wymagana. Dowolne wyrażenie.  
   
  `comparisonoperator`  
- Wymagany. Dowolny relacyjny operator porównania.  
+ Wymagana. Dowolny relacyjny operator porównania.  
   
  `object1`, `object2`  
- Wymagany. Wszystkie nazwy obiektu odwołania.  
+ Wymagana. Wszystkie nazwy obiektu odwołania.  
   
  `string`  
- Wymagany. Wszelkie `String` wyrażenia.  
+ Wymagana. Wszelkie `String` wyrażenia.  
   
  `pattern`  
- Wymagany. Wszelkie `String` wyrażenie lub zakres znaków.  
+ Wymagana. Wszelkie `String` wyrażenie lub zakres znaków.  
   
 ## <a name="remarks"></a>Uwagi  
  Poniższa tabela zawiera listę operatory relacyjne i warunków, które określają, czy `result` jest `True` lub `False`.  
   
-|Operator|`True`Jeśli|`False`Jeśli|  
+|Operator|`True` Jeśli|`False` Jeśli|  
 |--------------|---------------|----------------|  
-|`<`(Poniżej)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Mniejsze niż lub równe)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Więcej niż)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Większe niż lub równe)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Równe)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(Nie ma wartości)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Poniżej)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Mniejsze niż lub równe)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Więcej niż)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Większe niż lub równe)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (Równe)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (Nie ma wartości)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  [= — Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) jest również używany jako operator przypisania.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Porównywanie ciągów  
  Podczas porównywania ciągów wyrażenia parametrów są oceniane w oparciu ich kolejność sortowania alfabetyczne, zależy od `Option Compare` ustawienie.  
   
- `Option Compare Binary`podstawy ciągu porównania na kolejność sortowania, pochodzi z wewnętrznego reprezentacje binarne znaków. Kolejność sortowania jest określany za pomocą stron kodowych. W poniższym przykładzie przedstawiono typowe binarny porządek sortowania.  
+ `Option Compare Binary` podstawy ciągu porównania na kolejność sortowania, pochodzi z wewnętrznego reprezentacje binarne znaków. Kolejność sortowania jest określany za pomocą stron kodowych. W poniższym przykładzie przedstawiono typowe binarny porządek sortowania.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`podstawy ciągu porównania w kolejności sortowania bez uwzględniania wielkości liter, tekstowych określają ustawienia regionalne aplikacji. Podczas ustawiania `Option Compare Text` i sortowania znaków w poprzednim przykładzie, mają zastosowanie następujące tekstowy porządek sortowania:  
+ `Option Compare Text` podstawy ciągu porównania w kolejności sortowania bez uwzględniania wielkości liter, tekstowych określają ustawienia regionalne aplikacji. Podczas ustawiania `Option Compare Text` i sortowania znaków w poprzednim przykładzie, mają zastosowanie następujące tekstowy porządek sortowania:  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |W przypadku argumentów operacji|Wynik porównania ma|  
 |---------------------|-------------------|  
-|Zarówno`String`|Aby posortować porównań opartych na ciąg sortowania właściwości.|  
+|Zarówno `String`|Aby posortować porównań opartych na ciąg sortowania właściwości.|  
 |Zarówno liczbowe|Obiekty konwertowane na `Double`, porównanie liczbowe.|  
-|Jeden numeryczne i jeden`String`|`String` Jest konwertowana na `Double` i wykonywane jest porównanie numeryczne. Jeśli `String` nie można przekonwertować na `Double`, <xref:System.InvalidCastException> jest generowany.|  
-|Jedno lub obydwa są typy referencyjne innych niż`String`|<xref:System.InvalidCastException> Jest generowany.|  
+|Jeden numeryczne i jeden `String`|`String` Jest konwertowana na `Double` i wykonywane jest porównanie numeryczne. Jeśli `String` nie można przekonwertować na `Double`, <xref:System.InvalidCastException> jest generowany.|  
+|Jedno lub obydwa są typy referencyjne innych niż `String`|<xref:System.InvalidCastException> Jest generowany.|  
   
  Traktuj porównanie liczbowe `Nothing` jako 0. Porównywanie ciągów Traktuj `Nothing` jako `""` (ciągiem pustym).  
   
@@ -159,8 +151,8 @@ result = string Like pattern
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.InvalidCastException>  
- [= — Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Rozwiązywanie problemów związanych z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Operatory porównania w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

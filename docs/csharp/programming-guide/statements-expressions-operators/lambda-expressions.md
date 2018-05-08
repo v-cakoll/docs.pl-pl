@@ -1,10 +1,6 @@
 ---
-title: "Wyrażenia lambda (Przewodnik programowania w języku C#)"
+title: Wyrażenia lambda (Przewodnik programowania w języku C#)
 ms.date: 03/03/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f20ba6845a6a84a57fa7636355d08b2f4e5cea2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (Przewodnik programowania w języku C#)
 Wyrażenie lambda jest [funkcji anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) używanej do tworzenia [delegaty](../../../csharp/programming-guide/delegates/using-delegates.md) lub [drzewo wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) typów. Za pomocą wyrażenia lambda można pisać funkcje lokalne, które mogą być przekazywane jako argumenty lub zwracane jako wartość wywołania funkcji. Wyrażenia lambda są szczególnie przydatne w przypadku pisania wyrażeń zapytań w języku LINQ.  

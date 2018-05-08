@@ -1,21 +1,14 @@
 ---
 title: Przy użyciu bazy danych NoSQL jako infrastruktury trwałości
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przy użyciu bazy danych NoSQL jako infrastruktury trwałości
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 2618e8c068ec538f5bfed2f8243d1c594478fcb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Przy użyciu bazy danych NoSQL jako infrastruktury trwałości
 
@@ -156,7 +149,7 @@ Wyczyść zaletą korzystania z bazy danych MongoDB interfejsu API jest, że roz
 Aby uzyskać dalsze porównania po prostu przy użyciu bazy danych MongoDB i DB rozwiązania Cosmos w chmurze, zobacz [zalety używania bazy danych Azure rozwiązania Cosmos na tej stronie](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction). 
 
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizowanie swoje podejście przez aplikacje produkcyjne: vs API bazy danych MongoDB. Cosmos DB API
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizowanie swoje podejście przez aplikacje produkcyjne: vs API bazy danych MongoDB. Interfejs API rozwiązania cosmos bazy danych
 
 W eShopOnContainers firma Microsoft korzysta z interfejsu API bazy danych MongoDB powodu naszych priorytet zasadniczo do środowiska i testowania spójne korzystanie z bazy danych NoSQL, który może również współpracować z bazy danych Azure rozwiązania Cosmos.
 

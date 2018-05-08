@@ -1,22 +1,15 @@
 ---
-title: "Przekazywanie parametrów typu wartość (Przewodnik programowania w języku C#)"
+title: Przekazywanie parametrów typu wartość (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c33ef23040ec6adaae97a440796e7c6a491c2d8c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: b64968a89f010f3f904d3a281d346d2ddf999e2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Przekazywanie parametrów typu wartość (Przewodnik programowania w języku C#)
 A [typ wartości](../../../csharp/language-reference/keywords/value-types.md) zmienna zawiera dane bezpośrednio w przeciwieństwie do [Typ referencyjny](../../../csharp/language-reference/keywords/reference-types.md) zmiennej, która zawiera odwołanie do danych. Przekazywanie zmiennej typu wartość do metody przez wartość oznacza, że przekazywanie kopię zmienną do metody. Wszelkie zmiany do parametru, które odbywają się wewnątrz metody ma nie będzie miała wpływu na oryginalne dane przechowywane w zmiennej argumentu. Jeśli chcesz wywołaną metodę, aby zmienić wartości parametru, trzeba przekazać go przez odwołanie, za pomocą [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można także użyć [w](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe do przekazania parametrów wartość przez odwołanie, aby uniknąć kopii przy jednoczesnym zagwarantowaniu, że wartość nie zostanie zmieniona. Dla uproszczenia przedstawiono przykłady użycia `ref`.  

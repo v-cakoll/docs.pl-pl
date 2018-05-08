@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager::SetSymbolReadingPolicy — Metoda"
-ms.custom: 
+title: ICLRDebugManager::SetSymbolReadingPolicy — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager.SetSymbolReadingPolicy
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: bd921fa2-d377-4d79-acfc-64c38d4dcae9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bab97dc765438758abad3275bb2e4f8051da9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ee21861ed3911303d4661721b65e9e147c6953a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>ICLRDebugManager::SetSymbolReadingPolicy — Metoda
 Ustawia zasady do odczytywania plików programu (PDB) bazy danych. Zasady określa, czy informacje dotyczące numerów wierszy i pliki są uwzględniane w stosy wywołań.  
@@ -55,7 +43,7 @@ HRESULT SetSymbolReadingPolicy (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetSymbolReadingPolicy`zwrócona pomyślnie.|  
+|S_OK|`SetSymbolReadingPolicy` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
   
@@ -66,7 +54,7 @@ HRESULT SetSymbolReadingPolicy (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRDebugManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)

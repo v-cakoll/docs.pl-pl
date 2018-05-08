@@ -1,14 +1,6 @@
 ---
-title: "ICLRTask::Reset — Metoda"
-ms.custom: 
+title: ICLRTask::Reset — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.Reset
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8dc37f47fc01d73ff499ef974a2e11345a95286a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset — Metoda
 Informuje o środowisko uruchomieniowe języka wspólnego (CLR) została ukończona zadania hosta i umożliwia CLR do ponownego użycia bieżącego [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienie do reprezentowania inne zadanie.  
@@ -56,7 +44,7 @@ HRESULT Reset (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`Reset`zwrócona pomyślnie.|  
+|S_OK|`Reset` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub przetwarzania wywołania. pomyślnie|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -76,7 +64,7 @@ HRESULT Reset (
   
 5.  Host niszczy zadania, wywołując `ICLRTask::ExitTask`.  
   
- `Reset`Zmienia tego scenariusza na dwa sposoby. W kroku 5 powyżej wywołania hosta `Reset` zresetować zadania do stanu czystego, a następnie oddziela `ICLRTask` wystąpienie z jego skojarzony [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia. W razie potrzeby można buforować hosta `IHostTask` wystąpienie do ponownego użycia. W kroku 1 powyżej, środowisko uruchomieniowe ściąga odtwarzania `ICLRTask` z pamięci podręcznej, zamiast tworzyć nowe wystąpienie.  
+ `Reset` Zmienia tego scenariusza na dwa sposoby. W kroku 5 powyżej wywołania hosta `Reset` zresetować zadania do stanu czystego, a następnie oddziela `ICLRTask` wystąpienie z jego skojarzony [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia. W razie potrzeby można buforować hosta `IHostTask` wystąpienie do ponownego użycia. W kroku 1 powyżej, środowisko uruchomieniowe ściąga odtwarzania `ICLRTask` z pamięci podręcznej, zamiast tworzyć nowe wystąpienie.  
   
  Takie podejście dobrze działa w przypadku hosta ma również pulą zadania procesu roboczego do ponownego użycia. Gdy host niszczy jednego z jego `IHostTask` wystąpień, niszczy, odpowiadającego `ICLRTask` przez wywołanie metody `ExitTask`.  
   
@@ -87,7 +75,7 @@ HRESULT Reset (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

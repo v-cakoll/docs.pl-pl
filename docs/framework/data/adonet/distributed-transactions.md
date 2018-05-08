@@ -1,24 +1,12 @@
 ---
 title: Transakcje rozproszone
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>Transakcje rozproszone
 Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (zatwierdzania) albo nie powiedzie się (przerwanie) jako jednostki, między innymi. A *transakcja rozproszona* transakcji, które ma wpływ na kilku zasobów. Transakcji rozproszonych można przekazać wszystkich uczestników musi zapewniać każda zmiana danych będą trwałe. Zmiany muszą zostać zachowane niezależnie awarie systemu lub inne nieprzewidziane zdarzenia. Jeśli jednego uczestnika nie powiedzie się gwarancji, cała transakcja nie powiedzie się i wycofać zmiany wprowadzone w danych w zakresie transakcji.  
@@ -44,13 +32,13 @@ Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (z
   
  Rejestrowanie w transakcjach rozproszonych jest szczególnie przydatny, gdy buforowanie obiektów biznesowych. Jeśli z otwartego połączenia w puli jest obiekt biznesowy, transakcji automatycznej rejestracji występuje tylko po otwarciu tego połączenia. Jeśli wiele transakcji są wykonywane przy użyciu obiektu biznesowego puli, otwartego połączenia dla tego obiektu zostanie nie automatycznie zarejestrować nowo inicjowane transakcji. W takim przypadku można wyłączyć automatyczne transakcji rejestracji dla połączenia i zarejestrować połączenie w transakcji za pomocą `EnlistTransaction`.  
   
- `EnlistTransaction`pobiera jeden argument typu <xref:System.Transactions.Transaction> oznacza to odwołanie do istniejącej transakcji. Po wywołaniu metody połączenia `EnlistTransaction` — metoda, wszystkie zmiany wprowadzone w źródła danych przy użyciu połączenia znajdują się w transakcji. Przekazana wartość null unenlists połączenie z jego bieżącym rejestracji transakcji rozproszonej. Należy pamiętać, że można otworzyć połączenia przed wywołaniem `EnlistTransaction`.  
+ `EnlistTransaction` pobiera jeden argument typu <xref:System.Transactions.Transaction> oznacza to odwołanie do istniejącej transakcji. Po wywołaniu metody połączenia `EnlistTransaction` — metoda, wszystkie zmiany wprowadzone w źródła danych przy użyciu połączenia znajdują się w transakcji. Przekazana wartość null unenlists połączenie z jego bieżącym rejestracji transakcji rozproszonej. Należy pamiętać, że można otworzyć połączenia przed wywołaniem `EnlistTransaction`.  
   
 > [!NOTE]
 >  Gdy połączenie jest jawnie zarejestrowana w transakcji, nie może być usunięcie zarejestrowane lub zarejestrowane w innej transakcji zakończenie pierwszej transakcji.  
   
 > [!CAUTION]
->  `EnlistTransaction`zgłasza wyjątek, jeśli połączenie zostało już uruchomione transakcji za pomocą połączenia <xref:System.Data.Common.DbConnection.BeginTransaction%2A> metody. Jednak jeśli transakcja jest transakcji lokalnej rozpoczęty o godzinie źródło danych (na przykład wykonywania instrukcji BEGIN TRANSACTION, jawnie za pomocą <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` będzie wycofać transakcji lokalnej i zarejestrować w istniejących rozproszonych Transakcja zgodnie z żądaniem. Nie będą otrzymywali Zwróć uwagę, że lokalne transakcja została wycofana i należy zarządzać wszystkich transakcji lokalnej nie uruchomiony przy użyciu <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Jeśli używasz dostawcy danych programu .NET Framework dla programu SQL Server (`SqlClient`) z programem SQL Server, próba zarejestrować spowoduje zgłoszenie wyjątku. Wszystkich innych przypadkach będzie zostać wykryte.  
+>  `EnlistTransaction` zgłasza wyjątek, jeśli połączenie zostało już uruchomione transakcji za pomocą połączenia <xref:System.Data.Common.DbConnection.BeginTransaction%2A> metody. Jednak jeśli transakcja jest transakcji lokalnej rozpoczęty o godzinie źródło danych (na przykład wykonywania instrukcji BEGIN TRANSACTION, jawnie za pomocą <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` będzie wycofać transakcji lokalnej i zarejestrować w istniejących rozproszonych Transakcja zgodnie z żądaniem. Nie będą otrzymywali Zwróć uwagę, że lokalne transakcja została wycofana i należy zarządzać wszystkich transakcji lokalnej nie uruchomiony przy użyciu <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Jeśli używasz dostawcy danych programu .NET Framework dla programu SQL Server (`SqlClient`) z programem SQL Server, próba zarejestrować spowoduje zgłoszenie wyjątku. Wszystkich innych przypadkach będzie zostać wykryte.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Awansowanie transakcji w programie SQL Server  
  SQL Server obsługuje awansowanie transakcji, w których lekkich transakcji lokalnej może być automatycznie podwyższony do transakcji rozproszonej tylko wtedy, gdy jest to wymagane. Awansowanie transakcji nie jest wywoływany dodany narzutów transakcji rozproszonej, chyba że dodany jest wymagana. Aby uzyskać więcej informacji i przykładowy kod, zobacz [System.Transactions integracji z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  

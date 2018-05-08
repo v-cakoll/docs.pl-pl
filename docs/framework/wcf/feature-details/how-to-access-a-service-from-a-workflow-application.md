@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy"
-ms.custom: 
+title: 'Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ffac399e3f7cb3f860128b072251131ac356a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f1ef07d92eea2b526259cd11caf56e45c83675d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy
-W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji konsoli przepływu pracy. Zależy on od zakończenia [porady: Tworzenie usługi przepływu pracy z działaniami wiadomości](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu. Mimo że w tym temacie opisano sposób wywoływania usługi przepływu pracy z poziomu aplikacji przepływu pracy, te same metody można wywołać żadnego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi z poziomu aplikacji przepływu pracy.  
+W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji konsoli przepływu pracy. Zależy on od zakończenia [porady: Tworzenie usługi przepływu pracy z działaniami wiadomości](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu. Mimo że w tym temacie opisano sposób wywoływania usługi przepływu pracy z poziomu aplikacji przepływu pracy, te same metody można wywołać żadnej usługi Windows Communication Foundation (WCF) z poziomu aplikacji przepływu pracy.  
   
 ### <a name="create-a-workflow-console-application-project"></a>Utwórz projekt aplikacji konsoli przepływu pracy  
   

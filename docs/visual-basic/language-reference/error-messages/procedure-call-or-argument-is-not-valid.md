@@ -1,23 +1,14 @@
 ---
-title: "Nieprawidłowe wywołanie procedury lub argument (Visual Basic)"
+title: Nieprawidłowe wywołanie procedury lub argument (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID5
 ms.assetid: 9b07d280-66c6-4ea5-a8ed-5ddb0036f877
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2dead0f5edf2670fa77d8961f23011f391a3307e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d14137599ec922e6117bb6ba7719b0d127402e77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>Nieprawidłowe wywołanie procedury lub argument (Visual Basic)
 Nie można wykonać pewną część wywołania.  
@@ -27,4 +18,4 @@ Nie można wykonać pewną część wywołania.
 -   Sprawdź dozwolonych zakresy dla argumentów upewnić się, że żadne rozmieszczenie nie przekracza dozwolonej wartości.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

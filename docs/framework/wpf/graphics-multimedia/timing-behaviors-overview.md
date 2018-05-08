@@ -1,27 +1,15 @@
 ---
-title: "Przegląd Zachowania chronometrażu"
-ms.custom: 
+title: Przegląd Zachowania chronometrażu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31a6b7d3b92e886d9c90fc39d69f31cf72b99666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-behaviors-overview"></a>Przegląd Zachowania chronometrażu
 W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.Windows.Media.Animation.Timeline> obiektów.  
@@ -34,7 +22,7 @@ W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.W
 ## <a name="timeline-types"></a>Typy osi czasu  
  A <xref:System.Windows.Media.Animation.Timeline> reprezentuje segment czasu. Zapewnia właściwości, które umożliwiają określenie tego segmentu, gdy jej powinna zaczynać się, ile razy powtarza, szybkość postępu czasu w tym segmencie i inne.  
   
- Klasy, które dziedziczą z klasy osi czasu zapewniają dodatkowe funkcje, takie jak odtwarzanie animacji i nośnika. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia następujące <xref:System.Windows.Media.Animation.Timeline> typów.  
+ Klasy, które dziedziczą z klasy osi czasu zapewniają dodatkowe funkcje, takie jak odtwarzanie animacji i nośnika. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia następujące <xref:System.Windows.Media.Animation.Timeline> typów.  
   
 |Typ osi czasu|Opis|  
 |-------------------|-----------------|  
@@ -127,11 +115,11 @@ W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.W
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Właściwości sterujące szybkości osi czasu  
  <xref:System.Windows.Media.Animation.Timeline> Klasa zawiera trzy właściwości w celu określenia jego prędkości:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>— Umożliwia określenie tego kursu względem jego elementu nadrzędnego, jaką czas postępu dla <xref:System.Windows.Media.Animation.Timeline>. Wartości większej niż jeden zwiększania szybkości działania <xref:System.Windows.Media.Animation.Timeline> i jej podrzędne <xref:System.Windows.Media.Animation.Timeline> obiektów; wartości od zera do jednego spowolnić jej. Wartość jednego wskazuje, że <xref:System.Windows.Media.Animation.Timeline> realizowany w tym samym poziomie jak jego obiekt nadrzędny. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Osi czasu kontenera dotyczy wszystkich jego elementu podrzędnego <xref:System.Windows.Media.Animation.Timeline> również obiektów.  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Umożliwia określenie tego kursu względem jego elementu nadrzędnego, jaką czas postępu dla <xref:System.Windows.Media.Animation.Timeline>. Wartości większej niż jeden zwiększania szybkości działania <xref:System.Windows.Media.Animation.Timeline> i jej podrzędne <xref:System.Windows.Media.Animation.Timeline> obiektów; wartości od zera do jednego spowolnić jej. Wartość jednego wskazuje, że <xref:System.Windows.Media.Animation.Timeline> realizowany w tym samym poziomie jak jego obiekt nadrzędny. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Osi czasu kontenera dotyczy wszystkich jego elementu podrzędnego <xref:System.Windows.Media.Animation.Timeline> również obiektów.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>— Umożliwia określenie wartości procentowej <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego przyspieszenia. Na przykład zobacz [porady: przyspieszanie lub zwalnia animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Umożliwia określenie wartości procentowej <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego przyspieszenia. Na przykład zobacz [porady: przyspieszanie lub zwalnia animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>— Umożliwia określenie wartości procentowej <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego decelerating. Na przykład zobacz [porady: przyspieszanie lub zwalnia animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> — Umożliwia określenie wartości procentowej <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego decelerating. Na przykład zobacz [porady: przyspieszanie lub zwalnia animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

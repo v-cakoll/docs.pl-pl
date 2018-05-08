@@ -1,47 +1,35 @@
 ---
-title: "Jak malować obszar pędzlem systemowym"
-ms.custom: 
+title: Jak malować obszar pędzlem systemowym
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - system brushes [WPF], painting with
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8a66ffc283016d65a17b33e98ce28fe4cd1c242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Jak malować obszar pędzlem systemowym
 <xref:System.Windows.SystemColors> Klasy zapewnia dostęp do systemu pędzle i kolory, takich jak <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, i <xref:System.Windows.SystemColors.DesktopBrush%2A>. Pędzel systemu <xref:System.Windows.Media.SolidColorBrush> obiekt, który umożliwia malowanie obszar kolorem określonego systemu. Pędzel systemu zawsze daje wypełnieniem; Nie można użyć do Tworzenie gradientu.  
   
  Pędzle system służy jako statyczne lub dynamiczne zasobów. Użyj zasobu dynamicznego pędzla do automatycznej aktualizacji, jeśli użytkownik zmieni pędzla systemu, ponieważ aplikacja jest uruchomiona; w przeciwnym razie użyj statycznych zasobów. Klasa SystemColors zawiera szereg statycznej właściwości, które strict konwencją nazewnictwa:  
   
--   *\<SystemColor >*pędzla  
+-   *\<SystemColor >* pędzla  
   
      Pobiera statyczny odwołanie do <xref:System.Windows.Media.SolidColorBrush> koloru określonego systemu.  
   
--   *\<SystemColor >*BrushKey  
+-   *\<SystemColor >* BrushKey  
   
      Pobiera dynamiczny odwołanie do <xref:System.Windows.Media.SolidColorBrush> koloru określonego systemu.  
   
--   *\<SystemColor >*kolorów  
+-   *\<SystemColor >* kolorów  
   
      Pobiera statyczny odwołanie do <xref:System.Windows.Media.Color> struktury kolorów określonego systemu.  
   
--   *\<SystemColor >*ColorKey  
+-   *\<SystemColor >* ColorKey  
   
      Pobiera dynamiczny odwołanie do <xref:System.Windows.Media.Color> struktury kolorów określonego systemu.  
   

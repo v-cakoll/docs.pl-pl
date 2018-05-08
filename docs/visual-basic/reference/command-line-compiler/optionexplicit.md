@@ -1,11 +1,6 @@
 ---
 title: -optionexplicit
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - /optionexplicit
 - -optionexplicit
@@ -14,13 +9,11 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39ad78c82303d3655d5dda9e2286df0a55b8bf3e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 072a816f189a772543fbbd63e7202441469c0177
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Powoduje, że kompilator może raportować błędy zmiennych nie jest zadeklarowana, zanim zostaną użyte.  
@@ -33,7 +26,7 @@ Powoduje, że kompilator może raportować błędy zmiennych nie jest zadeklarow
   
 ## <a name="arguments"></a>Argumenty  
  `+` &#124; `-`  
- Opcjonalny. Określ `-optionexplicit+` wymagające jawnej deklaracji zmiennych. `-optionexplicit+` Opcja jest ustawieniem domyślnym i jest taki sam jak `-optionexplicit`. `-optionexplicit-` Opcja umożliwia niejawne deklaracji zmiennych.  
+ Opcjonalna. Określ `-optionexplicit+` wymagające jawnej deklaracji zmiennych. `-optionexplicit+` Opcja jest ustawieniem domyślnym i jest taki sam jak `-optionexplicit`. `-optionexplicit-` Opcja umożliwia niejawne deklaracji zmiennych.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli plik kodu źródłowego zawiera [instrukcji Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md), zastępuje instrukcji `-optionexplicit` Ustawienia kompilatora wiersza polecenia.  

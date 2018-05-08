@@ -1,14 +1,6 @@
 ---
 title: Przegląd Rysowanie obiektów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
 - GlyphRunDrawing objects [WPF]
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c896cd0c070ae30cb825cfc64dd9df9f8832e4ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-objects-overview"></a>Przegląd Rysowanie obiektów
 W tym temacie przedstawiono <xref:System.Windows.Media.Drawing> obiekty i opisuje sposób umożliwia wydajne Rysowanie kształtów, mapy bitowe, tekst i nośnika. Użyj <xref:System.Windows.Media.Drawing> malować obiekty podczas tworzenia obiektów graficznych, <xref:System.Windows.Media.DrawingBrush>, lub użyj <xref:System.Windows.Media.Visual> obiektów.  

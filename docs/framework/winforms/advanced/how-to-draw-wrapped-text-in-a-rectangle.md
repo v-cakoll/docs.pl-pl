@@ -1,13 +1,6 @@
 ---
-title: "Porady: rysowanie zawiniętego tekstu w prostokącie"
-ms.custom: 
+title: 'Porady: rysowanie zawiniętego tekstu w prostokącie'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82e8c324cac8f9eda8f3052f77230733dd47777d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c753be6a200f166e59e1330c7dbcf1fadc7588a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Porady: rysowanie zawiniętego tekstu w prostokącie
 Można Rysowanie zawiniętego tekstu w prostokącie przy użyciu <xref:System.Drawing.Graphics.DrawString%2A> przeciążona metoda <xref:System.Drawing.Graphics> klasy, która przyjmuje <xref:System.Drawing.Rectangle> lub <xref:System.Drawing.RectangleF> parametru. Ponadto <xref:System.Drawing.Brush> i <xref:System.Drawing.Font>.  
@@ -53,7 +41,7 @@ Można Rysowanie zawiniętego tekstu w prostokącie przy użyciu <xref:System.Dr
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Wymagaj poprzednich przykładach:  
   
--   <xref:System.Windows.Forms.PaintEventArgs>`e`, który jest parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
+-   <xref:System.Windows.Forms.PaintEventArgs> `e`, która jest parametr <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: rysowanie tekstu za pomocą GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  

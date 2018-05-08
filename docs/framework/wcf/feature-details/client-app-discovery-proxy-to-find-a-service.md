@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania"
-ms.custom: 
+title: 'Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania
-Ten temat dotyczy innych trzy tematy, który zawiera omówienie sposobu wdrażania serwera proxy odnajdywania. W poprzedniej części tematu [porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), zostanie zaimplementowana [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która rejestruje się przy użyciu serwera proxy odnajdywania. W tym temacie można utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, który używa serwera proxy odnajdywania można znaleźć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+Ten temat dotyczy innych trzy tematy, który zawiera omówienie sposobu wdrażania serwera proxy odnajdywania. W poprzedniej części tematu [porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), wdrożone usługi WCF, która rejestruje się przy użyciu serwera proxy odnajdywania. W tym temacie można utworzyć klienta WCF, która używa serwera proxy odnajdywania można znaleźć usługi WCF.  
   
 ### <a name="implement-the-client"></a>Wdrożenia klienta  
   

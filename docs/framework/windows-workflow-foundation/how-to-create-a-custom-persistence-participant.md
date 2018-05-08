@@ -1,23 +1,12 @@
 ---
-title: "Porady: tworzenie uczestnika trwałości niestandardowych"
-ms.custom: 
+title: 'Porady: tworzenie uczestnika trwałości niestandardowych'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebc83f100b4303b73ba2e6d3dc41d0f82e8f2c22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fcd96e41d8fc7b36f9dff5f10e9bc2d9034d79b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Porady: tworzenie uczestnika trwałości niestandardowych
 Poniższa procedura zawiera kroki, aby utworzyć uczestnika trwałości. Zobacz [uczestniczących w trwałości](http://go.microsoft.com/fwlink/?LinkID=177735) próbki i [rozszerzalności magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) temat implementacji próbki uczestników trwałości.  

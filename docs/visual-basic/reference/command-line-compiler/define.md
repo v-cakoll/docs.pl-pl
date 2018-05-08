@@ -1,11 +1,6 @@
 ---
 title: -Definiowanie (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
 - /d compiler option [Visual Basic]
@@ -16,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 136339c84ce80bff790c6683eef76065fb6d71ef
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-define-visual-basic"></a>-Definiowanie (Visual Basic)
 Definiuje warunkowe stałe kompilatora.  
@@ -37,8 +32,8 @@ Definiuje warunkowe stałe kompilatora.
   
 |Termin|Definicja|  
 |---|---|  
-|`symbol`|Wymagany. Symbol do definiowania.|  
-|`value`|Opcjonalny. Wartość do przypisania `symbol`. Jeśli `value` jest ciągiem, muszą być ujęte przez sekwencje ukośnik odwrotny cudzysłowu (\\") zamiast znaków cudzysłowu. Jeśli nie określono wartości, a następnie jest traktowana jako True.|  
+|`symbol`|Wymagana. Symbol do definiowania.|  
+|`value`|Opcjonalna. Wartość do przypisania `symbol`. Jeśli `value` jest ciągiem, muszą być ujęte przez sekwencje ukośnik odwrotny cudzysłowu (\\") zamiast znaków cudzysłowu. Jeśli nie określono wartości, a następnie jest traktowana jako True.|  
   
 ## <a name="remarks"></a>Uwagi  
  `-define` Opcji jest efekt jest podobny do sposobu używania `#Const` dyrektywy preprocesora w pliku źródłowym, z wyjątkiem tego stałe zdefiniowane z `-define` są publiczne i dotyczą wszystkich plików w projekcie.  

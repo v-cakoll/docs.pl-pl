@@ -1,12 +1,6 @@
 ---
-title: "Take — Klauzula (Visual Basic)"
+title: Take — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryTake
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dddb411af1b4ee269e091c07553a94589d90b2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="take-clause-visual-basic"></a>Take — Klauzula (Visual Basic)
 Zwraca określoną liczbę elementów ciągłe na początku kolekcji.  
@@ -34,7 +25,7 @@ Take count
   
 ## <a name="parts"></a>Części  
  `count`  
- Wymagany. Wartość lub wyrażenie obliczane do liczby elementów sekwencji do zwrócenia.  
+ Wymagana. Wartość lub wyrażenie obliczane do liczby elementów sekwencji do zwrócenia.  
   
 ## <a name="remarks"></a>Uwagi  
  `Take` Klauzuli powoduje uwzględnienie określoną liczbę sąsiadujących elementów od początku listy wyników zapytania. Liczba elementów do uwzględnienia jest określona przez `count` parametru.  
@@ -53,8 +44,8 @@ Take count
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
- [SELECT — klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Klauzula FROM](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By — klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Take While — klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- [SKIP — klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)
+ [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Take While, klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [Skip, klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)

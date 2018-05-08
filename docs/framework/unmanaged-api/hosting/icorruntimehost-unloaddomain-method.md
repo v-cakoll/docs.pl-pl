@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::UnloadDomain — Metoda"
-ms.custom: 
+title: ICorRuntimeHost::UnloadDomain — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.UnloadDomain
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: dd9e9204-a80d-44f3-8192-779224b35056
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 067b60b9da02300e9e7316712d0058a61ab8a697
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4db96133315b23a2d0b4bd32b597ee03f5d697b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain — Metoda
 Zwalnia domeny określonej aplikacji w bieżącym procesie.  
@@ -55,7 +43,7 @@ HRESULT UnloadDomain (
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Operacja powiodła się.|  
-|WARTOŚCI S_FALSE|Nie można ukończyć operacji.|  
+|S_FALSE|Nie można ukończyć operacji.|  
 |E_FAIL|Wystąpił nieznany, poważnej awarii. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie będzie już można używać w procesie. Kolejne wywołania żadnych hostingu interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
   

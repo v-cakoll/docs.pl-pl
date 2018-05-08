@@ -1,13 +1,6 @@
 ---
 title: Typy anonimowe (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>Typy anonimowe (Visual Basic)
 Visual Basic obsługuje typy anonimowe, które umożliwiają tworzenie obiektów bez pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma używać nazwy, bezpośrednio dziedziczy <xref:System.Object>i zawiera właściwości określonej w odwołaniu do obiektu. Ponieważ nie określono nazwę typu danych, jest ona określana jako *typu anonimowego*.  
@@ -95,11 +85,11 @@ Visual Basic obsługuje typy anonimowe, które umożliwiają tworzenie obiektów
 ## <a name="anonymous-types-from-query-expressions"></a>Typy anonimowe z wyrażenia zapytania  
  Wyrażenia zapytań nie zawsze wymagają utworzenia typy anonimowe. Jeśli to możliwe, używają istniejącego typu do przechowywania danych kolumny. Dzieje się tak, gdy kwerenda zwraca albo całego rekordy ze źródła danych lub tylko jedno pole z każdego rekordu. W poniższych przykładach kodu `customers` to zbiór obiektów `Customer` klasy. Klasa ma wiele właściwości, oraz może zawierać co najmniej jeden z nich, które znajdują się w wyniku kwerendy w dowolnej kolejności. W przykładach dwóch pierwszych nie typy anonimowe są wymagane, ponieważ zapytania wybierz elementy typów o nazwie:  
   
--   `custs1`zawiera kolekcję parametrów, ponieważ `cust.Name` jest ciągiem.  
+-   `custs1` zawiera kolekcję parametrów, ponieważ `cust.Name` jest ciągiem.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`zawiera kolekcję `Customer` obiektów, ponieważ każdy element `customers` jest `Customer` obiektu, a cały element jest wybierany przez zapytanie.  
+-   `custs2` zawiera kolekcję `Customer` obiektów, ponieważ każdy element `customers` jest `Customer` obiektu, a cały element jest wybierany przez zapytanie.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   
@@ -136,9 +126,9 @@ Visual Basic obsługuje typy anonimowe, które umożliwiają tworzenie obiektów
  Aby uzyskać więcej informacji o kodzie utworzony przez kompilator i funkcjonalność przesłoniętych metod, zobacz [definicja typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [Instrukcje: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  [Definicja typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
- [Klucz](../../../../visual-basic/language-reference/modifiers/key.md)
+ [Key](../../../../visual-basic/language-reference/modifiers/key.md)

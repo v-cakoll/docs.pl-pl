@@ -1,22 +1,12 @@
 ---
 title: Filtrowanie danych (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 31e3a4729a98e1f4b588cd415a15fff270587234
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d3f44d0b6478103a10fb731988aeebc005cde82e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering-data-visual-basic"></a>Filtrowanie danych (Visual Basic)
 Filtrowanie odnosi się do operacji ograniczyć zestaw wyników do zawierać tylko elementy, które spełniają określony warunek. Jest nazywana zaznaczenia.  
@@ -61,7 +51,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Linq>  
  [Operatory standardowe zapytań — omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Gdy klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Where, klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)  
  [Porady: filtrowanie wyników zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
  [Porady: zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  [Porady: zapytanie o pliki o określonym atrybucie lub nazwie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebug — Interfejs"
-ms.custom: 
+title: ICorDebug — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebug-interface"></a>ICorDebug — Interfejs
 Udostępnia metody, które umożliwiają deweloperom debugowanie aplikacji w środowisku środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego.  
@@ -55,7 +43,7 @@ Udostępnia metody, które umożliwiają deweloperom debugowanie aplikacji w śr
 |[Terminate, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Kończy `ICorDebug` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebug`reprezentuje pętli przetwarzania zdarzeń dla procesu debugera. Debuger musi czekać, aż [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) wywołania zwrotnego od wszystkich procesów debugowany przed wydaniem tego interfejsu.  
+ `ICorDebug` reprezentuje pętli przetwarzania zdarzeń dla procesu debugera. Debuger musi czekać, aż [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) wywołania zwrotnego od wszystkich procesów debugowany przed wydaniem tego interfejsu.  
   
  `ICorDebug` Obiekt jest obiektem początkowej do sterowania wszystkie dalsze zarządzane debugowania. W wersji systemu .NET Framework 1.0 i 1.1, ten obiekt był `CoClass` obiektu utworzone na podstawie modelu COM. W programie .NET Framework w wersji 2.0, ten obiekt nie jest już `CoClass` obiektu. Musi być utworzony przez [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) funkcji, która jest bardziej wersji obsługujących. Ta nowa funkcja tworzenia umożliwia klientom uzyskanie określonej implementacji `ICorDebug`, które również emuluje określoną wersję interfejsu API debugowania.  
   
@@ -69,7 +57,7 @@ Udostępnia metody, które umożliwiają deweloperom debugowanie aplikacji w śr
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

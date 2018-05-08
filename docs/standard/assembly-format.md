@@ -1,23 +1,16 @@
 ---
 title: Format pliku zestawu .NET
 description: Dowiedz się więcej o formacie pliku zestawu .NET, który jest używany do opisywania i zawierają aplikacji .NET i bibliotek.
-keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f2e838746762922087162142e61ce3ce5b33b2fb
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 219e2872ab58980ef7b4bce8e901341d8893a1a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-assembly-file-format"></a>Format pliku zestawu .NET
 

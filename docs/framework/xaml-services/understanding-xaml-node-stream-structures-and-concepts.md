@@ -1,28 +1,16 @@
 ---
-title: "Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML"
-ms.custom: 
+title: Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML node streams [XAML Services]
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 Czytniki XAML i zapisywania XAML zgodnie z implementacją w .NET Framework XAML Services są oparte na koncepcję projektu strumienia węzłów XAML. Strumień węzłów XAML jest conceptualization zestawu węzłów XAML. W tym conceptualization procesora XAML przedstawiono struktury relacje węzła w języku XAML, co w czasie. W dowolnym momencie istnieje tylko jeden rekord bieżący lub bieżącą pozycję w otwartych strumień węzłów XAML, a wiele aspektów interfejsu API zgłaszać tylko te informacje dostępne w tym miejscu. Bieżący węzeł w strumień węzłów XAML można przedstawić jako obiekt, element członkowski lub wartość. Traktując XAML jako strumień węzłów XAML, czytników XAML można komunikować się z autorów XAML i włączyć program do wyświetlania, interakcji z i zmienić zawartość strumienia węzłów XAML podczas ładowania ścieżki lub Zapisz operacji ścieżki, która obejmuje XAML. Projekt interfejsu API składników zapisywania i odczytywania XAML i koncepcji strumienia węzłów XAML są takie jak podobne do poprzedniego czytnika pokrewne i zapisywania projektów i pojęcia [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] i <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> klasy. W tym temacie omówiono pojęcia strumienia węzłów XAML i zawiera opis sposobu pisania procedury wchodzące w interakcje z reprezentacji XAML na poziomie węzła XAML.  
@@ -31,7 +19,7 @@ Czytniki XAML i zapisywania XAML zgodnie z implementacją w .NET Framework XAML 
 ## <a name="loading-xaml-into-a-xaml-reader"></a>Ładowania kodu XAML do czytnika XAML  
  Podstawowym <xref:System.Xaml.XamlReader> klasy nie deklaruje określonego technika ładowania początkowego XAML do czytnika XAML. Zamiast tego klasy pochodnej deklaruje i implementuje technika ładowania, łącznie z właściwości ogólne i ograniczenia jego źródło danych wejściowych dla języka XAML. Na przykład <xref:System.Xaml.XamlObjectReader> odczytuje wykres obiektu, począwszy od źródło pojedynczy obiekt, który reprezentuje katalog główny lub bazy danych wejściowych. <xref:System.Xaml.XamlObjectReader> Następnie tworzy strumień węzłów XAML z wykresu obiektu.  
   
- Najbardziej widocznym usług .NET Framework XAML — definicja <xref:System.Xaml.XamlReader> jest podklasą <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader>ładuje XAML początkowej, albo przez załadowanie pliku tekstowego bezpośrednio za pomocą ścieżki strumienia lub pliku lub pośrednio za pośrednictwem klasy pokrewne czytnika takich jak <xref:System.IO.TextReader>. <xref:System.Xaml.XamlReader> Mogą być uważane za zawierające całości źródło danych wejściowych XAML po załadowaniu. Jednak <xref:System.Xaml.XamlReader> podstawowy interfejs API zaprojektowano tak, aby czytnik prowadzi interakcję z jednego węzła XAML. Po raz pierwszy załadowano pierwszy jednego węzła, które wystąpią jest elementem głównym pliku XAML, a jego początkowy obiekt.  
+ Najbardziej widocznym usług .NET Framework XAML — definicja <xref:System.Xaml.XamlReader> jest podklasą <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> ładuje XAML początkowej, albo przez załadowanie pliku tekstowego bezpośrednio za pomocą ścieżki strumienia lub pliku lub pośrednio za pośrednictwem klasy pokrewne czytnika takich jak <xref:System.IO.TextReader>. <xref:System.Xaml.XamlReader> Mogą być uważane za zawierające całości źródło danych wejściowych XAML po załadowaniu. Jednak <xref:System.Xaml.XamlReader> podstawowy interfejs API zaprojektowano tak, aby czytnik prowadzi interakcję z jednego węzła XAML. Po raz pierwszy załadowano pierwszy jednego węzła, które wystąpią jest elementem głównym pliku XAML, a jego początkowy obiekt.  
   
 ### <a name="the-xaml-node-stream-concept"></a>Pojęcie strumienia węzłów XAML  
  Jeśli znasz zazwyczaj bardziej modelu DOM, metaphor drzewa lub oparte na zapytaniach podejście do uzyskiwania dostępu do technologii opartych na języku XML, pomocny sposób conceptualize strumień węzłów XAML ma następującą składnię. Załóżmy, że załadować XAML jest modelu DOM lub drzewa, w którym rozwinięty aż co węzłów, a następnie udostępniana liniowo. Jak możesz przechodzić przez węzły, możesz może być przechodzenie "in" lub "out" poziomów, które są istotne dla modelu DOM, ale strumień węzłów XAML nie jawnie śledzić ponieważ tych pojęć poziomu nie są odpowiednie do strumienia węzłów. Strumień węzłów ma pozycji "bieżący", ale chyba, że są przechowywane inne części strumienia samodzielnie jako odniesienie, każdego aspektu strumieniu węzłów, innej niż bieżąca pozycja węzła niewidocznymi.  
@@ -112,20 +100,20 @@ while (xxr.Read()) {
   
 |Kod znaczników XAML|Wynikowa strumień węzłów XAML|  
 |-----------------|--------------------------------|  
-|`<Party`|`Namespace`węzeł`Party`|  
-|`xmlns="PartyXamlNamespace">`|`StartObject`węzeł`Party`|  
-|`<Party.Favors>`|`StartMember`węzeł`Party.Favors`|  
-||`StartObject`węzeł niejawne`FavorCollection`|  
-||`StartMember`węzeł niejawne `FavorCollection` elementów właściwości.|  
-|`<Balloon`|`StartObject`węzeł`Balloon`|  
-|`Color="Red"`|`StartMember`węzeł`Color`<br /><br /> `Value`węzeł ciągu wartości atrybutu`"Red"`<br /><br /> `EndMember`dla`Color`|  
-|`HasHelium="True"`|`StartMember`węzeł`HasHelium`<br /><br /> `Value`węzeł ciągu wartości atrybutu`"True"`<br /><br /> `EndMember`dla`HasHelium`|  
-|`>`|`EndObject`dla`Balloon`|  
-|`<NoiseMaker>Loudest</NoiseMaker>`|`StartObject`węzeł`NoiseMaker`<br /><br /> `StartMember`węzeł`_Initialization`<br /><br /> `Value`węzeł wartość ciągu inicjowania`"Loudest"`<br /><br /> `EndMember`węzeł`_Initialization`<br /><br /> `EndObject`dla`NoiseMaker`|  
-||`EndMember`węzeł niejawne `FavorCollection` elementów właściwości.|  
-||`EndObject`węzeł niejawne`FavorCollection`|  
-|`</Party.Favors>`|`EndMember`dla`Favors`|  
-|`</Party>`|`EndObject`dla`Party`|  
+|`<Party`|`Namespace` węzeł `Party`|  
+|`xmlns="PartyXamlNamespace">`|`StartObject` węzeł `Party`|  
+|`<Party.Favors>`|`StartMember` węzeł `Party.Favors`|  
+||`StartObject` węzeł niejawne `FavorCollection`|  
+||`StartMember` węzeł niejawne `FavorCollection` elementów właściwości.|  
+|`<Balloon`|`StartObject` węzeł `Balloon`|  
+|`Color="Red"`|`StartMember` węzeł `Color`<br /><br /> `Value` węzeł ciągu wartości atrybutu `"Red"`<br /><br /> `EndMember` dla `Color`|  
+|`HasHelium="True"`|`StartMember` węzeł `HasHelium`<br /><br /> `Value` węzeł ciągu wartości atrybutu `"True"`<br /><br /> `EndMember` dla `HasHelium`|  
+|`>`|`EndObject` dla `Balloon`|  
+|`<NoiseMaker>Loudest</NoiseMaker>`|`StartObject` węzeł `NoiseMaker`<br /><br /> `StartMember` węzeł `_Initialization`<br /><br /> `Value` węzeł wartość ciągu inicjowania `"Loudest"`<br /><br /> `EndMember` węzeł `_Initialization`<br /><br /> `EndObject` dla `NoiseMaker`|  
+||`EndMember` węzeł niejawne `FavorCollection` elementów właściwości.|  
+||`EndObject` węzeł niejawne `FavorCollection`|  
+|`</Party.Favors>`|`EndMember` dla `Favors`|  
+|`</Party>`|`EndObject` dla `Party`|  
   
  W strumieniu węzłów XAML może polegać na następujące zachowanie:  
   
@@ -139,7 +127,7 @@ while (xxr.Read()) {
   
 -   A `Value` reprezentuje węzeł samą wartość; nie istnieje żadne "wartość końcowa panelu". Może być stosowana tylko przez `EndMember`.  
   
-    -   W strukturze wartość obiektu nie powoduje tekstu XAML inicjowania obiektu, ponieważ może być używany przez konstrukcji. Zamiast tego węzła dedykowanych elementu członkowskiego dla elementu członkowskiego o nazwie `_Initialization` jest tworzony. i ten węzeł elementu członkowskiego zawiera wartość ciągu inicjowania. Jeśli istnieje, `_Initialization` jest zawsze pierwszy `StartMember`. `_Initialization`może być kwalifikowany w niektórych reprezentacje usług XAML z namescope XAML języka XAML, wyjaśnienia, że `_Initialization` nie jest właściwością zdefiniowanych w tworzeniu kopii typów.  
+    -   W strukturze wartość obiektu nie powoduje tekstu XAML inicjowania obiektu, ponieważ może być używany przez konstrukcji. Zamiast tego węzła dedykowanych elementu członkowskiego dla elementu członkowskiego o nazwie `_Initialization` jest tworzony. i ten węzeł elementu członkowskiego zawiera wartość ciągu inicjowania. Jeśli istnieje, `_Initialization` jest zawsze pierwszy `StartMember`. `_Initialization` może być kwalifikowany w niektórych reprezentacje usług XAML z namescope XAML języka XAML, wyjaśnienia, że `_Initialization` nie jest właściwością zdefiniowanych w tworzeniu kopii typów.  
   
     -   Kombinacja wartości elementu członkowskiego reprezentuje ustawienia wartości atrybutów. Po pewnym czasie prawdopodobnie konwerter wartości objętego przetwarzania tej wartości, a wartość to zwykły ciąg. Jednakże, który nie jest oceniany, aż do zapisywania obiektów XAML przetwarza strumień węzła. Moduł zapisywania obiektów XAML posiada niezbędne kontekst schematu XAML, mapowanie typu systemu i innych obsługi potrzebne do konwersji wartości.  
   
@@ -174,20 +162,20 @@ public class GameBoard {
   
  Tekstowa reprezentacja strumień węzłów XAML dla tego użycia mogą być wyrażone w następujący sposób:  
   
- `StartObject`z <xref:System.Xaml.XamlType> reprezentujący`GameBoard`  
+ `StartObject` z <xref:System.Xaml.XamlType> reprezentujący `GameBoard`  
   
- `StartMember`z <xref:System.Xaml.XamlMember> reprezentujący`BoardSize`  
+ `StartMember` z <xref:System.Xaml.XamlMember> reprezentujący `BoardSize`  
   
- `Value`węzeł, z ciągu tekstowego "`8x8`"  
+ `Value` węzeł, z ciągu tekstowego "`8x8`"  
   
- `EndMember`dopasowań`BoardSize`  
+ `EndMember` Dopasowań `BoardSize`  
   
- `EndObject`dopasowań`GameBoard`  
+ `EndObject` Dopasowań `GameBoard`  
   
  Zwróć uwagę, nie jest żadne wystąpienie konwertera typu strumienia tego węzła. Ale można uzyskać informacji o typie konwertera wywołując <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> na <xref:System.Xaml.XamlMember> dla `BoardSize`. Jeśli masz prawidłowy kontekst schematu XAML, można także wywoływać metody konwertera uzyskując wystąpienia z <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>.  
   
 ### <a name="markup-extensions-in-the-xaml-node-stream"></a>Rozszerzenia znaczników w strumieniu węzłów XAML  
- Użycie rozszerzenia znaczników jest zgłaszane w strumieniu węzłów XAML jako obiekt węzła w ramach elementu członkowskiego, w którym obiekt reprezentuje wystąpienie rozszerzenia znaczników. W związku z tym użycie rozszerzenia znaczników jest podana więcej jawnie w reprezentacji strumienia węzłów niż użycie konwertera typu jest i zawiera więcej informacji. <xref:System.Xaml.XamlMember>informacji może nie mieć polecił niczego o rozszerzeniu znaczników ponieważ użycia jest oparty na analizie sytuacji i zmienia się w każdym przypadku możliwe znaczników; nie jest dedykowany i niejawne według typu lub elementu członkowskiego jak w przypadku konwertery typu.  
+ Użycie rozszerzenia znaczników jest zgłaszane w strumieniu węzłów XAML jako obiekt węzła w ramach elementu członkowskiego, w którym obiekt reprezentuje wystąpienie rozszerzenia znaczników. W związku z tym użycie rozszerzenia znaczników jest podana więcej jawnie w reprezentacji strumienia węzłów niż użycie konwertera typu jest i zawiera więcej informacji. <xref:System.Xaml.XamlMember> informacji może nie mieć polecił niczego o rozszerzeniu znaczników ponieważ użycia jest oparty na analizie sytuacji i zmienia się w każdym przypadku możliwe znaczników; nie jest dedykowany i niejawne według typu lub elementu członkowskiego jak w przypadku konwertery typu.  
   
  Reprezentacja strumienia węzeł rozszerzenia znaczników jako węzły obiektu jest to możliwe nawet wtedy, gdy użycie rozszerzenia znaczników została wprowadzona w formie atrybutu tekstowego w kodzie XAML (która jest często wielkość liter). Użycia rozszerzenia znaczników, używane w postaci elementu jawne obiektu są traktowane tak samo.  
   
@@ -197,7 +185,7 @@ public class GameBoard {
   
  Nazwany parametr użytkowania każdy nazwany parametr jest reprezentowany jako węzeł elementu członkowskiego o tej nazwie w strumieniu węzłów. Wartości elementów członkowskich niekoniecznie ciągów, ponieważ może być użycie rozszerzenia znaczników zagnieżdżonych.  
   
- `ProvideValue`z poziomu znacznika rozszerzenia nie jest jeszcze wywołana. Jednak jest wywoływana, jeśli Podłącz czytnik XAML i składnika zapisywania języka XAML, aby `WriteEndObject` jest wywoływana w węźle rozszerzenia znaczników, gdy należy zbadać w strumieniu węzłów. Z tego powodu konieczne są zwykle tym samym kontekście schematu XAML dostępne, ponieważ mają być używane w celu utworzenia wykresu obiektu na ścieżce obciążenia. W przeciwnym razie `ProvideValue` z żadnych znaczników rozszerzenia można zgłaszają wyjątki, w tym miejscu, ponieważ nie ma oczekiwanego dostępność usług.  
+ `ProvideValue` z poziomu znacznika rozszerzenia nie jest jeszcze wywołana. Jednak jest wywoływana, jeśli Podłącz czytnik XAML i składnika zapisywania języka XAML, aby `WriteEndObject` jest wywoływana w węźle rozszerzenia znaczników, gdy należy zbadać w strumieniu węzłów. Z tego powodu konieczne są zwykle tym samym kontekście schematu XAML dostępne, ponieważ mają być używane w celu utworzenia wykresu obiektu na ścieżce obciążenia. W przeciwnym razie `ProvideValue` z żadnych znaczników rozszerzenia można zgłaszają wyjątki, w tym miejscu, ponieważ nie ma oczekiwanego dostępność usług.  
   
 <a name="xaml_and_xml_languagedefined_members_in_the_xaml_node_stream"></a>   
 ## <a name="xaml-and-xml-language-defined-members-in-the-xaml-node-stream"></a>XAML i XML język elementów członkowskich zdefiniowanych w strumieniu węzłów XAML  
@@ -211,7 +199,7 @@ public class GameBoard {
   
 -   **Nieznany zawartości:** jest nazwa węzła tego elementu członkowskiego `_UnknownContent`. Mówiąc ściślej, jest <xref:System.Xaml.XamlDirective>, i jest on zdefiniowany w przestrzeni nazw XAML języka XAML. Ta dyrektywa jest używana jako wskaźnikowych w przypadkach, gdy XAML object element zawiera zawartość w źródle XAML, ale można ustalić ma właściwości zawartości w obszarze obecnie kontekst schematu XAML. Ten przypadek może wykryć w strumień węzłów XAML, sprawdzając dla elementów członkowskich o nazwie `_UnknownContent`. Jeśli nie podjęto żadnych innych akcji w obciążenia ścieżki strumień węzłów XAML, wartość domyślna <xref:System.Xaml.XamlObjectWriter> zgłoszenie próba `WriteEndObject` po napotkaniu `_UnknownContent` Członkowskie dowolnego obiektu. Wartość domyślna <xref:System.Xaml.XamlXmlWriter> nie zgłasza i traktuje jako niejawne elementu członkowskiego. Możesz uzyskać statycznych jednostki dla `_UnknownContent` z <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
   
--   **Właściwości kolekcji kolekcji:**chociaż zapasowy typ CLR kolekcji klasy, która jest zwykle używany dla XAML zawiera dedykowany nazwane właściwości, która przechowuje elementy kolekcji, tej właściwości jest nieznany system typów języka XAML, przed wykonaniem kopii typu rozdzielczość. Zamiast tego strumień węzłów XAML wprowadzono `Items` symbol zastępczy jest członkiem kolekcji typu XAML. W implementacji usług .NET Framework XAML nazwę tej dyrektywy / element członkowski w strumieniu węzłów jest `_Items`. Stała dla tej dyrektywy można uzyskać z <xref:System.Xaml.XamlLanguage.Items%2A>.  
+-   **Właściwości kolekcji kolekcji:** chociaż zapasowy typ CLR kolekcji klasy, która jest zwykle używany dla XAML zawiera dedykowany nazwane właściwości, która przechowuje elementy kolekcji, tej właściwości jest nieznany system typów języka XAML, przed wykonaniem kopii typu rozdzielczość. Zamiast tego strumień węzłów XAML wprowadzono `Items` symbol zastępczy jest członkiem kolekcji typu XAML. W implementacji usług .NET Framework XAML nazwę tej dyrektywy / element członkowski w strumieniu węzłów jest `_Items`. Stała dla tej dyrektywy można uzyskać z <xref:System.Xaml.XamlLanguage.Items%2A>.  
   
      Należy pamiętać, że strumień węzłów XAML może zawierać właściwości elementów z elementów, które stają się nie być parseable na podstawie rozpoznawania typu zapasowy i kontekst schematu XAML. Na przykład  
   
@@ -223,10 +211,10 @@ public class GameBoard {
  Niektórych dyrektyw są przeznaczone specjalnie, o podanie dodatkowych informacji w celu utworzenia obiektu z elementu object. Te dyrektywy: `Initialization`, `PositionalParameters`, `TypeArguments`, `FactoryMethod`, `Arguments`. Czytniki .NET Framework XAML Services XAML próbować umieścić te dyrektywy jako pierwszy elementów członkowskich w strumieniu węzłów następującego obiektu `StartObject`, przyczyn, które opisano szczegółowo w następnej sekcji.  
   
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Zachowanie XamlObjectWriter i kolejność węzłów  
- `StartObject`Aby <xref:System.Xaml.XamlObjectWriter> niekoniecznie sygnał do zapisywania obiektów XAML od razu utworzyć wystąpienie obiektu. XAML zawiera kilka funkcji języka, które umożliwiają można zainicjować obiektu przy użyciu dodatkowych danych wejściowych, a nie polegać wyłącznie na wywołania konstruktora domyślnego do tworzenia obiektu początkowej i następnie ustawienie właściwości. Te funkcje obejmują: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; inicjowania tekstu. [x: typearguments —](../../../docs/framework/xaml-services/x-typearguments-directive.md); pozycyjnych Parametry rozszerzenia znacznika; metodami factory i skojarzone [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) węzłów (XAML 2009). Każdy z tych przypadkach opóźnienie konstruowania rzeczywistego obiektu, a ponieważ ponownie sortowane strumień węzłów XAML zapisywania obiektu może polegać na zachowanie faktycznie konstruowanie wystąpienie napotkaniu członka start, które nie jest specjalnie konstrukcji dyrektywa dla tego typu obiektu.  
+ `StartObject` Aby <xref:System.Xaml.XamlObjectWriter> niekoniecznie sygnał do zapisywania obiektów XAML od razu utworzyć wystąpienie obiektu. XAML zawiera kilka funkcji języka, które umożliwiają można zainicjować obiektu przy użyciu dodatkowych danych wejściowych, a nie polegać wyłącznie na wywołania konstruktora domyślnego do tworzenia obiektu początkowej i następnie ustawienie właściwości. Te funkcje obejmują: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; inicjowania tekstu. [x: typearguments —](../../../docs/framework/xaml-services/x-typearguments-directive.md); pozycyjnych Parametry rozszerzenia znacznika; metodami factory i skojarzone [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) węzłów (XAML 2009). Każdy z tych przypadkach opóźnienie konstruowania rzeczywistego obiektu, a ponieważ ponownie sortowane strumień węzłów XAML zapisywania obiektu może polegać na zachowanie faktycznie konstruowanie wystąpienie napotkaniu członka start, które nie jest specjalnie konstrukcji dyrektywa dla tego typu obiektu.  
   
 ### <a name="getobject"></a>GetObject  
- `GetObject`reprezentuje węzeł XAML, gdzie zamiast tworzenia nowego obiektu, Edytor obiektu XAML powinien zamiast tego Pobierz wartość obiektu zawierającego. Typowy przypadek gdzie `GetObject` napotkano węzła do węzła XAML strumień jest dla obiektu kolekcji lub słownika, gdy zawierająca go właściwość jest celowo tylko do odczytu w modelu obiektu zapasowego typu. W tym scenariuszu kolekcji lub słownika często jest tworzony i inicjowany (zazwyczaj puste) przez logikę inicjowania typu będący właścicielem.  
+ `GetObject` reprezentuje węzeł XAML, gdzie zamiast tworzenia nowego obiektu, Edytor obiektu XAML powinien zamiast tego Pobierz wartość obiektu zawierającego. Typowy przypadek gdzie `GetObject` napotkano węzła do węzła XAML strumień jest dla obiektu kolekcji lub słownika, gdy zawierająca go właściwość jest celowo tylko do odczytu w modelu obiektu zapasowego typu. W tym scenariuszu kolekcji lub słownika często jest tworzony i inicjowany (zazwyczaj puste) przez logikę inicjowania typu będący właścicielem.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xaml.XamlObjectReader>  

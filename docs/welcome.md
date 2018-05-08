@@ -1,19 +1,18 @@
 ---
-title: ".NET — Zapraszamy"
+title: .NET — Zapraszamy
 description: Wprowadzenie do korzystania z rodziny .NET technologii.
-keywords: ".NET, .NET core, wprowadzenie, wiadomości"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 04/30/2018
 ms.topic: article
-ms.prod: .net
+ms.prod: dotnet
 ms.devlang: dotnet
-ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: updateeachrelease
+ms.openlocfilehash: ab6dcb8ccc52211d88e570b1b6f135e43ab9d5fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="welcome-to-net"></a>.NET — Zapraszamy
 
@@ -23,40 +22,38 @@ Tworzenie wielu typów aplikacji za pomocą platformy .NET, takie jak chmury, Io
 
 ## <a name="news"></a>Grupy dyskusyjne
 
+- [2018 kompilacji firmy Microsoft](https://channel9.msdn.com/Events/Build/2018)
+- [Anonsowanie 4.7.2 .NET Framework](https://blogs.msdn.microsoft.com/dotnet/2018/04/30/announcing-the-net-framework-4-7-2/)
+- [Anonsowanie .NET Core 2.1 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/04/11/announcing-net-core-2-1-preview-2/)
+- [2.1.0-preview2 platformy ASP.NET Core teraz dostępne](https://blogs.msdn.microsoft.com/webdev/2018/04/12/asp-net-core-2-1-0-preview2-now-available/)
+- [Anonsowanie Entity Framework Core 2.1 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/04/11/announcing-entity-framework-core-2-1-preview-2/)
+- [Opublikowała program Visual Studio 2017 15,6, wersji programu Visual Studio for Mac wersji 7.4](https://blogs.msdn.microsoft.com/visualstudio/2018/03/06/visual-studio-2017-version-15-6-visual-studio-for-mac-version-7-4-released/)
+- [Wprowadzenie do języka C# 7.2 i zakres](https://blogs.msdn.microsoft.com/dotnet/2017/11/15/welcome-to-c-7-2-and-span/)
 - [Oprogramowanie .NET core 2.0 wydana!](https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released)
-- [Anonsowanie .NET Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-core-2-0/)
 - [Anonsowanie .NET 2.0 standardowe](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)
-- [Anonsowanie platformy ASP.NET Core 2.0](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/)
-- [Anonsowanie Entity Framework Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/)
 - [Nowość w języku Visual Basic: standardowych bibliotek klas .NET i dotnet CLI!](https://blogs.msdn.microsoft.com/vbteam/2017/08/14/new-for-visual-basic-net-standard-class-libraries-and-the-dotnet-cli/)
-- [Visual Studio 2017 wersji 15 ustęp 3 wydane](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/visual-studio-2017-version-15-3-released/)
 - [Wprowadzenie do platformy .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
 - [Visual Studio dla komputerów Mac: teraz ogólnie dostępna](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
 - [Informuje o dostępności ogólne 2017 r w usłudze Visual Studio](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)
 - [What's new dla platformy .NET Core i Visual Studio 2017 (klip wideo)](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)
-- [Anonsowanie 4.7 .NET Framework](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)
-- [Nowe funkcje w języku C# 7.0](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/)
 - [Anonsowanie F # 4.1 i narzędzia Visual F # dla programu Visual Studio 2017 r.](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-f-4-1-and-the-visual-f-tools-for-visual-studio-2017-2/)
-- [Otwórz Xamarin źródła gotowe za Ciebie!](https://blog.xamarin.com/live-from-evolve-open-source-xamarin-ready-for-you/)
-- [Tydzień w .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
-- [Kompilacja 2017 witrynie Channel 9 - wideo na najnowszych technologii firmy Microsoft i wiadomości!](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
 ## <a name="documentation"></a>Dokumentacja
 
 Ta dokumentacja obejmuje szerokość .NET na platformach i językach.  Możesz rozpocząć pracę z usług .NET i jego języków w jednym z następujących sekcji:
 
 - [.NET — przewodnik](standard/index.md)
-- [Przewodnik po podstawowej platformy .NET](core/index.md)
+- [Przewodnik platformy .NET Core](core/index.md)
 - [.NET framework — przewodnik](framework/index.md)
-- [Przewodnik C#](csharp/index.md)
-- [Przewodnik F #](fsharp/index.md)
+- [Przewodnik dla języka C#](csharp/index.md)
+- [Podręcznik języka F #](fsharp/index.md)
 - [Przewodnik po Visual Basic](visual-basic/index.md)
 
 Ponadto możesz przeglądać [dokumentacja interfejsu API platformy .NET](/dotnet/api).
 
-## <a name="open-source"></a>Typu open source
+## <a name="open-source"></a>Kod open source
 
-Niniejsza dokumentacja jest całkowicie [typu open source](https://github.com/dotnet/docs). Można współtworzyć w dowolny sposób Ci się podoba, tworzyć problemy, aby pisanie dokumentacji.  Ponadto jest znacznie .NET samego typu open source:
+Niniejsza dokumentacja jest całkowicie [typu open source](https://github.com/dotnet/docs). Można współtworzyć w dowolny sposób Ci się podoba, tworzyć problemy, aby pisanie dokumentacji.  Ponadto większość .NET sam jest również otworzyć źródła:
 
 - [Główna platformy .NET core](https://github.com/dotnet/core)
 - [Bibliotek .NET](https://github.com/dotnet/corefx)

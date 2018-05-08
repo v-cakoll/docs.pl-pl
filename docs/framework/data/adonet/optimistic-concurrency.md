@@ -1,27 +1,15 @@
 ---
-title: "Optymistycznej współbieżności"
-ms.custom: 
+title: Optymistycznej współbieżności
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4cc1ac0446f13bcc6bc1c8262eae5716302c3e2d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimistic-concurrency"></a>Optymistycznej współbieżności
 W środowisku wielodostępnym są dwa modele aktualizacji danych w bazie danych: optymistycznej współbieżności i pesymistyczne współbieżności. <xref:System.Data.DataSet> Obiektu zaprojektowano w celu wspierać stosowanie optymistycznej współbieżności długotrwałe działań, np. danych zdalnych i interakcji z danymi.  
@@ -48,7 +36,7 @@ W środowisku wielodostępnym są dwa modele aktualizacji danych w bazie danych:
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Smith|Smith|Smith|  
+|Nazwisko|Smith|Smith|Smith|  
 |Imię|Bob|Bob|Bob|  
   
  O godzinie 13:01 Użytkownik2 odczytuje tego samego wiersza.  
@@ -58,7 +46,7 @@ W środowisku wielodostępnym są dwa modele aktualizacji danych w bazie danych:
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Smith|Smith|Smith|  
+|Nazwisko|Smith|Smith|Smith|  
 |Imię|Bob|Robert|Bob|  
   
  Aktualizacja powiedzie się, ponieważ oryginalne wartości, które ma Użytkownik2 pasuje do wartości w bazie danych w momencie aktualizacji.  
@@ -68,7 +56,7 @@ W środowisku wielodostępnym są dwa modele aktualizacji danych w bazie danych:
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Smith|Smith|Smith|  
+|Nazwisko|Smith|Smith|Smith|  
 |Imię|Bob|Kuba|Robert|  
   
  W tym momencie Użytkownik1 napotka naruszenie optymistycznej współbieżności, ponieważ wartość w bazie danych ("Robert") nie jest już zgodny oryginalnej wartości, że Użytkownik1 oczekiwała ("Bob"). Naruszenie współbieżności umożliwia po prostu wiedzieć, że aktualizacja nie powiodła się. Teraz decyzji musi można zastąpić zmiany dostarczonych przez Użytkownik2 ze zmianami dostarczone przez użytkownika Użytkownik1 lub Anuluj zmiany wprowadzone przez użytkownika Użytkownik1.  

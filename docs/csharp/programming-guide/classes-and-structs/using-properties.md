@@ -1,23 +1,16 @@
 ---
-title: "Używanie właściwości (Przewodnik programowania w języku C#)"
+title: Używanie właściwości (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f0d470d2c38a07db9a936fc645b7a97aa12a7f84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 Właściwości łączyć aspekty pól i metod. Użytkownikowi obiektu właściwości wydaje się być polem, uzyskiwanie dostępu do właściwości wymaga takiej samej składni. Realizator klasę, właściwości jest jeden lub dwa bloki kodu, reprezentujący [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu i/lub [ustawić](../../../csharp/language-reference/keywords/set.md) metody dostępu. Blok kodu dla `get` metody dostępu jest wykonywany podczas odczytywania właściwości; zablokować kod `set` metody dostępu jest wykonywane, gdy właściwość jest przypisywana nowa wartość. Właściwość bez `set` metody dostępu jest traktowane jako tylko do odczytu. Właściwość bez `get` metody dostępu jest traktowane jako tylko do zapisu. Właściwość, która ma obu metod dostępu jest do odczytu / zapisu.  

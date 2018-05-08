@@ -1,14 +1,6 @@
 ---
 title: Managed Extensibility Framework (MEF)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-caps.latest.revision: 31
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 524fa0f2d654c812189ff6863f84db81144fb48f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f950779514975a3ee76af76506c7579e046537f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 Ten temat zawiera omówienie Managed Extensibility Framework wprowadzone w .NET Framework 4.  
@@ -248,7 +236,7 @@ Public Property operations As IEnumerable(Of Lazy(Of IOperation, IOperationData)
 IEnumerable<Lazy<IOperation, IOperationData>> operations;  
 ```  
   
- <xref:System.Lazy%602>Typ jest zapewniana przez MEF do przechowywania pośredniego odwołania do eksportu.  W tym miejscu, oprócz samego obiektu wyeksportowanego umożliwia również wyświetlenie *Eksportowanie metadanych*, lub informacje opisujące eksportowanego obiektu. Każdy <xref:System.Lazy%602> zawiera `IOperation` obiekt reprezentujący bieżącej operacji i `IOperationData` obiekt reprezentujący jego metadanych.  
+ <xref:System.Lazy%602> Typ jest zapewniana przez MEF do przechowywania pośredniego odwołania do eksportu.  W tym miejscu, oprócz samego obiektu wyeksportowanego umożliwia również wyświetlenie *Eksportowanie metadanych*, lub informacje opisujące eksportowanego obiektu. Każdy <xref:System.Lazy%602> zawiera `IOperation` obiekt reprezentujący bieżącej operacji i `IOperationData` obiekt reprezentujący jego metadanych.  
   
  Dodaj następujące proste interfejsy modułu lub `SimpleCalculator` przestrzeni nazw:  
   

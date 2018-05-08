@@ -1,13 +1,6 @@
 ---
-title: "Jak poprawić wydajność renderowania przez zapisanie elementu w pamięci podręcznej"
-ms.custom: 
+title: Jak poprawić wydajność renderowania przez zapisanie elementu w pamięci podręcznej
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - rendering performance [WPF], caching an element
 - BitmapCache [WPF], improving rendering performance
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - performance [WPF], caching an element
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9cd12b811ae4dd89c645ada1f4f70b06f73b9b13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a92909c623db0c10e3434677b4275fa82b787fa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Jak poprawić wydajność renderowania przez zapisanie elementu w pamięci podręcznej
 Użyj <xref:System.Windows.Media.BitmapCache> klasę, aby poprawić wydajność renderowania złożonego <xref:System.Windows.UIElement>. W pamięci podręcznej elementu, Utwórz nowe wystąpienie klasy <xref:System.Windows.Media.BitmapCache> klasy i przypisz je do elementu <xref:System.Windows.UIElement.CacheMode%2A> właściwości. Można użyć ponownie <xref:System.Windows.Media.BitmapCache> wydajnie w <xref:System.Windows.Media.BitmapCacheBrush>.  

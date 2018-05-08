@@ -1,31 +1,17 @@
 ---
-title: "Dlaczego kolejność przekształcania jest ważna"
-ms.custom: 
+title: Dlaczego kolejność przekształcania jest ważna
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Dlaczego kolejność przekształcania jest ważna
 Pojedynczy <xref:System.Drawing.Drawing2D.Matrix> obiektu można przechowywać pojedyncze przekształcenie lub sekwencję transformacji. Drugie jest nazywany złożone przekształcenia. Macierzy transformacji złożonego mnożąc macierzy transformacji indywidualnych.  
@@ -35,7 +21,7 @@ Pojedynczy <xref:System.Drawing.Drawing2D.Matrix> obiektu można przechowywać p
   
  Powodem, dla którego kolejność jest ważna jest, że przekształcenia, takie jak obracanie i skalowanie są wykonywane względem źródła współrzędnych. Skalowanie obiektu, który skupia się na początku daje różne wyniki niż skalowania obiektu, który został przeniesiony poza źródła. Podobnie obrót obiektu, który skupia się na początku daje różne wyniki niż Obracanie obiektu, który został przeniesiony poza źródła.  
   
- W poniższym przykładzie łączy skalowanie, obracanie i tłumaczenia (w tej kolejności) do utworzenia złożonego transformacji. Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> przekazany do <xref:System.Drawing.Graphics.RotateTransform%2A> metoda wskazuje, że obrót wykonaj skalowanie. Podobnie, argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> przekazany do <xref:System.Drawing.Graphics.TranslateTransform%2A> — metoda wskazuje, że tłumaczenia przeprowadzić obrót. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>i <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> są elementami członkowskimi <xref:System.Drawing.Drawing2D.MatrixOrder> wyliczenia.  
+ W poniższym przykładzie łączy skalowanie, obracanie i tłumaczenia (w tej kolejności) do utworzenia złożonego transformacji. Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> przekazany do <xref:System.Drawing.Graphics.RotateTransform%2A> metoda wskazuje, że obrót wykonaj skalowanie. Podobnie, argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> przekazany do <xref:System.Drawing.Graphics.TranslateTransform%2A> — metoda wskazuje, że tłumaczenia przeprowadzić obrót. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> i <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> są elementami członkowskimi <xref:System.Drawing.Drawing2D.MatrixOrder> wyliczenia.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

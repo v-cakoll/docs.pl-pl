@@ -1,13 +1,6 @@
 ---
 title: '&lt;IPv6&gt; elementu (ustawienia sieciowe)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4a98d1d21d7df4e88c668262e60397029fe44c5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b73e5d781829292513e809c39ac9de9dfc6d0e8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; elementu (ustawienia sieciowe)
 Internet Protocol w wersji 6 (IPv6) umożliwia odpowiedzi z przestarzałych elementów członkowskich <xref:System.Net.Dns> klasy.  
   
  \<Konfiguracja >  
-\<System.NET >  
+\<system.net>  
 \<Ustawienia >  
 \<IPv6 >  
   

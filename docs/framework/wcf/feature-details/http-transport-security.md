@@ -1,29 +1,17 @@
 ---
 title: Zabezpieczenia transportu HTTP
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc284f82f974d9b34ff1cf6732d2ee7b95528c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
-Korzystając z protokołu HTTP jako transportu, zabezpieczenia przez implementację protokołu Secure Sockets Layer (SSL). Protokół SSL jest powszechnie używany w Internecie do uwierzytelniania usługi na kliencie, a następnie zapewnienie poufności (szyfrowanie) do kanału. W tym temacie wyjaśniono, jak działa protokół SSL i jak jest zaimplementowana w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Korzystając z protokołu HTTP jako transportu, zabezpieczenia przez implementację protokołu Secure Sockets Layer (SSL). Protokół SSL jest powszechnie używany w Internecie do uwierzytelniania usługi na kliencie, a następnie zapewnienie poufności (szyfrowanie) do kanału. W tym temacie wyjaśniono, jak działa protokół SSL i jak jest zaimplementowana w systemie Windows Communication Foundation (WCF).  
   
 ## <a name="basic-ssl"></a>Podstawowy protokołu SSL  
  Jak działa protokół SSL jest najlepsze objaśnione przez typowy scenariusz, w takim przypadku banku witryny sieci Web. Lokacji umożliwia klientowi zalogować się przy użyciu nazwy użytkownika i hasła. Po uwierzytelniony, użytkownik może wykonywać transakcje, takie jak widok środki na koncie, zwrócić rachunków i przenieść pieniędzy z jednego konta.  
@@ -42,11 +30,11 @@ Korzystając z protokołu HTTP jako transportu, zabezpieczenia przez implementac
  Każdy certyfikat ma dwa klucze, klucza prywatnego i klucz publiczny i dwa są określane jako *exchange pary kluczy*. Krótko mówiąc klucza prywatnego jest znany tylko do właściciela certyfikatu klucza publicznego jest do odczytu z certyfikatu. Albo klucz może służyć do szyfrowania lub odszyfrowywania digest, wyznaczania wartości skrótu, lub innego klucza, ale tylko jako sprzeczne operacje. Na przykład jeśli klienta są szyfrowane przy użyciu klucza publicznego, tylko witryna może odszyfrować wiadomości przy użyciu klucza prywatnego. Podobnie jeśli w lokacji są szyfrowane przy użyciu klucza prywatnego, klient może odszyfrować przy użyciu klucza publicznego. To gwarantuje klientowi czy komunikaty wymianie tylko z Właściciel klucza prywatnego ponieważ mogły być odszyfrowane tylko komunikatów szyfrowanych za pomocą klucza prywatnego z kluczem publicznym. Witryny jest pewność, że jest wymiana komunikatów z klienta, który został zaszyfrowany za pomocą klucza publicznego. Tego programu exchange jest zabezpieczone tylko w przypadku początkowego uzgadniania, czyli Dlaczego wiele innych odbywa się do tworzenia rzeczywistych klucza symetrycznego. Niemniej jednak cała komunikacja są zależne od usługi o certyfikat SSL.  
   
 ## <a name="implementing-ssl-with-wcf"></a>Implementacja protokołu SSL z programem WCF  
- Zabezpieczenia transportu HTTP (lub SSL) znajduje się poza programem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Protokół SSL można zaimplementować w jeden z dwóch sposobów; decydującym czynnikiem jest jak aplikacja jest hostowana:  
+ Zabezpieczenia transportu HTTP (lub SSL) zapewnia zewnętrznie WCF. Protokół SSL można zaimplementować w jeden z dwóch sposobów; decydującym czynnikiem jest jak aplikacja jest hostowana:  
   
--   Jeśli używasz Internet Information Services (IIS) jako sieci [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hosta, skonfigurować usługę SSL za pomocą infrastruktury usługi IIS.  
+-   Jeśli korzystasz z usług Internet Information Services (IIS) jako hosta usługi WCF, umożliwia konfigurowanie usługi SSL infrastruktury usługi IIS.  
   
--   Jeśli tworzysz własnym hostowanej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, można powiązać certyfikatu SSL z adresu przy użyciu narzędzia HttpCfg.exe.  
+-   Jeśli tworzysz aplikację hostowania samoobsługowego WCF można powiązać certyfikatu SSL z adresu przy użyciu narzędzia HttpCfg.exe.  
   
 ### <a name="using-iis-for-transport-security"></a>Za pomocą usług IIS zabezpieczeń transportu  
   
@@ -61,7 +49,7 @@ Korzystając z protokołu HTTP jako transportu, zabezpieczenia przez implementac
  Aby skonfigurować certyfikaty do użycia z [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [Certificates_IIS_SP1_Ops](http://go.microsoft.com/fwlink/?LinkId=88602).  
   
 ### <a name="using-httpcfg-for-ssl"></a>Za pomocą tak dla protokołu SSL  
- Jeśli tworzysz własnym hostowanej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, Pobierz narzędzia HttpCfg.exe dostępne pod adresem [lokacji narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=29002).  
+ Jeśli tworzysz aplikację hostowania samoobsługowego WCF, Pobierz narzędzia HttpCfg.exe dostępne pod adresem [lokacji narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
  Aby uzyskać więcej informacji o konfigurowaniu portów za pomocą certyfikatu X.509 przy użyciu narzędzia HttpCfg.exe, zobacz [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   

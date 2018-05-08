@@ -1,26 +1,16 @@
 ---
-title: "Porady: określanie, do jakiego typu odnosi się zmienna obiektu (Visual Basic)"
-ms.custom: 
+title: 'Porady: określanie, do jakiego typu odnosi się zmienna obiektu (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TypeOf operator [Visual Basic], determining object variable type
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5dd6785ecd48be3f0455de63b9e3f13a485ddbb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dfd4ed87b65f536802ae71cbc3de41e1c4f83af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Porady: określanie, do jakiego typu odnosi się zmienna obiektu (Visual Basic)
 Zmienna obiektu zawiera wskaźnik do danych przechowywanych w innym miejscu. Typ danych można zmienić w czasie wykonywania. W dowolnym momencie można użyć <xref:System.Type.GetTypeCode%2A> metody w celu określenia bieżącego typu czasu wykonywania, lub [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) można sprawdzić, czy bieżący typu run-time jest zgodny z określonym typem.  
@@ -68,4 +58,4 @@ Zmienna obiektu zawiera wskaźnik do danych przechowywanych w innym miejscu. Typ
  <xref:System.TypeCode>  
  [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+ [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

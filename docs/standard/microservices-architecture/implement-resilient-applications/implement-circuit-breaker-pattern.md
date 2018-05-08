@@ -1,21 +1,14 @@
 ---
-title: "Implementacja wzorca wyłącznika"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementacja wzorca wyłącznika"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Implementacja wzorca wyłącznika
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementacja wzorca wyłącznika
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Implementacja wzorca wyłącznika
 
@@ -147,7 +140,7 @@ Ten typ błędu może być również wyświetlany podczas uruchamiania, gdy apli
 
 Sposób eShopOnContainers rozwiązuje ten problem jest za pomocą wzorca ponownych prób, które firma Microsoft przedstawionymi wcześniej. Należy również określić powód błędu, podczas uruchamiania rozwiązania, można uzyskać ślady dziennika lub ostrzeżenia podobne do poniższych:
 
-> "**1 Ponów zaimplementowany przy użyciu jego Polly RetryPolicy**, z powodu: System.Net.Http.HttpRequestException: Wystąpił błąd podczas wysyłania żądania. ---&gt;System.Net.Http.CurlException: Nie można nawiązać połączenia z serwerem\\n na System.Net.Http.CurlHandler.ThrowIfCURLEError (błąd CURLcode)\\n na \[... \].
+> "**1 Ponów zaimplementowany przy użyciu jego Polly RetryPolicy**, z powodu: System.Net.Http.HttpRequestException: Wystąpił błąd podczas wysyłania żądania. ---&gt; System.Net.Http.CurlException: Nie można nawiązać połączenia z serwerem\\n na System.Net.Http.CurlHandler.ThrowIfCURLEError (błąd CURLcode)\\n na \[... \].
 
 ## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Testowanie wyłącznik w eShopOnContainers
 
@@ -171,9 +164,9 @@ To żądanie wyłącza oprogramowania pośredniczącego.
 
 Na przykład gdy aplikacja jest uruchomiona, można włączyć oprogramowanie pośredniczące dokonując żądania za pomocą następującego identyfikatora URI w dowolnej przeglądarce. Należy pamiętać, że porządkowania mikrousługi korzysta z portu 5103.
 
-http://localhost:5103 / niepowodzeniem? Włącz
+http://localhost:5103/failing?enable
 
-Następnie można sprawdzić stan, za pomocą identyfikatora URI [http://localhost:5103 / niepowodzeniem](http://localhost:5103/failing), jak pokazano na rysunku nr 10-4.
+Następnie można sprawdzić stan, za pomocą identyfikatora URI [ http://localhost:5103/failing ](http://localhost:5103/failing), jak pokazano na rysunku nr 10-4.
 
 ![](./media/image4.png)
 
@@ -235,12 +228,12 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Spróbuj ponownie wzorzec**
+-   **Spróbuj ponownie wzorca**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **Elastyczność połączenia** (Entity Framework Core) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Elastyczność połączenia** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (.NET odporności i biblioteki przejściowy błąd obsługi) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (.NET odporności i przejściowy błąd obsługi biblioteki) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
 -   **Wzorzec wyłącznika**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)

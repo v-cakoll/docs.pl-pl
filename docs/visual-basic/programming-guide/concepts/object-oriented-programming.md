@@ -1,21 +1,12 @@
 ---
 title: Programowanie zorientowane obiektowo (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 950f080949dce0fc1a2834825d2f7c945007fb7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programowanie zorientowane obiektowo (Visual Basic)
 Programowanie zorientowane obiektowo, łącznie z hermetyzacji, dziedziczenia i polimorfizm Visual Basic zapewnia pełną obsługę.  
@@ -60,7 +51,7 @@ Programowanie zorientowane obiektowo, łącznie z hermetyzacji, dziedziczenia i 
   
 -   [Typy ogólne](#generics)  
   
--   [Obiekty delegowane](#delegates)  
+-   [Delegaci](#delegates)  
   
 ## <a name="classes-and-objects"></a>Klasy i obiekty  
 Warunki *klasy* i *obiektu* są czasami używane zamiennie, ale w rzeczywistości opisano klasy *typu* obiektów, gdy obiekty są użyteczne  *wystąpienia* klas. Dlatego utworzenie obiektu jest nazywany *wystąpienia*. Przy użyciu odpowiednio planu, klasa to umożliwi, a obiekt jest budynku z tego planu.
@@ -83,9 +74,9 @@ End Structure
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
 
-- [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)
 
 ### <a name="class-members"></a>Członkowie klasy
 Każda klasa może mieć różne *klasy elementów członkowskich* zawierające właściwości, które opisują dane klasy, metody definiujące zachowanie klasy i zdarzenia, które zapewniają komunikację między różnych klas i obiektów.
@@ -135,13 +126,13 @@ Większość właściwości mają metody lub procedury zarówno Ustawianie i pob
 
 Aby uzyskać więcej informacji, zobacz:
   
--   [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Get — instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
+-   [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
   
--   [Set — instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)  
+-   [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)  
   
--   [Tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md)  
+-   [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
 -   [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
@@ -178,13 +169,13 @@ W większości przypadków należy zadeklarować metody w ramach definicji klasy
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
 
-- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
 
-- [Przeciążenia](../../../visual-basic/language-reference/modifiers/overloads.md)  
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
 
-- [Metody rozszerzenia](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+- [Metody rozszerzeń](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
 
 #### <a name="constructors"></a>Konstruktorów  
 Konstruktory są metody klasy, które są wykonywane automatycznie, gdy utworzono obiekt danego typu. Konstruktory zainicjować zazwyczaj elementy członkowskie danych nowego obiektu. Konstruktor można uruchomić tylko raz, podczas tworzenia klasy. Ponadto w Konstruktorze kod zawsze uruchamiany przed innymi kod w klasie. Jednak w taki sam sposób jak w przypadku innych metod, można utworzyć wielu przeciążeń konstruktora.
@@ -241,13 +232,13 @@ Dostępne są następujące modyfikatorów dostępu:
 
 |Modyfikator Visual Basic|Definicja|
 |---------------------------|----------------|
-|[Publiczna](../../../visual-basic/language-reference/modifiers/public.md)|Typ lub element członkowski jest możliwy przez inny kod, w tym samym zestawie lub innego zestawu, który odwołuje się on.|
-|[Prywatne](../../../visual-basic/language-reference/modifiers/private.md)|Typ lub element członkowski, jest możliwy tylko przez kod w tej samej klasy.|
-|[Chronione](../../../visual-basic/language-reference/modifiers/protected.md)|Typ lub element członkowski, jest możliwy tylko przez kod w tej samej klasy lub w klasie pochodnej.|
+|[Public](../../../visual-basic/language-reference/modifiers/public.md)|Typ lub element członkowski jest możliwy przez inny kod, w tym samym zestawie lub innego zestawu, który odwołuje się on.|
+|[Private](../../../visual-basic/language-reference/modifiers/private.md)|Typ lub element członkowski, jest możliwy tylko przez kod w tej samej klasy.|
+|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|Typ lub element członkowski, jest możliwy tylko przez kod w tej samej klasy lub w klasie pochodnej.|
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Typ lub element członkowski jest możliwy przez dowolny kod w tym samym zestawie, ale nie z innego zestawu.|
 |`Protected Friend`|Typ lub element członkowski jest dostępna przez dowolny kod w tym samym zestawie lub dowolnej klasy pochodnej w innym zestawie.|
 
-Aby uzyskać więcej informacji, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 ### <a name="instantiating-classes"></a>Utworzenie wystąpienia klasy  
 Do utworzenia obiektu, należy utworzyć wystąpienia klasy lub utworzyć wystąpienia klasy.
@@ -274,11 +265,11 @@ Dim sampleObject = New SampleClass With
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [New — Operator](../../../visual-basic/language-reference/operators/new-operator.md)
+- [Operator New](../../../visual-basic/language-reference/operators/new-operator.md)
 
-- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Inicjatory obiektów: typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a>Udostępniony klas i członków  
+###  <a name="Static"></a> Udostępniony klas i członków  
  Udostępnionego elementu członkowskiego klasy jest właściwość, procedura lub pola, które jest współużytkowana przez wszystkie wystąpienia klasy.  
   
  Aby zdefiniować udostępnionego elementu członkowskiego:  
@@ -299,9 +290,9 @@ MsgBox(SampleClass.SampleString)
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Udostępnione](../../../visual-basic/language-reference/modifiers/shared.md)  
+-   [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
   
--   [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
   
 ### <a name="anonymous-types"></a>Typy anonimowe  
 Typy anonimowe umożliwiają tworzenie obiektów bez pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma używać nazwy i zawiera właściwości, które określisz w odwołaniu do obiektu.
@@ -348,7 +339,7 @@ End Class
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Inherits — instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits, instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md)
 
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 
@@ -361,8 +352,8 @@ Następujących modyfikatorów są używane do kontrolowania sposobu przesłoni�
 
 |Modyfikator Visual Basic|Definicja|
 |---------------------------|----------------|
-|[Możliwym do zastąpienia](../../../visual-basic/language-reference/modifiers/overridable.md)|Umożliwia elementu członkowskiego klasy do zastąpienia w klasie pochodnej.|
-|[Zastąpienia](../../../visual-basic/language-reference/modifiers/overrides.md)|Zastępuje członka wirtualnego (możliwym do zastąpienia) zdefiniowana w klasie podstawowej.|
+|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Umożliwia elementu członkowskiego klasy do zastąpienia w klasie pochodnej.|
+|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Zastępuje członka wirtualnego (możliwym do zastąpienia) zdefiniowana w klasie podstawowej.|
 |[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Element członkowski zapobiega zastępowaniu klasy dziedziczące.|
 |[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Wymaga, aby element członkowski klasy do zastąpienia w klasie pochodnej.|
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Ukrywa element członkowski dziedziczona z klasy podstawowej|
@@ -393,9 +384,9 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
 
-- [Interface — instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
 
-- [Implements — instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md)  
+- [Implements, instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md)  
 
 ## <a name="generics"></a>Typy ogólne
 Klasy, struktury, interfejsy i metody w środowisku .NET mogą obejmować *parametry typu* definiującą typów obiektów, które mogą przechowywać lub użyć. Najbardziej typowym przykładem typów ogólnych jest kolekcją, w którym można określić typ obiektów, które mają być przechowywane w kolekcji.  
@@ -451,11 +442,11 @@ End Class
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Obiekty delegowane](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Delegaci](../../../visual-basic/programming-guide/language-features/delegates/index.md)
 
-- [Delegate — instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
-- [AddressOf — Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>Zobacz także
  [Przewodnik programowania w języku Visual Basic](../../../visual-basic/programming-guide/index.md)

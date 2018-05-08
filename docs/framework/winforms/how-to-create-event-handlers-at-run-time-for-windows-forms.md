@@ -1,13 +1,6 @@
 ---
-title: "Porady: tworzenie programów do obsługi zdarzeń w czasie wykonywania dla formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: tworzenie programów do obsługi zdarzeń w czasie wykonywania dla formularzy systemu Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a636e42c85ef3703a2831583aea9839e13effeaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38453c751e6cc63827f3f1e9d20ad2ebdfc841d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Porady: tworzenie programów do obsługi zdarzeń w czasie wykonywania dla formularzy systemu Windows
 Oprócz tworzenia zdarzeń przy użyciu narzędzia Projektant formularzy systemu Windows, można również utworzyć program obsługi zdarzeń w czasie wykonywania. Ta akcja umożliwia łączenie z na podstawie warunków w kodzie w czasie wykonywania, a nie przejdą oni połączone po początkowym uruchomieniu programu obsługi zdarzeń.  

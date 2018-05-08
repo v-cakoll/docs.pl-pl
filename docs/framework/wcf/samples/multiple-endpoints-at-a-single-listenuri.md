@@ -1,24 +1,12 @@
 ---
-title: "Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri"
-ms.custom: 
+title: Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3eb2036ffbb7c5e8cae77ebc1a86e07d31626c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri
 W tym przykładzie pokazano, usługa, która obsługuje wiele punktów końcowych w pojedynczym `ListenUri`. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.  
@@ -50,7 +38,7 @@ W tym przykładzie pokazano, usługa, która obsługuje wiele punktów końcowyc
   
  Wszystkie trzy punkty końcowe znajdują się w tym samym `ListenUri` i używać tego samego `binding` — punkty końcowe w tym samym `ListenUri` musi mieć tego samego powiązania, ponieważ są one udostępnianie stosu pojedynczego kanału, który wiadomości pod tym adresem fizycznym nasłuchuje maszyny. `address` Każdego punktu końcowego jest identyfikatorem URN; chociaż zazwyczaj adresy reprezentują lokalizacje fizyczne, w rzeczywistości adres może być dowolny rodzaj identyfikatora URI, ponieważ adres jest używany do dopasowywania i ich filtrowania, jak przedstawiono w przykładach w tym przykładzie.  
   
- Ponieważ wszystkie trzy punkty końcowe mają takie same `ListenUri`, po nadejściu wiadomości, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] należy zdecydować, który punkt końcowy komunikatu jest przeznaczony do. Każdy punkt końcowy ma filtr komunikatu, który składa się z dwóch części: filtr adresów i filtr umowy. Kryteria filtru adresu `To` wiadomości SOAP adres punktu końcowego usługi. Na przykład tylko komunikaty adresowane `To "Urn:OtherEcho"` nadają się do trzeciego punktu końcowego tej usługi. Akcje skojarzone z operacjami określonej umowy spełniają kryteria filtru kontraktu. Na przykład wiadomości z akcją `IEcho`. `Echo`Dopasowuje filtry kontraktu w drugim i innych punktów końcowych tej usługi, ponieważ oba te punkty końcowe hosta `IEcho` kontraktu.  
+ Ponieważ wszystkie trzy punkty końcowe mają takie same `ListenUri`, po nadejściu wiadomości, Windows Communication Foundation (WCF) należy zdecydować, który punkt końcowy komunikatu jest przeznaczony do. Każdy punkt końcowy ma filtr komunikatu, który składa się z dwóch części: filtr adresów i filtr umowy. Kryteria filtru adresu `To` wiadomości SOAP adres punktu końcowego usługi. Na przykład tylko komunikaty adresowane `To "Urn:OtherEcho"` nadają się do trzeciego punktu końcowego tej usługi. Akcje skojarzone z operacjami określonej umowy spełniają kryteria filtru kontraktu. Na przykład wiadomości z akcją `IEcho`. `Echo` Dopasowuje filtry kontraktu w drugim i innych punktów końcowych tej usługi, ponieważ oba te punkty końcowe hosta `IEcho` kontraktu.  
   
  W związku z tym kombinację adresu filtry i kontrakt umożliwia trasy każdy komunikat przychodzący w tej usłudze `ListenUri` do właściwego punktu końcowego. Trzeci punktu końcowego jest zróżnicowana od dwóch innych, ponieważ akceptuje on komunikaty wysyłane do innego adresu z innych punktów końcowych. Pierwszy i drugi punktów końcowych, które różnią się od siebie na podstawie ich umów (Akcja wiadomości przychodzącej).  
   
@@ -86,7 +74,7 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   

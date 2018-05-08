@@ -1,13 +1,6 @@
 ---
-title: "Wskazówki: włączanie przeciągania i upuszczania w kontrolce użytkownika"
-ms.custom: 
+title: 'Wskazówki: włączanie przeciągania i upuszczania w kontrolce użytkownika'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d87872d3009b46878b7b614c1aef728d5b1d511d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e4dba856b973f1210f2d088de3ed8ae5df2c6988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Wskazówki: włączanie przeciągania i upuszczania w kontrolce użytkownika
 Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowego, który mogą uczestniczyć w transferu danych przeciągania i upuszczania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -129,11 +117,11 @@ Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowe
   
     -   Wywołuje statycznych <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> metodę, aby zainicjować operację przeciągania i upuszczania. Następujące trzy parametry do przekazania <xref:System.Windows.DragDrop.DoDragDrop%2A> metody:  
   
-        -   `dragSource`— Odwołanie do tego formantu.  
+        -   `dragSource` — Odwołanie do tego formantu.  
   
-        -   `data`— <xref:System.Windows.DataObject> Utworzony w poprzednim kodzie.  
+        -   `data` — <xref:System.Windows.DataObject> Utworzony w poprzednim kodzie.  
   
-        -   `allowedEffects`Dozwolonych operacji przeciągania i upuszczania, które są <xref:System.Windows.DragDropEffects.Copy> lub <xref:System.Windows.DragDropEffects.Move>.  
+        -   `allowedEffects` Dozwolonych operacji przeciągania i upuszczania, które są <xref:System.Windows.DragDropEffects.Copy> lub <xref:System.Windows.DragDropEffects.Move>.  
   
 3.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
   
@@ -288,7 +276,7 @@ Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowe
   
 7.  Przeciągnij tekst nad formantem okręgu bez porzuceniem jej. Zmiany koło z blue zielony.  
   
-     ![Efekty przeciągnij &#45; i &#45; upuszczenie](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")  
+     ![Efekty przeciągnij&#45;i&#45;porzucić operacji](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")  
   
 8.  Przeciągnij tekst od kontroli okręgu. Zmiany koło z zielonym kopii na niebieski.  
   

@@ -1,20 +1,13 @@
 ---
-title: "C# wyrażeń — samouczek języka C#"
-description: "wyrażenia, argumentów i operatory są blokami konstrukcyjnymi języka C#"
-keywords: ".NET, csharp, wyrażenia, operatora, operandu"
-author: BillWagner
-ms.author: wiwagn
+title: C# wyrażeń — samouczek języka C#
+description: wyrażenia, argumentów i operatory są blokami konstrukcyjnymi języka C#
 ms.date: 11/06/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expressions"></a>Wyrażenia
 
@@ -43,10 +36,10 @@ Poniżej przedstawiono podsumowanie C# dla operatorów, wyświetlanie kategorii 
     - `new T(...){...}`: Tworzenie obiektów za pomocą inicjatora
     - `new {...}`: Inicjator obiektu anonimowe
     - `new T[...]`: Do utworzenia tablicy
-    - `typeof(T)`: Uzyskanie <xref:System.Type> obiekt do`T`
+    - `typeof(T)`: Uzyskanie <xref:System.Type> obiekt do `T`
     - `checked(x)`: Obliczyć wyrażenia w kontekście zaznaczenia
     - `unchecked(x)`: Obliczyć wyrażenia w kontekście unchecked
-    - `default(T)`: Wartość domyślna typu uzyskać`T`
+    - `default(T)`: Wartość domyślna typu uzyskać `T`
     - `delegate {...}`: Anonimowy — funkcja (metody anonimowej)
 * Jednoargumentowe
     - `+x`: Tożsamości
@@ -55,7 +48,7 @@ Poniżej przedstawiono podsumowanie C# dla operatorów, wyświetlanie kategorii 
     - `~x`: Bitową negację
     - `++x`: Przyrost wstępnego
     - `--x`: Zmniejszenie wstępnego
-    - `(T)x`: Jawnie przekonwertować `x` na typ`T`
+    - `(T)x`: Jawnie przekonwertować `x` na typ `T`
     - `await x`: Poczekaj asynchronicznie `x` do ukończenia
 * Mnożenia
     - `x * y`: Mnożenia
@@ -73,7 +66,7 @@ Poniżej przedstawiono podsumowanie C# dla operatorów, wyświetlanie kategorii 
     - `x <= y`: Mniejsza niż lub równe
     - `x >= y`: Większe lub równe
     - `x is T`: Zwracany `true` Jeśli `x` jest `T`, `false` inaczej
-    - `x as T`: Zwracany `x` typu `T`, lub `null` Jeśli `x` nie jest`T`
+    - `x as T`: Zwracany `x` typu `T`, lub `null` Jeśli `x` nie jest `T`
 * Równość
     - `x == y`: Równe
     - `x != y`: Nie jest równy
@@ -84,13 +77,13 @@ Poniżej przedstawiono podsumowanie C# dla operatorów, wyświetlanie kategorii 
 * OR logiczne
     - `x | y`: Liczba całkowita bitowe lub logiczna operatora logicznego OR
 * AND warunkowe
-    - `x && y`: Oblicza `y` tylko wtedy, gdy `x` nie jest`false`
+    - `x && y`: Oblicza `y` tylko wtedy, gdy `x` nie jest `false`
 * OR warunkowe
-    - `x || y`: Oblicza `y` tylko wtedy, gdy `x` nie jest`true`
+    - `x || y`: Oblicza `y` tylko wtedy, gdy `x` nie jest `true`
 * Łączenie wartości null
     - `x ?? y`: Daje w wyniku `y` Jeśli `x` ma wartość null, aby `x` inaczej
 * Warunkowe
-    - `x ? y : z`: Oblicza `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest`false`
+    - `x ? y : z`: Oblicza `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
 * Przypisanie ani funkcji anonimowej
     - `x = y`: Przypisania
     - `x op= y`: Przydział złożony; Operatory obsługiwane są

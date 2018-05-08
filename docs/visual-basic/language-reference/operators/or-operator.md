@@ -1,12 +1,6 @@
 ---
 title: Or — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Or
 helpviewer_keywords:
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4c9429eb2bdeb86bfa73786433231fdc22a230d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e02f619a81ee3c15321dfd44963c1a7d29843ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="or-operator-visual-basic"></a>Or — Operator (Visual Basic)
 Dokonuje logicznego rozłączenia dwóch `Boolean` wyrażeń lub bitowego rozłączenia dwóch wyrażeń liczbowych.  
@@ -41,13 +32,13 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagany. Wszelkie `Boolean` lub wyrażenia liczbowego. Aby uzyskać `Boolean` porównania, `result` jest łączną sumę logiczną na dwóch `Boolean` wartości. Dla Operacje bitowe `result` włącznie bitowego rozłączenia dwóch wzorców liczbowych bit reprezentujący wartość liczbową.  
+ Wymagana. Wszelkie `Boolean` lub wyrażenia liczbowego. Aby uzyskać `Boolean` porównania, `result` jest łączną sumę logiczną na dwóch `Boolean` wartości. Dla Operacje bitowe `result` włącznie bitowego rozłączenia dwóch wzorców liczbowych bit reprezentujący wartość liczbową.  
   
  `expression1`  
- Wymagany. Wszelkie `Boolean` lub wyrażenia liczbowego.  
+ Wymagana. Wszelkie `Boolean` lub wyrażenia liczbowego.  
   
  `expression2`  
- Wymagany. Wszelkie `Boolean` lub wyrażenia liczbowego.  
+ Wymagana. Wszelkie `Boolean` lub wyrażenia liczbowego.  
   
 ## <a name="remarks"></a>Uwagi  
  Dla `Boolean` porównania, `result` jest `False` przypadku i tylko wtedy, gdy oba `expression1` i `expression2` obliczać `False`. W poniższej tabeli przedstawiono sposób `result` jest określana.  
@@ -100,5 +91,5 @@ result = expression1 Or expression2
  [Operatory logiczne/bitowe (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [OrElse — Operator](../../../visual-basic/language-reference/operators/orelse-operator.md)  
+ [OrElse, operator](../../../visual-basic/language-reference/operators/orelse-operator.md)  
  [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

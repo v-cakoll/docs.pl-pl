@@ -1,19 +1,13 @@
 ---
 title: Liczby w C# samouczek - C# lokalnego poradniki Szybki Start
 description: Naucz się C# eksplorując typy liczbowe, ich właściwości i metody.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: cf8f00193b4fa66ff444fe8e40942c39e99d10b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>Liczby w języku C# — Szybki Start
 
@@ -278,7 +272,7 @@ Console.WriteLine(third);
 
 Należy pamiętać, że `0.3` powtarzające się nie jest dokładnie taka sama jak `1/3`.
 
-***Challenge***
+***żądanie***
 
 Spróbuj inne obliczenia z dużą liczbą, małej liczby, mnożenia i dzielenia przy użyciu `double` typu.  Spróbuj bardziej skomplikowane obliczenia.
 
@@ -310,7 +304,7 @@ Console.WriteLine(c / d);
 
 Należy zauważyć, że obliczenia przy użyciu typu decimal zawiera więcej cyfr z prawej strony punktu dziesiętnego. 
 
-***Challenge***
+***żądanie***
 
 Skoro już znasz różne typy liczbowe pisania kodu, który oblicza obszaru koło którego radius jest 2,50 cm. Należy pamiętać, że obszar koła jest radius kwadrat pomnożona przez PI. Jedną wskazówkę: .NET zawiera stałą Pi, <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. 
 

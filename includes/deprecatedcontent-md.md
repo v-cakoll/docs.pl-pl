@@ -1,1 +1,0 @@
-W tym materiale omówiono przestarzałe typy i przestrzenie nazw. Aby uzyskać więcej informacji, zobacz [przestarzałe typy w programie Windows Workflow Foundation 4.5](http://aka.ms/wfdeprecatedtypes).

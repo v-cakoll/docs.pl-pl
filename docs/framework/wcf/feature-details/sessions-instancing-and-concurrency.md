@@ -1,26 +1,12 @@
 ---
 title: Sesje, tworzenie wystąpień i współbieżność
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesje, tworzenie wystąpień i współbieżność
 A *sesji* jest korelacji wszystkich wiadomości wysłanych między dwoma punktami końcowymi. *Tworzenie wystąpienia* odwołuje się do kontrolowania okres istnienia obiektów zdefiniowanych przez użytkownika usług i ich powiązane <xref:System.ServiceModel.InstanceContext> obiektów. *Współbieżność* jest terminu podanego do formantu liczbę wątków działających w <xref:System.ServiceModel.InstanceContext> w tym samym czasie.  
@@ -30,7 +16,7 @@ A *sesji* jest korelacji wszystkich wiadomości wysłanych między dwoma punktam
 ## <a name="sessions"></a>Kategoria Sessions  
  Gdy kontrakt usługi Określa <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> właściwości <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, że kontrakt jest informujący o tym, że wszystkie wywołania (to znaczy podstawowej wymiany komunikatów obsługujących wywołania) musi być częścią ta sama konwersacja. Jeśli kontrakt Określa czy umożliwia sesji, ale nie wymaga jednego, mogą łączyć się klienci, a albo ustanowić sesję, czy nie. Jeśli sesja zakończy się oraz wiadomości przesyłane z tego samego opartymi na sesji jest zgłaszany wyjątek kanału.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesje mają następujące funkcje koncepcyjnej główne:  
+ Sesje WCF oferują następujące funkcje koncepcyjnej główne:  
   
 -   Jawnie są inicjowane i został przerwany przez wywołanie aplikacji.  
   
@@ -38,9 +24,9 @@ A *sesji* jest korelacji wszystkich wiadomości wysłanych między dwoma punktam
   
 -   Sesje skorelowania grupy wiadomości w konwersacji. Znaczenie tej korelacji jest klasą abstrakcyjną. Na przykład jeden kanał opartymi na sesji mogą mieć związek wiadomości opartych na połączenie sieciowe udostępnionych podczas innego opartymi na sesji kanału może skorelować wiadomości opartych na udostępnionych tagu w treści wiadomości. Funkcje, które mogą być uzyskane z sesji są zależne od charakteru korelacji.  
   
--   Brak ma skojarzone z magazynu danych ogólnych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesji.  
+-   Brak ma magazynu ogólnych danych skojarzonych z sesją programu WCF.  
   
- Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji i funkcji umożliwia, można zauważyć następujące różnice między tego rodzaju sesji i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesji:  
+ Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji i funkcji umożliwia, można zauważyć następujące różnice między tego rodzaju sesji i sesje WCF:  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są zawsze inicjowanych przez serwer.  
   
@@ -78,7 +64,7 @@ public class CalculatorService : ICalculatorInstance
   
  Użyj <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> konstruktora w celu utworzenia takiej usługi. Zapewnia alternatywę do wdrażania niestandardowego <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> po możesz podać wystąpienie określonego obiektu do użytku przez usługi singleton. Można użyć tego przeciążenia, gdy Twoje typ implementacji usługi jest trudne do skonstruowania (na przykład, jeśli nie implementuje domyślnego publicznego konstruktora bez parametrów).  
   
- Należy pamiętać, że jeśli obiekt został dostarczony do tego konstruktora, niektóre funkcje jest powiązany z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inaczej wystąpień pracy zachowanie. Na przykład wywołanie elementu <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> nie obowiązuje, gdy została podana pojedyncze wystąpienie obiektu. Podobnie inny mechanizm wersji wystąpienia jest ignorowana. <xref:System.ServiceModel.ServiceHost> Zawsze zachowuje się tak, jakby <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> ma ustawioną wartość właściwości <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> dla wszystkich operacji.  
+ Należy pamiętać, że jeśli obiekt został dostarczony do tego konstruktora, niektóre funkcje związane z do systemu Windows Communication Foundation (WCF) wystąpień zachowanie działają inaczej. Na przykład wywołanie elementu <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> nie obowiązuje, gdy została podana pojedyncze wystąpienie obiektu. Podobnie inny mechanizm wersji wystąpienia jest ignorowana. <xref:System.ServiceModel.ServiceHost> Zawsze zachowuje się tak, jakby <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> ma ustawioną wartość właściwości <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> dla wszystkich operacji.  
   
 ### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów InstanceContext  
  Można również sterować które podczas zamykania kanału sesji lub połączenia jest skojarzony z którym <xref:System.ServiceModel.InstanceContext> obiektu przez siebie wykonanie tego skojarzenia.  
@@ -92,7 +78,7 @@ public class CalculatorService : ICalculatorInstance
   
 -   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Każde wystąpienie usługi może mieć wiele wątków jednocześnie przetwarzanie komunikatów. Implementacja usługi musi być wielowątkowość ten tryb współbieżności.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Każde wystąpienie usługi przetwarza jeden komunikat w czasie, ale akceptuje wywołań wielobieżnej operacji. Usługa akceptuje tylko te wywołania, gdy wywołuje za pośrednictwem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu klienta.  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Każde wystąpienie usługi przetwarza jeden komunikat w czasie, ale akceptuje wywołań wielobieżnej operacji. Usługa akceptuje tylko te wywołania, gdy wywołuje za pośrednictwem obiektu klienta WCF.  
   
 > [!NOTE]
 >  Opis i tworzenia kodu korzystającego z bezpiecznie więcej niż jeden wątek może być trudne do zapisania pomyślnie. Przed użyciem <xref:System.ServiceModel.ConcurrencyMode.Multiple> lub <xref:System.ServiceModel.ConcurrencyMode.Reentrant> wartości, upewnij się, że usługa prawidłowo jest przeznaczony dla tych trybów. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

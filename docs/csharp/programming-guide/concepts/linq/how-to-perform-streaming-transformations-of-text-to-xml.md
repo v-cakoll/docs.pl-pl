@@ -1,21 +1,12 @@
 ---
-title: "Porady: wykonania przesyłania strumieniowego przekształcenia tekstu do pliku XML (C#)"
-ms.custom: 
+title: 'Porady: wykonania przesyłania strumieniowego przekształcenia tekstu do pliku XML (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 03c5ed5ef66db311ade751b5aad21de70b78f063
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4313c5263b6a219ec3c8d05a7b7938c41c7cc028
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Porady: wykonania przesyłania strumieniowego przekształcenia tekstu do pliku XML (C#)
 Jeden ze sposobów przetwarzania pliku tekstowego służy do zapisania — metoda rozszerzenia pliku tekstowego strumieni linii w czasie przy użyciu `yield return` utworzenia. Następnie można pisać zapytania LINQ, który przetwarza w pliku tekstowym w sposób odroczonego opóźnieniem. Jeśli następnie użyć <xref:System.Xml.Linq.XStreamingElement> do strumienia wyjściowego, następnie utworzyć transformację z pliku tekstowego z kod XML, który używa minimalnej ilości pamięci, niezależnie od rozmiaru pliku źródłowego.  

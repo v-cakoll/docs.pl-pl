@@ -1,32 +1,18 @@
 ---
 title: 'Instrukcje: Określanie wartości poświadczeń klienta'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 856d33f88b55c35927998b15acc7bbf8ff1e9fe2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e1133194fe925bca4fb79d8adc1975a2063450f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Instrukcje: Określanie wartości poświadczeń klienta
-Przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługi można określić, jak klient jest uwierzytelniony do usługi. Na przykład usługi można określić uwierzytelnienia klienta przy użyciu certyfikatu.  
+Za pomocą usługi Windows Communication Foundation (WCF), usługa może określić, jak klient jest uwierzytelniony do usługi. Na przykład usługi można określić uwierzytelnienia klienta przy użyciu certyfikatu.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Aby określić typ poświadczeń klienta  
   

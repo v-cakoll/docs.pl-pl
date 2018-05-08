@@ -1,29 +1,15 @@
 ---
 title: Manipulowania danymi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e899ef34964c8bb7ae9b827f329efe60a7f83a0c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 57d7342ab88bcafbb8bcd1d288254b5e81846975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-data"></a>Manipulowania danymi
 Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperzy było użycie wielu połączeń lub kursory po stronie serwera do rozwiązania niektórych scenariuszy. Gdy wiele połączeń były używane w sytuacji transakcyjnych, powiązany połączeń (z **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane. W następujących scenariuszach przedstawiono sposób użycia połączenia z włączoną obsługą MARS zamiast wielu połączeń.  

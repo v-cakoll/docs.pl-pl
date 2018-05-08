@@ -1,31 +1,19 @@
 ---
-title: "Instrukcje: Wdrażanie aplikacji integracji modelu COM+"
-ms.custom: 
+title: 'Instrukcje: Wdrażanie aplikacji integracji modelu COM+'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Instrukcje: Wdrażanie aplikacji integracji modelu COM+
 Raz napisano aplikacji COM + integration, warto wdrożyć ją na innym komputerze. W tym temacie opisano sposób przenoszenia aplikacji integracji modelu COM + z jednego komputera na inny.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Przenoszenie COM + hostowanej integracji aplikacji  
   
-1.  Upewnij się, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest zainstalowany na obu komputerach.  
+1.  Upewnij się, że WCF jest zainstalowany na obu komputerach.  
   
 2.  Eksportowanie aplikacji z maszyny A.  
   
@@ -35,11 +23,11 @@ Raz napisano aplikacji COM + integration, warto wdrożyć ją na innym komputerz
   
 5.  Skopiuj pliki Application.config i Application.manifest z katalogu głównego aplikacji na komputerze, A do katalogu głównego aplikacji na komputerze B.  
   
-6.  Edytuj adresy punktów końcowych usługi w pliku Application.config na komputerze B, aby zidentyfikować odpowiednią maszyny. Na przykład zmień http://machineA/MyService http://machineB/MyService.  
+6.  Edytuj adresy punktów końcowych usługi w pliku Application.config na komputerze B, aby zidentyfikować odpowiednią maszyny. Na przykład zmienić http://machineA/MyService do http://machineB/MyService.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Przenoszenie aplikacji hostowanych w sieci Web integracji  
   
-1.  Upewnij się, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest zainstalowany na obu komputerach.  
+1.  Upewnij się, że WCF jest zainstalowany na obu komputerach.  
   
 2.  Eksportowanie aplikacji z maszyny A.  
   

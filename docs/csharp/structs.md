@@ -1,20 +1,13 @@
 ---
-title: "Struktury — przewodnik C#"
-description: "Dowiedz się więcej o typie struktury i sposób ich tworzenia"
-keywords: .NET, .NET core, C#
-author: BillWagner
-ms.author: wiwagn
+title: Struktury — przewodnik C#
+description: Dowiedz się więcej o typie struktury i sposób ich tworzenia
 ms.date: 10/12/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 4c12e886ec388671fc47f08f8df6d6f2af8aac62
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structs"></a>Struktury
 A *struktury* jest typem wartości. Podczas tworzenia struktury zmiennej, do której przypisano struktury zawiera struktury danych rzeczywistych. Struktura jest przypisany do nowej zmiennej, są kopiowane. Nową zmienną i pierwotnej zmiennej w związku z tym zawierają dwa osobne kopie tych samych danych. Zmiany wprowadzone w jednej kopii nie wpływają na innej kopii.
@@ -68,7 +61,7 @@ Ostatnie dwa przykłady pokazują funkcje językowe wprowadzono w języku C# w w
 
 Drugi przedstawia *binarne literały*, pozwalają określić wzorce bit bezpośrednio, zamiast szesnastkowym.
 
-## <a name="nullable-types"></a>Typy dopuszczające wartości zerowe  
+## <a name="nullable-types"></a>Typy dopuszczające wartości null  
 Typy wartości zwykłej nie może mieć wartości [null](./language-reference/keywords/null.md). Można jednak utworzyć typy dopuszczające wartości zerowe wartości przez umieszczenie **?** po typie. Na przykład **int?** jest **int** typu, który ma także wartość [null](./language-reference/keywords/null.md). W CTS, typy dopuszczające wartości null są wystąpienia typu ogólnego struktury <xref:System.Nullable%601>. Typy dopuszczające wartości null są szczególnie przydatne, gdy są przekazywanie danych do i z baz danych, w których wartości liczbowych może mieć wartości null. Aby uzyskać więcej informacji, zobacz [typy dopuszczające wartości zerowe (C# przewodnik programowania w języku)](./programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Zobacz także

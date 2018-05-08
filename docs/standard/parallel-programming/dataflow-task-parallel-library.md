@@ -1,9 +1,7 @@
 ---
 title: Przepływ danych (Biblioteka zadań równoległych)
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +11,11 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 386d7a4ce7168fbe70d9037254a1540b7bf00478
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5581f825a23104ff005f3557de26420ee45b5c27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Przepływ danych (Biblioteka zadań równoległych)
 <a name="top"></a> Zadania biblioteki równoległych (TPL) zawiera składniki przepływu danych, aby zwiększyć niezawodność aplikacji z obsługą współbieżności. Te składniki przepływu danych są nazywane zbiorczo *przepływu danych tpl*. Ten model przepływu danych zamienia Programowanie oparte na aktora przez udostępnienie wiadomości w trakcie przekazywania dla coarse-grained przepływu danych i przetwarzanie potokowe zadania. Składniki przepływu danych kompilacji dla typów i planowania infrastruktury TPL oraz integrują się z obsługą języka C#, VB i F # programowania asynchronicznego. Te składniki przepływu danych są przydatne, jeśli masz wiele operacji, które muszą asynchronicznie komunikować się ze sobą, lub gdy użytkownik chce przetwarzać dane po jej udostępnieniu. Rozważmy na przykład aplikacja, która przetwarza dane obrazu z kamery internetowej. Przy użyciu modelu przepływu danych, aplikacja może przetwarzać ramki obrazu staną się one dostępne. Jeśli aplikacja zwiększa ramki obrazu, na przykład, wykonując światła zmniejszenie korektę lub efektu czerwonych utworzeniem *potoku* składników przepływu danych. Każdy etap potoku może używać więcej funkcji coarse-grained równoległości, takich jak funkcje, które są udostępniane przez TPL, aby przekształcić obrazu.  

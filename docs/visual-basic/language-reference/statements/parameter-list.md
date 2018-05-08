@@ -1,11 +1,6 @@
 ---
-title: "Lista parametrów (Visual Basic)"
+title: Lista parametrów (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - parameters [Visual Basic], Visual Basic
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c7190b618aa98c91b826ca7c065660d3b19c31a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 147a2501219db9f1f1c10f9cf1a81aa395b5ec2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-list-visual-basic"></a>Lista parametrów (Visual Basic)
 Określa parametry, które oczekuje procedury, gdy jest wywoływana. Wiele parametrów są oddzielone przecinkami. Poniżej przedstawiono składnię jeden parametr.  
@@ -36,22 +28,22 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="parts"></a>Części  
  `attributelist`  
- Opcjonalny. Lista atrybutów, które są stosowane do tego parametru. Musisz ją ująć [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").  
+ Opcjonalna. Lista atrybutów, które są stosowane do tego parametru. Musisz ją ująć [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").  
   
  `Optional`  
- Opcjonalny. Określa, że ten parametr nie jest wymagany, gdy procedura jest wywoływana.  
+ Opcjonalna. Określa, że ten parametr nie jest wymagany, gdy procedura jest wywoływana.  
   
  `ByVal`  
- Opcjonalny. Określa, że procedura nie można zastąpić lub ponownie przypisać zmiennej element bazowy odpowiadającego mu argumentu w wywoływanym kodzie.  
+ Opcjonalna. Określa, że procedura nie można zastąpić lub ponownie przypisać zmiennej element bazowy odpowiadającego mu argumentu w wywoływanym kodzie.  
   
  `ByRef`  
- Opcjonalny. Określa, czy procedurę można zmodyfikować odpowiedniego elementu zmiennej w wywoływanym kodzie w taki sam sposób można kodu wywołującego.  
+ Opcjonalna. Określa, czy procedurę można zmodyfikować odpowiedniego elementu zmiennej w wywoływanym kodzie w taki sam sposób można kodu wywołującego.  
   
  `ParamArray`  
- Opcjonalny. Określa, że ostatnim parametrem na liście parametrów opcjonalną tablicę elementów określonego typu danych. Dzięki temu kod wywołujący przekazać dowolnej liczby argumentów do procedury.  
+ Opcjonalna. Określa, że ostatnim parametrem na liście parametrów opcjonalną tablicę elementów określonego typu danych. Dzięki temu kod wywołujący przekazać dowolnej liczby argumentów do procedury.  
   
  `parametername`  
- Wymagany. Nazwa zmiennej lokalnej reprezentujące parametr.  
+ Wymagana. Nazwa zmiennej lokalnej reprezentujące parametr.  
   
  `parametertype`  
  Jeśli wymagane `Option Strict` jest `On`. Typ danych zmiennej lokalnej reprezentujące parametr.  
@@ -95,10 +87,10 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [DECLARE — instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [Atrybuty — omówienie](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Porady: przerywanie i łączenie instrukcji w Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+ [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

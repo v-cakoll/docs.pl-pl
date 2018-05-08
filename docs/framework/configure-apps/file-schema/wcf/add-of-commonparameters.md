@@ -1,24 +1,12 @@
 ---
 title: '&lt;add&gt; w &lt;commonParameters&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef23ba0fa39b01a7cf55c8b2b6cb0beb20be8631
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7973a1d759eaec06a6bd69822bbbf53ff77721ba
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;add&gt; w &lt;commonParameters&gt;
 Określa pary nazwa wartość parametrów, które są globalnie używane w wielu usługach. Zazwyczaj ten parametr zawiera parametry połączenia bazy danych, które mogą być współużytkowane przez usługi trwałe.  
@@ -26,7 +14,7 @@ Określa pary nazwa wartość parametrów, które są globalnie używane w wielu
  \<system.ServiceModel>  
 \<zachowania >  
 \<serviceBehaviors>  
-\<behavior>  
+\<zachowanie >  
 \<workflowRuntime>  
 \<commonParameters >  
 \<add>  
@@ -58,7 +46,7 @@ Określa pary nazwa wartość parametrów, które są globalnie używane w wielu
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<commonParameters>](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Kolekcja wspólnych parametrów używane przez usługi. Ta kolekcja zazwyczaj uwzględnia parametry połączenia bazy danych, które mogą być współużytkowane przez usługi trwałe.|  
+|[\<commonParameters >](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Kolekcja wspólnych parametrów używane przez usługi. Ta kolekcja zazwyczaj uwzględnia parametry połączenia bazy danych, które mogą być współużytkowane przez usługi trwałe.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<commonParameters>` Element definiuje żadnych parametrów, które są globalnie używane w wielu usługach, na przykład `ConnectionString` przy użyciu <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -97,4 +85,4 @@ Określa pary nazwa wartość parametrów, które są globalnie używane w wielu
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
  [Pliki konfiguracji przepływu pracy](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [\<commonParameters>](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+ [\<commonParameters >](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)

@@ -1,33 +1,21 @@
 ---
 title: '&lt;serviceCertificate&gt; w &lt;clientCredentials&gt;, element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f6f52eae3ed9ac3236f54c62ce8712656392f0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d54c39fd681e0686e419b7b73243703e9184d1f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>&lt;serviceCertificate&gt; w &lt;clientCredentials&gt;, element
 Określa certyfikat używany podczas uwierzytelniania usługi do klienta.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
   
 ## <a name="syntax"></a>Składnia  
@@ -54,7 +42,7 @@ Określa certyfikat używany podczas uwierzytelniania usługi do klienta.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane przez klienta do samodzielnego uwierzytelnienia usługi.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane przez klienta do samodzielnego uwierzytelnienia usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element konfiguracji określa ustawienia używane przez klienta do weryfikacji certyfikatu przedstawionego przez tę usługę, używając uwierzytelniania protokołu SSL. Zawiera ona także dowolny certyfikat dla usługi jawnie skonfigurowanego na kliencie do użycia na potrzeby szyfrowania wiadomości w usłudze przy użyciu zabezpieczeń wiadomości.  

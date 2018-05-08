@@ -1,24 +1,17 @@
 ---
-title: "Out (modyfikator ogólny) (Visual Basic)"
+title: Out (modyfikator ogólny) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.VarianceOut
 helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4e54504cd65b78846af41692f39899140a6d99b5
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7ba774bfcd629a7518602d4b971e86a690b2dd83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modyfikator ogólny) (Visual Basic)
 Parametry typu ogólnego `Out` — słowo kluczowe Określa, że typ jest kowariantny.  
@@ -63,4 +56,4 @@ Parametry typu ogólnego `Out` — słowo kluczowe Określa, że typ jest kowari
   
 ## <a name="see-also"></a>Zobacz też  
  [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+ [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

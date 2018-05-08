@@ -1,14 +1,6 @@
 ---
-title: "Funkcja ForwardTranslateAccelerator (WPF niezarządzany wykaz interfejsów API)"
-ms.custom: 
+title: Funkcja ForwardTranslateAccelerator (WPF niezarządzany wykaz interfejsów API)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 api_name:
@@ -16,17 +8,11 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cca9c78eaf13e04d22fce9f61ce4a7ab9ee09769
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8a296c0590d07c4929610021714d2a257236d67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Funkcja ForwardTranslateAccelerator (WPF niezarządzany wykaz interfejsów API)
 Ten interfejs API obsługuje infrastrukturę programu Windows Presentation Foundation (WPF) i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -47,7 +33,7 @@ HRESULT ForwardTranslateAccelerator(
  Wskaźnik do wiadomości.  
   
  appUnhandled  
- `true`gdy aplikacja została już podana możliwość obsługi komunikatu wejściowego, ale nie jest obsługiwane. w przeciwnym razie `false`.  
+ `true` gdy aplikacja została już podana możliwość obsługi komunikatu wejściowego, ale nie jest obsługiwane. w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe programu .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
@@ -58,7 +44,7 @@ HRESULT ForwardTranslateAccelerator(
   
  W wersji programu .NET Framework 4 i nowszych: PresentationHost_v0400.dll  
   
- **Wersja platformy .NET framework:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET framework w wersji:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Niezarządzane interfejsy API WPF — informacje](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

@@ -1,20 +1,13 @@
 ---
 title: Wyniki zapytania grupy
-description: "Sposób grupowania wyników."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+description: Sposób grupowania wyników.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: ca68cf96a2c27bbd1999d5445c14fc93e8e2566c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7808bfdd86dd23882d0722b87b1e013a84141e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-query-results"></a>Wyniki zapytania grupy
 
@@ -52,7 +45,7 @@ Grupowanie jest jednym z najbardziej zaawansowanych funkcji LINQ. Poniższe przy
  [!code-csharp[csProgGuideLINQ#18](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_3.cs)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób grupowania elementów źródła przy użyciu zakresu numerycznego jako klucz grupy. Zapytanie następnie projekcję wyniki do typu anonimowego, zawierający tylko imię i nazwisko i zakres percentyl, do którego należy studenta. Typ anonimowy jest używany, ponieważ nie jest to niezbędne do korzystania z pełną `Student` obiektu do wyświetlenia wyników. `GetPercentile`Funkcja pomocnika, który oblicza percentyl opiera się na Średnia ocena studenta. Metoda zwraca liczbą całkowitą z przedziału od 0 do 10.  
+ Poniższy przykład przedstawia sposób grupowania elementów źródła przy użyciu zakresu numerycznego jako klucz grupy. Zapytanie następnie projekcję wyniki do typu anonimowego, zawierający tylko imię i nazwisko i zakres percentyl, do którego należy studenta. Typ anonimowy jest używany, ponieważ nie jest to niezbędne do korzystania z pełną `Student` obiektu do wyświetlenia wyników. `GetPercentile` Funkcja pomocnika, który oblicza percentyl opiera się na Średnia ocena studenta. Metoda zwraca liczbą całkowitą z przedziału od 0 do 10.  
   
  [!code-csharp[csProgGuideLINQ#50](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]  
   
@@ -78,7 +71,7 @@ Grupowanie jest jednym z najbardziej zaawansowanych funkcji LINQ. Poniższe przy
  <xref:System.Linq.Enumerable.GroupBy%2A>  
  <xref:System.Linq.IGrouping%602>  
  [Wyrażenia zapytań LINQ](index.md)  
- [Group — klauzula](../language-reference/keywords/group-clause.md)  
+ [group, klauzula](../language-reference/keywords/group-clause.md)  
  [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)  
  [Wykonanie podzapytania w operacji grupowania](perform-a-subquery-on-a-grouping-operation.md)  
  [Tworzenie grup zagnieżdżonych](create-a-nested-group.md)  

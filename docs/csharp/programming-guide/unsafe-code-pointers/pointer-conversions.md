@@ -1,21 +1,14 @@
 ---
-title: "Konwersje wskaźników (Przewodnik programowania w języku C#)"
+title: Konwersje wskaźników (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e0c3a409d76468a6e214a96e8bb326a9d906fe18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Konwersje wskaźników (Przewodnik programowania w języku C#)
 W poniższej tabeli przedstawiono wstępnie zdefiniowane wskaźnika niejawne konwersje. Niejawne konwersje może wystąpić w wielu sytuacjach, w tym instrukcje metody wywoływania i przypisanie.  
@@ -47,8 +40,8 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowane wskaźnika niejawne kon
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wyrażenia wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [Typy wskaźnika](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+ [Typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
  [Typy](../../../csharp/language-reference/keywords/types.md)  
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [Fixed — instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [fixed, instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

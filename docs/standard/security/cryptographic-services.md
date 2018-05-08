@@ -1,13 +1,7 @@
 ---
 title: Usługi kryptograficzne
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
 - pattern of derived class inheritance
@@ -30,18 +24,13 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 <a name="top"></a> Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  

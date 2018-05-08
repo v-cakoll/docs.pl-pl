@@ -1,24 +1,12 @@
 ---
-title: "Niestandardowy element przechwytujący komunikaty"
-ms.custom: 
+title: Niestandardowy element przechwytujący komunikaty
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-interceptor"></a>Niestandardowy element przechwytujący komunikaty
 W tym przykładzie przedstawiono stosowania modelu rozszerzalności kanału. W szczególności widoczny jest sposób implementuje element niestandardowego powiązania, który tworzy fabryk kanałów i odbiorników kanału do przechwycenia wszystkich wiadomości przychodzących i wychodzących w określonym punkcie w stosie czasu wykonywania. Przykład obejmuje również klienta i serwera, które przedstawiają sposób używania tych niestandardowych fabryki.  
@@ -33,11 +21,11 @@ W tym przykładzie przedstawiono stosowania modelu rozszerzalności kanału. W s
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Próbka opisuje zalecaną procedurą tworzenia w niestandardowym kanale warstwowego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], przy użyciu platformy kanału i wykonując [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] najlepsze rozwiązania. Kroki, aby utworzyć niestandardowy kanał warstwowego są następujące:  
+ Przykład opisuje zalecane procedurę tworzenia niestandardowym kanale warstwowych w systemie Windows Communication Foundation (WCF), używając struktura kanału i po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] najlepsze rozwiązania. Kroki, aby utworzyć niestandardowy kanał warstwowego są następujące:  
   
 1.  Decyzji, które kształtów kanału będzie obsługiwać Twoje fabryki kanału i odbiornika kanałów.  
   
@@ -63,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Dodawanie elementu powiązania  
- Przykład definiuje element powiązania niestandardowego: `InterceptingBindingElement`. `InterceptingBindingElement`przyjmuje `ChannelMessageInterceptor` jako dane wejściowe i używa go `ChannelMessageInterceptor` do manipulowania wiadomości, które przechodzą przez go. Jest to jedyna klasa, która musi być publiczny. Fabryka odbiornika i kanały wszystkie może być wewnętrzny implementacje interfejsów publicznych czasu wykonywania.  
+ Przykład definiuje element powiązania niestandardowego: `InterceptingBindingElement`. `InterceptingBindingElement` przyjmuje `ChannelMessageInterceptor` jako dane wejściowe i używa go `ChannelMessageInterceptor` do manipulowania wiadomości, które przechodzą przez go. Jest to jedyna klasa, która musi być publiczny. Fabryka odbiornika i kanały wszystkie może być wewnętrzny implementacje interfejsów publicznych czasu wykonywania.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  

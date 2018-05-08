@@ -1,14 +1,6 @@
 ---
 title: Operacje synchroniczne i asynchroniczne
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
 W tym temacie omówiono Implementowanie i wywoływanie operacji usługi asynchronicznego.  
   
- Wiele aplikacji asynchroniczne wywoływanie metody, ponieważ umożliwia to aplikacji kontynuować pracy przydatne podczas wywołania metody. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi i klienci mogą uczestniczyć w wywołania operacji asynchronicznej na dwóch różnych poziomach aplikacji, które zawierają [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji nawet większą elastyczność i możliwość zmaksymalizować przepustowość zrównoważone interakcji.  
+ Wiele aplikacji asynchroniczne wywoływanie metody, ponieważ umożliwia to aplikacji kontynuować pracy przydatne podczas wywołania metody. Usług Windows Communication Foundation (WCF) i klienci mogą uczestniczyć w wywołaniach operację asynchroniczną na dwóch różnych poziomach aplikacji, które zawierają [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji zrównoważone nawet większą elastyczność i możliwość zmaksymalizować przepustowość interakcji.  
   
 ## <a name="types-of-asynchronous-operations"></a>Typy operacji asynchronicznych  
  Wszystkie usługi umów [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bez względu na typy parametrów i wartości zwracane, użyj [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] atrybutów, aby określić konkretnego wymiany komunikatów między klientem a usługą. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] automatycznie kieruje komunikaty przychodzące i wychodzące z operacją odpowiednią usługę lub wykonywanie kodu klienta.  

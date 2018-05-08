@@ -1,27 +1,15 @@
 ---
-title: "Lokalny kanał"
-ms.custom: 
+title: Lokalny kanał
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1298b4b96006837f0634040c5c615adfa3a1a11b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2473704c751ad0ea2d2a00bf7f3ea43d6e39498f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-channel"></a>Lokalny kanał
-Lokalny kanał jest [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanał transportu, który jest używany do komunikacji w obrębie tej samej domenie aplikacji. Jest to przydatne w przypadku scenariuszy, w którym klient i usługa są uruchomione w tej samej domenie aplikacji należy unikać obciążenie typowe stosu kanału WCF (serializacji i deserializacji wiadomości).  
+Lokalny kanał to kanał transportu Windows Communication Foundation (WCF) używanego do komunikacji w obrębie tej samej domenie aplikacji. Jest to przydatne w przypadku scenariuszy, w którym klient i usługa są uruchomione w tej samej domenie aplikacji należy unikać obciążenie typowe stosu kanału WCF (serializacji i deserializacji wiadomości).  
   
 ## <a name="demonstrates"></a>Demonstracje  
  Lokalny kanał  
@@ -46,6 +34,6 @@ Lokalny kanał jest [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kana
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\LocalChannel`

@@ -1,28 +1,16 @@
 ---
-title: "ContextMenuStrip — Formant"
-ms.custom: 
+title: ContextMenuStrip — Formant
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - context menus
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 318ad936a5977f8a2dcb0a9de7cf1c5c3f7b52b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45b37a3cc542295368a9304cb49078d88c347228
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip — Formant
 <xref:System.Windows.Forms.ContextMenuStrip> Kontrola zapewnia menu skrótów, które skojarzysz z formantem.  

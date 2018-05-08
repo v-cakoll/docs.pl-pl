@@ -1,13 +1,6 @@
 ---
-title: "Inicjatory obiektów: typy nazwane i anonimowe (Visual Basic)"
-ms.custom: 
+title: 'Inicjatory obiektów: typy nazwane i anonimowe (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ObjectInitializer
 helpviewer_keywords:
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 349e4f7b4902eb18845fee7cb4d01b217849a4d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 612b1dcea0f776dfd4580803e76f2785e7d28da6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicjatory obiektów: typy nazwane i anonimowe (Visual Basic)
 Inicjatory obiektów umożliwiają określenie właściwości dla obiekt złożony przy użyciu jedno wyrażenie. Mogą one służyć do tworzenia wystąpień typów o nazwie i typy anonimowe.  
@@ -140,6 +130,6 @@ Inicjatory obiektów umożliwiają określenie właściwości dla obiekt złożo
  [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Klucz](../../../../visual-basic/language-reference/modifiers/key.md)  
- [Porady: deklarowanie obiektu za pomocą inicjatora obiektów](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+ [Instrukcje: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [Key](../../../../visual-basic/language-reference/modifiers/key.md)  
+ [Instrukcje: deklarowanie obiektu za pomocą inicjatora obiektów](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

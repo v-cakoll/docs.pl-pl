@@ -1,34 +1,20 @@
 ---
 title: Określanie transferu danych w kontraktach usług
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7423a44f7779c8e4ef75fc68e33eeb4ac48a660a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Określanie transferu danych w kontraktach usług
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Można traktować jako infrastruktury obsługi wiadomości. Operacje usługi można odbierać wiadomości, ich przetworzyć i wysyłanie do nich wiadomości. Komunikaty są opisane przy użyciu kontrakty operacji. Na przykład należy wziąć pod uwagę następujące kontraktu.  
+Windows Communication Foundation (WCF) mogą być uważane za infrastruktury obsługi wiadomości. Operacje usługi można odbierać wiadomości, ich przetworzyć i wysyłanie do nich wiadomości. Komunikaty są opisane przy użyciu kontrakty operacji. Na przykład należy wziąć pod uwagę następujące kontraktu.  
   
 ```csharp  
 [ServiceContract]  
@@ -65,7 +51,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- Ponadto można używać parametrów odwołania do parametru część zarówno żądanie, jak i komunikatu odpowiedzi. Parametry muszą być typów, które można serializować (przekonwertowane na format XML). Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składnikiem o nazwie <xref:System.Runtime.Serialization.DataContractSerializer> klasy do wykonania konwersji. Typy pierwotne najbardziej (takich jak `int`, `string`, `float`, i `DateTime`.) są obsługiwane. Typy definiowane przez użytkownika musi mieć zwykle kontraktu danych. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Ponadto można używać parametrów odwołania do parametru część zarówno żądanie, jak i komunikatu odpowiedzi. Parametry muszą być typów, które można serializować (przekonwertowane na format XML). Domyślnie WCF używa składnik o nazwie <xref:System.Runtime.Serialization.DataContractSerializer> klasy do wykonania konwersji. Typy pierwotne najbardziej (takich jak `int`, `string`, `float`, i `DateTime`.) są obsługiwane. Typy definiowane przez użytkownika musi mieć zwykle kontraktu danych. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -100,7 +86,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- Czasami `DataContractSerializer` nie jest odpowiednia do serializacji typów sieci. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje mechanizm alternatywny serializacji, <xref:System.Xml.Serialization.XmlSerializer>, który można serializować parametrów. <xref:System.Xml.Serialization.XmlSerializer> Umożliwia użycie większą kontrolę nad wynikowego pliku XML przy użyciu atrybutów, takich jak `XmlAttributeAttribute`. Aby przełączyć się do przy użyciu <xref:System.Xml.Serialization.XmlSerializer> mają zastosowanie dla określonej operacji lub dla całej usługi <xref:System.ServiceModel.XmlSerializerFormatAttribute> atrybutu w celu wykonania operacji lub usługi. Na przykład:  
+ Czasami `DataContractSerializer` nie jest odpowiednia do serializacji typów sieci. WCF obsługuje mechanizm alternatywny serializacji, <xref:System.Xml.Serialization.XmlSerializer>, który można serializować parametrów. <xref:System.Xml.Serialization.XmlSerializer> Umożliwia użycie większą kontrolę nad wynikowego pliku XML przy użyciu atrybutów, takich jak `XmlAttributeAttribute`. Aby przełączyć się do przy użyciu <xref:System.Xml.Serialization.XmlSerializer> mają zastosowanie dla określonej operacji lub dla całej usługi <xref:System.ServiceModel.XmlSerializerFormatAttribute> atrybutu w celu wykonania operacji lub usługi. Na przykład:  
   
 ```csharp  
 [ServiceContract]  
@@ -261,7 +247,7 @@ End Class
 ## <a name="describing-messages-by-using-streams"></a>Opisujące wiadomości przy użyciu strumieni  
  Innym sposobem opisują komunikaty w operacji jest użycie <xref:System.IO.Stream> klasy lub jednej z jej klas pochodnych w kontrakt operacji lub jako członek treści kontraktu komunikatu (musi być jedynym członkiem w takim przypadku). Dla komunikatów przychodzących, typ musi być `Stream`— nie można używać klas pochodnych.  
   
- Zamiast wywoływania serializator, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pobiera dane ze strumienia i umieszcza je bezpośrednio do wiadomości wychodzącej lub pobiera dane z komunikatu przychodzącego i umieszcza je bezpośrednio do strumienia. Poniższy przykład przedstawia korzystanie ze strumieni.  
+ Zamiast wywoływania serializator, WCF pobiera dane ze strumienia i umieszcza je bezpośrednio do wiadomości wychodzącej lub pobiera dane z komunikatu przychodzącego i umieszcza je bezpośrednio do strumienia. Poniższy przykład przedstawia korzystanie ze strumieni.  
   
 ```csharp  
 [OperationContract]  
@@ -477,7 +463,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>Zachowania serializacji  
- Dostępne są dwa zachowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> i <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> który automatycznie są podłączone w zależności od którego serializator jest używana dla określonej operacji. Ponieważ te zachowania są automatycznie stosowane, zwykle nie trzeba się z nimi zapoznać.  
+ Dwa zachowania są dostępne w programie WCF, <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> i <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> który automatycznie są podłączone w zależności od którego serializator jest używana dla określonej operacji. Ponieważ te zachowania są automatycznie stosowane, zwykle nie trzeba się z nimi zapoznać.  
   
  Jednak `DataContractSerializerOperationBehavior` ma `MaxItemsInObjectGraph`, `IgnoreExtensionDataObject`, i `DataContractSurrogate` właściwości, których można użyć do dostosowania procesu serializacji. Pierwsze dwie właściwości mają takie samo znaczenie, zgodnie z opisem w poprzedniej sekcji. Można użyć `DataContractSurrogate` właściwości, aby włączyć surogaty kontraktu danych, które są zaawansowany mechanizm dostosowywanie i rozszerzanie procesu serializacji. Aby uzyskać więcej informacji, zobacz [surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
@@ -571,7 +557,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ```  
   
 ### <a name="shared-type-serialization-object-graph-preservation-and-custom-serializers"></a>Wspólnego typu serializacji, zachowywania wykres obiektu i serializatorów niestandardowych  
- <xref:System.Runtime.Serialization.DataContractSerializer> Serializuje przy użyciu nazwy kontraktu danych, a nie nazwy typów .NET. To jest zgodna z zorientowane na usługę architektura rozwiązań i umożliwia precyzyjną elastyczność — typów .NET, można zmienić bez wpływu na kontraktu danych przesyłanych w sieci. W rzadkich przypadkach można serializować rzeczywistej nazwy typów .NET, co wprowadzenie ścisłej sprzężenia między klientem i serwerem, podobnie jak technologię zdalnych .NET Framework. To nie jest zalecanym rozwiązaniem, z wyjątkiem w rzadkich przypadkach, w których zwykle występują podczas migracji do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z usługi zdalne środowiska .NET Framework. W takim przypadku należy użyć <xref:System.Runtime.Serialization.NetDataContractSerializer> klasy zamiast <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
+ <xref:System.Runtime.Serialization.DataContractSerializer> Serializuje przy użyciu nazwy kontraktu danych, a nie nazwy typów .NET. To jest zgodna z zorientowane na usługę architektura rozwiązań i umożliwia precyzyjną elastyczność — typów .NET, można zmienić bez wpływu na kontraktu danych przesyłanych w sieci. W rzadkich przypadkach można serializować rzeczywistej nazwy typów .NET, co wprowadzenie ścisłej sprzężenia między klientem i serwerem, podobnie jak technologię zdalnych .NET Framework. To nie jest zalecanym rozwiązaniem, z wyjątkiem w rzadkich przypadkach, zwykle występujących podczas migracji do programu WCF z usługi zdalne środowiska .NET Framework. W takim przypadku należy użyć <xref:System.Runtime.Serialization.NetDataContractSerializer> klasy zamiast <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
   
  <xref:System.Runtime.Serialization.DataContractSerializer> Zwykle serializuje wykresów obiektów jako drzewa obiektów. Oznacza to jeżeli ten sam obiekt jest określona więcej niż raz, jego jest serializowane więcej niż raz. Rozważmy na przykład `PurchaseOrder` wystąpienia, która ma dwa pola typu o nazwie adresu `billTo` i `shipTo`. Jeśli oba pola są ustawione w tym samym wystąpieniu adres, istnieją dwa identyczne wystąpienia adres po serializacji i deserializacji. Odbywa się, ponieważ nie istnieje standardowy sposób interoperacyjne do reprezentowania wykresów obiektów w pliku XML (z wyjątkiem dostępne w starszej wersji standard SOAP zakodowane <xref:System.Xml.Serialization.XmlSerializer>, zgodnie z opisem w poprzedniej sekcji na `Style` i `Use`). Serializacja wykresów obiektów jako drzewa ma niektóre wady, na przykład nie można zserializować wykresów z odwołań cyklicznych. Czasami jest niezbędne przełączyć się do serializacji wykres obiektu wartość true, mimo że nie jest współdziałanie. Można to zrobić za pomocą <xref:System.Runtime.Serialization.DataContractSerializer> skonstruowany przy `preserveObjectReferences` ustawiono parametr `true`.  
   

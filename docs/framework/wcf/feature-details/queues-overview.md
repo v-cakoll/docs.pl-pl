@@ -1,31 +1,17 @@
 ---
-title: "Omówienie kolejek"
-ms.custom: 
+title: Omówienie kolejek
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>Omówienie kolejek
-W tej sekcji przedstawiono ogólne i podstawowe pojęcia oczekujących komunikacji. Kolejne sekcje przejdź do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są manifestowany w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+W tej sekcji przedstawiono ogólne i podstawowe pojęcia oczekujących komunikacji. Kolejne sekcje przejdź do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w systemie Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Podstawowe pojęcia kolejkowania  
  Podczas projektowania aplikacji rozproszonej, wybór ważne jest prawo transportu do komunikacji między usług i klientów. Istnieje kilka możliwych wpływa na rodzaj transportu do użycia. Jeden ważnym czynnikiem — izolację między usługa, klient i transportu — Określa użycie transport z kolejką lub transportu bezpośredniego, takiego jak protokół TCP lub HTTP. Ze względu na specyfikę transportów bezpośrednie, takie jak protokół TCP i HTTP komunikacji zatrzymuje całkowicie czy usługi lub klienta przestaną działać, czy sieć nie powiedzie się. W tym samym czasie dla aplikacji do pracy musi działać usługa, klient i sieci. Transporty w kolejce zapewniają izolację, co oznacza, że usługi lub klienta się nie powieść lub łączy komunikacji między nimi zakończyć się niepowodzeniem, klient i usługa mogą nadal działać.  

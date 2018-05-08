@@ -1,26 +1,14 @@
 ---
-title: '&lt;rozszerzenia&gt;'
-ms.custom: 
+title: '&lt;Rozszerzenia&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13d79a52690f8262b08c8510e1f78b7efbf3adab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f25c5f99eafe0f87123d8c8c3f5c182220e8c58
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltextensionsgt"></a>&lt;rozszerzenia&gt;
+# <a name="ltextensionsgt"></a>&lt;Rozszerzenia&gt;
 Ten element konfiguracji zawiera kolekcję elementów XML, które zawierają niestandardowych metadanych do opublikowania oraz standardowe metadane wykrywalny (EPR, ContractTypeName, BindingName, zakresu i ListenUri o wartości). Oto przykład za pomocą tego elementu konfiguracji.  
   
 ```xml  

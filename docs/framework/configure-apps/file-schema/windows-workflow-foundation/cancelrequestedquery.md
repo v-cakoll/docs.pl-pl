@@ -1,34 +1,24 @@
 ---
 title: '&lt;cancelRequestedQuery&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8da9b1c4-338a-4f23-9830-6d257772d340
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c9ad0f766256d6507775c2cca1b9d54b474abc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3e532ea482108c9a5cabe13a99afddca10f8341d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcancelrequestedquerygt"></a>&lt;cancelRequestedQuery&gt;
 Reprezentuje zapytanie, które jest używane do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne. Zapytanie jest niezbędne do uczestnika śledzenia do subskrybowania Anuluj żądanie rekordu obiektów.  
   
  Aby uzyskać więcej informacji na zapytania dotyczące profilu śledzenia, zobacz [śledzenia profile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Śledzenie >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<przepływ pracy >  
-\<cancelRequestedQueries >  
+\<cancelRequestedQueries>  
 \<cancelRequestedQuery >  
   
 ## <a name="syntax"></a>Składnia  

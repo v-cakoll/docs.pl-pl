@@ -1,14 +1,6 @@
 ---
 title: 'Instrukcje: Włączanie wykrywania powtarzania komunikatu'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,24 +10,18 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c761a23d2560f40a0121d684dcb411a716de5a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Instrukcje: Włączanie wykrywania powtarzania komunikatu
 Atak powtarzania występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarzaniem strumienia do jednego lub więcej stron. O ile skorygowane, komputery mogą ulec ataku zostaną przetworzone strumienia jako istotnych wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówień elementu.  
   
  Aby uzyskać więcej informacji na temat wykrywania powtarzania komunikatu, zobacz [wykrywania powtarzania komunikatu](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
- W poniższej procedurze przedstawiono różne właściwości, które służy do sterowania powtarzania wykrywania przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ W poniższej procedurze przedstawiono różne właściwości, których można kontrolować za pomocą usługi Windows Communication Foundation (WCF) wykrywania powtarzania.  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Aby kontrolować wykrywania powtórzeń na kliencie przy użyciu kodu  
   

@@ -1,24 +1,12 @@
 ---
 title: Wykonanie Side-by-Side w ADO.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Wykonanie Side-by-Side w ADO.NET
 Wykonanie Side-by-side w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] jest możliwość uruchamiania aplikacji na komputerze, który ma wiele wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zainstalować wyłącznie przy użyciu wersji, dla którego został skompilowany aplikacji. Aby uzyskać szczegółowe informacje o konfigurowaniu wykonywania side-by-side, zobacz [wykonywania Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -26,7 +14,7 @@ Wykonanie Side-by-side w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort
  Aplikacji skompilowanych za pomocą jednej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] można uruchomić w innej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Jednak firma Microsoft zaleca, aby skompilować wersji aplikacji dla każdej zainstalowanej wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]i uruchom je oddzielnie. W każdym z tych scenariuszy należy pamiętać o zmianach w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] między wersjami, które mogą mieć wpływ na zgodność z nowszymi wersjami lub zgodności z poprzednimi wersjami aplikacji.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Zgodność z nowszymi wersjami i zgodności z poprzednimi wersjami  
- Zgodność z nowszymi wersjami oznacza, że aplikacji może być kompilowana przy użyciu wcześniejszej wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ale nadal będzie działać pomyślnie w nowszej wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]Kod napisany dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.1 są zgodne wprzód z nowszymi wersjami.  
+ Zgodność z nowszymi wersjami oznacza, że aplikacji może być kompilowana przy użyciu wcześniejszej wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ale nadal będzie działać pomyślnie w nowszej wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Kod napisany dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.1 są zgodne wprzód z nowszymi wersjami.  
   
  Zgodność z poprzednimi wersjami oznacza, że aplikacja została skompilowana dla nowszej wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ale nadal działa we wcześniejszych wersjach [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bez utraty funkcji. Oczywiście nie będzie to w przypadku funkcje wprowadzone w nowej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   

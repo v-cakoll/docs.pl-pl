@@ -1,21 +1,14 @@
 ---
-title: "Przerwana przez użytkownika"
+title: Przerwana przez użytkownika
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID18
 ms.assetid: 3a1f1297-f3d9-46db-a956-058a1d272047
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8b1df785433a31e005f40f35cd80e360b4843d84
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 873e452cf96495d8c2f350e9be68a294fc703e99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interrupt-occurred"></a>Przerwana przez użytkownika
 Użytkownik nacisnął klawisz CTRL + BREAK lub innego klucza przerwania.  
@@ -25,4 +18,4 @@ Użytkownik nacisnął klawisz CTRL + BREAK lub innego klucza przerwania.
 -   Ponów operację.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../visual-basic/programming-guide/language-features/error-types.md)
+ [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

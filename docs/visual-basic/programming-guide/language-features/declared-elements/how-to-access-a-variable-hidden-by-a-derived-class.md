@@ -1,12 +1,6 @@
 ---
-title: "Porady: dostęp do zmiennej ukrytej przez klasę pochodną (Visual Basic)"
-ms.custom: 
+title: 'Porady: dostęp do zmiennej ukrytej przez klasę pochodną (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - base classes [Visual Basic], accessing elements
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8dd59dff5b8123331237db905432bbb4e94d62ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Porady: dostęp do zmiennej ukrytej przez klasę pochodną (Visual Basic)
 Gdy kod w klasie pochodnej uzyskuje dostęp do zmiennej, kompilator zwykle usuwa odwołania do najbliższej wersji dostępny, oznacza to, że dostępna wersja najmniejszej derivational kroki z poprzednimi wersjami z uzyskiwaniem dostępu do klasy. Jeśli zmienna jest zdefiniowana w klasie pochodnej, kod zwykle uzyskuje dostęp do tej definicji.  
@@ -60,10 +51,10 @@ Gdy kod w klasie pochodnej uzyskuje dostęp do zmiennej, kompilator zwykle usuwa
 ## <a name="see-also"></a>Zobacz też  
  [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [Przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Różnice pomiędzy przesłanianiem i zastępowaniem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
- [Porady: ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
- [Porady: ukrywanie dziedziczonej zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [Różnice między przesłanianiem i zastępowaniem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [Instrukcje: ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [Instrukcje: ukrywanie dziedziczonej zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
  [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Zastąpienia](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
  [Me, My, MyBase i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

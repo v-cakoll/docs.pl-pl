@@ -1,22 +1,14 @@
 ---
 title: Klasa &#39; &lt;classname&gt; &#39; nie implementuje interfejsu System.Collections.ICollection
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 f1_keywords:
 - vbrID100
 ms.assetid: cc73bbc6-a283-41e0-b750-61ef553e83b3
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 683d7bfa1912b4829d32218f9903275222bee7c1
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8df1c1c3d79eedc240207397223b5699d3298266
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a>Klasa &#39; &lt;classname&gt; &#39; nie implementuje interfejsu System.Collections.ICollection
 Klasa nie implementuje `System.Collections.ICollection` interfejs, który definiuje metody rozmiar, wyliczenia i synchronizacji dla wszystkich zbiorów. Może być konieczna ponowna instalacja programu Visual Studio.  

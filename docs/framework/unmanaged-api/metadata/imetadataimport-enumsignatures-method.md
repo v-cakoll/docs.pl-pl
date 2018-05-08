@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumSignatures — Metoda"
-ms.custom: 
+title: IMetaDataImport::EnumSignatures — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumSignatures
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 88d47e2512103947f007c81450157a0b3e334a33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d36270047c8af0580a1cc3b44aa303e5907f33fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures — Metoda
 Wylicza tokeny sygnatury reprezentujący autonomicznej podpisów w bieżącym zakresie.  
@@ -66,7 +54,7 @@ HRESULT EnumSignatures (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures`zwrócona pomyślnie.|  
+|`S_OK`|`EnumSignatures` zwrócona pomyślnie.|  
 |`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcSignatures` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -79,7 +67,7 @@ HRESULT EnumSignatures (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

@@ -1,19 +1,12 @@
 ---
 title: Koncepcje programowania (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-caps.latest.revision: 4
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9c82430ec58b81f37a33f4c246ea40f6da465af8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a557812ff99f09f20d3eb17ea7ff4dd80483a4a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-concepts-c"></a>Koncepcje programowania (C#)
 W tej sekcji opisano pojęcia dotyczące programowania w języku C#.  
@@ -40,4 +33,4 @@ W tej sekcji opisano pojęcia dotyczące programowania w języku C#.
   
 |||  
 |---|---|  
-|[Porady dotyczące wydajności](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | W tym artykule omówiono kilka podstawowych reguł, które mogą pomóc zwiększyć wydajność aplikacji.|
+|[Wskazówki dotyczące wydajności](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | W tym artykule omówiono kilka podstawowych reguł, które mogą pomóc zwiększyć wydajność aplikacji.|

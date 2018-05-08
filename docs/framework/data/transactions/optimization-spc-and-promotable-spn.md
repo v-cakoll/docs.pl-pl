@@ -1,23 +1,12 @@
 ---
-title: "Optymalizacja za pomocą pojedynczego zatwierdzić fazy i awansowanie pojedyncze powiadomienia fazy"
-ms.custom: 
+title: Optymalizacja za pomocą pojedynczego zatwierdzić fazy i awansowanie pojedyncze powiadomienia fazy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Optymalizacja za pomocą pojedynczego zatwierdzić fazy i awansowanie pojedyncze powiadomienia fazy
 W tym temacie opisano mechanizmy udostępnione przez <xref:System.Transactions> infrastruktury w celu optymalizacji wydajności.  
@@ -53,7 +42,7 @@ W tym temacie opisano mechanizmy udostępnione przez <xref:System.Transactions> 
   
 2.  Po drugie połączenie, CN2 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>, połączenie nie powiedzie się, ponieważ jest zaangażowane innego awansowanie rejestracji. W związku z tym CN2 musi uzyskać transakcję usługi, aby można było przekazać je do programu SQL. W tym celu używa jednej z metod dostarczonych przez <xref:System.Transactions.TransactionInterop> klasy w celu uzyskania formatu transakcji, która może być SQL.  
   
-3.  <xref:System.Transactions>wywołania <xref:System.Transactions.ITransactionPromoter.Promote%2A> metoda <xref:System.Transactions.ITransactionPromoter> interfejsu implementowanego przez CN1.  
+3.  <xref:System.Transactions> wywołania <xref:System.Transactions.ITransactionPromoter.Promote%2A> metoda <xref:System.Transactions.ITransactionPromoter> interfejsu implementowanego przez CN1.  
   
 4.  W tym momencie CN1 Eskalowanie transakcji, niektóre mechanizm specyficzne dla SQL 2005 i <xref:System.Data>.  
   

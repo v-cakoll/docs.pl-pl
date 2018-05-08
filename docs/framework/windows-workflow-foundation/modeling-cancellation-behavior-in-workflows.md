@@ -1,24 +1,12 @@
 ---
 title: Zachowanie anulowania modelowania w przepływach pracy
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 08687f8c2e06a459714d934713fddfe3f3536774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Zachowanie anulowania modelowania w przepływach pracy
 Działania mogą zostać anulowane w przepływie pracy, na przykład przez <xref:System.Activities.Statements.Parallel> działania anulowanie niekompletne gałęzie po jego <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> daje w wyniku `true`, lub z poza przepływu pracy, jeśli host wywołuje <xref:System.Activities.WorkflowApplication.Cancel%2A>. Aby zapewnić anulowania obsługi, przepływ pracy autorzy mogą używać <xref:System.Activities.Statements.CancellationScope> działania, <xref:System.Activities.Statements.CompensableActivity> działania, lub tworzenia niestandardowych działań, które zapewniają logiki anulowania. Ten temat zawiera omówienie anulowania w przepływach pracy.  

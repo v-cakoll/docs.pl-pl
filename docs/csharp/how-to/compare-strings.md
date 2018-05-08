@@ -2,20 +2,14 @@
 title: 'Porady: porównywanie ciągów — przewodnik C#'
 description: Dowiedz się, jak porównać i kolejność wartości ciągu, z lub bez przypadku z lub bez kolejności określonej kultury
 ms.date: 03/20/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3edc1ffdcb4d084f8f76ff27144402fbf98fcbdb
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compare-strings-in-c"></a>Sposób porównywania ciągów w języku C# #
 

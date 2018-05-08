@@ -1,28 +1,14 @@
 ---
-title: "Śledzenie i rejestrowanie komunikatów"
-ms.custom: 
+title: Śledzenie i rejestrowanie komunikatów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cae7d806ce68f6804f97195c9bf2571328af6dff
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-message-logging"></a>Śledzenie i rejestrowanie komunikatów
 W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowa śladów i dzienników komunikatów wyświetlane przy użyciu [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -31,7 +17,7 @@ W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikat
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="tracing"></a>Śledzenie  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]używa mechanizmu śledzenia zdefiniowanych w <xref:System.Diagnostics> przestrzeni nazw. W tym modelu śledzenie danych śledzenia jest generowany przez źródła śledzenia, które implementują aplikacji. Każde źródło jest identyfikowane przez nazwę. Śledzenia konsumenci tworzą obiekty nasłuchujące śledzenia dla źródła śledzenia, dla których chcesz pobrać informacji. Aby odbierać dane śledzenia, należy utworzyć odbiornik źródła śledzenia. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], można to zrobić przez dodanie poniższego kodu do tej usługi lub pliku konfiguracji klienta przez ustawienie źródło śladu modelu usługi `switchValue`:  
+ Windows Communication Foundation (WCF) używa mechanizmu śledzenia zdefiniowanych w <xref:System.Diagnostics> przestrzeni nazw. W tym modelu śledzenie danych śledzenia jest generowany przez źródła śledzenia, które implementują aplikacji. Każde źródło jest identyfikowane przez nazwę. Śledzenia konsumenci tworzą obiekty nasłuchujące śledzenia dla źródła śledzenia, dla których chcesz pobrać informacji. Aby odbierać dane śledzenia, należy utworzyć odbiornik źródła śledzenia. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], można to zrobić przez dodanie poniższego kodu do tej usługi lub pliku konfiguracji klienta przez ustawienie źródło śladu modelu usługi `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -141,7 +127,7 @@ W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikat
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

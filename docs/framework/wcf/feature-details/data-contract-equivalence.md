@@ -1,31 +1,17 @@
 ---
 title: Równoważność kontraktów danych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b6461ffe6525b377e7f836a686a401033d344a4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-equivalence"></a>Równoważność kontraktów danych
 Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyślnie wysyłać dane do klienta wysłane typu nie zawsze musi istnieje po stronie odbiorczej. Jedynym wymaganiem jest równoważne kontraktów danych obu typów. (Czasami strict równoważność nie jest wymagana, zgodnie z opisem w [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  

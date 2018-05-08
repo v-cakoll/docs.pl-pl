@@ -1,27 +1,15 @@
 ---
-title: "Zaufana usługa fasady"
-ms.custom: 
+title: Zaufana usługa fasady
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0d1d0473a821510ee70e386058a2b3249221dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-facade-service"></a>Zaufana usługa fasady
-W tym przykładzie scenariuszu pokazano, jak przepływ informacji o tożsamości obiektu wywołującego z jedną usługę przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastruktury zabezpieczeń.  
+W tym przykładzie scenariuszu pokazano, jak przepływ informacji o tożsamości obiektu wywołującego z jedną usługę do drugiego za pomocą usługi Windows Communication Foundation (WCF) infrastruktura zabezpieczeń.  
   
  Jest wspólnego wzorca projektowego do udostępnienia funkcji udostępnianych przez usługę do publicznej sieci przy użyciu usługi fasad. Usługa fasad zazwyczaj znajduje się w sieci obwodowej (znanej także jako strefa DMZ, strefą zdemilitaryzowaną i podsiecią ekranowaną), a także komunikuje się za pomocą usługi wewnętrznej bazy danych, która implementuje logiki biznesowej i ma dostęp do danych wewnętrznych. Kanał komunikacji między usługą fasad i usługi wewnętrznej bazy danych przechodzi przez zaporę i jest zazwyczaj ograniczone do tylko jednej celu.  
   
@@ -137,7 +125,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Jak pokazano w poprzednim kodzie, hasło nie jest ustawiona na `ClientCredentials` właściwość jest ustawiona tylko nazwy użytkownika. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Infrastruktura zabezpieczeń tworzy tokenu zabezpieczającego nazwy użytkownika bez hasła w tym przypadku, czyli dokładnie co jest wymagane w tym scenariuszu.  
+ Jak pokazano w poprzednim kodzie, hasło nie jest ustawiona na `ClientCredentials` właściwość jest ustawiona tylko nazwy użytkownika. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Infrastruktura zabezpieczeń tworzy tokenu zabezpieczającego nazwy użytkownika bez hasła w tym przypadku, czyli dokładnie co jest wymagane w tym scenariuszu.  
   
  W usłudze zaplecza informacji zawartych w tokenie zabezpieczającym, nazwa użytkownika musi zostać uwierzytelniony. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń próbuje zamapować użytkownika na konto systemu Windows przy użyciu podanego hasła. W takim przypadku nie jest żadne hasło podane i usługi wewnętrznej bazy danych nie jest wymagane do uwierzytelniania nazwa użytkownika, ponieważ usługa fasad już zostało przeprowadzone uwierzytelnianie. Aby zaimplementować tę funkcję w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], niestandardowego `UserNamePasswordValidator` jest pod warunkiem, że tylko wymusza czy nazwę użytkownika w tokenie określono i nie wykonuje żadnego dodatkowego uwierzytelniania.  
   
@@ -298,7 +286,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   

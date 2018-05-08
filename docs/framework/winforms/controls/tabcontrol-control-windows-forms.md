@@ -1,13 +1,6 @@
 ---
-title: "TabControl — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: TabControl — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TabControl control [Windows Forms]
 - tab controls
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 705f9dbb8ea7f4d462a2b19cc0c6b845ae8f578b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl — Formant (Formularze systemu Windows)
 Formularze systemu Windows `TabControl` wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia. Karty może zawierać obrazów i inne formanty. Użyj `TabControl` do utworzenia strony właściwości.  
@@ -50,7 +38,7 @@ Formularze systemu Windows `TabControl` wyświetla wiele kart, takich jak separa
  Zobacz też [porady: Dodaj i usuń karty przy użyciu formantu TabControl formularzy systemu Windows projektanta](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [porady: Dodawanie formantu do karty strony przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.TabControl>klasy  
+ <xref:System.Windows.Forms.TabControl> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

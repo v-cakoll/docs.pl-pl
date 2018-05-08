@@ -1,24 +1,12 @@
 ---
 title: Przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d0b12fc6c91f57ec49050a0a37b16f64d0e54e6d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication
 Windows Workflow Foundation (WF) zapewnia kilka metod obsługi przepływów pracy. <xref:System.Activities.WorkflowInvoker> zapewnia prostą metodę do wywoływania przepływu pracy, tak, jakby były wywołanie metody i można używać tylko w przypadku przepływów pracy, które nie korzystają z trwałości. <xref:System.Activities.WorkflowApplication> zapewnia bardziej rozbudowane model do wykonywania przepływów pracy, które zawiera powiadomienia o zdarzenia cyklu życia, kontrola wykonywania wznowienie zakładek i trwałości. <xref:System.ServiceModel.Activities.WorkflowServiceHost> zapewnia obsługę działań dotyczących komunikatów i jest używany głównie z usług przepływu pracy. Ten temat stanowi wprowadzenie do przepływu pracy obsługującego z <xref:System.Activities.WorkflowInvoker> i <xref:System.Activities.WorkflowApplication>. Aby uzyskać więcej informacji o przepływach pracy z hostingu <xref:System.ServiceModel.Activities.WorkflowServiceHost>, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md) i [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

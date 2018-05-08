@@ -1,29 +1,15 @@
 ---
 title: Daty i godziny
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>Daty i godziny
 SQL Server 2008 wprowadzono nowe typy danych obsługi informacji o datę i godzinę. Nowe typy danych obejmują osobne typy daty i godziny i typy danych rozszerzonych z większego zakresu, dokładność i świadomości strefy czasowej. Począwszy od wersji .NET Framework 3.5 z dodatkiem Service Pack (SP1), .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) zapewnia pełną obsługę wszystkich nowych funkcji aparatu bazy danych programu SQL Server 2008. .NET Framework 3.5 z dodatkiem SP1 należy zainstalować (lub nowsza) do użycia z SqlClient te nowe funkcje.  
@@ -44,7 +30,7 @@ SQL Server 2008 wprowadzono nowe typy danych obsługi informacji o datę i godzi
 |`date`|`date` — Typ danych ma zakres 1 stycznia 01 do 31 grudnia 9999, z dokładnością do 1 dzień. Wartość domyślna to 1 stycznia 1900. Rozmiar magazynu jest 3 bajtów.|  
 |`time`|`time` — Typ danych przechowuje wartości czasu, oparte na zegarze 24-godzinnym. `time` Zakres 00:00:00.0000000 za pośrednictwem 23:59:59.9999999 z dokładnością 100 nanosekundach ma typ danych. Wartość domyślna to 00:00:00.0000000 (północ). `time` — Typ danych obsługuje zdefiniowane przez użytkownika dokładność ułamkowych części sekundy, i rozmiar magazynu zależą od 3 do 6 bajtów, oparte na dokładność określona.|  
 |`datetime2`|`datetime2` — Typ danych łączy zakresu i dokładność `date` i `time` typy danych do jednego typu danych.<br /><br /> Domyślne wartości i formaty literału ciągu, są takie same jak te zdefiniowane `date` i `time` typy danych.|  
-|`datetimeoffset`|`datetimeoffset` Typ danych ma wszystkich funkcji `datetime2` z przesunięciem dodatkową strefę czasową. Przesunięcie strefy czasowej jest reprezentowany jako [+ &#124;-] hh: mm. HH to 2 cyfry od 00 do 14 reprezentować liczbę godzin w przesunięcia strefy czasowej. MM to 2 cyfry od 00 do 59 reprezentować liczbę dodatkowych minut w przesunięcia strefy czasowej. Do 100 nanosekundach są obsługiwane formaty czasu. Obowiązkowe + lub - znak wskazuje, czy przesunięcie strefy czasowej jest dodane lub usunięte od czasu UTC (uniwersalny czas koordynować lub czas uniwersalny Greenwich) można uzyskać czasu lokalnego.|  
+|`datetimeoffset`|`datetimeoffset` Typ danych ma wszystkich funkcji `datetime2` z przesunięciem dodatkową strefę czasową. Przesunięcie strefy czasowej jest reprezentowany jako [+&#124;—] hh: mm. HH to 2 cyfry od 00 do 14 reprezentować liczbę godzin w przesunięcia strefy czasowej. MM to 2 cyfry od 00 do 59 reprezentować liczbę dodatkowych minut w przesunięcia strefy czasowej. Do 100 nanosekundach są obsługiwane formaty czasu. Obowiązkowe + lub - znak wskazuje, czy przesunięcie strefy czasowej jest dodane lub usunięte od czasu UTC (uniwersalny czas koordynować lub czas uniwersalny Greenwich) można uzyskać czasu lokalnego.|  
   
 > [!NOTE]
 >  Aby uzyskać więcej informacji o korzystaniu z `Type System Version` — słowo kluczowe, zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -204,7 +190,7 @@ command.Parameters.AddWithValue( _
 |Typ CLR|Wywnioskowane SqlDbType|  
 |--------------|------------------------|  
 |DataGodzina|SqlDbType.DateTime|  
-|TimeSpan|SqlDbType.Time|  
+|Zakres czasu|SqlDbType.Time|  
 |DateTimeOffset|SqlDbType.DateTimeOffset|  
   
 ## <a name="retrieving-date-and-time-data"></a>Podczas pobierania daty i godziny  

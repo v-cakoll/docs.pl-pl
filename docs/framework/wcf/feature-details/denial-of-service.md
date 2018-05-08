@@ -1,28 +1,14 @@
 ---
 title: Odmowa usługi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości, lub są przetwarzane bardzo wolno.  
@@ -62,15 +48,15 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Nieprawidłowy implementacje zawiesza się usługa Przyczyna może IAuthorizationPolicy  
  Wywoływanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metody na błędną implementację elementu <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejs może spowodować, że usługa zawieszenie.  
   
- Ograniczenie: Użyj tylko zaufanego kodu. Oznacza to, używają tylko kod, który został zapisany i przetestowane lub która pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń zastosowany w implementacji usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie daje żadnej różnicy między kodem aplikacji i obcego kodu, który jest podłączony za pomocą punkty rozszerzeń.  
+ Ograniczenie: Użyj tylko zaufanego kodu. Oznacza to, używają tylko kod, który został zapisany i przetestowane lub która pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń zastosowany w implementacji usługi. Usługi WCF nie powoduje żadnej różnicy między kodem aplikacji i obcego kodu, który jest podłączony za pomocą punkty rozszerzeń.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Może być konieczne Kerberos maksymalny rozmiar tokenu zmiana rozmiaru  
- Jeśli klient należy do dużej liczby grup (około 900, mimo że rzeczywista liczba może być różna w zależności od grup), problem może wystąpić, gdy blok Nagłówek wiadomości przekroczy 64 kilobajtów. W takim przypadku można zwiększyć maksymalny rozmiar tokenu protokołu Kerberos, zgodnie z opisem w artykule firmy Microsoft Support "[uwierzytelniania protokołu Kerberos programu Internet Explorer nie działa z powodu Niewystarczający bufor łączący się z IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Może również należy zwiększyć maksymalną [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] komunikatu rozmiar, aby obsłużyć większą token protokołu Kerberos.  
+ Jeśli klient należy do dużej liczby grup (około 900, mimo że rzeczywista liczba może być różna w zależności od grup), problem może wystąpić, gdy blok Nagłówek wiadomości przekroczy 64 kilobajtów. W takim przypadku można zwiększyć maksymalny rozmiar tokenu protokołu Kerberos, zgodnie z opisem w artykule firmy Microsoft Support "[uwierzytelniania protokołu Kerberos programu Internet Explorer nie działa z powodu Niewystarczający bufor łączący się z IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Może być również konieczne zwiększyć maksymalny rozmiar wiadomości WCF w celu uwzględnienia większej token protokołu Kerberos.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Powoduje autorejestrowania kilka certyfikatów o tej samej nazwie podmiotu maszyny  
  *Autorejestrowania* to możliwość [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] do automatycznego rejestrowania użytkowników i komputerów dla certyfikatów. Gdy komputer znajduje się w domenie z włączoną funkcją, certyfikat X.509 z przeznaczeniem uwierzytelniania klienta jest automatycznie tworzone i wstawione do magazynu certyfikatów osobistych komputera lokalnego, zawsze, gdy nowy komputer jest dołączony do sieć. Jednak autorejestrowania korzysta z taką samą nazwę podmiotu dla wszystkich certyfikatów, które tworzy się w pamięci podręcznej.  
   
- Wpływ jest to, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Otwórz w domenach z automatycznego rejestrowania usługi może być niemożliwe. Dzieje się tak, ponieważ domyślne kryteria wyszukiwania poświadczeń X.509 usługi może być niejednoznaczna, ponieważ istnieje wiele certyfikatów w pełni kwalifikowaną nazwą systemu nazw domen (DNS, Domain Name System) na komputerze. Jeden certyfikat pochodzi z autorejestrowania; drugi może być własnym wystawiony certyfikat.  
+ Wpływ jest usługi WCF może być niemożliwe Otwórz w domenach z autorejestrowania. Dzieje się tak, ponieważ domyślne kryteria wyszukiwania poświadczeń X.509 usługi może być niejednoznaczna, ponieważ istnieje wiele certyfikatów w pełni kwalifikowaną nazwą systemu nazw domen (DNS, Domain Name System) na komputerze. Jeden certyfikat pochodzi z autorejestrowania; drugi może być własnym wystawiony certyfikat.  
   
  Aby temu zaradzić, odwoływać się dokładnie certyfikat do użycia przy użyciu kryterium wyszukiwania dokładniejsze na [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Na przykład użyć <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> opcji, a następnie określ certyfikat przez jego unikatowy odcisk palca (skrót).  
   
@@ -82,7 +68,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="protect-configuration-files-with-acls"></a>Chroń pliki konfiguracji za pomocą listy kontroli dostępu  
  Można określić wymaganych i opcjonalnych oświadczeń w plikach kod i konfiguracja dla [!INCLUDE[infocard](../../../../includes/infocard-md.md)] wystawionych tokenów. Powoduje to odpowiednie elementy, które są emitowane w `RequestSecurityToken` wiadomości, które są wysyłane do zabezpieczenia tokenu usługi. Osoba atakująca można zmodyfikować kod lub konfigurację, aby usunąć wymaganego lub opcjonalnego roszczenia, potencjalnie pobierania usługi tokenu zabezpieczeń można wystawić tokenu, który nie zezwala na dostęp do usługi docelowej.  
   
- Aby ograniczyć: wymagają dostępu do komputera, aby zmodyfikować pliku konfiguracji. Korzystanie z pliku kontroli dostępu zawiera listę (kontroli dostępu ACL) do zabezpieczania plików konfiguracyjnych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga, aby kod w katalogu aplikacji lub w globalnej pamięci podręcznej zestawów, zanim umożliwi taki kod, aby być ładowane z konfiguracji. Użyj listy ACL w katalogu, aby zabezpieczyć katalogi.  
+ Aby ograniczyć: wymagają dostępu do komputera, aby zmodyfikować pliku konfiguracji. Korzystanie z pliku kontroli dostępu zawiera listę (kontroli dostępu ACL) do zabezpieczania plików konfiguracyjnych. Usługi WCF wymaga, aby kod w katalogu aplikacji lub w globalnej pamięci podręcznej zestawów, zanim umożliwi taki kod, aby być ładowane z konfiguracji. Użyj listy ACL w katalogu, aby zabezpieczyć katalogi.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Osiągnięto maksymalną liczbę bezpiecznej sesji dla usługi  
  Gdy klient zostanie pomyślnie uwierzytelniony przez usługę i bezpieczne ustanowiono połączenie z usługą, Usługa przechowuje informacje o sesji, dopóki klient anuluje go lub wygaśnięcia sesji. Każdy ustanowienie sesji jest za mała limit maksymalnej liczby aktywnych sesji jednoczesnych z usługą. Po osiągnięciu tego limitu klientów, które próbują utworzyć nowej sesji z tą usługą są odrzucane, dopóki jedna lub więcej aktywnych sesji wygaśnięcia lub anulowania przez klienta. Klient może mieć wiele sesji z usługą, a limit liczony w każdej z nich tymi sesjami.  

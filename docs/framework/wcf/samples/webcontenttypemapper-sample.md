@@ -1,31 +1,19 @@
 ---
-title: "WebContentTypeMapper — przykład"
-ms.custom: 
+title: WebContentTypeMapper — przykład
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34adf191d3edbff33fe989cf036c32104a6754ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper — przykład
-W tym przykładzie pokazano, jak nowe typy zawartości do mapowania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] formatów treści komunikatu.  
+W tym przykładzie przedstawiono sposób mapowania nowe typy zawartości do formatów treści wiadomości Windows Communication Foundation (WCF).  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint> Element podłącza kodera wiadomości w sieci Web, dzięki czemu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do odbierania JSON, XML lub raw komunikatów binarnych w tym samym punkcie końcowym. Koder Określa format treści wiadomości, analizując typ zawartości HTTP żądania. W tym przykładzie przedstawiono <xref:System.ServiceModel.Channels.WebContentTypeMapper> klasy, która umożliwia użytkownikowi na kontrolowanie mapowanie między typu zawartości i formatu treści.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zawiera zestaw domyślnych mapowań typów zawartości. Na przykład `application/json` mapy do formatu JSON i `text/xml` mapy do pliku XML. Typ zawartości, który nie jest zamapowany na formacie JSON i XML jest zamapowany na format binarny raw.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera zestaw domyślnych mapowań typów zawartości. Na przykład `application/json` mapy do formatu JSON i `text/xml` mapy do pliku XML. Typ zawartości, który nie jest zamapowany na formacie JSON i XML jest zamapowany na format binarny raw.  
   
  W niektórych scenariuszach (na przykład stylu wypychania API) dewelopera usługi nie kontroluje zawartości typ zwracany przez klienta. Na przykład klienci mogą zwracać dane JSON jako `text/javascript` zamiast `application/json`. W takim przypadku podać typu pochodzącego od dewelopera usługi <xref:System.ServiceModel.Channels.WebContentTypeMapper> poprawnie, jak pokazano w poniższym kodzie próbki obsługi danego typu zawartości.  
   
@@ -76,7 +64,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
   

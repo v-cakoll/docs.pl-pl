@@ -1,36 +1,22 @@
 ---
-title: "Przydziały dla transportu"
-ms.custom: 
+title: Przydziały dla transportu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>Przydziały dla transportu
 Przydziały dla transportu są mechanizm zasad dotyczących decydowania, kiedy korzysta z połączenia nadmiernego zasobów. Limit przydziału jest stały limit, który uniemożliwia użycie dodatkowych zasobów, po przekroczeniu przydziału wartości. Przydziały dla transportu zapobiec złośliwe lub przypadkowe "odmowa usługi".  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Transporty ma domyślne wartości przydziałów, które są oparte na zachowawcze alokacji zasobów. Te wartości domyślne są odpowiednie dla środowisk projektowych oraz instalacji małe scenariusze. Administratorzy usługi przejrzeć przydziały dla transportu i dostrajania poszczególne wartości przydziału, jeśli instalacja kończy się zasoby lub połączeń są ograniczeni niezależnie od dostępności dodatkowych zasobów.  
+ Transporty Windows Communication Foundation (WCF) ma domyślne wartości przydziałów, które są oparte na zachowawcze alokacji zasobów. Te wartości domyślne są odpowiednie dla środowisk projektowych oraz instalacji małe scenariusze. Administratorzy usługi przejrzeć przydziały dla transportu i dostrajania poszczególne wartości przydziału, jeśli instalacja kończy się zasoby lub połączeń są ograniczeni niezależnie od dostępności dodatkowych zasobów.  
   
 ## <a name="types-of-transport-quotas"></a>Typy przydziały dla transportu  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Transporty są trzy typy przydziałów:  
+ Transportu WCF są trzy typy przydziałów:  
   
 -   *Limity czasu* ograniczyć ataki, które opierają się na zajmowania zasobów przez dłuższy czas.  
   
@@ -39,7 +25,7 @@ Przydziały dla transportu są mechanizm zasad dotyczących decydowania, kiedy k
 -   *Limity rozmiaru kolekcji* powiązany zużycie zasobów, które pośrednio przydzielić pamięci lub w ograniczonych zasobach.  
   
 ## <a name="transport-quota-descriptions"></a>Opisy przydziału transportu  
- W tej sekcji opisano dostępne dla standardowego przydziały dla transportu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportów: HTTP (S), TCP/IP i nazwanych potoków. Transporty niestandardowe mogą uwidaczniać własne można konfigurować przydziały nie ma na tej liście. Zajrzyj do dokumentacji dla niestandardowych transportu dowiedzieć się o jego przydziałów.  
+ W tej sekcji opisano dostępne dla standardowych transportu WCF przydziały dla transportu: HTTP (S), TCP/IP i nazwanych potoków. Transporty niestandardowe mogą uwidaczniać własne można konfigurować przydziały nie ma na tej liście. Zajrzyj do dokumentacji dla niestandardowych transportu dowiedzieć się o jego przydziałów.  
   
  Każde ustawienie limitu przydziału ma typ, wartość minimalna i wartość domyślną. Maksymalna wartość limit przydziału jest ograniczona przez jego typu. Ze względu na ograniczenia maszyny nie zawsze jest możliwe ustawić limit przydziału maksymalnej wartości.  
   

@@ -1,12 +1,6 @@
 ---
-title: "Zasady pamięci podręcznej"
-ms.custom: 
+title: Zasady pamięci podręcznej
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time-based cache policies
 - location-based cache policies
@@ -16,21 +10,19 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bafad45e6b6b546707c4f805f857e85549f0f071
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cache-policy"></a>Zasady pamięci podręcznej
 Zasady pamięci podręcznej definiuje reguły, które są używane do ustalenia, czy można spełnić żądania przy użyciu pamięci podręcznej kopię żądanego zasobu. Określ aplikacje, wymagania dotyczące pamięci podręcznej klienta dla świeżości, ale zasady skuteczne pamięci podręcznej jest określany przez wymagania dotyczące pamięci podręcznej klienta, wygaśnięcia zawartości serwera oraz wymagania dotyczące ponownego sprawdzania poprawności serwera. Interakcja wymagania zasad i serwera pamięci podręcznej klienta zawsze powoduje najbardziej zachowawcze zasady pamięci podręcznej, aby zapewnić, że najnowsza zawartość jest zwracana do aplikacji klienckiej.  
   
- Zasady pamięci podręcznej są oparte na lokalizacji lub oparte na czasie. Zasady oparte na lokalizacji pamięci podręcznej definiuje świeżości wpisów pamięci podręcznej podstawę, z którego można pobrać żądanego zasobu. Zasady na podstawie czasu pamięci podręcznej definiuje świeżości wpisów pamięci podręcznej przy użyciu czasu, który został pobrany zasobu, nagłówki zwrócił zasobu a bieżącą godziną. Większość aplikacji można użyć domyślne zasady na podstawie czasu pamięci podręcznej, która implementuje zasad buforowania określone w dokumencie RFC 2616 dostępne pod adresem [http://www.ietf.org](http://www.ietf.org/).  
+ Zasady pamięci podręcznej są oparte na lokalizacji lub oparte na czasie. Zasady oparte na lokalizacji pamięci podręcznej definiuje świeżości wpisów pamięci podręcznej podstawę, z którego można pobrać żądanego zasobu. Zasady na podstawie czasu pamięci podręcznej definiuje świeżości wpisów pamięci podręcznej przy użyciu czasu, który został pobrany zasobu, nagłówki zwrócił zasobu a bieżącą godziną. Większość aplikacji można użyć domyślne zasady na podstawie czasu pamięci podręcznej, która implementuje zasad buforowania określone w dokumencie RFC 2616 dostępne pod adresem [ http://www.ietf.org ](http://www.ietf.org/).  
   
  Klasy opisane w poniższej tabeli służą do określania zasad buforowania.  
   

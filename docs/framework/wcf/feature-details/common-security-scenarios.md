@@ -1,28 +1,16 @@
 ---
-title: "Typowe scenariusze zabezpieczeń"
-ms.custom: 
+title: Typowe scenariusze zabezpieczeń
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-security-scenarios"></a>Typowe scenariusze zabezpieczeń
 Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpieczeń usługi. Konfiguracje różny w zależności od szeregu czynników. Na przykład czy usługi lub klienta znajduje się w intranecie lub czy zabezpieczeń są dostarczane przez Windows lub transportu (na przykład HTTPS).  
@@ -32,7 +20,7 @@ Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpiecz
  Przykład publiczny, niezabezpieczony klient i usługa.  
   
  [Niezabezpieczony klient i usługa w intranecie](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Podstawowy [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi opracowany, aby podać informacje w sieci prywatnej bezpieczny do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
+ Podstawowe usługi Windows Communication Foundation (WCF) opracowany, aby podać informacje w sieci prywatnej bezpieczny do aplikacji usługi WCF.  
   
  [Zabezpieczenia transportu z uwierzytelnianiem podstawowym](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  Aplikacja umożliwia klientom zalogować się przy użyciu uwierzytelniania niestandardowego.  
@@ -47,7 +35,7 @@ Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpiecz
  Pokazuje klienta i usługi zabezpieczone za pomocą certyfikatu.  
   
  [Zabezpieczenia komunikatów z anonimowym klientem](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Przedstawia klientów i usług zabezpieczonych przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia wiadomości.  
+ Przedstawia klientów i usług zabezpieczonych przez zabezpieczenia wiadomości WCF.  
   
  [Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Klient jest aplikacji formularzy systemu Windows, która umożliwia klientom zalogować się przy użyciu nazwy użytkownika domeny i hasła.  

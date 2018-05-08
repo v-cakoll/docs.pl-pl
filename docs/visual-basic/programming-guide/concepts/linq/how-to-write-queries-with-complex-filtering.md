@@ -1,22 +1,12 @@
 ---
-title: "Porady: pisać zapytania z złożone filtrowanie (Visual Basic)"
-ms.custom: 
+title: 'Porady: pisać zapytania z złożone filtrowanie (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 15ed0dcf87ad05b1da984aca494d28c1b19eb685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Porady: pisać zapytania z złożone filtrowanie (Visual Basic)
 Czasami chcesz zapisać LINQ do XML zapytania z złożonych filtrów. Na przykład może być konieczne Znajdź wszystkie elementy, które ma element podrzędny o określonej nazwie i wartości. W tym temacie przedstawiono przykładowy Pisanie zapytań za pomocą filtrowania złożonych.  
@@ -89,7 +79,7 @@ End Module
  <xref:System.Xml.Linq.XElement.Attribute%2A>  
  <xref:System.Xml.Linq.XContainer.Elements%2A>  
  [Podstawowe zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Właściwość osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
+ [Właściwości osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
  [Właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
  [Właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
  [Operacje rzutowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  

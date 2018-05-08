@@ -1,13 +1,6 @@
 ---
-title: "Porady: tworzenie ustawień aplikacji"
-ms.custom: 
+title: 'Porady: tworzenie ustawień aplikacji'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6d0ede88d8f9b4c15cd3e0f141870b9a5e747aa9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6e268169949994e1b58b5b8a7dcd0429895fb38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-application-settings"></a>Porady: tworzenie ustawień aplikacji
 Za pomocą kodu zarządzanego, można tworzyć nowe ustawienia aplikacji i powiązać je z właściwości formularza lub kontrolki formularza, aby te ustawienia są ładowane i automatycznie zapisywane w czasie wykonywania.  

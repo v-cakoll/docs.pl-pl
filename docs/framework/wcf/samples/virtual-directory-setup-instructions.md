@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje dotyczące konfigurowania katalogów wirtualnych"
-ms.custom: 
+title: Instrukcje dotyczące konfigurowania katalogów wirtualnych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrukcje dotyczące konfigurowania katalogów wirtualnych
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Będą udostępniać wspólnej katalog wirtualny o nazwie servicemodelsamples, który jest zamapowany na %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder próbek.  
+Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnej katalog wirtualny o nazwie servicemodelsamples, który jest zamapowany na %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.  
   
 > [!NOTE]
 >  Dysk % SystemDrive % jest zwykle C: i D:, w zależności od lokalizacji dysku, na którym zainstalowano usługi Internet Information Services (IIS).  

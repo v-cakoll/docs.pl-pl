@@ -1,26 +1,12 @@
 ---
 title: Wysyłanie według elementu treści
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-by-body-element"></a>Wysyłanie według elementu treści
 W tym przykładzie pokazano, jak wdrożyć alternatywny algorytm przypisywanie komunikatów przychodzących do operacji.  
@@ -82,7 +68,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Dodawanie selektor operacji do usługi  
- Selektory operacji wysyłania usługi są rozszerzenia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dyspozytora. Wybierania metody w kanale wywołania zwrotnego kontraktów dupleksowych, są również selektorów operacji klienta, które znacznie działa jak selektorów operacji wysyłania opisane w tym miejscu, ale które nie są jawnie wymienione w tym przykładzie.  
+ Selektory operacji wysyłania usługi są rozszerzenia do dyspozytora Windows Communication Foundation (WCF). Wybierania metody w kanale wywołania zwrotnego kontraktów dupleksowych, są również selektorów operacji klienta, które znacznie działa jak selektorów operacji wysyłania opisane w tym miejscu, ale które nie są jawnie wymienione w tym przykładzie.  
   
  Podobnie jak większość rozszerzenia modelu usługi selektorów operacji wysyłania są dodawane do dyspozytora za pomocą zachowań. A *zachowanie* jest obiekt konfiguracji, który dodaje jedno lub więcej rozszerzeń do wysyłania środowiska wykonawczego (lub środowiska uruchomieniowego klienta) albo w przeciwnym razie zmienia jego ustawienia.  
   
@@ -187,7 +173,7 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

@@ -1,31 +1,17 @@
 ---
 title: Przykład serializacji kodu JSON ze słabą kontrolą typów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Przykład serializacji kodu JSON ze słabą kontrolą typów
 Podczas serializowania typu zdefiniowane przez użytkownika format podanego podczas transmisji lub deserializacji formacie łańcuchowym do typu zdefiniowanego przez użytkownika, danego typu zdefiniowane przez użytkownika muszą być dostępne zarówno usługi, jak i na kliencie. Zwykle w tym celu, <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany do ich elementy członkowskie. Ten mechanizm ma również zastosowanie podczas pracy z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w temacie [porady: serializacji i deserializacji danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- W niektórych scenariuszach [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi lub klienta muszą uzyskać dostęp do obiektów JSON generowanych przez usługi lub klienta, który jest poza kontrolą dewelopera. Jak większej liczby usług sieci Web publicznie uwidacznia interfejsów API JSON, może być niepraktyczne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] developer do utworzenia lokalnego typy zdefiniowane przez użytkownika do którego deserializować dowolnego obiektów JSON. W tym przykładzie zapewnia mechanizm umożliwiający [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deweloperom zdeserializowany, dowolnego obiektów JSON bez tworzenia typy danych zdefiniowane przez użytkownika. Jest to nazywane *szeregowanie słabą kontrolą* obiektów JSON, ponieważ typ, do którego deserializuje obiekt JSON nie jest znany w czasie kompilacji.  
+ W niektórych scenariuszach klienta lub usługi Windows Communication Foundation (WCF) muszą uzyskać dostęp do obiektów JSON generowanych przez usługi lub klienta, który jest poza kontrolą dewelopera. Jak większej liczby usług sieci Web publicznie uwidacznia interfejsów API JSON, może być niepraktyczne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] developer do utworzenia lokalnego typy zdefiniowane przez użytkownika do którego deserializować dowolnego obiektów JSON. W tym przykładzie zapewnia mechanizm umożliwiający [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deweloperom zdeserializowany, dowolnego obiektów JSON bez tworzenia typy danych zdefiniowane przez użytkownika. Jest to nazywane *szeregowanie słabą kontrolą* obiektów JSON, ponieważ typ, do którego deserializuje obiekt JSON nie jest znany w czasie kompilacji.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -149,7 +135,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

@@ -1,32 +1,18 @@
 ---
 title: 'Porady: udostępnianie źródło danych jako Atom i RSS'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4780e43679d461509911a4abda689a0c16112e4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Porady: udostępnianie źródło danych jako Atom i RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługa syndykacji ujawniający zespolonego źródła danych przy użyciu zarówno Atom 1.0 i RSS 2.0. Ta usługa udostępnia jeden punkt końcowy, który może zwrócić albo formacie zespolonego. Dla uproszczenia usługę używaną w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS lub WAS. Aby uzyskać więcej informacji na temat różnych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hosting opcji, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF) służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługa syndykacji ujawniający zespolonego źródła danych przy użyciu zarówno Atom 1.0 i RSS 2.0. Ta usługa udostępnia jeden punkt końcowy, który może zwrócić albo formacie zespolonego. Dla uproszczenia usługę używaną w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS lub WAS. Aby uzyskać więcej informacji o różnych technologii WCF obsługujący opcji, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Aby utworzyć usługę zespolonego podstawowe  
   

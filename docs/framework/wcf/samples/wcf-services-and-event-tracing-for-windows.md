@@ -1,27 +1,15 @@
 ---
-title: "Usługi i śledzenie zdarzeń programu WCF dla systemu Windows"
-ms.custom: 
+title: Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
-W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] do wysyłania zdarzeń w zdarzenia śledzenia zdarzeń systemu Windows (ETW). Śledzenie analityczne są zdarzenia wysyłanego w punktach klucza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu, który umożliwia rozwiązywanie problemów z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług w środowisku produkcyjnym.  
+W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w systemie Windows Communication Foundation (WCF) do wysyłania zdarzeń w zdarzenia śledzenia zdarzeń systemu Windows (ETW). Śledzenie analityczne są zdarzenia wysyłanego w punktach klucza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu, który umożliwia rozwiązywanie problemów z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług w środowisku produkcyjnym.  
   
  Śledzenie analityczne w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi śledzenia, który może być włączony w środowisku produkcyjnym z minimalnym wpływem na wydajność. Te operacje śledzenia są emitowane jako zdarzenia do sesji ETW.  
   
@@ -37,7 +25,7 @@ W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w [!INCL
   
      W przeglądarce sieci Web, kliknij przycisk **Calculator.svc**. Identyfikator URI dokumentu WSDL dla usługi powinien zostać wyświetlony w przeglądarce. Skopiuj ten identyfikator URI.  
   
-     Domyślnie usługa rozpoczyna nasłuchiwanie na porcie 1378 (http://localhost:1378/Calculator.svc) żądań.  
+     Domyślnie usługa rozpoczyna nasłuchiwanie na porcie 1378 żądań (http://localhost:1378/Calculator.svc).  
   
 4.  Uruchom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta testowego (WcfTestClient.exe).  
   
@@ -94,7 +82,7 @@ W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w [!INCL
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

@@ -1,13 +1,6 @@
 ---
-title: "x:Class — dyrektywa"
-ms.custom: 
+title: x:Class — dyrektywa
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:Class
 - xClass
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-caps.latest.revision: "27"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e6a2379640d2556b553d14d20398a0a14931393
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xclass-directive"></a>x:Class — dyrektywa
 Konfiguruje kompilację znaczników XAML, aby dołączyć klasy częściowe między znaczników i związane z kodem. Klasy częściowe kod jest zdefiniowany w osobnym pliku kodu w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] języka, podczas gdy klasy częściowej znaczników jest zwykle tworzony przy generowania kodu podczas kompilacji XAML.  
@@ -43,16 +31,16 @@ Konfiguruje kompilację znaczników XAML, aby dołączyć klasy częściowe mię
   
 |||  
 |-|-|  
-|`namespace`|Opcjonalny. Określa [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] przestrzeń nazw zawiera klasy częściowej identyfikowane przez `classname`. Jeśli `namespace` określono kropkę (.) oddziela `namespace` i `classname`. Zobacz uwagi.|  
-|`classname`|Wymagany. Określa [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nazwa częściowej klasy, która łączy załadować XAML i z kodem dla tego języka XAML.|  
+|`namespace`|Opcjonalna. Określa [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] przestrzeń nazw zawiera klasy częściowej identyfikowane przez `classname`. Jeśli `namespace` określono kropkę (.) oddziela `namespace` i `classname`. Zobacz uwagi.|  
+|`classname`|Wymagana. Określa [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nazwa częściowej klasy, która łączy załadować XAML i z kodem dla tego języka XAML.|  
   
 ## <a name="dependencies"></a>Zależności  
- `x:Class`można określić tylko dla elementu głównego XAML produkcji. `x:Class`jest nieprawidłowy w każdym obiekcie, który ma element nadrzędny w środowisku produkcyjnym XAML. Aby uzyskać więcej informacji, zobacz [ \[MS XAML\] sekcji 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
+ `x:Class` można określić tylko dla elementu głównego XAML produkcji. `x:Class` jest nieprawidłowy w każdym obiekcie, który ma element nadrzędny w środowisku produkcyjnym XAML. Aby uzyskać więcej informacji, zobacz [ \[MS XAML\] sekcji 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Uwagi  
  `namespace` Wartość może zawierać dodatkowe punkty organizowania pokrewne przestrzeni nazw w hierarchii nazwa czyli technikę typowe w programowaniu .NET Framework. Tylko ostatni kropki (.) w ciągu `x:Class` wartości jest interpretowany do oddzielania `namespace` i `classname.` klasy, która jest używana jako `x:Class` nie może być klasą zagnieżdżoną. Klasy zagnieżdżone nie są dozwolone, ponieważ określanie znaczenie kropkami dla `x:Class` ciągów jest niejednoznaczny, jeśli klasy zagnieżdżone są dozwolone.  
   
- W istniejących programowania modeli, które używają `x:Class`, `x:Class` jest opcjonalna w tym sensie, jest całkowicie nieprawidłowe strona XAML ma nie kodem. Jednak taką możliwość interakcji z akcji kompilacji zaimplementowanego przez platformy, które używają XAML. `x:Class`możliwość również ma wpływ ról, że różne klasyfikacje zawartości XAML, określony w modelu aplikacji i w polu kompilacji akcje. Jeśli Twoje XAML deklaruje atrybutu obsługi zdarzeń wartości lub tworzy elementy niestandardowe, gdzie klasy definiującej znajdują się w klasie związanej z kodem, musisz podać `x:Class` dyrektywy odwołania (lub [x: Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) do odpowiedniej klasy dla związane z kodem.  
+ W istniejących programowania modeli, które używają `x:Class`, `x:Class` jest opcjonalna w tym sensie, jest całkowicie nieprawidłowe strona XAML ma nie kodem. Jednak taką możliwość interakcji z akcji kompilacji zaimplementowanego przez platformy, które używają XAML. `x:Class` możliwość również ma wpływ ról, że różne klasyfikacje zawartości XAML, określony w modelu aplikacji i w polu kompilacji akcje. Jeśli Twoje XAML deklaruje atrybutu obsługi zdarzeń wartości lub tworzy elementy niestandardowe, gdzie klasy definiującej znajdują się w klasie związanej z kodem, musisz podać `x:Class` dyrektywy odwołania (lub [x: Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) do odpowiedniej klasy dla związane z kodem.  
   
  Wartość `x:Class` dyrektywa musi być ciągiem, który określa w pełni kwalifikowana nazwa klasy, ale bez żadnych informacji o zestawie (odpowiednikiem <xref:System.Type.FullName%2A?displayProperty=nameWithType>). W przypadku prostego aplikacji informacji przestrzeń nazw CLR można pominąć, jeśli CodeBehind składa się również w ten sposób (kod rozpocznie definicji na poziomie klasy).  
   
@@ -69,7 +57,7 @@ Konfiguruje kompilację znaczników XAML, aby dołączyć klasy częściowe mię
  Dla programu Windows Workflow Foundation `x:Class` nazwy klasy niestandardowe działanie składające się wyłącznie w języku XAML, lub nazwy klasy częściowej strony XAML Designer działanie z kodem.  
   
 ## <a name="silverlight-usage-notes"></a>Uwagi dotyczące użycia programu Silverlight  
- `x:Class`dla programu Silverlight jest udokumentowany oddzielnie. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (platformy Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
+ `x:Class` dla programu Silverlight jest udokumentowany oddzielnie. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (platformy Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Zobacz też  
  [x:Subclass, dyrektywa](../../../docs/framework/xaml-services/x-subclass-directive.md)  

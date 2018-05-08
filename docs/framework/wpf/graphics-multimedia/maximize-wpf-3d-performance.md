@@ -1,28 +1,14 @@
 ---
-title: "Maksymalizuj wydajność 3D WPF"
-ms.custom: 
+title: Maksymalizuj wydajność 3D WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6677ee3a6d17ea38636d49327d7af22b53bc900e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maksymalizuj wydajność 3D WPF
 W trakcie używania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] do tworzenia kontrolek 3W i obejmują sceny 3W w aplikacjach, ważne jest, aby wziąć pod uwagę optymalizacji wydajności. Ten temat zawiera listę 3D klas i właściwości, które mają wpływ na wydajność aplikacji, wraz z zaleceniami dotyczącymi optymalizacji wydajności, gdy ich użyć.  
@@ -33,15 +19,15 @@ W trakcie używania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptl
   
 |Właściwość|Zalecenia|  
 |-|-|  
-|<xref:System.Windows.Media.Brush>|Szybkość pędzla (najszybciej do najwolniejsze):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(buforowanej)<br /><br /> <xref:System.Windows.Media.VisualBrush>(buforowanej)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(bez buforowania)<br /><br /> <xref:System.Windows.Media.VisualBrush>(bez buforowania)|  
-|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Ustaw `Viewport3D.ClipToBounds` na wartość false, gdy nie należy mieć [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jawnie przyciąć zawartość <xref:System.Windows.Controls.Viewport3D> Viewport3D prostokąta. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]antyaliasowany wycinka może być bardzo wolno i `ClipToBounds` jest domyślnie włączone (wolno) na <xref:System.Windows.Controls.Viewport3D>.|  
-|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Ustaw `Viewport3D.IsHitTestVisible` na wartość false, gdy nie ma potrzeby [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wziąć pod uwagę zawartość <xref:System.Windows.Controls.Viewport3D> podczas wykonywania myszy testowania trafień.  Trafień testowania zawartości 3D odbywa się w oprogramowaniu i może działać powoli z dużych siatki. <xref:System.Windows.UIElement.IsHitTestVisible%2A>jest domyślnie włączone (wolno) na <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.Media.Brush>|Szybkość pędzla (najszybciej do najwolniejsze):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (buforowanej)<br /><br /> <xref:System.Windows.Media.VisualBrush> (buforowanej)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (bez buforowania)<br /><br /> <xref:System.Windows.Media.VisualBrush> (bez buforowania)|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Ustaw `Viewport3D.ClipToBounds` na wartość false, gdy nie należy mieć [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jawnie przyciąć zawartość <xref:System.Windows.Controls.Viewport3D> Viewport3D prostokąta. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] antyaliasowany wycinka może być bardzo wolno i `ClipToBounds` jest domyślnie włączone (wolno) na <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Ustaw `Viewport3D.IsHitTestVisible` na wartość false, gdy nie ma potrzeby [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wziąć pod uwagę zawartość <xref:System.Windows.Controls.Viewport3D> podczas wykonywania myszy testowania trafień.  Trafień testowania zawartości 3D odbywa się w oprogramowaniu i może działać powoli z dużych siatki. <xref:System.Windows.UIElement.IsHitTestVisible%2A> jest domyślnie włączone (wolno) na <xref:System.Windows.Controls.Viewport3D>.|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|Utwórz różne modele tylko wtedy, gdy wymagają różnych materiałów lub transformacji.  W przeciwnym razie spróbuj łączyć wiele <xref:System.Windows.Media.Media3D.GeometryModel3D> wystąpienia o tych samych materiałów i przekształceń do większych kilka <xref:System.Windows.Media.Media3D.GeometryModel3D> i <xref:System.Windows.Media.Media3D.MeshGeometry3D> wystąpień.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Siatka animacji — zmiana poszczególnych wierzchołki siatki na podstawie na ramki — nie zawsze jest skuteczne w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Aby zminimalizować wpływ na wydajność powiadomienia o zmianie, gdy każdy wierzchołek jest modyfikowany, odłączyć siatkę z drzewa wizualnego przed wykonaniem modyfikacji wierzchołków.  Po sieci został zmodyfikowany, podłącz go do drzewa wizualnego.  Spróbuj również zminimalizować rozmiar siatki, które będzie można animować w ten sposób.|  
 |Antialiasingu 3D|Aby przyspieszyć renderowania wyłączyć multisampling na <xref:System.Windows.Controls.Viewport3D> przez ustawienie właściwości dołączonych <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> do `Aliased`.  Domyślnie antialiasingu 3D jest wyłączona na [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] i włączona na [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] z 4 próbki piksela.|  
 |Tekst|Tekst na żywo w scenę 3D (na żywo, ponieważ jest on <xref:System.Windows.Media.DrawingBrush> lub <xref:System.Windows.Media.VisualBrush>) może działać powoli. Zamiast tego użyć obrazów tekstu (za pośrednictwem <xref:System.Windows.Media.Imaging.RenderTargetBitmap>), chyba że zmieni się tekst.|  
 |<xref:System.Windows.Media.TileBrush>|Jeśli musisz użyć <xref:System.Windows.Media.VisualBrush> lub <xref:System.Windows.Media.DrawingBrush> w scenę 3D pędzla zawartość nie jest statyczny, spróbuj buforowanie pędzla (ustawienie dołączona właściwość <xref:System.Windows.Media.RenderOptions.CachingHint%2A> do `Cache`).  Ustaw minimalną i maksymalną skalę progi unieważniania (z dołączonych właściwości <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> i <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>), aby pędzle pamięci podręcznej nie będą generowane zbyt często, zachowując żądany poziom jakości.  Domyślnie <xref:System.Windows.Media.DrawingBrush> i <xref:System.Windows.Media.VisualBrush> nie są buforowane, co oznacza, że za każdym razem, gdy coś o pędzla musi zostać ponownie renderowany, całej zawartości pędzla najpierw należy ponownie wyrenderować pośredniego powierzchnię.|  
-|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>Wymusza wszystkie powiązane zawartości bez przyspieszanie sprzętowe.  Aby uzyskać najlepszą wydajność, nie należy używać <xref:System.Windows.Media.Effects.BitmapEffect>.|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> Wymusza wszystkie powiązane zawartości bez przyspieszanie sprzętowe.  Aby uzyskać najlepszą wydajność, nie należy używać <xref:System.Windows.Media.Effects.BitmapEffect>.|  
   
 ## <a name="performance-impact-medium"></a>Wpływ na wydajność: średni  
   
@@ -58,7 +44,7 @@ W trakcie używania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptl
 |<xref:System.Windows.Media.Media3D.Light>|Szybkość światła (najszybciej do najwolniejsze):<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Należy próbować zachować rozmiary siatki w tych granic:<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20,001 <xref:System.Windows.Media.Media3D.Point3D> wystąpień<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60,003 <xref:System.Int32> wystąpień|  
 |<xref:System.Windows.Media.Media3D.Material>|Szybkość materiału (najszybciej do najwolniejsze):<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3W nie zrezygnować z niewidoczne pędzle (czarny otoczenia pędzle, wyczyść pędzle itp.) w spójny sposób.  Należy wziąć pod uwagę, pomijając je z sceny.|  
+|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3W nie zrezygnować z niewidoczne pędzle (czarny otoczenia pędzle, wyczyść pędzle itp.) w spójny sposób.  Należy wziąć pod uwagę, pomijając je z sceny.|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|Każdy <xref:System.Windows.Media.Media3D.Material> w <xref:System.Windows.Media.Media3D.MaterialGroup> powoduje, że inny przebiegu renderowania wiele materiałów, dlatego w tym nawet proste materiałów, można znacznie zwiększyć wypełnienia zapotrzebowanie na procesor GPU.  Zminimalizowanie liczby materiałów w Twojej <xref:System.Windows.Media.Media3D.MaterialGroup>.|  
   
 ## <a name="performance-impact-low"></a>Wpływ na wydajność: Niski  

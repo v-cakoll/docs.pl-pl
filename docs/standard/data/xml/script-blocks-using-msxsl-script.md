@@ -1,29 +1,18 @@
 ---
-title: "Msxsl:script bloki za pomocą skryptu"
-ms.custom: 
+title: Msxsl:script bloki za pomocą skryptu
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="script-blocks-using-msxslscript"></a>Msxsl:script bloki za pomocą skryptu
 <xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje osadzonych skryptów przy użyciu `msxsl:script` elementu. Po załadowaniu arkusza stylów żadnych określonych funkcji są kompilowane na język pośredni firmy Microsoft (MSIL) przez kod Document Object Model (CodeDOM) i są wykonywane w czasie wykonywania. Zestaw wygenerowane z bloku osadzony skrypt jest oddzielony niż zestaw wygenerowany dla arkusza stylów.  
@@ -71,7 +60,7 @@ ms.lasthandoff: 12/23/2017
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- Numeryczne typy CLR są konwertowane na <xref:System.Double>. <xref:System.DateTime> Typu jest konwertowana na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable>typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. **Element XPathNavigator []** jest konwertowana na <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Numeryczne typy CLR są konwertowane na <xref:System.Double>. <xref:System.DateTime> Typu jest konwertowana na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. **Element XPathNavigator []** jest konwertowana na <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Wszystkie inne typy Zgłoś błąd.  
   
@@ -137,10 +126,10 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
   
-#### <a name="numberxml"></a>Number.XML  
+#### <a name="numberxml"></a>number.xml  
  [!code-xml[XSLT_Script#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/number.xml#2)]  
   
-#### <a name="calcxsl"></a>CALC.xsl  
+#### <a name="calcxsl"></a>calc.xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
 ### <a name="output"></a>Dane wyjściowe  

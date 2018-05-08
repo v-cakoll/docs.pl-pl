@@ -1,34 +1,20 @@
 ---
 title: 'Porady: implementowanie PriorityBinding'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cf0ed5c2b55358d3a583ac89e307b23b3ab08a9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>Porady: implementowanie PriorityBinding
-<xref:System.Windows.Data.PriorityBinding>w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] działa przez określenie listy powiązań. Lista powiązań porządkowania z najwyższym priorytetem do najniższego priorytetu. Jeśli powiązanie najwyższy priorytet zwróci wartość pomyślnie podczas przetwarzania oznacza to, że nigdy nie potrzeba przetworzyć pozostałych powiązaniach na liście. Może to być to powiązanie najwyższy priorytet trwa długo ma zostać obliczone, dalej najwyższy priorytet, która zwraca wartość pomyślnie zostanie użyty, dopóki powiązanie o wyższym priorytecie zwraca wartość pomyślnie.  
+<xref:System.Windows.Data.PriorityBinding> w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] działa przez określenie listy powiązań. Lista powiązań porządkowania z najwyższym priorytetem do najniższego priorytetu. Jeśli powiązanie najwyższy priorytet zwróci wartość pomyślnie podczas przetwarzania oznacza to, że nigdy nie potrzeba przetworzyć pozostałych powiązaniach na liście. Może to być to powiązanie najwyższy priorytet trwa długo ma zostać obliczone, dalej najwyższy priorytet, która zwraca wartość pomyślnie zostanie użyty, dopóki powiązanie o wyższym priorytecie zwraca wartość pomyślnie.  
   
 ## <a name="example"></a>Przykład  
  Aby zademonstrować sposób <xref:System.Windows.Data.PriorityBinding> działa, `AsyncDataSource` obiekt został utworzony z następujących trzech właściwości: `FastDP`, `SlowerDP`, i `SlowestDP`.  

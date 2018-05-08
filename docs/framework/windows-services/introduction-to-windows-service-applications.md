@@ -1,14 +1,6 @@
 ---
-title: "Wprowadzenie do aplikacji usług systemu Windows"
-ms.custom: 
+title: Wprowadzenie do aplikacji usług systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ServiceController
 helpviewer_keywords:
@@ -29,17 +21,13 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Wprowadzenie do aplikacji usług systemu Windows
 Program Microsoft Windows services, wcześniej znana jako usługi NT umożliwiają tworzenie aplikacji wykonywalnych długotrwałe działających w ich własnej sesji systemu Windows. Tych usług można automatycznie uruchamiana podczas rozruchu komputera, może być wstrzymane i ponownie uruchomione i nie wyświetlaj interfejsu użytkownika. Te funkcje należy usług idealne do użycia na serwerze lub jeśli potrzebne jest długotrwałe funkcje, które nie koliduje z innym użytkownikom pracującym na tym samym komputerze. Można również uruchomić usług w kontekście zabezpieczeń konta określonego użytkownika, który różni się od zalogowanego użytkownika lub domyślnego konta komputera. Aby uzyskać więcej informacji o usługach i sesji systemu Windows zobacz dokumentację zestawu Windows SDK.  

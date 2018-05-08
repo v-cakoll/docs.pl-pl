@@ -1,26 +1,12 @@
 ---
 title: 'Porady: Sprawdzanie poprawności DBML i plikami zewnętrznych mapowania'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9bf21353aebd0ae57c51b2ddf3b31b5e7f1ac615
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Porady: Sprawdzanie poprawności DBML i plikami zewnętrznych mapowania
 Mapowanie zewnętrzne pliki i pliki .dbml zmodyfikowaniu musi zostać zweryfikowany względem ich definicje odpowiednich schematu. Ten temat zawiera użytkowników programu Visual Studio czynności do wykonania procesu weryfikacji.  

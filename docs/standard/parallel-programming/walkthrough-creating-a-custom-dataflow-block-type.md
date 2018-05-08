@@ -1,9 +1,7 @@
 ---
 title: 'Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,15 +12,11 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fdb6bde99ac5e15fb07010f3a73aba7c09bd4834
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7fbc81729e8280f3a062cfa8290b102349e80e7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych
 Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, które umożliwiają wykonywanie różnych funkcji, jednak można również utworzyć niestandardowe bloku typów. Ten dokument zawiera opis sposobu tworzenia typu bloku przepływu danych, który implementuje zachowanie niestandardowych.  

@@ -1,10 +1,6 @@
 ---
 title: Domyślne zachowanie marshalingu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,14 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Przekazywanie międzyoperacyjne działa w regułach tego dyktować zachowania danych skojarzonych z parametrami metody przesyłanych między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolowania takich kierowania działań jako przekształcenia typu danych, czy wywoływany można zmienić przekazywania danych i zwracany do obiektu wywołującego te zmiany i w której okolicznościach organizatora zapewnia optymalizacji wydajności.  

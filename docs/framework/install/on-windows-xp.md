@@ -1,19 +1,15 @@
 ---
 title: Zainstaluj program .NET Framework w systemie Windows XP
-description: "Dowiedz się, jak zainstalować program .NET Framework w systemie Windows XP."
+description: Dowiedz się, jak zainstalować program .NET Framework w systemie Windows XP.
+ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-keywords: .NET framework, instalacja
-ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 83def2091cf1fdc7d3d359c98aa3116a009d465d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: 8ac695353e36466f05bae129ff1c37ba3d8cbb69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Zainstaluj program .NET Framework w systemie Windows XP i Windows Server 2003
 
@@ -24,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje pomoże Ci zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) jest najnowsza wersja. Nie jest obsługiwana w systemie Windows XP i Windows Server 2003. Znajduje się [systemu Windows 10 spadek twórców aktualizacji](https://www.microsoft.com/software-download/windows10) i [systemu Windows Server 2016 wersji 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Te instrukcje pomoże Ci zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Nie jest obsługiwana w systemie Windows XP i Windows Server 2003. Jest on dołączony [Windows Update 10 kwietnia 2018](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-403"></a>.NET framework 4.0.3
 

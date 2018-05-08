@@ -1,27 +1,15 @@
 ---
-title: "ToolBar — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: ToolBar — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 204c4229852d4e91d2af7a27163c7418b9a1e9b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e21b31805eb0b840866313f16cc85ea33c84e515
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar — Formant (Formularze systemu Windows)
 > [!NOTE]
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
  Zobacz też [porady: Określanie ikony dla narzędzi przycisk przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233659\(v=vs.110\)), [porady: dodawanie przycisków paska narzędzi formantu przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233650\(v=vs.110\)).  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.ToolBar>klasy  
+ <xref:System.Windows.Forms.ToolBar> Klasy  
  Zawiera informacje o klasie i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

@@ -1,23 +1,12 @@
 ---
-title: "Schemat bazy danych trwałości"
-ms.custom: 
+title: Schemat bazy danych trwałości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dc758f85b4f8b0bec5c00979f42d3f7b2ea7b182
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dd49d08e522c842d0f21f176b4d77ac0adb4b47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-database-schema"></a>Schemat bazy danych trwałości
 W tym temacie opisano publicznie obsługiwane przez Magazyn wystąpienia przepływu pracy SQL.  
@@ -27,7 +16,7 @@ W tym temacie opisano publicznie obsługiwane przez Magazyn wystąpienia przepł
   
 |Nazwa kolumny|Typ kolumny|Opis|  
 |-----------------|-----------------|-----------------|  
-|Identyfikator wystąpienia|Unikatowy identyfikator|Identyfikator wystąpienia przepływu pracy.|  
+|Identyfikator wystąpienia|UniqueIdentifier|Identyfikator wystąpienia przepływu pracy.|  
 |PendingTimer|DataGodzina|Wskazuje, że przepływ pracy jest zablokowany na działaniu Delay i zostanie wznowione po wygaśnięciu czasomierza. Ta wartość może być zerowy, jeśli przepływ pracy nie zostanie zablokowany, oczekiwanie na czasomierz wygaśnie.|  
 |CreationTime|DataGodzina|Wskazuje, kiedy przepływ pracy został utworzony.|  
 |LastUpdatedTime|DataGodzina|Wskazuje godzinę ostatniego przepływ pracy został utrwalonego do bazy danych.|  
@@ -62,7 +51,7 @@ W tym temacie opisano publicznie obsługiwane przez Magazyn wystąpienia przepł
 |Nazwa kolumny|Typ kolumny|Opis|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|Klucz podstawowy dla tego widoku.|  
-|Nazwa witryny|nvarchar(max)|Reprezentuje nazwę lokacji, który zawiera usługi przepływu pracy (np. **domyślna witryna sieci Web**).|  
+|SiteName|nvarchar(max)|Reprezentuje nazwę lokacji, który zawiera usługi przepływu pracy (np. **domyślna witryna sieci Web**).|  
 |RelativeServicePath|nvarchar(max)|Reprezentuje ścieżkę wirtualną względem lokacji, który wskazuje usługi przepływu pracy. (np.  **/app1/PurchaseOrderService.svc**).|  
 |RelativeApplicationPath|nvarchar(max)|Reprezentuje ścieżkę wirtualną względem lokacji, która wskazuje aplikacji, która zawiera usługi przepływu pracy. (np. **/App1**).|  
 |ServiceName|nvarchar(max)|Reprezentuje nazwę usługi przepływu pracy. (np. **PurchaseOrderService**).|  
@@ -79,7 +68,7 @@ W tym temacie opisano publicznie obsługiwane przez Magazyn wystąpienia przepł
   
 |Typ kolumny|Typ kolumny|Opis|  
 |-|-|-|  
-|Identyfikator wystąpienia|Unikatowy identyfikator|Identyfikator wystąpienia przepływu pracy|  
+|Identyfikator wystąpienia|UniqueIdentifier|Identyfikator wystąpienia przepływu pracy|  
 |EncodingOption|TinyInt|Opisuje, kodowanie, używany do serializacji awansowanej właściwości binarnych.<br /><br /> -0 – bez kodowania<br />-1 – GZipStream|  
 |PromotionName|Nvarchar(400)|Nazwa promocji skojarzony z tym wystąpieniem. PromotionName jest potrzebne do dodania kontekstu do ogólnego kolumny w tym wierszu.<br /><br /> Na przykład PromotionName PurchaseOrder może wskazywać, że wartość1 zawiera koszt kolejności, wartość2 zawiera nazwę odbiorcy, dla którego złożone zamówienie, wartość 3 zawiera adres odbiorcy i tak dalej.|  
 |Wartość [1-32]|Element SqlVariant|Wartość [1-32] zawiera wartości, które mogą być przechowywane w kolumnie SqlVariant. Pojedynczy podwyższania poziomu nie może zawierać więcej niż 32 SqlVariants.|  

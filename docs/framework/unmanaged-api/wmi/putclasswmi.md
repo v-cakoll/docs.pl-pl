@@ -1,11 +1,7 @@
 ---
-title: "Funkcja PutClassWmi (niezarządzany wykaz interfejsów API)"
-description: "Funkcja PutClassWmi tworzy nową klasę lub aktualizuje istniejący zestaw."
+title: Funkcja PutClassWmi (niezarządzany wykaz interfejsów API)
+description: Funkcja PutClassWmi tworzy nową klasę lub aktualizuje istniejący zestaw.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>Funkcja PutClassWmi
 Tworzy nową klasę lub aktualizuje istniejący zestaw.  
@@ -84,7 +77,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | Nazwa określona klasa jest nieprawidłowa. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Podjęto próbę dokonania zmiany, która będzie unieważnia podklasę. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` Określono flagę, ale klasa już istnieje. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`został określony w `lFlags`, a nie znaleziono klasy. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` został określony w `lFlags`, a nie znaleziono klasy. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | Wymagane właściwości dla klasy nie zostały ustawione. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Usługa WMI jest prawdopodobnie zatrzymana i ponownie uruchomić. Wywołanie [ConnectServerWmi](connectserverwmi.md) ponownie. |
@@ -104,7 +97,7 @@ Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje 
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

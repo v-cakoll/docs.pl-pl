@@ -1,29 +1,18 @@
 ---
-title: "Używanie wątków i wątkowości"
-ms.custom: 
+title: Używanie wątków i wątkowości
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5bed13950a29cfa787ef8c9eb2608c6d74dfd49f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 Tematy w tej sekcji omówiono tworzenie i zarządzanie wątków zarządzanych, jak przekazywać dane do zarządzanych wątków i uzyskiwać wyniki z powrotem i jak zniszczyć wątków i obsługiwać <xref:System.Threading.ThreadAbortException>.  

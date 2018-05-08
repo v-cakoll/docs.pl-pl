@@ -1,13 +1,6 @@
 ---
 title: Odbicie w oprogramowaniu .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], reflection
 - EventInfo class, reflection
@@ -28,16 +21,13 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9b131b8b66315ffbb769eab059142f729cfaf2a2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef4e2918b682d964b7f65eb98d497715d1e4ac57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-in-the-net-framework"></a>Odbicie w oprogramowaniu .NET Framework
 Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji na temat załadować [zestawy](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) i typy zdefiniowane w nich, takich jak [klasy](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfejsów](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5), i [typów wartości](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Umożliwia także odbicia Tworzenie wystąpień typów w czasie wykonywania, a także wywołania i uzyskiwać do nich dostęp. Tematy dotyczące określonych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego przeglądu.  
@@ -62,7 +52,7 @@ Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?disp
   
 -   Użyj <xref:System.Reflection.ParameterInfo> odnajdywania informacje, takie jak nazwa parametru, typ danych, czy parametr jest wartością wejściową lub parametru wyjściowego i pozycja parametru w podpisie metody.  
   
--   Użyj <xref:System.Reflection.CustomAttributeData> do wykrywania informacji na temat atrybutów niestandardowych, gdy użytkownik pracuje w kontekście "tylko odbicie" domeny aplikacji. <xref:System.Reflection.CustomAttributeData>można zbadać atrybutów bez tworzenia wystąpień z nich.  
+-   Użyj <xref:System.Reflection.CustomAttributeData> do wykrywania informacji na temat atrybutów niestandardowych, gdy użytkownik pracuje w kontekście "tylko odbicie" domeny aplikacji. <xref:System.Reflection.CustomAttributeData> można zbadać atrybutów bez tworzenia wystąpień z nich.  
   
  Klasy <xref:System.Reflection.Emit> przestrzeni nazw Podaj specjalna forma odbicia, która umożliwia tworzenie typów w czasie wykonywania.  
   
@@ -73,7 +63,7 @@ Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?disp
 ## <a name="runtime-types-in-reflection"></a>Typy środowiska uruchomieniowego w odbiciu  
  Odbicie udostępnia klasy, takich jak <xref:System.Type> i <xref:System.Reflection.MethodInfo>, do reprezentowania typów, elementy członkowskie, parametry oraz inne jednostki kodu. Jednak gdy używasz odbicia nie działają bezpośrednio z tych klas, z których większość są klasami abstrakcyjnymi (`MustInherit` w języku Visual Basic). Zamiast tego możesz pracować z typów dostarczanych przez środowisko uruchomieniowe języka wspólnego (CLR).  
   
- Na przykład, jeśli używasz języka C# `typeof` — operator (`GetType` w języku Visual Basic) można uzyskać <xref:System.Type> obiektu, obiekt jest w rzeczywistości `RuntimeType`. `RuntimeType`pochodną <xref:System.Type>i zawiera implementacje metody abstrakcyjne.  
+ Na przykład, jeśli używasz języka C# `typeof` — operator (`GetType` w języku Visual Basic) można uzyskać <xref:System.Type> obiektu, obiekt jest w rzeczywistości `RuntimeType`. `RuntimeType` pochodną <xref:System.Type>i zawiera implementacje metody abstrakcyjne.  
   
  Te klasy środowiska uruchomieniowego są `internal` (`Friend` w języku Visual Basic). Ich nie opisano oddzielnie z ich klasami podstawowymi, ponieważ ich zachowanie jest opisane w dokumentacji klasy podstawowej.  
   

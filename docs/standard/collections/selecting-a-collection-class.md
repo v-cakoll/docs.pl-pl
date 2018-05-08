@@ -1,13 +1,7 @@
 ---
 title: Wybieranie klasy kolekcji
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - last-in-first-out collections
 - first-in-first-out collections
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cede57d398930684a68ad15f3e6426939bba2e08
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 9d51f6c8e7dc03edb2823f61ab638fc669847dd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-a-collection-class"></a>Wybieranie klasy kolekcji
 Należy wybrać uważnie klasie kolekcji. Przy użyciu nieprawidłowego typu można ograniczyć korzystanie z kolekcji. Ogólnie rzecz biorąc, należy unikać typów w <xref:System.Collections> przestrzeni nazw o ile nie są specjalnie przeznaczonych dla platformy .NET Framework w wersji 1.1. Rodzajowa i współbieżnych wersje kolekcje są się ze względu na ich większe bezpieczeństwo typu i inne usprawnienia.  

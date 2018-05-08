@@ -1,1 +1,0 @@
-W przypadku niektórych metod, w szczególności operatorów, należy zadeklarować typ parametru, ale nie należy określać nazwy parametru. Taki parametr nosi nazwę *bez nazwy parametru*. W dokumentacji dotyczącej tych metod *__unnamed0* symbol zastępczy reprezentuje parametr nienazwany.

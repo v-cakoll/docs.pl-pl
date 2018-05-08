@@ -1,23 +1,16 @@
 ---
 title: Typy dopuszczające wartości zerowe (Przewodnik programowania w języku C#)
 ms.date: 05/15/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: 44
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9b874b265f4adb131a056ea1ef6fb5ffc820343f
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 10a2d4ab248276d9fdbe9d2bba40ccdd02a77408
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nullable-types-c-programming-guide"></a>Typy dopuszczające wartości zerowe (Przewodnik programowania w języku C#)
 Typy dopuszczające wartości null są wystąpieniami klasy <xref:System.Nullable%601?displayProperty=nameWithType> struktury. Typ dopuszczający wartość null może reprezentować poprawny zakres wartości dla jego typem podstawowym wartości, a także dodatkowe `null` wartość. Na przykład `Nullable<Int32>`, wyraźnym "Dopuszcza wartości null z Int32," można przypisać wartości od -2147483648 do 2147483647 lub można go przypisać `null` wartość. A `Nullable<bool>` można przypisać wartości [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), lub [null](../../../csharp/language-reference/keywords/null.md). Możliwość przypisania `null` do typów liczbowych i logicznych jest szczególnie przydatne podczas mamy do czynienia z bazami danych i inne typy danych, które zawierają elementy, które nie może być przypisana wartość. Na przykład polem w bazie danych można zapisać wartości `true` lub `false`, lub może być niezdefiniowana. 

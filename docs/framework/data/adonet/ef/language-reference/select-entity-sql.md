@@ -1,24 +1,12 @@
 ---
 title: Wybierz (jednostka SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 26d62b4ccab71d1d21a8f65f7feacb8cec727a94
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-entity-sql"></a>Wybierz (jednostka SQL)
 Określa elementów zwróconych przez kwerendę.  
@@ -50,7 +38,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Wyrażenie w postaci:  
   
- `expr`jako `identifier` &#124;`expr`  
+ `expr` jako `identifier`&#124; `expr`  
   
  `expr`  
  Literał lub wyrażenie.  
@@ -73,7 +61,7 @@ SELECT customers.Name FROM customers AS c
  Istnieje również możliwość użycia składni klauzuli JOIN (FULL, wewnętrzny, po lewej, zewnętrzne, ON i po prawej). ON jest wymagana do sprzężenia wewnętrzne i jest nAby dozwolone w przypadku wielu sprzężenia.  
   
 ## <a name="row-and-value-select-clauses"></a>Wiersz i wartość klauzule Select  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje dwa rodzaje klauzuli SELECT. Pierwszy variant, wybierz wiersz, jest identyfikowany przez wybierz — słowo kluczowe i może służyć do określenia jednego lub więcej wartości, które należy utworzyć projekcji limit. Wynik wyrażenia zapytania, ponieważ otoki wiersza jest niejawnie dodane wokół wartości zwracane, jest zawsze multiset wierszy.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje dwa rodzaje klauzuli SELECT. Pierwszy variant, wybierz wiersz, jest identyfikowany przez wybierz — słowo kluczowe i może służyć do określenia jednego lub więcej wartości, które należy utworzyć projekcji limit. Wynik wyrażenia zapytania, ponieważ otoki wiersza jest niejawnie dodane wokół wartości zwracane, jest zawsze multiset wierszy.  
   
  Każde wyrażenie zapytania w klauzuli select wiersz należy określić alias. Jeśli jest określony żaden alias[!INCLUDE[esql](../../../../../../includes/esql-md.md)] próbuje wygenerować za pomocą reguł generowania aliasu alias.  
   

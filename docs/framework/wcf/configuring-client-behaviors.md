@@ -1,30 +1,18 @@
 ---
-title: "Konfigurowanie zachowań klienta"
-ms.custom: 
+title: Konfigurowanie zachowań klienta
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-client-behaviors"></a>Konfigurowanie zachowań klienta
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Konfiguruje zachowań na dwa sposoby: poprzez odwołujących się do konfiguracji zachowania — które są zdefiniowane w `<behavior>` sekcji pliku konfiguracji aplikacji klienta — lub programowo w aplikacji wywołującej. W tym temacie opisano obu podejść.  
+Windows Communication Foundation (WCF) konfiguruje zachowań na dwa sposoby: poprzez odwołujących się do konfiguracji zachowania — które są zdefiniowane w `<behavior>` sekcji pliku konfiguracji aplikacji klienta — lub programowo w wywołaniu aplikacja. W tym temacie opisano obu podejść.  
   
  Podczas korzystania z pliku konfiguracji, konfiguracji zachowanie jest nazwany zestaw ustawień konfiguracji. Nazwa konfiguracji każdego zachowanie musi być unikatowa. Ten ciąg jest używany w `behaviorConfiguration` atrybutu konfiguracji punktu końcowego do łączenia punktu końcowego do zachowania.  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>Programowo za pomocą zachowań  
- Można również skonfigurować lub wstawić zachowania programowo dzięki umieszczeniu odpowiednie `Behaviors` właściwość [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] obiektu klienta lub w obiekcie fabryki kanału klienta przed otwarciem klienta.  
+ Można również skonfigurować lub wstawić zachowania programowo dzięki umieszczeniu odpowiednie `Behaviors` właściwości w obiekcie klienta usługi Windows Communication Foundation (WCF) lub na obiekt fabryki kanału klienta przed otwarciem klienta.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykładowy kod przedstawia sposób programowane Wstawianie zachowanie po zalogowaniu się do <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> właściwość <xref:System.ServiceModel.Description.ServiceEndpoint> zwrócony z <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> właściwości przed utworzenia obiektu kanału.  

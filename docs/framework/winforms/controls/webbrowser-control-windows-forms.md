@@ -1,28 +1,16 @@
 ---
-title: "WebBrowser — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: WebBrowser — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WebBrowser control [Windows Forms]
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a39e1332625d1614ea9e0243f2ac610e1f9287c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser — Formant (Formularze systemu Windows)
 Formularze systemu Windows `WebBrowser` formant zawiera stron sieci Web i umożliwia przeglądanie możliwości do aplikacji sieci Web.  
@@ -53,7 +41,7 @@ Formularze systemu Windows `WebBrowser` formant zawiera stron sieci Web i umożl
  Zawiera tematy dotyczące sposobu modyfikowania lub tworzenia stron HTML obsługiwanych przez <xref:System.Windows.Forms.WebBrowser> formantu.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.WebBrowser>klasy  
+ <xref:System.Windows.Forms.WebBrowser> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  

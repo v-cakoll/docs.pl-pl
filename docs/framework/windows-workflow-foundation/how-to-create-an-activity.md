@@ -1,27 +1,15 @@
 ---
 title: 'Porady: tworzenie działania'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: 39
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 18b03468646a4d016e383f5662d9827551d1141c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-activity"></a>Porady: tworzenie działania
 Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Logiki wykonywania działania można zaimplementować w kodzie zarządzanym lub można ją wdrożyć za pomocą innych działań. W tym temacie przedstawiono sposób tworzenia dwóch działań. Pierwsze działanie jest proste działanie, które używa kod do implementacji logiki jego wykonywania. Do implementacji działania drugi jest definiowana za pomocą innych działań. Te działania są używane w następujących krokach samouczka.  

@@ -1,32 +1,20 @@
 ---
-title: "Następstwo zależności wartości właściwości"
-ms.custom: 
+title: Następstwo zależności wartości właściwości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], classes as owners
 - dependency properties [WPF], metadata
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719c39c82b69421477cadf9ae5caf9f9f55b457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
-<a name="introduction"></a>W tym temacie opisano sposób działaniem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności oraz opis pierwszeństwa, przez które aspektów właściwości systemu dotyczą wprowadzenia wartości właściwości.  
+<a name="introduction"></a> W tym temacie opisano sposób działaniem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności oraz opis pierwszeństwa, przez które aspektów właściwości systemu dotyczą wprowadzenia wartości właściwości.  
     
   
 <a name="prerequisites"></a>   
@@ -117,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="setcurrentvalue"></a>   
 ## <a name="setcurrentvalue"></a>SetCurrentValue  
- <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Jest inny sposób ustawiania właściwości, ale nie jest w kolejności priorytetu. Zamiast tego <xref:System.Windows.DependencyObject.SetCurrentValue%2A> umożliwia zmianę wartości właściwości bez zastępowania źródło poprzedniej wartości. Można użyć <xref:System.Windows.DependencyObject.SetCurrentValue%2A> za każdym razem, aby ustawić wartość bez nadawania tej wartości priorytetu wartości lokalnej. Na przykład, jeśli właściwość jest ustawiony przez wyzwalacz, a następnie przypisać inną wartością za pomocą <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, system właściwość nadal szanuje wyzwalacza i właściwość ulegnie zmianie, jeśli zaistnieje akcja wyzwalacza. <xref:System.Windows.DependencyObject.SetCurrentValue%2A>Umożliwia zmianę wartości właściwości bez nadanie mu źródło o wyższym priorytecie. Analogicznie, można użyć <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Aby zmienić wartość właściwości bez zastępowania powiązania.  
+ <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Jest inny sposób ustawiania właściwości, ale nie jest w kolejności priorytetu. Zamiast tego <xref:System.Windows.DependencyObject.SetCurrentValue%2A> umożliwia zmianę wartości właściwości bez zastępowania źródło poprzedniej wartości. Można użyć <xref:System.Windows.DependencyObject.SetCurrentValue%2A> za każdym razem, aby ustawić wartość bez nadawania tej wartości priorytetu wartości lokalnej. Na przykład, jeśli właściwość jest ustawiony przez wyzwalacz, a następnie przypisać inną wartością za pomocą <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, system właściwość nadal szanuje wyzwalacza i właściwość ulegnie zmianie, jeśli zaistnieje akcja wyzwalacza. <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Umożliwia zmianę wartości właściwości bez nadanie mu źródło o wyższym priorytecie. Analogicznie, można użyć <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Aby zmienić wartość właściwości bez zastępowania powiązania.  
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Koercja, animacji i wartości podstawowej  

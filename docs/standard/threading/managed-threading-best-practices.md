@@ -1,13 +1,7 @@
 ---
-title: "Zarządzana wątkowość — najlepsze rozwiązania"
-ms.custom: 
+title: Zarządzana wątkowość — najlepsze rozwiązania
 ms.date: 11/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c23ef17e2bf2bec389368d1b9d88d11723ef531e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzana wątkowość — najlepsze rozwiązania
 Wielowątkowość wymaga zachować ostrożność podczas programowania. W przypadku większości zadań można zmniejszyć złożoność kolejkowania wiadomości żądania do wykonania przez wątków z puli wątków. Ten temat dotyczy sytuacji trudniej, takich jak koordynowanie pracy wiele wątków, lub obsługa wątki tego bloku.  
@@ -119,7 +108,7 @@ else {
   
 -   Nie używaj <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> do synchronizowania działania wiele wątków. Należy używać <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, i <xref:System.Threading.Monitor>.  
   
--   Nie mają wpływu na wykonywanie wątków roboczych z programu głównego (na przykład za pomocą zdarzeń,). Zamiast tego projektu programu tak, aby wątków roboczych są odpowiedzialne za czekając na zakończenie pracy jest dostępna, jej wykonanie i powiadamiania innych części program po zakończeniu. Jeśli Twoje wątków roboczych nie blokują, rozważ użycie wątków z puli wątków. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>jest przydatne w sytuacjach, gdy proces roboczy wątki bloku.  
+-   Nie mają wpływu na wykonywanie wątków roboczych z programu głównego (na przykład za pomocą zdarzeń,). Zamiast tego projektu programu tak, aby wątków roboczych są odpowiedzialne za czekając na zakończenie pracy jest dostępna, jej wykonanie i powiadamiania innych części program po zakończeniu. Jeśli Twoje wątków roboczych nie blokują, rozważ użycie wątków z puli wątków. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> jest przydatne w sytuacjach, gdy proces roboczy wątki bloku.  
   
 -   Nie można używać typów jako obiekty blokady. Oznacza to, takich jak uniknąć kodu `lock(typeof(X))` w języku C# lub `SyncLock(GetType(X))` w języku Visual Basic lub korzystanie z <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> z <xref:System.Type> obiektów. Dla danego typu, jest tylko jedno wystąpienie <xref:System.Type?displayProperty=nameWithType> na domeny aplikacji. Jeśli wykonywane blokady na typ jest publiczny, kodu innego niż własny może zająć blokad, co prowadzi do zakleszczenia. Aby uzyskać dodatkowe problemy, zobacz [najlepsze rozwiązania dotyczące niezawodności](../../../docs/framework/performance/reliability-best-practices.md).  
   

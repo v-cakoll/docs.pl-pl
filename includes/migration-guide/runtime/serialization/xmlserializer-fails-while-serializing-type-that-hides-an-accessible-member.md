@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Szczegóły|Podczas serializowania typu pochodnego <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> może zakończyć się niepowodzeniem, jeśli typ zawiera niedostępne pola lub właściwości, która ukrywa (za pomocą słowa kluczowego "new") to pole ani właściwość o tej samej nazwie, które były wcześniej dostępne (publiczne, na przykład) dla typu podstawowego.|
-|Sugestia|Ten problem można rozwiązać przez udostępnienie nowego, ukrywanie elementu członkowskiego do <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (przez oznaczenie jej publicznych, na przykład). Można również następujące ustawienia konfiguracji zostaną przywrócone do 4.0 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> zachowanie rozwiąże ten problem:<pre><code class="language-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
+|Sugestia|Ten problem można rozwiązać przez udostępnienie nowego, ukrywanie elementu członkowskiego do <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (przez oznaczenie jej publicznych, na przykład). Można również następujące ustawienia konfiguracji zostaną przywrócone do 4.0 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> zachowanie rozwiąże ten problem:<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|

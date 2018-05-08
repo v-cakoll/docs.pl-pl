@@ -1,12 +1,6 @@
 ---
-title: "Enum — Instrukcja (Visual Basic)"
+title: Enum — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum — Instrukcja (Visual Basic)
 Deklaruje wyliczenie i definiuje wartości jego elementów członkowskich.  
@@ -42,50 +33,50 @@ End Enum
   
 -   `attributelist`  
   
-     Opcjonalny. Lista atrybutów, które są stosowane do tego wyliczenia. Musisz ją ująć [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").  
+     Opcjonalna. Lista atrybutów, które są stosowane do tego wyliczenia. Musisz ją ująć [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").  
   
      <xref:System.FlagsAttribute> Atrybut wskazuje, że wartości wyliczenia wystąpienia może zawierać wiele elementy członkowskie wyliczenia i że każdy element członkowski reprezentuje pole bitowe wartości wyliczenia.  
   
 -   `accessmodifier`  
   
-     Opcjonalny. Określa, jaki kod mogą uzyskiwać dostęp do tego wyliczenia. Może to być jedna z następujących czynności:  
+     Opcjonalna. Określa, jaki kod mogą uzyskiwać dostęp do tego wyliczenia. Może to być jeden z następujących elementów:  
   
-    -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
      Można określić `Protected``Friend` się zezwolić na dostęp z kodu w obrębie klasy wyliczenia, klasy pochodnej lub tego samego zestawu.  
   
 -   `Shadows`  
   
-     Opcjonalny. Określa, że to wyliczenie programistyczny ponownie deklaruje i ukrywa element programowania o identycznej nazwie lub zbiór elementów przeciążona w klasie podstawowej. Można określić [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) tylko na wyliczenie samego, nie na żadnym z jego elementów członkowskich.  
+     Opcjonalna. Określa, że to wyliczenie programistyczny ponownie deklaruje i ukrywa element programowania o identycznej nazwie lub zbiór elementów przeciążona w klasie podstawowej. Można określić [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) tylko na wyliczenie samego, nie na żadnym z jego elementów członkowskich.  
   
 -   `enumerationname`  
   
-     Wymagany. Nazwa wyliczenia. Uzyskać informacji o prawidłowych nazw, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Wymagana. Nazwa wyliczenia. Uzyskać informacji o prawidłowych nazw, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `datatype`  
   
-     Opcjonalny. Typ danych wyliczenia i wszyscy jej członkowie.  
+     Opcjonalna. Typ danych wyliczenia i wszyscy jej członkowie.  
   
 -   `memberlist`  
   
-     Wymagany. Lista stałe element członkowski został zadeklarowany w tej instrukcji. Wiele elementów członkowskich są wyświetlane na poszczególnych źródła wierszy kodu.  
+     Wymagana. Lista stałe element członkowski został zadeklarowany w tej instrukcji. Wiele elementów członkowskich są wyświetlane na poszczególnych źródła wierszy kodu.  
   
-     Każdy `member` ma następujące składni i części:`[<attribute list>] member name [ = initializer ]`  
+     Każdy `member` ma następujące składni i części: `[<attribute list>] member name [ = initializer ]`  
   
     |Część|Opis|  
     |---|---|  
-    |`membername`|Wymagany. Nazwa tego elementu członkowskiego.|  
-    |`initializer`|Opcjonalny. Wyrażenie, które jest obliczane w czasie kompilacji i przypisane do tego elementu członkowskiego.|  
+    |`membername`|Wymagana. Nazwa tego elementu członkowskiego.|  
+    |`initializer`|Opcjonalna. Wyrażenie, które jest obliczane w czasie kompilacji i przypisane do tego elementu członkowskiego.|  
   
 -   `End``Enum`  
   
-     Kończy `Enum` bloku.  
+     Kończy blok `Enum`.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli masz zestaw wartości niezmiennych, logicznie powiązanych ze sobą, należy je zdefiniować w razem w wyliczeniu. Zapewnia to znaczące nazwy dla wyliczenia i jej elementów członkowskich, które są łatwiejsze do zapamiętania niż ich wartości. Elementy członkowskie wyliczenia można następnie użyć w wielu miejscach w kodzie.  
@@ -108,7 +99,7 @@ End Enum
   
  Wyliczenie zadeklarowane na poziomie przestrzeni nazw, poza klasy, struktury, modułu lub interfejsu, jest członkiem przestrzeni nazw, w których występuje.  
   
- *Kontekście deklaracji* wyliczenia musi być pliku źródłowego, przestrzeni nazw, klasy, struktury, modułu lub interfejsu i nie może być procedury. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ *Kontekście deklaracji* wyliczenia musi być pliku źródłowego, przestrzeni nazw, klasy, struktury, modułu lub interfejsu i nie może być procedury. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
  Można zastosować atrybutów do wyliczenia jako całość, ale nie do jego elementów członkowskich pojedynczo. Atrybut wspiera informacje dotyczące metadanych zestawu.  
   
@@ -131,7 +122,7 @@ End Enum
  Jeśli wartość elementu członkowskiego przekracza dopuszczalny zakres dla odpowiedniego typu danych lub zainicjować członków do maksymalna wartość dozwolona przez podstawowy typ danych, kompilator zgłasza błąd.  
   
 ## <a name="modifiers"></a>Modyfikatory  
- Klasy, struktury, moduł i domyślnie wyliczenia elementu członkowskiego interfejsu dostępu publicznego. Można dostosować ich poziomy dostępu z modyfikatorów dostępu. Namespace elementu członkowskiego wyliczenia domyślną wartość przyjaznego dostępu. Można dostosować ich poziomy dostępu publicznego, ale nie prywatne lub chronione. Aby uzyskać więcej informacji, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Klasy, struktury, moduł i domyślnie wyliczenia elementu członkowskiego interfejsu dostępu publicznego. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Namespace elementu członkowskiego wyliczenia domyślną wartość przyjaznego dostępu. Można dostosować ich poziomy dostępu publicznego, ale nie prywatne lub chronione. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Wszystkie elementy członkowskie wyliczenia mają dostęp publiczny i nie można użyć dowolnego modyfikatorów dostępu na nich. Jednak jeśli wyliczenia sam bardziej ograniczony poziom dostępu, wyliczenie określony poziom dostępu ma priorytet.  
   
@@ -180,8 +171,8 @@ End Enum
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Enum>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- [Const — instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
  [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Stałe i wyliczenia](../../../visual-basic/language-reference/constants-and-enumerations.md)

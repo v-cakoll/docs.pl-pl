@@ -1,20 +1,13 @@
 ---
-title: "C# wyliczenia — samouczek języka C#"
-description: "Dowiedz się więcej o wyliczenia, odrębny o nazwie stałe języka C#"
-keywords: ".NET, języka csharp"
-author: BillWagner
-ms.author: wiwagn
+title: C# wyliczenia — samouczek języka C#
+description: Dowiedz się więcej o wyliczenia, odrębny o nazwie stałe języka C#
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enums"></a>Wyliczenia
 
@@ -32,7 +25,7 @@ Poniższy przykład deklaruje `enum` typu o nazwie `Alignment` z typem podstawow
 
 Jak pokazano w poprzednim przykładzie `enum` deklaracji elementu członkowskiego mogą zawierać wyrażenie stałe, która określa wartość elementu członkowskiego. Wartość stała dla każdego `enum` element członkowski musi być w zakresie typ podstawowy elementu `enum`. Podczas `enum` deklaracji elementu członkowskiego nie jawnie określona wartość, element członkowski znajduje się wartość zero (jeśli pierwszego elementu członkowskiego w `enum` typu) lub wartość postaci tekstu poprzedniego `enum` elementu członkowskiego plus jeden.
 
-`Enum`wartości mogą być przekonwertowane na całkowite wartości i na odwrót przy użyciu typu rzutowania. Na przykład:
+`Enum` wartości mogą być przekonwertowane na całkowite wartości i na odwrót przy użyciu typu rzutowania. Na przykład:
 
 [!code-csharp[EnumStorage](../../../samples/snippets/csharp/tour/enums/Program.cs#L49-L50)]
 

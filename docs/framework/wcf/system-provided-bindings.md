@@ -1,28 +1,14 @@
 ---
 title: Powiązania dostarczane przez system
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>Powiązania dostarczane przez system
 Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i określić sposób nawiązywania połączenia z punktem końcowym. Powiązanie zawiera następujące elementy:  
@@ -33,7 +19,7 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
   
 -   Kodowanie określa przewodowy kodowanie do użycia dla wiadomości, które są wysyłane do punktu końcowego, na przykład, text/XML, binarne lub mechanizmu optymalizacji transmisji wiadomości (MTOM).  
   
- W tym temacie przedstawiono wszystkie dostarczane przez system [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] powiązania. Jeśli nie spełnia żadnego z tych dokładnych kryteriów dla aplikacji, można utworzyć niestandardowego powiązania. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ W tym temacie przedstawiono wszystkie powiązania dostarczane przez system Windows Communication Foundation (WCF). Jeśli nie spełnia żadnego z tych dokładnych kryteriów dla aplikacji, można utworzyć niestandardowego powiązania. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Bezpieczne i interoperacyjne powiązanie, który obsługuje protokół WS-Federation umożliwia organizacjom, które znajdują się w Federacji, aby wydajnie uwierzytelniania i autoryzacji użytkowników.  
   

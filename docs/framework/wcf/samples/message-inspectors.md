@@ -1,24 +1,12 @@
 ---
-title: "Inspektorzy komunikatów"
-ms.custom: 
+title: Inspektorzy komunikatów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ed4f31e004ddeb69a29568b3892ab7379715457
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05dbee820a002feb1f2a1672220be0c4a397f952
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-inspectors"></a>Inspektorzy komunikatów
 W tym przykładzie pokazano, jak wdrożyć i skonfigurować klienta i usługi inspektorzy komunikatów.  
@@ -52,7 +40,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Wszelkie inspektora wiadomości usługi (dyspozytora) musi implementować dwa <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> metody <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> i <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>jest wywoływany przez Dyspozytor wiadomość została otrzymał, przetwarzane przez stos kanału i przypisane do usługi, ale przed deserializacji i wysyłane do operacji. Jeśli komunikat przychodzący został zaszyfrowany, komunikat już jest odszyfrowywany po osiągnięciu inspektora wiadomości. Pobiera metodę `request` komunikat przekazany jako parametr odwołania, dzięki czemu komunikat, aby sprawdził, manipulować lub zastąpione zgodnie z potrzebami. Zwracana wartość może być dowolnym obiektem i jest używany jako obiekt stanu korelacji, który jest przekazywany do <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> gdy usługa zwraca odpowiedź do bieżącej wiadomości. W tym przykładzie <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> deleguje inspekcji (Walidacja) wiadomości prywatne i lokalne metodę `ValidateMessageBody` i zwraca obiekt stanu nie korelacji. Ta metoda gwarantuje, że żadne komunikaty nieprawidłowy przekazać do usługi.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> jest wywoływany przez Dyspozytor wiadomość została otrzymał, przetwarzane przez stos kanału i przypisane do usługi, ale przed deserializacji i wysyłane do operacji. Jeśli komunikat przychodzący został zaszyfrowany, komunikat już jest odszyfrowywany po osiągnięciu inspektora wiadomości. Pobiera metodę `request` komunikat przekazany jako parametr odwołania, dzięki czemu komunikat, aby sprawdził, manipulować lub zastąpione zgodnie z potrzebami. Zwracana wartość może być dowolnym obiektem i jest używany jako obiekt stanu korelacji, który jest przekazywany do <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> gdy usługa zwraca odpowiedź do bieżącej wiadomości. W tym przykładzie <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> deleguje inspekcji (Walidacja) wiadomości prywatne i lokalne metodę `ValidateMessageBody` i zwraca obiekt stanu nie korelacji. Ta metoda gwarantuje, że żadne komunikaty nieprawidłowy przekazać do usługi.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -67,7 +55,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>jest wywoływane zawsze, gdy odpowiedź jest gotowa do wysłania do klienta lub w przypadku jednokierunkowe komunikaty, po przetworzeniu komunikatu przychodzącego. Dzięki temu count wywoływana symetrycznie, niezależnie od MEP rozszerzeń. Jak <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, wiadomość jest przekazywana jako parametr odwołania i może sprawdzenia, zmodyfikowane lub zastąpione. Sprawdzanie poprawności wiadomości, które jest przeprowadzane w tym przykładzie jest ponownie delegowana do `ValidMessageBody` metody, ale obsługa błędów sprawdzania poprawności różni się nieco w takim przypadku.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> jest wywoływane zawsze, gdy odpowiedź jest gotowa do wysłania do klienta lub w przypadku jednokierunkowe komunikaty, po przetworzeniu komunikatu przychodzącego. Dzięki temu count wywoływana symetrycznie, niezależnie od MEP rozszerzeń. Jak <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, wiadomość jest przekazywana jako parametr odwołania i może sprawdzenia, zmodyfikowane lub zastąpione. Sprawdzanie poprawności wiadomości, które jest przeprowadzane w tym przykładzie jest ponownie delegowana do `ValidMessageBody` metody, ale obsługa błędów sprawdzania poprawności różni się nieco w takim przypadku.  
   
  Jeśli wystąpi błąd sprawdzania poprawności w usłudze `ValidateMessageBody` metoda zgłasza <xref:System.ServiceModel.FaultException>-pochodnych wyjątków. W <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, wyjątki te mogą być przełączane do modelu usługi infrastruktury, gdzie są one automatycznie przekształcone w błędach SOAP, a przekazany do klienta. W <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, <xref:System.ServiceModel.FaultException> wyjątki nie mogą być umieszczone w infrastrukturę, ponieważ transformacja wyjątków błędów zgłaszanych przez usługę występuje przed wywołaniem inspektora wiadomości. W związku z tym implementacji następujących przechwytuje znane `ReplyValidationFault` wyjątku i zamienia komunikat odpowiedzi z komunikat o błędzie jawna. Ta metoda gwarantuje, że żadne komunikaty nieprawidłowy są zwracane przez implementacji usługi.  
   
@@ -93,7 +81,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  Inspektor komunikat klienta jest bardzo podobne. Te dwie metody, które muszą zostać zaimplementowane z <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> są <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> i <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>.  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>wywoływane, gdy wiadomość została składane, przez aplikację klienta lub przez program formatujący operacji. Zgodnie z dyspozytora inspektorzy komunikatów, może po prostu komunikat sprawdzenia lub całkowicie zastąpiona. W tym przykładzie Inspektor deleguje do tej samej lokalnej `ValidateMessageBody` metody pomocniczej, która służy do wysyłania inspektorzy komunikatów.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> wywoływane, gdy wiadomość została składane, przez aplikację klienta lub przez program formatujący operacji. Zgodnie z dyspozytora inspektorzy komunikatów, może po prostu komunikat sprawdzenia lub całkowicie zastąpiona. W tym przykładzie Inspektor deleguje do tej samej lokalnej `ValidateMessageBody` metody pomocniczej, która służy do wysyłania inspektorzy komunikatów.  
   
  Behawioralnej różnica między klientem a usługą sprawdzania poprawności (jak określono w konstruktorze) jest, że sprawdzanie poprawności klienta zgłasza wyjątki lokalne, które są umieszczane w kodzie użytkownika, ponieważ występują lokalnie, a nie z powodu błędu usługi. Ogólnie rzecz biorąc jest zasada, czy usługa dyspozytora inspektorzy zgłoszenie błędów i że inspektorzy klienta zgłaszają wyjątki.  
   
@@ -420,7 +408,7 @@ catch (Exception e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   

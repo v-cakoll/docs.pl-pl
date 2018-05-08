@@ -1,11 +1,7 @@
 ---
-title: "What's new in ułatwień dostępu w programie .NET Framework"
+title: What's new in ułatwień dostępu w programie .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/13/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 dev_langs:
 - csharp
 - vb
@@ -13,20 +9,28 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5f17550bc0cc4919f00dc93c8e92d258b38c4f76
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in ułatwień dostępu w programie .NET Framework
 
-Celem jest tworzenie aplikacji więcej accessibile dla użytkowników programu .NET Framework. Funkcje ułatwień dostępu zezwala aplikacji zapewnić odpowiednie funkcje użytkowników korzystających z technologii pomocniczej. Począwszy od programu .NET Framework 4.7.1, .NET Framework zawiera wiele ulepszeń ułatwień dostępu, które umożliwiają deweloperom tworzenie aplikacji dostępny. 
+Celem jest udostępnienie aplikacji użytkownikom programu .NET Framework. Funkcje ułatwień dostępu zezwala aplikacji zapewnić odpowiednie funkcje użytkowników korzystających z technologii pomocniczej. Począwszy od programu .NET Framework 4.7.1, .NET Framework zawiera wiele ulepszeń ułatwień dostępu, które umożliwiają deweloperom tworzenie aplikacji dostępny. 
 
-Nowe funkcje ułatwień dostępu są włączone domyślnie dla aplikacji przeznaczonych dla platformy .NET Framework 4.7.1 lub nowszej. Ponadto aplikacje, które są stosowane do wcześniejszej wersji programu .NET Framework, ale są uruchomione w programie .NET Framework 4.7.1 lub później włączyć zachowań starszych ułatwień dostępu (i tym samym zgłosić się do poprawy ułatwień dostępu w programie .NET Framework 4.7.1) przez Dodawanie do następującego przełącznika [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) sekcji pliku konfiguracji aplikacji. 
+## <a name="accessibility-switches"></a>Przełączniki ułatwień dostępu
+
+Można skonfigurować aplikację do uczestnictwa w funkcje ułatwień dostępu, jeśli celem .NET Framework 4.7 lub starszej wersji, ale działa w programie .NET Framework 4.7.1 lub nowszym. Można także skonfigurować aplikację, aby korzystać z funkcji starszej wersji (i nie korzystać z funkcji ułatwień dostępu), jeśli jest on przeznaczony dla programu .NET Framework 4.7.1 lub nowszym. Każda wersja programu .NET Framework, która obejmuje funkcje ułatwień dostępu ma przełącznika dostępności określonej wersji, który można dodać do [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) sekcji pliku konfiguracji aplikacji. Przełączniki obsługiwane są następujące:
+
+|Wersja|Przełącznik|
+|---|---|
+|.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
+|.NET framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+
+### <a name="taking-advantage-of-accessibility-enhancements"></a>Korzystanie z rozszerzeń ułatwień dostępu
+
+Nowe funkcje ułatwień dostępu są włączone domyślnie dla aplikacji przeznaczonych dla platformy .NET Framework 4.7.1 lub nowszej. Ponadto aplikacje, które są stosowane do wcześniejszej wersji programu .NET Framework, ale są uruchomione w programie .NET Framework 4.7.1 lub później włączyć zachowań starszych ułatwień dostępu (i tym samym korzystając z usprawnień ułatwień dostępu), dodając przełączników do [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) sekcji pliku konfiguracji aplikacji i ustawienie ich wartości `false`. Poniżej przedstawiono sposób korzystania z rozszerzeń ułatwień dostępu, które wprowadzono w programie .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -35,23 +39,117 @@ Nowe funkcje ułatwień dostępu są włączone domyślnie dla aplikacji przezna
 </runtime>
 ```
 
-Podobnie, aplikacji, które odnoszą się do wersji programu .NET Framework, począwszy od 4.7.1 można wyłączyć funkcje ułatwień dostępu, dodając następujący przełącznik do [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) sekcji pliku konfiguracji aplikacji. 
+Jeśli wybierzesz opcję korzystania z funkcji ułatwień dostępu w nowszej wersji programu .NET Framework, musi również jawnie przystąpieniu do funkcji z wcześniejszych wersji programu .NET Framework. Konfigurowanie aplikacji, korzystając z usprawnień ułatwień dostępu w obu programu .NET Framework 4.7.1 i 4.7.2 wymaga następujących [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elementu:
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
-    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=true" />
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
 </runtime>
 ```
+
+### <a name="restoring-legacy-behavior"></a>Przywracanie starsze zachowanie
+
+Aplikacji przeznaczonych dla wersji programu .NET Framework, począwszy od 4.7.1 można wyłączyć funkcje ułatwień dostępu, dodając przełącza do [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) sekcji plik konfiguracji aplikacji i ustawienie ich wartości `true`. Na przykład następująca konfiguracja zdecyduje się poza wprowadzone w programie .NET Framework 4.7.2 funkcje ułatwień dostępu:  
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures.2=true" />
+</runtime>
+```
+
+## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>What's new in ułatwień dostępu w programie .NET Framework 4.7.2
+
+.NET Framework 4.7.2 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
+
+- [Windows Forms](#winforms472)
+
+- [Windows Presentation Foundation (WPF)](#wpf472)
+
+<a name="winforms472"></a>
+### <a name="windows-forms"></a>Windows Forms
+
+**Zdefiniowane przez system operacyjny kolorów w kompozycji duży kontrast**
+
+W programie .NET Framework 4.7.2, formularze systemu Windows używa kolorów zdefiniowanych przez system operacyjny w duży kontrast motywów. Ma to wpływ na następujące sterowniki:
+
+- Strzałkę listy rozwijanej <xref:System.Windows.Forms.ToolStripDropDownButton> formantu.
+
+- <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> i <xref:System.Windows.Forms.CheckBox> formanty z <xref:System.Windows.Forms.ButtonBase.FlatStyle> ustawioną <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> lub <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>. Poprzednio wybrane kolory tła i tekstu nie zostały kontrastem i był trudny do odczytania.
+
+- Formanty zawarte w <xref:System.Windows.Forms.GroupBox> mający jego <xref:System.Windows.Forms.Control.Enabled> ustawioną właściwość `false`.
+ 
+- <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox>, I <xref:System.Windows.Forms.ToolStripDropDownButton> formanty, które mają współczynnik kontrastu Zwiększona jasność w trybie wysokiej kontrastu.
+
+- <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> Właściwość <xref:System.Windows.Forms.DataGridViewLinkCell>.
+
+**Ulepszenia Narrator**
+
+Począwszy od programu .NET Framework 4.7.2 Narrator Obsługa została rozszerzona w następujący sposób:
+
+- Ogłasza, wartość <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> właściwość podczas anonsowania tekst <xref:System.Windows.Forms.ToolStripMenuItem>. 
+
+- Wskazuje, kiedy <xref:System.Windows.Forms.ToolStripMenuItem> ma jego <xref:System.Windows.Forms.Control.Enabled> ustawioną właściwość `false`.
+
+- Udostępnia informacji zwrotnych dotyczących stanu pola wyboru po <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> właściwość jest ustawiona na `true`.
+
+- Kolejność fokus tryb skanowania przez program Narrator jest zgodna z visual kolejności kontrolek w oknie dialogowym pobierania ClickOnce.
+
+**Ulepszenia DataGridView**
+
+Począwszy od programu .NET Framework 4.7.2, <xref:System.Windows.Forms.DataGridView> formantu ma wprowadzono następujące ulepszenia dotyczące ułatwień dostępu:
+
+- Za pomocą klawiatury można sortować wierszy. Użytkownik może używać klawisz F3, aby posortować według bieżącej kolumny.
+
+- Gdy <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> ma ustawioną wartość <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>, nagłówek kolumny zmienia kolor, aby wskazać bieżącej kolumny jako karty użytkownika za pośrednictwem komórek w bieżącym wierszu.
+
+- <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> Właściwość <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> zwraca formantu nadrzędnego poprawne.
+
+**Ulepszone podpowiedzi wizualne**
+
+- <xref:System.Windows.Forms.RadioButton> i <xref:System.Windows.Forms.CheckBox> formantów z pustą <xref:System.Windows.Forms.ButtonBase.Text> właściwości wyświetlania wskaźnika fokus po otrzymaniu fokus.
+
+**Obsługa siatki właściwości ulepszone**
+
+- <xref:System.Windows.Forms.PropertyGrid> Sterowanie teraz zwracane elementy podrzędne `true` dla <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> właściwość tylko wtedy, gdy PropertyGrid element jest włączony.
+
+- <xref:System.Windows.Forms.PropertyGrid> Kontrolować zwracane elementy podrzędne `false` dla <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> właściwość tylko wtedy, gdy PropertyGrid element można zmienić przez użytkownika.
+
+**Ulepszone klawiatury nawigacji**
+
+- <xref:System.Windows.Forms.ToolStripButton> Kontroli umożliwia fokus, gdy jest zawarty w <xref:System.Windows.Forms.ToolStripPanel> mający <xref:System.Windows.Forms.ToolStripPanel.TabStop> ustawioną właściwość `true`
+
+<a name="wpf472"></a>
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+**Zmiany do formantów wyboru i RadioButton**
+
+W programie .NET Framework 4.7.1 i wcześniejszych wersjach, WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> i <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> formanty mają niespójne i, w klasycznym i wysoki kontrast kompozycje fokus niepoprawne elementy wizualne.  Te problemy występują w przypadkach, gdy kontrolki nie mają żadnych zestawu zawartości.  Możliwość trudno Zobacz przejścia między mylące kompozycje i visual fokus.
+
+W programie .NET Framework 4.7.2 te elementy wizualne są teraz bardziej spójność w ramach kompozycje i widoczność w klasycznym i duży kontrast motywów.
+
+**Formanty WinForms hostowanych w aplikacji WPF**
+
+Do formant WinForms hostowanych w aplikacji WPF w programie .NET Framework 4.7.1 i wcześniejszych wersjach, użytkownicy nie karty poza warstwą WinForms, jeśli formant pierwszego lub ostatniego w tej warstwie jest WPF <xref:System.Windows.Forms.Integration.ElementHost> formantu. W programie .NET Framework 4.7.2 użytkownicy mogą teraz karcie poza warstwą WinForms.
+
+Jednak automatyczne aplikacje, które są oparte na fokus nigdy nie anulowanie warstwy WinForms może przestać działać zgodnie z oczekiwaniami.
 
 ## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>What's new in ułatwień dostępu w programie .NET Framework 4.7.1
 
 .NET Framework 4.7.1 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
 
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
+- [Windows Presentation Foundation (WPF)](#wpf471)
 
-- [Windows Forms](#windows-forms-accessibility-improvements)
+- [Windows Forms](#winforms471)
 
+- [Formanty sieci web ASP.NET](#aspnet471)
+
+- [Narzędzia zestawu SDK .NET](#tools471)
+
+- [Projektanta przepływów pracy programu Windows Workflow Foundation (WF)](#wf471)
+
+<a name="wpf471"></a>
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **Ulepszenia czytnika ekranu**
@@ -64,7 +162,7 @@ Włączenie ulepszenia ułatwień dostępu programu .NET Framework 4.7.1 obejmuj
  
 - Począwszy od programu .NET Framework 4.7.1 czytników ekranu ogłaszamy nazwę można edytować <xref:System.Windows.Controls.ComboBox>.
 
-- .NET Framework 4.7 i wcześniejszych wersjach <xref:System.Windows.Controls.PasswordBox> formanty zostały ogłoszenia jako "nie elementu w widoku" lub ma inaczej niepoprawnego zachowania. Tego problemu w programie .NET Framework 4.7.1.     
+- .NET Framework 4.7 i wcześniejszych wersjach <xref:System.Windows.Controls.PasswordBox> formanty zostały ogłoszenia jako "nie elementu w widoku" lub ma inaczej niepoprawnego zachowania. Tego problemu w programie .NET Framework 4.7.1.
 
 **Obsługa biblioteki UIAutomation LiveRegion**
 
@@ -192,6 +290,7 @@ Począwszy od programu .NET Framework 4.7.1 ulepszenia duży kontrast zostały w
 
 Aby uzyskać więcej informacji na WPF ulepszenia ułatwień dostępu w programie .NET Framework 4.7.1, zobacz [usprawnienia dostępu na platformie WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
+<a name="winforms471"></a>
 ## <a name="windows-forms-accessibility-improvements"></a>Ulepszenia dostępność formularzy systemu Windows
 
 W programie .NET Framework 4.7.1 formularze systemu Windows (WinForms) zawiera zmiany ułatwień dostępu w następujących obszarach.
@@ -257,6 +356,89 @@ Formularze systemu Windows w programie .NET Framework 4.7.1, obejmują:
 - Lepiej raportowanie typy formantów.
 - Ulepszone narrator zachowanie.
  
+<a name="aspnet471"></a>
+## <a name="aspnet-web-controls"></a>Formanty sieci web ASP.NET
+
+Począwszy od programu .NET Framework 4.7.1 i 15 ustęp 3 programu Visual Studio 2017, ASP.NET poprawia działanie formantów sieci web ASP.NET przy użyciu technologii ułatwień dostępu w programie Visual Studio. Następujące zmiany:
+
+- Zmiany w implementacji Brak wzorce ułatwień dostępu interfejsu użytkownika w formantach, tak samo, jak **Dodaj pole** okno dialogowe w **widoku szczegółów** kreatora lub **Konfiguruj element ListView** okna dialogowego z **ListView** kreatora.
+
+- Zmiany w celu polepszenia wyświetlania w trybie dużego kontrastu, takie jak **Edytor pola modułu stronicowania danych**.
+
+- Zmiany w celu polepszenia nawigacji klawiatury napotyka formanty, takie jak **pola** okno dialogowe w **Edytuj pola modułu stronicowania** Kreator formantu DataPager **skonfigurować ObjectContext**  okno dialogowe, lub **Konfigurowanie wyboru danych** okna dialogowego z **skonfiguruj źródło danych** kreatora.
+
+<a name="tools471"></a>
+## <a name="net-sdk-tools"></a>Narzędzia zestawu SDK .NET
+
+[Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) i [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ulepszono napraw problemy z dostępem zróżnicowane. Większość tych były niewielkie problemy, jak nazwa nie jest zdefiniowany lub niektórych wzorce automatyzacji interfejsu użytkownika nie jest zaimplementowana poprawnie. Gdy wielu użytkowników nie należy pamiętać o tych niepoprawne wartości, klienci korzystający z ułatwieniami technologii, takich jak czytniki znajdzie te narzędzia zestawu SDK dostęp. 
+
+Te ulepszenia zmienić niektóre zachowania poprzedniej, takich jak kolejność fokus klawiatury.
+
+<a name="wf471"></a>
+## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Projektanta przepływów pracy programu Windows Workflow Foundation (WF)
+
+Zmiany ułatwień dostępu w Projektancie przepływów pracy są następujące:
+
+- Kolejność tabulacji zmiany od lewej do prawej i od góry do dołu w niektórych formantów:
+
+  - W oknie korelacji zainicjować ustawienie dane korelacji dla <xref:System.ServiceModel.Activities.InitializeCorrelation> działania.
+
+  - W oknie definicję zawartości <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, i <xref:System.ServiceModel.Activities.ReceiveReply> działań.
+
+- Więcej funkcji dostępnych za pośrednictwem klawiatury:
+
+  - Podczas edytowania właściwości działania, grup właściwości może zostać zwinięty przy klawiatury są koncentruje się po raz pierwszy.
+
+  - Ostrzeżenie ikony są dostępny za pomocą klawiatury.
+
+  - **Więcej właściwości** przycisk **właściwości** okno jest dostępny za pomocą klawiatury.
+
+  - Klawiatura użytkownicy mogą uzyskiwać dostęp do elementy nagłówka w **argumenty** i **zmienne** okienka projektanta przepływów pracy.
+
+- Lepszą widoczność elementów z fokusem, takie jak czas:
+
+  - Dodawanie wierszy do siatek danych używane przez projektantów projektanta przepływów pracy i działania.
+
+  - TAB pól w <xref:System.ServiceModel.Activities.ReceiveReply> i <xref:System.ServiceModel.Activities.SendReply> działań.
+
+  - Ustawianie wartości domyślnych do zmiennych lub argumentów
+
+- Czytniki teraz mógł prawidłowo rozpoznać:
+
+  - Ustaw punkty przerwania w Projektancie przepływów pracy.
+
+  - <xref:System.Activities.Statements.FlowSwitch%601>, <xref:System.Activities.Statements.FlowDecision>, I <xref:System.ServiceModel.Activities.CorrelationScope> działań.
+  - Zawartość <xref:System.ServiceModel.Activities.Receive> działania.
+
+  - Typ docelowy dla <xref:System.Activities.Statements.InvokeMethod> działania.
+
+  - Pole kombi wyjątku i na koniec sekcji <xref:System.Activities.Statements.TryCatch> działania.
+
+  - Pole kombi typ komunikatu, podziału w oknie Dodaj inicjatorów korelacji, okno definicji zawartości i oknie CorrelatesOn definicji działania obsługi komunikatów (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, i <xref:System.ServiceModel.Activities.ReceiveReply>).
+
+  - Automatu stanów przejścia i przejścia miejsc docelowych.
+
+  - Adnotacje i łącznikami <xref:System.Activities.Statements.FlowDecision> działań.
+
+  - Menu kontekstowe (kliknij prawym przyciskiem myszy) dla działań.
+
+  - Edytory wartość właściwości, przycisk Wyczyść wyszukiwanie według kategorii i przyciski alfabetycznej sortowania i okno dialogowe Edytor wyrażeń w siatce właściwości.
+
+  - Procent powiększenia w Projektancie przepływów pracy.
+
+  - Separator w <xref:System.Activities.Statements.Parallel> i <xref:System.Activities.Statements.Pick> działań.
+
+  - <xref:System.Activities.Statements.InvokeDelegate> Działania.
+
+  - W oknie Wybierz typy działań słownika (`Microsoft.Activities.AddToDictionary<TKey,TValue>`, `Microsoft.Activities.RemoveFromDictionary<TKey,TValue>`itp.).
+
+  - Przeglądaj i wybierz typ .NET okna.
+
+  - Obszar nawigacji w Projektancie przepływów pracy.
+
+- Użytkownicy, którzy wybierz motywów duży kontrast będą widzieć wiele ulepszeń w widoczność projektanta przepływów pracy i jego kontroli, jak lepiej współczynniki kontrastu między elementami i bardziej zauważalne pola wyboru używany do elementów zespołu.
+
 ## <a name="see-also"></a>Zobacz też
-[Co to jest nowe w programie .NET Framework](whats-new.md)   
+
+[Co to jest nowe w programie .NET Framework](whats-new.md)
  

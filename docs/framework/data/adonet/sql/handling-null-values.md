@@ -1,27 +1,15 @@
 ---
-title: "Obsługa wartości Null"
-ms.custom: 
+title: Obsługa wartości Null
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
 Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie jest nieznany lub nieobecny. Wartość null nie jest ciągiem pustym (dla typów danych daty/godziny lub znakiem) ani wartość zero (dla liczbowych typów danych). Ze specyfikacją ANSI SQL-92 się informacja o wartości null musi być taka sama dla wszystkich typów danych tak, aby spójną wszystkie wartości null. <xref:System.Data.SqlTypes> Przestrzeń nazw zawiera wartości null semantyki zaimplementowanie <xref:System.Data.SqlTypes.INullable> interfejsu. Typy wszystkich danych w <xref:System.Data.SqlTypes> ma własną `IsNull` właściwości i `Null` wartość przypisana do wystąpienia tego typu danych.  
@@ -46,7 +34,7 @@ Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie
  ![Tabela prawdy](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Opis opcji ANSI_NULLS  
- <xref:System.Data.SqlTypes>udostępnia tej samej semantyki jako, gdy opcja ANSI_NULLS jest ustawiona na w programie SQL Server. Wszystkie operatory arytmetyczne (+, -, *, /, %), operatory bitowe (~ &, &#124;), a większość funkcji zwracać wartość null, jeśli dowolny z argumentów lub argumentów jest pusta, z wyjątkiem właściwości `IsNull`.  
+ <xref:System.Data.SqlTypes> udostępnia tej samej semantyki jako, gdy opcja ANSI_NULLS jest ustawiona na w programie SQL Server. Wszystkie operatory arytmetyczne (+, -, *, /, %), operatory bitowe (~ &, &#124;), a większość funkcji zwracać wartość null, jeśli dowolny z argumentów lub argumentów jest pusta, z wyjątkiem właściwości `IsNull`.  
   
  Nie obsługuje standardu ANSI SQL-92 *columnName* = NULL w klauzuli WHERE. W programie SQL Server opcji ANSI_NULLS steruje dopuszczania wartości null zarówno domyślnej bazy danych i oceny porównania z wartości null. Jeśli ANSI_NULLS jest włączona (ustawienie domyślne), operatora IS NULL należy używać w wyrażeniach podczas testowania wartości null. Na przykład poniższe porównanie zawsze daje nieznany, gdy ANSI_NULLS znajduje się na:  
   

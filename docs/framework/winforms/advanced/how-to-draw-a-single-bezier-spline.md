@@ -1,13 +1,6 @@
 ---
-title: "Porady: Rysowanie pojedynczego B &#233; zier krzywej składanej"
-ms.custom: 
+title: 'Porady: Rysowanie pojedynczego B&#233;zier krzywymi składanymi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +8,13 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6d2eaf570190f85ca084e5a5ab5d1bee1be56871
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e91b63275c37fc0cdde5721fddd114e1bf2264e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-draw-a-single-b233zier-spline"></a>Porady: Rysowanie pojedynczego B &#233; zier krzywej składanej
+# <a name="how-to-draw-a-single-b233zier-spline"></a>Porady: Rysowanie pojedynczego B&#233;zier krzywymi składanymi
 Krzywej Beziera jest definiowana za pomocą czterech punktów: punkt początkowy, punkty kontrolne dwóch i punkt końcowy.  
   
 ## <a name="example"></a>Przykład  

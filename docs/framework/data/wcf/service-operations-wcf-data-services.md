@@ -1,13 +1,6 @@
 ---
-title: "Operacje usługi (usługi danych WCF)"
-ms.custom: 
+title: Operacje usługi (usługi danych WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af11330bc9190ea0c07e23f2e87e5f4840b677
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da8d482fbf506749f9805edcbbaad3c893ad56b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-operations-wcf-data-services"></a>Operacje usługi (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Umożliwia zdefiniowanie operacji usługi w usłudze danych, aby udostępniać metod na serwerze. Podobnie jak inne zasoby usługi danych operacji usługi są opisane przez identyfikator URI. Operacje usług umożliwiają udostępnianie logiki biznesowej w usłudze danych, takich jak wdrożyć logikę sprawdzania poprawności, zastosować opartej na rolach zabezpieczeń lub do udostępnienia specjalizowany możliwości zapytań. Operacje usług są dodawane do klasy usługi danych, która pochodzi z metody <xref:System.Data.Services.DataService%601>. Podobnie jak wszystkie inne usługi zasobów danych możesz podać parametry metody operacji usługi. Na przykład następujące operacja identyfikator URI usługi (na podstawie [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Usługa danych) przekazuje wartość `London` do `city` parametru:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie operacji usługi w usłudze danych, aby udostępniać metod na serwerze. Podobnie jak inne zasoby usługi danych operacji usługi są opisane przez identyfikator URI. Operacje usług umożliwiają udostępnianie logiki biznesowej w usłudze danych, takich jak wdrożyć logikę sprawdzania poprawności, zastosować opartej na rolach zabezpieczeń lub do udostępnienia specjalizowany możliwości zapytań. Operacje usług są dodawane do klasy usługi danych, która pochodzi z metody <xref:System.Data.Services.DataService%601>. Podobnie jak wszystkie inne usługi zasobów danych możesz podać parametry metody operacji usługi. Na przykład następujące operacja identyfikator URI usługi (na podstawie [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Usługa danych) przekazuje wartość `London` do `city` parametru:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -53,7 +41,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   Metoda musi zwracać jedną z następujących czynności:  
   
-    -   `void`(`Nothing` w języku Visual Basic)  
+    -   `void` (`Nothing` w języku Visual Basic)  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
@@ -69,9 +57,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   Metoda musi być adnotowany przy `[WebGet]` lub `[WebInvoke]` atrybutu.  
   
-    -   `[WebGet]`Włącza metodę można wywołać za pomocą żądania GET.  
+    -   `[WebGet]` Włącza metodę można wywołać za pomocą żądania GET.  
   
-    -   `[WebInvoke(Method = "POST")]`Włącza metodę można wywołać za pomocą żądania POST. Inne <xref:System.ServiceModel.Web.WebInvokeAttribute> metody nie są obsługiwane.  
+    -   `[WebInvoke(Method = "POST")]` Włącza metodę można wywołać za pomocą żądania POST. Inne <xref:System.ServiceModel.Web.WebInvokeAttribute> metody nie są obsługiwane.  
   
 -   Operacja usługi może być oznaczony za pomocą <xref:System.Data.Services.SingleResultAttribute> określający, czy wartość zwracaną z metody jest pojedynczy element zamiast kolekcji jednostek. Ta różnica nakazują wynikowy serializacji odpowiedzi oraz sposób, w których traversals właściwości nawigacji dodatkowe są reprezentowane w identyfikatorze URI. Na przykład używając AtomPub serializacji, wystąpienie typu pojedynczego zasobu jest reprezentowany jako element wpisu i zestaw wystąpień jako element źródła.  
   
@@ -88,7 +76,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |Prawidłowe typy zwracane|Identyfikator URI zasad|  
 |------------------------|---------------|  
-|`void`(`Nothing` w języku Visual Basic)<br /><br /> —lub—<br /><br /> Typy jednostek<br /><br /> —lub—<br /><br /> Typy pierwotne|Identyfikator URI musi być segment pojedynczą ścieżkę, który jest nazwa operacji usługi. Opcje zapytania nie są dozwolone.|  
+|`void` (`Nothing` w języku Visual Basic)<br /><br /> —lub—<br /><br /> Typy jednostek<br /><br /> —lub—<br /><br /> Typy pierwotne|Identyfikator URI musi być segment pojedynczą ścieżkę, który jest nazwa operacji usługi. Opcje zapytania nie są dozwolone.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|Identyfikator URI musi być segment pojedynczą ścieżkę, który jest nazwa operacji usługi. Ponieważ nie jest typem wyniku <xref:System.Linq.IQueryable%601> typu, opcje zapytania nie są dozwolone.|  
 |<xref:System.Linq.IQueryable%601>|Segmenty ścieżki zapytania oprócz ścieżkę, która jest nazwa operacji usługi są dozwolone. Dozwolone są też opcji zapytania.|  
   

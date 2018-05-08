@@ -1,13 +1,6 @@
 ---
-title: "Porady: powiązanie formantu ComboBox lub ListBox (Formularze systemu Windows) z danymi"
-ms.custom: 
+title: 'Porady: powiązanie formantu ComboBox lub ListBox (Formularze systemu Windows) z danymi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b671910ac77b7456492cab871ace3abb61ac7fd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 270ed1c9fab4013df72b715ce8b074d287616713
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Porady: powiązanie formantu ComboBox lub ListBox (Formularze systemu Windows) z danymi
 Możesz powiązać <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.ListBox> z danymi w celu wykonania zadań, takich jak przeglądanie danych w bazie danych, wprowadzania nowych danych lub edycji istniejących danych.  
@@ -42,7 +30,7 @@ Możesz powiązać <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.F
   
 2.  Ustaw są wiązane tabeli `DisplayMember` dla właściwości Nazwa kolumny w źródle danych.  
   
-     \-lub -  
+     \- lub -  
   
      Są wiązane <xref:System.Collections.IList>, ustawioną członkiem wyświetlania właściwości publicznej typu na liście.  
   

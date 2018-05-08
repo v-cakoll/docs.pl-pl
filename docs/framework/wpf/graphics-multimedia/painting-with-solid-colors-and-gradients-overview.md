@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Malowanie jednolitymi kolorami i gradientami"
-ms.custom: 
+title: Przegląd Malowanie jednolitymi kolorami i gradientami
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Przegląd Malowanie jednolitymi kolorami i gradientami
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, i <xref:System.Windows.Media.RadialGradientBrush> obiektów namalować z kolorami, gradienty liniowe i gradientu promieniowego.  
@@ -74,7 +62,7 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>Malowanie obszaru gradientem  
- Pędzla gradientów do malowania obszar o wiele kolorów, które przejście do siebie, wzdłuż osi. Ich umożliwia utworzenie odcisków jasnym i w tle, podając formantów trójwymiarowy działania. Można także używać ich do symulowania awaryjne, chrome limitu górnego i innych smooth powierzchni.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Istnieją dwa rodzaje pędzle gradientów: <xref:System.Windows.Media.LinearGradientBrush> i <xref:System.Windows.Media.RadialGradientBrush>.  
+ Pędzla gradientów do malowania obszar o wiele kolorów, które przejście do siebie, wzdłuż osi. Ich umożliwia utworzenie odcisków jasnym i w tle, podając formantów trójwymiarowy działania. Można także używać ich do symulowania awaryjne, chrome limitu górnego i innych smooth powierzchni.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Istnieją dwa rodzaje pędzle gradientów: <xref:System.Windows.Media.LinearGradientBrush> i <xref:System.Windows.Media.RadialGradientBrush>.  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>Gradienty liniowe  
@@ -159,9 +147,9 @@ RadialGradientBrushes z różnymi ustawieniami GradientOrigin, Centrum RadiusX i
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Określanie Przezroczystość koloru w "XAML"  
- W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] szesnastkowym, aby określić przezroczystość poszczególnych kolorów. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]szesnastkowym używa następującej składni:  
+ W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] szesnastkowym, aby określić przezroczystość poszczególnych kolorów. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] szesnastkowym używa następującej składni:  
   
- `#`**aa** *rrggbb*  
+ `#` **AA** *rrggbb*  
   
  *Aa* w poprzednim wierszu reprezentuje wartość szesnastkowa dwucyfrowe używany do określenia Przezroczystość koloru. *Rr*, *gg*, i *bb* każdy reprezentuje wartość szesnastkowa dwóch cyfr używana do określania ilości czerwony, zielony i niebieski w kolor. Każdy szesnastkową wartością cyfrową może mieć wartość z zakresu od 0 – 9 lub A-F. najmniejsza wartość to 0, a F jest większa. Wartości alfa 00 Określa kolor, który jest całkowicie niewidoczne, gdy wartość alfa FF tworzy kolor jest całkowicie nieprzezroczyste.  W poniższym przykładzie szesnastkową [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji służy do określania dwóch kolorów. Pierwsza to częściowo przezroczyste (ma wartość alfa x20), podczas gdy druga jest całkowicie nieprzezroczysta.  
   

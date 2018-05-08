@@ -1,13 +1,6 @@
 ---
 title: Ildasm.exe (Dezasembler IL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PE files, MSIL Disassembler
 - portable executable files, MSIL Disassembler
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f42726b24abe78b151e4174da37b7c7bfff4c8d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8b69544b2d8041a3aa4cb566867b6c14b29f0f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -47,7 +37,7 @@ Poniższe opcje są dostępne dla *.exe*, *.dll*, *.obj*, *.lib*, i *winmd* plik
 
 | Opcja | Opis |
 | ------ | ----------- |
-|**/ out =**`filename`|Tworzy plik wyjściowy z określonym `filename`, zamiast wyświetlanie wyników w graficznym interfejsie użytkownika.|
+|**/ out =** `filename`|Tworzy plik wyjściowy z określonym `filename`, zamiast wyświetlanie wyników w graficznym interfejsie użytkownika.|
 |**/RTF**|Generuje wyjście w formacie RTF. Nieprawidłowy z **można** opcji.|
 |**można**|Wyświetla wyniki w oknie konsoli, a nie w graficznym interfejsie użytkownika czy plik wyjściowy.|
 |**polecenia**|Generuje wyjście w formacie HTML. Prawidłowe **/output** tylko opcji.|

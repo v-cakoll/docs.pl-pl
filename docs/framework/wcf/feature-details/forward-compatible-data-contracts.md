@@ -1,34 +1,20 @@
 ---
 title: Kontrakty danych zgodne z nowszymi wersjami
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 554176d2b6ac0c1d5cbe817721c55d06f88457cc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 95a72d5d09538bc6f663f2376c7f8f928909cd57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="forward-compatible-data-contracts"></a>Kontrakty danych zgodne z nowszymi wersjami
-Funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] system kontraktu danych jest można rozwijać kontraktów w czasie w nierozdzielający sposoby. Oznacza to, że klienta przy użyciu starszej wersji kontraktu danych może komunikować się z usługą przy użyciu nowszej wersji tego samego kontraktu danych lub klienta przy użyciu nowszej wersji kontraktu danych może komunikować się ze starszą wersją tej samej kontraktu danych. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Funkcja programu Windows Communication Foundation (WCF) jest system kontraktu danych który umów można rozwijać w czasie nierozdzielający sposoby. Oznacza to, że klienta przy użyciu starszej wersji kontraktu danych może komunikować się z usługą przy użyciu nowszej wersji tego samego kontraktu danych lub klienta przy użyciu nowszej wersji kontraktu danych może komunikować się ze starszą wersją tej samej kontraktu danych. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
  Większość funkcji przechowywania wersji można stosować na zgodnie z potrzebami, podczas tworzenia nowych wersji istniejących kontraktu danych. Jednak jedna z funkcji przechowywania wersji, *dwustronną komunikację*, muszą zostać skompilowane na typ z pierwszej wersji prawidłowego funkcjonowania.  
   
@@ -48,7 +34,7 @@ Funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] system kontraktu
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- Gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury napotka dane, które nie jest częścią kontrakt danych, dane są przechowywane we właściwości i zachowane. Nie został przetworzony w inny sposób, z wyjątkiem magazynu tymczasowego. Jeśli obiekt jest zwracany do pochodzenie, jest także zwracany oryginalnych danych (nieznany). W związku z tym dane wprowadził obiegu do i z punktem końcowym źródłowego bez utraty. Należy jednak pamiętać, że w razie potrzeby danych do przetwarzania źródłowego punktu końcowego tego oczekuje się unmet i punkt końcowy musi jakiś sposób wykrywania i wprowadzać zmiany.  
+ Jeśli infrastruktura WCF napotka dane, które nie jest częścią kontrakt danych, dane są przechowywane we właściwości i zachowane. Nie został przetworzony w inny sposób, z wyjątkiem magazynu tymczasowego. Jeśli obiekt jest zwracany do pochodzenie, jest także zwracany oryginalnych danych (nieznany). W związku z tym dane wprowadził obiegu do i z punktem końcowym źródłowego bez utraty. Należy jednak pamiętać, że w razie potrzeby danych do przetwarzania źródłowego punktu końcowego tego oczekuje się unmet i punkt końcowy musi jakiś sposób wykrywania i wprowadzać zmiany.  
   
  <xref:System.Runtime.Serialization.ExtensionDataObject> Typ nie zawiera publicznej metody lub właściwości. W związku z tym nie można uzyskać bezpośredni dostęp do danych przechowywanych w <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwości.  
   

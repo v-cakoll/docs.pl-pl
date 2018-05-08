@@ -1,13 +1,6 @@
 ---
-title: "Model zawartości WPF"
-ms.custom: 
+title: Model zawartości WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElement class [WPF], displaying content
 - content model [WPF], controls
@@ -18,19 +11,14 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48e96b04a3459aa18a52624758d5fa2347570fcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-content-model"></a>Model zawartości WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]jest to platforma prezentacji, która udostępnia wiele formantów i typów kontroli których podstawowym celem jest różnych typów zawartości. Aby ustalić, które formant do użycia lub pochodzić z kontroli, należy zrozumieć typy obiektów, które najlepiej można wyświetlić określonego formantu.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest to platforma prezentacji, która udostępnia wiele formantów i typów kontroli których podstawowym celem jest różnych typów zawartości. Aby ustalić, które formant do użycia lub pochodzić z kontroli, należy zrozumieć typy obiektów, które najlepiej można wyświetlić określonego formantu.  
   
  Ten temat zawiera podsumowanie modelu zawartości dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typów kontroli i kontroli. Model zawartości w tym artykule opisano zawartości mogą być używane w formancie. Ten temat zawiera także właściwości zawartości dla każdego modelu zawartości. Właściwość content jest właściwość, która jest używana do przechowywania zawartości obiektu.  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="classes-that-contain-arbitrary-content"></a>Klasy, które zawierają dowolnego zawartości  
  Niektóre formanty mogą zawierać obiekt dowolnego typu, takiego jak ciąg, <xref:System.DateTime> obiekt, lub <xref:System.Windows.UIElement> oznacza to kontener dla dodatkowych elementów. Na przykład <xref:System.Windows.Controls.Button> może zawierać obraz i tekst; lub <xref:System.Windows.Controls.CheckBox> może zawierać wartości <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ma cztery klasy, które może zawierać dowolną zawartość. W poniższej tabeli wymieniono klasy, które dziedziczą z <xref:System.Windows.Controls.Control>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma cztery klasy, które może zawierać dowolną zawartość. W poniższej tabeli wymieniono klasy, które dziedziczą z <xref:System.Windows.Controls.Control>.  
   
 |Klasa, która zawiera dowolnego zawartości|Zawartość|  
 |-------------------------------------------|-------------|  
@@ -122,7 +110,7 @@ TabControl — używający różnych typów we właściwości nagłówka
  Przykład sposobu tworzenia <xref:System.Windows.Controls.TabItem> obiekty, zobacz <xref:System.Windows.Controls.HeaderedContentControl>.  
   
 ### <a name="controls-that-contain-a-collection-of-arbitrary-objects"></a>Formanty, które zawiera kolekcję obiektów dowolnego  
- <xref:System.Windows.Controls.ItemsControl> Klasa dziedziczy <xref:System.Windows.Controls.Control> i może zawierać wielu elementów, takich jak ciągi, obiektów lub innych elementów. Jego właściwości zawartości <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> i <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>zazwyczaj używany do wypełnienia <xref:System.Windows.Controls.ItemsControl> włączeniu funkcji zbierania danych. Jeśli nie chcesz używać do wypełniania kolekcji <xref:System.Windows.Controls.ItemsControl>, można dodawać elementy przy użyciu <xref:System.Windows.Controls.ItemsControl.Items%2A> właściwości.  
+ <xref:System.Windows.Controls.ItemsControl> Klasa dziedziczy <xref:System.Windows.Controls.Control> i może zawierać wielu elementów, takich jak ciągi, obiektów lub innych elementów. Jego właściwości zawartości <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> i <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> zazwyczaj używany do wypełnienia <xref:System.Windows.Controls.ItemsControl> włączeniu funkcji zbierania danych. Jeśli nie chcesz używać do wypełniania kolekcji <xref:System.Windows.Controls.ItemsControl>, można dodawać elementy przy użyciu <xref:System.Windows.Controls.ItemsControl.Items%2A> właściwości.  
   
  Następujące formanty dziedziczyć <xref:System.Windows.Controls.ItemsControl> i używać jej modelu zawartości:  
   
@@ -231,7 +219,7 @@ Blok tekstu, który ma obramowanie
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>Klasy, które wizualne o elementu UIElement  
- <xref:System.Windows.Documents.Adorner> Klasa udostępnia wizualnych do użytkownika. Na przykład użyć <xref:System.Windows.Documents.Adorner> dodawania funkcjonalności dojść do elementów lub podaj informacje o formancie. <xref:System.Windows.Documents.Adorner> Klasy zapewnia platformę, dzięki czemu można tworzyć własne modułu definiowania układu kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]nie ma żadnych zaimplementowanym modułu definiowania układu kodu. Aby uzyskać więcej informacji, zobacz [omówienie modułu definiowania układu kodu](../../../../docs/framework/wpf/controls/adorners-overview.md).  
+ <xref:System.Windows.Documents.Adorner> Klasa udostępnia wizualnych do użytkownika. Na przykład użyć <xref:System.Windows.Documents.Adorner> dodawania funkcjonalności dojść do elementów lub podaj informacje o formancie. <xref:System.Windows.Documents.Adorner> Klasy zapewnia platformę, dzięki czemu można tworzyć własne modułu definiowania układu kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie ma żadnych zaimplementowanym modułu definiowania układu kodu. Aby uzyskać więcej informacji, zobacz [omówienie modułu definiowania układu kodu](../../../../docs/framework/wpf/controls/adorners-overview.md).  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>Klasy, które umożliwiają użytkownikom wprowadzanie tekstu  
@@ -261,7 +249,7 @@ Blok tekstu, który ma obramowanie
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>Klasy, które formatowania tekstu  
- <xref:System.Windows.Documents.TextElement>oraz ich powiązanymi klasami umożliwiają formatowania tekstu. <xref:System.Windows.Documents.TextElement>obiekty zawierają i formatowanie tekstu w <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument> obiektów. Dwa typy podstawowe <xref:System.Windows.Documents.TextElement> obiekty są <xref:System.Windows.Documents.Block> elementów i <xref:System.Windows.Documents.Inline> elementy. A <xref:System.Windows.Documents.Block> element reprezentuje blok tekstu, np. akapitu lub listy. <xref:System.Windows.Documents.Inline> Element reprezentuje fragment tekstu w bloku. Wiele <xref:System.Windows.Documents.Inline> klasy określ formatowanie tekstu, do której są stosowane. Każdy <xref:System.Windows.Documents.TextElement> ma własną modelu zawartości. Aby uzyskać więcej informacji, zobacz [omówienie modelu zawartości elementu TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
+ <xref:System.Windows.Documents.TextElement> oraz ich powiązanymi klasami umożliwiają formatowania tekstu. <xref:System.Windows.Documents.TextElement> obiekty zawierają i formatowanie tekstu w <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument> obiektów. Dwa typy podstawowe <xref:System.Windows.Documents.TextElement> obiekty są <xref:System.Windows.Documents.Block> elementów i <xref:System.Windows.Documents.Inline> elementy. A <xref:System.Windows.Documents.Block> element reprezentuje blok tekstu, np. akapitu lub listy. <xref:System.Windows.Documents.Inline> Element reprezentuje fragment tekstu w bloku. Wiele <xref:System.Windows.Documents.Inline> klasy określ formatowanie tekstu, do której są stosowane. Każdy <xref:System.Windows.Documents.TextElement> ma własną modelu zawartości. Aby uzyskać więcej informacji, zobacz [omówienie modelu zawartości elementu TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zaawansowane](../../../../docs/framework/wpf/advanced/index.md)

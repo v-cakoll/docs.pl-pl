@@ -1,21 +1,14 @@
 ---
 title: Ograniczenia dotyczące używania poziomów ułatwień dostępu (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bbe358822e885e5ddaba4cb9d982e89cefe1921e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ograniczenia dotyczące używania poziomów ułatwień dostępu (odwołanie w C#)
 Po określeniu typu w deklaracji, sprawdź, czy poziom dostępności typu zależy od poziomu dostępności elementu członkowskiego lub innego typu. Na przykład musi być co najmniej jako dostępne jako klasa pochodna bezpośredniej klasie podstawowej. Następujące deklaracje spowodować błąd kompilatora, ponieważ klasa podstawowa `BaseClass` jest mniej dostępny niż `MyClass`:  
@@ -31,7 +24,7 @@ public class MyClass: BaseClass {...} // Error
 |-------------|-------------|  
 |[Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)|Bezpośrednia klasa podstawowa typu klasy musi być co najmniej jako dostępny jako samego typu klasy.|  
 |[Interfejsy](../../../csharp/programming-guide/interfaces/index.md)|Jawne interfejsy podstawowego typu interfejsu muszą być co najmniej jako dostępne jako samego typu interfejsu.|  
-|[Obiekty delegowane](../../../csharp/programming-guide/delegates/index.md)|Zwracany typ i typy parametrów typu delegata musi być co najmniej jako dostępny jako sam typ delegata.|  
+|[Delegaci](../../../csharp/programming-guide/delegates/index.md)|Zwracany typ i typy parametrów typu delegata musi być co najmniej jako dostępny jako sam typ delegata.|  
 |[Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej dostępny jako stałej sam.|  
 |[Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)|Typ pola muszą być co najmniej jako dostępne jako samego pola.|  
 |[Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)|Zwracany typ i typy parametrów, metody muszą być co najmniej jako dostępne jako tej metody.|  
@@ -118,7 +111,7 @@ public class A
  [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md)  
  [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md)  
  [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [publiczny](../../../csharp/language-reference/keywords/public.md)  
- [prywatne](../../../csharp/language-reference/keywords/private.md)  
- [chronione](../../../csharp/language-reference/keywords/protected.md)  
- [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)

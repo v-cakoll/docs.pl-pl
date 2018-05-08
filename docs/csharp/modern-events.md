@@ -1,20 +1,13 @@
 ---
 title: Wzorzec zdarzenie Core zaktualizowanej platformy .NET
-description: "Dowiedz się, jak wzorzec zdarzenia platformy .NET Core umożliwia elastyczność zapewnienia zgodności i implementowania przetwarzania zdarzeń bezpieczne z subskrybentami asynchronicznego."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+description: Dowiedz się, jak wzorzec zdarzenia platformy .NET Core umożliwia elastyczność zapewnienia zgodności i implementowania przetwarzania zdarzeń bezpieczne z subskrybentami asynchronicznego.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Wzorzec zdarzenie Core zaktualizowanej platformy .NET
 
@@ -86,4 +79,4 @@ Są to wprowadzono znaczące aktualizacje z wzorcem zdarzenia platformy .NET. Zo
 
 W tym artykule pomaga odróżnić przy użyciu `delegates` i `events` w projektach. Są one podobne pojęcia i ten artykuł pomoże Ci podjęcie najlepszych decyzji programów.
 
-[Dalej](distinguish-delegates-events.md)
+[Next](distinguish-delegates-events.md)

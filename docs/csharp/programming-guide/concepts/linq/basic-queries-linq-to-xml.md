@@ -1,21 +1,12 @@
 ---
 title: Podstawowe zapytania (LINQ do XML) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0374cdf35a1c617e390b9e270fbb00932727c2ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b96fc6f2af7754d2403c2ccdf862e976463838a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Podstawowe zapytania (LINQ do XML) (C#)
 Ta sekcja zawiera przykłady basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania.  
@@ -26,7 +17,7 @@ Ta sekcja zawiera przykłady basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq
 |-----------|-----------------|  
 |[Porady: znajdowanie Element z określonym atrybutem (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Pokazuje, jak można znaleźć określonego elementu, który ma atrybut o określonej wartości.|  
 |[Porady: znajdowanie Element z elementu podrzędnego określonego (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Pokazuje, jak można znaleźć określonego elementu, który ma element podrzędny, która ma określoną wartość.|  
-|[Kwerenda vs klasy XDocument. Wykonywanie zapytania XElement (C#)](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Wyjaśniono różnice między Pisanie zapytań na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XElement> i zapisywanie zapytania na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XDocument>.|  
+|[Tworzenie zapytań dotyczących elementu XDocument a Wykonywanie zapytania XElement (C#)](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Wyjaśniono różnice między Pisanie zapytań na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XElement> i zapisywanie zapytania na drzewo XML, który jest osadzony w <xref:System.Xml.Linq.XDocument>.|  
 |[Porady: znajdowanie elementów podrzędnych o nazwie określonego elementu (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Pokazuje, jak można znaleźć wszystkie elementy podrzędne elementu o określonej nazwie. W tym przykładzie użyto <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.|  
 |[Porady: znajdowanie pojedynczego podrzędnym, przy użyciu metody elementy podrzędne (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Przedstawia sposób użycia <xref:System.Xml.Linq.XContainer.Descendants%2A> metody osi do znalezienia pojedynczy jednoznacznie o nazwie elementu.|  
 |[Porady: Pisanie zapytań za pomocą filtrowania złożonych (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Pokazano, jak napisać zapytanie z bardziej złożonych filtrów.|  

@@ -1,13 +1,7 @@
 ---
-title: "Proces zarządzanego wykonania"
-ms.custom: 
+title: Proces zarządzanego wykonania
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - source code language
 - code, managed execution process
@@ -16,21 +10,16 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 702ed3e73117fe01769ec9d7bf939ae8df523793
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4901a81e318efe8371dc72cd9c1d511d55b0c65b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
-<a name="introduction"></a>Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
+<a name="introduction"></a> Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
   
 1.  [Wybieranie kompilatora](#choosing_a_compiler).  
   
@@ -107,7 +96,7 @@ ms.lasthandoff: 12/23/2017
   
  W czasie wykonywania kodu zarządzanego odbiera usług, takich jak wyrzucanie elementów bezużytecznych, zabezpieczeń, współdziałanie z kodem niezarządzanym, obsługę debugowania wielu języków i wdrożenia rozszerzonego i obsługi przechowywania wersji.  
   
- W programie Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] i [!INCLUDE[windowsver](../../includes/windowsver-md.md)], modułu ładującego systemu operacyjnego wyszukuje modułów zarządzanych, sprawdzając nieco nagłówka COFF. Bit ustawiany oznacza modułu zarządzanego. Jeśli moduł ładujący wykryje modułów zarządzanych, ładuje biblioteki mscoree.dll, i `_CorValidateImage` i `_CorImageUnloading` modułu ładującego powiadamianie obrazy moduł zarządzany są załadowany i zwolniony. `_CorValidateImage`wykonuje następujące czynności:  
+ W programie Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] i [!INCLUDE[windowsver](../../includes/windowsver-md.md)], modułu ładującego systemu operacyjnego wyszukuje modułów zarządzanych, sprawdzając nieco nagłówka COFF. Bit ustawiany oznacza modułu zarządzanego. Jeśli moduł ładujący wykryje modułów zarządzanych, ładuje biblioteki mscoree.dll, i `_CorValidateImage` i `_CorImageUnloading` modułu ładującego powiadamianie obrazy moduł zarządzany są załadowany i zwolniony. `_CorValidateImage` wykonuje następujące czynności:  
   
 1.  Zapewnia, że kod jest prawidłowy kod zarządzany.  
   

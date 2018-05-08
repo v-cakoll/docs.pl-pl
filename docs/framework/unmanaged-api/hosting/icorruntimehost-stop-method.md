@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::Stop — Metoda"
-ms.custom: 
+title: ICorRuntimeHost::Stop — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.Stop
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9e27bd5d05b10f8db24a1119e4ed3717ce044e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1aea8cb4c180477fdd763a8af2f251db2d37d066
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop — Metoda
 Zatrzymuje wykonywanie kodu w czasie wykonywania dla bieżącego procesu.  
@@ -49,7 +37,7 @@ HRESULT Stop ();
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Operacja powiodła się.|  
-|WARTOŚCI S_FALSE|Nie można ukończyć operacji.|  
+|S_FALSE|Nie można ukończyć operacji.|  
 |E_FAIL|Wystąpił nieznany, poważnej awarii. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie będzie już można używać w procesie. Kolejne wywołania żadnych hostingu interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
   

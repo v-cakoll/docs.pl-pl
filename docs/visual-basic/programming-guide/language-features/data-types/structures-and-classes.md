@@ -1,13 +1,6 @@
 ---
 title: Struktury i klasy (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
 - structures [Visual Basic]
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e64b54b93463845dd9afd0c0efd0e39f20cab1ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Struktury i klasy (Visual Basic)
 Visual Basic łączy składnia struktury i klasy, z wynikami, że obie te jednostki obsługuje większość tej samej funkcji. Istnieją również istotne różnice między struktury i klasy.  

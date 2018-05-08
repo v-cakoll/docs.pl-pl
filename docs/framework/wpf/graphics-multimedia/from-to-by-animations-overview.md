@@ -1,13 +1,6 @@
 ---
-title: "Od do przez animacje — omówienie"
-ms.custom: 
+title: Od do przez animacje — omówienie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c4c2c3b9cabb630b5762fdc49f6cb62eef28f71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3095ec2c6307faaaa8049f23fffb5909cb3042d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fromtoby-animations-overview"></a>Przegląd Cechy animacji od/do/przez
 W tym temacie opisano sposób korzystania z lub do/przez animacje do animowania właściwości zależności. From lub do/przez animację tworzy przejścia między dwiema wartościami.  
@@ -47,11 +35,11 @@ W tym temacie opisano sposób korzystania z lub do/przez animacje do animowania 
   
  Klasy z/do/przez animację należą do <xref:System.Windows.Media.Animation> przestrzeni nazw i korzystać z następującą konwencją nazewnictwa:  
   
- *\<Typ >*`Animation`  
+ *\<Typ >* `Animation`  
   
  Gdzie  *\<typu >* jest typ wartości, które animuje klasy.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia następujące z lub do/przez animację klasy.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia następujące z lub do/przez animację klasy.  
   
 |Typ właściwości|Odpowiednie z lub do/przez klasy animacji|  
 |-------------------|------------------------------------------------|  
@@ -149,7 +137,7 @@ W tym temacie opisano sposób korzystania z lub do/przez animacje do animowania 
   
 -   Animacja ścieżki generuje dane wyjściowe wartości z <xref:System.Windows.Media.PathGeometry>. Aby uzyskać więcej informacji, zobacz [omówienie animacje ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Umożliwia także tworzenie własnych typów animacji niestandardowej. Aby uzyskać więcej informacji, zobacz [omówienie animacji niestandardowej](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia także tworzenie własnych typów animacji niestandardowej. Aby uzyskać więcej informacji, zobacz [omówienie animacji niestandardowej](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Animation.Timeline>  

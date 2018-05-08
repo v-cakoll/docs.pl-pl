@@ -1,30 +1,20 @@
 ---
 title: Zdarzenia metod ETW
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="method-etw-events"></a>Zdarzenia metod ETW
-<a name="top"></a>Te zdarzenia zbierać informacje, które są specyficzne dla metody. Ładunek te zdarzenia jest wymagana do rozpoznawania symboli. Zdarzenia te zapewniają dodatkowo pomocne informacje takie jak liczba została wywołana metoda.  
+<a name="top"></a> Te zdarzenia zbierać informacje, które są specyficzne dla metody. Ładunek te zdarzenia jest wymagana do rozpoznawania symboli. Zdarzenia te zapewniają dodatkowo pomocne informacje takie jak liczba została wywołana metoda.  
   
  Wszystkie zdarzenia metod ma poziom "Informacyjny (4)". Wszystkie zdarzenia pełne metody mają poziom "Verbose (5)".  
   
@@ -46,10 +36,10 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITKeyword`dostawcy środowiska uruchomieniowego (0x10)|Komunikat informacyjny (4)|  
-|`NGenKeyword`dostawcy środowiska uruchomieniowego (0x20)|Komunikat informacyjny (4)|  
-|`JitRundownKeyword`Dostawca stert (0x10)|Komunikat informacyjny (4)|  
-|`NGENRundownKeyword`Dostawca stert (0x20)|Komunikat informacyjny (4)|  
+|`JITKeyword` dostawcy środowiska uruchomieniowego (0x10)|Komunikat informacyjny (4)|  
+|`NGenKeyword` dostawcy środowiska uruchomieniowego (0x20)|Komunikat informacyjny (4)|  
+|`JitRundownKeyword` Dostawca stert (0x10)|Komunikat informacyjny (4)|  
+|`NGENRundownKeyword` Dostawca stert (0x20)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -82,9 +72,9 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementRundownKeyword`Dostawca stert (0x800)|Komunikat informacyjny (4)|  
-|`JitRundownKeyword`Dostawca stert (0x10)|Komunikat informacyjny (4)|  
-|`NGENRundownKeyword`Dostawca stert (0x20)|Komunikat informacyjny (4)|  
+|`AppDomainResourceManagementRundownKeyword` Dostawca stert (0x800)|Komunikat informacyjny (4)|  
+|`JitRundownKeyword` Dostawca stert (0x10)|Komunikat informacyjny (4)|  
+|`NGENRundownKeyword` Dostawca stert (0x20)|Komunikat informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -109,10 +99,10 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITKeyword`dostawcy środowiska uruchomieniowego (0x10)|Pełne (5)|  
-|`NGenKeyword`dostawcy środowiska uruchomieniowego (0x20)|Pełne (5)|  
-|`JitRundownKeyword`Dostawca stert (0x10)|Pełne (5)|  
-|`NGENRundownKeyword`Dostawca stert (0x20)|Pełne (5)|  
+|`JITKeyword` dostawcy środowiska uruchomieniowego (0x10)|Pełne (5)|  
+|`NGenKeyword` dostawcy środowiska uruchomieniowego (0x20)|Pełne (5)|  
+|`JitRundownKeyword` Dostawca stert (0x10)|Pełne (5)|  
+|`NGENRundownKeyword` Dostawca stert (0x20)|Pełne (5)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   
@@ -146,10 +136,10 @@ ms.lasthandoff: 12/22/2017
   
 |Słowo kluczowe wywołaniem zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITKeyword`dostawcy środowiska uruchomieniowego (0x10)|Pełne (5)|  
-|`NGenKeyword`dostawcy środowiska uruchomieniowego (0x20)|Pełne (5)|  
-|`JitRundownKeyword`Dostawca stert (0x10)|Pełne (5)|  
-|`NGENRundownKeyword`Dostawca stert (0x20)|Pełne (5)|  
+|`JITKeyword` dostawcy środowiska uruchomieniowego (0x10)|Pełne (5)|  
+|`NGenKeyword` dostawcy środowiska uruchomieniowego (0x20)|Pełne (5)|  
+|`JitRundownKeyword` Dostawca stert (0x10)|Pełne (5)|  
+|`NGENRundownKeyword` Dostawca stert (0x20)|Pełne (5)|  
   
  W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
   

@@ -1,31 +1,17 @@
 ---
-title: "Instrukcje: Definiowanie kontraktu usługi Windows Communication Foundation"
-ms.custom: 
+title: 'Instrukcje: Definiowanie kontraktu usługi Windows Communication Foundation'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 98e0b07f608db4396a5b8f5e25cde243e03390a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Instrukcje: Definiowanie kontraktu usługi Windows Communication Foundation
-Jest to pierwszy sześciu zadania wymagane do utworzenia podstawowego [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
+Jest to pierwszy sześciu zadania wymagane do tworzenia podstawowej aplikacji Windows Communication Foundation (WCF). Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
   
  Podczas tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, pierwszym zadaniem jest definiowanie kontraktu usługi. Kontrakt usługi określa, jakie operacje obsługuje usługi. Operację można traktować jako metoda usługi sieci Web. Kontrakty są tworzone przez definiowanie interfejsu C++, C# lub Visual Basic (VB). Każda metoda w interfejsie odpowiada określonej operacji usługi. Każdego interfejsu należy zastosować <xref:System.ServiceModel.ServiceContractAttribute> zastosować dla niego i każdej operacji musi być <xref:System.ServiceModel.OperationContractAttribute> atrybut zastosowany do niego. Jeśli metoda w interfejsie z atrybutem <xref:System.ServiceModel.ServiceContractAttribute> atrybut nie ma <xref:System.ServiceModel.OperationContractAttribute> atrybutu, że metoda nie jest uwidaczniana przez usługę.  
   

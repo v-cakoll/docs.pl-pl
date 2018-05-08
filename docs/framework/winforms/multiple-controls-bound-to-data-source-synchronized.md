@@ -1,13 +1,6 @@
 ---
-title: "Porady: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych"
-ms.custom: 
+title: 'Porady: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 227ad36e87c3deceb7fefe3cd19013fc8e76c686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ab7eebd4f4087502f8709e17dde3f3de448c9aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Porady: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych
 Często, podczas pracy z powiązanie danych w formularzach systemu Windows, wielu formantów powiązanych z tym samym źródle danych. W niektórych przypadkach może być konieczne wykonać dodatkowe czynności, aby upewnić się, czy powiązania właściwości formantów pozostają zsynchronizowane ze sobą i źródła danych. Te kroki są niezbędne w dwóch sytuacjach:  

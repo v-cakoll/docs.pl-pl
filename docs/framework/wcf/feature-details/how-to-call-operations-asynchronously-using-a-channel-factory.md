@@ -1,27 +1,15 @@
 ---
-title: "Instrukcje: Asynchroniczne wywoływanie operacji za pomocą fabryki kanałów"
-ms.custom: 
+title: 'Instrukcje: Asynchroniczne wywoływanie operacji za pomocą fabryki kanałów'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 216c0d529a15004ea9f7d6f087aeee4bf4f10e56
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 95279f90fbf87d64d96a1ed036449b72416e4f44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Instrukcje: Asynchroniczne wywoływanie operacji za pomocą fabryki kanałów
 W tym temacie opisano, jak klienta można uzyskać dostępu do operacji usługi asynchronicznie przy użyciu <xref:System.ServiceModel.ChannelFactory%601>-aplikacji klienta. (Przy użyciu <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> obiekt do wywołania usługi można użyć sterowane zdarzeniami asynchroniczne wywołanie modelu. Aby uzyskać więcej informacji, zobacz [porady: wywołania operacji usługi asynchronicznie](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Aby uzyskać więcej informacji na temat oparty na zdarzeniach asynchroniczne wywołanie modelu, zobacz [programowanie wielowątkowości za pomocą wzorca asynchronicznego opartego na zdarzeniach](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md).)  
@@ -53,7 +41,7 @@ W tym temacie opisano, jak klienta można uzyskać dostępu do operacji usługi 
      Podczas funkcja wywołania zwrotnego, gdy klient wywołuje `End<operation>` (na przykład `EndAdd`) można pobrać wyniku.  
   
 ## <a name="example"></a>Przykład  
- Implementuje usługę, która jest używana z kodu klienta, który jest używany w poprzedniej procedurze `ICalculator` interfejsu, jak pokazano w poniższym kodzie. Na stronie usługi `Add` i `Subtract` operacji kontraktu są wywoływane przez synchronicznie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wykonawczego, nawet jeśli poprzednie kroki klienta są wywoływane asynchronicznie na kliencie. `Multiply` i `Divide` operacje są używane do wywoływania usługi asynchronicznie po stronie usługi nawet wtedy, gdy klient wywołuje ich synchronicznie. W tym przykładzie <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> właściwości `true`. Ustawienie właściwości w połączeniu z implementacją [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wzorca asynchronicznego, określa, że czas uruchomienia do asynchronicznego wywołania operacji.  
+ Implementuje usługę, która jest używana z kodu klienta, który jest używany w poprzedniej procedurze `ICalculator` interfejsu, jak pokazano w poniższym kodzie. Na stronie usługi `Add` i `Subtract` operacji kontraktu są wywoływane synchronicznie przez Windows Communication Foundation (WCF) w czasie wykonywania, nawet jeśli poprzednie kroki klienta są wywoływane asynchronicznie na kliencie. `Multiply` i `Divide` operacje są używane do wywoływania usługi asynchronicznie po stronie usługi nawet wtedy, gdy klient wywołuje ich synchronicznie. W tym przykładzie <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> właściwości `true`. Ustawienie właściwości w połączeniu z implementacją [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wzorca asynchronicznego, określa, że czas uruchomienia do asynchronicznego wywołania operacji.  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  

@@ -1,17 +1,12 @@
 ---
 title: Typy ogólne (F#)
 description: 'Dowiedz się, jak używać funkcje ogólne F # i typy, które umożliwiają pisania kodu, który współpracuje z różnymi typami bez powtarzania kodu.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 0e5c7ad59f0e4d278f478e9fd8e6da70a13aba02
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 332e42dd53689440757da04727b69eb3d85ca0fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generics"></a>Typy ogólne
 

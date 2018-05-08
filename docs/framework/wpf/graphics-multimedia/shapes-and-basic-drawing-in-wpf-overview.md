@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Kształty i podstawowe rysowanie w WPF"
-ms.custom: 
+title: Przegląd Kształty i podstawowe rysowanie w WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,26 +12,21 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adbf982da25ff445d277b7c1b5911217d9825c02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Przegląd Kształty i podstawowe rysowanie w WPF
 Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.Shapes.Shape> obiektów. A <xref:System.Windows.Shapes.Shape> jest typem <xref:System.Windows.UIElement> umożliwiająca narysować kształt do ekranu. Ponieważ są one elementy interfejsu użytkownika <xref:System.Windows.Shapes.Shape> obiekty mogą być używane wewnątrz <xref:System.Windows.Controls.Panel> elementów i większość formantów.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]oferuje kilka warstw dostępu do usługi renderowania i grafiki. W górnej warstwie <xref:System.Windows.Shapes.Shape> obiekty są łatwe w użyciu i podaj wielu przydatnych funkcji, takich jak układ i udział w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zdarzeń systemu.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje kilka warstw dostępu do usługi renderowania i grafiki. W górnej warstwie <xref:System.Windows.Shapes.Shape> obiekty są łatwe w użyciu i podaj wielu przydatnych funkcji, takich jak układ i udział w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zdarzeń systemu.  
   
   
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Obiekty kształtu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia wiele gotowych do użycia <xref:System.Windows.Shapes.Shape> obiektów.  Wszystkie obiekty kształtu dziedziczyć <xref:System.Windows.Shapes.Shape> klasy. Kształt dostępne obiekty obejmują <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, i <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape>obiekty współużytkują wspólne następujące właściwości.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wiele gotowych do użycia <xref:System.Windows.Shapes.Shape> obiektów.  Wszystkie obiekty kształtu dziedziczyć <xref:System.Windows.Shapes.Shape> klasy. Kształt dostępne obiekty obejmują <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, i <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> obiekty współużytkują wspólne następujące właściwości.  
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>: W tym artykule opisano sposób jest rysowane konturu kształtu.  
   
@@ -83,7 +71,7 @@ Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.S
   
 <a name="pathgeometry"></a>   
 ### <a name="pathgeometry-and-pathsegments"></a>PathGeometry i PathSegments  
- <xref:System.Windows.Media.PathGeometry>obiekty składają się z co najmniej jeden <xref:System.Windows.Media.PathFigure> obiektów; każda <xref:System.Windows.Media.PathFigure> reprezentuje różne "rysunek" lub kształtu. Każdy <xref:System.Windows.Media.PathFigure> sam składa się z co najmniej jednego <xref:System.Windows.Media.PathSegment> obiekty, każdy reprezentuje połączony fragment rysunku lub kształtu. Są następujące typy segmentu: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, i <xref:System.Windows.Media.ArcSegment>.  
+ <xref:System.Windows.Media.PathGeometry> obiekty składają się z co najmniej jeden <xref:System.Windows.Media.PathFigure> obiektów; każda <xref:System.Windows.Media.PathFigure> reprezentuje różne "rysunek" lub kształtu. Każdy <xref:System.Windows.Media.PathFigure> sam składa się z co najmniej jednego <xref:System.Windows.Media.PathSegment> obiekty, każdy reprezentuje połączony fragment rysunku lub kształtu. Są następujące typy segmentu: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, i <xref:System.Windows.Media.ArcSegment>.  
   
  W poniższym przykładzie <xref:System.Windows.Shapes.Path> jest używany do rysowania kwadratową krzywą Beziera.  
   
@@ -108,7 +96,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![Ilustracja przedstawiająca ścieżkę](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
   
- <xref:System.Windows.Shapes.Path.Data%2A> Ciąg atrybutu rozpoczyna się przy użyciu polecenia "moveto", wskazane przez M, która określa punkt początkowy dla ścieżki w układzie współrzędnych <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path>Parametry danych jest rozróżniana wielkość liter. Wielka litera M wskazuje bezwzględny lokalizacji dla nowego punktu bieżącego. Małe litery m wskazuje współrzędnych względnych. Pierwszy segment jest sześcienny początku krzywej Beziera na (100,200) i koniec (400,175), rysowane przy użyciu dwóch kontroli punktów (100,25) i (400,350). Ten segment jest określane przez polecenie C w <xref:System.Windows.Shapes.Path.Data%2A> atrybut ciągu. Ponownie Wielka litera C wskazuje ścieżką bezwzględną; małe litery c wskazuje ścieżki względnej.  
+ <xref:System.Windows.Shapes.Path.Data%2A> Ciąg atrybutu rozpoczyna się przy użyciu polecenia "moveto", wskazane przez M, która określa punkt początkowy dla ścieżki w układzie współrzędnych <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path> Parametry danych jest rozróżniana wielkość liter. Wielka litera M wskazuje bezwzględny lokalizacji dla nowego punktu bieżącego. Małe litery m wskazuje współrzędnych względnych. Pierwszy segment jest sześcienny początku krzywej Beziera na (100,200) i koniec (400,175), rysowane przy użyciu dwóch kontroli punktów (100,25) i (400,350). Ten segment jest określane przez polecenie C w <xref:System.Windows.Shapes.Path.Data%2A> atrybut ciągu. Ponownie Wielka litera C wskazuje ścieżką bezwzględną; małe litery c wskazuje ścieżki względnej.  
   
  Drugi segment rozpocznie się za pomocą wiersza polecenia bezwzględny poziome "lineto" H, który określa linią z poprzednim podrzędną punktu końcowego (400,175) do nowego punktu końcowego (280,175). Polecenie poziome "lineto", dlatego jest wybrana *x*-współrzędną.  
   
@@ -116,7 +104,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>Kształty malowania  
- <xref:System.Windows.Media.Brush>obiekty służą do malowania kształtu <xref:System.Windows.Shapes.Shape.Stroke%2A> i <xref:System.Windows.Shapes.Shape.Fill%2A>. W poniższym przykładzie, obrysu i wypełnienie <xref:System.Windows.Shapes.Ellipse> zostały określone. Należy zauważyć, że prawidłowe wartości wejściowe pędzla właściwości mogą być słowo kluczowe lub szesnastkowej wartości koloru. Aby uzyskać więcej informacji na temat słów kluczowych dostępny kolor, zobacz właściwości <xref:System.Windows.Media.Colors> klasy w <xref:System.Windows.Media> przestrzeni nazw.  
+ <xref:System.Windows.Media.Brush> obiekty służą do malowania kształtu <xref:System.Windows.Shapes.Shape.Stroke%2A> i <xref:System.Windows.Shapes.Shape.Fill%2A>. W poniższym przykładzie, obrysu i wypełnienie <xref:System.Windows.Shapes.Ellipse> zostały określone. Należy zauważyć, że prawidłowe wartości wejściowe pędzla właściwości mogą być słowo kluczowe lub szesnastkowej wartości koloru. Aby uzyskać więcej informacji na temat słów kluczowych dostępny kolor, zobacz właściwości <xref:System.Windows.Media.Colors> klasy w <xref:System.Windows.Media> przestrzeni nazw.  
   
 ```  
 <Canvas Background="LightGray">   
@@ -213,7 +201,7 @@ myPolygon.StrokeThickness = 2;
 ## <a name="transforming-shapes"></a>Przekształcanie kształtów  
  <xref:System.Windows.Media.Transform> Klasa udostępnia środki do przekształcania kształtów w dwuwymiarowego rzutu.  Różne typy przekształcania obejmują obrotu (<xref:System.Windows.Media.RotateTransform>), skali (<xref:System.Windows.Media.ScaleTransform>), pochylenia (<xref:System.Windows.Media.SkewTransform>), a translacja (<xref:System.Windows.Media.TranslateTransform>).  
   
- Typowe przekształcenie do zastosowania do kształtu jest obrotu.  Obracanie kształtu, należy utworzyć <xref:System.Windows.Media.RotateTransform> i określ jej <xref:System.Windows.Media.RotateTransform.Angle%2A>. <xref:System.Windows.Media.RotateTransform.Angle%2A> 45 obraca element 45 stopni w prawo; pod kątem 90 obraca element 90 stopni w prawo; i tak dalej. Ustaw <xref:System.Windows.Media.RotateTransform.CenterX%2A> i <xref:System.Windows.Media.RotateTransform.CenterY%2A> właściwości, jeśli chcesz kontrolować punktu o tym, które jest obracana elementu. Wartości tych właściwości są wyrażane w układzie współrzędnych elementu transformacji. <xref:System.Windows.Media.RotateTransform.CenterX%2A>i <xref:System.Windows.Media.RotateTransform.CenterY%2A> mają przypisane wartości domyślne o wartości zero. Na koniec zastosować <xref:System.Windows.Media.RotateTransform> do elementu. Jeśli nie chcesz transformacji do mają wpływ na układ, ustaw kształtu <xref:System.Windows.UIElement.RenderTransform%2A> właściwości.  
+ Typowe przekształcenie do zastosowania do kształtu jest obrotu.  Obracanie kształtu, należy utworzyć <xref:System.Windows.Media.RotateTransform> i określ jej <xref:System.Windows.Media.RotateTransform.Angle%2A>. <xref:System.Windows.Media.RotateTransform.Angle%2A> 45 obraca element 45 stopni w prawo; pod kątem 90 obraca element 90 stopni w prawo; i tak dalej. Ustaw <xref:System.Windows.Media.RotateTransform.CenterX%2A> i <xref:System.Windows.Media.RotateTransform.CenterY%2A> właściwości, jeśli chcesz kontrolować punktu o tym, które jest obracana elementu. Wartości tych właściwości są wyrażane w układzie współrzędnych elementu transformacji. <xref:System.Windows.Media.RotateTransform.CenterX%2A> i <xref:System.Windows.Media.RotateTransform.CenterY%2A> mają przypisane wartości domyślne o wartości zero. Na koniec zastosować <xref:System.Windows.Media.RotateTransform> do elementu. Jeśli nie chcesz transformacji do mają wpływ na układ, ustaw kształtu <xref:System.Windows.UIElement.RenderTransform%2A> właściwości.  
   
  W poniższym przykładzie <xref:System.Windows.Media.RotateTransform> służy do Obrót o 45 stopni kształtu, o kształtu lewym górnym rogu (0,0).  
   

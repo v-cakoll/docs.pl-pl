@@ -1,34 +1,22 @@
 ---
 title: Proces zatwierdzania dokumentu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45a6a6b2cd3bf790c8170cef6a6111ee7dd0b27b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-approval-process"></a>Proces zatwierdzania dokumentu
-W tym przykładzie przedstawiono korzystanie z wielu Windows Workflow Foundation (WF) i [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcje razem. Razem wdrażają scenariusza proces zatwierdzania dokumentu. Aplikacja kliencka można przesyłać dokumenty do zatwierdzenia i zatwierdzić dokumenty. Aplikacja menedżera zatwierdzenia istnieje ułatwiających komunikację między klientami i do wymuszania reguł procesu zatwierdzania. Proces zatwierdzania jest przepływ pracy, który można wykonać kilka typów zatwierdzenia. Działania istnieje pobieranie jednego zatwierdzenia, zatwierdzenia kworum (procent zbiór osób zatwierdzających) i proces zatwierdzania złożonych, który składa się z kworum i jednego zatwierdzenia w sekwencji.  
+W przykładzie pokazano korzystanie z wielu funkcji Windows Workflow Foundation (WF) i Windows Communication Foundation (WCF) ze sobą. Razem wdrażają scenariusza proces zatwierdzania dokumentu. Aplikacja kliencka można przesyłać dokumenty do zatwierdzenia i zatwierdzić dokumenty. Aplikacja menedżera zatwierdzenia istnieje ułatwiających komunikację między klientami i do wymuszania reguł procesu zatwierdzania. Proces zatwierdzania jest przepływ pracy, który można wykonać kilka typów zatwierdzenia. Działania istnieje pobieranie jednego zatwierdzenia, zatwierdzenia kworum (procent zbiór osób zatwierdzających) i proces zatwierdzania złożonych, który składa się z kworum i jednego zatwierdzenia w sekwencji.  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   

@@ -1,30 +1,16 @@
 ---
 title: Usługi jednokierunkowe
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>Usługi jednokierunkowe
 Domyślne zachowanie operacji usługi jest wzorzec żądanie odpowiedź. We wzorcu żądanie odpowiedź, klient oczekuje na komunikat odpowiedzi nawet wtedy, gdy operacja usługi jest reprezentowana w kodzie jako `void` metody. Z operacji jednokierunkowych są przesyłane tylko jeden komunikat. Odbiornik nie wysyła komunikat odpowiedzi nie jest nadawca oczekiwany jeden.  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  Pełny przykład, zobacz [jednokierunkowe](../../../../docs/framework/wcf/samples/one-way.md) próbki.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Klienci z blokowaniem za pomocą operacji jednokierunkowych  
- Ważne jest, aby należy pamiętać, że mimo że niektóre aplikacje jednokierunkowe zwraca jak wychodzących dane są zapisywane do połączenia z siecią, w kilku scenariuszach wdrażania powiązania lub usługi może spowodować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta mają być blokowane przy użyciu jednokierunkowego operacje. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacje klienckie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie może zwracać obiektu klienta do momentu danych wychodzących został zapisany do połączenia sieciowego. Dotyczy to wszystkich wzorców wymiany wiadomości, w tym przypadku operacji jednokierunkowych; oznacza to, że wszystkie problem z zapisywaniem się, że dane do transportu uniemożliwi zwracanie przez klienta. W zależności od tego problemu, wynik może być wyjątku lub opóźnienia podczas wysyłania komunikatów do usługi.  
+ Należy koniecznie należy pamiętać, że mimo że niektóre aplikacje jednokierunkowe zwraca jak danych wychodzących są zapisywane do połączenia sieciowego w kilku scenariuszach wdrażania powiązania lub usługi może spowodować klienta WCF zablokować przy użyciu operacji jednokierunkowych. W aplikacjach klienckich usługi WCF obiekt klienta WCF nie zwraca dopóki danych wychodzących został zapisany do połączenia sieciowego. Dotyczy to wszystkich wzorców wymiany wiadomości, w tym przypadku operacji jednokierunkowych; oznacza to, że wszystkie problem z zapisywaniem się, że dane do transportu uniemożliwi zwracanie przez klienta. W zależności od tego problemu, wynik może być wyjątku lub opóźnienia podczas wysyłania komunikatów do usługi.  
   
  Na przykład, jeśli transport nie można odnaleźć punktu końcowego <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> wyjątek bez dużego opóźnienia. Jednak również jest możliwe, że usługa jest nie można odczytać danych ze przewodowy jakiegoś powodu, co uniemożliwia transport klienta operacji wysyłania zwracanie. W takich przypadkach Jeśli <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> okresu dla transportu klienta przekroczeniu powiązania <xref:System.TimeoutException?displayProperty=nameWithType> jest zgłaszany —, ale nie do czasu został przekroczony limit czasu. Istnieje również możliwość uruchomienie tak wiele komunikatów w punkcie usług, że usługa nie może ich przetworzyć po pewnym. W takim przypadku, bloki jednokierunkowe klienta usługi może przetwarzać komunikatów lub do momentu jest zgłaszany wyjątek.  
   

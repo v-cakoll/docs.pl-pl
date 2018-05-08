@@ -1,26 +1,15 @@
 ---
-title: "Kolekcja działań w WF"
-ms.custom: 
+title: Kolekcja działań w WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-activities-in-wf"></a>Kolekcja działań w WF
-Kolekcja są używane do pracy z obiektami kolekcji w przepływie pracy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]ma dostarczane przez system działania Dodawanie i usuwanie elementów z kolekcji, testowanie pod kątem istnienia elementu w kolekcji i wyczyszczenie kolekcji. `ExistsInCollection`i `RemoveFromCollection` ma <xref:System.Activities.OutArgument%601> typu <xref:System.Boolean>, która wskazuje wynik.  
+Kolekcja są używane do pracy z obiektami kolekcji w przepływie pracy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ma dostarczane przez system działania Dodawanie i usuwanie elementów z kolekcji, testowanie pod kątem istnienia elementu w kolekcji i wyczyszczenie kolekcji. `ExistsInCollection` i `RemoveFromCollection` ma <xref:System.Activities.OutArgument%601> typu <xref:System.Boolean>, która wskazuje wynik.  
   
 > [!IMPORTANT]
 >  Jeśli działanie kolekcji jest wykonywane przed ustawieniem obiekt kolekcji <xref:System.InvalidOperationException> jest zgłaszany i usterek działania.  
@@ -235,7 +224,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Powyższe przykłady kodu można również utworzyć za pomocą <xref:Microsoft.CSharp.Activities.CSharpValue%601> zamiast<xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Powyższe przykłady kodu można również utworzyć za pomocą <xref:Microsoft.CSharp.Activities.CSharpValue%601> zamiast <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  

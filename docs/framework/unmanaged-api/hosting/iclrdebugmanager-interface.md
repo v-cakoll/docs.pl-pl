@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager — Interfejs"
-ms.custom: 
+title: ICLRDebugManager — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e712f22156e96cfc58e9c1a835077ba21ecd184
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager — Interfejs
 Udostępnia metody umożliwiające hosta do skojarzenia z identyfikatorem i przyjazną nazwę zestawu zadań.  
@@ -50,7 +38,7 @@ Udostępnia metody umożliwiające hosta do skojarzenia z identyfikatorem i przy
 |[SetSymbolReadingPolicy, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Ustawia zasady do odczytywania plików programu (PDB) bazy danych. Zasady określa, czy informacje dotyczące numerów wierszy i pliki są uwzględniane w stosy wywołań.|  
   
 ## <a name="remarks"></a>Uwagi  
- W scenariuszach debugowania hosta może być grupy zadań zgodnie z jego własnej logiki programowania. Na przykład grupa umożliwia deweloperom wyświetlane zadania wymagane przez projektanta interfejsów API, zamiast każdego zadania uruchomione w procesie. `ICLRDebugManager`Umożliwia hosta do wdrożenia tego rodzaju grupowania.  
+ W scenariuszach debugowania hosta może być grupy zadań zgodnie z jego własnej logiki programowania. Na przykład grupa umożliwia deweloperom wyświetlane zadania wymagane przez projektanta interfejsów API, zamiast każdego zadania uruchomione w procesie. `ICLRDebugManager` Umożliwia hosta do wdrożenia tego rodzaju grupowania.  
   
 > [!IMPORTANT]
 >  Trzy `ICLRDebugManager` metod, `BeginConnection`, `SetConnectionTasks` i `EndConnection`, są zależne od siebie nawzajem. One musi zostać wywołany w podanej kolejności będzie działać zgodnie z oczekiwaniami.  
@@ -64,7 +52,7 @@ Udostępnia metody umożliwiające hosta do skojarzenia z identyfikatorem i przy
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -1,30 +1,18 @@
 ---
 title: Debugowanie (Niezarządzany wykaz interfejsów API)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged API reference [.NET Framework], debugging
 - debugging [.NET Framework], using the unmanaged API
 - native API reference [.NET Framework], debugging
 ms.assetid: f0bf70be-42ef-4c46-8709-1694b5f99018
-caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62110d07903b05e68ddfc72c297a785bad72c87f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Debugowanie (Niezarządzany wykaz interfejsów API)
 Debugowanie interfejsu API umożliwia debugera do debugowania kodu uruchamianego w środowisku środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego. Kodu do debugowania mogą być dowolnego typu kodu, który obsługuje środowisko CLR.  

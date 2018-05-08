@@ -1,24 +1,12 @@
 ---
 title: Windows Workflow Foundation 4 wydajności
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 793645c442e960c43f00c3ea3c9b636a4c539706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 wydajności
 Dustin Metzgar  
@@ -29,12 +17,12 @@ Dustin Metzgar
   
  Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zawiera znaczne zmiany z systemu Windows Workflow Foundation (WF) z dużych inwestycji w wydajności.  Ta nowa wersja wprowadza znaczących zmian z poprzednich wersji [!INCLUDE[wf1](../../../includes/wf1-md.md)] dostarczonego w ramach programu .NET Framework 3.0 i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Została zmieniona z rdzenia modelu programowania, środowiska uruchomieniowego i narzędzi, aby znacznie zwiększyć wydajność i użyteczność. W tym temacie przedstawiono ważne charakterystyki tych zmian i porównuje je z tych funkcji w poprzedniej wersji.  
   
- Zwiększa wydajność składników przepływu pracy o rzędów między WF3 i WF4.  To pozostawia odstęp między kodowane ręcznie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usług i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług przepływu pracy będzie bardzo mała.  Opóźnienie przepływu pracy została znacząco zmniejszona w WF4.  Zwiększa wydajność trwałości przez współczynnik 2.5 3.0.  Monitorowanie kondycji za pomocą śledzenia przepływu pracy ma znacznie mniejsze koszty.  Są one istotne powody migrację do lub przyjąć WF4 w aplikacji.  
+ Zwiększa wydajność składników przepływu pracy o rzędów między WF3 i WF4.  To pozostawia odstęp między kodowane ręcznie usług Windows Communication Foundation (WCF) i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług przepływu pracy będzie bardzo mała.  Opóźnienie przepływu pracy została znacząco zmniejszona w WF4.  Zwiększa wydajność trwałości przez współczynnik 2.5 3.0.  Monitorowanie kondycji za pomocą śledzenia przepływu pracy ma znacznie mniejsze koszty.  Są one istotne powody migrację do lub przyjąć WF4 w aplikacji.  
   
 ## <a name="terminology"></a>Terminologia  
  Wersja [!INCLUDE[wf1](../../../includes/wf1-md.md)] wprowadzone w systemie [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] zostaną określone jako WF4 w pozostałej części tego tematu.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wprowadzony w .net 3.0 i ma kilka drobne poprawki za pośrednictwem [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] z dodatkiem SP1. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Wersji programu Workflow Foundation zostaną określone jako WF3 w pozostałej części tego tematu. WF3 jest dostarczany w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] side-by-side z WF4. Aby uzyskać więcej informacji na temat migrowania artefakty WF3 do WF4 zobacz: [Przewodnik migracji systemu Windows Workflow Foundation 4](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] jest firmy Microsoft ujednolicony model programowania do tworzenia aplikacji korzystających z usług. Została wprowadzona jako część .net 3.0 oraz WF3, a teraz jest jednym z kluczowych składników [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Windows Communication Foundation (WCF) jest firmy Microsoft ujednolicony model programowania do tworzenia aplikacji korzystających z usług. Została wprowadzona jako część .net 3.0 oraz WF3, a teraz jest jednym z kluczowych składników [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Windows Server AppFabric to zestaw zintegrowanych technologii, które ułatwiają tworzenie, skalowanie i zarządzanie nimi w sieci Web i aplikacji złożonych, które w środowisku usług IIS. Udostępnia narzędzia do monitorowania i zarządzania usługami i przepływami pracy. Aby uzyskać więcej informacji, zobacz [systemu Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   

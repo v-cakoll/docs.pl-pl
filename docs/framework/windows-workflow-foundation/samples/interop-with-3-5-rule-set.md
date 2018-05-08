@@ -1,23 +1,12 @@
 ---
-title: "Współdziałanie z zestawu reguł w wersji 3.5"
-ms.custom: 
+title: Współdziałanie z zestawu reguł w wersji 3.5
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 854aeac936d3f911f2613c6e315ab81347f64a25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d42198d336e38c4ad9fc6c686a019814bd571bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interop-with-35-rule-set"></a>Współdziałanie z zestawu reguł w wersji 3.5
 W tym przykładzie przedstawiono użycie <xref:System.Activities.Statements.Interop> działania integracji z działań niestandardowych w [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] przy użyciu <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` i zasady. Przekazuje dane do działania niestandardowego przez powiązanie [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] zmienne do właściwości zależności udostępnianych przez działania niestandardowego.  
@@ -31,7 +20,7 @@ W tym przykładzie przedstawiono użycie <xref:System.Activities.Statements.Inte
 3.  [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]  
   
 ## <a name="demonstrates"></a>Demonstracje  
- <xref:System.Activities.Statements.Interop>działanie, <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` działania w [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] z właściwości zależności  
+ <xref:System.Activities.Statements.Interop> działanie, <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` działania w [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] z właściwości zależności  
   
 ## <a name="discussion"></a>Omówienie  
  W przykładzie pokazano jednego ze scenariuszy integracji dla integracji z [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] działania. Ten przykład zawiera [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] działania niestandardowego, który wywołuje <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` działania.  
@@ -87,6 +76,6 @@ base.SetValue(TravelRuleSet.DiscountLevelProperty, value);
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`

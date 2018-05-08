@@ -1,33 +1,19 @@
 ---
 title: 'Punkty końcowe: Adresy, powiązania i kontrakty'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Punkty końcowe: Adresy, powiązania i kontrakty
-Cała komunikacja z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji oferowanych przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji oferowanych przez usługi WCF.  
   
  Każdy punkt końcowy składa się z czterech właściwości:  
   
@@ -39,12 +25,12 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usł
   
 -   Zestaw zachowań, które określają szczegóły implementacji lokalnego punktu końcowego.  
   
- W tym temacie omówiono tego punktu końcowego struktury oraz wyjaśniono, jak są reprezentowane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu modelu.  
+ W tym temacie tej struktury punktu końcowego i opisano, jak są reprezentowane w modelu obiektów programu WCF.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Struktura punktu końcowego  
  Każdy punkt końcowy składa się z następujących czynności:  
   
--   Adres: Adres unikatowo identyfikuje punkt końcowy i informuje potencjalne korzystającym z usług, w którym znajduje się. Jest reprezentowana w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model obiektów przez <xref:System.ServiceModel.EndpointAddress> klasy. <xref:System.ServiceModel.EndpointAddress> Klasa zawiera:  
+-   Adres: Adres unikatowo identyfikuje punkt końcowy i informuje potencjalne korzystającym z usług, w którym znajduje się. Jest reprezentowana w modelu obiektów programu WCF przez <xref:System.ServiceModel.EndpointAddress> klasy. <xref:System.ServiceModel.EndpointAddress> Klasa zawiera:  
   
     -   A <xref:System.ServiceModel.EndpointAddress.Uri%2A> właściwość, która reprezentuje adres usługi.  
   
@@ -60,7 +46,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usł
   
     -   Niezbędne wymagania dotyczące zabezpieczeń (na przykład protokołu SSL lub protokołu SOAP wiadomości zabezpieczeń).  
   
-     Aby uzyskać więcej informacji, zobacz [omówienie powiązań WCF](../../../../docs/framework/wcf/bindings-overview.md). Powiązanie jest reprezentowana w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model obiektów przez abstrakcyjna klasa podstawowa <xref:System.ServiceModel.Channels.Binding>. W przypadku większości scenariuszy użytkownicy mogą używać jednego powiązania dostarczane przez system. Aby uzyskać więcej informacji, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Aby uzyskać więcej informacji, zobacz [omówienie powiązań WCF](../../../../docs/framework/wcf/bindings-overview.md). Powiązanie jest reprezentowana w modelu obiektów programu WCF przez abstrakcyjna klasa podstawowa <xref:System.ServiceModel.Channels.Binding>. W przypadku większości scenariuszy użytkownicy mogą używać jednego powiązania dostarczane przez system. Aby uzyskać więcej informacji, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Kontrakty: Kontrakt przedstawiono funkcje punktu końcowego udostępnia do klienta. Kontrakt określa:  
   
@@ -74,7 +60,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usł
   
      Aby uzyskać więcej informacji na temat definiowania kontrakt, zobacz [projektowanie kontraktów usług](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Zachowania: Aby dostosować zachowanie lokalnego punktu końcowego usługi można użyć zachowania punktu końcowego. Zachowania punktu końcowego to zrobić, uczestnictwa w procesie tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]środowiska wykonawczego. Przykład zachowania punktu końcowego <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> właściwość, która pozwala na określenie nasłuchiwania inny adres niż adres SOAP lub Web Services Description Language (WSDL). Aby uzyskać więcej informacji, zobacz [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Zachowania: Aby dostosować zachowanie lokalnego punktu końcowego usługi można użyć zachowania punktu końcowego. Zachowania punktu końcowego można to osiągnąć przez uczestnictwa w procesie tworzenia WCFruntime. Przykład zachowania punktu końcowego <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> właściwość, która pozwala na określenie nasłuchiwania inny adres niż adres SOAP lub Web Services Description Language (WSDL). Aby uzyskać więcej informacji, zobacz [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definiowanie punktów końcowych  
  Można określić punktu końcowego usługi za pomocą kodu imperatively lub deklaratywnie przy użyciu konfiguracji. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie punktu końcowego usługi w konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) i [porady: Tworzenie punktu końcowego usługi w kodzie](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
@@ -83,7 +69,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usł
  W tej sekcji opisano w celu powiązania, punktów końcowych i adresy; Pokazuje, jak skonfigurować powiązania i punktu końcowego; i przedstawiono sposób użycia `ClientVia` zachowania i `ListenUri` właściwości.  
   
  [Adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- W tym artykule opisano, jak punkty końcowe zostały rozwiązane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ W tym artykule opisano, jak punkty końcowe są opisane w programie WCF.  
   
  [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Opisuje sposób powiązania są używane do określania transportu, kodowanie i szczegóły protokołu wymagane dla klientów i usług komunikować się ze sobą.  

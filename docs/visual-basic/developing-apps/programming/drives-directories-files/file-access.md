@@ -1,13 +1,6 @@
 ---
 title: Dostęp do plików za pomocą Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - file access
 - files [Visual Basic], input and output
@@ -21,14 +14,11 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2aabea79e3c7a6dabf47647c7e27b072738ba363
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-access-with-visual-basic"></a>Dostęp do plików za pomocą Visual Basic
 `My.Computer.FileSystem` Obiektu zawiera narzędzia do pracy z plikami i folderami. Jego właściwości, metod i zdarzeń umożliwiają tworzenie, skopiować, przenieść, badanie i usuwać pliki i foldery. `My.Computer.FileSystem` zapewnia lepszą wydajność niż funkcje starszej wersji (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, itd.) są dostarczane przez program Visual Basic dla zgodności z poprzednimi wersjami.  

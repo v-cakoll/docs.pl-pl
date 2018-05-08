@@ -1,13 +1,6 @@
 ---
-title: "Automatyzacja interfejsu użytkownika formantu niestandardowego WPF"
-ms.custom: 
+title: Automatyzacja interfejsu użytkownika formantu niestandardowego WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automatyzacja interfejsu użytkownika formantu niestandardowego WPF
-[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]udostępnia interfejs jednej, uogólniony tego automatyzacji, którego klienci mogą używać do zbadania lub nie działać z różnych platform i struktur interfejsów użytkownika. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]umożliwia aplikacji ułatwień dostępu, takich jak czytniki poznać elementy interfejsu użytkownika i symulowanie interakcji z nimi z innego kodu i kody jakości (test). Aby uzyskać informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] na wszystkich platformach, zobacz ułatwień dostępu.  
+[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] udostępnia interfejs jednej, uogólniony tego automatyzacji, którego klienci mogą używać do zbadania lub nie działać z różnych platform i struktur interfejsów użytkownika. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] umożliwia aplikacji ułatwień dostępu, takich jak czytniki poznać elementy interfejsu użytkownika i symulowanie interakcji z nimi z innego kodu i kody jakości (test). Aby uzyskać informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] na wszystkich platformach, zobacz ułatwień dostępu.  
   
  W tym temacie opisano sposób implementowania dostawcy automatyzacji interfejsu użytkownika po stronie serwera dla kontrolki niestandardowej, która działa w aplikacji WPF. WPF obsługuje [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] za pośrednictwem drzewa obiektów równorzędnych automatyzacji równoleżnikami drzewa elementów interfejsu użytkownika. Testowanie kodu i aplikacje, które zapewniają funkcje ułatwień dostępu, można użyć obiektów równorzędnych automatyzacji bezpośrednio (dla kodu w procesie) lub za pośrednictwem uogólniony interfejs dostarczony przez [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)].  
   
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  Zastąpienie <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> metodę dla kontrolki niestandardowej, którego nie zwraca obiekt dostawcy, w którym musi dziedziczyć pośrednio lub bezpośrednio <xref:System.Windows.Automation.Peers.AutomationPeer>.  
   
 ### <a name="override-getpattern"></a>Zastąpienie GetPattern  
- Elementy równorzędne automatyzacji uprościć niektóre aspekty implementacja po stronie serwera [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] dostawców, ale elementy równorzędne automatyzacji formantu niestandardowego nadal musi obsługiwać interfejsy wzorca. Podobnie jak dostawców innych niż WPF elementów równorzędnych Obsługa wzorców formantów zapewniając implementacje interfejsów w <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> przestrzeni nazw, takich jak <xref:System.Windows.Automation.Provider.IInvokeProvider>. Można zaimplementować interfejsów wzorzec kontroli przez węzeł równorzędny samego lub innego obiektu. Implementacja obiektu równorzędnego <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> zwraca obiekt, który obsługuje określony wzorzec. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]kod wywoła <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> — metoda i określa <xref:System.Windows.Automation.Peers.PatternInterface> wartości wyliczenia. Zastąpienia z <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> powinna zwracać obiekt, który implementuje określony wzorzec. Jeśli formant nie ma niestandardowych implementacji wzorca, należy wywołać implementacja typu podstawowego <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> można pobrać jej implementacja lub wartość null, jeśli wzorzec nie jest obsługiwana dla tego typu formantu. Na przykład niestandardowego formantu NumericUpDown można ustawić na wartość w zakresie, więc jego [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] może implementować elementu równorzędnego <xref:System.Windows.Automation.Provider.IRangeValueProvider> interfejsu. W poniższym przykładzie przedstawiono sposób węzła równorzędnego <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> metoda zostanie przesłonięta odpowiedzieć na <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> wartość.  
+ Elementy równorzędne automatyzacji uprościć niektóre aspekty implementacja po stronie serwera [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] dostawców, ale elementy równorzędne automatyzacji formantu niestandardowego nadal musi obsługiwać interfejsy wzorca. Podobnie jak dostawców innych niż WPF elementów równorzędnych Obsługa wzorców formantów zapewniając implementacje interfejsów w <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> przestrzeni nazw, takich jak <xref:System.Windows.Automation.Provider.IInvokeProvider>. Można zaimplementować interfejsów wzorzec kontroli przez węzeł równorzędny samego lub innego obiektu. Implementacja obiektu równorzędnego <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> zwraca obiekt, który obsługuje określony wzorzec. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] kod wywoła <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> — metoda i określa <xref:System.Windows.Automation.Peers.PatternInterface> wartości wyliczenia. Zastąpienia z <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> powinna zwracać obiekt, który implementuje określony wzorzec. Jeśli formant nie ma niestandardowych implementacji wzorca, należy wywołać implementacja typu podstawowego <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> można pobrać jej implementacja lub wartość null, jeśli wzorzec nie jest obsługiwana dla tego typu formantu. Na przykład niestandardowego formantu NumericUpDown można ustawić na wartość w zakresie, więc jego [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] może implementować elementu równorzędnego <xref:System.Windows.Automation.Provider.IRangeValueProvider> interfejsu. W poniższym przykładzie przedstawiono sposób węzła równorzędnego <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> metoda zostanie przesłonięta odpowiedzieć na <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> wartość.  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  

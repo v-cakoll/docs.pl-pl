@@ -1,12 +1,6 @@
 ---
-title: "^= — Operator (Visual Basic)"
+title: ^= — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^=
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fa9d87d2f090a8c18aaab742e73878c7b80f55c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 571ef26eb188d9044ec8f6c8e6e4b490780f17a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^= — Operator (Visual Basic)
 Podnosi wartość zmiennej lub właściwości do potęgi wyrażenia i przypisuje wynik do zmiennej lub właściwości.  
@@ -35,10 +26,10 @@ variableorproperty ^= expression
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagany. Zmienna numeryczna lub właściwość.  
+ Wymagana. Zmienna numeryczna lub właściwość.  
   
  `expression`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagana. Dowolne wyrażenie liczbowe.  
   
 ## <a name="remarks"></a>Uwagi  
  Element po lewej stronie `^=` operator może być zmienną skalarną proste, właściwością lub element tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
@@ -58,7 +49,7 @@ variableorproperty ^= expression
  [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [^ — Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
+ [^, operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
  [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)  
  [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  

@@ -1,13 +1,7 @@
 ---
-title: "Konstrukcje grupujące w wyrażeniach regularnych"
-ms.custom: 
+title: Konstrukcje grupujące w wyrażeniach regularnych
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego. Można użyć konstrukcji grupowania wykonywać następujące czynności:  

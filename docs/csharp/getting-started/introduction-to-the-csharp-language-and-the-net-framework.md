@@ -2,22 +2,15 @@
 title: Wprowadzenie do języka C# i systemu .NET Framework
 description: Poznaj podstawy języka C# i platformy .NET. Omówienie języka C# i ekosystemu platformy .NET.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9713b61e9af25e6acba2d6b11b46f2e99f1f1800
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ab2d3042aff51e85b50296ce6f4382f588e1af71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 C# jest elegancki i bezpieczne zorientowany obiektowo język, który umożliwia deweloperom tworzenie szerokiej gamy bezpieczeństwa i niezawodności aplikacji uruchamianych na [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Służy C# do tworzenia klienta systemu Windows aplikacji, usług XML sieci Web, rozproszonej składniki, klient serwer aplikacji, aplikacje baz danych i znacznie, znacznie więcej. Visual C# zawiera edytora kodu zaawansowane, projektantów interfejsu użytkownika wygodny zintegrowane debugera i inne narzędzia ułatwiające tworzenie aplikacji na podstawie języka C# i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

@@ -1,28 +1,16 @@
 ---
-title: "PictureBox — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: PictureBox — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PictureBox control [Windows Forms]
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20c45ec8aa172edeb0c7babcb45c013330b9179b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d186b9deb88753566713dbf053e475a024f0bfa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox — Formant (Formularze systemu Windows)
 Formularze systemu Windows `PictureBox` formant jest używany do wyświetlania grafiki w formacie mapy bitowej, GIF, JPEG, metaplik lub ikonę.  

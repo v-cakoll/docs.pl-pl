@@ -1,10 +1,7 @@
 ---
-title: "Zgodność wersji w programie .NET Framework"
+title: Zgodność wersji w programie .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework 4.5, compatibility with earlier versions
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w programie .NET Framework
 Zgodności z poprzednimi wersjami oznacza, że aplikacja, która została opracowana dla określonej wersji platformy będzie działać w nowszych wersjach tej platformy. Próbuje zmaksymalizować zgodności z poprzednimi wersjami programu .NET Framework: źródła kodu napisanego dla jednej wersji programu .NET Framework należy skompilować w nowszych wersjach programu .NET Framework i zachowania tak samo w przypadku plików binarnych, działających w jednej wersji programu .NET Framework nowsze wersje programu .NET Framework.  
@@ -50,7 +45,7 @@ Zgodności z poprzednimi wersjami oznacza, że aplikacja, która została opraco
   
  W praktyce to zgodności można uszkodzony pozornie wpływu zmiany w .NET Framework i zmian w technik programowania. Lepsza wydajność programu .NET Framework 4.5 mogą na przykład ujawnić sytuacji wyścigu, które nie były wykonywane we wcześniejszych wersjach. Podobnie, przy użyciu ścieżki ustalony do zestawów platformy .NET Framework, wykonywanie porównanie równości z określoną wersją programu .NET Framework i pobierania wartości pola prywatnej przy użyciu odbicia nie są zapewniającej rozwiązania. Ponadto każda wersja programu .NET Framework obejmuje poprawki błędów i zmiany dotyczące zabezpieczeń, które mogą wpłynąć na zgodność niektóre aplikacje i składniki.  
   
- Jeśli aplikację lub składnik nie działa zgodnie z oczekiwaniami w .NET Framework 4.5 (łącznie z jego wersje punktu [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 lub 4.7.1, użyj poniższej listy kontrolne:  
+ Jeśli aplikację lub składnik nie działa zgodnie z oczekiwaniami w .NET Framework 4.5 (łącznie z jego wersje punktu [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 lub 4.7.2, użyj poniższej listy kontrolne:  
   
 -  Jeśli aplikacja został opracowany, aby uruchomić w dowolnej wersji systemu .NET Framework, począwszy od programu .NET Framework 4.0, zobacz [zgodność aplikacji w programie .NET Framework](application-compatibility.md) do wygenerowania listy zmian między sieci docelowej wersji .NET Framework i wersji, na którym jest uruchomiona aplikacja.  
 
@@ -64,7 +59,7 @@ Zgodności z poprzednimi wersjami oznacza, że aplikacja, która została opraco
   
 -   Jeśli okaże się, że zmiany w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] uległ aplikację wyboru [schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md) ustalenie, czy umożliwia ustawienie środowiska uruchomieniowego w pliku konfiguracyjnym aplikacji Przywróć poprzednie.  
   
--   Jeśli napotkasz problem, który nie jest udokumentowany pliku [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) usterek i skontaktuj się z [ netfxcf@microsoft.com ](mailto:netfxcf@microsoft.com) numer błędu.  
+-   Jeśli wystąpi problem, który nie jest udokumentowany, otwórz problem na [witryna społeczności deweloperów dla platformy .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) lub Otwórz problemu w [repozytorium GitHub Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
   
 ## <a name="compatibility-and-side-by-side-execution"></a>Zgodność i side-by-side wykonywania  
  Jeśli nie można znaleźć odpowiedniego rozwiązania, opis problemu, należy pamiętać, że program .NET Framework 4.5 (lub jeden z jego wersje punktu) działa równolegle z wersji 1.1, 2.0 i 3.5 i jest dostępna aktualizacja w miejscu, które zastępuje w wersji 4. Dla aplikacji, które odnoszą się do wersji 1.1, 2.0 i 3.5 można zainstalować odpowiednią wersję programu .NET Framework na komputerze docelowym, aby uruchomić aplikację w jego najlepsze środowisko. Aby uzyskać więcej informacji na temat wykonywania side-by-side, zobacz [wykonywania Side-by-Side](../../../docs/framework/deployment/side-by-side-execution.md).  

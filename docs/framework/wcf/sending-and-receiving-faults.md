@@ -1,34 +1,20 @@
 ---
-title: "Wysyłanie i odbieranie błędów"
-ms.custom: 
+title: Wysyłanie i odbieranie błędów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 76fb07a6c9a5e0efdbf21f153f5fc2aea7f1880e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sending-and-receiving-faults"></a>Wysyłanie i odbieranie błędów
-Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klienta, a w przypadku dupleksu od klienta do usługi w sposób interoperacyjne. Zazwyczaj usługa definiuje zawartość błędów niestandardowych i określa, jakie operacje może zwracać je. (Aby uzyskać więcej informacji, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).) W tym temacie omówiono sposób usługi lub dupleks klienta może wysyłać te błędy wystąpił odpowiedniego warunku błędu sposób i klienta lub usługę aplikacji obsługi tych błędów. Omówienie obsługi błędów w [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klienta, a w przypadku dupleksu od klienta do usługi w sposób interoperacyjne. Zazwyczaj usługa definiuje zawartość błędów niestandardowych i określa, jakie operacje może zwracać je. (Aby uzyskać więcej informacji, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).) W tym temacie omówiono sposób usługi lub dupleks klienta może wysyłać te błędy wystąpił odpowiedniego warunku błędu sposób i klienta lub usługę aplikacji obsługi tych błędów. Omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="sending-soap-faults"></a>Wysyłanie błędów SOAP  
  Zadeklarowany w błędach SOAP są te, w których ma operacji <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> , który określa typ niestandardowy błędu protokołu SOAP. Niezadeklarowany błędach SOAP są tymi, które nie są określone w umowie dla operacji.  
@@ -64,15 +50,15 @@ Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klient
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException>obiekty są zgłaszane, gdy operacja przekroczy określony limit czasu.  
+ <xref:System.TimeoutException> obiekty są zgłaszane, gdy operacja przekroczy określony limit czasu.  
   
- <xref:System.ServiceModel.CommunicationException>obiekty są zgłaszane po warunku błędu niektóre możliwe do odzyskania komunikacji na usługi lub klienta.  
+ <xref:System.ServiceModel.CommunicationException> obiekty są zgłaszane po warunku błędu niektóre możliwe do odzyskania komunikacji na usługi lub klienta.  
   
  <xref:System.ServiceModel.CommunicationException> Klasa ma dwie ważne typy pochodne <xref:System.ServiceModel.FaultException> i ogólnych <xref:System.ServiceModel.FaultException%601> typu.  
   
- <xref:System.ServiceModel.FaultException>wyjątki są zgłaszane odebrania odbiornik błędów, który nie jest oczekiwany lub określone w umowie operacji; Zazwyczaj ten błąd występuje podczas debugowania aplikacji i usługa ma <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ustawioną właściwość `true`.  
+ <xref:System.ServiceModel.FaultException> wyjątki są zgłaszane odebrania odbiornik błędów, który nie jest oczekiwany lub określone w umowie operacji; Zazwyczaj ten błąd występuje podczas debugowania aplikacji i usługa ma <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ustawioną właściwość `true`.  
   
- <xref:System.ServiceModel.FaultException%601>Po odebraniu w odpowiedzi na operację dwukierunkowe usterek, określonego w kontrakt operacji na komputerze klienckim są zgłaszane wyjątki (czyli metody z <xref:System.ServiceModel.OperationContractAttribute> atrybutem <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> ustawioną `false`).  
+ <xref:System.ServiceModel.FaultException%601> Po odebraniu w odpowiedzi na operację dwukierunkowe usterek, określonego w kontrakt operacji na komputerze klienckim są zgłaszane wyjątki (czyli metody z <xref:System.ServiceModel.OperationContractAttribute> atrybutem <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> ustawioną `false`).  
   
 > [!NOTE]
 >  Gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa ma <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ustawioną właściwość `true` klienta napotka to jako niezadeklarowany <xref:System.ServiceModel.FaultException%601> typu <xref:System.ServiceModel.ExceptionDetail>. Klientów można przechwycić tego określonego błędu lub obsługi błędów w bloku catch dla <xref:System.ServiceModel.FaultException>.  

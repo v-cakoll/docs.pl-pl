@@ -1,13 +1,6 @@
 ---
-title: "Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia"
-ms.custom: 
+title: 'Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41e41f65b82061cebc52485ed08176633c45613d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia
 Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane wyjściowe śledzenia.  
@@ -86,7 +76,7 @@ Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane w
   
     -   **Visual Basic:** w **Dodaj nowy element** oknie dialogowym wybierz **pliku konfiguracji aplikacji**.  
   
-         Plik konfiguracji aplikacji jest utworzony i otwarty. To jest dokument XML, którego element główny jest`<configuration>.`  
+         Plik konfiguracji aplikacji jest utworzony i otwarty. To jest dokument XML, którego element główny jest `<configuration>.`  
   
     -   **Visual C#:** w **Dodaj nowy element** oknie dialogowym wybierz **pliku XML**. Nazwij ten plik **app.config**. W edytorze XML po deklaracji XML, Dodaj następujący kod XML:  
   

@@ -1,18 +1,12 @@
 ---
-title: "Relacja między — funkcje językowe i biblioteki typów | Dokumentacja firmy Microsoft"
-description: "Funkcje języka często korzystają z biblioteki typów dla implementacji. Dowiedz się, że relacji."
-keywords: "Standardowa biblioteka języka C# język projektu,"
-author: billwagner
-ms.author: wiwagn
+title: Relacja między — funkcje językowe i biblioteki typów | Dokumentacja firmy Microsoft
+description: Funkcje języka często korzystają z biblioteki typów dla implementacji. Dowiedz się, że relacji.
 ms.date: 07/20/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>Relacje między — funkcje językowe i biblioteki typów
 
@@ -20,9 +14,9 @@ Definicja języka C# wymaga biblioteki standardowej mają określone typy i niek
 
 Tę zależność od funkcji biblioteki standardowej została część języka C# od momentu jego pierwszej wersji. W tej wersji z protokołem przykładami:
 
-* <xref:System.Exception>— używany dla wszystkich wyjątków wygenerowanego przez kompilator.
-* <xref:System.String>-C# `string` typu jest synonimem <xref:System.String>.
-* <xref:System.Int32>-synonim `int`.
+* <xref:System.Exception> — używany dla wszystkich wyjątków wygenerowanego przez kompilator.
+* <xref:System.String> -C# `string` typu jest synonimem <xref:System.String>.
+* <xref:System.Int32> -synonim `int`.
 
 Tego pierwszej wersji był prosty: kompilator i biblioteki standardowej dostarczane ze sobą, i nie tylko jedna wersja każdego z nich.
 

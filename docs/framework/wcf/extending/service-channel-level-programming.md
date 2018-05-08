@@ -1,30 +1,18 @@
 ---
-title: "Programowanie na poziomie kanału usługi"
-ms.custom: 
+title: Programowanie na poziomie kanału usługi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1a6ef03b3ee0cc68809ec6ba80a7eadbc44cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-channel-level-programming"></a>Programowanie na poziomie kanału usługi
-W tym temacie opisano sposób zapisania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji usługi bez użycia <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> i jego skojarzony obiekt modelu.  
+W tym temacie opisano sposób tworzenia aplikacji usługi Windows Communication Foundation (WCF) bez użycia <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> i jego skojarzony obiekt modelu.  
   
 ## <a name="receiving-messages"></a>Odbieranie komunikatów  
  Będzie gotowa do odbierania i przetwarzania wiadomości, wymagane są następujące kroki:  
@@ -40,14 +28,14 @@ W tym temacie opisano sposób zapisania [!INCLUDE[indigo1](../../../../includes/
 5.  Zamknij wszystkie obiekty kanału.  
   
 #### <a name="creating-a-binding"></a>Tworzenie powiązania  
- Pierwszym etapem nasłuchiwania i odbierania wiadomości jest utworzenie powiązania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]jest dostarczany z powiązaniami kilka wbudowanych lub dostarczane przez system, które mogą być używane bezpośrednio przez utworzenie wystąpienia jednego z nich. Ponadto można również utworzyć własne niestandardowe powiązanie przez utworzenie wystąpienia klasy CustomBinding, czyli, co oznacza kod w wyświetlania 1.  
+ Pierwszym etapem nasłuchiwania i odbierania wiadomości jest utworzenie powiązania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest dostarczany z powiązaniami kilka wbudowanych lub dostarczane przez system, które mogą być używane bezpośrednio przez utworzenie wystąpienia jednego z nich. Ponadto można również utworzyć własne niestandardowe powiązanie przez utworzenie wystąpienia klasy CustomBinding, czyli, co oznacza kod w wyświetlania 1.  
   
  Poniższy przykład kodu tworzy wystąpienie <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> i dodaje <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> do jego kolekcję elementów, który jest kolekcją elementów, które są używane do tworzenia kanału stosu wiązania. W tym przykładzie ponieważ kolekcja elementów zawiera tylko <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, wynikowy stosu kanału ma kanał transportu HTTP.  
   
 #### <a name="building-a-channellistener"></a>Tworzenie ChannelListener  
  Po utworzeniu powiązanie, nazywamy <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` do utworzenia odbiornika kanałów, gdzie parametr typu jest kształtu kanału do utworzenia. W tym przykładzie używamy <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> ponieważ chcemy nasłuchiwać komunikatów przychodzących w wymiany komunikatów żądania/odpowiedzi.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel>jest używany do odbierania komunikatów i odsyła odpowiedź komunikatów żądania. Wywoływanie <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> zwraca <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, które mogą służyć do komunikatu żądania i przesyła komunikat odpowiedzi z powrotem.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> jest używany do odbierania komunikatów i odsyła odpowiedź komunikatów żądania. Wywoływanie <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> zwraca <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, które mogą służyć do komunikatu żądania i przesyła komunikat odpowiedzi z powrotem.  
   
  Podczas tworzenia odbiornika, jest przekazywana adresu sieciowego, na którym ją nasłuchuje, w tym przypadku `http://localhost:8080/channelapp`. Ogólnie rzecz biorąc, każdy kanał transportu obsługuje co najmniej prawdopodobnie kilka Schematy adresów, na przykład transportu HTTP obsługuje schematy http i https.  
   

@@ -1,29 +1,15 @@
 ---
 title: Narzędzia
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>Narzędzia
-W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] narzędzia.  
+W tym temacie wymieniono wszystkie wyjątki generowane przez narzędzia Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Listy wyjątków  
   
@@ -47,7 +33,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |WrnCannotResolveServiceForValidation|Nie można załadować usługi za pomocą określonego configName. Aby sprawdzić poprawność usługi, podaj zarówno zestaw zawierający typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
 |ErrUnexpectedValue|Określona opcja nie obsługuje żadnych wartości.|  
 |#InvalidArg|Określony zawiera nieprawidłowy argument.|  
-|ParametersExcludeType|\<type>|  
+|ParametersExcludeType|\<Typ >|  
 |HelpXmlSerializer|Generowanie typów danych, które używają XmlSerializer do serializacji i deserializacji.|  
 |#|---------------------------------------------------------------------------------------------------------------------=|  
 |ErrUnexpectedError|Wystąpił błąd w narzędziu.|  
@@ -64,7 +50,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |ErrCannotCreateDirectory|Nie można utworzyć określonego katalogu.|  
 |ErrCouldNotLoadTypesFromAssemblyAt|Nie można załadować żadnych typów w określonym zestawie.|  
 |ErrUnknownSwitch|Określony przełącznik jest nierozpoznaną opcję.|  
-|Logo|Logo narzędzia jest "Microsoft® narzędzia modelu usług metadanych" z wersją.|  
+|logo|Logo narzędzia jest "Microsoft® narzędzia modelu usług metadanych" z wersją.|  
 |NoCodeWasGenerated|Nie wygenerowano kodu.<br /><br /> Jeśli chcesz wygenerować klient, może to być spowodowane dokumentów metadanych nie zawiera żadnych prawidłowych umów lub usług<br /><br /> lub ponieważ wszystkie kontrakty/usługi zostały odnalezione w zestawy referencyjne występują. Sprawdź wszystkich dokumentów metadanych został przekazany do narzędzia.|  
 |WrnUnableToLoadContractForSGen|Wystąpił błąd podczas ładowania typu kontraktu. Nie można wygenerować typu XmlSerializer dla tego kontraktu. Określony typ i szczegóły.|  
 |WrnOptionConflictsWithInput|Nie można użyć określonej opcji z wielu zestawów wejściowych. Określona opcja została zignorowana.|  
@@ -88,7 +74,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |ErrInputConflictsWithMode|Dane wejściowe z określonego do odczytu jest niespójny z innymi opcjami.|  
 |ErrDuplicateValuePassedToTypeArg|Określona wartość został przekazany do określoną opcję wiele razy. Każdy typ można określić tylko raz.|  
 |ErrInputEPRFileParseError|Nie można odczytać odwołania do punktu końcowego z określonego. Sprawdź, czy plik XML jest poprawnie sformułowany i prawidłowe.|  
-|ErrCouldNotCreateCodeProvider|Nie można utworzyć dostawcy kodu dla określonej wartości, który został przekazany do argumentu /{1}. Sprawdź dostawcę kodu jest poprawnie zainstalowana i skonfigurowana.|  
+|ErrCouldNotCreateCodeProvider|Nie można utworzyć dostawcy kodu dla określonej wartości, który został przekazany do /{1} argumentu. Sprawdź dostawcę kodu jest poprawnie zainstalowana i skonfigurowana.|  
 |ErrPathTooLongDirOnly|Wynikowe określona ścieżka jest za długa. Przejrzyj określonego argumentu.|  
 |HelpDataContractSerializer|Generowanie typów danych, które używają serializator DataContract do serializacji i deserializacji.|  
 |ErrUnableToExportEndpoint|Wystąpił błąd podczas eksportowania Nazwa punktu końcowego określona w określonej przestrzeni nazw w znaleziono w pliku konfiguracyjnym załadowany dla zestawu typu określonej usługi.|  
@@ -150,7 +136,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |ErrAssemblyLoadFailed|Nie można załadować określonego pliku zestawu. Aby uzyskać więcej informacji, sprawdź FusionLogs.|  
 |NoMetadataWasGenerated|Nie wygenerowano żadnych plików metadanych. Żaden kontrakt usługi zostały wyeksportowane.<br /><br /> Aby wyeksportować usługi, należy użyć określonej opcji. Aby wyeksportować kontraktów danych, należy określić opcję.|  
 |WrnCannotResolveServiceForExport|Nie można załadować usługi za pomocą określonego configName. Aby wyeksportować usługi, należy podać zestaw zawierający typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
-|ParametersCollectionType|\<type>|  
+|ParametersCollectionType|\<Typ >|  
 |ErrOptionConflictsWithTarget|Użyj określonej opcji nie jest obsługiwana z opcją określonego równa określonej wartości.|  
 |ErrCodegenError|Wystąpił błąd podczas generowania kodu w określonym języku.<br /><br /> Język nie obsługuje wszystkie elementy kodu generowany. Należy użyć innego języka.|  
 |ErrInputWsdlParseError|Podczas odczytywania określonego wystąpił podczas WSDL błąd analizy. Sprawdź, czy plik XML jest poprawnie sformułowany i prawidłowe.|  

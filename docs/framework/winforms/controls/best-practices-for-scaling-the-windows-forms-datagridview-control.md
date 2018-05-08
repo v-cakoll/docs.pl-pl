@@ -1,13 +1,6 @@
 ---
-title: "Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows"
-ms.custom: 
+title: Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Formantu ma na celu zapewnienie maksymalnej skalowalności. Jeśli konieczne jest wyświetlenie dużych ilości danych, powinny postępuj zgodnie z wytycznymi, opisane w tym temacie, aby uniknąć zużywa duże ilości pamięci lub pogorszenia jakości związku czasu odpowiedzi interfejsu użytkownika (UI). W tym temacie omówiono następujące zagadnienia:  
@@ -124,7 +112,7 @@ ms.lasthandoff: 12/22/2017
   
  Aby zapobiec przekształceniu cofnięto wierszy, skorzystaj z następujących wskazówek:  
   
--   Unikaj indeksowania <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji lub za pomocą iteracja `foreach` pętli. Nie zazwyczaj należy uzyskać bezpośredni dostęp wierszy. <xref:System.Windows.Forms.DataGridView>metody, które pracują na wiersze wykonać argumentów Indeks wiersza, zamiast kilku wystąpień wiersza. Ponadto programy obsługi dla zdarzenia związane z wiersza wyświetlany obiektów argument zdarzenia z właściwościami wiersza, które służy do manipulowania wierszy bez powodowania je, aby stać się nieudostępnionych.  
+-   Unikaj indeksowania <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji lub za pomocą iteracja `foreach` pętli. Nie zazwyczaj należy uzyskać bezpośredni dostęp wierszy. <xref:System.Windows.Forms.DataGridView> metody, które pracują na wiersze wykonać argumentów Indeks wiersza, zamiast kilku wystąpień wiersza. Ponadto programy obsługi dla zdarzenia związane z wiersza wyświetlany obiektów argument zdarzenia z właściwościami wiersza, które służy do manipulowania wierszy bez powodowania je, aby stać się nieudostępnionych.  
   
 -   Jeśli potrzebujesz dostępu do obiektu wiersza, użyj <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> — metoda i przekazać w indeksie rzeczywisty wiersza. Należy jednak pamiętać, że modyfikowanie obiektu udostępnionego wiersza pobrać za pomocą tej metody spowoduje jej modyfikacji wszystkie wiersze, które współużytkują ten obiekt. Wiersz dla nowych rekordów nie są udostępniane innych wierszy, dzięki czemu nie będzie można zmian podczas modyfikowania innych wierszy. Należy pamiętać, że różne wiersze reprezentowany przez udostępnionego wiersza może mieć menu skrótów inny. Aby pobrać menu skrótów poprawne z wystąpienia wierszu udostępnionym, należy użyć <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> — metoda i przekazać w indeksie rzeczywisty wiersza. Jeśli dostęp do udostępnionego wiersza <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> właściwości zamiast tego użyje indeksu udostępnionego wiersza-1 i nie będą pobierane z menu skrótów poprawne.  
   

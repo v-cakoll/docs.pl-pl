@@ -1,34 +1,20 @@
 ---
-title: "Przegląd modelu kanału"
-ms.custom: 
+title: Przegląd modelu kanału
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="channel-model-overview"></a>Przegląd modelu kanału
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanału stos jest stos warstwy komunikacji z jednego lub więcej kanałów, które przetwarzania komunikatów. W dolnej części stosu jest kanał transportu, który jest odpowiedzialny za dostosowania stosu kanału do transportu źródłowego (na przykład TCP, HTTP, SMTP i inne rodzaje transportu). Kanały zapewniają niskiego poziomu model programowania do wysyłania i odbierania wiadomości. Ten model programowania opiera się na kilka interfejsów i innych typów nazywanych zbiorczo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model kanału. W tym temacie omówiono kształtów kanału, konstrukcji odbiornika kanałów podstawowa (w usłudze) i fabryki kanałów (na kliencie).  
+Stos kanał Windows Communication Foundation (WCF) jest stos warstwy komunikacji z jednego lub więcej kanałów, które przetwarzania komunikatów. W dolnej części stosu jest kanał transportu, który jest odpowiedzialny za dostosowania stosu kanału do transportu źródłowego (na przykład TCP, HTTP, SMTP i inne rodzaje transportu). Kanały zapewniają niskiego poziomu model programowania do wysyłania i odbierania wiadomości. Ten model programowania opiera się na kilka interfejsów i innych typów nazywanych zbiorczo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model kanału. W tym temacie omówiono kształtów kanału, konstrukcji odbiornika kanałów podstawowa (w usłudze) i fabryki kanałów (na kliencie).  
   
 ## <a name="channel-stack"></a>Kanał stosu  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]punkty końcowe komunikacji z world przy użyciu stosu komunikacji, nazywany stosu kanału. Poniższy diagram porównuje stosu kanału z innych stosy komunikacji, na przykład protokołu TCP/IP.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punkty końcowe komunikacji z world przy użyciu stosu komunikacji, nazywany stosu kanału. Poniższy diagram porównuje stosu kanału z innych stosy komunikacji, na przykład protokołu TCP/IP.  
   
  ![Model kanału](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   
@@ -77,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  Fabryk kanałów, które są zobowiązani do tworzenia kanałów, które są używane do wysyłania wiadomości i zamknięcie wszystkich kanałów one tworzone po zamknięciu fabryki kanałów.  
   
- <xref:System.ServiceModel.ICommunicationObject>to interfejs core, który definiuje automatu stanów podstawowego, który implementuje wszystkie obiekty komunikacji. <xref:System.ServiceModel.Channels.CommunicationObject>udostępnia implementację tego interfejsu core innych klas kanału może pochodzić od zamiast ponownie implementowania interfejsu. Jednak nie jest to wymagane: można zaimplementować w niestandardowym kanale <xref:System.ServiceModel.ICommunicationObject> bezpośrednio i nie dziedziczy z <xref:System.ServiceModel.Channels.CommunicationObject>. Żadna z klas na rysunku 3 są traktowane jako część modelu kanału; są one dostępne dla obiektów implementujących niestandardowym kanale, którzy chcą tworzyć kanały pomocników.  
+ <xref:System.ServiceModel.ICommunicationObject> to interfejs core, który definiuje automatu stanów podstawowego, który implementuje wszystkie obiekty komunikacji. <xref:System.ServiceModel.Channels.CommunicationObject> udostępnia implementację tego interfejsu core innych klas kanału może pochodzić od zamiast ponownie implementowania interfejsu. Jednak nie jest to wymagane: można zaimplementować w niestandardowym kanale <xref:System.ServiceModel.ICommunicationObject> bezpośrednio i nie dziedziczy z <xref:System.ServiceModel.Channels.CommunicationObject>. Żadna z klas na rysunku 3 są traktowane jako część modelu kanału; są one dostępne dla obiektów implementujących niestandardowym kanale, którzy chcą tworzyć kanały pomocników.  
   
  ![Model kanału](../../../../docs/framework/wcf/extending/media/wcfc-wcfcchannelsigure3omumtreec.gif "wcfc_WCFCChannelsigure3OMUMTreec")  
   

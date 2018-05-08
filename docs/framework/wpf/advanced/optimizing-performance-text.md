@@ -1,13 +1,6 @@
 ---
-title: "Optymalizacja wydajności: tekst"
-ms.custom: 
+title: 'Optymalizacja wydajności: tekst'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,19 +11,14 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f345893ca79d820ebb066d920cb49c6c46c47297
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 177f42dfa1c1be2b12d7e9e5283cf57f14c0880c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-text"></a>Optymalizacja wydajności: tekst
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obsługuje prezentacji zawartości tekstowej przy użyciu bogate [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki. Ogólnie można podzielić renderowanie tekstu w trzech warstw:  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje prezentacji zawartości tekstowej przy użyciu bogate [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki. Ogólnie można podzielić renderowanie tekstu w trzech warstw:  
   
 1.  Przy użyciu <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> obiekty bezpośrednio.  
   
@@ -43,15 +31,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Renderowanie tekstu na poziomie symbolu  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]obsługuje zaawansowane tym poziomie symbolu znacznika z bezpośrednim dostępem do <xref:System.Windows.Documents.Glyphs> dla klientów, których chcesz przechwytywać i przetrwają formatowania tekstu. Funkcje te zapewniają krytyczne obsługę inny tekst renderowania wymagania w każdym z poniższych scenariuszy.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] obsługuje zaawansowane tym poziomie symbolu znacznika z bezpośrednim dostępem do <xref:System.Windows.Documents.Glyphs> dla klientów, których chcesz przechwytywać i przetrwają formatowania tekstu. Funkcje te zapewniają krytyczne obsługę inny tekst renderowania wymagania w każdym z poniższych scenariuszy.  
   
 -   Wyświetlanie dokumentów ustalonym formacie.  
   
 -   Scenariusze drukowania.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]jako urządzenie języka drukarki.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] jako urządzenie języka drukarki.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].,  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
     -   Poprzednie sterowniki drukarki, dane wyjściowe z [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplikacje do formatu stałym.  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   Reprezentacja ustalonym formacie dokumentu, w tym klientów dla wcześniejszych wersji programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i innych urządzeń komputerowych.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>i <xref:System.Windows.Media.GlyphRun> są przeznaczone do wydruku scenariusze i ustalonym formacie dokumentu prezentacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ogólny układ zapewnia kilka elementów i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenariuszy, takich jak <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.TextBlock>. Aby uzyskać więcej informacji na temat układu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy, zobacz [typografii na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
+>  <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> są przeznaczone do wydruku scenariusze i ustalonym formacie dokumentu prezentacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ogólny układ zapewnia kilka elementów i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenariuszy, takich jak <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.TextBlock>. Aby uzyskać więcej informacji na temat układu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy, zobacz [typografii na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
   
  W poniższych przykładach pokazano sposób definiowania właściwości <xref:System.Windows.Documents.Glyphs> obiektu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. <xref:System.Windows.Documents.Glyphs> Obiekt reprezentuje dane wyjściowe <xref:System.Windows.Media.GlyphRun> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Przykładów założono, że czcionki Arial, Courier New i podzbiory są instalowane w **C:\WINDOWS\Fonts** folderu na komputerze lokalnym.  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-drawglyphrun"></a>Przy użyciu DrawGlyphRun  
  Jeśli masz kontrolki niestandardowej, i chcesz renderowania symboli, użyj <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> metody.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]dostępne są także niższego poziomu usługi dla niestandardowego tekstu formatowanie za pośrednictwem <xref:System.Windows.Media.FormattedText> obiektu. Najbardziej wydajny sposób renderowania tekstu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] za Generowanie zawartości tekstowej na poziomie symbolu przy użyciu <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun>. Jednak koszt takie zwiększenie efektywności jest utraty łatwy w użyciu formatowania tekstu, które są wbudowane funkcje z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] formanty, takie jak <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dostępne są także niższego poziomu usługi dla niestandardowego tekstu formatowanie za pośrednictwem <xref:System.Windows.Media.FormattedText> obiektu. Najbardziej wydajny sposób renderowania tekstu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] za Generowanie zawartości tekstowej na poziomie symbolu przy użyciu <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun>. Jednak koszt takie zwiększenie efektywności jest utraty łatwy w użyciu formatowania tekstu, które są wbudowane funkcje z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] formanty, takie jak <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument>.  
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>Obiekt FormattedText  
@@ -86,10 +74,10 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument, blok tekstu i formantów etykiet  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera wiele formantów na rysowanie tekstu na ekranie. Każdej kontrolki jest przeznaczona do innego scenariusza i ma własną listę funkcji i ograniczenia.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wiele formantów na rysowanie tekstu na ekranie. Każdej kontrolki jest przeznaczona do innego scenariusza i ma własną listę funkcji i ograniczenia.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument więcej niż blok tekstu lub etykieta wpływa na wydajność  
- Ogólnie rzecz biorąc <xref:System.Windows.Controls.TextBlock> Jeśli obsługa ograniczona tekstu jest wymagane, na przykład krótki zdanie w, należy użyć elementu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>można można użyć, gdy wymagana jest obsługa minimalnej ilości tekstu. <xref:System.Windows.Documents.FlowDocument> Element to kontener dla ponownie przestawnym dokumentów, które obsługują sformatowanego prezentacji zawartości i w związku z tym ma wpływ na wydajność większa niż przy użyciu <xref:System.Windows.Controls.TextBlock> lub <xref:System.Windows.Controls.Label> kontrolki.  
+ Ogólnie rzecz biorąc <xref:System.Windows.Controls.TextBlock> Jeśli obsługa ograniczona tekstu jest wymagane, na przykład krótki zdanie w, należy użyć elementu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> można można użyć, gdy wymagana jest obsługa minimalnej ilości tekstu. <xref:System.Windows.Documents.FlowDocument> Element to kontener dla ponownie przestawnym dokumentów, które obsługują sformatowanego prezentacji zawartości i w związku z tym ma wpływ na wydajność większa niż przy użyciu <xref:System.Windows.Controls.TextBlock> lub <xref:System.Windows.Controls.Label> kontrolki.  
   
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Documents.FlowDocument>, zobacz [przepływ dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
@@ -160,7 +148,7 @@ Hiperłącza znajdującego się na MouseEnter
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Funkcje formatowanie tekstu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia usług, takich jak łączniki automatycznego formatowania tekstu. Te usługi mogą mieć wpływ na wydajność aplikacji i powinien być używany tylko w razie potrzeby.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia usług, takich jak łączniki automatycznego formatowania tekstu. Te usługi mogą mieć wpływ na wydajność aplikacji i powinien być używany tylko w razie potrzeby.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Unikaj niepotrzebnych stosowania dzielenia wyrazów  
  Automatyczne dzielenie wyrazów wyszukiwanie punktów przerwania łącznik wierszy tekstu i umożliwia pozycji dodatkowe podziału wierszy w <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument> obiektów. Domyślnie funkcja automatycznego dzielenia wyrazów jest wyłączone w tych obiektach. Można włączyć tę funkcję, ustawiając właściwość IsHyphenationEnabled obiektu `true`. Jednak włączenie tej funkcji powoduje, że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zainicjować [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] współdziałanie, która może wpłynąć na wydajność aplikacji. Zaleca się, że należy używać automatycznego dzielenia wyrazów, chyba że zajdzie taka potrzeba.  

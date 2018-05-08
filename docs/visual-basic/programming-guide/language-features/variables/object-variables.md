@@ -1,27 +1,17 @@
 ---
-title: "Zmienne obiektów w Visual Basic"
-ms.custom: 
+title: Zmienne obiektów w Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - object variables [Visual Basic], about object variables
 - variables [Visual Basic], object
 - objects [Visual Basic], accessing
 - object variables [Visual Basic]
 ms.assetid: 6169a196-2b13-4ba5-a205-154bc1b87844
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 44689d649a381618e5d6c934deb2b7b9bea463ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8383261c1806732c4c8abea9834000f003a848a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variables-in-visual-basic"></a>Zmienne obiektów w Visual Basic
 Oprócz wartości są przechowywane bezpośrednio, zmienna może odwoływać się do obiektu. Obiekt można przypisać do zmiennej przyczyn przypisać wartości do zmiennej:  
@@ -53,7 +43,7 @@ ctrlActv.Show()
   
 ## <a name="see-also"></a>Zobacz też  
  [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Porady: przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)  
+ [Instrukcje: przyspieszanie dostępu do obiektu z długą ścieżką kwalifikacji](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)  
  [Deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
  [Przypisanie zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
  [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

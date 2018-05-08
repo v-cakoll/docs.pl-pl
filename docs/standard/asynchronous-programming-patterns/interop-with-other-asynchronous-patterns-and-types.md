@@ -1,13 +1,7 @@
 ---
-title: "Współdziałanie z innymi wzorcami asynchronicznymi i typami"
-ms.custom: 
+title: Współdziałanie z innymi wzorcami asynchronicznymi i typami
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a46358052eb93662408f9c01592f917eee4540b9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c92725a43e43877488ff9ba93007530c794dd290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Współdziałanie z innymi wzorcami asynchronicznymi i typami
 .NET Framework 1.0 wprowadzone <xref:System.IAsyncResult> wzorzec, znanej także jako [asynchronicznego programowania modelu (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), lub `Begin/End` wzorzec.  .NET Framework 2.0, dodać [oparty na zdarzeniach asynchroniczny wzorzec (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Począwszy od programu .NET Framework 4, [opartego na zadaniach asynchronicznej wzorca (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) zastępuje zarówno APM, jak i EAP, ale umożliwia łatwe tworzenie procedury migracji z wcześniejszych wzorce.  
@@ -94,7 +83,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="EAP"></a>   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>Zadania i oparty na zdarzeniach wzorca asynchronicznego (EAP)  
- Zawijanie [oparty na zdarzeniach asynchroniczny wzorzec (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) implementacja jest bardziej skomplikowane niż zawijania wzorzec APM, ponieważ wzorzec EAP ma więcej odmiany i struktura mniej niż wzorzec APM.  Aby zademonstrować, opakowuje następujący kod `DownloadStringAsync` metody.  `DownloadStringAsync`akceptuje identyfikator URI, zgłasza `DownloadProgressChanged` zdarzeń podczas pobierania w celu raportowania statystyk wiele w toku i zgłasza `DownloadStringCompleted` zdarzeń po jej zakończeniu.  Wynik końcowy jest ciąg znaków zawierający zawartość strony o określonym identyfikatorze URI.  
+ Zawijanie [oparty na zdarzeniach asynchroniczny wzorzec (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) implementacja jest bardziej skomplikowane niż zawijania wzorzec APM, ponieważ wzorzec EAP ma więcej odmiany i struktura mniej niż wzorzec APM.  Aby zademonstrować, opakowuje następujący kod `DownloadStringAsync` metody.  `DownloadStringAsync` akceptuje identyfikator URI, zgłasza `DownloadProgressChanged` zdarzeń podczas pobierania w celu raportowania statystyk wiele w toku i zgłasza `DownloadStringCompleted` zdarzeń po jej zakończeniu.  Wynik końcowy jest ciąg znaków zawierający zawartość strony o określonym identyfikatorze URI.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  

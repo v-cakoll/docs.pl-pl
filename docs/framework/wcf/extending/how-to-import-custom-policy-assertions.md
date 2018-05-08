@@ -1,27 +1,15 @@
 ---
 title: 'Instrukcje: Importowanie niestandardowych asercji zasad'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Instrukcje: Importowanie niestandardowych asercji zasad
 Potwierdzenia zasad opisano wymagania punktu końcowego usługi.  Aplikacje klienckie można użyć potwierdzeń zasad w metadanych usługi, aby skonfigurować klienta powiązanie lub dostosować kontraktu usługi dla punktu końcowego usługi.  
@@ -51,7 +39,7 @@ Potwierdzenia zasad opisano wymagania punktu końcowego usługi.  Aplikacje klie
   
 3.  Wykonaj dostosowanie binding lub kontraktu, który obsługuje możliwości lub wymagania określone przez potwierdzenia zasad. Zwykle potwierdzenia wskazują, czy powiązanie wymaga określoną konfigurację lub element określonego powiązania. Wprowadź poniższe zmiany, uzyskując dostęp do <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> właściwości. Inne potwierdzenia wymagać modyfikacji kontraktu.  Masz dostęp i modyfikować za pomocą kontraktu <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> właściwości.  Pamiętaj, że Twoje importera zasad może pobrać wywołana wiele razy dla tego samego powiązania i kontraktu, ale różnych zasad alternatywnych alternatywne zasady importowania kończy się niepowodzeniem. Kod powinien być odporny na takie zachowanie.  
   
-4.  Usuń potwierdzenia zasad niestandardowych z kolekcji potwierdzenia. Jeśli usuniesz to potwierdzenie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] założono, że importowanie zasad nie powiodło się i nie importuje powiązanie skojarzone. Jeśli używasz <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> metodę, aby zlokalizować potwierdzenia zasad niestandardowych i usunąć go z kolekcji w jednym kroku, nie trzeba wykonać ten krok.  
+4.  Usuń potwierdzenia zasad niestandardowych z kolekcji potwierdzenia. Jeśli potwierdzenie nie zostanie usunięty Windows Communication Foundation (WCF) założono, że importowanie zasad nie powiodło się i nie importuje powiązanie skojarzone. Jeśli używasz <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> metodę, aby zlokalizować potwierdzenia zasad niestandardowych i usunąć go z kolekcji w jednym kroku, nie trzeba wykonać ten krok.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Aby wstawić importera zasad niestandardowych do metadanych systemu przy użyciu pliku konfiguracji  
   

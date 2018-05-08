@@ -1,27 +1,15 @@
 ---
 title: Token niestandardowy
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53242a7411d261a6f2860fcf319725e40cfb6dcf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-token"></a>Token niestandardowy
-W tym przykładzie przedstawiono sposób dodawania niestandardowych implementacji tokenu do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji. W przykładzie użyto `CreditCardToken` do bezpieczne przekazywanie informacji o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowana przy użyciu elementu powiązania zabezpieczeń symetrycznego wraz z treści wiadomości i innych nagłówków komunikatów. Jest to przydatne w sytuacjach, gdy wbudowanych tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczeń niestandardowej z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
+Ten przykład przedstawia sposób dodawania niestandardowych implementacji token do aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` do bezpieczne przekazywanie informacji o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowana przy użyciu elementu powiązania zabezpieczeń symetrycznego wraz z treści wiadomości i innych nagłówków komunikatów. Jest to przydatne w sytuacjach, gdy wbudowanych tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczeń niestandardowej z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  

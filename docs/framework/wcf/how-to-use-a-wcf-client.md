@@ -1,33 +1,19 @@
 ---
-title: "Instrukcje: Używanie klienta programu Windows Communication Foundation"
-ms.custom: 
+title: 'Instrukcje: Używanie klienta programu Windows Communication Foundation'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Instrukcje: Używanie klienta programu Windows Communication Foundation
-Jest to ostatnich sześciu zadania wymagane do utworzenia podstawowego [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
+Jest to ostatnich sześciu zadania wymagane do tworzenia podstawowej aplikacji Windows Communication Foundation (WCF). Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
   
- Raz [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] utworzono i skonfigurowano serwer proxy, można utworzyć wystąpienia klienta i aplikacja kliencka można skompilować i używany do komunikacji z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. W tym temacie opisano procedury tworzenia wystąpienia i przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta. Procedura ta nie trzy czynności:  
+ Gdy utworzono i skonfigurowano serwer proxy usług Windows Communication Foundation (WCF), można utworzyć wystąpienia klienta i aplikacja kliencka można skompilować i używany do komunikacji z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. W tym temacie opisano procedury tworzenia wystąpienia i przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta. Procedura ta nie trzy czynności:  
   
 1.  Tworzy wystąpienie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta.  
   

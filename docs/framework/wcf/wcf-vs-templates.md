@@ -1,29 +1,15 @@
 ---
 title: Szablony programu Visual Studio na potrzeby programu WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 873e728b72529fb5153913c44cac0abd77f1f7c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Szablony Visual Studio są wstępnie zdefiniowanych szablonów projektów i elementów w programie Visual Studio umożliwia szybkie tworzenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje otaczającego.  
+Szablony Visual Studio Windows Communication Foundation (WCF) są wstępnie zdefiniowanych szablonów projektów i elementów w programie Visual Studio umożliwia szybkie tworzenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje otaczającego.  
   
 ## <a name="using-the-wcf-templates"></a>Korzystanie z szablonów usługi WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablony Visual Studio Podaj struktury klasa podstawowa dla rozwoju usługi. W szczególności te szablony stanowią podstawowe definicje dla kontraktu usługi, kontrakt danych implementacji usługi i konfiguracji. Te szablony umożliwia tworzenie prostych usługi za pomocą kodu minimalnej interakcji, a także bloku konstrukcyjnego dla bardziej zaawansowanych usług.  

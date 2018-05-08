@@ -1,28 +1,16 @@
 ---
-title: "Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows"
-ms.custom: 
+title: Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], display modes
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92b66d27683fad4adf0ed2179a5bb29ef6220e3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97576218df651553ed1ac5f681d1ec0b4ab5ef3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Formant może wyświetlać dane w trzech różnych trybach: powiązane, niezwiązanej i wirtualnych. Wybierz najbardziej odpowiedniego tryb, w zależności od wymagań.  

@@ -1,27 +1,15 @@
 ---
-title: "Właściwości formantów formularzy systemu Windows obsługujące dostęp — Wytyczne"
-ms.custom: 
+title: Właściwości formantów formularzy systemu Windows obsługujące dostęp — Wytyczne
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 967b4a0e883338c756aceef37d11edecfb978527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b466dcf42561d8ced7b224215538a807c94b174b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Właściwości formantów formularzy systemu Windows obsługujące dostęp — Wytyczne
 Formanty standardowe przyborniku dla formularzy systemu Windows obsługują wiele wytycznych ułatwień dostępu, w tym udostępnianie fokus klawiatury i udostępnianie elementów ekranu.  

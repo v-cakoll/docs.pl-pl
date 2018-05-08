@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Renderowanie grafiki WPF"
-ms.custom: 
+title: Przegląd Renderowanie grafiki WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Przegląd Renderowanie grafiki WPF
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual warstwy. Dotyczy on rolę <xref:System.Windows.Media.Visual> klasy renderowania pomocy technicznej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelu.  
@@ -58,7 +46,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
 -   Globalizacja  
   
- <xref:System.Windows.Media.Visual>jest ujawniona jako publiczny klasa abstrakcyjna, z której klasy podrzędne muszą pochodzić. Na poniższej ilustracji przedstawiono hierarchii visual obiektów, które są widoczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <xref:System.Windows.Media.Visual> jest ujawniona jako publiczny klasa abstrakcyjna, z której klasy podrzędne muszą pochodzić. Na poniższej ilustracji przedstawiono hierarchii visual obiektów, które są widoczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  ![Diagram klas pochodnych obiekt wizualny](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 Hierarchia klas Visual  
@@ -80,13 +68,13 @@ Hierarchia klas Visual
 |Grafika wektorowa|Reprezentuje wektorów danych grafiki i wszelkie powiązane <xref:System.Windows.Media.Brush> i <xref:System.Windows.Media.Pen> informacji.|  
 |Obraz|Reprezentuje obraz w obrębie regionu zdefiniowane przez <xref:System.Windows.Rect>.|  
 |Symbolu|Reprezentuje rysunku, który renderuje <xref:System.Windows.Media.GlyphRun>, czyli kolejność symboli z zasobu określonej czcionki. Jest to, jak tekstu jest wyświetlana.|  
-|Wideo|Reprezentuje rysunku, który renderuje wideo.|  
+|Video|Reprezentuje rysunku, który renderuje wideo.|  
   
  <xref:System.Windows.Media.DrawingContext> Służy do wypełniania <xref:System.Windows.Media.Visual> z zawartością visual. Jeśli używasz <xref:System.Windows.Media.DrawingContext> polecenia rysowania obiektu są faktycznie przechowywania zestaw danych renderowania, które będą później używane przez system grafiki; nie jest rysowany do ekranu w czasie rzeczywistym.  
   
  Po utworzeniu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolować, takich jak <xref:System.Windows.Controls.Button>, formant niejawnie generuje renderowania danych sam rysowania. Na przykład ustawienie <xref:System.Windows.Controls.ContentControl.Content%2A> właściwość <xref:System.Windows.Controls.Button> powoduje, że formant do przechowywania renderowania reprezentację symbolu.  
   
- A <xref:System.Windows.Media.Visual> opisuje zawartość jako jeden lub więcej <xref:System.Windows.Media.Drawing> obiektów zawartych w <xref:System.Windows.Media.DrawingGroup>. A <xref:System.Windows.Media.DrawingGroup> opisano również nieprzezroczystość maski, transformacje efekty mapy bitowej i innych operacji, które są stosowane do jego zawartości. <xref:System.Windows.Media.DrawingGroup>operacje są stosowane w następującej kolejności podczas renderowania zawartości: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, a następnie <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ A <xref:System.Windows.Media.Visual> opisuje zawartość jako jeden lub więcej <xref:System.Windows.Media.Drawing> obiektów zawartych w <xref:System.Windows.Media.DrawingGroup>. A <xref:System.Windows.Media.DrawingGroup> opisano również nieprzezroczystość maski, transformacje efekty mapy bitowej i innych operacji, które są stosowane do jego zawartości. <xref:System.Windows.Media.DrawingGroup> operacje są stosowane w następującej kolejności podczas renderowania zawartości: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, a następnie <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Na poniższej ilustracji przedstawiono kolejność, w którym <xref:System.Windows.Media.DrawingGroup> operacji są stosowane podczas renderowania sekwencji.  
   
@@ -195,14 +183,14 @@ Panel Eksploratora drzewa wizualnego w edytorze XamlPad
  Powiadomienie jak <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, i <xref:System.Windows.Controls.Button> formanty każdego wyświetlić hierarchię oddzielny obiekt visual w **Visual drzewa Eksploratora** panelu edytor XamlPad. Jest to spowodowane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty mają <xref:System.Windows.Controls.ControlTemplate> zawierający drzewa wizualnego tego formantu. Jawnie odwołać formantu, można niejawnie odwołanie hierarchii visual.  
   
 ### <a name="profiling-visual-performance"></a>Profilowanie wydajności Visual  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia zestaw narzędzi, które umożliwiają analizowanie zachowania w czasie wykonywania aplikacji i określić typy optymalizacji wydajności, które można zastosować profilowania wydajności. Narzędzie profilera Visual udostępnia rozbudowane, graficznego widoku danych wydajności przez mapowanie bezpośrednio na drzewie wizualnym aplikacji. W tym zrzucie ekranu pokazano **użycie procesora CPU** sekcji profilera Visual umożliwia precyzyjne podział użycia obiektu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usług, takich jak renderowania i układu.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia zestaw narzędzi, które umożliwiają analizowanie zachowania w czasie wykonywania aplikacji i określić typy optymalizacji wydajności, które można zastosować profilowania wydajności. Narzędzie profilera Visual udostępnia rozbudowane, graficznego widoku danych wydajności przez mapowanie bezpośrednio na drzewie wizualnym aplikacji. W tym zrzucie ekranu pokazano **użycie procesora CPU** sekcji profilera Visual umożliwia precyzyjne podział użycia obiektu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usług, takich jak renderowania i układu.  
   
  ![Wyświetla danych wyjściowych, profilera Visual](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Visual dane wyjściowe profilera  
   
 <a name="visual_rendering_behavior"></a>   
 ## <a name="visual-rendering-behavior"></a>Sposób renderowania Visual  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wprowadzono kilka funkcji, które mają wpływ na sposób renderowania obiektów visual: zachowane tryb grafiki, grafiki wektorowej i grafiki niezależnie od urządzenia.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wprowadzono kilka funkcji, które mają wpływ na sposób renderowania obiektów visual: zachowane tryb grafiki, grafiki wektorowej i grafiki niezależnie od urządzenia.  
   
 ### <a name="retained-mode-graphics"></a>Tryb zachowanych grafiki  
  Jeden z kluczy do zrozumienia rolę obiektu Visual jest zrozumieć różnicę między **trybie natychmiastowym** i **zachowane tryb** systemy graficzne. Standardowa aplikacją systemu Win32 na podstawie GDI lub GDI + używa systemu grafiki w trybie natychmiastowym. Oznacza to, że aplikacja jest odpowiedzialny za odświeżenie część obszaru klienta, który zostało unieważnione z powodu akcja, taka jak okno zmieniany, lub zmiana jego wygląd obiektu.  
@@ -219,7 +207,7 @@ Diagram sekwencji renderowania WPF
  Jedną z największych korzyści za pomocą zachowanych tryb grafiki jest to, że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wydajnie zoptymalizować co musi zostać odświeżone w aplikacji. Nawet, jeśli masz złożonych sceny o różnej nieprzezroczystość zwykle nie trzeba napisać kod specjalnych zoptymalizować ponownego narysowania. To porównać programowania Win32, w którym trzeba poświęcić wiele wysiłku z optymalizacją zminimalizować ilość ponownego narysowania w regionie aktualizacji aplikacji. Zobacz [ponownego narysowania w regionie aktualizacji](https://msdn.microsoft.com/library/dd162909.aspx) na przykład typ złożoności zaangażowane w optymalizacji ponownego narysowania w aplikacjach systemu Win32.  
   
 ### <a name="vector-graphics"></a>Grafika wektorowa  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]używa **grafika wektorowa** jako formatem renderowania danych. Grafika wektorowa — które obejmują skalowalne wektor grafiki SVG metapliki Windows (WMF) i czcionki TrueType — przechowywanie danych renderowania i przekazuje je jako listę instrukcji zawierających opis sposobu ponownego tworzenia obrazu przy użyciu grafiki w nim elementów podstawowych. Na przykład czcionki TrueType są konspektu czcionek, które opisują zestaw linii, krzywych i poleceń, a nie tablicę pikseli. Jednym z kluczowych zalet grafika wektorowa jest możliwość skalowania do rozmiaru i rozpoznawania.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa **grafika wektorowa** jako formatem renderowania danych. Grafika wektorowa — które obejmują skalowalne wektor grafiki SVG metapliki Windows (WMF) i czcionki TrueType — przechowywanie danych renderowania i przekazuje je jako listę instrukcji zawierających opis sposobu ponownego tworzenia obrazu przy użyciu grafiki w nim elementów podstawowych. Na przykład czcionki TrueType są konspektu czcionek, które opisują zestaw linii, krzywych i poleceń, a nie tablicę pikseli. Jednym z kluczowych zalet grafika wektorowa jest możliwość skalowania do rozmiaru i rozpoznawania.  
   
  W przeciwieństwie do grafiki wektorowej grafiki mapy bitowej przechowywania danych renderowania jako reprezentacji poszczególne piksele obrazu wstępnie renderowana dla określonego rozwiązania. Jednym z podstawowych różnic między formaty graficzne mapy bitowej i wektor jest wierności do oryginalnego obrazu źródłowego. Na przykład podczas modyfikowania rozmiaru obrazu źródłowego systemy graficzne mapy bitowej obraz jest rozciągany tak, natomiast systemów grafiki wektorowej, skaluje obraz zachowuje wierności obrazu.  
   
@@ -239,7 +227,7 @@ Różnice między grafiki wektorowej i rastrowe
   
  Nie wszystkie aplikacje są obsługującą ustawienia DPI: niektóre użycie pikseli sprzętu jako podstawową jednostkę miary; Zmiana rozdzielczości DPI systemu nie ma wpływu na te aplikacje. Wiele innych aplikacji za pomocą jednostek obsługującą ustawienia DPI opisano rozmiary czcionek, ale do opisania wszystkich pozostałych używać pikseli. Wprowadzenie wartości DPI zbyt małej lub zbyt duży może spowodować problemy związane z układem w przypadku tych aplikacji, ponieważ tekst aplikacji skaluje ustawienie DPI systemu, ale nie ma interfejsu użytkownika aplikacji. Ten problem został wyeliminowany dla aplikacji utworzony przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]obsługuje automatyczne skalowanie za pomocą pixel niezależnie od urządzenia jako jego podstawowy jednostkę, zamiast sprzętu pikseli; Grafika i tekst skalowana bez konieczności wykonywania dodatkowych działań z deweloperem aplikacji. Na poniższej ilustracji przedstawiono przykładowy sposób [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tekstu i grafiki są wyświetlane różne ustawienia DPI.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje automatyczne skalowanie za pomocą pixel niezależnie od urządzenia jako jego podstawowy jednostkę, zamiast sprzętu pikseli; Grafika i tekst skalowana bez konieczności wykonywania dodatkowych działań z deweloperem aplikacji. Na poniższej ilustracji przedstawiono przykładowy sposób [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tekstu i grafiki są wyświetlane różne ustawienia DPI.  
   
  ![Grafika i tekst w różne ustawienia DPI](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Grafika i tekst w różne ustawienia DPI  

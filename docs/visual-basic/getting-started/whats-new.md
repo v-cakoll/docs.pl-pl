@@ -1,10 +1,6 @@
 ---
 title: Nowości w języku Visual Basic
 ms.date: 02/15/2018
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -12,14 +8,13 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 09a113130d29336ecabb52095ca7f5809f5f0ade
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Nowości w języku Visual Basic
 
@@ -159,7 +154,7 @@ Aby uzyskać więcej informacji, zobacz [odwołania zwracać wartości](../progr
  Wyrażenia parametrów interpolacji służy do tworzenia ciągów.  Wyrażenie ciągu interpolowanym wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciągu interpolowanym łatwiej zrozumieć względem argumentów niż [złożone formatowanie](../../standard/base-types/composite-format.md).  
   
 [Dostęp do elementu członkowskiego warunkowe null i indeksowania](../../csharp/language-reference/operators/null-conditional-operators.md)  
-Można sprawdzić wartość null w sposób składni bardzo małe przed wykonaniem dostępu elementu członkowskiego (`?.`) lub indeks (`?[]`) operacji.  Tych operatorów pomóc zapisu sprawdza mniej kod obsługujący wartości null, szczególnie w przypadku malejącej do struktur danych.  Jeśli Lewy argument operacji lub obiektu odwołanie ma wartość null, operacje zwraca wartość null.  
+Można sprawdzić wartość null w sposób składni bardzo małe przed wykonaniem dostępu elementu członkowskiego (`?.`) lub indeks (`?[]`) operacji.  Pomagają one w ograniczeniu ilości kodu potrzebnego do sprawdzenia wystąpień wartości null, zwłaszcza dla przypadków zstępujących do struktur danych.  Jeśli Lewy argument operacji lub obiektu odwołanie ma wartość null, operacje zwraca wartość null.  
   
 [Literały ciągu wiele wierszy](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Literały ciągu może zawierać sekwencje znaków nowego wiersza.  Możesz już konieczne stary obejść użycia `<xml><![CDATA[...text with newlines...]]></xml>.Value`  

@@ -1,24 +1,14 @@
 ---
-title: "Odczytywanie z oraz zapisywanie do rejestru za pomocą przestrzeni nazw Microsoft.Win32 (Visual Basic)"
-ms.custom: 
+title: Odczytywanie z oraz zapisywanie do rejestru za pomocą przestrzeni nazw Microsoft.Win32 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 462cc5c3854035cfc04c7c5df6905c2cfbd486ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6309f312ed05f48e65b19d8827322071cad1f6de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru za pomocą przestrzeni nazw Microsoft.Win32 (Visual Basic)
 Mimo że `My.Computer.Registry` powinno obejmować potrzeb podstawowe, gdy Programowanie w odniesieniu do rejestru, można również użyć <xref:Microsoft.Win32.Registry> i <xref:Microsoft.Win32.RegistryKey> klas w <xref:Microsoft.Win32> przestrzeń nazw [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -26,7 +16,7 @@ Mimo że `My.Computer.Registry` powinno obejmować potrzeb podstawowe, gdy Progr
 ## <a name="keys-in-the-registry-class"></a>Klucze rejestru klasy  
  <xref:Microsoft.Win32.Registry> Klasa zapewnia kluczy rejestru podstawowej, które mogą być używane do dostępu podklucze i ich wartości. Podstawowy samych kluczy są tylko do odczytu. Poniższej tabeli wymieniono i opisano klucze siedmiu udostępnianych przez <xref:Microsoft.Win32.Registry> klasy.  
   
-|**Klucz**|**Opis**|  
+|**Key**|**Opis**|  
 |-------------|---------------------|  
 |<xref:Microsoft.Win32.Registry.ClassesRoot>|Określa typy dokumentów i właściwości skojarzone z tych typów.|  
 |<xref:Microsoft.Win32.Registry.CurrentConfig>|Zawiera informacje o konfiguracji sprzętu, który nie jest specyficzne dla użytkownika.|  
@@ -52,6 +42,6 @@ Mimo że `My.Computer.Registry` powinno obejmować potrzeb podstawowe, gdy Progr
  <xref:System.SystemException>  
  <xref:System.ApplicationException>  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- [Try... CATCH... Finally — instrukcja](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Odczytywanie z oraz zapisywanie do rejestru](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
+ [Try...Catch...Finally, instrukcja](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
  [Bezpieczeństwo i rejestr](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)

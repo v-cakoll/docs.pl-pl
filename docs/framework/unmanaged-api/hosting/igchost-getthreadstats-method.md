@@ -1,14 +1,6 @@
 ---
-title: "IGCHost::GetThreadStats — Metoda"
-ms.custom: 
+title: IGCHost::GetThreadStats — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IGCHost.GetThreadStats
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 826baa9b-9218-4736-a509-7ab193b125a0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe84dd4d231bacba6792836844058b7256124db5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74827fac102ee6045965f4ba9d74dd3b1aa0af86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats — Metoda
 Pobiera statystyki dla każdego wątku wyrzucanie elementów bezużytecznych.  
@@ -61,7 +49,7 @@ HRESULT GetThreadStats (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [IGCHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

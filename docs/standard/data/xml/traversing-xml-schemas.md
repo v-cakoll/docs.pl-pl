@@ -1,30 +1,19 @@
 ---
 title: Przechodzenie przez schematy XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-xml-schemas"></a>Przechodzenie przez schematy XML
 Przechodzenie przez schemat XML przy użyciu schematu obiektu modelu (SOM) interfejsu API zapewnia dostęp do elementy, atrybuty i przechowywane w SOM. typów Przechodzenie XML schematu ładowane do SOM jest również pierwszym etapem schematu XML przy użyciu interfejsu API SOM edycji.  
@@ -38,11 +27,11 @@ Przechodzenie przez schemat XML przy użyciu schematu obiektu modelu (SOM) inter
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
-|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport>, lub<xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject>(umożliwia dostęp do globalnego poziomu elementy, atrybuty i typy).|  
+|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport>, lub <xref:System.Xml.Schema.XmlSchemaRedefine>|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (umożliwia dostęp do globalnego poziomu elementy, atrybuty i typy).|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
 |<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
-|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute>(umożliwia dostęp do atrybutów, które nie należą do schematu przestrzeni nazw)|  
+|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (umożliwia dostęp do atrybutów, które nie należą do schematu przestrzeni nazw)|  
   
 > [!NOTE]
 >  Wszystkie właściwości wymienione w powyższej tabeli, z wyjątkiem <xref:System.Xml.Schema.XmlSchema.Items%2A> właściwość nie ma właściwości po-Schema-kompilacji-typu Infoset (PSCI), które nie są dostępne, dopóki nie został skompilowany schematu. <xref:System.Xml.Schema.XmlSchema.Items%2A> Właściwość jest właściwością wstępnie przygotowany schema kompilacji, która może zostać użyta przed dostępu i edytować wszystkie globalne poziomu elementy, atrybuty i typów została skompilowana schematu.  

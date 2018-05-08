@@ -1,21 +1,14 @@
 ---
-title: "Porady: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania (Przewodnik programowania w języku C#)"
+title: 'Porady: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 754698fc423fb2dfc9bf50ed15be610831cefeda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c2bc990f9dda4b91928c176cf7f10bfb349ba343
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Porady: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania (Przewodnik programowania w języku C#)
 Niejawnie wpisane zmienne lokalne służy zawsze, gdy kompilator można określić typu zmienną lokalną. Niejawnie wpisane zmienne lokalne musi używać do przechowywania typy anonimowe, które są często używane w wyrażeniach zapytań. Poniższe przykłady przedstawiają zarówno opcjonalne i wymagane zastosowań niejawnie wpisane zmienne lokalne w zapytaniach.  
@@ -34,7 +27,7 @@ Niejawnie wpisane zmienne lokalne służy zawsze, gdy kompilator można określi
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Metody rozszerzenia](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [var](../../../csharp/language-reference/keywords/var.md)  
  [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

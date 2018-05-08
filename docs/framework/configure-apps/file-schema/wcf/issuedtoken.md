@@ -1,33 +1,21 @@
 ---
-title: '&lt;issuedToken&gt;'
-ms.custom: 
+title: '&lt;IssuedToken&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c4090dacdbb55f66bf7c27bdd02adf371049f7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a8d701e0806aae0a17a1c5ff7284606dd080f85
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltissuedtokengt"></a>&lt;issuedToken&gt;
+# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
 Określa niestandardowy token używany do uwierzytelniania klienta do usługi.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
 sekcja endpointBehaviors  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<issuedToken >  
   
 ## <a name="syntax"></a>Składnia  
@@ -68,7 +56,7 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
  Wystawiony token jest typu niestandardowego poświadczenia używane, na przykład podczas uwierzytelniania z Secure Token Service (STS) w federacyjnym scenariuszu. Domyślnie token jest tokenu SAML. Aby uzyskać więcej informacji, zobacz [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). i [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  

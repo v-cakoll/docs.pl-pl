@@ -1,28 +1,18 @@
 ---
-title: "Ułatwianie debugowania obrazu"
-ms.custom: 
+title: Ułatwianie debugowania obrazu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - images [.NET Framework], debugging
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c58008bc621ea95fbb2e4cc5e7d4521576aca37c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>Ułatwianie debugowania obrazu
 Podczas kompilowania niezarządzanego kodu można za pomocą odpowiednich przełączników środowiska IDE lub opcji wiersza polecenia skonfigurować wykonywalny obraz na potrzeby debugowania. Na przykład można użyć /**Zi** opcji wiersza polecenia w programie Visual C++ można zażądać Emituj debugowania plików symboli (.pdb rozszerzenia pliku). Podobnie /**Od** opcji wiersza polecenia informuje kompilator, aby wyłączyć optymalizacji. Powstały kod działa wolniej, ale w razie potrzeby łatwiej go debugować.  

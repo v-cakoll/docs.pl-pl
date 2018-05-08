@@ -1,22 +1,12 @@
 ---
-title: "Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)"
-ms.custom: 
+title: 'Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e890900cd2f53e62a55adef56bfdb27b9787d598
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)
 W tym przykładzie przedstawiono sposób scalania danych z różnych źródeł w sekwencji nowych typów.  

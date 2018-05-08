@@ -1,34 +1,22 @@
 ---
 title: 'Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 26
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows
-W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi znajduje się w domenie systemu Windows, który jest wywoływany przez klientów w tej samej domenie. Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Przykładową aplikację, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
+W tym temacie przedstawiono sposób włączania zabezpieczenia transportu usługi Windows Communication Foundation (WCF) znajduje się w domenie systemu Windows, który jest wywoływany przez klientów w tej samej domenie. Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Przykładową aplikację, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
   
  W tym temacie założono masz istniejący interfejs kontrakt i implementacja już zdefiniowany i dodaje się, że. Można również zmodyfikować istniejącą usługę i klienta.  
   

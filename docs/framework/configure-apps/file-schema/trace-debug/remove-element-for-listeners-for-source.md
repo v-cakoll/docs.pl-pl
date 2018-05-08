@@ -1,31 +1,20 @@
 ---
-title: "&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;"
-ms.custom: 
+title: '&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
 helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b983c5eb80f958098b6991970559d077b97a0759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc6772e7a9b98f09df21fd1acf24f578b66ae51e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;
 Usuwa odbiornik z `Listeners` kolekcji źródła śledzenia.  

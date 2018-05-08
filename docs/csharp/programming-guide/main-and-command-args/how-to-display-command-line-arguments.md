@@ -1,21 +1,14 @@
 ---
-title: "Porady: wyświetlanie argumentów wiersza poleceń (Przewodnik programowania w języku C#)"
+title: 'Porady: wyświetlanie argumentów wiersza poleceń (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6ae495eef227c6e4d9fb9ca0d4d0c031163fd52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b9e488e84c78c8fdbf64431f42ea5797fdca916
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Porady: wyświetlanie argumentów wiersza poleceń (Przewodnik programowania w języku C#)
 Argumenty przekazane do pliku wykonywalnego w wierszu polecenia są dostępne za pośrednictwem opcjonalny parametr do `Main`. Argumenty są udostępniane w formie tablicy ciągów. Każdy element tablicy zawiera jeden argument. Odstępu między argumentami zostaną usunięte. Rozważmy na przykład tych wywołań wiersza polecenia fikcyjne pliku wykonywalnego:  
@@ -36,7 +29,7 @@ Argumenty przekazane do pliku wykonywalnego w wierszu polecenia są dostępne za
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Za pomocą wiersza polecenia z csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+ [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
  [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Porady: za pomocą argumentów wiersza polecenia dostępu instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

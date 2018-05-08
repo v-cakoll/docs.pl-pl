@@ -1,13 +1,6 @@
 ---
-title: "Porady: ręczne renderowanie buforowanej grafiki"
-ms.custom: 
+title: 'Porady: ręczne renderowanie buforowanej grafiki'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a5d06da3a398782b0285fb55807df5832cf771
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab0868e31ac8b010c662c04a7670e1ead19cebe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Porady: ręczne renderowanie buforowanej grafiki
 Jeśli zarządzasz buforowanej grafiki, należy mieć możliwość tworzenia i renderowania grafiki buforów. Można utworzyć wystąpienia <xref:System.Drawing.BufferedGraphics> klasy, która jest skojarzona z rysunku powierzchni na ekranie, wywołując <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> metody. Ta metoda tworzy <xref:System.Drawing.BufferedGraphics> wystąpienia, który jest skojarzony z powierzchnią określonego renderowania, takich jak formularz lub formant. Po utworzeniu <xref:System.Drawing.BufferedGraphics> wystąpienia, można narysować grafiki w buforze reprezentuje za pośrednictwem <xref:System.Drawing.BufferedGraphics.Graphics%2A> właściwości. Po wykonaniu wszystkich operacji graficznych, wywołując można skopiować zawartość buforu ekranu <xref:System.Drawing.BufferedGraphics.Render%2A> metody.  

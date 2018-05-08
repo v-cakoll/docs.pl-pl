@@ -1,13 +1,6 @@
 ---
 title: Renderowanie formantu formularzy systemu Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>Renderowanie formantu formularzy systemu Windows
 Renderowanie odwołuje się do procesu tworzenia wizualną reprezentację na ekranie użytkownika. Formularze systemu Windows używa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (nowej bibliotece systemu Windows grafiki) do renderowania. Klasy zarządzane, które zapewniają dostęp do [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw i jego podobszary nazw.  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>jest zarządzanej klasy, który hermetyzuje funkcjonalność rysowania, zgodnie z opisem w dyskusji [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] dalszej części tego tematu. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Jest wystąpieniem <xref:System.Drawing.Rectangle> struktury i definiuje dostępnego obszaru, w którym można narysować kontrolkę. Można obliczyć dewelopera kontrolek <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> przy użyciu <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości formantu, zgodnie z opisem w omówieniu geometrii w dalszej części tego tematu.  
+ <xref:System.Drawing.Graphics> jest zarządzanej klasy, który hermetyzuje funkcjonalność rysowania, zgodnie z opisem w dyskusji [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] dalszej części tego tematu. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Jest wystąpieniem <xref:System.Drawing.Rectangle> struktury i definiuje dostępnego obszaru, w którym można narysować kontrolkę. Można obliczyć dewelopera kontrolek <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> przy użyciu <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości formantu, zgodnie z opisem w omówieniu geometrii w dalszej części tego tematu.  
   
- Formant musi dostarczyć logiki renderowania przez zastąpienie <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, która dziedziczy on z <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A>uzyskuje dostęp do obiektu graphics i prostokąta do rysowania za pomocą <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> i <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości <xref:System.Windows.Forms.PaintEventArgs> wystąpienia przekazane do niej.  
+ Formant musi dostarczyć logiki renderowania przez zastąpienie <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, która dziedziczy on z <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> uzyskuje dostęp do obiektu graphics i prostokąta do rysowania za pomocą <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> i <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości <xref:System.Windows.Forms.PaintEventArgs> wystąpienia przekazane do niej.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>Umożliwia malowanie tła (i tym samym kształtu) okna i gwarantuje to szybkie podczas <xref:System.Windows.Forms.Control.OnPaint%2A> malowanie szczegóły i może przebiegać wolniej, ponieważ paint poszczególnych żądań są połączone w jedną <xref:System.Windows.Forms.Control.Paint> zdarzenie, które obejmuje wszystkie obszary, które muszą być narysowany ponownie. Należy wywołać <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Jeśli na przykład chcesz narysować kolorze gradientu tła formantu.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Umożliwia malowanie tła (i tym samym kształtu) okna i gwarantuje to szybkie podczas <xref:System.Windows.Forms.Control.OnPaint%2A> malowanie szczegóły i może przebiegać wolniej, ponieważ paint poszczególnych żądań są połączone w jedną <xref:System.Windows.Forms.Control.Paint> zdarzenie, które obejmuje wszystkie obszary, które muszą być narysowany ponownie. Należy wywołać <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Jeśli na przykład chcesz narysować kolorze gradientu tła formantu.  
   
  Podczas <xref:System.Windows.Forms.Control.OnPaintBackground%2A> ma nomenklaturę zdarzenia podobne i ma ten sam argument co `OnPaint` metody <xref:System.Windows.Forms.Control.OnPaintBackground%2A> nie jest metodą zdarzeń wartość true. Brak nie `PaintBackground` zdarzeń i <xref:System.Windows.Forms.Control.OnPaintBackground%2A> nie wywoła zdarzeń delegatów. W przypadku przesłaniania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> — metoda, klasa pochodna nie jest wymagana do wywołania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> metody klasy podstawowej.  
   

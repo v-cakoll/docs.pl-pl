@@ -1,21 +1,12 @@
 ---
-title: "Porady: pobieranie wartości elementu (LINQ do XML) (C#)"
-ms.custom: 
+title: 'Porady: pobieranie wartości elementu (LINQ do XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ceb803eff68f72378ca195120ed96990d62d3593
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5eb75ea3dddbc90141ec875f87a988157ddf0362
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Porady: pobieranie wartości elementu (LINQ do XML) (C#)
 W tym temacie pokazano, jak pobrać wartość elementów. Istnieją dwa sposoby, w tym celu. Jednym ze sposobów jest można rzutować <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute> do odpowiedniego typu. Operator jawnej konwersji następnie konwertuje zawartość elementu lub atrybutu na określony typ i przypisuje go do zmiennej użytkownika. Alternatywnie można użyć <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości lub <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> właściwości.  
@@ -54,9 +45,9 @@ Console.WriteLine("Value of e:" + (int)e);
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera operatory jawnego rzutowania dla następujących typów danych: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`i `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera operatory jawnego rzutowania dla następujących typów danych: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?` , `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, i `GUID?`.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]udostępnia tego samego operatory rzutowania dla <xref:System.Xml.Linq.XAttribute> obiektów.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] udostępnia tego samego operatory rzutowania dla <xref:System.Xml.Linq.XAttribute> obiektów.  
   
 ## <a name="example"></a>Przykład  
  Można użyć <xref:System.Xml.Linq.XElement.Value%2A> właściwość, aby pobrać zawartość elementu:  

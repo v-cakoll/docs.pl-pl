@@ -1,9 +1,6 @@
 ---
-title: "Tworzenie i używanie zestawów o silnej nazwie"
+title: Tworzenie i używanie zestawów o silnej nazwie
 ms.date: 08/01/2017
-ms.prod: .net-framework
-ms.technology: dotnet-bcl
-ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, about strong-named assemblies
@@ -15,19 +12,16 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3a087f296a742bc9f0f5672d9bf0cb73c836121
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94659919d4e902f8562e669fbb0f98d6ebc679ab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnej nazwie
-<a name="top"></a>Silnej nazwy składa się z tożsamości zestawu — zwykły tekst nazwa, numer wersji i informacje o ustawieniach kulturowych (jeśli jest dostępny) — oraz klucz publiczny i podpis cyfrowy. Jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego. (Plik zestawu zawiera manifest zestawu, który zawiera nazwy i wartości skrótu wszystkie pliki wchodzące w skład zestawu).  
+<a name="top"></a> Silnej nazwy składa się z tożsamości zestawu — zwykły tekst nazwa, numer wersji i informacje o ustawieniach kulturowych (jeśli jest dostępny) — oraz klucz publiczny i podpis cyfrowy. Jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego. (Plik zestawu zawiera manifest zestawu, który zawiera nazwy i wartości skrótu wszystkie pliki wchodzące w skład zestawu).  
   
  Zestaw o silnej nazwie można używać tylko typów od innych zestawów o silnych nazwach. W przeciwnym razie integralność zestawu o silnej nazwie może zostać naruszone.  
   

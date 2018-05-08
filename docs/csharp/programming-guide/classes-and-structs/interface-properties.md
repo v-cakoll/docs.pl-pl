@@ -1,21 +1,15 @@
 ---
-title: "Właściwości interfejsu (Przewodnik programowania w języku C#)"
+title: Właściwości interfejsu (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1da48adf73cccb28d9cff641948db52b40b8c1bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bfa03c7ebe82f3f6a03666d908a5fa9d4e386172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-properties-c-programming-guide"></a>Właściwości interfejsu (Przewodnik programowania w języku C#)
 Właściwości mogą być deklarowane w [interfejsu](../../../csharp/language-reference/keywords/interface.md). Poniżej przedstawiono przykład metody dostępu interfejsu indeksatora:  
@@ -58,7 +52,7 @@ Właściwości mogą być deklarowane w [interfejsu](../../../csharp/language-re
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Przy użyciu właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [Używanie właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
  [Porównanie właściwości i indeksatorów](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
  [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
  [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)

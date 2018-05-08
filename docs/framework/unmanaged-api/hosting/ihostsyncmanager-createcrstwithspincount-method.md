@@ -1,14 +1,6 @@
 ---
-title: "IHostSyncManager::CreateCrstWithSpinCount — Metoda"
-ms.custom: 
+title: IHostSyncManager::CreateCrstWithSpinCount — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateCrstWithSpinCount
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31830f97cff1c302ee573b8248eb1d83e696ac48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50f292ab39bcf77d49d8a363b43b9233f350974c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount — Metoda
 Tworzy obiekt sekcja krytyczna z licznikiem pokrętła do synchronizacji.  
@@ -58,7 +46,7 @@ HRESULT CreateCrstWithSpinCount (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount`zwrócona pomyślnie.|  
+|S_OK|`CreateCrstWithSpinCount` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -67,7 +55,7 @@ HRESULT CreateCrstWithSpinCount (
 |E_OUTOFMEMORY|Za mało pamięci nie była dostępna, można utworzyć żądanego sekcja krytyczna.|  
   
 ## <a name="remarks"></a>Uwagi  
- Liczba pokrętła jest używana tylko w systemie wieloprocesorowym. Liczba pokrętła określa liczbę powtórzeń wątek wywołujący musi pokrętła przed przesłaniem operację oczekiwania na semafora skojarzony z sekcji krytycznej niedostępny. Jeśli sekcja krytyczna staje się wolnego podczas operacji pokrętła, wątek wywołujący pozwala uniknąć operacji oczekiwania. `CreateCrstWithSpinCount`odzwierciedla Win32 `InitializeCriticalSectionAndSpinCount` funkcji.  
+ Liczba pokrętła jest używana tylko w systemie wieloprocesorowym. Liczba pokrętła określa liczbę powtórzeń wątek wywołujący musi pokrętła przed przesłaniem operację oczekiwania na semafora skojarzony z sekcji krytycznej niedostępny. Jeśli sekcja krytyczna staje się wolnego podczas operacji pokrętła, wątek wywołujący pozwala uniknąć operacji oczekiwania. `CreateCrstWithSpinCount` odzwierciedla Win32 `InitializeCriticalSectionAndSpinCount` funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -76,7 +64,7 @@ HRESULT CreateCrstWithSpinCount (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

@@ -1,13 +1,6 @@
 ---
-title: "Kolejność zdarzeń w formularzach systemu Windows"
-ms.custom: 
+title: Kolejność zdarzeń w formularzach systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - events [Windows Forms], order of
 - focus event order
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 03d2661752e5c0acb36fe76a8fa72b0638b4ad54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 10a6451827a16605ba738cf74b7f684b69adb5dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-of-events-in-windows-forms"></a>Kolejność zdarzeń w formularzach systemu Windows
 Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu Windows ma szczególne znaczenie dla deweloperów związane z obsługi każdego z tych zdarzeń z kolei. Rozwiązania wymaga dokładnych obsługi zdarzenia, na przykład gdy są ponownego narysowania części formularza, konieczne jest świadomości dokładne kolejności, w której zdarzenia są generowane w czasie wykonywania. Ten temat zawiera pewne szczegóły rzędu zdarzenia podczas kilka ważnych etapach cykl życia aplikacji i kontrolek. Aby uzyskać szczegółowe informacje o zamówieniu myszy zdarzenia wejściowe, zobacz [zdarzenia myszy w formularzach systemu Windows](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Przegląd zdarzeń w formularzach systemu Windows, temacie [Przegląd zdarzeń](../../../docs/framework/winforms/events-overview-windows-forms.md). Aby uzyskać więcej informacji o w skład programów obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  

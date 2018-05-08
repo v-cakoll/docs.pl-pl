@@ -1,13 +1,6 @@
 ---
-title: "Jak utworzyć efekt najazdu przy użyciu zdarzenia"
-ms.custom: 
+title: Jak utworzyć efekt najazdu przy użyciu zdarzenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - rollover effect [WPF]
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fc65c9342cc86d4ceebd65e91c05cc1bea464e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d458d87586614093b35fcd73969dea04fe620351
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a>Jak utworzyć efekt najazdu przy użyciu zdarzenia
 W tym przykładzie pokazano, jak zmiana koloru elementu jako wskaźnik myszy uzyskuje i opuszcza obszar zajęty przez element.  

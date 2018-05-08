@@ -1,34 +1,20 @@
 ---
 title: Konfiguracja transakcji modelu ServiceModel
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>Konfiguracja transakcji modelu ServiceModel
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera trzy atrybuty konfigurowania transakcji usługi: `transactionFlow`, `transactionProtocol`, i `transactionTimeout`.  
+Windows Communication Foundation (WCF) zawiera trzy atrybuty dotyczące konfigurowania transakcji usługi: `transactionFlow`, `transactionProtocol`, i `transactionTimeout`.  
   
 ## <a name="configuring-transactionflow"></a>Konfigurowanie transactionFlow  
- Większość wstępnie zdefiniowanych powiązań [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia zawierają `transactionFlow` i `transactionProtocol` atrybutów, dzięki czemu można skonfigurować powiązania do akceptowania przychodzących transakcji dla określonego punktu końcowego za pomocą protokołu przepływu transakcji. Ponadto można użyć `transactionFlow` elementu i jego `transactionProtocol` atrybut do tworzenia własnego niestandardowego powiązania. Aby uzyskać więcej informacji na temat ustawiania elementów konfiguracji, zobacz [ \<powiązania >](../../../../docs/framework/misc/binding.md) i [schemat konfiguracji programu WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ Większość wstępnie zdefiniowanych powiązań WCF zapewnia zawierają `transactionFlow` i `transactionProtocol` atrybutów, dzięki czemu można skonfigurować powiązania do akceptowania przychodzących transakcji dla określonego punktu końcowego za pomocą protokołu przepływu transakcji. Ponadto można użyć `transactionFlow` elementu i jego `transactionProtocol` atrybut do tworzenia własnego niestandardowego powiązania. Aby uzyskać więcej informacji na temat ustawiania elementów konfiguracji, zobacz [ \<powiązania >](../../../../docs/framework/misc/binding.md) i [schemat konfiguracji programu WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
  `transactionFlow` Atrybut określa, czy przepływ transakcji jest włączona dla punktów końcowych usługi, które używają powiązania.  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>Konfigurowanie transactionTimeout  
- Można skonfigurować `transactionTimeout` atrybutu dla Twojego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w `behavior` elementu w pliku konfiguracji. Poniższy kod przedstawia, jak to zrobić.  
+ Można skonfigurować `transactionTimeout` atrybutu dla usługi WCF w `behavior` elementu w pliku konfiguracji. Poniższy kod przedstawia, jak to zrobić.  
   
 ```xml  
 <configuration>  

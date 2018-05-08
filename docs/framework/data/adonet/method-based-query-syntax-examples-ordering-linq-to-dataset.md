@@ -1,27 +1,15 @@
 ---
-title: "Przykłady składni zapytania oparte na metodzie: Porządkowanie (LINQ do DataSet)"
-ms.custom: 
+title: 'Przykłady składni zapytania oparte na metodzie: Porządkowanie (LINQ do DataSet)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 11ab18d16c9c6e3dd62dafd26f309fd940fbc244
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9a5a518740191eac067550d35e936a6f4ff09710
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Przykłady składni zapytania oparte na metodzie: Porządkowanie (LINQ do DataSet)
 Przykłady w tym temacie przedstawiają sposób użycia <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, i <xref:System.Linq.Enumerable.ThenBy%2A> metod do badania <xref:System.Data.DataSet> i kolejność wyniki za pomocą składni zapytania metody.  

@@ -1,29 +1,17 @@
 ---
-title: "Domyślne zachowanie myszy i klawiatury w formancie DataGrid"
-ms.custom: 
+title: Domyślne zachowanie myszy i klawiatury w formancie DataGrid
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Domyślne zachowanie myszy i klawiatury w formancie DataGrid
 W tym temacie opisano sposób interakcji użytkowników z <xref:System.Windows.Controls.DataGrid> formantu przy użyciu klawiatury i myszy.  
@@ -50,7 +38,7 @@ W tym temacie opisano sposób interakcji użytkowników z <xref:System.Windows.C
 |CTRL + STRZAŁKA W PRAWO|Przenosi fokus do ostatniej komórki w bieżącym wierszu.|  
 |CTRL + STRZAŁKA W LEWO|Przenosi fokus do pierwszej komórki w bieżącym wierszu.|  
 |CTRL + HOME|Przenosi fokus do pierwszej komórki w formancie.|  
-|CTRL + END|Przenosi fokus do ostatniej komórki w formancie.|  
+|CTRL+END|Przenosi fokus do ostatniej komórki w formancie.|  
 |CTRL + PAGE DOWN|Taka sama jak PAGE DOWN.|  
 |CTRL + PAGE UP|Taka sama jak PAGE UP.|  
 |F2|Jeśli <xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType> właściwość jest `false` i <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType> jest właściwość `false` dla bieżącej kolumny umieszcza bieżącej komórki w trybie edycji komórki.|  
@@ -58,8 +46,8 @@ W tym temacie opisano sposób interakcji użytkowników z <xref:System.Windows.C
 |ESC|Jeśli formant jest w trybie edycji, anuluje edycji i przywraca wszystkie zmiany wprowadzone w formancie. Jeśli implementuje źródło danych <xref:System.ComponentModel.IEditableObject>, naciskając klawisz ESC po raz drugi anuluje trybu edycji dla całego wiersza.|  
 |BACKSPACE|Usuwa znak przed kursorem podczas edytowania komórki.|  
 |DELETE|Usuwa znak po kursora podczas edytowania komórki.|  
-|CTRL + ENTER|Zatwierdza wszystkie zmiany do bieżącej komórki bez przenoszenia fokusu.|  
-|CTRL + A|Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ustawiono <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, wybiera wszystkie wiersze w <xref:System.Windows.Controls.DataGrid>.|  
+|CTRL+ENTER|Zatwierdza wszystkie zmiany do bieżącej komórki bez przenoszenia fokusu.|  
+|CTRL+A|Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ustawiono <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, wybiera wszystkie wiersze w <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="selection-keys"></a>Wybór kluczy  
  Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> właściwość jest ustawiona na <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, zachowanie nawigacji nie ulega zmianie, ale Nawigacja przy użyciu klawiatury, przytrzymaj klawisze SHIFT (w tym klawiszy CTRL + SHIFT) zmodyfikuje zaznaczenia wielu wierszy. Przed rozpoczęciem nawigacji formantu oznacza bieżącego wiersza jako zakotwiczenia wiersza. Po przejściu naciskaj klawisz SHIFT, zaznaczenie obejmuje wszystkie wiersze między zakotwiczenia wiersza i bieżącego wiersza.  
@@ -96,7 +84,7 @@ W tym temacie opisano sposób interakcji użytkowników z <xref:System.Windows.C
 |CTRL + kliknij wiersz|Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ma ustawioną wartość <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, modyfikuje nieciągłych zaznaczenia wielu wierszy.<br /><br /> Jeśli wiersz jest zaznaczona, powoduje usunięcie zaznaczenia wiersza.|  
 |SHIFT + kliknij wiersz|Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ma ustawioną wartość <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, zmienia ciągłych zaznaczenia wielu wierszy.|  
 |Kliknij nagłówek grupy|Rozwija lub zwija grupy.|  
-|Kliknij przycisk Wybierz wszystko w lewym górnym rogu aplikacji<xref:System.Windows.Controls.DataGrid>|Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ustawiono <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, wybiera wszystkie wiersze w <xref:System.Windows.Controls.DataGrid>.|  
+|Kliknij przycisk Wybierz wszystko w lewym górnym rogu aplikacji <xref:System.Windows.Controls.DataGrid>|Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ustawiono <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, wybiera wszystkie wiersze w <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="mouse-selection"></a>Wybór myszy  
  Jeśli <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> właściwość jest ustawiona na <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, klikając wiersz naciskaj klawisz CTRL lub SHIFT zmodyfikuje zaznaczenia wielu wierszy.  

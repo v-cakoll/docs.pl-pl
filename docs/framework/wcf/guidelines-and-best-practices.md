@@ -1,13 +1,6 @@
 ---
-title: "Wskazówki i najlepsze rozwiązania"
-ms.custom: 
+title: Wskazówki i najlepsze rozwiązania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, guidelines
 - best practices [WCF], application design
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6dc6ad423010cf881c62e2c22570c080cad6a1e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Wskazówki i najlepsze rozwiązania
-Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji.  
+Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia aplikacji systemu Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  

@@ -1,21 +1,14 @@
 ---
-title: "Parametr NumberOfChars musi być większa od zera."
+title: Parametr NumberOfChars musi być większa od zera.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrTextFieldParser_NumberOfCharsMustBePositive
 ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2390d003797af83f71534290e5e840a309b0e9e7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ccc56769b732e358ddb2b2898fd69f3b8c3ca021
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>Parametr NumberOfChars musi być większa od zera.
 Korzystając z `PeekChars` metody `TextFieldParser` obiektu, należy podać `NumberOfChars` wartość, która jest większa niż `0`.  

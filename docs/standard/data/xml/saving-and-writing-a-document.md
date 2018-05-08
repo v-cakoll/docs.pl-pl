@@ -1,29 +1,18 @@
 ---
 title: Zapisywanie i zapisywania dokumentu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 389ae0d95f3d612ca9c81ce69b74f8b58534d679
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saving-and-writing-a-document"></a>Zapisywanie i zapisywania dokumentu
 Podczas ładowania i zapisać <xref:System.Xml.XmlDocument>, zapisanego dokumentu może różnić się od oryginału w następujący sposób:  
@@ -68,7 +57,7 @@ doc.Save(tw);
  Dla <xref:System.Xml.XmlDeclaration> członkami <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A>, i <xref:System.Xml.XmlNode.InnerXml%2A>, jeśli <xref:System.Xml.XmlDeclaration.Encoding%2A> właściwość nie jest ustawiona, bez kodowania jest zapisywany. W przeciwnym razie kodowanie zapisana w deklaracji XML jest taki sam jak kodowanie znalezione w <xref:System.Xml.XmlDeclaration.Encoding%2A> właściwości.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Zapisywanie zawartości dokumentu za pomocą właściwości OuterXml  
- <xref:System.Xml.XmlNode.OuterXml%2A> Właściwości to rozszerzenie Microsoft standardy sieci World Wide Web konsorcjum W3C XML modelu DOM (Document Object). <xref:System.Xml.XmlNode.OuterXml%2A> Właściwość jest używana do pobrania znaczników całego dokumentu w formacie XML lub po prostu znaczników jeden węzeł i jego podrzędny węzłów. <xref:System.Xml.XmlNode.OuterXml%2A>Zwraca kod znaczników reprezentujący Podany węzeł i wszystkich jego węzłów podrzędnych.  
+ <xref:System.Xml.XmlNode.OuterXml%2A> Właściwości to rozszerzenie Microsoft standardy sieci World Wide Web konsorcjum W3C XML modelu DOM (Document Object). <xref:System.Xml.XmlNode.OuterXml%2A> Właściwość jest używana do pobrania znaczników całego dokumentu w formacie XML lub po prostu znaczników jeden węzeł i jego podrzędny węzłów. <xref:System.Xml.XmlNode.OuterXml%2A> Zwraca kod znaczników reprezentujący Podany węzeł i wszystkich jego węzłów podrzędnych.  
   
  Poniższy przykładowy kod przedstawia sposób zapisywania dokumentu w całości w postaci ciągu.  
   

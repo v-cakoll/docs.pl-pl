@@ -1,14 +1,6 @@
 ---
-title: "ToolStrip — Informacje o formancie [Formularze systemu Windows]"
-ms.custom: 
+title: ToolStrip — Informacje o formancie [Formularze systemu Windows]
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Toolstrip
 helpviewer_keywords:
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3927f180e738541f2f2f8af6d03d281f6a601167
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip — Informacje o formancie [Formularze systemu Windows]
-Formularze systemu Windows <xref:System.Windows.Forms.ToolStrip> kontroli i jego skojarzonych klas podanie łączenie elementy interfejsu użytkownika w paskach narzędzi, pasków stanu i menu wspólnej struktury. <xref:System.Windows.Forms.ToolStrip>Formanty zapewniają bogate środowisko czasu projektowania, zawierającą Aktywacja w miejscu i edytowanie niestandardowego układu i rafting, czyli paski narzędzi umożliwiają udostępnianie miejsca pozioma lub pionowa.  
+Formularze systemu Windows <xref:System.Windows.Forms.ToolStrip> kontroli i jego skojarzonych klas podanie łączenie elementy interfejsu użytkownika w paskach narzędzi, pasków stanu i menu wspólnej struktury. <xref:System.Windows.Forms.ToolStrip> Formanty zapewniają bogate środowisko czasu projektowania, zawierającą Aktywacja w miejscu i edytowanie niestandardowego układu i rafting, czyli paski narzędzi umożliwiają udostępnianie miejsca pozioma lub pionowa.  
   
  Mimo że <xref:System.Windows.Forms.ToolStrip> zastępuje i dodaje do formantu w poprzednich wersjach, funkcje <xref:System.Windows.Forms.ToolBar> są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli to konieczne.  
   

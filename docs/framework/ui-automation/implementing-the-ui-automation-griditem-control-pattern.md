@@ -1,28 +1,19 @@
 ---
-title: "Implementacja wzorca formantu GridItem dla automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Implementacja wzorca formantu GridItem dla automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementacja wzorca kontrolki GridItem dla automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Scalone komórki będzie zgłaszać ich <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> i <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> właściwości na podstawie ich podstawowej zakotwiczenia komórki zgodnie z definicją w dostawcy automatyzacji interfejsu użytkownika. Zazwyczaj będzie najwyższego poziomu i lewej strony wierszy lub kolumn.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider>przewidują active manipulowania siatki, takie jak scalanie lub dzielenie komórek.  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> przewidują active manipulowania siatki, takie jak scalanie lub dzielenie komórek.  
   
 -   Określa, które implementują <xref:System.Windows.Automation.Provider.IGridItemProvider> zwykle można przekształcić (klient automatyzacji interfejsu użytkownika można przenieść do formantów sąsiadujące) za pomocą klawiatury.  
   

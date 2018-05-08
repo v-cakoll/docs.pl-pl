@@ -1,25 +1,15 @@
 ---
-title: "Porady: deklarowanie prefiksów przestrzeni nazw XML i korzystanie z nich (Visual Basic)"
-ms.custom: 
+title: 'Porady: deklarowanie prefiksów przestrzeni nazw XML i korzystanie z nich (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML namespace prefixes
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0c0bb33eebb7bd223c482a758c806b0f8835b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59140cd3ed052806a044bcd157730687c819fac4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Porady: deklarowanie prefiksów przestrzeni nazw XML i korzystanie z nich (Visual Basic)
 W tym przykładzie pokazano, jak zaimportować prefiks przestrzeni nazw XML `ns` i używać go w literał XML i właściwości osi XML.  
@@ -34,7 +24,7 @@ W tym przykładzie pokazano, jak zaimportować prefiks przestrzeni nazw XML `ns`
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>  
- [Imports — instrukcja (Namespace XML)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
+ [Imports, instrukcja (przestrzeń nazw XML)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
  [Właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
  [Właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
  [Uzyskiwanie dostępu do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  

@@ -1,24 +1,12 @@
 ---
-title: "Kolekcje schematów serwera SQL"
-ms.custom: 
+title: Kolekcje schematów serwera SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-schema-collections"></a>Kolekcje schematów serwera SQL
 Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsługuje kolekcje schematów dodatkowe, oprócz typowych kolekcje schematów. Kolekcje schematów nieco różnią się zależnie od wersji programu SQL Server są używane. Ustalenie listy kolekcji schematu obsługiwanych wywołać **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcji obsługiwanych schematu, liczba ograniczeń obsługiwanych przez każdy z nich i części identyfikatora, które korzystają z.  
@@ -62,7 +50,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
   
 |Element columnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|type_desc|String|Typ indeksu będzie jedną z następujących czynności:<br /><br /> -   HEAP<br />— W KLASTRZE<br />-NIEKLASTROWANY<br />-XML<br />-PRZESTRZENNYCH|  
+|type_desc|String|Typ indeksu będzie jedną z następujących czynności:<br /><br /> -HEAP<br />— W KLASTRZE<br />-NIEKLASTROWANY<br />-XML<br />-PRZESTRZENNYCH|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -142,7 +130,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |COLUMN_DEFAULT|String|Wartość domyślna kolumny|  
 |IS_NULLABLE|String|Dopuszczania wartości null w kolumnie. Jeśli ta kolumna zezwala na wartość NULL, ta funkcja tak. W przeciwnym razie nie jest zwracana.|  
 |DATA_TYPE|String|Typ danych dostarczane przez system.|  
-|CHARACTER_MAXIMUM_LENGTH|Int32 – Sql8, Int16 – Sql7|Maksymalna długość w znakach dla danych binarnych, dane znakowe lub danych tekstowych i obrazów. W przeciwnym razie zostanie zwrócona wartość NULL.|  
+|CHARACTER_MAXIMUM_LENGTH|Int32 — Sql8, Int16 — Sql7|Maksymalna długość w znakach dla danych binarnych, dane znakowe lub danych tekstowych i obrazów. W przeciwnym razie zostanie zwrócona wartość NULL.|  
 |CHARACTER_OCTET_LENGTH|Int32 — SQL8, Int16 — Sql7|Maksymalna długość w bajtach dla danych binarnych, dane znakowe lub danych tekstowych i obrazów. W przeciwnym razie zostanie zwrócona wartość NULL.|  
 |NUMERIC_PRECISION|Bajtu bez znaku|Dokładność przybliżonej dane liczbowe, dokładne dane liczbowe, danych liczb całkowitych lub dane finansowe. W przeciwnym razie zostanie zwrócona wartość NULL.|  
 |NUMERIC_PRECISION_RADIX|Int16|Podstawa dokładności przybliżonej dane liczbowe, dokładne dane liczbowe, danych liczb całkowitych lub dane finansowe. W przeciwnym razie zostanie zwrócona wartość NULL.|  
@@ -253,7 +241,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
   
 |Element columnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|assembly_name|String|Nazwa pliku zestawu.|  
+|nazwa_zestawu|String|Nazwa pliku zestawu.|  
 |udt_name|String|Nazwa klasy dla zestawu.|  
 |version_major|Obiekt|Numer wersji głównej.|  
 |version_minor|Obiekt|Numer wersji pomocniczej.|  

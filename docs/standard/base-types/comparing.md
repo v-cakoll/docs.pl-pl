@@ -1,13 +1,7 @@
 ---
-title: "Porównywanie ciągów w .NET"
-ms.custom: 
+title: Porównywanie ciągów w .NET
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a9c2597ed2321c7494eaf44c3c43c2edc4df1952
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-strings-in-net"></a>Porównywanie ciągów w .NET
 .NET zapewnia kilka metod do porównania wartości ciągów. W poniższej tabeli wymieniono i opisano metody porównania wartości.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|Zwraca indeks znaku lub ciąg, od początku ciąg, do którego się. Zwraca liczbę całkowitą.|  
 |<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|Zwraca indeks znaku lub ciąg, począwszy od końca ciągu, który się. Zwraca liczbę całkowitą.|  
   
-## <a name="compare"></a>Porównaj  
+## <a name="compare"></a>{1&gt;Compare&lt;1}  
  Statycznych <xref:System.String.Compare%2A?displayProperty=nameWithType> metoda zapewnia możliwość dokładnego porównywania dwóch ciągów. Ta metoda jest kulturalnie uwagę. Ta funkcja służy do porównywania dwóch ciągów lub podciągów dwóch ciągów. Ponadto przeciążenia są podane w tym zakresie lub pominąć wielkość liter i odchylenie kultury. W poniższej tabeli przedstawiono trzy całkowitych wartości, że ta metoda może zwracać.  
   
 |Wartość zwracana|Warunek|  

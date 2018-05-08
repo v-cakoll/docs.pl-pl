@@ -1,33 +1,21 @@
 ---
-title: "StatusBar — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: StatusBar — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar — Formant (Formularze systemu Windows)
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStripStatusLabel> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.StatusBar> kontrolować; jednak <xref:System.Windows.Forms.StatusBar> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.  
   
- Formularze systemu Windows <xref:System.Windows.Forms.StatusBar> formant jest używany w formularzach jako obszaru, zwykle wyświetlane w dolnej części okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. <xref:System.Windows.Forms.StatusBar>Formanty mogą mieć paneli paska stanu na nich, które wyświetlanie ikon do wskazania stanu lub serii ikon animacji, które wskazują, czy proces działa; na przykład Microsoft Word wskazujący, że dokument jest zapisywany.  
+ Formularze systemu Windows <xref:System.Windows.Forms.StatusBar> formant jest używany w formularzach jako obszaru, zwykle wyświetlane w dolnej części okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. <xref:System.Windows.Forms.StatusBar> Formanty mogą mieć paneli paska stanu na nich, które wyświetlanie ikon do wskazania stanu lub serii ikon animacji, które wskazują, czy proces działa; na przykład Microsoft Word wskazujący, że dokument jest zapisywany.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [StatusBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  

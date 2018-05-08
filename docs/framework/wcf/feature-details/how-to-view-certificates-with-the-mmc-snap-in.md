@@ -1,28 +1,14 @@
 ---
-title: "Instrukcje: Wyświetlanie certyfikatów w przystawce programu MMC"
-ms.custom: 
+title: 'Instrukcje: Wyświetlanie certyfikatów w przystawce programu MMC'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 582eaef518e10acb4c4c356226ce0be24d1b4c35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d924121b9d9fa267fa7d1ada13c9dc5f5bf1523d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Instrukcje: Wyświetlanie certyfikatów w przystawce programu MMC
 Typowe typ poświadczeń jest certyfikat X.509. Podczas tworzenia bezpiecznych usług lub klientów, można określić, można użyć certyfikatu jako poświadczeń klienta lub usługi przy użyciu metod, takich jak <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody. Metoda wymaga różnych parametrów, takich jak magazyn, gdy certyfikat jest przechowywany i wartości używana podczas wyszukiwania certyfikatu. W poniższej procedurze przedstawiono sposób badania w magazynie na komputerze można znaleźć odpowiedniego certyfikatu. Na przykład wyszukiwanie odcisk palca certyfikatu, zobacz [porady: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
@@ -51,9 +37,9 @@ Typowe typ poświadczeń jest certyfikat X.509. Podczas tworzenia bezpiecznych u
   
 11. W **katalog główny konsoli** okna, kliknij przycisk **certyfikaty (komputer lokalny)** Aby wyświetlić certyfikat są przechowywane na komputerze.  
   
-12. Opcjonalny. Aby wyświetlić certyfikaty dla konta, powtórz kroki od 3 do 6. W kroku 7, zamiast zaznaczania **konto komputera**, kliknij przycisk **Moje konto** i powtórz kroki od 8 do 10.  
+12. Opcjonalna. Aby wyświetlić certyfikaty dla konta, powtórz kroki od 3 do 6. W kroku 7, zamiast zaznaczania **konto komputera**, kliknij przycisk **Moje konto** i powtórz kroki od 8 do 10.  
   
-13. Opcjonalny. Na **pliku** menu, kliknij przycisk **zapisać** lub **Zapisz jako**. Zapisz plik konsoli do użytku w przyszłości.  
+13. Opcjonalna. Na **pliku** menu, kliknij przycisk **zapisać** lub **Zapisz jako**. Zapisz plik konsoli do użytku w przyszłości.  
   
 ## <a name="viewing-certificates-with-internet-explorer"></a>Wyświetlanie certyfikatów w programie Internet Explorer  
  Można również wyświetlić, eksportowanie, importowania i usunąć certyfikaty w programie Internet Explorer.  

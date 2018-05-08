@@ -1,11 +1,6 @@
 ---
 title: -removeintchecks
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - removeintchecks
 - -removeintchecks
@@ -16,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25a14ffaca6e61c6e3306f8ff58de441e2ba2ade
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 26485fe2ba3f5647266147744cbe53f978694a9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 Włącza sprawdzanie operacji liczby całkowitej lub wyłącz błąd przepełnienia.  
@@ -35,7 +30,7 @@ Włącza sprawdzanie operacji liczby całkowitej lub wyłącz błąd przepełnie
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. `-removeintchecks-` Opcja powoduje, że kompilator, aby sprawdzić wszystkie obliczenia całkowitą błędy przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określanie `-removeintchecks` lub `-removeintchecks+` uniemożliwia sprawdzanie błędów i może wykonywać szybsze obliczenia liczby całkowitej. Jednak bez sprawdzania błędów, i jeśli są przepełnienie danych typu pojemności, niepoprawne wyniki mogą być przechowywane bez zgłaszania błędu.|  
+|`+` &#124; `-`|Opcjonalna. `-removeintchecks-` Opcja powoduje, że kompilator, aby sprawdzić wszystkie obliczenia całkowitą błędy przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określanie `-removeintchecks` lub `-removeintchecks+` uniemożliwia sprawdzanie błędów i może wykonywać szybsze obliczenia liczby całkowitej. Jednak bez sprawdzania błędów, i jeśli są przepełnienie danych typu pojemności, niepoprawne wyniki mogą być przechowywane bez zgłaszania błędu.|  
   
 |Aby ustawić - removeintchecks w programie Visual Studio zintegrowane środowisko deweloperskie|  
 |---|  

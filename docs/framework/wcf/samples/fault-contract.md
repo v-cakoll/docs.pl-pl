@@ -1,24 +1,12 @@
 ---
-title: "Kontrakt błędu"
-ms.custom: 
+title: Kontrakt błędu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9bf0f615ae338d9ad52cc8c40096e7130fb111ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37b9d7e3ec2135d60215232fae114baef1b54f36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fault-contract"></a>Kontrakt błędu
 Kontrakt błędu przykładowych pokazano, jak informacje o błędzie z usługi klientowi komunikowanie się. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), niektóre dodatkowy kod dodane do usługi, aby przekonwertować wyjątek wewnętrzny błąd. Klient próbuje wykonać dzielenie przez zero, aby wymusić warunek błędu usługi.  
@@ -109,7 +97,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- Domyślnie szczegóły nieoczekiwanego wyjątku nie są wysyłane do klienta zapobiegające szczegóły implementacji usługi z anulowanie bezpiecznej granic usługi. `FaultContract`zapewnia sposób błędów w kontrakcie opisywania i oznacz niektórych typów wyjątków odpowiednio do przekazania do klienta. `FaultException<T>`udostępnia mechanizm środowiska wykonawczego wysyłanie błędów do użytkowników.  
+ Domyślnie szczegóły nieoczekiwanego wyjątku nie są wysyłane do klienta zapobiegające szczegóły implementacji usługi z anulowanie bezpiecznej granic usługi. `FaultContract` zapewnia sposób błędów w kontrakcie opisywania i oznacz niektórych typów wyjątków odpowiednio do przekazania do klienta. `FaultException<T>` udostępnia mechanizm środowiska wykonawczego wysyłanie błędów do użytkowników.  
   
  Jednak jest przydatne wyświetlić szczegóły wewnętrznego błędu usługi podczas debugowania. Aby wyłączyć bezpieczny zachowanie opisany powyżej, może oznaczać, że szczegóły każdego nieobsługiwany wyjątek na serwerze powinny być objęte usterek, które są wysyłane do klienta. Jest to osiągane przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> do `true`. Można albo ustawiony w kodzie, lub w konfiguracji, jak pokazano w poniższym przykładzie.  
   
@@ -143,7 +131,7 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   

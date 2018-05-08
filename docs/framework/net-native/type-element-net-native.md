@@ -1,24 +1,14 @@
 ---
 title: Element &lt;Type&gt; (architektura .NET Native)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 654f3a360038266d246438838c9ad5821b0a50b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad20cf4528f5ca7d23f80570cc34712d33b74d93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttypegt-element-net-native"></a>Element &lt;Type&gt; (architektura .NET Native)
 Zastosowanie zasad wykonywania do określonego typu, takich jak klasy lub struktury.  
@@ -84,18 +74,18 @@ Zastosowanie zasad wykonywania do określonego typu, takich jak klasy lub strukt
 |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)|Stosuje zasady odbicia właściwości należących do tego typu.|  
 |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|Zastosowanie zasad wykonywania dla wszystkich klas dziedziczony z typu zawierającego.|  
 |`<Type>`|Stosuje odbicia zasady do typu zagnieżdżonego.|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|  
-|[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w określonym zestawie.|  
+|[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w określonym zestawie.|  
 |[\<Biblioteka >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w przestrzeni nazw.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w przestrzeni nazw.|  
 |`<Type>`|Stosuje odbicia zasady do typu i jej elementów członkowskich.|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i jej elementów członkowskich.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  
  Odbicie serializacji i atrybutów międzyoperacyjności są wszystkie opcjonalne. Jeśli nie są obecne, `<Type>` elementu służy jako kontener, których typy podrzędne zdefiniowania zasad dla poszczególnych członków.  

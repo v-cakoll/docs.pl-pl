@@ -1,23 +1,15 @@
 ---
-title: "Porady: modyfikowanie pliku konfiguracji komputera, aby włączyć obsługę protokołu IPv6"
-ms.custom: 
+title: 'Porady: modyfikowanie pliku konfiguracji komputera, aby włączyć obsługę protokołu IPv6'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: df0281d3be467309d2ee7a44af8f897885a8b2bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aef2300ccde12ae224e373ca4e19b4d10b9b4423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Porady: modyfikowanie pliku konfiguracji komputera, aby włączyć obsługę protokołu IPv6
 Poniższy przykład kodu pokazuje sposób modyfikowania pliku konfiguracji komputera, *machine.config*, aby włączyć obsługę protokołu IPv6. *Machine.config* plik jest przechowywany w *%Windir%\Microsoft.NET\Framework* folder w katalogu, w którym zainstalowano system Windows. Brak oddzielnej *machine.config* plików w folderach w obszarze *%Windir%\Microsoft.NET\Framework* dla każdej wersji platformy .NET zainstalowany na komputerze (na przykład *C:\ WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  

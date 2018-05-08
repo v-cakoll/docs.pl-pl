@@ -1,24 +1,12 @@
 ---
 title: Klient SQL dla FrameworkTypes jednostki
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-caps.latest.revision: "9"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 50898395dcba9e33544cae63208b352c7a6fb6f4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f5b471cea4f26c06e8af77298c256bff97ef21de
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Klient SQL dla FrameworkTypes jednostki
 Dostawcy danych programu .NET Framework dla pliku manifestu dostawcy programu SQL Server (SqlClient) zawiera listę dostawcy typów pierwotnych aspektów dla każdego typu mapowania między koncepcyjnej i typów pierwotnych modelu magazynu, a podwyższenia poziomu i konwersji reguły między typów pierwotnych modelu koncepcyjnego i magazynu.  

@@ -1,21 +1,15 @@
 ---
-title: "Obiekty (Przewodnik programowania w języku C#)"
+title: Obiekty (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f8a8e283b42b27a40780068be42c03fc5047a511
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobny do planu, określający, co można zrobić typu. Obiekt jest zasadniczo blok pamięci przydzielony i skonfigurowany zgodnie z planu. Program może tworzyć wiele obiektów o tej samej klasy. Obiekty są również nazywane wystąpień i mogą być przechowywane w nazwanej zmiennej lub tablicą lub kolekcją. Kod klienta jest kodem, który używa tych zmiennych do wywołania metody i uzyskać dostęp do publicznej właściwości obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
@@ -67,9 +61,9 @@ Definicja klasy lub struktury jest podobny do planu, określający, co można zr
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [obiekt](../../../csharp/language-reference/keywords/object.md)  
+ [object](../../../csharp/language-reference/keywords/object.md)  
  [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [klasy](../../../csharp/language-reference/keywords/class.md)  
- [— Struktura](../../../csharp/language-reference/keywords/struct.md)  
- [New — Operator](../../../csharp/language-reference/keywords/new-operator.md)  
- [Wspólny System typów](../../../standard/base-types/common-type-system.md)
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
+ [new, operator](../../../csharp/language-reference/keywords/new-operator.md)  
+ [System typu wspólnego](../../../standard/base-types/common-type-system.md)

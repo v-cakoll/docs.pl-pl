@@ -1,26 +1,12 @@
 ---
 title: Korelacja rozwiązywania problemów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-correlation"></a>Korelacja rozwiązywania problemów
 Korelacji jest używany do tworzenia powiązań komunikatów usługi przepływu pracy i wystąpienia przepływu pracy poprawny, ale jeśli nie jest prawidłowo skonfigurowany, nie będzie można odbierać wiadomości i aplikacje nie będą działać poprawnie. W tym temacie omówiono kilka metod do rozwiązywania problemów korelacji, a także przedstawiono kilka typowych problemów, które mogą wystąpić, gdy używasz korelacji.  
@@ -146,7 +132,7 @@ supports the context protocol and has a valid context initialized.
  Aby uzyskać więcej informacji, zobacz [wymiana kontekstu](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>Typowe problemy korelacji "żądanie-odpowiedź"  
- Korelacja żądań i odpowiedzi jest używany z <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary do zaimplementowania dwukierunkowe operacji w usłudze przepływu pracy oraz <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary, który wywołuje operację dwukierunkowe w innej sieci Web Usługa. Podczas wywoływania dwukierunkowe operacji usługi WCF, usługa może być albo tradycyjnych imperatywne opartej na kodzie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługę albo mogą być usługi przepływu pracy. Umożliwia powiązanie dwustronne muszą być stosowane, takich jak korelacja żądań i odpowiedzi <xref:System.ServiceModel.BasicHttpBinding>, i działania muszą być dwukierunkowe.  
+ Korelacja żądań i odpowiedzi jest używany z <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary do zaimplementowania dwukierunkowe operacji w usłudze przepływu pracy oraz <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary, który wywołuje operację dwukierunkowe w innej sieci Web Usługa. Podczas wywoływania dwukierunkowe operacji usługi WCF, usługa może być albo tradycyjną usługi przepływu pracy może być konieczne usługi WCF opartej na kodzie lub go. Umożliwia powiązanie dwustronne muszą być stosowane, takich jak korelacja żądań i odpowiedzi <xref:System.ServiceModel.BasicHttpBinding>, i działania muszą być dwukierunkowe.  
   
  W przypadku usługi przepływu pracy dwukierunkowe operacje równoległe lub nakładanie się <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> lub <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary, a następnie niejawne korelacji obsługiwać zarządzanie zapewniane przez <xref:System.ServiceModel.Activities.WorkflowServiceHost>mogą być niewystarczające, szczególnie w scenariuszach wysokiej akcent i komunikaty mogą nie być poprawnie kierowane. Aby zapobiec wystąpieniu tego problemu, zaleca się, że należy zawsze jawnie określić <xref:System.ServiceModel.Activities.CorrelationHandle> przy użyciu korelacja żądań i odpowiedzi. Korzystając z **SendAndReceiveReply** i **ReceiveAndSendReply** szablony z sekcji wiadomości **przybornika** w Projektancie przepływów pracy <xref:System.ServiceModel.Activities.CorrelationHandle> jawnie jest konfiguracja domyślna. Podczas tworzenia przepływu pracy przy użyciu kodu, <xref:System.ServiceModel.Activities.CorrelationHandle> została określona w <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> pierwszy działania pary. W poniższym przykładzie <xref:System.ServiceModel.Activities.Receive> działania jest skonfigurowana jawnego <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> określonego w <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.  
   

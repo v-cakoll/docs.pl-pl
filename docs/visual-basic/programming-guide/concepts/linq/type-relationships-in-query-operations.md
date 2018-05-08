@@ -1,14 +1,6 @@
 ---
 title: Relacje typu w operacjach zapytań (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
 - type information inferred [LINQ in Visual Basic]
@@ -19,14 +11,11 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ed0072eeb44a17201ddab2af6f6a44fd14461029
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacje typu w operacjach zapytań (Visual Basic)
 Zmienne używane w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zapytania operacje są silnie typizowane i muszą być zgodne ze sobą. Silne wpisywanie jest używany w źródle danych, samą kwerendę i do wykonywania zapytania. Poniższa ilustracja identyfikuje terminów używanych w celu opisania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Aby uzyskać więcej informacji na temat części zapytania, zobacz [podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

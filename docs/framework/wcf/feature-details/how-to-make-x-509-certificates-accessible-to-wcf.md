@@ -1,14 +1,6 @@
 ---
 title: 'Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,26 +9,20 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77ee21074b6f1bb5a2f5bd4ee653100d3534075d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cd13eae0a72ceaf5abfb93dfe84a53cfc3c8dec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF
-Aby udostępnić certyfikat X.509 do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kod aplikacji należy określić nazwę magazynu certyfikatów i lokalizacji. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X.509 w magazynie certyfikatów [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] musi mieć uprawnienia, aby to zrobić. Domyślnie tylko właściciel i konta System można uzyskać dostępu do klucza prywatnego certyfikatu.  
+Aby udostępnić certyfikat X.509 do usługi Windows Communication Foundation (WCF), kod aplikacji należy określić nazwę magazynu certyfikatów i lokalizacji. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X.509 w magazynie certyfikatów, WCF musi mieć uprawnienia, aby to zrobić. Domyślnie tylko właściciel i konta System można uzyskać dostępu do klucza prywatnego certyfikatu.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Aby Udostępnianie certyfikatów X.509 w architekturze WCF  
   
-1.  Nadaj kontu, pod którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] działa dostęp do odczytu do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509.  
+1.  Nadaj kontu, które WCF działa dostęp do odczytu do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509.  
   
-    1.  Określić, czy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga dostępu do odczytu do klucza prywatnego dla certyfikatu X.509.  
+    1.  Sprawdź, czy WCF wymaga dostęp do odczytu do klucza prywatnego dla certyfikatu X.509.  
   
          Poniższa tabela zawiera szczegóły, czy klucz prywatny musi być dostępny w przypadku używania certyfikatu X.509.  
   
@@ -64,9 +50,9 @@ Aby udostępnić certyfikat X.509 do [!INCLUDE[indigo1](../../../../includes/ind
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  Określić konto który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest uruchomiony.  
+    4.  Określ konto, na którym uruchomiony jest WCF.  
   
-         W poniższej tabeli przedstawiono konto, na którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest uruchomiona w danym scenariuszu.  
+         Poniższa tabela zawiera szczegóły konta, na którym uruchomiono usługi WCF w danym scenariuszu.  
   
         |Scenariusz|Tożsamość procesu|  
         |--------------|----------------------|  
@@ -75,7 +61,7 @@ Aby udostępnić certyfikat X.509 do [!INCLUDE[indigo1](../../../../includes/ind
         |Usługa, która znajduje się w usługach IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) lub usług IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|USŁUGA SIECIOWA|  
         |Oznacza to usługi hostowanej w usługach IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Steruje `<processModel>` elementu w pliku Machine.config. Domyślne konto jest ASPNET.|  
   
-    5.  Dostęp do pliku, który zawiera klucz prywatny, aby konto który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] działa w ramach, przy użyciu narzędzia, takiego jak cacls.exe.  
+    5.  Przyznać dostęp do odczytu do pliku, który zawiera klucz prywatny, aby konto usługi WCF jest uruchomiona w ramach, przy użyciu narzędzia, takiego jak cacls.exe.  
   
          Poniższy kod przykładowy edycji (/ E) listy kontroli dostępu (ACL) dla określonego pliku udzielić (/ G) odczytu konto Usługa sieciowa (: R) dostępu do pliku.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Aktualizowanie źródła danych za pomocą obiektów DataAdapter"
-ms.custom: 
+title: Aktualizowanie źródła danych za pomocą obiektów DataAdapter
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-caps.latest.revision: "8"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e99ff801894149a2324638bfacbc1d32ee937e0a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9d9eeb93cf0360f321c124bb6bce6ed02a9ea253
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aktualizowanie źródła danych za pomocą obiektów DataAdapter
 `Update` Metody <xref:System.Data.Common.DataAdapter> jest wywoływana, aby rozwiązać zmian z <xref:System.Data.DataSet> do źródła danych. `Update` Metody, takiej jak `Fill` metoda, przyjmuje jako argumenty wystąpienia `DataSet`i opcjonalny <xref:System.Data.DataTable> obiektu lub `DataTable` nazwy. `DataSet` Wystąpienie jest `DataSet` zawiera zmiany, które zostały wprowadzone, i `DataTable` identyfikuje tabeli, z której można pobrać zmiany. Jeśli nie `DataTable` jest określony, pierwszy `DataTable` w `DataSet` jest używany.  
@@ -57,7 +45,7 @@ ms.lasthandoff: 01/17/2018
   
  Do obsługi wyjątków, które mogą wystąpić podczas wywoływania metody `Update` metody, można użyć `RowUpdated` zdarzenia występujące odpowiedzieć na błędy aktualizacji wiersza (zobacz [obsługi zdarzeń element DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), lub możesz ustawić `DataAdapter.ContinueUpdateOnError` do `true` przed wywołaniem `Update`i reagowanie na informacje o błędzie, przechowywane w `RowError` właściwości określonego wiersza po ukończeniu aktualizacji (zobacz [informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Uwaga** wywoływania `AcceptChanges` na `DataSet`, `DataTable`, lub `DataRow` spowoduje, że wszystkie `Original` wartości `DataRow` zostaną zastąpione z `Current` wartości `DataRow`. Jeśli wartości pól, które identyfikują wiersze jako unikatowy zostały zmodyfikowane po wywołaniu `AcceptChanges` `Original` wartości będzie już nie pasują do wartości w źródle danych. `AcceptChanges`jest wywoływana automatycznie dla każdego wiersza podczas wywoływania metody aktualizacji `DataAdapter`. Można zachować oryginalne wartości podczas wywoływania metody aktualizacji przez pierwsze ustawienie `AcceptChangesDuringUpdate` właściwość `DataAdapter` false lub przez tworzenie obsługi zdarzeń dla `RowUpdated` zdarzeń i ustawienie <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.UpdateStatus.SkipCurrentRow>. Aby uzyskać więcej informacji, zobacz [Scalanie zawartości zestawu danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) i [obsługi zdarzeń element DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Uwaga** wywoływania `AcceptChanges` na `DataSet`, `DataTable`, lub `DataRow` spowoduje, że wszystkie `Original` wartości `DataRow` zostaną zastąpione z `Current` wartości `DataRow`. Jeśli wartości pól, które identyfikują wiersze jako unikatowy zostały zmodyfikowane po wywołaniu `AcceptChanges` `Original` wartości będzie już nie pasują do wartości w źródle danych. `AcceptChanges` jest wywoływana automatycznie dla każdego wiersza podczas wywoływania metody aktualizacji `DataAdapter`. Można zachować oryginalne wartości podczas wywoływania metody aktualizacji przez pierwsze ustawienie `AcceptChangesDuringUpdate` właściwość `DataAdapter` false lub przez tworzenie obsługi zdarzeń dla `RowUpdated` zdarzeń i ustawienie <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.UpdateStatus.SkipCurrentRow>. Aby uzyskać więcej informacji, zobacz [Scalanie zawartości zestawu danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) i [obsługi zdarzeń element DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższe przykłady przedstawiają sposób przeprowadzania aktualizacji do zmodyfikowanych wierszy, jawnie ustawiając `UpdateCommand` z `DataAdapter` i wywoływanie jej `Update` metody. Powiadomienie, że parametr określony w klauzuli WHERE aktualizacji instrukcji jest skonfigurowany do używania `Original` wartość `SourceColumn`. Jest to ważne, ponieważ `Current` wartość mogły zostać zmodyfikowane i może nie pasuje do wartości w źródle danych. `Original` Wartość jest wartością, którego użyto do wypełnienia `DataTable` ze źródła danych.  

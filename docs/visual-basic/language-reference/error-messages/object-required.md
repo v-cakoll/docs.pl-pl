@@ -1,23 +1,14 @@
 ---
 title: Wymagany obiekt (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3aa972d52b355cb8dc43d884d8797f5e2bac9e7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72febe4e161ee4c19f07816445757a730cec6edf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-required-visual-basic"></a>Wymagany obiekt (Visual Basic)
 Odwołania do właściwości i metody często wymaga kwalifikatora jawne obiektu. Jest to wówczas.  
@@ -33,4 +24,4 @@ Odwołania do właściwości i metody często wymaga kwalifikatora jawne obiektu
 4.  Sprawdź dokumentację obiektu i upewnij się, że akcja jest poprawna.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

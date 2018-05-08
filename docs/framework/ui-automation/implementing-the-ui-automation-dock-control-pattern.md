@@ -1,28 +1,19 @@
 ---
-title: "Implementacja wzorca formantu dokowania automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Implementacja wzorca formantu dokowania automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 136d4ec56cf0c78aac03d1b3f44a18cd268d3bc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e04814885ae0963d4da99acecf00dc646ecc96f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementacja wzorca kontrolki dokowania automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -39,7 +30,7 @@ Dokowanie przykład z programu Visual Studio, gdy okno "Klasy widok" jest DockPo
 ## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
  Gdy implementacja wzorca formantu dokowania, należy zwrócić uwagę następujące wskazówki i konwencje:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider>nie ujawnia żadnych właściwości dokowania kontenera ani właściwości formantów, które są zadokowane sąsiadujące bieżącego formantu w kontenerze dokowania.  
+-   <xref:System.Windows.Automation.Provider.IDockProvider> nie ujawnia żadnych właściwości dokowania kontenera ani właściwości formantów, które są zadokowane sąsiadujące bieżącego formantu w kontenerze dokowania.  
   
 -   Formanty są zadokowane względem siebie na podstawie ich bieżącego zamówienia z; wyższe ich kolejności umieszczania, dalej są umieszczane z określonej krawędzi dokowania kontenera.  
   

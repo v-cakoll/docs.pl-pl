@@ -1,30 +1,18 @@
 ---
 title: Sortowania z DataView (LINQ do DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e8eda365fa1970f4fa836440151cc1ba0d3ae9dd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortowania z DataView (LINQ do DataSet)
-Sortowanie danych na podstawie określonych kryteriów, a następnie prezentować danych do klienta za pomocą formantu interfejsu użytkownika jest ważnym aspektem wiązania z danymi. <xref:System.Data.DataView>udostępnia kilka sposobów, aby posortować dane i zwracanie wszystkich wierszy danych uporządkowanych według określonych kryteriów porządkowania. Oprócz jego podstawie ciąg sortowania możliwości, <xref:System.Data.DataView> także pozwala na użycie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażenia kryterium sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]wyrażenia umożliwia bardziej złożone i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano oba podejścia do sortowania za pomocą <xref:System.Data.DataView>.  
+Sortowanie danych na podstawie określonych kryteriów, a następnie prezentować danych do klienta za pomocą formantu interfejsu użytkownika jest ważnym aspektem wiązania z danymi. <xref:System.Data.DataView> udostępnia kilka sposobów, aby posortować dane i zwracanie wszystkich wierszy danych uporządkowanych według określonych kryteriów porządkowania. Oprócz jego podstawie ciąg sortowania możliwości, <xref:System.Data.DataView> także pozwala na użycie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażenia kryterium sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia umożliwia bardziej złożone i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano oba podejścia do sortowania za pomocą <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Tworzenie widoku danych z zapytania z sortowaniem informacji  
  A <xref:System.Data.DataView> można utworzyć obiektu z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania. Jeśli kwerenda zawiera <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, lub <xref:System.Linq.Enumerable.ThenByDescending%2A> wyrażeń w klauzuli te są używane jako podstawa sortowania danych w klauzuli <xref:System.Data.DataView>. Na przykład, jeśli zapytanie zawiera `Order By…`i `Then By…` klauzule powstałe w ten sposób <xref:System.Data.DataView> czy określanie kolejności według obu kolumn określonych danych.  

@@ -1,24 +1,12 @@
 ---
 title: Omówienie przepływu pracy systemu Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Omówienie przepływu pracy systemu Windows
 Przepływ pracy to zbiór jednostek stanie wolnym wywoływana *działania* przechowywane jako model, który opisano proces rzeczywistych. Przepływy pracy umożliwiają opisu kolejność wykonywania i zależności między pracy krótko - i długotrwałe. Tę pracę przechodzi przez model od początku do końca, a działania mogą być wykonywane przez osoby lub funkcji systemu.  
@@ -34,7 +22,7 @@ Przepływ pracy to zbiór jednostek stanie wolnym wywoływana *działania* przec
   
  Każda z tych klas opakowuje podstawowego środowiska wykonawczego działania, reprezentowane jako <xref:System.Activities.ActivityInstance> odpowiedzialny za wykonania działania. Może istnieć kilka <xref:System.Activities.ActivityInstance> obiektów w domenie aplikacji uruchomione jednocześnie.  
   
- Każdy z powyższych obiektów interakcji trzy hosta jest tworzony w drzewie działań określonych jako program przepływu pracy. Przy użyciu tych typów lub hosta niestandardowego, który opakowuje <xref:System.Activities.ActivityInstance>, przepływy pracy mogą być wykonywane w dowolnym procesu systemu Windows, w tym aplikacji konsoli oparte na formularzach aplikacji usług systemu Windows, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] witryn sieci Web i [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]usług.  
+ Każdy z powyższych obiektów interakcji trzy hosta jest tworzony w drzewie działań określonych jako program przepływu pracy. Przy użyciu tych typów lub hosta niestandardowego, który opakowuje <xref:System.Activities.ActivityInstance>, przepływy pracy mogą być wykonywane w dowolnym procesu systemu Windows, w tym aplikacji konsoli oparte na formularzach aplikacji usług systemu Windows, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sieci Web, witryn i (Windows Communication Foundation Usługi WCF).  
   
  ![Składniki przepływu pracy w ramach procesu hosta](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Składniki przepływu pracy w ramach procesu hosta  

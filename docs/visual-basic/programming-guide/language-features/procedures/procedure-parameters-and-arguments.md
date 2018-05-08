@@ -1,12 +1,6 @@
 ---
 title: Parametry i argumenty procedur (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], argument lists
@@ -24,14 +18,11 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b0ab186945b456d7fb4dde3f52724b08a99e2827
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametry i argumenty procedur (Visual Basic)
 W większości przypadków procedury potrzebuje pewnych informacji o okoliczności, w których została wywołana. Procedury, która wykonuje zadania wielokrotnego lub udostępnionego używa różne informacje dla każdego wywołania. Te informacje składa się z zmienne, stałe i wyrażeń, które przekazujesz do procedury po jej wywołaniu.  
@@ -69,12 +60,12 @@ Przekazywanie argumentów do parametru
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Sub — procedury](./sub-procedures.md)  
+ [Sub, procedury](./sub-procedures.md)  
  [Procedury funkcji](./function-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Procedury operatorów](./operator-procedures.md)  
- [Porady: Definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)  
- [Porady: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
+ [Instrukcje: definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
  [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
  [Przeciążanie procedury](./procedure-overloading.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

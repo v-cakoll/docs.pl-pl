@@ -1,21 +1,14 @@
 ---
 title: Monitorowanie kondycji
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Monitorowanie kondycji"
-keywords: Docker, Microservices, ASP.NET, Container
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Monitorowanie kondycji
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -27,7 +20,7 @@ W typowej modelu usług wysyłać raporty o stanie ich, a tych informacji jest a
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implementowanie kondycji sprawdza w usługach platformy ASP.NET Core
 
-Podczas tworzenia aplikacji platformy ASP.NET Core mikrousługi lub sieci web, mogą używać biblioteki o nazwie `HealthChecks` od zespołu programu ASP.NET. Wczesnego wydawania jest dostępny w tej [repozytorium GitHub](https://github.com/dotnet-architecture/HealthChecks).
+Podczas tworzenia aplikacji platformy ASP.NET Core mikrousługi lub sieci web, można użyć poza pasmem biblioteki (nie oficjalne jako część ASP.NETCore) o nazwie `HealthChecks` od zespołu programu ASP.NET. Jest dostępny w tej [repozytorium GitHub](https://github.com/dotnet-architecture/HealthChecks).
 
 Ta biblioteka jest łatwy w użyciu i udostępnia funkcje, dzięki którym można zweryfikować określonego zasobu zewnętrznego wymagane dla aplikacji (na przykład baza danych SQL Server lub zdalnego interfejsu API) działa prawidłowo. Korzystając z tej biblioteki, można również określić, co oznacza to, czy zasób jest w dobrej kondycji, jak możemy wyjaśnić później.
 
@@ -202,4 +195,4 @@ Ponadto jeśli były przechowywane wszystkich strumieni zdarzeń, służy Micros
     [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
-[Previous] (implement-circuit-breaker-pattern.md) [Next] (../secure-net-microservices-web-applications/index.md)
+[Poprzednie] (wdrożenie obwodu-dzielącego wyrazy pattern.md) [dalej] (.. /Secure-NET-microservices-Web-Applications/index.MD)

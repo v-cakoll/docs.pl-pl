@@ -1,40 +1,28 @@
 ---
 title: 'Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zawiera kilka powiązania dostarczane przez system, które można skonfigurować, ale nie udostępniają pełną elastyczność podczas konfigurowania wszystkich zabezpieczeń opcji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawia sposób tworzenia niestandardowego powiązania bezpośrednio z powiązania poszczególnych elementów i zaznacza niektórych ustawień zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) zawiera kilka powiązania dostarczane przez system, można skonfigurować, które nie udostępniają pełną elastyczność podczas konfigurowania wszystkie opcje zabezpieczeń obsługiwanych przez usługę WCF. W tym temacie przedstawia sposób tworzenia niestandardowego powiązania bezpośrednio z powiązania poszczególnych elementów i zaznacza niektórych ustawień zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji o tworzeniu niestandardowych powiązań, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> nie obsługuje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanału kształtu, który jest używany domyślny kanał kształtu przez TCP podczas transportu <xref:System.ServiceModel.TransferMode> ma ustawioną wartość <xref:System.ServiceModel.TransferMode.Buffered>. Należy ustawić <xref:System.ServiceModel.TransferMode> do <xref:System.ServiceModel.TransferMode.Streamed> aby można było używać <xref:System.ServiceModel.Channels.SecurityBindingElement> w tym scenariuszu.  
   
 ## <a name="creating-a-custom-binding"></a>Tworzenie niestandardowego powiązania  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składają się wszystkie powiązania z *elementów wiązania*. Każdy element powiązania jest pochodną <xref:System.ServiceModel.Channels.BindingElement> klasy. Standardowe powiązania dostarczane przez system elementy powiązania są tworzone i skonfigurowany, mimo że można dostosowywać niektóre ustawienia właściwości.  
+ W programie WCF składają się wszystkie powiązania z *elementów wiązania*. Każdy element powiązania jest pochodną <xref:System.ServiceModel.Channels.BindingElement> klasy. Standardowe powiązania dostarczane przez system elementy powiązania są tworzone i skonfigurowany, mimo że można dostosowywać niektóre ustawienia właściwości.  
   
  W przeciwieństwie do tworzenia niestandardowego powiązania, elementy powiązania utworzenia i skonfigurowania i <xref:System.ServiceModel.Channels.CustomBinding> jest tworzona na podstawie elementy wiązania.  
   

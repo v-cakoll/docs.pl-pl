@@ -1,21 +1,14 @@
 ---
 title: Terminologia docker
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Terminologia docker"
-keywords: Docker, Microservices, ASP.NET, Container
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Terminologia docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 342b4443470053d81534d4de1d56d2797798c746
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 9bbeff8c467e762e682fdaf99c8a11851b291db8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docker-terminology"></a>Terminologia docker
 

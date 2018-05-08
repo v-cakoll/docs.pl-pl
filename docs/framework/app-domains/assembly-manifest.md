@@ -1,13 +1,6 @@
 ---
 title: Manifest zestawu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assembly manifest
 - dynamic assemblies, assembly manifest
@@ -15,23 +8,20 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41dc27798e9d39d391e5958b86f691e3a0062582
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0f5d8e2e465e9dfa64a57c5ec7b99001f768492
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-manifest"></a>Manifest zestawu
 Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują powiązania między elementami zawartymi w zestawie. Manifest zestawu zawiera metadane zestawu. W manifeście zestawu znajdują się wszystkie metadane potrzebne do określenia wymagań w zakresie wersji zestawu i tożsamości jego zabezpieczeń, a także wszystkie metadane niezbędne do definiowania zakresu zestawu oraz rozpoznawania odwołań do zasobów i klas. Manifest zestawu może być przechowywany w pliku PE (.exe lub .dll) mającym kod w języku Microsoft Intermediate Language (MSIL) lub w samodzielnym pliku PE, który zawiera tylko dane manifestu zestawu.  
   
  Na ilustracji poniżej widać różne sposoby przechowywania manifestu.  
   
- ![Pojedynczy &#45; zestawu plików](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
+ ![Pojedynczy&#45;pliku zestawu](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
 Typy zestawów  
   
  Dla zestawu o jednym skojarzonym pliku manifest jest umieszczony w pliku PE, co tworzy zestaw jednoplikowy. Zestaw wieloplikowy może zawierać autonomiczny plik manifestu lub manifest umieszczony w jednym z plików PE w zestawie.  

@@ -1,31 +1,17 @@
 ---
 title: Uwierzytelnianie i tożsamość usług
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usługę sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po inicjowania przez klienta komunikatu do punktu końcowego i usługa samodzielnie przeprowadza uwierzytelnianie klienta, klient porównuje wartości tożsamości punktu końcowego z wartością rzeczywistą zwrócił procesu uwierzytelniania punktu końcowego. Jeśli są zgodne, klient jest pewność, że ma nawiązać kontaktu z punktem końcowym usługi oczekiwanego. Funkcja ta działa jako ochrony przed *phishing* zapobiegając nastąpi przekierowanie do punktu końcowego hostowanej przez usługę złośliwego klienta.  
@@ -35,7 +21,7 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
 > [!NOTE]
 >  Jeśli LanMan NT (NTLM) używany do uwierzytelniania, tożsamość usługi nie jest zaznaczone, ponieważ w obszarze NTLM, klient jest w stanie uwierzytelniania serwera. Uwierzytelnianie NTLM jest używany, gdy komputery są częścią grupy roboczej systemu Windows lub zainstalowana starsza wersja systemu Windows, która nie obsługuje uwierzytelniania Kerberos.  
   
- Gdy klient jest inicjowany przez bezpieczny kanał do wysłania komunikatu do usługi, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastruktury uwierzytelnia usługi i wysyła wiadomość tylko, jeśli określono adres punktu końcowego, klient korzysta z tożsamości pasuje do tożsamości usługi.  
+ Gdy klient inicjuje bezpiecznego kanału do wysyłania komunikatu do usługi nad nim, infrastruktury usług Windows Communication Foundation (WCF) uwierzytelnia usługi i wysyła wiadomość tylko, jeśli tożsamość określona w punkcie końcowym pasuje do tożsamości usługi adres klienta używa.  
   
  Tożsamość przetwarzania składa się z następujących etapów:  
   
@@ -45,7 +31,7 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
   
  Tożsamość przetwarzania na kliencie jest analogiczna do uwierzytelniania klientów w usłudze. Usługa bezpiecznego nie wykonuje kodu, dopóki nie zostały uwierzytelnione poświadczenia klienta. Podobnie klient nie wysyła komunikaty do usługi, dopóki poświadczenia zostały uwierzytelnione oparte na wcześniej określane z metadanych usługi.  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> Właściwość <xref:System.ServiceModel.EndpointAddress> klasa reprezentuje tożsamość usługi o nazwie przez klienta. Opis usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> w metadanych. Jeśli jest uruchomiony deweloperowi klienta [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego usługi wygenerowanego konfiguracji zawiera wartość usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Infrastruktury (jeśli jest skonfigurowane z zabezpieczeniami) sprawdza, czy usługa posiada określono tożsamości.  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> Właściwość <xref:System.ServiceModel.EndpointAddress> klasa reprezentuje tożsamość usługi o nazwie przez klienta. Opis usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> w metadanych. Jeśli jest uruchomiony deweloperowi klienta [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego usługi wygenerowanego konfiguracji zawiera wartość usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwości. Infrastruktura WCF (jeśli jest skonfigurowane z zabezpieczeniami) sprawdza, czy usługa posiada określono tożsamości.  
   
 > [!IMPORTANT]
 >  Metadane zawiera oczekiwaną tożsamość usługi, w związku z czym zaleca się uwidaczniać metadane usługi w sposób bezpieczny, na przykład, tworząc punkt końcowy HTTPS dla usługi. Aby uzyskać więcej informacji, zobacz [porady: Zabezpieczanie punktów końcowych metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
@@ -75,7 +61,7 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
   
   
 ## <a name="setting-identity-programmatically"></a>Ustawienie programowo tożsamości  
- Usługi nie trzeba jawnie określać tożsamości, ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatycznie określa go. Jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] służy do określania tożsamości dla punktu końcowego, jeśli jest to wymagane. Poniższy kod dodaje nowy punkt końcowy usługi o określonej tożsamości DNS.  
+ Usługi nie trzeba jawnie określić tożsamości, ponieważ automatycznie określa WCF. Jednak WCF można określić tożsamości dla punktu końcowego, jeśli jest to wymagane. Poniższy kod dodaje nowy punkt końcowy usługi o określonej tożsamości DNS.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
   
  Jeśli kanał jest skonfigurowany do uwierzytelniania za pomocą wiadomości lub poziomu transportu Secure Sockets Layer (SSL) za pomocą certyfikatów X.509 do uwierzytelniania, obowiązują następujące wartości tożsamości:  
   
--   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia, że certyfikat podczas uzgadniania protokołu SSL zawiera DNS lub `CommonName` atrybutu (CN) wartość określona w tożsamości DNS na kliencie. Należy pamiętać, że te testy są wykonywane dodatkowo do określania okres ważności certyfikatu serwera. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawdza, czy certyfikat serwera jest wystawiony przez zaufany główny urząd.  
+-   DNS. Usługi WCF gwarantuje, że certyfikat podczas uzgadniania protokołu SSL zawiera DNS lub `CommonName` atrybutu (CN) wartość określona w tożsamości DNS na kliencie. Należy pamiętać, że te testy są wykonywane dodatkowo do określania okres ważności certyfikatu serwera. Domyślnie program WCF sprawdza, czy certyfikat serwera jest wystawiony przez zaufany główny urząd.  
   
--   Certyfikat. Podczas uzgadniania protokołu SSL [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gwarantuje, że zdalny punkt końcowy zapewnia dokładną certyfikatu wybrana w tożsamości.  
+-   Certyfikat. Podczas uzgadniania protokołu SSL WCF gwarantuje, że zdalny punkt końcowy zapewnia dokładną certyfikatu wybrana w tożsamości.  
   
 -   Odwołanie do certyfikatu. Wartość taka sama jak w przypadku certyfikatu.  
   
--   RSA. Podczas uzgadniania protokołu SSL [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gwarantuje, że zdalny punkt końcowy zapewnia dokładną klucza RSA, określona w tożsamości.  
+-   RSA. Podczas uzgadniania protokołu SSL WCF gwarantuje, że zdalny punkt końcowy zapewnia dokładną klucza RSA, określona w tożsamości.  
   
  Jeśli usługa jest uwierzytelniany przy użyciu poziomu transportu lub komunikat protokołu SSL z poświadczeniami systemu Windows do uwierzytelniania i negocjuje poświadczeń, obowiązują następujące wartości tożsamości:  
   

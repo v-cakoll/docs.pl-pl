@@ -1,22 +1,12 @@
 ---
-title: "Parametry i wartości zwracane dla procedur wielowątkowości (Visual Basic)"
-ms.custom: 
+title: Parametry i wartości zwracane dla procedur wielowątkowości (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cbdce172-7ff6-41a9-bb21-53a7c6f538a5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 071e0aa916e4b3464c7c0cbff6596cabc6b67906
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 039e9be6f174148995a83c842a442806b9409a3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a>Parametry i wartości zwracane dla procedur wielowątkowości (Visual Basic)
 Dostarczania i wartości zwracane w aplikacji wielowątkowych jest skomplikowane, ponieważ Konstruktor w klasie wątku muszą być przekazywane odwołanie do procedury, która nie przyjmuje żadnych argumentów i nie zwraca żadnej wartości. W poniższych sekcjach przedstawiono kilka prostych sposobów Podaj parametry i zwrócić wartości z procedury w oddzielnych wątkach.  
@@ -116,5 +106,5 @@ End Sub
  [Synchronizacja wątku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
  [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)  
  [Aplikacje wielowątkowe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
- [Obiekty delegowane](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [Delegaci](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Wielowątkowość składników](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)

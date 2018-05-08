@@ -1,13 +1,6 @@
 ---
-title: "Porady: uruchamianie częściowo zaufanego kodu w bibliotece"
-ms.custom: 
+title: 'Porady: uruchamianie częściowo zaufanego kodu w bibliotece'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - partially trusted code
 - sandboxing
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc335bfef4993f6e730dca93cd645d886a9d13b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Porady: uruchamianie częściowo zaufanego kodu w bibliotece
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -72,7 +62,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Metoda zwraca albo `Internet` zestaw uprawnień lub `LocalIntranet` zestaw uprawnień w zależności od strefy na dowód. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Tworzy uprawnienia dotyczące tożsamości dla niektórych obiektów dowód przekazany jako odwołania.  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Metoda zwraca albo `Internet` zestaw uprawnień lub `LocalIntranet` zestaw uprawnień w zależności od strefy na dowód. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Tworzy uprawnienia dotyczące tożsamości dla niektórych obiektów dowód przekazany jako odwołania.  
   
 2.  Podpisz zestaw zawierający klasę hostingu (o nazwie `Sandboxer` w tym przykładzie), który odwołuje się kodzie niezaufanym. Dodaj <xref:System.Security.Policy.StrongName> używany do podpisywania zestawu do <xref:System.Security.Policy.StrongName> tablicę `fullTrustAssemblies` parametr <xref:System.AppDomain.CreateDomain%2A> wywołania. Klasa hostująca musi działać jako w pełni zaufany, aby umożliwić wykonywanie kodu częściowego zaufania lub aktualnych aplikacji częściowego zaufania. Jest to, jak przeczytać <xref:System.Security.Policy.StrongName> zestawu:  
   
@@ -176,7 +166,7 @@ AppDomain.CreateDomain( string friendlyName,
         }  
     ```  
   
-     <xref:System.Reflection>Służy do uzyskania dojścia metody w częściowo zaufanym zestawie. Dojście może służyć do wykonywania kodu w bezpieczny sposób z minimalne uprawnienia.  
+     <xref:System.Reflection> Służy do uzyskania dojścia metody w częściowo zaufanym zestawie. Dojście może służyć do wykonywania kodu w bezpieczny sposób z minimalne uprawnienia.  
   
      W poprzednim kodzie <xref:System.Security.PermissionSet.Assert%2A> uprawnienia pełnego zaufania przed wydrukowaniem <xref:System.Security.SecurityException>.  
   

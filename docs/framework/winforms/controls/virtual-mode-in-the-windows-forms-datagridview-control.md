@@ -1,28 +1,14 @@
 ---
 title: Tryb wirtualny w formancie DataGridView formularzy systemu Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e5724da4442bbfcb0928c864f78744b946acc18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Tryb wirtualny w formancie DataGridView formularzy systemu Windows
 Tryb wirtualny, można zarządzać interakcji między <xref:System.Windows.Forms.DataGridView> kontroli i pamięci podręcznej danych niestandardowych. Aby zaimplementować trybie wirtualnym, ustaw <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwości `true` i obsługiwać co najmniej jednego zdarzenia opisane w tym temacie. Zwykle obsłuży co najmniej `CellValueNeeded` zdarzeń, dzięki czemu formant wyszukiwania wartości w pamięci podręcznej danych.  

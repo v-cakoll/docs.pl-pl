@@ -1,13 +1,7 @@
 ---
-title: "Wykonywanie niezależnych od kultury zmian wielkości liter"
-ms.custom: 
+title: Wykonywanie niezależnych od kultury zmian wielkości liter
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Wykonywanie niezależnych od kultury zmian wielkości liter
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, I <xref:System.Char.ToLower%2A?displayProperty=nameWithType> metody udostępniają przeciążeń, które nie akceptują parametrów. Domyślnie te przeciążenia bez parametrów wykonują zmiany wielkości liter na podstawie wartości z <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Daje to wyniki z uwzględnieniem wielkości liter, które zależą od kultury. Aby umożliwić Wyczyść, czy wielkość zmiany, które mają być zależne od kultury lub niezależnych od kultury, należy używać przeciążeń tych metod, które wymagają jawnie określić `culture` parametru. Zależne od kultury zmian wielkości liter, można określić `CultureInfo.CurrentCulture` dla `culture` parametru. Niezależne od kultury zmian wielkości liter, można określić `CultureInfo.InvariantCulture` dla `culture` parametru.  

@@ -1,24 +1,14 @@
 ---
-title: 'Porady: zapytanie zestawu &#39; s metadanych z odbiciem (LINQ) (Visual Basic)'
-ms.custom: 
+title: 'Porady: zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 718f8d78ac71c8d6d28f762e756eb2a0219fce19
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f465cccef2009bb9d8da1dc57c14eb09dc008f54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Porady: zapytanie zestawu &#39; s metadanych z odbiciem (LINQ) (Visual Basic)
+# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Porady: zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (Visual Basic)
 W poniższym przykładzie przedstawiono sposób LINQ może służyć za pomocą odbicia do pobierania metadanych określonych o metodach, spełniających określone kryteria wyszukiwania. W takim przypadku zapytanie znajdzie nazwy wszystkie metody w zestawie, która zwraca typów wyliczenia, takich jak tablic.  
   
 ## <a name="example"></a>Przykład  

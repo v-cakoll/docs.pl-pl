@@ -1,12 +1,6 @@
 ---
-title: "Yield — Instrukcja (Visual Basic)"
+title: Yield — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Yield
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f938ad29df54ade6722f3de33e931c851ade8c21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="yield-statement-visual-basic"></a>Yield — Instrukcja (Visual Basic)
 Wysyła następnego elementu kolekcji do `For Each...Next` instrukcji.  
@@ -36,7 +27,7 @@ Yield expression
   
 |Termin|Definicja|  
 |---|---|  
-|`expression`|Wymagany. Wyrażenie, które jest umożliwiają niejawnej konwersji na typ funkcji iteracyjnej lub `Get` dostępu, który zawiera `Yield` instrukcji.|  
+|`expression`|Wymagana. Wyrażenie, które jest umożliwiają niejawnej konwersji na typ funkcji iteracyjnej lub `Get` dostępu, który zawiera `Yield` instrukcji.|  
   
 ## <a name="remarks"></a>Uwagi  
  `Yield` Instrukcja zwraca jeden element w kolekcji w czasie. `Yield` Instrukcji znajduje się w funkcji iteracyjnej lub `Get` metody dostępu wykonać niestandardowe iteracji w kolekcji.  

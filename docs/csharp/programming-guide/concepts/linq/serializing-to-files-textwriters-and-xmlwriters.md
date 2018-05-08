@@ -1,21 +1,12 @@
 ---
-title: "Serializacja do plików, TextWriters i XmlWriters1"
-ms.custom: 
+title: Serializacja do plików, TextWriters i XmlWriters1
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c2207ee3cf5bf1c89a01ba14875e788ceb53b01c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 903e6f5b6a8cd88c140e6759136301a6305cee2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializacja do plików, TextWriters i XmlWriters
 Może wykonywać serializację drzew XML do <xref:System.IO.File>, <xref:System.IO.TextWriter>, lub <xref:System.Xml.XmlWriter>.  

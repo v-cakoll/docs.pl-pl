@@ -1,1 +1,0 @@
-Do przekształcenia macierzowe <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, i <xref:System.Numerics.Vector4> wystąpienia są reprezentowane jako wiersze: wektor *v* jest przekształcana przez macierz *M* z *maszyny wirtualnej*  mnożenia.

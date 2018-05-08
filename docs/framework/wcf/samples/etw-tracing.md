@@ -1,24 +1,12 @@
 ---
-title: "Śledzenie za pomocą funkcji ETW"
-ms.custom: 
+title: Śledzenie za pomocą funkcji ETW
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 39164d6334be40de86f422e2faa4debf1d4f31f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4aa836650663a2918b51d5f9df95b55f410b8ded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="etw-tracing"></a>Śledzenie za pomocą funkcji ETW
 W tym przykładzie pokazano, jak wdrożyć śledzenia End-to-End (E2E) przy użyciu zdarzenia śledzenia dla systemu Windows (ETW) i `ETWTraceListener` dostarczanym z tego przykładu. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i obejmuje śledzenia zdarzeń systemu Windows.  
@@ -61,7 +49,7 @@ W tym przykładzie pokazano, jak wdrożyć śledzenia End-to-End (E2E) przy uży
  Przed użyciem tego odbiornika, można uruchomić sesję śledzenia funkcji ETW. Za pomocą Logman.exe lub Tracelog.exe można uruchomić tej sesji. Plik SetupETW.bat jest uwzględniona w tym przykładzie, dzięki czemu możesz skonfigurować sesję śledzenia funkcji ETW wraz z plikiem CleanupETW.bat zamykania sesji i uzupełniania w pliku dziennika.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu. Aby uzyskać więcej informacji na temat tych narzędzi, zobacz [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
+>  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu. Aby uzyskać więcej informacji na temat tych narzędzi zobacz [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
   
  Używając ETWTraceListener, dane śledzenia są rejestrowane w plikach binarnych ETL. Z włączonym śledzeniem ServiceModel jest włączona, wszystkie ślady generowane są wyświetlane w tym samym pliku. Użyj [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dotyczące wyświetlania plików dziennika ETL i .svclog. Podgląd komunikatów o tworzy widok end-to-end systemu, dzięki któremu można wyśledzić komunikatu od źródła do miejsca docelowego i punktem zużycia.  
   
@@ -113,7 +101,7 @@ Logman stop Wcf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   

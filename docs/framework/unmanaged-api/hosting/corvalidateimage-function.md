@@ -1,14 +1,6 @@
 ---
-title: "_CorValidateImage — Funkcja"
-ms.custom: 
+title: _CorValidateImage — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _CorValidateImage
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03deb62a84a1e9c6cee898fe0023c34b8c538ece
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage — Funkcja
 Weryfikuje obrazy moduł zarządzany i powiadamia modułu ładującego systemu operacyjnego po ich załadowaniu.  
@@ -74,7 +62,7 @@ STDAPI _CorValidateImage (
   
  Dla pliku wykonywalnego obrazów, następnie wywołuje modułu ładującego systemu operacyjnego [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) funkcji, niezależnie od punkt wejścia określony w pliku wykonywalnym. Biblioteka DLL zestawu obrazów, wywołuje moduł ładujący [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) funkcji.  
   
- `_CorExeMain`lub `_CorDllMain` wykonuje następujące czynności:  
+ `_CorExeMain` lub `_CorDllMain` wykonuje następujące czynności:  
   
 -   Inicjuje środowisko CLR.  
   
@@ -91,7 +79,7 @@ STDAPI _CorValidateImage (
   
  **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

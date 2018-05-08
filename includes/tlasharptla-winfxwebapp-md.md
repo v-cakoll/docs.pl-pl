@@ -1,1 +1,0 @@
-Aplikacja przeglądarki XAML (XBAP)

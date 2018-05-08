@@ -1,28 +1,14 @@
 ---
-title: "Porady: obsługa zdarzenia ContextMenuOpening"
-ms.custom: 
+title: 'Porady: obsługa zdarzenia ContextMenuOpening'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab4c4867981cd318738b7404d76f2f5932bb9059
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Porady: obsługa zdarzenia ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Zdarzeń mogą być obsługiwane w aplikacji albo dostosować istniejący przed menu kontekstu do wyświetlania lub pominąć menu, które w przeciwnym razie będzie wyświetlana przez ustawienie <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwości `true` w danych zdarzenia. Typowe przyczyny ustawienie <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true` zdarzeń danych ma zastąpić menu całkowicie nową <xref:System.Windows.Controls.ContextMenu> obiektów, co wymaga czasami anulowanie operacji i uruchomienie nowej Otwórz. Podczas pisania obsług dla <xref:System.Windows.FrameworkElement.ContextMenuOpening> zdarzenia, należy zwrócić uwagę problemy dotyczące synchronizacji między <xref:System.Windows.Controls.ContextMenu> kontroli i usługi, która jest odpowiedzialna za otwierania i ogólnie pozycjonowanie menu kontekstowe dla formantów. W tym temacie przedstawiono niektóre techniki kodu dla różnych menu kontekstowe otwierania scenariuszy i przedstawiono w przypadku, gdy problem chronometrażu wejścia play.  

@@ -1,29 +1,15 @@
 ---
 title: Strumieniowy transfer komunikatów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>Strumieniowy transfer komunikatów
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transport obsługuje dwa tryby przesyłania komunikatów:  
+Transporty Windows Communication Foundation (WCF) obsługuje dwa tryby przesyłania komunikatów:  
   
 -   Transfery buforowanego przytrzymaj cały komunikat w buforze pamięci przed zakończeniem transferu. Buforowane wiadomości musi być całkowicie dostarczana przed odbiorca może go odczytać.  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
  Operacje występujących między przesyłanej strumieniowo transportu może mieć kontrakt co najwyżej jeden wejściowych lub wyjściowych parametr. Ten parametr odpowiada całej treści wiadomości i musi być <xref:System.ServiceModel.Channels.Message>, typu pochodnego <xref:System.IO.Stream>, lub <xref:System.Xml.Serialization.IXmlSerializable> implementacji. Wartość zwracana operacji o jest odpowiednikiem o parametru wyjściowego.  
   
- Niektóre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funkcje, takie jak niezawodna obsługa komunikatów, transakcje i zabezpieczenia na poziomie komunikatu protokołu SOAP, zależą od tego, buforowanie wiadomości transmisji. Korzystanie z tych funkcji mogą ograniczenie lub wyeliminowanie zalet wydajności przy użyciu przesyłania strumieniowego. Aby zabezpieczyć przesyłanej strumieniowo transportu, użyj tylko zabezpieczenia na poziomie transportu lub zabezpieczenia na poziomie transportu plus zabezpieczeń wiadomości tylko do uwierzytelniania.  
+ Niektóre funkcje usługi WCF, takie jak niezawodnej obsługi komunikatów, transakcje i zabezpieczenia na poziomie komunikatu protokołu SOAP, korzystają z buforowania wiadomości transmisji. Korzystanie z tych funkcji mogą ograniczenie lub wyeliminowanie zalet wydajności przy użyciu przesyłania strumieniowego. Aby zabezpieczyć przesyłanej strumieniowo transportu, użyj tylko zabezpieczenia na poziomie transportu lub zabezpieczenia na poziomie transportu plus zabezpieczeń wiadomości tylko do uwierzytelniania.  
   
  Nagłówki SOAP zawsze są buforowane, nawet wtedy, gdy tryb transferu jest ustawiony na przesyłanej strumieniowo. Nagłówki wiadomości nie może przekraczać wielkości `MaxBufferSize` przydziału transportu. Aby uzyskać więcej informacji o tym ustawieniu, zobacz [przydziały dla transportu](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

@@ -1,27 +1,19 @@
 ---
 title: Rejestrowanie zestawów do użycia z modelem COM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - COM interop, registering assemblies
 - unregistering assemblies
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3beaffdc0660055dd047f449388216ccfdd312cc
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registering-assemblies-with-com"></a>Rejestrowanie zestawów do użycia z modelem COM
 Można uruchomić narzędzie wiersza polecenia o nazwie [narzędzie rejestracji zestawów (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) do zarejestrowania lub wyrejestrowania zestawu do użytku z modelu COM. Regasm.exe dodaje informacje o klasie w rejestrze systemu, więc klientów modelu COM można użyć klasy .NET Framework w sposób niewidoczny dla użytkownika. <xref:System.Runtime.InteropServices.RegistrationServices> Klasa udostępnia podobne funkcje.  

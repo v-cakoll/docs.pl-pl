@@ -1,12 +1,6 @@
 ---
-title: "Różnice pomiędzy właściwościami i zmiennymi w Visual Basic"
-ms.custom: 
+title: Różnice pomiędzy właściwościami i zmiennymi w Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Różnice pomiędzy właściwościami i zmiennymi w Visual Basic
 Zmienne i właściwości reprezentują wartości, które są dostępne. Istnieją różnice w pamięci masowej i implementacji.  
@@ -53,13 +44,13 @@ Zmienne i właściwości reprezentują wartości, które są dostępne. Istniej�
  <sup>1</sup> w przeciwieństwie do zmiennej, wartość właściwości nie może odpowiadać bezpośrednio do pojedynczego elementu magazynu. Magazyn może zostać podzielony na fragmenty dla wygody lub zabezpieczeń, lub wartość mogą być przechowywane w postaci zaszyfrowanej. W takich przypadkach `Get` procedury czy złożyć części lub odszyfrować przechowywana wartość i `Set` procedury czy szyfrowania nowej wartości lub podziel go na składników magazynu. Wartości właściwości mogą być efemeryczne, takich jak porę dnia, w którym to przypadku `Get` procedury będzie obliczać go na bieżąco zawsze dostęp do właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Property — instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Dim — instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Porady: Tworzenie właściwości](./how-to-create-a-property.md)  
- [Porady: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Porady: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
+ [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)  
+ [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
  [Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Porady: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
- [Porady: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+ [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
+ [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

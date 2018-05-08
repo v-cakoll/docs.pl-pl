@@ -1,28 +1,16 @@
 ---
-title: "Wskazówki: nadawanie stylu zawartości WPF"
-ms.custom: 
+title: 'Wskazówki: nadawanie stylu zawartości WPF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae150e93958b622a772258ab41fa4281014dd567
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d02e48daad705b29cb7e179417f665c34857896e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Wskazówki: nadawanie stylu zawartości WPF
 W tym przewodniku opisano sposób stosowanie stylów do formantu Windows Presentation Foundation (WPF) obsługiwanych na formularzu systemu Windows.  
@@ -83,7 +71,7 @@ W tym przewodniku opisano sposób stosowanie stylów do formantu Windows Present
   
 3.  W panelu tagów inteligentnych dla `elementHost1`, kliknij przycisk **Edytuj hostowana zawartość** z listy rozwijanej.  
   
-     `UserControl1`zostanie otwarty w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+     `UserControl1` zostanie otwarty w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
 4.  W widoku XAML, Wstaw następujący XAML po `<UserControl>` tagu początkowego.  
   

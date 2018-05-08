@@ -1,25 +1,15 @@
 ---
-title: "Konstrukcja funkcjonalności (LINQ do XML) (Visual Basic)"
-ms.custom: 
+title: Konstrukcja funkcjonalności (LINQ do XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d5c68fb71fd59d08574cee9eec933cee25e504d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Konstrukcja funkcjonalności (LINQ do XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]udostępnia zaawansowane metody do tworzenia elementów XML o nazwie *funkcjonalności konstrukcji*. Konstrukcja funkcjonalności jest możliwość tworzenia drzewo XML w jednej instrukcji.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] udostępnia zaawansowane metody do tworzenia elementów XML o nazwie *funkcjonalności konstrukcji*. Konstrukcja funkcjonalności jest możliwość tworzenia drzewo XML w jednej instrukcji.  
   
  Istnieje kilka kluczowych funkcji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu programowania, umożliwiające konstrukcji funkcjonalności:  
   

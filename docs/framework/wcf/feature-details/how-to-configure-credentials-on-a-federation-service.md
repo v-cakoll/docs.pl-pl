@@ -1,14 +1,6 @@
 ---
 title: 'Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5bfea40a500dc1355b439ae7d949b0d96d3ab08c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej
-W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tworzenie usługi federacyjnej składa się z następujących procedur głównego:  
+W systemie Windows Communication Foundation (WCF), tworzenie usługi federacyjnej składa się z następujących procedur głównego:  
   
 1.  Konfigurowanie <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowego powiązania. Aby uzyskać więcej informacji o tworzeniu powiązanie odpowiednie, zobacz [porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   

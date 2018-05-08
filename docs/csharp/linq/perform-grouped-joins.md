@@ -1,20 +1,13 @@
 ---
-title: "Wykonanie sprzężeń grupowanych"
-description: "Jak wykonanie sprzężeń grupowanych."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Wykonanie sprzężeń grupowanych
+description: Jak wykonanie sprzężeń grupowanych.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: 5e26473e19a5b6107d7aceea5e9829b48aa522b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbdb1a69fa2f3b171935fa3a58cf9a045be0a494
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-grouped-joins"></a>Wykonanie sprzężeń grupowanych
 
@@ -44,7 +37,7 @@ Dołącz do grupy jest przydatne w przypadku tworzenie struktury hierarchicznej 
 ## <a name="see-also"></a>Zobacz także  
  <xref:System.Linq.Enumerable.Join%2A>  
  <xref:System.Linq.Enumerable.GroupJoin%2A>  
- [Wykonanie sprzężeń wewnętrznych](perform-inner-joins.md)  
- [Wykonanie lewych sprzężeń zewnętrznych](perform-left-outer-joins.md)  
+ [Wykonywanie sprzężeń wewnętrznych](perform-inner-joins.md)  
+ [Wykonywanie lewych sprzężeń zewnętrznych](perform-left-outer-joins.md)  
  [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)  
  

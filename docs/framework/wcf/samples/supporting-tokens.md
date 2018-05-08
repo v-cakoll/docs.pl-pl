@@ -1,24 +1,12 @@
 ---
-title: "Obsługa tokenów"
-ms.custom: 
+title: Obsługa tokenów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6838f6914ed7430fc420705af2ff461ccde8e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-tokens"></a>Obsługa tokenów
 Przykładowe tokenów pomocniczych pokazano, jak dodać dodatkowe tokeny na komunikat, który używa WS-Security. W przykładzie dodano tokenu zabezpieczeń binarnych X.509 oprócz tokenu zabezpieczającego nazwy użytkownika. Token jest przekazywany w nagłówku wiadomości WS-Security od klienta do usługi i część komunikatu jest podpisany przy użyciu klucza prywatnego skojarzonego z tokenu zabezpieczającego X.509 potwierdzenie posiadania certyfikatu X.509 do odbiornika. Jest to przydatne w przypadku, gdy jest wymagane są wielu oświadczeń skojarzony z komunikatem uwierzytelniania lub autoryzacji nadawcy. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
@@ -294,7 +282,7 @@ public class EchoService : IEchoService
 ```  
   
 ## <a name="displaying-callers-information"></a>Informacje o wywołującym wyświetlania  
- Aby wyświetlić informacje o wywołującym, można użyć `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` jak pokazano w poniższym kodzie. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Zawiera autoryzacji oświadczeń skojarzone z bieżącym obiektem wywołującym. Te oświadczenia są dostarczane automatycznie przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dla każdego tokenu odebranego w wiadomości.  
+ Aby wyświetlić informacje o wywołującym, można użyć `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` jak pokazano w poniższym kodzie. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Zawiera autoryzacji oświadczeń skojarzone z bieżącym obiektem wywołującym. Te oświadczenia są określane automatycznie przez Windows Communication Foundation (WCF) dla każdego tokenu odebranego w wiadomości.  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   

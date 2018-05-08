@@ -1,24 +1,12 @@
 ---
-title: "Instrukcje: Tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy"
-ms.custom: 
+title: 'Instrukcje: Tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Instrukcje: Tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy
 Czasami jest niezbędne dla usługi przepływu pracy można uzyskać informacji z innej usługi przepływu pracy.  W tym temacie przedstawiono sposób wywoływania jednej usługi przepływu pracy z innej. W tym temacie utworzymy dwie usługi przepływu pracy; jeden, który ma metodę, która odwraca ciągu wejściowego, a druga konwertujący ciągu wejściowego na wielkie litery, po wycofaniu ciąg, który używa pierwszej usługi.  
@@ -113,7 +101,7 @@ Czasami jest niezbędne dla usługi przepływu pracy można uzyskać informacji 
   
     4.  **Element TargetType**: NestedServices.StringLibrary  
   
-8.  Teraz Zadzwonimy pierwszej usługi zmodyfikowany ciąg. Kliknij prawym przyciskiem myszy projekt i wybierz **Dodaj odwołanie do usługi**. Dodaj odwołania do usługi z usługą w http://localhost/NestedServices/StringReverserService.xamlx i skompiluj projekt do tworzenia działań niestandardowych do uzyskania dostępu do pierwszej usługi sieci Web.  
+8.  Teraz Zadzwonimy pierwszej usługi zmodyfikowany ciąg. Kliknij prawym przyciskiem myszy projekt i wybierz **Dodaj odwołanie do usługi**. Dodawanie odwołania do usługi z usługą w http://localhost/NestedServices/StringReverserService.xamlx i skompiluj projekt do tworzenia działań niestandardowych do uzyskania dostępu do pierwszej usługi sieci Web.  
   
 9. Przeciągnij wystąpienie nowego działania przepływu pracy, między **InvokeMethod** działania i **SendReplyToReceive** działań. Przypisz zmiennej StringToReverse z właściwością InputString nowe działanie i zmiennej StringToReturn właściwości StringToReturn.  
   

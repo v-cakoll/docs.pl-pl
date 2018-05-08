@@ -1,26 +1,15 @@
 ---
 title: Obiekty rozszerzenia XSLT
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 72b1605c6bc5a0f3cbc4417d043ab21bf0bb787e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 69fcd4bd8426bb349c090fc52f7a1f1a262378ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xslt-extension-objects"></a>Obiekty rozszerzenia XSLT
 Obiekty rozszerzenia są używane do rozszerzyć funkcjonalność arkuszy stylów. Obiekty rozszerzenia są obsługiwane przez <xref:System.Xml.Xsl.XsltArgumentList> klasy.  

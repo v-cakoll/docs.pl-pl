@@ -1,14 +1,6 @@
 ---
-title: "IAppDomainBinding — Interfejs"
-ms.custom: 
+title: IAppDomainBinding — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainBinding
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a6f26c8337f89d829f42e00a9e5e79731a15156
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding — Interfejs
 Udostępnia metody, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), aby powiadomić aplikacji hosta utworzono domeny aplikacji.  
@@ -50,7 +38,7 @@ Udostępnia metody, która jest wywoływana przez środowisko uruchomieniowe ję
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

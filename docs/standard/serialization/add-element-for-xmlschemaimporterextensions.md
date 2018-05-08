@@ -1,28 +1,15 @@
 ---
 title: '&lt;Dodaj&gt; elementu &lt;xmlSchemaImporterExtensions&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <xmlSchemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc01f0ed6b5b1bac5131e6262db5d3a2847a65ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6e14c478e33c465d2ea3d10158f856dc5ca6c49a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-element-for-ltxmlschemaimporterextensionsgt"></a>&lt;Dodaj&gt; elementu &lt;xmlSchemaImporterExtensions&gt;
 Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do mapowania typów XSD typów programu .NET Framework. Aby uzyskać więcej informacji o plikach konfiguracji, zobacz [schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -30,7 +17,7 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
  \<Konfiguracja >  
 \<System.XML.serialization >  
 \<XmlSchemaImporterExtensions >  
-\<Dodaj >  
+\<add>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,7 +33,7 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |**Nazwa**|Prosta nazwa jest używana do znajdowania wystąpienia.|  
-|**Typ**|Wymagany. Określa klasę rozszerzenia schematu do dodania. **Typu** wartość atrybutu musi być w jednym wierszu i zawierać pełni kwalifikowaną nazwę typu. Jeśli zestaw znajduje się w globalnej pamięci podręcznej zestawów (GAC), musi także obejmować wersję, kulturę i token klucza publicznego zestawu podpisem.|  
+|**Typ**|Wymagana. Określa klasę rozszerzenia schematu do dodania. **Typu** wartość atrybutu musi być w jednym wierszu i zawierać pełni kwalifikowaną nazwę typu. Jeśli zestaw znajduje się w globalnej pamięci podręcznej zestawów (GAC), musi także obejmować wersję, kulturę i token klucza publicznego zestawu podpisem.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -74,5 +61,5 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
- [\<System.XML.serialization > — Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+ [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  [\<schemaImporterExtensions > — Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)

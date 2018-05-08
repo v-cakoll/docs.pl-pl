@@ -1,13 +1,6 @@
 ---
-title: "Dynamiczne ładowanie i używanie typów"
-ms.custom: 
+title: Dynamiczne ładowanie i używanie typów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,16 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamiczne ładowanie i używanie typów
-Odbicie oferuje infrastrukturę, takie jak używany przez Kompilatory języka [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] i JScript do zaimplementowania ukryte późne powiązania. Powiązanie to proces lokalizowania deklaracji (wykonanie), która odpowiada jednoznacznie określonego typu. Ten proces odbywa się w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnego wiązania. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]Umożliwia użycie ukryte późne wiązania w kodzie; Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika spowodować odpowiedniej metody do wywołania w czasie wykonywania. Te argumenty są wystąpienia (obiekt) do wywołania metody, nazwę wywoływanej metody (ciąg) i argumenty przekazane do wywołana metoda (Tablica obiektów).  
+Odbicie oferuje infrastrukturę, takie jak używany przez Kompilatory języka [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] i JScript do zaimplementowania ukryte późne powiązania. Powiązanie to proces lokalizowania deklaracji (wykonanie), która odpowiada jednoznacznie określonego typu. Ten proces odbywa się w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnego wiązania. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] Umożliwia użycie ukryte późne wiązania w kodzie; Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika spowodować odpowiedniej metody do wywołania w czasie wykonywania. Te argumenty są wystąpienia (obiekt) do wywołania metody, nazwę wywoływanej metody (ciąg) i argumenty przekazane do wywołana metoda (Tablica obiektów).  
   
  W poniższym przykładzie kompilator Visual Basic używa odbicia niejawnie można wywołać metody dla obiekt, którego typ jest nieznany w czasie kompilacji. A **HelloWorld** klasa ma **PrintHello** do drukowania "Hello World" połączony z tekstem, który jest przekazywany do metody **PrintHello** metody. **PrintHello** metoda wywoływana w tym przykładzie jest rzeczywiście <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; kod Visual Basic umożliwia **PrintHello** metoda do wywołania, tak jakby były znany typ obiektu (helloObj), w kompilacji czas (wczesnego wiązania), a nie na wykonawczego (LCID).  
   
@@ -84,7 +74,7 @@ End Module
   
  Jeśli istnieje więcej niż jeden element członkowski w zestawie dostępności, wszystkie te metody są przekazywane do **BindToMethod**, który wybiera odpowiednią metodę i zwraca go. W przypadku 2 przykładów kodu, istnieją dwie metody o nazwie **PrintValue**. Wybrano odpowiednią metodę przez wywołanie **BindToMethod**.  
   
- <xref:System.Reflection.Binder.ChangeType%2A>wykonuje koercja argumentu (konwersji typów), który konwertuje rzeczywistych argumentów typu Argumenty formalne wybranej metody. **ChangeType** jest wywoływana dla każdego argumentu, nawet wtedy, gdy typy są takie same.  
+ <xref:System.Reflection.Binder.ChangeType%2A> wykonuje koercja argumentu (konwersji typów), który konwertuje rzeczywistych argumentów typu Argumenty formalne wybranej metody. **ChangeType** jest wywoływana dla każdego argumentu, nawet wtedy, gdy typy są takie same.  
   
  W przypadku 3 przykładów kodu, rzeczywisty argument typu **ciąg** o wartości "5.5" jest przekazywany do metody z formalnego argumentu typu **podwójne**. Wywołania do pomyślnego wartość ciągu "5.5" musi można przekonwertować na wartość podwójną. **ChangeType** wykonuje konwersji.  
   
@@ -106,7 +96,7 @@ End Module
 |Single|Double|  
 |Typ nieinformacyjne|Typ odwołania|  
   
- <xref:System.Type> Klasa ma **uzyskać** metody, które używają parametrów typu **integratora** do rozpoznawania odwołań do określonego elementu członkowskiego. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, i <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> wyszukiwanie określonego składnika bieżącego typu, podając informacje o podpisie dla tego elementu członkowskiego. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType>i <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> są wywołanie zwrotne do wybierz informacje o danym podpisem odpowiednich metod.  
+ <xref:System.Type> Klasa ma **uzyskać** metody, które używają parametrów typu **integratora** do rozpoznawania odwołań do określonego elementu członkowskiego. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, i <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> wyszukiwanie określonego składnika bieżącego typu, podając informacje o podpisie dla tego elementu członkowskiego. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> i <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> są wywołanie zwrotne do wybierz informacje o danym podpisem odpowiednich metod.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  

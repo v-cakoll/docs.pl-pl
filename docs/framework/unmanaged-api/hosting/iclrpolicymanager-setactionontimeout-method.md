@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetActionOnTimeout — Metoda"
-ms.custom: 
+title: ICLRPolicyManager::SetActionOnTimeout — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnTimeout
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 38439fa1-2b99-4fa8-a6ec-08afc0f83b9c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db0918272a315e78191624cbe6420863285620c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc1d16a2d57fea27c1c26fc55fbbfa9b74c25495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout — Metoda
 Określa akcję zasady, którą powinno mieć środowisko uruchomieniowe języka wspólnego (CLR), gdy upłynie limit czasu określonej operacji.  
@@ -66,7 +54,7 @@ HRESULT SetActionOnTimeout (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnTimeout`zwrócona pomyślnie.|  
+|S_OK|`SetActionOnTimeout` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -77,9 +65,9 @@ HRESULT SetActionOnTimeout (
 ## <a name="remarks"></a>Uwagi  
  Wartość limitu czasu może być domyślny limit czasu ustawiony przez środowisko CLR lub wartość określonego przez hosta w wywołaniu [ICLRPolicyManager::SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) metody.  
   
- Nie wszystkie wartości działania zasad można określić jako zachowanie limitu czasu dla operacji CLR. `SetActionOnTimeout`zwykle służą tylko do eskalować zachowanie. Na przykład host można określić, że wątek przerwań przekształcone niegrzeczny wątku przerwań, ale nie można określić odwrotnie. W poniższej tabeli opisano poprawne `action` wartości prawidłowe `operation` wartości.  
+ Nie wszystkie wartości działania zasad można określić jako zachowanie limitu czasu dla operacji CLR. `SetActionOnTimeout` zwykle służą tylko do eskalować zachowanie. Na przykład host można określić, że wątek przerwań przekształcone niegrzeczny wątku przerwań, ale nie można określić odwrotnie. W poniższej tabeli opisano poprawne `action` wartości prawidłowe `operation` wartości.  
   
-|Wartość`operation`|Prawidłowe wartości`action`|  
+|Wartość `operation`|Prawidłowe wartości `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_AppDomainUnload|-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -92,7 +80,7 @@ HRESULT SetActionOnTimeout (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [EClrOperation, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

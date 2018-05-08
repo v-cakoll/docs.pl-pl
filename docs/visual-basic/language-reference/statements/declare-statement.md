@@ -1,11 +1,6 @@
 ---
-title: "Declare — Instrukcja"
+title: Declare — Instrukcja
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare — Instrukcja
 Deklaruje odwołanie do procedury zaimplementowanej w zewnętrznym pliku.  
@@ -60,16 +52,16 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 |Termin|Definicja|  
 |---|---|  
-|`attributelist`|Opcjonalny. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcjonalny. Może to być jedna z następujących czynności:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcjonalny. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`charsetmodifier`|Opcjonalny. Określa zestaw znaków i plik wyszukiwania informacji. Może to być jedna z następujących czynności:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (ustawienie domyślne)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatycznie](../../../visual-basic/language-reference/modifiers/auto.md)|  
+|`attributelist`|Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Opcjonalna. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`charsetmodifier`|Opcjonalna. Określa zestaw znaków i plik wyszukiwania informacji. Może to być jeden z następujących elementów:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (ustawienie domyślne)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatycznie](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Opcjonalne, ale albo `Sub` lub `Function` musi występować. Wskazuje, że procedura zewnętrzna nie zwraca wartości.|  
 |`Function`|Opcjonalne, ale albo `Sub` lub `Function` musi występować. Wskazuje, że procedura zewnętrzna zwraca wartość.|  
-|`name`|Wymagany. Nazwa tego odwołania zewnętrznego. Aby uzyskać więcej informacji, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Lib`|Wymagany. Wprowadza `Lib` klauzuli, która identyfikuje zewnętrzny plik (DLL lub zasób kodu) zawierający zewnętrzną procedurę.|  
-|`libname`|Wymagany. Nazwa pliku, który zawiera procedury zadeklarowane.|  
-|`Alias`|Opcjonalny. Wskazuje procedury został zadeklarowany nie można zidentyfikować w swoim pliku według nazwy określone w `name`. Określ jego identyfikację w `aliasname`.|  
+|`name`|Wymagana. Nazwa tego odwołania zewnętrznego. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).|  
+|`Lib`|Wymagana. Wprowadza `Lib` klauzuli, która identyfikuje zewnętrzny plik (DLL lub zasób kodu) zawierający zewnętrzną procedurę.|  
+|`libname`|Wymagana. Nazwa pliku, który zawiera procedury zadeklarowane.|  
+|`Alias`|Opcjonalna. Wskazuje procedury został zadeklarowany nie można zidentyfikować w swoim pliku według nazwy określone w `name`. Określ jego identyfikację w `aliasname`.|  
 |`aliasname`|Wymagane w przypadku użycia `Alias` — słowo kluczowe. Ciąg, który identyfikuje procedury w jeden z dwóch sposobów:<br /><br /> Nazwa punktu wejścia procedury w jego pliku w cudzysłowy (`""`)<br /><br /> —lub—<br /><br /> Znak liczby (`#`) następuje liczba całkowita określająca liczbę porządkową punktu wejścia procedury w jego pliku|  
 |`parameterlist`|Wymagane, jeśli parametry przyjmowane przez procedurę. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Jeśli wymagane `Function` określono i `Option Strict` jest `On`. Typ danych wartości zwracanej przez procedurę.|  
@@ -77,15 +69,15 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## <a name="remarks"></a>Uwagi  
  Czasami trzeba wywołać procedurę zdefiniowane w pliku (np. DLL lub zasób kodu) poza projektem. Po wykonaniu tej czynności kompilator Visual Basic nie ma dostępu do informacji wymaganych do wywołania tej procedury poprawnie, z którym znajduje się procedura, jak określono jego sekwencja wywoływania i zwracany typ i zestaw znaków ciągu, który używa. `Declare` Instrukcji tworzy odwołanie do zewnętrznej procedury i przekazywać te informacje niezbędne.  
   
- Można użyć `Declare` tylko na poziomie modułu. Oznacza to, że *kontekście deklaracji* odwołanie zewnętrzne musi być klasą, strukturą lub modułu i nie może być plik źródłowy, przestrzeni nazw, interfejsu, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Można użyć `Declare` tylko na poziomie modułu. Oznacza to, że *kontekście deklaracji* odwołanie zewnętrzne musi być klasą, strukturą lub modułu i nie może być plik źródłowy, przestrzeni nazw, interfejsu, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
- Domyślnie odwołuje się do zewnętrznego [publicznego](../../../visual-basic/language-reference/modifiers/public.md) dostępu. Można dostosować ich poziomy dostępu z modyfikatorów dostępu.  
+ Domyślnie odwołuje się do zewnętrznego [publicznego](../../../visual-basic/language-reference/modifiers/public.md) dostępu. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu.  
   
 ## <a name="rules"></a>Reguły  
   
 -   **Atrybuty.** Atrybuty można zastosować do odwołania zewnętrznego. Wszelkie atrybuty, które stosujesz ma wpływ tylko w projekcie, a nie w pliku zewnętrznym.  
   
--   **Modyfikatorów.** Procedury zewnętrzne są niejawnie [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Nie można użyć `Shared` — słowo kluczowe podczas deklarowania odwołanie zewnętrzne i nie można zmienić stanu udostępnionego.  
+-   **Modyfikatory.** Procedury zewnętrzne są niejawnie [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Nie można użyć `Shared` — słowo kluczowe podczas deklarowania odwołanie zewnętrzne i nie można zmienić stanu udostępnionego.  
   
      Zewnętrzna procedura nie może uczestniczyć w zastępowanie, implementować członków interfejsu lub obsługi zdarzeń. W związku z tym nie można użyć `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, lub `Handles` — słowo kluczowe w `Declare` instrukcji.  
   
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Zestawy znaków.** Można określić w `charsetmodifier` jak Visual Basic powinien kierować ciągi wywołuje procedury zewnętrznego. `Ansi` Modyfikator kieruje Visual Basic, aby kierować wszystkie ciągi jako wartości ANSI i `Unicode` modyfikator kieruje je do kierować wszystkie ciągi jako wartości Unicode. `Auto` Modyfikator Określa, że program Visual Basic kierowanie ciągów zgodnie z .NET Framework zasady oparte na odwołanie zewnętrzne `name`, lub `aliasname` Jeśli zostanie określony. Wartość domyślna to `Ansi`.  
   
-     `charsetmodifier`Określa również sposób Visual Basic powinien wyglądać zewnętrznej procedury w ramach jego zewnętrznego pliku. `Ansi`i `Unicode` zarówno bezpośrednie Visual Basic w celu wyszukania bez modyfikowania jej nazwy podczas wyszukiwania. `Auto`Określa, że Visual Basic, aby ustalić podstawowy zestaw znaków platformy środowiska wykonawczego i możliwie zmodyfikować nazwę procedury zewnętrznej w następujący sposób:  
+     `charsetmodifier` Określa również sposób Visual Basic powinien wyglądać zewnętrznej procedury w ramach jego zewnętrznego pliku. `Ansi` i `Unicode` zarówno bezpośrednie Visual Basic w celu wyszukania bez modyfikowania jej nazwy podczas wyszukiwania. `Auto` Określa, że Visual Basic, aby ustalić podstawowy zestaw znaków platformy środowiska wykonawczego i możliwie zmodyfikować nazwę procedury zewnętrznej w następujący sposób:  
   
     -   Na platformie ANSI, takie jak Windows 95, Windows 98 lub Windows Millennium Edition Pierwsze spojrzenie procedury zewnętrznego bez żadnych modyfikacji nazwy. W przypadku niepowodzenia dołączyć "A" na końcu nazwę procedury zewnętrznej, i wyszukiwać go ponownie.  
   
@@ -150,10 +142,10 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf — Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call — instrukcja](../../../visual-basic/language-reference/statements/call-statement.md)  
- [Wskazówki: Wywoływanie Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+ [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Call, instrukcja](../../../visual-basic/language-reference/statements/call-statement.md)  
+ [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

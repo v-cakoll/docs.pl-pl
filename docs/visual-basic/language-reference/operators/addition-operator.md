@@ -1,12 +1,6 @@
 ---
 title: + — Operator (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+ — Operator (Visual Basic)
 Dodaje dwie liczby i zwraca wartość dodatnią wyrażenia liczbowego. Można również do łączenia dwóch ciągów wyrażeń.  
@@ -40,7 +31,7 @@ Dodaje dwie liczby i zwraca wartość dodatnią wyrażenia liczbowego. Można r�
   
 |Termin|Definicja|  
 |---|---|  
-|`expression1`|Wymagany. Dowolne wyrażenie numeryczny lub ciąg.|  
+|`expression1`|Wymagana. Dowolne wyrażenie numeryczny lub ciąg.|  
 |`expression2`|Wymagany, chyba że `+` operator jest obliczenie wartości ujemnej. Dowolne wyrażenie numeryczny lub ciąg.|  
   
 ## <a name="result"></a>Wynik  
@@ -63,26 +54,26 @@ Dodaje dwie liczby i zwraca wartość dodatnią wyrażenia liczbowego. Można r�
 |Typy danych wyrażeń|Akcja przez kompilator|  
 |---|---|  
 |Oba wyrażenia są numeryczne typy danych (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, lub `Double`)|Dodaj. Typ danych wyniku jest odpowiednie dla typów dane typu liczbowego `expression1` i `expression2`. Zobacz "Całkowitą arytmetycznego" tabele w [typy danych z wyników operatora](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Oba wyrażenia są typu`String`|Łączenie.|  
+|Oba wyrażenia są typu `String`|Łączenie.|  
 |Jedno wyrażenie to dane typu liczbowego, a drugi to ciąg|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, niejawnie przekonwertować `String` do `Double` i Dodaj.<br /><br /> Jeśli `String` nie można przekonwertować na `Double`, następnie throw <xref:System.InvalidCastException> wyjątku.|  
 |Jedno wyrażenie to dane typu liczbowego, a drugi to [nic](../../../visual-basic/language-reference/nothing.md)|Dodawanie, z `Nothing` zwracającej wartość zero.|  
-|Jedno wyrażenie jest ciągiem, a drugi to`Nothing`|ZŁĄCZ.teksty z `Nothing` ważnych jako "".|  
+|Jedno wyrażenie jest ciągiem, a drugi to `Nothing`|ZŁĄCZ.teksty z `Nothing` ważnych jako "".|  
   
  Jeśli jest jedno wyrażenie `Object` wyrażenia języka Visual Basic wykonuje następujące akcje.  
   
 |Typy danych wyrażeń|Akcja przez kompilator|  
 |---|---|  
-|`Object`wyrażenie zawiera wartość numeryczną, a drugi to dane typu liczbowego|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, następnie dodać.|  
-|`Object`wyrażenie zawiera wartość liczbową i innych jest typu`String`|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, niejawnie przekonwertować `String` do `Double` i Dodaj.<br /><br /> Jeśli `String` nie można przekonwertować na `Double`, następnie throw <xref:System.InvalidCastException> wyjątku.|  
-|`Object`wyrażenie zawiera ciąg, a drugi to dane typu liczbowego|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, niejawnie przekonwertować ciągu `Object` do `Double` i Dodaj.<br /><br /> Jeśli ciąg `Object` nie można przekonwertować na `Double`, następnie throw <xref:System.InvalidCastException> wyjątku.|  
-|`Object`wyrażenie zawiera ciąg, a drugi to typu`String`|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, niejawnie przekonwertować `Object` do `String` i łączenia.|  
+|`Object` wyrażenie zawiera wartość numeryczną, a drugi to dane typu liczbowego|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, następnie dodać.|  
+|`Object` wyrażenie zawiera wartość liczbową i innych jest typu `String`|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, niejawnie przekonwertować `String` do `Double` i Dodaj.<br /><br /> Jeśli `String` nie można przekonwertować na `Double`, następnie throw <xref:System.InvalidCastException> wyjątku.|  
+|`Object` wyrażenie zawiera ciąg, a drugi to dane typu liczbowego|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, niejawnie przekonwertować ciągu `Object` do `Double` i Dodaj.<br /><br /> Jeśli ciąg `Object` nie można przekonwertować na `Double`, następnie throw <xref:System.InvalidCastException> wyjątku.|  
+|`Object` wyrażenie zawiera ciąg, a drugi to typu `String`|Jeśli `Option Strict` jest `On`, następnie wygenerowanie błędu kompilatora.<br /><br /> Jeśli `Option Strict` jest `Off`, niejawnie przekonwertować `Object` do `String` i łączenia.|  
   
  Jeśli oba wyrażenia są `Object` wyrażenia, Visual Basic wykonuje następujące akcje (`Option Strict Off` tylko).  
   
 |Typy danych wyrażeń|Akcja przez kompilator|  
 |---|---|  
 |Zarówno `Object` wyrażenia przechowywania wartości liczbowych|Dodaj.|  
-|Zarówno `Object` wyrażenia są typu`String`|Łączenie.|  
+|Zarówno `Object` wyrażenia są typu `String`|Łączenie.|  
 |Jeden `Object` wyrażenie zawiera wartość liczbową i innych ma postać ciągu|Niejawnie przekonwertować ciągu `Object` do `Double` i Dodaj.<br /><br /> Jeśli ciąg `Object` nie można przekonwertować na wartość numeryczną, a następnie throw <xref:System.InvalidCastException> wyjątku.|  
   
  Jeśli dowolny `Object` wyrażenie daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md) lub <xref:System.DBNull>, `+` operator traktuje ją jako `String` o wartości "".  
@@ -117,10 +108,10 @@ Dodaje dwie liczby i zwraca wartość dodatnią wyrażenia liczbowego. Można r�
  Aby usunąć niejednoznaczność, należy użyć `&` operator zamiast `+` dla łączenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [& — Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [&, operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
  [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
  [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)

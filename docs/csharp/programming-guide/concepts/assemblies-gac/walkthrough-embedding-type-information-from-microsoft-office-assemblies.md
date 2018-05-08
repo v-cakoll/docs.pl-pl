@@ -1,21 +1,12 @@
 ---
-title: "Wskazówki: Osadzanie informacji o typie z zestawów Microsoft Office w Visual Studio (C#)"
-ms.custom: 
+title: 'Wskazówki: Osadzanie informacji o typie z zestawów Microsoft Office w Visual Studio (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 45ec4521da08a9a1f4bdc3b433d3f8d765960526
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8e7eb5c797ca87f87950d530112ec64f1327ae0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Wskazówki: Osadzanie informacji o typie z zestawów Microsoft Office w Visual Studio (C#)
 Jeśli informacje o typie jest osadzony w aplikacji, która odwołuje się do obiektów COM, można wyeliminować potrzebę podstawowy zestaw międzyoperacyjny (PIA). Ponadto informacji osadzonym typem pozwala na osiągnięcie niezależność od wersji aplikacji. Oznacza to, że program mogą być zapisywane na używanie typów z wielu wersji biblioteki COM bez konieczności PIA określonych dla każdej wersji. To jest typowym scenariuszem dla aplikacji, które korzystają z bibliotek Microsoft Office obiektów. Osadzanie informacji o typie włącza tę samą kompilację programu w różnych wersjach pakietu Microsoft Office na różnych komputerach bez konieczności ponownego wdrażania programu lub PIA dla każdej wersji pakietu Microsoft Office.  
@@ -29,7 +20,7 @@ Jeśli informacje o typie jest osadzony w aplikacji, która odwołuje się do ob
   
 -   Drugi komputer, na którym zainstalowano .NET Framework 4 lub nowszym i różnych wersji programu Excel.  
   
-##  <a name="BKMK_createapp"></a>Aby utworzyć aplikację, która działa w różnych wersjach pakietu Microsoft Office  
+##  <a name="BKMK_createapp"></a> Aby utworzyć aplikację, która działa w różnych wersjach pakietu Microsoft Office  
   
 1.  Uruchom program Visual Studio na komputerze, na którym jest zainstalowany program Excel.  
   
@@ -120,7 +111,7 @@ Jeśli informacje o typie jest osadzony w aplikacji, która odwołuje się do ob
   
 9. Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić projekt. Sprawdź, czy skoroszyt programu Excel została utworzona w lokalizacji określonej w przykładowym kodzie: C:\SampleFolder\SampleWorkbook.xls.  
   
-##  <a name="BKMK_publishapp"></a>Aby opublikować aplikację na komputerze, na którym zainstalowany jest inna wersja programu Microsoft Office  
+##  <a name="BKMK_publishapp"></a> Aby opublikować aplikację na komputerze, na którym zainstalowany jest inna wersja programu Microsoft Office  
   
 1.  Otwórz projekt utworzone przez tego przewodnika w programie Visual Studio.  
   

@@ -1,25 +1,16 @@
 ---
-title: "Const — Instrukcja (Visual Basic)"
+title: Const — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const — Instrukcja (Visual Basic)
 Deklaruje i definiuje co najmniej jedną stałą.  
@@ -33,18 +24,18 @@ Const constantlist
   
 ## <a name="parts"></a>Części  
  `attributelist`  
- Opcjonalny. Lista atrybutów, które są stosowane do wszystkich stałych zadeklarowany w tej instrukcji. Zobacz [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").  
+ Opcjonalna. Lista atrybutów, które są stosowane do wszystkich stałych zadeklarowany w tej instrukcji. Zobacz [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").  
   
  `accessmodifier`  
- Opcjonalny. Umożliwia określenie, jakie kodu mogą uzyskiwać dostęp do tych stałych. Może być [publicznego](../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, lub [prywatnej](../../../visual-basic/language-reference/modifiers/private.md).  
+ Opcjonalna. Umożliwia określenie, jakie kodu mogą uzyskiwać dostęp do tych stałych. Może być [publicznego](../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, lub [prywatnej](../../../visual-basic/language-reference/modifiers/private.md).  
   
  `Shadows`  
- Opcjonalny. Umożliwia to ponownie zadeklarować i ukrywanie elementu programistycznego w klasie podstawowej. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Opcjonalna. Umożliwia to ponownie zadeklarować i ukrywanie elementu programistycznego w klasie podstawowej. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
- Wymagany. Lista stałe został zadeklarowany w tej instrukcji.  
+ Wymagana. Lista stałe został zadeklarowany w tej instrukcji.  
   
- `constant``[ ,``constant``... ]`  
+ `constant` `[ ,` `constant` `... ]`  
   
  Każdy `constant` ma następujące składni i części:  
   
@@ -52,16 +43,16 @@ Const constantlist
   
 |Część|Opis|  
 |----------|-----------------|  
-|`constantname`|Wymagany. Nazwa stałej. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`constantname`|Wymagana. Nazwa stałej. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`datatype`|Jeśli wymagane `Option Strict` jest `On`. Typ danych stałej.|  
-|`initializer`|Wymagany. Wyrażenie, które jest obliczane w czasie kompilacji i przypisane do stałej.|  
+|`initializer`|Wymagana. Wyrażenie, które jest obliczane w czasie kompilacji i przypisane do stałej.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli wartość nie ulega zmianie w aplikacji, można zdefiniować nazwanej stałej i zastępującą wartość literału. Nazwa jest łatwiejsze do zapamiętania niż określona wartość. Można zdefiniować stała tylko raz i używany w wielu miejscach w kodzie. Jeśli w nowszej wersji. musisz ponownie zdefiniować wartości, `Const` instrukcja jest tylko miejscu, należy wprowadzić zmiany.  
   
- Można użyć `Const` tylko na poziomie modułu lub procedury. Oznacza to, że *kontekście deklaracji* dla zmiennej musi być klasy, struktury, modułu, procedurę lub blok i nie może być plik źródłowy, przestrzeni nazw lub interfejs. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Można użyć `Const` tylko na poziomie modułu lub procedury. Oznacza to, że *kontekście deklaracji* dla zmiennej musi być klasy, struktury, modułu, procedurę lub blok i nie może być plik źródłowy, przestrzeni nazw lub interfejs. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
- Domyślnie lokalne — stałe (wewnątrz procedury) dostępu publicznego, a nie można użyć dowolnego modyfikatory dostępu na nich. Klasy i moduł domyślny — stałe (poza dowolnej procedury) elementu członkowskiego o dostępie prywatnym i domyślnie stałe elementu członkowskiego struktury dostępu publicznego. Można dostosować ich poziomy dostępu z modyfikatorów dostępu.  
+ Domyślnie lokalne — stałe (wewnątrz procedury) dostępu publicznego, a nie można użyć dowolnego modyfikatory dostępu na nich. Klasy i moduł domyślny — stałe (poza dowolnej procedury) elementu członkowskiego o dostępie prywatnym i domyślnie stałe elementu członkowskiego struktury dostępu publicznego. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu.  
   
 ## <a name="rules"></a>Reguły  
   
@@ -71,7 +62,7 @@ Const constantlist
   
 -   **Atrybuty.** Atrybuty można stosować tylko do elementu członkowskiego stałe, a nie do lokalnego stałe. Atrybut przyczynia się informacji metadanych zestawu, który nie jest zrozumiały dla tymczasowego magazynu, takich jak lokalny stałe.  
   
--   **Modyfikatorów.** Domyślnie wszystkie stałe są `Shared`, `Static`, i `ReadOnly`. Nie można użyć dowolnego z następujących słów kluczowych przy deklarowaniu stałą.  
+-   **Modyfikatory.** Domyślnie wszystkie stałe są `Shared`, `Static`, i `ReadOnly`. Nie można użyć dowolnego z następujących słów kluczowych przy deklarowaniu stałą.  
   
      Na poziomie procedury nie można użyć `Shadows` lub dowolnego dostępu Modyfikatory Aby zadeklarować lokalnego stałe.  
   
@@ -110,10 +101,10 @@ Const constantlist
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [#Const-dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [ReDim — instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [Enum, instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [ReDim, instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)  
  [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Stałe i wyliczenia](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
  [Stałe i wyliczenia](../../../visual-basic/language-reference/constants-and-enumerations.md)  

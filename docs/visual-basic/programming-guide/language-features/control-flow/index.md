@@ -1,13 +1,6 @@
 ---
 title: Przepływ sterowania w Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control flow [Visual Basic]
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - structures [Visual Basic], control
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ec3ab191942e47d5025a0e641085b0f507088c7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 14133dc764d6708d8b7a3366038bc3240e5cbc76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-flow-in-visual-basic"></a>Przepływ sterowania w Visual Basic
 Pozostało nieuregulowanej, program będzie kontynuowana za pośrednictwem jego instrukcje od początku do końca. Niektóre programy bardzo proste mogą być napisane z tylko ten przepływ jednokierunkowe. Jednak większość zasilania i narzędzie żadnego języka programowania pochodzi z możliwości, aby zmienić kolejność wykonywania instrukcji sterowania i pętle.  

@@ -1,27 +1,20 @@
 ---
 title: null (C# Reference)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - "null"
 - null_CSharpKeyword
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-caps.latest.revision: ''
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8ca6236b1c9731091ad540d63ce13f11a73f0725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cd99ce43ad359c58c855748dff9a01abb6dbd453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="null-c-reference"></a>null (C# Reference)
-`null` — Słowo kluczowe jest literałem, który reprezentuje odwołanie o wartości null, który odwołuje się do dowolnego obiektu. `null`jest to wartość domyślna typu odwołania zmiennych. Typy wartości zwykłej nie może mieć wartości null. Jednak C# 2.0 wprowadzono typów wartości null. Zobacz [typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md).  
+`null` — Słowo kluczowe jest literałem, który reprezentuje odwołanie o wartości null, który odwołuje się do dowolnego obiektu. `null` jest to wartość domyślna typu odwołania zmiennych. Typy wartości zwykłej nie może mieć wartości null. Jednak C# 2.0 wprowadzono typów wartości null. Zobacz [typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md).  
   
  W poniższym przykładzie pokazano niektórych zachowań null — słowo kluczowe:  
   

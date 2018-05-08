@@ -1,21 +1,14 @@
 ---
 title: Zaprojektowanie kontenera i Mikrousługi aplikacji opartych na
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Zaprojektowanie kontenera i Mikrousługi aplikacji opartych na
-keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9b3088d93ead589c0b295bc3d2807fc98ee8ea75
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 91f63343ba2d7458d0d3b03978ac79a3a7e8427a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>Projektowania aplikacji opartych na kontenera i Mikrousługi
 

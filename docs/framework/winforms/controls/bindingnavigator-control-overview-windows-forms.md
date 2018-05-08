@@ -1,14 +1,6 @@
 ---
-title: "BindingNavigator — Informacje o formancie [Formularze systemu Windows]"
-ms.custom: 
+title: BindingNavigator — Informacje o formancie [Formularze systemu Windows]
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DataNavigator
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 921f8c7791620d51107fa2ff31a637094fc0c633
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae1e8273c39122e094817e28379e52c19c573a3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator — Informacje o formancie [Formularze systemu Windows]
 Można użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzyć standardowych środków użytkownikom wyszukiwanie i zmienić danych na formularzu systemu Windows. Często używane <xref:System.Windows.Forms.BindingNavigator> z <xref:System.Windows.Forms.BindingSource> składnik, aby umożliwić użytkownikom przechodzenie między rekordów danych w formularzu i interakcję z rekordów.  
@@ -41,14 +27,14 @@ Można użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzy
   
 |Formant|Funkcja|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>przycisk|Wstawia nowy wiersz w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>przycisk|Usuwa bieżący wiersz w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>przycisk|Przenosi do pierwszego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>przycisk|Przenosi do ostatniego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>przycisk|Przechodzi do następnego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>przycisk|Przenosi do poprzedniego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>pole tekstowe|Zwraca bieżącą pozycję w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A>pole tekstowe|Zwraca całkowitą liczbę elementów w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Przycisk|Wstawia nowy wiersz w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Przycisk|Usuwa bieżący wiersz w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Przycisk|Przenosi do pierwszego elementu w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Przycisk|Przenosi do ostatniego elementu w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Przycisk|Przechodzi do następnego elementu w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Przycisk|Przenosi do poprzedniego elementu w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> Pole tekstowe|Zwraca bieżącą pozycję w źródle danych.|  
+|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> Pole tekstowe|Zwraca całkowitą liczbę elementów w źródle danych.|  
   
  Dla każdego formantu w tej kolekcji jest elementem członkowskim odpowiedniego <xref:System.Windows.Forms.BindingSource> składnik, który programowo zapewnia te same funkcje. Na przykład <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> przycisk odpowiada <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> metody <xref:System.Windows.Forms.BindingSource> składnika <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> przycisk odpowiada <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> — metoda i tak dalej.  
   

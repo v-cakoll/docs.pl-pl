@@ -1,13 +1,6 @@
 ---
-title: "Model wątkowości"
-ms.custom: 
+title: Model wątkowości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,21 +18,16 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f598cecef2d0994692f197df09e9befc39a58723
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15115cc0ed14cb5605100ebe47abd5cd4dc02ec0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-model"></a>Model wątkowości
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Służy do zapisywania deweloperzy trudności z wątków. W rezultacie, większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programiści nie muszą zapisu interfejs, który korzysta z więcej niż jeden wątek. Ponieważ programy wielowątkowe są złożone i trudne do debugowania, ich należy unikać gdy istnieją jednowątkowe rozwiązania.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Służy do zapisywania deweloperzy trudności z wątków. W rezultacie, większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programiści nie muszą zapisu interfejs, który korzysta z więcej niż jeden wątek. Ponieważ programy wielowątkowe są złożone i trudne do debugowania, ich należy unikać gdy istnieją jednowątkowe rozwiązania.  
   
- Niezależnie od tego, jak również zaprojektowana, jednak nie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework kiedykolwiek będą mogli stanowią rozwiązanie jednowątkowe dla każdego rodzaju problem. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]pochodzi zamknięcia, ale nadal istnieją sytuacje, w którym wiele wątków poprawy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] wydajności czasu odpowiedzi lub aplikacji. Po omówieniu niektórych materiałów tła, w tym dokumencie Eksploruje niektóre z tych sytuacji i stwierdza, z omówieniem niektórych szczegółów niskiego poziomu.  
+ Niezależnie od tego, jak również zaprojektowana, jednak nie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework kiedykolwiek będą mogli stanowią rozwiązanie jednowątkowe dla każdego rodzaju problem. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pochodzi zamknięcia, ale nadal istnieją sytuacje, w którym wiele wątków poprawy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] wydajności czasu odpowiedzi lub aplikacji. Po omówieniu niektórych materiałów tła, w tym dokumencie Eksploruje niektóre z tych sytuacji i stwierdza, z omówieniem niektórych szczegółów niskiego poziomu.  
   
 
   
@@ -56,11 +44,11 @@ ms.lasthandoff: 12/22/2017
   
  Jak to [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji powinien obsługiwać operacje duży? Co zrobić, jeśli kod obejmuje dużą obliczeń lub wymaga kwerendy bazy danych na niektórych serwera zdalnego? Zazwyczaj odpowiedzi jest duży operację w oddzielnym wątku, pozostawiając [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zająć się zazwyczaj do elementów w wątku <xref:System.Windows.Threading.Dispatcher> kolejki. Po zakończeniu operacji duży może raportować jego wynik do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku do wyświetlenia.  
   
- W przeszłości [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] umożliwia [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, aby były dostępne tylko dla wątku, który je utworzył. Oznacza to, że wątku w tle odpowiedzialnym za niektóre długotrwałe zadanie nie można zaktualizować pola tekstowego po zakończeniu. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]Dzieje się tak, aby zapewnić integralność [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] składników. Pole listy może wyglądać dziwne, jeśli jego zawartość zostały zaktualizowane przez wątek w tle podczas rysowania.  
+ W przeszłości [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] umożliwia [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, aby były dostępne tylko dla wątku, który je utworzył. Oznacza to, że wątku w tle odpowiedzialnym za niektóre długotrwałe zadanie nie można zaktualizować pola tekstowego po zakończeniu. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Dzieje się tak, aby zapewnić integralność [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] składników. Pole listy może wyglądać dziwne, jeśli jego zawartość zostały zaktualizowane przez wątek w tle podczas rysowania.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera wbudowane wzajemne wykluczenie mechanizm, który wymusza koordynacja. Większość klas w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pochodzi od <xref:System.Windows.Threading.DispatcherObject>. W konstrukcji <xref:System.Windows.Threading.DispatcherObject> zawiera odwołanie do <xref:System.Windows.Threading.Dispatcher> połączone z aktualnie uruchomiony. W efekcie <xref:System.Windows.Threading.DispatcherObject> kojarzy z wątku, który go utworzył. Podczas wykonywania programu <xref:System.Windows.Threading.DispatcherObject> można wywołać jej publicznego <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> metody. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>sprawdza, czy <xref:System.Windows.Threading.Dispatcher> skojarzone z bieżącym wątku i porównuje go do <xref:System.Windows.Threading.Dispatcher> odwołanie podczas konstruowania przechowywane. Jeśli nie są zgodne, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> zgłasza wyjątek. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>jest przeznaczona do wywoływania na początku każdej metody należących do <xref:System.Windows.Threading.DispatcherObject>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wbudowane wzajemne wykluczenie mechanizm, który wymusza koordynacja. Większość klas w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pochodzi od <xref:System.Windows.Threading.DispatcherObject>. W konstrukcji <xref:System.Windows.Threading.DispatcherObject> zawiera odwołanie do <xref:System.Windows.Threading.Dispatcher> połączone z aktualnie uruchomiony. W efekcie <xref:System.Windows.Threading.DispatcherObject> kojarzy z wątku, który go utworzył. Podczas wykonywania programu <xref:System.Windows.Threading.DispatcherObject> można wywołać jej publicznego <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> metody. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> sprawdza, czy <xref:System.Windows.Threading.Dispatcher> skojarzone z bieżącym wątku i porównuje go do <xref:System.Windows.Threading.Dispatcher> odwołanie podczas konstruowania przechowywane. Jeśli nie są zgodne, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> zgłasza wyjątek. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> jest przeznaczona do wywoływania na początku każdej metody należących do <xref:System.Windows.Threading.DispatcherObject>.  
   
- Jeśli tylko jeden wątek można zmodyfikować [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], wątki w tle interakcji z użytkownikiem? Poproś wątku w tle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku do wykonania operacji w jej imieniu. Robi to poprzez zarejestrowanie elementu roboczego z <xref:System.Windows.Threading.Dispatcher> z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. <xref:System.Windows.Threading.Dispatcher> Klasy udostępnia dwie metody rejestrowania elementów roboczych: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> i <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Obie metody zaplanować delegata do wykonania. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>to wywołanie synchroniczne — to znaczy nie zwraca do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku rzeczywiście ukończeniem wykonywania delegata. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>jest asynchroniczne i zwraca natychmiast.  
+ Jeśli tylko jeden wątek można zmodyfikować [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], wątki w tle interakcji z użytkownikiem? Poproś wątku w tle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku do wykonania operacji w jej imieniu. Robi to poprzez zarejestrowanie elementu roboczego z <xref:System.Windows.Threading.Dispatcher> z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. <xref:System.Windows.Threading.Dispatcher> Klasy udostępnia dwie metody rejestrowania elementów roboczych: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> i <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Obie metody zaplanować delegata do wykonania. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> to wywołanie synchroniczne — to znaczy nie zwraca do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku rzeczywiście ukończeniem wykonywania delegata. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> jest asynchroniczne i zwraca natychmiast.  
   
  <xref:System.Windows.Threading.Dispatcher> Porządkuje elementy w swojej kolejki według priorytetu. Istnieją dziesięć poziomy, które można określić podczas dodawania elementu <xref:System.Windows.Threading.Dispatcher> kolejki. Priorytety te są obsługiwane w <xref:System.Windows.Threading.DispatcherPriority> wyliczenia. Szczegółowe informacje na temat <xref:System.Windows.Threading.DispatcherPriority> poziomy znajdują się w [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] dokumentacji.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Ilustracja przedstawiająca kolejkę dyspozytora](../../../../docs/framework/wpf/advanced/media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
   
- [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)]wykonuje sprawdzanie pisowni przy użyciu tego mechanizmu. Sprawdzanie pisowni jest wykonywane w tle, na podstawie czasu bezczynności [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Spójrzmy na kod.  
+ [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] wykonuje sprawdzanie pisowni przy użyciu tego mechanizmu. Sprawdzanie pisowni jest wykonywane w tle, na podstawie czasu bezczynności [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Spójrzmy na kod.  
   
  W poniższym przykładzie przedstawiono XAML, która tworzy interfejs użytkownika.  
   
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
  Oprócz Aktualizowanie tekstu w <xref:System.Windows.Controls.Button>, ten program obsługi jest odpowiedzialny za planowanie pierwszy wyboru liczba pierwsza przez dodanie pełnomocnika, aby <xref:System.Windows.Threading.Dispatcher> kolejki. Pewnym czasie, po zakończeniu pracy, ten program obsługi zdarzeń <xref:System.Windows.Threading.Dispatcher> wybierze ten delegat do wykonania.  
   
- Jak wspomniano wcześniej, <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> jest <xref:System.Windows.Threading.Dispatcher> Członkowskie zaplanowano delegata do wykonania. W takim przypadku wybieramy opcję <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> priorytet. <xref:System.Windows.Threading.Dispatcher> Wykona ten delegat tylko wtedy, gdy Brak ważnych zdarzeń do przetwarzania. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]czas odpowiedzi jest ważniejsze niż liczba sprawdzania. Możemy również przekazać nowe delegowanie reprezentujący sprawdzanie numer procedury.  
+ Jak wspomniano wcześniej, <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> jest <xref:System.Windows.Threading.Dispatcher> Członkowskie zaplanowano delegata do wykonania. W takim przypadku wybieramy opcję <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> priorytet. <xref:System.Windows.Threading.Dispatcher> Wykona ten delegat tylko wtedy, gdy Brak ważnych zdarzeń do przetwarzania. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] czas odpowiedzi jest ważniejsze niż liczba sprawdzania. Możemy również przekazać nowe delegowanie reprezentujący sprawdzanie numer procedury.  
   
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
@@ -143,7 +131,7 @@ ms.lasthandoff: 12/22/2017
   
  Po zakończeniu opóźnienie, losowo Wybraliśmy naszych prognozie pogody, nadszedł czas na raportowane [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Firma Microsoft w tym celu planowania wywołanie `UpdateUserInterface` w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku przy użyciu tego wątku <xref:System.Windows.Threading.Dispatcher>. Ciąg opisujący pogody do wywołania tej metody zaplanowane jest przekazywana.  
   
--   Aktualizowanie[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+-   Aktualizowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
@@ -154,7 +142,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="multiple-windows-multiple-threads"></a>Wiele okien, wiele wątków  
  Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje wymagają wielu okien najwyższego poziomu. Dopuszczalne dokładnie jeden wątek są /<xref:System.Windows.Threading.Dispatcher> kombinacja do zarządzania wiele okien, ale czasami kilka wątków czy lepiej zadania. Jest to szczególnie istotne, jeśli wysłanej co systemu windows będzie zająć całych wątku.  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]Eksplorator działa w ten sposób. Każde nowe okno Eksploratora należy do oryginalnej proces, ale jest tworzony poza kontrolą niezależnie od wątku.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Eksplorator działa w ten sposób. Każde nowe okno Eksploratora należy do oryginalnej proces, ale jest tworzony poza kontrolą niezależnie od wątku.  
   
  Za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> kontroli, można wyświetlić strony sieci Web. Można łatwo utworzyć prostą [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] podstaw. Możemy zaczynać ważna cecha: możliwość Otwórz nowe okno Eksploratora. Gdy użytkownik kliknie przycisk "nowe okno" przycisku, możemy uruchomić kopię naszych okna w oddzielnym wątku. W ten sposób długotrwałe lub blokowania operacji w jednym z systemu windows nie będzie blokować wszystkich innych okien.  
   
@@ -177,18 +165,18 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
  [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
- Ta metoda jest punkt początkowy dla nowego wątku. Utworzymy nowe okno pod kontrolą tego wątku. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]automatycznie tworzy nową <xref:System.Windows.Threading.Dispatcher> do zarządzania nowego wątku. Wszystkie mamy zrobić, aby wyświetlić okno funkcjonalności jest uruchomienie <xref:System.Windows.Threading.Dispatcher>.  
+ Ta metoda jest punkt początkowy dla nowego wątku. Utworzymy nowe okno pod kontrolą tego wątku. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] automatycznie tworzy nową <xref:System.Windows.Threading.Dispatcher> do zarządzania nowego wątku. Wszystkie mamy zrobić, aby wyświetlić okno funkcjonalności jest uruchomienie <xref:System.Windows.Threading.Dispatcher>.  
   
 <a name="stumbling_points"></a>   
 ## <a name="technical-details-and-stumbling-points"></a>Szczegółowe informacje techniczne i Stumbling punkty  
   
 ### <a name="writing-components-using-threading"></a>Składniki zapisywania za pomocą wątków  
- [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] Przewodnik dewelopera opisuje szablon dla jak składnika mogą uwidaczniać asynchroniczne zachowanie klientom (zobacz [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Na przykład, załóżmy, że trzeba pakietu `FetchWeatherFromServer` metody do wielokrotnego użytku, które składnika. Następujące standardowego [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] wzorzec, to będzie wyglądać podobnie do poniższego.  
+ Przewodnik dewelopera programu Microsoft .NET Framework w tym artykule opisano szablon dla jak składnika mogą uwidaczniać asynchroniczne zachowanie klientom (zobacz [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Na przykład, załóżmy, że trzeba pakietu `FetchWeatherFromServer` metody do wielokrotnego użytku, które składnika. Następujące standardowy wzorzec Microsoft .NET Framework to może wyglądać poniżej.  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
- `GetWeatherAsync`użyje jednej z metod opisanych wcześniej, takich jak tworzenie wątku w tle, które wykonają tę pracę asynchronicznie, nie blokuje wątek wywołujący.  
+ `GetWeatherAsync` użyje jednej z metod opisanych wcześniej, takich jak tworzenie wątku w tle, które wykonają tę pracę asynchronicznie, nie blokuje wątek wywołujący.  
   
  Jedną z najważniejszych części tego wzorca wywołuje *MethodName* `Completed` metody w tym samym wątku, który wywołał *MethodName* `Async` rozpoczynać się od metody. Użytkownik może to zrobić przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dość łatwe, przechowując <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>—, ale następnie składnika, które mogą być używane tylko w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, nie znajduje się w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] programów.  
   
@@ -198,11 +186,11 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>Zagnieżdżone przekazywania  
- Czasami nie jest to wykonalne całkowicie blokowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Zastanówmy <xref:System.Windows.MessageBox.Show%2A> metody <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox.Show%2A>nie zwraca, dopóki użytkownik kliknie przycisk OK. Utworzone jednak okna, którą muszą dysponować Pętla wiadomości, aby interakcyjne. Gdy firma Microsoft oczekujące dla użytkownika kliknij przycisk OK, oryginalnego okna aplikacji nie odpowiada na dane wejściowe użytkownika. Jednakże nadal przetwarzać komunikaty dotyczące malowania. Oryginalnego okna ponownie rysuje samego w sobie podczas objętych usługą i ujawniony.  
+ Czasami nie jest to wykonalne całkowicie blokowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Zastanówmy <xref:System.Windows.MessageBox.Show%2A> metody <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox.Show%2A> nie zwraca, dopóki użytkownik kliknie przycisk OK. Utworzone jednak okna, którą muszą dysponować Pętla wiadomości, aby interakcyjne. Gdy firma Microsoft oczekujące dla użytkownika kliknij przycisk OK, oryginalnego okna aplikacji nie odpowiada na dane wejściowe użytkownika. Jednakże nadal przetwarzać komunikaty dotyczące malowania. Oryginalnego okna ponownie rysuje samego w sobie podczas objętych usługą i ujawniony.  
   
  ![Element MessageBox z przycisk "OK"](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
- Niektóre wątek musi być odpowiedzialnym za okno komunikatu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]można utworzyć nowego wątku do okno komunikatu, ale ten wątek można malować wyłączonych elementów w oknie oryginalnego (należy pamiętać o wcześniejszych omówienie wzajemne wykluczenie). Zamiast tego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa zagnieżdżonych komunikat przetwarzania systemu. <xref:System.Windows.Threading.Dispatcher> Klasa zawiera specjalne metody o nazwie <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, bieżącego punktu wykonywania aplikacji której przechowywana jest następnie rozpoczyna się nowych pętli komunikatów. Po zakończeniu pracy pętli komunikatów zagnieżdżonych wykonywania wznawia działanie po oryginalnej <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> wywołania.  
+ Niektóre wątek musi być odpowiedzialnym za okno komunikatu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można utworzyć nowego wątku do okno komunikatu, ale ten wątek można malować wyłączonych elementów w oknie oryginalnego (należy pamiętać o wcześniejszych omówienie wzajemne wykluczenie). Zamiast tego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa zagnieżdżonych komunikat przetwarzania systemu. <xref:System.Windows.Threading.Dispatcher> Klasa zawiera specjalne metody o nazwie <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, bieżącego punktu wykonywania aplikacji której przechowywana jest następnie rozpoczyna się nowych pętli komunikatów. Po zakończeniu pracy pętli komunikatów zagnieżdżonych wykonywania wznawia działanie po oryginalnej <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> wywołania.  
   
  W takim przypadku <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> przechowuje kontekście program w wywołaniu <xref:System.Windows.MessageBox>.<xref:System.Windows.MessageBox.Show%2A>, i jest on uruchamiany nowy pętli komunikatów do odświeżenia okna tła i obsługi danych wejściowych okno komunikatu. Gdy użytkownik kliknie przycisk OK i czyści okno podręczne, zamyka zagnieżdżonych pętli i sterowania zostanie wznowione po wywołaniu <xref:System.Windows.MessageBox.Show%2A>.  
   
@@ -213,7 +201,7 @@ ms.lasthandoff: 12/22/2017
   
  Po naciśnięciu lewego przycisku myszy nad elipsy, `handler2` jest wykonywana. Po `handler2` zakończeniu zdarzenia są przekazywane do wzdłuż <xref:System.Windows.Controls.Canvas> obiektu, który używa `handler1` go przetworzyć. Dzieje się tak tylko wtedy, gdy `handler2` jest nie jawnie znacznik obiekt zdarzenia jako obsłużone.  
   
- Istnieje możliwość, że `handler2` potrwa dużą ilość czasu na przetwarzanie tego zdarzenia. `handler2`może używać <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> pętli zagnieżdżonych wiadomości, która nie zwraca godziny rozpoczęcia. Jeśli `handler2` nie nie znacznika zdarzenia jako obsługiwany, gdy ta pętla wiadomości jest zakończenie, zdarzenie jest przekazywany górę drzewa, mimo że jest to bardzo starych.  
+ Istnieje możliwość, że `handler2` potrwa dużą ilość czasu na przetwarzanie tego zdarzenia. `handler2` może używać <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> pętli zagnieżdżonych wiadomości, która nie zwraca godziny rozpoczęcia. Jeśli `handler2` nie nie znacznika zdarzenia jako obsługiwany, gdy ta pętla wiadomości jest zakończenie, zdarzenie jest przekazywany górę drzewa, mimo że jest to bardzo starych.  
   
 ### <a name="reentrancy-and-locking"></a>Wielobieżność i blokowanie  
  Mechanizm blokowania [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nie zachowywać się dokładnie jako jeden oczywiście; jedną może spodziewać się wątek całkowicie przestaną operacji podczas żądania blokady. W rzeczywistości wątku w dalszym ciągu otrzymywać i przetwarzania komunikatów o wysokim priorytecie. Pomaga to zapobiec zakleszczenie i utworzyć co najmniej odpowiadać interfejsów, jednak wprowadza możliwość subtelnych błędów.  Większość czasu nie trzeba niczego wiedzieć o tym, ale w rzadkich przypadkach (zwykle obejmujące [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] komunikatów okien i składników COM STA) może to być wartość uzyskiwanie informacji.  

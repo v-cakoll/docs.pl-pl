@@ -1,27 +1,15 @@
 ---
-title: "Opracowywanie kanałów"
-ms.custom: 
+title: Opracowywanie kanałów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: def60ec0cce8da71e7e2d98ff456420949360aed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-channels"></a>Opracowywanie kanałów
-Aby opracować protokołu lub transportu kanału, który może być używany z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] warstwy aplikacji wymaga podjęcia kilku czynności. W tym temacie opisano te kroki i kieruje użytkownika do określonych tematów, aby uzyskać więcej informacji. Aby poznać model kanału i różne typy, które są wymienione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md). Przykładowy kanał transportu pełną, [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
+Aby opracować protokołu lub transportu kanału, który może służyć z systemu Windows Communication Foundation (WCF) warstwy aplikacji wymaga podjęcia kilku czynności. W tym temacie opisano te kroki i kieruje użytkownika do określonych tematów, aby uzyskać więcej informacji. Aby poznać model kanału i różne typy, które są wymienione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md). Przykładowy kanał transportu pełną, [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
   
 ## <a name="the-channel-development-task-list"></a>Lista zadań rozwoju kanału  
  Dostępne są następujące kroki, aby utworzyć kanał zdefiniowane przez użytkownika. Wszystkie kanały muszą:  

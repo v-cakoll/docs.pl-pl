@@ -1,11 +1,7 @@
 ---
-title: "Funkcja ExecQueryWmi (niezarządzany wykaz interfejsów API)"
-description: "Funkcja ExecQueryWmi wykonuje zapytanie w celu pobrania obiektów."
+title: Funkcja ExecQueryWmi (niezarządzany wykaz interfejsów API)
+description: Funkcja ExecQueryWmi wykonuje zapytanie w celu pobrania obiektów.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 872109cb0472a8404c492c2867429fe783f898eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b482f2ca2e2d5c06e69945adb71aa6c0f5d26465
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execquerywmi-function"></a>Funkcja ExecQueryWmi
 Wykonuje zapytanie w celu pobrania obiektów.  
@@ -84,7 +77,7 @@ Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` naj
 `authLevel`  
 [in] Poziom autoryzacji.
 
-`impLevel`[in] Poziom personifikacji.
+`impLevel` [in] Poziom personifikacji.
 
 `pCurrentNamespace`   
 [in] Wskaźnik do [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) obiekt, który reprezentuje bieżącej przestrzeni nazw.
@@ -131,7 +124,7 @@ Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje 
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

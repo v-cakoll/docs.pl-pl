@@ -1,31 +1,20 @@
 ---
-title: "Ogólne informacje o przyspieszeniach w PLINQ"
-ms.custom: 
+title: Ogólne informacje o przyspieszeniach w PLINQ
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7d94a1fa4c559552a32140fd172c0c62e033f7a8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2c2e7d5ce170feecaf69aa5dd9785346de0375d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-speedup-in-plinq"></a>Ogólne informacje o przyspieszeniach w PLINQ
 Głównym celem PLINQ ma przyspieszyć wykonywanie LINQ do obiektów zapytań, wykonując delegatów zapytania równolegle na komputerach z procesorami wielordzeniowymi. PLINQ sprawdza się najlepiej, gdy przetwarzania każdego elementu w kolekcji źródłowej jest niezależny, bez udostępnionych stanu związane między poszczególnych obiektów delegowanych. Takie operacje są często używane w LINQ do obiektów i PLINQ i są często nazywane "*delightfully równoległe*" ponieważ możliwa jest łatwo planowania na wiele wątków. Jednak nie wszystkie zapytania składa się wyłącznie z operacji równoległych delightfully; w większości przypadków zapytania obejmuje niektóre operatory, które albo nie może być zarządzana z przetwarzaniem lub który spowolnić przetwarzania równoległego. I nawet w przypadku zapytań, które są całkowicie delightfully równoległe, PLINQ i musi być nadal partycji źródła danych i harmonogramu pracy nad wątki, zwykle scalania wyniki po wykonaniu kwerendy. Dodaj te operacje obliczeniową koszty równoległości; Dodawanie paralelizacja koszty są nazywane *koszty*. Aby osiągnąć optymalną wydajność w zapytaniu PLINQ, celem jest zmaksymalizować części, które są delightfully równoległe i zminimalizować części, które wymagają obciążenia. Ten artykuł zawiera informacje, dzięki którym można pisać zapytania PLINQ, które są najbardziej efektywne podczas nadal reaguje poprawnych wyników.  

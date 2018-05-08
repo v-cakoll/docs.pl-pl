@@ -1,14 +1,6 @@
 ---
-title: "&lt;assemblybinding —&gt; elementu &lt;środowiska wykonawczego&gt;"
-ms.custom: 
+title: '&lt;assemblybinding —&gt; elementu &lt;środowiska wykonawczego&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
 helpviewer_keywords:
@@ -16,23 +8,19 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d5ef09f5d7b2dce366c605c8d8f4e6c456920b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d84c134b8e2b048f39836bbc10af06039e96719e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblybinding —&gt; elementu &lt;środowiska wykonawczego&gt;
 Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.  
   
  \<Konfiguracja >  
-\<Runtime >  
+\<runtime>  
 \<assemblybinding — >  
   
 ## <a name="syntax"></a>Składnia  
@@ -50,7 +38,7 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**xmlns**|Atrybut wymagany.<br /><br /> Określa przestrzeń nazw XML, wymagane do powiązań zestawów. Należy użyć ciągu "urn: schemas-microsoft-com:asm.v1" jako wartości.|  
+|**Xmlns**|Atrybut wymagany.<br /><br /> Określa przestrzeń nazw XML, wymagane do powiązań zestawów. Należy użyć ciągu "urn: schemas-microsoft-com:asm.v1" jako wartości.|  
 |**Element appliesTo**|Określa wersję środowiska uruchomieniowego dotyczy przekierowania zestawu .NET Framework. Ten opcjonalny atrybut używa numeru wersji .NET Framework w celu wskazania dotyczy wersji. Jeśli nie **appliesTo** określono atrybut  **\<assemblybinding — >** element ma zastosowanie do wszystkich wersji platformy .NET Framework. **AppliesTo** atrybutu została wprowadzona w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblybinding — >** elementy są stosowane, gdy przy użyciu platformy .NET Framework w wersji 1.0, nawet jeśli **appliesTo** jest określony atrybut.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -59,7 +47,7 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
 |-------------|-----------------|  
 |[\<dependentAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Hermetyzuje lokalizacji zasad i zestawu powiązania dla zestawu. Użyj jednej  **\<dependentAssembly >** tagu dla każdego zestawu.|  
 |[\<sondowanie >](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Określa podkatalogi podczas ładowania zestawów wyszukiwania środowisko uruchomieniowe języka wspólnego.|  
-|[\<publisherPolicy >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Określa, czy środowisko wykonawcze ma zastosowanie zasad wydawcy.|  
+|[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Określa, czy środowisko wykonawcze ma zastosowanie zasad wydawcy.|  
 |[\<qualifyassembly — >](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|Określa pełną nazwę zestawu, które powinny być dynamicznie załadowane, gdy część nazwy jest używany.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  

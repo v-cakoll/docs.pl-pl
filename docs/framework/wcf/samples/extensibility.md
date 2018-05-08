@@ -1,27 +1,15 @@
 ---
-title: "Rozszerzalność"
-ms.custom: 
+title: Rozszerzalność
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>Rozszerzalność
-Ta sekcja zawiera przykłady, które zajmują się niestandardowych rozszerzeń i innych funkcji [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Ta sekcja zawiera przykłady, które zajmują się rozszerzalności niestandardowe i inne funkcje programu Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Rozszerzalność kanałów](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ Ta sekcja zawiera przykłady, które zajmują się niestandardowych rozszerzeń 
  Pokazuje, jak punkty rozszerzeń, jaką może wykorzystać formaty danych niestandardowych wiadomości.  
   
  [Niestandardowy filtr komunikatów](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- Pokazuje, jak zastąpić komunikat filtrów, które [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa do wysyłania wiadomości do punktów końcowych.  
+ Pokazuje, jak zastąpić filtry wiadomości Windows Communication Foundation (WCF) używanych do wysyłania wiadomości do punktów końcowych.  
   
  [Niestandardowy host usługi](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Pokazuje, jak używać niestandardowych pochodną <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania.  

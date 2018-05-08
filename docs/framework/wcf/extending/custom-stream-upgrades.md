@@ -1,24 +1,12 @@
 ---
 title: Niestandardowe uaktualnienia strumienia
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>Niestandardowe uaktualnienia strumienia
 Zorientowane na strumień transportu, np. TCP i nazwane potoki działają na stały strumień bajtów między klientem i serwerem. Ten strumień jest realizowana <xref:System.IO.Stream> obiektu. W przypadku uaktualnienia strumienia klient chce dodać opcjonalne protokołu warstwy kanału i prosi o końcu kanał komunikacji, aby to zrobić. Uaktualnienie strumienia polega na zastąpienie oryginalnej <xref:System.IO.Stream> obiektu z uaktualnionym.  
@@ -41,7 +29,7 @@ Zorientowane na strumień transportu, np. TCP i nazwane potoki działają na sta
  Należy pamiętać, że w przypadku kilku uaktualnień, inicjator i wykonawca Hermetyzowanie maszyny stanu do wymuszania które przejścia uaktualnienia są prawidłowe dla każdego inicjowania.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>Jak zaimplementować uaktualnienia strumienia  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia cztery `abstract` klasy, które można zaimplementować:  
+ Windows Communication Foundation (WCF) zawiera cztery `abstract` klasy, które można zaimplementować:  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -78,7 +66,7 @@ Zorientowane na strumień transportu, np. TCP i nazwane potoki działają na sta
 ## <a name="security-upgrades"></a>Aktualizacje zabezpieczeń  
  Dodawanie uaktualnienie zabezpieczeń to specjalna wersja strumienia ogólne procesu uaktualniania.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]już zawiera dwa elementy powiązania uaktualniania zabezpieczenia strumienia. Konfiguracja zabezpieczenia na poziomie transportu jest hermetyzowany przez <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> i <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> którego można konfigurować i dodane do niestandardowego powiązania. Rozszerzenia te elementy powiązania <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> klasy, która tworzy strumień klienta i serwera uaktualnienia dostawców. Te elementy powiązania mają metody tworzące strumienia specjalne zabezpieczeń klasy dostawcy uaktualnienia, które nie są `public`, więc dla tych dwóch przypadkach wszystko co należy zrobić to dodanie elementu powiązania do powiązania.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] już zawiera dwa elementy powiązania uaktualniania zabezpieczenia strumienia. Konfiguracja zabezpieczenia na poziomie transportu jest hermetyzowany przez <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> i <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> którego można konfigurować i dodane do niestandardowego powiązania. Rozszerzenia te elementy powiązania <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> klasy, która tworzy strumień klienta i serwera uaktualnienia dostawców. Te elementy powiązania mają metody tworzące strumienia specjalne zabezpieczeń klasy dostawcy uaktualnienia, które nie są `public`, więc dla tych dwóch przypadkach wszystko co należy zrobić to dodanie elementu powiązania do powiązania.  
   
  W scenariuszach zabezpieczeń nie zostały spełnione przez powyższych elementów dwa powiązania trzy związanych z zabezpieczeniami `abstract` klas są uzyskiwane z powyższych klas podstawowych inicjatora, wykonawca i dostawcy:  
   

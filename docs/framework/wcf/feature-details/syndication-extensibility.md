@@ -1,24 +1,12 @@
 ---
-title: "Rozszerzalność syndykacji"
-ms.custom: 
+title: Rozszerzalność syndykacji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>Rozszerzalność syndykacji
 Interfejs API zespolonego umożliwia model programowania niezależny od formatu, który umożliwia zawartości zespolonej do zapisania danych przesyłanych w sieci w różnych formatach. Model danych abstrakcyjny składa się z następujących klas:  
@@ -35,7 +23,7 @@ Interfejs API zespolonego umożliwia model programowania niezależny od formatu,
   
  Te klasy mapowania ściśle konstrukcje specyfikacją Atom 1.0, mimo że niektóre nazwy są różne.  
   
- Kluczowy element zespolony protokołów jest rozszerzalności. Zarówno Atom 1.0 i RSS 2.0, należy dodać atrybuty i elementy do zespolonego źródła danych, które nie są zdefiniowane w specyfikacji. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Model programowania zespolonego zapewnia następujące sposoby pracy z atrybutów niestandardowych i rozszerzeń, typowaniem luźnym dostępu i wyprowadzanie nową klasę.  
+ Kluczowy element zespolony protokołów jest rozszerzalności. Zarówno Atom 1.0 i RSS 2.0, należy dodać atrybuty i elementy do zespolonego źródła danych, które nie są zdefiniowane w specyfikacji. Model programowania zespolonego Windows Communication Foundation (WCF) zapewnia następujące sposoby pracy z atrybutów niestandardowych i rozszerzeń, typowaniem luźnym dostępu i wyprowadzanie nową klasę.  
   
 ## <a name="loosely-typed-access"></a>Słabo Typizowana dostępu  
  Dodawanie rozszerzeń przez wyprowadzanie nową klasę wymaga zapisywania dodatkowy kod. Inną opcją uzyskuje dostęp do rozszerzeń w taki sposób, typowaniem luźnym. Wszystkie typy zdefiniowanego w modelu danych abstrakcyjny zespolonego zawiera właściwości o nazwie `AttributeExtensions` i `ElementExtensions` (z jednym wyjątkiem <xref:System.ServiceModel.Syndication.SyndicationContent> ma `AttributeExtensions` właściwość, ale nie `ElementExtensions` właściwości). Te właściwości są kolekcjami rozszerzeń nie są przetwarzane przez `TryParseAttribute` i `TryParseElement` metody odpowiednio. Dostęp do tych rozszerzeń nieprzetworzone wywołując <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> na `ElementExtensions` właściwość <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson>, i <xref:System.ServiceModel.Syndication.SyndicationCategory>. Ten zestaw metod znajduje wszystkie rozszerzenia o określonej nazwie i przestrzeni nazw, deserializuje je oddzielnie do wystąpienia `TExtension` i zwraca je jako kolekcja `TExtension` obiektów.  

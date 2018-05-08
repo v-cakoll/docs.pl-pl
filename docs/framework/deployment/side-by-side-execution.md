@@ -1,42 +1,30 @@
 ---
-title: "Wykonywanie równoczesne w programie .NET Framework"
-ms.custom: 
+title: Wykonywanie równoczesne w programie .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75ee159f45932f6130db2ce47c6923c24b38ca99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Wykonywanie równoczesne w programie .NET Framework
 Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacji lub składnika na jednym komputerze. Można mieć wiele wersji środowiska uruchomieniowego języka wspólnego i wiele wersji aplikacji oraz składników, które używają wersji środowiska uruchomieniowego na jednym komputerze w tym samym czasie.  
   
  Na poniższej ilustracji pokazano kilka aplikacji używających dwóch różnych wersji środowiska uruchomieniowego na jednym komputerze. Aplikacje A, B i C używają środowiska uruchomieniowego w wersji 1.0, podczas gdy aplikacja D używa środowiska uruchomieniowego w wersji 1.1.  
   
- ![Po stronie &#45; przez &#45; wykonanie po stronie](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
+ ![Po stronie&#45;przez&#45;wykonania po stronie](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
 Wykonywanie równoczesne dwóch wersji środowiska uruchomieniowego  
   
  Program .NET Framework składa się ze środowiska uruchomieniowego języka wspólnego i kolekcji zestawów zawierających typy interfejsu API. Wersje środowiska uruchomieniowego i zestawów programu .NET Framework są określane oddzielnie. Na przykład wersja 4.0 środowiska uruchomieniowego jest w rzeczywistości wersją 4.0.319, natomiast wersja 1.0 zestawów programu .NET Framework jest w rzeczywistości wersją 1.0.3300.0.  
   
  Na poniższej ilustracji pokazano kilka aplikacji używających dwóch różnych wersji składnika na jednym komputerze. Aplikacje A i B używają wersji 1.0 składnika, podczas gdy aplikacja C używa wersji 2.0 tego samego składnika.  
   
- ![Po stronie &#45; przez &#45; wykonanie po stronie](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
+ ![Po stronie&#45;przez&#45;wykonania po stronie](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
 Wykonywanie równoczesne dwóch wersji składnika  
   
  Wykonywanie równoczesne daje większą kontrolę nad tym, z którymi wersjami składnika jest powiązana aplikacja, a także większą kontrolę nad tym, których wersji środowiska uruchomieniowego używa aplikacja.  

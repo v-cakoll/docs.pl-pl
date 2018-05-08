@@ -1,34 +1,24 @@
 ---
-title: "&lt;System.Runtime.Caching —&gt; — Element (ustawienia pamięci podręcznej)"
-ms.custom: 
+title: '&lt;System.Runtime.Caching —&gt; — Element (ustawienia pamięci podręcznej)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <system.runtime.caching> element
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83964d3a6e07267eaa946fa306301bc6d0d16e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 659a168f6c0bcb459bcfbdb247a9959c61c9c996
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemruntimecachinggt-element-cache-settings"></a>&lt;System.Runtime.Caching —&gt; — Element (ustawienia pamięci podręcznej)
 Zapewnia konfigurację domyślną w pamięci <xref:System.Runtime.Caching.ObjectCache> wykonywania za pośrednictwem `memoryCache` wpis w pliku konfiguracji.  
   
  \<Konfiguracja >  
-\<System.Runtime.Caching — >  
+\<system.runtime.caching>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +38,7 @@ Zapewnia konfigurację domyślną w pamięci <xref:System.Runtime.Caching.Object
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<memoryCache >](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Definiuje element, który jest używany do konfigurowania pamięci podręcznej, która jest oparta na <xref:System.Runtime.Caching.MemoryCache> klasy.|  
+|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Definiuje element, który jest używany do konfigurowania pamięci podręcznej, która jest oparta na <xref:System.Runtime.Caching.MemoryCache> klasy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

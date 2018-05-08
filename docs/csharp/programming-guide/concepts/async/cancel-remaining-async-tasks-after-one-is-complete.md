@@ -1,22 +1,12 @@
 ---
-title: "Anulowanie pozostałych zadań asynchronicznych po jednym jest pełna (C#)"
-ms.custom: 
+title: Anulowanie pozostałych zadań asynchronicznych po jednym jest pełna (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5e1a899223d0f6d15e6851c9320275bafe876118
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 22a29dec90dcbbd24ff1a6081fd7bf1d56d6ac0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Anulowanie pozostałych zadań asynchronicznych po jednym jest pełna (C#)
 Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> metody razem z <xref:System.Threading.CancellationToken>, możesz anulować wszystkie pozostałe zadania po zakończeniu zadania. `WhenAny` Metoda przyjmuje argument, który jest kolekcji zadań. Metoda uruchamiania wszystkich zadań i zwraca jedno zadanie. Pojedyncze zadanie zakończeniu po ukończeniu zadań w kolekcji.  

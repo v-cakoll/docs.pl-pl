@@ -1,9 +1,6 @@
 ---
-title: "Lista typów (Visual Basic)"
+title: Lista typów (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>Lista typów (Visual Basic)
 Określa *parametry typu* dla *ogólnego* elementu programistycznego. Wiele parametrów są oddzielone przecinkami. Poniżej przedstawiono składnię dla parametru typu.  
@@ -49,9 +43,9 @@ Określa *parametry typu* dla *ogólnego* elementu programistycznego. Wiele para
   
 |Termin|Definicja|  
 |---|---|  
-|`genericmodifier`|Opcjonalny. Może być używana tylko w interfejsach i delegatów. Można zadeklarować typu kowariantnego przy użyciu [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) — słowo kluczowe lub kontrawariantnego przy użyciu [w](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) — słowo kluczowe. Zobacz [Kowariancja i Kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md).|  
-|`typename`|Wymagany. Nazwa parametru typu. Jest to symbol zastępczy, mają zostać zastąpione przez zdefiniowanego typu dostarczonych przez argument odpowiedniego typu.|  
-|`constraintlist`|Opcjonalny. Listę wymagań, które ograniczenia typu danych, które mogą być dostarczane na potrzeby `typename`. Jeśli masz wiele ograniczeń, ujmij ją w nawiasy klamrowe (`{ }`) i oddziel je przecinkami. Należy wprowadzić listę powiązanych z [jako](../../../visual-basic/language-reference/statements/as-clause.md) — słowo kluczowe. Możesz użyć `As` tylko jeden raz na początku listy.|  
+|`genericmodifier`|Opcjonalna. Może być używana tylko w interfejsach i delegatów. Można zadeklarować typu kowariantnego przy użyciu [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) — słowo kluczowe lub kontrawariantnego przy użyciu [w](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) — słowo kluczowe. Zobacz [Kowariancja i Kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md).|  
+|`typename`|Wymagana. Nazwa parametru typu. Jest to symbol zastępczy, mają zostać zastąpione przez zdefiniowanego typu dostarczonych przez argument odpowiedniego typu.|  
+|`constraintlist`|Opcjonalna. Listę wymagań, które ograniczenia typu danych, które mogą być dostarczane na potrzeby `typename`. Jeśli masz wiele ograniczeń, ujmij ją w nawiasy klamrowe (`{ }`) i oddziel je przecinkami. Należy wprowadzić listę powiązanych z [jako](../../../visual-basic/language-reference/statements/as-clause.md) — słowo kluczowe. Możesz użyć `As` tylko jeden raz na początku listy.|  
   
 ## <a name="remarks"></a>Uwagi  
  Co ogólnego elementu programistycznego musi mieć co najmniej jeden parametr typu. Parametr typu jest symbolem zastępczym dla określonego typu ( *skonstruowane elementu*) kodu klienta określa, kiedy tworzy wystąpienie typu ogólnego. Można zdefiniować klasy ogólnej, struktury, interfejsu, procedury lub delegowanie.  
@@ -98,14 +92,14 @@ Określa *parametry typu* dla *ogólnego* elementu programistycznego. Wiele para
  [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Z](../../../visual-basic/language-reference/statements/of-clause.md)  
- [New — Operator](../../../visual-basic/language-reference/operators/new-operator.md)  
+ [z](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [Operator New](../../../visual-basic/language-reference/operators/new-operator.md)  
  [Poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Object — typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Porady: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Kowariancja i Kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+ [Object, typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)  
+ [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

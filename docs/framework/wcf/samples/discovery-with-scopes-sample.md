@@ -1,24 +1,12 @@
 ---
-title: "Przykład odnajdywania z zakresami"
-ms.custom: 
+title: Przykład odnajdywania z zakresami
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aa762df1dbfe92102f8cd719613099b23986ed0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee6fdb69f6417e6c43d671c7c76bda8af067d5a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-with-scopes-sample"></a>Przykład odnajdywania z zakresami
 Ten przykład przedstawia sposób użycia zakresów kategoryzację wykrywalny punktów końcowych, jak również sposób użycia <xref:System.ServiceModel.Discovery.DiscoveryClient> do wykonywania asynchronicznych wyszukiwania dla punktów końcowych. W usłudze w tym przykładzie pokazano, jak dostosować odnajdywania dla każdego punktu końcowego przez dodanie zachowanie odnajdowania punktu końcowego i użytkowania go, aby dodać zakres do punktu końcowego, a także kontrolowanie możliwość odnajdowania punktu końcowego. Na komputerze klienckim próbki przechodzi w jaki sposób klienci mogą tworzyć <xref:System.ServiceModel.Discovery.DiscoveryClient> i dostosowywanie wyszukiwania parametrów do dołączania zakresów przez dodawanie zakresów do <xref:System.ServiceModel.Discovery.FindCriteria>. Również w tym przykładzie pokazano, jak klienci mogą ograniczać odpowiedzi od dodania kryterium zakończenia.  
@@ -31,7 +19,7 @@ Ten przykład przedstawia sposób użycia zakresów kategoryzację wykrywalny pu
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  W przykładzie użyto punktów końcowych HTTP i do uruchomienia tego przykładu, muszą zostać dodane odpowiednie listy ACL adresu URL. Zobacz [Konfigurowanie protokołów HTTP i HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) szczegółowe informacje. Następujące polecenie w pełnych uprawnień do wykonania należy dodać odpowiednich list ACL. Można zastąpić użytkownika domena i nazwa użytkownika dla następujących argumentów, jeśli polecenie nie działa, ponieważ jest:`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  W przykładzie użyto punktów końcowych HTTP i do uruchomienia tego przykładu, muszą zostać dodane odpowiednie listy ACL adresu URL. Zobacz [Konfigurowanie protokołów HTTP i HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) szczegółowe informacje. Następujące polecenie w pełnych uprawnień do wykonania należy dodać odpowiednich list ACL. Można zastąpić użytkownika domena i nazwa użytkownika dla następujących argumentów, jeśli polecenie nie działa, ponieważ jest: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Skompiluj rozwiązanie.  
   
@@ -44,7 +32,7 @@ Ten przykład przedstawia sposób użycia zakresów kategoryzację wykrywalny pu
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   

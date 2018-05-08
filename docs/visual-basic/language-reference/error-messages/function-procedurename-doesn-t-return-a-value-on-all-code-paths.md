@@ -1,28 +1,19 @@
 ---
-title: "Funkcja &#39; &lt;nazwaprocedury&gt;&#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu"
+title: Funkcja &#39; &lt;nazwaprocedury&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42105
 - vbc42105
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5244d97a79f2450f44fe05f63510369914375912
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c18c6229eb170e8a688aaa2734ae8fbfa081061
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Funkcja &#39; &lt;nazwaprocedury&gt;&#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
+# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Funkcja &#39; &lt;nazwaprocedury&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
 Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu. Czy nie brakuje instrukcji "Return"?  
   
  A `Function` procedura ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kod, który nie zwraca wartości.  
@@ -49,5 +40,5 @@ Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury funkcji](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
  [Strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

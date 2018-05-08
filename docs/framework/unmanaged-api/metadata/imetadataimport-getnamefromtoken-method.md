@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::GetNameFromToken — Metoda"
-ms.custom: 
+title: IMetaDataImport::GetNameFromToken — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.GetNameFromToken
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 32114ecf-8916-4ab2-a201-179c017344f1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: baa0c0e78f7912561b432effd2bf5503e0f06ae7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a39eac88537d47535844d1f05e0741cc94142f0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken — Metoda
 Pobiera nazwę UTF-8 obiektu odwołuje się token określonych metadanych. Ta metoda jest przestarzała.  
@@ -55,7 +43,7 @@ HRESULT GetNameFromToken (
  [out] Wskaźnik do nazwy obiektu UTF-8 w stosie.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetNameFromToken`jest przestarzała. Alternatywnie, należy wywołać metodę można pobrać właściwości określonego rodzaju token wymagane, takie jak `GetFieldProps` dla pola lub `GetMethodProps` metody.  
+ `GetNameFromToken` jest przestarzała. Alternatywnie, należy wywołać metodę można pobrać właściwości określonego rodzaju token wymagane, takie jak `GetFieldProps` dla pola lub `GetMethodProps` metody.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

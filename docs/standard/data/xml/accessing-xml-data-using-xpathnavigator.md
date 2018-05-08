@@ -1,26 +1,15 @@
 ---
-title: "Uzyskiwanie dostępu do danych XML przy użyciu parametrem XPathNavigator"
-ms.custom: 
+title: Uzyskiwanie dostępu do danych XML przy użyciu parametrem XPathNavigator
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e0b6d8545fccf9148aaa317b6d936c5c9f02775
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 74a991148ba4a71284e1f5da7b5d9c2a40c4446b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do danych XML przy użyciu parametrem XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa dostarcza metody do nawigowania węzłów, wyodrębnić dane XML i dostępu jednoznacznie danych XML w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu.  

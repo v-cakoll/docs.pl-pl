@@ -1,13 +1,6 @@
 ---
 title: Wprowadzenie do LINQ w Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
 - query execution [LINQ in Visual Basic]
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1f41252d6f28c7b2ffb459b3374833fde56393f8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ae59cb4d6b812ba956ce55723e034f381db14aa1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
 Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend do języka Visual Basic i udostępnia prosta i skuteczna możliwości podczas pracy z wszystkich typów danych. Zamiast Wysyłanie zapytania do bazy danych w celu przetworzenia lub Praca z inną składnię dla każdego typu danych, które w przypadku wyszukiwania, LINQ wprowadza zapytania jako część języka Visual Basic. Używa ujednoliconego składni niezależnie od typu danych.  

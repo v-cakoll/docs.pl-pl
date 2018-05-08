@@ -1,29 +1,15 @@
 ---
 title: Host usługi WCF (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Host usługi (WcfSvcHost.exe) pozwala na uruchamianie debugera programu Visual Studio (F5), aby automatycznie udostępniać i testowanie usługi, które zostały zaimplementowane. Następnie można testować przy użyciu usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testowanie klienta (WcfTestClient.exe) lub własnego klienta, aby znaleźć i rozwiązać wszelkie potencjalne błędy.  
+Host usługi Windows Communication Foundation (WCF) (WcfSvcHost.exe) umożliwia uruchamianie debugera programu Visual Studio (F5), aby automatycznie udostępniać i testowanie usługi, które zostały zaimplementowane. Następnie można testować przy użyciu usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testowanie klienta (WcfTestClient.exe) lub własnego klienta, aby znaleźć i rozwiązać wszelkie potencjalne błędy.  
   
 ## <a name="wcf-service-host"></a>Host usługi WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi wylicza usług w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projektu usługi ładuje konfigurację projektu i tworzy wystąpienie hosta dla każdej usługi, która znajdzie. Narzędzie jest zintegrowany z programu Visual Studio za pośrednictwem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] szablonu usługi i jest wywoływana po rozpoczęciu debugowania projektu.  

@@ -1,29 +1,18 @@
 ---
-title: "Tworzenie w czasie wykonywania z DynamicActivity działania"
-ms.custom: 
+title: Tworzenie w czasie wykonywania z DynamicActivity działania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebbd6e77c2c47754054a81f4b07d3d845cdcac00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Tworzenie w czasie wykonywania z DynamicActivity działania
-<xref:System.Activities.DynamicActivity>jest klasą konkretną, sealed z publicznym konstruktorem. <xref:System.Activities.DynamicActivity>można użyć do włączenia funkcji działania w czasie wykonywania za pomocą działania modelu DOM.  
+<xref:System.Activities.DynamicActivity> jest klasą konkretną, sealed z publicznym konstruktorem. <xref:System.Activities.DynamicActivity> można użyć do włączenia funkcji działania w czasie wykonywania za pomocą działania modelu DOM.  
   
 ## <a name="dynamicactivity-features"></a>Funkcje DynamicActivity  
- <xref:System.Activities.DynamicActivity>ma dostęp do właściwości wykonania, argumentów i zmienne, ale brak dostępu do usługi czasu wykonywania, takie jak planowania działań podrzędnych lub śledzenia.  
+ <xref:System.Activities.DynamicActivity> ma dostęp do właściwości wykonania, argumentów i zmienne, ale brak dostępu do usługi czasu wykonywania, takie jak planowania działań podrzędnych lub śledzenia.  
   
  Można ustawić właściwości najwyższego poziomu za pomocą przepływu pracy <xref:System.Activities.Argument> obiektów. W kodzie imperatywnych tych argumentów są tworzone przy użyciu właściwości CLR dla nowego typu. W języku XAML, są one uznane za pomocą `x:Class` i `x:Member` tagów.  
   

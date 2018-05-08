@@ -1,36 +1,27 @@
 ---
-title: "LINQ do XML-Przegląd (C#)"
-ms.custom: 
+title: LINQ do XML-Przegląd (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1c66e87ecc72bf711dfda33cd7c0ea35f126c1e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 318c5494134fd1dd3ac2adbf538d693ad4a5dbf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ do XML-Przegląd (C#)
 Powszechnie przyjęto XML jako sposób do formatowania danych w wielu sytuacjach. Na przykład XML można znaleźć w sieci Web, w plikach konfiguracji, pliki programu Microsoft Office Word i baz danych.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]jest aktualne, zmienioną podejście do programowania w języku XML. Udostępnia dokument w pamięci możliwości modyfikacji z modelu DOM (Document Object) i obsługuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenia zapytań. Chociaż tych wyrażeń zapytania składniowo różnią się od wyrażenia XPath, zapewniają podobne funkcje.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest aktualne, zmienioną podejście do programowania w języku XML. Udostępnia dokument w pamięci możliwości modyfikacji z modelu DOM (Document Object) i obsługuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenia zapytań. Chociaż tych wyrażeń zapytania składniowo różnią się od wyrażenia XPath, zapewniają podobne funkcje.  
   
 ## <a name="linq-to-xml-developers"></a>LINQ do XML deweloperów  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Celem odmiany deweloperów. Dla średniej developer, który właśnie chce coś zrobić [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ułatwia XML, udostępniając środowisko zapytania, która jest podobna do bazy danych SQL. Tylko bit badań programistów dowiedzieć się do pisania zwięzły i zaawansowanych zapytań w języku programowania wyboru.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Celem odmiany deweloperów. Dla średniej developer, który właśnie chce coś zrobić [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ułatwia XML, udostępniając środowisko zapytania, która jest podobna do bazy danych SQL. Tylko bit badań programistów dowiedzieć się do pisania zwięzły i zaawansowanych zapytań w języku programowania wyboru.  
   
  Professional deweloperzy mogą używać [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] znacznie zwiększyć ich wydajność. Z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], mogą zapisywać mniej kodu, który jest bardziej obszerne mniejszych i bardziej zaawansowanych. Wyrażenia zapytań z wielu domen danych użyciem w tym samym czasie.  
   
 ## <a name="what-is-linq-to-xml"></a>Co to jest LINQ do XML?  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]to włączone LINQ, w pamięci XML programowania interfejs, który umożliwia pracę z językiem XML z poziomu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] języków programowania.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to włączone LINQ, w pamięci XML programowania interfejs, który umożliwia pracę z językiem XML z poziomu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] języków programowania.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]ma takie jak modelu DOM (Document Object) stwarza dokumentu XML do pamięci. Możesz zbadać i modyfikowanie dokumentu, a po jego modyfikacji można zapisać w pliku lub go serializować i wysłać go przez Internet. Jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różni się od DOM: zapewnia nowy model, która jest mniejsza waga i łatwiejsze do pracy z, i który korzysta z funkcji języka w języku C#.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ma takie jak modelu DOM (Document Object) stwarza dokumentu XML do pamięci. Możesz zbadać i modyfikowanie dokumentu, a po jego modyfikacji można zapisać w pliku lub go serializować i wysłać go przez Internet. Jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różni się od DOM: zapewnia nowy model, która jest mniejsza waga i łatwiejsze do pracy z, i który korzysta z funkcji języka w języku C#.  
   
  Najważniejszą korzyścią z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest integracji z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Integracja ta umożliwia pisanie zapytań w dokumencie XML w pamięci można pobrać kolekcji elementów i atrybutów. Możliwości zapytania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można porównywać pod względem funkcji (ale nie w składni) XPath i XQuery. Integracja [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] w języku C# zapewnia silniejsze pisowni, kompilacji sprawdzanie i ulepszona obsługa debugera.  
   
@@ -97,4 +88,4 @@ new XElement("Contacts",
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Linq>  
- [Wprowadzenie (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+ [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

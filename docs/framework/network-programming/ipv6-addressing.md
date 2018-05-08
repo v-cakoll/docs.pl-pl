@@ -1,12 +1,6 @@
 ---
 title: Adresowanie IPv6
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -32,16 +26,14 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 01d4fd0fbeeb0f111505fde0f8154c54b2bdcc38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 532928118df9784198eada6f6a2f1e7a1b808ee9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ipv6-addressing"></a>Adresowanie IPv6
 W Internet Protocol w wersji 6 (IPv6) adresy to 128 bitów. Jedną z przyczyn miejsca długich adresów jest dalszy dostępnych adresów do hierarchii domen routingu, które odzwierciedlać topologii sieci Internet. Kolejny powód jest mapowania adresów karty sieciowe (lub interfejsy) łączące urządzeń w sieci. IPv6 funkcjami związanego z używaniem możliwość rozpoznawania adresów na najniższym poziomie, który znajduje się na poziomie interfejsu sieciowego i zapewnia również funkcję automatycznej konfiguracji.  
@@ -62,7 +54,7 @@ W Internet Protocol w wersji 6 (IPv6) adresy to 128 bitów. Jedną z przyczyn mi
   
  Oto przykład adresu z prefiksem 64-bitowych.  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`.,  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
   
  Prefiks, w tym przykładzie jest `3FFE:FFFF:0:CD30`. Adres może być także zapisane w postaci skompresowanej jako `3FFE:FFFF:0:CD30::/64`.  
   

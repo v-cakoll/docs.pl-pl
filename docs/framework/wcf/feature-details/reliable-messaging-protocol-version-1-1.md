@@ -1,29 +1,17 @@
 ---
 title: Reliable Messaging Protocol w wersji 1,1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ff02bc6953ec1e5030dd0b592a352b7e23ab0d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging Protocol w wersji 1,1
-W tym temacie omówiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] szczegóły implementacji protokołu WS-ReliableMessaging February 2007 (w wersji 1.1) protokołu niezbędne do współpracy przy użyciu protokołu HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zgodna ze specyfikacją WS-ReliableMessaging, ograniczenia i wyjaśnienia opisanego w tym temacie. Należy pamiętać, że protokołu WS-ReliableMessaging w wersji 1.1 jest wykonywane, począwszy od [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
+W tym temacie omówiono szczegóły implementacji usługi Windows Communication Foundation (WCF) dla protokołu WS-ReliableMessaging protokołu lutego 2007 (w wersji 1.1) niezbędne do współpracy przy użyciu protokołu HTTP. Usługi WCF zgodna ze specyfikacją WS-ReliableMessaging, ograniczenia i wyjaśnienia opisanego w tym temacie. Należy pamiętać, że protokołu WS-ReliableMessaging w wersji 1.1 jest wykonywane, począwszy od [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
   
- WS-ReliableMessaging February 2007 protokół jest zaimplementowana w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przez <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
+ WS-ReliableMessaging February 2007 protokół jest zaimplementowana w programie WCF przez <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
   
  Dla wygody tematu są używane następujące role:  
   
@@ -35,53 +23,53 @@ W tym temacie omówiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
   
 |Prefiks|Przestrzeń nazw|  
 |-|-|  
-|Menedżer zasobów systemu Windows|http://docs.oasis-open.org/ws-Rx/WSRM/200702|  
-|netrm|http://schemas.microsoft.com/ws/2006/05/RM|  
-|s|http://www.w3.org/2003/05/SOAP-Envelope|  
-|wsa|http://schemas.xmlsoap.org/ws/2005/08/Addressing|  
-|wsse|http://docs.oasis-open.org/WSS/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
-|wsrmp|http://docs.oasis-open.org/ws-Rx/wsrmp/200702|  
-|netrmp|http://schemas.microsoft.com/ws-Rx/wsrmp/200702|  
+|Menedżer zasobów systemu Windows|http://docs.oasis-open.org/ws-rx/wsrm/200702|  
+|netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
+|s|http://www.w3.org/2003/05/soap-envelope|  
+|wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
+|wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
+|wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|  
+|netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|  
 |WSP|(WS-Policy 1.2 lub WS-Policy 1.5)|  
   
 ## <a name="messaging"></a>Obsługa wiadomości  
   
 ### <a name="sequence-creation"></a>Tworzenie sekwencji  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementuje `CreateSequence` i `CreateSequenceResponse` komunikaty, aby ustanowić niezawodna obsługa komunikatów sekwencji. Obowiązują następujące ograniczenia:  
+ Implementuje WCF `CreateSequence` i `CreateSequenceResponse` komunikaty, aby ustanowić niezawodna obsługa komunikatów sekwencji. Obowiązują następujące ograniczenia:  
   
--   B1101: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora używa odwołania do tego samego punktu końcowego jako `CreateSequence` komunikatu `ReplyTo`, `AcksTo` i `Offer/Endpoint`.  
+-   B1101: Odwołanie do tego samego punktu końcowego jako używa inicjatora WCF `CreateSequence` komunikatu `ReplyTo`, `AcksTo` i `Offer/Endpoint`.  
   
 -   R1102: `AcksTo`, `ReplyTo` i `Offer/Endpoint` odwołania do punktu końcowego w `CreateSequence` wiadomości musi mieć adres wartości z reprezentacji ciągu identyczne tak, aby odpowiadały octet-wise.  
   
-    -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie sprawdza, czy identyfikator URI części `AcksTo`, `ReplyTo` i `Endpoint` odwołania do punktu końcowego są identyczne, przed utworzeniem sekwencji.  
+    -   Obiekt odpowiadający w trybie WCF sprawdza, czy identyfikator URI części `AcksTo`, `ReplyTo` i `Endpoint` odwołania do punktu końcowego są identyczne, przed utworzeniem sekwencji.  
   
 -   R1103: `AcksTo`, `ReplyTo` i `Offer/Endpoint` odwołania do punktu końcowego w `CreateSequence` wiadomości powinny mieć ten sam zestaw parametrów odwołania.  
   
-    -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie wymusza, ale przyjęto założenie, które zawierają odniesienia parametry `AcksTo`, `ReplyTo` i `Offer/Endpoint` odwołuje się do punktu końcowego na `CreateSequence` są identyczne i korzysta z parametrów odwołania z `ReplyTo` odwołania do punktu końcowego dla Potwierdzanie i komunikaty sekwencji odwrotnej.  
+    -   Usługi WCF nie wymusza, ale przyjęto założenie, że odwołanie parametry `AcksTo`, `ReplyTo` i `Offer/Endpoint` odwołuje się do punktu końcowego na `CreateSequence` są identyczne i korzysta z parametrów odwołania z `ReplyTo` odwołania do punktu końcowego dla Potwierdzanie i komunikaty sekwencji odwrotnej.  
   
--   B1104: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora nie generuje opcjonalny `Expires` lub `Offer/Expires` element `CreateSequence` wiadomości.  
+-   B1104: Inicjator WCF nie generuje opcjonalny `Expires` lub `Offer/Expires` element `CreateSequence` wiadomości.  
   
--   B1105: Podczas uzyskiwania dostępu do `CreateSequence` wiadomości, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa obiektu odpowiadającego w trybie `Expires` wartość w `CreateSequence` element jako `Expires` wartość w `CreateSequenceResponse` elementu. W przeciwnym razie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu odpowiadającego w trybie odczytuje i ignoruje `Expires` i `Offer/Expires` wartości.  
+-   B1105: Podczas uzyskiwania dostępu do `CreateSequence` używa obiektu odpowiadającego w trybie WCF wiadomości, `Expires` wartość w `CreateSequence` element jako `Expires` wartość w `CreateSequenceResponse` elementu. W przeciwnym wypadku obiekt odpowiadający w trybie WCF odczytuje i ignoruje `Expires` i `Offer/Expires` wartości.  
   
--   B1106: Podczas uzyskiwania dostępu do `CreateSequenceResponse` wiadomości, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora odczytuje opcjonalny `Expires` wartość, ale nie używa ich.  
+-   B1106: Podczas uzyskiwania dostępu do `CreateSequenceResponse` komunikat, inicjator WCF: opcjonalny `Expires` wartość, ale nie używa ich.  
   
--   B1107: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Inicjator i obiekt odpowiadający zawsze Generuj opcjonalny `IncompleteSequenceBehavior` element `CreateSequence/Offer` i `CreateSequenceResponse` elementy.  
+-   B1107: WCF Inicjator i obiekt odpowiadający zawsze Generuj opcjonalny `IncompleteSequenceBehavior` element `CreateSequence/Offer` i `CreateSequenceResponse` elementy.  
   
--   B1108: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa tylko `DiscardFollowingFirstGap` i `NoDiscard` wartości w `IncompleteSequenceBehavior` elementu.  
+-   B1108: WCF używa tylko `DiscardFollowingFirstGap` i `NoDiscard` wartości w `IncompleteSequenceBehavior` elementu.  
   
     -   Korzysta z protokołu WS-ReliableMessaging `Offer` mechanizmu ustanowienie dwa konwersacji skorelowane sekwencji, które tworzą sesji.  
   
--   B1109: Jeśli `CreateSequence` zawiera `Offer` elementu, jeden sposób [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu odpowiadającego w trybie odrzuca oferowany sekwencji odpowiedzi z `CreateSequenceResponse` bez `Accept` elementu.  
+-   B1109: Jeśli `CreateSequence` zawiera `Offer` elementu jednokierunkowej udzielenia WCF odrzuca oferowany sekwencji odpowiedzi z `CreateSequenceResponse` bez `Accept` elementu.  
   
--   B1110: Jeśli sekwencja oferowany odrzuca niezawodnej obsługi komunikatów obiektu odpowiadającego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora błędów nowo utworzonego sekwencji.  
+-   B1110: Jeśli obiekt odpowiadający niezawodnej obsługi komunikatów odrzuci oferowany sekwencji, inicjator WCF błędów nowo utworzonego sekwencji.  
   
--   B1111: Jeśli `CreateSequence` nie zawiera `Offer` element, dwukierunkowe [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu odpowiadającego w trybie odrzuca oferowany sekwencji odpowiedzi z `CreateSequenceRefused` usterek.  
+-   B1111: Jeśli `CreateSequence` nie zawiera `Offer` elementu dwukierunkowe udzielenia WCF odrzuca oferowany sekwencji odpowiedzi z `CreateSequenceRefused` usterek.  
   
 -   R1112: Gdy dwa konwersacji sekwencje są ustanawianie za pomocą `Offer` mechanizmu, `[address]` właściwość `CreateSequenceResponse/Accept/AcksTo` odwołania do punktu końcowego musi być zgodna docelowego identyfikatora URI z `CreateSequence` bajtów wiadomości dla bajtu.  
   
 -   R1113: Gdy dwa konwersacji sekwencje są ustanawianie za pomocą `Offer` mechanizmu, wszystkie komunikaty o obu sekwencji wynikających z inicjatora do udzielenia muszą zostać przesłane do odwołania do tego samego punktu końcowego.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa protokołu WS-ReliableMessaging do nawiązywania niezawodnych sesji między Inicjator i obiekt odpowiadający. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Implementacja protokołu WS-ReliableMessaging udostępnia niezawodnej sesji dla jednokierunkowe żądanie odpowiedź i pełny dupleks wzorców do obsługi komunikatów. WS-ReliableMessaging `Offer` mechanizmu na `CreateSequence` i `CreateSequenceResponse` umożliwia ustanawianie odwrotnej skorelowane dwóch sekwencji i zapewnia protokołu sesji, które jest odpowiednie dla wszystkich komunikatów punktów końcowych. Ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia gwarancję zabezpieczeń takich sesji w tym end-to-end ochronę integralności sesji, jest praktyczne upewnij się, że wiadomości przeznaczony dla tej samej strony do tego samego miejsca docelowego. Umożliwia to także "piggy zapasowy" potwierdzeń sekwencji komunikatów aplikacji. W związku z tym ograniczenia R1102, R1112 i R1113 dotyczą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Usługi WCF używa WS-ReliableMessaging do nawiązywania niezawodnych sesji między Inicjator i obiekt odpowiadający. Implementacja WCF WS-ReliableMessaging udostępnia niezawodnej sesji dla jednokierunkowe żądanie odpowiedź i pełny dupleks wzorców do obsługi komunikatów. WS-ReliableMessaging `Offer` mechanizmu na `CreateSequence` i `CreateSequenceResponse` umożliwia ustanawianie odwrotnej skorelowane dwóch sekwencji i zapewnia protokołu sesji, które jest odpowiednie dla wszystkich komunikatów punktów końcowych. Ponieważ WCF zapewnia gwarancję zabezpieczeń dla sesji, w tym na trasie ochronę integralności sesji, jest praktyczne upewnij się, że wiadomości przeznaczony dla tej samej strony do tego samego miejsca docelowego. Umożliwia to także "piggy zapasowy" potwierdzeń sekwencji komunikatów aplikacji. W związku z tym ograniczenia R1102, R1112 i R1113 dotyczą WCF.  
   
  Przykład `CreateSequence` wiadomości.  
   
@@ -136,9 +124,9 @@ W tym temacie omówiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
 ```  
   
 ### <a name="closing-a-sequence"></a>Zamknięcie sekwencji  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa `CloseSequence` i `CloseSequenceResponse` komunikatów dla niezawodna obsługa komunikatów zamknięcia zainicjowanego źródła. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Niezawodna obsługa komunikatów docelowego nie zainicjować operacji zamykania i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] niezawodna obsługa komunikatów źródło nie obsługuje zamknięcia zainicjowanego przez miejsce docelowe niezawodna obsługa komunikatów. Obowiązują następujące ograniczenia:  
+ Używa WCF `CloseSequence` i `CloseSequenceResponse` komunikatów dla niezawodna obsługa komunikatów zamknięcia zainicjowanego źródła. Niezawodna obsługa komunikatów usługi WCF w miejscu docelowym nie zainicjować operacji zamykania i źródło niezawodna obsługa komunikatów usługi WCF nie obsługuje zamknięcia zainicjowanego przez miejsce docelowe niezawodna obsługa komunikatów. Obowiązują następujące ograniczenia:  
   
--   B1201: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] niezawodna obsługa komunikatów źródła zawsze wysyła `CloseSequence` komunikat zamknięcia sekwencji.  
+-   B1201: Źródło niezawodna obsługa komunikatów usługi WCF zawsze wysyła `CloseSequence` komunikat zamknięcia sekwencji.  
   
 -   B1202: Źródło niezawodna obsługa komunikatów czeka na potwierdzenie pełnego zakresu sekwencji wiadomości przed wysłaniem `CloseSequence` wiadomości.  
   
@@ -146,7 +134,7 @@ W tym temacie omówiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
   
 -   R1204: Niezawodna obsługa komunikatów w miejscu docelowym musi nie zainicjować operacji zamykania, wysyłając `CloseSequence` wiadomości.  
   
--   B1205: odebrane `CloseSequence` komunikat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] niezawodna obsługa komunikatów źródła uzna sekwencji, niekompletna i wysyła błąd.  
+-   B1205: odebrane `CloseSequence` wiadomości, uznaje sekwencji, niekompletna źródła niezawodna obsługa komunikatów usługi WCF i wysyła błąd.  
   
  Przykład `CloseSequence` wiadomości.  
   
@@ -189,15 +177,15 @@ Example CloseSequenceResponse message:
 ```  
   
 ### <a name="sequence-termination"></a>Zakończenie sekwencji  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]przede wszystkim używa `TerminateSequence/TerminateSequenceResponse` uzgadniania po zakończeniu `CloseSequence/CloseSequenceResponse` uzgadniania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Niezawodna obsługa komunikatów docelowego nie inicjuje zakończenia i niezawodna obsługa komunikatów źródło nie obsługuje zakończenia niezawodna obsługa komunikatów zainicjowanego przez miejsce docelowe. Obowiązują następujące ograniczenia:  
+ Przede wszystkim używa WCF `TerminateSequence/TerminateSequenceResponse` uzgadniania po zakończeniu `CloseSequence/CloseSequenceResponse` uzgadniania. Niezawodna obsługa komunikatów usługi WCF w miejscu docelowym nie inicjuje zakończenia i źródła niezawodna obsługa komunikatów nie obsługuje zakończenia niezawodna obsługa komunikatów zainicjowanego przez miejsce docelowe. Obowiązują następujące ograniczenia:  
   
--   B1301: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora tylko wysyła `TerminateSequence` komunikat po pomyślnym zarejestrowaniu `CloseSequence/CloseSequenceResponse` uzgadniania.  
+-   B1301: Inicjator WCF wysyła tylko `TerminateSequence` komunikat po pomyślnym zarejestrowaniu `CloseSequence/CloseSequenceResponse` uzgadniania.  
   
--   R1302: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawdza, czy `LastMsgNumber` element jest spójny we wszystkich `CloseSequence` i `TerminateSequence` wiadomości dla danej sekwencji. Oznacza to, że `LastMsgNumber` albo nie występuje na wszystkie `CloseSequence` i `TerminateSequence` wiadomości, lub jest obecny i identyczne we wszystkich `CloseSequence` i `TerminateSequence` wiadomości.  
+-   R1302: WCF sprawdza, czy `LastMsgNumber` element jest spójny we wszystkich `CloseSequence` i `TerminateSequence` wiadomości dla danej sekwencji. Oznacza to, że `LastMsgNumber` albo nie występuje na wszystkie `CloseSequence` i `TerminateSequence` wiadomości, lub jest obecny i identyczne we wszystkich `CloseSequence` i `TerminateSequence` wiadomości.  
   
 -   B1303: Podczas odbierania `TerminateSequence` komunikatu po `CloseSequence/CloseSequenceResponse` uzgadniania odpowiada docelowego niezawodna obsługa komunikatów `TerminateSequenceResponse` wiadomości. Ponieważ źródła niezawodna obsługa komunikatów ma ostateczne potwierdzenie przed wysłaniem `TerminateSequence` wiadomości, niezawodna obsługa komunikatów w miejscu docelowym zna bez wątpienia czy kończy się sekwencja i natychmiast zwraca zasobów.  
   
--   B1304: Podczas odbierania `TerminateSequence` komunikatów przed `CloseSequence/CloseSequenceResponse` uzgadniania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] niezawodna obsługa komunikatów docelowego odpowiada `TerminateSequenceResponse` wiadomości. Jeśli docelowy niezawodna obsługa komunikatów Określa, że nie ma żadnych niespójności w sekwencji, docelowy niezawodna obsługa komunikatów oczekiwania przez czas określony docelowy aplikacji przed odzyskiwanie zasobów, aby umożliwić klientom możliwość odbierania ostateczne potwierdzenie. W przeciwnym razie wartość docelową niezawodnej obsługi komunikatów natychmiast zwraca zasobów i wskazuje przeznaczenia aplikacji, że sekwencja kończy się wątpliwości, podnosząc `Faulted` zdarzeń.  
+-   B1304: Podczas odbierania `TerminateSequence` komunikatów przed `CloseSequence/CloseSequenceResponse` uzgadniania odpowiada docelowego WCF niezawodna obsługa komunikatów `TerminateSequenceResponse` wiadomości. Jeśli docelowy niezawodna obsługa komunikatów Określa, że nie ma żadnych niespójności w sekwencji, docelowy niezawodna obsługa komunikatów oczekiwania przez czas określony docelowy aplikacji przed odzyskiwanie zasobów, aby umożliwić klientom możliwość odbierania ostateczne potwierdzenie. W przeciwnym razie wartość docelową niezawodnej obsługi komunikatów natychmiast zwraca zasobów i wskazuje przeznaczenia aplikacji, że sekwencja kończy się wątpliwości, podnosząc `Faulted` zdarzeń.  
   
  Przykład `TerminateSequence` wiadomości.  
   
@@ -242,7 +230,7 @@ Example TerminateSequenceResponse message:
 ### <a name="sequences"></a>Sekwencje  
  Oto lista ograniczeń, które są stosowane do sekwencji:  
   
--   B1401:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje i uzyskuje dostęp do numerów sekwencji. nie jest wyższa niż `xs:long`przez wartość maksymalna włącznie, 9223372036854775807.  
+-   Generuje B1401:WCF i uzyskuje dostęp do sekwencji liczb nie jest wyższa niż `xs:long`na maksymalną wartość z wartościami granicznymi 9223372036854775807.  
   
  Przykład `Sequence` nagłówka.  
   
@@ -254,7 +242,7 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="request-acknowledgement"></a>Potwierdzenie żądania  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa `AckRequested` nagłówka jako mechanizmu keep-alive.  
+ Używa WCF `AckRequested` nagłówka jako mechanizmu keep-alive.  
   
  Przykład `AckRequested` nagłówka.  
   
@@ -265,11 +253,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa mechanizmu "nakładka" dla potwierdzeń sekwencji w WS-Reliable Messaging. Obowiązują następujące ograniczenia:  
+ Usługi WCF używa mechanizmu "nakładka" dla potwierdzeń sekwencji w WS-Reliable Messaging. Obowiązują następujące ograniczenia:  
   
 -   R1601: Gdy dwa konwersacji sekwencje są ustanawianie za pomocą `Offer` mechanizmu, `SequenceAcknowledgement` nagłówka może być zawarta w każdej wiadomości aplikacji przesyłane do określonego adresata. Zdalny punkt końcowy musi mieć możliwość dostępu nakładane `SequenceAcknowledgement` nagłówka.  
   
--   B1602: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie generuje `SequenceAcknowledgement` nagłówki, które zawierają `Nack` elementów. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]weryfikuje każdy `Nack` element zawiera numer sekwencji, ale w przeciwnym razie ignoruje `Nack` elementu i wartość.  
+-   B1602: Usługi WCF nie generuje `SequenceAcknowledgement` nagłówki, które zawierają `Nack` elementów. Usługi WCF weryfikuje każdy `Nack` element zawiera numer sekwencji, ale w przeciwnym razie ignoruje `Nack` elementu i wartość.  
   
  Przykład `SequenceAcknowledgement` nagłówka.  
   
@@ -281,11 +269,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-reliablemessaging-faults"></a>Błędy protokołu WS-ReliableMessaging.  
- Poniżej przedstawiono listę ograniczenia, które dotyczą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji protokołu WS-ReliableMessaging błędów. Obowiązują następujące ograniczenia:  
+ Poniżej znajduje się lista ograniczenia, które dotyczą implementacji WCF błędów WS-ReliableMessaging. Obowiązują następujące ograniczenia:  
   
--   B1701: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie generuje `MessageNumberRollover` błędów.  
+-   B1701: Usługi WCF nie generuje `MessageNumberRollover` błędów.  
   
--   B1702: Za pośrednictwem protokołu SOAP 1.2, gdy punkt końcowy usługi przez nią miejsce osiągnie limit liczby połączeń i nie może przetworzyć nowe połączenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje zagnieżdżoną `CreateSequenceRefused` fault podrzędny, `netrm:ConnectionLimitReached`, jak pokazano w poniższym przykładzie.  
+-   B1702: Za pośrednictwem protokołu SOAP 1.2, gdy punkt końcowy usługi przez nią miejsce osiągnie limit liczby połączeń i nie może przetworzyć nowe połączenia, WCF generuje zagnieżdżoną `CreateSequenceRefused` fault podrzędny, `netrm:ConnectionLimitReached`, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <s:Envelope>  
@@ -312,9 +300,9 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-addressing-faults"></a>Protokół WS-Addressing błędów  
- Ponieważ WS-ReliableMessaging korzysta z protokołu WS-Addressing, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji protokołu WS-ReliableMessaging może wygenerować i przekazywania błędów protokołu WS-Addressing. Ta obejmuje sekcji WS-Addressing błędów, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jawnie generuje i przesyła w warstwie usługi WS-ReliableMessaging:  
+ Ponieważ WS-ReliableMessaging korzysta z protokołu WS-Addressing, implementacji protokołu WS-ReliableMessaging WCF może generować i przekazywania błędów protokołu WS-Addressing. W tej sekcji omówiono WS-Addressing usterek, które jawnie WCF generuje i przesyła w warstwie usługi WS-ReliableMessaging:  
   
--   B1801:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje i przesyła `Message Addressing Header Required` fault, gdy spełniony jest jeden z następujących czynności:  
+-   B1801:WCF generuje i przesyła `Message Addressing Header Required` fault, gdy spełniony jest jeden z następujących czynności:  
   
     -   A `CreateSequence`, `CloseSequence` lub `TerminateSequence` Brak komunikatu `MessageId` nagłówka.  
   
@@ -322,26 +310,26 @@ Example TerminateSequenceResponse message:
   
     -   A `CreateSequenceResponse`, `CloseSequenceResponse`, lub `TerminateSequenceResponse` Brak komunikatu `RelatesTo` nagłówka.  
   
--   B1802:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje i przesyła `Endpoint Unavailable` błędów, aby wskazać żadnego punktu końcowego nasłuchiwania, który może przetwarzać sekwencji oparte na badania adresowania nagłówków `CreateSequence` wiadomości.  
+-   B1802:WCF generuje i przesyła `Endpoint Unavailable` błędów, aby wskazać żadnego punktu końcowego nasłuchiwania, który może przetwarzać sekwencji oparte na badania adresowania nagłówków `CreateSequence` wiadomości.  
   
 ## <a name="protocol-composition"></a>Protokół kompozycji  
   
 ### <a name="composition-with-ws-addressing"></a>Kompozycja z protokołu WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje protokół WS-Addressing dwie wersje: WS-Addressing 2004/08 [WS-ADDR] i W3C WS-Addressing 1.0 zalecenia [WS-ADDR-CORE] i [WS-ADDR — SOAP].  
+ Usługi WCF obsługuje dwie wersje usługi WS-Addressing: WS-Addressing 2004/08 [WS-ADDR] i W3C WS-Addressing 1.0 zalecenia [WS-ADDR-CORE] i [WS-ADDR — SOAP].  
   
- Podczas uwagi specyfikacji WS-ReliableMessaging tylko WS-Addressing 2004-08 nie uniemożliwia wersji WS-Addressing do użycia. Poniżej przedstawiono listę ograniczenia, które dotyczą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Podczas uwagi specyfikacji WS-ReliableMessaging tylko WS-Addressing 2004-08 nie uniemożliwia wersji WS-Addressing do użycia. Oto lista ograniczeń, które są stosowane do programu WCF:  
   
 -   R2101: Zarówno WS-Addressing 2004/08 i WS-Addressing 1.0 mogą być używane z WS-Reliable Messaging.  
   
 -   R2102: Jednej wersji WS-Addressing można używać w danej sekwencji WS-ReliableMessaging dysków lub para skorelowane przy użyciu sekwencji odwrotnej `Offer` mechanizmu.  
   
 ### <a name="composition-with-soap"></a>Kompozycja z protokołu SOAP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje zarówno SOAP 1.1 i SOAP 1.2 z WS-Reliable Messaging.  
+ Usługi WCF obsługuje SOAP 1.1 i SOAP 1.2 z WS-Reliable Messaging.  
   
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>Kompozycja i WS-Security WS-SecureConversation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia ochronę sekwencji WS-ReliableMessaging za pomocą zabezpieczenia WS konwersacji bezpieczne transportowych (HTTPS), kompozycji z WS-Security i kompozycji. Protokół WS-ReliableMessaging 1.1, WS-Security 1.1 i zabezpieczenia WS konwersacji 1.3 protokołu powinny być używane razem. Poniżej przedstawiono listę ograniczenia, które dotyczą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Usługi WCF zapewnia ochronę sekwencji WS-ReliableMessaging za pomocą zabezpieczenia WS konwersacji bezpieczne transportowych (HTTPS), kompozycji z WS-Security i kompozycji. Protokół WS-ReliableMessaging 1.1, WS-Security 1.1 i zabezpieczenia WS konwersacji 1.3 protokołu powinny być używane razem. Oto lista ograniczeń, które są stosowane do programu WCF:  
   
--   R2301: Aby chronić integralność WS-ReliableMessaging sekwencji dodatkowo integralności i poufności poszczególne wiadomości [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymaga, należy użyć zabezpieczenia WS konwersacji.  
+-   R2301: Aby chronić integralność sekwencji WS-ReliableMessaging oprócz integralności i poufności poszczególne wiadomości, WCF wymaga, należy użyć zabezpieczenia WS konwersacji.  
   
 -   R2302:AWS-Secure Conversation sesji muszą być ustalane przed ustanawianie sequence(s) WS-ReliableMessaging.  
   
@@ -349,7 +337,7 @@ Example TerminateSequenceResponse message:
   
 -   B2304:ws-sekwencji ReliableMessaging dysków lub para skorelowane odwrotnej sekwencje są zawsze powiązane z jednej sesji WS-SecureConversation.  
   
--   R2305: Gdy składa się z zabezpieczenia WS konwersacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu odpowiadającego w trybie wymaga, aby `CreateSequence` komunikat zawiera `wsse:SecurityTokenReference` elementu i `wsrm:UsesSequenceSTR` nagłówka.  
+-   R2305: Jeżeli składa się z zabezpieczenia WS konwersacji, obiekt odpowiadający w trybie WCF wymaga, aby `CreateSequence` komunikat zawiera `wsse:SecurityTokenReference` elementu i `wsrm:UsesSequenceSTR` nagłówka.  
   
  Przykład `UsesSequenceSTR` nagłówka.  
   
@@ -358,31 +346,31 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="composition-with-ssltls-sessions"></a>Kompozycja z sesji SSL/TLS  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]nie obsługuje kompozycji z sesji SSL/TLS:  
+ Usługi WCF nie obsługuje kompozycji z sesji SSL/TLS:  
   
--   B2401: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie generuje `wsrm:UsesSequenceSSL` nagłówka.  
+-   B2401: Usługi WCF nie generuje `wsrm:UsesSequenceSSL` nagłówka.  
   
--   R2402: Niezawodnej inicjatora wiadomości nie musi wysyłać `CreateSequence` komunikatów z `wsrm:UsesSequenceSSL` nagłówka do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu odpowiadającego w trybie.  
+-   R2402: Niezawodnej inicjatora wiadomości nie musi wysyłać `CreateSequence` komunikatów z `wsrm:UsesSequenceSSL` nagłówka do obiekt odpowiadający WCF.  
   
 ### <a name="composition-with-ws-policy"></a>Kompozycja z WS-Policy.  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje dwie wersje usługi WS-Policy: WS-Policy 1.2 i 1.5 WS-Policy.  
+ Usługi WCF obsługuje dwie wersje usługi WS-Policy: WS-Policy 1.2 i 1.5 WS-Policy.  
   
 ## <a name="ws-reliablemessaging-ws-policy-assertion"></a>WS-ReliableMessaging WS-potwierdzenia zasad  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa protokołu WS-ReliableMessaging WS-Policy potwierdzenia `wsrm:RMAssertion` do opisywania możliwości punktów końcowych. Poniżej przedstawiono listę ograniczenia, które dotyczą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Usługi WCF używa protokołu WS-ReliableMessaging WS-Policy potwierdzenia `wsrm:RMAssertion` do opisywania możliwości punktów końcowych. Oto lista ograniczeń, które są stosowane do programu WCF:  
   
--   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dołącza `wsrmn:RMAssertion` WS-Policy potwierdzenia do `wsdl:binding` elementów. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje zarówno załączników do `wsdl:binding` i `wsdl:port` elementy.  
+-   B3001: Dołącza WCF `wsrmn:RMAssertion` WS-Policy potwierdzenia do `wsdl:binding` elementów. Usługi WCF obsługuje zarówno załączników do `wsdl:binding` i `wsdl:port` elementy.  
   
--   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nigdy nie generuje `wsp:Optional` tagu.  
+-   B3002: Nigdy nie generuje WCF `wsp:Optional` tagu.  
   
--   B3003: Podczas uzyskiwania dostępu do `wsrmp:RMAssertion` potwierdzenia WS-Policy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoruje `wsp:Optional` tagu i traktuje zasady protokołu WS-RM jako obowiązkowe.  
+-   B3003: Podczas uzyskiwania dostępu do `wsrmp:RMAssertion` ignoruje WCF potwierdzenia WS-Policy `wsp:Optional` tagu i traktuje zasady protokołu WS-RM jako obowiązkowe.  
   
--   R3004: Ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie tworzą z sesji SSL/TLS [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie akceptuje zasady, które określają `wsrmp:SequenceTransportSecurity`.  
+-   R3004: Ponieważ WCF nie tworzą z sesji SSL/TLS, usługi WCF nie akceptuje zasady, które określają `wsrmp:SequenceTransportSecurity`.  
   
--   B3005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawsze generuje `wsrmp:DeliveryAssurance` elementu.  
+-   B3005: WCF zawsze generuje `wsrmp:DeliveryAssurance` elementu.  
   
--   B3006: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawsze Określa `wsrmp:ExactlyOnce` gwarancji dostarczenia.  
+-   B3006: WCF określa zawsze `wsrmp:ExactlyOnce` gwarancji dostarczenia.  
   
--   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje i odczytuje następujące właściwości potwierdzenia WS-ReliableMessaging i zapewnia kontrolę nad nimi na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
+-   B3007: WCF generuje i odczytuje następujące właściwości potwierdzenia WS-ReliableMessaging i zapewnia kontrolę nad nimi na usługi WCF`ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   
@@ -407,11 +395,11 @@ Example TerminateSequenceResponse message:
     ```  
   
 ## <a name="flow-control-ws-reliablemessaging-extension"></a>Przepływ sterowania WS-ReliableMessaging rozszerzenia  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa rozszerzeń protokołu WS-ReliableMessaging, aby zapewnić opcjonalne dodatkowe zwiększenie poziomu kontrolę nad przepływ komunikatów sekwencji.  
+ Usługi WCF używa rozszerzalności WS-ReliableMessaging, aby zapewnić opcjonalne dodatkowe zwiększenie poziomu kontrolę nad przepływ komunikatów sekwencji.  
   
- Przez ustawienie włączone jest sterowanie przepływem `ReliableSessionBindingElement`w `FlowControlEnabled``boolean` właściwości `true`. Poniżej przedstawiono listę ograniczenia, które dotyczą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Przez ustawienie włączone jest sterowanie przepływem `ReliableSessionBindingElement`w `FlowControlEnabled``boolean` właściwości `true`. Oto lista ograniczeń, które są stosowane do programu WCF:  
   
--   B4001: Podczas kontroli przepływu komunikatów niezawodnej jest włączona, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje `netrm:BufferRemaining` elementu w element możliwość rozszerzania `SequenceAcknowledgement` nagłówka, jak pokazano w poniższym przykładzie.  
+-   B4001: Po włączeniu niezawodnej obsługi komunikatów sterowanie przepływem WCF generuje `netrm:BufferRemaining` elementu w element możliwość rozszerzania `SequenceAcknowledgement` nagłówka, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -421,16 +409,16 @@ Example TerminateSequenceResponse message:
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B4002: Nawet wtedy, gdy jest to niezawodny sterowanie przepływem wiadomości jest włączona, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie wymaga `netrm:BufferRemaining` element `SequenceAcknowledgement` nagłówka.  
+-   B4002: Nawet wtedy, gdy niezawodnej obsługi komunikatów sterowanie przepływem jest włączone, usługi WCF nie wymaga `netrm:BufferRemaining` element `SequenceAcknowledgement` nagłówka.  
   
--   B4003: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa niezawodnej obsługi komunikatów docelowego `netrm:BufferRemaining` można buforu wskazująca, jak wiele nowych komunikatów go.  
+-   B4003: Używa WCF niezawodnej obsługi komunikatów docelowego `netrm:BufferRemaining` można buforu wskazująca, jak wiele nowych komunikatów go.  
   
--   B4004:when niezawodnej obsługi komunikatów sterowanie przepływem jest włączona, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiarygodnego źródła komunikatów używa wartości `netrm:BufferRemaining` do ograniczania przesyłania komunikatów.  
+-   B4004:when niezawodnej obsługi komunikatów sterowanie przepływem jest włączona, źródło WCF niezawodnej obsługi komunikatów używa wartości `netrm:BufferRemaining` do ograniczania przesyłania komunikatów.  
   
--   B4005: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generuje `netrm:BufferRemaining` liczby całkowitej wartości z zakresu od 0 do 4096 włącznie i odczytuje wartości Liczba całkowita między 0 a `xs:int`w `maxInclusive` wartość 214748364 włącznie.  
+-   B4005: Generuje WCF `netrm:BufferRemaining` liczby całkowitej wartości z zakresu od 0 do 4096 włącznie i odczytuje wartości Liczba całkowita między 0 a `xs:int`w `maxInclusive` wartość 214748364 włącznie.  
   
 ## <a name="message-exchange-patterns"></a>Wzorce wymiany komunikatów  
- W tej sekcji opisano [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tego zachowania, gdy WS-ReliableMessaging służy do różnych wzorców wymiany wiadomości. Dla każdego wymiany komunikatów w następujących scenariuszach dwa wdrożenia są traktowane jako:  
+ W tej sekcji opisano zachowanie WCF w przypadku WS-ReliableMessaging służy do różnych wzorców wymiany wiadomości. Dla każdego wymiany komunikatów w następujących scenariuszach dwa wdrożenia są traktowane jako:  
   
 -   Inicjator nie rozpozna: Inicjator znajduje się za zaporą; Obiekt odpowiadający w trybie wiadomości mogą być dostarczane do inicjatora tylko na odpowiedzi HTTP.  
   
@@ -439,97 +427,97 @@ Example TerminateSequenceResponse message:
 ### <a name="one-way-non-addressable-initiator"></a>Jednokierunkowe, nie mogą być adresowane inicjatora  
   
 #### <a name="binding"></a>Powiązanie  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia jednokierunkowe wymiany komunikatów przy użyciu jednej sekwencji przez jeden kanał HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa żądania HTTP do przekazywania wszystkich komunikatów z inicjatora obiektu odpowiadającego w trybie i HTTP odpowiedzi do przesyłania wszystkie komunikaty z udzielenia do inicjatora.  
+ Usługi WCF zawiera jednokierunkowe wymiany komunikatów przy użyciu jednej sekwencji przez jeden kanał HTTP. WCF używa żądania HTTP do przekazywania wszystkich komunikatów z inicjatora obiektu odpowiadającego w trybie i HTTP odpowiedzi do przesyłania wszystkie komunikaty z udzielenia do inicjatora.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence programu Exchange  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła inicjatora `CreateSequence` wiadomość bez `Offer` elementu na żądania HTTP i oczekuje `CreateSequenceResponse` komunikat odpowiedzi HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie tworzy sekwencję i przesyła `CreateSequenceResponse` wiadomość bez `Accept` elementu na odpowiedzi HTTP.  
+ Przesyła inicjatora WCF `CreateSequence` wiadomość bez `Offer` elementu na żądania HTTP i oczekuje `CreateSequenceResponse` komunikat odpowiedzi HTTP. Obiekt odpowiadający w trybie WCF tworzy sekwencję i przesyła `CreateSequenceResponse` wiadomość bez `Accept` elementu na odpowiedzi HTTP.  
   
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Inicjatora przetwarza potwierdzenia w odpowiedzi wszystkie komunikaty z wyjątkiem `CreateSequence` komunikat i komunikaty o błędach. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie zawsze przesyła autonomicznej potwierdzenia w odpowiedzi HTTP do wszystkich sekwencji i `AckRequested` wiadomości.  
+ Inicjator WCF przetwarza potwierdzenia w odpowiedzi wszystkie komunikaty z wyjątkiem `CreateSequence` komunikat i komunikaty o błędach. Obiekt odpowiadający w trybie WCF zawsze przesyła autonomicznej potwierdzenia w odpowiedzi HTTP do wszystkich sekwencji i `AckRequested` wiadomości.  
   
 #### <a name="closesequence-exchange"></a>CloseSequence programu Exchange  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła inicjatora `CloseSequence` wiadomości na żądania HTTP i oczekuje `CreateSequenceResponse` komunikat odpowiedzi HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła obiektu odpowiadającego w trybie `CloseSequenceResponse` komunikat odpowiedzi HTTP.  
+ Przesyła inicjatora WCF `CloseSequence` wiadomości na żądania HTTP i oczekuje `CreateSequenceResponse` komunikat odpowiedzi HTTP. Obiekt odpowiadający w trybie WCF przesyła `CloseSequenceResponse` komunikat odpowiedzi HTTP.  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence programu Exchange  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła inicjatora `TerminateSequence` wiadomości na żądania HTTP i oczekuje `TerminateSequenceResponse` komunikat odpowiedzi HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła obiektu odpowiadającego w trybie `TerminateSequenceResponse` komunikat odpowiedzi HTTP.  
+ Przesyła inicjatora WCF `TerminateSequence` wiadomości na żądania HTTP i oczekuje `TerminateSequenceResponse` komunikat odpowiedzi HTTP. Obiekt odpowiadający w trybie WCF przesyła `TerminateSequenceResponse` komunikat odpowiedzi HTTP.  
   
 ### <a name="one-way-addressable-initiator"></a>Jednym ze sposobów, mogą być adresowane inicjatora  
   
 #### <a name="binding"></a>Powiązanie  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia jednokierunkowe wymiany komunikatów za pomocą jednego sekwencji za pośrednictwem jednej dla ruchu przychodzącego i jeden wychodzący kanał HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
+ WCF zapewnia jednokierunkowe wymiany komunikatów za pomocą jednego sekwencji za pośrednictwem jednej dla ruchu przychodzącego i jeden wychodzący kanał HTTP. WCF używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence programu Exchange  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła inicjatora `CreateSequence` wiadomość bez `Offer` elementu na żądania HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie tworzy sekwencję i przesyła `CreateSequenceResponse` wiadomość bez `Accept` elementu na żądania HTTP.  
+ Przesyła inicjatora WCF `CreateSequence` wiadomość bez `Offer` elementu na żądania HTTP. Obiekt odpowiadający w trybie WCF tworzy sekwencję i przesyła `CreateSequenceResponse` wiadomość bez `Accept` elementu na żądania HTTP.  
   
 ### <a name="duplex-addressable-initiator"></a>Dupleks, mogą być adresowane inicjatora  
   
 #### <a name="binding"></a>Powiązanie  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zawiera w pełni asynchroniczne, dwukierunkowe wymiany komunikatów za pomocą dwóch sekwencji do jednego dla ruchu przychodzącego i jeden wychodzący kanał HTTP. Ta wymiany komunikatów można łączyć z `Request/Reply`, `Addressable` inicjatora wymiany komunikatów w sposób ograniczony. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
+ Udostępnia WCF pełni asynchroniczne, dwukierunkowe wymiany komunikatów za pomocą dwóch sekwencji do jednego dla ruchu przychodzącego i jeden wychodzący kanał HTTP. Ta wymiany komunikatów można łączyć z `Request/Reply`, `Addressable` inicjatora wymiany komunikatów w sposób ograniczony. WCF używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence programu Exchange  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła inicjatora `CreateSequence` komunikatów z `Offer` elementu na żądania HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego temu `CreateSequence` ma `Offer` elementu, następnie tworzy sekwencję i przesyła `CreateSequenceResponse` komunikatów z `Accept` elementu.  
+ Przesyła inicjatora WCF `CreateSequence` komunikatów z `Offer` elementu na żądania HTTP. Obiekt odpowiadający w trybie WCF upewnia się, że `CreateSequence` ma `Offer` elementu, następnie tworzy sekwencję i przesyła `CreateSequenceResponse` komunikatów z `Accept` elementu.  
   
 #### <a name="sequence-lifetime"></a>Okres istnienia sekwencji  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]traktuje dwóch sekwencji jako jedna sesja pełni duplex.  
+ Usługi WCF traktuje dwóch sekwencji jako jedna sesja pełni duplex.  
   
- Podczas generowania błędów, które błędów jedną sekwencję [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oczekuje, że zdalny punkt końcowy do obu sekwencji. Podczas odczytywania usterek, które błędów jedną sekwencję [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] błędów zarówno sekwencji.  
+ Podczas generowania błędów, które błędów jedną sekwencję, WCF oczekuje, że zdalny punkt końcowy do obu sekwencji. Podczas odczytywania usterek, które błędów jedną sekwencję, WCF błędów zarówno sekwencji.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Zamknij jego sekwencji wychodzących i dalsze przetwarzanie komunikatów na jego przychodzących sekwencji. Z drugiej strony [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] można przetwarzać zamknięcia sekwencji dla ruchu przychodzącego i kontynuować wysyłanie wiadomości na jego wychodzące sekwencji.  
+ WCF można zamknąć ich wychodzącego sekwencji i dalsze przetwarzanie komunikatów na jego przychodzących sekwencji. Z drugiej strony WCF można przetwarzać zamknięcia sekwencji dla ruchu przychodzącego i kontynuować wysyłanie wiadomości na jego wychodzące sekwencji.  
   
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>Żądanie odpowiedź i jednokierunkowe, nie mogą być adresowane inicjatora  
   
 #### <a name="binding"></a>Powiązanie  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia możliwość jednokierunkowych i żądanie odpowiedź wymiany komunikatów za pomocą dwóch sekwencji ponad jeden kanał HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa żądania HTTP do przekazywania wszystkich komunikatów z inicjatora obiektu odpowiadającego w trybie i HTTP odpowiedzi do przesyłania wszystkie komunikaty z udzielenia do inicjatora.  
+ Usługi WCF zapewnia jednokierunkowe i żądanie odpowiedź wymiany komunikatów za pomocą dwóch sekwencji ponad jeden kanał HTTP. WCF używa żądania HTTP do przekazywania wszystkich komunikatów z inicjatora obiektu odpowiadającego w trybie i HTTP odpowiedzi do przesyłania wszystkie komunikaty z udzielenia do inicjatora.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence programu Exchange  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła inicjatora `CreateSequence` komunikatów z `Offer` elementu na żądania HTTP i oczekuje `CreateSequenceResponse` komunikat odpowiedzi HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie tworzy sekwencję i przesyła `CreateSequenceResponse` komunikatów z `Accept` elementu na odpowiedzi HTTP.  
+ Przesyła inicjatora WCF `CreateSequence` komunikatów z `Offer` elementu na żądania HTTP i oczekuje `CreateSequenceResponse` komunikat odpowiedzi HTTP. Obiekt odpowiadający w trybie WCF tworzy sekwencję i przesyła `CreateSequenceResponse` komunikatów z `Accept` elementu na odpowiedzi HTTP.  
   
 #### <a name="one-way-message"></a>Komunikat jednokierunkowy  
- Aby ukończyć exchange komunikat jednokierunkowy pomyślnie, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora przesyła żądanie komunikatu sekwencji na żądania HTTP i odbiera autonomiczny `SequenceAcknowledgement` komunikat odpowiedzi HTTP. `SequenceAcknowledgement` Musi potwierdzić wiadomości przesyłane.  
+ Można pomyślnie ukończyć exchange komunikat jednokierunkowy inicjatora WCF przesyła żądanie komunikatu sekwencji na żądania HTTP i odbiera autonomiczny `SequenceAcknowledgement` komunikat odpowiedzi HTTP. `SequenceAcknowledgement` Musi potwierdzić wiadomości przesyłane.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie może odpowiadać na żądania z potwierdzeniem, błąd lub odpowiedzi o pustej treści i kod stanu HTTP 202.  
+ Obiekt odpowiadający w trybie WCF może odpowiedzieć na żądanie z potwierdzeniem, błąd lub odpowiedzi o pustej treści i kod stanu HTTP 202.  
   
 #### <a name="two-way-messages"></a>Dwa komunikaty sposób  
- Pomyślnie protokół exchange dwukierunkowej wiadomości, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora przesyła żądanie komunikatu sekwencji na żądania HTTP i odbierania komunikatu sekwencji odpowiedzi na odpowiedzi HTTP. Odpowiedzi muszą oni nosić przy sobie `SequenceAcknowledgement` potwierdzeniem wiadomość sekwencji żądanie przesyłane.  
+ Pomyślnie protokół exchange dwukierunkowej wiadomości, inicjator WCF przesyła żądanie komunikatu sekwencji na żądania HTTP i odbiera odpowiedź komunikatu sekwencji odpowiedzi HTTP. Odpowiedzi muszą oni nosić przy sobie `SequenceAcknowledgement` potwierdzeniem wiadomość sekwencji żądanie przesyłane.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie może odpowiadać na żądania o odpowiedzi aplikacji, błąd lub odpowiedzi o pustej treści i kod stanu HTTP 202.  
+ Obiekt odpowiadający w trybie WCF może odpowiedzieć na żądanie odpowiedzi aplikacji, błąd lub odpowiedzi o pustej treści i kod stanu HTTP 202.  
   
  Z powodu obecności jednokierunkowe komunikaty i czas odpowiedzi aplikacji numer sekwencyjny komunikatu sekwencji żądania i numer sekwencyjny komunikatu odpowiedzi mają nie korelacji.  
   
 #### <a name="retrying-replies"></a>Ponawianie próby odpowiedzi  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zależy od korelacja żądań i odpowiedzi HTTP dla korelacji protokół exchange dwukierunkowej wiadomości. W związku z tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora nie zatrzymuje ponowieniem próby wykonania żądania komunikatu sekwencji żądanie sekwencji komunikat zostaje potwierdzony, ale raczej, jeśli odpowiedź HTTP niesie `SequenceAcknowledgement`, odpowiedzi aplikacji lub fault. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego w trybie ponowi próbę odpowiedzi na odpowiedzi HTTP żądania, do której są korelowane z odpowiedzi.  
+ Usługi WCF zależy od korelacja żądań i odpowiedzi HTTP dla korelacji protokół exchange dwukierunkowej wiadomości. W związku z tym inicjatora WCF nie zatrzymuje ponowieniem próby wykonania żądania komunikatu sekwencji żądanie sekwencji komunikat zostaje potwierdzony, ale raczej, jeśli odpowiedź HTTP niesie `SequenceAcknowledgement`, odpowiedzi aplikacji lub fault. Obiekt odpowiadający w trybie WCF ponowi próbę odpowiedzi na odpowiedzi HTTP żądania, do której są korelowane z odpowiedzi.  
   
 #### <a name="closesequence-exchange"></a>CloseSequence programu Exchange  
- Po otrzymaniu wszystkich komunikatów sekwencji odpowiedzi i potwierdzeń wszystkich komunikatów sekwencji żądań jednokierunkowej, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przesyła inicjatora `CloseSequence` wiadomości dla żądania kolejności na żądania HTTP i oczekuje `CloseSequenceResponse` na HTTP odpowiedź.  
+ Po otrzymaniu wszystkich komunikatów sekwencji odpowiedzi i potwierdzeń wszystkich komunikatów sekwencji żądań jednokierunkowej, przesyła inicjatora WCF `CloseSequence` wiadomości dla żądania kolejności na żądania HTTP i oczekuje `CloseSequenceResponse` na odpowiedzi HTTP.  
   
- Niejawnie zamknięciem sekwencji żądań zamyka sekwencji odpowiedzi. Oznacza to, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora obejmuje Final sekwencji odpowiedzi `SequenceAcknowledgement` na `CloseSequence` komunikat i sekwencji odpowiedzi nie ma `CloseSequence` programu exchange.  
+ Niejawnie zamknięciem sekwencji żądań zamyka sekwencji odpowiedzi. Oznacza to, że inicjatora WCF obejmuje Final sekwencji odpowiedzi `SequenceAcknowledgement` na `CloseSequence` komunikat i sekwencji odpowiedzi nie ma `CloseSequence` programu exchange.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego temu wszystkie odpowiedzi są potwierdzone i przesyła `CloseSequenceResponse` komunikat odpowiedzi HTTP.  
+ Obiekt odpowiadający w trybie WCF zapewnia wszystkie odpowiedzi są potwierdzone i przesyła `CloseSequenceResponse` komunikat odpowiedzi HTTP.  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence programu Exchange  
- Od momentu odebrania `CloseSequenceResponse` wiadomości, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przesyła inicjatora `TerminateSequence` wiadomości dla żądania kolejności na żądania HTTP i oczekuje `TerminateSequenceResponse` na odpowiedzi HTTP.  
+ Od momentu odebrania `CloseSequenceResponse` przesyła inicjatora WCF wiadomości, `TerminateSequence` wiadomości dla żądania kolejności na żądania HTTP i oczekuje `TerminateSequenceResponse` na odpowiedzi HTTP.  
   
- Podobnie jak `CloseSequence` programu exchange, niejawnie przerywanie sekwencji żądanie kończy sekwencji odpowiedzi. Oznacza to, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicjatora obejmuje final sekwencji odpowiedzi `SequenceAcknowledgement` na `TerminateSequence` komunikat i sekwencji odpowiedzi nie ma `TerminateSequence` programu exchange.  
+ Podobnie jak `CloseSequence` programu exchange, niejawnie przerywanie sekwencji żądanie kończy sekwencji odpowiedzi. Oznacza to, że inicjatora WCF obejmuje final sekwencji odpowiedzi `SequenceAcknowledgement` na `TerminateSequence` komunikat i sekwencji odpowiedzi nie ma `TerminateSequence` programu exchange.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła obiektu odpowiadającego w trybie `TerminateSequenceResponse` komunikat odpowiedzi HTTP.  
+ Obiekt odpowiadający w trybie WCF przesyła `TerminateSequenceResponse` komunikat odpowiedzi HTTP.  
   
 ### <a name="requestreply-addressable-initiator"></a>Żądanie/odpowiedź, mogą być adresowane inicjatora  
   
 #### <a name="binding"></a>Powiązanie  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia wymiany komunikatów "żądanie-odpowiedź" za pomocą dwóch sekwencji do jednego dla ruchu przychodzącego i jeden wychodzący kanał HTTP. Ta wymiany komunikatów można łączyć z `Duplex, Addressable` inicjatora wymiany komunikatów w sposób ograniczony. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
+ Udostępnia WCF wymiany komunikatów "żądanie-odpowiedź" za pomocą dwóch sekwencji do jednego dla ruchu przychodzącego i jeden wychodzący kanał HTTP. Ta wymiany komunikatów można łączyć z `Duplex, Addressable` inicjatora wymiany komunikatów w sposób ograniczony. WCF używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence programu Exchange  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Przesyła inicjatora `CreateSequence` komunikatów z `Offer` elementu na żądania HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Obiektu odpowiadającego temu `CreateSequence` ma `Offer` element następnie tworzy sekwencję i przesyła `CreateSequenceResponse` komunikatów z `Accept` elementu.  
+ Przesyła inicjatora WCF `CreateSequence` komunikatów z `Offer` elementu na żądania HTTP. Obiekt odpowiadający w trybie WCF upewnia się, że `CreateSequence` ma `Offer` element następnie tworzy sekwencję i przesyła `CreateSequenceResponse` komunikatów z `Accept` elementu.  
   
 #### <a name="requestreply-correlation"></a>Żądanie i odpowiedź korelacji  
  Poniższe informacje dotyczą wszystkich skorelowane żądań i odpowiedzi:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia wszystkie posiadają komunikaty żądania aplikacji `ReplyTo` odwołania do punktu końcowego i `MessageId`.  
+-   Usługi WCF zapewnia wszystkie posiadają komunikaty żądania aplikacji `ReplyTo` odwołania do punktu końcowego i `MessageId`.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]stosuje się odwołanie do lokalnego punktu końcowego jako każdy komunikat żądania aplikacji `ReplyTo`. Odwołanie do lokalnego punktu końcowego jest `CreateSequence` komunikatu `ReplyTo` inicjatora i `CreateSequence` komunikatu `To` obiektu odpowiadającego w trybie.  
+-   Usługi WCF odnoszą się odwołania do lokalnego punktu końcowego jako każdy komunikat żądania aplikacji `ReplyTo`. Odwołanie do lokalnego punktu końcowego jest `CreateSequence` komunikatu `ReplyTo` inicjatora i `CreateSequence` komunikatu `To` obiektu odpowiadającego w trybie.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia to żądanie przychodzące komunikaty opatrzone `MessageId` i `ReplyTo`.  
+-   Usługi WCF zapewnia to żądanie przychodzące komunikaty opatrzone `MessageId` i `ReplyTo`.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia `ReplyTo` URI punktu końcowego odwołania wszystkich komunikatów żądania aplikacji odpowiada odwołaniu do lokalnego punktu końcowego, zgodnie z definicją wcześniej.  
+-   Zapewnia WCF `ReplyTo` URI punktu końcowego odwołania wszystkich komunikatów żądania aplikacji odpowiada odwołaniu do lokalnego punktu końcowego, zgodnie z definicją wcześniej.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia, że wszystkie odpowiedzi zawierać poprawny `RelatesTo` i `To` następujące nagłówki `wsa` żądania/odpowiedzi reguły korelacji.
+-   WCF gwarantuje, że wszystkie odpowiedzi zawierać poprawny `RelatesTo` i `To` następujące nagłówki `wsa` żądania/odpowiedzi reguły korelacji.

@@ -1,29 +1,18 @@
 ---
 title: Parametry XSLT
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ef57d16c52100398919563205a97205be3c5dd7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xslt-parameters"></a>Parametry XSLT
 Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem parametru o tej godzinie.  
@@ -50,7 +39,7 @@ Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyc
   
  * To jest odpowiednikiem zestawu węzłów zawierającego jeden węzeł.  
   
- Jeśli parametr obiektu nie jest jednym z powyższych klas, jest konwertowana zgodnie z następującymi zasadami. Popularne typy liczbowe języka wspólnego (CLR) są konwertowane na <xref:System.Double>. <xref:System.DateTime> Typu jest konwertowana na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable>typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. **Element XPathNavigator []** jest konwertowana na <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Jeśli parametr obiektu nie jest jednym z powyższych klas, jest konwertowana zgodnie z następującymi zasadami. Popularne typy liczbowe języka wspólnego (CLR) są konwertowane na <xref:System.Double>. <xref:System.DateTime> Typu jest konwertowana na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. **Element XPathNavigator []** jest konwertowana na <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Wszystkie inne typy Zgłoś błąd.  
   
@@ -62,7 +51,7 @@ Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyc
   
 ### <a name="input"></a>Dane wejściowe  
   
-##### <a name="orderxml"></a>ORDER.XML  
+##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
 ##### <a name="discountxsl"></a>discount.xsl  

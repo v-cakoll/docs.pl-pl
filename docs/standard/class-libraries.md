@@ -1,23 +1,16 @@
 ---
 title: Biblioteki klas .NET
 description: Dowiedz się, jak bibliotek klas .NET umożliwia przydatne funkcje grupy do modułów, które mogą być używane przez wiele aplikacji.
-keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-class-libraries"></a>Biblioteki klas .NET
 

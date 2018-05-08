@@ -1,11 +1,6 @@
 ---
-title: "Group By — Klauzula (Visual Basic)"
+title: Group By — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupByInto
 - vb.QueryGroupBy
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b719bfa2ebe4c324acf82a03e215e481283845fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By — Klauzula (Visual Basic)
 Grupuje elementy w wyniku zapytania. Można również zastosować funkcje agregujące do każdej grupy. Operacja grupowania jest oparta na co najmniej jeden klucz.  
@@ -40,19 +32,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `listField1`, `listField2`  
   
-     Opcjonalny. Co najmniej jedno pole zmienną zapytania lub zmiennych, które jawnie określić pola do uwzględnienia w wyniku grupowanych. Jeśli nie określono pól, wszystkie pola zmienną zapytania lub zmienne są uwzględnione w grupowanych wynik.  
+     Opcjonalna. Co najmniej jedno pole zmienną zapytania lub zmiennych, które jawnie określić pola do uwzględnienia w wyniku grupowanych. Jeśli nie określono pól, wszystkie pola zmienną zapytania lub zmienne są uwzględnione w grupowanych wynik.  
   
 -   `keyExp1`  
   
-     Wymagany. Wyrażenie identyfikujące klucz do użycia w celu określenia grupy elementów. Można określić więcej niż jednego klucza do określenia klucza złożonego.  
+     Wymagana. Wyrażenie identyfikujące klucz do użycia w celu określenia grupy elementów. Można określić więcej niż jednego klucza do określenia klucza złożonego.  
   
 -   `keyExp2`  
   
-     Opcjonalny. Jeden lub więcej dodatkowych kluczy, które są połączone z `keyExp1` można utworzyć klucza złożonego.  
+     Opcjonalna. Jeden lub więcej dodatkowych kluczy, które są połączone z `keyExp1` można utworzyć klucza złożonego.  
   
 -   `aggregateList`  
   
-     Wymagany. Co najmniej jednego wyrażenia, które identyfikują agregowaniem grup. Aby zidentyfikować nazwę elementu członkowskiego grupowanych wyników, należy użyć `Group` — słowo kluczowe, które mogą być w jednym z następujących formatów:  
+     Wymagana. Co najmniej jednego wyrażenia, które identyfikują agregowaniem grup. Aby zidentyfikować nazwę elementu członkowskiego grupowanych wyników, należy użyć `Group` — słowo kluczowe, które mogą być w jednym z następujących formatów:  
   
     ```  
     Into Group  
@@ -79,8 +71,8 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
- [SELECT — klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Klauzula FROM](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By — klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [AGGREGATE — klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Group Join — klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)
+ [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)

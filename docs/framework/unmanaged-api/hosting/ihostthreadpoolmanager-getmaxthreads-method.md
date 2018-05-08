@@ -1,14 +1,6 @@
 ---
-title: "IHostThreadPoolManager::GetMaxThreads — Metoda"
-ms.custom: 
+title: IHostThreadPoolManager::GetMaxThreads — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostThreadPoolManager.GetMaxThreads
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 84867f1b5dfdcfd7a50d01c9e51cb0c42da62f0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa6e0e2447cc3ff6766bb33bb603388f37ec3ce0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads — Metoda
 Pobiera maksymalną liczbę wątków, która jest obsługiwana przez hosta jednocześnie w puli wątków.  
@@ -54,7 +42,7 @@ HRESULT GetMaxThreads (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads`zwrócona pomyślnie.|  
+|S_OK|`GetMaxThreads` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR (nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchomić kodu zarządzanego lub proces wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -74,7 +62,7 @@ HRESULT GetMaxThreads (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Threading.ThreadPool.GetMaxThreads%2A>  

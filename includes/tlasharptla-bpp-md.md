@@ -1,1 +1,0 @@
-bity na piksel (BPP)

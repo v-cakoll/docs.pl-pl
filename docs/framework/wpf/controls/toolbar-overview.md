@@ -1,39 +1,27 @@
 ---
-title: "ToolBar — Przegląd"
-ms.custom: 
+title: ToolBar — Przegląd
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c66867ce4d86a11424d7a7a859817d603b4227e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-overview"></a>ToolBar — Przegląd
-<xref:System.Windows.Controls.ToolBar>Formanty są kontenerami dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji. A <xref:System.Windows.Controls.ToolBar> zwykle zawiera przyciski, które wywołują polecenia.  
+<xref:System.Windows.Controls.ToolBar> Formanty są kontenerami dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji. A <xref:System.Windows.Controls.ToolBar> zwykle zawiera przyciski, które wywołują polecenia.  
   
   
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar — Formant  
- <xref:System.Windows.Controls.ToolBar> Kontroli przyjmuje nazwy rozmieszczenie przypominającej paska przycisków lub inne formanty na jeden wiersz lub kolumnę. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar> elementy sterujące udostępniają mechanizm przepełnienia, który umieszcza wszystkie elementy, które nie mieszczą się naturalnie rozmiar ograniczony <xref:System.Windows.Controls.ToolBar> w obszarze specjalne przepełnienia. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> formanty są zazwyczaj używane z odnośnych <xref:System.Windows.Controls.ToolBarTray> kontroli, która zapewnia zachowanie specjalne układ, a także zapewnia obsługę zainicjowane przez użytkownika zmiany rozmiaru i rozmieszczanie pasków narzędzi.  
+ <xref:System.Windows.Controls.ToolBar> Kontroli przyjmuje nazwy rozmieszczenie przypominającej paska przycisków lub inne formanty na jeden wiersz lub kolumnę. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> elementy sterujące udostępniają mechanizm przepełnienia, który umieszcza wszystkie elementy, które nie mieszczą się naturalnie rozmiar ograniczony <xref:System.Windows.Controls.ToolBar> w obszarze specjalne przepełnienia. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> formanty są zazwyczaj używane z odnośnych <xref:System.Windows.Controls.ToolBarTray> kontroli, która zapewnia zachowanie specjalne układ, a także zapewnia obsługę zainicjowane przez użytkownika zmiany rozmiaru i rozmieszczanie pasków narzędzi.  
   
 <a name="Creating_ToolBars"></a>   
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>Określanie w kontrolki ToolBarTray pozycji pasków narzędzi  
- Użyj <xref:System.Windows.Controls.ToolBar.Band%2A> i <xref:System.Windows.Controls.ToolBar.BandIndex%2A> właściwości, aby umieścić <xref:System.Windows.Controls.ToolBar> w <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A>Określa położenie, w którym <xref:System.Windows.Controls.ToolBar> znajduje się w ramach jego elementu nadrzędnego <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>Określa kolejność, w którym <xref:System.Windows.Controls.ToolBar> znajduje się w jego poza pasmem. W poniższym przykładzie przedstawiono sposób używać tej właściwości można umieścić <xref:System.Windows.Controls.ToolBar> kontrolki wewnątrz <xref:System.Windows.Controls.ToolBarTray>.  
+ Użyj <xref:System.Windows.Controls.ToolBar.Band%2A> i <xref:System.Windows.Controls.ToolBar.BandIndex%2A> właściwości, aby umieścić <xref:System.Windows.Controls.ToolBar> w <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A> Określa położenie, w którym <xref:System.Windows.Controls.ToolBar> znajduje się w ramach jego elementu nadrzędnego <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Określa kolejność, w którym <xref:System.Windows.Controls.ToolBar> znajduje się w jego poza pasmem. W poniższym przykładzie przedstawiono sposób używać tej właściwości można umieścić <xref:System.Windows.Controls.ToolBar> kontrolki wewnątrz <xref:System.Windows.Controls.ToolBarTray>.  
   
  [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   

@@ -1,29 +1,17 @@
 ---
-title: "&lt;usługi&gt;"
-ms.custom: 
+title: '&lt;Usługi&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 689dfae90baffa3e9895258d1635c7840d8df6b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a73e4699e0998338f09e1ed0504f5b1cfd73b225
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltservicegt"></a>&lt;usługi&gt;
+# <a name="ltservicegt"></a>&lt;Usługi&gt;
 `service` Element zawiera ustawienia usługi Windows Communication Foundation (WCF). Zawiera ona także punkty końcowe, które udostępniają usługi.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<usługi >  
 \<usługi >  
   
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |behaviorConfiguration|Ciąg zawierający nazwę zachowania zachowania, które ma być używany do utworzenia wystąpienia usługi. Nazwa zachowania musi być w zakresie w punkcie, który usługa została zdefiniowana. Wartością domyślną jest ciąg pusty.|  
-|nazwa|Wymagany atrybut ciągu określający typ usługi zostać utworzone. To ustawienie musi są równoważne do prawidłowego typu. Format powinien być`Namespace.Class.`|  
+|nazwa|Wymagany atrybut ciągu określający typ usługi zostać utworzone. To ustawienie musi są równoważne do prawidłowego typu. Format powinien być `Namespace.Class.`|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

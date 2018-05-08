@@ -1,11 +1,7 @@
 ---
-title: "Funkcja Beingenumeration (niezarządzany wykaz interfejsów API)"
-description: "Funkcja Beingenumeration resetuje moduł wyliczający na początku wyliczenia"
+title: Funkcja Beingenumeration (niezarządzany wykaz interfejsów API)
+description: Funkcja Beingenumeration resetuje moduł wyliczający na początku wyliczenia
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>Funkcja Beingenumeration
 Moduł wyliczający resetuje do początku wyliczenia.  
@@ -49,7 +42,7 @@ HRESULT BeginEnumeration (
 `vFunc`  
 [in] Ten parametr nie jest używana.
 
-`ptr`[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+`ptr` [in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
 
 `lEnumFlags`  
 [in] Bitowe połączenie flagi lub wartości opisanych w [uwagi](#remarks) sekcji, która kontroluje właściwości zawarte w wyliczeniu.
@@ -108,7 +101,7 @@ Stała  |Wartość  |Opis  |
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

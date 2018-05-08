@@ -1,11 +1,6 @@
 ---
 title: Shared (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Shared
 helpviewer_keywords:
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fce13c308a449e63eacc2bc4c94c274c7e25506a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzonych z klasy lub struktury w dużych, a nie z konkretnym wystąpieniem klasy lub struktury.  
@@ -33,7 +25,7 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzony
 ## <a name="when-to-use-shared"></a>Kiedy należy używać udostępnionych  
  Udostępnianie elementem członkowskim klasy lub struktury udostępnia go do każdego wystąpienia, a nie *udostępniana*, gdzie każde wystąpienie zachowuje własną kopię. Jest to przydatne, na przykład, jeśli wartość zmiennej, która ma zastosowanie do całej aplikacji. Deklarowanie zmiennej jako `Shared`, następnie wszystkie wystąpienia dostęp do tej samej lokalizacji magazynu, a jeśli jedno wystąpienie zmieni wartość zmiennej, wszystkich wystąpień dostęp zaktualizowanej wartości.  
   
- Udostępnianie nie zmienia poziom dostępu do elementu członkowskiego. Na przykład może być udostępniony element członkowski klasy i prywatny (dostępny tylko w obrębie klasy), lub udostępniana, jak i publicznych. Aby uzyskać więcej informacji, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Udostępnianie nie zmienia poziom dostępu do elementu członkowskiego. Na przykład może być udostępniony element członkowski klasy i prywatny (dostępny tylko w obrębie klasy), lub udostępniana, jak i publicznych. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Reguły  
   
@@ -87,21 +79,21 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzony
   
  `Shared` Modyfikatora można używać w tych sytuacjach:  
   
- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Statyczne](../../../visual-basic/language-reference/modifiers/static.md)  
+ [Static](../../../visual-basic/language-reference/modifiers/static.md)  
  [Okres istnienia w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
  [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

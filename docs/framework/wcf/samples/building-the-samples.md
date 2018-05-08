@@ -1,29 +1,15 @@
 ---
 title: Kompilowanie przykładów programu Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Kompilowanie przykładów programu Windows Communication Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Próbki mogą być tworzone przy użyciu programu Visual Studio 2010 lub **msbuild** polecenie w wierszu polecenia. Zarówno procedury opisane w tym temacie.  
+Przykłady Windows Communication Foundation (WCF) mogą być tworzone przy użyciu programu Visual Studio 2010 lub **msbuild** polecenie w wierszu polecenia. Zarówno procedury opisane w tym temacie.  
   
 > [!NOTE]
 >  Tworzenie lub z dowolnym z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbek, upewnij się, mogły być wykonane [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
  Pliki wsadowe Setup.exe i Cleanup.exe i skrypty powinien zostać uruchomiony z wiersza polecenia programu Visual Studio. Kilka zestawu w górę i oczyszczania plików wykonywanie zadań, które wymagają uprawnień administratora i powinna być uruchamiana z uprawnieniami administratora.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Ważne informacje dotyczące zabezpieczeń dotyczące punkty końcowe metadanych  
- Aby zapobiec przypadkowe ujawnienie metadanych usługi potencjalnie poufnych, konfigurację domyślną dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale również zaimportować narzędzia (na przykład Svcutil.exe) oznacza, że metadane nie można użyć do generowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie podczas publikowania metadanych usługi w konfiguracji. Aby eksperymentowanie z próbek łatwiejsze, prawie wszystkie próbki ujawniać punkt końcowy publikowania metadanych niezabezpieczona. Takie punkty końcowe są potencjalnie dostępne dla anonimowych użytkowników nieuwierzytelnionych i należy uważać przed wdrożeniem takich punktów końcowych w celu zapewnienia publicznie ujawniająca metadanych usługi odpowiednie. Aby uzyskać więcej informacji o publikowaniu metadanych usługi, zobacz [zachowanie podczas publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) próbki. Zobacz [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) przykładowa przykładowe zabezpieczanie punktu końcowego metadanych.  
+ Aby zapobiec przypadkowe ujawnienie metadanych usługi potencjalnie poufnych, konfigurację domyślną dla usług Windows Communication Foundation (WCF) wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale również zaimportować narzędzia (na przykład Svcutil.exe) oznacza, że metadane nie można użyć do generowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie podczas publikowania metadanych usługi w konfiguracji. Aby eksperymentowanie z próbek łatwiejsze, prawie wszystkie próbki ujawniać punkt końcowy publikowania metadanych niezabezpieczona. Takie punkty końcowe są potencjalnie dostępne dla anonimowych użytkowników nieuwierzytelnionych i należy uważać przed wdrożeniem takich punktów końcowych w celu zapewnienia publicznie ujawniająca metadanych usługi odpowiednie. Aby uzyskać więcej informacji o publikowaniu metadanych usługi, zobacz [zachowanie podczas publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) próbki. Zobacz [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) przykładowa przykładowe zabezpieczanie punktu końcowego metadanych.  
   
 ## <a name="exception-handling"></a>Obsługa wyjątków  
  Ogólnie rzecz biorąc, te przykłady nie obejmują obsługi wyjątków, aby zachować koncentruje się na temat próbki kodu. Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz [oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) próbki.  

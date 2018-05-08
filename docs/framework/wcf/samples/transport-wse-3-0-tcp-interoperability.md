@@ -1,29 +1,15 @@
 ---
 title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
-Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplementować sesji dupleksowej TCP jako niestandardowego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transportu. Przedstawiono również, jak używasz rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. W następujących krokach przedstawiono sposób tworzenia tej niestandardowej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportu:  
+Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplementować sesji dupleksowej TCP jako niestandardowego transportu Windows Communication Foundation (WCF). Przedstawiono również, jak używasz rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. W następujących krokach przedstawiono sposób tworzenia tej niestandardowej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportu:  
   
 1.  Począwszy od gniazda TCP, utworzyć klienta i serwera implementacje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> który umożliwia DIME Framing odróżniać granice wiadomości.  
   

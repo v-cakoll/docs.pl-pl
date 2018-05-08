@@ -1,10 +1,6 @@
 ---
 title: Boolean Data Type (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.FALSE
 - vb.TRUE
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bdc106f1ec874c1a2165df069d5f3485fe5b2e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean Data Type (Visual Basic)
 Wartości blokad, które mogą być tylko `True` lub `False`. Słowa kluczowe `True` i `False` odpowiadają dwa stany `Boolean` zmiennych.  
@@ -33,7 +26,7 @@ Wartości blokad, które mogą być tylko `True` lub `False`. Słowa kluczowe `T
   
  Wartość domyślna `Boolean` jest `False`.  
   
- `Boolean`wartości nie są przechowywane jako liczby, a nie mają równoważne numery przechowywane wartości. Nigdy nie powinien pisania kodu, który polega na równoważne wartości numerycznych `True` i `False`. Jeśli to możliwe, należy ograniczyć użycie `Boolean` zmienne do wartości logiczne, dla których są przeznaczone.  
+ `Boolean` wartości nie są przechowywane jako liczby, a nie mają równoważne numery przechowywane wartości. Nigdy nie powinien pisania kodu, który polega na równoważne wartości numerycznych `True` i `False`. Jeśli to możliwe, należy ograniczyć użycie `Boolean` zmienne do wartości logiczne, dla których są przeznaczone.  
   
 ## <a name="type-conversions"></a>Konwersje typu  
  Gdy Visual Basic konwertuje wartości typu danych liczbowych `Boolean`, staje się 0 `False` i stać się wszystkie inne wartości `True`. Gdy konwertuje Visual Basic `Boolean` wartości na typy liczbowe `False` staje się 0 i `True` staje się wartość -1.  
@@ -42,9 +35,9 @@ Wartości blokad, które mogą być tylko `True` lub `False`. Słowa kluczowe `T
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Wartości ujemne.** `Boolean`nie jest typu liczbowego i nie może reprezentować wartość ujemną. W żadnym przypadku nie należy używać `Boolean` do przechowywania wartości liczbowych.  
+-   **Wartości ujemne.** `Boolean` nie jest typu liczbowego i nie może reprezentować wartość ujemną. W żadnym przypadku nie należy używać `Boolean` do przechowywania wartości liczbowych.  
   
--   **Znaki typu.** `Boolean`nie ma znak literalny typu ani znak typu identyfikator.  
+-   **Znaki typu.** `Boolean` nie ma znak literalny typu ani znak typu identyfikator.  
   
 -   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.Boolean?displayProperty=nameWithType> struktury.  
   
@@ -65,5 +58,5 @@ End If
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [CType — funkcja](../../../visual-basic/language-reference/functions/ctype-function.md)
+ [Rozwiązywanie problemów związanych z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Funkcja CType](../../../visual-basic/language-reference/functions/ctype-function.md)

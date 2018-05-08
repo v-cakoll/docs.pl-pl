@@ -1,10 +1,6 @@
 ---
 title: Tworzenie prototypów w kodzie zarządzanym
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +17,13 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Tworzenie prototypów w kodzie zarządzanym
 Ten temat zawiera opis sposobu dostępu z funkcjami niezarządzanymi i wprowadzono kilka pól atrybutów, które adnotacji definicji metody w kodzie zarządzanym. Aby uzyskać przykłady pokazujące, które pokazują, jak utworzyć. Deklaracje opartych na potrzeby używania z platformy invoke, zobacz [organizowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  

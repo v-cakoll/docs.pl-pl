@@ -1,13 +1,6 @@
 ---
-title: "Optymalizacja wydajności: grafika 2D i obrazowanie"
-ms.custom: 
+title: 'Optymalizacja wydajności: grafika 2D i obrazowanie'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,40 +12,35 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99fc5e179fe7652868d47d93fbdcabd47bc8cab9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optymalizacja wydajności: grafika 2D i obrazowanie
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]oferuje szeroką gamę grafiki 2D oraz obsługi obrazów funkcje, które mogą być optymalizowane do wymagań aplikacji. Ten temat zawiera informacje o optymalizacji wydajności w tych obszarach.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje szeroką gamę grafiki 2D oraz obsługi obrazów funkcje, które mogą być optymalizowane do wymagań aplikacji. Ten temat zawiera informacje o optymalizacji wydajności w tych obszarach.  
   
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Rysowanie i kształtów  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia zarówno <xref:System.Windows.Media.Drawing> i <xref:System.Windows.Shapes.Shape> obiekty do reprezentowania graficznego rysowania zawartości. Jednak <xref:System.Windows.Media.Drawing> obiekty są konstrukcje prostsze niż <xref:System.Windows.Shapes.Shape> obiekty i zapewnić lepszą charakterystyki wydajności.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia zarówno <xref:System.Windows.Media.Drawing> i <xref:System.Windows.Shapes.Shape> obiekty do reprezentowania graficznego rysowania zawartości. Jednak <xref:System.Windows.Media.Drawing> obiekty są konstrukcje prostsze niż <xref:System.Windows.Shapes.Shape> obiekty i zapewnić lepszą charakterystyki wydajności.  
   
  A <xref:System.Windows.Shapes.Shape> umożliwia narysować kształt graficzny do ekranu. Ponieważ pochodzą z <xref:System.Windows.FrameworkElement> klasy <xref:System.Windows.Shapes.Shape> obiekty mogą być używane wewnątrz paneli i większość formantów.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]oferuje kilka warstw dostępu do usługi renderowania i grafiki. W górnej warstwie <xref:System.Windows.Shapes.Shape> obiekty są łatwe w użyciu i podaj wielu przydatnych funkcji, takich jak układ i obsługi zdarzeń. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera liczbę obiektów kształtu gotowe do użycia. Wszystkie obiekty kształtu dziedziczyć <xref:System.Windows.Shapes.Shape> klasy. Kształt dostępne obiekty obejmują <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, i <xref:System.Windows.Shapes.Rectangle>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje kilka warstw dostępu do usługi renderowania i grafiki. W górnej warstwie <xref:System.Windows.Shapes.Shape> obiekty są łatwe w użyciu i podaj wielu przydatnych funkcji, takich jak układ i obsługi zdarzeń. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera liczbę obiektów kształtu gotowe do użycia. Wszystkie obiekty kształtu dziedziczyć <xref:System.Windows.Shapes.Shape> klasy. Kształt dostępne obiekty obejmują <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, i <xref:System.Windows.Shapes.Rectangle>.  
   
- <xref:System.Windows.Media.Drawing>obiekty z drugiej strony, nie pochodzi od <xref:System.Windows.FrameworkElement> klasy i udostępnić implementację wagi jaśniejszego kształtów renderowania, obrazy i tekst.  
+ <xref:System.Windows.Media.Drawing> obiekty z drugiej strony, nie pochodzi od <xref:System.Windows.FrameworkElement> klasy i udostępnić implementację wagi jaśniejszego kształtów renderowania, obrazy i tekst.  
   
  Istnieją cztery typy <xref:System.Windows.Media.Drawing> obiektów:  
   
--   <xref:System.Windows.Media.GeometryDrawing>Rysuje kształt.  
+-   <xref:System.Windows.Media.GeometryDrawing> Rysuje kształt.  
   
--   <xref:System.Windows.Media.ImageDrawing>Rysuje obraz.  
+-   <xref:System.Windows.Media.ImageDrawing> Rysuje obraz.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>Rysuje tekst.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> Rysuje tekst.  
   
--   <xref:System.Windows.Media.DrawingGroup>Rysuje inne rysunki. Użyj grupy rysunku, aby połączyć inne rysunki w jeden złożonego.  
+-   <xref:System.Windows.Media.DrawingGroup> Rysuje inne rysunki. Użyj grupy rysunku, aby połączyć inne rysunki w jeden złożonego.  
   
  <xref:System.Windows.Media.GeometryDrawing> Obiekt jest używany do renderowania zawartości geometrii. <xref:System.Windows.Media.Geometry> Konkretnych klas pochodzących od, takich jak i klasy <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, i <xref:System.Windows.Media.PathGeometry>, zapewniają środki do renderowania grafiki 2D, a także testowanie trafień i obsługa wycinka. Obiekty geometrii może służyć do definiowania region kontrolki, na przykład, lub aby zdefiniować obszar przycinania w celu zastosowania do obrazu. Geometria obiekty mogą być proste regionach, takie jak prostokąty i okręgi lub złożone regiony utworzone na podstawie co najmniej dwa obiekty geometrii. Można tworzyć bardziej złożone geometrycznych regionów łącząc <xref:System.Windows.Media.PathSegment>-pochodnych obiekty, takie jak <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, i <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>Obiekty StreamGeometry  
- <xref:System.Windows.Media.StreamGeometry> Obiekt jest lekki zamiast <xref:System.Windows.Media.PathGeometry> tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> potrzebne do opisywania geometrii złożonych. <xref:System.Windows.Media.StreamGeometry>zoptymalizowana pod kątem obsługi wielu <xref:System.Windows.Media.PathGeometry> obiekty i działa lepiej w porównaniu z zastosowaniem wiele osób <xref:System.Windows.Media.PathGeometry> obiektów.  
+ <xref:System.Windows.Media.StreamGeometry> Obiekt jest lekki zamiast <xref:System.Windows.Media.PathGeometry> tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> potrzebne do opisywania geometrii złożonych. <xref:System.Windows.Media.StreamGeometry> zoptymalizowana pod kątem obsługi wielu <xref:System.Windows.Media.PathGeometry> obiekty i działa lepiej w porównaniu z zastosowaniem wiele osób <xref:System.Windows.Media.PathGeometry> obiektów.  
   
  W poniższym przykładzie użyto Składnia atrybutu, aby utworzyć trójkątny <xref:System.Windows.Media.StreamGeometry> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -78,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Images"></a>   
 ## <a name="images"></a>Obrazy  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Tworzenie obrazów udostępnia znaczne ulepszenia w porównaniu z możliwości przetwarzania obrazów w poprzednich wersjach [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Imaging możliwości, takie jak wyświetlanie mapy bitowej lub przy użyciu obrazu na formantu wspólnego głównie zostały obsłużone przez program Microsoft Windows graficzny interfejs urządzenia (GDI) lub interfejsu GDI + systemu Microsoft Windows interfejsu programowania aplikacji (API). Tych interfejsów API dostępny linii bazowej funkcje obsługi obrazów, ale brakuje funkcje, takie jak obsługa rozszerzalność kodera-dekodera i o wysokiej wierności obsługi obrazów. Interfejs API WPF Imaging przeprojektowano rozwiązać niedociągnięć GDI i GDI + i dostarczyć nowy zestaw interfejsu API do wyświetlanie i używanie obrazów w aplikacjach.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Tworzenie obrazów udostępnia znaczne ulepszenia w porównaniu z możliwości przetwarzania obrazów w poprzednich wersjach [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Imaging możliwości, takie jak wyświetlanie mapy bitowej lub przy użyciu obrazu na formantu wspólnego głównie zostały obsłużone przez program Microsoft Windows graficzny interfejs urządzenia (GDI) lub interfejsu GDI + systemu Microsoft Windows interfejsu programowania aplikacji (API). Tych interfejsów API dostępny linii bazowej funkcje obsługi obrazów, ale brakuje funkcje, takie jak obsługa rozszerzalność kodera-dekodera i o wysokiej wierności obsługi obrazów. Interfejs API WPF Imaging przeprojektowano rozwiązać niedociągnięć GDI i GDI + i dostarczyć nowy zestaw interfejsu API do wyświetlanie i używanie obrazów w aplikacjach.  
   
  Przy użyciu obrazów, należy wziąć pod uwagę poniższe zalecenia do uzyskania lepszej wydajności:  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 -   Aby uzyskać więcej informacji, zobacz [Imaging omówienie](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- Gdy animacji skali wszystkie mapy bitowej, domyślny obraz wysokiej jakości ponownie próbkowania algorytm czasami mogą zużywać powodować spadku szybkość ramki, efektywnie powoduje animacji odtwarzanie przerywane wystarczających zasobów systemowych. Przez ustawienie <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> właściwość <xref:System.Windows.Media.RenderOptions> do obiektu <xref:System.Windows.Media.BitmapScalingMode.LowQuality> płynniejszą animację można tworzyć w czasie skalowania mapy bitowej. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>Określa tryb [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu renderowania, aby przełączyć się z algorytmem zoptymalizowanych pod względem jakości algorytmu zoptymalizowanych pod kątem szybkości, podczas przetwarzania obrazów.  
+ Gdy animacji skali wszystkie mapy bitowej, domyślny obraz wysokiej jakości ponownie próbkowania algorytm czasami mogą zużywać powodować spadku szybkość ramki, efektywnie powoduje animacji odtwarzanie przerywane wystarczających zasobów systemowych. Przez ustawienie <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> właściwość <xref:System.Windows.Media.RenderOptions> do obiektu <xref:System.Windows.Media.BitmapScalingMode.LowQuality> płynniejszą animację można tworzyć w czasie skalowania mapy bitowej. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Określa tryb [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu renderowania, aby przełączyć się z algorytmem zoptymalizowanych pod względem jakości algorytmu zoptymalizowanych pod kątem szybkości, podczas przetwarzania obrazów.  
   
  Poniższy przykład przedstawia sposób ustawiania <xref:System.Windows.Media.BitmapScalingMode> dla obiekt obrazu.  
   

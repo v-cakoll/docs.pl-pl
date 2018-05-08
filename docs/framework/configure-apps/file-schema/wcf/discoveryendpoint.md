@@ -1,30 +1,18 @@
 ---
-title: '&lt;obiektu discoveryEndpoint&gt;'
-ms.custom: 
+title: '&lt;Obiektu DiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51caf46f85e7edd1f8e4b9a08ab6a1198ccd9c79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a352fbfced08001f76dceaff283d6bca25f56f9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;obiektu discoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;Obiektu DiscoveryEndpoint&gt;
 
 Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem odkrywania. Po dodaniu do konfiguracji usługi, określa gdzie nasłuchiwać komunikatów odnajdywania. Po dodaniu do konfiguracji klienta Określa gdzie wysyłanie zapytań odnajdywania.  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<standardEndpoints >  
   
 ## <a name="syntax"></a>Składnia

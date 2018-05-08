@@ -1,21 +1,14 @@
 ---
-title: "Używanie typów dopuszczających wartości zerowe (Przewodnik programowania w języku C#)"
+title: Używanie typów dopuszczających wartości zerowe (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Używanie typów dopuszczających wartości zerowe (Przewodnik programowania w języku C#)
 Typy dopuszczające wartości zerowe może reprezentować wszystkich wartości typu podstawowego i dodatkowego [null](../../../csharp/language-reference/keywords/null.md) wartość. Typy dopuszczające wartości null są zadeklarowane w jeden z dwóch sposobów:  
@@ -26,7 +19,7 @@ Typy dopuszczające wartości zerowe może reprezentować wszystkich wartości t
   
  `T? variable`  
   
- `T`jest typem podstawowym typu dopuszczającego wartość null. `T`mogą być dowolnego typu wartości w tym `struct`; nie może być typem referencyjnym.  
+ `T` jest typem podstawowym typu dopuszczającego wartość null. `T` mogą być dowolnego typu wartości w tym `struct`; nie może być typem referencyjnym.  
   
  Na przykład kiedy może używać typu dopuszczającego wartość null, należy wziąć pod uwagę sposób zwykłej wartość logiczna może mieć dwie wartości: true i false. Nie istnieje wartość, która oznacza, że "undefined". W wielu aplikacjach programowania głównie bazy danych interakcji, zmienne może wystąpić w stanie niezdefiniowany. Na przykład pole w bazie danych może zawierać wartości PRAWDA lub FAŁSZ, ale może również zawierać żadnej wartości w ogóle. Podobnie można ustawić typy referencyjne `null` aby wskazać, że nie jest inicjowany.  
   
@@ -42,11 +35,11 @@ Typy dopuszczające wartości zerowe może reprezentować wszystkich wartości t
   
 -   `HasValue`  
   
-     `HasValue`jest typu `bool`. Ma ustawioną wartość `true` Jeśli zmienna zawiera wartość inną niż null.  
+     `HasValue` jest typu `bool`. Ma ustawioną wartość `true` Jeśli zmienna zawiera wartość inną niż null.  
   
 -   `Value`  
   
-     `Value`jest tego samego typu jako typu bazowego. Jeśli `HasValue` jest `true`, `Value` zawiera odpowiednią wartość. Jeśli `HasValue` jest `false`, podczas uzyskiwania dostępu do `Value` zgłosi <xref:System.InvalidOperationException>.  
+     `Value` jest tego samego typu jako typu bazowego. Jeśli `HasValue` jest `true`, `Value` zawiera odpowiednią wartość. Jeśli `HasValue` jest `false`, podczas uzyskiwania dostępu do `Value` zgłosi <xref:System.InvalidOperationException>.  
   
  W tym przykładzie `HasValue` element członkowski jest używany do sprawdzenia, czy zmienna zawiera wartość, przed ponowną próbą go wyświetlić.  
   
@@ -103,7 +96,7 @@ Typy dopuszczające wartości zerowe może reprezentować wszystkich wartości t
   
  W poniższej tabeli przedstawiono wyniki tych operatorów:  
   
-|X|t|x & y|x &#124; y|  
+|X|t|x & y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|false|false|true|  
@@ -117,6 +110,6 @@ Typy dopuszczające wartości zerowe może reprezentować wszystkich wartości t
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md)  
- [Konwersja boxing typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [Typy dopuszczające wartości zerowe wartości](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+ [Typy dopuszczające wartości null](../../../csharp/programming-guide/nullable-types/index.md)  
+ [Konwersja boxing typów dopuszczających wartości null](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
+ [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

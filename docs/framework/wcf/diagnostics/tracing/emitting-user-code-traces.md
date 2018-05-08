@@ -1,27 +1,15 @@
 ---
-title: "Emitowanie danych śledzenia elementu User-Code"
-ms.custom: 
+title: Emitowanie danych śledzenia elementu User-Code
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>Emitowanie danych śledzenia elementu User-Code
-Oprócz włączenia śledzenia w konfiguracji, aby zbieranie danych Instrumentacji generowanych przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], można również wysyłać dane śledzenia w kodzie użytkownika. W ten sposób można utworzyć aktywne dane instrumentacji, który można przejrzeć później w celu diagnostyki. W tym temacie opisano, jak to zrobić.  
+Oprócz włączenia śledzenia w konfiguracji, aby zbieranie danych Instrumentacji generowanych przez Windows Communication Foundation (WCF), można również wysyłać dane śledzenia w kodzie użytkownika. W ten sposób można utworzyć aktywne dane instrumentacji, który można przejrzeć później w celu diagnostyki. W tym temacie opisano, jak to zrobić.  
   
  Ponadto [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md) próbki obejmuje całego kodu pokazano w poniższych sekcjach.  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  Na poniższym diagramie Widzimy również śladów transfer od i do działania Kalkulator, jak również dwie pary uruchomienia i zatrzymania śledzenia na działanie żądania, jeden dla klienta i jeden dla usługi (po jednej dla każdego źródła śledzenia).  
   
- ![Podgląd śledzenia: Emitowanie użytkownika &#45; kod śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Podgląd śledzenia: Emitowanie użytkownika&#45;kodu śladów](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Lista działań w oparciu o czas utworzenia (lewego panelu) i ich zagnieżdżonych działań (prawym górnym panelu)  
   
  Jeśli kod usługi zgłasza wyjątek, który powoduje, że klient ma zostać zgłoszony, jak również (na przykład, gdy klient nie pobrały odpowiedzi na żądania), zarówno usługa i klient ostrzeżenia lub komunikaty o błędach występować w tym samym działaniu dla korelacji bezpośredniego. Na poniższym diagramie usługa zgłasza wyjątek stwierdzający "Usługa odmówi przetworzyć tego żądania w kodzie użytkownika." Klient również zgłasza wyjątek stwierdzający "serwer nie może przetworzyć żądania z powodu błędu wewnętrznego."  
   
- ![Emituj 45; & użytkownika za pomocą podglądu śledzenia śledzi kodu](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![Emituj użytkownika za pomocą podglądu śledzenia&#45;kodu śladów](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Błędy w obrębie punktów końcowych dla danego żądania są wyświetlane w tym samym działaniu jeśli pochodzi żądanie identyfikator działania  
   
  Dwukrotne kliknięcie mnożenie działania w lewym panelu przedstawia wykres następujących, za pomocą danych śledzenia dla mnożenia działanie dla każdego procesu związane. Firma Microsoft można zauważyć, że najpierw wystąpiło ostrzeżenie w usług (wystąpienie wyjątku), której następuje ostrzeżeń i błędów na komputerze klienckim, ponieważ nie można przetworzyć żądania. Firma Microsoft w związku z tym oznacza błąd przyczynowy relacji między punktami końcowymi i pochodzić przyczynę błędu.  
   
- ![Emituj 45; & użytkownika za pomocą podglądu śledzenia śledzi kodu](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![Emituj użytkownika za pomocą podglądu śledzenia&#45;kodu śladów](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Widok wykresu błąd korelacji  
   
  Uzyskanie poprzedniej śladów ustawiliśmy `ActivityTracing` źródeł śledzenia użytkownika i `propagateActivity=true` dla `System.ServiceModel` źródła śledzenia. Firma Microsoft nie określono `ActivityTracing` dla `System.ServiceModel` źródła śledzenia do kodu użytkownika rozprzestrzenianie działania kodu użytkownika. (Jeśli ServiceModel czynność śledzenia jest włączona, identyfikator działania zdefiniowane na komputerze klienckim nie są propagowane do kodu użytkownika usługi; Transfery, jednak skorelowania działania kodu użytkownika klienta i usługi do pośredniego [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] działania.)  

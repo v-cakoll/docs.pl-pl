@@ -1,38 +1,24 @@
 ---
-title: "Przegląd integrowania z aplikacjami modelu COM"
-ms.custom: 
+title: Przegląd integrowania z aplikacjami modelu COM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami modelu COM
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia bogate środowisko tworzenia połączonych aplikacji dewelopera kodu zarządzanego. Jednak jeśli masz znaczących inwestycji w niezarządzanym kodzie oparte na modelu COM i nie chcesz migrować, można nadal zintegrować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług sieci Web bezpośrednio do istniejącego kodu za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] krótkiej nazwy. Krótka nazwa usługi może służyć w środowiskach programistycznych szeroki zakres modelu COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  
+Windows Communication Foundation (WCF) zapewnia dewelopera kodu zarządzanego przy użyciu bogate środowisko tworzenia połączonych aplikacji. Jednak jeśli masz znaczących inwestycji w niezarządzanym kodzie oparte na modelu COM i nie chcesz migrować, można nadal zintegrować usług sieci Web WCF bezpośrednio z istniejącego kodu za pomocą moniker usługi WCF. Krótka nazwa usługi może służyć w środowiskach programistycznych szeroki zakres modelu COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  
   
 > [!NOTE]
->  Moniker usługi używa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanał komunikacyjny na potrzeby całej komunikacji. Bezpieczeństwo i tożsamość mechanizmów dla tego kanału różnią się od używanych w standardowe COM i DCOM serwera proxy. Ponadto ponieważ używa moniker usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanał komunikacyjny jedną minutę na wszystkich wywołań jest domyślny limit czasu.  
+>  Moniker usługi używa kanał komunikacyjny WCF dla całej komunikacji. Bezpieczeństwo i tożsamość mechanizmów dla tego kanału różnią się od używanych w standardowe COM i DCOM serwera proxy. Ponadto ponieważ moniker usługi używa kanał komunikacyjny WCF domyślny limit czasu jest jedną minutę na wszystkich wywołań.  
   
- Moniker usługi jest używany z `GetObject` funkcji niezarządzanej developer podejścia jednoznacznie, specyficzne dla modelu COM przy dotyczący wywołania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług sieci Web. Wymaga to definicji lokalnego, widoczny dla modelu COM [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kontrakt usługi i powiązania, który ma być używany w sieci Web. Takich jak inne [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów, moniker usługi należy tworzyć typu kanału do usługi, chociaż ten kanał konstrukcji wykonywane w sposób przezroczysty dla programisty modelu COM przy pierwszym wywołaniu metody.  
+ Moniker usługi jest używany z `GetObject` funkcji niezarządzanej developer podejścia jednoznacznie, specyficzne dla modelu COM przy wywoływania usługi sieci Web WCF. Wymaga lokalnego, widoczny dla modelu COM definicja kontraktu usługi WCF w sieci Web i powiązania, który ma być używany. Podobnie jak innymi klientami WCF moniker usługi należy tworzyć typu kanału do usługi, chociaż tej konstrukcji kanału wykonywane w sposób przezroczysty dla programisty modelu COM przy pierwszym wywołaniu metody.  
   
- Wspólne innych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów, korzystając z krótką nazwę, aplikacje Określ address, binding i contract do komunikowania się z usługą. Kontrakt można określić w jednym z następujących sposobów:  
+ Wspólne innych klienci WCF, korzystając z monikerem aplikacje Określ address, binding i contract do komunikowania się z usługą. Kontrakt można określić w jednym z następujących sposobów:  
   
 -   Typu kontraktu — jest zarejestrowany jako typ widoczne COM na komputerze klienckim.  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 |`serializer`|Określ użycie serializatora "xml" lub "datacontract".|  
   
 > [!NOTE]
->  Nawet wtedy, gdy jest używany z klientami całkowicie oparty na modelu COM, wymaga moniker usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i obsługi .NET Framework 2.0 jest zainstalowany na komputerze klienckim. Jest również krytycznych, że aplikacje klienckie, które używają moniker usługi załadować odpowiednią wersję środowiska uruchomieniowego .NET Framework. Używając krótkiej nazwy w aplikacjach pakietu Office, aby upewnić się, że jest załadowany poprawne framework w wersji może wymagać pliku konfiguracji. Na przykład przy użyciu programu Excel, następujący tekst należy umieścić w pliku o nazwie Excel.exe.config w tym samym katalogu co plik Excel.exe:  
+>  Nawet wtedy, gdy jest używany z klientami całkowicie oparty na modelu COM, moniker usługi wymaga WCF i obsługi .NET Framework 2.0, można zainstalować na komputerze klienckim. Jest również krytycznych, że aplikacje klienckie, które używają moniker usługi załadować odpowiednią wersję środowiska uruchomieniowego .NET Framework. Używając krótkiej nazwy w aplikacjach pakietu Office, aby upewnić się, że jest załadowany poprawne framework w wersji może wymagać pliku konfiguracji. Na przykład przy użyciu programu Excel, następujący tekst należy umieścić w pliku o nazwie Excel.exe.config w tym samym katalogu co plik Excel.exe:  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   

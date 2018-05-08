@@ -1,26 +1,12 @@
 ---
 title: LINQ i ADO.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: d86a3f97bcdb748d397dcf5edf20d4d8ce945bc6
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 1385b2d9b49a7615810025141e111b7d7bf71eac
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
 Dzisiaj, użyć wielu firm deweloperów języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstwy logiki i prezentacji firm (na przykład Visual C# lub Visual Basic), a język kwerendy do interakcji z bazy danych (takich jak [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Wymaga deweloperowi można wykorzystać w wielu językach zadziałało i powoduje także, że język niezgodności w środowisku programistycznym. Na przykład aplikację, która używa interfejsu API dostępu do danych można wykonać kwerendy w bazie danych określa zapytanie jako literału ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzany pod kątem błędów, takich jak Błędna składnia lub czy kolumn lub wierszy, do których się odwołuje faktycznie istnieją. Nie ma typu Sprawdzanie parametrów zapytania i nie `IntelliSense` obsługuje albo.  

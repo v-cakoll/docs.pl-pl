@@ -1,22 +1,12 @@
 ---
 title: Wariancje w Delegatach (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9fe76a32f76f760497021289ec1c6ce673cec1b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Wariancje w Delegatach (Visual Basic)
 .NET framework 3.5 wprowadzono obsługę wariancję dopasowania podpisy metod typów delegata w wszystkich delegatów w języku C# i Visual Basic. Oznacza to, że można przypisać do deleguje nie tylko metody, które pasują do podpisów, ale również metody, które zwracają więcej pochodnych typów (kowariancja) lub akceptujących parametrów, które mają mniej typów pochodnych (kontrawariancja) od określonej przez typ delegata . Dotyczy to również ogólne i inny niż ogólny delegatów.  
@@ -129,9 +119,9 @@ End Sub
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Delegaty ogólne, które mają typ Variant parametry typu w programie .NET Framework  
  .NET framework 4 wprowadzono obsługę wariancji dla parametrów typu ogólnego w kilka istniejących delegaty ogólne:  
   
--   `Action`deleguje z <xref:System> przestrzeni nazw, na przykład <xref:System.Action%601> i<xref:System.Action%602>  
+-   `Action` deleguje z <xref:System> przestrzeni nazw, na przykład <xref:System.Action%601> i <xref:System.Action%602>  
   
--   `Func`deleguje z <xref:System> przestrzeni nazw, na przykład <xref:System.Func%601> i<xref:System.Func%602>  
+-   `Func` deleguje z <xref:System> przestrzeni nazw, na przykład <xref:System.Func%601> i <xref:System.Func%602>  
   
 -   <xref:System.Predicate%601> Delegowanie  
   
@@ -157,7 +147,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```  
   
 > [!IMPORTANT]
->  `ByRef`Parametry w języku Visual Basic nie można oznaczyć jako typ variant.  
+>  `ByRef` Parametry w języku Visual Basic nie można oznaczyć jako typ variant.  
   
  Istnieje również możliwość do obsługi wariancji i Kowariancja w tego samego obiektu delegowanego, ale także dla parametrów innego typu. Przedstawiono to w poniższym przykładzie.  
   

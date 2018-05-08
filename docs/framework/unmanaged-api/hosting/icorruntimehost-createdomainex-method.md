@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::CreateDomainEx — Metoda"
-ms.custom: 
+title: ICorRuntimeHost::CreateDomainEx — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.CreateDomainEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1bdde382-f8ba-4cc8-94b2-d1ac919c585e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a2a577e1bd8765c7359e521b007bea943de7a984
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e851cf16e4b23b1f8510c4d96b23c01eb726a77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>ICorRuntimeHost::CreateDomainEx — Metoda
 Tworzy domeny aplikacji. Obiekt wywołujący uzyskuje wskaźnika interfejsu typu <xref:System._AppDomain>, aby wystąpienie typu <xref:System.AppDomain?displayProperty=nameWithType>. Ta metoda umożliwia obiekt wywołujący, aby przekazać wystąpienia IAppDomainSetup Konfigurowanie dodatkowych funkcji zwracana <xref:System._AppDomain> wystąpienia.  
@@ -67,12 +55,12 @@ HRESULT CreateDomainEx (
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Operacja powiodła się.|  
-|WARTOŚCI S_FALSE|Nie można ukończyć operacji.|  
+|S_FALSE|Nie można ukończyć operacji.|  
 |E_FAIL|Wystąpił nieznany, poważnej awarii. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie będzie już można używać w procesie. Kolejne wywołania żadnych hostingu interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateDomainEx`Rozszerza możliwości [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) przez obiekt wywołujący, aby przekazać `IAppDomainSetup` wystąpienia o wartości właściwości do konfigurowania domeny aplikacji.  
+ `CreateDomainEx` Rozszerza możliwości [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) przez obiekt wywołujący, aby przekazać `IAppDomainSetup` wystąpienia o wartości właściwości do konfigurowania domeny aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

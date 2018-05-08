@@ -1,13 +1,6 @@
 ---
-title: "Rozwiązywanie problemów aplikacji hybrydowych"
-ms.custom: 
+title: Rozwiązywanie problemów aplikacji hybrydowych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,29 +9,24 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Rozwiązywanie problemów aplikacji hybrydowych
-<a name="introduction"></a>W tym temacie wymieniono niektóre typowe problemy, które mogą wystąpić, gdy tworzenie hybrydowych aplikacji korzystających z obu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii.  
+<a name="introduction"></a> W tym temacie wymieniono niektóre typowe problemy, które mogą wystąpić, gdy tworzenie hybrydowych aplikacji korzystających z obu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii.  
   
 
   
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Nakładanie się kontrolek  
- Formanty nie może nakładać się zgodnie z regułami. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]używa oddzielnych HWND dla każdego formantu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]używa jednego HWND dla całej zawartości na stronie. Ta różnica implementacji powoduje nieoczekiwane zachowania nakładające się.  
+ Formanty nie może nakładać się zgodnie z regułami. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] używa oddzielnych HWND dla każdego formantu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa jednego HWND dla całej zawartości na stronie. Ta różnica implementacji powoduje nieoczekiwane zachowania nakładające się.  
   
  A [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli hostowanych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawsze jest wyświetlany nad [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawartość udostępniana w <xref:System.Windows.Forms.Integration.ElementHost> formant jest widoczny w porządek osi z <xref:System.Windows.Forms.Integration.ElementHost> formantu. Można zastąpić <xref:System.Windows.Forms.Integration.ElementHost> formantów, ale hostowanej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości nie łączyć lub interakcji.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość udostępniana w <xref:System.Windows.Forms.Integration.ElementHost> formant jest widoczny w porządek osi z <xref:System.Windows.Forms.Integration.ElementHost> formantu. Można zastąpić <xref:System.Windows.Forms.Integration.ElementHost> formantów, ale hostowanej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości nie łączyć lub interakcji.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>Właściwość elementu podrzędnego  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>Skalowanie  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mają różne modele skalowania. Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] skalowania przekształceń są przydatne do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów, ale inne osoby nie są. Na przykład skalowanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli 0 będą działać, ale próba skalowania formantu tego samego wartość niezerową rozmiar formantu pozostaje 0. Aby uzyskać więcej informacji, zobacz [zagadnienia układu elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mają różne modele skalowania. Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] skalowania przekształceń są przydatne do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów, ale inne osoby nie są. Na przykład skalowanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli 0 będą działać, ale próba skalowania formantu tego samego wartość niezerową rozmiar formantu pozostaje 0. Aby uzyskać więcej informacji, zobacz [zagadnienia układu elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>Adapter  
@@ -95,11 +83,11 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Metoda Dispose  
- Nie usuwanie klas prawidłowo można wyciek zasobów. Upewnij się, że w aplikacjach hybrydowego <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost> klasy są usuwane, lub można wyciek zasobów. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Usuwa <xref:System.Windows.Forms.Integration.ElementHost> sterować jego niemodalne <xref:System.Windows.Forms.Form> nadrzędnego zostanie zamknięty. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Usuwa <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementów podczas zamykania aplikacji. Umożliwia wyświetlanie <xref:System.Windows.Forms.Integration.WindowsFormsHost> element <xref:System.Windows.Window> w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] pętli komunikatów. W takim przypadku kodu nie może otrzymywać powiadomienie, że aplikacja jest zamykana.  
+ Nie usuwanie klas prawidłowo można wyciek zasobów. Upewnij się, że w aplikacjach hybrydowego <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost> klasy są usuwane, lub można wyciek zasobów. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Usuwa <xref:System.Windows.Forms.Integration.ElementHost> sterować jego niemodalne <xref:System.Windows.Forms.Form> nadrzędnego zostanie zamknięty. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Usuwa <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementów podczas zamykania aplikacji. Umożliwia wyświetlanie <xref:System.Windows.Forms.Integration.WindowsFormsHost> element <xref:System.Windows.Window> w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] pętli komunikatów. W takim przypadku kodu nie może otrzymywać powiadomienie, że aplikacja jest zamykana.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Włączanie style wizualne  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]Visual Style na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant może nie być włączone. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Metoda jest wywoływana w szablonie dla [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Mimo że ta metoda nie jest wywoływana domyślnie, jeśli używasz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do tworzenia projektu uzyskasz [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style formantów, jeśli jest dostępny Comctl32.dll w wersji 6.0. Należy wywołać <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metoda przed utworzeniem dojść w wątku. Aby uzyskać więcej informacji, zobacz [porady: Włączanie style wizualne w aplikacji hybrydowych](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Visual Style na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant może nie być włączone. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Metoda jest wywoływana w szablonie dla [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Mimo że ta metoda nie jest wywoływana domyślnie, jeśli używasz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do tworzenia projektu uzyskasz [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style formantów, jeśli jest dostępny Comctl32.dll w wersji 6.0. Należy wywołać <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metoda przed utworzeniem dojść w wątku. Aby uzyskać więcej informacji, zobacz [porady: Włączanie style wizualne w aplikacji hybrydowych](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Licencjonowane formanty  

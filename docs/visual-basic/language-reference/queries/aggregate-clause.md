@@ -1,11 +1,6 @@
 ---
-title: "Aggregate — Klauzula (Visual Basic)"
+title: Aggregate — Klauzula (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate — Klauzula (Visual Basic)
 Stosuje co najmniej jeden funkcje agregujące do kolekcji.  
@@ -40,11 +32,11 @@ Aggregate element [As type] In collection _
   
 |Termin|Definicja|  
 |---|---|  
-|`element`|Wymagany. Zmienna używany do iterowania po elementach kolekcji.|  
-|`type`|Opcjonalny. Typ `element`. Jeśli nie określono typu, typu `element` jest wywnioskowany na podstawie `collection`.|  
-|`collection`|Wymagany. Odnosi się do kolekcji do działania na.|  
-|`clause`|Opcjonalny. Co najmniej jednego zapytania klauzule, takie jak `Where` klauzuli, aby doprecyzować wyniku zapytania, aby zastosować aggregate — klauzula lub klauzule.|  
-|`expressionList`|Wymagany. Co najmniej jeden rozdzielana przecinkami wyrażeń określających funkcji agregującej do zastosowania do kolekcji. Alias można stosować do funkcji agregującej, aby określić nazwę elementu członkowskiego wyniku zapytania. Jeśli nie jest dostarczony żadnego aliasu, nazwy funkcji agregującej jest używany. Aby uzyskać przykłady zobacz sekcję funkcje agregujące w dalszej części tego tematu.|  
+|`element`|Wymagana. Zmienna używany do iterowania po elementach kolekcji.|  
+|`type`|Opcjonalna. Typ `element`. Jeśli nie określono typu, typu `element` jest wywnioskowany na podstawie `collection`.|  
+|`collection`|Wymagana. Odnosi się do kolekcji do działania na.|  
+|`clause`|Opcjonalna. Co najmniej jednego zapytania klauzule, takie jak `Where` klauzuli, aby doprecyzować wyniku zapytania, aby zastosować aggregate — klauzula lub klauzule.|  
+|`expressionList`|Wymagana. Co najmniej jeden rozdzielana przecinkami wyrażeń określających funkcji agregującej do zastosowania do kolekcji. Alias można stosować do funkcji agregującej, aby określić nazwę elementu członkowskiego wyniku zapytania. Jeśli nie jest dostarczony żadnego aliasu, nazwy funkcji agregującej jest używany. Aby uzyskać przykłady zobacz sekcję funkcje agregujące w dalszej części tego tematu.|  
   
 ## <a name="remarks"></a>Uwagi  
  `Aggregate` Klauzuli może służyć do uwzględnienia funkcji agregujących w zapytaniach. Funkcje agregujące wykonać kontroli i obliczenia przez zestaw wartości i zwraca pojedynczą wartość. Obliczona wartość mogą korzystać za pomocą elementu członkowskiego typu wyników zapytania. Standardowe funkcje agregujące, których można użyć są `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, i `Sum` funkcji. Te funkcje są znane deweloperom, którzy zapoznali się z wartości zagregowanych SQL. Są one opisane w poniższej sekcji tego tematu.  
@@ -87,7 +79,7 @@ Aggregate element [As type] In collection _
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
- [SELECT — klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Klauzula FROM](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Gdy klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Group By — klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)
+ [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Group By, klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)

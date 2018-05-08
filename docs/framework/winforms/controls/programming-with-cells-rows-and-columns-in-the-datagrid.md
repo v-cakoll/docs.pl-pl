@@ -1,13 +1,6 @@
 ---
-title: "Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows"
-ms.custom: 
+title: Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], elements
 - columns [Windows Forms], data grids
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], programming with grid elements
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f87d1e2744ffcd81f5711991880deb1fe5edd2a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows
 Ta sekcja zawiera tematy, które przedstawiają różne zadania programowania obejmujące komórek, wierszy i kolumn obiektów.  

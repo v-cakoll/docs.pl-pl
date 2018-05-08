@@ -1,26 +1,12 @@
 ---
 title: Komunikacja za pomocą nietrwałych kolejek
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b03bfff66cb9bed7ea9f1514d25096cf6b79f88a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="volatile-queued-communication"></a>Komunikacja za pomocą nietrwałych kolejek
 W tym przykładzie pokazano, jak wykonać volatile komunikatu w kolejce przez transportu usługi kolejkowania komunikatów (MSMQ). W przykładzie użyto <xref:System.ServiceModel.NetMsmqBinding>. Usługa jest w tym przypadku aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -95,7 +81,7 @@ public static void Main()
  Nazwa kolejki usługi MSMQ jest określona w sekcji appSettings pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji system.serviceModel pliku konfiguracji i określa `netMsmqBinding` powiązania.  
   
 > [!NOTE]
->  Nazwa kolejki używa pojedynczego znaku kropki (.) lokalnego separatory maszyny i ukośnika w jego ścieżki, podczas tworzenia kolejki przy użyciu <xref:System.Messaging>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Net.msmq Określa adres punktu końcowego: schemat, używa "localhost" dla komputera lokalnego i ukośniki pod jego ścieżki.  
+>  Nazwa kolejki używa pojedynczego znaku kropki (.) lokalnego separatory maszyny i ukośnika w jego ścieżki, podczas tworzenia kolejki przy użyciu <xref:System.Messaging>. Adres punktu końcowego usługi Windows Communication Foundation (WCF) określa net.msmq: schemat, używa "localhost" dla komputera lokalnego i ukośniki pod jego ścieżki.  
   
  Gwarancje i trwałości lub zmienności wiadomości są również określona w konfiguracji.  
   
@@ -236,7 +222,7 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   

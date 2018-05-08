@@ -1,30 +1,19 @@
 ---
 title: Sprawdzanie poprawności schematu (XSD) XML z XmlSchemaSet
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f18852411d733d12bcbbdba2b64bc2f134ea061c
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 4036b98cc98736033a2be1682ec6d5355939d3ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Sprawdzanie poprawności schematu (XSD) XML z XmlSchemaSet
 Dokumenty XML może zostać zweryfikowany względem schematu XML schema definition language (XSD) w <xref:System.Xml.Schema.XmlSchemaSet>.  

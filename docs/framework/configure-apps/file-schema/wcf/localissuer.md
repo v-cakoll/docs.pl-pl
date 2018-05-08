@@ -1,33 +1,21 @@
 ---
 title: '&lt;localIssuer&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c7e5c28325326d838da851ff4add12f8ae612c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9118d1462d4790bb457fc8dc2f7c74b6e69de43a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 Określa adres i powiązanie wystawcy lokalnego używanego do uzyskania tokenu zabezpieczającego.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
 sekcja endpointBehaviors  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<issuedToken >  
 \<localIssuer >  
   
@@ -64,7 +52,7 @@ sekcja endpointBehaviors
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Określa niestandardowy token używany do uwierzytelniania klienta do usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas uzyskiwania wystawionego tokenu z zabezpieczeń tokenu usługi (STS), aplikacja klienta musi być skonfigurowana z adres i powiązanie na potrzeby komunikacji z STS. Gdy <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL usługi tokenu zabezpieczeń, lub gdy adres wystawcy wiązania federacyjnego jest http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous lub `null`, klienta [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] kanał używane wartości określone przez `address` i `binding` do komunikacji z STS uzyskanie wystawionego tokenu. Aby uzyskać więcej informacji na temat konfigurowania wystawcy lokalnego, zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Podczas uzyskiwania wystawionego tokenu z zabezpieczeń tokenu usługi (STS), aplikacja klienta musi być skonfigurowana z adres i powiązanie na potrzeby komunikacji z STS. Gdy <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL dla usługi tokenu zabezpieczającego lub gdy jest adres wystawcy wiązania federacyjnego http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous lub `null`, klienta usługi Windows Communication Foundation (WCF) kanału są używane wartości określone przez `address`i `binding` do komunikacji z STS uzyskanie wystawionego tokenu. Aby uzyskać więcej informacji na temat konfigurowania wystawcy lokalnego, zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie `address`, `binding`, i `bindingConfiguration` atrybuty `localIssuer` elementu.  

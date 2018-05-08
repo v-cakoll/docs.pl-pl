@@ -1,45 +1,33 @@
 ---
 title: Powiązania i zabezpieczenia
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>Powiązania i zabezpieczenia
-Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferują możliwość szybkiego program [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. Ten temat ułatwia wybierz prawa powiązanie dla wymagania w zakresie zabezpieczeń.  
+Powiązania dostarczane przez system uwzględnione z usługi Windows Communication Foundation (WCF) oferują możliwość szybkiego aplikacje programu WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. Ten temat ułatwia wybierz prawa powiązanie dla wymagania w zakresie zabezpieczeń.  
   
- Omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania w języku [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przy użyciu powiązań, zobacz [programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Omówienie zabezpieczeń usługi WCF, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania przy użyciu powiązań WCF, zobacz [programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Jeśli zostały już wybrane powiązanie, można znaleźć więcej informacji na temat zachowania czasu wykonywania, które są skojarzone z zabezpieczeniami w [zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Niektóre funkcje zabezpieczeń nie są programowalny za pomocą powiązania dostarczane przez system. Aby uzyskać większą kontrolę przy użyciu niestandardowego powiązania, zobacz [możliwości zabezpieczeń wiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funkcje związane z bezpieczeństwem powiązań  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera liczbę powiązania dostarczane przez system, które spełniają potrzeby większości. Jeśli określonego powiązania nie wystarcza, można również utworzyć niestandardowego powiązania. Aby uzyskać listę powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md). Aby uzyskać więcej informacji dotyczących powiązań niestandardowych, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Usługi WCF zawiera szereg powiązania dostarczane przez system, które spełniają potrzeby większości. Jeśli określonego powiązania nie wystarcza, można również utworzyć niestandardowego powiązania. Aby uzyskać listę powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md). Aby uzyskać więcej informacji dotyczących powiązań niestandardowych, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Każde powiązanie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ma dwie formy: interfejs API, a element XML używane w pliku konfiguracji. Na przykład `WSHttpBinding` (API) ma odpowiednik w [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Każde powiązanie w programie WCF ma dwie formy: interfejs API, a element XML używane w pliku konfiguracji. Na przykład `WSHttpBinding` (API) ma odpowiednik w [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  Poniższa sekcja zawiera listę zarówno formularzy dla każdego powiązania i zawiera podsumowanie funkcji zabezpieczeń.  
   
@@ -149,7 +137,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  W kodzie, użyj <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> klasy; w konfiguracji, użyj [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- To powiązanie jest zoptymalizowany do tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów i usług, które współdziałają z inną niż[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych usługi kolejkowania wiadomości firmy Microsoft (MSMQ).  
+ To powiązanie jest zoptymalizowana pod kątem tworzenia WCF klientów i usług, które współdziałają z punktami końcowymi nie - WCF Microsoft kolejkowania wiadomości MSMQ.  
   
  Domyślnie to powiązanie korzysta z zabezpieczeń transportu i zawiera następujące właściwości zabezpieczeń:  
   
@@ -162,7 +150,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  W kodzie, użyj <xref:System.ServiceModel.NetMsmqBinding> klasy; w konfiguracji, użyj [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- To powiązanie jest przeznaczona do użycia podczas tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługi wiadomości w kolejce usług, które wymagają usługi MSMQ.  
+ To powiązanie jest przeznaczony do użytku podczas tworzenia usług WCF, które wymagają MSMQ obsługi wiadomości w kolejce.  
   
  Domyślnie to powiązanie korzysta z zabezpieczeń transportu i zawiera następujące właściwości zabezpieczeń:  
   
@@ -232,7 +220,7 @@ Powiązania dostarczane przez system dołączonego [!INCLUDE[indigo1](../../../.
 |----------|-----------------|  
 |Brak|Umożliwia usłudze na współdziałanie z anonimowego klientów.|  
 |Windows|Umożliwia wymianę wiadomości protokołu SOAP ma zostać wykonane w kontekście uwierzytelnionych poświadczeń systemu Windows.|  
-|UserName|Umożliwia usłudze wymagają który uwierzytelnienia klienta przy użyciu poświadczeń użytkownika. Należy pamiętać, że jeśli ustawiono tryb zabezpieczeń `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje wysyłanie hasła klawiszy skrótu lub wyprowadzanie przy użyciu hasła i te klucze dla zabezpieczenia trybu wiadomości. W efekcie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymusza, czy transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
+|UserName|Umożliwia usłudze wymagają który uwierzytelnienia klienta przy użyciu poświadczeń użytkownika. Należy pamiętać, że jeśli ustawiono tryb zabezpieczeń `TransportWithMessageCredential`, usługi WCF nie obsługuje wysyłanie hasła klawiszy skrótu lub wyprowadzanie przy użyciu hasła i te klucze dla zabezpieczenia trybu wiadomości. Usługi WCF wymusza tak, czy transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
 |certyfikat|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu.|  
 |IssuedToken|Umożliwia usłudze Użyj usługi tokenu zabezpieczającego, aby określić niestandardowy token.|  
   

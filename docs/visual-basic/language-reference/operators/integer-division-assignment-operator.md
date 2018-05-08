@@ -1,11 +1,6 @@
 ---
-title: '\=Operator'
+title: '\= Operator'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - '\='
 - vb.\=
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ba74f7a433687b306e8b4273f3a2a6d60583396
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ebbf2eca7fb3cd208d979d7f3c77aa106569119
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator"></a>\\= — Operator
 Dzieli wartość zmiennej lub właściwość przez wartość wyrażenia i przypisuje całkowitą wynik do zmiennej lub właściwości.  
@@ -36,10 +28,10 @@ variableorproperty \= expression
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagany. Zmienna numeryczna lub właściwość.  
+ Wymagana. Zmienna numeryczna lub właściwość.  
   
  `expression`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagana. Dowolne wyrażenie liczbowe.  
   
 ## <a name="remarks"></a>Uwagi  
  Element po lewej stronie `\=` operator może być zmienną skalarną proste, właściwością lub element tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  

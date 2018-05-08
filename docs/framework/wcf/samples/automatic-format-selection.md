@@ -1,27 +1,15 @@
 ---
 title: Automatyczne wybieranie formatu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-format-selection"></a>Automatyczne wybieranie formatu
-W tym przykładzie pokazano, jak włączyć automatyczne wybieranie formatu (XML lub JSON) z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programowania modelu, a także sposobu jawnie ustawić format w kodzie operacji REST.  
+W tym przykładzie pokazano, jak włączyć automatyczne wybieranie formatu (XML lub JSON) z resztą Windows Communication Foundation (WCF) programowania modelu, a także sposobu jawnie ustawić format w kodzie operacji.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  Próbka składa się z usługą wraz z kodu klienta, który wysyła żądania do usługi. Usługa obsługuje jeden protokół HTTP `GET` operacji (`EchoWithGet`) i jeden HTTP `POST` operacji (`EchoWithPost`). Obie operacje oczekiwany ciąg, a następnie wróć ciąg w odpowiedzi. Z `GET` operacji ciąg znajduje się w parametr ciągu zapytania identyfikatora URI. Z `POST` operacji ciąg znajduje się w treści żądania serializacji w danych XML. Usługa jest w stanie zwracanie odpowiedzi w XML lub JSON przy użyciu nowego automatycznego wyboru formatu i formatu konieczne wybór funkcji w [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
@@ -47,7 +35,7 @@ W tym przykładzie pokazano, jak włączyć automatyczne wybieranie formatu (XML
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   

@@ -1,31 +1,19 @@
 ---
 title: '&lt;participants&gt; w WCF'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 881ee8486d7939e743613fb8a0261a4fcfe7499f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 093ed0ed51c068fe0a999dc5f7b7a3adec39ae77
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>&lt;participants&gt; w WCF
 Skonfiguruj listę śledzenia uczestników, które będą wysyłane do śledzenia rekordów jest emitowane bezpośrednio ze środowiska wykonawczego i przetwórz je w sposób są skonfigurowane. Dotyczy to również zapis do określonych danych wyjściowych (np. PLik, konsoli, ETW), przetwarzania/agregowania rekordy lub dowolną kombinację, który może być wymagane.  
   
  Aby uzyskać więcej informacji śledzenia przepływu pracy i uczestników śledzenia, zobacz [przepływu pracy śledzenia i śledzenia](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) i [uczestników śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<Śledzenie >  
 \<Uczestnicy >  
   
@@ -45,7 +33,7 @@ Skonfiguruj listę śledzenia uczestników, które będą wysyłane do śledzeni
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|Zawiera ustawienia dla uczestnika śledzenia.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|Zawiera ustawienia dla uczestnika śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

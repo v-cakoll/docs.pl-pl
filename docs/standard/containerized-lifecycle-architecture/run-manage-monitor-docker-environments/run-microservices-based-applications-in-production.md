@@ -1,19 +1,14 @@
 ---
 title: Uruchom złożony i mikrousług aplikacji w środowisku produkcyjnym
 description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1ba71a02c1f800fd65462b0df9a435af87c9a37f
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 47685bfd8dca50c5e93be7574ea6ef30a49cbede
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Uruchom złożony i mikrousług aplikacji w środowisku produkcyjnym
 

@@ -1,26 +1,14 @@
 ---
-title: '&lt;servicePrincipalName&gt;'
-ms.custom: 
+title: '&lt;ServicePrincipalName&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f9b4ec506097cf010af78b3504def08102e0774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
 Określa tożsamość usługi przez jej nazwy usługi (SPN).  
   
  Aby uzyskać więcej informacji na temat ustawiania nazwy SPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -53,7 +41,7 @@ Określa tożsamość usługi przez jej nazwy usługi (SPN).
 |[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi uwierzytelniania przez klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Bezpieczny [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] klient łączący punkt końcowy o tej tożsamości używa główną nazwę usługi, gdy z punktem końcowym uwierzytelniania SSPI.  
+ Bezpieczne łączący punkt końcowy o tej tożsamości klienta Windows Communication Foundation (WCF) używa nazwy SPN podczas przeprowadzania uwierzytelniania SSPI z punktem końcowym.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

@@ -1,23 +1,16 @@
 ---
-title: "Argument &#39; Ścieżka &#39; ma wartość Nothing lub jest pusty"
+title: Argument &#39;ścieżki&#39; ma wartość Nothing lub jest pusty
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_PathNullOrEmpty
 ms.assetid: ba8aed14-2543-4c8e-ad88-c35b49078dd6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9872b5d795889453004d3e4a331c45a29a349b86
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 70dde7a1511f7b763af671e0a2e82628eaf8dda6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="argument-39path39-is-nothing-or-empty"></a>Argument &#39; Ścieżka &#39; ma wartość Nothing lub jest pusty
+# <a name="argument-39path39-is-nothing-or-empty"></a>Argument &#39;ścieżki&#39; ma wartość Nothing lub jest pusty
 Nazwa ścieżki jest nieprawidłowa, ponieważ jest on zainicjowany `Nothing` lub jest pusty. Ścieżka musi mieć typ danych i prawidłową nazwę.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

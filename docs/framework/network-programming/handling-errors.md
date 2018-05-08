@@ -1,12 +1,6 @@
 ---
-title: "Obsługa błędów"
-ms.custom: 
+title: Obsługa błędów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -37,16 +31,14 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c7d9c08e38c2d82381c94e8813ef0312806bd010
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8020a92345ba85a99c0b46b2d4247d677defd054
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-errors"></a>Obsługa błędów
 <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy zgłaszają wyjątki zarówno system (takich jak <xref:System.ArgumentException>) oraz wyjątków dotyczących sieci Web (, które są <xref:System.Net.WebException> zgłaszanych przez <xref:System.Net.WebRequest.GetResponse%2A> — metoda).  

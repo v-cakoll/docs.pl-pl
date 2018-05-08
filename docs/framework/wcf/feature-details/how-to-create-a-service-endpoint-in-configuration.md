@@ -1,29 +1,15 @@
 ---
 title: 'Porady: Tworzenie punktu końcowego usługi w konfiguracji'
-ms.custom: ''
 ms.date: 06/16/2016
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ecb7345dbbff04388edb39dae9e5c05f2c40fd75
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f1a2696e2aeb8d0c704d008b064a8f8c8b0745d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Porady: Tworzenie punktu końcowego usługi w konfiguracji
-Punkty końcowe udostępniać klientom dostęp do funkcji [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferty usługi. Można określić jedną lub więcej punktów końcowych dla usługi przy użyciu kombinacji adresy punktów końcowych względne i bezwzględne lub jeśli żadnych punktów końcowych usługi nie jest zdefiniowana, środowiska uruchomieniowego zawiera niektóre domyślnie dla Ciebie. W tym temacie przedstawiono sposób dodawania punktów końcowych przy użyciu pliku konfiguracji, które zawierają zarówno względnych i bezwzględnych adresów.  
+Punkty końcowe udostępniać klientom dostęp do funkcji oferowanych przez usługi Windows Communication Foundation (WCF). Można określić jedną lub więcej punktów końcowych dla usługi przy użyciu kombinacji adresy punktów końcowych względne i bezwzględne lub jeśli żadnych punktów końcowych usługi nie jest zdefiniowana, środowiska uruchomieniowego zawiera niektóre domyślnie dla Ciebie. W tym temacie przedstawiono sposób dodawania punktów końcowych przy użyciu pliku konfiguracji, które zawierają zarówno względnych i bezwzględnych adresów.  
   
 ## <a name="example"></a>Przykład  
  Następująca konfiguracja usługi Określa adres bazowy i pięć punktów końcowych.  

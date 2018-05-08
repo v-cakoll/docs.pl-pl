@@ -1,13 +1,6 @@
 ---
-title: "Macierzowe przedstawienie przekształcenia"
-ms.custom: 
+title: Macierzowe przedstawienie przekształcenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +16,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c68a79f2a40117a980cb6206b74d42f885874aa8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c840d8a5abc89493bc684526ce76d34307f4ba1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="matrix-representation-of-transformations"></a>Macierzowe przedstawienie przekształcenia
 M x n macierzy jest zbioru liczb ułożone w mln wierszy i kolumn n. Na poniższej ilustracji przedstawiono kilka macierzy.  
@@ -86,11 +74,11 @@ M x n macierzy jest zbioru liczb ułożone w mln wierszy i kolumn n. Na poniższ
 |-|-|  
 |Macierz A|Obrót o 90 stopni|  
 |Macierz B|Skalowanie przez współczynnik 2 w kierunku x|  
-|Macierz C|Tłumaczenie 3 jednostki w kierunku y|  
+|Matrix C|Tłumaczenie 3 jednostki w kierunku y|  
   
  Jeśli Rozpoczniemy z punktem (2 i 1) — reprezentowany przez macierzy [2 1 1] — i pomnożyć przez, następnie B, a następnie C, (2 i 1) punktu zostaną poddane trzy przekształcenia w podanej kolejności.  
   
- [2 1 1] ABC = [1 5-2]  
+ [2 1 1]ABC = [-2 5 1]  
   
  Zamiast niż trzy części złożone przekształcenia są przechowywane w trzech oddzielnych macierzy, należy pomnożyć A, B i C razem uzyskanie pojedynczego macierzy 3 x 3, która przechowuje całego złożone przekształcenia. Załóżmy, że ABC = D. Następnie punkt pomnożona przez D zapewnia takiego samego wyniku jako punkt pomnożona przez A, następnie B, następnie C.  
   

@@ -1,23 +1,12 @@
 ---
-title: "Za pomocą działania InvokePowerShell"
-ms.custom: 
+title: Za pomocą działania InvokePowerShell
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cf7092d6eac4fc2d70c4606f4a76f3a83ed9dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-invokepowershell-activity"></a>Za pomocą działania InvokePowerShell
 InvokePowerShell przykładowych pokazano, jak można wywołać za pomocą poleceń programu Windows PowerShell `InvokePowerShell` działania.  
@@ -35,7 +24,7 @@ InvokePowerShell przykładowych pokazano, jak można wywołać za pomocą polece
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -73,9 +62,9 @@ new InvokePowerShell<Process>()
 },  
 ```  
   
- `Output`zmienna jest używana do przechowywania danych wyjściowych polecenia.  
+ `Output` zmienna jest używana do przechowywania danych wyjściowych polecenia.  
   
- Następne wywołanie pokazuje, jak przetwarzanie końcowe krok zostanie uruchomiony na każdej poszczególnych danych wyjściowych wywołania programu PowerShell. `InitializationAction`ustawiono funkcji, które generuje reprezentację ciągu dla każdego procesu. Kolekcja te ciągi, jest zwracany w `Output` zmiennej przez `InvokePowerShell<string>` działania.  
+ Następne wywołanie pokazuje, jak przetwarzanie końcowe krok zostanie uruchomiony na każdej poszczególnych danych wyjściowych wywołania programu PowerShell. `InitializationAction` ustawiono funkcji, które generuje reprezentację ciągu dla każdego procesu. Kolekcja te ciągi, jest zwracany w `Output` zmiennej przez `InvokePowerShell<string>` działania.  
   
  Pomyślne `InvokePowerShell` wywołania pokazują przekazywanie danych do działania i pobierania danych wyjściowych i błędów wychodzących.  
   
@@ -205,7 +194,7 @@ new ForEach<PSObject>
   
 1.  Jeśli odwołuje się do `InvokePowerShell` zestawu działań lub projektu z innego projektu spowoduje błąd kompilacji, może być konieczne ręczne dodanie `<SpecificVersion>True</SpecificVersion>` elementu do pliku .csproj nowy projekt w wierszu, który odwołuje się do `InvokePowerShell`.  
   
-2.  Jeśli nie zainstalowano programu Windows PowerShell, komunikat o błędzie jest wyświetlany w programie Visual Studio, natychmiast po dodaniu `InvokePowerShell` działania do przepływu pracy:`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Jeśli nie zainstalowano programu Windows PowerShell, komunikat o błędzie jest wyświetlany w programie Visual Studio, natychmiast po dodaniu `InvokePowerShell` działania do przepływu pracy: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  W programie Windows PowerShell 2.0 programowo wywoływania `$input.MoveNext()` kończy się niepowodzeniem i skrypty, używając `$input.MoveNext()` niezamierzone błędów i wyników. Aby obejść ten problem, należy wziąć pod uwagę przy użyciu programu PowerShell zlecenie `foreach` zamiast wywoływać metodę `MoveNext()` podczas iteracji tablicy.  
   
@@ -214,6 +203,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

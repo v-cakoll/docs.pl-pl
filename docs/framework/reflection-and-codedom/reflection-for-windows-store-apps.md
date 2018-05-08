@@ -1,13 +1,6 @@
 ---
 title: Odbicia w .NET Framework dla aplikacji sklepu Windows Store
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f015a8323079b4c63cc217826769316c44fa986d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 598acd746949369ffec7d153b6870bebeeafe532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Odbicia w .NET Framework dla aplikacji sklepu Windows Store
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework zawiera zestaw odbicia typów i członków do użycia w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Te typy i składniki są dostępne w pełnej .NET Framework oraz jak w [.NET dla Sklepu Windows apps](http://go.microsoft.com/fwlink/?LinkID=225700). W tym dokumencie opisano główne różnice między te i ich odpowiedniki w .NET Framework 4 i starszych wersji.  
@@ -34,7 +24,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framewo
 ## <a name="typeinfo-and-assembly-loading"></a>Klasa TypeInfo i ładowanie zestawu  
  W [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], <xref:System.Reflection.TypeInfo> klasa zawiera niektóre funkcje programu .NET Framework 4 <xref:System.Type> klasy. A <xref:System.Type> obiekt reprezentuje odwołanie do definicji typu, podczas gdy <xref:System.Reflection.TypeInfo> obiekt reprezentuje samą definicję typu. Dzięki temu można manipulować <xref:System.Type> obiektów bez konieczności musi załadować zestawu odwołują się do środowiska uruchomieniowego. Pobieranie skojarzony <xref:System.Reflection.TypeInfo> obiektu wymusza zestawu do załadowania.  
   
- <xref:System.Reflection.TypeInfo>zawiera wiele elementów członkowskich na <xref:System.Type>i wiele właściwości odbicia w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] zwracać kolekcji <xref:System.Reflection.TypeInfo> obiektów. Aby uzyskać <xref:System.Reflection.TypeInfo> obiekt z <xref:System.Type> obiektów, użyj <xref:System.Reflection.IReflectableType.GetTypeInfo%2A> metody.  
+ <xref:System.Reflection.TypeInfo> zawiera wiele elementów członkowskich na <xref:System.Type>i wiele właściwości odbicia w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] zwracać kolekcji <xref:System.Reflection.TypeInfo> obiektów. Aby uzyskać <xref:System.Reflection.TypeInfo> obiekt z <xref:System.Type> obiektów, użyj <xref:System.Reflection.IReflectableType.GetTypeInfo%2A> metody.  
   
 ## <a name="query-methods"></a>Metody zapytania  
  W [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], użyj właściwości odbicia, które zwracają <xref:System.Collections.Generic.IEnumerable%601> kolekcje zamiast metody zwracające tablice. Konteksty odbicia można zaimplementować opóźnieniem przechodzenie tych kolekcji dla dużych zestawów lub typów.  

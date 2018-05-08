@@ -1,29 +1,19 @@
 ---
-title: "Przestarzałe funkcje hostingu środowiska CLR"
-ms.custom: 
+title: Przestarzałe funkcje hostingu środowiska CLR
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - .NET Framework 1.1, hosting global static functions
 - global static functions [.NET Framework hosting], version 2.0
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 985425ad44003f5971b21f107fad322f2123f6ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Przestarzałe funkcje hostingu środowiska CLR
 W tej sekcji opisano niezarządzane statyczne funkcje globalne, które używany w starszych wersjach programu obsługi interfejsu API.  

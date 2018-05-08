@@ -1,34 +1,20 @@
 ---
-title: "Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań"
-ms.custom: 
+title: Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
-Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestandardowych rozszerzeń, które inspekcji i sprawdź poprawność konfiguracji usługi lub modyfikowanie zachowania w czasie wykonywania w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta i usługi aplikacji. W tym temacie opisano interfejsów zachowanie, jak ich implementacji i sposobu dodawania ich do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo lub w pliku konfiguracji. Aby uzyskać więcej informacji na temat za pomocą zachowań dostarczane przez system, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania środowiska uruchomieniowego klienta](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestandardowych rozszerzeń, które Inspekcja i sprawdź poprawność konfiguracji usługi lub modyfikowanie zachowania w czasie wykonywania w aplikacjach klienta i usługi Windows Communication Foundation (WCF). W tym temacie opisano interfejsów zachowanie, jak ich implementacji i sposobu dodawania ich do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo lub w pliku konfiguracji. Aby uzyskać więcej informacji na temat za pomocą zachowań dostarczane przez system, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania środowiska uruchomieniowego klienta](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Zachowania  
- Zachowanie typy są dodawane do usługi lub obiektów opis punktu końcowego usługi (na usługi lub klienta, odpowiednio) przed te obiekty są używane przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] można utworzyć środowisko uruchomieniowe, które wykonuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. Wywołanego te zachowania podczas procesu tworzenia środowiska uruchomieniowego są następnie dostęp do środowiska wykonawczego właściwości i metod, które modyfikują środowiska uruchomieniowego tworzony przez kontraktu, powiązania oraz adres.  
+ Zachowanie typy są dodawane do usługi lub obiektów opis punktu końcowego usługi (na usługi lub klienta, odpowiednio) przed te obiekty są wykorzystywane przez Windows Communication Foundation (WCF) do tworzenia środowiska uruchomieniowego, która wykonuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. Wywołanego te zachowania podczas procesu tworzenia środowiska uruchomieniowego są następnie dostęp do środowiska wykonawczego właściwości i metod, które modyfikują środowiska uruchomieniowego tworzony przez kontraktu, powiązania oraz adres.  
   
 ### <a name="behavior-methods"></a>Zachowanie metody  
  Ma wszystkie zachowania `AddBindingParameters` metody `ApplyDispatchBehavior` metody, `Validate` metody i `ApplyClientBehavior` metody z jednym wyjątkiem: ponieważ <xref:System.ServiceModel.Description.IServiceBehavior> nie można wykonać na kliencie nie implementuje on `ApplyClientBehavior`.  

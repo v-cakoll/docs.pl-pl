@@ -1,27 +1,15 @@
 ---
-title: "Wytyczne do projektowania kontrolek w określonych stylach"
-ms.custom: 
+title: Wytyczne do projektowania kontrolek w określonych stylach
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Wytyczne do projektowania kontrolek w określonych stylach
 Ten dokument zawiera podsumowanie zestawu najlepszych rozwiązań, które należy rozważyć podczas projektowania formantu, który ma zostać łatwo stylable i templatable. Zdecydowaliśmy się do tego zestawu najlepszych rozwiązań za pomocą wielu prób i błędów podczas pracy nad stylów formantu motywu wbudowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolować zestawu. Dowiedzieliśmy się, że pomyślnie stylów jest tyle funkcją modelu obiektu dobrze zaprojektowanego się sam stylu. Docelowa grupa odbiorców dla tego dokumentu jest autorem formantu nie autora stylu.  
@@ -53,7 +41,7 @@ Ten dokument zawiera podsumowanie zestawu najlepszych rozwiązań, które należ
   
     -   Minimalizowanie możliwie umów.  
   
-    -   Projekt wokół założenie, iż podczas projektowania czas (podczas przy użyciu narzędzia projektowe) jest typowe dla szablonu formantu być niekompletna. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]nie oferuje infrastrukturze stanu "Tworzenie", więc formantów ma zostać utworzony przy założeniu, że taki stan może być nieprawidłowy.  
+    -   Projekt wokół założenie, iż podczas projektowania czas (podczas przy użyciu narzędzia projektowe) jest typowe dla szablonu formantu być niekompletna. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie oferuje infrastrukturze stanu "Tworzenie", więc formantów ma zostać utworzony przy założeniu, że taki stan może być nieprawidłowy.  
   
     -   Nie zgłaszają wyjątki, gdy dowolnego aspektu kontrakt szablonu nie jest zakończony. Wzdłuż te wiersze panele nie powinien zgłosić wyjątków, jeśli ma zbyt wiele lub zbyt mało elementów podrzędnych.  
   
@@ -112,7 +100,7 @@ Ten dokument zawiera podsumowanie zestawu najlepszych rozwiązań, które należ
   
 -   **Być zgodne z istniejących wzorców style.** Wiele razy istnieje wiele sposobów, aby rozwiązać problem. Należy pamiętać o i, jeśli możliwe, zgodnie z istniejącym Kontrola Wzorce style. Jest to szczególnie ważne dla formantów, które pochodzą z tego samego typu podstawowego (na przykład <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>i tak dalej).  
   
--   **Udostępnianie właściwości, aby umożliwić typowe scenariusze dostosowywania bez retemplating**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]nie obsługuje części podłączany/dostosowania, więc użytkownik formantu pozostaje tylko dwóch metod dostosowywania: Ustawianie właściwości bezpośrednio lub ustawiania właściwości za pomocą stylów. Z tym pamiętać należy do ograniczonej liczby właściwości celem scenariusze dostosowywania często, o wysokim priorytecie, które w przeciwnym razie będzie wymagać retemplating powierzchni. Poniżej przedstawiono najlepsze rozwiązania dotyczące kiedy i jak włączyć Dostosowywanie scenariusze:  
+-   **Udostępnianie właściwości, aby umożliwić typowe scenariusze dostosowywania bez retemplating**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie obsługuje części podłączany/dostosowania, więc użytkownik formantu pozostaje tylko dwóch metod dostosowywania: Ustawianie właściwości bezpośrednio lub ustawiania właściwości za pomocą stylów. Z tym pamiętać należy do ograniczonej liczby właściwości celem scenariusze dostosowywania często, o wysokim priorytecie, które w przeciwnym razie będzie wymagać retemplating powierzchni. Poniżej przedstawiono najlepsze rozwiązania dotyczące kiedy i jak włączyć Dostosowywanie scenariusze:  
   
     -   Często dostosowania powinny być widoczne jako właściwości w formancie i używane przez szablon.  
   

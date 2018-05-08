@@ -1,29 +1,19 @@
 ---
-title: "Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu"
-ms.custom: 
+title: Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - code security, unmanaged code
 - unmanaged code, securing
 - security [.NET Framework], unmanaged code
 - secure coding, unmanaged code
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adbdd005bba9e7276a77f2e78c53be43fdceffae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
 Kod biblioteki musi wywoływać kodu niezarządzanego (na przykład kodu natywnego interfejsów API, takich jak Win32). Ponieważ oznacza to, że zewnętrzne granicznej zabezpieczeń dla zarządzanego kodu właściwym ostrożność jest wymagana. Jeśli kod jest neutralnym poziomie bezpieczeństwa, zarówno w kodzie, jak i każdy kod wywołujący go musi mieć niezarządzanych uprawnień kodu (<xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określona flaga).  
@@ -56,8 +46,8 @@ Kod biblioteki musi wywoływać kodu niezarządzanego (na przykład kodu natywne
   
 |Słowo kluczowe|Zagadnienia dotyczące bezpieczeństwa|  
 |-------------|-----------------------------|  
-|**bezpieczne**|Całkowicie nieszkodliwe dla żadnego kodu nawet złośliwy kod, aby wywołać. Można tak samo jak inne kodu zarządzanego. Na przykład funkcja, która pobiera godzinę jest zazwyczaj bezpieczne.|  
-|**natywny**|Neutralnym poziomie bezpieczeństwa; oznacza to, że kodu niezarządzanego, który wymaga niezarządzany kod uprawnienia do wywoływania. Zabezpieczenia są sprawdzane, co uniemożliwia nieautoryzowanym wywołującego.|  
+|**Bezpieczne**|Całkowicie nieszkodliwe dla żadnego kodu nawet złośliwy kod, aby wywołać. Można tak samo jak inne kodu zarządzanego. Na przykład funkcja, która pobiera godzinę jest zazwyczaj bezpieczne.|  
+|**Natywny**|Neutralnym poziomie bezpieczeństwa; oznacza to, że kodu niezarządzanego, który wymaga niezarządzany kod uprawnienia do wywoływania. Zabezpieczenia są sprawdzane, co uniemożliwia nieautoryzowanym wywołującego.|  
 |**unsafe**|Niebezpieczny kod niezarządzany punkt wejścia z zabezpieczeniami pomijane. Deweloperzy należy zachować ostrożność największy podczas korzystania z takich kodu niezarządzanego, upewniając się, że inne ochrony znajdują się w miejscu, aby uniemożliwić luki w zabezpieczeniach. Deweloperzy muszą być odpowiedzialne, jak system zabezpieczeń zastępuje to słowo kluczowe.|  
   
 ## <a name="see-also"></a>Zobacz też  

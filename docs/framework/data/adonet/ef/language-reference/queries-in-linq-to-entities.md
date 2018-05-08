@@ -1,24 +1,12 @@
 ---
-title: "Zapytania w składniku LINQ to Entities"
-ms.custom: 
+title: Zapytania w składniku LINQ to Entities
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bcf4fea4fc4efce32e5dbadf4738419707ffee3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 27e547dacb41201f00552c58840c70ca8fa34428
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="queries-in-linq-to-entities"></a>Zapytania w składniku LINQ to Entities
 Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są zwykle zapisywane w język kwerendy specjalnych, takich jak SQL relacyjnych baz danych i XQuery dla formatu XML. W związku z tym deweloperzy było nauczyć się nowy język kwerendy dla każdego typu źródła danych lub format danych są zapytania. Zapytanie języku zintegrowanym (LINQ) oferuje prostszy, spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. Zapytania LINQ zawsze do pracy z programowania obiektów.  
@@ -30,7 +18,7 @@ Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania s�
  W zapytaniu możesz określić dokładnie informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje sortowania, grupowane i w kształcie przed zwróceniem jest. W składniku LINQ zapytanie jest przechowywana w zmiennej. Jeśli zapytanie zwraca sekwencję wartości, samej zmiennej zapytania musi być typem zapytań. Ta zmienna zapytania Brak działania i zwraca żadnych danych; tylko przechowuje informacje o kwerendzie. Po utworzeniu zapytania należy wykonać zapytania można pobrać żadnych danych.  
   
 ## <a name="query-syntax"></a>Składnia zapytania  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]zapytania mogą być składane w dwóch składnie: wyrażenie składnia zapytania i metody zapytań. Składnia wyrażeń jest nowego w języku C# 3.0 i 9.0 Visual Basic i składa się z zestawu klauzule napisany w składni deklaratywnej podobny do języka Transact-SQL lub XQuery. Jednak [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] środowisko uruchomieniowe języka wspólnego (CLR) nie może odczytać sam składnia wyrażenia zapytania. W związku z tym podczas kompilacji wyrażenia zapytania są translacji obsługiwanym przez środowisko CLR: wywołania metody. Te metody są określane jako *standardowych operatorów zapytań*. Deweloper istnieje możliwość wywołania je bezpośrednio, używając składni metody zamiast za pomocą składni zapytań. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+ [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania mogą być składane w dwóch składnie: wyrażenie składnia zapytania i metody zapytań. Składnia wyrażeń jest nowego w języku C# 3.0 i 9.0 Visual Basic i składa się z zestawu klauzule napisany w składni deklaratywnej podobny do języka Transact-SQL lub XQuery. Jednak [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] środowisko uruchomieniowe języka wspólnego (CLR) nie może odczytać sam składnia wyrażenia zapytania. W związku z tym podczas kompilacji wyrażenia zapytania są translacji obsługiwanym przez środowisko CLR: wywołania metody. Te metody są określane jako *standardowych operatorów zapytań*. Deweloper istnieje możliwość wywołania je bezpośrednio, używając składni metody zamiast za pomocą składni zapytań. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ### <a name="query-expression-syntax"></a>Składnia wyrażenia zapytania  
  Wyrażenia zapytania są deklaratywne składnię. Ta składnia umożliwia deweloperom Pisanie zapytań w języku wysokiego poziomu, który jest sformatowany podobny do języka Transact-SQL. Przy użyciu składni wyrażeń zapytania, można wykonywać nawet złożone filtrowanie, kolejność i operacji grupowania na źródeł danych z minimalnym kodu. Aby uzyskać więcej informacji [podstawowe operacje zapytań (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Aby uzyskać przykłady pokazujące, które pokazują, jak używać składni wyrażenia zapytania zobacz następujące tematy:  

@@ -1,30 +1,18 @@
 ---
 title: Pojedynczej tabeli zapytania (LINQ do DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5ac58f5e98113150123b152dad8d2cc25c61cf97
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5a128349ea81cda7397b2dadbc2ce4096f692744
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Pojedynczej tabeli zapytania (LINQ do DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]zapytania działają w źródeł danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. <xref:System.Data.DataTable> Klasa nie implementuje albo interfejsu, dlatego należy wywołać <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metodę, jeśli chcesz użyć <xref:System.Data.DataTable> jako źródło w `From` klauzuli [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania.  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] zapytania działają w źródeł danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. <xref:System.Data.DataTable> Klasa nie implementuje albo interfejsu, dlatego należy wywołać <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metodę, jeśli chcesz użyć <xref:System.Data.DataTable> jako źródło w `From` klauzuli [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania.  
   
  W poniższym przykładzie pobiera zamówień online z tabeli SalesOrderHeader i generuje identyfikator zamówienia, Data zamówienia i numer zamówienia do konsoli.  
   

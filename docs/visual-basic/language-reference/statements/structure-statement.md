@@ -1,11 +1,6 @@
 ---
-title: "Structure — Instrukcja"
+title: Structure — Instrukcja
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Structure — Instrukcja
 Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktury.  
@@ -44,27 +36,27 @@ End Structure
   
 |Termin|Definicja|  
 |---|---|  
-|`attributelist`|Opcjonalny. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcjonalny. Może to być jedna z następujących czynności:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcjonalny. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`Partial`|Opcjonalny. Wskazuje definicji częściowej struktury. Zobacz [częściowe](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Wymagany. Nazwa tej struktury. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Opcjonalny. Określa, że jest to struktura generyczna.|  
+|`attributelist`|Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Opcjonalna. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`Partial`|Opcjonalna. Wskazuje definicji częściowej struktury. Zobacz [częściowe](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`name`|Wymagana. Nazwa tej struktury. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|Opcjonalna. Określa, że jest to struktura generyczna.|  
 |`typelist`|Wymagane w przypadku użycia [z](../../../visual-basic/language-reference/statements/of-clause.md) — słowo kluczowe. Lista parametrów typu dla tej struktury. Zobacz [typu listy](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|Opcjonalny. Wskazuje, że ta struktura implementuje członkami jeden lub więcej interfejsów. Zobacz [implementuje instrukcji](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Opcjonalna. Wskazuje, że ta struktura implementuje członkami jeden lub więcej interfejsów. Zobacz [implementuje instrukcji](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Wymagane w przypadku użycia `Implements` instrukcji. Nazwy interfejsów, które implementuje tej struktury.|  
-|`datamemberdeclarations`|Wymagany. Zero lub więcej `Const`, `Dim`, `Enum`, lub `Event` instrukcje deklarowanie *elementy członkowskie danych* struktury.|  
-|`methodmemberdeclarations`|Opcjonalny. Deklaracje zero lub więcej `Function`, `Operator`, `Property`, lub `Sub` procedur, które stanowią *członków metody* struktury.|  
-|`End Structure`|Wymagany. Kończy `Structure` definicji.|  
+|`datamemberdeclarations`|Wymagana. Zero lub więcej `Const`, `Dim`, `Enum`, lub `Event` instrukcje deklarowanie *elementy członkowskie danych* struktury.|  
+|`methodmemberdeclarations`|Opcjonalna. Deklaracje zero lub więcej `Function`, `Operator`, `Property`, lub `Sub` procedur, które stanowią *członków metody* struktury.|  
+|`End Structure`|Wymagana. Kończy definicję `Structure`.|  
   
 ## <a name="remarks"></a>Uwagi  
  `Structure` Instrukcji definiuje typ wartości złożonego, który można dostosować. A *struktury* jest generalizacji typu zdefiniowanego przez użytkownika (UDT) poprzednich wersji programu Visual Basic. Aby uzyskać więcej informacji, zobacz [struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
   
  Struktury obsługuje wiele te same funkcje co klasy. Na przykład struktury mogą mieć właściwości i procedury, miały zaimplementowane interfejsy i może mieć sparametryzowanych konstruktorów. Istnieją jednak istotne różnice między struktury i klasy w obszarach, takich jak dziedziczenia, deklaracje i użycia. Również typy referencyjne występują następujące klasy i struktury są typów wartości. Aby uzyskać więcej informacji, zobacz [struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Można użyć `Structure` tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekście deklaracji* przez strukturę musi zawierać plik źródłowy, przestrzeni nazw, klasy, struktury, modułu lub interfejsu i nie może być procedurę lub blok. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Można użyć `Structure` tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekście deklaracji* przez strukturę musi zawierać plik źródłowy, przestrzeni nazw, klasy, struktury, modułu lub interfejsu i nie może być procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
- Domyślnie struktury [Friend](../../../visual-basic/language-reference/modifiers/friend.md) dostępu. Można dostosować ich poziomy dostępu z modyfikatorów dostępu. Aby uzyskać więcej informacji, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Domyślnie struktury [Friend](../../../visual-basic/language-reference/modifiers/friend.md) dostępu. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Reguły  
   
@@ -112,13 +104,13 @@ End Structure
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface — instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const — instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Enum, instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
  [Struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

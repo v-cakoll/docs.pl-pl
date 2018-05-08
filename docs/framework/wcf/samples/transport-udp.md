@@ -1,27 +1,15 @@
 ---
 title: 'Transport: UDP'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-udp"></a>Transport: UDP
-Przykładowe transportu UDP pokazano, jak wdrażanie UDP emisji pojedynczej i multiemisji jako niestandardowego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transportu. Próbka opisuje zalecaną procedurą tworzenia niestandardowych transportu w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], przy użyciu platformy kanału i wykonując [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] najlepsze rozwiązania. Kroki, aby utworzyć niestandardowe transportu są następujące:  
+Przykładowe transportu UDP pokazuje, jak wdrażanie UDP emisji pojedynczej i multiemisji jako niestandardowego transportu Windows Communication Foundation (WCF). Próbka opisuje zalecaną procedurą tworzenia niestandardowych transportu w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], przy użyciu platformy kanału i wykonując [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] najlepsze rozwiązania. Kroki, aby utworzyć niestandardowe transportu są następujące:  
   
 1.  Decyzji, które kanału [wzorce wymiany wiadomości](#MessageExchangePatterns) (IOutputChannel IInputChannel, IDuplexChannel, IRequestChannel albo IReplyChannel) z elementu ChannelFactory i ChannelListener będzie obsługiwać. Następnie zdecydować, czy będzie obsługiwać zamykania zmian tych interfejsów.  
   
@@ -61,7 +49,7 @@ Przykładowe transportu UDP pokazano, jak wdrażanie UDP emisji pojedynczej i mu
 >  Dla transportu UDP Datagram, jest tylko MEP, która jest obsługiwana, ponieważ protokół UDP jest z założenia protokołem "wyzwalać i zapomnij".  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Interfejs ICommunicationObject i cyklem życia obiektów WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Typowe maszyna stanu, używany do zarządzania cyklem życia obiektów, takich jak <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, i <xref:System.ServiceModel.Channels.IChannelListener> używanych do komunikacji. Brak pięć Państwa, w których te obiekty komunikacji może istnieć. Te stany są reprezentowane przez <xref:System.ServiceModel.CommunicationState> wyliczenie i są w następujący sposób:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Typowe maszyna stanu, używany do zarządzania cyklem życia obiektów, takich jak <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, i <xref:System.ServiceModel.Channels.IChannelListener> używanych do komunikacji. Brak pięć Państwa, w których te obiekty komunikacji może istnieć. Te stany są reprezentowane przez <xref:System.ServiceModel.CommunicationState> wyliczenie i są w następujący sposób:  
   
 -   Utworzona: Jest to stan <xref:System.ServiceModel.ICommunicationObject> po raz pierwszy zostanie uruchomiony. Nie wejścia/wyjścia (We/Wy) występuje w tym stanie.  
   
@@ -79,7 +67,7 @@ Przykładowe transportu UDP pokazano, jak wdrażanie UDP emisji pojedynczej i mu
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>Fabryka kanałów i odbiornika kanałów  
- Następny krok w Pisanie niestandardowych transportu jest utworzenie implementacja <xref:System.ServiceModel.Channels.IChannelFactory> dla kanałów klienta oraz <xref:System.ServiceModel.Channels.IChannelListener> kanałów usługi. Warstwie kanału korzysta ze wzorca fabrykę do tworzenia kanałów. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia pomocników klasę podstawową dla tego procesu.  
+ Następny krok w Pisanie niestandardowych transportu jest utworzenie implementacja <xref:System.ServiceModel.Channels.IChannelFactory> dla kanałów klienta oraz <xref:System.ServiceModel.Channels.IChannelListener> kanałów usługi. Warstwie kanału korzysta ze wzorca fabrykę do tworzenia kanałów. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia pomocników klasę podstawową dla tego procesu.  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> Klasa implementuje <xref:System.ServiceModel.ICommunicationObject> i wymusza automatu stanów opisany w kroku 2. 
 
@@ -268,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   Za pomocą niestandardowego powiązania: niestandardowego powiązania umożliwia użytkownikom tworzenie własnych powiązania na podstawie dowolnego zestawu elementów wiązania.  
   
--   Za pomocą powiązania dostarczane przez system, która zawiera naszych elementu powiązania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia wiele tych powiązań zdefiniowanych przez system, taką jak `BasicHttpBinding`, `NetTcpBinding`, i `WsHttpBinding`. Każdy z tych powiązań jest skojarzona z profilem dobrze zdefiniowany.  
+-   Za pomocą powiązania dostarczane przez system, która zawiera naszych elementu powiązania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia wiele tych powiązań zdefiniowanych przez system, taką jak `BasicHttpBinding`, `NetTcpBinding`, i `WsHttpBinding`. Każdy z tych powiązań jest skojarzona z profilem dobrze zdefiniowany.  
   
  Przykład implementuje powiązanie profilu w `SampleProfileUdpBinding`, która jest pochodną <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` Zawiera maksymalnie cztery elementy powiązania w nim: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, i `ReliableSessionBindingElement`.  
   
@@ -488,6 +476,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

@@ -1,34 +1,20 @@
 ---
 title: Używanie klasy Message
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ff65d9173838a8eb8850253e62d822f06942f26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-message-class"></a>Używanie klasy Message
-<xref:System.ServiceModel.Channels.Message> Klasy jest niezbędne, aby [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Cała komunikacja między klientami i usługami powoduje w rezultacie <xref:System.ServiceModel.Channels.Message> wysyłanych i odbieranych wystąpień.  
+<xref:System.ServiceModel.Channels.Message> Klasy jest podstawą do usługi Windows Communication Foundation (WCF). Cała komunikacja między klientami i usługami powoduje w rezultacie <xref:System.ServiceModel.Channels.Message> wysyłanych i odbieranych wystąpień.  
   
- Nie będzie zazwyczaj interakcję z <xref:System.ServiceModel.Channels.Message> bezpośrednio klasa. Zamiast tego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tworzy model usług, takich jak dane kontrakty, kontraktów komunikatu i kontrakty operacji służą do opisywania wiadomości przychodzących i wychodzących. Jednak w niektórych zaawansowane scenariusze można zaprogramować za pomocą <xref:System.ServiceModel.Channels.Message> bezpośrednio klasa. Na przykład możesz chcieć użyć <xref:System.ServiceModel.Channels.Message> klasy:  
+ Nie będzie zazwyczaj interakcję z <xref:System.ServiceModel.Channels.Message> bezpośrednio klasa. Zamiast tego konstrukcje modelu usługi WCF, takie jak kontraktów danych, kontraktów komunikatu i kontrakty operacji są używane do opisywania wiadomości przychodzących i wychodzących. Jednak w niektórych zaawansowane scenariusze można zaprogramować za pomocą <xref:System.ServiceModel.Channels.Message> bezpośrednio klasa. Na przykład możesz chcieć użyć <xref:System.ServiceModel.Channels.Message> klasy:  
   
 -   Jeśli wymagane jest alternatywna metoda tworzenia wychodzącego treść wiadomości (na przykład tworzenie wiadomości bezpośrednio z pliku na dysku) zamiast serializacji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów.  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Jeśli musisz postępowania w przypadku komunikatów w sposób ogólny, niezależnie od zawartości komunikatu (na przykład, gdy routingu lub przesyłanie komunikatów dalej podczas kompilowania router, usługi równoważenia obciążenia lub publikowanie-subskrypcji systemu).  
   
- Przed użyciem <xref:System.ServiceModel.Channels.Message> klasy, warto zapoznać się z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transferu danych architektura [omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ Przed użyciem <xref:System.ServiceModel.Channels.Message> klasy, zapoznaj się z architektury transferu danych WCF w [omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
  A <xref:System.ServiceModel.Channels.Message> jest kontenerem ogólnego przeznaczenia dla danych, ale jego projekt jest ściśle zgodna projektowania komunikatu protokołu SOAP. Podobnie jak w SOAP, wiadomość ma zarówno treści wiadomości i nagłówków. Treść wiadomości zawiera danych ładunku rzeczywiste, gdy nagłówki zawierać kontenery dodatkowych danych o podanej nazwie. Reguły do odczytu i zapisu treści i nagłówki są różne, na przykład nagłówki zawsze są buforowane w pamięci i mogą być używane w dowolna kolejność dowolną liczbę razy, gdy jednostka mogą być odczytywane tylko raz i mogą być przesyłane strumieniowo. Zwykle podczas korzystania z protokołu SOAP, treść komunikatu jest mapowana do treści protokołu SOAP, a nagłówki komunikatów są mapowane na nagłówków protokołu SOAP.  
   
@@ -181,7 +167,7 @@ ms.lasthandoff: 04/28/2018
  Aby uzyskać dostęp do danych XML w nagłówku, można wywołać <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A> i zwracać modułu odczytującego XML dla indeksu określonego nagłówka. Aby deserializować zawartość nagłówka do obiektu, należy użyć <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> lub jednego z innych przeciążeniach. Najbardziej podstawowa przeciążeń deserializacji nagłówków przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer> skonfigurowane w domyślnej sposób. Jeśli chcesz użyć innego serializatora lub innej konfiguracji `DataContractSerializer`, użyj jednego z przeciążeń, które przyjmują `XmlObjectSerializer`. Dostępne są także przeciążeń, które przyjmują nazwa nagłówka, przestrzeń nazw i opcjonalnie listę `Actor` wartości zamiast indeksu; jest kombinacją `FindHeader` i `GetHeader`.  
   
 ## <a name="working-with-properties"></a>Praca z właściwościami  
- A `Message` wystąpienia może zawierać dowolną liczbę nazwane obiekty dowolnego typu. Ta kolekcja jest dostępny za pośrednictwem `Properties` właściwości typu `MessageProperties`. Implementuje kolekcji <xref:System.Collections.Generic.IDictionary%602> interfejsu i działa jako mapowanie <xref:System.String> do <xref:System.Object>. Zazwyczaj nie mapują bezpośrednio do dowolnej części komunikatu umieszczonego w wartości właściwości, ale raczej udostępnia różne wskazówek przetwarzania wiadomości dla różnych kanałów w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanału stosu lub <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> struktura usługi. Na przykład zobacz [omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ A `Message` wystąpienia może zawierać dowolną liczbę nazwane obiekty dowolnego typu. Ta kolekcja jest dostępny za pośrednictwem `Properties` właściwości typu `MessageProperties`. Implementuje kolekcji <xref:System.Collections.Generic.IDictionary%602> interfejsu i działa jako mapowanie <xref:System.String> do <xref:System.Object>. Zazwyczaj nie mapują bezpośrednio do dowolnej części komunikatu umieszczonego w wartości właściwości, ale raczej zapewniają różne komunikatu wskazówki dotyczące przetwarzania do różnych kanałów w stosie kanału WCF, lub do <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> struktura usługi. Na przykład zobacz [omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
 ## <a name="inheriting-from-the-message-class"></a>Dziedziczenie z klasy wiadomości  
  Jeśli wbudowane komunikatu typy utworzone za pomocą `CreateMessage` nie spełniają wymagania, Utwórz klasę pochodną `Message` klasy.  

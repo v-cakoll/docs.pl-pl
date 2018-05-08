@@ -1,36 +1,25 @@
 ---
-title: "Porady: dodawanie i usuwanie elementów ConcurrentDictionary"
-ms.custom: 
+title: 'Porady: dodawanie i usuwanie elementów ConcurrentDictionary'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4ef7c8050b26cffeed03cc394193116f8f6797a9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Porady: dodawanie i usuwanie elementów ConcurrentDictionary
 W tym przykładzie pokazano, jak dodać, pobierania, aktualizowanie i usuwanie elementów z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Ta klasa kolekcji jest implementacją wątkowo. Zaleca się używania jej w każdym przypadku, gdy wiele wątków może próby uzyskania dostępu do elementów jednocześnie.  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>zapewnia kilka metod wygody wchodzące niepotrzebnych kodu najpierw sprawdź, czy istnieje klucz przed próbuje dodać lub usunąć dane. Poniższej tabeli wymieniono te metody wygody oraz opis ich użycie.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zapewnia kilka metod wygody wchodzące niepotrzebnych kodu najpierw sprawdź, czy istnieje klucz przed próbuje dodać lub usunąć dane. Poniższej tabeli wymieniono te metody wygody oraz opis ich użycie.  
   
 |Metoda|Używany, gdy...|  
 |------------|---------------|  
@@ -44,7 +33,7 @@ W tym przykładzie pokazano, jak dodać, pobierania, aktualizowanie i usuwanie e
  [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
  [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>jest przeznaczony do scenariuszy wielowątkowych. Nie trzeba stosować blokady w kodzie, aby dodać lub usunąć elementy z kolekcji. Jednak zawsze jest jeden wątek, aby pobrać wartości i inny wątek natychmiast zaktualizować kolekcji, zapewniając nową wartość w taki sam klucz.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602> jest przeznaczony do scenariuszy wielowątkowych. Nie trzeba stosować blokady w kodzie, aby dodać lub usunąć elementy z kolekcji. Jednak zawsze jest jeden wątek, aby pobrać wartości i inny wątek natychmiast zaktualizować kolekcji, zapewniając nową wartość w taki sam klucz.  
   
  Ponadto mimo że wszystkie metody <xref:System.Collections.Concurrent.ConcurrentDictionary%602> są wątkowo, nie wszystkie metody są atomic, w szczególności <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Delegowanie użytkownika, który jest przekazywany do tych metod jest wywoływany poza słownik wewnętrzny blokady. (Jest to na celu zapobieganie blokuje wszystkie wątki nieznany kod.) Dlatego możliwe jest dla tej sekwencji zdarzenia:  
   

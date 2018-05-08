@@ -1,29 +1,17 @@
 ---
-title: "Porady: włączanie zmiany układu kolumn w formancie DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant"
-ms.custom: 
+title: 'Porady: włączanie zmiany układu kolumn w formancie DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - Windows Forms, columns
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd65179ea22bd7e8b9240d157874f6fd01285665
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 519ddacfa37fa6ffb5ff7ffbe6124ee772ab0c09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: włączanie zmiany układu kolumn w formancie DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Podczas przeglądania danych wyświetlanych w formularzach systemu Windows <xref:System.Windows.Forms.DataGridView> kontroli, użytkownicy czasami chcesz porównać wartości w określonych kolumnach. Może to być niewygodne, jeśli powszechnie rozdzielono kolumn w formancie, szczególnie jeśli użytkownicy musieli przewijać i z powrotem w poziomie aby zobaczyć wszystkie kolumny, które są zainteresowani. Możesz wprowadzić zadanie porównanie wartości kolumny jest łatwiejsze, umożliwiając użytkownikom zmienianie kolejności kolumn. Po włączeniu zmiany kolejności kolumn, użytkownicy mogą przechodzić do nowej pozycji kolumny przez przeciągnięcie nagłówka kolumny za pomocą myszy.  

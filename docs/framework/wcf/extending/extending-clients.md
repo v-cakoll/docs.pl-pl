@@ -1,38 +1,24 @@
 ---
-title: "Rozszerzanie klientów"
-ms.custom: 
+title: Rozszerzanie klientów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>Rozszerzanie klientów
 W aplikacji wywołującej jest odpowiedzialny za tłumaczenia wywołań metod w kodzie aplikacji w komunikatach wychodzących, wypychanie ich do podstawowej kanałów, tłumaczenia wyników do wartości zwracanych do edycji i parametrów w warstwy modelu usług Kod aplikacji, a następnie zwraca wyniki z powrotem do wywołującego. Rozszerzenia modelu usługi zmodyfikować, lub zaimplementuj wykonywania lub zachowanie komunikacji i funkcje dotyczące klienta lub dyspozytora funkcje, niestandardowe zachowania, wiadomości i przechwytywaniu parametru i innych funkcji rozszerzalności.  
   
- W tym temacie opisano sposób użycia <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.ClientOperation> klas w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji klienckiej, aby zmodyfikować domyślne zachowanie wykonywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta lub w celu przechwycenia lub modyfikowanie komunikatów i parametrów lub zwracanych wartości przed lub kolejne do wysyłania lub pobierania ich z warstwy kanału. Aby uzyskać więcej informacji na temat rozszerzania środowiska uruchomieniowego usługi, zobacz [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Aby uzyskać więcej informacji dotyczących zachowania, które modyfikowania i wstawiania dostosowania obiektów w czasie wykonywania klienta, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ W tym temacie opisano sposób użycia <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.ClientOperation> klas w aplikacji klienta Windows Communication Foundation (WCF), aby zmodyfikować domyślne zachowanie wykonywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta albo do przechwycenia lub modyfikowanie komunikatów, parametry, lub zwracają wartości przed lub po wysyłania lub pobierania ich z warstwy kanału. Aby uzyskać więcej informacji na temat rozszerzania środowiska uruchomieniowego usługi, zobacz [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Aby uzyskać więcej informacji dotyczących zachowania, które modyfikowania i wstawiania dostosowania obiektów w czasie wykonywania klienta, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Klienci  
  Na komputerze klienckim [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu klienta lub kanału klienta konwertuje wywołań metod wysyła komunikaty wychodzące i przychodzące komunikaty do wyników operacji, które są zwracane do aplikacji wywołującej. (Aby uzyskać więcej informacji na temat typów klientów, zobacz [Architektura klienta WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]typy klienta mają typów środowiska wykonawczego, które obsługują tę funkcję na poziomie punktu końcowego i operacji. Gdy aplikacja wywołuje operację <xref:System.ServiceModel.Dispatcher.ClientOperation> tłumaczy obiekty wychodzące do wiadomości, przetwarza interceptory, potwierdza, że odpowiada kontraktu docelowych wywołań wychodzących i przekazuje komunikat wychodzący <xref:System.ServiceModel.Dispatcher.ClientRuntime>, który jest odpowiedzialne za tworzenie i zarządzanie kanałów wychodzących i kanały przychodzące w przypadku usługi dwukierunkowe, obsługa bardzo wychodzący komunikatów przetwarzania (np. nagłówek modyfikacji), przetwarzania interceptory wiadomości w obu kierunkach i routing ruchu przychodzącego dwustronnego wywołania do odpowiedniego klienta <xref:System.ServiceModel.Dispatcher.DispatchRuntime> obiektu. Zarówno <xref:System.ServiceModel.Dispatcher.ClientOperation> i <xref:System.ServiceModel.Dispatcher.ClientRuntime> świadczenia usług podobne, gdy komunikaty (w tym błędy) są zwracane do klienta.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typy klienta mają typów środowiska wykonawczego, które obsługują tę funkcję na poziomie punktu końcowego i operacji. Gdy aplikacja wywołuje operację <xref:System.ServiceModel.Dispatcher.ClientOperation> tłumaczy obiekty wychodzące do wiadomości, przetwarza interceptory, potwierdza, że odpowiada kontraktu docelowych wywołań wychodzących i przekazuje komunikat wychodzący <xref:System.ServiceModel.Dispatcher.ClientRuntime>, który jest odpowiedzialne za tworzenie i zarządzanie kanałów wychodzących i kanały przychodzące w przypadku usługi dwukierunkowe, obsługa bardzo wychodzący komunikatów przetwarzania (np. nagłówek modyfikacji), przetwarzania interceptory wiadomości w obu kierunkach i routing ruchu przychodzącego dwustronnego wywołania do odpowiedniego klienta <xref:System.ServiceModel.Dispatcher.DispatchRuntime> obiektu. Zarówno <xref:System.ServiceModel.Dispatcher.ClientOperation> i <xref:System.ServiceModel.Dispatcher.ClientRuntime> świadczenia usług podobne, gdy komunikaty (w tym błędy) są zwracane do klienta.  
   
  Te dwie klasy środowiska uruchomieniowego są główne rozszerzeniem, aby dostosować przetwarzania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiekty klienta i kanałów. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Klasa umożliwia użytkownikom przechwytywać i rozszerzyć wykonywania klienta na wszystkie wiadomości w umowie. <xref:System.ServiceModel.Dispatcher.ClientOperation> Klasa umożliwia użytkownikom przechwytywać i rozszerzyć wykonywania klienta dla wszystkich wiadomości w danej operacji.  
   

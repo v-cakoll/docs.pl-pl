@@ -1,34 +1,22 @@
 ---
 title: '&lt;clientCertificate&gt; w &lt;serviceCredentials&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0bd36f0c13aebb75bb9d2147e871224c162b862
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c33c6d6a80625028b9d97ab486cf50e4970b8941
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;clientCertificate&gt; w &lt;serviceCredentials&gt;
 Definiuje certyfikat X.509 używany do podpisywania i szyfrowania wiadomości dla formularza klienta usługi we wzorcu komunikację dupleksową.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<serviceBehaviors >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
+\<serviceBehaviors>  
 \<zachowanie >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<clientCertificate >  
   
 ## <a name="syntax"></a>Składnia  
@@ -57,7 +45,7 @@ Definiuje certyfikat X.509 używany do podpisywania i szyfrowania wiadomości dl
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenia, które mają być użyte w uwierzytelnianiu usługi, i sprawdzanie poprawności poświadczeń klienta powiązane ustawienia.|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenia, które mają być użyte w uwierzytelnianiu usługi, i sprawdzanie poprawności poświadczeń klienta powiązane ustawienia.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element jest używany, gdy usługa musi mieć certyfikat klienta z wyprzedzeniem do bezpiecznego komunikowania się z klientem. Dzieje się tak podczas używania wzorca komunikację dupleksową. We wzorcu bardziej typowego żądania/odpowiedzi klienta obejmuje jego certyfikat w żądaniu, usługa używa do szyfrowania i podpisywania odpowiedzi do klienta. We wzorcu komunikację dupleksową jednak usługa ma żądania z klienta i dlatego wymaga certyfikatu klienta z wyprzedzeniem, aby zabezpieczyć wiadomość do klienta. W związku z tym należy uzyskać certyfikat klienta w negocjacji poza pasmem oraz określić certyfikat przy użyciu tego elementu. Aby uzyskać więcej informacji na temat usługi dwukierunkowe, zobacz [porady: tworzenie kontraktu dwukierunkowego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  

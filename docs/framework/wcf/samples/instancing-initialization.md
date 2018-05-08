@@ -1,24 +1,12 @@
 ---
-title: "Tworzenie wystąpienia inicjowania"
-ms.custom: 
+title: Tworzenie wystąpienia inicjowania
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instancing-initialization"></a>Tworzenie wystąpienia inicjowania
 W tym przykładzie rozszerza [buforowanie](../../../../docs/framework/wcf/samples/pooling.md) przykładowa przez definiowanie interfejsu `IObjectControl`, który dostosowuje inicjowania obiektu przez aktywowanie i dezaktywowanie go. Klient wywołuje metody, które zwracają obiekt do puli, a które nie zwracają obiekt do puli.  
@@ -27,7 +15,7 @@ W tym przykładzie rozszerza [buforowanie](../../../../docs/framework/wcf/sample
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="extensibility-points"></a>Punkty rozszerzeń  
- Pierwszym krokiem tworzenia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rozszerzenia jest określenie punkcie rozszerzenia do użycia. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], termin *EndpointDispatcher* odwołuje się do odpowiedzialny za konwersji komunikatów przychodzących do wywołań metod w usłudze użytkownika i konwertowania wartości zwracanych z tej metody do składnika środowiska wykonawczego komunikat wychodzący. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa tworzy EndpointDispatcher dla każdego punktu końcowego.  
+ Pierwszym krokiem tworzenia rozszerzenia programu Windows Communication Foundation (WCF) jest podjęcie punkcie rozszerzenia do użycia. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], termin *EndpointDispatcher* odwołuje się do odpowiedzialny za konwersji komunikatów przychodzących do wywołań metod w usłudze użytkownika i konwertowania wartości zwracanych z tej metody do składnika środowiska wykonawczego komunikat wychodzący. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa tworzy EndpointDispatcher dla każdego punktu końcowego.  
   
  Oferuje EndpointDispatcher punktu końcowego zakresu (dla wszystkich wiadomości wysłanych i odebranych przez usługę) rozszerzalności za pomocą <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> klasy. Ta klasa umożliwia dostosowanie różne właściwości sterujące zachowaniem elementu EndpointDispatcher. W tym przykładzie koncentruje się na <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwość, która wskazuje obiekt, który zapewnia wystąpienia klasy usługi.  
   
@@ -165,7 +153,7 @@ if (activeObjectsCount == 0)
   
  W przykładzie użyto atrybutu niestandardowego. Gdy <xref:System.ServiceModel.ServiceHost> jest utworzone, jego sprawdza atrybuty używane w definicji typu usługi, jak i dodaje zachowania dostępne do kolekcji zachowań opisu usługi.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>jest nazywana najpierw; Umożliwia usługi poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>jest nazywana obok; Ta metoda jest wymagana tylko w scenariuszach bardzo zaawansowane. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>jest nazywana ostatnio i jest odpowiedzialny za konfigurację środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> jest nazywana najpierw; Umożliwia usługi poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> jest nazywana obok; Ta metoda jest wymagana tylko w scenariuszach bardzo zaawansowane. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> jest nazywana ostatnio i jest odpowiedzialny za konfigurację środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Ten parametr zawiera opis usługi dla całej usługi. Może być używany do zbadania opis danych dotyczących punktów końcowych usługi, kontrakty, powiązania i innych danych związanych z usługą.  
   
@@ -214,7 +202,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Aktywacja i dezaktywacja Przechwytywanie  
  Głównym celem buforowanie obiektów jest w celu zoptymalizowania krótkim okresie obiektów o stosunkowo drogie tworzenia i inicjowania. W związku z tym wzrost wydajności znacznej go można udostępnić aplikacji, jeśli używana poprawnie. Ponieważ obiekt jest zwracany z puli, konstruktora zostanie wywołana tylko raz. Jednak niektóre aplikacje wymagają pewnego poziomu kontroli, tak aby mogli inicjowanie i oczyszczanie zasobów używanych w pojedynczym kontekście. Na przykład obiekt używany dla zestawu obliczeń zresetować swoich pól prywatnych przed przetworzeniem dalej obliczeń. Usługi Enterprise włączone tego rodzaju inicjowanie zależne od kontekstu, umożliwiając developer obiektu zastąpienie `Activate` i `Deactivate` metody <xref:System.EnterpriseServices.ServicedComponent> klasy podstawowej.  
   
- Wywołań puli obiektów `Activate` metody bezpośrednio przed powrotem obiektu z puli. `Deactivate`jest wywoływana po powrocie obiekt z powrotem do puli. <xref:System.EnterpriseServices.ServicedComponent> Klasy podstawowej ma również `boolean` właściwość o nazwie `CanBePooled`, które mogą służyć do powiadamiania puli, czy obiekt może dodatkowo puli.  
+ Wywołań puli obiektów `Activate` metody bezpośrednio przed powrotem obiektu z puli. `Deactivate` jest wywoływana po powrocie obiekt z powrotem do puli. <xref:System.EnterpriseServices.ServicedComponent> Klasy podstawowej ma również `boolean` właściwość o nazwie `CanBePooled`, które mogą służyć do powiadamiania puli, czy obiekt może dodatkowo puli.  
   
  Aby naśladował tę funkcję, próbki deklaruje interfejs publiczny (`IObjectControl`) mający wyżej wymienione elementy członkowskie. Ten interfejs jest następnie wdrażany przez usługę klasy mają na celu dostarczenie inicjowania określonego kontekstu. <xref:System.ServiceModel.Dispatcher.IInstanceProvider> Wdrożenia muszą zostać zmodyfikowane w celu spełnienia tych wymagań. Teraz, zawsze można uzyskać obiektu przez wywołanie metody `GetInstance` metody, musisz sprawdzić, czy obiekt implementuje `IObjectControl.` Jeśli tak, należy wywołać `Activate` metody odpowiednio.  
   
@@ -272,7 +260,7 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   

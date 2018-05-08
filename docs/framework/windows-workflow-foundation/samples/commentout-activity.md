@@ -1,23 +1,12 @@
 ---
-title: "Działanie CommentOut"
-ms.custom: 
+title: Działanie CommentOut
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 340204c3-f827-45fb-870e-55e2ac457ca5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 900f6647eadb04a783fe0a3a143a71d9c766a48c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7847f4e1d77c2927a27be6b83f4016a22e4e3b32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="commentout-activity"></a>Działanie CommentOut
 W tym przykładzie pokazano, jak zapisać działań niestandardowych, które usuwa innych działań ze ścieżki wykonywania skutecznie komentowania je.  
@@ -51,7 +40,7 @@ public sealed class CommentOut : CodeActivity
 </Border>  
 ```  
   
- W klasie projektanta XAML służy do tworzenia niestandardowych wizualną reprezentację działania. <xref:System.Activities.Presentation.WorkflowItemPresenter>jest klasa, która zawiera Edytor wizualny.  
+ W klasie projektanta XAML służy do tworzenia niestandardowych wizualną reprezentację działania. <xref:System.Activities.Presentation.WorkflowItemPresenter> jest klasa, która zawiera Edytor wizualny.  
   
  Pojedyncze działanie może być upuszczone na `CommentOut` powierzchni działania. Jeśli chcesz dodać wielu działań do tej warstwy, przeciągnij działanie sekwencji tutaj najpierw.  
   
@@ -68,6 +57,6 @@ public sealed class CommentOut : CodeActivity
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\CommentOut`

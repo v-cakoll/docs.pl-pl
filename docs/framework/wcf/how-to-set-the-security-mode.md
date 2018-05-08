@@ -1,14 +1,6 @@
 ---
 title: 'Instrukcje: Ustawianie trybu zabezpieczeń'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,16 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bdfd273f7a541cac4f1fd8a03a976d73e997b718
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: ddcf6983a7308bc1a615b11e86f17da1302d5085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Instrukcje: Ustawianie trybu zabezpieczeń
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] zabezpieczenia mają trzy często używanych trybów zabezpieczeń, które zostały znalezione na najbardziej wstępnie zdefiniowanych powiązań: transportu, komunikat oraz "transportu z poświadczeniami komunikatu". Dwa tryby dodatkowe są specyficzne dla dwa powiązania: tryb "tylko transportu credential" znaleziono na <xref:System.ServiceModel.BasicHttpBinding>oraz "Zarówno" tryb na <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech często używanych trybów zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
+Zabezpieczenia systemu Windows Communication Foundation (WCF) ma trzy często używanych trybów zabezpieczeń, które zostały znalezione na najbardziej wstępnie zdefiniowanych powiązań: transportu, komunikat oraz "transportu z poświadczeniami komunikatu". Dwa tryby dodatkowe są specyficzne dla dwa powiązania: tryb "tylko transportu credential" znaleziono na <xref:System.ServiceModel.BasicHttpBinding>oraz "Zarówno" tryb na <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech często używanych trybów zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Zauważ, że nie wszystkie wstępnie zdefiniowanych powiązań obsługuje wszystkie te tryby. W tym temacie Ustawia tryb z <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> klas i pokazuje, jak ustawić tryb programowo i za pomocą konfiguracji.  
   

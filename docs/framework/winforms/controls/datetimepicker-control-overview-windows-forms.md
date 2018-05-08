@@ -1,31 +1,17 @@
 ---
-title: "DateTimePicker — Informacje o formancie [Formularze systemu Windows]"
-ms.custom: 
+title: DateTimePicker — Informacje o formancie [Formularze systemu Windows]
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DateTimePicker
 helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db5e532a2688d7f213fd42772234b9600192390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf44cdff7da06a27921ce5881199a3a88b1096f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.DateTimePicker> formant umożliwia użytkownikowi wybranie pojedynczego elementu z listy daty i godziny. Gdy jest używany do reprezentowania datę, pojawi się z dwóch części: listy rozwijanej z przedstawiany w tekst i siatki, które pojawia się po kliknięciu Strzałka w dół obok listy. Siatka wygląda <xref:System.Windows.Forms.MonthCalendar> formantu, który może służyć do wybierania wielu daty. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.MonthCalendar> sterowania, zobacz [informacje o formancie MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  

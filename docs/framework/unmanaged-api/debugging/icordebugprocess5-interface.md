@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess5 — Interfejs"
-ms.custom: 
+title: ICorDebugProcess5 — Interfejs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess5
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e26f50967f0fb70e0593584e3f175d20a7b213e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3aed85e989313e4778e12a6f6bb789ccef49747
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 — Interfejs
 Umożliwia rozbudowywanie interfejsu ICorDebugProcess do obsługi dostępu do sterty zarządzanej, aby podać informacje o pamięci obiektów zarządzanych, oraz do ustalenia, czy debuger ładuje obrazów z pamięci podręcznej obrazów natywnych lokalnej aplikacji.  
@@ -67,7 +55,7 @@ Umożliwia rozbudowywanie interfejsu ICorDebugProcess do obsługi dostępu do st
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

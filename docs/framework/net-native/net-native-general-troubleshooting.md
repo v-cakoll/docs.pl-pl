@@ -1,24 +1,14 @@
 ---
-title: "Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native"
-ms.custom: 
+title: Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e92e99b978d12c32cc46b9133621875f35af634
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b53150c90e473e7c4ed32991c43ff0b8ca5b75b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-general-troubleshooting"></a>Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native
 W tym temacie opisano sposoby rozwiązywania potencjalnych problemów, które można napotkać podczas opracowywania aplikacji za pomocą [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
@@ -41,7 +31,7 @@ W tym temacie opisano sposoby rozwiązywania potencjalnych problemów, które mo
   
      Po utworzeniu projektu za pomocą [!INCLUDE[net_native](../../../includes/net-native-md.md)], znajdują się dane wyjściowe w obszarze obj\\*config*\ *arch* \\  *projectname*. ilc\out.  Zawartość natywnego pakiet można znaleźć w bin\\*arch*\\*config*\AppX. Zawartość natywnego pakiet podlegają \bin\\*arch*\\*config*\AppX Jeśli aplikacja została wdrożona.  
   
--   **Problem:** platformy .NET Native skompilowana aplikacja jest zgłaszanie wyjątków środowiska uruchomieniowego (zazwyczaj [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) lub [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątkami), który go nie throw, gdy kompilowany bez platformy .NET Native.  
+-   **Problem:** platformy .NET Native skompilowana aplikacja jest zgłaszanie wyjątków środowiska uruchomieniowego (zazwyczaj [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) lub [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątkami), który nie zgłosiła podczas kompilacji bez platformy .NET Native.  
   
      **Rozwiązanie:** są zgłaszane wyjątki, ponieważ platforma .NET Native nie dostarczyła metadanych lub kod implementacji, który jest dostępny za pośrednictwem odbicia. (Aby uzyskać więcej informacji, zobacz [platformy .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md).) Aby wyeliminować wyjątek, należy dodać wpis do Twojej [środowiska uruchomieniowego (rd.xml) dyrektywy pliku](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) tak, aby platforma .NET Native łańcucha narzędzi można udostępnić metadanych lub wykonania kodu w czasie wykonywania. Dostępne są dwa narzędzia do rozwiązywania problemów który wygeneruje wymaganego wpisu do dodania do pliku dyrektyw środowiska uruchomieniowego:  
   

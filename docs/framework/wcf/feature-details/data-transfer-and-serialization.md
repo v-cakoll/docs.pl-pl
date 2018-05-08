@@ -1,30 +1,18 @@
 ---
 title: Transfer i serializacja danych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transfer-and-serialization"></a>Transfer i serializacja danych
-W systemie połączonych usług i klientów są zależne od wymiany danych, wykonywać wszystkie zadania. Jako deweloper usługi lub klienta, należy również poznać sposób [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje dane i serializacja danych, aby można było utworzyć aplikacje, które są wydajne i łatwe w konserwacji.  
+W systemie połączonych usług i klientów są zależne od wymiany danych, wykonywać wszystkie zadania. Jako deweloper usługi lub klienta należy również poznać, jak Windows Communication Foundation (WCF) obsługuje dane i serializacja danych w celu tworzenia aplikacji, które są wydajne i łatwe w konserwacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -55,7 +43,7 @@ W systemie połączonych usług i klientów są zależne od wymiany danych, wyko
  W tym artykule opisano elementy pod uwagę podczas programowania transfer i serializacja danych.  
   
  [Omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- W tym artykule opisano widok ogólnego projektu transferu danych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ W tym artykule opisano widok ogólnego projektu transfer danych w programie WCF.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  

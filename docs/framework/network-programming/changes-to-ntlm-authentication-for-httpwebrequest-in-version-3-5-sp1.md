@@ -1,23 +1,15 @@
 ---
 title: Zmiany do uwierzytelniania NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Zmiany do uwierzytelniania NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
 Wprowadzono zmiany zabezpieczeń w .NET Framework w wersji 3.5 z dodatkiem SP1 i później który mają wpływ na sposób zintegrowane z systemem Windows uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, i powiązanych klas w przestrzeni nazw System.Net. Te zmiany mogą wpłynąć na aplikacji, które używają tych klas do żądań sieci web i odbierania odpowiedzi, gdzie jest używane zintegrowane uwierzytelnianie systemu Windows oparte na NTLM. Ta zmiana może wpłynąć na serwerach sieci web i aplikacji klienckich, które są skonfigurowane do korzystania ze zintegrowanego uwierzytelniania systemu Windows.  
@@ -58,7 +50,7 @@ Wprowadzono zmiany zabezpieczeń w .NET Framework w wersji 3.5 z dodatkiem SP1 i
   
  7. Zamknij Edytor rejestru, a następnie uruchom ponownie usługę usługę i uruchom polecenie IISReset.  
   
- Mniej bezpieczna opcja pracy około jest wyłączenie kontroli wstecz pętli, zgodnie z opisem w [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Wyłącza ochronę przed atakami odbicia. Dlatego lepiej jest ograniczyć zestaw alternatywnych nazw wyłącznie do tych oczekiwać maszyny, aby rzeczywiście używane.  
+ Mniej bezpieczna opcja pracy około jest wyłączenie kontroli wstecz pętli, zgodnie z opisem w [ http://support.microsoft.com/kb/896861 ](http://go.microsoft.com/fwlink/?LinkID=179657). Wyłącza ochronę przed atakami odbicia. Dlatego lepiej jest ograniczyć zestaw alternatywnych nazw wyłącznie do tych oczekiwać maszyny, aby rzeczywiście używane.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

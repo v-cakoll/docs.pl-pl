@@ -1,13 +1,6 @@
 ---
-title: "&lt;śledzenia&gt; — Element"
-ms.custom: 
+title: '&lt;śledzenia&gt; — Element'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#trace
@@ -17,16 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d7ddcbdbdbbc2924d4f725d2fd401f873a4cfb0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttracegt-element"></a>&lt;śledzenia&gt; — Element
 Zawiera nasłuchujących zbierania, przechowywania i trasy śledzenia wiadomości.  
@@ -82,7 +73,7 @@ Zawiera nasłuchujących zbierania, przechowywania i trasy śledzenia wiadomośc
 |`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie `<trace>` elementu do dodania odbiornika `MyListener` do `Listeners` kolekcji. `MyListener`Tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku. `useGlobalLock` Atrybut ma ustawioną `false`, co powoduje, że globalne blokady nie powinna być używana, jeśli odbiornik śledzenia jest bezpieczne dla wątków. `autoflush` Atrybut ma ustawioną `true`, co powoduje, że nasłuchującego śledzenia do zapisania do pliku, niezależnie od tego, czy <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> metoda jest wywoływana. `indentsize` Atrybut jest ustawiony na 0 (zero), co powoduje, że odbiornika do zera wcięć przy <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> metoda jest wywoływana.  
+ Poniższy przykład przedstawia użycie `<trace>` elementu do dodania odbiornika `MyListener` do `Listeners` kolekcji. `MyListener` Tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku. `useGlobalLock` Atrybut ma ustawioną `false`, co powoduje, że globalne blokady nie powinna być używana, jeśli odbiornik śledzenia jest bezpieczne dla wątków. `autoflush` Atrybut ma ustawioną `true`, co powoduje, że nasłuchującego śledzenia do zapisania do pliku, niezależnie od tego, czy <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> metoda jest wywoływana. `indentsize` Atrybut jest ustawiony na 0 (zero), co powoduje, że odbiornika do zera wcięć przy <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> metoda jest wywoływana.  
   
 ```xml  
 <configuration>  

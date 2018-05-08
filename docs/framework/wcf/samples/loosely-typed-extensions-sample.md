@@ -1,24 +1,12 @@
 ---
-title: "Przykład rozszerzeń z typowaniem luźnym"
-ms.custom: 
+title: Przykład rozszerzeń z typowaniem luźnym
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8861138f7763f413f06983bbfba5f6e0ec3c8b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ad00c1e76d14b32cb28216cfdbb1a01f82a70cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loosely-typed-extensions-sample"></a>Przykład rozszerzeń z typowaniem luźnym
 W modelu obiektu syndykacji zapewnia sformatowanego obsługuje do pracy z danymi rozszerzenia — informacje, które znajduje się w zespolonego źródła danych jego reprezentacja w formacie XML, ale nie są jawnie udostępnianych przez klas takich jak <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem>. W tym przykładzie przedstawiono podstawowe techniki do pracy z danymi rozszerzenia.  
@@ -67,13 +55,13 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
 -   `myAttribute` Atrybutu `<feed>` elementu.  
   
--   `<simpleString>`element.  
+-   `<simpleString>` element.  
   
--   `<DataContractExtension>`element.  
+-   `<DataContractExtension>` element.  
   
--   `<XmlSerializerExtension>`element.  
+-   `<XmlSerializerExtension>` element.  
   
--   `<xElementExtension>`element.  
+-   `<xElementExtension>` element.  
   
 ## <a name="writing-extension-data"></a>Zapisywanie danych rozszerzenia  
  Atrybut rozszerzenia są tworzone przez dodanie wpisów <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> kolekcji, jak pokazano w poniższym kodzie próbki.  
@@ -162,7 +150,7 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   

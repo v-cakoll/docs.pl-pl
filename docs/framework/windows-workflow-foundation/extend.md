@@ -1,28 +1,16 @@
 ---
 title: Rozszerzanie programu Windows Workflow Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WF [WF], extending
 - Windows Workflow Foundation [WF], extending
 - extending [WF]
 ms.assetid: d6861f28-9c8c-4225-872d-9a80e2e59034
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1006b32d7a265c94753081eab7b2bd279ed3dbdf
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b8fcdfdee442afe5a8fc354f4fb484f3a947d293
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-windows-workflow-foundation"></a>Rozszerzanie programu Windows Workflow Foundation
 W poniższej sekcji opisano, jak rozszerzyć Windows Workflow Foundation (WF) z działań niestandardowych i projektantów w środowiskach rehosted poza [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  

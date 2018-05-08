@@ -1,26 +1,14 @@
 ---
-title: "Model programowania oświadczeń WIF"
-ms.custom: 
+title: Model programowania oświadczeń WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 71327fb5a86c30d15ff060eff5cce170695e86a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-claims-programming-model"></a>Model programowania oświadczeń WIF
 ASP.NET i Windows Communication Foundation (WCF) deweloperzy zazwyczaj używać interfejsów tożsamości i IPrincipal do pracy z informacji o tożsamości użytkownika. W programie .NET 4.5 Windows Identity Foundation (WIF) jest zintegrowana w taki sposób, że istnieją oświadczenia teraz zawsze dla dowolnego podmiotu, jak pokazano na poniższym diagramie:  
@@ -31,19 +19,19 @@ ASP.NET i Windows Communication Foundation (WCF) deweloperzy zazwyczaj używać 
   
  Oświadczenia jest reprezentowana przez <xref:System.Security.Claims.Claim> klasy. Ta klasa ma następujące właściwości ważne:  
   
--   <xref:System.Security.Claims.Claim.Type%2A>reprezentuje typ oświadczenia i zwykle jest identyfikatorem URI. Na przykład oświadczenia adresu e-mail jest reprezentowany jako `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
+-   <xref:System.Security.Claims.Claim.Type%2A> reprezentuje typ oświadczenia i zwykle jest identyfikatorem URI. Na przykład oświadczenia adresu e-mail jest reprezentowany jako `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
   
--   <xref:System.Security.Claims.Claim.Value%2A>zawiera wartość oświadczenia i jest reprezentowany jako ciąg. Na przykład adres e-mail może być reprezentowana jako "someone@contoso.com".  
+-   <xref:System.Security.Claims.Claim.Value%2A> zawiera wartość oświadczenia i jest reprezentowany jako ciąg. Na przykład adres e-mail może być reprezentowana jako "someone@contoso.com".  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A>reprezentuje typ wartości oświadczenia i zwykle jest identyfikatorem URI. Na przykład typ string jest reprezentowany jako `http://www.w3.org/2001/XMLSchema#string`. Typ wartości musi być QName schemat XML. Wartość powinna być w formacie `namespace#format` umożliwiające WIF do wyjściowego Nieprawidłowa nazwa QName. Jeśli przestrzeń nazw nie jest dobrze zdefiniowany przestrzeni nazw, XML wygenerowanych prawdopodobnie nie może być schemat sprawdzania poprawności, ponieważ nie będzie opublikowanego pliku XSD dla tej przestrzeni nazw. Typ wartości domyślnej jest `http://www.w3.org/2001/XMLSchema#string`. Zobacz [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) dla wartości dobrze znane typy, które można bezpiecznie.  
+-   <xref:System.Security.Claims.Claim.ValueType%2A> reprezentuje typ wartości oświadczenia i zwykle jest identyfikatorem URI. Na przykład typ string jest reprezentowany jako `http://www.w3.org/2001/XMLSchema#string`. Typ wartości musi być QName schemat XML. Wartość powinna być w formacie `namespace#format` umożliwiające WIF do wyjściowego Nieprawidłowa nazwa QName. Jeśli przestrzeń nazw nie jest dobrze zdefiniowany przestrzeni nazw, XML wygenerowanych prawdopodobnie nie może być schemat sprawdzania poprawności, ponieważ nie będzie opublikowanego pliku XSD dla tej przestrzeni nazw. Typ wartości domyślnej jest `http://www.w3.org/2001/XMLSchema#string`. Zobacz [ http://www.w3.org/2001/XMLSchema ](http://go.microsoft.com/fwlink/?LinkId=209155) dla wartości dobrze znane typy, które można bezpiecznie.  
   
--   <xref:System.Security.Claims.Claim.Issuer%2A>jest to identyfikator usługę tokenu zabezpieczającego (STS), który wystawił oświadczenie. To może być reprezentowana jako adres URL usługi STS lub nazwę, która reprezentuje STS, takich jak `https://sts1.contoso.com/sts`.  
+-   <xref:System.Security.Claims.Claim.Issuer%2A> jest to identyfikator usługę tokenu zabezpieczającego (STS), który wystawił oświadczenie. To może być reprezentowana jako adres URL usługi STS lub nazwę, która reprezentuje STS, takich jak `https://sts1.contoso.com/sts`.  
   
--   <xref:System.Security.Claims.Claim.OriginalIssuer%2A>to identyfikator Usługa tokenu Zabezpieczającego, które wystawił oryginalne oświadczenie, niezależnie od tego, ile STSs znajdują się w łańcuchu. To jest reprezentowana w podobny sposób jak <xref:System.Security.Claims.Claim.Issuer%2A>.  
+-   <xref:System.Security.Claims.Claim.OriginalIssuer%2A> to identyfikator Usługa tokenu Zabezpieczającego, które wystawił oryginalne oświadczenie, niezależnie od tego, ile STSs znajdują się w łańcuchu. To jest reprezentowana w podobny sposób jak <xref:System.Security.Claims.Claim.Issuer%2A>.  
   
--   <xref:System.Security.Claims.Claim.Subject%2A>jest podmiotu, której tożsamość jest kontrolowany. Zawiera on element <xref:System.Security.Claims.ClaimsIdentity>.  
+-   <xref:System.Security.Claims.Claim.Subject%2A> jest podmiotu, której tożsamość jest kontrolowany. Zawiera on element <xref:System.Security.Claims.ClaimsIdentity>.  
   
--   <xref:System.Security.Claims.Claim.Properties%2A>jest słownikiem deweloperom zawierają dane specyficzne dla aplikacji do przeniesienia umieszczonego wraz z innymi właściwościami i może służyć do niestandardowego sprawdzania poprawności.  
+-   <xref:System.Security.Claims.Claim.Properties%2A> jest słownikiem deweloperom zawierają dane specyficzne dla aplikacji do przeniesienia umieszczonego wraz z innymi właściwościami i może służyć do niestandardowego sprawdzania poprawności.  
   
 ## <a name="identity-delegation"></a>Delegowanie tożsamości  
  Ważną właściwością <xref:System.Security.Claims.ClaimsIdentity> jest <xref:System.Security.Claims.ClaimsIdentity.Actor%2A>. Ta właściwość umożliwia delegowanie poświadczeń w systemie wielowarstwowych, w którym warstwy środkowej działa jako klient na wysyłanie żądań do usługi zaplecza.  

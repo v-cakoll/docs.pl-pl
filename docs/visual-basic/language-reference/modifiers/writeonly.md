@@ -1,10 +1,6 @@
 ---
 title: WriteOnly (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - WriteOnly
 - vb.WriteOnly
@@ -15,14 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9dab9115c31e538bd28583b9f0591ae0c9611e2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f34f7f4ada3f8d61c9d855eab1b8b073a3d5ed8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Określa, że właściwości mogą być zapisane, ale nie do odczytu.  
@@ -52,9 +45,9 @@ Określa, że właściwości mogą być zapisane, ale nie do odczytu.
   
  `WriteOnly` Modyfikatora można używać w tym kontekście:  
   
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md)  
- [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)  
+ [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

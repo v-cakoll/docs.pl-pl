@@ -1,12 +1,6 @@
 ---
 title: Wymiary tablic w Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Wymiary tablic w Visual Basic
 A *wymiaru* jest kierunek, w którym można wybrać różne specyfikacje elementów tablicy. Tablica, która przechowuje sprzedaży całkowitą dla każdego dnia, miesiąca ma jeden wymiar (dzień miesiąca). Tablica, która przechowuje sprzedaży całkowita przez dział dla każdego dnia, miesiąca ma dwóch wymiarów (numer działu i dzień miesiąca). Nazywa się liczby wymiarów tablicy nie ma jej *rangę*.  
@@ -35,13 +26,13 @@ A *wymiaru* jest kierunek, w którym można wybrać różne specyfikacje element
   
  Na poniższych ilustracjach przedstawiono koncepcyjnej struktury tablic o różnym stopniu. Każdy element na ilustracjach przedstawiono wartości indeksów, które do niego dostęp. Na przykład można dostępu pierwszym elementem w drugim wierszu tablicą dwuwymiarową określając indeksów `(1, 0)`.  
   
- ![Graficzny diagram co &#45; tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![Graficzny diagram jednego&#45;tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 Jednowymiarowa tablica  
   
- ![Graficzny diagram dwie &#45; tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![Graficzny diagram dwóch&#45;tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 tablicą dwuwymiarową  
   
- ![Graficzny diagram trzech &#45; tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![Graficzny diagram trzech&#45;tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 tablicą trójwymiarową  
   
 ### <a name="one-dimension"></a>Jeden wymiar  
@@ -99,4 +90,4 @@ Dim salesAmounts(4, 11, 30) As Double
   
 ## <a name="see-also"></a>Zobacz też  
  [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Rozwiązywanie problemów z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+ [Rozwiązywanie problemów związanych z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

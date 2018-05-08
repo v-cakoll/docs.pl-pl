@@ -1,27 +1,15 @@
 ---
-title: "Porady: zmiana wartości istniejącego ustawienia w czasie projektowania"
-ms.custom: 
+title: 'Porady: zmiana wartości istniejącego ustawienia w czasie projektowania'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de66234a79ad4e17f41048e87324237c47918a7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 12f069f647c6e8f7145a5f4a69c4af38d92c35ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Porady: zmiana wartości istniejącego ustawienia w czasie projektowania
 Visual Studio umożliwia edytowanie wartości istniejącego ustawienia w projekcie.  

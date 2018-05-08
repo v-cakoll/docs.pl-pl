@@ -1,21 +1,12 @@
 ---
 title: 'Porady: strumienia fragmenty XML z element XmlReader (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2fe1bc1122900bab6f65db785027add4e0a8e4f7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8e2baed3ca32ea4273993fe5bed43fef768204ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Porady: strumienia fragmenty XML z element XmlReader (C#)
 Podczas przetwarzania dużych plików XML, może nie być możliwe do załadowania całego drzewa XML do pamięci. W tym temacie przedstawiono sposób strumienia fragmenty przy użyciu <xref:System.Xml.XmlReader>.  

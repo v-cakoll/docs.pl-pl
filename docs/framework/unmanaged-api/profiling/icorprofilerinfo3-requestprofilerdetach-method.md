@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo3::RequestProfilerDetach — Metoda"
-ms.custom: 
+title: ICorProfilerInfo3::RequestProfilerDetach — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.RequestProfilerDetach Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 33a5c45bbb64029177a0a680243dd39a825683e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e69a15d70b8f1b9e271571be92f1f6717a9f196c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach — Metoda
 Powoduje, że środowisko uruchomieniowe można odłączyć profilera.  
@@ -59,7 +47,7 @@ HRESULT RequestProfilerDetach(
 |CORPROF_E_IMMUTABLE_FLAGS_SET|Oderwania jest niemożliwe, ponieważ profiler Ustaw flagi niezmienne podczas uruchamiania. Nie podjęto próby oderwania; profiler nadal pełni jest dołączony.|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Oderwania jest niemożliwe, ponieważ profiler używane zinstrumentowane kod języka pośredniego (MSIL) firmy Microsoft lub wstawionego `enter` / `leave` punkty zaczepienia. Nie podjęto próby oderwania; profiler nadal pełni jest dołączony.<br /><br /> **Uwaga** Zinstrumentowane MSIL jest kod jest kod, który odbywa się przy użyciu profilera [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody.|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|Środowisko uruchomieniowe nie zostały jeszcze zainicjowane w zarządzanej aplikacji. (To znaczy środowiska uruchomieniowego nie został całkowicie załadowany.) Tego kodu błędu mogą być zwrócone zleconą oderwania wewnątrz wywołania zwrotnego profilera [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metody.|  
-|WYNIK CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach`została wywołana w czasie nieobsługiwany. Dzieje się tak, jeśli metoda jest wywoływana w wątku zarządzanego, ale nie za pomocą [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metody lub z poziomu [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metody, które nie tolerują wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|WYNIK CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` została wywołana w czasie nieobsługiwany. Dzieje się tak, jeśli metoda jest wywoływana w wątku zarządzanego, ale nie za pomocą [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metody lub z poziomu [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metody, które nie tolerują wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Uwagi  
  Podczas wykonywania procedury detach detach wątku (Wątek utworzony specjalnie z myślą o odłączanie profilera) od czasu do czasu sprawdza, czy wszystkie wątki zamknięciu kodu profilera. Profilera powinien podać prognozę, jak długo powinien zostać za pośrednictwem `dwExpectedCompletionMilliseconds` parametru. Dobrym wartości do użycia to typowe ilość czasu profilera zużywa wewnątrz żadnej podanej `ICorProfilerCallback*` metody; ta wartość nie powinna być mniejsza niż połowy maksymalną ilość czasu profilera oczekuje poświęcić.  
@@ -75,7 +63,7 @@ HRESULT RequestProfilerDetach(
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  

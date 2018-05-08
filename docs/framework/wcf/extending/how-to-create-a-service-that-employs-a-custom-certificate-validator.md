@@ -1,36 +1,22 @@
 ---
-title: "Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów"
-ms.custom: 
+title: 'Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0a48801b1d4674b81a0e4b54a80b69d026ce2af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów
 W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryfikacji certyfikatów i sposobie konfigurowania poświadczeń klienta lub usługę, należy zastąpić domyślną logikę sprawdzania poprawności certyfikatu niestandardowego modułu weryfikacji certyfikatów.  
   
- Jeśli certyfikat X.509 jest używany do uwierzytelniania klienta lub usługę, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] domyślnie używa magazynu certyfikatów systemu Windows i interfejsu API szyfrowania do weryfikacji certyfikatu i upewnij się, że jest zaufany. Czasami certyfikatu wbudowanych funkcji sprawdzania poprawności nie jest wystarczająco i musi zostać zmienione. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia łatwy sposób zmień logikę sprawdzania poprawności, pozwalając użytkownikom na dodawanie niestandardowego modułu weryfikacji certyfikatów. Jeśli określono niestandardowego modułu weryfikacji certyfikatów, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie korzysta z logikę weryfikacji certyfikatu wbudowanych, ale zamiast tego zależy niestandardowego modułu weryfikacji.  
+ Jeśli certyfikat X.509 jest używany do uwierzytelniania klienta lub usługę, Windows Communication Foundation (WCF) domyślnie korzysta z magazynu certyfikatów systemu Windows i interfejsu API szyfrowania weryfikacji certyfikatu i upewnij się, że jest zaufany. Czasami certyfikatu wbudowanych funkcji sprawdzania poprawności nie jest wystarczająco i musi zostać zmienione. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia łatwy sposób zmień logikę sprawdzania poprawności, pozwalając użytkownikom na dodawanie niestandardowego modułu weryfikacji certyfikatów. Jeśli określono niestandardowego modułu weryfikacji certyfikatów, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie korzysta z logikę weryfikacji certyfikatu wbudowanych, ale zamiast tego zależy niestandardowego modułu weryfikacji.  
   
 ## <a name="procedures"></a>Procedury  
   

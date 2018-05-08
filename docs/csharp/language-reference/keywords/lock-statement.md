@@ -1,24 +1,17 @@
 ---
 title: lock — Instrukcja (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-caps.latest.revision: 43
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb48c2b1554ad2817406eaef42b4cb336ea46862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lock-statement-c-reference"></a>lock — Instrukcja (odwołanie w C#)
 `lock` — Słowo kluczowe oznacza blok instrukcji jako sekcja krytyczna uzyskania wzajemnego wykluczeń dla danego obiektu, wykonywania instrukcji, a następnie zwolnienie blokady. Poniższy przykład zawiera `lock` instrukcji.  
@@ -54,11 +47,11 @@ class Account
   
  Ogólnie rzecz biorąc, należy unikać blokowania na `public` typu lub wystąpień poza swój kod sterowania. Typowe konstrukcje `lock (this)`, `lock (typeof (MyType))`, i `lock ("myLock")` narusza niniejsze wytyczne:  
   
--   `lock (this)`jest to problem, jeśli wystąpienie jest dostępny publicznie.  
+-   `lock (this)` jest to problem, jeśli wystąpienie jest dostępny publicznie.  
   
--   `lock (typeof (MyType))`jest problem, jeśli `MyType` jest dostępny publicznie.  
+-   `lock (typeof (MyType))` jest problem, jeśli `MyType` jest dostępny publicznie.  
   
--   `lock("myLock")`jest to problem, ponieważ innego kodu w procesie przy użyciu tych samych parametrach współużytkują tego samego blokady.  
+-   `lock("myLock")` jest to problem, ponieważ innego kodu w procesie przy użyciu tych samych parametrach współużytkują tego samego blokady.  
   
  Najlepszym rozwiązaniem jest określenie `private` obiekt, aby zablokować, lub `private static` zmienna obiektu, aby chronić dane wspólne dla wszystkich wystąpień.  
   
@@ -87,5 +80,5 @@ class Account
  [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)  
  <xref:System.Threading.Monitor>  
  [Operacje blokowane](../../../standard/threading/interlocked-operations.md)  
- [Autoresetevent —](../../../standard/threading/autoresetevent.md)  
+ [AutoResetEvent](../../../standard/threading/autoresetevent.md)  
  [Synchronizacja wątku](../../programming-guide/concepts/threading/thread-synchronization.md)

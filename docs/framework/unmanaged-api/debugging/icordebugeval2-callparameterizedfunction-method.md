@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval2::CallParameterizedFunction — Metoda"
-ms.custom: 
+title: ICorDebugEval2::CallParameterizedFunction — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval2.CallParameterizedFunction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 055ded7f3309ff1011d1ca390daf353cba870376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction — Metoda
 Konfiguruje wywołanie do określonego ICorDebugFunction, które mogą być zagnieżdżone wewnątrz klasy, w których Konstruktor pobiera <xref:System.Type> parametrów lub mogą się zająć <xref:System.Type> parametrów.  
@@ -67,7 +55,7 @@ HRESULT CallParameterizedFunction (
  [in] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugValue, który reprezentuje wartość przekazano argument funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `CallParameterizedFunction`przypomina [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) z tą różnicą, że funkcja może być wewnątrz klasy z parametrami typu, może się zająć parametry typu lub obie. Argumenty typu należy najpierw dla klasy, a następnie dla funkcji.  
+ `CallParameterizedFunction` przypomina [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) z tą różnicą, że funkcja może być wewnątrz klasy z parametrami typu, może się zająć parametry typu lub obie. Argumenty typu należy najpierw dla klasy, a następnie dla funkcji.  
   
  Jeśli funkcja znajduje się w domenie innej aplikacji, nastąpi przejście. Jednak wszystkie argumenty typu i wartości muszą być w docelowej domenie aplikacji.  
   
@@ -80,4 +68,4 @@ HRESULT CallParameterizedFunction (
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

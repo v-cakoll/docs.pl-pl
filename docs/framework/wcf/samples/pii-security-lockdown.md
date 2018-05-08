@@ -1,27 +1,17 @@
 ---
-title: "Blokada zabezpieczeń PII"
-ms.custom: 
+title: Blokada zabezpieczeń PII
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-caps.latest.revision: "25"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 39f805da7570b81ff1f6593e82f5d0a9310ee9c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
-W tym przykładzie pokazano sposób kontrolowania kilka funkcji związanych z zabezpieczeniami programu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] przez:  
+W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezpieczeniami usług Windows Communication Foundation (WCF) przez:  
   
 -   Szyfrowanie poufnych informacji w pliku konfiguracji usługi.  
   
@@ -34,7 +24,7 @@ W tym przykładzie pokazano sposób kontrolowania kilka funkcji związanych z za
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
@@ -43,7 +33,7 @@ W tym przykładzie pokazano sposób kontrolowania kilka funkcji związanych z za
   
  Pliki konfiguracji .NET Framework mogą zawierać poufne informacje, takie jak parametry połączenia z bazami danych. W scenariuszach udostępnionego, hostowanych w sieci Web może być pożądane, aby zaszyfrować te informacje w pliku konfiguracji dla usługi tak, aby dane zawarte w pliku konfiguracji jest odporna na wyświetlanie zwykłych. .NET framework 2.0 lub nowszy ma możliwość szyfrowania części pliku konfiguracji za pomocą programowania interfejsu (DPAPI) lub dostawcy usług kryptograficznych RSA aplikacji ochrony danych systemu Windows. Aspnet_regiis.exe przy użyciu DPAPI lub RSA można zaszyfrować wybierz części pliku konfiguracji.  
   
- W scenariuszach hostowanych w sieci Web jest możliwe usług w podkatalogach innych usług. Domyślne semantycznego określania wartości konfiguracji umożliwia pliki konfiguracyjne w katalogach zagnieżdżone, aby zastąpić wartości konfiguracji w katalogu nadrzędnym. W niektórych sytuacjach może to być niepożądane z różnych przyczyn. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Usługa konfiguracji obsługuje blokowania wartości konfiguracji, dzięki czemu zagnieżdżone konfiguracji generuje wyjątki, gdy jest uruchamiana usługa zagnieżdżonych przy użyciu przesłonięcia wartości konfiguracji.  
+ W scenariuszach hostowanych w sieci Web jest możliwe usług w podkatalogach innych usług. Domyślne semantycznego określania wartości konfiguracji umożliwia pliki konfiguracyjne w katalogach zagnieżdżone, aby zastąpić wartości konfiguracji w katalogu nadrzędnym. W niektórych sytuacjach może to być niepożądane z różnych przyczyn. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Usługa konfiguracji obsługuje blokowania wartości konfiguracji, dzięki czemu zagnieżdżone konfiguracji generuje wyjątki, gdy jest uruchamiana usługa zagnieżdżonych przy użyciu przesłonięcia wartości konfiguracji.  
   
  W tym przykładzie pokazano, jak sterujące rejestrowaniem z znane osobiście informacji osobowych w dziennikach śledzenia i wiadomości, takie jak nazwa użytkownika i hasło. Domyślnie rejestrowanie znanych danych jest wyłączona, jednak w niektórych sytuacjach może być ważne dla debugowania aplikacji rejestrowanie danych osobowych. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ponadto w tym przykładzie użyto śledzenie i rejestrowanie komunikatów. Aby uzyskać więcej informacji, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbki.  
   

@@ -1,23 +1,16 @@
 ---
-title: "Operatory (Przewodnik programowania w języku C#)"
+title: Operatory (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 W języku C# *operator* jest element program, który jest stosowany do co najmniej jeden *operandy* w wyrażenia lub instrukcji. Operatory, które mają jeden operand, takich jak operator inkrementacji (`++`) lub `new`, są określane jako *jednoargumentowy* operatorów. Operatory, które przyjmują dwóch argumentów operacji, takich jak operatory arytmetyczne (`+`,`-`,`*`,`/`), są określane jako *binarne* operatorów. Jeden operator, operator warunkowy (`?:`), ma trzy operandy i jest jedyny operator trójargumentowy w języku C#.  
@@ -53,12 +46,12 @@ W języku C# *operator* jest element program, który jest stosowany do co najmni
 |[Nowy](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Utworzenie obiektu i delegata|  
 |`new` T(...){...}|Utworzenie obiektu za pomocą inicjatora. Zobacz [inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
 |`new` {...}|Inicjator obiektu anonimowego. Zobacz [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
-|`new` T[...]|Utworzenie tablicy. Zobacz [tablice](../../../csharp/programming-guide/arrays/index.md).|  
+|`new` T [...]|Utworzenie tablicy. Zobacz [tablice](../../../csharp/programming-guide/arrays/index.md).|  
 |[TypeOf](../../../csharp/language-reference/keywords/typeof.md)(T)|Uzyskanie obiektu System.Type dla typu T|  
 |[zaznaczone](../../../csharp/language-reference/keywords/checked.md)(x)|Obliczenie wyrażenia w kontekście sprawdzanym|  
 |[Zaznaczenie opcji](../../../csharp/language-reference/keywords/unchecked.md)(x)|Obliczenie wyrażenia w kontekście niesprawdzanym|  
 |[domyślne](../../../csharp/language-reference/keywords/default.md) (T)|Uzyskanie wartości domyślnej typu T|  
-|[Delegowanie](../../../csharp/language-reference/keywords/delegate.md) {}|Funkcja anonimowa (metoda anonimowa)|  
+|[Delegat](../../../csharp/language-reference/keywords/delegate.md) {}|Funkcja anonimowa (metoda anonimowa)|  
   
  **Operatory jednoargumentowe**  
   
@@ -91,7 +84,7 @@ W języku C# *operator* jest element program, który jest stosowany do co najmni
   
 |Wyrażenie|Opis|  
 |----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Przesunięcie w lewo|  
+|x [ < \< ](../../../csharp/language-reference/operators/left-shift-operator.md) y|Przesunięcie w lewo|  
 |x [ >> ](../../../csharp/language-reference/operators/right-shift-operator.md) y|Przesunięcie w prawo|  
   
  **Relacyjnych i wpisz operatory**  
@@ -100,7 +93,7 @@ W języku C# *operator* jest element program, który jest stosowany do co najmni
 |----------------|-----------------|  
 |x [ \< ](../../../csharp/language-reference/operators/less-than-operator.md) y|Mniejsze niż|  
 |x [ > ](../../../csharp/language-reference/operators/greater-than-operator.md) y|Większe niż|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|Mniejsze niż lub równe|  
+|x [ \< = ](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|Mniejsze niż lub równe|  
 |x [ >= ](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|Większe niż lub równe|  
 |x [jest](../../../csharp/language-reference/keywords/is.md) T|Zwraca wartość true, gdy x jest typu T; w przeciwnym razie zwraca wartość false|  
 |x [jako](../../../csharp/language-reference/keywords/as.md) T|Zwraca wartość x jako wartość typu T lub zwraca wartość null, jeśli x nie jest typu T|  

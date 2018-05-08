@@ -1,38 +1,26 @@
 ---
-title: "Instrukcje: Konfigurowanie klienta programu WCF do współdziałania z usługami WES3.0"
-ms.custom: 
+title: 'Instrukcje: Konfigurowanie klienta programu WCF do współdziałania z usługami WES3.0'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e30403f9c97f31e93c22a9658ffb74d4d02a49ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Instrukcje: Konfigurowanie klienta programu WCF do współdziałania z usługami WES3.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Klienci są przewodowy poziom zgodny z 3.0 rozszerzenia usługi sieci Web dla usług platformy Microsoft .NET (WSE), kiedy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów są skonfigurowane do korzystania z sierpnia 2004 wersja specyfikacji WS-Addressing.  
+Klientów systemu Windows Communication Foundation (WCF) są zgodny poziom przewodowy z 3.0 rozszerzenia usługi sieci Web dla usług platformy Microsoft .NET (WSE), gdy klienci WCF są skonfigurowane do korzystania z sierpnia 2004 wersja specyfikacji WS-Addressing.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Aby skonfigurować klienta programu WCF na potrzeby współdziałania z usługą sieci Web programu WSE 3.0  
   
-1.  Uruchom [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta usługi sieci Web programu WSE 3.0.  
+1.  Uruchom [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można utworzyć klienta WCF dla usługi sieci Web programu WSE 3.0.  
   
-     Usługi sieci Web programu WSE [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utworzeniu klasy klienta.  
+     Dla usługi sieci Web programu WSE tworzony jest klasa klienta WCF.  
   
-     Aby uzyskać więcej informacji o tworzeniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, zobacz [porady: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Aby uzyskać więcej informacji o tworzeniu klienta WCF, zobacz [porady: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Utwórz klasę, która reprezentuje powiązanie, który może komunikować się z usługami WSE 3.0 w sieci Web.  
   
@@ -61,13 +49,13 @@ ms.lasthandoff: 01/19/2018
   
 3.  W kodzie aplikacji klienta Dodaj kod, aby ustawić właściwości powiązania.  
   
-     Poniższy przykład kodu Określa, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta musi używać uwierzytelniania i ochrony wiadomości, zgodnie z definicją w WSE 3.0 `AnonymousForCertificate` potwierdzenia zabezpieczeń gotowe. Ponadto wymagane są bezpieczne sesje i kluczy pochodnych.  
+     Poniższy przykład kodu Określa, że klient WCF musi używać ochrony wiadomości oraz uwierzytelnianie zgodnie z definicją w WSE 3.0 `AnonymousForCertificate` potwierdzenia zabezpieczeń gotowe. Ponadto wymagane są bezpieczne sesje i kluczy pochodnych.  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje niestandardowego powiązania, który udostępnia właściwości, które odpowiadają właściwości potwierdzenia zabezpieczeń gotowe WSE 3.0. Wiązanie niestandardowe o nazwie `WseHttpBinding`, jest następnie używany do określania właściwości powiązania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta.  
+ Poniższy przykładowy kod definiuje niestandardowego powiązania, który udostępnia właściwości, które odpowiadają właściwości potwierdzenia zabezpieczeń gotowe WSE 3.0. Wiązanie niestandardowe o nazwie `WseHttpBinding`, jest następnie używany do określania właściwości powiązania dla klienta programu WCF.  
   
   
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]

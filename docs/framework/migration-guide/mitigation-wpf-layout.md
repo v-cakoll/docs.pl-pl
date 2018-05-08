@@ -1,24 +1,14 @@
 ---
-title: "Ograniczenie: układ platformy WPF"
-ms.custom: 
+title: 'Ograniczenie: układ platformy WPF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1dcbe970281f3d9cf3b8ffe9adb543afc120ae6b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a9bc9e14621b22cad6491f6f5132ef302e7ef06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mitigation-wpf-layout"></a>Ograniczenie: układ platformy WPF
 Układ formantów WPF mogą się nieznacznie zmieniać.  

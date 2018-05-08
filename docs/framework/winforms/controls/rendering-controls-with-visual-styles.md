@@ -1,13 +1,6 @@
 ---
-title: "Renderowanie formantów przy użyciu stylów wizualnych"
-ms.custom: 
+title: Renderowanie formantów przy użyciu stylów wizualnych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - professional appearance [Windows Forms], rendering Windows Forms controls
 - themes [Windows Forms], XP visual styles in Window Forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7f2d810567d37021d5d4473204d9950d6834b9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderowanie formantów przy użyciu stylów wizualnych
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zapewnia obsługę renderowania kontrolek i innych użytkowników systemu Windows elementy interfejsu użytkownika przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów obsługi w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla formantów renderowania i inne elementy interfejsu użytkownika z aktualnym stylu wizualnym systemu operacyjnego.  
@@ -65,9 +53,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="visual-style-element-and-rendering-classes"></a>Element stylu wizualnego i renderowania klas  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Przestrzeń nazw zawiera klasy, które mogą służyć do rysowania i uzyskać informacje na temat kontroli ani elementu interfejsu użytkownika, który jest obsługiwany przez stylów wizualnych. Są obsługiwane kontrolki typowych formantów, które mają klasy renderowania w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw (zobacz poprzedniej sekcji), a także inne formanty, takie jak formanty karty i formanty paska pomocniczego. Inne obsługiwane elementy interfejsu użytkownika obejmują części **Start** menu, paska zadań i obszar niekliencki systemu windows.  
   
- Klasy głównym <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeni nazw są <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> i <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>jest klasą foundation identyfikacji dowolnego elementu interfejsu formant lub użytkownika, obsługiwane przez stylów wizualnych. Oprócz <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeń nazw zawiera wiele zagnieżdżonych klas <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> z `static` właściwości, które zwracają <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> dla każdego stanu formantu, część kontroli lub innego elementu interfejsu użytkownika obsługiwanych przez visual style.  
+ Klasy głównym <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeni nazw są <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> i <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> jest klasą foundation identyfikacji dowolnego elementu interfejsu formant lub użytkownika, obsługiwane przez stylów wizualnych. Oprócz <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeń nazw zawiera wiele zagnieżdżonych klas <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> z `static` właściwości, które zwracają <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> dla każdego stanu formantu, część kontroli lub innego elementu interfejsu użytkownika obsługiwanych przez visual style.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>udostępnia metody, które rysowania i uzyskać informacje o poszczególnych <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> wynika z aktualnym stylu wizualnym systemu operacyjnego. Gdy można pobrać informacje o elemencie obejmuje jego domyślny rozmiar, typ tła i definicje kolorów. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>opakowuje funkcję style wizualne (UxTheme) interfejsu API z powłoki Windows części zestawu SDK platformy Windows. Aby uzyskać więcej informacji, zobacz [przy użyciu style wizualne XP Windows](https://msdn.microsoft.com/library/ms997649.aspx).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> udostępnia metody, które rysowania i uzyskać informacje o poszczególnych <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> wynika z aktualnym stylu wizualnym systemu operacyjnego. Gdy można pobrać informacje o elemencie obejmuje jego domyślny rozmiar, typ tła i definicje kolorów. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> opakowuje funkcję style wizualne (UxTheme) interfejsu API z powłoki Windows części zestawu SDK platformy Windows. Aby uzyskać więcej informacji, zobacz [przy użyciu style wizualne XP Windows](https://msdn.microsoft.com/library/ms997649.aspx).  
   
  Aby uzyskać więcej informacji o korzystaniu z <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> i <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, zobacz [porady: renderowanie elementu stylu wizualnego](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
   

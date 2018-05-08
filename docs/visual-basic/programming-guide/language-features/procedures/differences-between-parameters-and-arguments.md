@@ -1,12 +1,6 @@
 ---
-title: "Różnice pomiędzy parametrami i argumentami (Visual Basic)"
-ms.custom: 
+title: Różnice pomiędzy parametrami i argumentami (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], parameters
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b6613c64a24ef18239422b69f8b5320eadc95b92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a5075c218371b754ac883b97475ab941811966b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Różnice pomiędzy parametrami i argumentami (Visual Basic)
 W większości przypadków procedury musi mieć niektóre informacje na temat sytuacji, w których została wywołana. Procedury, która wykonuje zadania wielokrotnego lub udostępnionego używa różne informacje dla każdego wywołania. Te informacje składa się z zmienne, stałe i wyrażeń, które przekazujesz do procedury po jej wywołaniu.  
@@ -47,12 +38,12 @@ W większości przypadków procedury musi mieć niektóre informacje na temat sy
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Sub — procedury](./sub-procedures.md)  
+ [Sub, procedury](./sub-procedures.md)  
  [Procedury funkcji](./function-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Procedury operatorów](./operator-procedures.md)  
- [Porady: Definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)  
- [Porady: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
+ [Instrukcje: definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
  [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
- [Procedury cykliczne](./recursive-procedures.md)  
+ [Procedury rekursywne](./recursive-procedures.md)  
  [Przeciążanie procedury](./procedure-overloading.md)

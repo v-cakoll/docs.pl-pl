@@ -1,22 +1,16 @@
 ---
-title: "Finalizatory (C# przewodnik programowania w języku)"
+title: Finalizatory (C# przewodnik programowania w języku)
 ms.date: 05/10/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b1efe92c371e44eb2d650eb07facc3e7030e9766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (C# przewodnik programowania w języku)
 Finalizatory są używane do destruct wystąpień klas.  
@@ -78,7 +72,7 @@ protected override void Finalize()
   
 -   [Implementacja metody Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [Using — instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
+-   [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy trzech klas, które łańcuch dziedziczenia. Klasa `First` jest klasą bazową `Second` jest pochodną `First`, i `Third` jest pochodną `Second`. Wszystkie trzy ma finalizatory. W `Main`, tworzone jest wystąpienie klasy pochodnej większość. Po uruchomieniu tego programu, zwróć uwagę, że finalizatory dla trzech klas zostaną wywołane automatycznie i w kolejności, większość opartych na najmniejszą pochodny.  
@@ -92,4 +86,4 @@ protected override void Finalize()
  <xref:System.IDisposable>  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Wyrzucanie elementów bezużytecznych](../../../standard/garbage-collection/index.md)
+ [Odzyskiwanie pamięci](../../../standard/garbage-collection/index.md)

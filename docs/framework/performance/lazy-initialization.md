@@ -1,31 +1,19 @@
 ---
-title: "Inicjalizacja z opóźnieniem"
-ms.custom: 
+title: Inicjalizacja z opóźnieniem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
 *Inicjalizacja z opóźnieniem* obiektu oznacza, że jej tworzenia została odroczona aż najpierw jest używany. (W tym temacie warunki *incjalizacji* i *opóźnieniem wystąpienia* to samo.) Inicjalizacja z opóźnieniem służy głównie w celu zwiększenia wydajności, uniknąć niepotrzebne obliczeń i zmniejszyć wymagania dotyczące pamięci programu. Są to najbardziej typowych scenariuszy:  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Gdy został wybrany obiekt, który jest kosztowne i chcesz odroczenie jego tworzenia, aż do zakończenia inne kosztowne operacje. Załóżmy na przykład, że program ładuje kilka wystąpień obiektu podczas uruchamiania, ale tylko niektóre z nich są wymagane natychmiast. Aby zwiększyć wydajność uruchamiania programów, należy odkładanie Inicjowanie obiektów, które nie są wymagane do czasu utworzenia wymaganych obiektów.  
   
- Mimo że można napisać własny kod do wykonania inicjowania z opóźnieniem, zaleca się używanie <xref:System.Lazy%601> zamiast tego. <xref:System.Lazy%601>oraz jego powiązanych typów również obsługuje bezpieczeństwo wątków i zasad propagacji spójne wyjątku.  
+ Mimo że można napisać własny kod do wykonania inicjowania z opóźnieniem, zaleca się używanie <xref:System.Lazy%601> zamiast tego. <xref:System.Lazy%601> oraz jego powiązanych typów również obsługuje bezpieczeństwo wątków i zasad propagacji spójne wyjątku.  
   
  Poniższa tabela zawiera listę typów, które .NET Framework w wersji 4 udostępnia umożliwiające Inicjalizacja z opóźnieniem w różnych scenariuszy.  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  Niektóre <xref:System.Lazy%601> mieć konstruktorów <xref:System.Threading.LazyThreadSafetyMode> parametru o nazwie `mode`. Konstruktory te zapewniają tryb awaryjny wątku dodatkowe. W poniższej tabeli przedstawiono, jak bezpieczeństwo wątku <xref:System.Lazy%601> obiektu dotyczy parametrami konstruktora, które określają bezpieczeństwo wątków. Każdy Konstruktor ma co najwyżej jeden taki parametr.  
   
-|Bezpieczeństwo wątków obiektu|`LazyThreadSafetyMode``mode` parametru|Wartość logiczna `isThreadSafe` parametru|Brak parametrów bezpieczeństwa wątków|  
+|Bezpieczeństwo wątków obiektu|`LazyThreadSafetyMode` `mode` Parametr|Wartość logiczna `isThreadSafe` parametru|Brak parametrów bezpieczeństwa wątków|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Pełni wątkowo; tylko jeden wątek jednocześnie umożliwia podjęcie próby zainicjowania wartość.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Tak.|  
 |Nie wątkowo.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Nie dotyczy.|  
@@ -113,8 +101,8 @@ ms.lasthandoff: 12/22/2017
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Nie|Nie|  
 |Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Tak|  
-|Lazy(T)(Boolean)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
-|Lazy(T)(FUNC(T), wartość logiczna)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Tak|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
+|Lazy(T)(FUNC(T), wartość logiczna)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Tak|  
 |Lazy(T)(LazyThreadSafetyMode)|Określone przez użytkownika|Nie|Nie|  
 |Lazy(T)(FUNC(T), LazyThreadSafetyMode)|Określone przez użytkownika|Tak|Nie, jeśli użytkownik określi <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; w przeciwnym razie tak.|  
   
@@ -137,7 +125,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601>otacza znacznie taki sam sposób jak jego obiekt <xref:System.Lazy%601>, z tych podstawowych różnic:  
+ <xref:System.Threading.ThreadLocal%601> otacza znacznie taki sam sposób jak jego obiekt <xref:System.Lazy%601>, z tych podstawowych różnic:  
   
 -   Każdy wątek inicjuje zmiennej lokalnej wątku przy użyciu własnego dane prywatne, który nie jest dostępny z innych wątków.  
   

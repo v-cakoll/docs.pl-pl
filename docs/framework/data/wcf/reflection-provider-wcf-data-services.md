@@ -1,31 +1,17 @@
 ---
-title: "Dostawca odbicia (usługi danych WCF)"
-ms.custom: 
+title: Dostawca odbicia (usługi danych WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6885ee7976461379513e8e579f58160146769a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Dostawca odbicia (usługi danych WCF)
-Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity Framework [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] mogą uwidaczniać ściśle nie jest zdefiniowany w modelu jednostki na podstawie danych. Dostawca odbicia udostępnia dane klas, które zwracają typów, które implementują <xref:System.Linq.IQueryable%601> interfejsu. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]używa odbicia do wywnioskowania modelu danych dla tych klas i może dokonywać translacji oparte na adresie zapytań względem zasobów na język kwerendy zintegrowanym (LINQ) — na podstawie zapytań dotyczących narażonych <xref:System.Linq.IQueryable%601> typów.  
+Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity Framework [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] mogą uwidaczniać ściśle nie jest zdefiniowany w modelu jednostki na podstawie danych. Dostawca odbicia udostępnia dane klas, które zwracają typów, które implementują <xref:System.Linq.IQueryable%601> interfejsu. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa odbicia do wywnioskowania modelu danych dla tych klas i może dokonywać translacji oparte na adresie zapytań względem zasobów na język kwerendy zintegrowanym (LINQ) — na podstawie zapytań dotyczących narażonych <xref:System.Linq.IQueryable%601> typów.  
   
 > [!NOTE]
 >  Można użyć <xref:System.Linq.Queryable.AsQueryable%2A> metodę, aby zwrócić <xref:System.Linq.IQueryable%601> każda klasa implementująca interfejs <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Dzięki temu najbardziej ogólnym typy kolekcji do użycia jako źródło danych dla usługi danych.  
@@ -102,7 +88,7 @@ Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity 
 |<xref:System.Data.Services.IUpdatable.SetValue%2A>|Udostępnia funkcje, które można ustawić wartości właściwości zasobu.|  
   
 ## <a name="handling-concurrency"></a>Obsługa współbieżności  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]obsługuje model optymistycznej współbieżności, umożliwiając zdefiniowanie tokenem współbieżności dla jednostki. Ten token współbieżności, który zawiera co najmniej jednej właściwości jednostki, jest używany przez usługę danych do określenia, czy w danych, który jest wymagany, zaktualizowanych lub usuniętych nastąpiła zmiana. Gdy wartości tokenu z elementem eTag w żądaniu różnią się od bieżących wartości podmiotu, wyjątek zgłoszony przez usługę danych. <xref:System.Data.Services.ETagAttribute> Jest stosowany do typu jednostki, aby zdefiniować tokenem współbieżności w dostawcy odbicia. Token współbieżności nie może zawierać właściwości klucza lub właściwości nawigacji. Aby uzyskać więcej informacji, zobacz [aktualizacji usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje model optymistycznej współbieżności, umożliwiając zdefiniowanie tokenem współbieżności dla jednostki. Ten token współbieżności, który zawiera co najmniej jednej właściwości jednostki, jest używany przez usługę danych do określenia, czy w danych, który jest wymagany, zaktualizowanych lub usuniętych nastąpiła zmiana. Gdy wartości tokenu z elementem eTag w żądaniu różnią się od bieżących wartości podmiotu, wyjątek zgłoszony przez usługę danych. <xref:System.Data.Services.ETagAttribute> Jest stosowany do typu jednostki, aby zdefiniować tokenem współbieżności w dostawcy odbicia. Token współbieżności nie może zawierać właściwości klucza lub właściwości nawigacji. Aby uzyskać więcej informacji, zobacz [aktualizacji usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Przy użyciu składnika LINQ to SQL z dostawcą odbicia  
  Ponieważ programu Entity Framework jest obsługiwany natywnie domyślnie, dostawcę danych zalecane jest dotyczące korzystania z danych relacyjnych z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Jednak można użyć dostawcy odbicia do użycia LINQ w klasach SQL z usługą danych. <xref:System.Data.Linq.Table%601> Zestawy, które są zwracane przez metody na wyników <xref:System.Data.Linq.DataContext> generowane przez składnik LINQ to SQL Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych) wdrożenie <xref:System.Linq.IQueryable%601> interfejsu. Dzięki temu dostawcy odbicia dostępu do tych metod i zwróć jednostki danych z programu SQL Server za pomocą wygenerowanego LINQ w klasach SQL. Jednak ponieważ LINQ do SQL nie implementuje <xref:System.Data.Services.IUpdatable> interfejsu, musisz dodać częściowej klasy, która rozszerza istniejący <xref:System.Data.Linq.DataContext> częściowej klasy, aby dodać <xref:System.Data.Services.IUpdatable> implementacji. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych przy użyciu składnika LINQ to SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  

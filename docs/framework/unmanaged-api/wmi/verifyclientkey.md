@@ -1,11 +1,7 @@
 ---
-title: "Funkcja VerifyClientKey (niezarządzany wykaz interfejsów API)"
-description: "Funkcja VerifyClientKey gwarantuje, że klucz klienta ma poprawne zabezpieczeń."
+title: Funkcja VerifyClientKey (niezarządzany wykaz interfejsów API)
+description: Funkcja VerifyClientKey gwarantuje, że klucz klienta ma poprawne zabezpieczeń.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - VerifyClientKey
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ada878ff8bc430ab2a2d48cac13a81b1f64d39f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="verifyclientkey-function"></a>Funkcja VerifyClientKey
 Zapewnia, że klucz klienta ma poprawnych zabezpieczeń.  
@@ -51,7 +44,7 @@ Jeśli funkcja nie powiedzie się, wartość zwracana jest kodu zera błąd zdef
   
  **Nagłówek:** WMINet_Utils.def  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

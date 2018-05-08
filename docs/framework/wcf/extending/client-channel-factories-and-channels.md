@@ -1,24 +1,12 @@
 ---
-title: "Klienta: Fabryk kanałów i kanały"
-ms.custom: 
+title: 'Klienta: Fabryk kanałów i kanały'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82e42a3dd4fbb29970b8e1a17333b66d85d2887b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>Klienta: Fabryk kanałów i kanały
 W tym temacie omówiono tworzenie fabryki kanałów i kanały.  
@@ -31,7 +19,7 @@ Fabryka kanałów tworzy kanałów.
   
  Po zamknięciu fabryk kanałów, które są zobowiązani do zamykania kanałów, które są tworzone, które nie są jeszcze zamknięty. Należy pamiętać, że model asymetrycznego tutaj ponieważ zamknięcie odbiornika kanałów tylko przestaje akceptować nowych kanałów, ale pozostawia otwartych istniejące kanały, dzięki czemu może nadal otrzymywać wiadomości.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia pomocników klasę podstawową dla tego procesu. (Dla diagramu klas pomocniczych kanału omówione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia pomocników klasę podstawową dla tego procesu. (Dla diagramu klas pomocniczych kanału omówione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> Klasa implementuje <xref:System.ServiceModel.ICommunicationObject> i wymusza automatu stanów opisany w kroku 2 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

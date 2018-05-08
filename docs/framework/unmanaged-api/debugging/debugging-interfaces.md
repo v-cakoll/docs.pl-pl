@@ -1,28 +1,18 @@
 ---
-title: "Debugowanie — Interfejsy"
-ms.custom: 
+title: Debugowanie — Interfejsy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], debugging
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
-caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e625818238a1fd18ef3885d2699e0f532efa40e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 991e333c53101a2be2a8a19d3960c3d0879619be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-interfaces"></a>Debugowanie — Interfejsy
 W tej sekcji opisano niezarządzane interfejsy obsługujące debugowanie programu wykonywanego w środowisku uruchomieniowym języka wspólnego (CLR).  
@@ -251,7 +241,7 @@ W tej sekcji opisano niezarządzane interfejsy obsługujące debugowanie program
  Dostarcza metody do przetwarzania wywołań zwrotnych debugera.  
   
  [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- Dostarcza metody umożliwiające obsługę wyjątków debugera i obsługujące asystentów zarządzanego debugowania (MDA). `ICorDebugManagedCallback2`jest logiczną rozszerzenie `ICorDebugManagedCallback`.  
+ Dostarcza metody umożliwiające obsługę wyjątków debugera i obsługujące asystentów zarządzanego debugowania (MDA). `ICorDebugManagedCallback2` jest logiczną rozszerzenie `ICorDebugManagedCallback`.  
   
  [ICorDebugManagedCallback3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)  
  Dostarcza metodę wywołania zwrotnego, która wskazuje, że zgłoszono powiadomienie włączenia niestandardowego debugera.  

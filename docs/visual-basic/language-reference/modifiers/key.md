@@ -1,11 +1,6 @@
 ---
 title: Key (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousKey
 helpviewer_keywords:
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 20dbe4e67fb3e415ba0202555ace7fd5afed68d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92d54e3135142bc02a17f3ce5ac078a356c139be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key` — Słowo kluczowe można określić zachowanie dla właściwości typu anonimowego. Tylko właściwości wyznaczone jako właściwości klucza brać udziału w testach równość wystąpień typu anonimowego lub obliczenia wartości skrótu kodu. Nie można zmienić wartości właściwości klucza.  
@@ -62,5 +54,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Definicja typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
- [Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [Instrukcje: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

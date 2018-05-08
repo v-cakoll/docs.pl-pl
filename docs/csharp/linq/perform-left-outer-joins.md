@@ -1,20 +1,13 @@
 ---
-title: "Wykonanie lewych sprzężeń zewnętrznych"
-description: "Jak wykonanie lewych sprzężeń zewnętrznych."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Wykonanie lewych sprzężeń zewnętrznych
+description: Jak wykonanie lewych sprzężeń zewnętrznych.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-ms.openlocfilehash: 0c28c85bf933a411403aefcb91801d28fe1c268e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aacab1ac6f4ab2c10b393cf0b2c578a13d9b9306
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-left-outer-joins"></a>Wykonanie lewych sprzężeń zewnętrznych
 Lewe sprzężenie zewnętrzne jest sprzężenia, w której każdy element pierwsza kolekcja jest zwracany, niezależnie od tego, czy ma żadnych elementów skorelowane w druga kolekcja. LINQ umożliwia wykonywanie lewe sprzężenie zewnętrzne, wywołując <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> metody w wynikach sprzężenia grupy.  
@@ -34,7 +27,7 @@ Lewe sprzężenie zewnętrzne jest sprzężenia, w której każdy element pierws
 ## <a name="see-also"></a>Zobacz także  
  <xref:System.Linq.Enumerable.Join%2A>  
  <xref:System.Linq.Enumerable.GroupJoin%2A>  
- [Wykonanie sprzężeń wewnętrznych](perform-inner-joins.md)  
- [Wykonanie sprzężeń grupowanych](perform-grouped-joins.md)  
+ [Wykonywanie sprzężeń wewnętrznych](perform-inner-joins.md)  
+ [Wykonywanie sprzężeń grupowanych](perform-grouped-joins.md)  
  [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)  
  

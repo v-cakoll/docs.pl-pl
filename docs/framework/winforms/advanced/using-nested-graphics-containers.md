@@ -1,13 +1,6 @@
 ---
-title: "Używanie zagnieżdżonych kontenerów grafiki"
-ms.custom: 
+title: Używanie zagnieżdżonych kontenerów grafiki
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>Używanie zagnieżdżonych kontenerów grafiki
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]udostępnia kontenerów, które można użyć, aby tymczasowo zastąpić lub rozszerzyć część stanu w <xref:System.Drawing.Graphics> obiektu. Kontener można utworzyć przez wywołanie metody <xref:System.Drawing.Graphics.BeginContainer%2A> metody <xref:System.Drawing.Graphics> obiektu. Możesz wywołać <xref:System.Drawing.Graphics.BeginContainer%2A> wielokrotnie w celu utworzenia zagnieżdżone kontenery. Każde wywołanie <xref:System.Drawing.Graphics.BeginContainer%2A> muszą łączyć się z wywołania <xref:System.Drawing.Graphics.EndContainer%2A>.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia kontenerów, które można użyć, aby tymczasowo zastąpić lub rozszerzyć część stanu w <xref:System.Drawing.Graphics> obiektu. Kontener można utworzyć przez wywołanie metody <xref:System.Drawing.Graphics.BeginContainer%2A> metody <xref:System.Drawing.Graphics> obiektu. Możesz wywołać <xref:System.Drawing.Graphics.BeginContainer%2A> wielokrotnie w celu utworzenia zagnieżdżone kontenery. Każde wywołanie <xref:System.Drawing.Graphics.BeginContainer%2A> muszą łączyć się z wywołania <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Przekształcenia w zagnieżdżonych kontenerów  
  Poniższy przykład tworzy <xref:System.Drawing.Graphics> obiekt i kontener, w tym <xref:System.Drawing.Graphics> obiektu. Transformacja świata z <xref:System.Drawing.Graphics> obiekt jest translacja 100 w kierunku x i 80 jednostek w kierunku y. Transformacja świata kontenera jest 30 stopni. Kod sprawia, że wywołanie `DrawRectangle(pen, -60, -30, 120, 60)` dwa razy. W pierwszym wywołaniu <xref:System.Drawing.Graphics.DrawRectangle%2A> znajduje się wewnątrz kontenera; wywołanie jest Between wywołań <xref:System.Drawing.Graphics.BeginContainer%2A> i <xref:System.Drawing.Graphics.EndContainer%2A>. Drugie wywołanie <xref:System.Drawing.Graphics.DrawRectangle%2A> po wywołaniu <xref:System.Drawing.Graphics.EndContainer%2A>.  

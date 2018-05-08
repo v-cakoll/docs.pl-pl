@@ -1,33 +1,19 @@
 ---
 title: Wybieranie typu poświadczeń
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 756017462ccaf8a555b0634e8a43cfdd3bc63d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-a-credential-type"></a>Wybieranie typu poświadczeń
-*Poświadczenia* są dane [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa w celu ustalenia tożsamości lub funkcji. Na przykład usługi passport jest poświadczenia, który wystawia Rząd potwierdzenie możliwości dostępnych w kraju lub regionie. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczeń, jak są używane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oraz sposobu wybierania prawo poświadczeń dla aplikacji.  
+*Poświadczenia* są dane Windows Communication Foundation (WCF) używa do określania tożsamości lub możliwości. Na przykład usługi passport jest poświadczenia, który wystawia Rząd potwierdzenie możliwości dostępnych w kraju lub regionie. W programie WCF poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczeń, sposób ich użycia w programie WCF oraz sposobu wybierania prawo poświadczeń dla aplikacji.  
   
  W wielu innych krajów i regionów prawa jazdy jest przykładem poświadczenie. Licencji zawiera dane, które reprezentują tożsamość osoby i możliwości. Zawiera ona dowodu posiadania w formie obrazu właściciel. Licencji wystawiony przez zaufany urząd zwykle rządowych działu licencjonowania. Licencja jest zapieczętowany i może zawierać hologram, pokazujący, że nie został zmieniony przez niepowołane lub podrobić.  
   
- Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Na przykład, należy wziąć pod uwagę dwa typy obsługiwanych w poświadczeń [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: nazwa użytkownika oraz (X.509) certyfikatu poświadczeń.  
+ Umożliwienie korzystania z poświadczeń polega na prezentacji danych i dowodu posiadania danych. Usługi WCF obsługuje różne typy poświadczeń na poziomie zabezpieczeń transportu i komunikatu. Na przykład, należy wziąć pod uwagę dwa typy obsługiwane w programie WCF poświadczenia: nazwa użytkownika oraz (X.509) certyfikatu poświadczeń.  
   
  Dla poświadczenie nazwy użytkownika tożsamości reprezentuje nazwę użytkownika i hasło zawiera dowodu posiadania. Zaufany urząd to w takim przypadku system, który sprawdza poprawność nazwy użytkownika i hasła.  
   
@@ -41,7 +27,7 @@ ms.lasthandoff: 04/30/2018
 |Brak|Określa, że klient musi przedstawiać żadnego poświadczenia. Umożliwia to anonimowym klientem.|  
 |Podstawowy|Określa uwierzytelnianie podstawowe dla klienta. Aby uzyskać dodatkowe informacje, zobacz RFC2617 —[uwierzytelnianie HTTP: Basic i uwierzytelniania szyfrowanego](http://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Skrót|Określa uwierzytelnianie szyfrowane dla klienta. Aby uzyskać dodatkowe informacje, zobacz RFC2617 —[uwierzytelnianie HTTP: Basic i uwierzytelniania szyfrowanego](http://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Uwierzytelnianie NTLM|Określa uwierzytelnianie NT LAN Manager (NTLM). To jest używany, gdy z jakiegoś powodu nie można użyć uwierzytelniania Kerberos. Można również wyłączyć jako rezerwowe, ustawiając <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwości `false`, co powoduje, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dokonanie optymalnych zostać zgłoszony wyjątek, jeśli używane jest uwierzytelnianie NTLM. Należy pamiętać, że ustawienie tej właściwości na `false` może uniemożliwia poświadczeń NTLM są przesyłane przez sieć.|  
+|Uwierzytelnianie NTLM|Określa uwierzytelnianie NT LAN Manager (NTLM). To jest używany, gdy z jakiegoś powodu nie można użyć uwierzytelniania Kerberos. Można również wyłączyć jako rezerwowe, ustawiając <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwości `false`, co powoduje, że WCF dokonanie optymalnych zostać zgłoszony wyjątek, jeśli używane jest uwierzytelnianie NTLM. Należy pamiętać, że ustawienie tej właściwości na `false` może uniemożliwia poświadczeń NTLM są przesyłane przez sieć.|  
 |Windows|Określa uwierzytelnianie systemu Windows. Aby określić tylko protokołu Kerberos w domenie systemu Windows, należy ustawić <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwości `false` (wartość domyślna to `true`).|  
 |certyfikat|Wykonuje uwierzytelnianie klienta przy użyciu certyfikatu X.509.|  
 |Hasło|Użytkownik musi podać nazwę użytkownika i hasło. Sprawdź poprawność pary nazwa/hasło użytkownika za pomocą uwierzytelniania systemu Windows lub inne niestandardowe rozwiązanie.|  
@@ -53,17 +39,17 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |Brak|Określa, że klient musi przedstawiać poświadczeń. Umożliwia to anonimowym klientem.|  
 |Windows|Umożliwia wymianę wiadomości SOAP występuje w kontekście zabezpieczeń ustanowione za pomocą poświadczeń systemu Windows.|  
-|Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta z poświadczenie nazwy użytkownika. Należy pamiętać, że [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie zezwala na wszystkie operacje kryptograficzne z nazwami użytkowników, takich jak generowania podpis i szyfrowanie danych. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia, że transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
+|Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta z poświadczenie nazwy użytkownika. Należy zauważyć, że WCF nie pozwala operacji kryptograficznych z nazwy użytkownika, takie jak generowania podpis i szyfrowanie danych. WCF gwarantuje, że transport jest zabezpieczony, korzystając z poświadczeń nazwy użytkownika.|  
 |certyfikat|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu X.509.|  
 |Wystawiony Token|Niestandardowy typ tokenu skonfigurowane zgodnie z zasadami zabezpieczeń. Domyślny typ tokenu to zabezpieczeń potwierdzenia Markup Language (SAML). Bezpieczne usługi tokenu wystawiła token. Aby uzyskać więcej informacji, zobacz [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Model negocjacji poświadczenia usługi  
  *Negocjowanie* to proces ustanawiania relacji zaufania między klientem a usługą poprzez wymianę poświadczeń. Proces jest wykonywany wielokrotnie powtarzane między klientem i usługi, aby ujawnić tylko te informacje, które są niezbędne do następnego kroku w procesie negocjacji. W praktyce wynik końcowy jest dostarczanie poświadczeń usługi do klienta, który ma być używana podczas kolejnych operacji.  
   
- Z jednym wyjątkiem domyślnie powiązania dostarczane przez system w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatycznie negocjowania poświadczeń usługi, korzystając z zabezpieczeniami na poziomie wiadomości. (Wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding>, który nie obsługuje zabezpieczeń domyślnie.) Aby wyłączyć to zachowanie, zobacz <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> i <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> właściwości.  
+ Z jednym wyjątkiem domyślnie powiązania dostarczane przez system, w programie WCF negocjowania poświadczeń usługi automatycznie przy użyciu zabezpieczeń na poziomie komunikatu. (Wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding>, który nie obsługuje zabezpieczeń domyślnie.) Aby wyłączyć to zachowanie, zobacz <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> i <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> właściwości.  
   
 > [!NOTE]
->  Gdy zabezpieczeń SSL jest używany z programem .NET Framework 3.5 lub nowszego oraz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klient używa zarówno certyfikaty pośrednie w magazynie certyfikatów i certyfikaty pośrednie otrzymał podczas negocjacji w protokole SSL podczas weryfikacji łańcucha certyfikatu certyfikat usługi. .NET framework 3.0 używa tylko certyfikaty pośrednie zainstalowane w lokalnym magazynie certyfikatów.  
+>  Stosowania zabezpieczeń SSL z programem .NET Framework 3.5 lub nowszym klienta WCF używa zarówno certyfikaty pośrednie w magazynie certyfikatów i certyfikaty pośrednie otrzymał podczas negocjacji w protokole SSL podczas weryfikacji łańcucha certyfikatu usługi certyfikat. .NET framework 3.0 używa tylko certyfikaty pośrednie zainstalowane w lokalnym magazynie certyfikatów.  
   
 #### <a name="out-of-band-negotiation"></a>Negocjowanie poza pasmem  
  Po wyłączeniu automatycznej negocjacji poświadczenie usługi musi zainicjowana dla klienta przed wysłaniem komunikaty do usługi. Jest to nazywane również *poza pasmem* inicjowania obsługi administracyjnej. Na przykład jeśli określony typ poświadczeń jest certyfikatem, a automatyczne negocjacji jest wyłączone, klient musi skontaktować się Właściciel usługi do pobierania i instalowania certyfikatu na komputerze z uruchomionym aplikacji klienckiej. Można to zrobić, na przykład, jeśli chcesz ściśle kontrolować, które mogą uzyskać dostęp klienci usługi w scenariuszu business-to-business. Ten limit z-poza pasmem — negocjowanie może odbywać się w wiadomości e-mail, a certyfikat X.509 jest przechowywany w magazynie certyfikatów systemu Windows, przy użyciu narzędzia, takiego jak przystawki Certyfikaty programu Microsoft Management Console (MMC).  
@@ -90,7 +76,7 @@ ms.lasthandoff: 04/30/2018
  Jeśli klient określa prawidłową nazwę użytkownika i hasło, to poświadczenie jest używane do uwierzytelniania klienta. W przeciwnym razie używane są poświadczenia bieżącego zalogowanego użytkownika.  
   
 ### <a name="setting-client-credentials"></a>Ustawianie poświadczeń klienta  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], użyj aplikacji klienckich [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, aby połączyć się z usługami. Każdy klient pochodzi z <xref:System.ServiceModel.ClientBase%601> klasy i <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> na kliencie umożliwia określenie różnych wartości poświadczeń klienta.  
+ W programie WCF aplikacje klienckie użyć klienta programu WCF do nawiązania połączenia usługi. Każdy klient pochodzi z <xref:System.ServiceModel.ClientBase%601> klasy i <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> na kliencie umożliwia określenie różnych wartości poświadczeń klienta.  
   
 #### <a name="setting-a-certificate"></a>Ustawienia certyfikatu  
  Aby udostępnić usługi za pomocą certyfikatu X.509, który jest używany do uwierzytelniania klienta do usługi, użyj <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> klasy.  
@@ -98,7 +84,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Jak poświadczeń klienta są używane do uwierzytelniania klienta do usługi  
  Klient poświadczenia wymagane do komunikacji z usługą informacje przy użyciu <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwości lub <xref:System.ServiceModel.ChannelFactory.Credentials%2A> właściwości. Bezpieczny kanał używa tych informacji do uwierzytelniania klienta do usługi. Uwierzytelnianie jest przeprowadzane za pomocą jednego z dwóch trybów:  
   
--   Przed wysłaniem pierwszego komunikatu przy użyciu poświadczeń klienta są używane raz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wystąpienie klienta, aby ustanowić kontekst zabezpieczeń. Wszystkie komunikaty aplikacji są następnie zabezpieczone za pomocą kontekstu zabezpieczeń.  
+-   Klient używane są poświadczenia raz przed wysłaniem pierwszego komunikatu przy użyciu wystąpienia klienta WCF ustanowić kontekstu zabezpieczeń. Wszystkie komunikaty aplikacji są następnie zabezpieczone za pomocą kontekstu zabezpieczeń.  
   
 -   Poświadczenia klienta są używane do uwierzytelniania każdej wiadomości aplikacji wysyłane do usługi. W takim przypadku kontekst nie zostanie nawiązane między klientem a usługą.  
   
@@ -106,7 +92,7 @@ ms.lasthandoff: 04/30/2018
  W przypadku pierwsza metoda ustalonym kontekstem jest stałe skojarzone z tożsamością klienta. Oznacza to, że po ustanowieniu kontekstu zabezpieczeń nie można zmienić tożsamość skojarzoną z klienta.  
   
 > [!IMPORTANT]
->  Istnieje sytuacja pod uwagę podczas tożsamości nie można przełączyć (to znaczy podczas ustanawiania zabezpieczeń kontekstu jest włączona, domyślnie). Po utworzeniu usługi, która komunikuje się z usługą drugi tożsamość użyty do otwarcia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta drugi usługi nie można zmienić. To stanie się problemem, jeśli wielu klientów mogą korzystać z pierwszej usługi i usługa personifikuje klientów podczas uzyskiwania dostępu do usługi drugiego. Jeśli usługa ponownie używa tego samego klienta dla wszystkich obiektów wywołujących, wszystkie połączenia z usługą drugi są wykonywane z tożsamością pierwszy obiekt wywołujący, który został użyty do otwarcia klienta usługi drugiego. Innymi słowy usługa używa tożsamości pierwszego klienta dla wszystkich klientów do komunikacji z usługą drugiego. Może to spowodować podniesienie uprawnień. Jeśli nie jest zamierzone zachowanie usługi, musi śledzić każdy obiekt wywołujący i tworzenia nowego klienta do drugiego usługi dla każdego obiektu wywołującego w odrębnych i upewnić, że usługa używa tylko prawo klienta do obiektu wywołującego w prawo do komunikowania się z usługą drugiego.  
+>  Istnieje sytuacja pod uwagę podczas tożsamości nie można przełączyć (to znaczy podczas ustanawiania zabezpieczeń kontekstu jest włączona, domyślnie). Po utworzeniu usługi, która komunikuje się z usługą drugi tożsamości użyty do otwarcia klienta WCF drugi usługi nie można zmienić. To stanie się problemem, jeśli wielu klientów mogą korzystać z pierwszej usługi i usługa personifikuje klientów podczas uzyskiwania dostępu do usługi drugiego. Jeśli usługa ponownie używa tego samego klienta dla wszystkich obiektów wywołujących, wszystkie połączenia z usługą drugi są wykonywane z tożsamością pierwszy obiekt wywołujący, który został użyty do otwarcia klienta usługi drugiego. Innymi słowy usługa używa tożsamości pierwszego klienta dla wszystkich klientów do komunikacji z usługą drugiego. Może to spowodować podniesienie uprawnień. Jeśli nie jest zamierzone zachowanie usługi, musi śledzić każdy obiekt wywołujący i tworzenia nowego klienta do drugiego usługi dla każdego obiektu wywołującego w odrębnych i upewnić, że usługa używa tylko prawo klienta do obiektu wywołującego w prawo do komunikowania się z usługą drugiego.  
   
  Aby uzyskać więcej informacji na temat poświadczeń i bezpieczne sesje, zobacz [zagadnienia dotyczące zabezpieczeń dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   

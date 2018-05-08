@@ -1,13 +1,6 @@
 ---
 title: 'Porady: wybieranie zakresu dat w formancie MonthCalendar formularzy systemu Windows'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32555097c25a23ca1de6e20308a420d3ec70caf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b6d64fcffb02c4496cff3f2821861117b0062fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Porady: wybieranie zakresu dat w formancie MonthCalendar formularzy systemu Windows
 Ważna cecha formularzy systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant jest, że użytkownik może wybrać zakres dat. Ta funkcja jest ulepszoną funkcję wyboru daty <xref:System.Windows.Forms.DateTimePicker> określanie tylko umożliwia użytkownikowi wybranie wartość jednej daty/godziny. Możesz ustawić zakresu dat lub pobrać wybranego zakresu określonego przez tego użytkownika za pomocą właściwości <xref:System.Windows.Forms.MonthCalendar> formantu. W poniższym przykładzie pokazano, jak ustawić wybranego zakresu.  

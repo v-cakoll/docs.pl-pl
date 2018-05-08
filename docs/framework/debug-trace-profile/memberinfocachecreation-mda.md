@@ -1,13 +1,6 @@
 ---
 title: memberInfoCacheCreation MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - member info cache creation
 - MemberInfoCacheCreation MDA
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d82e77e2a47a9b0feb36ca054c0abcff2721940
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 `memberInfoCacheCreation` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.Reflection.MemberInfo> pamięci podręcznej. To silne wskazanie program, który jest użycie funkcji odbicia zasobów.  

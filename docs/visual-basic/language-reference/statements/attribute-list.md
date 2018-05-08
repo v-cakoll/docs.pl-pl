@@ -1,23 +1,15 @@
 ---
-title: "Lista atrybutów (Visual Basic)"
+title: Lista atrybutów (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>Lista atrybutów (Visual Basic)
 Określa atrybuty, które ma zostać zastosowany do zadeklarowany element. Wiele atrybutów są rozdzielane przecinkami. Poniżej przedstawiono składnię jeden atrybut.  
@@ -33,13 +25,13 @@ Określa atrybuty, które ma zostać zastosowany do zadeklarowany element. Wiele
  Wymagany dla atrybutów zastosowanych na początku pliku źródłowego. Może być [zestawu](../../../visual-basic/language-reference/modifiers/assembly.md) lub [modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md).  
   
  `attributename`  
- Wymagany. Nazwa atrybutu.  
+ Wymagana. Nazwa atrybutu.  
   
  `attributearguments`  
- Opcjonalny. Lista argumentów pozycyjnych dla tego atrybutu. Używanie wielu argumentów są oddzielone przecinkami.  
+ Opcjonalna. Lista argumentów pozycyjnych dla tego atrybutu. Używanie wielu argumentów są oddzielone przecinkami.  
   
  `attributeinitializer`  
- Opcjonalny. Listy inicjatorów zmienna lub właściwość dla tego atrybutu. Wiele inicjatory są oddzielone przecinkami.  
+ Opcjonalna. Listy inicjatorów zmienna lub właściwość dla tego atrybutu. Wiele inicjatory są oddzielone przecinkami.  
   
 ## <a name="remarks"></a>Uwagi  
  Co najmniej jeden atrybut można stosować do niemal dowolnego elementu programistycznego (typy, procedur, właściwości i tak dalej). Atrybuty są wyświetlane w metadanych zestawu i mogą pomóc adnotacji kodu lub określić sposób użycia konkretnego elementu programistycznego. Można zastosować atrybutów zdefiniowanych przez Visual Basic i .NET Framework, a można definiować własne atrybuty.  
@@ -54,7 +46,7 @@ Określa atrybuty, które ma zostać zastosowany do zadeklarowany element. Wiele
   
 -   **Część deklaracji.** Atrybut musi być w deklaracji elementu oddzielną instrukcję. Można użyć sekwencji kontynuacji wiersza (" `_`") do rozszerzenia instrukcji deklaracji na wiele wierszy kodu źródłowego.  
   
--   **Modyfikatorów.** Modyfikator atrybutu (`Assembly` lub `Module`) jest wymagany na każdy atrybut zastosowany do elementu programistycznego na początku pliku źródłowego. Atrybut modyfikatorów nie są dozwolone na atrybuty stosowane do elementów, które nie są na początku pliku źródłowego.  
+-   **Modyfikatory.** Modyfikator atrybutu (`Assembly` lub `Module`) jest wymagany na każdy atrybut zastosowany do elementu programistycznego na początku pliku źródłowego. Atrybut modyfikatorów nie są dozwolone na atrybuty stosowane do elementów, które nie są na początku pliku źródłowego.  
   
 -   **Argumenty.** Wszystkie argumenty pozycyjne atrybutu musi poprzedzać wszystkie inicjatory zmienna lub właściwość.  
   
@@ -63,10 +55,10 @@ Określa atrybuty, które ma zostać zastosowany do zadeklarowany element. Wiele
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>Wskazuje, że procedura oparte na atrybutach reprezentuje punkt wejścia w niezarządzanych biblioteki dołączanej (dynamicznie DLL). Ten atrybut zawiera nazwy biblioteki DLL jako argument pozycyjny oraz inne informacje jako inicjatory zmiennej.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> Wskazuje, że procedura oparte na atrybutach reprezentuje punkt wejścia w niezarządzanych biblioteki dołączanej (dynamicznie DLL). Ten atrybut zawiera nazwy biblioteki DLL jako argument pozycyjny oraz inne informacje jako inicjatory zmiennej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestawu](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
  [Moduł \<— słowo kluczowe >](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
  [Atrybuty — omówienie](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Porady: przerywanie i łączenie instrukcji w Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+ [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

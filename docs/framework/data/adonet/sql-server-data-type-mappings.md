@@ -1,26 +1,12 @@
 ---
 title: Mapowanie typu danych serwera SQL
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e1af00ba0a1f631868711f191c028a04c5e0441a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapowanie typu danych serwera SQL
 SQL Server i programu .NET Framework są oparte na systemach innego typu. Na przykład, .NET Framework <xref:System.Decimal> struktury ma maksymalną skalę 28, natomiast typy danych numerycznych i dziesiętnych programu SQL Server ma maksymalną skalę wynosząca 38. Zachowanie spójności danych podczas odczytywania i zapisywania danych, <xref:System.Data.SqlClient.SqlDataReader> ujawnia specyficzne dla programu SQL Server typu metody dostępu, które zwracają obiekty <xref:System.Data.SqlTypes> oraz metod dostępu, które zwracają .NET Framework typów. Zarówno program SQL Server typy i .NET Framework, również są przedstawiane przez wyliczeń w <xref:System.Data.DbType> i <xref:System.Data.SqlDbType> klasy, które można używać podczas określania <xref:System.Data.SqlClient.SqlParameter> typów danych.  

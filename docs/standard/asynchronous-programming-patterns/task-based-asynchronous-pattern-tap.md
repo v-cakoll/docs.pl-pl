@@ -1,13 +1,7 @@
 ---
 title: Wzorzec asynchroniczny oparty na zadaniach (TAP)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3c3d768414a5cd8a8a9fd4a7e120f74d70827729
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Wzorzec asynchroniczny oparty na zadaniach (TAP)
 Na podstawie jest oparty na zadaniach asynchronicznej wzorca (TAP) <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> typy w <xref:System.Threading.Tasks?displayProperty=nameWithType> przestrzeni nazw, które są używane do reprezentowania dowolnego operacji asynchronicznych. Wzorzec TAP jest zalecanym asynchronicznym wzorcem projektowym dla nowych prac deweloperskich.  
@@ -77,7 +66,7 @@ Na podstawie jest oparty na zadaniach asynchronicznej wzorca (TAP) <xref:System.
   
  Jeśli token anulowania zażądał anulowania przed wywołaniem metody NACIŚNIJ akceptującego token jest wywoływana, metoda NACIŚNIJ powinna zwrócić <xref:System.Threading.Tasks.TaskStatus.Canceled> zadań.  Jeśli jednak żądanie anulowania zostanie zgłoszone, gdy trwa operacja asynchroniczna, operacja asynchroniczna nie musi akceptować żądania anulowania.  Zadanie zwrócone powinien kończyć się <xref:System.Threading.Tasks.TaskStatus.Canceled> stan tylko, jeśli operacja kończy się w wyniku żądania anulowania. Jeśli zażądano anulowania, ale wynik lub wyjątek nadal jest generowany, zadanie powinien kończyć się <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> lub <xref:System.Threading.Tasks.TaskStatus.Faulted> stanu. 
  
- Dla metod asynchronicznych, które mają być ujawnia możliwość anulowane przede wszystkim nie trzeba podać przeciążenia, które nie akceptuje token anulowania. W przypadku metod, które nie mogą być anulowane, nie należy dostarczać przeciążeń, które akceptują token anulowania. Pomaga to wskazać obiektowi wywołującemu, czy metodę docelową można w rzeczywistości anulować.  Kod użytkownika, który nie potrzeby anulowania może wywołać metodę, która akceptuje <xref:System.Threading.CancellationToken> i podaj <xref:System.Threading.CancellationToken.None%2A> jako wartość argumentu. <xref:System.Threading.CancellationToken.None%2A>jest funkcjonalnym odpowiednikiem domyślnie <xref:System.Threading.CancellationToken>.  
+ Dla metod asynchronicznych, które mają być ujawnia możliwość anulowane przede wszystkim nie trzeba podać przeciążenia, które nie akceptuje token anulowania. W przypadku metod, które nie mogą być anulowane, nie należy dostarczać przeciążeń, które akceptują token anulowania. Pomaga to wskazać obiektowi wywołującemu, czy metodę docelową można w rzeczywistości anulować.  Kod użytkownika, który nie potrzeby anulowania może wywołać metodę, która akceptuje <xref:System.Threading.CancellationToken> i podaj <xref:System.Threading.CancellationToken.None%2A> jako wartość argumentu. <xref:System.Threading.CancellationToken.None%2A> jest funkcjonalnym odpowiednikiem domyślnie <xref:System.Threading.CancellationToken>.  
   
 ## <a name="progress-reporting-optional"></a>Raportowanie postępu (opcjonalnie)  
  Niektóre operacje asynchroniczne korzystają z dostarczania powiadomień na temat postępu. Zazwyczaj są one używane do aktualizowania interfejsu użytkownika za pomocą informacji o postępie operacji asynchronicznej. 

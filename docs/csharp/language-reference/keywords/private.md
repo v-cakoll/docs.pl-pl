@@ -1,24 +1,17 @@
 ---
 title: private (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - private_CSharpKeyword
 - private
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d9cc8f86166888b47a758e200182d319c68ca6d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26eab2912923c9fcae1ce930bd5b59a2740d500e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="private-c-reference"></a>private (odwołanie w C#)
 `private` — Słowo kluczowe jest modyfikator dostępu elementu członkowskiego. 
@@ -56,6 +49,6 @@ class Employee
  [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)  
  [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
- [publiczny](../../../csharp/language-reference/keywords/public.md)  
- [chronione](../../../csharp/language-reference/keywords/protected.md)  
- [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)

@@ -1,13 +1,6 @@
 ---
 title: Sub — Procedury (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3286df1a5babfcf7d6b759ff5c9a920bb44f51ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub — Procedury (Visual Basic)
 A `Sub` procedura jest serię instrukcji języka Visual Basic otoczony `Sub` i `End Sub` instrukcje. `Sub` Procedury wykonuje zadanie, a następnie zwraca sterowania do kodu wywołującego, ale nie zwraca wartości do wywołującego kodu.  

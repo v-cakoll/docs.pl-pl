@@ -1,12 +1,7 @@
 ---
-title: "Uzupełnianie ciągów w .NET"
-ms.custom: 
+title: Uzupełnianie ciągów w .NET
 ms.date: 03/15/2018
-ms.prod: .net
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,15 +15,11 @@ helpviewer_keywords:
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bf90c841c8fff21dd423fcd19613b5eb46a2c80c
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f8b71908d817625ca38f3b53a10fc20e9103ee15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="padding-strings-in-net"></a>Uzupełnianie ciągów w .NET
 

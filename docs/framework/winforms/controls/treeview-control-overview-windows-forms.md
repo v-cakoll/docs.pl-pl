@@ -1,30 +1,16 @@
 ---
-title: "TreeView — Informacje o formancie [Formularze systemu Windows]"
-ms.custom: 
+title: TreeView — Informacje o formancie [Formularze systemu Windows]
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TreeView
 helpviewer_keywords:
 - TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bbe8549268c2b67b67184966e938f7d62b766a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6326f8976e20b5b72e1b6690ab323c8581411156
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView — Informacje o formancie [Formularze systemu Windows]
 Windows Forms <xref:System.Windows.Forms.TreeView> sterowania, można wyświetlić hierarchię węzłów do użytkowników, takich jak sposób pliki i foldery są wyświetlane w okienku po lewej stronie Eksploratora Windows funkcji systemu operacyjnego Windows. Każdy węzeł w widoku drzewa może zawierać innych węzłów, nazywany *węzłów podrzędnych*. Można wyświetlić węzłów nadrzędnych lub węzłów, które zawiera węzły podrzędne jako rozwinięte lub zwinięte. Widok drzewa o pola wyboru obok węzłów można także wyświetlić, ustawiając widok drzewa <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> właściwości `true`. Można następnie programowo wybierz lub wyczyść pole wyboru węzłów przez ustawienie węzła <xref:System.Windows.Forms.TreeNode.Checked%2A> właściwości `true` lub `false`.  

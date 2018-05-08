@@ -1,10 +1,6 @@
 ---
 title: Słowa kluczowe języka C#
 ms.date: 03/07/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.keywords
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-caps.latest.revision: 22
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 60833d372bc54c83c1f491f1f779b597b3ab97dc
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f14cac08a2f110d97b8f9f660eb3dd1e664165c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C#
 Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, które mają specjalne znaczenie w kompilatorze. Nie można używać jako identyfikatorów w programie, chyba że zawierają one `@` jako prefiksu. Na przykład `@if` jest prawidłowym identyfikatorem, ale `if` jest ponieważ `if` jest słowem kluczowym.  
@@ -55,13 +48,13 @@ Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, któ
   
 ||||  
 |---|---|---|  
-|[add](../../../csharp/language-reference/keywords/add.md)|[alias](../../../csharp/language-reference/keywords/extern-alias.md)|[ascending](../../../csharp/language-reference/keywords/ascending.md)|  
+|[add](../../../csharp/language-reference/keywords/add.md)|[Alias](../../../csharp/language-reference/keywords/extern-alias.md)|[ascending](../../../csharp/language-reference/keywords/ascending.md)|  
 |[async](../../../csharp/language-reference/keywords/async.md)|[await](../../../csharp/language-reference/keywords/await.md)|[descending](../../../csharp/language-reference/keywords/descending.md)|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|[Z](../../../csharp/language-reference/keywords/from-clause.md)|[get](../../../csharp/language-reference/keywords/get.md)|  
 |[global](../../../csharp/language-reference/keywords/global.md)|[Grupy](../../../csharp/language-reference/keywords/group-clause.md)|[into](../../../csharp/language-reference/keywords/into.md)|  
-|[join](../../../csharp/language-reference/keywords/join-clause.md)|[let](../../../csharp/language-reference/keywords/let-clause.md)|[nameof](nameof.md)|   
+|[join](../../../csharp/language-reference/keywords/join-clause.md)|[Let](../../../csharp/language-reference/keywords/let-clause.md)|[nameof](nameof.md)|   
 |[orderby](../../../csharp/language-reference/keywords/orderby-clause.md)|[Partial (typ)](../../../csharp/language-reference/keywords/partial-type.md)|[Partial — metoda)](../../../csharp/language-reference/keywords/partial-method.md)|   
-|[remove](../../../csharp/language-reference/keywords/remove.md)|[select](../../../csharp/language-reference/keywords/select-clause.md)|[set](../../../csharp/language-reference/keywords/set.md)|   
+|[remove](../../../csharp/language-reference/keywords/remove.md)|[Wybierz](../../../csharp/language-reference/keywords/select-clause.md)|[set](../../../csharp/language-reference/keywords/set.md)|   
 |[value](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[when (warunek filtru)](when.md)|   
 |[where (ograniczenie typu ogólnego)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[gdzie (klauzula kwerendy)](../../../csharp/language-reference/keywords/where-clause.md)|[yield](../../../csharp/language-reference/keywords/yield.md)|  
   

@@ -1,24 +1,12 @@
 ---
-title: "Moduł weryfikacji certyfikatów X.509"
-ms.custom: 
+title: Moduł weryfikacji certyfikatów X.509
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08ccbbf50db089841d2af2205c7a7cb289a8767c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d9aa14af3ded11bcd373f38656763036e83b0bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="x509-certificate-validator"></a>Moduł weryfikacji certyfikatów X.509
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego modułu weryfikacji certyfikatów X.509. Jest to przydatne w sytuacjach, gdy żaden z wbudowanych tryby walidacji certyfikatu X.509 nie jest odpowiednią do wymagań aplikacji. W tym przykładzie pokazano usługi, która ma niestandardowego modułu weryfikacji akceptuje własnym wystawionych certyfikatów. Klient używa takiego certyfikatu do uwierzytelnienia w usłudze.  
@@ -365,6 +353,6 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1.  Uruchamianie Cleanup.bat w folderze Przykłady po ukończeniu działania próbki. Spowoduje to usunięcie certyfikaty serwera i klienta z magazynu certyfikatów.  
   
 > [!NOTE]
->  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania na komputerach w przykładzie. Jeśli uruchomiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] przykłady, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania na komputerach w przykładzie. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Zobacz też

@@ -1,17 +1,13 @@
 ---
 title: Znaki specjalne (odwołanie w Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4203197166c15a93e71df0b0b61002bdf030924
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.openlocfilehash: 04cc2ca4efe91ecfefce69583e0102823d11a5a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-characters-visual-basic-reference"></a>Znaki specjalne (odwołanie w Visual Basic)
 
@@ -20,5 +16,5 @@ Znaki specjalne są wstępnie zdefiniowane, kontekstowe znaki, które modyfikuje
 - [$](interpolated.md), znaków ciągu interpolowanym.
 
 ## <a name="see-also"></a>Zobacz też  
-[Odwołanie w Visual Basic](../../../csharp/language-reference/index.md)   
+[Dokumentacja języka Visual Basic](../../../csharp/language-reference/index.md)   
  

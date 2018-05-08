@@ -1,24 +1,12 @@
 ---
 title: Buforowane odbierania
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="buffered-receive"></a>Buforowane odbierania
 W tym przykładzie pokazano, jak instalowanie i konfigurowanie funkcji receive buforowane w systemie Windows Workflow Foundation (WF). Buforowane odbierania umożliwia autorowi przepływu pracy utworzyć przepływ pracy bez konieczności martwić o kolejność, w którym są odbierane wiadomości. Funkcja odbierania buforowanego buforuje wiadomości lokalnie i dostarcza je, gdy przepływ pracy jest gotowa do ich odebrania.  
@@ -31,12 +19,12 @@ W tym przykładzie pokazano, jak instalowanie i konfigurowanie funkcji receive b
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
 ## <a name="discussion"></a>Omówienie  
- W tym przykładzie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługa jest wdrażana przy użyciu [!INCLUDE[wf1](../../../../includes/wf1-md.md)] i ma sekwencji <xref:System.ServiceModel.Activities.Receive> działań. Ten przepływ pracy modele pożyczki prosty proces zatwierdzania, gdy przepływ pracy oczekuje trzy powiadomienia pożyczki zatwierdzenia. A [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacja kliencka wysyła trzy skorelowane powiadomienia w odwrotnej kolejności oczekuje usługi. Ponieważ funkcja buforowanego receive jest włączona w usłudze, każdy komunikat poza kolejnością jest buforowana w usłudze i przetwarzania przepływu pracy będzie gotowa do odbioru go.  
+ W tym przykładzie usługi Windows Communication Foundation (WCF) jest implementowany przy użyciu [!INCLUDE[wf1](../../../../includes/wf1-md.md)] i ma sekwencji <xref:System.ServiceModel.Activities.Receive> działań. Ten przepływ pracy modele pożyczki prosty proces zatwierdzania, gdy przepływ pracy oczekuje trzy powiadomienia pożyczki zatwierdzenia. Aplikacja kliencka Windows Communication Foundation (WCF) wysyła trzy skorelowane powiadomienia w odwrotnej kolejności oczekuje usługi. Ponieważ funkcja buforowanego receive jest włączona w usłudze, każdy komunikat poza kolejnością jest buforowana w usłudze i przetwarzania przepływu pracy będzie gotowa do odbioru go.  
   
  Funkcja odbierania buforowanego wymaga <xref:System.ServiceModel.Activities.ReceiveContent> wsparciu powiązanie, w związku z tym usługa używa <xref:System.ServiceModel.NetMsmqBinding>. Konfiguracja nie specjalne jest wymagane dla tego powiązania, dlatego są używane wartości domyślne.  
   
@@ -115,6 +103,6 @@ W tym przykładzie pokazano, jak instalowanie i konfigurowanie funkcji receive b
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

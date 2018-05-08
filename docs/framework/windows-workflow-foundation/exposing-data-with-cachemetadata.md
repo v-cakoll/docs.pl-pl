@@ -1,23 +1,12 @@
 ---
-title: "Udostępnianie danych z CacheMetadata"
-ms.custom: 
+title: Udostępnianie danych z CacheMetadata
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a25e658d512cf0575a4e3902a9a951099675e29a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 386bbb8734e26eff8079f2913284668125a8a774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Udostępnianie danych z CacheMetadata
 Przed wykonaniem działania, czas wykonywania przepływu pracy uzyskuje wszystkie informacje o działaniach wymaganych w celu zachowania jego wykonywania. Te informacje podczas wykonywania pobiera środowiska uruchomieniowego przepływu pracy <xref:System.Activities.Activity.CacheMetadata%2A> metody. Domyślna implementacja tej metody zawiera środowiska wykonawczego o wszystkich publicznych argumenty, zmienne i działań podrzędnych udostępnianych przez działania w czasie wykonania; Jeśli działanie wymaga więcej informacji do środowiska wykonawczego równą (na przykład prywatne elementy Członkowskie lub działań do zaplanowania przez działanie), ta metoda może zostać zastąpiona do tego celu.  
@@ -27,17 +16,17 @@ Przed wykonaniem działania, czas wykonywania przepływu pracy uzyskuje wszystki
   
 -   <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, lub <xref:System.Activities.InOutArgument%601> (argumentów ogólnych): argumenty są widoczne do środowiska wykonawczego jako argumenty z nazwą i wpisz nazwę ujawnionych właściwości i typ, odpowiedni kierunek i niektórych danych sprawdzania poprawności.  
   
--   <xref:System.Activities.Variable>lub jego żadnych podklasa klasy: elementy te są widoczne dla środowiska uruchomieniowego jako zmiennych publicznych.  
+-   <xref:System.Activities.Variable> lub jego żadnych podklasa klasy: elementy te są widoczne dla środowiska uruchomieniowego jako zmiennych publicznych.  
   
--   <xref:System.Activities.Activity>lub jego żadnych podklasa klasy: elementy te są widoczne dla środowiska uruchomieniowego jako działania podrzędnego publicznego. Domyślne zachowanie może być jawnie implementowane przez wywołanie metody <xref:System.Activities.ActivityMetadata.AddImportedChild%2A>, przekazując działania podrzędnego.  
+-   <xref:System.Activities.Activity> lub jego żadnych podklasa klasy: elementy te są widoczne dla środowiska uruchomieniowego jako działania podrzędnego publicznego. Domyślne zachowanie może być jawnie implementowane przez wywołanie metody <xref:System.Activities.ActivityMetadata.AddImportedChild%2A>, przekazując działania podrzędnego.  
   
--   <xref:System.Activities.ActivityDelegate>lub jego żadnych podklasa klasy: elementy te są widoczne dla środowiska uruchomieniowego pełnomocnikiem publicznego.  
+-   <xref:System.Activities.ActivityDelegate> lub jego żadnych podklasa klasy: elementy te są widoczne dla środowiska uruchomieniowego pełnomocnikiem publicznego.  
   
--   <xref:System.Collections.ICollection>typu <xref:System.Activities.Variable>: wszystkie elementy w kolekcji są widoczne dla środowiska uruchomieniowego jako zmiennych publicznych.  
+-   <xref:System.Collections.ICollection> typu <xref:System.Activities.Variable>: wszystkie elementy w kolekcji są widoczne dla środowiska uruchomieniowego jako zmiennych publicznych.  
   
--   <xref:System.Collections.ICollection>typu <xref:System.Activities.Activity>: wszystkie elementy w kolekcji są widoczne dla środowiska uruchomieniowego jako publiczne elementy podrzędne.  
+-   <xref:System.Collections.ICollection> typu <xref:System.Activities.Activity>: wszystkie elementy w kolekcji są widoczne dla środowiska uruchomieniowego jako publiczne elementy podrzędne.  
   
--   <xref:System.Collections.ICollection>typu <xref:System.Activities.ActivityDelegate>: wszystkie elementy w kolekcji są widoczne dla środowiska uruchomieniowego pełnomocnikiem publicznego.  
+-   <xref:System.Collections.ICollection> typu <xref:System.Activities.ActivityDelegate>: wszystkie elementy w kolekcji są widoczne dla środowiska uruchomieniowego pełnomocnikiem publicznego.  
   
  <xref:System.Activities.Activity.CacheMetadata%2A> Działań, które pochodzą z <xref:System.Activities.Activity>, <xref:System.Workflow.Activities.CodeActivity>, i <xref:System.Activities.AsyncCodeActivity> również działać zgodnie z powyższym, z wyjątkiem następujących różnic:  
   

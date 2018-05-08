@@ -1,13 +1,6 @@
 ---
-title: "Zdarzenia zmiany właściwości"
-ms.custom: 
+title: Zdarzenia zmiany właściwości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], change events
 - property value changes [WPF]
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac2a44eb92e384851bbe6ac860fd9b46d3377a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-change-events"></a>Zdarzenia zmiany właściwości
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]definiuje kilka zdarzeń, które zostały zgłoszone w odpowiedzi na zmianę wartości właściwości. Właściwość jest często właściwości zależności. Samym zdarzeniu jest czasami kierowanego zdarzenia i czasami jest standardem [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Definicji zdarzenia może być różna w zależności od scenariusza, ponieważ niektóre zmiany właściwości odpowiedniej są wysyłane za pośrednictwem drzewo elementu inne zmiany właściwości są zwykle tylko dotyczących obiektów, których zmianie właściwości.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiuje kilka zdarzeń, które zostały zgłoszone w odpowiedzi na zmianę wartości właściwości. Właściwość jest często właściwości zależności. Samym zdarzeniu jest czasami kierowanego zdarzenia i czasami jest standardem [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Definicji zdarzenia może być różna w zależności od scenariusza, ponieważ niektóre zmiany właściwości odpowiedniej są wysyłane za pośrednictwem drzewo elementu inne zmiany właściwości są zwykle tylko dotyczących obiektów, których zmianie właściwości.  
   
 ## <a name="identifying-a-property-change-event"></a>Identyfikowanie zdarzenie zmiany właściwości  
  Nie wszystkie zdarzenia, które zgłosiły zmiany właściwości są jawnie oznaczone jako zdarzenie zmiany właściwości, albo na podstawie wzorca podpisu lub wzorzec nazewnictwa. Ogólnie rzecz biorąc, opisu zdarzenia w [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] dokumentacji wskazuje, czy zdarzenie jest bezpośrednio związany z zmiany wartości właściwości zawiera odsyłacze między właściwości i zdarzenia.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Jeśli Twoje właściwość jest właściwością zależności niestandardowych lub jeśli pracujesz z klasy pochodnej której zdefiniowano kod wystąpienia, jest znacznie lepszą mechanizm śledzenia zmian właściwości, które korzysta z wbudowanej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu: wywołania zwrotne systemu właściwość <xref:System.Windows.CoerceValueCallback> i <xref:System.Windows.PropertyChangedCallback>. Aby uzyskać więcej informacji na temat korzystania z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system właściwości sprawdzania poprawności i wymuszenia, zobacz [wywołania zwrotne właściwości zależności i sprawdzania poprawności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) i [właściwości zależności niestandardowe](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>Zdarzenia DependencyPropertyChanged  
- Kolejną parę typów, które są częścią scenariusza zdarzenie zmiany właściwości jest <xref:System.Windows.DependencyPropertyChangedEventArgs> i <xref:System.Windows.DependencyPropertyChangedEventHandler>. Zdarzenia te zmiany właściwości nie są trasowane; są one standardowe [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzenia. <xref:System.Windows.DependencyPropertyChangedEventArgs>Dane zdarzenia nietypowe typ raportowania, ponieważ nie pochodzi od <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> jest strukturą, nie klasy.  
+ Kolejną parę typów, które są częścią scenariusza zdarzenie zmiany właściwości jest <xref:System.Windows.DependencyPropertyChangedEventArgs> i <xref:System.Windows.DependencyPropertyChangedEventHandler>. Zdarzenia te zmiany właściwości nie są trasowane; są one standardowe [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzenia. <xref:System.Windows.DependencyPropertyChangedEventArgs> Dane zdarzenia nietypowe typ raportowania, ponieważ nie pochodzi od <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> jest strukturą, nie klasy.  
   
  Zdarzenia, które używają <xref:System.Windows.DependencyPropertyChangedEventArgs> i <xref:System.Windows.DependencyPropertyChangedEventHandler> są nieco częściej niż `RoutedPropertyChanged` zdarzenia. Na przykład zdarzenia, które korzysta z tych typów <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
   

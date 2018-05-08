@@ -1,38 +1,26 @@
 ---
-title: "Podstawowe pojęcia programu Windows Communication Foundation"
-ms.custom: 
+title: Podstawowe pojęcia programu Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - concepts [WCF]
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
-Ten dokument zawiera widok ogólny [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architektury. Jest on przeznaczony do podstawowych pojęć i sposób ich dopasowania. Samouczek dotyczący tworzenia najprostszym wersji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i klienta, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md). Aby dowiedzieć się [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programowania, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
+Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jest on przeznaczony do podstawowych pojęć i sposób ich dopasowania. Samouczek dotyczący tworzenia najprostszym wersji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i klienta, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md). Aby dowiedzieć się [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programowania, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="wcf-fundamentals"></a>Podstawowe informacje na temat usługi WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]to środowisko uruchomieniowe i zestaw interfejsów API do tworzenia systemów, które wysyłać wiadomości między usług i klientów. Te same infrastruktura i interfejsy API są używane do tworzenia aplikacji, które komunikują się z innymi aplikacjami na tym samym komputerze lub w systemie znajduje się w innej firmy, który jest dostępny za pośrednictwem Internetu.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to środowisko uruchomieniowe i zestaw interfejsów API do tworzenia systemów, które wysyłać wiadomości między usług i klientów. Te same infrastruktura i interfejsy API są używane do tworzenia aplikacji, które komunikują się z innymi aplikacjami na tym samym komputerze lub w systemie znajduje się w innej firmy, który jest dostępny za pośrednictwem Internetu.  
   
 ### <a name="messaging-and-endpoints"></a>Obsługa komunikatów i punkty końcowe  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]opiera się na koncepcji komunikacji wiadomości i niczego, które mogą być modelowane zgodnie z komunikatu (na przykład żądania HTTP lub wiadomości MSMQ (MSMQ)) może być reprezentowany w jednolity sposób w modelu programowania. Dzięki temu ujednolicony interfejs API przez różne mechanizmy transportu.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] opiera się na koncepcji komunikacji wiadomości i niczego, które mogą być modelowane zgodnie z komunikatu (na przykład żądania HTTP lub wiadomości MSMQ (MSMQ)) może być reprezentowany w jednolity sposób w modelu programowania. Dzięki temu ujednolicony interfejs API przez różne mechanizmy transportu.  
   
  Model rozróżnia *klientów*, które są aplikacje, które inicjują komunikację, i *usług*, które są aplikacje, które poczekaj, aż klienci komunikują się z nimi i reagowanie na który komunikacji. Pojedynczej aplikacji może działać jako klient i usługa. Aby uzyskać przykłady, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md) i [sieci Peer-to-Peer](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
@@ -43,7 +31,7 @@ Ten dokument zawiera widok ogólny [!INCLUDE[indigo1](../../../includes/indigo1-
 ### <a name="communication-protocols"></a>Protokoły komunikacji  
  Jeden wymagany jest element stosu komunikacji *protokołu transportu*. Wiadomości mogą być wysyłane za pośrednictwem sieci intranet i Internet za pomocą transportu wspólne, takie jak HTTP i TCP. Uwzględniono innych transportów obsługujące komunikacji z aplikacjami usługi kolejkowania komunikatów i węzły w sieci równorzędnej siatki. Można dodać więcej mechanizmów transportu za pomocą wbudowanych rozszerzenia punkty [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
- Innego wymaganego elementu stosu komunikacji jest kodowanie, które określa sposób formatowania żadnych podanym komunikatem. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]udostępnia następujące rodzaje kodowania:  
+ Innego wymaganego elementu stosu komunikacji jest kodowanie, które określa sposób formatowania żadnych podanym komunikatem. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] udostępnia następujące rodzaje kodowania:  
   
 -   Kodowanie, interoperacyjne kodowania tekstu.  
   
@@ -54,7 +42,7 @@ Ten dokument zawiera widok ogólny [!INCLUDE[indigo1](../../../includes/indigo1-
  Można dodać więcej kodowania mechanizmów (na przykład kompresji kodowanie) przy użyciu wbudowanych rozszerzenia punkty [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ### <a name="message-patterns"></a>Wzorce wiadomości  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]obsługuje kilka wzorce obsługi komunikatów, w tym żądanie odpowiedź, jednokierunkowe i komunikację dupleksową. Różnych transportów obsługuje różne wzorce obsługi komunikatów, a w związku z tym wpływają na typy interakcji, które obsługują. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Interfejsów API i środowiska uruchomieniowego też pomóc Ci do wysyłania wiadomości w sposób bezpieczny i niezawodny.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje kilka wzorce obsługi komunikatów, w tym żądanie odpowiedź, jednokierunkowe i komunikację dupleksową. Różnych transportów obsługuje różne wzorce obsługi komunikatów, a w związku z tym wpływają na typy interakcji, które obsługują. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Interfejsów API i środowiska uruchomieniowego też pomóc Ci do wysyłania wiadomości w sposób bezpieczny i niezawodny.  
   
 ## <a name="wcf-terms"></a>Warunki WCF  
  Inne pojęć i terminów używanych w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dokumentacji to m.in.  
@@ -95,7 +83,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Składnik, który określa różne aspekty środowiska wykonawczego usługi, punkt końcowy, określonej operacji lub klienta. Zachowania są pogrupowane według zakresu: zachowań wspólnych globalnie wpływają na wszystkie punkty końcowe, zachowania usługi wpływania na aspekty tylko związane z usługą tylko właściwości powiązanych z punktu końcowego wpłynąć na zachowania punktu końcowego i zachowania poziomu operacji wpływają na konkretnym operacje. Na przykład jeden zachowanie usługi jest ograniczanie, który określa, w jaki sposób usługa reaguje, gdy część wiadomości grozi przeciąży możliwości obsługi. Zachowanie punktu końcowego z drugiej strony, określa tylko aspektów, które mają zastosowanie do punktów końcowych, jak i gdzie można znaleźć poświadczeń zabezpieczeń.  
   
  powiązania dostarczane przez system  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]zawiera liczbę powiązania dostarczane przez system. Te są kolekcjami elementów, które są zoptymalizowane pod kątem konkretnych scenariuszy wiązania. Na przykład <xref:System.ServiceModel.WSHttpBinding> zaprojektowano pod kątem współdziałania z usługami, które implementują różnych WS-* specyfikacji. Te wstępnie zdefiniowanych powiązań zaoszczędzić czas, z uwzględnieniem tylko te opcje, które można poprawnie zastosować do danego scenariusza. Jeśli wstępnie zdefiniowane powiązania nie spełnia wymagań, można tworzyć własnego niestandardowego powiązania.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera liczbę powiązania dostarczane przez system. Te są kolekcjami elementów, które są zoptymalizowane pod kątem konkretnych scenariuszy wiązania. Na przykład <xref:System.ServiceModel.WSHttpBinding> zaprojektowano pod kątem współdziałania z usługami, które implementują różnych WS-* specyfikacji. Te wstępnie zdefiniowanych powiązań zaoszczędzić czas, z uwzględnieniem tylko te opcje, które można poprawnie zastosować do danego scenariusza. Jeśli wstępnie zdefiniowane powiązania nie spełnia wymagań, można tworzyć własnego niestandardowego powiązania.  
   
  Konfiguracja i kodowania  
  Formant aplikacji można przeprowadzić albo za pomocą kodowania, za pośrednictwem konfiguracji, lub obie te grupy. Konfiguracja ma możliwość kogoś innego niż developer (na przykład administrator sieci), aby ustawić parametry klienta i usługi, po zapisaniu kodu i bez konieczności ponownego kompilowania. Konfiguracja nie tylko służy do ustawiania wartości podobnie jak adresy punktów końcowych, ale również umożliwia dalsze kontrolę umożliwiając dodać punkty końcowe, powiązania i zachowania. Kodowanie umożliwia deweloperowi zachować ścisłą kontrolę nad wszystkimi składnikami usługi lub klienta i wszelkich ustawień za pomocą konfiguracji mogą być kontrolowane i w razie potrzeby zastąpione przez kod.  
@@ -133,10 +121,10 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Aplikacja kliencka  
  Program, który wymienia wiadomości z jedną lub więcej punktów końcowych. Aplikacja kliencka rozpoczyna się od utworzenia wystąpienia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta i wywołanie metody [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta. Należy do pojedynczej aplikacji może zawierać zarówno klient, jak i usługi.  
   
- channel  
+ Kanał  
  Konkretną implementację elementu powiązania. Powiązanie reprezentuje konfigurację i kanał jest skojarzony z tym konfiguracji wdrożenia. W związku z tym jest skojarzone z każdym elementem powiązania kanału. Kanały stosu na siebie, aby utworzyć konkretną implementację powiązania: stosu kanału.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]klienta  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klienta  
  Aplikacja kliencka strukturą ujawniającą operacji usługi jako metody (w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] programowania w języku, takich jak Visual Basic lub Visual C#). Każdej aplikacji może obsługiwać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta, w tym aplikacji, która obsługuje usługę. W związku z tym istnieje możliwość utworzyć usługę, która obejmuje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów z innymi usługami.  
   
  A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta mogą być generowane automatycznie za pomocą [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) i wskazując uruchomioną usługę, która publikuje metadane.  

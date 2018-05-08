@@ -1,23 +1,14 @@
 ---
 title: Obiekty rozszerzalne
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>Obiekty rozszerzalne
 Wzorzec rozszerzonego obiektu jest używany, aby wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub aby dodać nowy stan do obiektu. Dołączony do jednego z obiekty rozszerzalne, dzięki rozszerzeniom zachowania w bardzo różnych etapach przetwarzania dostęp do stanu udostępnionego i dołączony do obiektu extensible wspólnej mogą uzyskiwać dostęp do funkcji.  
@@ -27,7 +18,7 @@ Wzorzec rozszerzonego obiektu jest używany, aby wydłużyć istniejące klasy �
   
  <xref:System.ServiceModel.IExtensibleObject%601> Interfejs jest implementowany przez typy, które umożliwiają <xref:System.ServiceModel.IExtension%601> obiektów, aby dostosować ich funkcje.  
   
- Obiekty rozszerzalne Zezwalaj na agregację dynamiczne <xref:System.ServiceModel.IExtension%601> obiektów. <xref:System.ServiceModel.IExtension%601>obiekty charakteryzują się interfejsu:  
+ Obiekty rozszerzalne Zezwalaj na agregację dynamiczne <xref:System.ServiceModel.IExtension%601> obiektów. <xref:System.ServiceModel.IExtension%601> obiekty charakteryzują się interfejsu:  
   
 ```  
 public interface IExtension<T>  
@@ -38,11 +29,11 @@ where T : IExtensibleObject<T>
 }  
 ```  
   
- Ograniczenie typu gwarantuje, że rozszerzenia można zdefiniować tylko dla klas, które są <xref:System.ServiceModel.IExtensibleObject%601>. <xref:System.ServiceModel.IExtension%601.Attach%2A>i <xref:System.ServiceModel.IExtension%601.Detach%2A> powiadamiać agregacji lub podziału.  
+ Ograniczenie typu gwarantuje, że rozszerzenia można zdefiniować tylko dla klas, które są <xref:System.ServiceModel.IExtensibleObject%601>. <xref:System.ServiceModel.IExtension%601.Attach%2A> i <xref:System.ServiceModel.IExtension%601.Detach%2A> powiadamiać agregacji lub podziału.  
   
  Jest on prawidłowy dla implementacji ograniczyć, gdy mogą być dodawane i usuwane z użyciem właściciela. Na przykład można uniemożliwić usunięcie całkowicie, brak zezwolenia Dodawanie lub usuwanie rozszerzeń, gdy właściciel lub rozszerzenia są w stanie nie zezwalaj na dodawanie jednocześnie do wielu właścicieli lub Zezwalaj tylko jednego dodanie następuje pojedynczego Usuń.  
   
- <xref:System.ServiceModel.IExtension%601>nie oznacza wszystkie interakcje z innych standardowych interfejsów zarządzanych. W szczególności <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> metody dla obiekt właściciela zwykle nie odłączyć jej rozszerzeń.  
+ <xref:System.ServiceModel.IExtension%601> nie oznacza wszystkie interakcje z innych standardowych interfejsów zarządzanych. W szczególności <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> metody dla obiekt właściciela zwykle nie odłączyć jej rozszerzeń.  
   
  Jeśli rozszerzenie zostanie dodane do kolekcji, <xref:System.ServiceModel.IExtension%601.Attach%2A> jest wywoływana przed przechodzi on w kolekcji. Rozszerzenie zostanie usunięty z kolekcji, <xref:System.ServiceModel.IExtension%601.Detach%2A> jest wywoływana po jego usunięciu. (Przy założeniu odpowiedniej synchronizacji) oznacza, że rozszerzenie liczyć na dostępne tylko w kolekcji w czasie, gdy jest między <xref:System.ServiceModel.IExtension%601.Attach%2A> i <xref:System.ServiceModel.IExtension%601.Detach%2A>.  
   
@@ -54,18 +45,18 @@ where T : IExtensibleObject<T>
   
  Drugi scenariusz używa <xref:System.ServiceModel.IExtension%601.Attach%2A> i <xref:System.ServiceModel.IExtension%601.Detach%2A> właściwości, aby włączyć obiekt, aby uczestniczyć w zachowaniu niestandardowe, takie jak rejestrowanie zdarzeń, obserwowanie przejść stanu i tak dalej.  
   
- <xref:System.ServiceModel.IExtensionCollection%601> Interfejsu jest kolekcją <xref:System.ServiceModel.IExtension%601> obiektów, które umożliwiają pobieranie <xref:System.ServiceModel.IExtension%601> przez jego typu. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType>Zwraca ostatnio dodany obiekt, który jest <xref:System.ServiceModel.IExtension%601> tego typu.  
+ <xref:System.ServiceModel.IExtensionCollection%601> Interfejsu jest kolekcją <xref:System.ServiceModel.IExtension%601> obiektów, które umożliwiają pobieranie <xref:System.ServiceModel.IExtension%601> przez jego typu. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> Zwraca ostatnio dodany obiekt, który jest <xref:System.ServiceModel.IExtension%601> tego typu.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Obiekty rozszerzalne programu Windows Communication Foundation  
- Istnieją cztery obiekty rozszerzalne w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  
+ Istnieją cztery obiekty rozszerzalne w systemie Windows Communication Foundation (WCF):  
   
--   <xref:System.ServiceModel.ServiceHostBase>— To jest klasa podstawowa dla hosta usługi.  Rozszerzenia tej klasy można rozszerzyć zachowanie <xref:System.ServiceModel.ServiceHostBase> samego lub do przechowywania stanu dla każdej usługi.  
+-   <xref:System.ServiceModel.ServiceHostBase> — To jest klasa podstawowa dla hosta usługi.  Rozszerzenia tej klasy można rozszerzyć zachowanie <xref:System.ServiceModel.ServiceHostBase> samego lub do przechowywania stanu dla każdej usługi.  
   
--   <xref:System.ServiceModel.InstanceContext>— Ta klasa wystąpienia typu usługi łączy się z usługą środowiska uruchomieniowego usługi.  Zawiera on informacje dotyczące tego wystąpienia, a także odwołanie do <xref:System.ServiceModel.InstanceContext>zawierającego <xref:System.ServiceModel.ServiceHostBase>. Rozszerzenia tej klasy można rozszerzyć zachowanie <xref:System.ServiceModel.InstanceContext> lub do przechowywania stanu dla każdej usługi.  
+-   <xref:System.ServiceModel.InstanceContext> — Ta klasa wystąpienia typu usługi łączy się z usługą środowiska uruchomieniowego usługi.  Zawiera on informacje dotyczące tego wystąpienia, a także odwołanie do <xref:System.ServiceModel.InstanceContext>zawierającego <xref:System.ServiceModel.ServiceHostBase>. Rozszerzenia tej klasy można rozszerzyć zachowanie <xref:System.ServiceModel.InstanceContext> lub do przechowywania stanu dla każdej usługi.  
   
--   <xref:System.ServiceModel.OperationContext>— Ta klasa reprezentuje informacje operacji zbierające środowiska uruchomieniowego dla każdej operacji.  Dotyczy to również informacje, takie jak nagłówki wiadomości przychodzących, właściwości przychodzących wiadomości przychodzącej tożsamości zabezpieczeń i inne informacje.  Rozszerzenia tej klasy można wydłużyć zachowanie <xref:System.ServiceModel.OperationContext> ani do przechowywania stanu dla każdej operacji.  
+-   <xref:System.ServiceModel.OperationContext> — Ta klasa reprezentuje informacje operacji zbierające środowiska uruchomieniowego dla każdej operacji.  Dotyczy to również informacje, takie jak nagłówki wiadomości przychodzących, właściwości przychodzących wiadomości przychodzącej tożsamości zabezpieczeń i inne informacje.  Rozszerzenia tej klasy można wydłużyć zachowanie <xref:System.ServiceModel.OperationContext> ani do przechowywania stanu dla każdej operacji.  
   
--   <xref:System.ServiceModel.IContextChannel>— Ten interfejs umożliwia inspekcji każdy stan dla kanałów i serwery proxy utworzony przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska wykonawczego.  Rozszerzenia tej klasy można wydłużyć zachowanie <xref:System.ServiceModel.IClientChannel> lub służy do przechowywania stanu dla poszczególnych kanałów.  
+-   <xref:System.ServiceModel.IContextChannel> — Ten interfejs umożliwia inspekcji każdy stan dla kanałów i serwery proxy utworzony przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska wykonawczego.  Rozszerzenia tej klasy można wydłużyć zachowanie <xref:System.ServiceModel.IClientChannel> lub służy do przechowywania stanu dla poszczególnych kanałów.  
   
 -  
   

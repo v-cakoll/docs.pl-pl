@@ -1,31 +1,20 @@
 ---
-title: "Obsługa wyjątku (Biblioteka zadań równoległych)"
-ms.custom: 
+title: Obsługa wyjątku (Biblioteka zadań równoległych)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-task-parallel-library"></a>Obsługa wyjątku (Biblioteka zadań równoległych)
 Nieobsłużonych wyjątków, które są generowane przez kod użytkownika, który działa wewnątrz zadania są propagowane do wątek wywołujący, z wyjątkiem w niektórych scenariuszach, które zostały opisane w dalszej części tego tematu. Oczekiwania były propagowane, gdy używany jest jeden statycznych lub wystąpienia <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` metod, a ich obsługę, umieszczając wywołanie `try` / `catch` instrukcji. Jeśli zadanie ma element nadrzędny zadania podrzędne dołączone lub oczekiwania na wielu zadań, może zostać zgłoszony wiele wyjątków.  

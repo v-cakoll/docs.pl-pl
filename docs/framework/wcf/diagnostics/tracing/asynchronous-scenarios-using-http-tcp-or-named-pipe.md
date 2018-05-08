@@ -1,24 +1,12 @@
 ---
-title: "Scenariusze asynchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego"
-ms.custom: 
+title: Scenariusze asynchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenariusze asynchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
 W tym temacie opisano działania i transferów w scenariuszach różnych asynchroniczne żądanie/odpowiedź z żądaniami wielowątkowe przy użyciu protokołu HTTP, TCP, lub nazwany potok.  
@@ -44,7 +32,7 @@ W tym temacie opisano działania i transferów w scenariuszach różnych asynchr
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>Propagacja jest wyłączona na stronach albo przy użyciu protokołu HTTP  
  Jeśli `propagateActivity` = `false` po obu stronach ProcessMessage nie wskazuje ProcessAction działanie (activity) na transfer do. W związku z tym wywołaniu nowego, tymczasowego działania ProcessAction z nowym Identyfikatorem. Po dopasowaniu asynchroniczne odpowiedzi na żądanie w kodzie ServiceModel, identyfikator działania można pobrać z kontekstu lokalnego. Rzeczywiste działania ProcessAction mogą zostać przeniesione do o tym identyfikatorze.  
   
- ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP &#47; TCP &#47; Nazwany potok](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP&#47;TCP&#47;nazwanego potoku](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  Rysunek 2. Asynchroniczne klienta, bez wywołania zwrotnego `propagateActivity` = `false` po obu stronach HTTP  
   
@@ -53,7 +41,7 @@ W tym temacie opisano działania i transferów w scenariuszach różnych asynchr
  Działanie procesu akcji jest tworzony na kliencie asynchronicznych po `propagateActivity` = `false` na wywołujący lub wywoływany i gdy komunikat odpowiedzi nie zawiera nagłówka Action.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>Propagacja jest włączona na obie strony przy użyciu protokołu TCP lub nazwanego potoku  
- ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP &#47; TCP &#47; Nazwany potok](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP&#47;TCP&#47;nazwanego potoku](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Rysunek 3. Asynchroniczne klienta, bez wywołania zwrotnego `propagateActivity` = `true` po obu stronach nazwanego-potoku/TCP  
   
@@ -66,7 +54,7 @@ W tym temacie opisano działania i transferów w scenariuszach różnych asynchr
   
  Podobnie jak Fig.2, jeśli `propagateActivity` = `false` po obu stronach ProcessMessage nie wskazuje ProcessAction działanie (activity) na transfer do. W związku z tym wywołaniu nowego, tymczasowego działania ProcessAction z nowym Identyfikatorem. Po dopasowaniu asynchroniczne odpowiedzi na żądanie w kodzie ServiceModel, identyfikator działania można pobrać z kontekstu lokalnego. Rzeczywiste działania ProcessAction mogą zostać przeniesione do o tym identyfikatorze.  
   
- ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP &#47; TCP &#47; Nazwane potoki](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP&#47;TCP&#47; potoków nazwanych](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  Rysunek 4. Asynchroniczne klienta, bez wywołania zwrotnego `propagateActivity` = `false` po obu stronach nazwanego-potoku/TCP  
   
@@ -86,7 +74,7 @@ W tym temacie opisano działania i transferów w scenariuszach różnych asynchr
  Rysunek 6. Asynchroniczne klienta z wywołania zwrotnego, `endCall` poza wywołania zwrotnego  
   
 ### <a name="asynchronous-server-with-callback"></a>Asynchroniczne serwera z wywołania zwrotnego  
- ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP &#47; TCP &#47; O nazwie &#45; Potok](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![Scenariusze asynchroniczne z zastosowaniem protokołu HTTP&#47;TCP&#47; nazwane&#45;potoku](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  Rysunek 7. Serwer asynchroniczne wywołanie zwrotne  
   

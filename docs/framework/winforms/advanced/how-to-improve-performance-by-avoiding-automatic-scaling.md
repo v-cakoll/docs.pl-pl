@@ -1,13 +1,6 @@
 ---
-title: "Porady: poprawianie wydajności dzięki unikaniu automatycznego skalowania"
-ms.custom: 
+title: 'Porady: poprawianie wydajności dzięki unikaniu automatycznego skalowania'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f49fc4b1e59879b9ecc67295610187fa2e5e80d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1c46f805b7ba2e2f2a1eb52042cc2ca08e63e03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Porady: poprawianie wydajności dzięki unikaniu automatycznego skalowania
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]może automatycznie skalować obrazu podczas rysowania, które mogłoby obniżyć wydajność. Alternatywnie można kontrolować skalowanie obrazu przekazując wymiary prostokąt docelowy <xref:System.Drawing.Graphics.DrawImage%2A> metody.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] może automatycznie skalować obrazu podczas rysowania, które mogłoby obniżyć wydajność. Alternatywnie można kontrolować skalowanie obrazu przekazując wymiary prostokąt docelowy <xref:System.Drawing.Graphics.DrawImage%2A> metody.  
   
  Na przykład następujące wywołanie do <xref:System.Drawing.Graphics.DrawImage%2A> metody określa lewym górnym rogu (50, 30), ale nie określa prostokątne docelowego.  
   

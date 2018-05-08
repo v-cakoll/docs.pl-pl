@@ -1,13 +1,6 @@
 ---
-title: "Porady: definiowanie typu ogólnego przy użyciu emisji odbicia"
-ms.custom: 
+title: 'Porady: definiowanie typu ogólnego przy użyciu emisji odbicia'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6096a54c6a530035bd32c24d427ba047f905476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Porady: definiowanie typu ogólnego przy użyciu emisji odbicia
 W tym temacie przedstawiono sposób tworzenia prostego typu ogólnego z dwoma parametrami typu, jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczeń specjalnych do parametrów typu i sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.  
@@ -74,7 +64,7 @@ W tym temacie przedstawiono sposób tworzenia prostego typu ogólnego z dwoma pa
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  Zdefiniuj pola. W tym przykładzie typ pola jest określony przez parametr typu `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder>pochodną <xref:System.Type>, dzięki czemu można używać parametrów typu ogólnego, można użyć typu dowolnego miejsca.  
+7.  Zdefiniuj pola. W tym przykładzie typ pola jest określony przez parametr typu `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> pochodną <xref:System.Type>, dzięki czemu można używać parametrów typu ogólnego, można użyć typu dowolnego miejsca.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
@@ -107,7 +97,7 @@ W tym temacie przedstawiono sposób tworzenia prostego typu ogólnego z dwoma pa
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Wywołanie metody. `ExampleMethod`nie jest rodzajowa, ale należy do typu jest ogólny, tak aby można było pobrać <xref:System.Reflection.MethodInfo> może być wywoływany jest niezbędne do utworzenia skonstruowanego typu z definicji typu dla `Sample`. Używa utworzony typ `Example` klasy, która spełnia ograniczenia na `TFirst` ponieważ jest typem referencyjnym i ma domyślny konstruktor bez parametrów i `ExampleDerived` klasy, która spełnia ograniczenia na `TSecond`. (Kod `ExampleDerived` można znaleźć w sekcji z przykładowym kodem.) Te dwa typy są przekazywane do <xref:System.Type.MakeGenericType%2A> do utworzenia skonstruowanego typu. <xref:System.Reflection.MethodInfo> Następnie są uzyskiwane przy użyciu <xref:System.Type.GetMethod%2A> metody.  
+11. Wywołanie metody. `ExampleMethod` nie jest rodzajowa, ale należy do typu jest ogólny, tak aby można było pobrać <xref:System.Reflection.MethodInfo> może być wywoływany jest niezbędne do utworzenia skonstruowanego typu z definicji typu dla `Sample`. Używa utworzony typ `Example` klasy, która spełnia ograniczenia na `TFirst` ponieważ jest typem referencyjnym i ma domyślny konstruktor bez parametrów i `ExampleDerived` klasy, która spełnia ograniczenia na `TSecond`. (Kod `ExampleDerived` można znaleźć w sekcji z przykładowym kodem.) Te dwa typy są przekazywane do <xref:System.Type.MakeGenericType%2A> do utworzenia skonstruowanego typu. <xref:System.Reflection.MethodInfo> Następnie są uzyskiwane przy użyciu <xref:System.Type.GetMethod%2A> metody.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]

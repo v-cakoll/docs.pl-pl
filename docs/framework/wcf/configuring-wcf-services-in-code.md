@@ -1,27 +1,15 @@
 ---
-title: "Konfigurowanie usług WCF w kodzie"
-ms.custom: 
+title: Konfigurowanie usług WCF w kodzie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202214a6c9279eb61db560321a8f36943ce5d635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2046ee00bef0f3e84a61151474c777d64005a30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Umożliwia deweloperom konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi być skonfigurowana po wdrożeniu. Podczas korzystania z plików konfiguracyjnych, specjalistów IT wystarczy tylko zaktualizować pliku konfiguracji, kompilacji nie jest wymagana. Pliki konfiguracji, jednak można złożone i trudne w utrzymaniu. Nie jest obsługiwane dla debugowania plików konfiguracji i elementy konfiguracji odwołują się nazwy, dzięki czemu tworzenia plików konfiguracyjnych podatne na błędy i trudne. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Umożliwia również skonfigurować usługi w kodzie. W starszych wersjach [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach siebie <xref:System.ServiceModel.ServiceHost> klasa dozwolona konfigurowania punktów końcowych i zachowania przed wywołaniem ServiceHost.Open. W scenariuszach hostowana w sieci web, możesz nie mają jednak bezpośredni dostęp do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować sieci web hostowanej usługi są wymagane do utworzenia `System.ServiceModel.ServiceHostFactory` utworzony <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać wszelkie wymagane konfiguracji. W programie .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umożliwia łatwiejsze sposobem skonfigurowania obu hosta samodzielnego i sieci web hostowanych usług w kodzie.  
+Windows Communication Foundation (WCF) umożliwia deweloperom konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi być skonfigurowana po wdrożeniu. Podczas korzystania z plików konfiguracyjnych, specjalistów IT wystarczy tylko zaktualizować pliku konfiguracji, kompilacji nie jest wymagana. Pliki konfiguracji, jednak można złożone i trudne w utrzymaniu. Nie jest obsługiwane dla debugowania plików konfiguracji i elementy konfiguracji odwołują się nazwy, dzięki czemu tworzenia plików konfiguracyjnych podatne na błędy i trudne. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Umożliwia również skonfigurować usługi w kodzie. W starszych wersjach [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach siebie <xref:System.ServiceModel.ServiceHost> klasa dozwolona konfigurowania punktów końcowych i zachowania przed wywołaniem ServiceHost.Open. W scenariuszach hostowana w sieci web, możesz nie mają jednak bezpośredni dostęp do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować sieci web hostowanej usługi są wymagane do utworzenia `System.ServiceModel.ServiceHostFactory` utworzony <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać wszelkie wymagane konfiguracji. W programie .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umożliwia łatwiejsze sposobem skonfigurowania obu hosta samodzielnego i sieci web hostowanych usług w kodzie.  
   
 ## <a name="the-configure-method"></a>Konfiguruj — metoda  
  Wystarczy zdefiniować publicznej metody statycznej o nazwie `Configure` z następującą sygnaturą w klasie implementacji usługi:  

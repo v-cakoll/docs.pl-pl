@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Autorstwo formantów"
-ms.custom: 
+title: Przegląd Autorstwo formantów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c2c796819924cdbd15d6eefffe10a607bad9bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] model kontroli, znacznie ogranicza potrzebę tworzenia nowego formantu. Jednak w niektórych przypadkach może nadal należy utworzyć niestandardowego formantu. W tym temacie opisano funkcje, co minimalizuje konieczność tworzenia kontrolki niestandardowej, a inny formant tworzenia modeli w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. W tym temacie przedstawiono również sposób tworzenia nowego formantu.  
@@ -54,7 +42,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>Modele do tworzenia kontrolki  
- Rozbudowane modelu zawartości, style, szablonów i wyzwalaczy zminimalizować trzeba utworzyć nowy formant. Jednak jeśli trzeba utworzyć nową kontrolkę, ważne jest zrozumienie inny formant tworzenia modeli w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia trzy modele ogólne do tworzenia kontrolek, z których każdy zawiera inny zestaw funkcji i poziom elastyczności. Klasy podstawowej są trzy modele <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, i <xref:System.Windows.FrameworkElement>.  
+ Rozbudowane modelu zawartości, style, szablonów i wyzwalaczy zminimalizować trzeba utworzyć nowy formant. Jednak jeśli trzeba utworzyć nową kontrolkę, ważne jest zrozumienie inny formant tworzenia modeli w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia trzy modele ogólne do tworzenia kontrolek, z których każdy zawiera inny zestaw funkcji i poziom elastyczności. Klasy podstawowej są trzy modele <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, i <xref:System.Windows.FrameworkElement>.  
   
 ### <a name="deriving-from-usercontrol"></a>Wyprowadzanie z UserControl  
  Najprostszym sposobem tworzenia formantu w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma dziedziczyć <xref:System.Windows.Controls.UserControl>. Podczas budowania formantu dziedziczy <xref:System.Windows.Controls.UserControl>, dodać istniejące składniki <xref:System.Windows.Controls.UserControl>, nazwa składników i odwołać obsługi zdarzeń w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Następnie można odwoływać się elementy o i zdefiniuj programy obsługi zdarzeń w kodzie. Ten model programowania jest bardzo podobny do modelu używany do tworzenia aplikacji w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -83,7 +71,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ### <a name="deriving-from-frameworkelement"></a>Wyprowadzanie z FrameworkElement  
  Formanty, które pochodzą z <xref:System.Windows.Controls.UserControl> lub <xref:System.Windows.Controls.Control> opierają się na tworzenie istniejące elementy. W różnych scenariuszach jest dopuszczalne rozwiązanie, ponieważ każdy obiekt, który dziedziczy <xref:System.Windows.FrameworkElement> może znajdować się w <xref:System.Windows.Controls.ControlTemplate>. Istnieją jednak razy podczas wygląd formantu wymaga więcej niż funkcji prosty element kompozycji. W tych sytuacjach tworzony składnik na <xref:System.Windows.FrameworkElement> jest właściwie.  
   
- Istnieją dwie metody standardowe dla tworzenia <xref:System.Windows.FrameworkElement>— na podstawie składników: bezpośrednie renderowanie i niestandardowych kompozycji elementu. Bezpośrednie renderowania obejmuje zastępowanie <xref:System.Windows.UIElement.OnRender%2A> metody <xref:System.Windows.FrameworkElement> i <xref:System.Windows.Media.DrawingContext> operacje, które jawnie definiować wizualnych składnika. Jest to metoda używana przez <xref:System.Windows.Controls.Image> i <xref:System.Windows.Controls.Border>. Niestandardowy element kompozycji polega na użyciu obiekty typu <xref:System.Windows.Media.Visual> utworzenie wyglądu składnika. Na przykład zobacz [przy użyciu obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track>Przykładem formantu w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używający elementu niestandardowego kompozycji. Użytkownik może również mieszać bezpośredniego renderowania i kompozycji elementu niestandardowego, w tym samym formancie.  
+ Istnieją dwie metody standardowe dla tworzenia <xref:System.Windows.FrameworkElement>— na podstawie składników: bezpośrednie renderowanie i niestandardowych kompozycji elementu. Bezpośrednie renderowania obejmuje zastępowanie <xref:System.Windows.UIElement.OnRender%2A> metody <xref:System.Windows.FrameworkElement> i <xref:System.Windows.Media.DrawingContext> operacje, które jawnie definiować wizualnych składnika. Jest to metoda używana przez <xref:System.Windows.Controls.Image> i <xref:System.Windows.Controls.Border>. Niestandardowy element kompozycji polega na użyciu obiekty typu <xref:System.Windows.Media.Visual> utworzenie wyglądu składnika. Na przykład zobacz [przy użyciu obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track> Przykładem formantu w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używający elementu niestandardowego kompozycji. Użytkownik może również mieszać bezpośredniego renderowania i kompozycji elementu niestandardowego, w tym samym formancie.  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Korzyści wynikające z FrameworkElement  
  Należy wziąć pod uwagę pochodny <xref:System.Windows.FrameworkElement> Jeśli dowolny z następujących warunków:  
@@ -125,9 +113,9 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   Zdefiniuj [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwości o nazwie `Value`, która jest tej samej nazwie, które jest używane do rejestrowania właściwości zależności, implementując właściwości `get` i `set` metody dostępu. Należy pamiętać, że `get` i `set` wywoływać tylko metody dostępu <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> odpowiednio. Zaleca się, że metody dostępu właściwości zależności nie zawiera dodatkową logikę, ponieważ klienci i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można pominąć metody dostępu i wywołanie <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Na przykład, gdy właściwość jest powiązana z danych źródłowych, właściwości `set` nie wywołano metody dostępu.  Zamiast opcji dodawania dodatkową logikę do pobierania i metod dostępu set, użyj <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, i <xref:System.Windows.PropertyChangedCallback> delegatów uwzględniał lub sprawdź wartość, gdy zmieni się.  Aby uzyskać więcej informacji o tych wywołań zwrotnych, zobacz [wywołania zwrotne właściwości zależności i sprawdzania poprawności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
   
--   Zdefiniuj metodę <xref:System.Windows.CoerceValueCallback> o nazwie `CoerceValue`. `CoerceValue`zapewnia, że `Value` jest większa lub równa `MinValue` i mniejsza niż lub równa `MaxValue`.  
+-   Zdefiniuj metodę <xref:System.Windows.CoerceValueCallback> o nazwie `CoerceValue`. `CoerceValue` zapewnia, że `Value` jest większa lub równa `MinValue` i mniejsza niż lub równa `MaxValue`.  
   
--   Zdefiniuj metodę <xref:System.Windows.PropertyChangedCallback>o nazwie `OnValueChanged`. `OnValueChanged`Tworzy <xref:System.Windows.RoutedPropertyChangedEventArgs%601> obiektu i przygotowuje podnieść `ValueChanged` kierowanego zdarzenia. W następnej sekcji omówiono kierowane zdarzenia.  
+-   Zdefiniuj metodę <xref:System.Windows.PropertyChangedCallback>o nazwie `OnValueChanged`. `OnValueChanged` Tworzy <xref:System.Windows.RoutedPropertyChangedEventArgs%601> obiektu i przygotowuje podnieść `ValueChanged` kierowanego zdarzenia. W następnej sekcji omówiono kierowane zdarzenia.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -195,7 +183,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   Implementowanie para `public` `static` CLR metody o nazwie `Set` *PropertyName* i `Get` *PropertyName*. Obie metody powinna obsługiwać klasę pochodzącą od <xref:System.Windows.DependencyProperty> jako pierwszy argument. `Set` *PropertyName* metoda przyjmuje również argumentem, którego typ jest zgodny z typem danych zarejestrowanych dla właściwości. `Get` *PropertyName* metoda powinna zwrócić wartość tego samego typu. Jeśli `Set` *PropertyName* Brak metody, właściwość jest oznaczona jako tylko do odczytu.  
   
--   `Set`*PropertyName* i `Get` *PropertyName* należy kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> odpowiednio metody w zależności docelowy obiekt. Projektanci może uzyskać dostępu do dołączona właściwość przez wywoływanie przez otoki metody lub bezpośrednie wywołania docelowy obiekt zależności.  
+-   `Set` *PropertyName* i `Get` *PropertyName* należy kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> odpowiednio metody w zależności docelowy obiekt. Projektanci może uzyskać dostępu do dołączona właściwość przez wywoływanie przez otoki metody lub bezpośrednie wywołania docelowy obiekt zależności.  
   
  Aby uzyskać więcej informacji na dołączone właściwości, zobacz [dołączony Przegląd właściwości](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
   
@@ -240,7 +228,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
  [!code-csharp[SharedResources#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>Definiowanie zasobów na poziomie motywu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Pozwala utworzyć zasobów dla różnych kompozycji systemu Windows.  Jako autor formantu należy zdefiniować zasobów dla określonych motywu zmienić wygląd formantu, w zależności od tego, jakie motyw jest używany. Na przykład wygląd <xref:System.Windows.Controls.Button> w Windows Classic motywu (motyw domyślny dla systemu Windows 2000) różni się od <xref:System.Windows.Controls.Button> w motywie Luna systemu Windows (motyw domyślny dla systemu Windows XP) ponieważ <xref:System.Windows.Controls.Button> używa innej <xref:System.Windows.Controls.ControlTemplate> dla każdego motywu.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Pozwala utworzyć zasobów dla różnych kompozycji systemu Windows.  Jako autor formantu należy zdefiniować zasobów dla określonych motywu zmienić wygląd formantu, w zależności od tego, jakie motyw jest używany. Na przykład wygląd <xref:System.Windows.Controls.Button> w Windows Classic motywu (motyw domyślny dla systemu Windows 2000) różni się od <xref:System.Windows.Controls.Button> w motywie Luna systemu Windows (motyw domyślny dla systemu Windows XP) ponieważ <xref:System.Windows.Controls.Button> używa innej <xref:System.Windows.Controls.ControlTemplate> dla każdego motywu.  
   
  Zasoby, które są specyficzne dla motywu są przechowywane w słowniku zasobów z określoną nazwą pliku. Te pliki muszą znajdować się w folderze o nazwie `Themes` oznacza to podfolder folderu, który zawiera kontrolki. W poniższej tabeli wymieniono pliki słownika zasobów i motywu, który jest skojarzony z każdego pliku:  
   

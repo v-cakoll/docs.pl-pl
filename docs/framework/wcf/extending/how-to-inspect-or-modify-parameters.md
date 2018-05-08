@@ -1,30 +1,18 @@
 ---
-title: "Instrukcje: Inspekcja lub modyfikowanie parametrów"
-ms.custom: 
+title: 'Instrukcje: Inspekcja lub modyfikowanie parametrów'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f1a0ef31ba074082e4c3aa8a26e6a59502a7566
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Instrukcje: Inspekcja lub modyfikowanie parametrów
-Można inspekcja lub modyfikowanie komunikatów przychodzących lub wychodzących dla jednej operacji na [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obiektu klienta lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi zaimplementowanie <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interfejs oraz wstawieniu ich do środowiska uruchomieniowego klienta lub usługi. Zwykle to zachowanie działania jest używana do dodawania inspektorzy parametr dla jednej operacji. innych zachowań może służyć do zapewnienia łatwego dostępu do środowiska wykonawczego w zakresie większa. Aby uzyskać więcej informacji, zobacz [rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md) i [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+Można inspekcja lub modyfikowanie komunikatów przychodzących lub wychodzących dla jednej operacji na obiekcie klienta usługi Windows Communication Foundation (WCF) lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi zaimplementowanie <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interfejs oraz wstawieniu ich do klienta lub usługi środowisko uruchomieniowe. Zwykle to zachowanie działania jest używana do dodawania inspektorzy parametr dla jednej operacji. innych zachowań może służyć do zapewnienia łatwego dostępu do środowiska wykonawczego w zakresie większa. Aby uzyskać więcej informacji, zobacz [rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md) i [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Sprawdzanie lub modyfikowanie parametrów  
   

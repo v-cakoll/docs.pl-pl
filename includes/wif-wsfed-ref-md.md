@@ -1,1 +1,0 @@
-Aby uzyskać więcej informacji na temat elementu, który reprezentuje ta klasa, zobacz sekcję 13 następującej specyfikacji: [Web Services Federation Language (WS-Federation) w wersji 1.2](http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html) (http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html).

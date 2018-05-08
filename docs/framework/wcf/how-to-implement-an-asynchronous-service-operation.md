@@ -1,32 +1,18 @@
 ---
 title: 'Instrukcje: Wdrażanie asynchronicznej operacji usługi'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe823fc8b86dd20cfa344c9889eca9dff21514ec
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8e6ce386dc122ba059a18a448239cec7eaae222
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Instrukcje: Wdrażanie asynchronicznej operacji usługi
-W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, operacja usługi można zaimplementować asynchronicznie lub synchronicznie bez dyktowanie do klienta, jak wywołać ją. Na przykład można można synchronicznie wywoływania operacji asynchronicznych usługi i operacji synchronicznych usługi może być wywołana asynchronicznie. Na przykład pokazujący sposób asynchroniczne wywoływanie operacji w aplikacji klienta, zobacz [porady: wywołania operacji usługi asynchronicznie](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Aby uzyskać więcej informacji na temat operacje synchroniczne i asynchroniczne, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md) i [synchroniczne i asynchroniczne operacje](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). W tym temacie opisano podstawową strukturę asynchronicznej operacji usługi, kodu nie została ukończona. Pełny przykład stron usługa i klient zobacz [asynchronicznym](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
+W aplikacji Windows Communication Foundation (WCF) operacji usługi można stosować asynchronicznie lub synchronicznie bez dyktowanie do klienta, jak wywołać ją. Na przykład można można synchronicznie wywoływania operacji asynchronicznych usługi i operacji synchronicznych usługi może być wywołana asynchronicznie. Na przykład pokazujący sposób asynchroniczne wywoływanie operacji w aplikacji klienta, zobacz [porady: wywołania operacji usługi asynchronicznie](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Aby uzyskać więcej informacji na temat operacje synchroniczne i asynchroniczne, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md) i [synchroniczne i asynchroniczne operacje](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). W tym temacie opisano podstawową strukturę asynchronicznej operacji usługi, kodu nie została ukończona. Pełny przykład stron usługa i klient zobacz [asynchronicznym](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Implementuje operację usługi asynchronicznie  
   

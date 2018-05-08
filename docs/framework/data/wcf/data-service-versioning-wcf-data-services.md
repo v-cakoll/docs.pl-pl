@@ -1,30 +1,16 @@
 ---
 title: Przechowywanie wersji usługi danych (usługi danych WCF)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6d800b35a69c08ab9f7bd90165691eab7d8743f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0d77f54b5ef20db81c3c20f486ac7314f73aece8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (usługi danych WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Umożliwia tworzenie usług danych, dzięki czemu klienci mają dostęp do danych jako zasoby przy użyciu identyfikatorów URI, które są oparte na modelu danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje również definicji operacji usługi. Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia tych usług danych może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub w celu rozwiązania innych problemów. Po wprowadzeniu zmian w istniejącej usłudze danych, należy rozważyć możliwość definiowania nowej wersji danych usługi i jak najlepiej zminimalizować wpływ na istniejące aplikacje klienckie. W tym temacie znajdują się wskazówki dotyczące kiedy i jak utworzyć nową wersję usługi danych. Opisano również sposób [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje wymiany między klientami a usług danych, które obsługują różne wersje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu.  

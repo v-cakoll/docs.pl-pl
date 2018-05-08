@@ -1,13 +1,6 @@
 ---
-title: "Obiekty nasłuchujące śledzenia"
-ms.custom: 
+title: Obiekty nasłuchujące śledzenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 042b8a6f7c25c34fc06d5d0bfd4ebce6417b920f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 457310fbf12ef2d6143586116f76df1720b59a6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trace-listeners"></a>Obiekty nasłuchujące śledzenia
 Korzystając z **śledzenia**, **debugowania** i <xref:System.Diagnostics.TraceSource>, musi mieć mechanizm zbieranie i rejestrowanie komunikatów, które są wysyłane. Komunikaty śledzenia są odbierane przez *odbiorników*. Odbiornik ma na celu zbierania, przechowywania i komunikatów śledzenia, które trasy. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takie jak dziennik, okno lub PLiku tekstowego.  
@@ -41,7 +31,7 @@ Korzystając z **śledzenia**, **debugowania** i <xref:System.Diagnostics.TraceS
   
 -   <xref:System.Diagnostics.EventLogTraceListener> Przekierowuje dane wyjściowe do dziennika zdarzeń.  
   
--   A <xref:System.Diagnostics.DefaultTraceListener> emituje **zapisu** i **WriteLine** komunikaty **OutputDebugString** i **Debugger.Log** metody. W programie Visual Studio powoduje to komunikaty debugowania pojawią się w oknie danych wyjściowych. **Niepowodzenie** i operacja nie powiodła **Assert** wiadomości również wysyłać do **OutputDebugString** interfejsu API systemu Windows i **Debugger.Log** metody i Przyczyna polu komunikat można wyświetlić. To zachowanie jest to domyślne zachowanie dla **debugowania** i **śledzenia** wiadomości, ponieważ **DefaultTraceListener** jest automatycznie uwzględnione w każdym `Listeners` Kolekcja i jest tylko odbiornika automatycznie dołączane.  
+-   A <xref:System.Diagnostics.DefaultTraceListener> emituje **zapisu** i **WriteLine** komunikaty **OutputDebugString** i **Debugger.Log** metody. W programie Visual Studio powoduje to komunikaty debugowania pojawią się w oknie danych wyjściowych. **Niepowodzenie** i operacja nie powiodła **Assert** wiadomości również wysyłać do **OutputDebugString** interfejsu API systemu Windows i **Debugger.Log** metody i Przyczyna komunikat pole jako wyświetlane. To zachowanie jest to domyślne zachowanie dla **debugowania** i **śledzenia** wiadomości, ponieważ **DefaultTraceListener** jest automatycznie uwzględnione w każdym `Listeners` Kolekcja i jest tylko odbiornika automatycznie dołączane.  
   
 -   A <xref:System.Diagnostics.ConsoleTraceListener> kieruje śledzenia i debugowania dane wyjściowe do standardowego wyjścia lub Standardowy strumień błędów.  
   

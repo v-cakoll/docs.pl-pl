@@ -1,21 +1,14 @@
 ---
-title: "Wiersz &lt;numer&gt; nie można analizować przy użyciu bieżącego parametru Delimiters."
+title: Wiersz &lt;numer&gt; nie można analizować przy użyciu bieżącego parametru Delimiters.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8541a2a144964a535f72182fe08187bdc479675a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e4ba6312c8ba0deb327a010186e85574e1197498
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Wiersz &lt;numer&gt; nie można analizować przy użyciu bieżącego parametru Delimiters.
 Nie można analizować określonego wiersza, ponieważ używa ograniczniki innych niż określone.  

@@ -1,28 +1,16 @@
 ---
-title: "Różnice między formantami DataGridView i DataGrid formularzy systemu Windows"
-ms.custom: 
+title: Różnice między formantami DataGridView i DataGrid formularzy systemu Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bc6d1fa2450d0aba52bd6a5a030c025fede0cb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0a82d5724ebe142ae080fc930665733e701e237
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Różnice między formantami DataGridView i DataGrid formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Formant jest nowy formant, który zastępuje <xref:System.Windows.Forms.DataGrid> formantu. <xref:System.Windows.Forms.DataGridView> Kontrola zapewnia wiele podstawowych i zaawansowanych funkcji, które nie występują w <xref:System.Windows.Forms.DataGrid> formantu. Ponadto architektura <xref:System.Windows.Forms.DataGridView> kontroli ułatwia rozszerzyć i dostosować niż <xref:System.Windows.Forms.DataGrid> formantu.  

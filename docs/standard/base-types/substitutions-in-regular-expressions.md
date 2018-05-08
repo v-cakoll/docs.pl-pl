@@ -1,13 +1,7 @@
 ---
-title: "Podstawienia w wyrażeniach regularnych"
-ms.custom: 
+title: Podstawienia w wyrażeniach regularnych
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,28 +13,23 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="substitutions-in-regular-expressions"></a>Podstawienia w wyrażeniach regularnych
-<a name="Top"></a>Podstawienia są elementy języka, które są rozpoznawane tylko w obrębie wzorce zamiany. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zamiany są dostarczane do przeciążenia <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, która ma `replacement` parametru i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody. Metody Zastąp wzorzec dopasowany wzorzec, który jest zdefiniowany przez `replacement` parametru.  
+<a name="Top"></a> Podstawienia są elementy języka, które są rozpoznawane tylko w obrębie wzorce zamiany. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zamiany są dostarczane do przeciążenia <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, która ma `replacement` parametru i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody. Metody Zastąp wzorzec dopasowany wzorzec, który jest zdefiniowany przez `replacement` parametru.  
   
  Program .NET Framework definiuje elementy podstawień wymienione w poniższej tabeli.  
   
 |Podstawienie|Opis|  
 |------------------|-----------------|  
-|`$`*numer*|Obejmuje ostatnich podciąg pasujący do grupy przechwytywania, identyfikowany przez *numer*, gdzie *numer* jest wartość dziesiętna, w ciągu zastępowania. Aby uzyskać więcej informacji, zobacz [podstawiając grupy numerowane](#Numbered).|  
-|`${`*nazwa*`}`|Obejmuje ostatnich podciąg pasujący do grupy o nazwie określony przez `(?<` *nazwa* `> )` w ciąg zastępczy. Aby uzyskać więcej informacji, zobacz [podstawiając grupę o nazwie](#Named).|  
+|`$` *Numer*|Obejmuje ostatnich podciąg pasujący do grupy przechwytywania, identyfikowany przez *numer*, gdzie *numer* jest wartość dziesiętna, w ciągu zastępowania. Aby uzyskać więcej informacji, zobacz [podstawiając grupy numerowane](#Numbered).|  
+|`${` *Nazwa* `}`|Obejmuje ostatnich podciąg pasujący do grupy o nazwie określony przez `(?<` *nazwa* `> )` w ciąg zastępczy. Aby uzyskać więcej informacji, zobacz [podstawiając grupę o nazwie](#Named).|  
 |`$$`|Zawiera pojedynczy literał „$” w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawiając Symbol "$"](#DollarSign).|  
 |`$&`|Zawiera kopię całego dopasowania w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawiając całego dopasowania](#EntireMatch).|  
 |<code>$\`</code>|Zawiera cały tekst ciągu wejściowego przed dopasowaniem w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [zastępując tekst przed dopasowania](#BeforeMatch).|  

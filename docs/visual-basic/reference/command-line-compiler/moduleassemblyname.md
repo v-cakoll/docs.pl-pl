@@ -1,23 +1,18 @@
 ---
 title: -moduleassemblyname
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - moduleassemblyname compiler option [Visual Basic]
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 author: rpetrusha
-ms.author: ronpett
-ms.openlocfilehash: 0a097ea8a7e30f25a0abb877dc496fb81d1c139f
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.author: ronpet
+ms.openlocfilehash: b8b579c2c3ae22469706326ee17109b8e39dab60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Określa nazwę zestawu, którego częścią ma być ten moduł.  

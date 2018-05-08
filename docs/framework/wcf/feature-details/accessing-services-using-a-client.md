@@ -1,32 +1,18 @@
 ---
 title: Uzyskiwanie dostępu do usług za pomocą klienta
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-services-using-a-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta
-Aplikacje klienckie należy utworzyć, konfiguracji i użytkowaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta lub kanału obiektów do komunikowania się z usługami. [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md) temat zawiera omówienie obiektów i kroki związane z tworzeniem podstawowych obiektów klienta i kanału i za ich pomocą.  
+Aplikacje klienckie należy utworzyć, konfigurowanie i łączyć się z usługami za pomocą obiektów klienta lub kanału WCF. [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md) temat zawiera omówienie obiektów i kroki związane z tworzeniem podstawowych obiektów klienta i kanału i za ich pomocą.  
   
  Ten temat zawiera szczegółowe informacje na temat niektórych problemów z klientem, aplikacji i klienta i kanał obiektów, które mogą być użyteczne, w zależności od danego scenariusza.  
   
@@ -42,7 +28,7 @@ Aplikacje klienckie należy utworzyć, konfiguracji i użytkowaniu [!INCLUDE[ind
 -   Inicjowanie kanałów interaktywnie.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanał i okresy istnienia sesji  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacje obejmują dwie kategorie kanały, datagram i sessionful.  
+ Aplikacje systemu Windows Communication Foundation (WCF) obejmuje dwie kategorie kanały, datagram i sessionful.  
   
  A *datagram* kanał jest kanału, w którym są nieskorelowane wszystkie komunikaty. W przypadku niepowodzenia operacji wejściowych lub wyjściowych z kanału datagramowego następnej operacji jest zwykle nie dotyczy, a można ponownie użyć tego samego kanału. W związku z tym kanały datagram zwykle nie fault.  
   
@@ -79,11 +65,11 @@ Aplikacje klienckie należy utworzyć, konfiguracji i użytkowaniu [!INCLUDE[ind
  Aby uzyskać więcej informacji o pracy z informacje o błędzie na poziomie aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Oczekiwano wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) opisuje oczekiwane wyjątki oraz sposób ich obsługę. Aby uzyskać więcej informacji o sposobie obsługi błędów podczas tworzenia kanałów, zobacz [obsługi wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Blokowanie klienta i wydajności  
- Gdy aplikacji synchronicznie odwołuje się operacja żądanie odpowiedź, bloki klienta do momentu otrzymania wartości zwracanej lub wyjątek (takie jak <xref:System.TimeoutException?displayProperty=nameWithType>) zostanie zgłoszony. To zachowanie jest podobne do zachowania lokalnego. Gdy aplikacja synchronicznie wywołuje operację na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiektu klienta lub kanału, klient nie może zwracać dopóki warstwie kanału można zapisać danych w sieci lub dopóki nie jest zgłaszany wyjątek. I podczas wymiany komunikatów jednokierunkowe (określonego przez oznaczenie operacji o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> ustawioną `true`) ułatwia niektórzy klienci również zablokować poprawę reakcji, jednokierunkowe operacje, w zależności od powiązania i jakie komunikaty są już wysyłane. Operacje jednokierunkowe są tylko o wymianie wiadomości, ma więcej i nie mniejsza. Aby uzyskać więcej informacji, zobacz [usług One-Way](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Gdy aplikacji synchronicznie odwołuje się operacja żądanie odpowiedź, bloki klienta do momentu otrzymania wartości zwracanej lub wyjątek (takie jak <xref:System.TimeoutException?displayProperty=nameWithType>) zostanie zgłoszony. To zachowanie jest podobne do zachowania lokalnego. Aplikację synchronicznie wywołuje operację na obiekcie klienta WCF lub kanału, klient nie powrócić do momentu warstwie kanału można zapisać danych w sieci lub dopóki nie jest zgłaszany wyjątek. I podczas wymiany komunikatów jednokierunkowe (określonego przez oznaczenie operacji o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> ustawioną `true`) ułatwia niektórzy klienci również zablokować poprawę reakcji, jednokierunkowe operacje, w zależności od powiązania i jakie komunikaty są już wysyłane. Operacje jednokierunkowe są tylko o wymianie wiadomości, ma więcej i nie mniejsza. Aby uzyskać więcej informacji, zobacz [usług One-Way](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
  Fragmenty dużej ilości danych może opóźnić klienta przetwarzania niezależnie od tego, jakie z środków wymiany komunikatów. Aby poznać sposób obsługi tych problemów, zobacz [duże ilości danych i przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Jeśli aplikacja może kontynuować pracę podczas operacji, należy utworzyć pary metod asynchronicznych interfejsu kontraktu usługi który Twojej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje klienta. Najprostszym sposobem, w tym celu jest użycie `/async` Włącz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Na przykład zobacz [porady: wywołania operacji usługi asynchronicznie](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Jeśli aplikacja może kontynuować pracę podczas operacji, należy utworzyć pary metod asynchronicznych na interfejsu kontraktu usługi, który implementuje klienta WCF. Najprostszym sposobem, w tym celu jest użycie `/async` Włącz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Na przykład zobacz [porady: wywołania operacji usługi asynchronicznie](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
  Aby uzyskać więcej informacji na temat zwiększa wydajność klienta, zobacz [aplikacje klienckie warstwy środkowej](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   

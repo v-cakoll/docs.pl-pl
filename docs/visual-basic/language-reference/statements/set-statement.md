@@ -1,12 +1,6 @@
 ---
-title: "Set — Instrukcja (Visual Basic)"
+title: Set — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Set
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-statement-visual-basic"></a>Set — Instrukcja (Visual Basic)
 Deklaruje `Set` procedury właściwości używane do przypisania wartości dla właściwości.  
@@ -38,32 +29,32 @@ End Set
   
 ## <a name="parts"></a>Części  
  `attributelist`  
- Opcjonalny. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Opcjonalnie na maksymalnie jeden `Get` i `Set` instrukcje w tej właściwości. Może to być jedna z następujących czynności:  
+ Opcjonalnie na maksymalnie jeden `Get` i `Set` instrukcje w tej właściwości. Może to być jeden z następujących elementów:  
   
--   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)  
+-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
 -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)  
+-   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
 -   `Protected Friend`  
   
- Zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Wymagany. Parametr zawierający nową wartość dla właściwości.  
+ Wymagana. Parametr zawierający nową wartość dla właściwości.  
   
  `datatype`  
  Jeśli wymagane `Option Strict` jest `On`. Typ danych `value` parametru. Określony typ danych musi być taki sam jak typ danych właściwości gdzie to `Set` zadeklarowano instrukcji.  
   
  `statements`  
- Opcjonalny. Co najmniej jeden instrukcji, które podczas uruchamiania `Set` właściwości procedura jest wywoływana.  
+ Opcjonalna. Co najmniej jeden instrukcji, które podczas uruchamiania `Set` właściwości procedura jest wywoływana.  
   
  `End Set`  
- Wymagany. Kończy definicję `Set` procedury właściwości.  
+ Wymagana. Kończy definicję `Set` procedury właściwości.  
   
 ## <a name="remarks"></a>Uwagi  
  Dla każdej właściwości musi mieć `Set` procedury właściwości, chyba że właściwość jest oznaczona jako `ReadOnly`. `Set` Procedura służy do ustawiania wartości właściwości.  
@@ -86,7 +77,7 @@ End Set
   
 -   **Zwracanie z procedury właściwości.** Gdy `Set` procedura zwraca do kodu wywołującego, wykonanie jest kontynuowane po instrukcji, która podane wartości, które mają być przechowywane.  
   
-     `Set`procedury własności może zwrócić przy użyciu [zwracać instrukcji](../../../visual-basic/language-reference/statements/return-statement.md) lub [instrukcji Zakończ](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` procedury własności może zwrócić przy użyciu [zwracać instrukcji](../../../visual-basic/language-reference/statements/return-statement.md) lub [instrukcji Zakończ](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
      `Exit Property` i `Return` instrukcje spowodować natychmiastowe wyjścia z procedury właściwości. Dowolną liczbę `Exit Property` i `Return` instrukcje mogą występować w dowolnym miejscu w procedurze, a można mieszać `Exit Property` i `Return` instrukcje.  
   
@@ -96,7 +87,7 @@ End Set
  [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Get — instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Procedury własności](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+ [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Procedury właściwości](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)

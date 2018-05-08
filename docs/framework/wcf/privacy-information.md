@@ -1,34 +1,22 @@
 ---
-title: "Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)"
-ms.custom: 
+title: Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
-Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas budowania aplikacji przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika lub może zażądać, lub wysłać informacje przez Internet do witryny sieci Web. Jeśli technologii firmy Microsoft możesz osadzić w aplikacji, technologia ta może być własną zachowanie, które mogą mieć wpływ na prywatność. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy wybrać do wysyłania do nas.  
+Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypadku kompilowania aplikacji przy użyciu systemu Windows Communication Foundation (WCF), wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika lub może zażądać, lub wysłać informacje przez Internet do witryny sieci Web. Jeśli technologii firmy Microsoft możesz osadzić w aplikacji, technologia ta może być własną zachowanie, które mogą mieć wpływ na prywatność. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy wybrać do wysyłania do nas.  
   
 ## <a name="wcf-in-brief"></a>Usługi WCF w Brief  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]rozproszone framework komunikatów używa programu Microsoft .NET Framework, która umożliwia deweloperom tworzenie aplikacji rozproszonych. Komunikaty przekazywane między dwiema aplikacjami zawierają informacje nagłówek i treść.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] rozproszone framework komunikatów używa programu Microsoft .NET Framework, która umożliwia deweloperom tworzenie aplikacji rozproszonych. Komunikaty przekazywane między dwiema aplikacjami zawierają informacje nagłówek i treść.  
   
  Nagłówki może zawierać rozsyłania wiadomości, informacje o zabezpieczeniach transakcji i dłużej w zależności od usługi używane przez aplikację. Komunikaty są zwykle domyślnie szyfrowane. Jedynym wyjątkiem jest przy użyciu `BasicHttpBinding`, który został zaprojektowany do użytku z usługami sieci Web nie jest zabezpieczony, starszej wersji. Projektant aplikacji jest odpowiedzialny za ostatecznego projektu. W treści protokołu SOAP wiadomości dane specyficzne dla aplikacji; Jednak te dane, takie jak zdefiniowane przez aplikację informacje osobiste, mogą być chronione przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] funkcje szyfrowania i poufności. W poniższych sekcjach opisano funkcje, które mogą mieć wpływ na prywatność.  
   
@@ -45,7 +33,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
  Hosting nie ujawnia żadnych określonych informacji w sieci i nie przechowuje danych na tym komputerze.  
   
 ## <a name="message-security"></a>Zabezpieczenia komunikatów  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]funkcja zabezpieczenia oferuje funkcje zabezpieczeń dla aplikacji do obsługi wiadomości. Dostępne funkcje zabezpieczeń obejmują uwierzytelniania i autoryzacji.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] funkcja zabezpieczenia oferuje funkcje zabezpieczeń dla aplikacji do obsługi wiadomości. Dostępne funkcje zabezpieczeń obejmują uwierzytelniania i autoryzacji.  
   
  Uwierzytelnianie jest wykonywane przez przekazanie poświadczeń między klientami i usługami. Uwierzytelniania mogą być przez zabezpieczenia na poziomie transportu lub za pośrednictwem protokołu SOAP wiadomości poziomu zabezpieczeń, w następujący sposób:  
   
@@ -58,7 +46,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
 |Dane|Magazyn|  
 |----------|-------------|  
 |Poświadczenia prezentacji, takie jak nazwa użytkownika, certyfikaty X.509, tokeny protokołu Kerberos i odwołania do poświadczeń.|Standardowy system Windows poświadczeń mechanizmów zarządzania, takich jak magazynu certyfikatów systemu Windows.|  
-|Członkostwo informacje o użytkowniku, takie jak nazwy użytkowników i hasła.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]dostawcy członkostwa.|  
+|Członkostwo informacje o użytkowniku, takie jak nazwy użytkowników i hasła.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dostawcy członkostwa.|  
 |Informacje dotyczące usługi używany do uwierzytelniania usługi dla klientów tożsamości.|Adres punktu końcowego usługi.|  
 |Informacje o wywołującym.|Dzienniki inspekcji.|  
   
@@ -84,7 +72,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
  Żadne informacje osobiste nie są przechowywane na komputerze użytkownika końcowego.  
   
 ## <a name="queued-channels"></a>Kanały w kolejce  
- Kolejki przechowywania komunikatów z aplikacja wysyłająca imieniu aplikację i później przekazywanie tych wiadomości do aplikacji odbierającej. One zapewnić transferu wiadomości z aplikacji wysyłającej aplikacje odbierające, na przykład aplikacja odbierająca jest przejściowy. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]zapewnia obsługę dla usługi kolejkowania wiadomości przy użyciu usługi kolejkowania wiadomości firmy Microsoft (MSMQ) do ich przenoszenia.  
+ Kolejki przechowywania komunikatów z aplikacja wysyłająca imieniu aplikację i później przekazywanie tych wiadomości do aplikacji odbierającej. One zapewnić transferu wiadomości z aplikacji wysyłającej aplikacje odbierające, na przykład aplikacja odbierająca jest przejściowy. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zapewnia obsługę dla usługi kolejkowania wiadomości przy użyciu usługi kolejkowania wiadomości firmy Microsoft (MSMQ) do ich przenoszenia.  
   
  Funkcja kanałów w kolejce nie dodaje nagłówki na wiadomość. Zamiast tego tworzy komunikatów usługi kolejkowania komunikatów z odpowiedniego zbioru właściwości komunikatów usługi kolejkowania komunikatów i wywołuje metody kolejkowania put wiadomości w kolejce usługi kolejkowania komunikatów. Usługa kolejkowania komunikatów jest opcjonalnym składnikiem, który jest dostarczany z systemem Windows.  
   
@@ -138,13 +126,13 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  Klucze, które zostały usunięte:  
   
- \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  Wst:Entropy  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,13 +140,13 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  Potencjalnie osobiste informacje zostaną usunięte:  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:username  
   
  wsse:BinarySecurityToken  
   
- \-Dla xmlns:saml = "urn: oasis: nazwy: tc: SAML:1.0:assertion" są usuwane elementy pogrubione (poniżej):  
+ \- Dla xmlns:saml = "urn: oasis: nazwy: tc: SAML:1.0:assertion" są usuwane elementy pogrubione (poniżej):  
   
  \<Potwierdzenia  
   
@@ -176,7 +164,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
  \<Audience>[uri]\</Audience>+  
   
@@ -200,7 +188,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  [any] *  
   
- \</Advice>?  
+ \</ Porady >?  
   
  <\!--Abstrakcyjnych typów podstawowych  
   
@@ -208,7 +196,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  \<SubjectStatement>  
   
- \<Subject>  
+ \<Temat >  
   
  `<NameIdentifier`  
   
@@ -296,9 +284,9 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  [Podmiotu]  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<Akcja Namespace = "[identyfikator uri]" > [parametry]\<Action > +  
   
- \<Evidence>  
+ \<Dowód >  
   
  \<AssertionIDReference > [identyfikator]\</AssertionIDReference > +  
   
@@ -368,7 +356,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
  http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Informacje nie zostaną usunięte z nagłówków specyficzne dla aplikacji i danych treści  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji (na przykład ciągi zapytań) lub treści danych (na przykład numer karty kredytowej).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji (na przykład ciągi zapytań) lub treści danych (na przykład numer karty kredytowej).  
   
  Po włączeniu rejestrowania komunikatów informacje osobiste w nagłówkach specyficzne dla aplikacji i informacje mogą być widoczne w dziennikach. Ponownie wdrażania aplikacji jest odpowiedzialny za ustawienie listy kontroli dostępu dla plików dziennika i konfiguracji. Może on również wyłączenie rejestrowania, jeśli on nie chce, aby te informacje mają być wyświetlane lub może on filtrować te informacje z plików dziennika po jest rejestrowany.  
   
@@ -383,14 +371,14 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
  Dla obu komunikat rejestrowania i śledzenia można skonfigurować odbiornik śledzenia niestandardowego, który może wysyłać dane śledzenia i komunikaty umieszczonego w (na przykład do zdalnej bazy danych). Narzędzia wdrażania aplikacji jest odpowiedzialny za konfigurowanie niestandardowych odbiorników lub umożliwienie użytkownikom to zrobić. Odpowiada on też żadnych informacji osobistych widoczne w lokalizacji zdalnej i stosowania prawidłowo listy kontroli dostępu do tej lokalizacji.  
   
 ### <a name="other-features-for-it-professionals"></a>Inne funkcje dla specjalistów IT  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]ma dostawcę WMI, który ujawnia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] informacje o konfiguracji infrastruktury za pomocą usługi WMI (dostarczane z systemem Windows). Domyślnie interfejs WMI są dostępne dla administratorów.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ma dostawcę WMI, który ujawnia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] informacje o konfiguracji infrastruktury za pomocą usługi WMI (dostarczane z systemem Windows). Domyślnie interfejs WMI są dostępne dla administratorów.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Konfiguracja korzysta z mechanizmu konfiguracji .NET Framework. Pliki konfiguracji są przechowywane na tym komputerze. Deweloper aplikacji i administrator utworzyć pliki konfiguracji i listy ACL dla każdego wymagania aplikacji. Plik konfiguracji może zawierać adresy punktów końcowych i łącza do certyfikaty w magazynie certyfikatów. Certyfikaty mogą służyć do zapewnienia danych aplikacji, aby skonfigurować różne właściwości funkcje używane przez aplikację.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Konfiguracja korzysta z mechanizmu konfiguracji .NET Framework. Pliki konfiguracji są przechowywane na tym komputerze. Deweloper aplikacji i administrator utworzyć pliki konfiguracji i listy ACL dla każdego wymagania aplikacji. Plik konfiguracji może zawierać adresy punktów końcowych i łącza do certyfikaty w magazynie certyfikatów. Certyfikaty mogą służyć do zapewnienia danych aplikacji, aby skonfigurować różne właściwości funkcje używane przez aplikację.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]używa również funkcje .NET Framework zrzutu procesu przez wywołanie metody <xref:System.Environment.FailFast%2A> metody.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] używa również funkcje .NET Framework zrzutu procesu przez wywołanie metody <xref:System.Environment.FailFast%2A> metody.  
   
 ### <a name="it-pro-tools"></a>IT Pro Tools  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]dostępne są także następujące narzędzia specjalistów IT, które są dostępne w zestawie Windows SDK.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dostępne są także następujące narzędzia specjalistów IT, które są dostępne w zestawie Windows SDK.  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
  Wyświetla podgląd [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pliki śledzenia. Podgląd pokazuje, niezależnie od informacji znajduje się w dane śledzenia.  

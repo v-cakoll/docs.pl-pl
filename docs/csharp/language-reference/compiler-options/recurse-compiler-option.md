@@ -1,10 +1,6 @@
 ---
 title: -recurse (opcje kompilatora C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /recurse
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b50454112bc7aee6c3e0f8fe674e8727ca9e49be
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d18fb2b1710e074653e054d003be762d947d1be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (opcje kompilatora C#)
 Recurse — opcja umożliwia skompilować plików kodu źródłowego we wszystkich katalogach podrzędnych albo określonego katalogu (dir) lub w katalogu projektu.  
@@ -31,7 +24,7 @@ Recurse — opcja umożliwia skompilować plików kodu źródłowego we wszystki
 ```  
   
 ## <a name="arguments"></a>Argumenty  
- `dir`(opcjonalnie)  
+ `dir` (opcjonalnie)  
  Katalog, w którym ma rozpocząć wyszukiwanie. Jeśli nie zostanie określony, wyszukiwanie rozpoczyna się w katalogu projektu.  
   
  `file`  

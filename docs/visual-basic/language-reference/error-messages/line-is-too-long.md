@@ -1,26 +1,17 @@
 ---
-title: "Wiersz jest za długi"
+title: Wiersz jest za długi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30494
 - vbc30494
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 63399e40f94b9596582762ce9f056f3ac9f4a371
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bed3a2b19baf28d759ac31ad5e156a769aba5a5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-is-too-long"></a>Wiersz jest za długi
 Wiersze tekstu źródła nie może przekraczać 65535 znaków.  
@@ -32,4 +23,4 @@ Wiersze tekstu źródła nie może przekraczać 65535 znaków.
 -   Skrócić długość wiersza do 65535 znaków lub mniej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

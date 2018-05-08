@@ -1,32 +1,20 @@
 ---
-title: "Obiekt Materialization (usługi danych WCF)"
-ms.custom: 
+title: Obiekt Materialization (usługi danych WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54f8cc876b373fcfa8e8e514abf50111942de88c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-materialization-wcf-data-services"></a>Obiekt Materialization (usługi danych WCF)
 Jeśli używasz **Dodaj odwołanie do usługi** okna dialogowego, aby korzystać z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w aplikacji klienta opartego na programie .NET Framework, dane równoważne klasy są generowane dla poszczególnych typów jednostek w modelu danych udostępnianych przez źródło. Aby uzyskać więcej informacji, zobacz [generowania biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Jednostka danych zwracanych przez zapytanie jest zmaterializowany do wystąpienia jednego z tych klas usług danych wygenerowanego klienta. Uzyskać informacji o opcji scalania i rozpoznawania tożsamości dla śledzonych obiektów, zobacz [Zarządzanie kontekstu danych usługi](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Umożliwia definiowanie własnych klas usług danych klienta, a nie przy użyciu klasy dane generowane przez narzędzie. Dzięki temu można użyć własnych klas danych, nazywane również "starego zwykłego obiektu CLR" klas danych (POCO). Korzystając z tych typów danych niestandardowych klas, powinien atrybutu klasy danych przy użyciu jednej <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> i upewnij się, że typ nazwy na nazwy typu dopasowania klienta usługi danych modelu danych.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia definiowanie własnych klas usług danych klienta, a nie przy użyciu klasy dane generowane przez narzędzie. Dzięki temu można użyć własnych klas danych, nazywane również "starego zwykłego obiektu CLR" klas danych (POCO). Korzystając z tych typów danych niestandardowych klas, powinien atrybutu klasy danych przy użyciu jednej <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> i upewnij się, że typ nazwy na nazwy typu dopasowania klienta usługi danych modelu danych.  
   
  Gdy biblioteki otrzyma komunikat odpowiedzi zapytania, zostaje on zwrócone dane z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych do wystąpień danych klienta klasy usługi, które są właściwościami typu zapytania. Ogólny proces materializowania tych obiektów jest następujący:  
   

@@ -1,27 +1,15 @@
 ---
-title: "Konstruktorzy ciągów połączenia"
-ms.custom: 
+title: Konstruktorzy ciągów połączenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: beec0aba34bc38ba310aa87dadeeaa4b41c82649
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 01bbf726ffa8d1c595b1ef53df420431bf28560f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-builders"></a>Konstruktorzy ciągów połączenia
 W starszych wersjach [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], kompilacji Sprawdzanie parametrów połączenia z połączony ciąg wartości nie zostało przeprowadzone, dzięki czemu w czasie wykonywania, generowane jest niepoprawna — słowo kluczowe <xref:System.ArgumentException>. Każdy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawców danych obsługę różnych składni słowa kluczowe parametrów połączenia, które konstruowania trudne ciągi prawidłowe połączenie, jeśli jest wykonywane ręcznie. Aby rozwiązać ten problem, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wprowadzono nowe konstruktorów ciągu połączenia dla każdego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. Każdy dostawca danych obejmują dziedziczący z klasy konstruktora ciąg połączenia jednoznacznie <xref:System.Data.Common.DbConnectionStringBuilder>. W poniższej tabeli wymieniono [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych i ich skojarzonych z połączeniami ciągu konstruktora klasy.  

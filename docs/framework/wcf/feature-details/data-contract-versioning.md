@@ -1,14 +1,6 @@
 ---
 title: Przechowywanie wersji kontraktów danych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
 Jak aplikacje rozwijać, może również trzeba zmienić użycia usług kontraktów danych. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy kontroli wersji kontraktu danych. Pełny przegląd i wskazówki przetestowanego przechowywania wersji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -110,7 +96,7 @@ Jak aplikacje rozwijać, może również trzeba zmienić użycia usług kontrakt
 ## <a name="schema-considerations"></a>Zagadnienia dotyczące schematu  
  Aby uzyskać informacje o jakie schematu jest generowany na typy kontraktu danych, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Schemat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] na typy kontraktu danych i tworzy sprawia, że nie przepisy dotyczące przechowywania wersji. Oznacza to, że schemat wyeksportowane z wersji typu zawiera tylko te elementy członkowskie danych dostępne w tej wersji. Implementowanie <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu nie zmienia schemat dla typu.  
+ Schemat WCF tworzy dla typy kontraktu danych powoduje nie przepisy dotyczące przechowywania wersji. Oznacza to, że schemat wyeksportowane z wersji typu zawiera tylko te elementy członkowskie danych dostępne w tej wersji. Implementowanie <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu nie zmienia schemat dla typu.  
   
  Elementy członkowskie danych są eksportowane do schematu jako opcjonalne elementy domyślnie. Oznacza to `minOccurs` (atrybut XML) wartość jest równa 0. Elementy członkowskie danych wymagane są eksportowane z `minOccurs` ustawioną wartość 1.  
   

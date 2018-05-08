@@ -1,23 +1,12 @@
 ---
 title: 225 - TraceCorrelationKeys
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d9083aaf-3816-4c1c-bae0-2d7f49628345
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9a8d9120c4173d90d7bf6b1ff2054117f80ac96a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0bb54387dbd738a01225008edfc45ecb7297cd00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="225---tracecorrelationkeys"></a>225 - TraceCorrelationKeys
 ## <a name="properties"></a>Właściwości  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 |ID|225|  
 |Słowa kluczowe|Rozwiązywanie problemów, ServiceModel|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji Server aplikacje/analityczne|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
  To zdarzenie jest emitowany stosowania korelacji na podstawie zawartości dla usługi przepływu pracy. Zawiera klucze korelacji, które są stosowane do skorelowania komunikat do wystąpienia.  
@@ -42,5 +31,5 @@ ms.lasthandoff: 12/22/2017
 |Klucz wystąpienia|`xs:GUID`|Klucz, który został wygenerowany na podstawie wartości korelacji.|  
 |Wartości|`xs:string`|Wartości, które były używane do obliczania korelacji klucza wystąpienia.|  
 |Zakresu nadrzędnego|`xs:string`||  
-|HostReference|`xs:string`|Dla usług sieci Web hostowanych w tym polu unikatowo identyfikuje usługę w hierarchii sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web &#124; Ścieżka wirtualna usługi &#124; ServiceName ". Przykład: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".|  
+|HostReference|`xs:string`|Dla usług sieci Web hostowanych w tym polu unikatowo identyfikuje usługę w hierarchii sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web&#124;ścieżki wirtualnej usługi&#124;ServiceName". Przykład: "Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
 |Domeny aplikacji|`xs:string`|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|

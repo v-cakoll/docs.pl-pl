@@ -1,22 +1,12 @@
 ---
-title: "Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (Visual Basic)"
-ms.custom: 
+title: Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c0cc5c92-5ca3-44b1-98dd-371601df721b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 44a30e3c79eb1f68f968e83c50a55f24da9275cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35e05f4201920401dbbf68fc810c77b92c2850f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (Visual Basic)
 W tym temacie przedstawiono możliwość serializowania wykresów obiektów, które zawierają odwołania do obiektów typu <xref:System.Xml.Linq.XElement>. Obiekcie tego typu serializacji, <xref:System.Xml.Linq.XElement> implementuje <xref:System.Xml.Serialization.IXmlSerializable> interfejsu.  

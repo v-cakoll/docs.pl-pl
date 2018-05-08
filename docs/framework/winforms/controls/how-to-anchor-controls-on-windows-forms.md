@@ -1,13 +1,6 @@
 ---
-title: "Porady: kotwiczenie formantów na formularzach systemu Windows"
-ms.custom: 
+title: 'Porady: kotwiczenie formantów na formularzach systemu Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
 - Windows Forms controls, screen resolutions
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ceaacc250d48e7199d7224f95aa91ed976c097e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d0885ac3acde6732a5c059063f992913a98b9c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Porady: kotwiczenie formantów na formularzach systemu Windows
 W przypadku projektowania formularza, który użytkownik może zmienić rozmiar w czasie wykonywania, formantów w formularzu należy zmienić rozmiar i zmienia położenie poprawnie. Aby zmienić rozmiar kontrolki dynamicznie za pomocą formularza, można użyć <xref:System.Windows.Forms.Control.Anchor%2A> właściwości formantów formularzy systemu Windows. <xref:System.Windows.Forms.Control.Anchor%2A> Właściwość definiuje pozycji zakotwiczenia dla formantu. Gdy formant jest zakotwiczony do formularza i rozmiarów formularza, formant zachowuje odległość między formantem a pozycji zakotwiczenia. Na przykład, jeśli masz <xref:System.Windows.Forms.TextBox> formant, który jest zakotwiczona lewy, prawy i dolnej krawędzi formularza, ponieważ rozmiarów formularza <xref:System.Windows.Forms.TextBox> kontroli zmienia rozmiar w poziomie, aby przechowuje takiej samej odległości od prawej i lewej stronie formularza. Ponadto kontrolka umieszcza się pionowo tak, aby jego lokalizacji jest zawsze tej samej odległości od dolnej krawędzi formularza. Jeśli formant jest zakotwiczony nie zmieni się rozmiar formularza, pozycja kontroli względem krawędzi formularzu zostanie zmieniona.  

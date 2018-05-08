@@ -1,13 +1,6 @@
 ---
-title: "&lt;uruchamianie&gt; — Element"
-ms.custom: 
+title: '&lt;uruchamianie&gt; — Element'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#startup
@@ -16,21 +9,19 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 60699f0335bb35589341558800cfd64503d0aa0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;uruchamianie&gt; — Element
 Określa uruchamiania informacje CLR.  
   
- \<configuration>  
+ \<Konfiguracja >  
 \<startup>  
   
 ## <a name="syntax"></a>Składnia  
@@ -49,7 +40,7 @@ Określa uruchamiania informacje CLR.
 |---------------|-----------------|  
 |`useLegacyV2RuntimeActivationPolicy`|Atrybut opcjonalny.<br /><br /> Określa, czy włączyć [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] zasad aktywacji środowiska uruchomieniowego lub użyć [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] zasad aktywacji.|  
   
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy Attribute  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>Atrybut useLegacyV2RuntimeActivationPolicy  
   
 |Wartość|Opis|  
 |-----------|-----------------|  

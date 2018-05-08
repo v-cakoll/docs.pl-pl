@@ -1,24 +1,12 @@
 ---
 title: Autoryzacja i uprawnienia w programie SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-caps.latest.revision: "8"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b5dd162aad85ea28e7d05cbfd2e72e7fc2fb235
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bddbbd7eac29d33801042276e5f4ca9a05a83c1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autoryzacja i uprawnienia w programie SQL Server
 Podczas tworzenia obiektów bazy danych musi jawnie udzielić uprawnień, aby udostępnić je użytkownikom. Co zabezpieczanego obiektu ma uprawnienia, które mogą być przyznane uprawnienia instrukcje using podmiot zabezpieczeń.  
@@ -45,7 +33,7 @@ Podczas tworzenia obiektów bazy danych musi jawnie udzielić uprawnień, aby ud
 |Instrukcja uprawnień|Opis|  
 |--------------------------|-----------------|  
 |UDZIEL|Udziela uprawnienia.|  
-|REVOKE|Odwołuje uprawnienia. Jest to domyślny stan nowego obiektu. Uprawnienie odwołany od użytkownika lub roli nadal mogą być dziedziczone z innych grup lub ról, którym przypisano podmiot zabezpieczeń.|  
+|ODWOŁYWANIE|Odwołuje uprawnienia. Jest to domyślny stan nowego obiektu. Uprawnienie odwołany od użytkownika lub roli nadal mogą być dziedziczone z innych grup lub ról, którym przypisano podmiot zabezpieczeń.|  
 |ODMÓW|ODMÓW odwołuje uprawnienia tak, aby nie może być dziedziczona. Odmowa ma pierwszeństwo przed wszystkie uprawnienia, z wyjątkiem ODMÓW nie ma zastosowania do obiektu właścicieli i członkowie `sysadmin`. Odmowa uprawnień do obiektu do `public` roli jest zabroniony wszystkich użytkowników i ról z wyjątkiem właścicieli obiektów i `sysadmin` elementów członkowskich.|  
   
 -   Instrukcja GRANT można przypisać uprawnienia do grupy lub roli, które mogą być dziedziczone przez użytkowników bazy danych. Jednak instrukcji odmowa ma pierwszeństwo przed wszystkie inne instrukcje uprawnień. W związku z tym odmówiono uprawnienia użytkownika nie może dziedziczyć po jego innej roli.  

@@ -1,29 +1,17 @@
 ---
 title: '&lt;add&gt; w &lt;allowAccounts&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 064c9d438832142e1f761d0d33db528dbe73ef2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2230b8d22a14c3df5eb3aa10872246febce015e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-of-ltallowaccountsgt"></a>&lt;add&gt; w &lt;allowAccounts&gt;
-Określa konta użytkownika dla procesów obsługujących [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług i przyznano im dostęp do połączenia z usługą udostępniania.  
+Określa konto użytkownika dla procesów, które host usługi WCF i przyznano im dostęp do połączenia z usługą udostępniania.  
   
- \<system.serviceModel.activation >  
+ \<system.serviceModel.activation>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +37,7 @@ Określa konta użytkownika dla procesów obsługujących [!INCLUDE[indigo2](../
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybutu, aby określić konta użytkowników dla procesów obsługujących [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług i przyznano im dostęp do połączenia z usługą udostępniania.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybutu określ konta użytkowników dla procesów, które host usługi WCF i przyznano im dostęp do połączenia z usługą udostępniania.|  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie konfiguracji dodaje identyfikatory pięć domyślnych dla kont użytkowników do tej kolekcji.  

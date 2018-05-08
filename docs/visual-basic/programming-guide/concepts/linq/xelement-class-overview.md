@@ -1,22 +1,12 @@
 ---
-title: "Przegląd klasy XElement klasy (Visual Basic)"
-ms.custom: 
+title: Przegląd klasy XElement klasy (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: decd7c4f805de0d23b091972ee95a323baf0b7d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 321f812176fc129e0922878c1d071621c32ccf57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xelement-class-overview-visual-basic"></a>Przegląd klasy XElement klasy (Visual Basic)
 <xref:System.Xml.Linq.XElement> Klasy jest jednym z podstawowych klas w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Reprezentuje XML element. Ta klasa służy do tworzenia elementów; zmienić zawartość elementu; Dodawanie, zmienianie lub usuwanie elementów podrzędnych; dodać atrybuty do elementu; lub serializacji zawartości elementu w postaci tekstu. Możesz również może współdziałać z innych klas w <xref:System.Xml?displayProperty=nameWithType>, takich jak <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, i <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -93,7 +83,7 @@ Console.WriteLine(xmlTree)
  Aby uzyskać więcej informacji, zobacz [drzew serializacji XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>Pobieranie danych XML za pomocą metod osi  
- Można użyć metody osi można pobrać atrybutów, elementy podrzędne elementów podrzędnych i elementów nadrzędnych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]zapytania działać na osi metod i podać kilka sposobów elastycznym i wydajnym do nawigowania i przetwarzania drzewo XML.  
+ Można użyć metody osi można pobrać atrybutów, elementy podrzędne elementów podrzędnych i elementów nadrzędnych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania działać na osi metod i podać kilka sposobów elastycznym i wydajnym do nawigowania i przetwarzania drzewo XML.  
   
  Aby uzyskać więcej informacji, zobacz [LINQ do osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
   

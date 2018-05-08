@@ -1,23 +1,16 @@
 ---
-title: "Wymiary tablicy nie są zgodne z platformą określoną w &#39; VBFixedArray &#39; atrybut"
+title: Wymiary tablicy nie są zgodne z platformą określoną w &#39;VBFixedArray&#39; atrybutu
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_ArrayDimensionsDontMatch
 ms.assetid: 71809e3b-8147-4314-9c4c-e4a5bc9a5530
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1a00268c6b53abae0eb6b39eda240ba1ba38bd2c
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 75ce46a0ba73a64cfed1fe62d2981a95490e355b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a>Wymiary tablicy nie są zgodne z platformą określoną w &#39; VBFixedArray &#39; atrybut
+# <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a>Wymiary tablicy nie są zgodne z platformą określoną w &#39;VBFixedArray&#39; atrybutu
 Wymiary tablicy oraz nie są zgodne wymiary określono w `VBFixedArray` atrybutu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

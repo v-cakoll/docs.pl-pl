@@ -1,28 +1,14 @@
 ---
 title: TypeConverters i XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6d41b5ad519302016ed7fa1d6a103af0f4f14d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters i XAML
 W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji języka XAML. W programie .NET Framework <xref:System.ComponentModel.TypeConverter> klasy służy określonego celu jako część wdrożenia dla zarządzanej klasy niestandardowych, które mogą być używane jako wartości właściwości w języku XAML, użycie atrybutu. Jeśli zapisu niestandardowej klasy, a ma wystąpień klasy może być używany jako wartości można ustawić atrybutów pliku XAML, może być konieczne zastosowanie <xref:System.ComponentModel.TypeConverterAttribute> do własnej klasy zapisu niestandardowego <xref:System.ComponentModel.TypeConverter> lub klasę.  
@@ -69,7 +55,7 @@ W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji j
  Jeden sytuacja rozszerzenie znaczników w przypadku potrzeby zamiast konwertera typów jest odwołanie do obiektu, który już istnieje. W najlepszym konwertera typów bezstanowych można generować tylko nowe wystąpienie nie może być pożądane. Aby uzyskać więcej informacji na rozszerzenia znaczników, zobacz [rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Konwertery typu macierzystego  
- W implementacji WPF i .NET Framework analizatora języka XAML Brak niektórych typów, które mają Obsługa konwersji typu macierzystego, jeszcze nie są typy, które tradycyjnie mogą być uważane za nim elementów podstawowych. Przykładem takiego typu <xref:System.DateTime>. Przyczyną tego jest oparta na działanie architektury .NET Framework: typ <xref:System.DateTime> jest zdefiniowany w mscorlib, najbardziej podstawowa Biblioteka programu .NET. <xref:System.DateTime>nie może mieć atrybut atrybut, który pochodzi z innego zestawu, który wprowadzono zależność (<xref:System.ComponentModel.TypeConverterAttribute> z System), mechanizmu odnajdywania konwertera typu zwykle poprzez przypisywanie nie może być obsługiwana. Zamiast tego analizatora XAML zawiera listę typów, które wymagają natywnego przetwarzania i przetwarza je podobnie do sposobu przetwarzania podstawowych wartość true. (W przypadku liczby <xref:System.DateTime> obejmuje to wywołanie <xref:System.DateTime.Parse%2A>.)  
+ W implementacji WPF i .NET Framework analizatora języka XAML Brak niektórych typów, które mają Obsługa konwersji typu macierzystego, jeszcze nie są typy, które tradycyjnie mogą być uważane za nim elementów podstawowych. Przykładem takiego typu <xref:System.DateTime>. Przyczyną tego jest oparta na działanie architektury .NET Framework: typ <xref:System.DateTime> jest zdefiniowany w mscorlib, najbardziej podstawowa Biblioteka programu .NET. <xref:System.DateTime> nie może mieć atrybut atrybut, który pochodzi z innego zestawu, który wprowadzono zależność (<xref:System.ComponentModel.TypeConverterAttribute> z System), mechanizmu odnajdywania konwertera typu zwykle poprzez przypisywanie nie może być obsługiwana. Zamiast tego analizatora XAML zawiera listę typów, które wymagają natywnego przetwarzania i przetwarza je podobnie do sposobu przetwarzania podstawowych wartość true. (W przypadku liczby <xref:System.DateTime> obejmuje to wywołanie <xref:System.DateTime.Parse%2A>.)  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>Implementowanie konwertera typów  
@@ -77,7 +63,7 @@ W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji j
 ### <a name="typeconverter"></a>TypeConverter  
  W <xref:System.Windows.Point> przykładzie wcześniej, klasa <xref:System.Windows.PointConverter> wspomniano. W przypadku implementacji .NET XAML, wszystkie typy konwerterów, które są używane do celów XAML są klasy, które pochodzi od klasy podstawowej <xref:System.ComponentModel.TypeConverter>. <xref:System.ComponentModel.TypeConverter> Klasy istniał w wersji programu .NET Framework, które należy poprzedzić istnienie XAML; jeden z jego oryginalnej użycia jest zapewnienie Konwersja ciągu w oknach dialogowych właściwości w wizualnych projektantów. Dla języka XAML, rola <xref:System.ComponentModel.TypeConverter> jest rozszerzona w celu uwzględnienia jest klasą bazową dla konwersji do ciągu i z ciągu, które umożliwiają analizowanie wartość ciągu atrybutu i prawdopodobnie przetwarzania wartość czasu wykonywania właściwości określonego obiektu na ciąg w celu Serializacja jako atrybut.  
   
- <xref:System.ComponentModel.TypeConverter>definiuje cztery elementów członkowskich, które mają zastosowanie do konwertowania do i z ciągów w celu przetwarzania XAML:  
+ <xref:System.ComponentModel.TypeConverter> definiuje cztery elementów członkowskich, które mają zastosowanie do konwertowania do i z ciągów w celu przetwarzania XAML:  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -91,7 +77,7 @@ W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji j
   
  Metoda najważniejszych dalej jest <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Jeśli aplikacja jest konwertowana na reprezentacji znacznika (na przykład, jeśli plik jest zapisywany w języku XAML jako plik), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> jest odpowiedzialny za tworzenie reprezentacji znacznika. W takim przypadku ścieżkę kodu, który ma znaczenie dla XAML jest podczas przekazywania `destinationType` z <xref:System.String> .  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>i <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> metod obsługi, które są używane, gdy usługa wysyła zapytanie do możliwości <xref:System.ComponentModel.TypeConverter> implementacji. Musisz zaimplementować tych metod, aby zwrócić `true` dla określonego typu przypadków, które obsługują metody konwersji w równoważnych z konwertera. Do celów XAML, zwykle oznacza to <xref:System.String> typu.  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> i <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> metod obsługi, które są używane, gdy usługa wysyła zapytanie do możliwości <xref:System.ComponentModel.TypeConverter> implementacji. Musisz zaimplementować tych metod, aby zwrócić `true` dla określonego typu przypadków, które obsługują metody konwersji w równoważnych z konwertera. Do celów XAML, zwykle oznacza to <xref:System.String> typu.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informacje o ustawieniach kulturowych i typy konwerterów dla XAML  
  Każdy <xref:System.ComponentModel.TypeConverter> implementacji ma własną interpretacji, co stanowi prawidłowy ciąg dla konwersji i można również użyć lub Ignoruj opisu typu przekazywane jako parametry. Brak ważną kwestią w odniesieniu do kultury i konwersji typu XAML. Przy użyciu Lokalizowalny ciągi jako wartości atrybutu jest całkowicie obsługiwana przez XAML. Jednak przy użyciu tego ciągu Lokalizowalny jako dane wejściowe konwertera typu wymagania określoną kulturę, nie jest obsługiwana, ponieważ typy konwerterów dla XAML wartości atrybutów wymagają zachowania podczas analizowania niekoniecznie stałe języka, używając `en-US` kultury. Aby uzyskać więcej informacji na projekt powody to ograniczenie, należy skonsultować się specyfikacja języka XAML ([\[MS XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)).  
@@ -107,7 +93,7 @@ W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji j
 >  Nie używaj znaków nawias klamrowy, szczególnie {, jako element możliwe formatu ciągu. Następujące znaki są zastrzeżone dla wejścia i wyjścia sekwencji rozszerzenia znaczników.  
   
 ### <a name="implementing-convertto"></a>Implementowanie ConvertTo  
- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>potencjalnie jest używana do obsługi serializacji. Obsługa serializacji za pośrednictwem <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> dla danego typu niestandardowego i jej typ konwertera nie jest bezwzględnie spełniony. Jednak jeśli implementacja formantu, lub za pomocą serializacji jako część funkcji lub projekt klasy, należy zaimplementować <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> potencjalnie jest używana do obsługi serializacji. Obsługa serializacji za pośrednictwem <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> dla danego typu niestandardowego i jej typ konwertera nie jest bezwzględnie spełniony. Jednak jeśli implementacja formantu, lub za pomocą serializacji jako część funkcji lub projekt klasy, należy zaimplementować <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
   
  Może być używany jako <xref:System.ComponentModel.TypeConverter> implementacja obsługuje XAML, <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> metody dla tego konwertera, musisz zaakceptować wystąpienia typu (lub wartość) są obsługiwane jako `value` parametru. Gdy `destinationType` parametr jest typu <xref:System.String>, a następnie zwrócony obiekt musi mieć możliwość można rzutować jako <xref:System.String>. Zwracany ciąg musi reprezentować serializacji wartości `value`. W idealnym przypadku powinien być może generować taką samą wartość, jeśli ten ciąg zostały przekazane do formatu serializacji, możesz wybrać <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> implementacji konwertera tego samego, bez znaczny poziom utraty danych.  
   
@@ -125,7 +111,7 @@ W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji j
 ## <a name="applying-the-typeconverterattribute"></a>Stosowanie TypeConverterAttribute  
  Aby Twoje konwertera typu niestandardowego ma być używany jako działający konwerter typów dla niestandardowej klasy przez procesor XAML, należy najpierw zastosować [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> do definicji klasy. <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> Użytkownika za pomocą atrybutu musi być nazwą typu z konwertera typu niestandardowego. Z tym atrybutem stosowane gdy procesor XAML obsługi wartości, których typ właściwości używa danego typu klasy niestandardowej, można wejściowych ciągów i zwrócić wystąpienia obiektu.  
   
- Można też podać konwertera typów, na podstawie poszczególnych właściwości. Zamiast stosowania [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> do definicji klasy zastosować je do definicji właściwości (główny definicji nie `get` / `set` implementacji w niej). Typ właściwości musi odpowiadać typowi przetwarzanego przez użytkownika konwertera typu niestandardowego. Z tym atrybutem zastosowane XAMLprocessor, obsługując wartości właściwości, można przetwarzać ciągów wejściowych i zwrócić wystąpienia obiektu. Dla właściwości typu konwertera technika jest szczególnie przydatne, jeśli chcesz użyć typu właściwości z [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] lub z niektórych biblioteki, której nie można kontrolować definicji klasy i nie można zastosować <xref:System.ComponentModel.TypeConverterAttribute> istnieje.  
+ Można też podać konwertera typów, na podstawie poszczególnych właściwości. Zamiast stosowania [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> do definicji klasy zastosować je do definicji właściwości (główny definicji nie `get` / `set` implementacji w niej). Typ właściwości musi odpowiadać typowi przetwarzanego przez użytkownika konwertera typu niestandardowego. Z tym atrybutem zastosowane XAMLprocessor, obsługując wartości właściwości, można przetwarzać ciągów wejściowych i zwrócić wystąpienia obiektu. Dla właściwości typu konwertera technika jest szczególnie przydatne, jeśli chcesz użyć typu właściwości z programu Microsoft .NET Framework lub niektóre biblioteki, której nie można kontrolować definicji klasy i nie można zastosować <xref:System.ComponentModel.TypeConverterAttribute> istnieje.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.TypeConverter>  

@@ -1,34 +1,22 @@
 ---
 title: Sortowanie i filtrowanie danych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Sortowanie i filtrowanie danych
 <xref:System.Data.DataView> Udostępnia kilka sposobów, sortowanie i filtrowanie danych w <xref:System.Data.DataTable>:  
   
 -   Można użyć <xref:System.Data.DataView.Sort%2A> właściwości w celu określenia jednej lub wielu kolumn sortowanie zleceń i mają (rosnąco) ASC i DESC (malejąco) parametry.  
   
--   Można użyć <xref:System.Data.DataView.ApplyDefaultSort%2A> właściwość, aby automatycznie utworzyć porządek sortowania, w kolejności rosnącej na podstawie kolumny klucza podstawowego lub kolumny tabeli. <xref:System.Data.DataView.ApplyDefaultSort%2A>ma zastosowanie tylko w przypadku **sortowania** właściwość jest odwołanie o wartości null lub pusty ciąg, i gdy tabela ma zdefiniowany klucz podstawowy.  
+-   Można użyć <xref:System.Data.DataView.ApplyDefaultSort%2A> właściwość, aby automatycznie utworzyć porządek sortowania, w kolejności rosnącej na podstawie kolumny klucza podstawowego lub kolumny tabeli. <xref:System.Data.DataView.ApplyDefaultSort%2A> ma zastosowanie tylko w przypadku **sortowania** właściwość jest odwołanie o wartości null lub pusty ciąg, i gdy tabela ma zdefiniowany klucz podstawowy.  
   
 -   Można użyć <xref:System.Data.DataView.RowFilter%2A> właściwości w celu określenia podzbiór wierszy na podstawie ich kolumny wartości. Aby uzyskać więcej informacji o prawidłowe wyrażenia dla **RowFilter** właściwości, zobacz informacje referencyjne dotyczące <xref:System.Data.DataColumn.Expression%2A> właściwość <xref:System.Data.DataColumn> klasy.  
   
@@ -42,12 +30,12 @@ ms.lasthandoff: 01/17/2018
     |------------------------------|-----------------|  
     |**CurrentRows**|**Bieżącego** wersja wiersza wszystkich **Unchanged**, **Added**, i **zmodyfikowane** wierszy. Domyślnie włączone.|  
     |**Dodane**|**Bieżącego** wersja wiersza wszystkich **Added** wierszy.|  
-    |**Usunięte**|**Oryginalnego** wersja wiersza wszystkich **usunięte** wierszy.|  
+    |**usunięte**|**Oryginalnego** wersja wiersza wszystkich **usunięte** wierszy.|  
     |**ModifiedCurrent**|**Bieżącego** wersja wiersza wszystkich **zmodyfikowane** wierszy.|  
     |**ModifiedOriginal**|**Oryginalnego** wersja wiersza wszystkich **zmodyfikowane** wierszy.|  
     |**Brak**|Żadne wiersze.|  
     |**OriginalRows**|**Oryginalnego** wersja wiersza wszystkich **Unchanged**, **zmodyfikowane**, i **usunięte** wierszy.|  
-    |**Unchanged**|**Bieżącego** wersja wiersza wszystkich **Unchanged** wierszy.|  
+    |**Bez zmian**|**Bieżącego** wersja wiersza wszystkich **Unchanged** wierszy.|  
   
  Aby uzyskać więcej informacji na temat stany wiersza i wersje wiersza, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   

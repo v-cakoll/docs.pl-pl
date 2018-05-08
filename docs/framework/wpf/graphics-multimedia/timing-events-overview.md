@@ -1,13 +1,6 @@
 ---
-title: "Przegląd Zdarzenia chronometrażu"
-ms.custom: 
+title: Przegląd Zdarzenia chronometrażu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a48d1621e5568d556a1177578cc662813d70a283
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-events-overview"></a>Przegląd Zdarzenia chronometrażu
 W tym temacie opisano sposób używania pięciu zdarzenia czasowe na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów.  
@@ -67,7 +55,7 @@ W tym temacie opisano sposób używania pięciu zdarzenia czasowe na <xref:Syste
   
 |Zdarzenie|Wyzwalanie operacji interakcyjne|Inne wyzwalacze|  
 |-----------|--------------------------------------|--------------------|  
-|**Ukończone**|Przejdź do wypełnienia|Zegar zostanie ukończone.|  
+|**ukończone**|Przejdź do wypełnienia|Zegar zostanie ukończone.|  
 |**CurrentGlobalSpeedInvalidated**|Wstrzymać, wznowić, wyszukiwania, ustaw stosunek szybkości, przejdź do wypełnienia, Zatrzymaj|Zegar odwraca, przyspiesza, uruchomienia lub zatrzymania.|  
 |**CurrentStateInvalidated**|Rozpocząć, przejdź do wypełnienia, Zatrzymaj|Zegar uruchamia, zatrzymuje, lub wypełnia.|  
 |**CurrentTimeInvalidated**|Rozpocznij, wyszukiwania, przejdź do wypełnienia, Zatrzymaj|Realizowany zegara.|  

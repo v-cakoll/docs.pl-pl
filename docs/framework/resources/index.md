@@ -1,14 +1,6 @@
 ---
 title: Zasoby w aplikacjach klasycznych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - application resources
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-in-desktop-apps"></a>Zasoby w aplikacjach klasycznych
 Niemal wszystkie wysokiej jakości aplikacji ma korzystać z zasobów. Zasób jest niewykonywalne dane, które logicznie jest wdrażany z aplikacją. Zasób może być wyświetlany w aplikacji jako komunikaty o błędach lub jako część interfejsu użytkownika. Zasoby mogą zawierać dane w wielu formularzy, a także ciągów, obrazy i utrwalone obiektów. (Aby napisać utrwalonych obiektów do pliku zasobów, obiekty muszą podlegać serializacji.) Przechowywanie danych w pliku zasobów umożliwia zmianę danych bez konieczności ponownego kompilowania całej aplikacji. Także umożliwia przechowywanie danych w jednej lokalizacji i eliminuje potrzebę polegać na stałe danych przechowywanych w wielu lokalizacjach.  
@@ -37,7 +25,7 @@ Niemal wszystkie wysokiej jakości aplikacji ma korzystać z zasobów. Zasób je
   
  Aby uzyskać informacje o zasobach w programie ASP.NET, zobacz [Omówienie zasobów strony sieci Web programu ASP.NET](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd) w programie Internet Explorer Developer Center.  
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]aplikacje korzystają z modelu innego zasobu z aplikacji klasycznych i zapisanie ich zasobów w pliku indeksu (PRI) pojedynczy pakiet zasobów. Aby uzyskać informacje o zasobach w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach w Sklepie Windows](http://go.microsoft.com/fwlink/p/?LinkId=241674) w Centrum deweloperów systemu Windows.  
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje korzystają z modelu innego zasobu z aplikacji klasycznych i zapisanie ich zasobów w pliku indeksu (PRI) pojedynczy pakiet zasobów. Aby uzyskać informacje o zasobach w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach w Sklepie Windows](http://go.microsoft.com/fwlink/p/?LinkId=241674) w Centrum deweloperów systemu Windows.  
   
 ## <a name="creating-and-localizing-resources"></a>Tworzenie i zasoby lokalizacyjne  
  W aplikacji niezlokalizowana pliki zasobów można użyć jako repozytorium dla danych aplikacji, szczególnie dla ciągów, które mogłoby zostać ustalony w wielu lokalizacjach w kodzie źródłowym. Najczęściej, utwórz zasoby jako tekstowy (txt) lub pliki XML (resx) i używać [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) do kompilowania ich do plików binarnych .resources. Te pliki mogą być osadzone w plik wykonywalny aplikacji przez kompilator języka. Aby uzyskać więcej informacji na temat tworzenia zasobów, zobacz [tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  

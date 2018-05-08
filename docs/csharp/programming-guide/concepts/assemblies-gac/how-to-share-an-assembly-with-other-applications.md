@@ -1,21 +1,12 @@
 ---
-title: "Porady: dzielenie się zestawem z innymi aplikacjami (C#)"
-ms.custom: 
+title: 'Porady: dzielenie się zestawem z innymi aplikacjami (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2317b608c57b4883d1e892e9419cd735fefbb3d9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: beadd6adb176c3fd4e6dde94d95194aea790a2fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Porady: dzielenie się zestawem z innymi aplikacjami (C#)
 Zestawy mogą być prywatne lub współużytkowane: domyślnie większości programów proste składają się z zestaw prywatny, ponieważ nie są one przeznaczone do użycia przez inne aplikacje.  

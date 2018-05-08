@@ -1,13 +1,6 @@
 ---
 title: virtualCERCall MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
 - virtualCERCall MDA
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 010c5dd082c10556ed264306b7575cbe5399fda3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c2f2104768144da244679e5d0be884d70a3ba6b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
 `virtualCERCall` Zarządzany Asystent debugowania (MDA) została aktywowana jako ostrzeżenie informujące, że witryny wywołania wykresu wywołań (CER) region ograniczonego wykonania odwołuje się do wirtualnego docelowych, oznacza to, wirtualnych wywołanie metody wirtualnej innej niż końcowa lub przy użyciu wywołania interfejs. Środowisko uruchomieniowe języka wspólnego (CLR) nie można przewidzieć metody docelowej telefonów z pośredniego wyłącznie analizy metadanych i języka. W związku z tym nie można przygotować drzewo wywołań jako część wykresu CER i przerwań wątku, w tym poddrzewie nie mogą zostać automatycznie zablokowane. To zdarzenie MDA ostrzega o przypadkach, gdy CER może być konieczne można rozszerzyć za pomocą jawnego wywołania <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metody po dodatkowe informacje wymagane do obliczenia w celu wywołania jest znany w czasie wykonywania.  

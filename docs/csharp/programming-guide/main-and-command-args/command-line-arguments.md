@@ -1,21 +1,14 @@
 ---
-title: "Argumenty wiersza poleceń (Przewodnik programowania w języku C#)"
+title: Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 025ed2c451c0a657ce71db56df603302097fc7ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92b3f916b58f72ab2f2f542d3a611d35861afebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 Możesz wysłać argumenty `Main` metody, definiując metody w jednym z następujących sposobów:  
@@ -72,7 +65,7 @@ long num = Convert.ToInt64(s);
   
      `Factorial 3`  
   
-5.  Polecenie powoduje te dane wyjściowe:`The factorial of 3 is 6.`  
+5.  Polecenie powoduje te dane wyjściowe: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumentów wiersza polecenia w [strona debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
@@ -83,7 +76,7 @@ long num = Convert.ToInt64(s);
  <xref:System.Environment?displayProperty=nameWithType>  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Porady: wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Porady: za pomocą argumentów wiersza polecenia dostępu instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Instrukcje: wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
  [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)

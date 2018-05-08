@@ -1,33 +1,21 @@
 ---
 title: '&lt;authentication&gt; w &lt;serviceCertificate&gt;, element'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e8c9530097593f1694af67396773fc32d5534d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; w &lt;serviceCertificate&gt;, element
 Określa ustawienia używane przez serwer proxy klienta do uwierzytelniania certyfikatów usługi, które są uzyskiwane przy użyciu negocjacji SSL/TLS.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
 sekcja endpointBehaviors  
 \<zachowanie >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<Uwierzytelnianie >  
   

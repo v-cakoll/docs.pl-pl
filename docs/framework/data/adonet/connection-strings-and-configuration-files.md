@@ -1,27 +1,15 @@
 ---
-title: "Parametry połączenia i pliki konfiguracji"
-ms.custom: 
+title: Parametry połączenia i pliki konfiguracji
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego skompilowana do kodu źródłowego aplikacji można wyświetlić przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli kiedykolwiek zmieni się parametry połączenia, aplikacja musi ponownie skompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracyjnym aplikacji.  
@@ -78,7 +66,7 @@ Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemó
 >  **Machine.config** plik zawiera także **connectionStrings** sekcja, która zawiera parametry połączenia używane przez program Visual Studio. Podczas pobierania parametrów połączenia o nazwie dostawcy z **app.config** plik w aplikacji Windows, parametry połączenia w **machine.config** uzyskać pierwszy załadowany, a następnie wpisy z **app.config**. Dodawanie **wyczyść** natychmiast po **connectionStrings** element usuwa odwołania wszystkie odziedziczone ze struktury danych w pamięci, dzięki czemu tylko parametry połączenia zdefiniowane w lokalnej **app.config** są traktowane jako plik.  
   
 ### <a name="working-with-the-configuration-classes"></a>Praca z klasami konfiguracji  
- Począwszy od programu .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> jest używany podczas pracy z plików konfiguracyjnych na komputerze lokalnym, zastępując przestarzałe <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager>Służy do pracy z plikami konfiguracji ASP.NET. Jest przeznaczona do pracy z plikami konfiguracji na serwerze sieci Web i umożliwia dostęp programistyczny do sekcji pliku konfiguracji, takich jak **system.web**.  
+ Począwszy od programu .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> jest używany podczas pracy z plików konfiguracyjnych na komputerze lokalnym, zastępując przestarzałe <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> Służy do pracy z plikami konfiguracji ASP.NET. Jest przeznaczona do pracy z plikami konfiguracji na serwerze sieci Web i umożliwia dostęp programistyczny do sekcji pliku konfiguracji, takich jak **system.web**.  
   
 > [!NOTE]
 >  Uzyskiwanie dostępu do plików konfiguracji w czasie wykonywania wymaga przyznawania uprawnień do wywołującego wymagane uprawnienia są zależne od typu aplikacji, plików konfiguracji i lokalizacji. Aby uzyskać więcej informacji, zobacz [przy użyciu klasy konfiguracji](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc) i <xref:System.Web.Configuration.WebConfigurationManager> dla aplikacji ASP.NET i <xref:System.Configuration.ConfigurationManager> dla aplikacji systemu Windows.  

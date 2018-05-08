@@ -1,22 +1,12 @@
 ---
-title: "Porady: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (Visual Basic)"
-ms.custom: 
+title: 'Porady: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f308495a21b671edf03fbd791ef77d668d55388d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4bef55c35311672ab3f28c2ce04a64e1cd21c170
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Porady: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (Visual Basic)
 Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest często używany do przechowywania danych arkusza kalkulacyjnego lub innych danych tabelarycznych reprezentowanego przez wierszy i kolumn. Za pomocą <xref:System.String.Split%2A> metodę, aby rozdzielić pola, jest bardzo proste w celu wykonywania zapytań i manipulowania plików CSV za pomocą LINQ. W rzeczywistości tę samą metodę można zmienić kolejność części strukturalnych wiersza tekstu. nie jest ograniczona do plików CSV.  
@@ -88,4 +78,4 @@ End Class
 ## <a name="see-also"></a>Zobacz też  
  [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [Porady: generowanie kodu XML z plików CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+ [Instrukcje: generowanie kodu XML z plików CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

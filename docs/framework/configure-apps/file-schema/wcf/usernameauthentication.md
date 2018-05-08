@@ -1,33 +1,21 @@
 ---
-title: '&lt;userNameAuthentication&gt;'
-ms.custom: 
+title: '&lt;UserNameAuthentication&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cea18a2c8c2244f384b87b48f195b77da4eb5dfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d81bf3441f4999683b9dc9ab956fff517c20e80e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
 Określa poświadczenia usługi na podstawie nazwy użytkownika i hasła.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<zachowanie >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<userNameAuthentication >  
   
 ## <a name="syntax"></a>Składnia  
@@ -65,7 +53,7 @@ Określa poświadczenia usługi na podstawie nazwy użytkownika i hasła.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenia, które ma być używany podczas uwierzytelniania usługi, i sprawdzanie poprawności poświadczeń klienta powiązane ustawienia.|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenia, które ma być używany podczas uwierzytelniania usługi, i sprawdzanie poprawności poświadczeń klienta powiązane ustawienia.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli żaden z powiązania używane przez usługę jest skonfigurowany do uwierzytelniania opartego na nazwie/hasło użytkownika, są ignorowane atrybutów dla tego elementu. Obejmują one `customUserNamePasswordValidatorType`, `includeWindowsGroups`, `membershipProviderName`, i `userNamePasswordValidationMode`.  

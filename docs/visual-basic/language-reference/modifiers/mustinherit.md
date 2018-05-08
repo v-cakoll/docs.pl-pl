@@ -1,10 +1,6 @@
 ---
 title: MustInherit (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Określa, że klasa może być używana tylko jako klasa bazowa i że nie można utworzyć obiektu bezpośrednio z niej.  
@@ -31,7 +24,7 @@ Określa, że klasa może być używana tylko jako klasa bazowa i że nie można
   
  Użycie innego `MustInherit` klasy jest ograniczenie zmienną do zestawu powiązanymi klasami. Można zdefiniować klasę podstawową i pochodną te klasy pokrewne. Klasa podstawowa nie trzeba podać żadnej funkcji, które są wspólne dla wszystkich klas pochodnych, ale może służyć jako filtr dla przypisywanie wartości do zmiennych. Jeśli odbierającą kod deklaruje zmienną jako klasę podstawową, Visual Basic umożliwia przypisanie tylko obiekt z jednej z klas pochodnych do tej zmiennej.  
   
- .NET Framework definiuje kilka `MustInherit` klas między nimi <xref:System.Array>, <xref:System.Enum>, i <xref:System.ValueType>. <xref:System.ValueType>jest to przykład klasy podstawowej, która ogranicza zmiennej. Wszystkie typy wartości pochodzi od <xref:System.ValueType>. Deklarowanie zmiennej jako <xref:System.ValueType>, tylko typy wartości można przypisać do tej zmiennej.  
+ .NET Framework definiuje kilka `MustInherit` klas między nimi <xref:System.Array>, <xref:System.Enum>, i <xref:System.ValueType>. <xref:System.ValueType> jest to przykład klasy podstawowej, która ogranicza zmiennej. Wszystkie typy wartości pochodzi od <xref:System.ValueType>. Deklarowanie zmiennej jako <xref:System.ValueType>, tylko typy wartości można przypisać do tej zmiennej.  
   
 ## <a name="rules"></a>Reguły  
   
@@ -51,10 +44,10 @@ Określa, że klasa może być używana tylko jako klasa bazowa i że nie można
 ## <a name="usage"></a>Użycie  
  `MustInherit` Modyfikatora można używać w tym kontekście:  
   
- [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Inherits — instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [Inherits, instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md)  
  [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
  [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

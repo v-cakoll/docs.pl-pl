@@ -1,14 +1,6 @@
 ---
-title: "StackOverflowInfo — Struktura"
-ms.custom: 
+title: StackOverflowInfo — Struktura
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StackOverflowInfo
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12a880a7c30277d382bff2b46ebe10720880e907
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo — Struktura
 Przechowuje typ i przepełnienia, który wystąpił na wyjątek zgłoszony z powodu przepełnienia.  
@@ -63,7 +51,7 @@ typedef struct _StackOverflowInfo {
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

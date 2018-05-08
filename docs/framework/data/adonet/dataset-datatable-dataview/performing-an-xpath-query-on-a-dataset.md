@@ -1,27 +1,15 @@
 ---
 title: Wykonywanie kwerendy XPath w zestawie danych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3a13d6ee9345731e097d0bdc9b6e59772d29b554
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie kwerendy XPath w zestawie danych
 Relacja między zsynchronizowany <xref:System.Data.DataSet> i <xref:System.Xml.XmlDataDocument> pozwala korzystać z XML usług, takich jak zapytania XML Path Language (XPath), które uzyskują dostęp do **dokumentu XmlDataDocument** i mogą wykonywać niektórych funkcji ułatwia niż dostęp do **DataSet** bezpośrednio. Na przykład zamiast używania **wybierz** metody <xref:System.Data.DataTable> do nawigowanie po relacjach do innych tabel w **zestawu danych**, można wykonywać kwerendę XPath na **dokumentu XmlDataDocument**  który jest synchronizowany z **DataSet**, aby uzyskać listę elementów XML w formie <xref:System.Xml.XmlNodeList>. Węzły w **XmlNodeList**, rzutowanie jako <xref:System.Xml.XmlElement> węzłów, można następnie przekazać do **GetRowFromElement** metody **dokumentu XmlDataDocument**, aby zwrócić dopasowania <xref:System.Data.DataRow> odwołania do wierszy tabeli w zsynchronizowanej **zestawu danych**.  

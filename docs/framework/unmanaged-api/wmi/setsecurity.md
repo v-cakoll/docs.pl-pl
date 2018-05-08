@@ -1,11 +1,7 @@
 ---
-title: "Funkcja SetSecurity (niezarządzany wykaz interfejsów API)"
-description: "Funkcja SetSecurity pobiera token personifikacji bieżącego wątku."
+title: Funkcja SetSecurity (niezarządzany wykaz interfejsów API)
+description: Funkcja SetSecurity pobiera token personifikacji bieżącego wątku.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SetSecurity
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abb716d64bde9b298203e54d862ff4f1b2bcd170
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setsecurity-function"></a>Funkcja SetSecurity
 Pobiera token personifikacji skojarzone z bieżącego wątku.   
@@ -45,7 +38,7 @@ HRESULT SetSecurity (
 
 ## <a name="parameters"></a>Parametry
 
-`pNeedToReset`[out] Po powrocie z funkcji zawiera wskaźnik do `boolean` wskazująca, czy token powinni resetować wywołując [ResetSecurity](resetsecurity.md) funkcji.  
+`pNeedToReset` [out] Po powrocie z funkcji zawiera wskaźnik do `boolean` wskazująca, czy token powinni resetować wywołując [ResetSecurity](resetsecurity.md) funkcji.  
 
 `token`  
 [out] Po powrocie z funkcji zawiera wskaźnik do dojścia token personifikacji skojarzone z bieżącego wątku. Wartość może być `null` Jeśli jest nie tokenu skojarzonego z bieżącego wątku. 
@@ -61,7 +54,7 @@ Jeśli funkcja nie powiedzie się, wartość zwracana jest kodu zera błędu. Ab
   
  **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
 [Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

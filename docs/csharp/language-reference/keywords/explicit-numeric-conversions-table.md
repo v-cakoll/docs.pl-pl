@@ -1,9 +1,6 @@
 ---
-title: "Tabela jawnych konwersji liczbowych (odwołanie w C#)"
+title: Tabela jawnych konwersji liczbowych (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela jawnych konwersji liczbowych (odwołanie w C#)
 Jawna konwersja liczbowa jest używana do konwertowania dowolnego typu liczbowego żadnego innego liczbowego typu, które nie są niejawna konwersja, korzystając z wyrażeniem rzutowania. W poniższej tabeli przedstawiono te konwersji.  
@@ -28,18 +22,18 @@ Jawna konwersja liczbowa jest używana do konwertowania dowolnego typu liczboweg
   
 |Z|Do|  
 |----------|--------|  
-|[sbyte —](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong`, lub`char`|  
-|[bajtów](../../../csharp/language-reference/keywords/byte.md)|`Sbyte`lub`char`|  
-|[krótki](../../../csharp/language-reference/keywords/short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong`, lub`char`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short`, lub`char`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, lub`char`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, lub`char`|  
-|[długa](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, lub`char`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, lub`char`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte`, lub`short`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, lub`decimal`|  
-|[podwójne](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub`decimal`|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub`double`|  
+|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong`, lub `char`|  
+|[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` lub `char`|  
+|[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong`, lub `char`|  
+|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short`, lub `char`|  
+|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, lub `char`|  
+|[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, lub `char`|  
+|[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, lub `char`|  
+|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, lub `char`|  
+|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte`, lub `short`|  
+|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, lub `decimal`|  
+|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub `decimal`|  
+|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub `double`|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -65,7 +59,7 @@ Jawna konwersja liczbowa jest używana do konwertowania dowolnego typu liczboweg
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [() — Operator](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [(), operator](../../../csharp/language-reference/operators/invocation-operator.md)  
  [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

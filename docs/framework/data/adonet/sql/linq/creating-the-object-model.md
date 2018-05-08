@@ -1,26 +1,12 @@
 ---
 title: Tworzenie modelu obiektów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8686b46545699ab8c07b5d3b5f3ea26080261036
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7724d6e75b350e5c57f090d42ef1f49c4d3593b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-object-model"></a>Tworzenie modelu obiektów
 Można utworzyć modelu obiektów z istniejącej bazy danych i używać modelu w stanie domyślnym. Można również dostosować wiele aspektów modelu i jego zachowanie.  

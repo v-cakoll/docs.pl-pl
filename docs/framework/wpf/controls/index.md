@@ -1,35 +1,21 @@
 ---
 title: Formanty
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>Formanty
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]jest dostarczany z wielu typowych składników interfejsu użytkownika, które są używane w większości aplikacji systemu Windows, takich jak <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, i <xref:System.Windows.Controls.ListBox>. W przeszłości te obiekty mają zostały określone jako formantów. Gdy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestawu SDK w dalszym ciągu używa termin "control" słabo oznacza wszystkie klasy, która reprezentuje obiekt widoczne w aplikacji, ważne jest, aby należy zauważyć, że klasa nie dziedziczy po <xref:System.Windows.Controls.Control> klasy mają obecności widoczne. Klasy, które dziedziczą z <xref:System.Windows.Controls.Control> klasa zawiera <xref:System.Windows.Controls.ControlTemplate>, dzięki czemu konsumenta formantu znacząco zmienić wygląd formantu, bez konieczności tworzenia nową podklasę.  W tym temacie omówiono sposób formantów (zarówno te, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, które nie) są często używane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest dostarczany z wielu typowych składników interfejsu użytkownika, które są używane w większości aplikacji systemu Windows, takich jak <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, i <xref:System.Windows.Controls.ListBox>. W przeszłości te obiekty mają zostały określone jako formantów. Gdy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestawu SDK w dalszym ciągu używa termin "control" słabo oznacza wszystkie klasy, która reprezentuje obiekt widoczne w aplikacji, ważne jest, aby należy zauważyć, że klasa nie dziedziczy po <xref:System.Windows.Controls.Control> klasy mają obecności widoczne. Klasy, które dziedziczą z <xref:System.Windows.Controls.Control> klasa zawiera <xref:System.Windows.Controls.ControlTemplate>, dzięki czemu konsumenta formantu znacząco zmienić wygląd formantu, bez konieczności tworzenia nową podklasę.  W tym temacie omówiono sposób formantów (zarówno te, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, które nie) są często używane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Tworzenie wystąpienia formantu  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- Poniższy przykład tworzy tej samej aplikacji w kodzie. Jednak tworzenie <xref:System.Windows.Controls.Grid>, `grid1`, został on wykluczony z próbki. `grid1`ma takie same definicje kolumn i wierszy, jak pokazano w poprzednim [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przykład.  
+ Poniższy przykład tworzy tej samej aplikacji w kodzie. Jednak tworzenie <xref:System.Windows.Controls.Grid>, `grid1`, został on wykluczony z próbki. `grid1` ma takie same definicje kolumn i wierszy, jak pokazano w poprzednim [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przykład.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Tworzenie stylu dla formantu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]umożliwi to przywrócenie, aby określić wygląd formantów hurtowym, zamiast właściwości na każde wystąpienie w aplikacji, tworząc <xref:System.Windows.Style>. Poniższy przykład tworzy <xref:System.Windows.Style> do każdej zastosowano <xref:System.Windows.Controls.Button> w aplikacji. <xref:System.Windows.Style>definicje są zazwyczaj definiowane w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w <xref:System.Windows.ResourceDictionary>, takich jak <xref:System.Windows.FrameworkElement.Resources%2A> właściwość <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] umożliwi to przywrócenie, aby określić wygląd formantów hurtowym, zamiast właściwości na każde wystąpienie w aplikacji, tworząc <xref:System.Windows.Style>. Poniższy przykład tworzy <xref:System.Windows.Style> do każdej zastosowano <xref:System.Windows.Controls.Button> w aplikacji. <xref:System.Windows.Style> definicje są zazwyczaj definiowane w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w <xref:System.Windows.ResourceDictionary>, takich jak <xref:System.Windows.FrameworkElement.Resources%2A> właściwość <xref:System.Windows.FrameworkElement>.  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   

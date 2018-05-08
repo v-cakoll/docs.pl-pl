@@ -1,34 +1,20 @@
 ---
 title: Przegląd tworzenia punktów końcowych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3317bc47c03e0b100d094ba1d929a003dddab055
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-creation-overview"></a>Przegląd tworzenia punktów końcowych
-Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferty usługi. W tej sekcji opisano strukturę punktu końcowego i opisano sposób definiowania punkt końcowy w konfiguracji i w kodzie.  
+Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferty usługi. W tej sekcji opisano strukturę punktu końcowego i opisano sposób definiowania punkt końcowy w konfiguracji i w kodzie.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Struktura punktu końcowego  
  Każdy punkt końcowy zawiera adres, który wskazuje, gdzie można znaleźć punktu końcowego, powiązanie, które określa, jak klient może komunikować się z punktem końcowym i kontraktu, który identyfikuje dostępne metody.  

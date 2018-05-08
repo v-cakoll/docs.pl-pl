@@ -1,21 +1,15 @@
 ---
-title: "Polimorfizm (Przewodnik programowania w języku C#)"
+title: Polimorfizm (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: "31"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
 Polimorfizm jest często określany jako trzeci słupka o programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest słowem grecki, która oznacza "wiele kształcie" i ma dwa różne aspekty:  
@@ -95,15 +89,15 @@ Polimorfizm jest często określany jako trzeci słupka o programowanie zoriento
   
 -   [Przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+-   [Użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Porady: zastępowanie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Instrukcje: przesłonięcie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Klasy abstrakcyjne i zapieczętowane oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
  [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
  [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
  [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  

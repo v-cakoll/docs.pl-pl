@@ -1,14 +1,6 @@
 ---
-title: "IHostThreadPoolManager::QueueUserWorkItem — Metoda"
-ms.custom: 
+title: IHostThreadPoolManager::QueueUserWorkItem — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostThreadPoolManager.QueueUserWorkItem
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c0a304c2052192d3cba761a128e15dc463011030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem — Metoda
 Funkcja do wykonania kolejek i określa obiekt zawierający dane, które mają być używane przez tą funkcją. Funkcja jest wykonywana po udostępnieniu wątku.  
@@ -62,7 +50,7 @@ HRESULT QueueUserWorkItem (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem`zwrócona pomyślnie.|  
+|S_OK|`QueueUserWorkItem` zwrócona pomyślnie.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
@@ -70,7 +58,7 @@ HRESULT QueueUserWorkItem (
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `QueueUserWorkItem`umieszcza w kolejce elementu roboczego do wątku roboczego w puli wątków. Jego podpisu i parametr typy są identyczne z odpowiedniej funkcji Win32, który ma taką samą nazwę. Aby uzyskać więcej informacji zobacz dokumentację platformy systemu Windows.  
+ `QueueUserWorkItem` umieszcza w kolejce elementu roboczego do wątku roboczego w puli wątków. Jego podpisu i parametr typy są identyczne z odpowiedniej funkcji Win32, który ma taką samą nazwę. Aby uzyskać więcej informacji zobacz dokumentację platformy systemu Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -79,7 +67,7 @@ HRESULT QueueUserWorkItem (
   
  **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  

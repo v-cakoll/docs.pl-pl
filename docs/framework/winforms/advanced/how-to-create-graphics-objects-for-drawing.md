@@ -1,13 +1,6 @@
 ---
-title: "Porady: tworzenie obiektów graficznych do rysowania"
-ms.custom: 
+title: 'Porady: tworzenie obiektów graficznych do rysowania'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c25ddcfb3a566055afd5e233c2a69b3b7a8c66e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Porady: tworzenie obiektów graficznych do rysowania
 Przed może wykonywać Rysowanie linii i kształtów, renderowania tekstu, lub wyświetlania i modyfikowania obrazów za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], należy utworzyć <xref:System.Drawing.Graphics> obiektu. <xref:System.Drawing.Graphics> Obiekt reprezentuje [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] powierzchni rysowania i jest obiekt, który służy do tworzenia obrazów graficznego.  

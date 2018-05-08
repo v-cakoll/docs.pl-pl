@@ -1,24 +1,14 @@
 ---
-title: "Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)"
-ms.custom: 
+title: Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f452a32b209c30175f95aec7a8a90e0783c10086
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 009d70423a3eb29c97f3279a288c37623dac927e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)
 Dyrektyw środowiska uruchomieniowego (. rd.xml) pliku jest plik konfiguracyjny XML, który określa, czy program wyznaczonych elementy są dostępne w celu odbicia. Oto przykład pliku dyrektyw środowiska uruchomieniowego:  
@@ -158,43 +148,43 @@ Dyrektyw środowiska uruchomieniowego (. rd.xml) pliku jest plik konfiguracyjny 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Określanie zasad dla zestawów, obszary nazw i typy  
  [Aplikacji](../../../docs/framework/net-native/application-element-net-native.md), [zestawu](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [podtypów](../../../docs/framework/net-native/subtypes-element-net-native.md)i [ Typ](../../../docs/framework/net-native/type-element-net-native.md) elementy obsługuje następujące typy zasad:  
   
--   `Activate`., Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, aby włączyć aktywacji wystąpień.  
+-   `Activate`. Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, aby włączyć aktywacji wystąpień.  
   
--   `Browse`., Formanty wykonywania zapytania dotyczącego informacji o elementach programu, ale nie umożliwia dostęp do wszystkich środowiska wykonawczego.  
+-   `Browse`. Formanty wykonywania zapytania dotyczącego informacji o elementach programu, ale nie umożliwia dostęp do wszystkich środowiska wykonawczego.  
   
--   `Dynamic`., Sterowanie dostępem środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne.  
+-   `Dynamic`. Sterowanie dostępem środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne.  
   
--   `Serialize`., Sterowanie dostępem środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić wystąpienia typu serializacji i serializowany przez bibliotek innych firm, takich jak serializator Newtonsoft JSON.  
+-   `Serialize`. Sterowanie dostępem środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić wystąpienia typu serializacji i serializowany przez bibliotek innych firm, takich jak serializator Newtonsoft JSON.  
   
--   `DataContractSerializer`., Określa zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.  
+-   `DataContractSerializer`. Określa zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.  
   
--   `DataContractJsonSerializer`., Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.  
+-   `DataContractJsonSerializer`. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.  
   
--   `XmlSerializer`., Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.  
+-   `XmlSerializer`. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.  
   
--   `MarshalObject`., Określa zasady dla przekazywanie typów referencyjnych do środowiska WinRT i modelu COM.  
+-   `MarshalObject`. Określa zasady dla przekazywanie typów referencyjnych do środowiska WinRT i modelu COM.  
   
--   `MarshalDelegate`., Określa zasady dla przekazywanie typów delegatów jako wskaźników funkcji do kodu natywnego.  
+-   `MarshalDelegate`. Określa zasady dla przekazywanie typów delegatów jako wskaźników funkcji do kodu natywnego.  
   
 -   `MarshalStructure` . Określa zasady dla przekazywanie struktur do kodu natywnego.  
   
  Dostępne są następujące ustawienia skojarzone z tych typów zasad:  
   
--   `All`., Włącz zasady dla wszystkich typów i elementów członkowskich, które nie powoduje usunięcia łańcucha narzędzi.  
+-   `All`. Włącz zasady dla wszystkich typów i elementów członkowskich, które nie powoduje usunięcia łańcucha narzędzi.  
   
--   `Auto`., Zachowanie domyślne. (Nie określenie zasad jest równoznaczne z ustawieniem tej zasady `Auto` chyba, że ta zasada jest zastępowana, na przykład element nadrzędny.)  
+-   `Auto`. Zachowanie domyślne. (Nie określenie zasad jest równoznaczne z ustawieniem tej zasady `Auto` chyba, że ta zasada jest zastępowana, na przykład element nadrzędny.)  
   
--   `Excluded`., Wyłącz zasady dla elementu programu.  
+-   `Excluded`. Wyłącz zasady dla elementu programu.  
   
--   `Public`., Włącz zasady dla typy publiczne lub elementy członkowskie, chyba że łańcucha narzędzi Określa, że element członkowski nie jest konieczne i w związku z tym spowoduje usunięcie jej. (W tym drugim przypadku należy użyć `Required Public` do upewnij się, że element członkowski jest przechowywana i funkcję odbicia.)  
+-   `Public`. Włącz zasady dla typy publiczne lub elementy członkowskie, chyba że łańcucha narzędzi Określa, że element członkowski nie jest konieczne i w związku z tym spowoduje usunięcie jej. (W tym drugim przypadku należy użyć `Required Public` do upewnij się, że element członkowski jest przechowywana i funkcję odbicia.)  
   
--   `PublicAndInternal`., Włącz zasady dla publicznych i wewnętrznych typów albo elementów członkowskich, jeśli łańcucha narzędzi nie powoduje usunięcia ich.  
+-   `PublicAndInternal`. Włącz zasady dla publicznych i wewnętrznych typów albo elementów członkowskich, jeśli łańcucha narzędzi nie powoduje usunięcia ich.  
   
--   `Required Public`., Wymagają łańcucha narzędzi, aby zachować typy publiczne i elementów członkowskich, czy są używane, a następnie włączyć ją dla nich.  
+-   `Required Public`. Wymagają łańcucha narzędzi, aby zachować typy publiczne i elementów członkowskich, czy są używane, a następnie włączyć ją dla nich.  
   
--   `Required PublicAndInternal`., Wymagają łańcucha narzędzi, aby zachować zarówno typów publicznych oraz wewnętrznych, jak i elementów członkowskich, czy są używane, a następnie włączyć ją dla nich.  
+-   `Required PublicAndInternal`. Wymagają łańcucha narzędzi, aby zachować zarówno typów publicznych oraz wewnętrznych, jak i elementów członkowskich, czy są używane, a następnie włączyć ją dla nich.  
   
--   `Required All`., Wymagają łańcucha narzędzi, aby zachować wszystkie typy i składniki, czy są używane, a następnie włączyć ją dla nich.  
+-   `Required All`. Wymagają łańcucha narzędzi, aby zachować wszystkie typy i składniki, czy są używane, a następnie włączyć ją dla nich.  
   
  Na przykład następujący plik dyrektyw środowiska uruchomieniowego definiuje zasady dla wszystkich typów i członków w zestawie DataClasses.dll. Umożliwia ona odbicia dla serializacji wszystkie właściwości publiczne, umożliwia przeglądanie dla wszystkich typów i członków typu umożliwia aktywację dla wszystkich typów (z powodu `Dynamic` atrybut) i umożliwia odbicia wszystkie typy publiczne i elementów członkowskich.  
   
@@ -214,27 +204,27 @@ Dyrektyw środowiska uruchomieniowego (. rd.xml) pliku jest plik konfiguracyjny 
 ### <a name="specifying-policy-for-members"></a>Określanie zasad dla elementów członkowskich  
  [Właściwości](../../../docs/framework/net-native/property-element-net-native.md) i [pola](../../../docs/framework/net-native/field-element-net-native.md) elementy obsługuje następujące typy zasad:  
   
--   `Browse`-Formanty wykonywania zapytania dotyczącego informacji na temat tego elementu członkowskiego, ale nie umożliwia dostęp do wszystkich środowiska wykonawczego.  
+-   `Browse` -Formanty wykonywania zapytania dotyczącego informacji na temat tego elementu członkowskiego, ale nie umożliwia dostęp do wszystkich środowiska wykonawczego.  
   
--   `Dynamic`-Kontroluje dostęp środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne. Kontroluje również wykonywania zapytania dotyczącego informacji na temat typu zawierającego.  
+-   `Dynamic` -Kontroluje dostęp środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne. Kontroluje również wykonywania zapytania dotyczącego informacji na temat typu zawierającego.  
   
--   `Serialize`— Umożliwia sterowanie dostępem środowiska uruchomieniowego do elementu członkowskiego, aby włączyć wystąpienia typu serializacji i deserializacji przez biblioteki, takich jak serializator Newtonsoft JSON. Ta zasada będzie stosowana do konstruktorów, pól i właściwości.  
+-   `Serialize` — Umożliwia sterowanie dostępem środowiska uruchomieniowego do elementu członkowskiego, aby włączyć wystąpienia typu serializacji i deserializacji przez biblioteki, takich jak serializator Newtonsoft JSON. Ta zasada będzie stosowana do konstruktorów, pól i właściwości.  
   
  [Metody](../../../docs/framework/net-native/method-element-net-native.md) i [zdarzeń](../../../docs/framework/net-native/event-element-net-native.md) elementy obsługuje następujące typy zasad:  
   
--   `Browse`-Formanty wykonywania zapytania dotyczącego informacji na temat tego elementu członkowskiego, ale nie włączyć dostęp do wszystkich środowiska wykonawczego.  
+-   `Browse` -Formanty wykonywania zapytania dotyczącego informacji na temat tego elementu członkowskiego, ale nie włączyć dostęp do wszystkich środowiska wykonawczego.  
   
--   `Dynamic`-Kontroluje dostęp środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne. Kontroluje również wykonywania zapytania dotyczącego informacji na temat typu zawierającego.  
+-   `Dynamic` -Kontroluje dostęp środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne. Kontroluje również wykonywania zapytania dotyczącego informacji na temat typu zawierającego.  
   
  Dostępne są następujące ustawienia skojarzone z tych typów zasad:  
   
--   `Auto`-Zachowanie domyślne. (Nie określenie zasad jest równoznaczne z ustawieniem tej zasady `Auto` chyba, że coś zastępuje go.)  
+-   `Auto` -Zachowanie domyślne. (Nie określenie zasad jest równoznaczne z ustawieniem tej zasady `Auto` chyba, że coś zastępuje go.)  
   
--   `Excluded`-Nigdy nie zawierają metadanych dla elementu członkowskiego.  
+-   `Excluded` -Nigdy nie zawierają metadanych dla elementu członkowskiego.  
   
--   `Included`-Włącz zasady, jeśli typ nadrzędny znajduje się w danych wyjściowych.  
+-   `Included` -Włącz zasady, jeśli typ nadrzędny znajduje się w danych wyjściowych.  
   
--   `Required`-Wymagają łańcucha narzędzi, aby zachować ten element członkowski nawet wtedy, gdy jest używana i Włącz dla niej zasady.  
+-   `Required` -Wymagają łańcucha narzędzi, aby zachować ten element członkowski nawet wtedy, gdy jest używana i Włącz dla niej zasady.  
   
 ## <a name="runtime-directives-file-semantics"></a>Semantyka pliku dyrektyw środowiska uruchomieniowego  
  Zasady można definiować jednocześnie elementów wyższego poziomu oraz niższych poziomach. Na przykład zasady można definiować dla zestawu i dla niektórych typów zawartych w tym zestawie. Jeśli dany element niższego poziomu nie jest reprezentowany, dziedziczy zasady jego elementu nadrzędnego. Na przykład jeśli `Assembly` element jest obecny, ale `Type` elementy nie są określone zasady w `Assembly` element dotyczy poszczególnych typów w zestawie. Wiele elementów może także zastosować zasady do tego samego elementu programu. Przykładowo oddzielne [zestawu](../../../docs/framework/net-native/assembly-element-net-native.md) elementy zdefiniować tego samego elementu zasad dla tego samego zestawu inaczej. W poniższych sekcjach opisano, jak zasady dla danego typu zostanie rozwiązany w takich przypadkach.  
@@ -248,9 +238,9 @@ Dyrektyw środowiska uruchomieniowego (. rd.xml) pliku jest plik konfiguracyjny 
   
 1.  Jeśli `Excluded` element jest obecny, ma pierwszeństwo.  
   
-2.  `Required`ma pierwszeństwo przez nie `Required`.  
+2.  `Required` ma pierwszeństwo przez nie `Required`.  
   
-3.  `All`ma pierwszeństwo przed `PublicAndInternal`, który ma pierwszeństwo przed `Public`.  
+3.  `All` ma pierwszeństwo przed `PublicAndInternal`, który ma pierwszeństwo przed `Public`.  
   
 4.  Wszelkie jawne ustawienie ma pierwszeństwo przed `Auto`.  
   

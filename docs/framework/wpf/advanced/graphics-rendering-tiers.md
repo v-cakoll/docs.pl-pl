@@ -1,13 +1,6 @@
 ---
 title: Poziomy zmiany grafiki
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - rendering graphics [WPF]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: "44"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwa renderowania określa poziom możliwości sprzętowe grafiki i wydajności dla urządzenia z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -69,7 +57,7 @@ Warstwa renderowania określa poziom możliwości sprzętowe grafiki i wydajnoś
   
 |Funkcja|Warstwy 1|Warstwy 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]Wersja|Musi być większa lub równa 9.0.|Musi być większa lub równa 9.0.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Wersja|Musi być większa lub równa 9.0.|Musi być większa lub równa 9.0.|  
 |Ilość pamięci RAM wideo|Musi być większa lub równa 60MB.|Musi być większa niż lub równy 120MB.|  
 |Program do cieniowania pikseli|Poziom wersji musi być większa lub równa 2.0.|Poziom wersji musi być większa lub równa 2.0.|  
 |Program do cieniowania wierzchołków|Nie jest wymagany.|Poziom wersji musi być większa lub równa 2.0.|  
@@ -81,10 +69,10 @@ Warstwa renderowania określa poziom możliwości sprzętowe grafiki i wydajnoś
 |-------------|-----------|  
 |Renderowanie 2D|Renderowanie najbardziej 2D jest obsługiwana.|  
 |Rasteryzacji 3D|Większość rasteryzacji 3D jest obsługiwana.|  
-|Filtrowanie anizotropowych 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]próbuje użyć anizotropowej filtrowania podczas renderowania 3W zawartości. Filtrowanie anizotropowej odwołuje się do udoskonalanie jakości obrazu tekstur na powierzchni, które są daleko i nawisów pod kątem względem aparatu.|  
-|Mapowanie MCI 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]próbuje użyć mapowania MCI podczas renderowania 3W zawartości. Mapowanie MCI zwiększa jakość renderowania tekstury tekstury zajmuje mniejszych widzenia pola w <xref:System.Windows.Controls.Viewport3D>.|  
+|Filtrowanie anizotropowych 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] próbuje użyć anizotropowej filtrowania podczas renderowania 3W zawartości. Filtrowanie anizotropowej odwołuje się do udoskonalanie jakości obrazu tekstur na powierzchni, które są daleko i nawisów pod kątem względem aparatu.|  
+|Mapowanie MCI 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] próbuje użyć mapowania MCI podczas renderowania 3W zawartości. Mapowanie MCI zwiększa jakość renderowania tekstury tekstury zajmuje mniejszych widzenia pola w <xref:System.Windows.Controls.Viewport3D>.|  
 |Gradientu promieniowego|Obsługiwane, należy unikać użycia <xref:System.Windows.Media.RadialGradientBrush> na dużych obiektów.|  
-|Obliczenia oświetlenia 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wykonuje oświetlenia wierzchołków, co oznacza, że intensywność światła muszą zostać obliczone na każdy wierzchołek każdego materiału zastosowane do siatki.|  
+|Obliczenia oświetlenia 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wykonuje oświetlenia wierzchołków, co oznacza, że intensywność światła muszą zostać obliczone na każdy wierzchołek każdego materiału zastosowane do siatki.|  
 |Renderowanie tekstu|Podrzędne pikseli czcionki renderowania używa programów do cieniowania pikseli dostępne na sprzęcie grafiki.|  
   
  Następujące funkcje i możliwości są sprzętu przyspieszony tylko w przypadku renderowania warstwy 2:  
@@ -98,8 +86,8 @@ Warstwa renderowania określa poziom możliwości sprzętowe grafiki i wydajnoś
 |Funkcja|Uwagi|  
 |-------------|-----------|  
 |Wydruk|Cała zawartość drukowanych jest renderowany przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] potoku oprogramowania.|  
-|Rasteryzacji zawartości, która używa<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Zawartość renderowany przy użyciu <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> metody <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Ułożenie sąsiadujące zawartość, która używa<xref:System.Windows.Media.TileBrush>|Wszelkie rozmieszczany zawartości, w którym <xref:System.Windows.Media.TileBrush.TileMode%2A> właściwość <xref:System.Windows.Media.TileBrush> ma ustawioną wartość <xref:System.Windows.Media.TileMode.Tile>.|  
+|Rasteryzacji zawartości, która używa <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Zawartość renderowany przy użyciu <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> metody <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Ułożenie sąsiadujące zawartość, która używa <xref:System.Windows.Media.TileBrush>|Wszelkie rozmieszczany zawartości, w którym <xref:System.Windows.Media.TileBrush.TileMode%2A> właściwość <xref:System.Windows.Media.TileBrush> ma ustawioną wartość <xref:System.Windows.Media.TileMode.Tile>.|  
 |Powierzchnie przekracza rozmiar maksymalny tekstury sprzętu grafiki|Dla większości sprzętu grafiki dużych powierzchni są rozmiar 2048 x 2048 lub 4096 x 4096 pikseli.|  
 |Każde działanie, którego wideo wymaganie pamięci RAM przekracza ilość pamięci sprzętu grafiki|Użycie pamięci RAM wideo aplikacji można monitorować za pomocą narzędzia Perforator, który znajduje się w [pakiet wydajności WPF](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) w zestawie Windows SDK.|  
 |Warstwowego systemu windows|Zezwalaj warstwowego windows [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje do renderowania zawartości ekranu w oknie nieregularnych. W systemach operacyjnych obsługuje wyświetlania modelu sterownika (WDDM) systemu Windows, takich jak [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] i [!INCLUDE[win7](../../../../includes/win7-md.md)], warstwowego systemu windows są przyspieszony sprzętu. W innych systemach takich jak [!INCLUDE[winxp](../../../../includes/winxp-md.md)], warstwowego systemu windows są renderowane przez oprogramowanie z nie przyspieszanie sprzętowe.<br /><br /> Można włączyć warstwowego systemu windows w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przez ustawienie następujących <xref:System.Windows.Window> właściwości:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
@@ -109,7 +97,7 @@ Warstwa renderowania określa poziom możliwości sprzętowe grafiki i wydajnoś
  Następujące zasoby mogą ułatwiają analizowanie charakterystyki wydajności Twojego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
   
 ### <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia cztery ustawienia rejestru dla kontrolowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowania:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia cztery ustawienia rejestru dla kontrolowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowania:  
   
 |Ustawienie|Opis|  
 |-------------|-----------------|  
@@ -121,7 +109,7 @@ Warstwa renderowania określa poziom możliwości sprzętowe grafiki i wydajnoś
  Te ustawienia są dostępne dla dowolnego narzędzia konfiguracji zewnętrznego, który potrafi odwołanie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ustawień rejestru. Te ustawienia można również utworzony lub zmodyfikowany, uzyskując dostęp do wartości bezpośrednio za pomocą [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Edytor rejestru. Aby uzyskać więcej informacji, zobacz [ustawienia rejestru renderowania grafiki](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Narzędzia profilowania wydajności WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia zestaw narzędzi, które umożliwiają analizowanie zachowania w czasie wykonywania aplikacji i określić typy optymalizacji wydajności, które można zastosować profilowania wydajności. W poniższej tabeli wymieniono profilowania narzędzia, które są uwzględniane w wydajności [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] narzędzia pakiet wydajności WPF:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia zestaw narzędzi, które umożliwiają analizowanie zachowania w czasie wykonywania aplikacji i określić typy optymalizacji wydajności, które można zastosować profilowania wydajności. W poniższej tabeli wymieniono profilowania narzędzia, które są uwzględniane w wydajności [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] narzędzia pakiet wydajności WPF:  
   
 |Narzędzie|Opis|  
 |----------|-----------------|  

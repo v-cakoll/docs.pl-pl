@@ -1,30 +1,20 @@
 ---
 title: '&lt;Uczestnicy&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6e00ccbe4a43fd1dbf96a40d5bc4bca70ea7f78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d5ce06a535283a7789419fb9d87433a45e37fa81
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltparticipantsgt"></a>&lt;Uczestnicy&gt;
 Skonfiguruj listę śledzenia uczestników, które będą wysyłane do śledzenia rekordów jest emitowane bezpośrednio ze środowiska wykonawczego i przetwórz je w sposób są skonfigurowane. Dotyczy to również zapis do określonych danych wyjściowych (np. PLik, konsoli, ETW), przetwarzania/agregowania rekordy lub dowolną kombinację, który może być wymagane.  
   
  Aby uzyskać więcej informacji śledzenia przepływu pracy i uczestników śledzenia, zobacz [przepływu pracy śledzenia i śledzenia](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) i [uczestników śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Śledzenie >  
 \<Uczestnicy >  
   
@@ -50,7 +40,7 @@ Skonfiguruj listę śledzenia uczestników, które będą wysyłane do śledzeni
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|Zawiera ustawienia dla uczestnika śledzenia.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|Zawiera ustawienia dla uczestnika śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

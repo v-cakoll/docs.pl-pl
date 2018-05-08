@@ -1,13 +1,6 @@
 ---
 title: 'Porady: rysowanie krzywych kardynalnych'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 64661bbdcb267e2f2ce33b8a8db2ab2aac9a86f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ad06eb28e1d8e6b5d5f4a77e545f174d8a68d9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Porady: rysowanie krzywych kardynalnych
 Kardynalnej krzywej składanej jest krzywą płynnie przechodzi przez podany zestaw punktów. Do rysowania kardynalnej krzywej składanej, Utwórz <xref:System.Drawing.Graphics> obiektu i przekazać adres tablicę punkty <xref:System.Drawing.Graphics.DrawCurve%2A> metody.  

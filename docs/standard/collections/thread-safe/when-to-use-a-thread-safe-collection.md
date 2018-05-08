@@ -1,28 +1,17 @@
 ---
-title: "Kiedy należy używać kolekcji bezpiecznych wątkowo"
-ms.custom: 
+title: Kiedy należy używać kolekcji bezpiecznych wątkowo
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 61444afd5afe52cbcb0f64074ec4479bd6252358
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Kiedy należy używać kolekcji bezpiecznych wątkowo
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Wprowadza pięć nowych typów kolekcji specjalnie zaprojektowane do obsługi wielowątkowych dodawania i usuwania działań. Aby uzyskać bezpieczeństwo wątków, te nowe typy użyć różnych rodzajów blokowanie wydajne i mechanizmów zwolnić blokady synchronizacji. Synchronizacja narzut dodaje do operacji. Narzut zależy od rodzaju synchronizacji, który jest używany, rodzaj operacji, które są wykonywane i inne czynniki, takie jak liczba wątków, które próbujesz uzyskać jednocześnie dostęp do kolekcji.  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) vs. Queue(T)  
  W scenariuszach czysty producent — konsument, gdzie czas przetwarzania dla każdego elementu jest bardzo mały (kilka instrukcje), następnie <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> mogą oferować niewielkie wydajności za pośrednictwem <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> mający zewnętrznych blokady. W tym scenariuszu <xref:System.Collections.Concurrent.ConcurrentQueue%601> sprawdza się najlepiej, gdy jeden wątek dedykowanych w kolejce i wyłączyć kolejkowanie jest jeden wątek dedykowanych. Jeśli nie wymuszania tej reguły, następnie <xref:System.Collections.Generic.Queue%601> nawet może zapewnić lepszą niż <xref:System.Collections.Concurrent.ConcurrentQueue%601> na komputerach, które mają wiele rdzeni.  
   
- Gdy czas przetwarzania wynosi około 500 FLOPS (operacji zmiennoprzecinkowych) lub więcej, następnie reguły dwa wątku nie ma zastosowania do <xref:System.Collections.Concurrent.ConcurrentQueue%601>, który następnie jest bardzo dobre skalowalności. <xref:System.Collections.Generic.Queue%601>nie działa dobrze w tym scenariuszu.  
+ Gdy czas przetwarzania wynosi około 500 FLOPS (operacji zmiennoprzecinkowych) lub więcej, następnie reguły dwa wątku nie ma zastosowania do <xref:System.Collections.Concurrent.ConcurrentQueue%601>, który następnie jest bardzo dobre skalowalności. <xref:System.Collections.Generic.Queue%601> nie działa dobrze w tym scenariuszu.  
   
  W mieszanych producent — konsument scenariuszy, gdy czas przetwarzania jest bardzo mała <xref:System.Collections.Generic.Queue%601> mający zewnętrzne blokady skaluje się lepiej niż <xref:System.Collections.Concurrent.ConcurrentQueue%601> jest. Gdy czas przetwarzania jest jednak FLOPS około 500 lub więcej, a następnie <xref:System.Collections.Concurrent.ConcurrentQueue%601> skaluje się lepiej.  
   

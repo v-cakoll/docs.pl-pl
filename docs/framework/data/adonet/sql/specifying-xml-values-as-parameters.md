@@ -1,29 +1,15 @@
 ---
 title: Określanie wartości XML jako parametrów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c963b3e08eba7776a0ed579017f1e84828794379
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Określanie wartości XML jako parametrów
 Zapytanie wymaga parametru, którego wartość jest ciągiem XML, deweloperzy mogą podać tę wartość za pomocą wystąpienia **SqlXml** — typ danych. Naprawdę nie ma żadnych lewy; Kolumn XML w programie SQL Server zaakceptować wartości parametrów, dokładnie tak samo jak inne typy danych.  

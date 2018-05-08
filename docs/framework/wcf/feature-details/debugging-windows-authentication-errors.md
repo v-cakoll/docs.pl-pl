@@ -1,14 +1,6 @@
 ---
 title: Debugowanie błędów uwierzytelniania systemu Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +8,25 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
-Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, interfejsu dostawcy obsługi zabezpieczeń (SSPI) obsługuje procesów zabezpieczeń. W przypadku wystąpienia błędów zabezpieczeń w warstwie SSPI, są udostępniane przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Ten temat zawiera framework i zestawu pytania, aby pomóc w zdiagnozowaniu błędów.  
+Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, interfejsu dostawcy obsługi zabezpieczeń (SSPI) obsługuje procesów zabezpieczeń. W przypadku wystąpienia błędów zabezpieczeń w warstwie SSPI, są one udostępniane przez Windows Communication Foundation (WCF). Ten temat zawiera framework i zestawu pytania, aby pomóc w zdiagnozowaniu błędów.  
   
  Omówienie protokołu Kerberos, zobacz [protokołu Kerberos](http://go.microsoft.com/fwlink/?LinkID=86946); w przypadku zobacz omówienie interfejsu SSPI, [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941).  
   
- Uwierzytelniania systemu Windows [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zwykle wykorzystuje *Negotiate* Obsługa dostawca zabezpieczeń (SSP), który przeprowadza uwierzytelnianie wzajemne Kerberos między klientem a usługą. Jeśli protokół Kerberos nie jest dostępny domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powraca do programu NT LAN Manager (NTLM). Można jednak skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Użyj tylko protokołu Kerberos (i Zgłoś wyjątek, jeśli protokół Kerberos nie jest dostępna). Można również skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używania formularzy ograniczone protokołu Kerberos.  
+ W przypadku uwierzytelniania systemu Windows, zazwyczaj używa WCF *Negotiate* Obsługa dostawca zabezpieczeń (SSP), który przeprowadza uwierzytelnianie wzajemne Kerberos między klientem a usługą. Jeśli protokół Kerberos nie jest dostępny, domyślnie WCF powraca do programu NT LAN Manager (NTLM). Można jednak skonfigurować WCF do korzystania z protokołu Kerberos (i Zgłoś wyjątek, jeśli protokół Kerberos nie jest dostępna). Można również skonfigurować usługi WCF do użycia formularze ograniczone protokołu Kerberos.  
   
 ## <a name="debugging-methodology"></a>Metodologia debugowania  
  Podstawowa metoda wygląda następująco:  
   
 1.  Określ, czy używasz uwierzytelniania systemu Windows. Jeśli korzystasz z innego systemu, w tym temacie nie ma zastosowania.  
   
-2.  Określić, czy na pewno korzystasz z uwierzytelniania systemu Windows, czy Twoje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Konfiguracja korzysta z bezpośredniego protokołu Kerberos lub Negotiate.  
+2.  Jeśli masz pewność, że używasz uwierzytelniania systemu Windows, należy określić, czy konfiguracji WCF używa protokołu Kerberos, bezpośrednio lub Negotiate.  
   
 3.  Po określeniu, czy konfiguracja jest przy użyciu protokołu Kerberos lub NTLM, można zrozumieć, komunikaty o błędach w poprawny kontekst.  
   
@@ -75,7 +61,7 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
 ### <a name="kerberos-protocol"></a>Protokół Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Nazwa SPN/nazwa UPN problemów przy użyciu protokołu Kerberos  
- Korzystając z uwierzytelniania systemu Windows i protokołu Kerberos, protokół jest używany lub wynegocjowanym przez interfejs SSPI, adres URL punktu końcowego klienta używa musi zawierać w pełni kwalifikowana nazwa domeny hosta usługi wewnątrz adres URL usługi. Przy założeniu, że konto, na którym uruchomiono usługę ma prawa dostępu do klucza głównej nazwy (usługi SPN) usługi maszyny (ustawienie domyślne), który jest tworzony po dodaniu komputera do domeny usługi Active Directory, najczęściej jest to zrobić, uruchamiając usługi w Konto Usługa sieciowa. Jeśli usługa nie ma dostępu do klucza SPN komputera, należy podać poprawną nazwę SPN lub użytkownika nazwę główną (UPN) konta, pod którym usługa jest uruchomiona w tożsamości punktu końcowego klienta. Aby uzyskać więcej informacji o tym, jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] współpracuje z nazw SPN i UPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Korzystając z uwierzytelniania systemu Windows i protokołu Kerberos, protokół jest używany lub wynegocjowanym przez interfejs SSPI, adres URL punktu końcowego klienta używa musi zawierać w pełni kwalifikowana nazwa domeny hosta usługi wewnątrz adres URL usługi. Przy założeniu, że konto, na którym uruchomiono usługę ma prawa dostępu do klucza głównej nazwy (usługi SPN) usługi maszyny (ustawienie domyślne), który jest tworzony po dodaniu komputera do domeny usługi Active Directory, najczęściej jest to zrobić, uruchamiając usługi w Konto Usługa sieciowa. Jeśli usługa nie ma dostępu do klucza SPN komputera, należy podać poprawną nazwę SPN lub użytkownika nazwę główną (UPN) konta, pod którym usługa jest uruchomiona w tożsamości punktu końcowego klienta. Aby uzyskać więcej informacji na temat działania usługi WCF z nazw SPN i UPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  W programie Równoważenie obciążenia scenariusze, takie jak farmy serwerów sieci Web lub ogrodach sieci Web popularną praktyką jest zdefiniuj unikatowe konto dla poszczególnych aplikacji, Przypisz nazwę SPN dla tego konta i upewnij się, że wszystkie usługi aplikacji uruchomione na tym koncie.  
   
@@ -111,7 +97,7 @@ Korzystając z uwierzytelniania systemu Windows jako mechanizm zabezpieczeń, in
 ### <a name="ntlm-protocol"></a>Protokół NTLM  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negocjowania SSP powróci do uwierzytelniania NTLM, ale uwierzytelnianie NTLM jest wyłączone.  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Właściwość jest ustawiona na `false`, co powoduje, że [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dokonanie optymalnych zostać zgłoszony wyjątek, jeśli używane jest uwierzytelnianie NTLM. Należy pamiętać, że ustawienie tej właściwości na `false` może uniemożliwia poświadczeń NTLM są przesyłane przez sieć.  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Właściwość jest ustawiona na `false`, co powoduje, że Windows Communication Foundation (WCF) aby optymalnych zostać zgłoszony wyjątek, jeśli używane jest uwierzytelnianie NTLM. Należy pamiętać, że ustawienie tej właściwości na `false` może uniemożliwia poświadczeń NTLM są przesyłane przez sieć.  
   
  Poniżej przedstawiono sposób wyłączania powrotu do uwierzytelniania NTLM.  
   

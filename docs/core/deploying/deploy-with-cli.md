@@ -4,16 +4,11 @@ description: Dowiedz się, wdrażanie aplikacji .NET Core za pomocą narzędzi i
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core za pomocą narzędzia interfejsu wiersza polecenia (CLI)
 
@@ -63,11 +58,15 @@ Po prostu wdrażanie wdrożenia zależne od framework bez zależności innych fi
       ```
    Spowoduje to utworzenie zlecenia (zamiast debugowania) wersji aplikacji. Pliki wynikowe są umieszczane w katalogu o nazwie *publikowania* w podkatalogu projektu *bin* katalogu.
 
-Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (.pdb) program, który zawiera informacje o debugowaniu aplikacji. Plik przydaje się głównie w celu debugowania wyjątków. Można pominąć rozpowszechnienie go z plikami aplikacji. Jednak należy go zapisać, w przypadku, gdy chcesz debugować kompilacji wersji aplikacji.
+   Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (.pdb) program, który zawiera informacje o debugowaniu aplikacji. Plik przydaje się głównie w celu debugowania wyjątków. Można pominąć rozpowszechnienie go z plikami aplikacji. Jednak należy go zapisać, w przypadku, gdy chcesz debugować kompilacji wersji aplikacji.
 
-Pełny zestaw plików aplikacji w dowolny sposób, który chcesz można wdrożyć. Na przykład można umieścić je w pliku Zip, użyć prostej `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika. Po zainstalowaniu użytkowników można uruchamiać aplikacji przy użyciu `dotnet` polecenia i podania nazwy pliku aplikacji, takich jak `dotnet fdd.dll`.
+   Pełny zestaw plików aplikacji w dowolny sposób, który chcesz można wdrożyć. Na przykład można umieścić je w pliku Zip, użyć prostej `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
 
-Oprócz plików binarnych aplikacji instalatorem należy również pakietu Instalatora udostępnionego framework albo wyszukać jako warunek wstępny jako część instalacji aplikacji.  Instalacja udostępnionego framework wymaga dostępu administratora/root.
+1. Uruchamianie aplikacji
+
+   Po zainstalowaniu użytkowników można uruchamiać aplikacji przy użyciu `dotnet` polecenia i podania nazwy pliku aplikacji, takich jak `dotnet fdd.dll`.
+
+   Oprócz plików binarnych aplikacji instalatorem należy również pakietu Instalatora udostępnionego framework albo wyszukać jako warunek wstępny jako część instalacji aplikacji.  Instalacja udostępnionego framework wymaga dostępu administratora/root.
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Wdrożenie Framework zależne zależności innych firm
 

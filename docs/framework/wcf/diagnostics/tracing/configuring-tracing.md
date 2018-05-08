@@ -1,28 +1,14 @@
 ---
 title: Konfigurowanie śledzenia
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 53
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródła śledzenia na emitowanie danych śledzenia i poziomy śledzenia zestawu, śledzenie działania zestawu i propagacji do obsługi korelacji śledzenia end-to-end i ustaw obiektów nasłuchujących śledzenia do śledzenia.  
@@ -33,7 +19,7 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
 >  W systemie Windows 8 należy uruchomić aplikację podniesionych uprawnień (Uruchom jako Administrator) w kolejności dla aplikacji do wygenerowania dzienniki śledzenia.  
   
 ## <a name="enabling-tracing"></a>Włączenie debugowania  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Wyświetla następujące dane śledzenia diagnostycznego:  
+ Windows Communication Foundation (WCF) generuje następujące dane śledzenia diagnostycznego:  
   
 -   Ślady punktów kontrolnych procesu dotyczące wszystkich składników aplikacji, takie jak wywołania operacji kodu wyjątki, ostrzeżenia i inne istotne przetwarzanie zdarzeń.  
   

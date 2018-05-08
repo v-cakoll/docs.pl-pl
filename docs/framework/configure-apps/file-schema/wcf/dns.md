@@ -1,24 +1,12 @@
 ---
 title: '&lt;DNS&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c7585cfa85d805a3d1454b0c16e38eee297280a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6125bf157d04a1b0298a183465d11a18ac3786f0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa dla X509 tryb uwierzytelniania certyfikatu, jeśli certyfikat serwera zawiera DNS o tej samej wartości. Ma również zastosowanie do trybu uwierzytelniania systemu Windows, jeśli nazwa SPN ma taką samą wartość.  
@@ -41,7 +29,7 @@ Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa d
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|value|DNS certyfikatu. Usługa DNS jest standardowym protokołem używanym do lokalizacji komputerów w sieciach opartych na protokole IP. Użytkownicy do zapamiętania nazw wyświetlanych, takich jak [http://go.microsoft.com/fwlink/?prd=10929](http://go.microsoft.com/fwlink/?prd=10929) lub [http://go.microsoft.com/fwlink/?LinkID=96165](http://go.microsoft.com/fwlink/?LinkID=96165), łatwiejsze niż liczbowe adresów, takich jak 207.46.131.137.|  
+|value|DNS certyfikatu. Usługa DNS jest standardowym protokołem używanym do lokalizacji komputerów w sieciach opartych na protokole IP. Użytkownicy do zapamiętania nazw wyświetlanych, takich jak [ http://go.microsoft.com/fwlink/?prd=10929 ](http://go.microsoft.com/fwlink/?prd=10929) lub [ http://go.microsoft.com/fwlink/?LinkID=96165 ](http://go.microsoft.com/fwlink/?LinkID=96165), łatwiejsze niż liczbowe adresów, takich jak 207.46.131.137.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

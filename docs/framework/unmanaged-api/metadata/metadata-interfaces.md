@@ -1,28 +1,18 @@
 ---
 title: Interfejsy metadanych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], metadata
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4043bdb7ea128e7ac34349dad8c51a0b247df71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata-interfaces"></a>Interfejsy metadanych
 W tej sekcji opisano niezarządzane interfejsy, które umożliwiają dostęp do metadanych udostępnianych przez typy .NET Framework, metody, pól i tak dalej.  
@@ -47,7 +37,7 @@ W tej sekcji opisano niezarządzane interfejsy, które umożliwiają dostęp do 
  Udostępnia metody do mapowania biblioteki typów na ich podpisów metadanych i przekonwertować z jednego do drugiego.  
   
  [IMetaDataDispenser, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser`jest przestarzała. Zamiast nich należy używać słów kluczowych `IMetaDataDispenserEx`.  
+ `IMetaDataDispenser` jest przestarzała. Zamiast nich należy używać słów kluczowych `IMetaDataDispenserEx`.  
   
  [IMetaDataDispenserEx, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  Udostępnia metody, które mapują obszary pamięci dla tworzenia lub modyfikowania metadanych.  

@@ -1,13 +1,6 @@
 ---
 title: 'Porady: korzystanie z SystemFonts'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +9,17 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2579926dfc71028590e09993e2773ee2cfac1505
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305d0cf18db5dc96b2d3cde863cf4ba2ae8dbb96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-systemfonts"></a>Porady: korzystanie z SystemFonts
 W tym przykładzie pokazano, jak korzystać z zasobów statycznej <xref:System.Windows.SystemFonts> klasy do nadawania stylu lub dostosowywanie przycisku.  
   
 ## <a name="example"></a>Przykład  
- Zasoby systemowe ujawnia kilka określić systemu wartości jako właściwości i zasoby w celu ułatwienia tworzenia elementów wizualnych, które są zgodne z ustawieniami systemu. <xref:System.Windows.SystemFonts>to klasa, która zawiera zarówno system czcionki wartości jako właściwości statycznych i właściwości, które odwołują się klucze zasobów, które mogą być używane do dostępu tych wartości dynamicznie w czasie wykonywania. Na przykład <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> jest <xref:System.Windows.SystemFonts> wartości, i <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> jest odpowiedni klucz zasobów.  
+ Zasoby systemowe ujawnia kilka określić systemu wartości jako właściwości i zasoby w celu ułatwienia tworzenia elementów wizualnych, które są zgodne z ustawieniami systemu. <xref:System.Windows.SystemFonts> to klasa, która zawiera zarówno system czcionki wartości jako właściwości statycznych i właściwości, które odwołują się klucze zasobów, które mogą być używane do dostępu tych wartości dynamicznie w czasie wykonywania. Na przykład <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> jest <xref:System.Windows.SystemFonts> wartości, i <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> jest odpowiedni klucz zasobów.  
   
  W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], można użyć elementów członkowskich <xref:System.Windows.SystemFonts> jako statycznej właściwości lub odwołania do zasobów dynamicznych (o wartości właściwości statycznej jako klucz). Odwołanie do zasobu dynamicznego należy użyć, jeśli Metryka czcionki mają być automatycznie aktualizowane podczas aplikacji działa; w przeciwnym razie użyj wartości statycznej odwołania.  
   

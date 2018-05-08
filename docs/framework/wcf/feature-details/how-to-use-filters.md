@@ -1,26 +1,12 @@
 ---
-title: "Porady: Używanie filtrów"
-ms.custom: 
+title: 'Porady: Używanie filtrów'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>Porady: Używanie filtrów
 W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia konfiguracji routingu, która używa wielu filtrów. W tym przykładzie wiadomości są kierowane do dwóch implementacji usługi Kalkulator, regularCalc i roundingCalc. Zarówno implementacje obsługują te same operacje; Jednak jedna usługa zaokrągla wszystkich obliczeń do najbliższej liczby całkowitej wartości przed zwróceniem. Aplikacja kliencka musi mieć możliwość wskazuje, czy należy użyć wersji zaokrąglania usługi; Jeśli wyrażono ma preferencji usługi wiadomość jest równoważone między dwie usługi. Operacje udostępnianych przez obie te usługi są:  
@@ -145,7 +131,7 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia konfigu
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Jeśli wiadomość zostanie odebrana na adres, który rozpoczyna się od "http://localhost/routingservice/router/rounding/", a następnie daje w wyniku tego filtru **true**. Adres podstawowy używany przez tę konfigurację jest "http://localhost/routingservice/router" i "zaokrąglania/Kalkulator" jest określony dla roundingEndpoint adres, pełny adres używany do komunikacji z tym punktem końcowym jest "http://localhost/ obiektu routingservice/routera/zaokrąglania/Kalkulator", który spełni warunki tego filtru.  
+     Jeśli wiadomość zostanie odebrana na adres, który rozpoczyna się od ciągu "http://localhost/routingservice/router/rounding/" daje w wyniku tego filtru, a następnie **true**. Ponieważ jest adres podstawowy używany przez tę konfigurację "http://localhost/routingservice/router"i jest pełny adres używany do komunikacji z tym punktem końcowym adres podany dla roundingEndpoint jest "zaokrąglania/Kalkulator","http://localhost/routingservice/router/rounding/calculator", który spełni warunki tego filtru.  
   
     > [!NOTE]
     >  Filtr PrefixEndpointAddress nie może oszacować nazwy hosta podczas wykonywania dopasowania, ponieważ w jednym hoście można odwoływać się przy użyciu różnych nazw hostów, które może wszystkie mieć prawidłowe metody odwoływania się do hosta z aplikacji klienta. Na przykład następujące czynności mogą odwoływać się do tego samego hosta:  

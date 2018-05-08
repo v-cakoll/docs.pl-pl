@@ -1,21 +1,12 @@
 ---
-title: "Porady: znajdowanie atrybutu nadrzędnego (XPath-LINQ do XML) (C#)"
-ms.custom: 
+title: 'Porady: znajdowanie atrybutu nadrzędnego (XPath-LINQ do XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eeb1bea8c82eaff904ec1076e92609cd16024d28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6f796bfb8f8b0051af4e31f6e82a503dbfbbc334
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Porady: znajdowanie atrybutu nadrzędnego (XPath-LINQ do XML) (C#)
 W tym temacie przedstawiono sposób przejdź do elementu nadrzędnego i odnalezienia atrybutu o tym.  

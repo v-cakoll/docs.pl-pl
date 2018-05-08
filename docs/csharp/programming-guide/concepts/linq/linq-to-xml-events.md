@@ -1,24 +1,15 @@
 ---
-title: "LINQ do XML zdarzeń (C#)"
-ms.custom: 
+title: LINQ do XML zdarzeń (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 90e868c7de8c4eb8f252a914acf4bffe2fd8a6ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3dd4eaa0261ae7d878e188572d260b34b64fc031
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ do XML zdarzeń (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zdarzenia umożliwiają powiadomienia, gdy zostanie zmieniona drzewo XML.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzenia umożliwiają powiadomienia, gdy zostanie zmieniona drzewo XML.  
   
  Zdarzenia można dodawać do wystąpienia dowolnego <xref:System.Xml.Linq.XObject>. Program obsługi zdarzeń Zadzwonimy zdarzenia dla zmian w tym <xref:System.Xml.Linq.XObject> i wszystkie jego elementy podrzędne. Można na przykład, Dodaj program obsługi zdarzeń do katalogu głównego drzewa i obsługiwać wszystkie modyfikacje w drzewie z tej obsługi zdarzeń.  
   

@@ -1,22 +1,15 @@
 ---
 title: Interfejsy (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6ef872876e800674a58b440e0e4001b86b0f8244
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
 Interfejs zawiera definicje dla grupy powiązane funkcje który [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) można zaimplementować.  
@@ -63,16 +56,16 @@ Interfejs zawiera definicje dla grupy powiązane funkcje który [klasy](../../..
 -   Wiele interfejsów można zaimplementować w klasie lub strukturze. Klasy mogą dziedziczyć klasa podstawowa i także implementować jeden lub więcej interfejsów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Jawna implementacja interfejsu](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+ [Implementacja interfejsu jawnego](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
  Wyjaśnia sposób tworzenia elementu członkowskiego klasy, które są specyficzne dla interfejsu.  
   
- [Porady: jawne Implementowanie elementów interfejsu](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)  
+ [Instrukcje: jawne implementowanie elementów interfejsu](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)  
  Przykład sposobu jawne Implementowanie elementów interfejsów.  
   
- [Porady: jawne Implementowanie elementów dwóch interfejsów](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Instrukcje: jawne implementowanie elementów dwóch interfejsów](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
  Przykład sposobu jawne Implementowanie elementów interfejsów z dziedziczenia.  
   
-##  <a name="BKMK_RelatedSections"></a>Sekcje pokrewne  
+##  <a name="BKMK_RelatedSections"></a> Sekcje pokrewne  
   
 -   [Właściwości interfejsu](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
@@ -88,7 +81,7 @@ Interfejs zawiera definicje dla grupy powiązane funkcje który [klasy](../../..
   
 -   [Polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
   
--   [Klasy abstrakcyjne i zapieczętowane oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+-   [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
   
 -   [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   

@@ -1,28 +1,14 @@
 ---
 title: Typografia w WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cd424dfd936427edb855a92e54921c064c8a8fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45f74a4dd2164f332314ad79a18eab49efb520d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują lepszą jakość i wydajność renderowanie tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii pomocy technicznej, rozszerzone tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -31,9 +17,9 @@ W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[T
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Poprawy jakości i wydajności tekstu  
- Tekst w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest renderowany przy użyciu [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], która zwiększa jasności i czytelność tekstu. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]jest to technologia oprogramowania opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] która poprawia czytelność tekstu w istniejących LCDs (należy zmienić.), takie jak ekranów komputerów przenośnych, Pocket PC ekrany i prosty monitory. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]używa renderowania podrzędne pikseli, dzięki czemu tekst wyświetlany z większą dokładność do jego kształtu true znakami wyrównywanie ułamkową część piksel. Dodatkowe rozpoznawania zwiększa ostrość szczegóły niewielki rozmiar wyświetlania tekstu, co znacznie ułatwia odczytanie przez długi czas trwania. Poprawa innego [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest kierunku y wygładzanie, która wygładza stacjonarne i dołu skrócona krzywych w znaki tekstu. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcji, zobacz [omówienie ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ Tekst w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest renderowany przy użyciu [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], która zwiększa jasności i czytelność tekstu. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowania opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] która poprawia czytelność tekstu w istniejących LCDs (należy zmienić.), takie jak ekranów komputerów przenośnych, Pocket PC ekrany i prosty monitory. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] używa renderowania podrzędne pikseli, dzięki czemu tekst wyświetlany z większą dokładność do jego kształtu true znakami wyrównywanie ułamkową część piksel. Dodatkowe rozpoznawania zwiększa ostrość szczegóły niewielki rozmiar wyświetlania tekstu, co znacznie ułatwia odczytanie przez długi czas trwania. Poprawa innego [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest kierunku y wygładzanie, która wygładza stacjonarne i dołu skrócona krzywych w znaki tekstu. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcji, zobacz [omówienie ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
- ![Tekst z & ClearType y 45; kierunek anty &#45; aliasów](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![Tekst ClearType y&#45;kierunek anty&#45;aliasów](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
 Tekst z ClearType antialiasingu kierunku y  
   
  Potoku renderowania cały tekst może być przyspieszane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pod warunkiem, że komputer spełnia minimalnego wymagania sprzętowe. Renderowanie, którego nie można wykonać przy użyciu sprzętu powróci do renderowania oprogramowania. Przyspieszanie sprzętowe ma wpływ na wszystkich etapach potoku renderowania tekstu — zapisywanie poszczególnych symboli, składania symboli do symbolu serii, efekty, do stosowania [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] mieszania algorytmu do końcowego wyświetlanych wyników. Aby uzyskać więcej informacji na temat sprzętowego przyspieszania, zobacz [warstw renderowania grafiki](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
@@ -61,7 +47,7 @@ Tekst standardowe i kaligraficzne symbole OpenType
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Obsługa rozszerzonego tekstu międzynarodowych  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia obsługę rozszerzonych tekst międzynarodowy podając następujące funkcje:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia obsługę rozszerzonych tekst międzynarodowy podając następujące funkcje:  
   
 -   Automatyczne wiersza odstępy we wszystkich systemach zapisu, przy użyciu adaptacyjną miary.  
   
@@ -71,7 +57,7 @@ Tekst standardowe i kaligraficzne symbole OpenType
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>Obsługa czcionek rozszerzone  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia obsługę rozszerzonych czcionki podając następujące funkcje:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia obsługę rozszerzonych czcionki podając następujące funkcje:  
   
 -   Unicode dla całego tekstu. Zachowanie czcionki i zaznaczenia nie wymagają charset lub stronę kodową.  
   
@@ -89,7 +75,7 @@ Tekst standardowe i kaligraficzne symbole OpenType
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Nowy tekst interfejsy programowania aplikacji (API)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]udostępnia kilka tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] dla deweloperów do użycia podczas łącznie z tekstem w swoich aplikacjach. Te [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] są podzielone na trzy kategorie:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia kilka tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] dla deweloperów do użycia podczas łącznie z tekstem w swoich aplikacjach. Te [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] są podzielone na trzy kategorie:  
   
 -   **Układ i interfejs**. Typowe tekst kontrolki do [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
@@ -101,7 +87,7 @@ Tekst standardowe i kaligraficzne symbole OpenType
  Na najwyższym poziomie funkcjonalności, tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] Podaj wspólnej [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] formanty, takie jak <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, i <xref:System.Windows.Controls.TextBox>. Te elementy sterujące udostępniają podstawowe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów wewnątrz aplikacji i oferty w prosty sposób stanowią i interakcję z tekstem. Określa, takich jak <xref:System.Windows.Controls.RichTextBox> i <xref:System.Windows.Controls.PasswordBox> Włącz bardziej zaawansowane lub specjalizowany obsługi tekstu. Takich jak klasy i <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, i <xref:System.Windows.Documents.TextPointer> włączyć manipulowania przydatne tekstu. Te [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy sterujące udostępniają właściwości <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, i <xref:System.Windows.Controls.Control.FontStyle%2A>, które umożliwiają kontrolowanie czcionki, który jest używany do renderowania tekstu.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Przy użyciu mapy bitowej efekty, transformacji i efektów tekstowych  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Służy do tworzenia wizualnego interesujące używa tekstu przez korzysta z funkcji takich jak efekty mapy bitowej, transformacji i efektów tekstowych. Poniższy przykład przedstawia typowy typ efektem cienia tekstu.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Służy do tworzenia wizualnego interesujące używa tekstu przez korzysta z funkcji takich jak efekty mapy bitowej, transformacji i efektów tekstowych. Poniższy przykład przedstawia typowy typ efektem cienia tekstu.  
   
  ![Cień tekstu z miękkości &#61; 0,25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
 Tekst z cień  

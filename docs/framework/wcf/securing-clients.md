@@ -1,31 +1,19 @@
 ---
 title: Zabezpieczanie klientów [WCF]
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
-W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługa nakazują wymagania dotyczące zabezpieczeń dla klientów. To, że usługa określa, jakie tryb zabezpieczeń, aby używać, i określa, czy klient musi dostarczyć poświadczenia. Zabezpieczanie klientów, w związku z tym, proces jest prosty: używanie metadanych uzyskane z usługi (jeśli jest publikowany) i kompilacji klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga to, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie opisano proces bardziej szczegółowo. Aby uzyskać więcej informacji o tworzeniu Usługa bezpiecznego, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
+W systemie Windows Communication Foundation (WCF), usługa nakazują wymagania dotyczące zabezpieczeń dla klientów. To, że usługa określa, jakie tryb zabezpieczeń, aby używać, i określa, czy klient musi dostarczyć poświadczenia. Zabezpieczanie klientów, w związku z tym, proces jest prosty: używanie metadanych uzyskane z usługi (jeśli jest publikowany) i kompilacji klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga to, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie opisano proces bardziej szczegółowo. Aby uzyskać więcej informacji o tworzeniu Usługa bezpiecznego, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Usługa określa zabezpieczeń  
  Domyślnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powiązania ma włączone funkcje zabezpieczeń. (Wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding>.) W związku z tym jeśli usługa została utworzona przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], istnieje duże prawdopodobieństwo, że będzie implementowany zabezpieczeń, aby zapewnić uwierzytelnianie, poufność i integralność. W takim przypadku metadanych, który udostępnia usługi wskaże, co wymaga, aby ustanowić kanał bezpiecznej komunikacji. Jeśli metadane usługi nie ma żadnych wymagań dotyczących zabezpieczeń, nie istnieje sposób nałożyć schemat zabezpieczeń, takich jak Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, w usłudze. Jeśli jednak usługa wymaga klienta podać poświadczenia, następnie deweloperowi klienta, narzędzia wdrażania lub administrator musisz podać poświadczenia rzeczywiste używanego przez klienta do samodzielnego uwierzytelnienia usługi.  

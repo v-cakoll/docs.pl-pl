@@ -1,24 +1,15 @@
 ---
 title: AttributeUsage (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: f8add9de7f472703048f81ec7f34b601611c2e63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
-Określa sposób użycia klasy atrybutu niestandardowego. `AttributeUsage`jest atrybut, który może odnosić się do definicji atrybutu niestandardowego do kontrolowania, jak można zastosować nowego atrybutu. Po zastosowaniu jawnie, domyślne ustawienia następującą postać:  
+Określa sposób użycia klasy atrybutu niestandardowego. `AttributeUsage` jest atrybut, który może odnosić się do definicji atrybutu niestandardowego do kontrolowania, jak można zastosować nowego atrybutu. Po zastosowaniu jawnie, domyślne ustawienia następującą postać:  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.All,  
@@ -80,7 +71,7 @@ class DClass : BClass { }
  W takim przypadku `Attr1` nie ma zastosowania do `DClass` za pośrednictwem dziedziczenia.  
   
 ## <a name="remarks"></a>Uwagi  
- `AttributeUsage` Jest atrybutem jednorazowy — nie można zastosować w więcej niż raz do tej samej klasy. `AttributeUsage`alias jest <xref:System.AttributeUsageAttribute>.  
+ `AttributeUsage` Jest atrybutem jednorazowy — nie można zastosować w więcej niż raz do tej samej klasy. `AttributeUsage` alias jest <xref:System.AttributeUsageAttribute>.  
   
  Aby uzyskać więcej informacji, zobacz [podczas uzyskiwania dostępu do atrybutów przy użyciu odbicia (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   

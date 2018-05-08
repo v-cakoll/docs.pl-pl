@@ -1,24 +1,12 @@
 ---
-title: "Scenariusze zabezpieczeń aplikacji w programie SQL Server"
-ms.custom: 
+title: Scenariusze zabezpieczeń aplikacji w programie SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6207bc570dd8182b351a945a36d5f80c14a8dd4c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1239715678bda648bc962f9b23667b954b540e3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenariusze zabezpieczeń aplikacji w programie SQL Server
 Nie istnieje jeden sposób poprawne do tworzenia bezpiecznego aplikacji klienckiej programu SQL Server. Każda aplikacja jest unikatowa w jego wymagania, środowisko wdrażania i użytkowników. Aplikacja, która jest bezpieczny okres, po początkowym wdrożeniu może stać się mniej bezpieczne wraz z upływem czasu. Nie można przewidzieć z dowolnym dokładność, jakie zagrożenia mogą pojawić się w przyszłości.  

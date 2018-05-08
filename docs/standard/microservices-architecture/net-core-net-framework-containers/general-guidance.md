@@ -1,21 +1,14 @@
 ---
-title: "Ogólne wskazówki"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Ogólne wskazówki"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Ogólne wskazówki
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Ogólne wskazówki
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>Ogólne wskazówki
 
@@ -45,10 +38,10 @@ Za pomocą .NET Framework na Docker może poprawić komfort pracy wdrażania zmi
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Książka elektroniczna: modernizacji istniejących aplikacji .NET Framework z platformy Azure i kontenery Windows**
+-   **Książka elektroniczna: modernizacji istniejących aplikacji .NET Framework z platformy Azure i kontenery systemu Windows**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Przykładowe aplikacje: modernizacji starsze aplikacje sieci web ASP.NET przy użyciu systemu Windows kontenery**
+-   **Przykładowe aplikacje: modernizacji starsze aplikacje sieci web ASP.NET przy użyciu kontenery systemu Windows**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 

@@ -1,14 +1,6 @@
 ---
-title: "Porady: drukowanie za pomocą formantu WebBrowser"
-ms.custom: 
+title: 'Porady: drukowanie za pomocą formantu WebBrowser'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +13,11 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f72ba017870bfccbb7c0e404c57cab77a96ab8b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2ddb362100d5678d678a71707d8959a3be25853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Porady: drukowanie za pomocą formantu WebBrowser
 Poniższy przykład kodu pokazuje sposób użycia <xref:System.Windows.Forms.WebBrowser> formantu, aby wydrukować stronę sieci Web bez ich wyświetlania.  

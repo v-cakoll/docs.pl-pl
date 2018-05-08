@@ -1,13 +1,6 @@
 ---
-title: "Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM"
-ms.custom: 
+title: Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -33,16 +26,13 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b99dacb5a30cd7b12a5a5dd96bf9fe25b32ab984
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f1d2c9a1b27032c2f293b876928f581388ed8aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
 <xref:System.CodeDom.Compiler> Przestrzeń nazw zawiera interfejsy do generowania kodu źródłowego z wykresów CodeDOM obiektu i zarządzania kompilacji z kompilatorów obsługiwane. Dostawca kodu może wygenerować kodu źródłowego w określonym języku programowania zgodnie z wykresu CodeDOM. Klasa, która pochodzi z <xref:System.CodeDom.Compiler.CodeDomProvider> zwykle zapewnia metody dla Generowanie i kompilowanie kodu dla języka dostawca obsługuje.  

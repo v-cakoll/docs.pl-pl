@@ -1,29 +1,15 @@
 ---
 title: Pobieranie tożsamości lub wartości automatyczny numer
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ce3c888ce9e96d1f5768ce9cf3f3eef8cf8624e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Pobieranie tożsamości lub wartości automatyczny numer
 Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, które zawsze zawiera unikatowe wartości. Wiedzy o wartości klucza podstawowego można zlokalizować wiersza, który go zawiera. Relacyjnych baz danych, takich jak SQL Server, Oracle i Microsoft Access/Jet obsługuje tworzenie automatycznie zwiększany kolumn, które mogą być oznaczone jako klucze podstawowe. Wartości te są generowane przez serwer jako wiersze są dodawane do tabeli. W programie SQL Server ustaw właściwość identity kolumny w oprogramowaniu Oracle tworzenia sekwencji i programu Microsoft Access tworzenia automatycznie numerowane kolumny.  

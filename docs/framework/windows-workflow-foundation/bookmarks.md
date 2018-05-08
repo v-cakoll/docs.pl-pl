@@ -1,23 +1,12 @@
 ---
 title: Bookmarks1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd30abdb158f07724e7acdf172546111e3330713
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bookmarks"></a>Zakładki
 Zakładki są mechanizm, który umożliwia działanie pasywnie oczekiwania na dane wejściowe nieposiadających na wątku przepływu pracy. Gdy działanie sygnalizuje, że oczekuje bodźca, może utworzyć zakładki. Oznacza to środowisko uruchomieniowe czy wykonanie działania nie należy traktować jako pełną nawet wtedy, gdy aktualnie wykonywane — metoda (który utworzony <xref:System.Activities.Bookmark>) zwraca.  
@@ -124,4 +113,4 @@ syncEvent.WaitOne();
  Gdy `ReadLine` działania jest wykonywana, tworzy <xref:System.Activities.Bookmark> o nazwie `UserName` , a następnie oczekiwanie zakładki wznowienie zadania było. Zbiera dane żądanego hosta, a następnie kontynuowanie <xref:System.Activities.Bookmark>. Przepływ pracy wznawia, wyświetla nazwę, a następnie kończy. Należy pamiętać, że żaden kod synchronizacji jest wymagana w odniesieniu do wznawiania działania zakładki. A <xref:System.Activities.Bookmark> można wznowić tylko wtedy, gdy przepływ pracy jest bezczynny, a jeśli przepływ pracy nie jest w stanie bezczynności, wywołanie <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> blokuje aż przepływ pracy stanie bezczynności.  
   
 ## <a name="bookmark-resumption-result"></a>Wynik wznowienie zakładki  
- <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>Zwraca <xref:System.Activities.BookmarkResumptionResult> wartość wyliczenia wskazująca wyniki żądania wznowienia zakładki. Możliwe wartości zwracane są <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady>, i <xref:System.Activities.BookmarkResumptionResult.NotFound>. Tej wartości można użyć hostów i rozszerzenia do określania, jak kontynuować.
+ <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> Zwraca <xref:System.Activities.BookmarkResumptionResult> wartość wyliczenia wskazująca wyniki żądania wznowienia zakładki. Możliwe wartości zwracane są <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady>, i <xref:System.Activities.BookmarkResumptionResult.NotFound>. Tej wartości można użyć hostów i rozszerzenia do określania, jak kontynuować.

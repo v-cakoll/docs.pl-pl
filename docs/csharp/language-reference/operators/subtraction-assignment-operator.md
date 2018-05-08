@@ -1,24 +1,17 @@
 ---
 title: Operator -= (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - -=_CSharpKeyword
 helpviewer_keywords:
 - subtraction assignment operator (-=) [C#]
 - -= operator (subtraction assignment ) [C#]
 ms.assetid: 05c7d68a-423f-4de8-891b-cf24e8fb6ed7
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 443f0d717288a491838d23eaa63218150bd346d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 33aba2e944c8d0589949e7bdc77aadd4f213da28
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="--operator-c-reference"></a>Operator -= (odwołanie w C#)
 Operator przypisania odejmowania.  
@@ -48,4 +41,4 @@ x = x - y
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Operatory C#](../../../csharp/language-reference/operators/index.md)
+ [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

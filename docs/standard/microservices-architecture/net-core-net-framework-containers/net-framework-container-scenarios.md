@@ -1,21 +1,14 @@
 ---
-title: "Kiedy należy wybrać .NET Framework dla kontenerów Docker"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Kiedy należy wybrać .NET Framework dla kontenerów Docker"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Kiedy należy wybrać .NET Framework dla kontenerów Docker
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Kiedy należy wybrać .NET Framework dla kontenerów Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać .NET Framework dla kontenerów Docker
 
@@ -55,7 +48,7 @@ Tymczasem dowolną platformę i dowolne usługi w usłudze Azure nadal nie obsł
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **.NET core przewodnik**
+-   **Przewodnik po podstawowej platformy .NET**
     [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **Eksportowanie z .NET Framework do platformy .NET Core**
@@ -71,4 +64,4 @@ Tymczasem dowolną platformę i dowolne usługi w usłudze Azure nadal nie obsł
 
 
 >[!div class="step-by-step"]
-[Previous] (net-core-container-scenarios.md) [Next] (container-framework-choice-factors.md)
+[Poprzednie] (net-core kontenera scenarios.md) [dalej] (kontenera framework wybór factors.md)

@@ -1,28 +1,16 @@
 ---
 title: Windows Workflow Foundation programowania
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], programming
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b704357d914f72049d0639c402bf2ae64975d00
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e60a98492947a5ce21652cff1ca7dda7993e8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation programowania
 Ta sekcja zawiera zestaw tematów Elementarz, które należy zrozumieć, tworzyć profesjonalne programisty Windows Workflow Foundation (WF).  
@@ -62,7 +50,7 @@ Ta sekcja zawiera zestaw tematów Elementarz, które należy zrozumieć, tworzy�
  Tematach opisano przepływ pracy, kontrola i śledzenie oraz jak te funkcje są używane do monitorowania aplikacji przepływu pracy.  
   
  [Zabezpieczenia przepływu pracy](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
- Omówiono w celu poprawy bezpieczeństwa przepływu pracy przy użyciu języka SQL i [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+ W tym artykule omówiono sposób chronić przepływu pracy, korzystając z programu SQL i Windows Communication Foundation (WCF).  
   
  [Wydajność programu Windows Workflow Foundation 4](../../../docs/framework/windows-workflow-foundation/performance.md)  
  W tym artykule omówiono wydajności systemu Windows Workflow Foundation 4 i porównuje go do poprzedniej wersji programu WF.

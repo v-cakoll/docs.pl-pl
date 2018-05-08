@@ -1,13 +1,6 @@
 ---
 title: Przypisanie zmiennej obiektu (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], object variable assignment
 - object variables [Visual Basic], initializing
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Przypisanie zmiennej obiektu (Visual Basic)
 Instrukcja przydział normalny umożliwia przydzielanie obiektu do zmiennej obiektu. Można przypisać wyrażenia obiektu lub [nic](../../../../visual-basic/language-reference/nothing.md) — słowo kluczowe, jak w poniższym przykładzie przedstawiono.  
@@ -40,7 +30,7 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing`oznacza, że nie ma żadnego obiektu aktualnie przypisane do zmiennej.  
+ `Nothing` oznacza, że nie ma żadnego obiektu aktualnie przypisane do zmiennej.  
   
 ## <a name="initialization"></a>Inicjalizacja  
  Po kodzie rozpoczyna, zmienne są inicjowane do obiektu `Nothing`. Te, których deklaracje zawierają inicjowania są ponownie inicjowane do wartości, które można określić podczas wykonywania instrukcji deklaracji.  
@@ -89,5 +79,5 @@ addStandardText(Me)
  [Deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
  [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
  [Porady: deklarowanie zmiennej obiektu i przydzielanie obiektu do niego w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [Porady: umieszczanie zmienna obiektu nie odwołuje się do dowolnego wystąpienia](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
+ [Instrukcje: sprawianie, aby zmienna obiektu nie odwoływała się do żadnego wystąpienia](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
  [Me, My, MyBase i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

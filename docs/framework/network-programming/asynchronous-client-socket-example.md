@@ -1,12 +1,6 @@
 ---
-title: "Przykład gniazda asynchroniczne klienta"
-ms.custom: 
+title: Przykład gniazda asynchroniczne klienta
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +9,14 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-client-socket-example"></a>Przykład gniazda asynchroniczne klienta
 Następujący przykład program tworzy klienta, który łączy się z serwerem. Klient jest oparty o asynchroniczne gniazda, dlatego wykonywania aplikacji klienckiej nie został wstrzymany, gdy serwer zwraca odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer w konsoli.  

@@ -1,24 +1,12 @@
 ---
 title: Generowanie relacji zestawu danych na podstawie schematu XML (XSD)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generowanie relacji zestawu danych na podstawie schematu XML (XSD)
 W <xref:System.Data.DataSet>, formularz skojarzenia między co najmniej dwie kolumny przez utworzenie relacji nadrzędny podrzędny. Istnieją trzy sposoby do reprezentowania **DataSet** relacji w ramach schematu schematu XML definition language (XSD):  
@@ -44,7 +32,7 @@ W <xref:System.Data.DataSet>, formularz skojarzenia między co najmniej dwie kol
 </xs:element>  
 ```  
   
- Proces mapowania schematu XML tworzy tabele w **DataSet** odpowiada zagnieżdżone typy złożone w schemacie. Tworzy również dodatkowe kolumny, które są używane jako element nadrzędny**-**kolumn podrzędnych dla wygenerowanego tabel. Należy pamiętać, że te nadrzędnego**-**kolumn podrzędnych Określ relacje, które nie jest taka sama jak określenie ograniczeń klucza podstawowego/klucz obcy.  
+ Proces mapowania schematu XML tworzy tabele w **DataSet** odpowiada zagnieżdżone typy złożone w schemacie. Tworzy również dodatkowe kolumny, które są używane jako element nadrzędny**-** kolumn podrzędnych dla wygenerowanego tabel. Należy pamiętać, że te nadrzędnego**-** kolumn podrzędnych Określ relacje, które nie jest taka sama jak określenie ograniczeń klucza podstawowego/klucz obcy.  
   
 ## <a name="msdatarelationship-annotation"></a>MSDATA:Relationship adnotacji  
  **Msdata:Relationship** adnotacji można jawnie określić relacji nadrzędny podrzędny między elementami, które nie są zagnieżdżone w schemacie. W poniższym przykładzie przedstawiono struktury **relacji** elementu.  

@@ -1,24 +1,17 @@
 ---
 title: static (odwołanie w C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - static
 - static_CSharpKeyword
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c47f4a19843039c27ef9f1602581d1004fb8fd76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7e2981c8832d6ac1744c102d5bde55bbe25c256
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-c-reference"></a>static (odwołanie w C#)
 Użyj `static` modyfikator Aby zadeklarować statyczny element członkowski, który należy do samego typu, a nie z określonym obiektem. `static` Modyfikatora można używać z klasami, pola, metody, właściwości, operatory, zdarzeń i konstruktorów, ale nie można użyć z indeksatorów, finalizatory lub typu innego niż klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statycznych elementów członkowskich klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -71,4 +64,4 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
- [Klasy statyczne i statyczni członkowie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+ [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

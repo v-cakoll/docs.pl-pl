@@ -1,13 +1,6 @@
 ---
-title: "LinkLabel — Formant (Formularze systemu Windows)"
-ms.custom: 
+title: LinkLabel — Formant (Formularze systemu Windows)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Label control [Windows Forms]
 - links [Windows Forms], adding to Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Web page link control
 - LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5231813096413b66272b87aabd9adf0643c6e26d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea472636402b650b6e8d0352bd151d3bcf9e3bfd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linklabel-control-windows-forms"></a>LinkLabel — Formant (Formularze systemu Windows)
 Formularze systemu Windows `LinkLabel` formant umożliwia dodawanie łączy stylu sieci Web do aplikacji formularzy systemu Windows. Można użyć `LinkLabel` kontroli dla wszystko, co umożliwia <xref:System.Windows.Forms.Label> sterować dla; można też określić część tekstu jako łącze do obiektu lub strony sieci Web.  
@@ -43,7 +31,7 @@ Formularze systemu Windows `LinkLabel` formant umożliwia dodawanie łączy styl
  Przedstawia sposób wyświetlania strony sieci Web w domyślnej przeglądarce po kliknięciu przez użytkownika formularzy systemu Windows `LinkLabel` formantu.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.LinkLabel>klasy  
+ <xref:System.Windows.Forms.LinkLabel> Klasy  
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

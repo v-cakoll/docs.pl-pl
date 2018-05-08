@@ -1,29 +1,19 @@
 ---
 title: Zabezpieczanie kodu otoki
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], wrapper code
 - wrapper code, securing
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e29a2bdd0bfa338d0266c0841e11aa2ac366529
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-wrapper-code"></a>Zabezpieczanie kodu otoki
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  Zabezpieczenia deklaracyjne oferuje następujące kontrole zabezpieczeń:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand>Określa przeszukiwania stosu zabezpieczeń dostępu kodu. Wszystkich obiektów wywołujących na stosie musi mieć określone uprawnienie lub tożsamości do przekazania. **Żądanie** wykonywane przy każdym wywołaniu, ponieważ stos mogą zawierać różne elementy wywołujące. Jeśli wielokrotnie wywołania metody to sprawdzanie zabezpieczeń jest wykonywane zawsze. **Żądanie** dobrej ochrony przed atakami; zapewnienia zostanie wykryty nieautoryzowanego kodu próby pobrania za jego pośrednictwem.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> Określa przeszukiwania stosu zabezpieczeń dostępu kodu. Wszystkich obiektów wywołujących na stosie musi mieć określone uprawnienie lub tożsamości do przekazania. **Żądanie** wykonywane przy każdym wywołaniu, ponieważ stos mogą zawierać różne elementy wywołujące. Jeśli wielokrotnie wywołania metody to sprawdzanie zabezpieczeń jest wykonywane zawsze. **Żądanie** dobrej ochrony przed atakami; zapewnienia zostanie wykryty nieautoryzowanego kodu próby pobrania za jego pośrednictwem.  
   
 -   [Żądanie LinkDemand](../../../docs/framework/misc/link-demands.md) odbywa się na czas kompilacji just in time (JIT) i sprawdza tylko bezpośredniego obiektu wywołującego. Ta kontrola zabezpieczeń nie sprawdza obiekt wywołujący obiektu wywołującego. Po pomyślnej ten test, nie istnieje żadne dodatkowe zabezpieczenia narzut niezależnie od tego, ile razy może wywołać obiekt wywołujący. Ponieważ nie ma również nie ochrona przed atakami zapewnienia. Z **LinkDemand**, kodu, który przekazuje testu i może się odwoływać kod potencjalnie może uszkodzić zabezpieczeń przez złośliwy kod wywołać przy użyciu autoryzowanego kodu. W związku z tym nie należy używać **LinkDemand** chyba, że wszystkie możliwe słabe punkty można uniknąć dokładnie.  
   

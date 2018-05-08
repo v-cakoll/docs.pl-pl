@@ -1,22 +1,12 @@
 ---
-title: "Porady: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)"
-ms.custom: 
+title: 'Porady: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1e2d81f88371e63f64567422e87ed5b185e7a633
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61b4ebee03511df8bb06b792ecfd700959d0696b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Porady: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)
 Ten przykład przedstawia, jak LINQ może służyć do wykonywania zaawansowanych grupowanie i sortowanie operacje na listach plików lub folderów. Przedstawiono również sposób strony danych wyjściowych w oknie konsoli przy użyciu <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metody.  

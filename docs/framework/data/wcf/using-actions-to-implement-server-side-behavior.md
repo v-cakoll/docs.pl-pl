@@ -1,33 +1,21 @@
 ---
-title: "Za pomocą akcji do wykonania zachowanie po stronie serwera"
-ms.custom: 
+title: Za pomocą akcji do wykonania zachowanie po stronie serwera
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4be2aa42c667460232f6aa3cd8dc707805750e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Za pomocą akcji do wykonania zachowanie po stronie serwera
-Akcji OData umożliwiają wdrożenie zachowanie, który działa na zasób, który został pobrany z usługi OData.  Na przykład należy wziąć pod uwagę film cyfrowy jako zasób, istnieje wiele rzeczy, które można wykonać z film cyfrowy: wyewidencjonowania, szybkość/comment lub zaewidencjonowania. Są to wszystkie przykłady akcji, które mogą być wykonywane przez usługi danych WCF, która zarządza filmów cyfrowych. Działania są opisane w odpowiedzi OData, która zawiera zasób, w którym można wywołać akcję. Gdy użytkownik zażąda z zasobem, który reprezentuje film cyfrowy odpowiedź zwrócona z usługi danych WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu usługi danych lub zasobu. Na przykład po filmu cyfrowego jest wyewidencjonowany go nie może zostać wyewidencjonowany przez innego użytkownika. Klienci mogą wywoływać akcję po prostu, określając adres URL. Na przykład http://MyServer/MovieService.svc/Movies (6) może zidentyfikować określonych film cyfrowy i http://MyServer/MovieService.svc/Movies (6) / Checkout powodowałoby wywołanie akcji w określonych filmu. Akcje umożliwiają można ujawnić modelu usługi bez narażania modelu danych. Kontynuowaniem service przykład movie, można zezwolić użytkownikowi na szybkości filmu, ale nie są bezpośrednio udostępniania danych klasyfikacji jako zasób. Można zaimplementować akcję szybkość pozwala użytkownikom sklasyfikować filmu, ale nie bezpośredni dostęp do danych klasyfikacji jako zasób.  
+Akcji OData umożliwiają wdrożenie zachowanie, który działa na zasób, który został pobrany z usługi OData.  Na przykład należy wziąć pod uwagę film cyfrowy jako zasób, istnieje wiele rzeczy, które można wykonać z film cyfrowy: wyewidencjonowania, szybkość/comment lub zaewidencjonowania. Są to wszystkie przykłady akcji, które mogą być wykonywane przez usługi danych WCF, która zarządza filmów cyfrowych. Działania są opisane w odpowiedzi OData, która zawiera zasób, w którym można wywołać akcję. Gdy użytkownik zażąda z zasobem, który reprezentuje film cyfrowy odpowiedź zwrócona z usługi danych WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu usługi danych lub zasobu. Na przykład po filmu cyfrowego jest wyewidencjonowany go nie może zostać wyewidencjonowany przez innego użytkownika. Klienci mogą wywoływać akcję po prostu, określając adres URL. Na przykład http://MyServer/MovieService.svc/Movies(6) może zidentyfikować określonego filmu cyfrowych i http://MyServer/MovieService.svc/Movies(6)/Checkout powodowałoby wywołanie akcji w określonych filmu. Akcje umożliwiają można ujawnić modelu usługi bez narażania modelu danych. Kontynuowaniem service przykład movie, można zezwolić użytkownikowi na szybkości filmu, ale nie są bezpośrednio udostępniania danych klasyfikacji jako zasób. Można zaimplementować akcję szybkość pozwala użytkownikom sklasyfikować filmu, ale nie bezpośredni dostęp do danych klasyfikacji jako zasób.  
   
 ## <a name="implementing-an-action"></a>Implementowanie akcji  
- Do wykonania działania usługi, musisz zaimplementować <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), i [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfejsów. <xref:System.IServiceProvider>Usługi danych WCF można pobrać implementacji umożliwia [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) umożliwia usługi danych WCF w celu utworzenia, wyszukiwanie, opis i wywołania akcji usługi. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) umożliwia wywoływać kod, który implementuje zachowanie działania usługi i uzyskiwać wyniki, jeśli istnieje. Należy pamiętać, że usługi danych WCF są każdego wywołania usługi WCF, nowe wystąpienie usługi zostanie utworzona na każdym razem, gdy usługa jest wywoływana.  Upewnij się, że nie niepotrzebne jest wykonać po utworzeniu usługi.  
+ Do wykonania działania usługi, musisz zaimplementować <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), i [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfejsów. <xref:System.IServiceProvider> Usługi danych WCF można pobrać implementacji umożliwia [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) umożliwia usługi danych WCF w celu utworzenia, wyszukiwanie, opis i wywołania akcji usługi. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) umożliwia wywoływać kod, który implementuje zachowanie działania usługi i uzyskiwać wyniki, jeśli istnieje. Należy pamiętać, że usługi danych WCF są każdego wywołania usługi WCF, nowe wystąpienie usługi zostanie utworzona na każdym razem, gdy usługa jest wywoływana.  Upewnij się, że nie niepotrzebne jest wykonać po utworzeniu usługi.  
   
 ### <a name="iserviceprovider"></a>Dostawca IServiceProvider  
- <xref:System.IServiceProvider>zawiera metodę o nazwie <xref:System.IServiceProvider.GetService%2A>. Ta metoda jest wywoływana przez usługi danych WCF można pobrać liczbę dostawców usług, w tym metadanych, dostawców usług i danych akcji usługodawców. Zwraca monit dla dostawcy danych usług akcji użytkownika [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) implementacji.  
+ <xref:System.IServiceProvider> zawiera metodę o nazwie <xref:System.IServiceProvider.GetService%2A>. Ta metoda jest wywoływana przez usługi danych WCF można pobrać liczbę dostawców usług, w tym metadanych, dostawców usług i danych akcji usługodawców. Zwraca monit dla dostawcy danych usług akcji użytkownika [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) implementacji.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) zawiera metody, dzięki którym można pobrać informacji o dostępnych akcji. Po zaimplementowaniu [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) są rozbudować metadanych usługi zdefiniowanego przez implementację usługi [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) z akcjami i Obsługa wysyłania te akcje zależnie od potrzeb.  
@@ -63,7 +51,7 @@ Akcji OData umożliwiają wdrożenie zachowanie, który działa na zasób, któr
 ## <a name="invoking-a-wcf-data-service-action"></a>Wywoływanie akcję usługi danych WCF  
  Akcje są wywoływane przy użyciu żądania HTTP POST. Adres URL określa zasobów, a po niej nazwę akcji. Parametry są przekazywane w treści żądania. Na przykład jeśli wystąpił usługi o nazwie MovieService, który ujawniany akcji o nazwie szybkości. Wywołanie akcji szybkość na określonych filmu można użyć następującego adresu URL:  
   
- (1) / szybkość http://MovieServer/MovieService.svc/Movies  
+ http://MovieServer/MovieService.svc/Movies(1)/Rate  
   
  Movies(1) określa film, który ma zostać współczynnik i szybkość Określa szybkość działania. Rzeczywistej wartości ocena będzie w treści żądania HTTP, jak pokazano w poniższym przykładzie:  
   

@@ -1,24 +1,12 @@
 ---
-title: "Program obsługi tokenów sieci Web JSON"
-ms.custom: 
+title: Program obsługi tokenów sieci Web JSON
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a822e87f03c4fa7e1ce7449f09efd178b87cc99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27c01a3d0ce0f2891b00ad28526d4753b9be4ce0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="json-web-token-handler"></a>Program obsługi tokenów sieci Web JSON
 Rozszerzenie JSON Web Token Handler dla programu Windows Identity Foundation umożliwia tworzenie i weryfikowanie tokenów sieci Web w formacie JSON (JWT) w tworzonych aplikacjach. Rozszerzenie JWT Token Handler można skonfigurować do uruchamiania w potoku programu WIF, podobnie jak inne wbudowane programy obsługi tokenów zabezpieczających, ale można go również używać niezależnie w celu walidacji tokenów w aplikacjach zubożonych. Rozszerzenie JWT Token Handler jest szczególnie przydatne w przypadku korzystania ze schematu tokenu okaziciela protokołu OAuth 2.0, na przykład podczas uwierzytelniania w usłudze Active Directory systemu Microsoft Azure.  

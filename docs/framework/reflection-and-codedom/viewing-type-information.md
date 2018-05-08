@@ -1,13 +1,6 @@
 ---
-title: "Wyświetlanie informacji o typie"
-ms.custom: 
+title: Wyświetlanie informacji o typie
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b31c029eb18943c926dfd5ed5b0576e866067d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc957b345c1e66059551508f73e37e0f6d69f6cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="viewing-type-information"></a>Wyświetlanie informacji o typie
 <xref:System.Type?displayProperty=nameWithType> Klasy jest podstawą odbicia. Tworzy środowisko uruchomieniowe języka wspólnego **typu** dla typu załadowanego podczas żądania odbicia. Można użyć **typu** metod, pola, właściwości i zagnieżdżonych klas, aby dowiedzieć się wszystkiego o tego typu obiektu.  

@@ -1,30 +1,20 @@
 ---
-title: "Niezabezpieczony klient internetowy i usługa"
-ms.custom: 
+title: Niezabezpieczony klient internetowy i usługa
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-unsecured-client-and-service"></a>Niezabezpieczony klient internetowy i usługa
-Następujące ilustracji przedstawiono przykład publiczny, niezabezpieczone [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta i usługi.  
+Na poniższej ilustracji przedstawiono przykład publicznego, niezabezpieczona klienta usługi Windows Communication Foundation (WCF) i usługi.  
   
  ![Niezabezpieczona scenariusza cleint i usługi Internet](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
@@ -32,7 +22,7 @@ Następujące ilustracji przedstawiono przykład publiczny, niezabezpieczone [!I
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Brak|  
 |Transportu|HTTP|  
-|Powiązanie|<xref:System.ServiceModel.BasicHttpBinding>w kodzie lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element w konfiguracji.|  
+|Powiązanie|<xref:System.ServiceModel.BasicHttpBinding> w kodzie lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element w konfiguracji.|  
 |Współdziałanie|Z istniejących klientów usługi sieci Web i usług|  
 |Uwierzytelnianie|Brak|  
 |Integralność|Brak|  
@@ -89,7 +79,7 @@ Następujące ilustracji przedstawiono przykład publiczny, niezabezpieczone [!I
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia podstawowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, który uzyskuje dostęp do punktu końcowego niezabezpieczona.  
+ Poniższy kod przedstawia podstawowe klienta WCF, który uzyskuje dostęp do punktu końcowego niezabezpieczona.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  

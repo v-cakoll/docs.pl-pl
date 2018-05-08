@@ -1,26 +1,12 @@
 ---
 title: Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki
 Drzew poleceń w danych wyjściowych zapytania modelu ściśle zapytania można wyrazić w języku SQL. Istnieją pewne wyzwania autorzy dostawcy podczas generowania SQL z poziomu drzewa poleceń danych wyjściowych. W tym temacie omówiono te problemy. W następnym temacie dostawcy przykładowych pokazano, jak rozwiązać te problemy.  

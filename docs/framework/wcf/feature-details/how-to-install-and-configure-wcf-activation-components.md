@@ -1,37 +1,23 @@
 ---
-title: "Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF"
-ms.custom: 
+title: 'Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF
-W tym temacie opisano kroki wymagane do skonfigurowania Windows Process Activation Service (znanej także jako Usługa WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] hosta [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protokoły sieciowe usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano czynności dla tej konfiguracji:  
+W tym temacie opisano kroki wymagane do skonfigurowania Windows Process Activation Service (znanej także jako Usługa WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] do obsługi systemu Windows Communication Foundation (WCF) protokołów sieciowych usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano czynności dla tej konfiguracji:  
   
--   Zainstaluj (lub potwierdź instalacji) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składników aktywacji.  
+-   Zainstaluj (lub potwierdź instalacji) składników aktywacji programu WCF.  
   
 -   Skonfiguruj WAS do obsługi protokołu innego niż HTTP. Poniższa procedura umożliwia skonfigurowanie [!INCLUDE[wv](../../../../includes/wv-md.md)] aktywacji TCP.  
   
- Po zainstalowaniu i skonfigurowaniu WAS, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) dla procedury tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi udostępniającej punktu końcowego protokołu HTTP, który wykorzystuje WAS.  
+ Po zainstalowaniu i skonfigurowaniu WAS, zobacz [porady: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) procedury utworzyć usługę WCF, która przedstawia punktu końcowego protokołu HTTP, który wykorzystuje WAS.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Aby zainstalować składniki Aktywacja bez HTTP programu WCF  
   
@@ -64,7 +50,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania Windows Process Activati
     ```  
   
     > [!NOTE]
-    >  To polecenie jest pojedynczy wiersz tekstu. To polecenie włącza /\<*aplikacja WCF*> aplikacji, aby uzyskać dostęp za pomocą obu http://localhost*/\<aplikacja WCF >* i net.tcp:// localhost /*\<aplikacja WCF >*.  
+    >  To polecenie jest pojedynczy wiersz tekstu. To polecenie włącza /\<*aplikacja WCF*> aplikacji można uzyskać dostępu do jednoczesnego używania http://localhost  */ \<aplikacja WCF >* i net.tcp:// localhost /*\<aplikacja WCF >*.  
   
      Usuń powiązanie witryny net.tcp, dodane dla tego przykładu.  
   

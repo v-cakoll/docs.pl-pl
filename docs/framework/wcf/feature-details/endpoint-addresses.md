@@ -1,33 +1,19 @@
 ---
-title: "Adresy punktów końcowych"
-ms.custom: 
+title: Adresy punktów końcowych
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>Adresy punktów końcowych
-Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowania i identyfikowania punktu końcowego. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] model programowania przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, które wymiany wiadomości, a opcjonalny zestaw <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które opisują inne nagłówki SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zawierają dodatkowe i bardziej szczegółowych informacji o adresach do identyfikacji użytkownika lub interakcji z punktem końcowym usługi. Adres punktu końcowego jest reprezentowana w sieci jako usługi WS-Addressing odwołaniu do punktu końcowego (EPR).  
+Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowania i identyfikowania punktu końcowego. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w modelu programowania usług Windows Communication Foundation (WCF) przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe który do wymiany wiadomości z nim i zestaw opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które opisują inne nagłówki SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zawierają dodatkowe i bardziej szczegółowych informacji o adresach do identyfikacji użytkownika lub interakcji z punktem końcowym usługi. Adres punktu końcowego jest reprezentowana w sieci jako usługi WS-Addressing odwołaniu do punktu końcowego (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Struktura adresu URI  
  Adres URI dla transportu większości ma cztery części. Na przykład czterech części identyfikatora URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint może być wyszczególnione w następujący sposób:  
@@ -63,7 +49,7 @@ Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowan
   
 -   Informacje o powiązaniu: Adres IP, portu i nagłówka hosta  
   
- Usługi IIS można określić wiele powiązań dla każdej lokacji, co prowadzi do wielu adresu podstawowego dla każdego schematu. Przed [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje wielu adresów dla schematu i, jeśli zostały one określone, zgłosił <xref:System.ArgumentException> podczas aktywacji.  
+ Usługi IIS można określić wiele powiązań dla każdej lokacji, co prowadzi do wielu adresu podstawowego dla każdego schematu. Przed [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], usługi WCF nie obsługuje wielu adresów dla schematu i, jeśli zostały one określone, zwrócił <xref:System.ArgumentException> podczas aktywacji.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] Umożliwia dostawcy usług internetowych hostować wiele aplikacji o różnych adresu podstawowego dla tego samego schematu w tej samej lokacji.  
   
@@ -111,7 +97,7 @@ Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowan
  Aby uzyskać szczegółowe informacje i przykłady, zobacz [Obsługa wielu wiązań witryny usług IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) i <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Rozszerzanie adresowania w usługach WCF  
- Domyślne adresowania model [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi używa adres URI punktu końcowego w następujących celach:  
+ Domyślnie adresowania modelu usług WCF używa adres URI punktu końcowego w następujących celach:  
   
 -   Aby określić adres nasłuchiwania usługi lokalizacji, jaką punktu końcowego nasłuchuje wiadomości,  
   

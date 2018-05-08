@@ -1,24 +1,14 @@
 ---
-title: "Porady: Tworzenie aplikacji formularzy sieci Web obsługujący oświadczenia ASP.NET za pomocą WIF"
-ms.custom: 
+title: 'Porady: Tworzenie aplikacji formularzy sieci Web obsługujący oświadczenia ASP.NET za pomocą WIF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 70d503448946b60f1d6b63bf850d8d62fb63acc2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Porady: Tworzenie aplikacji formularzy sieci Web obsługujący oświadczenia ASP.NET za pomocą WIF
 ## <a name="applies-to"></a>Dotyczy:  
@@ -113,7 +103,7 @@ ms.lasthandoff: 12/22/2017
     </system.webServer>  
     ```  
   
-5.  Dodaj następujące Windows Identity Foundation powiązane pozycje konfiguracji i upewnij się, że adres URL aplikacji platformy ASP.NET i numer portu pasują do wartości w  **\<audienceUris >** wpisu, **obszaru**  atrybutu  **\<wsFederation >** elementu i **odpowiedzi** atrybutu  **\<wsFederation >**elementu. Ponadto upewnij się, że **wystawcy** wartość pasuje do adresu URL zabezpieczeń usługi tokenów (STS).  
+5.  Dodaj następujące Windows Identity Foundation powiązane pozycje konfiguracji i upewnij się, że adres URL aplikacji platformy ASP.NET i numer portu pasują do wartości w  **\<audienceUris >** wpisu, **obszaru**  atrybutu  **\<wsFederation >** elementu i **odpowiedzi** atrybutu  **\<wsFederation >** elementu. Ponadto upewnij się, że **wystawcy** wartość pasuje do adresu URL zabezpieczeń usługi tokenów (STS).  
   
     ```xml  
     <system.identityModel>  

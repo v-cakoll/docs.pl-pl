@@ -4,17 +4,13 @@ description: 'Informacje pojęcia testów jednostkowych dla F # w .NET Core za p
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.topic: conceptual
 dev_langs:
 - fsharp
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 803f6607b90014646bc2057b8e829044364025a0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14e1ac54cb966e0e38c962e92cceb764fd8e9b42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Testowanie biblioteki F # w .NET Core za pomocą testu dotnet i MSTest jednostki
 

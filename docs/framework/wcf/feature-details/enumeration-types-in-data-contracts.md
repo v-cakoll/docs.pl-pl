@@ -1,31 +1,17 @@
 ---
 title: Typy wyliczeniowe w kontraktach danych
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7989996f7ed64ba4b85ddc1ca01538ec05e99e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Typy wyliczeniowe w kontraktach danych
 Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedstawiono kilka przykładów objaśniające modelu programowania.  
@@ -43,7 +29,7 @@ Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedst
  Można użyć <xref:System.Runtime.Serialization.DataContractAttribute> właściwości (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> i <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) dla kontraktów danych wyliczenia.  
   
 ### <a name="enumeration-member-values"></a>Wartości elementu członkowskiego wyliczenia  
- Kontrakt danych obejmuje zazwyczaj wyliczenie nazwy elementów członkowskich, nie wartości liczbowe. Jednak jeśli przy użyciu danych kontraktu modelu, jeśli po stronie odbierającej jest [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, wyeksportowanego schematu zachowuje wartości liczbowe. Należy pamiętać, że to nie jest to przy użyciu [przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ Kontrakt danych obejmuje zazwyczaj wyliczenie nazwy elementów członkowskich, nie wartości liczbowe. Jednak podczas korzystania z modelu kontraktu danych, jeśli klient WCF jest po stronie odbierającej, wyeksportowanego schematu zachowuje wartości liczbowe. Należy pamiętać, że to nie jest to przy użyciu [przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  W poprzednim przykładzie Jeśli `condition` ustawiono `Used` i jest serializowany danych do pliku XML, wynikowy kod XML jest `<condition>Used</condition>` i nie `<condition>1</condition>`. W związku z tym następujące kontrakt danych jest odpowiednikiem z kontraktem danych `CarConditionEnum`.  
   

@@ -1,29 +1,20 @@
 ---
 title: Wprowadzenie do kwerend LINQ (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - deferred execution [LINQ]
 - LINQ, queries
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-caps.latest.revision: "47"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae7a2d03859e95d939ff4c62fa33e07917a873a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f74b762532f0fb2795625185e59360cdfb76b124
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-linq-queries-c"></a>Wprowadzenie do kwerend LINQ (C#)
-A *zapytania* jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są zwykle zapisywane w język kwerendy specjalne. Wraz z upływem czasu dla różnych typów źródeł danych, na przykład SQL relacyjnych baz danych i XQuery XML zostały opracowane w różnych językach. W związku z tym deweloperzy było nauczyć się nowy język kwerendy dla każdego typu źródła danych lub format danych, które muszą obsługiwać. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]upraszcza tej sytuacji, oferując spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze korzystasz z obiektów. Użyj tego samego podstawowe wzorców kodowania w celu wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych, kolekcji .NET i innym formacie, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny.  
+A *zapytania* jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są zwykle zapisywane w język kwerendy specjalne. Wraz z upływem czasu dla różnych typów źródeł danych, na przykład SQL relacyjnych baz danych i XQuery XML zostały opracowane w różnych językach. W związku z tym deweloperzy było nauczyć się nowy język kwerendy dla każdego typu źródła danych lub format danych, które muszą obsługiwać. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] upraszcza tej sytuacji, oferując spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze korzystasz z obiektów. Użyj tego samego podstawowe wzorców kodowania w celu wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych, kolekcji .NET i innym formacie, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny.  
   
 ## <a name="three-parts-of-a-query-operation"></a>Trzy części operacji zapytania  
  Wszystkie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania operacje składa się z trzy różne akcje:  
@@ -66,7 +57,7 @@ IQueryable<Customer> custQuery =
 > [!NOTE]
 >  Typy, takich jak <xref:System.Collections.ArrayList> inny niż ogólny, który obsługuje <xref:System.Collections.IEnumerable> interfejs może również służyć jako [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [porady: zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
-##  <a name="query"></a>Zapytanie  
+##  <a name="query"></a> Zapytanie  
  Zapytanie określa informacjach zostać pobrane ze źródła danych lub źródła. Opcjonalnie zapytania również określa, jak te informacje sortowania, grupowane i w kształcie przed zwróceniem jest. Zapytanie jest przechowywana w zmiennej zapytania i zainicjować przy użyciu wyrażenia zapytania. Aby ułatwić pisać zapytania, C# wprowadziła nowej składni zapytań.  
   
  W poprzednim przykładzie zwraca wszystkie liczby parzyste z tablicy liczby całkowitej. Wyrażenia zapytania zawiera trzy klauzule: `from`, `where` i `select`. (Jeśli znasz SQL, można będzie zauważyć czy kolejność klauzule jest wycofywane z kolejnością SQL.) `from` Klauzuli Określa źródło danych, `where` klauzuli stosuje filtr oraz `select` klauzuli Określa typ zwrócony elementów. Te i inne klauzule zapytań omówiono szczegółowo w [wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md) sekcji. Na razie istotne jest to, że w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], samej zmiennej zapytanie Brak działania i zwraca żadnych danych. Po prostu przechowuje informacje, które są wymagane w celu uzyskania wyników podczas wykonywania zapytania w pewnym momencie nowsze. Aby uzyskać więcej informacji dotyczących sposobu zapytania są skonstruowane w tle, zobacz [standardowe operatory zapytań — omówienie (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -101,5 +92,5 @@ IQueryable<Customer> custQuery =
  [Wskazówki: Pisanie zapytań w języku C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  [Wskazówki: Pisanie zapytań w języku C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Instrukcja foreach w](../../../../csharp/language-reference/keywords/foreach-in.md)  
+ [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
  [Słowa kluczowe zapytania (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

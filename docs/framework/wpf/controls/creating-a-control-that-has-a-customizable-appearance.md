@@ -1,13 +1,6 @@
 ---
-title: "Tworzenie formantu, którego wygląd można dostosować"
-ms.custom: 
+title: Tworzenie formantu, którego wygląd można dostosować
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Tworzenie formantu, którego wygląd można dostosować
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia możliwość tworzenia można dostosować, którego wygląd formantu. Na przykład można zmienić wygląd <xref:System.Windows.Controls.CheckBox> poza jakiego ustawienie właściwości będzie zrobić, tworząc nowe <xref:System.Windows.Controls.ControlTemplate>. Na poniższej ilustracji pokazano <xref:System.Windows.Controls.CheckBox> używające domyślnego <xref:System.Windows.Controls.ControlTemplate> i <xref:System.Windows.Controls.CheckBox> używającej niestandardowego <xref:System.Windows.Controls.ControlTemplate>.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia możliwość tworzenia można dostosować, którego wygląd formantu. Na przykład można zmienić wygląd <xref:System.Windows.Controls.CheckBox> poza jakiego ustawienie właściwości będzie zrobić, tworząc nowe <xref:System.Windows.Controls.ControlTemplate>. Na poniższej ilustracji pokazano <xref:System.Windows.Controls.CheckBox> używające domyślnego <xref:System.Windows.Controls.ControlTemplate> i <xref:System.Windows.Controls.CheckBox> używającej niestandardowego <xref:System.Windows.Controls.ControlTemplate>.  
   
  ![Pole wyboru przy użyciu domyślnego szablonu kontroli. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Pole wyboru, które korzysta z domyślnego szablonu formantu  
@@ -89,7 +77,7 @@ Niestandardowe kontrolki NumericUpDown
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Zachowanie visual `NumericUpDown` formant jest, czy wartość jest czcionką czerwony, gdy jest ujemna.  Jeśli zmienisz <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> w przypadku kodu `Value` jest ujemna, `NumericUpDown` zawsze będzie widoczna wartość ujemną czerwony. Określ zachowanie visual formantu w <xref:System.Windows.Controls.ControlTemplate> przez dodanie <xref:System.Windows.VisualState> obiekty do <xref:System.Windows.Controls.ControlTemplate>.  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualState> obiektów na `Positive` i `Negative` stanów.  `Positive`i `Negative` są wzajemnie (formant jest zawsze w dokładnie jeden z dwóch), więc umieszcza przykładzie <xref:System.Windows.VisualState> obiektów w ramach jednej <xref:System.Windows.VisualStateGroup>.  Gdy formant przechodzi do `Negative` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> zmienia kolor na czerwony.  Gdy formant jest w `Positive` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> zwraca do jej oryginalnej wartości.  Definiowanie <xref:System.Windows.VisualState> obiekty w <xref:System.Windows.Controls.ControlTemplate> opisane w [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Zachowanie visual `NumericUpDown` formant jest, czy wartość jest czcionką czerwony, gdy jest ujemna.  Jeśli zmienisz <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> w przypadku kodu `Value` jest ujemna, `NumericUpDown` zawsze będzie widoczna wartość ujemną czerwony. Określ zachowanie visual formantu w <xref:System.Windows.Controls.ControlTemplate> przez dodanie <xref:System.Windows.VisualState> obiekty do <xref:System.Windows.Controls.ControlTemplate>.  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualState> obiektów na `Positive` i `Negative` stanów.  `Positive` i `Negative` są wzajemnie (formant jest zawsze w dokładnie jeden z dwóch), więc umieszcza przykładzie <xref:System.Windows.VisualState> obiektów w ramach jednej <xref:System.Windows.VisualStateGroup>.  Gdy formant przechodzi do `Negative` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> zmienia kolor na czerwony.  Gdy formant jest w `Positive` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> zwraca do jej oryginalnej wartości.  Definiowanie <xref:System.Windows.VisualState> obiekty w <xref:System.Windows.Controls.ControlTemplate> opisane w [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Należy ustawić <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> dołączona właściwość w katalogu głównym <xref:System.Windows.FrameworkElement> z <xref:System.Windows.Controls.ControlTemplate>.  
@@ -212,17 +200,17 @@ Niestandardowe kontrolki NumericUpDown
   
 -   A <xref:System.Windows.Controls.Primitives.RepeatButton> o nazwie `UpButton`.  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> o nazwie`DownButton.`  
+-   A <xref:System.Windows.Controls.Primitives.RepeatButton> o nazwie `DownButton.`  
   
  Formant może być w następujących stanów:  
   
--   W`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   W `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   W`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   W `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

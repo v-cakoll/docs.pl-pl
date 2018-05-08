@@ -1,13 +1,6 @@
 ---
-title: "Jak implementować powiadomienie o zmianie właściwości"
-ms.custom: 
+title: Jak implementować powiadomienie o zmianie właściwości
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6628ec27ab381f52a086cac3f8d0cd92aea2cd8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9c0fb433e2fa65e28db3b793e038b49f9d6353b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-property-change-notification"></a>Jak implementować powiadomienie o zmianie właściwości
 Do obsługi <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> powiązanie umożliwia powiązanie właściwości docelowej automatycznie zgodnie ze zmianami dynamiczne źródła powiązanie (na przykład okienko podglądu aktualizowane automatycznie, gdy użytkownik edytuje formularza), klasa należy podać powiadomienia odpowiednie zmiany właściwości. W tym przykładzie pokazano, jak utworzyć klasę, która implementuje <xref:System.ComponentModel.INotifyPropertyChanged>.  

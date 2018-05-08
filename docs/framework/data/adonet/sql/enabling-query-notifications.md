@@ -1,27 +1,15 @@
 ---
-title: "Włączanie powiadomień o zapytaniach"
-ms.custom: 
+title: Włączanie powiadomień o zapytaniach
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c7b02ba7959a5cfc2205222655460026847c3098
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4cda3ce3bcae7741df66496c87ba6654e0bbfe6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-query-notifications"></a>Włączanie powiadomień o zapytaniach
 Aplikacje używające powiadomień o zapytaniach mają wspólny zbiór wymagań. Źródło danych musi być poprawnie skonfigurowany do obsługi powiadomień kwerendy SQL, a użytkownik musi mieć odpowiednie uprawnienia po stronie klienta i po stronie serwera.  
@@ -90,7 +78,7 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqldependency"></a>Korzystania z elementu SqlDependency  
  Aby użyć <xref:System.Data.SqlClient.SqlDependency>, Service Broker musi być włączona dla bazy danych programu SQL Server używany, a użytkownicy muszą mieć uprawnienia do odbierania powiadomień. Jest wstępnie zdefiniowanych obiektów brokera usług, takich jak kolejka powiadomień.  
   
- Ponadto <xref:System.Data.SqlClient.SqlDependency> automatycznie spowoduje uruchomienie procesu roboczego wątku przetwarzania powiadomień ogłoszone do kolejki, a także analizuje komunikatów programu Service Broker, ujawnienia informacji jako dane argument zdarzenia. <xref:System.Data.SqlClient.SqlDependency>musi zostać zainicjowany przez wywołanie metody `Start` metodę ustanawiania zależności w bazie danych. To jest metodą statyczną, który musi zostać wywołana tylko raz podczas inicjowania aplikacji dla każdego połączenia bazy danych, wymagane. `Stop` Metoda powinna być wywoływana po zakończeniu aplikacji dla każdego połączenia zależności, która została wprowadzona.  
+ Ponadto <xref:System.Data.SqlClient.SqlDependency> automatycznie spowoduje uruchomienie procesu roboczego wątku przetwarzania powiadomień ogłoszone do kolejki, a także analizuje komunikatów programu Service Broker, ujawnienia informacji jako dane argument zdarzenia. <xref:System.Data.SqlClient.SqlDependency> musi zostać zainicjowany przez wywołanie metody `Start` metodę ustanawiania zależności w bazie danych. To jest metodą statyczną, który musi zostać wywołana tylko raz podczas inicjowania aplikacji dla każdego połączenia bazy danych, wymagane. `Stop` Metoda powinna być wywoływana po zakończeniu aplikacji dla każdego połączenia zależności, która została wprowadzona.  
   
 ### <a name="using-sqlnotificationrequest"></a>Przy użyciu SqlNotificationRequest  
  Z kolei <xref:System.Data.Sql.SqlNotificationRequest> wymaga wykonania całej infrastruktury nasłuchiwania samodzielnie. Ponadto muszą być zdefiniowane wszystkie pomocnicze obiektów brokera usług takich jak kolejki, usługi i typy obsługiwane przez kolejkę komunikatów. Ta metoda ręczna jest przydatne, jeśli aplikacja wymaga specjalnych powiadomień lub zachowania powiadomień, czy aplikacja jest częścią większej aplikacji programu Service Broker.  

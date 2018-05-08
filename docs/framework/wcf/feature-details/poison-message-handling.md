@@ -1,36 +1,22 @@
 ---
 title: Obsługa komunikatów zanieczyszczonych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja kolejki nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty w ramach transakcji. Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, tak, aby komunikat zostanie ponowiony w nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może zostać zablokowane w pętli otrzymywanie i przerywanie tę samą wiadomość do czasu przekroczyła maksymalną liczbę prób dostarczenia i wyniki Trująca wiadomość.  
   
  Komunikat może stać się Trująca wiadomość wielu powodów. Najbardziej typowe przyczyny są określone dla aplikacji. Na przykład jeśli aplikacja odczytuje komunikat z kolejki i przetwarza niektóre bazy danych, aplikacja może się nie powieść uzyskać blokady w bazie danych, co powoduje przerwać transakcji. Ponieważ transakcji bazy danych zostało przerwane, komunikat pozostaje w kolejce, co powoduje, że aplikacja odczytać wiadomość po raz drugi i wprowadzić kolejna próba uzyskania blokady w bazie danych. Komunikaty może również zostać skażone, które zawierają nieprawidłowe informacje. Na przykład zamówienia zakupu mogą zawierać nieprawidłowe odbiorcy. W takich przypadkach aplikacji dobrowolnie może przerwać transakcji i wymusić komunikat, który ma zostać Trująca wiadomość.  
   
- W rzadkich przypadkach wiadomości może nie pobrać wysyłane do aplikacji. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Warstwa może się okazać problem z wiadomości, takie jak wiadomości ma nieprawidłową ramkę, poświadczenia nieprawidłowy komunikat dołączenie do lub nagłówka nieprawidłową akcję. W takich przypadkach aplikacja nigdy nie odbiera wiadomości; Jednakże komunikat nadal może stać się Trująca wiadomość i ręczne przetwarzanie.  
+ W rzadkich przypadkach wiadomości może nie pobrać wysyłane do aplikacji. Warstwy usług Windows Communication Foundation (WCF) może się okazać problem z wiadomości, takie jak wiadomości ma nieprawidłową ramkę, poświadczenia nieprawidłowy komunikat dołączenie do lub nagłówka nieprawidłową akcję. W takich przypadkach aplikacja nigdy nie odbiera wiadomości; Jednakże komunikat nadal może stać się Trująca wiadomość i ręczne przetwarzanie.  
   
 ## <a name="handling-poison-messages"></a>Obsługa wiadomości  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], skażone komunikat — Obsługa udostępnia mechanizm aplikacja odbierająca na wypadek wiadomości, które nie mogą być wysyłane do aplikacji lub wiadomości, które są wysyłane do aplikacji, ale które nie można przetworzyć z powodu przyczyny specyficzne dla aplikacji. Obsługi uszkodzonych komunikatów jest konfigurowana za pomocą następujących właściwości w każdym z dostępnych powiązań umieszczonych w kolejce:  
+ W programie WCF obsługi uszkodzonych komunikatów zapewnia mechanizm aplikacja odbierająca na wypadek wiadomości, które nie mogą być wysyłane do aplikacji lub wiadomości, które są wysyłane do aplikacji, ale które nie można przetworzyć z powodu specyficznych dla aplikacji przyczyny. Obsługi uszkodzonych komunikatów jest konfigurowana za pomocą następujących właściwości w każdym z dostępnych powiązań umieszczonych w kolejce:  
   
 -   `ReceiveRetryCount`. Wartość całkowitą, która wskazuje maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. To jest odpowiednia w przypadku, gdy natychmiastowego ponawiania rozwiązuje problem, takich jak z tymczasowego zakleszczenie w bazie danych.  
   
@@ -46,7 +32,7 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
   
 -   Odrzuć. Ta opcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Powoduje to, że usługi kolejkowania komunikatów (MSMQ) do odesłania negatywnego potwierdzenia do wysyłania menedżera kolejek, że aplikacja nie może odebrać komunikatu. Wiadomość jest umieszczana w kolejce wiadomości utraconych wysyłania menedżera kolejek.  
   
--   Przenieś. Ta opcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Spowoduje to przeniesienie Trująca wiadomość do kolejki komunikatów poison do późniejszego przetwarzania przez aplikację do obsługi komunikatów poison. Kolejka komunikatów poison jest podkolejki kolejki aplikacji. Może być aplikacją poison komunikat — Obsługa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która odczytuje wiadomości z kolejki skażone. Trująca kolejki jest podkolejki kolejki aplikacji i może zostać zlikwidowane jako net.msmq://\<*nazw komputerów*>/*applicationQueue*; skażone, gdzie  *Nazwa maszyny* to nazwa komputera, na którym znajduje się kolejka i *applicationQueue* jest nazwą kolejki specyficzne dla aplikacji.  
+-   Przenieś. Ta opcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Spowoduje to przeniesienie Trująca wiadomość do kolejki komunikatów poison do późniejszego przetwarzania przez aplikację do obsługi komunikatów poison. Kolejka komunikatów poison jest podkolejki kolejki aplikacji. Aplikacja poison komunikat — Obsługa może być odczytującego komunikaty z kolejki skażone usługi WCF. Trująca kolejki jest podkolejki kolejki aplikacji i może zostać zlikwidowane jako net.msmq://\<*nazw komputerów*>/*applicationQueue*; skażone, gdzie  *Nazwa maszyny* to nazwa komputera, na którym znajduje się kolejka i *applicationQueue* jest nazwą kolejki specyficzne dla aplikacji.  
   
  Maksymalna liczba prób dostarczenia komunikatu są następujące:  
   
@@ -57,20 +43,20 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
 > [!NOTE]
 >  Brak ponownych prób są nawiązywane komunikatu, który jest dostarczany pomyślnie.  
   
- Aby śledzić liczbę razy, przeczytaj wiadomość zostanie podjęta, [!INCLUDE[wv](../../../../includes/wv-md.md)] przechowuje właściwości trwałe wiadomości, które zlicza liczbę przerwań i właściwość count przeniesienie, które zlicza liczbę razy komunikat są przenoszone między kolejki aplikacji i kolejki podrzędne. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kanału wykorzystuje te można obliczyć liczby ponownych prób receive i liczby cykli ponownych prób. Na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)], liczba przerwania jest przechowywana w pamięci przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanału i jest resetowana, jeśli aplikacja nie powiedzie się. Ponadto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanału może przechowywać przerwanie liczby komunikatów do 256 w pamięci w dowolnym momencie. Jeśli 257th wiadomość zostanie odczytana, następnie najstarsze komunikat przerwania zostanie zresetowany.  
+ Aby śledzić liczbę razy, przeczytaj wiadomość zostanie podjęta, [!INCLUDE[wv](../../../../includes/wv-md.md)] przechowuje właściwości trwałe wiadomości, które zlicza liczbę przerwań i właściwość count przeniesienie, które zlicza liczbę razy komunikat są przenoszone między kolejki aplikacji i kolejki podrzędne. Kanał WCF wykorzystuje te można obliczyć liczby ponownych prób receive i liczby cykli ponownych prób. Na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)], liczba przerwania jest przechowywana w pamięci przez kanał WCF i jest resetowana, jeśli aplikacja nie powiedzie się. Ponadto kanału WCF mogą przechowywać przerwanie liczby komunikatów do 256 w pamięci w dowolnym momencie. Jeśli 257th wiadomość zostanie odczytana, następnie najstarsze komunikat przerwania zostanie zresetowany.  
   
  Przerwanie liczba i Przenieś liczby właściwości są dostępne dla operacji usługi za pomocą kontekstu operacji. Poniższy przykład kodu pokazuje, jak uzyskać do nich dostęp.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia dwa standardowe powiązania w kolejce:  
+ Usługi WCF oferuje dwa standardowe powiązania w kolejce:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi kolejki wykonywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych.  
+-   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innych punktów końcowych WCF kolejki wykonywania.  
   
 -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
   
 > [!NOTE]
->  Można zmienić właściwości w tych powiązań, w oparciu o wymagania Twojej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Cały Trująca wiadomość mechanizmu obsługi jest lokalny do aplikacji odbierającej. Proces jest niewidoczne aplikacja wysyłająca, chyba że aplikacja odbierająca ostatecznie zatrzymuje i wysyła potwierdzenie negatywne do nadawcy. W takim przypadku wiadomość zostanie przeniesiona do kolejki utraconych wiadomości nadawcy.  
+>  Można zmienić właściwości w tych powiązań, zależnie od wymagań usługi WCF. Cały Trująca wiadomość mechanizmu obsługi jest lokalny do aplikacji odbierającej. Proces jest niewidoczne aplikacja wysyłająca, chyba że aplikacja odbierająca ostatecznie zatrzymuje i wysyła potwierdzenie negatywne do nadawcy. W takim przypadku wiadomość zostanie przeniesiona do kolejki utraconych wiadomości nadawcy.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Najlepsze rozwiązanie: Msmqpoisonmessageexception — Obsługa  
  Gdy usługa określa, że wiadomość jest skażone, transport z kolejką zgłasza <xref:System.ServiceModel.MsmqPoisonMessageException> zawierający `LookupId` skażone wiadomości.  
@@ -116,7 +102,7 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
   
 -   Komunikatów usługi kolejkowania wiadomości w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje negatywną potwierdzenie, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie. Potwierdzenie negatywne z odbierającego menedżera kolejek powoduje wysyłanie menedżera kolejek można umieścić odrzucone wiadomości w kolejce wiadomości utraconych. W efekcie `ReceiveErrorHandling.Reject` jest niedozwolone w przypadku [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Komunikatów usługi kolejkowania wiadomości w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje nastąpiła właściwości wiadomości, które zlicza liczbę dostarczanie komunikatów. Ta właściwość count przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przechowuje liczby przerwania w pamięci, dlatego jest możliwe, że ta właściwość nie może zawierać dokładne wartości, gdy ten sam komunikat jest odczytywany przez więcej niż jeden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługę w farmie.  
+-   Komunikatów usługi kolejkowania wiadomości w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje nastąpiła właściwości wiadomości, które zlicza liczbę dostarczanie komunikatów. Ta właściwość count przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Usługi WCF przechowuje liczby przerwania w pamięci, więc jest to możliwe, że ta właściwość nie może zawierać dokładne wartości, gdy ten sam komunikat jest odczytywany przez więcej niż jedna usługa WCF w farmie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

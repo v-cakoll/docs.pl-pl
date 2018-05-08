@@ -1,27 +1,15 @@
 ---
 title: Dodawanie kolumn do DataTable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6340baa434467ec4ccde501b4bb11d55a72c069b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8ee47ddce273e564673d96d2b2e276b68879373f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-columns-to-a-datatable"></a>Dodawanie kolumn do DataTable
 A <xref:System.Data.DataTable> zawiera kolekcję <xref:System.Data.DataColumn> odwołują się obiekty **kolumn** właściwość tabeli. W tej kolekcji kolumn, wraz ze wszystkimi ograniczeniami definiuje schemat lub struktury tabeli.  
@@ -60,7 +48,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
 > [!CAUTION]
 >  Jeśli nie podano nazwy kolumn dla kolumny, kolumnie podano przyrostowe domyślną nazwę kolumny*N,* począwszy od "Kolumna1", gdy jest ona dodawana do **DataColumnCollection**. Firma Microsoft zaleca, aby uniknąć z konwencją nazewnictwa "kolumny*N*" gdy Podaj nazwę kolumny, ponieważ Podaj nazwę może spowodować konflikt z istniejącą nazwą kolumny domyślne w **DataColumnCollection**. Jeśli podanej nazwie już istnieje, jest zwracany wyjątek.  
   
- Jeśli używasz <xref:System.Xml.Linq.XElement> jako <xref:System.Data.DataColumn.DataType%2A> z <xref:System.Data.DataColumn> w <xref:System.Data.DataTable>, podczas odczytu w danych serializacji XML nie będą działać. Na przykład, jeśli należy zapisać <xref:System.Xml.XmlDocument> za pomocą `DataTable.WriteXml` metody podczas serializacji XML jest dodatkowe nadrzędnym w <xref:System.Xml.Linq.XElement>. Aby obejść ten problem, należy użyć <xref:System.Data.SqlTypes.SqlXml> wpisz zamiast <xref:System.Xml.Linq.XElement>. `ReadXml`i `WriteXml` pracować poprawnie z <xref:System.Data.SqlTypes.SqlXml>.  
+ Jeśli używasz <xref:System.Xml.Linq.XElement> jako <xref:System.Data.DataColumn.DataType%2A> z <xref:System.Data.DataColumn> w <xref:System.Data.DataTable>, podczas odczytu w danych serializacji XML nie będą działać. Na przykład, jeśli należy zapisać <xref:System.Xml.XmlDocument> za pomocą `DataTable.WriteXml` metody podczas serializacji XML jest dodatkowe nadrzędnym w <xref:System.Xml.Linq.XElement>. Aby obejść ten problem, należy użyć <xref:System.Data.SqlTypes.SqlXml> wpisz zamiast <xref:System.Xml.Linq.XElement>. `ReadXml` i `WriteXml` pracować poprawnie z <xref:System.Data.SqlTypes.SqlXml>.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Data.DataColumn>  

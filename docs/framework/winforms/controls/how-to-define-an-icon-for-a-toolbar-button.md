@@ -1,13 +1,6 @@
 ---
-title: "Porady: określanie ikony dla przycisku ToolBar"
-ms.custom: 
+title: 'Porady: określanie ikony dla przycisku ToolBar'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,22 +13,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f7550fdc76cb3a025d8233ec538d38f23f9226a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Porady: określanie ikony dla przycisku ToolBar
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.  
   
- <xref:System.Windows.Forms.ToolBar>przyciski będą mogli wyświetlać ikony w nich ułatwiający identyfikację przez użytkowników. Jest to osiągane przez dodanie obrazów do [składnika ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) składnik, a następnie kojarząc <xref:System.Windows.Forms.ImageList> składnik o <xref:System.Windows.Forms.ToolBar> formantu.  
+ <xref:System.Windows.Forms.ToolBar> przyciski będą mogli wyświetlać ikony w nich ułatwiający identyfikację przez użytkowników. Jest to osiągane przez dodanie obrazów do [składnika ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) składnik, a następnie kojarząc <xref:System.Windows.Forms.ImageList> składnik o <xref:System.Windows.Forms.ToolBar> formantu.  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Aby ustawić programowo ikony dla przycisku paska narzędzi  
   

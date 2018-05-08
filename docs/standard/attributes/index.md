@@ -1,13 +1,7 @@
 ---
 title: Rozszerzanie metadanych za pomocą atrybutów
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - metadata, extending
 - attributes [.NET Framework], metadata
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ae399e5213c95b29736c54fcc48ac45a778ba25b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-metadata-using-attributes"></a>Rozszerzanie metadanych za pomocą atrybutów
 Środowisko uruchomieniowe języka wspólnego pozwala dodać deklaracje opisowe typu słowo kluczowe, nazywany atrybuty dla adnotacji programowania elementów, takich jak typy, pola, metody i właściwości. Podczas kompilowania kodu środowiska uruchomieniowego jest konwertowane na język pośredni firmy Microsoft (MSIL) i umieszczony wewnątrz pliku wykonywalnego (PE) pliku przenośnego wraz z metadanych generowanych przez kompilator. Atrybuty pozwala na umieszczenie bardzo opisowe informacje do metadanych, który można wyodrębnić przy użyciu usługi czasu wykonywania odbicia. Kompilator tworzy atrybuty przy deklarowaniu wystąpienia klas specjalne, które pochodzą z <xref:System.Attribute?displayProperty=nameWithType>.  

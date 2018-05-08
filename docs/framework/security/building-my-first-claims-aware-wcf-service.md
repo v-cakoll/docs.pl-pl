@@ -1,26 +1,14 @@
 ---
-title: "Tworzenie Moje pierwszej usługi WCF obsługujący oświadczenia"
-ms.custom: 
+title: Tworzenie Moje pierwszej usługi WCF obsługujący oświadczenia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5641eba212cfdeb95c0a52a82a28b5c2d3e9aee
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 3b88835cc7836d9d6c323de3c0386b3f4c7c3078
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Tworzenie Moje pierwszej usługi WCF obsługujący oświadczenia
 ## <a name="applies-to"></a>Dotyczy:  
@@ -44,7 +32,7 @@ ms.lasthandoff: 03/08/2018
   
  STS to usługa, która wystawia tokeny po pomyślnym uwierzytelnieniu. Firma Microsoft oferuje dwie usługi STS będące standardami branżowymi:  
   
--   [Usługi Active Directory Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   [Usługi Active Directory Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) ()http://go.microsoft.com/fwlink/?LinkID=247516)  
   
 -   [Usługi kontroli dostępu na platformie Azure systemu Windows (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).  
   

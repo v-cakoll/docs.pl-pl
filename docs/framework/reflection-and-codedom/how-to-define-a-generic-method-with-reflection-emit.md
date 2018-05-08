@@ -1,13 +1,6 @@
 ---
-title: "Porady: definiowanie metody ogólnej przy użyciu emisji odbicia"
-ms.custom: 
+title: 'Porady: definiowanie metody ogólnej przy użyciu emisji odbicia'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 307347a1209a74c76e71c42a4cb9e3c3f814dee6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Porady: definiowanie metody ogólnej przy użyciu emisji odbicia
 Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma parametrami typu i sposób stosowania ograniczenia klasy, interfejsu, ograniczenia i ograniczeń specjalnych parametrów typu.  
@@ -104,7 +94,7 @@ Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma par
      [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]
      [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
   
-2.  Emituj kod w celu utworzenia wystąpienia `TOutput`, za pomocą przeciążenia metody ogólnej <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> metody. Za pomocą tego przeciążenia wymaga określony typ ma konstruktora bez parametrów, czyli Przyczyna dodanie tego ograniczenia do `TOutput`. Utwórz skonstruowane Metoda ogólna przez przekazanie `TOutput` do <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Po emitowanie kodu, aby wywołać metodę, wyemitować kodu, zapisz go w zmiennej lokalnej `retVal` przy użyciu<xref:System.Reflection.Emit.OpCodes.Stloc_S>  
+2.  Emituj kod w celu utworzenia wystąpienia `TOutput`, za pomocą przeciążenia metody ogólnej <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> metody. Za pomocą tego przeciążenia wymaga określony typ ma konstruktora bez parametrów, czyli Przyczyna dodanie tego ograniczenia do `TOutput`. Utwórz skonstruowane Metoda ogólna przez przekazanie `TOutput` do <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Po emitowanie kodu, aby wywołać metodę, wyemitować kodu, zapisz go w zmiennej lokalnej `retVal` przy użyciu <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
   
      [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]
      [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  
@@ -126,7 +116,7 @@ Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma par
   
 6.  Emituj kodu dla pętli. Pierwszym krokiem jest oznaczenie górnej pętli, wywołując <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> z `loopAgain` etykiety. Branch — instrukcje używających etykieta zostanie teraz gałęzi w tym punkcie w kodzie. Następnym krokiem jest push `TOutput` obiektu rzutować `ICollection(Of TInput)`, na stosie. Nie jest wymagane natychmiast, ale musi być w pozycji dla wywołania `Add` metody. Dalej tablicy wejściowej spoczywa na stosie, a następnie `index` zmienną, która zawiera bieżący indeks w tablicy. <xref:System.Reflection.Emit.OpCodes.Ldelem> Kod operacji POP indeks i Tablica ze stosu i umieszcza elementu tablicy indeksowanej na stosie. Stos jest gotowy dla wywołania <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metodę, która będzie wyświetlana, kolekcji i nowego elementu ze stosu i dodaje element do kolekcji.  
   
-     Zwiększa pozostałej części kodu w pętli indeks i testy, aby zobaczyć, czy Zakończenie pętli: indeks 32-bitową liczbę całkowitą 1 wypychana na stosie i dodany, pozostawiając Suma na stosie; Suma są przechowywane w `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>wywoływana jest ustawiony jako punkt wejścia dla pętli tego punktu. Indeks został załadowany ponownie. Tablica wejściowa spoczywa na stosie, i <xref:System.Reflection.Emit.OpCodes.Ldlen> jest emitowany uzyskać jego długość. Indeks i długość są teraz na stosie, i <xref:System.Reflection.Emit.OpCodes.Clt> jest emitowany do porównania. Jeśli indeks jest mniejszy niż długość, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> oddziałów z powrotem do początku pętli.  
+     Zwiększa pozostałej części kodu w pętli indeks i testy, aby zobaczyć, czy Zakończenie pętli: indeks 32-bitową liczbę całkowitą 1 wypychana na stosie i dodany, pozostawiając Suma na stosie; Suma są przechowywane w `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> wywoływana jest ustawiony jako punkt wejścia dla pętli tego punktu. Indeks został załadowany ponownie. Tablica wejściowa spoczywa na stosie, i <xref:System.Reflection.Emit.OpCodes.Ldlen> jest emitowany uzyskać jego długość. Indeks i długość są teraz na stosie, i <xref:System.Reflection.Emit.OpCodes.Clt> jest emitowany do porównania. Jeśli indeks jest mniejszy niż długość, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> oddziałów z powrotem do początku pętli.  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
@@ -139,7 +129,7 @@ Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma par
 <a name="procedureSection2"></a>   
 ### <a name="to-invoke-the-generic-method"></a>Można wywołać metody ogólne  
   
-1.  `Factory`jest ogólną definicją metody. Aby można było wywołać go, należy przypisać typów jego parametrów typu ogólnego. Użyj <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> metody w tym celu. Poniższy kod tworzy skonstruowane metody ogólnej, określając <xref:System.String> dla `TInput` i `List(Of String)` (`List<string>` w języku C#) dla `TOutput`i wyświetla reprezentację ciągu metody.  
+1.  `Factory` jest ogólną definicją metody. Aby można było wywołać go, należy przypisać typów jego parametrów typu ogólnego. Użyj <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> metody w tym celu. Poniższy kod tworzy skonstruowane metody ogólnej, określając <xref:System.String> dla `TInput` i `List(Of String)` (`List<string>` w języku C#) dla `TOutput`i wyświetla reprezentację ciągu metody.  
   
      [!code-csharp[GenericMethodHowTo#21](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#21)]
      [!code-vb[GenericMethodHowTo#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#21)]  
@@ -159,7 +149,7 @@ Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma par
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu tworzy typu nierodzajowe `DemoType`, metodą rodzajową `Factory`. Ta metoda ma dwa parametry typu ogólnego, `TInput` Aby określić typ danych wejściowych i `TOutput` określenia typu danych wyjściowych. `TOutput` Parametr typu jest ograniczona do zaimplementowania `ICollection<TInput>` (`ICollection(Of TInput)` w języku Visual Basic), typu odwołania i mieć konstruktora bez parametrów.  
   
- Metoda ma jeden formalny parametr, który jest tablicą o `TInput`. Metoda zwraca wystąpienie klasy `TOutput` zawierający wszystkie elementy tablicy wejściowej. `TOutput`mogą być dowolnego typu kolekcja ogólna, który implementuje <xref:System.Collections.Generic.ICollection%601> interfejs generyczny.  
+ Metoda ma jeden formalny parametr, który jest tablicą o `TInput`. Metoda zwraca wystąpienie klasy `TOutput` zawierający wszystkie elementy tablicy wejściowej. `TOutput` mogą być dowolnego typu kolekcja ogólna, który implementuje <xref:System.Collections.Generic.ICollection%601> interfejs generyczny.  
   
  Podczas wykonywania kodu zostanie zapisany jako DemoGenericMethod1.dll zestawu dynamicznego, a przy [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   

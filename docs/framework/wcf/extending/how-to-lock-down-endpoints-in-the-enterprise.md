@@ -1,29 +1,15 @@
 ---
 title: 'Porady: blokowanie punktów końcowych w przedsiębiorstwie'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Porady: blokowanie punktów końcowych w przedsiębiorstwie
-Duże przedsiębiorstwa często wymagają, że aplikacje są tworzone zgodnie z zasadami zabezpieczeń organizacji. Następującym temacie omówiono sposób rozwijać i zainstalować moduł weryfikacji punktu końcowego klienta używany do sprawdzania poprawności wszystkich [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacje klienckie instalowane na komputerach.  
+Duże przedsiębiorstwa często wymagają, że aplikacje są tworzone zgodnie z zasadami zabezpieczeń organizacji. Poniższy temat omówiono sposób rozwijać i zainstalować moduł weryfikacji punktu końcowego klienta używany do sprawdzania poprawności wszystkich aplikacji klienckich Windows Communication Foundation (WCF) zainstalowane na komputerach.  
   
  W takim przypadku modułu sprawdzania poprawności jest moduł weryfikacji klienta, ponieważ to zachowanie punktu końcowego zostanie dodany do klienta [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji w pliku machine.config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ładuje wspólnego zachowania punktu końcowego tylko dla aplikacji klienckich i ładuje wspólnego zachowania usługi tylko dla aplikacji usługi. Aby zainstalować tego samego modułu weryfikacji dla aplikacji usług, modułu sprawdzania poprawności musi być zachowanie usługi. Aby uzyskać więcej informacji, zobacz [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji.  
   

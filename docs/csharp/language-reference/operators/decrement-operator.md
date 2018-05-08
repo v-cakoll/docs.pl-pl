@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="---operator-c-reference"></a>Operator -- (odwołanie w C#)
-Operator dekrementacji (`--`) zmeniejsza wartośc jego operandu o 1. Operator dekrementacji może występować przed lub po jego argumencie: `--variable` i `variable--`. Pierwszą formą jest dekrementacja prefiksowa. Wynikiem tej operacji jest wartość operandu po zmniejszeniu. Drugą formą jest dekrementacja postfiksowa. Wynikiem tej operacji jest wartość operandu przed jej zmniejszeniem.  
+Operator dekrementacji (`--`) zmniejsza wartosc argumentu operacji o 1. Operator dekrementacji moze wystepowac przed argumentem operacji lub po nim: `--variable` i `variable--`. Pierwsza forma to dekrementacja prefiksowa. Wynikiem tej operacji jest wartosc argumentu operacji po zmniejszeniu. Druga forma to dekrementacja odwrotna. Wynikiem tej operacji jest wartosc argumentu przed zmniejszeniem. 
   
 ## <a name="remarks"></a>Uwagi  
- Typy numeryczne i wyliczenia mają wstępnie zdefiniowane operatory dekrementacji. W typach definiowanych przez użytkownika można przeciążać operator `--`. Operacje na typach całkowitych w wyliczeniach są zazwyczaj dozwolone. 
+ Typy numeryczne i wyliczenia maja wstepnie zdefiniowane operatory dekrementacji. W typach definiowanych przez uzytkownika mozna przeciazac operator `--`. Operacje na typach calkowitych w wyliczeniach sa zazwyczaj dozwolone. 
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  

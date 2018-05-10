@@ -2,20 +2,20 @@
 title: Niestandardowy okres istnienia
 ms.date: 03/30/2017
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e41c970739b8036730fa601433ce7157e01d7e19
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-lifetime"></a>Niestandardowy okres istnienia
-W tym przykładzie pokazano, jak napisać rozszerzenia programu Windows Communication Foundation (WCF) do świadczenia usług Niestandardowy okres istnienia, współużytkowanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wystąpień usługi.  
+W tym przykładzie pokazano, jak napisać rozszerzenia programu Windows Communication Foundation (WCF) do świadczenia usług Niestandardowy okres istnienia dla udostępnionego wystąpienia usługi WCF.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="shared-instancing"></a>Udostępnione wystąpień  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferuje kilka wystąpień trybów dla swoich wystąpień usługi. Tryb udostępnionych wystąpień opisanych w tym temacie umożliwia współużytkują wystąpienie usługi, między wiele kanałów. Klientów można rozpoznać adres punktu końcowego wystąpienia lokalnie lub skontaktuj się z metody fabryki w usłudze, aby uzyskać adres punktu końcowego uruchomionego wystąpienia. Po ma adres punktu końcowego, go utworzyć nowy kanał, a następnie uruchomić komunikacji. Poniższy fragment kodu przedstawia, jak aplikacja kliencka tworzy nowy kanał do istniejącego wystąpienia usługi.  
+ Usługi WCF oferuje kilka wystąpień trybów dla swoich wystąpień usługi. Tryb udostępnionych wystąpień opisanych w tym temacie umożliwia współużytkują wystąpienie usługi, między wiele kanałów. Klientów można rozpoznać adres punktu końcowego wystąpienia lokalnie lub skontaktuj się z metody fabryki w usłudze, aby uzyskać adres punktu końcowego uruchomionego wystąpienia. Po ma adres punktu końcowego, go utworzyć nowy kanał, a następnie uruchomić komunikacji. Poniższy fragment kodu przedstawia, jak aplikacja kliencka tworzy nowy kanał do istniejącego wystąpienia usługi.  
   
 ```  
 // Create the first channel.  
@@ -34,12 +34,12 @@ ChannelFactory<IEchoService> channelFactory2 =
 IEchoService proxy2 = channelFactory2.CreateChannel();  
 ```  
   
- W przeciwieństwie do innych wystąpień trybów udostępnionego trybu tworzenia ma unikatowy sposób zwolnienia wystąpień usługi. Zamknięcia wszystkich kanałów dla wystąpienia usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska uruchomieniowego uruchamia czasomierz. Jeśli nikt nie nawiązuje połączenie przed upłynięciem limitu czasu, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zwalnia wystąpienie i oświadczeń zasobów. W ramach procedury usuwania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywołuje <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody wszystkich <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacje przed zwolnieniem wystąpienie. Jeśli wszystkie z nich zwraca `true` wystąpienie zostanie zwolniony. W przeciwnym razie <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacja jest odpowiedzialna za powiadomienie `Dispatcher` stanu bezczynności przy użyciu metody wywołania zwrotnego.  
+ W przeciwieństwie do innych wystąpień trybów udostępnionego trybu tworzenia ma unikatowy sposób zwolnienia wystąpień usługi. Zamknięcie wszystkich kanałów dla wystąpienia środowiska uruchomieniowego usługi WCF uruchamia czasomierz. Jeśli nikt nie nawiązuje połączenie przed upłynięciem limitu czasu WCF zwalnia wystąpienie i oświadczeń zasobów. W ramach procedury usuwania wywołuje WCF <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody wszystkich <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacje przed zwolnieniem wystąpienie. Jeśli wszystkie z nich zwraca `true` wystąpienie zostanie zwolniony. W przeciwnym razie <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacja jest odpowiedzialna za powiadomienie `Dispatcher` stanu bezczynności przy użyciu metody wywołania zwrotnego.  
   
  Domyślnie wartość limitu czasu bezczynności <xref:System.ServiceModel.InstanceContext> jest jedna minuta. Jednak w przykładzie pokazano, jak można rozszerzyć użycie niestandardowego rozszerzenia.  
   
 ## <a name="extending-the-instancecontext"></a>Rozszerzanie obiekt InstanceContext  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.InstanceContext> jest łącze między wystąpienie usługi i `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia rozszerzenie tego składnika środowiska wykonawczego przez dodanie nowego stanu lub zachowania przy użyciu jego wzorzec rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu obiektu extensible: `IExtensibleObject<T>`, `IExtension<T>`, i `IExtensionCollection<T>`.  
+ W programie WCF <xref:System.ServiceModel.InstanceContext> jest łącze między wystąpienie usługi i `Dispatcher`. Usługi WCF umożliwia rozszerzenie tego składnika środowiska wykonawczego przez dodanie nowego stanu lub zachowania przy użyciu jego wzorzec rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w programie WCF wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu obiektu extensible: `IExtensibleObject<T>`, `IExtension<T>`, i `IExtensionCollection<T>`.  
   
  `IExtensibleObject<T>` Interfejs jest implementowany przez obiekty, aby zezwalać na rozszerzenia, które dostosowywanie ich funkcji.  
   
@@ -80,7 +80,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
 }  
 ```  
   
- Gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywołuje <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody w <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacji tego wywołania jest kierowany do <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody `CustomLeaseExtension`. Następnie przy użyciu `CustomLeaseExtension` umożliwia sprawdzenie stanu prywatne, aby zobaczyć, czy <xref:System.ServiceModel.InstanceContext> jest w stanie bezczynności. Jeśli jest w stanie bezczynności go zwraca `true`. W przeciwnym razie uruchamia czasomierz określoną ilość rozszerzonej okres istnienia.  
+ Gdy wywołuje WCF <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody w <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacji tego wywołania jest kierowany do <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody `CustomLeaseExtension`. Następnie przy użyciu `CustomLeaseExtension` umożliwia sprawdzenie stanu prywatne, aby zobaczyć, czy <xref:System.ServiceModel.InstanceContext> jest w stanie bezczynności. Jeśli jest w stanie bezczynności go zwraca `true`. W przeciwnym razie uruchamia czasomierz określoną ilość rozszerzonej okres istnienia.  
   
 ```  
 public bool IsIdle  
@@ -116,7 +116,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
   
  Nie istnieje sposób odnowić czasomierza uruchomione po odebraniu nowego komunikatu dla tego wystąpienia jest przenoszony do stanu bezczynności.  
   
- Implementuje próbki <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> połączeń w celu przechwycenia <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metodę i sposób ich do `CustomLeaseExtension`. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> Wdrożenia jest zawarty w `CustomLifetimeLease` klasy. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> Metoda jest wywoływana po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ma wersji wystąpienia usługi. Istnieje jednak tylko jedno wystąpienie określonego `ISharedSessionInstance` implementacja ServiceBehavior <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> kolekcji. Oznacza to, nie istnieje sposób wiedzy <xref:System.ServiceModel.InstanceContext> zamknięte w czasie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawdza <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody. Dlatego w tym przykładzie użyto wątku blokowania do serializowania żądań <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody.  
+ Implementuje próbki <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> połączeń w celu przechwycenia <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metodę i sposób ich do `CustomLeaseExtension`. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> Wdrożenia jest zawarty w `CustomLifetimeLease` klasy. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> Metoda jest wywoływana, gdy funkcja WCF została zwolniona wystąpienia usługi. Istnieje jednak tylko jedno wystąpienie określonego `ISharedSessionInstance` implementacja ServiceBehavior <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> kolekcji. Oznacza to, nie istnieje sposób wiedzy <xref:System.ServiceModel.InstanceContext> zamknięte w czasie sprawdza WCF <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody. Dlatego w tym przykładzie użyto wątku blokowania do serializowania żądań <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metody.  
   
 > [!IMPORTANT]
 >  Używanie blokowania wątku nie jest zalecane podejście ponieważ serializacji mogą znacznie wpłynąć na wydajność aplikacji.  
@@ -160,7 +160,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
   
  Przed `ICustomLease.IsIdle` właściwość jest zaznaczona właściwość wywołania zwrotnego musi być ustawiona, ponieważ jest to konieczne do `CustomLeaseExtension` powiadomiono dyspozytor, gdy stanie się bezczynności. Jeśli `ICustomLease.IsIdle` zwraca `true`, `isIdle` prywatnego elementu członkowskiego po prostu znajduje się w `CustomLifetimeLease` do `true` i wywołuje metodę wywołania zwrotnego. Ponieważ kod utrzymuje blokadę, innych wątków nie można zmienić wartość tego elementu członkowskiego prywatnych. I przy następnym sprawdza dyspozytora `ISharedSessionLifetime.IsIdle`, zwraca `true` i umożliwia dyspozytora wersji wystąpienia.  
   
- Teraz, przygotowuje niestandardowe rozszerzenie zostało zakończone, musi on być podłączony do modelu usługi. Aby przyłączyć `CustomLeaseExtension` wykonania <xref:System.ServiceModel.InstanceContext>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> interfejsu przeprowadzić inicjowanie <xref:System.ServiceModel.InstanceContext>. W przykładzie `CustomLeaseInitializer` klasa implementuje ten interfejs i dodaje wystąpienie `CustomLeaseExtension` do <xref:System.ServiceModel.InstanceContext.Extensions%2A> kolekcji od zainicjowania jedyną metodą. Ta metoda jest wywoływana przez dyspozytora podczas inicjowania <xref:System.ServiceModel.InstanceContext>.  
+ Teraz, przygotowuje niestandardowe rozszerzenie zostało zakończone, musi on być podłączony do modelu usługi. Aby przyłączyć `CustomLeaseExtension` wykonania <xref:System.ServiceModel.InstanceContext>, zapewnia WCF <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> interfejsu przeprowadzić inicjowanie <xref:System.ServiceModel.InstanceContext>. W przykładzie `CustomLeaseInitializer` klasa implementuje ten interfejs i dodaje wystąpienie `CustomLeaseExtension` do <xref:System.ServiceModel.InstanceContext.Extensions%2A> kolekcji od zainicjowania jedyną metodą. Ta metoda jest wywoływana przez dyspozytora podczas inicjowania <xref:System.ServiceModel.InstanceContext>.  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  

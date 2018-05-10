@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Punkty końcowe WCF (Windows Communication Foundation)
-Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferty usługi.  
+Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji, która oferuje usługi WCF.  
   
  Aby uzyskać ogólne informacje o sposobie tworzenia punktu końcowego, zobacz [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md). Każdy punkt końcowy zawiera:  
   
@@ -34,7 +34,7 @@ Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się 
  Opisuje strukturę punktu końcowego, a także przedstawiono sposób definiowania punkt końcowy w konfiguracji i w kodzie, jak używać domyślnych punktów końcowych, powiązania i zachowania dostarczonym w czasie wykonywania.  
   
  [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- W tym artykule opisano sposób komunikacji z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi odbywa się przez punkty końcowe.  
+ W tym artykule opisano sposób komunikacji z usługą WCF odbywa się przez punkty końcowe.  
   
  [Instrukcje: tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Pokazuje, jak utworzyć punkt końcowy usługi w konfiguracji.  

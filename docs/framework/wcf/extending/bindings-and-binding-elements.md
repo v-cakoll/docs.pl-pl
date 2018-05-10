@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2a0e797a921ff20b2432e824c92c09fff833bf7d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Powiązania i elementy powiązań
 Powiązania są kolekcjami elementów konfiguracji specjalnych, nazywany *elementów wiązania*, które są oceniane przez środowisko wykonawcze usługi zawsze, gdy klient lub punktu końcowego usługi jest tworzona. Typ i kolejność elementów powiązania w powiązaniu Określa wybór i kolejność kanały transportu i protokół punktu końcowego kanału stosu.  
@@ -18,7 +18,7 @@ Powiązania są kolekcjami elementów konfiguracji specjalnych, nazywany *elemen
  Powiązanie musi zawierać dokładnie jeden element powiązania transportu. Każdy element powiązania transportu oznacza komunikat domyślny kodowanie elementu powiązania, która może być zastąpiona przez dodanie co najwyżej jeden element powiązania do powiązania kodowania komunikatu. Oprócz transportu i elementy wiązań kodera powiązania może zawierać dowolną liczbę elementy powiązania protokołu implementujących funkcje niezbędne do usługi i wysyłać wiadomości protokołu SOAP z jeden punkt końcowy do innego. Aby uzyskać więcej informacji, zobacz [za pomocą powiązania do konfigurowania usług i klientów](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Rozszerzanie powiązań i elementów wiązania  
- Windows Communication Foundation (WCF) obejmuje powiązania dostarczane przez system, które obejmują szeroki zakres scenariuszy. (Aby uzyskać więcej informacji, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).) Może to być sytuacji, gdy są potrzebne do utworzenia i użycia powiązania, które nie są uwzględnione w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Następujące scenariusze wymagają utworzenia nowego powiązania.  
+ Windows Communication Foundation (WCF) obejmuje powiązania dostarczane przez system, które obejmują szeroki zakres scenariuszy. (Aby uzyskać więcej informacji, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).) Może istnieć razy, jednakże, gdy potrzebne do utworzenia i użycia powiązania, które nie są uwzględnione w programie WCF. Następujące scenariusze wymagają utworzenia nowego powiązania.  
   
 -   Aby użyć nowego elementu powiązania (na przykład nowy transport, kodowanie lub elementu powiązania protokołu), należy utworzyć nowe powiązanie, który zawiera ten element powiązania. Na przykład jeśli dodano niestandardową `UdpTransportBindingElement` dla transportu UDP, należy utworzyć nowe powiązanie, aby z niego korzystać. Informacje dotyczące wykonywania tego zachowania przy użyciu <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> typu, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
@@ -37,7 +37,7 @@ Powiązania są kolekcjami elementów konfiguracji specjalnych, nazywany *elemen
   
  Istnieją dwa ogólne typy kanałów: protokół kanałów i kanały transportu. Kanały transportu są odpowiedzialne za rzeczywiste transmisję wiadomości z jedną siecią punktu końcowego do innego. Kanały transportu musi mieć kodera wiadomości domyślne i powinno być możliwe do użycia kodera wiadomości alternatywny dostarczonych przez element powiązania kodera wiadomości. Koder komunikatów odpowiada za włączanie <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> do reprezentacji danych przesyłanych w sieci i na odwrót. Kanały protokołów są odpowiedzialne za wdrożenie protokołów SOAP poziomu (na przykład WS-Security lub WS-ReliableMessaging).  
   
- Podstawowy wymóg kanałów transportu i protokołu jest miały zaimplementowane interfejsy wymagane kanału. Aby utworzyć warstwę kanału pracy muszą mieć skojarzone fabryk i odbiorników i tak dalej. Aby użyć implementacji kanału z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] musi istnieć elementy skojarzone powiązanie pochodzi od <xref:System.ServiceModel.Channels.BindingElement> dla każdego kanału i powinien być element rozszerzenia powiązania powiązane do włączenia w plikach konfiguracji, które jest pochodną <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>.  
+ Podstawowy wymóg kanałów transportu i protokołu jest miały zaimplementowane interfejsy wymagane kanału. Aby utworzyć warstwę kanału pracy muszą mieć skojarzone fabryk i odbiorników i tak dalej. Aby użyć implementacji kanału z WCF musi istnieć skojarzone elementy pochodzące z <xref:System.ServiceModel.Channels.BindingElement> dla każdego kanału i powinien być element rozszerzenia powiązania powiązane do włączenia w plikach konfiguracji, która pochodzi z <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>.  
   
  Jako wspomniano wcześniej, powiązania elementy koderów wiadomości, protokołu i transportu implementacje kanału może być skumulowanych do utworzenia stosu kanału i mechanizmu Aby wyrównać je do zestawu uporządkowanych jest powiązanie. Powiązania i elementy powiązań nawiązać model kanału model programowania aplikacji. Można użyć z implementacji kanału z kodu bezpośrednio, ale chyba że koderów, transportu i protokoły są zaimplementowane jako elementów wiązania nie można użyć z modelu programowania warstwy usługi.  
   

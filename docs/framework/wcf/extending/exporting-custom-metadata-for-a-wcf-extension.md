@@ -2,11 +2,11 @@
 title: Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF
 W konsoli Windows Communication Foundation (WCF) eksportowania metadanych jest proces opisujące punktów końcowych usługi i projekcji ich reprezentację równoległe, standardowe, której klienci mogą używać, aby zrozumieć sposób korzystania z usługi. Niestandardowych metadanych składa się z elementów XML nie można wyeksportować eksportera metadanych dostarczane przez system. Zazwyczaj zawiera elementy WSDL niestandardowe zachowania użytkownika i elementy powiązania i potwierdzeń zasad o możliwości i wymagania dotyczące powiązania i kontrakty.  
@@ -14,7 +14,7 @@ W konsoli Windows Communication Foundation (WCF) eksportowania metadanych jest p
  W tej sekcji opisano eksportowanie niestandardowych WSDL lub potwierdzeń zasad, a nie skupić się na samym procesie eksportowanie. Aby uzyskać więcej informacji o sposobie używania typy, które eksportowanie i Importowanie metadanych niezależnie od tego, czy metadane są niestandardowe lub utworzone przez system, zobacz [eksportowanie i Importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Omówienie  
- Gdy publikowane są metadane, za pomocą <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> się zbadana i generowane są wszystkie kontrakty i powiązania XSD i WSDL — w tym potwierdzeń zasad — która [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] można obsługiwać przy użyciu atrybutów dostarczane przez system i powiązania. Jednak powiązania elementów lub atrybutów niestandardowych zachowania wymagają obsługi przed poprawnie eksportowane.  
+ Gdy publikowane są metadane, za pomocą <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> się zbadana i XSD i — w tym potwierdzeń zasad--WSDL generowane są wszystkie kontrakty i powiązania obsługującymi WCF za pomocą atrybutów dostarczane przez system i powiązania. Jednak powiązania elementów lub atrybutów niestandardowych zachowania wymagają obsługi przed poprawnie eksportowane.  
   
  W tej sekcji opisano:  
   

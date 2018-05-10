@@ -2,11 +2,11 @@
 title: Narzędzie rejestracji modelu ServiceModel (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 660bad0b80a80a21936c9c8a5d485fe05b8c8acf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>Narzędzie rejestracji modelu ServiceModel (ServiceModelReg.exe)
 To narzędzie wiersza polecenia umożliwia zarządzanie rejestracją składników WCF i WF na jednym komputerze. W normalnych okolicznościach nie należy do tego narzędzia można użyć jako WCF i WF składniki są konfigurowane podczas instalacji. Ale jeśli masz problemy z aktywacją usługi, możesz zarejestrować składników za pomocą tego narzędzia.  
@@ -41,7 +41,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|Wyświetla Pomoc|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>Naprawienie błędu fileloadexception —  
- Jeśli zainstalowano poprzednie wersje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] na komputerze, mogą wystąpić `FileLoadFoundException` błąd podczas uruchamiania narzędzia ServiceModelReg można zarejestrować nowej instalacji. Może to nastąpić, nawet jeśli masz ręcznie usunąć pliki z poprzedniej instalacji, ale pozostanie bez zmian ustawień pliku machine.config.  
+ Jeśli poprzednie wersje usług WCF jest zainstalowany na tym komputerze, mogą wystąpić `FileLoadFoundException` błąd podczas uruchamiania narzędzia ServiceModelReg można zarejestrować nowej instalacji. Może to nastąpić, nawet jeśli masz ręcznie usunąć pliki z poprzedniej instalacji, ale pozostanie bez zmian ustawień pliku machine.config.  
   
  Komunikat o błędzie jest podobny do następującego.  
   
@@ -50,7 +50,7 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- Należy zauważyć, komunikat o błędzie do zainstalowania zestawu System.ServiceModel wersji 2.0.0.0 przez wczesnego wydawania klienta Technology Preview (CTP). Bieżąca wersja zestawu System.ServiceModel wydane jest 3.0.0.0 w zamian. W związku z tym Napotkano problem podczas chcesz zainstalować urzędnika [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wersji na maszynie, na którym wersji CTP wczesne usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] został zainstalowany, ale nie całkowicie odinstalowany.  
+ Należy zauważyć, komunikat o błędzie do zainstalowania zestawu System.ServiceModel wersji 2.0.0.0 przez wczesnego wydawania klienta Technology Preview (CTP). Bieżąca wersja zestawu System.ServiceModel wydane jest 3.0.0.0 w zamian. Jeśli chcesz zainstalować oficjalnego wydania usługi WCF na komputerze, na którym wczesne wersji CTP programu WCF został zainstalowany, ale nie całkowicie odinstalowany w związku z tym napotkano ten problem.  
   
  ServiceModelReg.exe nie można wyczyścić wpisy wcześniejsze niż wersja, nie można zarejestrować nową wersję wpisów. Tylko obejście jest ręcznie edytować pliku machine.config. Możesz znaleźć tego pliku w następującej lokalizacji.  
   
@@ -58,7 +58,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- Jeśli używasz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] na komputerze 64-bitowych, należy również edytować tego samego pliku w tej lokalizacji.  
+ Jeśli używasz usługi WCF na komputerze 64-bitowych, należy również edytować tego samego pliku w tej lokalizacji.  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   

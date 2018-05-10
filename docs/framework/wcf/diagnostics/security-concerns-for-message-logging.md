@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.  
@@ -16,7 +16,7 @@ W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dziennikó
 ## <a name="security-concerns"></a>Zagadnienia dotyczące zabezpieczeń  
   
 ### <a name="logging-sensitive-information"></a>Rejestrowanie informacji poufnych  
- Windows Communication Foundation (WCF) nie modyfikuje danych w nagłówkach specyficzne dla aplikacji i treść. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji i danych treści.  
+ Windows Communication Foundation (WCF) nie modyfikuje danych w nagłówkach specyficzne dla aplikacji i treść. Usługi WCF nie śledzi również informacje osobiste w nagłówkach specyficzne dla aplikacji i danych treści.  
   
  Po włączeniu rejestrowania komunikatów, informacje osobiste w nagłówkach specyficzne dla aplikacji, takich jak ciąg zapytania. i body informacje, takie jak numer karty kredytowej, może stać się widoczne w dziennikach. Narzędzia wdrażania aplikacji jest odpowiedzialny za egzekwowanie kontrolę dostępu dla plików dziennika i konfiguracji. Jeśli nie chcesz, tego rodzaju informacje są widoczne, należy wyłączyć rejestrowanie lub odfiltrować części danych, jeśli chcesz udostępnić dzienniki.  
   

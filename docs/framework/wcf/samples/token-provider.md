@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>Dostawca tokenów
-W tym przykładzie pokazano, jak do zaimplementowania niestandardowego dostawcy tokenu. Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest dostarczany z domyślnym dostawcy tokenu Menedżera poświadczeń. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
+W tym przykładzie pokazano, jak do zaimplementowania niestandardowego dostawcy tokenu. Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. Usługi WCF jest dostarczany z domyślnego dostawcy tokenu Menedżera poświadczeń. Usługi WCF jest także dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
   
 -   Jeśli masz Magazyn poświadczeń, które tych dostawców tokenu nie może pracować z.  
   
--   Jeśli chcesz udostępnić własny niestandardowy mechanizm do przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje o tym, kiedy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework klienta używa poświadczeń.  
+-   Jeśli chcesz udostępnić własny niestandardowy mechanizm do przekształcania poświadczenia z punktu, gdy użytkownik podaje szczegóły, aby podczas framework klienta WCF używa poświadczeń.  
   
 -   Jeśli tworzysz niestandardowy token.  
   
@@ -108,7 +108,7 @@ W tym przykładzie pokazano, jak do zaimplementowania niestandardowego dostawcy 
 </system.serviceModel>  
 ```  
   
- Poniższe kroki pokazują, jak utworzyć niestandardowego dostawcę tokenu i ich integracji z programem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] strukturę zabezpieczeń:  
+ Poniższe kroki pokazują, jak utworzyć niestandardowego dostawcę tokenu i zintegrować ją z architekturą WCF zabezpieczeń:  
   
 1.  Pisanie niestandardowych dostawcy tokenu.  
   

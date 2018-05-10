@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>Rejestrowanie zdarzeń w architekturze WCF
 Windows Communication Foundation (WCF) śledzi wewnętrznego zdarzenia w dzienniku zdarzeń systemu Windows.  
   
 ## <a name="viewing-event-logs"></a>Wyświetlanie dzienników zdarzeń  
- Rejestrowanie zdarzeń jest automatycznie włączone domyślnie i nie istnieje mechanizm je wyłączyć. Zdarzenia zarejestrowane przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] można wyświetlić za pomocą Podglądu zdarzeń. Aby uruchomić to narzędzie, kliknij przycisk **Start**, kliknij przycisk **Panelu sterowania**, kliknij dwukrotnie **narzędzia administracyjne**, a następnie kliknij dwukrotnie **Podgląd zdarzeń**.  
+ Rejestrowanie zdarzeń jest automatycznie włączone domyślnie i nie istnieje mechanizm je wyłączyć. Zdarzenia zarejestrowane przez usługę WCF można wyświetlić za pomocą Podglądu zdarzeń. Aby uruchomić to narzędzie, kliknij przycisk **Start**, kliknij przycisk **Panelu sterowania**, kliknij dwukrotnie **narzędzia administracyjne**, a następnie kliknij dwukrotnie **Podgląd zdarzeń**.  
   
 ### <a name="application-event-log"></a>Dziennik zdarzeń aplikacji  
- **w dzienniku zdarzeń aplikacji** zawiera większość zdarzeń generowanych przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Większość pozycji wskazują, że poszczególnych funkcji nie można uruchomić aplikacji. Przykłady obejmują:  
+ **w dzienniku zdarzeń aplikacji** zawiera większość zdarzeń wygenerowanych przez usługę WCF. Większość pozycji wskazują, że poszczególnych funkcji nie można uruchomić aplikacji. Przykłady obejmują:  
   
--   Rejestrowanie komunikatów/śledzenie: [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zapisuje zdarzenie w dzienniku zdarzeń, gdy śledzenie i rejestrowanie komunikatów nie powiodło się. Jednak nie każdy błąd śledzenia wyzwala zdarzenie. Aby zapobiec całkowicie wypełnione błędów ślady dziennika zdarzeń [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] implementuje na 10 minut okres niedostępności takiego zdarzenia. Oznacza to, że jeśli [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Błąd śledzenia zapisuje w dzienniku zdarzeń nie ma tak ponownie dla co najmniej 10 minut.  
+-   Rejestrowanie komunikatów/śledzenie: WCF powoduje zapisanie zdarzenia w dzienniku zdarzeń, gdy śledzenia i rejestrowania komunikatów nie powiodło się. Jednak nie każdy błąd śledzenia wyzwala zdarzenie. Aby zapobiec całkowicie wypełnione błędów ślady dziennika zdarzeń, usługi WCF implementuje na 10 minut okres niedostępności takiego zdarzenia. Oznacza to, że jeśli WCF zapisów śledzenia awarii w dzienniku zdarzeń nie ma tak ponownie dla co najmniej 10 minut.  
   
 -   Udostępnione odbiornika: Usługa Udostępnianie portów TCP WCF rejestruje zdarzenie, gdy nie powiedzie się uruchomienie.  
   

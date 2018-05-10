@@ -2,18 +2,18 @@
 title: WebContentTypeMapper — przykład
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89f13599e23f3e60ae4d9bc973debc436f46c147
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper — przykład
 W tym przykładzie przedstawiono sposób mapowania nowe typy zawartości do formatów treści wiadomości Windows Communication Foundation (WCF).  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> Element podłącza kodera wiadomości w sieci Web, dzięki czemu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do odbierania JSON, XML lub raw komunikatów binarnych w tym samym punkcie końcowym. Koder Określa format treści wiadomości, analizując typ zawartości HTTP żądania. W tym przykładzie przedstawiono <xref:System.ServiceModel.Channels.WebContentTypeMapper> klasy, która umożliwia użytkownikowi na kontrolowanie mapowanie między typu zawartości i formatu treści.  
+ <xref:System.ServiceModel.Description.WebHttpEndpoint> Element podłącza kodera wiadomości w sieci Web, dzięki czemu WCF do odbierania JSON, XML lub raw komunikatów binarnych w tym samym punkcie końcowym. Koder Określa format treści wiadomości, analizując typ zawartości HTTP żądania. W tym przykładzie przedstawiono <xref:System.ServiceModel.Channels.WebContentTypeMapper> klasy, która umożliwia użytkownikowi na kontrolowanie mapowanie między typu zawartości i formatu treści.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera zestaw domyślnych mapowań typów zawartości. Na przykład `application/json` mapy do formatu JSON i `text/xml` mapy do pliku XML. Typ zawartości, który nie jest zamapowany na formacie JSON i XML jest zamapowany na format binarny raw.  
+ Usługi WCF zawiera zestaw domyślnych mapowań typów zawartości. Na przykład `application/json` mapy do formatu JSON i `text/xml` mapy do pliku XML. Typ zawartości, który nie jest zamapowany na formacie JSON i XML jest zamapowany na format binarny raw.  
   
  W niektórych scenariuszach (na przykład stylu wypychania API) dewelopera usługi nie kontroluje zawartości typ zwracany przez klienta. Na przykład klienci mogą zwracać dane JSON jako `text/javascript` zamiast `application/json`. W takim przypadku podać typu pochodzącego od dewelopera usługi <xref:System.ServiceModel.Channels.WebContentTypeMapper> poprawnie, jak pokazano w poniższym kodzie próbki obsługi danego typu zawartości.  
   

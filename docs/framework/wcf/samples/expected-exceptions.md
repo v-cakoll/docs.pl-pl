@@ -2,11 +2,11 @@
 title: Oczekiwane wyjątki
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>Oczekiwane wyjątki
 W tym przykładzie pokazano, jak catch oczekiwane wyjątki, używając typu klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS).  
@@ -16,9 +16,9 @@ W tym przykładzie pokazano, jak catch oczekiwane wyjątki, używając typu klie
   
  W tym przykładzie pokazano przechwytywanie i dwa typy oczekiwanego wyjątku, które Popraw programy obsługi musi obsługiwać: `TimeoutException` i `CommunicationException`.  
   
- Wyjątki, które są generowane z metody komunikacji na kliencie systemu Windows Communication Foundation (WCF) są oczekiwane lub nieoczekiwany. Nieoczekiwany wyjątków należą poważnej awarii, takich jak `OutOfMemoryException` i programowania błędów, takich jak `ArgumentNullException` lub `InvalidOperationException`. Zwykle nie istnieje sposób przydatne do obsługi błędów nieoczekiwany, dlatego zazwyczaj nie należy przechwytywać ich podczas wywoływania metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] metodę komunikacji z klientem.  
+ Wyjątki, które są generowane z metody komunikacji na kliencie systemu Windows Communication Foundation (WCF) są oczekiwane lub nieoczekiwany. Nieoczekiwany wyjątków należą poważnej awarii, takich jak `OutOfMemoryException` i programowania błędów, takich jak `ArgumentNullException` lub `InvalidOperationException`. Zwykle nie istnieje sposób przydatne do obsługi tak zwykle nie należy przechwytywać je w wywołaniu metody komunikacji klienta WCF nieoczekiwane błędy.  
   
- Oczekiwano wyjątki od metody komunikacji na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta obejmują `TimeoutException`, `CommunicationException`, oraz wszelkie otrzymane z klasy `CommunicationException`. Te wskazują na problem podczas komunikacji, który może być bezpiecznie obsługiwanych przez przerywanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta oraz raportowania błędów komunikacji. Ponieważ czynniki zewnętrzne mogą powodować błędy w dowolnej aplikacji, poprawne aplikacji należy przechwytywać tych wyjątków i odzyskać wystąpieniach.  
+ Oczekiwano obejmują wyjątki od metody komunikacji klienta WCF `TimeoutException`, `CommunicationException`, oraz wszelkie otrzymane z klasy `CommunicationException`. Oznaczają one problem podczas komunikacji, który można bezpiecznie obsłużyć przerywanie klienta WCF i raportowania błędów komunikacji. Ponieważ czynniki zewnętrzne mogą powodować błędy w dowolnej aplikacji, poprawne aplikacji należy przechwytywać tych wyjątków i odzyskać wystąpieniach.  
   
  Istnieje kilka klas pochodnych `CommunicationException` który klient może zgłosić. W niektórych przypadkach aplikacji również catch niektóre z nich, aby nie specjalnej obsługi, ale inni traktowane jako `CommunicationException`. Można to zrobić przez najpierw Przechwytywanie więcej określony typ wyjątku, a następnie Przechwytywanie `CommunicationException` w późniejszym klauzuli catch.  
   

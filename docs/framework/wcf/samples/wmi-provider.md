@@ -2,18 +2,18 @@
 title: Dostawca WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
-W tym przykładzie pokazano, jak można zebrać danych z usługi Windows Communication Foundation (WCF) w czasie wykonywania za pomocą dostawcy Instrumentacji zarządzania Windows (WMI), który jest wbudowany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ponadto w przykładzie pokazano sposób dodawania obiektu WMI zdefiniowane przez użytkownika do usługi. Przykład aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  
+W tym przykładzie pokazano, jak można zebrać danych z usługi Windows Communication Foundation (WCF) w czasie wykonywania za pomocą dostawcy Instrumentacji zarządzania Windows (WMI), który jest wbudowany w usługi WCF. Ponadto w przykładzie pokazano sposób dodawania obiektu WMI zdefiniowane przez użytkownika do usługi. Przykład aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  
   
  Usługa WMI stanowi implementację firmy Microsoft w sieci Web-Based Enterprise Management (WBEM) standardowa. Aby uzyskać więcej informacji o zestawie SDK usługi WMI, zobacz [Instrumentacji zarządzania Windows](https://msdn.microsoft.com/library/aa394582.aspx). Technologia WBEM jest branżowy standard jak aplikacje ujawnia Instrumentacji zarządzania do narzędzia do zarządzania zewnętrznego.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje dostawcę usługi WMI, składnik, który ujawnia Instrumentacji w czasie wykonywania za pośrednictwem interfejsu zgodnego WBEM. Narzędzia do zarządzania mogą łączyć się usługi za pomocą interfejsu w czasie wykonywania. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia Atrybuty usług, takich jak adresy, powiązania zachowania i odbiorników.  
+ Usługi WCF implementuje dostawcę WMI składnik, który ujawnia Instrumentacji w czasie wykonywania za pośrednictwem interfejsu zgodnego WBEM. Narzędzia do zarządzania mogą łączyć się usługi za pomocą interfejsu w czasie wykonywania. Usługa WCF umożliwia atrybuty usług, takich jak adresy, powiązania zachowania i odbiorników.  
   
  Wbudowane dostawcy WMI jest aktywowana w pliku konfiguracji aplikacji. Jest to zrobić za pomocą `wmiProviderEnabled` atrybutu [ \<diagnostyki >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) w [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sekcji, jak pokazano w następującym przykładowym Konfiguracja:  
   
@@ -35,7 +35,7 @@ W tym przykładzie pokazano, jak można zebrać danych z usługi Windows Communi
   
  W przykładzie użyto dwóch skryptów Java: jeden wyliczyć usługi uruchomione na komputerze wraz z niektórych właściwości i drugiego do wyświetlania danych usługi WMI zdefiniowane przez użytkownika. Skrypt otwiera połączenie z dostawcą WMI, analizuje dane i wyświetla zbieranych danych.  
   
- Uruchomić przykład, aby utworzyć działającego wystąpienia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Gdy usługa jest uruchomiona, uruchom każdego skryptu języka Java przy użyciu następującego polecenia w wierszu polecenia:  
+ Uruchom przykład, aby utworzyć działającego wystąpienia usługi WCF. Gdy usługa jest uruchomiona, uruchom każdego skryptu języka Java przy użyciu następującego polecenia w wierszu polecenia:  
   
 ```  
 cscript EnumerateServices.js  
@@ -116,7 +116,7 @@ cscript EnumerateCustomObjects.js
   
  Dane wyjściowe wskazuje, że istnieje pojedynczą usługę uruchomionej na komputerze. Usługa udostępnia jeden punkt końcowy, który implementuje `ICalculator` kontraktu. Ustawienia zachowania i powiązania, które są implementowane przez punkt końcowy są wyświetlane jako sumę poszczególne elementy stosem obsługi wiadomości.  
   
- Usługa WMI nie jest ograniczona do udostępnianie Instrumentacja zarządzania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury. Aplikacja może narazić elementy dane specyficzne dla domeny przez ten sam mechanizm. Usługa WMI stanowi mechanizm ujednoliconego inspekcji i kontroli usługi sieci Web.  
+ Usługa WMI nie jest ograniczone do udostępnianie Instrumentacji zarządzania infrastrukturą usługi WCF. Aplikacja może narazić elementy dane specyficzne dla domeny przez ten sam mechanizm. Usługa WMI stanowi mechanizm ujednoliconego inspekcji i kontroli usługi sieci Web.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Jeśli zainstalowano [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] po zainstalowaniu programu ASP.NET, może być konieczne uruchomienie "%WINDIR%\ Foundation\servicemodelreg.exe komunikacji Microsoft.Net\Framework\v3.0\Windows "- r - x, aby udzielić ASPNET uprawnienia konta do publikowania obiektów WMI.  
+    >  Jeśli WCF jest zainstalowany po zainstalowaniu programu ASP.NET, może być konieczne uruchomienie "%WINDIR%\ Foundation\servicemodelreg.exe komunikacji Microsoft.Net\Framework\v3.0\Windows "- r - x, aby udzielić ASPNET uprawnienia konta do publikowania obiektów WMI.  
   
 5.  Wyświetl dane przykładowe udostępniane za pośrednictwem usługi WMI za pomocą poleceń: `cscript EnumerateServices.js` lub `cscript EnumerateCustomObjects.js`.  
   

@@ -2,18 +2,18 @@
 title: Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
-W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w systemie Windows Communication Foundation (WCF) do wysyłania zdarzeń w zdarzenia śledzenia zdarzeń systemu Windows (ETW). Śledzenie analityczne są zdarzenia wysyłanego w punktach klucza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu, który umożliwia rozwiązywanie problemów z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług w środowisku produkcyjnym.  
+W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w systemie Windows Communication Foundation (WCF) do wysyłania zdarzeń w zdarzenia śledzenia zdarzeń systemu Windows (ETW). Śledzenie analityczne są zdarzenia emitowane na klucz wskazuje na stosie WCF, umożliwiających rozwiązywanie problemów z usług WCF w środowisku produkcyjnym.  
   
- Śledzenie analityczne w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi śledzenia, który może być włączony w środowisku produkcyjnym z minimalnym wpływem na wydajność. Te operacje śledzenia są emitowane jako zdarzenia do sesji ETW.  
+ Śledzenia analitycznego w usługach WCF jest śledzenie, które mogą być włączone w środowisku produkcyjnym z minimalnym wpływem na wydajność. Te operacje śledzenia są emitowane jako zdarzenia do sesji ETW.  
   
- Ten przykład zawiera podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w zdarzenia, które są emitowane przez usługę w dzienniku zdarzeń, które można wyświetlić za pomocą Podglądu zdarzeń. Istnieje również możliwość rozpocząć sesję ETW dedykowanych nasłuchuje zdarzeń z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Przykład obejmuje skrypt służący do tworzenia dedykowanych sesji funkcji ETW, która zapisuje zdarzenia w pliku binarnego, który może zostać odczytany za pomocą Podglądu zdarzeń.  
+ Ten przykład zawiera podstawowe usługi WCF, w której zdarzenia są emitowane przez usługę w dzienniku zdarzeń, które można wyświetlić za pomocą Podglądu zdarzeń. Istnieje również możliwość rozpocząć sesję ETW dedykowanych nasłuchuje zdarzeń z usługi WCF. Przykład obejmuje skrypt służący do tworzenia dedykowanych sesji funkcji ETW, która zapisuje zdarzenia w pliku binarnego, który może zostać odczytany za pomocą Podglądu zdarzeń.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
@@ -27,17 +27,17 @@ W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w system
   
      Domyślnie usługa rozpoczyna nasłuchiwanie na porcie 1378 żądań (http://localhost:1378/Calculator.svc).  
   
-4.  Uruchom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta testowego (WcfTestClient.exe).  
+4.  Uruchomić klienta testowego WCF (WcfTestClient.exe).  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Klienta testowego (WcfTestClient.exe) znajduje się w \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] zainstalować Dir > \Common7\IDE\ WcfTestClient.exe (domyślny [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] dir instalacji to C:\Program Files\Microsoft Visual Studio 10.0).  
+     Klienta testowego WCF (WcfTestClient.exe) znajduje się w \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] zainstalować Dir > \Common7\IDE\ WcfTestClient.exe (domyślny [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] dir instalacji to C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  W ramach [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Klient testowy, Dodaj usługę, wybierając **pliku**, a następnie **Dodaj usługę**.  
+5.  W kliencie testowym WCF, Dodaj usługę, wybierając **pliku**, a następnie **Dodaj usługę**.  
   
      Dodaj adres punktu końcowego w odpowiednim polu. Wartość domyślna to http://localhost:1378/Calculator.svc.  
   
 6.  Otwórz aplikację Podgląd zdarzeń.  
   
-     Przed wywołaniem usługi, Uruchom Podgląd zdarzeń i upewnij się, nasłuchują dziennika zdarzeń dla zdarzenia śledzenia wyemitowanego z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+     Przed wywołaniem usługi, należy uruchomić Podgląd zdarzeń i upewnij się, czy dziennik zdarzeń nasłuchuje śledzenia zdarzeń wysyłanego z usługi WCF.  
   
 7.  Z **Start** menu, wybierz opcję **narzędzia administracyjne**, a następnie **Podgląd zdarzeń**.  Włącz **analityczne** i **debugowania** dzienniki.  
   
@@ -51,7 +51,7 @@ W tym przykładzie przedstawiono sposób użycia śledzenie analityczne w system
   
 #### <a name="to-test-the-service"></a>Aby przetestować usługę  
   
-1.  Przywraca [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przetestować klienta, a następnie kliknij dwukrotnie ikonę `Divide` i Zachowaj wartości domyślne, które określają denominator 0.  
+1.  Przełącza z powrotem do klienta testowego WCF, a następnie kliknij dwukrotnie ikonę `Divide` i Zachowaj wartości domyślne, które określają denominator 0.  
   
      Jeżeli dzielnik wynosi 0, usługa zgłasza błąd.  
   

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą, a adres Określa, gdzie można znaleźć usługi. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowana przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera zasób identyfikator URI (Uniform) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, reprezentuje tożsamości zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają bardziej szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Na przykład nagłówków można wskazać sposobu przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania komunikat przychodzący z konkretnego użytkownika, jeśli dostępnych jest wiele wystąpień.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Definicja adresu punktu końcowego  
- W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], <xref:System.ServiceModel.EndpointAddress> modele odwołanie do punktu końcowego (EPR) zgodnie z definicją w standardzie WS-Addressing.  
+ W programie WCF <xref:System.ServiceModel.EndpointAddress> modele odwołanie do punktu końcowego (EPR) zgodnie z definicją w standardzie WS-Addressing.  
   
  Adres URI dla transportu większości ma cztery części. Na przykład ten identyfikator URI, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" zawiera następujące cztery części:  
   
@@ -29,11 +29,11 @@ Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się 
   
 -   Path: /mathservice.svc/secureEndpoint  
   
- Część modelu EPR jest, że odwołanie do każdego punktu końcowego może przenosić niektórych parametrów odwołania, które dodać informacje identyfikacyjne bardzo. W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], te parametry odwołania są modelowane jako wystąpienia <xref:System.ServiceModel.Channels.AddressHeader> klasy.  
+ Część modelu EPR jest, że odwołanie do każdego punktu końcowego może przenosić niektórych parametrów odwołania, które dodać informacje identyfikacyjne bardzo. W programie WCF, te parametry odwołania są modelowane jako wystąpienia <xref:System.ServiceModel.Channels.AddressHeader> klasy.  
   
  Imperatively przy użyciu kodu lub deklaratywnie przy użyciu konfiguracji można określić adres punktu końcowego usługi. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie opracowywane. Ogólnie rzecz biorąc lepiej jest punkty końcowe usługi przy użyciu konfiguracji zamiast kodu. Utrzymywanie powiązania i adresowanie poza kod pozwala na zmianę bez konieczności ponowne skompilowanie i wdrożenie aplikacji. Jeżeli nie określono żadnych punktów końcowych w kodzie, lub w konfiguracji, następnie środowiska uruchomieniowego dodaje jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdej umowy zaimplementowanych przez usługę.  
   
- Istnieją dwa sposoby, aby określić adres punktu końcowego usługi w programie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Można określić jako adres bezwzględny dla każdego punktu końcowego związane z usługą lub możesz podać adres podstawowy <xref:System.ServiceModel.ServiceHost> usługi, a następnie określ adres dla każdego punktu końcowego skojarzone z tą usługą, która jest zdefiniowana względem tej bazy adres. Aby określić adres punktu końcowego usługi w konfiguracji lub kod, można użyć każdego z tych procedur. Jeśli nie określisz adresu względnego, usługa używa adres podstawowy. Może istnieć wiele adresami podstawowymi dla usługi, ale każda usługa jest dozwolony tylko jeden adres podstawowy dla każdego transportu. Jeśli masz wiele punktów końcowych, z których każdy ma skonfigurowane inne powiązanie, adresy muszą być unikatowe. Punkty końcowe, które używać tego samego powiązania, ale różnymi umowami można użyć tego samego adresu.  
+ Istnieją dwa sposoby, aby określić adresy punktów końcowych dla usługi programu WCF. Można określić jako adres bezwzględny dla każdego punktu końcowego związane z usługą lub możesz podać adres podstawowy <xref:System.ServiceModel.ServiceHost> usługi, a następnie określ adres dla każdego punktu końcowego skojarzone z tą usługą, która jest zdefiniowana względem tej bazy adres. Aby określić adres punktu końcowego usługi w konfiguracji lub kod, można użyć każdego z tych procedur. Jeśli nie określisz adresu względnego, usługa używa adres podstawowy. Może istnieć wiele adresami podstawowymi dla usługi, ale każda usługa jest dozwolony tylko jeden adres podstawowy dla każdego transportu. Jeśli masz wiele punktów końcowych, z których każdy ma skonfigurowane inne powiązanie, adresy muszą być unikatowe. Punkty końcowe, które używać tego samego powiązania, ale różnymi umowami można użyć tego samego adresu.  
   
  Jeśli obsługa za pomocą usług IIS, nie jest zarządzana <xref:System.ServiceModel.ServiceHost> wystąpienie samodzielnie. Adres podstawowy jest zawsze adresem określonym w pliku svc usługi odnośnie do hostowania w usługach IIS. Dlatego należy użyć adresy punktów końcowych względną dla punktów końcowych usług hostowanych przez usługi IIS. Podając w pełni kwalifikowany adres punktu końcowego może prowadzić do błędów w ramach wdrożenia usługi. Aby uzyskać więcej informacji, zobacz [wdrażanie usługi WCF Internet Information Services-Hosted](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   

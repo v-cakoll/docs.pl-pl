@@ -2,16 +2,16 @@
 title: Przykład serializacji kodu JSON ze słabą kontrolą typów
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 294c00bd18b5fabba5baa20770fd593031a98994
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Przykład serializacji kodu JSON ze słabą kontrolą typów
 Podczas serializowania typu zdefiniowane przez użytkownika format podanego podczas transmisji lub deserializacji formacie łańcuchowym do typu zdefiniowanego przez użytkownika, danego typu zdefiniowane przez użytkownika muszą być dostępne zarówno usługi, jak i na kliencie. Zwykle w tym celu, <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany do ich elementy członkowskie. Ten mechanizm ma również zastosowanie podczas pracy z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w temacie [porady: serializacji i deserializacji danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- W niektórych scenariuszach klienta lub usługi Windows Communication Foundation (WCF) muszą uzyskać dostęp do obiektów JSON generowanych przez usługi lub klienta, który jest poza kontrolą dewelopera. Jak większej liczby usług sieci Web publicznie uwidacznia interfejsów API JSON, może być niepraktyczne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] developer do utworzenia lokalnego typy zdefiniowane przez użytkownika do którego deserializować dowolnego obiektów JSON. W tym przykładzie zapewnia mechanizm umożliwiający [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deweloperom zdeserializowany, dowolnego obiektów JSON bez tworzenia typy danych zdefiniowane przez użytkownika. Jest to nazywane *szeregowanie słabą kontrolą* obiektów JSON, ponieważ typ, do którego deserializuje obiekt JSON nie jest znany w czasie kompilacji.  
+ W niektórych scenariuszach klienta lub usługi Windows Communication Foundation (WCF) muszą uzyskać dostęp do obiektów JSON generowanych przez usługi lub klienta, który jest poza kontrolą dewelopera. Jak większej liczby usług sieci Web publicznie uwidacznia interfejsów API JSON, może stać się niepraktyczne dla deweloperów usług WCF do utworzenia lokalnego typy zdefiniowane przez użytkownika do którego deserializować dowolnego obiektów JSON. W tym przykładzie zapewnia mechanizm, który umożliwia deweloperom WCF pracować z obiektami JSON zdeserializowany, dowolnego, bez tworzenia typy danych zdefiniowane przez użytkownika. Jest to nazywane *szeregowanie słabą kontrolą* obiektów JSON, ponieważ typ, do którego deserializuje obiekt JSON nie jest znany w czasie kompilacji.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -22,7 +22,7 @@ Podczas serializowania typu zdefiniowane przez użytkownika format podanego podc
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- Do deserializacji tego obiektu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta musi implementować następujące typy zdefiniowane przez użytkownika.  
+ Do deserializacji tego obiektu, klienta programu WCF musi implementować następujące typy zdefiniowane przez użytkownika.  
   
 ```  
 [DataContract]  

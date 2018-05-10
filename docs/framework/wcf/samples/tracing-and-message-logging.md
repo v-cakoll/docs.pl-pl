@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>Śledzenie i rejestrowanie komunikatów
 W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowa śladów i dzienników komunikatów wyświetlane przy użyciu [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikat
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="tracing"></a>Śledzenie  
- Windows Communication Foundation (WCF) używa mechanizmu śledzenia zdefiniowanych w <xref:System.Diagnostics> przestrzeni nazw. W tym modelu śledzenie danych śledzenia jest generowany przez źródła śledzenia, które implementują aplikacji. Każde źródło jest identyfikowane przez nazwę. Śledzenia konsumenci tworzą obiekty nasłuchujące śledzenia dla źródła śledzenia, dla których chcesz pobrać informacji. Aby odbierać dane śledzenia, należy utworzyć odbiornik źródła śledzenia. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], można to zrobić przez dodanie poniższego kodu do tej usługi lub pliku konfiguracji klienta przez ustawienie źródło śladu modelu usługi `switchValue`:  
+ Windows Communication Foundation (WCF) używa mechanizmu śledzenia zdefiniowanych w <xref:System.Diagnostics> przestrzeni nazw. W tym modelu śledzenie danych śledzenia jest generowany przez źródła śledzenia, które implementują aplikacji. Każde źródło jest identyfikowane przez nazwę. Śledzenia konsumenci tworzą obiekty nasłuchujące śledzenia dla źródła śledzenia, dla których chcesz pobrać informacji. Aby odbierać dane śledzenia, należy utworzyć odbiornik źródła śledzenia. W programie WCF, można to zrobić, dodając następujący kod do pliku konfiguracji usługi lub klienta przez ustawienie źródło śladu modelu usługi `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikat
   
 -   Korelowanie działania za pośrednictwem przesyłania i propagacji.  
   
--   Ogranicza koszty wydajności [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] śledzenia (na przykład miejsca kosztu dysku dla pliku dziennika).  
+-   Ogranicza koszty wydajności śledzenia WCF (na przykład kosztu miejsca na dysku w pliku dziennika).  
   
  Aby uzyskać więcej informacji dotyczących śledzenia zdefiniowanych przez użytkownika działań, zobacz [rozszerzanie śledzenia](../../../../docs/framework/wcf/samples/extending-tracing.md) próbki.  
   
 ## <a name="message-logging"></a>Rejestrowanie komunikatów  
- Rejestrowanie komunikatów można włączyć zarówno na kliencie i usługi dowolnego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Aby włączyć rejestrowanie komunikatów, musi Dodaj następujący kod do klienta lub usługi:  
+ Zarówno na kliencie i usługi WCF dowolnej aplikacji, można włączyć rejestrowanie komunikatów. Aby włączyć rejestrowanie komunikatów, musi Dodaj następujący kod do klienta lub usługi:  
   
 ```xml  
 <configuration>  

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b81689d7d625d519a0a9fc8b1fa6df3df16ada
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Porady: dostosowywanie powiązania dostarczane przez System
 Windows Communication Foundation (WCF) zawiera kilka powiązania dostarczane przez system, które umożliwiają konfigurowanie niektórych właściwości podstawowych elementów powiązania, ale nie wszystkie właściwości. W tym temacie przedstawiono sposób ustawiania właściwości do powiązania elementów do tworzenia niestandardowego powiązania.  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) zawiera kilka powiązania dostarczane prz
   
  Aby uzyskać więcej informacji o tworzeniu i rozszerzanie wiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składają się wszystkie powiązania z *elementów wiązania*. Każdy element powiązania jest pochodną <xref:System.ServiceModel.Channels.BindingElement> klasy. Powiązania dostarczane przez system, takich jak <xref:System.ServiceModel.BasicHttpBinding> utworzyć i skonfigurować własne elementy wiązania. W tym temacie przedstawiono sposób dostępu i zmiana właściwości tych elementów powiązania, które nie są bezpośrednio widoczne dla powiązania; w szczególności <xref:System.ServiceModel.BasicHttpBinding> klasy.  
+ W programie WCF składają się wszystkie powiązania z *elementów wiązania*. Każdy element powiązania jest pochodną <xref:System.ServiceModel.Channels.BindingElement> klasy. Powiązania dostarczane przez system, takich jak <xref:System.ServiceModel.BasicHttpBinding> utworzyć i skonfigurować własne elementy wiązania. W tym temacie przedstawiono sposób dostępu i zmiana właściwości tych elementów powiązania, które nie są bezpośrednio widoczne dla powiązania; w szczególności <xref:System.ServiceModel.BasicHttpBinding> klasy.  
   
  Poszczególne elementy znajdują się w kolekcji reprezentowany przez <xref:System.ServiceModel.Channels.BindingElementCollection> klasy i są dodawane w następującej kolejności: przepływu transakcji, niezawodnej sesji zabezpieczeń, złożone dupleksowy, jednokierunkowe zabezpieczenia strumienia, kodowanie komunikatu i transportu. Należy pamiętać, że nie wszystkie elementy na liście są wymagane w każdym powiązania. Elementy wiązania zdefiniowane przez użytkownika może również zostać wyświetlony w tej kolekcji element powiązania i musi występować w tej samej kolejności, w sposób opisany wcześniej. Na przykład transportu zdefiniowane przez użytkownika musi być ostatnim elementem kolekcji element powiązania.  
   

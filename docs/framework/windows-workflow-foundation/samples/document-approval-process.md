@@ -2,11 +2,11 @@
 title: Proces zatwierdzania dokumentu
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>Proces zatwierdzania dokumentu
 W przykładzie pokazano korzystanie z wielu funkcji Windows Workflow Foundation (WF) i Windows Communication Foundation (WCF) ze sobą. Razem wdrażają scenariusza proces zatwierdzania dokumentu. Aplikacja kliencka można przesyłać dokumenty do zatwierdzenia i zatwierdzić dokumenty. Aplikacja menedżera zatwierdzenia istnieje ułatwiających komunikację między klientami i do wymuszania reguł procesu zatwierdzania. Proces zatwierdzania jest przepływ pracy, który można wykonać kilka typów zatwierdzenia. Działania istnieje pobieranie jednego zatwierdzenia, zatwierdzenia kworum (procent zbiór osób zatwierdzających) i proces zatwierdzania złożonych, który składa się z kworum i jednego zatwierdzenia w sekwencji.  
@@ -29,7 +29,7 @@ W przykładzie pokazano korzystanie z wielu funkcji Windows Workflow Foundation 
   
 1.  Jako użytkownik w systemie proces zatwierdzania zasubskrybowaniem przez klienta.  
   
-2.  A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klient wysyła do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi hostowanej przez aplikację menedżera zatwierdzenia.  
+2.  Klient WCF wysyła do usługi WCF hostowanej przez aplikację menedżera zatwierdzenia.  
   
 3.  Identyfikator unikatowy użytkownika jest zwracana do klienta. Klient może teraz uczestniczyć w procesów zatwierdzania.  
   
@@ -47,19 +47,19 @@ W przykładzie pokazano korzystanie z wielu funkcji Windows Workflow Foundation 
   
 10. Klient może odbierać żądania zatwierdzenia i odpowiedzi na żądanie w dowolnym momencie w czasie.  
   
-11. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi hostowanej na kliencie może odbierać żądania zatwierdzenia z aplikacji Menedżera zatwierdzenia.  
+11. Usługi WCF hostowanych na komputerze klienckim może odbierać żądania zatwierdzenia z aplikacji Menedżera zatwierdzenia.  
   
 12. Informacje dokumentu są przedstawione na kliencie do przeglądu.  
   
 13. Użytkownika można zatwierdzić lub odrzucić dokumentu.  
   
-14. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta służy do wysyłania odpowiedzi zatwierdzenia z powrotem do aplikacji Menedżera zatwierdzenia.  
+14. Klienta programu WCF służy do wysyłania odpowiedzi zatwierdzenia z powrotem do aplikacji Menedżera zatwierdzenia.  
   
  Z punktu widzenia aplikacji Menedżera zatwierdzenia zatwierdzenia proces funkcji w następujący sposób:  
   
 1.  Klient żąda brać udziału w systemie procesu zatwierdzania.  
   
-2.  A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi w Menedżerze zatwierdzania odbiera żądanie, jako część systemu procesu zatwierdzania.  
+2.  Usługi WCF w Menedżerze zatwierdzania odbiera żądanie, jako część systemu procesu zatwierdzania.  
   
 3.  Unikatowy identyfikator jest generowany dla klienta. Informacje użytkownika są przechowywane w bazie danych.  
   

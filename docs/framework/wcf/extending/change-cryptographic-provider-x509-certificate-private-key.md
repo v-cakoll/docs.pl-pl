@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Porady: zmienianie dostawcy kryptograficznego dla certyfikatu X.509&#39;s klucza prywatnego
 W tym temacie pokazano sposób zintegrować dostawcy przez strukturę zabezpieczeń systemu Windows Communication Foundation (WCF) oraz sposobu zmiany dostawcy usług kryptograficznych, umożliwiające uzyskanie klucza prywatnego certyfikatu X.509. Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Strukturę zabezpieczeń umożliwia wprowadzenie nowych typów tokenu zabezpieczeń, zgodnie z opisem w [porady: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Użytkownik może również używać niestandardowy token, aby zastąpić istniejące typy tokenów dostarczane przez system.  
+ Struktura zabezpieczeń WCF umożliwia wprowadzenie nowych typów tokenu zabezpieczeń, zgodnie z opisem w [porady: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Użytkownik może również używać niestandardowy token, aby zastąpić istniejące typy tokenów dostarczane przez system.  
   
  W tym temacie tokenu zabezpieczającego X.509 dostarczane przez system zastępuje niestandardowy token X.509, który zawiera inną implementację dla klucza prywatnego certyfikatu. Jest to przydatne w scenariuszach, w którym podano rzeczywistego klucza prywatnego przez dostawcę usług kryptograficznych innego niż domyślny dostawca usług kryptograficznych systemu Windows. Przykładem alternatywnego dostawcy usług kryptograficznych jest sprzętowego modułu zabezpieczeń, który wykonuje wszystkie prywatnego klucza pokrewne operacje kryptograficzne, a nie przechowywania kluczy prywatnych w pamięci, co poprawia zabezpieczeń systemu.  
   
@@ -32,9 +32,9 @@ W tym temacie pokazano sposób zintegrować dostawcy przez strukturę zabezpiecz
   
 2.  Zastąpienie <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> właściwości tylko do odczytu. Ta właściwość zwraca rzeczywisty rozmiar klucza certyfikatu pary kluczy publiczny/prywatny.  
   
-3.  Zastąpienie <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> metody. Ta metoda jest wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework zabezpieczeń do odszyfrowania klucza symetrycznego klucza prywatnego certyfikatu. (Klucz został wcześniej zaszyfrowany z użyciem klucza publicznego certyfikatu).  
+3.  Zastąpienie <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> metody. Ta metoda jest wywoływana przez strukturę zabezpieczeń WCF do odszyfrowania klucza symetrycznego klucza prywatnego certyfikatu. (Klucz został wcześniej zaszyfrowany z użyciem klucza publicznego certyfikatu).  
   
-4.  Zastąpienie <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> metody. Ta metoda jest wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń platformę, by uzyskać wystąpienia <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasa, która reprezentuje dostawcy usług kryptograficznych dla jego certyfikat prywatny lub publiczny klucz, w zależności od parametrów przekazane do metody.  
+4.  Zastąpienie <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> metody. Ta metoda jest wywoływana przez strukturę zabezpieczeń WCF można uzyskać wystąpienia <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasa, która reprezentuje dostawcy usług kryptograficznych dla jego certyfikat prywatny lub publiczny klucz, w zależności od parametrów przekazane do metody.  
   
 5.  Opcjonalna. Zastąpienie <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> metody. Przesłonić tę metodę, jeśli różne implementacje <xref:System.Security.Cryptography.HashAlgorithm> klasa jest wymagana.  
   
@@ -45,7 +45,7 @@ W tym temacie pokazano sposób zintegrować dostawcy przez strukturę zabezpiecz
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- Poniższa procedura przedstawia sposób integrowanie niestandardowych X.509 asymetrycznego klucza implementacji zabezpieczeń utworzony w poprzedniej procedurze z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework zabezpieczeń, aby zastąpić tokenu zabezpieczającego X.509 dostarczane przez system.  
+ Poniższa procedura przedstawia sposób integrowanie niestandardowych X.509 asymetrycznego klucza implementacji zabezpieczeń utworzony w poprzedniej procedurze z architekturą WCF zabezpieczeń, aby zastąpić zabezpieczeń X.509 dostarczane przez system tokenu.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Aby zastąpić niestandardowy token klucza asymetrycznego zabezpieczeń X.509 tokenu zabezpieczającego X.509 dostarczane przez system  
   

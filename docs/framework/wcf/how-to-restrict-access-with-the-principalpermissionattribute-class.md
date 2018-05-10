@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38e3c62aaf0e87860732bcb12c61da69b1c4346d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute
 Kontrolowanie dostępu do zasobów na komputerze domeny systemu Windows jest zadaniem podstawowych zabezpieczeń. Na przykład tylko określonym użytkownikom powinien móc wyświetlić poufnych danych, takich jak lista płac informacji. W tym temacie wyjaśniono, jak ograniczyć dostęp do metody przez wymaganie, który użytkownik należy do grupy wstępnie zdefiniowanych. Dla przykładu pracy, zobacz [Autoryzowanie dostępu do operacji usługi](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -76,7 +76,7 @@ Kontrolowanie dostępu do zasobów na komputerze domeny systemu Windows jest zad
     </behaviors>  
     ```  
   
-     Ustawienie tej wartości na `UseAspNetRoles` oznacza to, że `Name` właściwość `PrincipalPermissionAttribute` posłuży do przeprowadzenia porównania ciągów. Gdy certyfikat jest używany jako poświadczeń klienta, domyślnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] łączy nazwa pospolita certyfikatu i odcisk palca średnikiem, aby utworzyć unikatową wartość dla podstawowej tożsamości klienta. Z `UseAspNetRoles` Ustaw jako `PrincipalPermissionMode` w usłudze tej wartości podstawowej tożsamości jest porównywana z `Name` wartości właściwości, aby określić uprawnienia dostępu użytkownika.  
+     Ustawienie tej wartości na `UseAspNetRoles` oznacza to, że `Name` właściwość `PrincipalPermissionAttribute` posłuży do przeprowadzenia porównania ciągów. Gdy certyfikat jest używany jako poświadczeń klienta, domyślnie WCF łączy nazwa pospolita certyfikatu i odcisk palca średnikiem, aby utworzyć unikatową wartość dla podstawowej tożsamości klienta. Z `UseAspNetRoles` Ustaw jako `PrincipalPermissionMode` w usłudze tej wartości podstawowej tożsamości jest porównywana z `Name` wartości właściwości, aby określić uprawnienia dostępu użytkownika.  
   
      Możesz również ustawić podczas tworzenia samodzielnie hostowana usługa, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> właściwości w kodzie, jak pokazano w poniższym kodzie:  
   

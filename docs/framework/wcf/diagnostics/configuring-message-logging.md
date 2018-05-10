@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla różnych scenariuszy.  
@@ -66,7 +66,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla 
   
  Dla komunikatów wychodzących rejestrowanie odbywa się natychmiast po wiadomość opuszcza kod użytkownika i bezpośrednio przed przejdzie do przesyłania wiadomości.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rejestruje komunikaty w dwóch różnych poziomach, usług i mechanizm transportu. Wadliwe komunikaty są także rejestrowane. Trzy kategorie są niezależne od siebie i można aktywować niezależnie w konfiguracji.  
+ Usługi WCF rejestruje komunikaty w dwóch różnych poziomach, usług i mechanizm transportu. Wadliwe komunikaty są także rejestrowane. Trzy kategorie są niezależne od siebie i można aktywować niezależnie w konfiguracji.  
   
  Poziom rejestrowania można kontrolować przez ustawienie `logMessagesAtServiceLevel`, `logMalformedMessages`, i `logMessagesAtTransportLevel` atrybuty `messageLogging` elementu.  
   
@@ -77,7 +77,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla 
  Komunikaty zarejestrowane w tej warstwie jest gotowe do można lub dekodowanym na lub po transportu w sieci. Jeśli zostały określone filtry, są rejestrowane tylko komunikatów spełniających filtrów. W przeciwnym razie są rejestrowane wszystkie komunikaty w warstwie transportowej. Wszystkie komunikaty infrastruktury są rejestrowane w tej warstwie, w tym komunikaty niezawodnej obsługi komunikatów. Na strumienia wiadomości tylko nagłówki są rejestrowane. Ponadto zabezpieczonych wiadomości są rejestrowane szyfrowane na tym poziomie, chyba że bezpiecznego transportu, takie jak jest używany protokół HTTPS.  
   
 ### <a name="malformed-level"></a>Poziom źle sformułowany  
- Wadliwe komunikaty są komunikaty, które zostały odrzucone prze [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu na każdym etapie przetwarzania. Wadliwe komunikaty są rejestrowane jako — jest: szyfrowane, gdy są one tak, z XML bez odpowiedniego i tak dalej. `maxSizeOfMessageToLog` rozmiar komunikatu, który ma zostać zarejestrowany jako typu CDATA zdefiniowany. Domyślnie `maxSizeOfMessageToLog` jest równa 256 KB. Aby uzyskać więcej informacji na temat tego atrybutu zobacz sekcję inne opcje.  
+ Wadliwe komunikaty są komunikaty, które zostały odrzucone przez stos WCF na każdym etapie przetwarzania. Wadliwe komunikaty są rejestrowane jako — jest: szyfrowane, gdy są one tak, z XML bez odpowiedniego i tak dalej. `maxSizeOfMessageToLog` rozmiar komunikatu, który ma zostać zarejestrowany jako typu CDATA zdefiniowany. Domyślnie `maxSizeOfMessageToLog` jest równa 256 KB. Aby uzyskać więcej informacji na temat tego atrybutu zobacz sekcję inne opcje.  
   
 ### <a name="other-options"></a>Inne opcje  
  Oprócz poziomów rejestrowania użytkownika można określić następujące opcje:  

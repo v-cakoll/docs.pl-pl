@@ -2,11 +2,11 @@
 title: Buforowanie
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 2c864bd0c1d27e9c771a1b97e756c04b107ac2b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6554ec9c5eaefaf8c9e39d2a8d92982716cc18c5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pooling"></a>Buforowanie
 W tym przykładzie pokazano, jak rozszerzyć Windows Communication Foundation (WCF) do obsługi buforowanie obiektów. Przykład przedstawia sposób tworzenia atrybutu składnię i semantycznie podobny do `ObjectPoolingAttribute` atrybutu funkcji usług dla przedsiębiorstw. Buforowanie obiektu może zapewnić znaczne zwiększenie wydajności na wydajność aplikacji. Jednak jeśli nie jest prawidłowo używana może mieć odwrotny efekt. Buforowanie obiektu pomaga zmniejszyć koszty odtworzenie często używanych obiektów, które wymagają szeroką gamę inicjowania. Jednak jeśli wywołanie do metody w obiekcie puli przyjmuje znaczną ilość czasu, buforowanie obiektów kolejek dodatkowych żądań zaraz po osiągnięciu maksymalny rozmiar puli. W związku z tym może nie obsługiwać niektórych obiektów żądania tworzenia przez zgłaszanie wyjątków przekroczenia limitu czasu.  
@@ -14,14 +14,14 @@ W tym przykładzie pokazano, jak rozszerzyć Windows Communication Foundation (W
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Pierwszym krokiem tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rozszerzenia jest określenie punkcie rozszerzenia do użycia.  
+ Pierwszym krokiem tworzenia rozszerzenia programu WCF jest podjęcie punkcie rozszerzenia do użycia.  
   
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] termin *dyspozytora* odwołuje się do składnika środowiska wykonawczego odpowiedzialny za konwersji komunikatów przychodzących do wywołań metod w usłudze użytkownika i konwertowania wartości zwracanych z tej metody wychodzący Komunikat. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa tworzy dyspozytora dla każdego punktu końcowego. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, należy użyć dyspozytora kontrakt skojarzony z tego klienta jest kontraktu dwukierunkowego.  
+ W programie WCF termin *dyspozytora* odwołuje się do składnika środowiska wykonawczego odpowiedzialny za konwersji komunikatów przychodzących do wywołań metod w usłudze użytkownika i konwertowania wartości zwracanych z tej metody do wysyłanej wiadomości. Usługi WCF tworzy dyspozytora dla każdego punktu końcowego. Klienta programu WCF należy korzystać dyspozytora kontrakt skojarzony z tego klienta jest kontraktu dwukierunkowego.  
   
  Dystrybucja kanału i punktu końcowego oferują kanału- i rozszerzalność całej kontraktu w przypadku wystawianego różne właściwości, które określają zachowanie Dyspozytor. <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> Właściwości umożliwia również sprawdzać, zmodyfikować lub dostosowania procesu wysyłania. W tym przykładzie koncentruje się na <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwość, która wskazuje obiekt, który zapewnia wystąpienia klasy usługi.  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Dyspozytor tworzy wystąpienia przy użyciu klasy usługi <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, który implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu. Ten interfejs zawiera trzy metody:  
+ W programie WCF, Dyspozytor tworzy wystąpienia przy użyciu klasy usługi <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, który implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu. Ten interfejs zawiera trzy metody:  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Podczas wywołania dyspozytora nadejścia wiadomości <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> metodę w celu utworzenia wystąpienia klasy usługi, aby przetworzyć komunikatu. Częstotliwość połączeń do tej metody jest określany przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Na przykład jeśli <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.InstanceContextMode.PerCall> nowe wystąpienie klasy usługi służy do przetwarzania każdy komunikat przychodzący, dlatego <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> jest wywoływana w momencie nadejścia wiadomości.  
   
@@ -100,7 +100,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  W przykładzie użyto atrybutu niestandardowego. Gdy <xref:System.ServiceModel.ServiceHost> jest tworzony poszczególne atrybuty, są używane w definicji typu usługi i dodaje zachowania dostępne do kolekcji zachowań opisu usługi.  
   
- Interfejs <xref:System.ServiceModel.Description.IServiceBehavior> ma trzy metody w-- <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>, i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> Metoda służy do zapewnienia, że zachowanie może odnosić się do usługi. W tym przykładzie wdrożenia gwarantuje, że usługa nie jest skonfigurowany z <xref:System.ServiceModel.InstanceContextMode.Single>. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> Metoda służy do konfigurowania powiązań usługi. Nie jest wymagane w tym scenariuszu. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> Służy do konfigurowania usługi dyspozytorów. Ta metoda jest wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. Następujące parametry są przekazywane do tej metody:  
+ Interfejs <xref:System.ServiceModel.Description.IServiceBehavior> ma trzy metody w-- <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>, i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> Metoda służy do zapewnienia, że zachowanie może odnosić się do usługi. W tym przykładzie wdrożenia gwarantuje, że usługa nie jest skonfigurowany z <xref:System.ServiceModel.InstanceContextMode.Single>. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> Metoda służy do konfigurowania powiązań usługi. Nie jest wymagane w tym scenariuszu. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> Służy do konfigurowania usługi dyspozytorów. Ta metoda jest wywoływana przez usługę WCF podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. Następujące parametry są przekazywane do tej metody:  
   
 -   `Description`: Ten argument zawiera opis usługi dla całej usługi. Może być używany do zbadania opis danych dotyczących punktów końcowych usługi, kontrakty, powiązania i innych danych.  
   
@@ -177,7 +177,7 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  Oprócz <xref:System.ServiceModel.Description.IServiceBehavior> implementacji <xref:System.EnterpriseServices.ObjectPoolingAttribute> klasa ma kilka elementów członkowskich, aby dostosować puli obiektów przy użyciu argumentów atrybutu. Elementy te obejmują <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A>, i <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>, aby odpowiadać obiektowi buforowanie zestaw funkcji udostępniane przez usługi .NET Enterprise.  
   
- Obiekt, buforowanie zachowanie można teraz dodać do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi przez dodawanie adnotacji do implementacji usługi z nowo utworzonych niestandardowych `ObjectPooling` atrybutu.  
+ Obiekt buforowanie zachowanie można teraz dodać do usługi WCF przez dodawanie adnotacji do implementacji usługi z nowo utworzonych niestandardowych `ObjectPooling` atrybutu.  
   
 ```  
 [ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      

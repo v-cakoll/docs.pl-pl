@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Instrukcje: Tworzenie klienta WCF (Windows Communication Foundation)
 Jest to czwarty sześciu zadania wymagane do utworzenia aplikacji Windows Communication Foundation (WCF). Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
   
- W tym temacie opisano, jak pobrać metadanych od [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i umożliwia utworzenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serwera proxy, który można uzyskać dostępu do usługi. To zadanie zostało wykonane przy użyciu funkcji Dodaj odwołanie do usługi udostępniane przez program Visual Studio. To narzędzie pobiera metadane z punktu końcowego MEX usługi i generuje plik kodu zarządzanego źródła dla klienta serwera proxy w języku wybrano (C# domyślnie). Oprócz tworzenia serwera proxy klienta, narzędzie tworzy lub aktualizuje plik konfiguracji klienta, który umożliwia aplikacjom klienta połączyć się z usługą w jednej z jego punktów końcowych.  
+ W tym temacie opisano, jak pobrać metadanych z usługą WCF i użyć go do tworzenia usług WCF serwer proxy, który można uzyskać dostępu do usługi. To zadanie zostało wykonane przy użyciu funkcji Dodaj odwołanie do usługi udostępniane przez program Visual Studio. To narzędzie pobiera metadane z punktu końcowego MEX usługi i generuje plik kodu zarządzanego źródła dla klienta serwera proxy w języku wybrano (C# domyślnie). Oprócz tworzenia serwera proxy klienta, narzędzie tworzy lub aktualizuje plik konfiguracji klienta, który umożliwia aplikacjom klienta połączyć się z usługą w jednej z jego punktów końcowych.  
   
 > [!NOTE]
 >  Można również użyć [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzie do generowania klasy serwera proxy i konfiguracji zamiast Dodaj odwołanie do usługi w programie Visual Studio.  
   
 > [!WARNING]
->  Podczas wywoływania metody [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi z projektu biblioteki klas w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] funkcja Dodaj odwołanie do usługi umożliwia automatyczne generowanie serwera proxy i skojarzony plik konfiguracji.  Plik konfiguracji nie będzie służyć za projektu biblioteki klas. Należy dodać ustawienia w pliku konfiguracyjnym wygenerowanego pliku app.config dla pliku wykonywalnego, który będzie dzwonić, biblioteki klas.  
+>  Podczas wywoływania usługi WCF z projektu biblioteki klas w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] funkcja Dodaj odwołanie do usługi umożliwia automatyczne generowanie serwera proxy i skojarzony plik konfiguracji.  Plik konfiguracji nie będzie służyć za projektu biblioteki klas. Należy dodać ustawienia w pliku konfiguracyjnym wygenerowanego pliku app.config dla pliku wykonywalnego, który będzie dzwonić, biblioteki klas.  
   
  Aplikacja kliencka używa klasy wygenerowany serwer proxy do komunikacji z usługą. Ta procedura jest opisana w [porady: używanie klienta](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   

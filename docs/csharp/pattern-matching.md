@@ -3,11 +3,11 @@ title: Dopasowanie wzorca — przewodnik C#
 description: Dowiedz się więcej o wzorzec dopasowany wyrażenia w języku C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 7bdb41085a1a110f5a097ad3fa2cb645237fcefd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca #
 
@@ -45,7 +45,7 @@ W tym zaktualizowaną wersję `is` wyrażenie testów zmiennej i przypisuje go d
 
 Reguły języka wyrażeń dopasowania wzorca pomóc w uniknięciu niewłaściwie korzysta z wyników wyrażenie dopasowania. W przykładzie przedstawionym powyżej zmienne `s`, `c`, i `r` tylko w zakresie i ostatecznie przypisane przypadku wyrażenia dopasowania wzorca odpowiednich `true` wyników. Jeśli spróbujesz użyć zmiennej albo w innym miejscu kodu generuje błędy kompilatora.
 
-Przeanalizujmy oba te reguły szczegółowo, począwszy od zakresu. Zmienna `c` znajduje się w zakresie tylko w `else` gałęzi pierwszego `if` instrukcji. Zmienna `s` znajduje się w zakresie w metodzie `ComputeArea`. Wynika to z każdej gałęzi `if` instrukcji ustanawia oddzielnymi zakresami zmiennych. Jednak `if` nie obsługuje instrukcji sam. Oznacza to, że zmienne zadeklarowane w `if` instrukcji znajdują się w tym samym zakresie co `if` instrukcji (metoda w tym przypadku.) To zachowanie nie jest specyficzne dla dopasowania wzorca, ale jest zdefiniowane zachowanie dla zmiennej zakresów i `if` i `else` instrukcje.
+Przeanalizujmy oba te reguły szczegółowo, począwszy od zakresu. Zmienna `c` znajduje się w zakresie tylko w `else` gałęzi pierwszego `if` instrukcji. Zmienna `s` znajduje się w zakresie w metodzie `ComputeAreaModernIs`. Wynika to z każdej gałęzi `if` instrukcji ustanawia oddzielnymi zakresami zmiennych. Jednak `if` nie obsługuje instrukcji sam. Oznacza to, że zmienne zadeklarowane w `if` instrukcji znajdują się w tym samym zakresie co `if` instrukcji (metoda w tym przypadku.) To zachowanie nie jest specyficzne dla dopasowania wzorca, ale jest zdefiniowane zachowanie dla zmiennej zakresów i `if` i `else` instrukcje.
 
 Zmienne `c` i `s` są przypisane, kiedy odpowiednio `if` instrukcje są spełnione ze względu na przypisane ostatecznie gdy true mechanizmu.
 

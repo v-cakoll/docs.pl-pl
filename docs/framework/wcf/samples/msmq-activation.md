@@ -2,11 +2,11 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 W tym przykładzie pokazano, jak udostępniać aplikacje w usługi aktywacji procesów systemu Windows (WAS), które są odczytywane z kolejki komunikatów. W przykładzie użyto `netMsmqBinding` i opierają się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji sieci Web hostowanych klienta i jest samodzielnie hostowana konsoli obserwować stan zakupów przesłane dane wyjściowe.  
@@ -19,11 +19,11 @@ W tym przykładzie pokazano, jak udostępniać aplikacje w usługi aktywacji pro
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do systemu Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" i przykłady Windows Workflow Foundation (WF) dotyczące [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pobrać wszystkie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do systemu Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" i przykłady Windows Workflow Foundation (WF) dotyczące [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] do pobrania wszystkich WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows Process Activation Service (WAS), nowy proces aktywacji mechanizm [!INCLUDE[lserver](../../../../includes/lserver-md.md)], zapewnia funkcje podobne usług IIS, które były wcześniej dostępne tylko do aplikacji HTTP dla aplikacji, które używają protokołów innych niż HTTP. Windows Communication Foundation (WCF) używa interfejsu Adapter odbiornika do komunikowania się żądania aktywacji, które są otrzymywane za pośrednictwem protokołów innych niż HTTP obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], takie jak protokół TCP, potoków nazwanych i usługi MSMQ. Funkcja odbierania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzanych usług systemu Windows działa w SMSvcHost.exe.  
+ Windows Process Activation Service (WAS), nowy proces aktywacji mechanizm [!INCLUDE[lserver](../../../../includes/lserver-md.md)], zapewnia funkcje podobne usług IIS, które były wcześniej dostępne tylko do aplikacji HTTP dla aplikacji, które używają protokołów innych niż HTTP. Windows Communication Foundation (WCF) używa interfejsu Adapter odbiornika do komunikowania się żądania aktywacji, które są otrzymywane za pośrednictwem protokołów innych niż HTTP obsługiwane przez usługi WCF, takie jak protokół TCP, potoków nazwanych i usługi MSMQ. Funkcja odbierania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzanych usług systemu Windows działa w SMSvcHost.exe.  
   
  Adapter odbiornika Net.Msmq usługi (NetMsmqActivator) aktywuje umieszczonych w kolejce aplikacje oparte na wiadomości w kolejce.  
   
@@ -83,7 +83,7 @@ public class OrderProcessorService : IOrderProcessor
  Nazwa kolejki usługi MSMQ jest określona w sekcji appSettings pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji System.serviceModel pliku konfiguracji.  
   
 > [!NOTE]
->  Adres nazwy i punktu końcowego kolejki usługi MSMQ Użyj konwencji adresowania nieco inne. Nazwa kolejki usługi MSMQ używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnika w jego ścieżki. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Net.msmq Określa adres punktu końcowego: schemat, korzysta "localhost" na komputerze lokalnym, a ukośniki w swojej ścieżce. Aby odczytać z kolejki znajdującej się na komputerze zdalnym, zastąp "." i "localhost" do nazwy komputera zdalnego.  
+>  Adres nazwy i punktu końcowego kolejki usługi MSMQ Użyj konwencji adresowania nieco inne. Nazwa kolejki usługi MSMQ używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnika w jego ścieżki. Adres punktu końcowego WCF określa net.msmq: schemat, korzysta "localhost" na komputerze lokalnym, a ukośniki w swojej ścieżce. Aby odczytać z kolejki znajdującej się na komputerze zdalnym, zastąp "." i "localhost" do nazwy komputera zdalnego.  
   
  Plik .svc o nazwie klasy jest używana do hostowania kodu usługi WAS.  
   
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  Upewnij się, że [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zainstalowano, zgodnie z wymaganiami aktywacji WAS.  
   
-2.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składniki Aktywacja bez HTTP:  
+2.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować składniki Aktywacja bez HTTP usług WCF:  
   
     1.  Z **Start** menu, wybierz **Panelu sterowania**.  
   

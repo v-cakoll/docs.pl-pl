@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Przesłanianie tożsamości usługi na potrzeby uwierzytelniania
 Zazwyczaj nie trzeba ustawić tożsamość w usłudze, ponieważ typ tożsamości w metadanych usługi nakazują wybór typu poświadczeń klienta. Na przykład w poniższym kodzie konfiguracji użyto [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element i zestawy `clientCredentialType` atrybutu do systemu Windows.  
@@ -30,9 +30,9 @@ Zazwyczaj nie trzeba ustawić tożsamość w usłudze, ponieważ typ tożsamośc
 > [!NOTE]
 >  Aby użyć typu poświadczeń systemu Windows bez negocjowania, konto użytkownika usługi musi mieć dostęp do głównej nazwy usługi, które jest zarejestrowane w domenie usługi Active Directory. Można to zrobić w następujący sposób:  
   
--   Użyj konta NetworkService lub LocalSystem uruchamiania usługi. Ponieważ te konta ma dostęp do komputera, nazwę SPN, który zostanie nawiązane, gdy komputer jest dołączany domeny usługi Active Directory [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatycznie generuje prawidłowego elementu SPN w punkt końcowy usługi w metadanych usługi (WSDL).  
+-   Użyj konta NetworkService lub LocalSystem uruchamiania usługi. Ponieważ te konta dostępu do komputera, nazwę SPN, który zostanie nawiązane, gdy komputer jest dołączany do domeny usługi Active Directory, usługi WCF automatycznie generuje prawidłowego elementu SPN w punkt końcowy usługi w metadanych usługi (WSDL).  
   
--   Użyj dowolnego konta domeny usługi Active Directory do uruchomienia usługi. W takim przypadku ustanowić nazwę SPN dla tego konta domeny, co można zrobić za pomocą narzędzia Narzędzie Setspn.exe. Po utworzeniu nazwy SPN konta usługi, należy skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do opublikowania tej nazwy SPN do obsługi klientów za pośrednictwem jego metadanych (WSDL). Jest to realizowane przez ustawienie tożsamość punktu końcowego dla dostępnego punktu końcowego, albo za pomocą pliku konfiguracji aplikacji lub kodu.  
+-   Użyj dowolnego konta domeny usługi Active Directory do uruchomienia usługi. W takim przypadku ustanowić nazwę SPN dla tego konta domeny, co można zrobić za pomocą narzędzia Narzędzie Setspn.exe. Po utworzeniu nazwy SPN konta usługi, należy skonfigurować usług WCF do opublikowania tej nazwy SPN do obsługi klientów za pośrednictwem jego metadanych (WSDL). Jest to realizowane przez ustawienie tożsamość punktu końcowego dla dostępnego punktu końcowego, albo za pomocą pliku konfiguracji aplikacji lub kodu.  
   
  Aby uzyskać więcej informacji na temat nazw SPN, protokołu Kerberos i usługi Active Directory, zobacz [Kerberos techniczne dodatku dla systemu Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
@@ -59,7 +59,7 @@ Zazwyczaj nie trzeba ustawić tożsamość w usłudze, ponieważ typ tożsamośc
   
   
 ### <a name="setting-identity-programmatically"></a>Ustawienie programowo tożsamości  
- Usługi nie trzeba jawnie określać tożsamości, ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatycznie określa go. Jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] służy do określania tożsamości dla punktu końcowego, jeśli jest to wymagane. Poniższy kod dodaje nowy punkt końcowy usługi o określonej tożsamości DNS.  
+ Usługi nie trzeba jawnie określić tożsamości, ponieważ automatycznie określa WCF. Jednak WCF można określić tożsamości dla punktu końcowego, jeśli jest to wymagane. Poniższy kod dodaje nowy punkt końcowy usługi o określonej tożsamości DNS.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

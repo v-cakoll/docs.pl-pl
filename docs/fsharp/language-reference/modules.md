@@ -4,7 +4,7 @@ description: 'Dowiedz się, jak to grupa kodzie języka F #, takie jak wartości
 ms.date: 04/24/2017
 ms.openlocfilehash: b503a78abed34cbb56a7a1ceaba61f851a125831
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---

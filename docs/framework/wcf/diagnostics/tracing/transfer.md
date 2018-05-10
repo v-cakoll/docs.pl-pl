@@ -2,17 +2,17 @@
 title: Transfer
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>Transfer
 W tym temacie opisano transfer w modelu śledzenie działania Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definicja transferu  
- Transfery między działaniami reprezentują przyczynowy relacje między zdarzeniami w powiązanych działań w ramach punktów końcowych. Dwa działania są powiązane z transferów podczas kontroli przepływają między te działania, na przykład wywołanie metody przekraczające granice działania. W [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], gdy bajty znajdują się w usłudze nasłuchiwania podczas działania jest przenoszona do działania odbierania bajtów której jest tworzony obiekt komunikatu przychodzącego. Listę scenariuszy śledzenia end-to-end oraz ich odpowiednich działania i śledzenia projektu, zobacz [scenariusze śledzenia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Transfery między działaniami reprezentują przyczynowy relacje między zdarzeniami w powiązanych działań w ramach punktów końcowych. Dwa działania są powiązane z transferów podczas kontroli przepływają między te działania, na przykład wywołanie metody przekraczające granice działania. W programie WCF podczas bajtów jest przychodzące od usługi, działania nasłuchiwania na jest przenoszona do działania odbierania bajtów której jest tworzony obiekt komunikatu. Listę scenariuszy śledzenia end-to-end oraz ich odpowiednich działania i śledzenia projektu, zobacz [scenariusze śledzenia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Aby emitować transferu danych śledzenia, należy użyć `ActivityTracing` ustawienie w źródle śledzenia, jak pokazano w następującym kodem konfiguracji.  
   

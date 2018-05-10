@@ -2,24 +2,24 @@
 title: Punkty końcowe protokołów SOAP i HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>Punkty końcowe protokołów SOAP i HTTP
-W tym przykładzie przedstawiono sposób implementacji usługi opartego na protokole RPC i udostępnić go w formacie protokołu SOAP i formatowanie "Zwykły starego pliku XML" (POX) przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania sieci Web. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) przykładowa, aby uzyskać więcej informacji o powiązanie HTTP dla usługi. Ten przykład dotyczy przede wszystkim szczegółowe informacje, które odnoszą się do udostępnianie tych samych usług za pośrednictwem protokołu SOAP i HTTP przy użyciu różnych powiązań.  
+W tym przykładzie przedstawiono sposób implementacji usługi opartego na protokole RPC i udostępnić go w formacie protokołu SOAP i format "XML starego zwykły" (POX) za pomocą modelu programowania sieci Web WCF. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) przykładowa, aby uzyskać więcej informacji o powiązanie HTTP dla usługi. Ten przykład dotyczy przede wszystkim szczegółowe informacje, które odnoszą się do udostępnianie tych samych usług za pośrednictwem protokołu SOAP i HTTP przy użyciu różnych powiązań.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- Udostępnianie usługi RPC za pośrednictwem protokołu SOAP i HTTP przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Udostępnianie usługi RPC za pośrednictwem protokołu SOAP i HTTP przy użyciu usługi WCF.  
   
 ## <a name="discussion"></a>Omówienie  
- Ten przykład zawiera dwa składniki: projekt aplikacji sieci Web (usługa), który zawiera [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług i aplikacji konsoli (klient), która wywołuje operacji usługi za pomocą powiązania SOAP i HTTP.  
+ Ten przykład zawiera dwa składniki: projekt aplikacji sieci Web (usługa), który zawiera usługi WCF i aplikacji konsoli (klienta), które wywołuje operacji usługi za pomocą powiązania SOAP i HTTP.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 2 operacje — udostępnia usługi`GetData` i `PutData` — która echo ciąg, który został przekazany jako dane wejściowe. Operacje usług są opatrzoną <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute>. Te atrybuty kontrolują projekcji HTTP z tych operacji. Ponadto mają adnotacje z <xref:System.ServiceModel.OperationContractAttribute>, co pozwala je, aby być uwidaczniany za pośrednictwem powiązania SOAP. Usługi `PutData` metoda zgłasza <xref:System.ServiceModel.Web.WebFaultException>, które są wysyłane z powrotem przez serwer HTTP przy użyciu kodu stanu HTTP i są wysyłane z powrotem za pośrednictwem protokołu SOAP jako błąd protokołu SOAP.  
+ Usługi WCF przedstawia działanie 2-`GetData` i `PutData` — która echo ciąg, który został przekazany jako dane wejściowe. Operacje usług są opatrzoną <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute>. Te atrybuty kontrolują projekcji HTTP z tych operacji. Ponadto mają adnotacje z <xref:System.ServiceModel.OperationContractAttribute>, co pozwala je, aby być uwidaczniany za pośrednictwem powiązania SOAP. Usługi `PutData` metoda zgłasza <xref:System.ServiceModel.Web.WebFaultException>, które są wysyłane z powrotem przez serwer HTTP przy użyciu kodu stanu HTTP i są wysyłane z powrotem za pośrednictwem protokołu SOAP jako błąd protokołu SOAP.  
   
- Konfiguruje plik Web.config [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi z punktami końcowymi 3:  
+ Plik Web.config służy do konfigurowania usługi WCF z punktami końcowymi 3:  
   
 -   Punkt końcowy ~/service.svc/mex, który udostępnia metadane usługi dla dostępu klientów opartego na protokole SOAP.  
   

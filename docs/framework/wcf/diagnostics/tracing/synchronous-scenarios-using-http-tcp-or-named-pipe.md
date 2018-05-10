@@ -2,11 +2,11 @@
 title: Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego
 W tym temacie opisano działania i transferów w scenariuszach różnych synchroniczne żądania/odpowiedzi, za pomocą klienta jednowątkowe, przy użyciu protokołu HTTP, TCP lub nazwany potok. Zobacz [scenariusze asynchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) uzyskać więcej informacji dotyczących żądań wielowątkowych.  
@@ -54,7 +54,7 @@ W tym temacie opisano działania i transferów w scenariuszach różnych synchro
  Jedyną różnicą z poprzednim scenariuszu jest, że komunikat o błędzie SOAP są zwracane jako komunikatu odpowiedzi. Jeśli `propagateActivity` = `true`, identyfikator działania komunikatu żądania jest dodawany do komunikatu błędu SOAP.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Synchroniczne jednokierunkowe bez błędów  
- Jedyna różnica z pierwszego scenariusza polega na tym, że komunikat nie jest zwracana do serwera. Dla protokołów opartych na protokole HTTP, stan (nieprawidłowa lub błąd) nadal jest zwracana do klienta. Jest to spowodowane HTTP jest jedynym protokołem z semantyki żądanie odpowiedź, który jest częścią [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosu protokołu. Ponieważ jest ukryta przetwarzania TCP [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], bez potwierdzenia są wysyłane do klienta.  
+ Jedyna różnica z pierwszego scenariusza polega na tym, że komunikat nie jest zwracana do serwera. Dla protokołów opartych na protokole HTTP, stan (nieprawidłowa lub błąd) nadal jest zwracana do klienta. Jest to spowodowane HTTP jest jedynym protokołem z semantyki żądanie odpowiedź, który jest częścią stosu protokołu WCF. Ponieważ przetwarzanie TCP jest ukryta WCF, bez potwierdzenia są wysyłane do klienta.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Synchroniczne jednokierunkowe z błędami  
  Jeśli wystąpi błąd podczas przetwarzania komunikatu (Q lub nowszych), do klienta zwracany jest prezentowane żadne powiadomienie. To jest taka sama jak w scenariuszu "Synchronicznej One-Way bez błędów". Nie należy używać jednokierunkowe scenariusz, jeśli chcesz otrzymywać komunikat o błędzie.  

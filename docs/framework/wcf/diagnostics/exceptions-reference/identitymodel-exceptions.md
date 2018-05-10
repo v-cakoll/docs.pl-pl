@@ -1,24 +1,12 @@
 ---
-title: "Wyjątki modelu IdentityModel"
-ms.custom: 
+title: Wyjątki modelu IdentityModel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>Wyjątki modelu IdentityModel
 W tym temacie wymieniono wszystkie wyjątki generowane przez modelu IdentityModel.  
@@ -91,8 +79,8 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez modelu IdentityMode
 |SAMLSignatureAlreadyRead|Podpis jest już do odczytu w potwierdzenia języka SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|Określony algorytm i klucz prywatny są niezgodne.|  
 |EmptyTransformChainNotSupported|Pusty łańcuch przekształcenia nie jest obsługiwane.|  
-|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper &#124; " Przesunięcie "jest poza zakresem.|  
-|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper &#124; " rozmiar "jest poza zakresem. SecurityTokenManagerCannotCreateAuthenticatorForRequirement = zabezpieczeń Menedżer tokenów nie może utworzyć wystawcy uwierzytelnienia tokenu dla wymagania określone.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;"offset" jest poza zakresem.|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper&#124;"rozmiar" jest poza zakresem. SecurityTokenManagerCannotCreateAuthenticatorForRequirement = zabezpieczeń Menedżer tokenów nie może utworzyć wystawcy uwierzytelnienia tokenu dla wymagania określone.|  
 |UnableToCreateKeyedHashAlgorithm|Nie można utworzyć elementu KeyedHashAlgorithm z określonej wartości dla określonej sygnatury algorytmu.|  
 |SAMLUnableToLoadAssertion|\<Saml:assertion > nie można załadować elementu.|  
 |X509FindValueMismatchMulti|Określone X509FindType wymaga, aby typ findValue argument jedną z wartości 2. Argument findValue jest innego typu.|  

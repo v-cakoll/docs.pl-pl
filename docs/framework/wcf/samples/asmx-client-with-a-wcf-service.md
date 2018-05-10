@@ -2,14 +2,14 @@
 title: Klient ASMX z usługą WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 5a0262361eac35ac45c3861deee13133011754ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93a881e486d82183fc42c524f3d83527c649516d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Klient ASMX z usługą WCF
-W tym przykładzie pokazano, jak utworzyć usługę za pomocą usługi Windows Communication Foundation (WCF) i uzyskuje dostęp do usługi z innej[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, takich jak klient ASMX.  
+W tym przykładzie pokazano, jak utworzyć usługę za pomocą usługi Windows Communication Foundation (WCF) i uzyskuje dostęp do usługi z klienta z systemem innym niż WCF, takich jak klient ASMX.  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Xml.Serialization.XmlSerializer> mapowania typów CLR reprezentację XML. <xref:System.Runtime.Serialization.DataContractSerializer> Inaczej niż XmlSerializer interpretuje niektóre reprezentacji XML. Z systemem innym niż[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generatory serwera proxy, takich jak Wsdl.exe, generowanie bardziej użyteczne interfejsu, gdy jest używany element XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Jest stosowany do `ICalculator` interfejsu, aby upewnić się, że XmlSerializer służy do mapowania typów CLR XML. Implementacji usługi jest obliczana i zwraca odpowiedni wynik.  
+ <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Xml.Serialization.XmlSerializer> mapowania typów CLR reprezentację XML. <xref:System.Runtime.Serialization.DataContractSerializer> Inaczej niż XmlSerializer interpretuje niektóre reprezentacji XML. Generatory proxy non-WCF, takich jak Wsdl.exe, generowanie bardziej użyteczne interfejsu, gdy używany jest element XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Jest stosowany do `ICalculator` interfejsu, aby upewnić się, że XmlSerializer służy do mapowania typów CLR XML. Implementacji usługi jest obliczana i zwraca odpowiedni wynik.  
   
  Usługa udostępnia jeden punkt końcowy dla komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji (Web.config). Punkt końcowy składa się z adresu, powiązania i kontrakt. Usługa udostępnia punkt końcowy w bazowym adresie dostarczone przez hosta usługi Internet Information Services (IIS). `binding` Atrybut ma ustawioną basicHttpBinding udostępniający komunikacji HTTP przy użyciu protokołu SOAP 1.1, który jest zgodny ze WS-I BasicProfile 1.1, jak pokazano w poniższych Przykładowa konfiguracja.  
   
@@ -49,7 +49,7 @@ public interface ICalculator
 </services>  
 ```  
   
- Klient ASMX komunikuje się z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi przy użyciu typu serwera proxy, który jest generowany przez narzędzie Web Services Description Language (WSDL) (Wsdl.exe). Typu serwera proxy znajduje się w pliku generatedClient.cs. Narzędzie WSDL pobiera metadane dla określonej usługi i generuje typu serwera proxy do użytku przez klienta do komunikacji. Domyślnie platformę nie ujawnia żadnych metadanych. Do udostępnienia metadanych wymaganych do utworzenia serwera proxy, należy dodać [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) i ustawić jej `httpGetEnabled` atrybutu `True` jak pokazano w poniższej konfiguracji.  
+ Klient ASMX komunikuje się z usługą WCF, za pomocą typu serwera proxy, który jest generowany przez narzędzie Web Services Description Language (WSDL) (Wsdl.exe). Typu serwera proxy znajduje się w pliku generatedClient.cs. Narzędzie WSDL pobiera metadane dla określonej usługi i generuje typu serwera proxy do użytku przez klienta do komunikacji. Domyślnie platformę nie ujawnia żadnych metadanych. Do udostępnienia metadanych wymaganych do utworzenia serwera proxy, należy dodać [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) i ustawić jej `httpGetEnabled` atrybutu `True` jak pokazano w poniższej konfiguracji.  
   
 ```xml  
 <behaviors>  

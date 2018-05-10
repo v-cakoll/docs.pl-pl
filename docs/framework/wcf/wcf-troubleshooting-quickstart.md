@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie zamieszczono listę znanych problemów, które klienci mają uruchamiać do podczas opracowywania WCF klientów i usług. Jeśli problem, którego używasz do nie jest na liście, zaleca się Konfiguruj śledzenie dla usługi. Spowoduje to wygenerowanie pliku śledzenia można wyświetlić podgląd pliku śledzenia i uzyskać szczegółowe informacje dotyczące wyjątków, który może być przeprowadzana w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia, zobacz: [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na przeglądarka plików śledzenia, zobacz: [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Wydaje się, jak jednokierunkowe i operacji żądanie odpowiedź zwracanie w przybliżeniu szybkości odpowiedzi nie zawiera żadnych danych. Co się dzieje?  
- Określanie, czy operacja jest jednym ze sposobów oznacza tylko, że kontrakt operacji akceptuje komunikat wejściowy i nie może zwracać komunikatu wyjściowego. W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], wszystkich wywołań klientów zwracanie danych wychodzących został zapisany do przesyłania lub jest zgłaszany wyjątek. Operacje jednokierunkowe działają tak samo, a ich zgłoszenie, jeśli usługi nie można zlokalizować lub zablokować, jeśli usługa nie jest przygotowany do akceptowania danych z sieci. Zwykle w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], powoduje to jednokierunkowe wywołania zwracanie szybciej niż żądanie odpowiedź do klienta, ale wszystkie warunek, który spowalnia wysyłania danych wychodzących za pośrednictwem sieci spowalnia operacji jednokierunkowych, a także operacje żądanie odpowiedź. Aby uzyskać więcej informacji, zobacz [usług One-Way](../../../docs/framework/wcf/feature-details/one-way-services.md) i [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Określanie, czy operacja jest jednym ze sposobów oznacza tylko, że kontrakt operacji akceptuje komunikat wejściowy i nie może zwracać komunikatu wyjściowego. W programie WCF wszystkie wywołania klienta zwracane w przypadku danych wychodzących został zapisany do przesyłania lub jest zgłaszany wyjątek. Operacje jednokierunkowe działają tak samo, a ich zgłoszenie, jeśli usługi nie można zlokalizować lub zablokować, jeśli usługa nie jest przygotowany do akceptowania danych z sieci. Zwykle w programie WCF, powoduje to jednokierunkowe wywołania zwracany do klienta szybciej niż żądanie odpowiedź; ale wszelkie warunek, który spowalnia wysyłania danych wychodzących za pośrednictwem sieci spowalnia operacji jednokierunkowych, a także operacje żądanie odpowiedź. Aby uzyskać więcej informacji, zobacz [usług One-Way](../../../docs/framework/wcf/feature-details/one-way-services.md) i [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Używam certyfikat X.509 z mojej usługi i uzyskać System.Security.Cryptography.CryptographicException. Co się dzieje?  
@@ -169,7 +169,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Używam Moje śledzenia narzędzia i uzyskać endpointnotfoundexception —. Co się dzieje?  
- Jeśli używasz narzędzia śledzenia, który nie jest dostarczane przez system [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mechanizm śledzenia i możesz otrzymywać <xref:System.ServiceModel.EndpointNotFoundException> wskazuje, że wystąpiła niezgodność filtru adresu, należy użyć <xref:System.ServiceModel.Description.ClientViaBehavior> klasy do kierowania wiadomości śledzenie Narzędzia i narzędzie przekierowania tych wiadomości na adres usługi. <xref:System.ServiceModel.Description.ClientViaBehavior> Zmienia klasy `Via` adresowania nagłówka, aby określić adres sieciowy dalej niezależnie od odbiornika ultimate, wskazane przez `To` adresowania nagłówka. W ten sposób, jednak nie należy zmieniać adresu punktu końcowego, który jest używany do ustanawiania `To` wartość.  
+ Jeśli używasz narzędzia śledzenia, który nie jest mechanizm śledzenia WCF dostarczane przez system i pojawi się <xref:System.ServiceModel.EndpointNotFoundException> wskazuje, że wystąpiła niezgodność filtru adresu, należy użyć <xref:System.ServiceModel.Description.ClientViaBehavior> klasy do kierowania wiadomości przez narzędzie śledzenia i ma narzędzie przekierowania tych wiadomości na adres usługi. <xref:System.ServiceModel.Description.ClientViaBehavior> Zmienia klasy `Via` adresowania nagłówka, aby określić adres sieciowy dalej niezależnie od odbiornika ultimate, wskazane przez `To` adresowania nagłówka. W ten sposób, jednak nie należy zmieniać adresu punktu końcowego, który jest używany do ustanawiania `To` wartość.  
   
  Poniższy przykładowy kod przedstawia przykład klienta pliku konfiguracji.  
   

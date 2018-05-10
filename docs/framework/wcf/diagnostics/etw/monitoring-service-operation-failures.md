@@ -2,11 +2,11 @@
 title: Monitorowanie niepowodzeń operacji usługi
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>Monitorowanie niepowodzeń operacji usługi
 Jeśli śledzenie analityczne jest włączony dla aplikacji, błędów usługi łatwo można monitorować w Podglądzie zdarzeń.  W tym temacie przedstawiono sposób określania, kiedy operacji usługi nie powiedzie się i sposób określenia, jakie spowodował błąd.  
@@ -17,7 +17,7 @@ Jeśli śledzenie analityczne jest włączony dla aplikacji, błędów usługi �
   
 2.  Jeśli nie włączono śledzenie analityczne, rozwiń węzeł **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji serwera aplikacji** . Wybierz **widoku**, **wyświetlanie analityczne i debugowania dzienniki**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Włącz dziennik**. Pozostaw otwarte Podgląd zdarzeń, dzięki czemu można będzie wyświetlić dane śledzenia, po operacji usługi nie powiedzie się.  
   
-3.  Następnie otwórz folder próbki utworzone w [Wprowadzenie — samouczek](../../../../../docs/framework/wcf/getting-started-tutorial.md) w [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] należy pamiętać, że trzeba uruchomić [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] jako administrator, dzięki czemu można utworzyć usługi. Jeśli masz [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zainstalowanych przykładów, możesz otworzyć [wprowadzenie](../../../../../docs/framework/wcf/samples/getting-started-sample.md), zawierającą ukończone projekt utworzony w samouczku.  
+3.  Następnie otwórz folder próbki utworzone w [Wprowadzenie — samouczek](../../../../../docs/framework/wcf/getting-started-tutorial.md) w [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] należy pamiętać, że trzeba uruchomić [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] jako administrator, dzięki czemu można utworzyć usługi. Jeśli masz zainstalowanych przykładów WCF, możesz otworzyć [wprowadzenie](../../../../../docs/framework/wcf/samples/getting-started-sample.md), zawierającą ukończone projekt utworzony w samouczku.  
   
 4.  W pliku Program.cs w projekcie serwera, Dodaj następujący wiersz kodu na początku `Divide` metoda `CalculatorService` klasy:  
   

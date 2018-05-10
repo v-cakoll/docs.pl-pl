@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
-Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia na Windows Communication Foundation (WCF) środowisko programowania. Są one przeznaczone do wypełnienia kolejności na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wprowadzające kroków wymaganych do utworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje klienckie. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jedną operację usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klient musi komunikować się z usługą i kontrakt definiujący funkcje udostępniony przez usługę klientom.  
+Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia na Windows Communication Foundation (WCF) środowisko programowania. Są one przeznaczone do wypełnienia kolejności na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wstępne czynności wymagane do tworzenia usług WCF i klienta aplikacji. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jedną operację usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klient musi komunikować się z usługą i kontrakt definiujący funkcje udostępniony przez usługę klientom.  
   
  Po zakończeniu pracy z sekwencją tematów w tym samouczku, będzie mieć uruchomioną usługę i klienta, który wywołuje usługę. Pierwsze trzy tematach opisano, jak definiowanie kontraktu usługi, jak Implementowanie kontraktu usługi oraz sposobu obsługi usługi. Usługa, która jest tworzona jest samodzielnie hostowana w aplikacji konsoli. Usługi również może być hostowana w obszarze usługi Internet Information Services (IIS). Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz [porady: hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Usługa jest skonfigurowana w kodzie; Jednak usługi, można również skonfigurować w pliku konfiguracji. Aby uzyskać więcej informacji na temat używania pliku konfiguracji zobacz [Konfigurowanie usług za pomocą plików konfiguracji](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
@@ -30,7 +30,7 @@ Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- Opisuje sposób tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kontraktu przy użyciu interfejsu użytkownika. Kontrakt definiuje funkcji udostępnianych przez usługę.  
+ Opisuje sposób tworzenia kontraktu usługi WCF przy użyciu interfejsu użytkownika. Kontrakt definiuje funkcji udostępnianych przez usługę.  
   
  [Instrukcje: implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Opisuje sposób Implementowanie kontraktu usługi. Gdy kontrakt jest zdefiniowanie, musi być implementowana z klasą usługi.  
@@ -39,13 +39,13 @@ Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia
  Zawiera opis sposobu konfigurowania punktu końcowego usługi w kodzie i obsługiwać usługę w aplikacji konsoli. Staje się aktywny, usługi należy skonfigurować i hostowany w środowisku czasu wykonywania. To środowisko tworzy usługi i formanty jego kontekstu i okresem istnienia.  
   
  [Instrukcje: tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- Zawiera opis sposobu pobierania metadanych używany do tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. Ten proces korzysta z funkcji Dodaj odwołanie do usługi w programie Visual Studio 2011.  
+ Zawiera opis sposobu pobierania metadanych używany do tworzenia serwera proxy klienta WCF z usługą WCF. Ten proces korzysta z funkcji Dodaj odwołanie do usługi w programie Visual Studio 2011.  
   
  [Instrukcje: konfigurowanie klienta](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Opisuje sposób konfigurowania WCF klienta Konfigurowanie klienta wymaga określenia punktu końcowego, który klient używa do uzyskania dostępu do usługi.  
   
  [Instrukcje: używanie klienta](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- Informacje dotyczące używania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta do wywołania operacji usługi.  
+ W tym artykule opisano sposób użycia serwera proxy klienta WCF do wywołania operacji usługi.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.ServiceContractAttribute>  

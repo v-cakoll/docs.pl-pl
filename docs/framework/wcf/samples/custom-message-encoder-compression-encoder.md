@@ -2,11 +2,11 @@
 title: 'Niestandardowy koder komunikatów: Koder kompresji'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 087bec47787c0a28eb30346904c8b876136b3eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Niestandardowy koder komunikatów: Koder kompresji
 W tym przykładzie pokazano, jak wdrożyć niestandardowego kodera przy użyciu platformy Windows Communication Foundation (WCF).  
@@ -24,9 +24,9 @@ W tym przykładzie pokazano, jak wdrożyć niestandardowego kodera przy użyciu 
  W tym przykładzie składa się z konsoli program kliencki (.exe), (.exe) hostowanie Samoobsługowe konsoli programu i kompresji biblioteki kodera wiadomości (.dll). Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź. Kontrakt jest definiowana za pomocą `ISampleServer` interfejsu, który ujawnia podstawowe ciągu wyświetlania operacji (`Echo` i `BigEcho`). Klient wysyła żądań synchronicznych operacji i odpowiedzi usługi powtarzając wiadomość do klienta. Aktywność klienta i usługi jest widoczna w oknie konsoli. Celem tego przykładu jest pokazują, jak zapisać niestandardowego kodera i Wykaż wpływ kompresji wiadomości w sieci. Możesz dodać Instrumentacji do kodera wiadomości kompresji do obliczenia rozmiaru wiadomości i czas przetwarzania.  
   
 > [!NOTE]
->  W .NET Framework 4, został włączony na automatycznej dekompresji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, jeśli serwer wysyła odpowiedź skompresowane (utworzone przy użyciu algorytmu, takich jak GZip i Deflate). W przypadku usługi sieci Web hostowanych w Internet Information Server (IIS), usługi IIS można skonfigurować do wysyłania skompresowane odpowiedzi usługi. Można w tym przykładzie, jeśli wymagane jest przeprowadzenie kompresji i dekompresji zarówno klient, jak i usługi lub usługa jest samodzielnie hostowana.  
+>  W .NET Framework 4 został włączony automatycznej dekompresji na klienta WCF, jeśli serwer wysyła odpowiedź skompresowane (utworzone przy użyciu algorytmu, takich jak GZip i Deflate). W przypadku usługi sieci Web hostowanych w Internet Information Server (IIS), usługi IIS można skonfigurować do wysyłania skompresowane odpowiedzi usługi. Można w tym przykładzie, jeśli wymagane jest przeprowadzenie kompresji i dekompresji zarówno klient, jak i usługi lub usługa jest samodzielnie hostowana.  
   
- Przykład pokazuje, jak kompilacji i integracji niestandardowy koder komunikatów do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Biblioteka GZipEncoder.dll jest wdrażana z zarówno klient, jak i usługi. W przykładzie pokazano także wpływ kompresowania wiadomości. Kod w GZipEncoder.dll przedstawiono poniżej:  
+ Przykład pokazuje, jak kompilacji i integracji niestandardowy koder komunikatów w aplikacji WCF. Biblioteka GZipEncoder.dll jest wdrażana z zarówno klient, jak i usługi. W przykładzie pokazano także wpływ kompresowania wiadomości. Kod w GZipEncoder.dll przedstawiono poniżej:  
   
 -   Tworzenie niestandardowego kodera i fabryki kodera.  
   
@@ -56,13 +56,13 @@ W tym przykładzie pokazano, jak wdrożyć niestandardowego kodera przy użyciu 
   
 5.  Warstwa koder jest implementowany jako fabrykę klas. Fabryka klas kodera musi być publicznie wystawiony dla niestandardowego kodera. Obiekt fabryki jest zwracany przez element powiązania podczas <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601> tworzony jest obiekt. Kodery komunikat może działać w trybie buforowanego lub przesyłania strumieniowego. W przykładzie pokazano, zarówno w trybie buforowanego, jak i w trybie przesyłania strumieniowego.  
   
- Dla każdego trybu istnieje towarzyszącego `ReadMessage` i `WriteMessage` metoda abstrakcyjna `MessageEncoder` klasy. Większość pracy kodowania odbywa się w tych metod. Przykład opakowuje istniejący tekst i kodery komunikatu binarnego. To pozwala na przykład, aby delegować do odczytywania i zapisywania reprezentacja przesyłania wiadomości do kodera wewnętrzny oraz umożliwia koder kompresji, które mają być kompresowane lub dekompresja wyniki. Ponieważ nie ma żadnych potoku dla kodowania wiadomości, jest tylko modelu przy użyciu wielu koderów w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Po komunikat został zdekompresowany, komunikat wynikowy jest przekazywany w górę stosu stosu kanału do obsługi. Podczas kompresji wynikowy skompresowany wiadomości są zapisywane bezpośrednio do dostarczonego strumienia.  
+ Dla każdego trybu istnieje towarzyszącego `ReadMessage` i `WriteMessage` metoda abstrakcyjna `MessageEncoder` klasy. Większość pracy kodowania odbywa się w tych metod. Przykład opakowuje istniejący tekst i kodery komunikatu binarnego. To pozwala na przykład, aby delegować do odczytywania i zapisywania reprezentacja przesyłania wiadomości do kodera wewnętrzny oraz umożliwia koder kompresji, które mają być kompresowane lub dekompresja wyniki. Ponieważ nie ma żadnych potoku dla kodowania komunikatu, jest tylko model dla programu WCF za pomocą koderów wiele. Po komunikat został zdekompresowany, komunikat wynikowy jest przekazywany w górę stosu stosu kanału do obsługi. Podczas kompresji wynikowy skompresowany wiadomości są zapisywane bezpośrednio do dostarczonego strumienia.  
   
  W przykładzie użyto metody pomocnicze (`CompressBuffer` i `DecompressBuffer`) aby dokonać konwersji z buforów do strumieni, aby użyć `GZipStream` klasy.  
   
  Buforowane `ReadMessage` i `WriteMessage` klasy należy korzystać z `BufferManager` klasy. Koder jest dostępna tylko za pośrednictwem fabryki kodera. Abstract `MessageEncoderFactory` klasy zawiera właściwości o nazwie `Encoder` do uzyskiwania dostępu do bieżącego kodera i metodę o nazwie `CreateSessionEncoder` umożliwiający utworzenie kodera, który obsługuje sesji. Takie kodera służy w sytuacji, gdy kanał obsługuje sesji, porządkowania i niezawodności. Ten scenariusz umożliwia optymalizacji w każdej sesji zapisanych do przesyłania danych. Jeśli jest to niepożądane, nie można przeciążać metodę podstawową. `Encoder` Właściwość udostępnia mechanizm do uzyskiwania dostępu do kodera bez sesji i domyślną implementację elementu `CreateSessionEncoder` metoda zwraca wartość właściwości. Ponieważ próbki opakowuje kodera istniejących zapewnienie kompresji, `MessageEncoderFactory` akceptuje implementacji `MessageEncoderFactory` reprezentujący fabryki wewnętrzny kodera.  
   
- Teraz, gdy zdefiniowano koder i fabryki kodera, można ich używać z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta i usługi. Jednak te kodery należy dodać do stosu kanału. Mogą dziedziczyć klasy z <xref:System.ServiceModel.ServiceHost> i <xref:System.ServiceModel.ChannelFactory%601> klasy i zastąpienie `OnInitialize` metod, aby ręcznie dodać tej fabryki kodera. Można również ujawniać fabryki kodera przez element niestandardowego powiązania.  
+ Teraz, gdy są zdefiniowane koder i fabryki kodera służy z klienta WCF i usługi. Jednak te kodery należy dodać do stosu kanału. Mogą dziedziczyć klasy z <xref:System.ServiceModel.ServiceHost> i <xref:System.ServiceModel.ChannelFactory%601> klasy i zastąpienie `OnInitialize` metod, aby ręcznie dodać tej fabryki kodera. Można również ujawniać fabryki kodera przez element niestandardowego powiązania.  
   
  Aby utworzyć nowy element niestandardowego powiązania, pochodzi z klasy <xref:System.ServiceModel.Channels.BindingElement> klasy. Istnieje jednak kilka typów elementów powiązania. Aby upewnić się, że element niestandardowego powiązania jest rozpoznawana jako powiązanie element kodowania komunikatu, również należy zaimplementować <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Udostępnia metodę tworzenia fabrykę kodera wiadomości (`CreateMessageEncoderFactory`), którego jest stosowana do zwrócenia wystąpienia pasującej fabryki kodera wiadomości. Ponadto <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> ma właściwość, aby wskazać wersja adresowania. Ponieważ w tym przykładzie opakowuje istniejące kodery, przykładowe zastosowanie również opakowuje koder istniejących elementów wiązania i przyjmuje kodera wewnętrznego powiązania elementu jako parametr do konstruktora i uwidacznia go za pośrednictwem właściwości. Następujący przykładowy kod przedstawia implementację `GZipMessageEncodingBindingElement` klasy.  
   

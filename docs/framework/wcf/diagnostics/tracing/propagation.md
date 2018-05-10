@@ -2,11 +2,11 @@
 title: Propagacja
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>Propagacja
 W tym temacie opisano propagowania działań w modelu śledzenia usług Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ W tym temacie opisano propagowania działań w modelu śledzenia usług Windows 
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Propagacja działania jest konfigurowalne możliwości, który powoduje, że [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] można dodać nagłówka do wiadomości wychodzących, takich jak identyfikator działania na TLS. Jeśli dołączysz to na kolejnych ślady po stronie serwera, firma Microsoft skorelowania działania klienta i serwera.  
+ Propagacja działania jest konfigurowalne możliwość, która powoduje, że WCF można dodać nagłówka do wiadomości wychodzących, która zawiera identyfikator działania na TLS. Jeśli dołączysz to na kolejnych ślady po stronie serwera, firma Microsoft skorelowania działania klienta i serwera.  
   
 ## <a name="propagation-definition"></a>Propagacji definicji  
  GAId M działania jest propagowana do działania N, jeśli wszystkie następujące warunki.  

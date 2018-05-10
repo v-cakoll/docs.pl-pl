@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: f3b8abb2a8e0079dc18624c5ac0408a2738f06b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Tworzenie zorientowanych na usługę aplikacji za pomocą usługi WCF
 Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WCF), czyli ujednolicony model programowania do tworzenia aplikacji korzystających z usług. Umożliwia ona deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjne, zintegrowanie na różnych platformach, które współdziałają z dotychczasowych inwestycji.
@@ -34,7 +34,7 @@ Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WC
  W tym artykule opisano podstawy do tworzenia aplikacji Windows Communication Foundation.  
   
  [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Zawiera tematy dzięki którym wybierz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] należy stosować funkcje.  
+ Zawiera tematy, które można określić, które funkcja WCF lub funkcje należy stosować.  
   
  [Rozszerzanie architektury WCF](../../../docs/framework/wcf/extending/index.md)  
  Opisuje sposób modyfikowania i rozszerzyć składniki wykonawcze usługi WCF  
@@ -67,7 +67,7 @@ Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WC
  Przykłady, które zawierają instrukcji na różnych aspektów programu Windows Communication Foundation  
   
  [Słownik programu Windows Communication Foundation](../../../docs/framework/wcf/glossary.md)  
- Jest to lista terminów specyficznych dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ Jest to lista warunków określonych w architekturze WCF  
   
  [Informacje ogólne](../../../docs/framework/wcf/general-reference.md)  
  W sekcji opisano elementy, które są używane do konfigurowania klientów z systemem Windows Communication Foundation i usług.  

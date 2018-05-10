@@ -2,11 +2,11 @@
 title: Obsługa tokenów
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="supporting-tokens"></a>Obsługa tokenów
 Przykładowe tokenów pomocniczych pokazano, jak dodać dodatkowe tokeny na komunikat, który używa WS-Security. W przykładzie dodano tokenu zabezpieczeń binarnych X.509 oprócz tokenu zabezpieczającego nazwy użytkownika. Token jest przekazywany w nagłówku wiadomości WS-Security od klienta do usługi i część komunikatu jest podpisany przy użyciu klucza prywatnego skojarzonego z tokenu zabezpieczającego X.509 potwierdzenie posiadania certyfikatu X.509 do odbiornika. Jest to przydatne w przypadku, gdy jest wymagane są wielu oświadczeń skojarzony z komunikatem uwierzytelniania lub autoryzacji nadawcy. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>Uruchomiona próbki  
- Po uruchomieniu próbki klienta najpierw monituje o podanie nazwy użytkownika i hasła dla użytkownika nazwa tokenu. Należy podać prawidłowe wartości dla Twojego konta systemowego, ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi mapuje wartości podane w token nazwy użytkownika do tożsamości podanej przez system. Następnie klient jest wyświetlany odpowiedź z usługi. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu próbki klienta najpierw monituje o podanie nazwy użytkownika i hasła dla użytkownika nazwa tokenu. Upewnij się zapewnić poprawne wartości dla konta system ponieważ WCF w usłudze mapuje wartości podane w token nazwy użytkownika do tożsamości podanej przez system. Następnie klient jest wyświetlany odpowiedź z usługi. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ## <a name="setup-batch-file"></a>Instalacyjny plik wsadowy  
  Plik wsadowy pliku Setup.bat uwzględnionych w tym przykładzie pozwala na skonfigurowanie serwera z odpowiednich certyfikatów do uruchomienia aplikacji hostowanej Internet Information Services (IIS), która wymaga zabezpieczeń na podstawie certyfikatu serwera. Ten plik wsadowy muszą zostać zmodyfikowane, aby pracować na komputerach lub do pracy w przypadku z systemem innym niż obsługiwany.  
@@ -464,6 +464,6 @@ iisreset
 -   Uruchamianie Cleanup.bat w folderze Przykłady po ukończeniu działania próbki.  
   
 > [!NOTE]
->  Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania na komputerach w przykładzie. Jeśli uruchomiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przykłady, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania na komputerach w przykładzie. Po uruchomieniu przykłady WCF, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Zobacz też

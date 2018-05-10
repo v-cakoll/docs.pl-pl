@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16bdbf3aa2403a3af603b24df90391d36660dbd4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Jak: utworzyć dostawcę tokenu zabezpieczającego niestandardowych
 W tym temacie przedstawiono sposób tworzenia nowych typów tokenu z dostawcę tokenu zabezpieczającego niestandardowych i sposobu integracji dostawcy z Menedżer tokenów zabezpieczających niestandardowych.  
@@ -42,7 +42,7 @@ W tym temacie przedstawiono sposób tworzenia nowych typów tokenu z dostawcę t
   
 2.  Zastąpienie <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metodę, jeśli jeszcze nie jest przeciążona.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Metoda jest odpowiedzialna za zwracanie wystąpienia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy należy <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametr przekazany do metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] strukturę zabezpieczeń. Zmodyfikuj metodę, aby zwrócić implementacji dostawcy tokenów zabezpieczeń niestandardowe (utworzonego w poprzedniej procedurze) gdy metoda jest wywoływana z parametrem tokenu odpowiednich ustawień zabezpieczeń. Aby uzyskać więcej informacji na temat Menedżer tokenów zabezpieczających, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Metoda jest odpowiedzialna za zwracanie wystąpienia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy należy <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametr przekazywany do metody przez strukturę zabezpieczeń WCF. Zmodyfikuj metodę, aby zwrócić implementacji dostawcy tokenów zabezpieczeń niestandardowe (utworzonego w poprzedniej procedurze) gdy metoda jest wywoływana z parametrem tokenu odpowiednich ustawień zabezpieczeń. Aby uzyskać więcej informacji na temat Menedżer tokenów zabezpieczających, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
 3.  Dodanie logiki niestandardowej metody do zwrócić dostawcy tokenu zabezpieczeń niestandardowe na podstawie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametru. Poniższy przykład zwraca dostawcę tokenów zabezpieczających niestandardowych, jeśli spełnione są wymagania tokenu. Wymagania obejmują tokenu zabezpieczającego X.509 i kierunek wiadomości (czy jest używany dla danych wyjściowych komunikat). We wszystkich innych przypadkach kod wywołuje klasa podstawowa do obsługi innych wymagań dotyczących zabezpieczeń tokenu zachowanie dostarczane przez system.  
   

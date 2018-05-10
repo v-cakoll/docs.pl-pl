@@ -2,17 +2,17 @@
 title: Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 W tym temacie opisano format danych śledzenia, jak wyświetlać i metod korzystających z przeglądarki śledzenia usługi Rozwiązywanie problemów z aplikacją.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Za pomocą narzędzia podglądu śledzenia usługi  
- Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) pomaga skorelowania dane śledzenia diagnostycznego utworzonego przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] odbiorników można znaleźć katalogu głównego. Przyczyna błędu. Narzędzie pozwala na przeglądanie, grupy i ślady filtru, dzięki czemu można diagnozować, naprawy i sprawdź problemy z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług. Aby uzyskać więcej informacji na temat stosowania tego narzędzia, zobacz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) pomaga skorelowania dane śledzenia diagnostycznego utworzonego przez odbiorników WCF, aby znaleźć przyczynę błędu. Narzędzie umożliwia łatwe przeglądanie grupy, i filtrować dane śledzenia, tak aby zdiagnozować, napraw i sprawdź problemy z usługi WCF. Aby uzyskać więcej informacji na temat stosowania tego narzędzia, zobacz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Ten temat zawiera zrzuty ekranu śladów generowane przez uruchomienie [śledzenie i rejestrowanie komunikatów](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbkowania, podczas wyświetlania przy użyciu [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). W tym temacie przedstawiono sposób śledzenia zawartości, działań i ich korelacji i analizowania dużych ilości danych śledzenia podczas rozwiązywania problemów.  
   
@@ -104,11 +104,11 @@ W tym temacie opisano format danych śledzenia, jak wyświetlać i metod korzyst
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>Śledzenie ServiceModel E2E  
- Gdy `System.ServiceModel` ustawiono źródła śledzenia `switchValue` innych niż wyłączone, i `ActivityTracing`, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] tworzy działania i transferu dla [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] przetwarzania.  
+ Gdy `System.ServiceModel` źródła została skonfigurowana z `switchValue` innych niż wyłączone, i `ActivityTracing`, WCF tworzy działań i transferu dla przetwarzania WCF.  
   
  Działanie to jednostka logiczna przetwarzania czy grupy wszystkie ślady dotyczące tej jednostki przetwarzania. Na przykład można zdefiniować jedno działanie dla każdego żądania. Transfery utworzyć przyczynowego między działaniami w obrębie punktów końcowych. Propagowanie identyfikator działania umożliwia odnoszą się działań w obrębie punktów końcowych. Można to zrobić przez ustawienie `propagateActivity` = `true` w konfiguracji w każdym punkcie końcowym. Działań, przesyłania i propagacji umożliwiają wykonywanie błąd korelacji. W ten sposób można znaleźć przyczynę błędu szybciej.  
   
- Na komputerze klienckim co [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] działania jest tworzony dla każdego wywołania modelu obiektu (na przykład otwórz elementu ChannelFactory, Dodaj dzielenia i itd.) Każdy z wywołania operacji są przetwarzane w działaniu "Akcja procesu".  
+ Na komputerze klienckim jedno działanie WCF jest tworzony dla każdego wywołania modelu obiektu (na przykład otwórz elementu ChannelFactory, Dodaj dzielenia i itd.) Każdy z wywołania operacji są przetwarzane w działaniu "Akcja procesu".  
   
  Na poniższym zrzucie ekranu wyodrębniony z [śledzenie i rejestrowanie komunikatów](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbki lewego panelu Wyświetla listę działań utworzonych w procesie klienta, posortowane według czasu utworzenia. Poniżej przedstawiono listę chronologicznej działania:  
   
@@ -127,14 +127,14 @@ W tym temacie opisano format danych śledzenia, jak wyświetlać i metod korzyst
  Widzimy komunikatów infrastruktury zabezpieczeń z powodu wsHttpBinding.  
   
 > [!NOTE]
->  W [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], zostanie przedstawiony wiadomości odpowiedzi początkowo przetwarzanych w oddzielnych działania (proces komunikat) przed możemy skorelowania do odpowiedniego działania działania procesu, który obejmuje komunikat żądania do przeniesienia. To odbywa się w infrastrukturze wiadomości i żądań asynchronicznych, ze względu na fakt, że firma Microsoft musi sprawdzić wiadomości, odczytać nagłówka identyfikatora i zidentyfikować istniejące działanie procesu akcji o takim identyfikatorze służące do skorelowania do niego. Żądań synchronicznych firma Microsoft blokuje odpowiedzi, a więc wiedzieć, jakie działania procesu odpowiedzi odnosi się do.  
+>  W programie WCF, zostanie przedstawiony wiadomości odpowiedzi początkowo przetwarzanych w oddzielnych działania (proces komunikat) przed możemy skorelowania do odpowiedniego działania działania procesu, który obejmuje komunikat żądania do przeniesienia. To odbywa się w infrastrukturze wiadomości i żądań asynchronicznych, ze względu na fakt, że firma Microsoft musi sprawdzić wiadomości, odczytać nagłówka identyfikatora i zidentyfikować istniejące działanie procesu akcji o takim identyfikatorze służące do skorelowania do niego. Żądań synchronicznych firma Microsoft blokuje odpowiedzi, a więc wiedzieć, jakie działania procesu odpowiedzi odnosi się do.  
   
  ![Przy użyciu przeglądarki śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
 Działania klienta WCF, wymienionych według godzina utworzenia (lewego panelu) i zagnieżdżonych działań i dane śledzenia (w górnym prawym panelu)  
   
  Gdy firma Microsoft wybierz działanie, w lewym panelu, firma Microsoft Zobacz zagnieżdżonych działań i dane śledzenia w górnym prawym panelu. W związku z tym jest to obniżonej hierarchiczny widok listy działań po lewej stronie, na podstawie wybranej nadrzędnej działania. Ponieważ wybranej akcji procesu dodaj to pierwsze żądanie, to działanie zawiera działanie ustawić zapasowej bezpieczną sesję (przesyłanie danych do przeniesienia od) i śledzi rzeczywiste przetwarzanie akcji Dodaj.  
   
- Kliknij dwukrotnie działanie procesu Dodaj działania w lewym panelu, możemy stwierdzić graficzną reprezentację klienta [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] działania związane z Dodaj. Pierwsze działanie po lewej stronie jest działanie główne (0000), która jest domyślne działanie. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transfery poza działanie otoczenia. Jeśli to nie jest zdefiniowany, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transferów poza 0000. W tym miejscu drugi działania. Dodaj działania procesu transferu poza 0. Następnie sprawdź ustawienia bezpieczną sesję.  
+ Kliknij dwukrotnie działanie procesu Dodaj działania w lewym panelu, po widzimy graficzną reprezentację działania WCF klienta, które są powiązane z Dodaj. Pierwsze działanie po lewej stronie jest działanie główne (0000), która jest domyślne działanie. Transfery WCF z otaczającym działania. Jeśli to nie jest zdefiniowany, WCF przesyła poza 0000. W tym miejscu drugi działania. Dodaj działania procesu transferu poza 0. Następnie sprawdź ustawienia bezpieczną sesję.  
   
  ![Przy użyciu przeglądarki śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 Wykres widoku działania klienta WCF: działanie otoczenia (tutaj 0), proces działania i ustawić zapasowej bezpieczną sesję  
@@ -146,7 +146,7 @@ Lista śladów działania procesu akcji: możemy wysłać żądania i odbierania
   
  W tym miejscu możemy załadować śladów klienta tylko dla jasności, ale ślady usługi (Odebrano komunikat żądania i odpowiedzi wiadomość wysłana) są wyświetlane w to samo działanie, jeśli należą również załadowany w narzędziu i `propagateActivity` ustawiono `true.` przedstawiono to w późniejszym ilustracji.  
   
- W usłudze mapuje modelu aktywności [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pojęcia w następujący sposób:  
+ W usłudze modelu aktywności mapuje pojęcia dotyczące usługi WCF w następujący sposób:  
   
 1.  Firma Microsoft może utworzyć, a następnie otwórz ServiceHost (może to spowodować kilku czynności związanych z hosta, na przykład w przypadku zabezpieczeń).  
   
@@ -154,11 +154,11 @@ Lista śladów działania procesu akcji: możemy wysłać żądania i odbierania
   
 3.  Odbiornik wykryje żądanie komunikacji inicjowane przez klienta, przesyłania do działania "Odbieranie bajtów", w którym są przetwarzane wszystkich bajtów wysłanych z klienta. W przypadku tego działania możemy Zobacz wszelkie błędy połączenia, które wystąpiły w czasie interakcji usługi klienta.  
   
-4.  Dla każdego zestawu bajtów odebranych jest umożliwiająca wiadomości, możemy przetworzyć tych bajtów w działaniu "Proces komunikat", gdzie utworzymy [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] obiekt typu Message. W przypadku tego działania widzimy błędy związane z koperty nieprawidłowy lub uszkodzony komunikat.  
+4.  Dla każdego zestawu bajtów odebranych jest umożliwiająca wiadomości możemy przetworzyć tych bajtów w działaniu "Proces komunikat", gdzie możemy utworzyć obiektu wiadomości WCF. W przypadku tego działania widzimy błędy związane z koperty nieprawidłowy lub uszkodzony komunikat.  
   
-5.  Gdy komunikat jest sformułowany, przekazywane do działania procesu akcji. Jeśli `propagateActivity` ma ustawioną wartość `true` na klienta i usługi, to działanie ma ten sam identyfikator jak zdefiniowane na komputerze klienckim i opisanych powyżej. Z tego etapu Rozpoczniemy korzystanie z bezpośredniej korelacji między punktami końcowymi, ponieważ wszystkie ślady emitowanych w [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] powiązanych do żądania znajdują się w tym samym działania, w tym przetwarzanie komunikatu odpowiedzi.  
+5.  Gdy komunikat jest sformułowany, przekazywane do działania procesu akcji. Jeśli `propagateActivity` ma ustawioną wartość `true` na klienta i usługi, to działanie ma ten sam identyfikator jak zdefiniowane na komputerze klienckim i opisanych powyżej. Z tego etapu Rozpoczniemy do korzystania z bezpośredniego korelacji w obrębie punktów końcowych, ponieważ wszystkie ślady wysyłanego w programie WCF, powiązanych do żądania znajdują się w tej samej działania, w tym przetwarzanie komunikatu odpowiedzi.  
   
-6.  Akcja poza procesem, utworzymy "Wykonanie kodu użytkownika" działanie, aby odizolować śladów wysyłanego w kodzie użytkownika z tymi emitowanych w [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. W powyższym przykładzie śledzenia "Usługa wysyła odpowiedź Dodaj" są emitowane w działaniu "Kod użytkownika Execute" nie znajduje się w działania propagowane przez klienta, jeśli ma to zastosowanie.  
+6.  Akcja poza procesem utworzymy działanie "Wykonywanie kodu użytkownika", aby odizolować śladów wysyłanego w kodzie użytkownika z tymi wysyłanego w programie WCF. W powyższym przykładzie śledzenia "Usługa wysyła odpowiedź Dodaj" są emitowane w działaniu "Kod użytkownika Execute" nie znajduje się w działania propagowane przez klienta, jeśli ma to zastosowanie.  
   
  Na ilustracji poniżej pierwsze działanie po lewej stronie będzie działanie główne (0000), która jest domyślne działanie. Trzech kolejnych działań są otworzyć ServiceHost. Działania w kolumnie 5 jest odbiornika, a pozostałych działań (od 6 do 8) opisano przetwarzania WCF wiadomość z bajtów przetwarzania aktywację kodu użytkownika.  
   

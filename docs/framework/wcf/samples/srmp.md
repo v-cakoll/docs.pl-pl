@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ) za pośrednictwem protokołu HTTP.  
@@ -37,7 +37,7 @@ W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji p
  Aby uruchomić ten przykład, usługi IIS musi być zainstalowany na usługi i komputerów klienckich, oprócz usługi MSMQ.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- W przykładzie pokazano, wysyłanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] za pośrednictwem protokołu HTTP przy użyciu usługi MSMQ wiadomości w kolejce. Jest to tak zwane SRMP wiadomości. Kiedy wiadomość w kolejce jest wysyłane, usługi MSMQ na wysyłanie przeniesień maszyny komunikaty odbierającego menedżera kolejek przy użyciu transportu TCP lub HTTP. Wybierając SRMP użytkownik wskazuje wybór HTTP jako transportu do przeniesienia kolejki. Zabezpieczanie SRMP umożliwia korzystanie z protokołu HTTPS.  
+ W przykładzie pokazano, wysyłanie WCF za pośrednictwem protokołu HTTP przy użyciu usługi MSMQ wiadomości w kolejce. Jest to tak zwane SRMP wiadomości. Kiedy wiadomość w kolejce jest wysyłane, usługi MSMQ na wysyłanie przeniesień maszyny komunikaty odbierającego menedżera kolejek przy użyciu transportu TCP lub HTTP. Wybierając SRMP użytkownik wskazuje wybór HTTP jako transportu do przeniesienia kolejki. Zabezpieczanie SRMP umożliwia korzystanie z protokołu HTTPS.  
   
 ## <a name="example"></a>Przykład  
  Przykładowy kod jest oparta na przykład transakcyjne. Jak wysłać wiadomości do kolejki i odbierania wiadomości z kolejki przy użyciu SRMP jest taka sama jak wysyłanie i odbieranie komunikatów za pomocą natywnego protokołu.  

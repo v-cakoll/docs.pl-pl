@@ -2,11 +2,11 @@
 title: Przechowywanie wersji usługi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usług (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub do innych adresów problemy. Każda zmiana wprowadziła nową wersję usługi. W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywanie wersji w systemie Windows Communication Foundation (WCF).  
@@ -34,7 +34,7 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
   
  Dla kontraktów usług zgodności można dodać nowych operacji oznacza udostępnianych przez usługę, ale istniejące operacje nie można usunąć ani zmienić semantycznie.  
   
- Dla kontraktów danych zgodności oznacza, że nowy typ schematu, definicje mogą zostać dodane, ale istniejącej definicji typu schematu nie można zmienić dzielenie sposobów. Fundamentalne zmiany może obejmować usunięcie danych elementów członkowskich lub niezgodny sposób zmiany ich typu danych. Ta funkcja umożliwia usłudze niektórych szerokości geograficznej w zmiana wersji jego kontraktów bez przerywania klientów. W dwóch następnych sekcjach opisano nierozdzielających i fundamentalne zmiany, które mogą być dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kontraktów danych i usługi.  
+ Dla kontraktów danych zgodności oznacza, że nowy typ schematu, definicje mogą zostać dodane, ale istniejącej definicji typu schematu nie można zmienić dzielenie sposobów. Fundamentalne zmiany może obejmować usunięcie danych elementów członkowskich lub niezgodny sposób zmiany ich typu danych. Ta funkcja umożliwia usłudze niektórych szerokości geograficznej w zmiana wersji jego kontraktów bez przerywania klientów. W dwóch następnych sekcjach opisano nierozdzielający i fundamentalne zmiany, które można wprowadzić do danych programu WCF i umowy o świadczenie usług.  
   
 ## <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych  
  W tej sekcji omówiono zarządzanie wersjami danych, korzystając z <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.DataContractAttribute> klasy.  
@@ -53,7 +53,7 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
 ### <a name="lax-versioning"></a>Swobodny kontroli wersji  
  W wielu innych scenariuszach dewelopera usługi wprowadzić założeniu, że dodawanie nowych, opcjonalne członka do kontraktu danych nie będę powodować utraty istniejących klientów. Wymaga to deweloperom usługi Sprawdź, czy istniejący klienci nie są wykonywane sprawdzanie poprawności schematu i czy Ignoruj ich elementy członkowskie danych nieznany. W tych scenariuszach jest to możliwe, należy korzystać z funkcji kontraktu danych do dodawania nowych elementów członkowskich w sposób nierozdzielający. Dewelopera usługi można wprowadzać tego założeń bez obaw, jeśli już użyto funkcji kontraktu danych do przechowywania wersji dla pierwszej wersji usługi.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Usług sieci Web ASP.NET i wiele innych Obsługa usługi sieci Web stosy *swobodny versioning*: oznacza to, że ich nie zgłaszają wyjątki dla nowych członków: nieznane dane w odebranych danych.  
+ Usługi WCF, usług sieci Web ASP.NET i wiele innych sieci Web usługi Obsługa stosów *swobodny versioning*: oznacza to, że ich nie zgłaszają wyjątki dla nowych członków: nieznane dane w odebranych danych.  
   
  To proste przez pomyłkę podejrzeń, że dodawanie nowego elementu członkowskiego nie będę powodować utraty istniejących klientów. Jeśli nie wiesz, że wszyscy klienci mogą obsługiwać swobodny przechowywania wersji, zalecane jest wytycznymi wersjonowania ograniczeniami i traktować danych umów jako niezmienialny.  
   
@@ -92,7 +92,7 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
 ## <a name="message-contract-versioning"></a>Przechowywanie wersji kontraktów komunikatu  
  Wytyczne dotyczące przechowywanie wersji kontraktów komunikatu są bardzo podobne do przechowywanie wersji kontraktów danych. Jeśli wymagana jest strict przechowywania wersji, należy nie zmienić treść komunikatu, ale zamiast tego utworzyć nowe kontraktu komunikatu o unikatowej nazwie kwalifikowanej. Jeśli znasz służy swobodny przechowywania wersji, można dodać nowe części treści wiadomości, ale nie zmienić lub usunąć istniejące. W tych wskazówkach zastosowanie zarówno do bez systemu operacyjnego i opakować kontraktów komunikatu.  
   
- Zawsze można dodać nagłówków komunikatów, nawet jeśli strict versioning jest w użyciu. Flaga atrybutu MustUnderstand może mieć wpływ na przechowywanie wersji. Ogólnie rzecz biorąc, przechowywania wersji modelu dla nagłówków w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest zgodnie z opisem w specyfikacji protokołu SOAP.  
+ Zawsze można dodać nagłówków komunikatów, nawet jeśli strict versioning jest w użyciu. Flaga atrybutu MustUnderstand może mieć wpływ na przechowywanie wersji. Ogólnie rzecz biorąc przechowywanie wersji modelu dla nagłówków w programie WCF jest zgodnie z opisem w specyfikacji protokołu SOAP.  
   
 ## <a name="service-contract-versioning"></a>Przechowywanie wersji kontraktów usług  
  Podobnie jak przechowywanie wersji kontraktów danych, przechowywanie wersji kontraktów usługi obejmuje również dodawanie, zmienianie i usuwanie operacji.  
@@ -118,7 +118,7 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
  Lista błędów, które opisano w kontrakcie usługi nie jest uważana za wyczerpujący. W dowolnym momencie operacja może zwrócić błędów, które nie zostały opisane w jego kontraktu. W związku z tym zmiana zestawu błędów opisanego w kontrakcie nie jest uznawane za krytyczne. Na przykład dodać do umowy przy użyciu nowych usterek <xref:System.ServiceModel.FaultContractAttribute> lub usunięcie istniejącej usterki z umowy.  
   
 ### <a name="service-contract-libraries"></a>Biblioteki kontraktu usługi  
- Organizacje mogą stosować bibliotek kontraktów, gdy kontrakt jest publikowana w centralnym repozytorium i implementacji usługi Implementowanie kontraktów z tego repozytorium. W takim przypadku podczas publikowania kontraktu usługi do repozytorium można nie kontrolują stwarza usług, które implementuje go. W związku z tym nie można modyfikować po opublikowaniu kontrakt usługi renderowaniem go skutecznie niezmienialny. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje kontraktu dziedziczenia, która może służyć do tworzenia nowego kontraktu, rozszerzający istniejących umów. Aby użyć tej funkcji, zdefiniuj nowy interfejs kontraktu usługi, która dziedziczy po interfejsie starego kontraktu usługi, a następnie dodaj metody nowego interfejsu. Następnie zmienić usługa, która implementuje starego kontraktu do wdrożenia nowego kontraktu i zmień definicję punktu końcowego "versionOld", aby użyć nowego kontraktu. Do klientów "versionOld" punktu końcowego będą nadal wyświetlane jako uwidaczniającą kontraktu "versionOld"; do klientów "versionNew" punktu końcowego pojawi się do udostępnienia kontraktu "versionNew".  
+ Organizacje mogą stosować bibliotek kontraktów, gdy kontrakt jest publikowana w centralnym repozytorium i implementacji usługi Implementowanie kontraktów z tego repozytorium. W takim przypadku podczas publikowania kontraktu usługi do repozytorium można nie kontrolują stwarza usług, które implementuje go. W związku z tym nie można modyfikować po opublikowaniu kontrakt usługi renderowaniem go skutecznie niezmienialny. Usługi WCF obsługuje dziedziczenie kontraktów, którego można użyć do utworzenia nowego kontraktu, rozszerzający istniejących umów. Aby użyć tej funkcji, zdefiniuj nowy interfejs kontraktu usługi, która dziedziczy po interfejsie starego kontraktu usługi, a następnie dodaj metody nowego interfejsu. Następnie zmienić usługa, która implementuje starego kontraktu do wdrożenia nowego kontraktu i zmień definicję punktu końcowego "versionOld", aby użyć nowego kontraktu. Do klientów "versionOld" punktu końcowego będą nadal wyświetlane jako uwidaczniającą kontraktu "versionOld"; do klientów "versionNew" punktu końcowego pojawi się do udostępnienia kontraktu "versionNew".  
   
 ## <a name="address-and-binding-versioning"></a>Adres i powiązanie kontroli wersji  
  Zmiany adres punktu końcowego i powiązania są fundamentalne zmiany, chyba że klienci są w stanie powiązania lub dynamicznie odnajdywania nowy adres punktu końcowego. Jeden mechanizm stosowania tej funkcji jest za pomocą rejestru Universal Description odnajdywania i usług UDDI i wzorzec wywołania UDDI, gdzie klient próbuje nawiązać połączenia z punktem końcowym i, w przypadku awarii zapytanie UDDI dobrze znane rejestr dla bieżących metadanych punktu końcowego. Klient używa następnie adres i powiązanie z tym metadanych do komunikowania się z punktem końcowym. Jeśli ta komunikacja zakończy się powodzeniem, klient buforuje informacje adres i powiązanie do użytku w przyszłości.  

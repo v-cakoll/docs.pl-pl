@@ -2,11 +2,11 @@
 title: 'Usługa: Odbiorniki kanałów i kanały'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 5f5acff6ca933006707a863ea5ba04cd01cfb93e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eca7061243fa7f006079d19c3eaaf86ba906bca2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-listeners-and-channels"></a>Usługa: Odbiorniki kanałów i kanały
 Istnieją trzy kategorie obiektów kanału: kanały, odbiorniki kanałów i fabryk kanałów. Kanały to interfejs pomiędzy aplikacją i stosu kanału. Odbiorniki kanałów są zobowiązani do tworzenia kanałów po stronie odbioru (lub nasłuchiwania), zwykle w odpowiedzi na połączenie lub nowy komunikat przychodzący. Fabryk kanałów, które są odpowiedzialne za tworzenie kanałów po stronie wysyłającej można zainicjować komunikacji z punktem końcowym.  
@@ -21,7 +21,7 @@ Odbiornik kanału odbierania komunikatów i dostarczanie do warstwy powyżej za 
   
  Proces można koncepcyjnie modelowane jako kolejki wewnątrz każdego kanału, mimo że implementacji nie mogą faktycznie używać kolejki. Odbiornik kanału jest odpowiedzialny za odbieranie wiadomości z warstwy poniżej lub sieci i umieszczania ich w kolejce. Kanał jest odpowiedzialny za pobieranie wiadomości z kolejki i przekazywanie ich do warstwy powyżej po tej warstwy komunikatu z pytaniem wiadomości, na przykład wywołując `Receive` w kanale.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia pomocników klasę podstawową dla tego procesu. (Dla diagramu klas pomocniczych kanału omówione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ WCF udostępnia pomocników klasę podstawową dla tego procesu. (Dla diagramu klas pomocniczych kanału omówione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> Klasa implementuje <xref:System.ServiceModel.ICommunicationObject> i wymusza automatu stanów opisany w kroku 2 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

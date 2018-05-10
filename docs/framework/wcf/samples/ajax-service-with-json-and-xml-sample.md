@@ -2,16 +2,16 @@
 title: Usługa AJAX z formatami JSON i XML — przykład
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 1973be48457d3164bec6b8df236c07f5bfa6b897
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32964c287b0064daf529aa4c1e28f0927d29a6d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Usługa AJAX z formatami JSON i XML — przykład
 W tym przykładzie pokazano, jak używać usługi Windows Communication Foundation (WCF) do tworzenia usługi asynchronicznego JavaScript i XML (AJAX), która zwraca dane JavaScript Object Notation (JSON) lub XML. Usługa AJAX mogą korzystać za pomocą kodu JavaScript w kliencie przeglądarki sieci Web. Ten przykład jest oparty na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.  
   
- W przeciwieństwie do innych próbek AJAX, w tym przykładzie nie korzysta z kodu ASP.NET AJAX i <xref:System.Web.UI.ScriptManager> formantu. W przypadku niektórych konfiguracji dodatkowych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług AJAX są dostępne z dowolnej strony HTML przy użyciu języka JavaScript i pokazane w tym scenariuszu. Na przykład za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z ASP.NET AJAX, zobacz [przykłady AJAX](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ W przeciwieństwie do innych próbek AJAX, w tym przykładzie nie korzysta z kodu ASP.NET AJAX i <xref:System.Web.UI.ScriptManager> formantu. Dzięki dodatkowej konfiguracji usług WCF AJAX można uzyskać z dowolnej strony HTML przy użyciu języka JavaScript i pokazane w tym scenariuszu. Na przykład przy użyciu programu WCF z ASP.NET AJAX, zobacz [przykłady AJAX](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
   
  W tym przykładzie pokazano, jak typ odpowiedzi operacji między formatami JSON i XML przełącznika. Ta funkcja jest dostępna, niezależnie od tego, czy usługa jest skonfigurowana można uzyskać dostępu do środowiska ASP.NET AJAX lub stronę klienta HTML/JavaScript.  
   
@@ -39,7 +39,7 @@ W tym przykładzie pokazano, jak używać usługi Windows Communication Foundati
   
  Format danych domyślnych <xref:System.ServiceModel.Description.WebHttpEndpoint> jest podczas domyślny format danych XML, <xref:System.ServiceModel.Description.WebScriptEndpoint> jest JSON. Aby uzyskać więcej informacji, zobacz [tworzenie usług AJAX WCF bez platformy ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
   
- Usługi w poniższym przykładzie jest standardem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi z dwóch operacji. Zarówno operacje wymagają <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> treści w stylu <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybuty, które dotyczą `webHttp` zachowania i nie ma żadnego wpływu na przełączniku format danych JSON/XML.  
+ Usługi w poniższym przykładzie jest standardowe usługi WCF za pomocą dwóch operacji. Zarówno operacje wymagają <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> treści w stylu <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybuty, które dotyczą `webHttp` zachowania i nie ma żadnego wpływu na przełączniku format danych JSON/XML.  
 
 ```csharp
 [OperationContract]  
@@ -57,7 +57,7 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);  
 ```
 
- Należy pamiętać, że w obu przypadkach operacje zwracać typu złożonego `MathResult`, który jest standardem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typu kontraktu danych.  
+ Należy pamiętać, że w obu przypadkach operacje zwracać typu złożonego `MathResult`, która jest standardowa typu kontraktu danych WCF.  
   
  Klient XmlAjaxClientPage.htm strony sieci Web zawiera kod JavaScript, który wywołuje jednego z poprzednich dwóch operacji, gdy użytkownik kliknie **obliczanie (zwracany JSON)** lub **obliczanie (zwracany XML)**  przyciski na stronie. Kod, aby wywołać usługę konstruuje treść kodu JSON i wysyła je przy użyciu metody POST protokołu HTTP. Żądanie jest tworzony ręcznie w języku JavaScript, w odróżnieniu od [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki i przykłady, za pomocą kodu ASP.NET AJAX.  
 

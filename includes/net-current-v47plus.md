@@ -1,0 +1,1 @@
+Dostępne od 4.7

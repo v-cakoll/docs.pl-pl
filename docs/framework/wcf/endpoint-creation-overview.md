@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>Przegląd tworzenia punktów końcowych
-Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferty usługi. W tej sekcji opisano strukturę punktu końcowego i opisano sposób definiowania punkt końcowy w konfiguracji i w kodzie.  
+Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do usługi WCF oferuje funkcje. W tej sekcji opisano strukturę punktu końcowego i opisano sposób definiowania punkt końcowy w konfiguracji i w kodzie.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Struktura punktu końcowego  
  Każdy punkt końcowy zawiera adres, który wskazuje, gdzie można znaleźć punktu końcowego, powiązanie, które określa, jak klient może komunikować się z punktem końcowym i kontraktu, który identyfikuje dostępne metody.  
   
--   **Adres**. Adres unikatowo identyfikuje punkt końcowy i informuje potencjalnych klientów, w którym znajduje się usługa. Jest reprezentowana w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] model obiektów przez <xref:System.ServiceModel.EndpointAddress> adresu, który zawiera jednolity identyfikator zasobów (URI) i właściwości adresów, które obejmują tożsamości, niektóre elementy sieci Web Services Description Language (WSDL) i kolekcję opcjonalne nagłówki. Opcjonalne nagłówki zawierają dodatkowe szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Adres**. Adres unikatowo identyfikuje punkt końcowy i informuje potencjalnych klientów, w którym znajduje się usługa. Jest reprezentowana w modelu obiektów programu WCF przez <xref:System.ServiceModel.EndpointAddress> adresu, który zawiera jednolity identyfikator zasobów (URI) i właściwości adresów, które obejmują tożsamości, niektóre elementy sieci Web Services Description Language (WSDL) oraz zbiór opcjonalne nagłówki. Opcjonalne nagłówki zawierają dodatkowe szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   **Powiązanie**. Powiązanie określa sposób komunikowania się z punktem końcowym. Określa powiązanie, jak punkt końcowy komunikuje się innym osobom, które protokół transportu do użycia w tym (np. TCP lub HTTP), które kodowanie do użycia dla wiadomości (na przykład tekst lub binarny) i wymagania zabezpieczeń, które są niezbędne (dla przykład protokołu Secure Sockets Layer [SSL] lub zabezpieczenia komunikatów SOAP). Aby uzyskać więcej informacji, zobacz [za pomocą powiązania do konfigurowania usług i klientów](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

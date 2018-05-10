@@ -2,17 +2,17 @@
 title: Tworzenie elementu BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>Tworzenie elementu BindingElement
-Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>odpowiednio) są na miejscu, gdzie jest skojarzony z fabryk kanałów i odbiorników kanału modelu aplikacji Windows Communication Foundation (WCF). Bez powiązania, za pomocą niestandardowych kanałów wymaga programowania na poziomie kanału zgodnie z opisem w [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) i [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). W tym temacie omówiono wymagania minimalne, aby włączyć za pomocą kanału w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], rozwoju <xref:System.ServiceModel.Channels.BindingElement> kanału i Włącz użycie z aplikacji, zgodnie z opisem w kroku 4 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>odpowiednio) są na miejscu, gdzie jest skojarzony z fabryk kanałów i odbiorników kanału modelu aplikacji Windows Communication Foundation (WCF). Bez powiązania, za pomocą niestandardowych kanałów wymaga programowania na poziomie kanału zgodnie z opisem w [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) i [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). W tym temacie omówiono wymagania minimalne, aby włączyć za pomocą kanału w programie WCF, rozwoju <xref:System.ServiceModel.Channels.BindingElement> kanału i Włącz użycie z aplikacji, zgodnie z opisem w kroku 4 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Omówienie  
- Tworzenie <xref:System.ServiceModel.Channels.BindingElement> dla kanału umożliwia deweloperom korzystanie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. <xref:System.ServiceModel.Channels.BindingElement> obiekty mogą być używane z <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> klasy nawiązać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji do kanału bez konieczności informacje dokładny typ kanału.  
+ Tworzenie <xref:System.ServiceModel.Channels.BindingElement> dla kanału umożliwia deweloperom używany w aplikacji WCF. <xref:System.ServiceModel.Channels.BindingElement> obiekty mogą być używane z <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> klasy łączenie aplikacji WCF do kanału bez konieczności informacje dokładny typ kanału.  
   
  Raz <xref:System.ServiceModel.Channels.BindingElement> został utworzony, można włączyć więcej funkcji, wykonując pozostałe kroki tworzenia kanału opisanego w zależności od wymagań [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

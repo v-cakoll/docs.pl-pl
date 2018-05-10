@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ba6d2016a36809910561543a531dd4d44aac9b9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi
 W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu aplikacji oraz sposobu wdrażania niestandardowego klienta i poświadczeń usługi.  
@@ -23,12 +23,12 @@ W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu apl
   
  Zarówno <xref:System.ServiceModel.Description.ClientCredentials> i <xref:System.ServiceModel.Description.ServiceCredentials> klasy dziedziczą z klasy abstrakcyjnej <xref:System.ServiceModel.Security.SecurityCredentialsManager> klasa, która definiuje kontrakt dla zwracania <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- Aby uzyskać więcej informacji na temat klasy poświadczeń i sposobie ich użycia w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Architektura zabezpieczeń, zobacz [Architektura zabezpieczeń](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Aby uzyskać więcej informacji na temat klasy poświadczeń i sposobie ich użycia w Architektura zabezpieczeń programu WCF, zobacz [Architektura zabezpieczeń](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
- W domyślnej implementacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługi typów poświadczenia dostarczane przez system i utworzyć Menedżer tokenów, który może obsługiwać te typy poświadczeń zabezpieczeń.  
+ Domyślnej implementacji podany w programie WCF obsługi typów poświadczenia dostarczane przez system i utworzyć Menedżer tokenów, który może obsługiwać te typy poświadczeń zabezpieczeń.  
   
 ## <a name="reasons-to-customize"></a>Powodów do dostosowania  
- Istnieje wiele przyczyn dostosowywania klas poświadczeń klienta lub usługi. Przedniej jest wymaganie, aby zmienić domyślny [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zachowania zabezpieczeń w zakresie obsługi poświadczenia dostarczane przez system typów, szczególnie z następujących powodów:  
+ Istnieje wiele przyczyn dostosowywania klas poświadczeń klienta lub usługi. Wszystkim jest wymaganie, aby zmienić domyślne zachowanie zabezpieczeń WCF w odniesieniu do obsługi poświadczenia dostarczane przez system typów, szczególnie z następujących powodów:  
   
 -   Zmiany, które nie są możliwe przy użyciu innych punktów rozszerzania.  
   
@@ -39,7 +39,7 @@ W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu apl
  W tym temacie opisano sposób wdrażania niestandardowego klienta i poświadczeń usługi i z nich korzystać z kodu aplikacji.  
   
 ## <a name="first-in-a-series"></a>Pierwszy z serii  
- Tworzenie klasy niestandardowych poświadczeń jest tylko pierwszym krokiem, ponieważ jest przyczyna Dostosowywanie poświadczenia, aby zmienić [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zachowanie dotyczące poświadczeń inicjowania obsługi administracyjnej serializacji tokenu zabezpieczeń i uwierzytelniania. Innych tematach w tej sekcji opisano sposób tworzenia niestandardowych serializatorów i wystawcy uwierzytelnienia. W tym zakresie Tworzenie niestandardowego poświadczenia klasy jest pierwszym temacie w serii. Kolejne czynności (Tworzenie niestandardowych serializatorów i wystawcy uwierzytelnienia) jest możliwe tylko po tworzenia niestandardowych poświadczeń. Dodatkowe tematy, które na ten temat zawiera:  
+ Tworzenie klasy niestandardowych poświadczeń jest tylko pierwszym krokiem, ponieważ jest przyczyna Dostosowywanie poświadczenia, aby zmienić zachowanie WCF dotyczące poświadczeń inicjowania obsługi administracyjnej serializacji tokenu zabezpieczeń i uwierzytelniania. Innych tematach w tej sekcji opisano sposób tworzenia niestandardowych serializatorów i wystawcy uwierzytelnienia. W tym zakresie Tworzenie niestandardowego poświadczenia klasy jest pierwszym temacie w serii. Kolejne czynności (Tworzenie niestandardowych serializatorów i wystawcy uwierzytelnienia) jest możliwe tylko po tworzenia niestandardowych poświadczeń. Dodatkowe tematy, które na ten temat zawiera:  
   
 -   [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
@@ -55,7 +55,7 @@ W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu apl
   
 2.  Opcjonalna. Dodaj nowe metody lub właściwości dla nowych typów poświadczeń. Jeśli nie zostaną dodane nowe typy poświadczeń, Pomiń ten krok. W poniższym przykładzie dodano `CreditCardNumber` właściwości.  
   
-3.  Zastąpienie <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metody. Ta metoda jest automatycznie wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury zabezpieczeń stosowania poświadczeń klienta. Ta metoda jest odpowiedzialny za tworzenie i zwracanie wystąpienia implementacja <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy.  
+3.  Zastąpienie <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metody. Ta metoda jest wywoływana przez infrastrukturę zabezpieczeń WCF automatycznie, gdy poświadczenie niestandardowego klienta jest używane. Ta metoda jest odpowiedzialny za tworzenie i zwracanie wystąpienia implementacja <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy.  
   
     > [!IMPORTANT]
     >  Należy zauważyć, że <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metoda zostanie przesłonięta do tworzenia niestandardowych zabezpieczeń Menedżer tokenów. Menedżer tokenów zabezpieczających pochodną <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, musi zwracać niestandardowego dostawcy tokenów zabezpieczających, pochodzących z <xref:System.IdentityModel.Selectors.SecurityTokenProvider>, aby utworzyć token zabezpieczający rzeczywistego. Jeśli ten wzorzec służący do tworzenia tokenów zabezpieczających nie są zgodne, aplikacja może działać niepoprawnie podczas <xref:System.ServiceModel.ChannelFactory> buforowania obiektów (to jest domyślne zachowanie dla serwerów proxy klienta WCF) skutkująca potencjalnie atakom podniesienie uprawnień. Niestandardowe poświadczenia obiektu w pamięci podręcznej jako część <xref:System.ServiceModel.ChannelFactory>. Jednak niestandardowego <xref:System.IdentityModel.Selectors.SecurityTokenManager> jest tworzona na każdego wywołania, co zmniejsza zagrożenie bezpieczeństwa, tak długo, jak logika tworzenia tokenu jest umieszczany w <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
@@ -89,7 +89,7 @@ W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu apl
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- Opisane w poprzedniej procedurze pokazano, jak użyć poświadczeń klienta z kodu aplikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] poświadczenia można również skonfigurować przy użyciu pliku konfiguracji aplikacji. Za pomocą konfiguracji aplikacji jest często kodować, ponieważ umożliwia modyfikowanie parametrów aplikacji bez konieczności modyfikowania źródła, ponowną kompilację i ponownego wdrażania.  
+ Opisane w poprzedniej procedurze pokazano, jak użyć poświadczeń klienta z kodu aplikacji. Poświadczenia usługi WCF można również skonfigurować przy użyciu pliku konfiguracji aplikacji. Za pomocą konfiguracji aplikacji jest często kodować, ponieważ umożliwia modyfikowanie parametrów aplikacji bez konieczności modyfikowania źródła, ponowną kompilację i ponownego wdrażania.  
   
  Następna procedura opisuje sposób zapewnienia obsługi konfiguracji niestandardowych poświadczeń.  
   
@@ -108,7 +108,7 @@ W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu apl
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- Po utworzeniu klasy obsługi konfiguracji, mogą zostać włączone do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration framework. Poświadczenia niestandardowego klienta do użycia w elementach zachowania punktu końcowego klienta, który umożliwia opisane w następnej procedurze.  
+ Po utworzeniu klasy obsługi konfiguracji, może zostać zintegrowany w ramach konfiguracji usługi WCF. Poświadczenia niestandardowego klienta do użycia w elementach zachowania punktu końcowego klienta, który umożliwia opisane w następnej procedurze.  
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Aby zarejestrować i użyć niestandardowego klienta poświadczenia obsługi konfiguracji w konfiguracji aplikacji  
   
@@ -146,7 +146,7 @@ W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu apl
   
 2.  Opcjonalna. Dodaj nowe właściwości do zapewnienia interfejsów API nowej wartości poświadczeń, które są dodawane. Jeśli nie zostaną dodane nowe wartości poświadczeń, Pomiń ten krok. W poniższym przykładzie dodano `AdditionalCertificate` właściwości.  
   
-3.  Zastąpienie <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metody. Ta metoda jest automatycznie wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury stosowania poświadczeń klienta. Metoda jest odpowiedzialna za tworzenie i zwracanie wystąpienia implementacja <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy (opisany w następnej procedurze).  
+3.  Zastąpienie <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metody. Ta metoda jest wywoływana przez infrastrukturę WCF automatycznie, gdy poświadczenie niestandardowego klienta jest używane. Metoda jest odpowiedzialna za tworzenie i zwracanie wystąpienia implementacja <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy (opisany w następnej procedurze).  
   
 4.  Opcjonalna. Zastąpienie <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> metody. Jest to wymagane tylko w przypadku dodawania nowych właściwości lub pól wewnętrznej implementacji poświadczeń klienta.  
   

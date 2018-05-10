@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Określanie zachowania klienta w czasie wykonywania
 Aby zmodyfikować zachowanie czasu wykonania do własnych aplikacji klienta można skonfigurować klientów systemu Windows Communication Foundation (WCF), takie jak usługi Windows Communication Foundation (WCF). Atrybuty trzy są dostępne do określania zachowania klienta w czasie wykonywania. Obiekty klienta dwustronnego wywołania zwrotnego można użyć <xref:System.ServiceModel.CallbackBehaviorAttribute> i <xref:System.ServiceModel.Description.CallbackDebugBehavior> atrybuty do modyfikowania zachowania w czasie wykonywania. Ten atrybut <xref:System.ServiceModel.Description.ClientViaBehavior>, może służyć do rozdzielania logicznej docelowej z docelowego bezpośredniej sieci. Ponadto klienta dwustronnego wywołania zwrotnego typów mogą korzystać z niektórych zachowań po stronie serwera. Aby uzyskać więcej informacji, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -35,7 +35,7 @@ Aby zmodyfikować zachowanie czasu wykonania do własnych aplikacji klienta moż
   
 -   Czynności wykonywane tylko w kontrolowany debugowania scenariuszy.  
   
- Poniższy przykład kodu pokazuje klienta pliku konfiguracji, który powoduje, że [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Aby uzyskać informacje o zarządzanym wyjątku w kliencie obiektu wywołania zwrotnego wiadomości SOAP.  
+ Poniższy przykład kodu pokazuje klienta WCF, aby uzyskać informacje o zarządzanym wyjątku w kliencie obiektu wywołania zwrotnego wiadomości SOAP powoduje, że plik konfiguracji.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  

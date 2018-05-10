@@ -2,11 +2,11 @@
 title: Zabezpieczanie usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: ac02b5ffcfc14ea4aab9e8aafd5f6a4cbcdef3b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-workflow-services"></a>Zabezpieczanie usług przepływu pracy
 Przykład zabezpieczone usługi przepływu pracy obejmuje następujące procedury:  
@@ -21,7 +21,7 @@ Przykład zabezpieczone usługi przepływu pracy obejmuje następujące procedur
  Przy użyciu zabezpieczeń WCF do zabezpieczania komunikacji między klientem a usługą przepływu pracy, na podstawie oświadczeń autoryzacji  
   
 ## <a name="discussion"></a>Omówienie  
- W tym przykładzie przedstawiono użycie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń infrastrukturę do zabezpieczania usługi przepływu pracy, tak jak w zwykłym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. W szczególności używa oświadczenia niestandardowego dla autoryzacji. W takim przypadku używa <xref:System.ServiceModel.WSHttpBinding> i komunikatów tryb zabezpieczeń z poświadczeniami systemu Windows.  
+ W tym przykładzie przedstawiono korzystanie z infrastruktury zabezpieczeń WCF do zabezpieczania usługi przepływu pracy, tak jak normalne usługi WCF. W szczególności używa oświadczenia niestandardowego dla autoryzacji. W takim przypadku używa <xref:System.ServiceModel.WSHttpBinding> i komunikatów tryb zabezpieczeń z poświadczeniami systemu Windows.  
   
  Niestandardowa <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) sprawdza nazwa użytkownika systemu Windows klienta i dla określonych znaków. Jeśli ten znak jest obecny, tworzy i dodaje oświadczenie do <xref:System.IdentityModel.Policy.EvaluationContext>. Dzięki temu zasady niestandardowe jest wprowadzenie instrukcji który klient ma tego znaku w nazwy użytkownika. Tego oświadczenia mogą być przeszukiwane przez cały okres istnienia połączenia. Możesz znaleźć tego znaku w `Constants.cs`.  
   

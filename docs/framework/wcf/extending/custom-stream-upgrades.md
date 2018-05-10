@@ -2,11 +2,11 @@
 title: Niestandardowe uaktualnienia strumienia
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>Niestandardowe uaktualnienia strumienia
 Zorientowane na strumień transportu, np. TCP i nazwane potoki działają na stały strumień bajtów między klientem i serwerem. Ten strumień jest realizowana <xref:System.IO.Stream> obiektu. W przypadku uaktualnienia strumienia klient chce dodać opcjonalne protokołu warstwy kanału i prosi o końcu kanał komunikacji, aby to zrobić. Uaktualnienie strumienia polega na zastąpienie oryginalnej <xref:System.IO.Stream> obiektu z uaktualnionym.  
@@ -66,7 +66,7 @@ Zorientowane na strumień transportu, np. TCP i nazwane potoki działają na sta
 ## <a name="security-upgrades"></a>Aktualizacje zabezpieczeń  
  Dodawanie uaktualnienie zabezpieczeń to specjalna wersja strumienia ogólne procesu uaktualniania.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] już zawiera dwa elementy powiązania uaktualniania zabezpieczenia strumienia. Konfiguracja zabezpieczenia na poziomie transportu jest hermetyzowany przez <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> i <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> którego można konfigurować i dodane do niestandardowego powiązania. Rozszerzenia te elementy powiązania <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> klasy, która tworzy strumień klienta i serwera uaktualnienia dostawców. Te elementy powiązania mają metody tworzące strumienia specjalne zabezpieczeń klasy dostawcy uaktualnienia, które nie są `public`, więc dla tych dwóch przypadkach wszystko co należy zrobić to dodanie elementu powiązania do powiązania.  
+ Usługi WCF już zawiera dwa elementy powiązania uaktualniania zabezpieczenia strumienia. Konfiguracja zabezpieczenia na poziomie transportu jest hermetyzowany przez <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> i <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> którego można konfigurować i dodane do niestandardowego powiązania. Rozszerzenia te elementy powiązania <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> klasy, która tworzy strumień klienta i serwera uaktualnienia dostawców. Te elementy powiązania mają metody tworzące strumienia specjalne zabezpieczeń klasy dostawcy uaktualnienia, które nie są `public`, więc dla tych dwóch przypadkach wszystko co należy zrobić to dodanie elementu powiązania do powiązania.  
   
  W scenariuszach zabezpieczeń nie zostały spełnione przez powyższych elementów dwa powiązania trzy związanych z zabezpieczeniami `abstract` klas są uzyskiwane z powyższych klas podstawowych inicjatora, wykonawca i dostawcy:  
   

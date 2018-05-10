@@ -2,11 +2,11 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 614b651d02b511927eda3909a40d1382c0842512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9002597ef662c78b6519ab0c04700cddf7ee3714
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="jsonp"></a>JSONP
 W tym przykładzie przedstawiono sposób obsługi formatu JSON z dopełnienie (JSONP) w usługach WCF REST. Format JSONP jest Konwencji, używany do innej domeny skrypty wywołania przez generowanie tagi skryptu w bieżącym dokumencie. Wynik zostanie zwrócony w funkcji określonej wywołania zwrotnego. JSONP opiera się na założeniu, że tagi, takie jak `<script src="http://..." >` skryptów z dowolnej domeny w stanie ocenić i pobierane przez tagi skryptu jest obliczane w zakresie, w którym mogą już zdefiniowany innych funkcji.  
@@ -36,7 +36,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>  
 ```  
   
- ScriptManager zarządza interakcji z usługą i ukrywa optymalizacji złożoności ręcznie wdrażania dostępu JSONP. Gdy `crossDomainScriptAccessEnabled` ma ustawioną wartość `true` i odpowiedzi format dla formatu JSON, jest operacja [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury sprawdza identyfikator URI żądania dla wywołania zwrotnego parametr ciągu zapytania i opakowuje JSON odpowiedzi o wartości zapytania wywołania zwrotnego Parametr typu String. W przykładzie strony sieci Web wywołuje usługę WCF REST z następujący identyfikator URI.  
+ ScriptManager zarządza interakcji z usługą i ukrywa optymalizacji złożoności ręcznie wdrażania dostępu JSONP. Gdy `crossDomainScriptAccessEnabled` ustawiono `true` i format odpowiedzi dla operacji JSON, infrastruktura WCF sprawdza identyfikator URI żądania dla wywołania zwrotnego parametr ciągu zapytania i opakowuje JSON odpowiedzi o wartości ciągu zapytania wywołania zwrotnego parametr. W przykładzie strony sieci Web wywołuje usługę WCF REST z następujący identyfikator URI.  
   
 ```  
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0  
@@ -50,7 +50,7 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
  Tej odpowiedzi JSONP zawiera dane klienta w formacie JSON, opakowana z nazwą funkcji wywołania zwrotnego, która żądanej strony sieci Web. ScriptManager wykonanie tego wywołania zwrotnego przy użyciu tagu skryptu do wykonania żądania między domenami, a następnie przekazać wynik do obsługi onSuccess, który został przekazany do operacji GetCustomer proxy ASP.NET AJAX.  
   
- Próbka składa się z dwóch aplikacji sieci web platformy ASP.NET: jeden zawiera po prostu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, a inny zawiera sieci Web .aspx, który wywołuje usługę. Podczas uruchamiania rozwiązania, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] będzie obsługiwać dwie witryny sieci Web na inne porty, które tworzy środowisko, w którym usługa i klient na żywo w różnych domenach.  
+ Próbka składa się z dwóch aplikacji sieci web platformy ASP.NET: jeden zawiera tylko usługi WCF, a inny sieci Web .aspx, który wywołuje usługę. Podczas uruchamiania rozwiązania, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] będzie obsługiwać dwie witryny sieci Web na inne porty, które tworzy środowisko, w którym usługa i klient na żywo w różnych domenach.  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
@@ -67,4 +67,4 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 2.  Naciśnij klawisz F5, aby uruchomić `http://localhost:26648/JSONPClientPage.aspx` w przeglądarce.  
   
-3.  Należy zauważyć, że po załadowaniu strony wejść tekst "Name" i "Address" są wypełniane przy wartości.  Wartości te zostały podane po wywołaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi po zakończeniu przeglądarki renderowania strony.
+3.  Należy zauważyć, że po załadowaniu strony wejść tekst "Name" i "Address" są wypełniane przy wartości.  Te wartości zostały podane po wywołaniu usługi WCF, po zakończeniu przeglądarki renderowania strony.

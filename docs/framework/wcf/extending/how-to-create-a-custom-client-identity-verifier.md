@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Porady: tworzenie weryfikatora tożsamości niestandardowego klienta
 *Tożsamości* funkcji Windows Communication Foundation (WCF) umożliwia klientowi z góry określić oczekiwaną tożsamość usługi. Zawsze, gdy serwer uwierzytelnia do klienta, tożsamość jest sprawdzana względem Oczekiwana tożsamość. (Aby uzyskać informacje o tożsamości i jej działania, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-implement-the-trygetidentity-method"></a>Aby zaimplementować metodę TryGetIdentity  
   
-1.  Implementowanie <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> metodę, która określa, czy wystąpienie <xref:System.ServiceModel.EndpointIdentity> klasy może być zwracany przez klienta. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Infrastruktury wymaga wykonania `TryGetIdentity` metodę, aby najpierw pobrać tożsamości usługi z komunikatu. Następnie wywołuje infrastruktury `CheckAccess` implementację zwróconego `EndpointIdentity` i <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+1.  Implementowanie <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> metodę, która określa, czy wystąpienie <xref:System.ServiceModel.EndpointIdentity> klasy może być zwracany przez klienta. Infrastruktura WCF wymaga wykonania `TryGetIdentity` metodę, aby najpierw pobrać tożsamości usługi z komunikatu. Następnie wywołuje infrastruktury `CheckAccess` implementację zwróconego `EndpointIdentity` i <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 2.  W `TryGetIdentity` metodę, umieść następujący kod:  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8271f51885c0d7800d26018b94942a7d832bf4a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Konfigurowanie usług i klientów za pomocą powiązań
 Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do połączenia z punktem końcowym. W szczególności powiązania zawierają informacje o konfiguracji, który jest używany do tworzenia środowiska uruchomieniowego klienta lub usługę, definiując specyfice transportów, formatów łańcuchowych (kodowania wiadomości) i protokoły dla odpowiednich kanału klienta lub punktu końcowego. Do utworzenia działającym usługi Windows Communication Foundation (WCF), każdy punkt końcowy usługi wymaga powiązania. W tym temacie opisano powiązania są, jak są definiowane i jak określono konkretnego powiązanie dla punktu końcowego.  
@@ -26,15 +26,15 @@ Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do poł
  Określa, kodowania wiadomości, na przykład, text/XML, binarne lub komunikat transmisji optymalizacji mechanizmu (MTOM), określający, jak komunikaty są reprezentowane jako strumienie bajtów umieszczonego w.  
   
 ## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera zestaw powiązania dostarczane przez system, które są zaprojektowane tak, aby pokrywał większość wymagań aplikacji i scenariuszy. Następujące klasy reprezentują przykłady powiązania dostarczane przez system:  
+ Usługi WCF zawiera zestaw powiązania dostarczane przez system, które są zaprojektowane tak, aby pokrywał większość wymagań aplikacji i scenariuszy. Następujące klasy reprezentują przykłady powiązania dostarczane przez system:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: Protokołu HTTP powiązanie odpowiednie dla łączących się z usługami sieci Web, który jest zgodny ze standardem WS-I Basic Profile 1.1 specyfikacji (na przykład ASP.NET Web services [ASMX] — na podstawie usługi).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: Protokołu HTTP powiązanie odpowiednie do nawiązywania połączenia z punktami końcowymi, zgodnych ze standardami sieci Web usług specyfikacje protokołów.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Używa binarne .NET, kodowanie i framing technologii w połączeniu z systemu Windows o nazwie transportu potoku połączyć się z innymi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktów końcowych na tym samym komputerze.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Używa kodowanie binarne .NET i framing technologii w połączeniu z systemu Windows o nazwie transportu potoku nawiązać połączenia z innych punktów końcowych WCF na tym samym komputerze.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Używa plik binarny .NET, kodowanie i framing technologii w połączeniu z MSMQ (MSMQ) do utworzenia w kolejce wiadomości połączenia z innymi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktów końcowych.  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Używa binarne .NET, kodowanie i framing technologii w połączeniu z MSMQ (MSMQ) w celu utworzenia komunikatu w kolejce połączeń z innymi punktami końcowymi WCF.  
   
  Aby uzyskać pełną listę powiązania dostarczane przez system, z opisami, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -49,7 +49,7 @@ Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do poł
 2.  Tworzenie punktu końcowego, który używa tego powiązania.  
   
 ## <a name="code-and-configuration"></a>Kod i Konfiguracja  
- Można zdefiniować lub skonfiguruj powiązania za pomocą kodu lub konfiguracji. Te dwie metody są niezależne od typ powiązania używanego, na przykład, czy używane są dostarczane przez system, czy na <xref:System.ServiceModel.Channels.CustomBinding> powiązania. Ogólnie rzecz biorąc przy użyciu kodu umożliwia pełną kontrolę nad definicji powiązania podczas kompilowania. Przy użyciu konfiguracji z drugiej strony, umożliwia administratorem systemu lub użytkownik [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi lub klienta, aby zmienić parametry powiązania. Tego rodzaju elastyczności często jest pożądane, ponieważ nie można przewidzieć wymagania dotyczące określonego komputera i sieci warunków, w której [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji ma zostać wdrożona. Oddzielanie informacji powiązania (i adresowania) z kodu umożliwia administratorom zmienić szczegóły powiązanie bez konieczności ponowne skompilowanie lub ponownego wdrażania aplikacji. Należy pamiętać, że jeśli powiązanie jest zdefiniowany w kodzie, zastępuje on definicje oparta na konfiguracji w pliku konfiguracji. Przykłady z tych metod zobacz następujące tematy:  
+ Można zdefiniować lub skonfiguruj powiązania za pomocą kodu lub konfiguracji. Te dwie metody są niezależne od typ powiązania używanego, na przykład, czy używane są dostarczane przez system, czy na <xref:System.ServiceModel.Channels.CustomBinding> powiązania. Ogólnie rzecz biorąc przy użyciu kodu umożliwia pełną kontrolę nad definicji powiązania podczas kompilowania. Z drugiej strony, za pomocą konfiguracji, umożliwia administratorem systemu lub użytkownika usługi WCF lub klienta w celu zmiany parametrów wiązania. Tego rodzaju elastyczności często jest pożądane, ponieważ nie ma możliwości prognozować wymagania dotyczące określonego komputera i sieci warunków, w których ma zostać wdrożona aplikacja WCF. Oddzielanie informacji powiązania (i adresowania) z kodu umożliwia administratorom zmienić szczegóły powiązanie bez konieczności ponowne skompilowanie lub ponownego wdrażania aplikacji. Należy pamiętać, że jeśli powiązanie jest zdefiniowany w kodzie, zastępuje on definicje oparta na konfiguracji w pliku konfiguracji. Przykłady z tych metod zobacz następujące tematy:  
   
 -   [Porady: hostowanie usługi WCF w zarządzanej aplikacji](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) stanowi przykład tworzenia powiązania w kodzie.  
   

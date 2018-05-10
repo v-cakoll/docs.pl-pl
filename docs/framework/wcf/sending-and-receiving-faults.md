@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 76fb07a6c9a5e0efdbf21f153f5fc2aea7f1880e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a4b4dc79b0f0dad661d99fae6377d1c86b673b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sending-and-receiving-faults"></a>Wysyłanie i odbieranie błędów
 Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klienta, a w przypadku dupleksu od klienta do usługi w sposób interoperacyjne. Zazwyczaj usługa definiuje zawartość błędów niestandardowych i określa, jakie operacje może zwracać je. (Aby uzyskać więcej informacji, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).) W tym temacie omówiono sposób usługi lub dupleks klienta może wysyłać te błędy wystąpił odpowiedniego warunku błędu sposób i klienta lub usługę aplikacji obsługi tych błędów. Omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -25,26 +25,26 @@ Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klient
  [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
  [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
   
- W celu przekazania `GreetingFault` informacje o błędzie do klienta, catch warunku błędu odpowiednie i zgłosić nową <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> typu `GreetingFault` o nowe `GreetingFault` obiektu jako argument, jak w poniższym przykładzie kodu. Jeśli klient jest [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji klienckiej go napotka to jako zarządzanym wyjątku, której typ jest <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> typu `GreetingFault`.  
+ W celu przekazania `GreetingFault` informacje o błędzie do klienta, catch warunku błędu odpowiednie i zgłosić nową <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> typu `GreetingFault` o nowe `GreetingFault` obiektu jako argument, jak w poniższym przykładzie kodu. Jeśli klient znajduje się aplikacja klienta WCF, go to napotyka jako zarządzanym wyjątku, której typ jest <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> typu `GreetingFault`.  
   
  [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
  [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
   
 ### <a name="sending-undeclared-faults"></a>Wysyłanie błędów niezadeklarowany  
- Wysyłanie błędów niezadeklarowany może być bardzo przydatne szybkie diagnozowanie i debugowania problemów w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacje, ale jego użyteczności jako narzędzie do debugowania jest ograniczona. Ogólnie rzecz biorąc, gdy jej debugowanie jest zalecane używanie <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> właściwości. Gdy ta wartość jest ustawiona na wartość true, klienci wystąpić błędów, takich jak <xref:System.ServiceModel.FaultException%601> wyjątki typu <xref:System.ServiceModel.ExceptionDetail>.  
+ Wysyłanie błędów niezadeklarowany może być bardzo przydatne szybkie diagnozowanie i debugowania problemów w aplikacji WCF, ale jego użyteczność, jako narzędzie do debugowania jest ograniczona. Ogólnie rzecz biorąc, gdy jej debugowanie jest zalecane używanie <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> właściwości. Gdy ta wartość jest ustawiona na wartość true, klienci wystąpić błędów, takich jak <xref:System.ServiceModel.FaultException%601> wyjątki typu <xref:System.ServiceModel.ExceptionDetail>.  
   
 > [!IMPORTANT]
->  Ponieważ zarządzane wyjątki może ujawnić informacje o wewnętrznych aplikacji, ustawianie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> do `true` zezwolić na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów, aby uzyskać informacje dotyczące wyjątków operacji wewnętrzny usługi, w tym osobiście do zidentyfikowania lub inne poufne informacje.  
+>  Ponieważ zarządzane wyjątki może ujawnić informacje o wewnętrznych aplikacji, ustawianie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> do `true` może zezwolić klientom uzyskanie informacji o wyjątkach operacji wewnętrzny usługi, w tym osobiście WCF do zidentyfikowania lub inne poufne informacje.  
 >   
->  W związku z tym ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> do `true` jest zalecane tylko w sposób tymczasowo debugowania aplikacji usługi. Ponadto WSDL dla metody, która zwraca nieobsługiwanych wyjątków w ten sposób zarządzanych nie zawiera kontraktu dla <xref:System.ServiceModel.FaultException%601> typu <xref:System.ServiceModel.ExceptionDetail>. Klienci muszą oczekują możliwości nieznany błąd protokołu SOAP (Powrót do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów jako <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> obiektów) można uzyskać informacji o debugowaniu poprawnie.  
+>  W związku z tym ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> do `true` jest zalecane tylko w sposób tymczasowo debugowania aplikacji usługi. Ponadto WSDL dla metody, która zwraca nieobsługiwanych wyjątków w ten sposób zarządzanych nie zawiera kontraktu dla <xref:System.ServiceModel.FaultException%601> typu <xref:System.ServiceModel.ExceptionDetail>. Klienci muszą oczekują możliwości nieznany błąd protokołu SOAP (zwracanych do klientów WCF jako <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> obiektów) można uzyskać informacji o debugowaniu poprawnie.  
   
- Aby wysłać niezadeklarowany błędu protokołu SOAP, throw <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> obiektu (to znaczy nie typ ogólny <xref:System.ServiceModel.FaultException%601>) i przekazać ciąg do konstruktora. To jest narażony na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji klienckich jako element zgłaszany <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> wyjątku, której ten ciąg jest dostępna przez wywołanie metody <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> metody.  
+ Aby wysłać niezadeklarowany błędu protokołu SOAP, throw <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> obiektu (to znaczy nie typ ogólny <xref:System.ServiceModel.FaultException%601>) i przekazać ciąg do konstruktora. To jest uwidaczniany w aplikacji klienta WCF jako element zgłaszany <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> wyjątku, której ten ciąg jest dostępna przez wywołanie metody <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> metody.  
   
 > [!NOTE]
 >  Jeśli zadeklarować typu ciąg błędu protokołu SOAP i zgłosić to w usłudze jako <xref:System.ServiceModel.FaultException%601> gdzie parametr typu jest <xref:System.String?displayProperty=nameWithType> wartość ciągu jest przypisany do <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> właściwości i nie jest dostępny z <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>.  
   
 ## <a name="handling-faults"></a>Obsługa błędów  
- W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów i błędach SOAP występujących podczas komunikacji interesujące dla aplikacji klienckich są zgłaszane jako zarządzane wyjątki. Gdy istnieje wiele wyjątków, które mogą wystąpić podczas wykonywania programu, aplikacje przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] model programowania klienta można oczekiwać, że do obsługi wyjątków następujące dwa typy wyniku komunikacji.  
+ Klienci WCF jako zarządzane wyjątki pojawienia się błędach SOAP występujących podczas komunikacji interesujące dla aplikacji klienckich. Gdy istnieje wiele wyjątków, które mogą wystąpić podczas wykonywania programu, aplikacje za pomocą modelu programowania klienta WCF można oczekiwać, że do obsługi wyjątków następujące dwa typy wyniku komunikacji.  
   
 -   <xref:System.TimeoutException>  
   
@@ -61,7 +61,7 @@ Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klient
  <xref:System.ServiceModel.FaultException%601> Po odebraniu w odpowiedzi na operację dwukierunkowe usterek, określonego w kontrakt operacji na komputerze klienckim są zgłaszane wyjątki (czyli metody z <xref:System.ServiceModel.OperationContractAttribute> atrybutem <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> ustawioną `false`).  
   
 > [!NOTE]
->  Gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa ma <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ustawioną właściwość `true` klienta napotka to jako niezadeklarowany <xref:System.ServiceModel.FaultException%601> typu <xref:System.ServiceModel.ExceptionDetail>. Klientów można przechwycić tego określonego błędu lub obsługi błędów w bloku catch dla <xref:System.ServiceModel.FaultException>.  
+>  Gdy usługa WCF ma <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ustawioną właściwość `true` klienta napotka to jako niezadeklarowany <xref:System.ServiceModel.FaultException%601> typu <xref:System.ServiceModel.ExceptionDetail>. Klientów można przechwycić tego określonego błędu lub obsługi błędów w bloku catch dla <xref:System.ServiceModel.FaultException>.  
   
  Zwykle tylko <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException>, i <xref:System.ServiceModel.CommunicationException> wyjątki są przydatne do klientów i usług.  
   
@@ -74,13 +74,13 @@ Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klient
  Należy pamiętać, że jedna operacja może zwrócić dowolną liczbę błędów określonego. Każdy awarii jest typem unikatowy i muszą być obsługiwane oddzielnie.  
   
 ### <a name="handle-exceptions-when-closing-the-channel"></a>Obsługa wyjątków podczas zamykania kanału  
- Większość poprzedniego dyskusji związana z błędy wysyłane w trakcie przetwarzania komunikatów aplikacji, czyli wiadomości jawnie wysłane przez klienta, gdy aplikacja klient wywołuje operacje na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta.  
+ Większość poprzedniego dyskusji związana z błędy wysyłane w trakcie przetwarzania komunikatów aplikacji, czyli wiadomości jawnie wysłane przez klienta, gdy aplikacja klient wywołuje operacji na obiekcie klienta WCF.  
   
- Nawet w przypadku lokalnych obiektów usuwania obiektu można wywołać lub maskować wyjątki, które występują w trakcie odtwarzania procesu. Podobnie może wystąpić, gdy używasz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektów klienta. Podczas wywoływania operacji wysyłania wiadomości przez nawiązane połączenie. Zamknięcie kanału można generują wyjątki, jeśli połączenie nie można prawidłowo zamknięty lub jest już zamknięty, nawet jeśli wszystkie operacje zwrócił poprawnie.  
+ Nawet w przypadku lokalnych obiektów usuwania obiektu można wywołać lub maskować wyjątki, które występują w trakcie odtwarzania procesu. Podobnie może wystąpić, gdy używasz obiekty klienta WCF. Podczas wywoływania operacji wysyłania wiadomości przez nawiązane połączenie. Zamknięcie kanału można generują wyjątki, jeśli połączenie nie można prawidłowo zamknięty lub jest już zamknięty, nawet jeśli wszystkie operacje zwrócił poprawnie.  
   
  Zazwyczaj kanały obiektu klienta są zamknięte w jednym z następujących sposobów:  
   
--   Gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta zostanie odtworzony.  
+-   Gdy obiekt klienta WCF zostanie odtworzony.  
   
 -   Gdy aplikacja kliencka wywołuje <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
@@ -98,7 +98,7 @@ Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klient
  Poniższy przykład kodu pokazuje sposób obsługi wyjątków błędu protokołu SOAP w podstawowej aplikacji klienckiej, w tym zadeklarowane usterek i błędów niezadeklarowany.  
   
 > [!NOTE]
->  Ten przykładowy kod nie używa `using` utworzenia. Ponieważ zamykania kanałów może zgłaszać wyjątki, zaleca się aplikacje tworzą [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta pierwszy, a następnie otwórz, używania i Zamknij [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta, w tym samym bloku try. Aby uzyskać więcej informacji, zobacz [Przegląd klienta programu WCF](../../../docs/framework/wcf/wcf-client-overview.md) i [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+>  Ten przykładowy kod nie używa `using` utworzenia. Ponieważ zamykania kanałów może zgłaszać wyjątki, zalecane jest aplikacje tworzą use pierwszy, a następnie otwórz klienta WCF i Zamknij klienta WCF, w tym samym spróbuj bloku. Aby uzyskać więcej informacji, zobacz [Przegląd klienta programu WCF](../../../docs/framework/wcf/wcf-client-overview.md) i [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  

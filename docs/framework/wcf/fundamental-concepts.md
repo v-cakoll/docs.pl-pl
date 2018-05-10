@@ -7,31 +7,31 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
-Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jest on przeznaczony do podstawowych pojęć i sposób ich dopasowania. Samouczek dotyczący tworzenia najprostszym wersji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i klienta, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md). Aby dowiedzieć się [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programowania, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
+Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jest on przeznaczony do podstawowych pojęć i sposób ich dopasowania. Samouczek dotyczący tworzenia najprostszym wersji usługi WCF i klienta, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md). Aby dowiedzieć się programowania WCF, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="wcf-fundamentals"></a>Podstawowe informacje na temat usługi WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to środowisko uruchomieniowe i zestaw interfejsów API do tworzenia systemów, które wysyłać wiadomości między usług i klientów. Te same infrastruktura i interfejsy API są używane do tworzenia aplikacji, które komunikują się z innymi aplikacjami na tym samym komputerze lub w systemie znajduje się w innej firmy, który jest dostępny za pośrednictwem Internetu.  
+ Usługi WCF jest środowisko uruchomieniowe i zestaw interfejsów API do tworzenia systemów, które wysyłać wiadomości między usług i klientów. Te same infrastruktura i interfejsy API są używane do tworzenia aplikacji, które komunikują się z innymi aplikacjami na tym samym komputerze lub w systemie znajduje się w innej firmy, który jest dostępny za pośrednictwem Internetu.  
   
 ### <a name="messaging-and-endpoints"></a>Obsługa komunikatów i punkty końcowe  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] opiera się na koncepcji komunikacji wiadomości i niczego, które mogą być modelowane zgodnie z komunikatu (na przykład żądania HTTP lub wiadomości MSMQ (MSMQ)) może być reprezentowany w jednolity sposób w modelu programowania. Dzięki temu ujednolicony interfejs API przez różne mechanizmy transportu.  
+ WCF opiera się na koncepcji komunikacji wiadomości i niczego, które mogą być modelowane zgodnie z komunikatu (na przykład żądania HTTP lub wiadomości MSMQ (MSMQ)) może być reprezentowany w jednolity sposób w modelu programowania. Dzięki temu ujednolicony interfejs API przez różne mechanizmy transportu.  
   
  Model rozróżnia *klientów*, które są aplikacje, które inicjują komunikację, i *usług*, które są aplikacje, które poczekaj, aż klienci komunikują się z nimi i reagowanie na który komunikacji. Pojedynczej aplikacji może działać jako klient i usługa. Aby uzyskać przykłady, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md) i [sieci Peer-to-Peer](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
  Komunikaty są wysyłane między punktami końcowymi. *Punkty końcowe* miejsc, w której wysyłane lub odbierane wiadomości (lub obie) i określają one wszystkie informacje wymagane do wymiany komunikatów. Udostępnia usługi punktów końcowych aplikacji (a także zero lub więcej punktów końcowych infrastruktury), a klient generuje punktu końcowego, który jest zgodny z jednym z punktów końcowych usługi.  
   
- *Punktu końcowego* opisano w sposób oparta na standardach, wysyłania wiadomości, jak mają być wysyłane i jak powinna wyglądać wiadomości. Usługi można ujawnić te informacje jako metadane przetwarzające przez klientów do generowania odpowiednich [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów i komunikacja *stosy*.  
+ *Punktu końcowego* opisano w sposób oparta na standardach, wysyłania wiadomości, jak mają być wysyłane i jak powinna wyglądać wiadomości. Usługi można ujawnić te informacje jako metadane przetwarzające przez klientów do generowania odpowiednich klientów WCF i komunikacji *stosy*.  
   
 ### <a name="communication-protocols"></a>Protokoły komunikacji  
- Jeden wymagany jest element stosu komunikacji *protokołu transportu*. Wiadomości mogą być wysyłane za pośrednictwem sieci intranet i Internet za pomocą transportu wspólne, takie jak HTTP i TCP. Uwzględniono innych transportów obsługujące komunikacji z aplikacjami usługi kolejkowania komunikatów i węzły w sieci równorzędnej siatki. Można dodać więcej mechanizmów transportu za pomocą wbudowanych rozszerzenia punkty [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Jeden wymagany jest element stosu komunikacji *protokołu transportu*. Wiadomości mogą być wysyłane za pośrednictwem sieci intranet i Internet za pomocą transportu wspólne, takie jak HTTP i TCP. Uwzględniono innych transportów obsługujące komunikacji z aplikacjami usługi kolejkowania komunikatów i węzły w sieci równorzędnej siatki. Można dodać więcej mechanizmów transportu przy użyciu punktów wbudowanych rozszerzenia programu WCF.  
   
- Innego wymaganego elementu stosu komunikacji jest kodowanie, które określa sposób formatowania żadnych podanym komunikatem. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] udostępnia następujące rodzaje kodowania:  
+ Innego wymaganego elementu stosu komunikacji jest kodowanie, które określa sposób formatowania żadnych podanym komunikatem. Usługi WCF udostępnia następujące rodzaje kodowania:  
   
 -   Kodowanie, interoperacyjne kodowania tekstu.  
   
@@ -39,13 +39,13 @@ Ten dokument zawiera ogólny widok architektury usług Windows Communication Fou
   
 -   Binarny kodowanie transferu wydajne.  
   
- Można dodać więcej kodowania mechanizmów (na przykład kompresji kodowanie) przy użyciu wbudowanych rozszerzenia punkty [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Można dodać więcej kodowania mechanizmów (na przykład kompresji kodowanie) przy użyciu punktów wbudowanych rozszerzenia programu WCF.  
   
 ### <a name="message-patterns"></a>Wzorce wiadomości  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje kilka wzorce obsługi komunikatów, w tym żądanie odpowiedź, jednokierunkowe i komunikację dupleksową. Różnych transportów obsługuje różne wzorce obsługi komunikatów, a w związku z tym wpływają na typy interakcji, które obsługują. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Interfejsów API i środowiska uruchomieniowego też pomóc Ci do wysyłania wiadomości w sposób bezpieczny i niezawodny.  
+ Usługi WCF obsługuje kilka wzorce obsługi komunikatów, w tym żądanie odpowiedź, jednokierunkowe i komunikację dupleksową. Różnych transportów obsługuje różne wzorce obsługi komunikatów, a w związku z tym wpływają na typy interakcji, które obsługują. Interfejsy API WCF i środowiska uruchomieniowego też pomóc Ci do wysyłania wiadomości w sposób bezpieczny i niezawodny.  
   
 ## <a name="wcf-terms"></a>Warunki WCF  
- Inne pojęć i terminów używanych w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dokumentacji to m.in.  
+ Inne pojęć i terminów używanych w dokumentacji platformy WCF m.in.  
   
  — komunikat  
  Samodzielna jednostka danych, które może składać się z kilku części, łącznie z treści i nagłówków.  
@@ -56,7 +56,7 @@ Ten dokument zawiera ogólny widok architektury usług Windows Communication Fou
  endpoint  
  Konstrukcja w wiadomości, które są wysyłane lub odbierane (lub obie). W tym zawiera lokalizację (adresu), która określa, gdzie mogą być wysyłane wiadomości, specyfikacja mechanizm komunikacji (powiązanie), który opisano, jak można wysłać wiadomości, i definicji zestaw komunikatów, które mogą być wysyłane lub odbierane (lub obie) Lokalizacja (kontrakt usługi) w tym artykule opisano, jakie komunikaty mogą być wysyłane.  
   
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi jest narażony na świecie jako kolekcja punktów końcowych.  
+ Usługa WCF jest narażony na świecie jako kolekcja punktów końcowych.  
   
  punkt końcowy aplikacji  
  Punkt końcowy udostępniany przez aplikację i że odpowiada kontrakt usługi zaimplementowana przez aplikację.  
@@ -83,13 +83,13 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Składnik, który określa różne aspekty środowiska wykonawczego usługi, punkt końcowy, określonej operacji lub klienta. Zachowania są pogrupowane według zakresu: zachowań wspólnych globalnie wpływają na wszystkie punkty końcowe, zachowania usługi wpływania na aspekty tylko związane z usługą tylko właściwości powiązanych z punktu końcowego wpłynąć na zachowania punktu końcowego i zachowania poziomu operacji wpływają na konkretnym operacje. Na przykład jeden zachowanie usługi jest ograniczanie, który określa, w jaki sposób usługa reaguje, gdy część wiadomości grozi przeciąży możliwości obsługi. Zachowanie punktu końcowego z drugiej strony, określa tylko aspektów, które mają zastosowanie do punktów końcowych, jak i gdzie można znaleźć poświadczeń zabezpieczeń.  
   
  powiązania dostarczane przez system  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera liczbę powiązania dostarczane przez system. Te są kolekcjami elementów, które są zoptymalizowane pod kątem konkretnych scenariuszy wiązania. Na przykład <xref:System.ServiceModel.WSHttpBinding> zaprojektowano pod kątem współdziałania z usługami, które implementują różnych WS-* specyfikacji. Te wstępnie zdefiniowanych powiązań zaoszczędzić czas, z uwzględnieniem tylko te opcje, które można poprawnie zastosować do danego scenariusza. Jeśli wstępnie zdefiniowane powiązania nie spełnia wymagań, można tworzyć własnego niestandardowego powiązania.  
+ Usługi WCF zawiera szereg powiązania dostarczane przez system. Te są kolekcjami elementów, które są zoptymalizowane pod kątem konkretnych scenariuszy wiązania. Na przykład <xref:System.ServiceModel.WSHttpBinding> zaprojektowano pod kątem współdziałania z usługami, które implementują różnych WS-* specyfikacji. Te wstępnie zdefiniowanych powiązań zaoszczędzić czas, z uwzględnieniem tylko te opcje, które można poprawnie zastosować do danego scenariusza. Jeśli wstępnie zdefiniowane powiązania nie spełnia wymagań, można tworzyć własnego niestandardowego powiązania.  
   
  Konfiguracja i kodowania  
  Formant aplikacji można przeprowadzić albo za pomocą kodowania, za pośrednictwem konfiguracji, lub obie te grupy. Konfiguracja ma możliwość kogoś innego niż developer (na przykład administrator sieci), aby ustawić parametry klienta i usługi, po zapisaniu kodu i bez konieczności ponownego kompilowania. Konfiguracja nie tylko służy do ustawiania wartości podobnie jak adresy punktów końcowych, ale również umożliwia dalsze kontrolę umożliwiając dodać punkty końcowe, powiązania i zachowania. Kodowanie umożliwia deweloperowi zachować ścisłą kontrolę nad wszystkimi składnikami usługi lub klienta i wszelkich ustawień za pomocą konfiguracji mogą być kontrolowane i w razie potrzeby zastąpione przez kod.  
   
  Operacja usługi  
- Procedura zdefiniowane w kodzie usługi, która implementuje funkcje dla operacji. Ta operacja jest widoczne dla klientów jako metody na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta. Metoda może zwracać wartości, można podjąć opcjonalne liczba argumentów, lub nie przyjmują argumentów i zwraca odpowiedź nie. Na przykład operacja, która działa jako prosty tekst "Hello" mogą być używane jako powiadomienie obecności klienta i rozpocząć czynności.  
+ Procedura zdefiniowane w kodzie usługi, która implementuje funkcje dla operacji. Ta operacja jest widoczne dla klientów jako metody klienta WCF. Metoda może zwracać wartości, można podjąć opcjonalne liczba argumentów, lub nie przyjmują argumentów i zwraca odpowiedź nie. Na przykład operacja, która działa jako prosty tekst "Hello" mogą być używane jako powiadomienie obecności klienta i rozpocząć czynności.  
   
  kontrakt usługi  
  Wiąże ze sobą wielu powiązanych operacji w pojedynczą jednostkę funkcjonalności. Kontrakt można zdefiniować ustawienia poziomu usług, takie jak przestrzeń nazw usługi, kontrakt wywołania zwrotnego odpowiedniego i inne takie ustawienia. W większości przypadków kontrakt jest definiowana za tworzenie interfejsu w języku programowania i stosowanie <xref:System.ServiceModel.ServiceContractAttribute> do interfejsu. Wyniki kodu usługi rzeczywiste zaimplementowanie interfejsu.  
@@ -119,25 +119,25 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Usługa ma wystąpień modelu. Istnieją trzy modele wystąpień: "jednym", w którym pojedynczego obiektu CLR usług wszystkich klientów; " na wywołanie,"w którym jest tworzony nowy obiekt CLR do obsługi każdego wywołania klienta; i "na"sesji, w które obiekty Zestaw CLR, jest tworzony, jeden dla każdej sesji oddzielne. Wybór wystąpień modelu zależy od wymagań aplikacji i wzorzec oczekiwane wykorzystanie usługi.  
   
  Aplikacja kliencka  
- Program, który wymienia wiadomości z jedną lub więcej punktów końcowych. Aplikacja kliencka rozpoczyna się od utworzenia wystąpienia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta i wywołanie metody [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta. Należy do pojedynczej aplikacji może zawierać zarówno klient, jak i usługi.  
+ Program, który wymienia wiadomości z jedną lub więcej punktów końcowych. Aplikacja kliencka rozpoczyna się od tworzenia wystąpienia klienta WCF i wywołanie metody klienta platformy WCF. Należy do pojedynczej aplikacji może zawierać zarówno klient, jak i usługi.  
   
  Kanał  
  Konkretną implementację elementu powiązania. Powiązanie reprezentuje konfigurację i kanał jest skojarzony z tym konfiguracji wdrożenia. W związku z tym jest skojarzone z każdym elementem powiązania kanału. Kanały stosu na siebie, aby utworzyć konkretną implementację powiązania: stosu kanału.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klienta  
- Aplikacja kliencka strukturą ujawniającą operacji usługi jako metody (w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] programowania w języku, takich jak Visual Basic lub Visual C#). Każdej aplikacji może obsługiwać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta, w tym aplikacji, która obsługuje usługę. W związku z tym istnieje możliwość utworzyć usługę, która obejmuje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów z innymi usługami.  
+ Klient WCF  
+ Aplikacja kliencka strukturą ujawniającą operacji usługi jako metody (w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] programowania w języku, takich jak Visual Basic lub Visual C#). Każdej aplikacji może obsługiwać klienta WCF, łącznie z aplikacji, która obsługuje usługę. W związku z tym jest możliwe utworzyć usługę, która zawiera klientów WCF innych usług.  
   
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta mogą być generowane automatycznie za pomocą [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) i wskazując uruchomioną usługę, która publikuje metadane.  
+ Klienta programu WCF mogą być generowane automatycznie za pomocą [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) i wskazując uruchomioną usługę, która publikuje metadane.  
   
  metadane  
- W usłudze opisano charakterystyki usługę jednostki zewnętrznej trzeba poznać, aby komunikować się z usługą. Metadane mogą być używane przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta i towarzyszące konfiguracji, który aplikacja kliencka służy do interakcji z usługą.  
+ W usłudze opisano charakterystyki usługę jednostki zewnętrznej trzeba poznać, aby komunikować się z usługą. Metadane mogą być używane przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania klienta WCF i towarzyszące konfiguracji, który aplikacja kliencka służy do interakcji z usługą.  
   
  Metadane udostępnianych przez usługę obejmuje dokumentach schematów XML, których definiowanie kontraktu danych usługi, i dokumentów WSDL, których opisano metody usługi.  
   
- Po włączeniu metadanych dla usługi jest generowana automatycznie przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sprawdzając usługę i jej punkty końcowe. Publikowanie metadanych z usługą, musisz jawnie włączyć zachowanie metadanych.  
+ Po włączeniu metadanych dla usługi jest automatycznie generowany przez WCF sprawdzając usługę i jej punkty końcowe. Publikowanie metadanych z usługą, musisz jawnie włączyć zachowanie metadanych.  
   
  zabezpieczenia  
- W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], obejmuje poufność (szyfrowanie wiadomości, aby zapobiec podsłuchiwaniu), integralność (oznacza wykrywania naruszeniu wiadomości), uwierzytelniania (oznacza do sprawdzania poprawności serwerów i klientów) i autoryzacji ( Kontrola dostępu do zasobów). Funkcje te są udostępniane przez albo korzystanie z usług istniejące mechanizmy zabezpieczeń, takich jak TLS za pośrednictwem protokołu HTTP (znanej także jako HTTPS) lub wdrażanie jednego lub kilku różnych WS-* specyfikacji zabezpieczenia.  
+ W programie WCF między innymi poufność (szyfrowanie wiadomości, aby zapobiec podsłuchiwaniu) integralności (oznacza wykrywania naruszeniu wiadomości), uwierzytelniania (oznacza do sprawdzania poprawności serwerów i klientów) i autoryzacji (kontrola dostępu do zasoby). Funkcje te są udostępniane przez albo korzystanie z usług istniejące mechanizmy zabezpieczeń, takich jak TLS za pośrednictwem protokołu HTTP (znanej także jako HTTPS) lub wdrażanie jednego lub kilku różnych WS-* specyfikacji zabezpieczenia.  
   
  Tryb zabezpieczeń Transport  
  Określa, że poufności, integralności i uwierzytelniania są udostępniane przez mechanizmy warstwy transportu (na przykład HTTPS). Korzystając z transportu, takich jak HTTPS, w tym trybie ma zaletą jest efektywne pod względem wydajności, a także rozpoznawanych ze względu na jego występowanie w Internecie. Wadą jest to, że tego rodzaju zabezpieczeń jest stosowane osobno każdego przeskoku w ścieżce komunikacji wprowadzania komunikacji narażony na atak typu "man w środku".  
@@ -149,7 +149,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Określa użycie warstwy transportu, aby zagwarantować poufność, uwierzytelniania i integralności wiadomości, podczas każdej wiadomości może zawierać wiele poświadczeń (oświadczeń) wymagany przez odbiorców w wiadomości.  
   
  WS-*  
- Skrócona forma rosnącej gamy parametry usługi sieci Web (WS), na przykład WS-Security, WS-ReliableMessaging i tak dalej, które zostały wdrożone w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Skrócona forma rosnącej gamy specyfikacji usługi sieci Web (WS), takich jak WS-Security WS-ReliableMessaging i tak dalej, które są wdrażane w programie WCF.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

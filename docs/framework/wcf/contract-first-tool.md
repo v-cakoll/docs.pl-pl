@@ -2,11 +2,11 @@
 title: Narzędzie Contract-First
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f061f4dd37861c1cf3dd0cc8318de9f0f65b90e4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract-first-tool"></a>Narzędzie Contract-First
 Kontrakty usług często muszą być utworzone na podstawie istniejących usług. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], klasy kontraktu danych mogą być tworzone automatycznie z istniejącymi usługami za pomocą narzędzie contract-first. Aby użyć narzędzie contract-first, plik definicji schematu XML (XSD), należy pobrać lokalnie; Narzędzie nie może zaimportować kontraktów danych zdalnych za pośrednictwem protokołu HTTP.  
@@ -58,7 +58,7 @@ Kontrakty usług często muszą być utworzone na podstawie istniejących usług
  Aby dodać powyżej kontraktu usługi do projektu, kliknij prawym przyciskiem myszy projekt i wybierz **Dodaj nowy...** . Wybierz definicję schematu z okienka WCF okna dialogowego szablony, a nazwa nowego pliku SampleContract.xsd. Skopiuj i Wklej powyższy kod do widoku kodu nowego pliku.  
   
 ## <a name="configuring-contract-first-options"></a>Konfigurowanie opcji pierwszy kontraktu  
- W menu właściwości można skonfigurować opcje kontraktu pierwszy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projektu. Aby umożliwić programowanie pierwszy kontraktu, zaznacz **włączyć XSD jako język definicji typu** pole wyboru na stronie WCF w oknie właściwości projektu.  
+ Opcje kontraktu pierwszy można skonfigurować w menu Właściwości projektu usługi WCF. Aby umożliwić programowanie pierwszy kontraktu, zaznacz **włączyć XSD jako język definicji typu** pole wyboru na stronie WCF w oknie właściwości projektu.  
   
  ![Kontrakt przedstawiający opcje projektu WCF&#45;pierwszy](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   

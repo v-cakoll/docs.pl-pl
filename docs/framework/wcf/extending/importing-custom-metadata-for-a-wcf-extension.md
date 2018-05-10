@@ -2,21 +2,21 @@
 title: Importowanie niestandardowych metadanych dla rozszerzenia WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: bb7124cbce3fa38d00446b6568c85fc3136ee180
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e2bd7c0ce1fd4a8154a0d6d9650487197d98d8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importowanie niestandardowych metadanych dla rozszerzenia WCF
-W konsoli Windows Communication Foundation (WCF) importu metadanych jest proces generowania abstrakcyjną reprezentacją usługi lub jego składniki z jego metadanych. Na przykład [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] można zaimportować <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień, <xref:System.ServiceModel.Channels.Binding> wystąpień lub <xref:System.ServiceModel.Description.ContractDescription> wystąpień z WSDL dokumentu usługi. Aby zaimportować metadane usługi w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], korzystać z implementacji <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> klasy abstrakcyjnej. Typy, które pochodzą z <xref:System.ServiceModel.Description.MetadataImporter> klasa implementuje pomocy technicznej dla importowania formaty metadanych, które korzystają z protokołu WS-Policy zaimportować logikę w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+W konsoli Windows Communication Foundation (WCF) importu metadanych jest proces generowania abstrakcyjną reprezentacją usługi lub jego składniki z jego metadanych. Na przykład można zaimportować WCF <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień, <xref:System.ServiceModel.Channels.Binding> wystąpień lub <xref:System.ServiceModel.Description.ContractDescription> wystąpień z WSDL dokumentu usługi. Aby zaimportować metadane usługi w programie WCF, należy korzystać z implementacji <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> klasy abstrakcyjnej. Typy, które pochodzą z <xref:System.ServiceModel.Description.MetadataImporter> klasa implementuje pomocy technicznej dla logiki w programie WCF zaimportować importowania formaty metadanych, które korzystają z protokołu WS-Policy.  
   
  Niestandardowych metadanych składa się z elementów XML, których nie można zaimportować importerów metadanych dostarczane przez system. Zwykle obejmuje niestandardowe rozszerzenia WSDL oraz niestandardowych asercji zasad.  
   
  Ta sekcja opisuje sposób importowania niestandardowe rozszerzenia WSDL i potwierdzeń zasad. Nie skupić się na sam proces importowania. Aby uzyskać więcej informacji o sposobie używania typy, które eksportowanie i Importowanie metadanych niezależnie od tego, czy metadane niestandardowych lub obsługiwane przez system, zobacz [eksportowanie i Importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Omówienie  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Typu to implementacja <xref:System.ServiceModel.Description.MetadataImporter> dołączone do klasy abstrakcyjnej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. <xref:System.ServiceModel.Description.WsdlImporter> Typu importuje WSDL metadanych za pomocą dołączonego zasad, które są powiązane w <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> obiektu. Potwierdzenia zasad i rozszerzenia WSDL, które nie rozpoznają importerów domyślne są przekazywane do żadnych zarejestrowanych zasady niestandardowe i importerów WSDL do zaimportowania. Zazwyczaj importerów są wdrażane do obsługi elementy wiązania zdefiniowane przez użytkownika lub zmodyfikować importowanych kontraktu.  
+ <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Typu to implementacja <xref:System.ServiceModel.Description.MetadataImporter> dołączonego WCF klasy abstrakcyjnej. <xref:System.ServiceModel.Description.WsdlImporter> Typu importuje WSDL metadanych za pomocą dołączonego zasad, które są powiązane w <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> obiektu. Potwierdzenia zasad i rozszerzenia WSDL, które nie rozpoznają importerów domyślne są przekazywane do żadnych zarejestrowanych zasady niestandardowe i importerów WSDL do zaimportowania. Zazwyczaj importerów są wdrażane do obsługi elementy wiązania zdefiniowane przez użytkownika lub zmodyfikować importowanych kontraktu.  
   
  W tej sekcji opisano:  
   

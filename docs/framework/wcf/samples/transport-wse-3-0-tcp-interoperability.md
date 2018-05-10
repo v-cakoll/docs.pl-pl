@@ -2,14 +2,14 @@
 title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
-Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplementować sesji dupleksowej TCP jako niestandardowego transportu Windows Communication Foundation (WCF). Przedstawiono również, jak używasz rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. W następujących krokach przedstawiono sposób tworzenia tej niestandardowej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportu:  
+Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplementować sesji dupleksowej TCP jako niestandardowego transportu Windows Communication Foundation (WCF). Przedstawiono również, jak używasz rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. W następujących krokach przedstawiono sposób tworzenia niestandardowych transportu WCF:  
   
 1.  Począwszy od gniazda TCP, utworzyć klienta i serwera implementacje <xref:System.ServiceModel.Channels.IDuplexSessionChannel> który umożliwia DIME Framing odróżniać granice wiadomości.  
   
@@ -128,7 +128,7 @@ Przykładowe WSE 3.0 TCP współdziałanie transportu pokazano, jak zaimplemento
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- Składa się z dwóch testów — jeden test konfiguruje klient z typowaniem przy użyciu kodu wygenerowane z pliku programu WSE 3.0 WSDL. Drugi test używa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jako klient i serwer wysyła komunikaty bezpośrednio na kanale interfejsów API.  
+ Składa się z dwóch testów — jeden test konfiguruje klient z typowaniem przy użyciu kodu wygenerowane z pliku programu WSE 3.0 WSDL. Drugi test używa WCF jako klient i serwer wysyła komunikaty bezpośrednio na kanale interfejsów API.  
   
  Podczas uruchamiania próbki, oczekiwano następujących danych wyjściowych.  
   
@@ -182,7 +182,7 @@ Symbols:
   
     2.  Ustaw projekt StockService jako projekt startowy.  
   
-    3.  Otwórz StockService.cs w StockService projektu i komentarz dla atrybutu [zasad] `StockService` klasy. Powoduje wyłączenie zabezpieczeń z próbki. Gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] może współdziałać z programu WSE 3.0 bezpieczne punkty końcowe, zabezpieczeń jest wyłączone, aby zachować ten przykład koncentruje się na niestandardowe transportu TCP.  
+    3.  Otwórz StockService.cs w StockService projektu i komentarz dla atrybutu [zasad] `StockService` klasy. Powoduje wyłączenie zabezpieczeń z próbki. Gdy WCF może współdziałać z bezpieczne punkty końcowe programu WSE 3.0, zabezpieczenia są wyłączone do zachowania w tym przykładzie koncentruje się na niestandardowe transportu TCP.  
   
     4.  Naciśnij klawisz F5, aby uruchomić `TcpSyncStockService`. Usługa jest uruchamiana w nowym oknie konsoli.  
   

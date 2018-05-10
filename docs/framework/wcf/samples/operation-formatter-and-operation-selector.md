@@ -2,14 +2,14 @@
 title: Element formatujący operacji i selektor operacji
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db548e99c99ba6f29cc1c6e998d0e7485cd41046
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Element formatujący operacji i selektor operacji
-W tym przykładzie pokazano, jak punkty rozszerzeń Windows Communication Foundation (WCF) może służyć do Zezwalaj komunikat danych w innym formacie z co [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oczekuje. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementy formatujące oczekiwane parametry metody do uwzględnienia w obszarze `soap:body` elementu. Przykład obejmuje implementowania niestandardowych operacji programu formatującego, zamiast tego analizuje dane parametru ciągu zapytania HTTP GET, który wywołuje metody przy użyciu tych danych.  
+W przykładzie pokazano, jak punkty rozszerzeń Windows Communication Foundation (WCF) może służyć do Zezwalaj komunikat danych w innym formacie z WCF oczekuje. Domyślnie, programy formatujące WCF oczekiwać parametry metody do uwzględnienia w obszarze `soap:body` elementu. Przykład obejmuje implementowania niestandardowych operacji programu formatującego, zamiast tego analizuje dane parametru ciągu zapytania HTTP GET, który wywołuje metody przy użyciu tych danych.  
   
  Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. Go przedstawiono sposób dodawania, odejmowania wielokrotnie i dzielenia wiadomości, można zmienić użyć żądania HTTP GET dla żądań klienta do serwera i HTTP POST z POX wiadomości odpowiedzi serwera do klienta.  
   
@@ -29,7 +29,7 @@ W tym przykładzie pokazano, jak punkty rozszerzeń Windows Communication Founda
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="key-concepts"></a>Podstawowe pojęcia  
- `QueryStringFormatter` Programu formatującego operacji jest składnikiem w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] odpowiada do konwertowania wiadomości na tablicę obiektów parametru i tablicę obiektów parametru do wiadomości. Ta próba polega na kliencie przy użyciu <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interfejsu i na serwerze z <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interfejsu. Te interfejsy umożliwiają użytkownikom uzyskiwanie komunikatów żądań i odpowiedzi z `Serialize` i `Deserialize` metody.  
+ `QueryStringFormatter` Programu formatującego operacji jest składnikiem programu WCF, odpowiedzialną za konwertowania wiadomości na tablicę obiektów parametru i tablicę obiektów parametru do wiadomości. Ta próba polega na kliencie przy użyciu <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interfejsu i na serwerze z <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interfejsu. Te interfejsy umożliwiają użytkownikom uzyskiwanie komunikatów żądań i odpowiedzi z `Serialize` i `Deserialize` metody.  
   
  W tym przykładzie `QueryStringFormatter` implementuje obu tych interfejsów i jest zaimplementowana na kliencie i serwerze.  
   
@@ -59,10 +59,10 @@ W tym przykładzie pokazano, jak punkty rozszerzeń Windows Communication Founda
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> Ustawiono <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> implementacji.  
   
- Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa filtra dokładnie dopasowanego adresu. Identyfikator URI w komunikacie przychodzącym zawiera sufiks nazwy operacji następuje zawierający dane parametru ciągu zapytania, dzięki zachowania punktu końcowego również zmiany filtr adresów jako prefiksu pasuje do filtru. Używa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> w tym celu.  
+ Domyślnie WCF używa filtr adresów dopasowanie dokładna. Identyfikator URI w komunikacie przychodzącym zawiera sufiks nazwy operacji następuje zawierający dane parametru ciągu zapytania, dzięki zachowania punktu końcowego również zmiany filtr adresów jako prefiksu pasuje do filtru. Używa usługi WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> w tym celu.  
   
 ### <a name="installing-operation-formatters"></a>Instalowanie formatujących operacji  
- Operacja zachowania, określające elementy formatujące są unikatowe. Domyślnie dla każdej operacji tworzenia programu formatującego niezbędnych operacji zawsze zaimplementowano jednego takiego zachowania. Jednak te zachowania wyglądać kolejna operacja zachowanie; nie są identyfikowane przez inny atrybut. Aby zainstalować zachowanie zastąpienia, implementacja musi wyglądać dla określonego programu formatującego zachowania, które są instalowane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modułu ładującego typu domyślnie i zastąp go lub dodać zachowanie zgodne do uruchomienia po zachowanie domyślne.  
+ Operacja zachowania, określające elementy formatujące są unikatowe. Domyślnie dla każdej operacji tworzenia programu formatującego niezbędnych operacji zawsze zaimplementowano jednego takiego zachowania. Jednak te zachowania wyglądać kolejna operacja zachowanie; nie są identyfikowane przez inny atrybut. Aby zainstalować zachowanie zastąpienia, implementacji musi wyglądać dla określonego programu formatującego zachowania, które są instalowane przez moduł ładujący typ WCF domyślnie i albo go zastąpić lub Dodaj niezgodne zachowanie do uruchomienia po domyślne zachowanie.  
   
  Te zachowania elementy formatujące operacji można skonfigurować programowo przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> lub określając zachowanie operacji, która jest wykonywana po domyślny. Jednak go nie można łatwo można skonfigurować przy zachowanie punktu końcowego (i w związku z tym w konfiguracji) ponieważ modelu zachowanie nie zezwala na zachowanie zastąpić innych zachowań lub modyfikację drzewa opis.  
   

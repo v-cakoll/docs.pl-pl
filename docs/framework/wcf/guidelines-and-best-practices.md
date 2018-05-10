@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Wskazówki i najlepsze rozwiązania
 Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia aplikacji systemu Windows Communication Foundation (WCF).  
@@ -22,7 +22,7 @@ Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia aplikacji 
  Wyjaśniono, jak i kiedy utworzyć kontraktów danych, które nie Przerwij, gdy są tworzone w przyszłych wersjach.  
   
  [Przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md)  
- Wyjaśniono, jak należy wziąć pod uwagę przechowywania wersji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Po wdrożeniu usługi (i punktów końcowych, które udostępniają) może być konieczne zmiany, na przykład, aby spełniać zmiana wymagania biznesowe lub wymagania, lub aby rozwiązać problemy. Każda zmiana wprowadziła nową wersję usługi.  
+ Wyjaśniono, jak należy wziąć pod uwagę przechowywanie wersji w programie WCF. Po wdrożeniu usługi (i punktów końcowych, które udostępniają) może być konieczne zmiany, na przykład, aby spełniać zmiana wymagania biznesowe lub wymagania, lub aby rozwiązać problemy. Każda zmiana wprowadziła nową wersję usługi.  
   
  [Równoważenie obciążenia](../../../docs/framework/wcf/load-balancing.md)  
  Zawiera wskazówki dotyczące równoważenia obciążenia z farmy sieci Web.  

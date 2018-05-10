@@ -2,11 +2,11 @@
 title: Przegląd przepływu komunikatu
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 056737b9d057101568274ab8d24c0c0e2780f93a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aea0ca4c5a8574f6039cd055561ce7da0099841b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-flow-overview"></a>Przegląd przepływu komunikatu
 W systemie rozproszonej zawierający połączonych usług jest niezbędne do określenia przyczynowy relacje między usługami. Ważne jest, aby poznać różne składniki, które były częścią przepływu żądania do obsługi krytycznych scenariuszy, takich jak kondycja monitorowanie, rozwiązywanie problemów i głównego przyczynę problemu. Aby włączyć korelacja śladów różnych usług w .NET Framework 4 dodano obsługę następujących funkcji:  
@@ -25,7 +25,7 @@ W systemie rozproszonej zawierający połączonych usług jest niezbędne do okr
   
 2.  Jeśli nie włączono śledzenie analityczne, rozwiń węzeł **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji serwera aplikacji** . Wybierz **widoku**, **wyświetlanie analityczne i debugowania dzienniki**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Włącz dziennik**. Pozostaw otwarte Podgląd zdarzeń, dzięki czemu można wyświetlać danych śledzenia.  
   
-3.  Otwórz przykładowe utworzone w [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md) w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Należy pamiętać, że trzeba uruchomić [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] jako administrator, dzięki czemu można utworzyć usługi. Jeśli masz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zainstalowanych przykładów, możesz otworzyć [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), zawierającą ukończone projekt utworzony w samouczku.  
+3.  Otwórz przykładowe utworzone w [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md) w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Należy pamiętać, że trzeba uruchomić [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] jako administrator, dzięki czemu można utworzyć usługi. Jeśli masz zainstalowanych przykładów WCF, możesz otworzyć [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), zawierającą ukończone projekt utworzony w samouczku.  
   
 4.  Kliknij prawym przyciskiem myszy **usługi** projekt i wybierz **Dodaj**, **nowy element**. Wybierz **pliku konfiguracji aplikacji** i kliknij przycisk **OK**.  
   

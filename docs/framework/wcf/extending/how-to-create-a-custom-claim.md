@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ee707ae4e2a7dafeb7cb42d6d56eeece8f23306
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>Instrukcje: Tworzenie oświadczenia niestandardowego
-Infrastruktury modelu tożsamości w systemie Windows Communication Foundation (WCF) zawiera zestaw wbudowanych oświadczenia i prawa o funkcje pomocnicze do tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w kliencie poświadczeń typy, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenie składa się z typu oświadczenia, zasobów, dla której oświadczenia dotyczy i praw potwierdzona za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
+Infrastruktury modelu tożsamości w systemie Windows Communication Foundation (WCF) zawiera zestaw wbudowanych oświadczenia i prawa o funkcje pomocnicze do tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w typach poświadczeń klienta, które obsługuje WCF domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenie składa się z typu oświadczenia, zasobów, dla której oświadczenia dotyczy i praw potwierdzona za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Aby tworzenie oświadczenia niestandardowego, który jest oparty na typie danych pierwotnych  
   
@@ -20,15 +20,15 @@ Infrastruktury modelu tożsamości w systemie Windows Communication Foundation (
   
     1.  Wybierz unikatową wartość dla typu oświadczenia.  
   
-         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Aby uzyskać listę typów oświadczeń, które są zdefiniowane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
+         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Dla listy typów oświadczeń, które są zdefiniowane przez usługi WCF, zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
   
     2.  Wybierz typ danych pierwotnych i wartość zasobu.  
   
-         Zasób jest obiektem. Typ CLR zasób może być typu pierwotnego, takich jak <xref:System.String> lub <xref:System.Int32>, lub typ możliwy do serializacji. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczenia są serializowane w różnych momentach przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Typy pierwotne są możliwy do serializacji.  
+         Zasób jest obiektem. Typ CLR zasób może być typu pierwotnego, takich jak <xref:System.String> lub <xref:System.Int32>, lub typ możliwy do serializacji. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczenia są serializowane w różnych momentach przez usługę WCF. Typy pierwotne są możliwy do serializacji.  
   
-    3.  Wybierz uprawnienia, który jest definiowana za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lub unikatową wartość dla niestandardowego prawo.  
+    3.  Wybierz uprawnienia, który jest definiowana za pomocą usługi WCF lub unikatową wartość dla niestandardowego prawo.  
   
-         Prawo to identyfikator unikatowy ciąg. Prawa, które są zdefiniowane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
+         Prawo to identyfikator unikatowy ciąg. Prawa, które są definiowane przez WCF są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
   
          Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany do prawej jest unikatowa.  
   
@@ -43,11 +43,11 @@ Infrastruktury modelu tożsamości w systemie Windows Communication Foundation (
   
     1.  Wybierz unikatową wartość dla typu oświadczenia.  
   
-         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Aby uzyskać listę typów oświadczeń, które są zdefiniowane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
+         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Dla listy typów oświadczeń, które są zdefiniowane przez usługi WCF, zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
   
     2.  Wybierz lub zdefiniuj serializacji typu innego niż pierwotny dla zasobu.  
   
-         Zasób jest obiektem. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczenia są serializowane w różnych momentach przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Typy pierwotne są już możliwy do serializacji.  
+         Zasób jest obiektem. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczenia są serializowane w różnych momentach przez usługę WCF. Typy pierwotne są już możliwy do serializacji.  
   
          Jeśli nowy typ jest zdefiniowany, zastosuj <xref:System.Runtime.Serialization.DataContractAttribute> do klasy. Mają zastosowanie również <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do wszystkich elementów członkowskich typu nowe, które muszą być Zserializowany jako część oświadczenia.  
   
@@ -56,9 +56,9 @@ Infrastruktury modelu tożsamości w systemie Windows Communication Foundation (
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  Wybierz uprawnienia, który jest definiowana za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lub unikatową wartość dla niestandardowego prawo.  
+    3.  Wybierz uprawnienia, który jest definiowana za pomocą usługi WCF lub unikatową wartość dla niestandardowego prawo.  
   
-         Prawo to identyfikator unikatowy ciąg. Prawa, które są zdefiniowane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
+         Prawo to identyfikator unikatowy ciąg. Prawa, które są definiowane przez WCF są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
   
          Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany do prawej jest unikatowa.  
   

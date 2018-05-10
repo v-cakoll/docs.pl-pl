@@ -2,11 +2,11 @@
 title: Niestandardowa publikacja WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-wsdl-publication"></a>Niestandardowa publikacja WSDL
 W przykładzie pokazano, jak:  
@@ -230,7 +230,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Gdy określono niestandardowe importera [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] metadanych załadowanie importera niestandardowych w każdym <xref:System.ServiceModel.Description.WsdlImporter> utworzone w tym celu. W przykładzie użyto <xref:System.ServiceModel.Description.MetadataExchangeClient> można pobrać metadanych <xref:System.ServiceModel.Description.WsdlImporter> poprawnie skonfigurowane, aby zaimportować metadane za pomocą niestandardowych importera tworzy próbki, i <xref:System.ServiceModel.Description.ServiceContractGenerator> zbieranie informacji zmienioną umowę na obu Visual Basic i C# klienta kodu, który można używać w programie Visual Studio do obsługi funkcji Intellisense lub skompilowany w dokumentacji XML.  
+ Gdy określono niestandardowe importera WCF metadanych załadowanie importera niestandardowych w każdym <xref:System.ServiceModel.Description.WsdlImporter> utworzone w tym celu. W przykładzie użyto <xref:System.ServiceModel.Description.MetadataExchangeClient> można pobrać metadanych <xref:System.ServiceModel.Description.WsdlImporter> poprawnie skonfigurowane, aby zaimportować metadane za pomocą niestandardowych importera tworzy próbki, i <xref:System.ServiceModel.Description.ServiceContractGenerator> zbieranie informacji zmienioną umowę na obu Visual Basic i C# klienta kodu, który można używać w programie Visual Studio do obsługi funkcji Intellisense lub skompilowany w dokumentacji XML.  
   
 ```  
 /// From WSDL Documentation:  

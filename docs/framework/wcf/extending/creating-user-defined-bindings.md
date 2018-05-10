@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Tworzenie powiązań zdefiniowanych przez użytkownika
 Istnieje kilka sposobów, aby utworzyć powiązania nie są dostarczane przez system:  
@@ -26,9 +26,9 @@ Istnieje kilka sposobów, aby utworzyć powiązania nie są dostarczane przez sy
   
  Elementy powiązania protokołu — te elementy reprezentują wyższego poziomu przetwarzania czynności, które działają w wiadomości. Kanałów i odbiorników utworzone przez te elementy powiązania można dodać, usunąć lub zmodyfikować zawartość komunikatu. Podane powiązanie może mieć dowolną liczbę elementy powiązania protokołu, każdy dziedziczenie z <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) obejmuje kilka elementów powiązania protokołu, w tym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> i <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Kodowanie elementu powiązania — te stanowią elementy przekształceń między komunikat i kodowania gotowe do transmisji w sieci. Typowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania zawierać dokładnie jeden element powiązania kodowania. Kodowanie elementy powiązania przykłady <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Jeśli nie określono kodowanie elementu powiązania dla powiązania, domyślnym kodowaniem jest używany. Wartość domyślna to tekst w przypadku transportu HTTP i dane binarne w przeciwnym razie wartość.  
+ Kodowanie elementu powiązania — te stanowią elementy przekształceń między komunikat i kodowania gotowe do transmisji w sieci. Typowy powiązania WCF zawierać dokładnie jeden element powiązania kodowania. Kodowanie elementy powiązania przykłady <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Jeśli nie określono kodowanie elementu powiązania dla powiązania, domyślnym kodowaniem jest używany. Wartość domyślna to tekst w przypadku transportu HTTP i dane binarne w przeciwnym razie wartość.  
   
- Element powiązania transportu — te elementy reprezentują transmisji kodowania komunikatu protokołu transportu. Typowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania zawierać dokładnie jeden element powiązania transportu, który dziedziczy <xref:System.ServiceModel.Channels.TransportBindingElement>. Przykłady transportu elementów wiązania <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement>i <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Element powiązania transportu — te elementy reprezentują transmisji kodowania komunikatu protokołu transportu. Typowy powiązania WCF zawierać dokładnie jeden element powiązania transportu, który dziedziczy <xref:System.ServiceModel.Channels.TransportBindingElement>. Przykłady transportu elementów wiązania <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement>i <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
  Podczas tworzenia nowego powiązania ważna jest kolejność elementów powiązania dodany. Zawsze dodawaj elementy powiązania w następującej kolejności:  
   
@@ -41,10 +41,10 @@ Istnieje kilka sposobów, aby utworzyć powiązania nie są dostarczane przez sy
 |Kodowanie|Tekst, Binary, MTOM, niestandardowe|Tak*|  
 |Transportu|TCP i nazwane potoki, HTTP, HTTPS, usługa MSMQ, niestandardowe|Tak|  
   
- * Ponieważ jest wymagane kodowanie dla każdego powiązania, jeśli nie określono kodowania, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dodaje domyślne kodowanie dla Ciebie. Wartość domyślna to Text/XML dla transportu HTTP i HTTPS, a danych binarnych w przeciwnym razie wartość.  
+ * Ponieważ jest wymagane kodowanie dla każdego powiązania, jeśli nie określono kodowania, WCF dodaje domyślne kodowanie dla Ciebie. Wartość domyślna to Text/XML dla transportu HTTP i HTTPS, a danych binarnych w przeciwnym razie wartość.  
   
 ## <a name="creating-a-new-binding-element"></a>Tworzenie nowego elementu powiązania  
- Oprócz typów pochodnych <xref:System.ServiceModel.Channels.BindingElement> są dostarczane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], możesz utworzyć własne elementy powiązania. Dzięki temu można dostosować sposób stosu powiązania jest tworzony i składników, które Przejdź w niej, tworząc własne <xref:System.ServiceModel.Channels.BindingElement> mogą się składać z innych typów dostarczane przez system na stosie.  
+ Oprócz typów pochodnych <xref:System.ServiceModel.Channels.BindingElement> które są dostarczane przez usługę WCF, możesz utworzyć własne elementy powiązania. Dzięki temu można dostosować sposób stosu powiązania jest tworzony i składników, które Przejdź w niej, tworząc własne <xref:System.ServiceModel.Channels.BindingElement> mogą się składać z innych typów dostarczane przez system na stosie.  
   
  Na przykład w przypadku zastosowania `LoggingBindingElement` zapewnia możliwość rejestrowania komunikatu do bazy danych, należy go umieścić powyżej kanał transportu w stosie kanału. W takim przypadku aplikacja tworzy niestandardowego powiązania, które składa się `LoggingBindingElement` z `TcpTransportBindingElement`, jak w poniższym przykładzie.  
   
@@ -64,7 +64,7 @@ Binding customBinding = new CustomBinding(
   
  Co najmniej powiązania zdefiniowane przez użytkownika musi implementować <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> — metoda i <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
   
- <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Metoda zwraca nową <xref:System.ServiceModel.Channels.BindingElementCollection> zawierającą elementy wiązania dla wiązania. Kolekcja jest określona i powinna zawierać elementy powiązania protokołu najpierw, a następnie element powiązania kodowania, a następnie element powiązania transportu. Korzystając z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementy wiązania dostarczane przez system, należy wykonać element powiązania reguły określone w kolejności [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md). Ta kolekcja nigdy nie powinien odwoływać się w klasie powiązania zdefiniowane przez użytkownika; odwoływać się do obiektów w związku z tym, autorzy powiązania musi zwracać `Clone()` z <xref:System.ServiceModel.Channels.BindingElementCollection> na każde wywołanie <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Metoda zwraca nową <xref:System.ServiceModel.Channels.BindingElementCollection> zawierającą elementy wiązania dla wiązania. Kolekcja jest określona i powinna zawierać elementy powiązania protokołu najpierw, a następnie element powiązania kodowania, a następnie element powiązania transportu. Korzystając z elementów wiązania WCF dostarczane przez system, należy wykonać element powiązania porządkowanie reguły określone w [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md). Ta kolekcja nigdy nie powinien odwoływać się w klasie powiązania zdefiniowane przez użytkownika; odwoływać się do obiektów w związku z tym, autorzy powiązania musi zwracać `Clone()` z <xref:System.ServiceModel.Channels.BindingElementCollection> na każde wywołanie <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
   
  <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Właściwość reprezentuje schemat identyfikatora URI używany dla powiązania protokołu transportu. Na przykład *WSHttpBinding* i *NetTcpBinding* zwrócić "http" i "net.tcp" z odpowiednich <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
   

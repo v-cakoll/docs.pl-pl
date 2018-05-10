@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d9e6b83a78967193c4cb0343f6c77560354a837
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-performance-counters"></a>Liczniki wydajności programu WCF
 Windows Communication Foundation (WCF) zawiera duży zbiór liczników wydajności, aby ocenić wydajność aplikacji.  
   
 ## <a name="enabling-performance-counters"></a>Włączanie liczników wydajności  
- Można włączyć liczniki wydajności dla [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] za pośrednictwem pliku konfiguracyjnego app.config [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi w następujący sposób:  
+ Liczniki wydajności dla usługi WCF można włączyć za pomocą pliku konfiguracji app.config usługi WCF w następujący sposób:  
   
 ```xml  
 <configuration>  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) zawiera duży zbiór liczników wydajnoś
   
 -   Wyłączone: Liczniki wydajności modelu ServiceModel * są wyłączone.  
   
- Jeśli chcesz włączyć liczniki wydajności dla wszystkich [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplikacje, ustawienia konfiguracji można umieścić w pliku Machine.config.  Zobacz **zwiększyć rozmiar pamięci dla liczników wydajności** sekcji poniżej, aby uzyskać więcej informacji na temat konfigurowania wystarczającą ilość pamięci dla liczników wydajności na tym komputerze.  
+ Jeśli chcesz włączyć liczniki wydajności dla wszystkich aplikacji WCF, ustawienia konfiguracji można umieścić w pliku Machine.config.  Zobacz **zwiększyć rozmiar pamięci dla liczników wydajności** sekcji poniżej, aby uzyskać więcej informacji na temat konfigurowania wystarczającą ilość pamięci dla liczników wydajności na tym komputerze.  
   
- Jeśli używasz [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] punktów rozszerzalności takich jak invokers operacja niestandardowa możesz powinny również Emituj liczniki wydajności. To dlatego, jeśli implementuje punkt rozszerzeń [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] może już nie Emituj danych licznika wydajności standardowe w domyślnej ścieżce. Jeśli nie implementuje obsługi licznika wydajności ręczne, nie zobaczysz oczekiwane dane licznika wydajności.  
+ Jeśli używasz punkty rozszerzeń WCF, takich jak invokers operacja niestandardowa, powinny również Emituj liczniki wydajności. Jest to spowodowane zastosowanie punkcie rozszerzenia WCF może nie są już emitowane dane licznika wydajności standardowe w domyślnej ścieżce. Jeśli nie implementuje obsługi licznika wydajności ręczne, nie zobaczysz oczekiwane dane licznika wydajności.  
   
  Można również włączyć liczniki wydajności kod w następujący sposób  
   
@@ -56,11 +56,11 @@ config.Save();
 >  Wystąpienia liczników wydajności może zostać zwolniony przed ostatnim wiadomości są przetwarzane przez Dyspozytor punktu końcowego. Może to spowodować danych wydajności nie przechwycone kilka komunikatów.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Zwiększyć rozmiar pamięci dla liczników wydajności  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] używa oddzielnych Pamięć współużytkowana dla jego kategorii licznika wydajności.  
+ Usługi WCF używa oddzielnych pamięci współużytkowanej jego kategorii licznika wydajności.  
   
- Domyślnie oddzielne pamięci współużytkowanej ustawiono kwartału rozmiar pamięci liczników wydajności globalnego. Domyślna pamięć licznika wydajności globalnego jest 524,288 bajtów. W związku z tym trzech [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kategorii licznika wydajności ma domyślny rozmiar około 128 KB. W zależności od właściwości środowisko uruchomieniowe [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplikacji na maszynie pamięci liczników wydajności mogą wyczerpane. W takim przypadku [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zapisuje komunikat o błędzie w dzienniku zdarzeń aplikacji. Stany zawartości błędu nie można załadować licznika wydajności, czy wyjątek zawiera wpis "System.InvalidOperationException: za mało pamięci dla widoku pliku liczników niestandardowych." Jeśli śledzenie jest włączone na poziomie błąd, ten błąd jest również śledzone. Jeśli wyczerpaniu pamięci liczników wydajności nadal uruchamiany z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplikacji za pomocą włączone liczniki wydajności może spowodować zmniejszenie wydajności. Jeśli jesteś administratorem komputera, należy skonfigurować ją przydzielić wystarczającej ilości pamięci do obsługi maksymalnie liczniki wydajności, które może występować w dowolnym momencie.  
+ Domyślnie oddzielne pamięci współużytkowanej ustawiono kwartału rozmiar pamięci liczników wydajności globalnego. Domyślna pamięć licznika wydajności globalnego jest 524,288 bajtów. W związku z tym trzech kategorii licznika wydajności usługi WCF ma domyślny rozmiar około 128KB. W zależności od właściwości środowisko uruchomieniowe aplikacji WCF na maszynie, może wyczerpaniu pamięci liczników wydajności. W takim przypadku WCF zapisuje błąd w dzienniku zdarzeń aplikacji. Stany zawartości błędu nie można załadować licznika wydajności, czy wyjątek zawiera wpis "System.InvalidOperationException: za mało pamięci dla widoku pliku liczników niestandardowych." Jeśli śledzenie jest włączone na poziomie błąd, ten błąd jest również śledzone. Jeśli wyczerpaniu pamięci liczników wydajności kontynuowanie do uruchomienia aplikacji WCF z włączoną liczników wydajności może spowodować obniżenie wydajności. Jeśli jesteś administratorem komputera, należy skonfigurować ją przydzielić wystarczającej ilości pamięci do obsługi maksymalnie liczniki wydajności, które może występować w dowolnym momencie.  
   
- Możesz zmienić ilość pamięci liczników wydajności dla [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kategorii w rejestrze. Aby to zrobić, należy dodać nową wartość DWORD o nazwie `FileMappingSize` do trzech następujących lokalizacji i ustaw ją na żądaną wartość w bajtach. Ponowny rozruch komputera, aby te zmiany są brane pod efekt.  
+ Można zmienić ilość pamięci liczników wydajności dla kategorii WCF w rejestrze. Aby to zrobić, należy dodać nową wartość DWORD o nazwie `FileMappingSize` do trzech następujących lokalizacji i ustaw ją na żądaną wartość w bajtach. Ponowny rozruch komputera, aby te zmiany są brane pod efekt.  
   
 -   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
@@ -123,7 +123,7 @@ ServiceName@ServiceBaseAddress
 >  Jeśli masz nazwy zduplikowanych operacji na kontrakt tylko uzyskać jednego wystąpienia liczników dla obu operacji.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>Programowanie liczniki wydajności programu WCF  
- Kilka plików są instalowane w folderze instalacyjnym zestawu SDK, dzięki czemu można uzyskać dostępu do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] programowo liczników wydajności. Te pliki znajdują się w następujący sposób.  
+ Niektóre pliki są instalowane w folderze instalacyjnym zestawu SDK, dzięki czemu programowy dostęp liczniki wydajności programu WCF. Te pliki znajdują się w następujący sposób.  
   
 -   _ServiceModelEndpointPerfCounters.vrg  
   

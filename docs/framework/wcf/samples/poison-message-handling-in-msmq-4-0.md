@@ -2,11 +2,11 @@
 title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 W tym przykładzie pokazano, jak wykonać Trująca wiadomość została obsługa w usłudze. Ten przykład jest oparty na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W przykładzie użyto `netMsmqBinding`. Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Przetwarzanie komunikatów z kolejki Trująca wiadomość  
  Trująca wiadomość usługi odczytuje wiadomości z kolejki końcowego Trująca wiadomość i przetwarza je.  
   
- Wiadomości w kolejce Trująca wiadomość są komunikaty adresowane do usługi, który przetwarza wiadomości, która może się różnić od punktu końcowego usługi Trująca wiadomość. W związku z tym, kiedy usługi Trująca wiadomość została odczytuje wiadomości z kolejki, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] warstwy kanału znajduje niezgodność w punktów końcowych i wysyła wiadomość. W takim przypadku wiadomość jest skierowana do kolejność przetwarzania usługi, ale są odbierane przez usługę Trująca wiadomość. Aby przejść do komunikatu, nawet jeśli komunikat jest skierowana do innego punktu końcowego, możemy dodać `ServiceBehavior` adresy filtr przypadku kryterium dopasowywania do dopasowania wiadomość jest skierowana do dowolnego punktu końcowego usługi. Jest to wymagane do pomyślnie przetwarzania komunikatów odczytujących z kolejki Trująca wiadomość.  
+ Wiadomości w kolejce Trująca wiadomość są komunikaty adresowane do usługi, który przetwarza wiadomości, która może się różnić od punktu końcowego usługi Trująca wiadomość. W związku z tym gdy usługa Trująca wiadomość odczytuje wiadomości z kolejki, warstwie kanału WCF znajduje niezgodność w punktów końcowych i nie wysłać wiadomości. W takim przypadku wiadomość jest skierowana do kolejność przetwarzania usługi, ale są odbierane przez usługę Trująca wiadomość. Aby przejść do komunikatu, nawet jeśli komunikat jest skierowana do innego punktu końcowego, możemy dodać `ServiceBehavior` adresy filtr przypadku kryterium dopasowywania do dopasowania wiadomość jest skierowana do dowolnego punktu końcowego usługi. Jest to wymagane do pomyślnie przetwarzania komunikatów odczytujących z kolejki Trująca wiadomość.  
   
  Trująca wiadomość implementacji usługi sam jest bardzo podobny do implementacji usługi. Ją implementuje kontrakt i przetwarza zamówienia. Przykładowy kod ma następującą składnię.  
 

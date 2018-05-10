@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: e1133194fe925bca4fb79d8adc1975a2063450f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9625400b855492ead12a5a2f1fa74f10164f6cdd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Instrukcje: Określanie wartości poświadczeń klienta
 Za pomocą usługi Windows Communication Foundation (WCF), usługa może określić, jak klient jest uwierzytelniony do usługi. Na przykład usługi można określić uwierzytelnienia klienta przy użyciu certyfikatu.  
@@ -44,7 +44,7 @@ Za pomocą usługi Windows Communication Foundation (WCF), usługa może określ
   
 1.  Użyj [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania kodu i konfiguracji usługi.  
   
-2.  Utwórz wystąpienie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta przy użyciu wygenerowanego kodu.  
+2.  Utwórz wystąpienie klienta WCF używającego wygenerowanego kodu.  
   
 3.  W klasie klienta, należy ustawić <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwość <xref:System.ServiceModel.ClientBase%601> klasy odpowiednią wartość. W tym przykładzie ustawiono właściwość certyfikatu X.509 przy użyciu <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> klasy.  
   

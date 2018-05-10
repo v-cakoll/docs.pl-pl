@@ -1,4 +1,4 @@
-﻿---
+---
 title: -&gt; Operator (odwołanie w C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; Operator (odwołanie w C#)
-Operator `->` laczy wyluskanie wskaznika i dostep do elementu czlonkowskiego.  
+Operator `->` łączy wyłuskanie wskaźnika i dostęp do elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
  Wyrażenie w postaci  
@@ -23,13 +23,13 @@ Operator `->` laczy wyluskanie wskaznika i dostep do elementu czlonkowskiego.
 x->y  
 ```  
   
- (gdzie `x` to wskaznik typu `T*`, a `y` to element czlonkowski `T`) jest odpowiednikiem wyrazenia  
+ (gdzie `x` to wskaźnik typu `T*`, a `y` to element członkowski `T`) jest odpowiednikiem wyrażenia  
   
 ```  
 (*x).y  
 ```  
   
- Operatora `->` mozna uzywac tylko w kodzie, który jest oznaczony jako [niebezpieczny](../../../csharp/language-reference/keywords/unsafe.md).  
+ Operatora `->` można używać tylko w kodzie, który jest oznaczony jako [niebezpieczny](../../../csharp/language-reference/keywords/unsafe.md).  
   
  Operator `->` nie może być przeciążony.  
   

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-extensibility"></a>Wprowadzenie do rozszerzalności
-Model aplikacji Windows Communication Foundation (WCF) jest zaprojektowana w celu rozwiązania większa część wymaganiach dotyczących komunikacji z dowolnej aplikacji rozproszonej. Zawsze jednak mogą scenariusze, które nie obsługują implementacji dostarczane przez system i domyślny model aplikacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Modelu rozszerzalności jest przeznaczona do obsługi niestandardowych scenariuszy, umożliwiając zmodyfikować zachowanie systemu na każdym poziomie, nawet do punktu wymiana modelu całej aplikacji. W tym temacie opisano różne obszary rozszerzenia i wskazuje więcej informacji o poszczególnych.  
+Model aplikacji Windows Communication Foundation (WCF) jest zaprojektowana w celu rozwiązania większa część wymaganiach dotyczących komunikacji z dowolnej aplikacji rozproszonej. Zawsze jednak mogą scenariusze, które nie obsługują implementacji dostarczane przez system i domyślny model aplikacji. Modelu rozszerzalności WCF jest przeznaczony do obsługi scenariuszy niestandardowych umożliwiając zmodyfikować zachowanie systemu na każdym poziomie, nawet do punktu wymiana modelu całej aplikacji. W tym temacie opisano różne obszary rozszerzenia i wskazuje więcej informacji o poszczególnych.  
   
 ## <a name="areas-to-extend"></a>Obszarów, aby rozszerzyć  
  Można rozszerzyć:  
@@ -25,7 +25,7 @@ Model aplikacji Windows Communication Foundation (WCF) jest zaprojektowana w cel
 -   Środowisko uruchomieniowe hosta. Spowoduje to rozszerzenie relacji hostingu domeny aplikacji do środowiska wykonawczego kanału i aplikacji.  
   
 ### <a name="extending-the-application-runtime"></a>Rozszerzanie środowiska uruchomieniowego aplikacji  
- W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji, jest różnica między wiadomości, które są przeznaczone dla odpowiedniego kanału i komunikaty, które są przeznaczone dla aplikacji. Komunikaty z kanałów obsługuje niektóre funkcje związane z kanału, takie jak ustanawianie bezpiecznej konwersacji lub ustanawiania niezawodnej sesji. Komunikaty te nie są dostępne do środowiska wykonawczego aplikacji; są przetwarzane przed uczestniczy warstwy aplikacji.  
+ W aplikacjach WCF jest różnica między wiadomości, które są przeznaczone dla odpowiedniego kanału i komunikaty, które są przeznaczone dla aplikacji. Komunikaty z kanałów obsługuje niektóre funkcje związane z kanału, takie jak ustanawianie bezpiecznej konwersacji lub ustanawiania niezawodnej sesji. Komunikaty te nie są dostępne do środowiska wykonawczego aplikacji; są przetwarzane przed uczestniczy warstwy aplikacji.  
   
  Komunikatów aplikacji zawiera dane, które jest przeznaczone dla klienta lub operacji usługi, utworzony zostanie lub klienta. Komunikaty te są dostępne dla systemu rozszerzenia na poziomie aplikacji w formie wiadomości lub obiektu, w zależności od potrzeb.  
   

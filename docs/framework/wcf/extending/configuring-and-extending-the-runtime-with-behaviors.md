@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af95fa01fc9caffb8a4f0e85d3457c7f3fa60320
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
 Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestandardowych rozszerzeń, które Inspekcja i sprawdź poprawność konfiguracji usługi lub modyfikowanie zachowania w czasie wykonywania w aplikacjach klienta i usługi Windows Communication Foundation (WCF). W tym temacie opisano interfejsów zachowanie, jak ich implementacji i sposobu dodawania ich do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo lub w pliku konfiguracji. Aby uzyskać więcej informacji na temat za pomocą zachowań dostarczane przez system, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania środowiska uruchomieniowego klienta](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Zachowania  
- Zachowanie typy są dodawane do usługi lub obiektów opis punktu końcowego usługi (na usługi lub klienta, odpowiednio) przed te obiekty są wykorzystywane przez Windows Communication Foundation (WCF) do tworzenia środowiska uruchomieniowego, która wykonuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi lub [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. Wywołanego te zachowania podczas procesu tworzenia środowiska uruchomieniowego są następnie dostęp do środowiska wykonawczego właściwości i metod, które modyfikują środowiska uruchomieniowego tworzony przez kontraktu, powiązania oraz adres.  
+ Zachowanie typy są dodawane do usługi lub obiektów opis punktu końcowego usługi (na usługi lub klienta, odpowiednio) przed te obiekty są wykorzystywane przez Windows Communication Foundation (WCF) do tworzenia środowisko uruchomieniowe, które wykonuje usługi WCF lub klienta programu WCF. Wywołanego te zachowania podczas procesu tworzenia środowiska uruchomieniowego są następnie dostęp do środowiska wykonawczego właściwości i metod, które modyfikują środowiska uruchomieniowego tworzony przez kontraktu, powiązania oraz adres.  
   
 ### <a name="behavior-methods"></a>Zachowanie metody  
  Ma wszystkie zachowania `AddBindingParameters` metody `ApplyDispatchBehavior` metody, `Validate` metody i `ApplyClientBehavior` metody z jednym wyjątkiem: ponieważ <xref:System.ServiceModel.Description.IServiceBehavior> nie można wykonać na kliencie nie implementuje on `ApplyClientBehavior`.  
@@ -33,9 +33,9 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
 > [!NOTE]
 >  Omówienie środowiska uruchomieniowego właściwości i typy rozszerzeń, których można użyć, aby zmodyfikować sposób wykonywania klienta, zobacz [rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md). Omówienie środowiska uruchomieniowego właściwości i typy rozszerzeń, które umożliwia modyfikowanie zachowania wykonywania dyspozytora usługi, zobacz [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
- Większość [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] użytkownicy nie korzystają z środowiska uruchomieniowego bezpośrednio; zamiast tego użyć ich core programowania konstrukcje modelu, takie jak punkty końcowe, kontrakty, powiązania, adresy i zachowanie atrybuty klasy lub zachowania w plikach konfiguracji. Konstrukcje te tworzą *drzewa opis*, który znajduje się pełna Specyfikacja konstruowania środowiska uruchomieniowego w celu obsługi usługi lub klienta opisanego przez drzewa opis.  
+ Większość użytkowników usługi WCF nie wchodzą w interakcje ze środowiskiem uruchomieniowym bezpośrednio; Zamiast tego użyć core programowania konstrukcje modelu, takie jak punkty końcowe, kontrakty, powiązania, adresy i zachowanie atrybuty klasy lub zachowania w plikach konfiguracji. Konstrukcje te tworzą *drzewa opis*, który znajduje się pełna Specyfikacja konstruowania środowiska uruchomieniowego w celu obsługi usługi lub klienta opisanego przez drzewa opis.  
   
- Istnieją cztery rodzaje zachowania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Istnieją cztery rodzaje zachowania w programie WCF:  
   
 -   Usługa zachowania (<xref:System.ServiceModel.Description.IServiceBehavior> typy) włączenia dostosowywania środowiska uruchomieniowego całej usługi, w tym <xref:System.ServiceModel.ServiceHostBase>.  
   
@@ -64,24 +64,24 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
   
 3.  Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> który rozszerza konfiguracji. Umożliwia to korzystanie z zachowanie usługi z pliki konfiguracji aplikacji.  
   
- Przykłady usługi zachowania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obejmują <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>i <xref:System.ServiceModel.Description.ServiceMetadataBehavior> zachowanie.  
+ Przykłady zachowania usługi programu WCF <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>i <xref:System.ServiceModel.Description.ServiceMetadataBehavior> zachowanie.  
   
 #### <a name="contract-behaviors"></a>Kontrakt zachowania  
  Zwiń zachowania, które implementują <xref:System.ServiceModel.Description.IContractBehavior> interfejsu, służą do rozszerzania środowiska uruchomieniowego klienta i usługi między kontrakt.  
   
- Istnieją dwa mechanizmy dodawania zachowania kontraktu do kontraktu.  Pierwszy mechanizmu polega na utworzeniu atrybutu niestandardowego ma być używany dla interfejsu kontraktu. Po użyciu interfejsu kontraktu jest przekazywany jako <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawdza, czy atrybuty w interfejsie. Jeśli wszystkie atrybuty są implementacje <xref:System.ServiceModel.Description.IContractBehavior>, te są dodawane do kolekcji zachowań na <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> utworzone dla tego interfejsu.  
+ Istnieją dwa mechanizmy dodawania zachowania kontraktu do kontraktu.  Pierwszy mechanizmu polega na utworzeniu atrybutu niestandardowego ma być używany dla interfejsu kontraktu. Po użyciu interfejsu kontraktu jest przekazywany jako <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601>, WCF sprawdza atrybutów w interfejsie. Jeśli wszystkie atrybuty są implementacje <xref:System.ServiceModel.Description.IContractBehavior>, te są dodawane do kolekcji zachowań na <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> utworzone dla tego interfejsu.  
   
  Można też wdrożyć <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> na atrybut zachowanie niestandardowych kontraktu. W takim przypadku zachowanie następująco po zastosowaniu do:  
   
- •Podstawowy interfejsu kontraktu. W takim przypadku zachowanie jest stosowane do wszystkich umów tego typu dowolnego punktu końcowego i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> właściwości.  
+ •Podstawowy interfejsu kontraktu. W takim przypadku zachowanie jest stosowany do wszystkich umów tego typu dowolnego punktu końcowego i WCF ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> właściwości.  
   
  Klasa usługi •podstawowy. W takim przypadku zachowanie jest stosowane tylko do punktów końcowych z kontraktem jest wartością <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> właściwości.  
   
- Klasa wywołania zwrotnego •podstawowy. W takim przypadku zachowanie jest stosowane do punktu końcowego dupleksu klienta i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> właściwości.  
+ Klasa wywołania zwrotnego •podstawowy. W takim przypadku zachowanie jest stosowany do punktu końcowego dupleksu klienta i WCF ignoruje wartość <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> właściwości.  
   
  Drugi mechanizm jest dodanie zachowania do kolekcji zachowań na <xref:System.ServiceModel.Description.ContractDescription>.  
   
- Przykłady zachowania kontraktu w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obejmują <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> atrybutu. Więcej informacji oraz przykład zobacz temat informacje.  
+ Przykłady zachowania kontraktu w programie WCF <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> atrybutu. Więcej informacji oraz przykład zobacz temat informacje.  
   
 #### <a name="endpoint-behaviors"></a>Zachowania punktu końcowego  
  Zachowania punktu końcowego, które implementują <xref:System.ServiceModel.Description.IEndpointBehavior>, są podstawowym mechanizm, za pomocą którego można zmodyfikować całej usługi lub klienta wykonawczego dla określonego punktu końcowego.  
@@ -97,11 +97,11 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
 #### <a name="operation-behaviors"></a>Operacja zachowania  
  Operacja zachowania, które implementują <xref:System.ServiceModel.Description.IOperationBehavior> interfejsu, służą do rozszerzania środowiska uruchomieniowego klienta i usługi dla każdej operacji.  
   
- Istnieją dwa mechanizmy Dodawanie zachowań operacji do operacji. Pierwszy mechanizmu polega na utworzeniu atrybutu niestandardowego ma być używany dla metody, która modele operacji. Po dodaniu działania do albo <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dodaje wszelkie <xref:System.ServiceModel.Description.IOperationBehavior> atrybuty do kolekcji zachowań na <xref:System.ServiceModel.Description.OperationDescription> utworzone dla tej operacji.  
+ Istnieją dwa mechanizmy Dodawanie zachowań operacji do operacji. Pierwszy mechanizmu polega na utworzeniu atrybutu niestandardowego ma być używany dla metody, która modele operacji. Po dodaniu działania do albo <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory>, WCF dodaje wszelkie <xref:System.ServiceModel.Description.IOperationBehavior> atrybuty do kolekcji zachowań na <xref:System.ServiceModel.Description.OperationDescription> utworzone dla tej operacji.  
   
  Drugi mechanizm jest bezpośrednio dodając zachowania do kolekcji zachowań na skonstruowane <xref:System.ServiceModel.Description.OperationDescription>.  
   
- Przykłady zachowania operacji w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obejmują <xref:System.ServiceModel.OperationBehaviorAttribute> i <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ Przykłady zachowania operacji w programie WCF <xref:System.ServiceModel.OperationBehaviorAttribute> i <xref:System.ServiceModel.TransactionFlowAttribute>.  
   
  Więcej informacji oraz przykład zobacz temat informacje.  
   

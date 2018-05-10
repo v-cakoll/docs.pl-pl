@@ -2,16 +2,16 @@
 title: Śledzenie
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing"></a>Śledzenie
 Windows Communication Foundation (WCF) zapewnia instrumentacji aplikacji i danych diagnostycznych błędów monitorowania i analizy. Śledzenie można użyć zamiast debugera zrozumienie zachowania aplikacji lub przyczynę błędów. Między składnikami, aby zapewnić środowisko end-to-end można również dostosować błędów i przetwarzania.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Wyświetla następujące dane śledzenia diagnostycznego:  
+ Usługi WCF generuje następujące dane śledzenia diagnostycznego:  
   
 -   Ślady punktów kontrolnych procesu dotyczące wszystkich składników aplikacji, takie jak wywołania operacji kodu: wyjątki, ostrzeżenia i inne istotne przetwarzanie zdarzeń."  
   
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) zapewnia instrumentacji aplikacji i danyc
   
  [Informacje o śladach](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- W tym temacie wymieniono wszystkie ślady generowane przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ W tym temacie wymieniono wszystkie ślady generowane przez usługę WCF.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>Usługi
 Ta sekcja zawiera przykłady ilustrujące usług Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Pokazuje hosting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.  
+ Pokazuje hostingu usług WCF.  
   
  [Współdziałanie usług](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- Pokazuje interakcje między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i innych technologii usługi.  
+ Pokazuje interakcje między WCF i innych technologii usługi.  
   
  [Zachowania](../../../../docs/framework/wcf/samples/behaviors.md)  
- Pokazuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zachowania usługi.  
+ Pokazuje zachowania usługi WCF.  
   
  [Zabezpieczenia usług](../../../../docs/framework/wcf/samples/service-security.md)  
- Pokazuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia usługi.  
+ Pokazuje zabezpieczenia usługi WCF.  
   
  [Uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- Pokazuje, jak wdrożyć i skonfigurować typowe usługi i klienta przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Pokazuje, jak wdrożyć i skonfigurować typowe usługi i klienta przy użyciu programu WCF.  
   
  [Użycie standardowych punktów końcowych](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Pokazuje, jak używać standardowych punktów końcowych w plikach konfiguracji usługi.  
@@ -55,7 +55,7 @@ Ta sekcja zawiera przykłady ilustrujące usług Windows Communication Foundatio
  Pokazuje usługi, która obsługuje wiele punktów końcowych w pojedynczym `ListenUri`.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Pokazano sposób wysyłania dodatkowe informacje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywołanie przy użyciu nagłówków.  
+ Pokazano sposób wysyłania dodatkowych informacji na temat wywołanie WCF przy użyciu nagłówków.  
   
  [Opis usługi](../../../../docs/framework/wcf/samples/service-description.md)  
  Pokazuje, jak usługa można pobrać jego informacje o opisie usługi w czasie wykonywania.  

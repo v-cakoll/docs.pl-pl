@@ -2,11 +2,11 @@
 title: Token niestandardowy
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>Token niestandardowy
 Ten przykład przedstawia sposób dodawania niestandardowych implementacji token do aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` do bezpieczne przekazywanie informacji o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowana przy użyciu elementu powiązania zabezpieczeń symetrycznego wraz z treści wiadomości i innych nagłówków komunikatów. Jest to przydatne w sytuacjach, gdy wbudowanych tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczeń niestandardowej z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
@@ -20,7 +20,7 @@ Ten przykład przedstawia sposób dodawania niestandardowych implementacji token
   
 -   Jak usługa może wykorzystywać i zweryfikować tokenu zabezpieczającego niestandardowych.  
   
--   Jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kodu usługi można uzyskać informacje na temat tokeny zabezpieczające odebrane wraz z tokenem niestandardowy zabezpieczeń.  
+-   Jak kodu usługi WCF można uzyskać informacje na temat tokeny zabezpieczające odebrane wraz z tokenem niestandardowy zabezpieczeń.  
   
 -   Jak certyfikat X.509 służy do ochrony klucz symetryczny stosowany do szyfrowania wiadomości i podpis.  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Implementacja tokenu zabezpieczeń niestandardowych  
- Aby włączyć tokenu zabezpieczającego niestandardowych w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Utwórz obiekt reprezentację tokenu zabezpieczającego niestandardowych. Próbka ma taka reprezentacja w `CreditCardToken` klasy. Reprezentacja obiektu odpowiada do przechowywania wszystkich informacji o tokenie zabezpieczeń oraz zamieszczono listę kluczy zabezpieczeń zawartych w tokenie zabezpieczającym. W takim przypadku tokenu zabezpieczającego karty kredytowej nie zawiera żadnych klucz zabezpieczeń.  
+ Aby włączyć tokenu zabezpieczającego niestandardowych w programie WCF, Utwórz obiekt reprezentację tokenu zabezpieczającego niestandardowych. Próbka ma taka reprezentacja w `CreditCardToken` klasy. Reprezentacja obiektu odpowiada do przechowywania wszystkich informacji o tokenie zabezpieczeń oraz zamieszczono listę kluczy zabezpieczeń zawartych w tokenie zabezpieczającym. W takim przypadku tokenu zabezpieczającego karty kredytowej nie zawiera żadnych klucz zabezpieczeń.  
   
- W następnej sekcji opisano, co można zrobić, aby włączyć niestandardowy token przesyłane przez sieć i używane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktu końcowego.  
+ W następnej sekcji opisano, co należy wykonać, aby włączyć niestandardowy token przesyłane przez sieć i używane przez punkt końcowy usługi WCF.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Pobieranie tokenu z komunikatu i niestandardowe karty kredytowej  
- Serializatorów tokenu zabezpieczeń w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] są odpowiedzialne za tworzenie obiektu reprezentację tokeny zabezpieczające z pliku XML w komunikacie i tworzenie formularza XML tokenów zabezpieczających. Są one również odpowiedzialne za inne funkcje, takie jak odczytywanie i zapisywanie klucza identyfikatory wskazujący tokeny zabezpieczające, ale w tym przykładzie użyto tylko funkcji związanych z tokenu zabezpieczeń. Aby włączyć niestandardowy token należy zaimplementować własny Serializator tokenu zabezpieczającego. W przykładzie użyto `CreditCardSecurityTokenSerializer` klasy w tym celu.  
+ Serializatorów tokenu zabezpieczeń w programie WCF są odpowiedzialne za tworzenie obiektu reprezentację tokeny zabezpieczające z pliku XML w komunikacie i tworzenie formularza XML tokenów zabezpieczających. Są one również odpowiedzialne za inne funkcje, takie jak odczytywanie i zapisywanie klucza identyfikatory wskazujący tokeny zabezpieczające, ale w tym przykładzie użyto tylko funkcji związanych z tokenu zabezpieczeń. Aby włączyć niestandardowy token należy zaimplementować własny Serializator tokenu zabezpieczającego. W przykładzie użyto `CreditCardSecurityTokenSerializer` klasy w tym celu.  
   
  W usłudze serializatora niestandardowego odczytuje formularz XML tokenu niestandardowego i tworzy reprezentację niestandardowego obiektu tokenu z niego.  
   

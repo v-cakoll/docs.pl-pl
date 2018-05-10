@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: 7be5ca95732b4ddadf851ccf839e31be3c5b47bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="query-execution"></a>Wykonywanie zapytania
 Po utworzeniu zapytania LINQ przez użytkownika, zostanie przekonwertowane na drzewo poleceń. Drzewo poleceń jest reprezentację kwerendę, która jest zgodna z programu Entity Framework. Drzewo poleceń jest następnie wykonywane względem źródła danych. Podczas wykonywania zapytania wszystkie wyrażenia zapytania (to znaczy, że wszystkie składniki zapytania) są oceniane pod tym tych wyrażeń, które są używane w wyniku materialization.  
@@ -17,7 +17,10 @@ Po utworzeniu zapytania LINQ przez użytkownika, zostanie przekonwertowane na dr
  Na jakie punktu wyrażenia zapytania są wykonywane może się różnić. Zapytania LINQ są zawsze wykonywane, gdy zmienną zapytania jest iterowane, nie, po utworzeniu zmiennej zapytania. Ta metoda jest wywoływana *odroczonego wykonania*. Możesz też wymusić zapytanie w celu wykonania natychmiast, który jest przydatny do buforowania wyników zapytania. Jest to opisane w dalszej części tego tematu.  
   
  Podczas wykonywania zapytania składnika LINQ to Entities, niektóre wyrażenia w zapytaniu może być wykonywane na serwerze, a niektóre elementy mogą wykonać lokalnie na komputerze klienckim. Obliczenie wyrażenia po stronie klienta odbywa się przed wykonaniem zapytania na serwerze. Jeśli wyrażenie jest obliczane na kliencie, zastępuje wynik tej oceny wyrażenia w zapytaniu, a następnie wykonać zapytania na serwerze. Konfiguracja źródła danych, ponieważ zapytania są wykonywane w źródle danych, zastępowanie zachowanie określone w kliencie. Na przykład Obsługa wartości null i dokładność wartości liczbowych są zależne od ustawień serwera. Wszelkie wyjątki zgłaszane podczas wykonywania zapytania na serwerze są przekazywane bezpośrednio do klienta.  
-  
+ 
+> [!TIP]
+> Podsumowanie wygodny operatorów zapytań w formacie tabeli, która pozwala na szybkie identyfikowanie sposób wykonywania operatora, zobacz [klasyfikacji z standardowych operatorów zapytań w czasie wykonywania (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+
 ## <a name="deferred-query-execution"></a>Wykonywanie zapytań odroczonych  
  W zapytaniu, która zwraca sekwencję wartości samej zmiennej zapytanie nigdy nie zawiera wyników zapytania i przechowuje dane tylko w poleceniach zapytań. Wykonanie kwerendy jest odłożona do zmiennej zapytania jest powtórzyć za pośrednictwem w `foreach` lub `For Each` pętli. Jest to nazywane *odroczonego wykonania*; oznacza to, że zapytania pewien czas po zapytaniu jest tworzony jest wykonywany. Oznacza to, że można wykonać zapytania często chcesz. Jest to przydatne, gdy na przykład istnieć bazy danych, która jest aktualizowana przez inne aplikacje. W aplikacji można utworzyć kwerendę, aby pobrać najnowsze informacje i wielokrotnie wykonać zapytanie, zwracając zaktualizowane informacje zawsze.  
   

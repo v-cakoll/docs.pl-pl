@@ -2,21 +2,21 @@
 title: Niezawodny dostawca wystawionych tokenów
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>Niezawodny dostawca wystawionych tokenów
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego klienta, dostawca wystawionych tokenów.  
   
 ## <a name="discussion"></a>Omówienie  
- Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podanie poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
+ Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podanie poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. Usługi WCF jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
   
 -   Jeśli masz Magazyn poświadczeń, które wbudowanego dostawcy tokenów nie może pracować z.  
   
--   Jeśli chcesz udostępnić własny niestandardowy mechanizm do przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje o tym, kiedy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta używa poświadczeń.  
+-   Jeśli chcesz udostępnić własny niestandardowy mechanizm do przekształcania poświadczenia z punktu, gdy użytkownik podaje szczegóły, aby podczas klienta WCF używa poświadczeń.  
   
 -   Jeśli tworzysz niestandardowy token.  
   
@@ -26,7 +26,7 @@ W tym przykładzie pokazano, jak do zaimplementowania niestandardowego klienta, 
   
 -   Jak można skonfigurować klienta z niestandardowego dostawcy tokenu.  
   
--   Jak wystawione tokeny mogą być buforowane i przekazane do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta.  
+-   Jak wystawione tokeny mogą być buforowane i dostarczony do klienta platformy WCF.  
   
 -   Jak serwer jest uwierzytelniany przez klienta przy użyciu certyfikat X.509.  
   
@@ -109,7 +109,7 @@ W tym przykładzie pokazano, jak do zaimplementowania niestandardowego klienta, 
  Usługa tokenu zabezpieczającego przedstawia przy użyciu standardowych wsHttpBinding jeden punkt końcowy. Usługi tokenu zabezpieczającego odpowiada na żądania od klientów tokenów i pod warunkiem klienta jest uwierzytelniany przy użyciu konta systemu Windows, wystawia token, który zawiera nazwę użytkownika klienta jako oświadczenia w wystawionego tokenu. Podczas tworzenia tokenu znaki usługi tokenu zabezpieczeń tokenu przy użyciu klucza prywatnego skojarzonego z CN = certyfikat STS. Ponadto tworzy klucza symetrycznego i szyfruje go za pomocą klucza publicznego skojarzonego z CN = localhost certyfikat. Zwracany token do klienta, usługę tokenu zabezpieczającego zwraca klucz symetryczny. Klient prezentuje wystawionego tokenu z usługą Kalkulator i okaże się wie klucza symetrycznego, tworząc wiadomości z tego klucza.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Niestandardowe poświadczenia i dostawcy tokenów  
- Poniższe kroki pokazują, jak utworzyć niestandardowego dostawcę tokenów, że pamięci podręcznych wystawionych tokenów i ich integracji z programem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: zabezpieczeń.  
+ Poniższe kroki pokazują, jak utworzyć niestandardowego dostawcę tokenów, że pamięci podręcznych wystawionych tokenów i zintegrować ją z programem WCF: zabezpieczeń.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>Aby utworzyć niestandardowego dostawcę tokenów  
   

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 38035230cf4f5e411f7ec769a169528ada130749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61a81e342a16bd298cbebef2dc733b5ec631839c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Określanie zachowania środowiska uruchomieniowego usługi
 Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)) i realizowane umowy serwisowej ([Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)) można skonfigurować zachowanie operacji usługi czasu wykonywania. W tym temacie omówiono usługi dostarczane przez system i zachowania operacji i opisano, gdzie można znaleźć więcej informacji, aby utworzyć nowe zachowania. Podczas niektórych zachowań są stosowane jako atrybuty, wiele są stosowane przy użyciu pliku konfiguracji aplikacji lub programowo. Aby uzyskać więcej informacji na temat konfigurowania aplikacji usługi, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
@@ -21,7 +21,7 @@ Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../..
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> i <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> atrybuty są najczęściej przydatne zachowania i Ujawnij najczęściej wymagane funkcje operacji. Ponieważ są one atrybuty, należy je zastosować do wykonania operacji lub usługi. Innych zachowań, takich jak <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, są zazwyczaj stosowane przy użyciu pliku konfiguracji aplikacji, chociaż można je programowo.  
   
- Ten temat zawiera omówienie <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutów, w tym artykule opisano różne zakresy, w których zachowania może działać oraz ich opisy szybkie wielu zachowania dostarczane przez system w różnych zakresów, które mogą być odsetek do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] deweloperów.  
+ Ten temat zawiera omówienie <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutów, w tym artykule opisano różne zakresy, w których zachowania może działać oraz ich opisy szybkie wielu zachowania dostarczane przez system w różnych zakresów, które mogą być odsetek do deweloperów usług WCF.  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute i OperationBehaviorAttribute  
  Najważniejsze zachowania są <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybuty, które służy do sterowania:  
@@ -76,13 +76,13 @@ Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../..
 ### <a name="service-behaviors"></a>Zachowania usług  
  Następujące zachowania działają na usługi.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Stosowane do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, aby wskazać, czy usługi mogą być uruchamiane [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] w trybie zgodności.  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Stosowane do usługi WCF, aby wskazać, czy usługi mogą być uruchamiane [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] w trybie zgodności.  
   
 -   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Określa, jak usługa autoryzuje oświadczenia klienta.  
   
 -   <xref:System.ServiceModel.Description.ServiceCredentials>. Określa poświadczenia usługi. Ta klasa umożliwia określanie poświadczeń dla usługi, takie jak certyfikat X.509.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Włącza debugowanie i funkcje informacji pomocy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi.  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Włącza debugowanie i pomóc funkcje informacji dla usługi WCF.  
   
 -   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Określa publikację usługi metadanych i skojarzonych informacji.  
   
@@ -95,13 +95,13 @@ Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../..
   
 -   <xref:System.ServiceModel.CallbackBehaviorAttribute>. Konfiguruje implementacji usługi wywołania zwrotnego w aplikacji klienckiej dupleksowych.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Włącza usługę debugowania dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu wywołania zwrotnego.  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Włącza usługę debugowania dla obiektu wywołania zwrotnego WCF.  
   
 -   <xref:System.ServiceModel.Description.ClientCredentials>. Zezwala użytkownikowi na konfigurowanie poświadczeń klienta i usługi, a także ustawienia uwierzytelniania poświadczenia do użycia na kliencie usługi.  
   
 -   <xref:System.ServiceModel.Description.ClientViaBehavior>. Używany przez klientów, aby określić identyfikator URI (Uniform Resource) dla której należy utworzyć kanał transportu.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Powoduje, że [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wyłączyć `MustUnderstand` przetwarzania.  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Powoduje, że usługi WCF, aby wyłączyć `MustUnderstand` przetwarzania.  
   
 -   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Powoduje, że środowiska uruchomieniowego do użycia synchronicznego odbierania procesu dla kanałów.  
   

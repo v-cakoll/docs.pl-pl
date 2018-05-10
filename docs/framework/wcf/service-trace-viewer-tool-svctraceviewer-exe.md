@@ -2,14 +2,14 @@
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
-Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, widoków i filtrować komunikaty śledzenia w dzienniku, tak aby zdiagnozować, naprawy i sprawdź [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi problemy.  
+Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez usługę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, widoków i filtrować komunikaty śledzenia w dzienniku, tak aby zdiagnozować, naprawy i sprawdź problemów dotyczących usługi WCF.  
   
 ## <a name="configuring-tracing"></a>Konfigurowanie śledzenia  
  Dane śledzenia diagnostycznego udostępnić informacje, które wskazują na to, co dzieje się w całej aplikacji operacji. Jak nazwa wskazuje, można wykonać operacji z ich źródła do miejsca docelowego, a także pośrednich punktów.  
@@ -55,7 +55,7 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Otwieranie i wyświetlanie plików śledzenia WCF  
  Przeglądarka śledzenia usługi obsługuje trzy typy plików:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Śledzenie plików (.svcLog)  
+-   Usługi WCF (.svcLog) pliku śledzenia  
   
 -   Zdarzenia śledzenia w pliku (ETL)  
   
@@ -65,7 +65,7 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
   
 ##### <a name="to-open-a-trace-file"></a>Aby otworzyć plik śledzenia  
   
-1.  Uruchom Podgląd śledzenia usługi przy użyciu okna polecenia, aby przejść do Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] lokalizacji instalacji (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz `SvcTraceViewer.exe`.  
+1.  Uruchom Podgląd śledzenia usługi za pomocą okna polecenia przejdź do lokalizacji instalacji usługi WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Narzędzia podglądu śledzenia usługi można skojarzyć z dwóch typów plików: .svclog i .stvproj. Dwa parametry wiersza polecenia umożliwia rejestrowanie i wyrejestrowywanie rozszerzenia pliku.  
@@ -87,7 +87,7 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
 >  Nie zaleca się załadowanie pliku dziennika śledzenia większe niż 200MB. Próba załadowania pliku większego niż to ograniczenie proces ładowania może zająć dużo czasu, w zależności od zasobu komputera. Narzędzia podglądu śledzenia usługi mogą nie odpowiadać przez długi czas lub może on zużywa pamięć komputera. Zalecane jest skonfigurowanie częściowe ładowania Aby tego uniknąć. Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz sekcję "Pliki ładowania dużych śledzenia".  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>Śledzenie zdarzeń i śledzenia Crismon  
- Formatu macierzystego podglądu jest śledzenie działania format [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] emituje. Przed przeglądarka wyświetli je, należy przekonwertować śladów emitowanych w innym formacie. Obecnie oprócz format śledzenie działania, przeglądarka obsługuje śledzenie zdarzeń i śledzenia crismon.  
+ Podgląd formatu macierzystego to format śledzenie działania, który emituje WCF. Przed przeglądarka wyświetli je, należy przekonwertować śladów emitowanych w innym formacie. Obecnie oprócz format śledzenie działania, przeglądarka obsługuje śledzenie zdarzeń i śledzenia crismon.  
   
  Po otwarciu pliku, który nie zawiera działania śledzenia Podgląd próbuje przekonwertować pliku. Należy określić nazwę i lokalizację pliku, który będzie zawierać dane śledzenia przekonwertowany. Po konwersji danych przeglądarka wyświetla zawartość nowego pliku.  
   
@@ -104,7 +104,7 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
 -   W **projektu** karcie, możesz dodać pliki do projektu.  
   
 ### <a name="viewing-wcf-traces"></a>Wyświetlanie śledzenia WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] emituje danych śledzenia przy użyciu formatu śledzenie działania. W modelu śledzenie działania indywidualnych ślady są pogrupowane w działania zgodnie z ich przeznaczenie. Przepływ sterowania logiczne są przesyłane między działaniami. Na przykład przez cały okres istnienia aplikacji, wiele "działania wysyłania komunikatu" pojawiają się i znikają. Aby uzyskać więcej informacji o wyświetlaniu zbyt śladów i działań i interfejsu użytkownika podglądu śledzenia usługi, zobacz [przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Usługi WCF emituje danych śledzenia przy użyciu formatu śledzenie działania. W modelu śledzenie działania indywidualnych ślady są pogrupowane w działania zgodnie z ich przeznaczenie. Przepływ sterowania logiczne są przesyłane między działaniami. Na przykład przez cały okres istnienia aplikacji, wiele "działania wysyłania komunikatu" pojawiają się i znikają. Aby uzyskać więcej informacji o wyświetlaniu zbyt śladów i działań i interfejsu użytkownika podglądu śledzenia usługi, zobacz [przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Przełączanie do innych widoków  
  Przeglądarka śledzenia usługi udostępnia następujące widoki. Są wyświetlane jako karty w lewym okienku Podgląd i mogą również uzyskiwać z **widoku** menu.  
@@ -217,7 +217,7 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
   
 -   Filtr narzędzi zapewnia dostęp do wstępnie zdefiniowanych i niestandardowych filtrów. Można ją włączyć za pomocą **widoku** menu.  
   
--   Wstępnie zdefiniowany filtr podglądu może służyć do selektywnego filtrować części [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] śladów. Domyślnie jest ustawiona zezwalająca na wszystkie ślady infrastruktury do przekazywania. Ustawienia tego filtru są definiowane w **opcje filtrowania** podmenu w obszarze **widoku** menu.  
+-   Wstępnie zdefiniowany filtr podglądu może służyć do filtrowania selektywnie części śledzenia WCF. Domyślnie jest ustawiona zezwalająca na wszystkie ślady infrastruktury do przekazywania. Ustawienia tego filtru są definiowane w **opcje filtrowania** podmenu w obszarze **widoku** menu.  
   
 -   Filtry niestandardowe XPath zapewniają użytkownikom pełną kontrolę nad filtrowania. Może być zdefiniowana w **niestandardowy filtr** w obszarze **widoku** menu.  
   
@@ -237,7 +237,7 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
  **Wyczyść** przycisk resetuje filtry wstępnie zdefiniowanych i niestandardowych zezwalająca na wszystkie ślady do przekazywania.  
   
 #### <a name="filter-options"></a>Opcje filtru  
- Przeglądarka nie może automatycznie usunąć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] śladów z widoku. Można selektywnie usunąć śladów emitowane przez określone obszary [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], na przykład usunięcie transakcji powiązanych śladów z widoku.  
+ Podgląd może automatycznie usunąć śledzenia WCF z widoku. Można selektywnie usunąć śladów emitowane przez określone obszary WCF, na przykład usunięcie transakcji powiązanego z śladów z widoku.  
   
  Ustawienia tego filtru są definiowane w **opcje filtrowania** podmenu w obszarze **widoku** menu.  
   
@@ -347,7 +347,7 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
 -   Kroku Backward: Użyj **działania** menu lub naciśnij przycisk "F9". Umożliwia także strzałka "w górę" w okienku śledzenia.  
   
 > [!NOTE]
->  To może zająć do działania wykonywane w ramach innego procesu lub na innym komputerze, ponieważ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wiadomości może przenosić identyfikatorów, które obejmują maszyny działania.  
+>  Może to zająć należy do działania wykonywane w ramach innego procesu lub na innym komputerze, ponieważ wiadomości WCF może przenosić identyfikatorów, które obejmują maszyny działania.  
   
 #### <a name="follow-transfer"></a>Wykonaj transferu  
  Transfer danych śledzenia są specjalne dane śledzenia w pliku śledzenia. Działanie może przenieść do innego działania śledzenia transferu. Na przykład "Działania A", mogą przesyłać do "Działania B". W takim przypadku Brak śledzenia transfer w ikonie "Działania A" o nazwie "Działania:" i transferu. Ślad transfer jest powiązanie tych dwóch zapisów śledzenia. W "Działania B" może być również śledzenia transferu na koniec działania powrotem do "Działania A". Jest to podobne do wywołania funkcji w programach: A wywołuje B, a następnie zwraca B.  
@@ -417,9 +417,9 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Komunikat dziennika śledzenia](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Komunikatów dziennika śledzenia: śledzenia, która jest wysyłanego, gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest rejestrowany przez funkcję rejestrowania komunikatów, gdy `System.ServiceModel.MessageLogging` źródła śledzenia jest włączona. Kliknięcie tego śledzenia powoduje wyświetlenie komunikatu. Istnieją cztery punkty można skonfigurować rejestrowanie wiadomości: ServiceLevelSendRequest, TransportSend TransportReceive i ServiceLevelReceiveRequest, który można również określić przez `messageSource` atrybutu w wiadomości dziennika śledzenia.|  
-|![Komunikat śledzenia odebrane](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Komunikat śledzenia odebrane: śledzenia, która jest wysyłanego, gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wiadomość zostanie odebrana, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad jest niezbędne do wyświetlania strzałkę korelacji wiadomości w działaniu **wykres** widoku.|  
-|![Komunikat śledzenia wysłane](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Komunikat śledzenia wysłane: śledzenia, która jest wysyłanego, gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest wysyłany komunikat, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad jest niezbędne do wyświetlania strzałkę korelacji wiadomości w działaniu **wykres** widoku.|  
+|![Komunikat dziennika śledzenia](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Komunikat dziennika śledzenia: emitowanego podczas rejestrowania wiadomości WCF przez funkcję rejestrowanie komunikatów śledzenia podczas `System.ServiceModel.MessageLogging` źródła śledzenia jest włączona. Kliknięcie tego śledzenia powoduje wyświetlenie komunikatu. Istnieją cztery punkty można skonfigurować rejestrowanie wiadomości: ServiceLevelSendRequest, TransportSend TransportReceive i ServiceLevelReceiveRequest, który można również określić przez `messageSource` atrybutu w wiadomości dziennika śledzenia.|  
+|![Komunikat śledzenia odebrane](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Komunikat śledzenia odebrane: śledzenia emitowanego po odebraniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad jest niezbędne do wyświetlania strzałkę korelacji wiadomości w działaniu **wykres** widoku.|  
+|![Komunikat śledzenia wysłane](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Komunikat śledzenia wysłane: śledzenia emitowanego po wysłaniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad jest niezbędne do wyświetlania strzałkę korelacji wiadomości w działaniu **wykres** widoku.|  
   
 ### <a name="activities"></a>Kategoria Activities  
   
@@ -432,11 +432,11 @@ Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) p
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Działanie środowiska](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta lub klienta. Błędy, które wystąpiło podczas fazy te będą wyświetlane w tego działania.|  
+|![Działanie środowiska](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które umożliwia tworzenie, powoduje otwarcie lub zamknięcie klienta lub hosta usługi WCF. Błędy, które wystąpiło podczas fazy te będą wyświetlane w tego działania.|  
 |![Nasłuchiwanie działania](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Nasłuchiwanie działania: działanie, które dzienniki śledzenia związane z odbiornik. Wewnątrz tego działania możemy wyświetlić żądania odbiornika informacji i połączenia.|  
 |![Odbieranie bajtów działania](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Działanie bajtów odbierania: działania, który grupuje wszystkie ślady dotyczące odbierania bajtów przychodzących na połączenie między dwoma punktami końcowymi. To działanie ma zasadnicze znaczenie korelacji z działaniami transportu, propagujące ich identyfikator działania, takie jak sterownik http.sys. Błędy połączenia, takie jak przerwań pojawi się tego działania.|  
-|![Przetwarzanie komunikatów działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Przetwarzanie działania komunikatu: działania, który grupuje dane śledzenia dotyczących tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wiadomości. Błędy z powodu nieprawidłowych koperty lub źle sformułowane wiadomości będą wyświetlane w tym działania. Wewnątrz tego działania możemy sprawdzić nagłówki komunikatów, aby sprawdzić, czy identyfikator działania pochodzi z obiektu wywołującego. Jeśli to PRAWDA, gdy przekazywane do procesu akcji działania (dalej), firma Microsoft można także przypisać dla danego działania propagowany działania identyfikator korelacji między wywołującego i ślady wywołującej.|  
-|![Komunikat dziennika śledzenia](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Przetwarzanie działanie Action: działania, który grupuje wszystkie ślady dotyczące [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] żądanie między dwoma punktami końcowymi. Jeśli `propagateActivity` ma ustawioną wartość `true` dla obu punktów końcowych w konfiguracji wszystkie ślady z oba punkty końcowe są scalane w jedno działanie dla bezpośredniego korelacji. Takie działanie będzie zawierać błędy z powodu transportu lub zabezpieczeń przetwarzania, rozszerzanie do granicy kod użytkownika i (jeśli istnieje odpowiedzi).|  
+|![Przetwarzanie komunikatów działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Przetwarzanie działania komunikatu: działania, który grupuje dane śledzenia dotyczących tworzenia wiadomości WCF. Błędy z powodu nieprawidłowych koperty lub źle sformułowane wiadomości będą wyświetlane w tym działania. Wewnątrz tego działania możemy sprawdzić nagłówki komunikatów, aby sprawdzić, czy identyfikator działania pochodzi z obiektu wywołującego. Jeśli to PRAWDA, gdy przekazywane do procesu akcji działania (dalej), firma Microsoft można także przypisać dla danego działania propagowany działania identyfikator korelacji między wywołującego i ślady wywołującej.|  
+|![Komunikat dziennika śledzenia](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Przetwarzanie działanie Action: działania, który grupuje wszystkie ślady dotyczące żądania WCF między dwoma punktami końcowymi. Jeśli `propagateActivity` ma ustawioną wartość `true` dla obu punktów końcowych w konfiguracji wszystkie ślady z oba punkty końcowe są scalane w jedno działanie dla bezpośredniego korelacji. Takie działanie będzie zawierać błędy z powodu transportu lub zabezpieczeń przetwarzania, rozszerzanie do granicy kod użytkownika i (jeśli istnieje odpowiedzi).|  
 |![Przetwarzanie komunikatów działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Wykonanie działania kodu użytkownika: śledzi działania, który grupuje kod użytkownika do przetworzenia żądania.|  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  

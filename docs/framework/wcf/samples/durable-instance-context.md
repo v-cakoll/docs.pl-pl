@@ -2,11 +2,11 @@
 title: Kontekst niezawodnej instancji
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
 W tym przykładzie pokazano, jak dostosować włączyć kontekst niezawodnej instancji środowiska uruchomieniowego systemu Windows Communication Foundation (WCF). SQL Server 2005 używa jako magazynu zapasowego, jego (SQL Server 2005 Express w tym przypadku). Jednak umożliwia także sposób uzyskać dostępu do magazynu niestandardowych mechanizmów.  
@@ -14,7 +14,7 @@ W tym przykładzie pokazano, jak dostosować włączyć kontekst niezawodnej ins
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Ten przykład obejmuje zarówno warstwie kanału, jak i warstwy modelu usług z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. W związku z tym należy zrozumieć podstawowe pojęcia przed przejściem do szczegóły implementacji.  
+ Ten przykład obejmuje zarówno warstwie kanału, jak i warstwy modelu usług WCF. W związku z tym należy zrozumieć podstawowe pojęcia przed przejściem do szczegóły implementacji.  
   
  Konteksty wystąpienia trwałych znajduje się w rzeczywistych scenariuszach bardzo często. Na przykład aplikację koszyka zakupów ma możliwość wstrzymać zakupy w połowie za pośrednictwem i kontynuować go innym dnia. Tak, aby po firma Microsoft odwiedź koszyka następnego dnia, naszych oryginalnego kontekst został przywrócony. Należy pamiętać, że aplikacja koszyka zakupów (na serwerze) nie przechowuje wystąpienie koszyka zakupów odłączeniu możemy są. Zamiast tego utrwala swój stan na trwałe nośników i używa go podczas tworzenia nowego wystąpienia dla kontekstu przywrócone. W związku z tym wystąpienie usługi, która może obsłużyć tego samego kontekstu nie jest taka sama jak poprzedniego wystąpienia (to znaczy, że nie ma ten sam adres pamięci).  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- Implementacje tych kanałów jest następnie dodawana do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska uruchomieniowego kanału przez `DurableInstanceContextBindingElement` klasy i `DurableInstanceContextBindingElementSection` odpowiednio klasy. Zobacz [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) kanału przykładowej dokumentacji więcej szczegółów na temat elementów wiązania i powiązania elementu sekcje.  
+ Implementacje tych kanałów jest następnie dodawana do środowiska wykonawczego kanału WCF przez `DurableInstanceContextBindingElement` klasy i `DurableInstanceContextBindingElementSection` odpowiednio klasy. Zobacz [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) kanału przykładowej dokumentacji więcej szczegółów na temat elementów wiązania i powiązania elementu sekcje.  
   
 ## <a name="service-model-layer-extensions"></a>Rozszerzenia warstwy modelu usług  
  Teraz, identyfikator kontekstu ma pokonać za pośrednictwem warstwy kanału, można zaimplementować zachowanie usługi do dostosowywania wystąpienia. W tym przykładzie Menedżer magazynowania służy do ładowania i zapisać stanu z lub do magazynu trwałego. Jak opisano wcześniej, w tym przykładzie przedstawiono Menedżer magazynowania, który używa programu SQL Server 2005 jako jego magazynu zapasowego. Jednak również jest możliwie dodanie mechanizmów magazynu niestandardowego do tego rozszerzenia. W tym celu interfejs publiczny jest zadeklarowana, musi być implementowana przez wszystkich menedżerów magazynu.  
@@ -228,9 +228,9 @@ else
   
  Zaimplementowano infrastruktury wymaganej do odczytu i zapisu z magazynu trwałego wystąpienia. Teraz czynności niezbędnych do zmiany zachowania usługi muszą zostać pobrane.  
   
- W pierwszym kroku procesu mamy do zapisania Identyfikatora kontekstu, która pochodzi za pośrednictwem warstwy kanału do bieżącego obiektu InstanceContext. Obiekt InstanceContext jest składnika środowiska uruchomieniowego, który pełni rolę łącza między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dyspozytora i wystąpienie usługi. Może służyć do dodatkowych stanie i zachowanie do wystąpienia usługi. Jest to konieczne, ponieważ w komunikacie sesyjnych identyfikator kontekstu jest wysyłane tylko z pierwszego komunikatu.  
+ W pierwszym kroku procesu mamy do zapisania Identyfikatora kontekstu, która pochodzi za pośrednictwem warstwy kanału do bieżącego obiektu InstanceContext. Obiekt InstanceContext jest składnika środowiska uruchomieniowego, który pełni rolę łącza między dyspozytora WCF i wystąpienie usługi. Może służyć do dodatkowych stanie i zachowanie do wystąpienia usługi. Jest to konieczne, ponieważ w komunikacie sesyjnych identyfikator kontekstu jest wysyłane tylko z pierwszego komunikatu.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umożliwia rozszerzanie jej składnika środowiska wykonawczego InstanceContext przez dodanie nowego stanu i zachowanie przy użyciu jego wzorca rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu rozszerzonego obiektu - interfejs IExtensibleObject\<T >, IExtension\<T >, a IExtensionCollection\<T >:  
+ Usługi WCF umożliwia rozszerzanie jej składnika środowiska wykonawczego InstanceContext przez dodanie nowego stanu i zachowanie przy użyciu jego wzorca rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w programie WCF wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu rozszerzonego obiektu - interfejs IExtensibleObject\<T >, IExtension\<T >, a IExtensionCollection\<T >:  
   
 -   Interfejs IExtensibleObject\<T > Interfejs jest implementowany przez obiekty, które umożliwia rozszerzenia umożliwiające dostosowanie ich funkcje.  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Zgodnie z wcześniejszym opisem identyfikator kontekstu zostanie odczytany z `Properties` Kolekcja `Message` klasy i przekazany do konstruktora klasy extension. Oznacza to, jak informacje może być wymieniane między warstwami w sposób ciągły.  
   
- Następnym krokiem ważne zastępuje procesu tworzenia wystąpienia usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia Implementowanie niestandardowego wystąpienia zachowania i przechwytywanie je do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowe `InstanceProvider` zaimplementowana jest klasa, aby wykonać to zadanie. W Konstruktorze jest akceptowany oczekiwano od dostawcy wystąpienia typu usługi. Później służy to tworzenia nowych wystąpień. W `GetInstance` tworzone jest wystąpienie Menedżera magazynu implementacji wyszukiwanie trwałego wystąpienia. Jeśli zmienna zwraca `null` utworzone nowe wystąpienie typu usługi i zwracany do obiektu wywołującego.  
+ Następnym krokiem ważne zastępuje procesu tworzenia wystąpienia usługi. Usługi WCF umożliwia Implementowanie niestandardowego wystąpienia zachowania i przechwytywanie je do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowe `InstanceProvider` zaimplementowana jest klasa, aby wykonać to zadanie. W Konstruktorze jest akceptowany oczekiwano od dostawcy wystąpienia typu usługi. Później służy to tworzenia nowych wystąpień. W `GetInstance` tworzone jest wystąpienie Menedżera magazynu implementacji wyszukiwanie trwałego wystąpienia. Jeśli zmienna zwraca `null` utworzone nowe wystąpienie typu usługi i zwracany do obiektu wywołującego.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  W podsumowaniu wykonanej do tej pory w tym przykładzie ma utworzyło kanału, który jest włączony protokół przewodowy niestandardowych dla programu exchange identyfikator kontekstu niestandardowe, a także zastępuje domyślne zachowanie można załadować wystąpienia z magazynu trwałego wystąpień.  
   
- Pozostała to sposób Zapisz do magazynu trwałego wystąpienia usługi. Jak wspomniano wcześniej, jest już wymagane funkcje można zapisać stanu w `IStorageManager` implementacji. Mamy teraz należy zintegrować to z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska wykonawczego. Inny atrybut jest wymagany, które mają zastosowanie do metody w klasie implementacji usługi. Ten atrybut powinien można zastosować do metody, które spowodują zmianę stanu wystąpienia usługi.  
+ Pozostała to sposób Zapisz do magazynu trwałego wystąpienia usługi. Jak wspomniano wcześniej, jest już wymagane funkcje można zapisać stanu w `IStorageManager` implementacji. Mamy teraz należy zintegrować to ze środowiskiem uruchomieniowym WCF. Inny atrybut jest wymagany, które mają zastosowanie do metody w klasie implementacji usługi. Ten atrybut powinien można zastosować do metody, które spowodują zmianę stanu wystąpienia usługi.  
   
- `SaveStateAttribute` Klasa implementuje tę funkcję. Implementuje również `IOperationBehavior` klasę, aby zmodyfikować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska uruchomieniowego dla każdej operacji. Gdy metoda jest oznaczona atrybutem, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywołuje środowiska uruchomieniowego `ApplyBehavior` metoda podczas odpowiednie `DispatchOperation` jest tworzona. W tej implementacji metody jest pojedynczy wiersz kodu:  
+ `SaveStateAttribute` Klasa implementuje tę funkcję. Implementuje również `IOperationBehavior` klasę, aby zmodyfikować środowiska uruchomieniowego WCF dla każdej operacji. Podczas metoda jest oznaczona atrybutem tego atrybutu, wywołuje środowiska uruchomieniowego WCF `ApplyBehavior` metoda podczas odpowiednie `DispatchOperation` jest tworzona. W tej implementacji metody jest pojedynczy wiersz kodu:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -373,7 +373,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>Przy użyciu rozszerzenia  
- Kanał warstwy i usługi warstwy rozszerzeń modelu są wykonywane, a teraz mogą być używane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. Usługi trzeba dodać do stosu kanału, za pomocą niestandardowego powiązania kanału, a następnie oznaczenie klasy implementacji usługi z odpowiednich atrybutów.  
+ Zarówno warstwy kanału i rozszerzeń warstwy modelu usług są wykonywane, i teraz można używać w aplikacji WCF. Usługi trzeba dodać do stosu kanału, za pomocą niestandardowego powiązania kanału, a następnie oznaczenie klasy implementacji usługi z odpowiednich atrybutów.  
   
 ```  
 [DurableInstanceContext]  

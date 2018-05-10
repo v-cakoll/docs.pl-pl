@@ -1,32 +1,18 @@
 ---
 title: Co&#39;s Nowość w systemie Windows Communication Foundation 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ca03c4529588964abe2d0d434bfd47b005e8d26
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Co&#39;s Nowość w systemie Windows Communication Foundation 4.5
-W tym temacie omówiono zaczynasz korzystać z funkcji [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+W tym temacie omówiono funkcje nowe do usługi Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-simplification-features"></a>Funkcje upraszczania programu WCF  
  Aby ułatwić tworzenie i obsługa aplikacji WCF 4.5 zostało wykonane dużo pracy. Aby uzyskać więcej informacji, zobacz [funkcje upraszczania programu WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
@@ -87,7 +73,7 @@ W tym temacie omówiono zaczynasz korzystać z funkcji [!INCLUDE[indigo1](../../
  Aby ułatwić nowych i istniejących WCF usługi deweloperom konfigurowanie w swoich usług, Edytor XML usługi Visual Studio teraz udostępnia etykietki narzędzi dla każdego elementu konfiguracji i jego właściwości, które jest częścią pliku konfiguracji usługi.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Umożliwia deweloperom konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi być skonfigurowana po wdrożeniu. Podczas korzystania z plików konfiguracyjnych, specjalistów IT wystarczy tylko zaktualizować pliku konfiguracji, kompilacji nie jest wymagana. Pliki konfiguracji, jednak można złożone i trudne w utrzymaniu. Nie jest obsługiwane dla debugowania plików konfiguracji i elementy konfiguracji odwołują się nazwy, dzięki czemu tworzenia plików konfiguracyjnych podatne na błędy i trudne. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Umożliwia również skonfigurować usługi w kodzie. W starszych wersjach [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach siebie <xref:System.ServiceModel.ServiceHost> klasa dozwolona konfigurowania punktów końcowych i zachowania przed wywołaniem ServiceHost.Open. W scenariuszach hostowana w sieci web, jednak nie masz dostępu do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować sieci web hostowanej usługi są wymagane do utworzenia `System.ServiceModel.ServiceHostFactory` utworzony <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać wszelkie wymagane konfiguracji. W programie .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umożliwia łatwiejsze sposobem skonfigurowania obu hosta samodzielnego i sieci web hostowanych usług w kodzie. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług WCF w kodzie](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ Windows Communication Foundation (WCF) umożliwia deweloperom konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi być skonfigurowana po wdrożeniu. Podczas korzystania z plików konfiguracyjnych, specjalistów IT wystarczy tylko zaktualizować pliku konfiguracji, kompilacji nie jest wymagana. Pliki konfiguracji, jednak można złożone i trudne w utrzymaniu. Nie jest obsługiwane dla debugowania plików konfiguracji i elementy konfiguracji odwołują się nazwy, dzięki czemu tworzenia plików konfiguracyjnych podatne na błędy i trudne. Usługi WCF umożliwia również konfigurowanie usługi w kodzie. W starszych wersjach, konfigurowanie usług WCF (4.0 i starszych) w kodzie było łatwe w scenariuszach siebie <xref:System.ServiceModel.ServiceHost> klasa dozwolona konfigurowania punktów końcowych i zachowania przed wywołaniem ServiceHost.Open. W scenariuszach hostowana w sieci web, jednak nie masz dostępu do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować sieci web hostowanej usługi są wymagane do utworzenia `System.ServiceModel.ServiceHostFactory` utworzony <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać wszelkie wymagane konfiguracji. Począwszy od platformy .NET 4.5, usługi WCF zapewnia łatwiejszy sposób skonfigurowania obu hosta samodzielnego i sieci web hostowanej usługi w kodzie. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług WCF w kodzie](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>Buforowanie elementu ChannelFactory  
  Aplikacje klienta WCF <xref:System.ServiceModel.ChannelFactory%601> klasę, aby utworzyć kanał komunikacji z usługą WCF.  Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień powoduje pewne nadmiarowe obciążenie, ponieważ obejmuje ona następujące operacje:  
@@ -121,7 +107,7 @@ W tym temacie omówiono zaczynasz korzystać z funkcji [!INCLUDE[indigo1](../../
  Wartości atrybutów w plikach konfiguracji dla atrybutów niestandardowych zdefiniowanych w projekcie teraz intellisense pomocy technicznej w celu ułatwienia pracy z konfiguracjami szybkiego.  
   
 ## <a name="configuration-tooltips"></a>Etykietki narzędzi konfiguracji  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] elementów i atrybutów teraz łatwiej trzeba etykietki narzędzi w edytorze XML, a dokładnie sprawdzić celem elementu lub atrybutu.  
+ WCF elementów i atrybutów teraz łatwiej trzeba etykietki narzędzi w edytorze XML, a dokładnie sprawdzić celem elementu lub atrybutu.  
   
 ## <a name="paste-data-as-classes"></a>Wklejanie danych jako klasy  
  W projekcie programu WCF typów danych zdefiniowanych w pliku XML (takie jak są widoczne w usłudze) można wkleić bezpośrednio do strony kodowej. Typ XML zostanie wklejona jako typu CLR. Zobacz [generowania klasy typów danych z pliku XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) więcej szczegółów.  

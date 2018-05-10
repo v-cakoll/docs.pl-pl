@@ -2,19 +2,19 @@
 title: Działanie
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="activity"></a>Działanie
 W tym temacie opisano działania śledzenia w modelu śledzenia usług Windows Communication Foundation (WCF). Działania są przetwarzania jednostki, które pomagają użytkownikowi zawęzić zakres awarii. Błędy występujące w tej samej działania są bezpośrednio powiązane. Na przykład kończy się niepowodzeniem, ponieważ odszyfrowywania wiadomości nie powiodło się. Ślady za działanie i błąd odszyfrowywania wiadomości są wyświetlane w to samo działanie przedstawiający bezpośredniego korelacja błędu odszyfrowywania Błąd żądania.  
   
 ## <a name="configuring-activity-tracing"></a>Konfigurowanie śledzenia działania  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] udostępnia wstępnie zdefiniowane działań do przetwarzania aplikacji (zobacz [lista działania](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Działania można również definiować programowo do grupy użytkowników śladów. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ Usługi WCF udostępnia wstępnie zdefiniowane działań do przetwarzania aplikacji (zobacz [lista działania](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Działania można również definiować programowo do grupy użytkowników śladów. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
- Aby wysyłać ślady działania w czasie wykonywania, należy użyć `ActivityTracing` ustawienie `System.ServiceModel` śledzenia źródła lub inne [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] lub źródła śledzenia niestandardowych, jak pokazano w następującym kodem konfiguracji.  
+ Aby wysyłać ślady działania w czasie wykonywania, należy użyć `ActivityTracing` ustawienie `System.ServiceModel` śledzenia źródła, lub inne WCF lub źródła śledzenia niestandardowych, jak pokazano w następującym kodem konfiguracji.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
@@ -88,7 +88,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Działanie oznacza granic przetwarzania, który może być istotnych dla administratora systemu lub obsługi.  
   
--   Każdy [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] metody, zarówno na kliencie i serwerze, jest ograniczona przez od nowego działania, a następnie (po zakończeniu pracy) kończy nowe działanie i powrót do działania otoczenia.  
+-   Każda metoda WCF, zarówno na kliencie i serwerze, jest ograniczona przez od nowego działania, a następnie (po zakończeniu pracy) kończy nowe działanie i powrót do działania otoczenia.  
   
 -   Czas uruchamiania (ciągłe) działania, takie jak nasłuchiwania dla połączeń lub Oczekiwanie na komunikaty są reprezentowane przez odpowiednie znaczniki uruchamiania i zatrzymywania.  
   

@@ -2,11 +2,11 @@
 title: Powiązanie danych w kliencie formularzy systemu Windows
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: a84aeedba89cc7a5c267a0fd1f6c4f604fe80d43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38991390f2d0dd272b8d07041b61e6cf16db0cae
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Powiązanie danych w kliencie formularzy systemu Windows
 W tym przykładzie pokazano, jak można powiązać z danymi zwróconymi przez usługę Windows Communication Foundation (WCF) w aplikacji formularzy systemu Windows.  
@@ -14,11 +14,11 @@ W tym przykładzie pokazano, jak można powiązać z danymi zwróconymi przez us
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego artykułu.  
   
- W przykładzie pokazano to usługa, która implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź. Próbka składa się z klienta aplikacji formularzy systemu Windows (.exe) i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi hostowanej przez Internetowe usługi informacyjne (IIS).  
+ W przykładzie pokazano to usługa, która implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź. Próbka składa się z klienta aplikacji formularzy systemu Windows (.exe) i usługi WCF hostowanej przez Internetowe usługi informacyjne (IIS).  
   
  Kontrakt jest definiowana za pomocą `IWeatherService` interfejsu, który udostępnia operacji o nazwie `GetWeatherData`. Ta operacja akceptuje tablicy miast i zwraca tablicę `WeatherData` obiekty reprezentujące wysoki i niski prognozowanych temperatura miasta.  
   
- Powiązanie danych występuje na komputerze klienckim w aplikacji formularzy systemu Windows. A `DataGridView` jest zdefiniowany w narzędziu Projektant dla formularzy systemu Windows, czyli graficzną reprezentację danych. Pośrednik o nazwie `BindingSource` tworzona jest również. Źródło danych `BindingSource` ma ustawioną wartość tablicy danych zwróconych przez usługę. Celem `BindingSource` jest zapewnienie warstwę pośredni między danymi i widoku danych. Wszystkie interakcje z danymi, takich jak przeglądanie, sortowanie, filtrowanie i aktualizowanie, jest realizowane za pomocą wywołania `BindingSource` składnika. Powiązywanie danych do celu `DataGridView`, `datasource` z `DataGridView` następnie ustawiono `BindingSource` obiektu. Wszystkie dane zwrócone w wyniku [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] graficznie zebrane usługi dla użytkownika.  Za każdym razem, gdy użytkownik kliknie przycisk, zwrócone dane są automatycznie aktualizowane w powiązanym z danymi `DataGridView`.  
+ Powiązanie danych występuje na komputerze klienckim w aplikacji formularzy systemu Windows. A `DataGridView` jest zdefiniowany w narzędziu Projektant dla formularzy systemu Windows, czyli graficzną reprezentację danych. Pośrednik o nazwie `BindingSource` tworzona jest również. Źródło danych `BindingSource` ma ustawioną wartość tablicy danych zwróconych przez usługę. Celem `BindingSource` jest zapewnienie warstwę pośredni między danymi i widoku danych. Wszystkie interakcje z danymi, takich jak przeglądanie, sortowanie, filtrowanie i aktualizowanie, jest realizowane za pomocą wywołania `BindingSource` składnika. Powiązywanie danych do celu `DataGridView`, `datasource` z `DataGridView` następnie ustawiono `BindingSource` obiektu. Wszystkie dane zwrócone z usługi WCF zebrane graficznie dla użytkownika.  Za każdym razem, gdy użytkownik kliknie przycisk, zwrócone dane są automatycznie aktualizowane w powiązanym z danymi `DataGridView`.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
   

@@ -2,11 +2,11 @@
 title: Instrukcje dotyczące konfigurowania katalogów wirtualnych
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrukcje dotyczące konfigurowania katalogów wirtualnych
 Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnej katalog wirtualny o nazwie servicemodelsamples, który jest zamapowany na %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.  
@@ -35,12 +35,12 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnej
 7.  Kliknij przycisk **OK**. Aplikacja sieci Web został utworzony dla przykładów WCF.  
   
     > [!NOTE]
-    >  To zadanie należy wykonać tylko raz, ponieważ wszystkie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przykłady użycia servicemodelsamples tej samej aplikacji sieci Web.  
+    >  To zadanie można wykonać tylko raz, ponieważ wszystkie przykłady WCF używają tego samego servicemodelsamples aplikacji sieci Web.  
   
     > [!NOTE]
     >  Na potrzeby tej dokumentacji termin `virtual directory` CGI `Web application`.  
   
-     Oprócz tworzenia katalogu wirtualnego, należy także ustawić jej właściwości w celu włączenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] działanie usług. Aby uzyskać więcej informacji, zobacz poniżej.  
+     Oprócz tworzenia katalogu wirtualnego, należy także ustawić jego właściwości, aby umożliwić działanie usług WCF. Aby uzyskać więcej informacji, zobacz poniżej.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Można utworzyć katalogu wirtualnego w wersji 5.1 usług IIS lub 6.0  
   
@@ -52,7 +52,7 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnej
   
 4.  W kreatorze wpisz `servicemodelsamples` jako alias katalogu wirtualnego, który tworzysz.  
   
-5.  Ustaw ścieżkę na % SystemDrive%\inetpub\wwwroot\servicemodelsamples. Większość [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przykłady skopiuj pliki wykonywalne usługi do tej lokalizacji, podczas tworzenia.  
+5.  Ustaw ścieżkę na % SystemDrive%\inetpub\wwwroot\servicemodelsamples. Większość przykładów WCF skopiuj pliki wykonywalne usługi do tej lokalizacji, podczas tworzenia.  
   
 6.  Kliknij przycisk **Dalej**.  
   
@@ -65,7 +65,7 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnej
 8.  Kliknij przycisk **dalej**, a następnie kliknij przycisk **Zakończ** aby zakończyć pracę kreatora.  
   
     > [!NOTE]
-    >  To zadanie należy wykonać tylko raz. ponieważ wszystkie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przykłady użyć tego samego servicemodelsamples katalogu wirtualnego.  
+    >  To zadanie należy wykonać tylko raz, ponieważ przykłady WCF używają tego samego servicemodelsamples katalogu wirtualnego.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Aby ustawić właściwości dodatkowe katalogu wirtualnego w usługach IIS 7.0 lub 7.5  
   

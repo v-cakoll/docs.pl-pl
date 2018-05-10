@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
 W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezpieczeniami usług Windows Communication Foundation (WCF) przez:  
@@ -29,11 +29,11 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Omówienie  
- Każda z tych funkcji może być używane razem lub osobno aspektów kontroli zabezpieczeń usługi. To nie jest wyczerpujący do zabezpieczania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+ Każda z tych funkcji może być używane razem lub osobno aspektów kontroli zabezpieczeń usługi. To nie jest wyczerpujący do zabezpieczania usługi WCF.  
   
  Pliki konfiguracji .NET Framework mogą zawierać poufne informacje, takie jak parametry połączenia z bazami danych. W scenariuszach udostępnionego, hostowanych w sieci Web może być pożądane, aby zaszyfrować te informacje w pliku konfiguracji dla usługi tak, aby dane zawarte w pliku konfiguracji jest odporna na wyświetlanie zwykłych. .NET framework 2.0 lub nowszy ma możliwość szyfrowania części pliku konfiguracji za pomocą programowania interfejsu (DPAPI) lub dostawcy usług kryptograficznych RSA aplikacji ochrony danych systemu Windows. Aspnet_regiis.exe przy użyciu DPAPI lub RSA można zaszyfrować wybierz części pliku konfiguracji.  
   
- W scenariuszach hostowanych w sieci Web jest możliwe usług w podkatalogach innych usług. Domyślne semantycznego określania wartości konfiguracji umożliwia pliki konfiguracyjne w katalogach zagnieżdżone, aby zastąpić wartości konfiguracji w katalogu nadrzędnym. W niektórych sytuacjach może to być niepożądane z różnych przyczyn. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Usługa konfiguracji obsługuje blokowania wartości konfiguracji, dzięki czemu zagnieżdżone konfiguracji generuje wyjątki, gdy jest uruchamiana usługa zagnieżdżonych przy użyciu przesłonięcia wartości konfiguracji.  
+ W scenariuszach hostowanych w sieci Web jest możliwe usług w podkatalogach innych usług. Domyślne semantycznego określania wartości konfiguracji umożliwia pliki konfiguracyjne w katalogach zagnieżdżone, aby zastąpić wartości konfiguracji w katalogu nadrzędnym. W niektórych sytuacjach może to być niepożądane z różnych przyczyn. Obsługa konfiguracji usługi WCF blokowania wartości konfiguracji, dzięki czemu zagnieżdżone konfiguracji generuje wyjątki, gdy jest uruchamiana usługa zagnieżdżonych przy użyciu przesłonięcia wartości konfiguracji.  
   
  W tym przykładzie pokazano, jak sterujące rejestrowaniem z znane osobiście informacji osobowych w dziennikach śledzenia i wiadomości, takie jak nazwa użytkownika i hasło. Domyślnie rejestrowanie znanych danych jest wyłączona, jednak w niektórych sytuacjach może być ważne dla debugowania aplikacji rejestrowanie danych osobowych. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ponadto w tym przykładzie użyto śledzenie i rejestrowanie komunikatów. Aby uzyskać więcej informacji, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbki.  
   

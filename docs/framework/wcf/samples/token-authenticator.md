@@ -2,11 +2,11 @@
 title: Wystawca uwierzytelnienia tokenów
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Wystawca uwierzytelnienia tokenów
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego wystawcy uwierzytelnienia tokenu. Token uwierzytelniania w systemie Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu używane z komunikatu, sprawdzania jest spójny, czy uwierzytelnianie tożsamość skojarzona z tokenem.  
@@ -23,11 +23,11 @@ W tym przykładzie pokazano, jak do zaimplementowania niestandardowego wystawcy 
   
 -   Jak serwer można sprawdzić poprawności poświadczeń klienta przy użyciu niestandardowego wystawcy uwierzytelnienia tokenu.  
   
--   Jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kodu usługi wiąże się przy użyciu niestandardowego wystawcy uwierzytelnienia tokenu.  
+-   Jak kodu usługi WCF wiąże się przy użyciu niestandardowego wystawcy uwierzytelnienia tokenu.  
   
 -   W jaki sposób serwer mogą być uwierzytelniane za pomocą certyfikatu X.509 serwera.  
   
- W tym przykładzie pokazano, jak tożsamość obiektu wywołującego jest dostępny z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] po procesie uwierzytelniania tokenu niestandardowego.  
+ W tym przykładzie przedstawiono również sposób tożsamości obiektu wywołującego jest dostępny z WCF po procesie uwierzytelniania tokenu niestandardowego.  
   
  Usługa udostępnia jeden punkt końcowy dla komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Punkt końcowy składa się z adresu, powiązania i kontrakt. Powiązanie jest skonfigurowane z normą `wsHttpBinding`, tryb zabezpieczeń, ustawiono na wiadomości - domyślnego trybu `wsHttpBinding`. W tym przykładzie ustawia standardowego `wsHttpBinding` uwierzytelniania nazwa użytkownika klienta. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowanie. `securityCredentials` Zachowanie pozwala określić certyfikat usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewnienia ochrony wiadomości. Następująca konfiguracja odwołuje się do certyfikatu localhost zainstalowane podczas instalacji próbki zgodnie z opisem w poniższych instrukcjach instalacji.  
   

@@ -4,11 +4,11 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 1186ad41fa1a6befcfcc4fa1f547605bb69e68bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 85694cbfe8c30b8430200f0ffbd01379f11b3f9d
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD opartych na danych
 
@@ -251,11 +251,11 @@ catalog.api:
     - "5101:80"
 ```
 
-Pliki docker-compose.yml na poziomie rozwiązania nie są tylko bardziej elastyczne niż pliki konfiguracji na poziomie projektu lub mikrousługi, ale także więcej, ale również wyższy poziom bezpieczeństwa w razie przesłonięcia zmienne środowiskowe zadeklarowane na pliki docker-compose z wartości z narzędziami wdrażania, takie jak z zadania wdrażania programu VSTS Docker. 
+Plik docker-compose.yml na poziomie rozwiązania nie są tylko bardziej elastyczne niż pliki konfiguracji na poziomie projektu lub mikrousługi, ale również wyższy poziom bezpieczeństwa w razie przesłonięcia zmienne środowiskowe zadeklarowane na pliki docker-compose z wartości ustawione na narzędziami wdrażania, takie jak z zadania wdrażania programu VSTS Docker. 
 
 Ponadto można uzyskać tę wartość w kodzie za pomocą konfiguracji\["ConnectionString"\], jak pokazano w metodzie ConfigureServices w wcześniejszego przykładu kodu.
 
-Jednak dla środowisk produkcyjnych, możesz chcieć explorer dodatkowe sposoby na jak przechowywać hasła, takie jak parametry połączenia. Zazwyczaj które będą zarządzane przez z wybranym orchestrator, jak można zrobić za pomocą [Docker Swarm zarządzania kluczy tajnych](https://docs.docker.com/engine/swarm/secrets/).
+Jednak dla środowisk produkcyjnych, możesz rozpocząć eksplorowanie dodatkowe sposoby na jak przechowywać hasła, takie jak parametry połączenia. Zazwyczaj które będą zarządzane przez z wybranym orchestrator, jak można zrobić za pomocą [Docker Swarm zarządzania kluczy tajnych](https://docs.docker.com/engine/swarm/secrets/).
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>Implementowanie przechowywania wersji w interfejsów API sieci Web ASP.NET
 

@@ -2,11 +2,11 @@
 title: Tworzenie wystąpienia inicjowania
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="instancing-initialization"></a>Tworzenie wystąpienia inicjowania
 W tym przykładzie rozszerza [buforowanie](../../../../docs/framework/wcf/samples/pooling.md) przykładowa przez definiowanie interfejsu `IObjectControl`, który dostosowuje inicjowania obiektu przez aktywowanie i dezaktywowanie go. Klient wywołuje metody, które zwracają obiekt do puli, a które nie zwracają obiekt do puli.  
@@ -15,12 +15,12 @@ W tym przykładzie rozszerza [buforowanie](../../../../docs/framework/wcf/sample
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
 ## <a name="extensibility-points"></a>Punkty rozszerzeń  
- Pierwszym krokiem tworzenia rozszerzenia programu Windows Communication Foundation (WCF) jest podjęcie punkcie rozszerzenia do użycia. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], termin *EndpointDispatcher* odwołuje się do odpowiedzialny za konwersji komunikatów przychodzących do wywołań metod w usłudze użytkownika i konwertowania wartości zwracanych z tej metody do składnika środowiska wykonawczego komunikat wychodzący. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługa tworzy EndpointDispatcher dla każdego punktu końcowego.  
+ Pierwszym krokiem tworzenia rozszerzenia programu Windows Communication Foundation (WCF) jest podjęcie punkcie rozszerzenia do użycia. W programie WCF termin *EndpointDispatcher* odwołuje się do składnika środowiska wykonawczego odpowiedzialny za konwersji komunikatów przychodzących do wywołań metod w usłudze użytkownika i konwertowania wartości zwracanych z tej metody do wysyłanej wiadomości . Usługi WCF tworzy EndpointDispatcher dla każdego punktu końcowego.  
   
  Oferuje EndpointDispatcher punktu końcowego zakresu (dla wszystkich wiadomości wysłanych i odebranych przez usługę) rozszerzalności za pomocą <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> klasy. Ta klasa umożliwia dostosowanie różne właściwości sterujące zachowaniem elementu EndpointDispatcher. W tym przykładzie koncentruje się na <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwość, która wskazuje obiekt, który zapewnia wystąpienia klasy usługi.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], EndpointDispatcher tworzy wystąpienia klasy usługi przy użyciu dostawcy wystąpienia, który implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu. Ten interfejs ma tylko dwie metody:  
+ W programie WCF, EndpointDispatcher tworzy wystąpienia klasy usługi przy użyciu dostawcy wystąpienia, który implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu. Ten interfejs ma tylko dwie metody:  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Gdy nadejścia wiadomości, wywołania dyspozytora <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metodę w celu utworzenia wystąpienia klasy usługi, aby przetworzyć komunikatu. Częstotliwość połączeń do tej metody jest określany przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Na przykład jeśli <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, nowe wystąpienie klasy usługi służy do przetwarzania każdy komunikat przychodzący, dlatego <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> jest wywoływana w momencie nadejścia wiadomości.  
   
@@ -153,7 +153,7 @@ if (activeObjectsCount == 0)
   
  W przykładzie użyto atrybutu niestandardowego. Gdy <xref:System.ServiceModel.ServiceHost> jest utworzone, jego sprawdza atrybuty używane w definicji typu usługi, jak i dodaje zachowania dostępne do kolekcji zachowań opisu usługi.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> jest nazywana najpierw; Umożliwia usługi poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> jest nazywana obok; Ta metoda jest wymagana tylko w scenariuszach bardzo zaawansowane. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> jest nazywana ostatnio i jest odpowiedzialny za konfigurację środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez WCF podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> jest nazywana najpierw; Umożliwia usługi poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> jest nazywana obok; Ta metoda jest wymagana tylko w scenariuszach bardzo zaawansowane. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> jest nazywana ostatnio i jest odpowiedzialny za konfigurację środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Ten parametr zawiera opis usługi dla całej usługi. Może być używany do zbadania opis danych dotyczących punktów końcowych usługi, kontrakty, powiązania i innych danych związanych z usługą.  
   
@@ -189,7 +189,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  Oprócz <xref:System.ServiceModel.Description.IServiceBehavior> implementacji `ObjectPoolingAttribute` klasa ma kilka elementów członkowskich, aby dostosować puli obiektów przy użyciu argumentów atrybutu. Elementy te obejmują `MaxSize`, `MinSize`, `Enabled` i `CreationTimeout`, aby odpowiadać obiektowi buforowanie zestaw funkcji udostępniane przez usługi .NET Enterprise.  
   
- Obiekt, buforowanie zachowanie można teraz dodać do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi przez dodawanie adnotacji do implementacji usługi z nowo utworzonych niestandardowych `ObjectPooling` atrybutu.  
+ Obiekt buforowanie zachowanie można teraz dodać do usługi WCF przez dodawanie adnotacji do implementacji usługi z nowo utworzonych niestandardowych `ObjectPooling` atrybutu.  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      

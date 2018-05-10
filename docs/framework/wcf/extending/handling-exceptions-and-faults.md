@@ -1,30 +1,18 @@
 ---
-title: "Obsługa wyjątków i błędów"
-ms.custom: 
+title: Obsługa wyjątków i błędów
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikacji błędy lokalnie w obrębie implementacji klienta lub usługi. Błędy, z drugiej strony, są używane do komunikacji błędy w granicach usługi, takie jak z serwera do klienta lub na odwrót. Oprócz błędów kanały transportu często używają mechanizmów specyficznych dla transportu do komunikowania się błędy na poziomie transportu. Na przykład transportu HTTP używa kodów stanu, takie jak 404 do komunikowania się nieistniejącego punktu końcowego adresu URL (Brak żaden punkt końcowy do odesłania błędów). Ten dokument zawiera trzy sekcje, które zawierają wskazówki autorom niestandardowym kanale. Pierwsza sekcja zawiera wskazówki dotyczące czasu i sposób definiowania i zgłaszanie wyjątków. Druga sekcja zawiera wskazówki dotyczące generowania i korzystanie z błędów. Trzeci sekcji opisano sposób Podaj informacje o śledzeniu, aby ułatwić rozwiązywanie problemów uruchamianie aplikacji użytkownika niestandardowego kanału.  
   
 ## <a name="exceptions"></a>Wyjątki  
- Istnieją dwie czynności należy wziąć pod uwagę podczas generowania wyjątku: najpierw musi być typu, który pozwala użytkownikom na zapis prawidłowego kodu, który można reagować odpowiednio wyjątek. Po drugie musi on zawierać informacje wystarczające do użytkownika, aby zrozumieć, co poszło źle, wpływ awarii i jak to naprawić. W poniższych sekcjach znajdują się wskazówki dotyczące typów wyjątków i wiadomości dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanałów. Istnieje również ogólne wskazówki dotyczące wyjątków w .NET w wytycznych projektowych wyjątki dokumentu.  
+ Istnieją dwie czynności należy wziąć pod uwagę podczas generowania wyjątku: najpierw musi być typu, który pozwala użytkownikom na zapis prawidłowego kodu, który można reagować odpowiednio wyjątek. Po drugie musi on zawierać informacje wystarczające do użytkownika, aby zrozumieć, co poszło źle, wpływ awarii i jak to naprawić. W poniższych sekcjach znajdują się wskazówki dotyczące typów wyjątków i wiadomości dla kanałów Windows Communication Foundation (WCF). Istnieje również ogólne wskazówki dotyczące wyjątków w .NET w wytycznych projektowych wyjątki dokumentu.  
   
 ### <a name="exception-types"></a>Typy wyjątków  
  Wszystkie wyjątki zgłaszane przez kanały musi być równa albo <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, lub typ pochodzący od <xref:System.ServiceModel.CommunicationException>. (Wyjątki, takie jak <xref:System.ObjectDisposedException> może również zostać wygenerowany, ale tylko do wskazują, że kod wywołujący ma niewłaściwego użycia kanału. Jeśli kanał jest prawidłowo używana, jego musi tylko zgłosić danego wyjątki.) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia siedmiu typów wyjątków, które pochodzą z <xref:System.ServiceModel.CommunicationException> i mają być używane przez kanały. Istnieją inne <xref:System.ServiceModel.CommunicationException>-pochodnych wyjątki, które są przeznaczone do użytku przez inne części systemu. Te typy wyjątek to:  
@@ -127,7 +115,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>Generowanie błędów  
  W tej sekcji opisano proces generowania błąd w odpowiedzi na błąd wykryto w kanale lub we właściwości wiadomości utworzone przez kanał. Typowym przykładem odsyła błąd w odpowiedzi na komunikat żądania, który zawiera nieprawidłowe dane.  
   
- Podczas generowania usterki, niestandardowym kanale najlepiej nie przesyłać usterki bezpośrednio, zamiast powinien zgłosić wyjątek i pozwól warstwy powyżej zdecydować, czy można przekonwertować tego wyjątku do usterki oraz jak wysłać go. W celu ułatwienia tej konwersji, należy podać kanału `FaultConverter` wdrożenia, który można przekonwertować wyjątek w niestandardowym kanale właściwe usterki. `FaultConverter`nie zdefiniowano jako:  
+ Podczas generowania usterki, niestandardowym kanale najlepiej nie przesyłać usterki bezpośrednio, zamiast powinien zgłosić wyjątek i pozwól warstwy powyżej zdecydować, czy można przekonwertować tego wyjątku do usterki oraz jak wysłać go. W celu ułatwienia tej konwersji, należy podać kanału `FaultConverter` wdrożenia, który można przekonwertować wyjątek w niestandardowym kanale właściwe usterki. `FaultConverter` nie zdefiniowano jako:  
   
 ```  
 public class FaultConverter  
@@ -313,7 +301,7 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault`Zwraca `true` w przypadku błędu `mustUnderstand` błędów. `WasHeaderNotUnderstood`Zwraca `true` nagłówek o określonej nazwie i przestrzeni nazw jest uwzględniane w usterek jako nagłówek NotUnderstood.  W przeciwnym razie zwraca `false`.  
+ `IsMustUnderstandFault` Zwraca `true` w przypadku błędu `mustUnderstand` błędów. `WasHeaderNotUnderstood` Zwraca `true` nagłówek o określonej nazwie i przestrzeni nazw jest uwzględniane w usterek jako nagłówek NotUnderstood.  W przeciwnym razie zwraca `false`.  
   
  Jeśli kanał emituje nagłówek, który jest oznaczony jako atrybut MustUnderstand = true, a następnie tej warstwy powinny również implementować wzorzec interfejsu API generowania wyjątków i należy przekonwertować `mustUnderstand` błędy spowodowane nagłówka do bardziej użyteczne wyjątków opisanych powyżej.  
   
@@ -379,7 +367,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>Śledzenia danych strukturalnych  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>ma <xref:System.Diagnostics.TraceSource.TraceData%2A> metody pobierającej jednego lub większej liczby obiektów, które mają być uwzględniane we wpisie śledzenia. Ogólnie rzecz biorąc <xref:System.Object.ToString%2A?displayProperty=nameWithType> metoda jest wywoływana dla każdego obiektu i wynikowy ciąg jest zapisywany jako część wpis śledzenia. Korzystając z <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> do danych wyjściowych danych śledzenia, można przekazać <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> jako obiekt danych do <xref:System.Diagnostics.TraceSource.TraceData%2A>. Wynikowy wpis śledzenia zawiera XML podał <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Oto przykładowy wpis z danych XML aplikacji:  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> ma <xref:System.Diagnostics.TraceSource.TraceData%2A> metody pobierającej jednego lub większej liczby obiektów, które mają być uwzględniane we wpisie śledzenia. Ogólnie rzecz biorąc <xref:System.Object.ToString%2A?displayProperty=nameWithType> metoda jest wywoływana dla każdego obiektu i wynikowy ciąg jest zapisywany jako część wpis śledzenia. Korzystając z <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> do danych wyjściowych danych śledzenia, można przekazać <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> jako obiekt danych do <xref:System.Diagnostics.TraceSource.TraceData%2A>. Wynikowy wpis śledzenia zawiera XML podał <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Oto przykładowy wpis z danych XML aplikacji:  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

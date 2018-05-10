@@ -1109,4 +1109,15 @@
 
 <!-- End of VB Content -->
 
+<!-- ML.NET Content -->
+# [Przewodnik po strukturze ML.NET](machine-learning/index.md)
+## [Samouczki](machine-learning/tutorials/index.md)
+### [Analiza tonacji (klasyfikacja)](machine-learning/tutorials/sentiment-analysis.md)
+### [Prognoza czasu dla taksówek (regresja)](machine-learning/tutorials/taxi-fare.md)
+## [Zasoby](machine-learning/resources/index.md)
+### [Glosariusz uczenia maszynowego](machine-learning/resources/glossary.md)
+### [Podstawy uczenia maszynowego](machine-learning/resources/basics.md)
+
+<!-- End ML.NET Content -->
+
 # [Przykłady i samouczki](samples-and-tutorials/index.md)

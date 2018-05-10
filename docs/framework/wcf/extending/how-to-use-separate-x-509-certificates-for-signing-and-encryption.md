@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Instrukcje: Używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania
 W tym temacie przedstawiono sposób konfigurowania systemu Windows Communication Foundation (WCF) korzystanie z różnych certyfikatów komunikat podpisywania i szyfrowania na kliencie i usługi.  
   
- Aby włączyć osobnych certyfikatów służący do podpisywania i szyfrowania, niestandardowe klienta lub usługi poświadczeń (lub obie) należy utworzyć ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie zapewnia interfejsu API, aby ustawić wiele certyfikatów klienta lub usługi. Ponadto zabezpieczeń Menedżer tokenów należy podać wykorzystać informacje wiele certyfikatów i utworzyć dostawcę tokenu zabezpieczeń odpowiednich dla określony klucza kierunku użycia i komunikatu.  
+ Aby włączyć osobnych certyfikatów służący do podpisywania i szyfrowania, niestandardowe klienta lub usługi poświadczeń (lub obie) należy utworzyć ponieważ WCF nie zapewnia interfejsu API, aby ustawić wiele certyfikatów klienta lub usługi. Ponadto zabezpieczeń Menedżer tokenów należy podać wykorzystać informacje wiele certyfikatów i utworzyć dostawcę tokenu zabezpieczeń odpowiednich dla określony klucza kierunku użycia i komunikatu.  
   
  Na poniższym diagramie przedstawiono główne klasy używane, klasy dziedziczą z (się za pomocą strzałki wskazującej w górę) i typy zwracane niektórych metod i właściwości.  
   

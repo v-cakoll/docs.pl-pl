@@ -2,11 +2,11 @@
 title: Niestandardowy dyspozytor kanału
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Niestandardowy dyspozytor kanału
 Ten przykład demonstruje sposób tworzenia kanału stosu w niestandardowy sposób zaimplementowanie <xref:System.ServiceModel.ServiceHostBase> bezpośrednio oraz sposobu tworzenia dyspozytora niestandardowym kanale w środowisku hosta sieci Web. Dyspozytor kanału współdziała z <xref:System.ServiceModel.Channels.IChannelListener> ma akceptować komunikaty kanałów i pobiera ze stosu kanału. W tym przykładzie przedstawiono również podstawowy przykład demonstrujące sposób tworzenia kanału stosu w środowisku hosta sieci Web przy użyciu <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
@@ -22,13 +22,13 @@ Ten przykład demonstruje sposób tworzenia kanału stosu w niestandardowy spos�
  Dyspozytor otwierania odbiornika kanałów i następnie akceptuje pojedyncze kanału odpowiedzi. Z kanału rozpoczyna się do wysyłania wiadomości (liczba żądań) w pętli nieskończonej. Dla każdego żądania tworzy komunikat odpowiedzi i wysyła je z powrotem do klienta.  
   
 ## <a name="creating-a-response-message"></a>Tworzenie komunikatu odpowiedzi  
- Przetwarzanie komunikatów jest zaimplementowany w typie `MyServiceManager`. W `HandleRequest` metody `Action` nagłówka wiadomości jest najpierw sprawdzane w celu sprawdzenia, czy żądanie jest obsługiwane. A wstępnie zdefiniowane akcji SOAP "http://tempuri.org/HelloWorld/Hello" zdefiniowano w celu zapewnienia filtrowania wiadomości. To jest podobny do koncepcji kontraktu usługi w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacja <xref:System.ServiceModel.ServiceHost>.  
+ Przetwarzanie komunikatów jest zaimplementowany w typie `MyServiceManager`. W `HandleRequest` metody `Action` nagłówka wiadomości jest najpierw sprawdzane w celu sprawdzenia, czy żądanie jest obsługiwane. A wstępnie zdefiniowane akcji SOAP "http://tempuri.org/HelloWorld/Hello" zdefiniowano w celu zapewnienia filtrowania wiadomości. To jest podobny do koncepcji kontraktu usługi WCF stosowania <xref:System.ServiceModel.ServiceHost>.  
   
  W przypadku poprawne akcji SOAP próbki pobiera dane żądanej wiadomości i generuje odpowiadająca mu reakcja na żądanie, podobnie jak co jest widoczne w <xref:System.ServiceModel.ServiceHost> przypadku.  
   
  Specjalnie zlecenia HTTP GET są obsługiwane przez zwrócenie niestandardowe wiadomości w formacie HTML, w tym przypadku tak, aby przeglądać usługi z przeglądarki, aby zobaczyć, że jest on niepoprawnie skompilowany. Jeśli Akcja SOAP są niezgodne, Błąd wysyłania wiadomości Wstecz, aby wskazać, że żądanie nie jest obsługiwane.  
   
- Klient w tym przykładzie jest zwykłym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, który nie przyjmuje żadnych z usługi. Usługa jest specjalnie zaprojektowane do dopasowania, otrzymasz od zwykłym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.ServiceHost> implementacji. W związku z tym kontraktu usługi jest wymagany na kliencie.  
+ Klient w tym przykładzie jest normalne klienta WCF, która nie przyjmuje żadnych z usługi. Usługa jest specjalnie zaprojektowane do dopasowania, otrzymasz od normalnego WCF<xref:System.ServiceModel.ServiceHost> implementacji. W związku z tym kontraktu usługi jest wymagany na kliencie.  
   
 ## <a name="using-the-sample"></a>Przy użyciu próbki  
  Uruchomienie aplikacji klienckiej bezpośrednio tworzy następujące dane wyjściowe.  

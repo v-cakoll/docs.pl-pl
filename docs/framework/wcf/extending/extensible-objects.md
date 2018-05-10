@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensible-objects"></a>Obiekty rozszerzalne
 Wzorzec rozszerzonego obiektu jest używany, aby wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub aby dodać nowy stan do obiektu. Dołączony do jednego z obiekty rozszerzalne, dzięki rozszerzeniom zachowania w bardzo różnych etapach przetwarzania dostęp do stanu udostępnionego i dołączony do obiektu extensible wspólnej mogą uzyskiwać dostęp do funkcji.  
@@ -56,7 +56,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> — Ta klasa reprezentuje informacje operacji zbierające środowiska uruchomieniowego dla każdej operacji.  Dotyczy to również informacje, takie jak nagłówki wiadomości przychodzących, właściwości przychodzących wiadomości przychodzącej tożsamości zabezpieczeń i inne informacje.  Rozszerzenia tej klasy można wydłużyć zachowanie <xref:System.ServiceModel.OperationContext> ani do przechowywania stanu dla każdej operacji.  
   
--   <xref:System.ServiceModel.IContextChannel> — Ten interfejs umożliwia inspekcji każdy stan dla kanałów i serwery proxy utworzony przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] środowiska wykonawczego.  Rozszerzenia tej klasy można wydłużyć zachowanie <xref:System.ServiceModel.IClientChannel> lub służy do przechowywania stanu dla poszczególnych kanałów.  
+-   <xref:System.ServiceModel.IContextChannel> — Ten interfejs umożliwia inspekcji każdy stan dla kanałów i serwery proxy utworzony przez środowisko wykonawcze usługi WCF.  Rozszerzenia tej klasy można wydłużyć zachowanie <xref:System.ServiceModel.IClientChannel> lub służy do przechowywania stanu dla poszczególnych kanałów.  
   
 -  
   

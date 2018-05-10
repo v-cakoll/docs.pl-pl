@@ -9,11 +9,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d5085b846a10fe86a87e19738e1b159e300c5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitowanie dynamicznych metod i zestawów
 W tej sekcji opisano zestaw typy zarządzane w <xref:System.Reflection.Emit> przestrzeni nazw, która umożliwia kompilatora lub narzędziu emitowanie metadanych i Microsoft języku pośrednim (MSIL) w czasie wykonywania i opcjonalnie Generowanie pliku przenośny plik wykonywalny (PE) na dysku. Liczba aparatów skryptów i kompilatory są użytkowników podstawowych tego obszaru nazw. W tej sekcji funkcje udostępniane przez <xref:System.Reflection.Emit> przestrzeni nazw jest określana jako odbicia emisji.  
@@ -45,7 +45,7 @@ W tym artykule opisano zabezpieczeń, które Emituj problemów dotyczących twor
 Pokazuje, jak wykonać prostą metodę dynamicznego i dynamiczna metoda powiązany z wystąpieniem klasy.
 
 [Porady: Definiowanie typu ogólnego z odbiciem emisji](how-to-define-a-generic-type-with-reflection-emit.md)   
-Przedstawia sposób tworzenia prostego typu ogólnego z parametrami typu dwa, jak dotyczą parametrów typu klasy interfejsu i ograniczeń specjalnych oraz sposobu tworzenia memers, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.
+Przedstawia sposób tworzenia prostego typu ogólnego z dwoma parametrami typu, jak dotyczą parametrów typu klasy interfejsu i ograniczeń specjalnych oraz sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.
 
 [Porady: definiowanie metody ogólnej za pomocą odbicia emisji](how-to-define-a-generic-method-with-reflection-emit.md)   
 Przedstawia sposób tworzenia, emisji, a następnie wywołaj proste metody rodzajowej.

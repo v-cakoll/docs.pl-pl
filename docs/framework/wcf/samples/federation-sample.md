@@ -2,17 +2,17 @@
 title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 W tym przykładzie przedstawiono zabezpieczeń.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
- Windows Communication Foundation (WCF) zapewnia obsługę wdrażania architektury zabezpieczeń za pomocą `wsFederationHttpBinding`. `wsFederationHttpBinding` Udostępnia bezpieczne, niezawodne i interoperacyjne powiązanie, które polega na użyciu protokołu HTTP jako podstawowy mechanizm transportu dla komunikacji żądanie/odpowiedź, a Text/XML jako przewodowy format kodowania. Aby uzyskać więcej informacji o federacji w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) zapewnia obsługę wdrażania architektury zabezpieczeń za pomocą `wsFederationHttpBinding`. `wsFederationHttpBinding` Udostępnia bezpieczne, niezawodne i interoperacyjne powiązanie, które polega na użyciu protokołu HTTP jako podstawowy mechanizm transportu dla komunikacji żądanie/odpowiedź, a Text/XML jako przewodowy format kodowania. Aby uzyskać więcej informacji o federacji w programie WCF, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Scenariusz składa się z 4 części:  
   

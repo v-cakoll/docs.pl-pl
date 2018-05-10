@@ -2,16 +2,16 @@
 title: Przykład autonomicznego kanału diagnostycznego
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Przykład autonomicznego kanału diagnostycznego
 Ten przykład przedstawia sposób tworzenia RSS/źródło danych Atom dla zespolonego z usługi Windows Communication Foundation (WCF). Jest podstawowe program "Hello World", który zawiera podstawowe informacje o modelu obiektów oraz sposobu konfigurowania usługi Windows Communication Foundation (WCF).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modele zespolonego źródła danych jako operacji usługi, które zwracają specjalnego typu danych, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Wystąpienia <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> może serializować źródło danych do formatów RSS 2.0 i Atom 1.0. Następujący przykładowy kod przedstawia kontraktu używane.  
+ Usługi WCF modeli zespolonego źródła danych operacji usługi, które zwracają specjalnego typu danych, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Wystąpienia <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> może serializować źródło danych do formatów RSS 2.0 i Atom 1.0. Następujący przykładowy kod przedstawia kontraktu używane.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ Ten przykład przedstawia sposób tworzenia RSS/źródło danych Atom dla zespol
     }  
 ```  
   
- `GetProcesses` Operacji jest oznaczony za pomocą <xref:System.ServiceModel.Web.WebGetAttribute> atrybut, który umożliwia kontrolowanie sposobu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywołuje żądania HTTP GET do usługi operations i określić format wysyłanych wiadomości.  
+ `GetProcesses` Operacji jest oznaczony za pomocą <xref:System.ServiceModel.Web.WebGetAttribute> atrybut, który umożliwia kontrolowanie sposobu WCF wywołuje HTTP GET żądania do usługi operations i określić format wysyłanych wiadomości.  
   
- Takie jak dowolne [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, zespolonego źródła danych mogą być samodzielnie hostowana w dowolnej aplikacji zarządzanych. Syndykacja usługi wymagają określonego powiązania ( <xref:System.ServiceModel.WebHttpBinding>) i zachowanie określonego punktu końcowego ( <xref:System.ServiceModel.Description.WebHttpBehavior>) do poprawnego działania. Nowe <xref:System.ServiceModel.Web.WebServiceHost> klasy oferuje wygodny interfejs API do tworzenia tych punktów końcowych bez określonej konfiguracji.  
+ Podobnie jak żadnej usługi WCF zespolonego źródła danych mogą być samodzielnie hostowana w dowolnej aplikacji zarządzanych. Syndykacja usługi wymagają określonego powiązania ( <xref:System.ServiceModel.WebHttpBinding>) i zachowanie określonego punktu końcowego ( <xref:System.ServiceModel.Description.WebHttpBehavior>) do poprawnego działania. Nowe <xref:System.ServiceModel.Web.WebServiceHost> klasy oferuje wygodny interfejs API do tworzenia tych punktów końcowych bez określonej konfiguracji.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

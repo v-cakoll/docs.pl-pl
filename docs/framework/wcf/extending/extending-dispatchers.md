@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 653b22adb5ed53c9c3eb44db598ad5d1c50ff1a9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-dispatchers"></a>Rozszerzanie dyspozytorów
 Dystrybucja są odpowiedzialne za ściąganie wiadomości przychodzących poza podstawowej kanały, tłumaczenia je do wywołania metody w kodzie aplikacji i wysłaniem wyniki z powrotem do wywołującego. Rozszerzenia dyspozytorów umożliwiają modyfikowanie tego przetwarzania.  Można zaimplementować inspektorzy komunikatów lub parametr, które inspekcja lub modyfikowanie zawartość wiadomości lub parametrów.  Możesz zmienić sposób komunikaty są kierowane do operacji lub podaj niektóre inne funkcje.  
@@ -16,7 +16,7 @@ Dystrybucja są odpowiedzialne za ściąganie wiadomości przychodzących poza p
  W tym temacie opisano sposób użycia <xref:System.ServiceModel.Dispatcher.DispatchRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchOperation> aplikacji, aby zmodyfikować domyślne zachowanie wykonywania dyspozytora lub do przechwycenia lub modyfikowanie komunikatów, parametry lub zwróć usługi klas w konsoli Windows Communication Foundation (WCF) wartości przed lub po wysyłania lub pobierania ich z warstwy kanału. Aby uzyskać więcej informacji o przetwarzaniu komunikat środowiska uruchomieniowego równoważne klienta, zobacz [rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md). Aby zrozumieć rolę który <xref:System.ServiceModel.IExtensibleObject%601> typy odtwarzania podczas uzyskiwania dostępu do stanu udostępnionego między różnymi obiektami dostosowania środowiska uruchomieniowego, zobacz [obiekty rozszerzalne](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Dystrybucja  
- Warstwy modelu usług wykonuje konwersję między dewelopera model programowania i podstawowej wymiany wiadomości, często nazywane warstwie kanału. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dyspozytorów kanału i punktu końcowego (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> i <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>odpowiednio) są zobowiązani do akceptowania nowych kanałów, odbierania wiadomości, operacji wysyłania i wywołania i przetwarzanie odpowiedzi składników usługi. Dyspozytor obiekty są obiektami odbiornika, ale implementacje kontrakt wywołania zwrotnego w usługi dwukierunkowe również ujawniać ich obiektów dyspozytora do inspekcji, modyfikacji lub rozszerzenia.  
+ Warstwy modelu usług wykonuje konwersję między dewelopera model programowania i podstawowej wymiany wiadomości, często nazywane warstwie kanału. Usługi WCF kanału i dystrybucja punktu końcowego (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> i <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>odpowiednio) są zobowiązani do akceptowania nowych kanałów, odbierania wiadomości, operacji wysyłania i wywołania i przetwarzanie odpowiedzi składników usługi. Dyspozytor obiekty są obiektami odbiornika, ale implementacje kontrakt wywołania zwrotnego w usługi dwukierunkowe również ujawniać ich obiektów dyspozytora do inspekcji, modyfikacji lub rozszerzenia.  
   
  Dyspozytor kanału (i Pomocnika <xref:System.ServiceModel.Channels.IChannelListener>) pobiera komunikaty z kanału podstawowy i przekazuje komunikaty do ich dystrybucja odpowiednich punktu końcowego. Dyspozytor każdego punktu końcowego ma <xref:System.ServiceModel.Dispatcher.DispatchRuntime> który kieruje komunikaty do odpowiednich <xref:System.ServiceModel.Dispatcher.DispatchOperation>, który jest odpowiedzialny dla wywołania metody, która implementuje operację. Różnych klas opcjonalne i wymagane rozszerzenia są wywoływane na bieżąco. W tym temacie opisano sposób sztuk dopasowania i jak może zmodyfikować właściwości i dołączyć własnego kodu rozszerzenie podstawowych funkcji.  
   
@@ -45,7 +45,7 @@ Dystrybucja są odpowiedzialne za ściąganie wiadomości przychodzących poza p
   
 -   Niestandardowy komunikat przekształcenia. Użytkownicy mogą stosować określonych przekształceń do wiadomości w czasie wykonywania (na przykład w przypadku wersji). Można to zrobić, ponownie z interfejsami interceptora wiadomości.  
   
--   Model danych niestandardowych. Użytkownicy mogą mieć modelem serializacji danych niż obsługiwany przez domyślną w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (to znaczy, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>i komunikaty raw). Można to zrobić przez wdrożenie interfejsy program formatujący wiadomości. Na przykład zobacz [programu formatującego operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+-   Model danych niestandardowych. Użytkownicy mogą mieć modelem serializacji danych niż obsługiwany przez domyślną w programie WCF (to znaczy, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>i komunikaty raw). Można to zrobić przez wdrożenie interfejsy program formatujący wiadomości. Na przykład zobacz [programu formatującego operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
 -   Sprawdzanie poprawności parametru niestandardowego. Użytkownicy mogą wymusić czy parametrów typu są prawidłowe (a nie XML). Można to zrobić za pomocą interfejsów inspektora parametru.  
   
@@ -60,9 +60,9 @@ Dystrybucja są odpowiedzialne za ściąganie wiadomości przychodzących poza p
 -   Autoryzacja niestandardowa zachowania. Użytkownicy mogą zaimplementować kontroli dostępu niestandardowe rozszerzenie części środowiska wykonawczego umowy lub operacji i dodając kontroli zabezpieczeń oparte na tokeny w wiadomości. Można to zrobić za pomocą przechwytujący lub parametr interceptora interfejsów. Aby uzyskać przykłady, zobacz [rozszerzalność zabezpieczeń](../../../../docs/framework/wcf/samples/security-extensibility.md).  
   
     > [!CAUTION]
-    >  Ponieważ zmiany właściwości zabezpieczeń może naruszyć bezpieczeństwo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, zdecydowanie zaleca się podejmowania związanych z zabezpieczeniami modyfikacje ostrożnie, a dokładnie przetestować przed wdrożeniem.  
+    >  Ponieważ zmiany właściwości zabezpieczeń może naruszyć bezpieczeństwo aplikacji WCF, stanowczo zaleca się podejmowania związanych z zabezpieczeniami modyfikacje ostrożnie i dokładnie przetestować przed ich wdrożeniem.  
   
--   WCF niestandardowe moduły weryfikacji środowiska wykonawczego. Sprawdź, czy usługi, kontrakty i powiązania wymuszać zasady na poziomie przedsiębiorstwa w odniesieniu do niestandardowych modułów weryfikacji można zainstalować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji. (Na przykład, zobacz [porady: blokowanie dół punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+-   WCF niestandardowe moduły weryfikacji środowiska wykonawczego. Można zainstalować niestandardowe moduły weryfikacji, które Sprawdź, czy usługi, kontrakty i powiązania wymuszać zasady na poziomie przedsiębiorstwa względem aplikacji WCF. (Na przykład, zobacz [porady: blokowanie dół punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>Używanie klasy obiektu DispatchRuntime  
  Użyj <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy zmodyfikować domyślne zachowanie usługi lub poszczególnych punktu końcowego, lub Wstaw obiektów implementujących niestandardowymi modyfikacjami do jednej lub obu następujących procesów usługi (lub procesów klienta w przypadku klienta dupleks):  

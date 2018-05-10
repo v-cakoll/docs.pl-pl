@@ -2,11 +2,11 @@
 title: Rozszerzanie śledzenia
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>Rozszerzanie śledzenia
 W tym przykładzie pokazano, jak rozszerzyć funkcję śledzenia usług Windows Communication Foundation (WCF) pisząc śledzenia zdefiniowanych przez użytkownika działań w kod klienta i usługi. Dzięki temu użytkownikowi na tworzenie śledzenia działań i grupować dane śledzenia w logiczne jednostki pracy. Istnieje również możliwość służące do skorelowania działań za pośrednictwem transferu (w ramach tego samego punktu końcowego) i propagacji (za pośrednictwem punktów końcowych). W tym przykładzie śledzenie jest włączone dla klienta i usługi. Aby uzyskać więcej informacji o sposobie włączania śledzenia w plikach konfiguracji klienta i usługi, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -26,7 +26,7 @@ W tym przykładzie pokazano, jak rozszerzyć funkcję śledzenia usług Windows 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Śledzenie i propagowania działań.  
- Śledzenie działania użytkownika zezwala użytkownikowi na tworzenie własnych działań śledzenia do śledzenia grupy w logiczne jednostki pracy, korelowanie działań za pośrednictwem przesyłania i propagacji i zmniejszyć koszt wydajności [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] śledzenia (na przykład miejsce kosztu dysku dla pliku dziennika).  
+ Śledzenie działania użytkownika zezwala użytkownikowi na tworzenie własnych działań śledzenia do grupy śledzeniem w logiczne jednostki pracy, skorelowania działań za pośrednictwem przesyłania i propagacji i zmniejszyć koszt wydajności śledzenia WCF (na przykład kosztu miejsca na dysku pliku dziennika).  
   
 ### <a name="adding-custom-sources"></a>Dodawanie źródeł niestandardowych  
  Ślady zdefiniowane przez użytkownika można dodać do kodu klienta i usługi. Dodawanie źródła śledzenia w plikach konfiguracji klienta lub usługę umożliwiają te niestandardowe śladów rejestrowane i wyświetlane w [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Poniższy kod przedstawia sposób dodawania źródła śledzenia zdefiniowanych przez użytkownika o nazwie `ServerCalculatorTraceSource` do pliku konfiguracji.  
@@ -67,7 +67,7 @@ W tym przykładzie pokazano, jak rozszerzyć funkcję śledzenia usług Windows 
 ```  
   
 ### <a name="correlating-activities"></a>Korelowanie działań  
- Aby skorelować działań bezpośrednio w obrębie punktów końcowych, `propagateActivity` atrybut musi być ustawiony na `true` w `System.ServiceModel` źródła śledzenia. Ponadto propagację śladów bez pośrednictwa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] działania ServiceModel działania śledzenia musi być wyłączona. Można to zaobserwować w poniższym przykładzie kodu.  
+ Aby skorelować działań bezpośrednio w obrębie punktów końcowych, `propagateActivity` atrybut musi być ustawiony na `true` w `System.ServiceModel` źródła śledzenia. Ponadto propagację śladów bez pośrednictwa usługi WCF działań, śledzenie działania ServiceModel musi zostać wyłączone. Można to zaobserwować w poniższym przykładzie kodu.  
   
 > [!NOTE]
 >  Wyłączenie śledzenia działania ServiceModel nie jest taka sama jak o poziomie śledzenia, wskazywane przez `switchValue` właściwość ustawiona na wartość off.  
@@ -85,7 +85,7 @@ W tym przykładzie pokazano, jak rozszerzyć funkcję śledzenia usług Windows 
 ```  
   
 ### <a name="lessening-performance-cost"></a>Zmniejszenie kosztów wydajności  
- Ustawienie `ActivityTracing` wyłączone w `System.ServiceModel` źródło śladu generuje plik śledzenia, który zawiera tylko ślady działania zdefiniowane przez użytkownika, bez żadnej śladów działania ServiceModel uwzględnione. Powoduje to znacznie mniejszy rozmiar pliku dziennika. Jednak możliwość skorelowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przetwarzania śladów zostaną utracone.  
+ Ustawienie `ActivityTracing` wyłączone w `System.ServiceModel` źródło śladu generuje plik śledzenia, który zawiera tylko ślady działania zdefiniowane przez użytkownika, bez żadnej śladów działania ServiceModel uwzględnione. Powoduje to znacznie mniejszy rozmiar pliku dziennika. Jednak możliwość skorelowania przetwarzania śladów WCF zostaną utracone.  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
   

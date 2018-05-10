@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Wskazówki: Przechowywanie wersji kontraktów danych
 Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych, które można łatwo rozwijać, wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -21,7 +21,7 @@ Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych
   
  Oznacza to, że nawet najbardziej typowych versioning scenariusz, takie jak dodawanie nowego elementu członkowskiego danych nie można zaimplementować w sposób zapewniający szybkie rozwiązanie w zakresie danego schematu. Nowsze wersje kontraktu danych (z nowego członka danych, na przykład) nie weryfikują przy użyciu starego schematu.  
   
- Istnieje jednak wiele scenariuszy, w których zgodność strict schematu nie jest wymagane. Usług sieci Web na wiele platform, w tym [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] i usług XML sieci Web utworzony za pomocą programu ASP.NET, nie sprawdzania poprawności schematu domyślnie i w związku z tym tolerować dodatkowe elementy, które nie zostały opisane w schemacie. Podczas pracy z takich platform, wiele scenariuszy, w kontroli wersji są łatwiejsze do wdrożenia.  
+ Istnieje jednak wiele scenariuszy, w których zgodność strict schematu nie jest wymagane. Wiele platform usług sieci Web, w tym usług WCF i XML sieci Web utworzony za pomocą programu ASP.NET, nie sprawdzania poprawności schematu domyślnie i w związku z tym tolerować dodatkowe elementy, które nie zostały opisane w schemacie. Podczas pracy z takich platform, wiele scenariuszy, w kontroli wersji są łatwiejsze do wdrożenia.  
   
  W związku z tym są dwa zestawy danych kontraktu wytycznymi wersjonowania: jeden ustawiony w scenariuszach, w których ważność strict schematu jest ważne, a inną wartość dla scenariuszy nie jest.  
   
@@ -36,7 +36,7 @@ Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych
   
  Aby uzyskać więcej informacji, zobacz zalecenia: [przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md).  
   
- Czasami musi zapewniać zgodność strict schematu dla wiadomości wysyłanych przez aplikację, ale nie może polegać na wiadomości przychodzących, które należy ściśle schematu zgodne. W takim przypadku to zagrożenie, że komunikat przychodzący może zawierać nadmiarowe dane. Nadmiarowe wartości są przechowywane i zwrócony przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] i w związku z tym wynikiem wiadomości nieprawidłowy schemat. Aby uniknąć tego problemu, funkcja dwustronną komunikację powinna być wyłączona. Istnieją dwa sposoby, w tym celu.  
+ Czasami musi zapewniać zgodność strict schematu dla wiadomości wysyłanych przez aplikację, ale nie może polegać na wiadomości przychodzących, które należy ściśle schematu zgodne. W takim przypadku to zagrożenie, że komunikat przychodzący może zawierać nadmiarowe dane. Nadmiarowe wartości są przechowywane i zwrócony przez usługę WCF i w związku z tym wynikiem wiadomości nieprawidłowy schemat. Aby uniknąć tego problemu, funkcja dwustronną komunikację powinna być wyłączona. Istnieją dwa sposoby, w tym celu.  
   
 -   Nie należy implementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu na żadnym z typów.  
   

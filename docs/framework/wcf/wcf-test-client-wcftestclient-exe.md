@@ -2,46 +2,46 @@
 title: Testowy klient WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: fa06077cef3a53b796b85a1eb84bf0fdfba2f598
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 78be40268b46c4c85ee034db67d67ee0fbf2158f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Testowy klient WCF (WcfTestClient.exe)
-Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) jest narzędzie graficznego interfejsu użytkownika, które użytkownicy mogą wprowadzić parametry testu, że dane wejściowe do usługi przesyłania i wyświetlić usługi odsyła odpowiedź. Zapewnia bezproblemowe usługi testowania czynności w połączeniu z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi.  
+Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) jest narzędzie graficznego interfejsu użytkownika, które użytkownicy mogą wprowadzić parametry testu, że dane wejściowe do usługi przesyłania i wyświetlić usługi odsyła odpowiedź. Zapewnia bezproblemowe usługi testowania czynności w połączeniu z hosta usługi WCF.  
   
- Zwykle można znaleźć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego (WcfTestClient.exe) w następującej lokalizacji: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE — społeczność może być "Przedsiębiorstwa", "Professional" lub "Społeczności" w zależności od poziomu programu Visual Studio jest zainstalowany.
+ Klienta testowego WCF (WcfTestClient.exe) zwykle można znaleźć w następującej lokalizacji: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE — społeczność może być "Przedsiębiorstwa", "Professional" lub "Społeczności", w zależności od której poziom programu Visual Studio jest zainstalowany.
   
 ## <a name="scenarios-for-using-test-client"></a>Scenariusze korzystania z klienta testowego  
- W poniższych sekcjach omówiono najbardziej typowych scenariuszy, w których można używać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klient testowy może usprawnić procesie tworzenia aplikacji.  
+ W poniższych sekcjach omówiono najbardziej typowych scenariuszy, w których można użyć klienta testowego WCF w celu uproszczenia procesu tworzenia.  
   
 ### <a name="inside-visual-studio"></a>W programie Visual Studio  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-a-single-service"></a>Usługa hosta uruchamia WCF klienta testowego WCF z jedną usługą  
- Po utworzeniu nowego [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi projektu, a następnie naciśnij klawisz F5, aby uruchomić debugera, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi rozpoczyna się do obsługi usługi w projekcie. Następnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego otwiera i wyświetla listę punktów końcowych usługi zdefiniowane w pliku konfiguracyjnym. Można przetestować parametry i wywoływanie usługi i powtórz ten proces, aby stale testowanie i weryfikowanie usługi.  
+ Po utworzeniu nowego projektu usługi WCF i naciśnij klawisz F5, aby uruchomić debugera, Host usługi WCF rozpoczyna się do obsługi usługi w projekcie. Następnie klienta testowego WCF otwiera i wyświetla listę punktów końcowych usługi zdefiniowane w pliku konfiguracyjnym. Można przetestować parametry i wywoływanie usługi i powtórz ten proces, aby stale testowanie i weryfikowanie usługi.  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-multiple-services"></a>Usługa hosta uruchamia WCF klienta testowego WCF z wieloma usługami  
- Można również użyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego debugować projektu usługi, który zawiera wiele usług. Gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] otwiera klienta testowego, automatycznie wykonuje iterację na liście usług w projekcie i otwiera je do testowania.  
+ Umożliwia także klienta testowego WCF debugować projektu usługi, który zawiera wiele usług. Po otwarciu klienta testowego WCF automatycznie wykonuje iterację na liście usług w projekcie i otwiera je do testowania.  
   
 ### <a name="outside-visual-studio"></a>Poza programu Visual Studio  
- Można także wywoływać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testowanie klienta (WcfTestClient.exe) poza programem Visual Studio, aby przetestować dowolnych usług w Internecie. Aby zlokalizować narzędzia, przejdź do następującej lokalizacji:  
+ Testowanie klienta WCF (WcfTestClient.exe) można także wywoływać poza programem Visual Studio, aby przetestować dowolnych usług w Internecie. Aby zlokalizować narzędzia, przejdź do następującej lokalizacji:  
   
  C:\Program Files\Microsoft 9.0\Common7\IDE\ programu Visual Studio  
   
  Aby użyć narzędzia, kliknij dwukrotnie nazwę pliku, aby otworzyć go z tej lokalizacji lub uruchomić go z wiersza polecenia.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klient testowy przyjmuje dowolnego liczba identyfikatorów URI jako argumenty wiersza polecenia.  Są to identyfikator URI usług, które można zbadać.  
+ Klienta testowego WCF przyjmuje dowolnego liczba identyfikatorów URI jako argumenty wiersza polecenia.  Są to identyfikator URI usług, które można zbadać.  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
- Po [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] okna Klient testowy jest otwarty, kliknij przycisk **pliku**->**Dodaj usługę**i wprowadź adres punktu końcowego usługi, którą chcesz otworzyć.  
+ Po otwarciu okna klienta testowego WCF, kliknij przycisk **pliku**->**Dodaj usługę**, a następnie wprowadź adres punktu końcowego usługi, którą chcesz otworzyć.  
   
 ## <a name="wcf-test-client-user-interface"></a>Interfejs użytkownika klienta testowego WCF  
- Można użyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego z usługą jednego lub wielu usług.  
+ Można użyć klienta testowego WCF z usługą jednego lub wielu usług.  
   
 ### <a name="service-operations"></a>Operacje usługi  
- W lewym okienku [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego główne okno wyświetla listę wszystkich dostępnych usług, oraz ich odpowiednich punktów końcowych i operacji.  
+ W okienku po lewej stronie okna głównego klienta testowego WCF zawiera listę wszystkich dostępnych usług, oraz ich odpowiednich punktów końcowych i operacji.  
   
  Po dwukrotnym kliknięciu operacji, można wyświetlić jego zawartość w okienku po prawej stronie wewnątrz nową kartę o nazwie wykonać operację.  
   
@@ -69,12 +69,12 @@ Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) je
  Jeśli **uruchomić nowego serwera proxy** pole wyboru jest zaznaczone, uruchomieniu nowego serwera proxy dla każdego **Invoke**scenariusza poprzednia sesja zostanie zakończona i stan usługi zostanie zresetowana.  
   
 ### <a name="editing-client-configuration"></a>Edytowanie konfiguracji klienta  
- W lewym okienku [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego główne okno listy plików konfiguracji klienta. Kliknij dwukrotnie dowolny z elementów do wyświetlenia zawartości pliku w okienku po prawej stronie.  
+ W okienku po lewej stronie okna głównego klienta testowego WCF zawiera listę plików konfiguracji klienta. Kliknij dwukrotnie dowolny z elementów do wyświetlenia zawartości pliku w okienku po prawej stronie.  
   
 #### <a name="edit-with-service-configuration-editor"></a>Edytuj z edytora konfiguracji usługi  
  Kliknij prawym przyciskiem myszy **pliku konfiguracyjnego** w okienku po lewej stronie i wybierz menu kontekstowe **edytować za pomocą SvcConfigEditor**. Edytor konfiguracji usługi jest uruchamiana z zawartością konfiguracji klienta. Można edytować konfiguracji i zapisz go w narzędziu.  
   
- Po zapisaniu pliku w edytora konfiguracji usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testu klient jest wyświetlany komunikat ostrzegawczy z informacją, że plik został zmodyfikowany poza i zapyta, czy chcesz załadować go ponownie.  
+ Po zapisaniu pliku w oknie edytora konfiguracji usługi, klienta testowego WCF wyświetla komunikat ostrzegawczy z informacją, że plik został zmodyfikowany poza i zapyta, czy chcesz załadować go ponownie.  
   
  W przypadku wybrania **tak**, zawartość konfiguracji na karcie "Plik Client.dll.config" odzwierciedla zmiany wprowadzone w edytorze.  
   
@@ -84,14 +84,14 @@ Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) je
  Jeśli chcesz anulować wszystkie zmiany i przywrócić domyślnej konfiguracji klienta, kliknij prawym przyciskiem myszy **pliku konfiguracyjnego** w okienku po lewej stronie i wybierz menu kontekstowe **Przywróć konfigurację domyślną**. Wartość domyślna konfiguracja zostanie załadowany i zawartości na karcie "Plik Client.dll.config" został przywrócony.  
   
 #### <a name="validate-changes"></a>Sprawdzanie poprawności zmiany  
- Kiedy zapisano zmiany są ładowane w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego, konfiguracja jest sprawdzany pod kątem poprawności względem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] schematu. Jeśli zostaną znalezione błędy, aby wyświetlić szczegóły błędu jest wyświetlone okno dialogowe.  
+ Zapisano zmiany są ładowane w kliencie testowym WCF, konfiguracja jest sprawdzany pod kątem poprawności względem schematu WCF. Jeśli zostaną znalezione błędy, aby wyświetlić szczegóły błędu jest wyświetlone okno dialogowe.  
   
- Generowanie serwera proxy, binarnych kompilacji lub wywoływania usługi są wyłączone elementy menu, które obsługuje edycji (to znaczy "Edytuj...", "Przywracanie..." i tak dalej). Wywołania usługi również jest wyłączona podczas ładowania aktualizacji konfiguracji na [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego.  
+ Generowanie serwera proxy, binarnych kompilacji lub wywoływania usługi są wyłączone elementy menu, które obsługuje edycji (to znaczy "Edytuj...", "Przywracanie..." i tak dalej). Wywołania usługi jest niedostępne podczas ładowania aktualizacji konfiguracji do klienta testowego WCF.  
   
 #### <a name="persist-client-configuration"></a>Utrwalanie konfiguracji klienta  
- **Narzędzia**->**opcje**->**konfiguracji klienta** karta zawiera **zawsze Generuj konfiguracji podczas uruchamiania Usługi** opcja, która jest domyślnie włączona. Ta opcja określa, że zawsze [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego ładuje usługą, jego ponowne wygenerowanie pliku konfiguracji na podstawie najnowszych kontrakt usługi i pliki App.config usługi.  
+ **Narzędzia**->**opcje**->**konfiguracji klienta** karta zawiera **zawsze Generuj konfiguracji podczas uruchamiania Usługi** opcja, która jest domyślnie włączona. Ta opcja określa, że za każdym razem, gdy klienta testowego WCF ładuje usługi, generuje plik konfiguracji na podstawie najnowszych kontrakt usługi i pliki App.config usługi.  
   
- Po zakończeniu edycji konfiguracji klienta dla Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, aby zawsze używać zaktualizowanego pliku do debugowania z usługą, możesz usunąć zaznaczenie pola **ponownie wygenerować** opcji. Wykonując tak, nawet gdy aktualizacja usługi i ponownie otwórz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego pliku plik Client.dll.config jest aktualizowane wcześniej zamiast wygenerowano ponownie, jeden na podstawie zaktualizowane usługi.  
+ Jeśli edytowano konfiguracji klienta dla usługi WCF i chcesz zawsze używaj zaktualizowanego pliku do debugowania z usługą, możesz usunąć zaznaczenie pola **ponownie wygenerować** opcji. W ten sposób, nawet wtedy, gdy aktualizacja usługi i ponownie otwórz klienta testowego WCF, pliku plik Client.dll.config jest aktualizowany wcześniej zamiast wygenerowano ponownie, jeden na podstawie zaktualizowane usługi.  
   
  Jednak może być konieczne edycję pliku konfiguracyjnego, aby je dostosować za pomocą ponownie wygenerowanego serwera proxy. Jeśli ponownie wygenerowanego serwera proxy i pliku konfiguracji są niezgodne z powodu zaktualizowane usługi, błędy zostanie przeprowadzona po wywołaniu usługi.  
   
@@ -105,35 +105,35 @@ Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) je
 ### <a name="adding-removing-and-refreshing-services"></a>Dodawanie, usuwanie i odświeżanie usługi  
   
 #### <a name="add-service"></a>Dodawanie usługi  
- Kliknij przycisk **pliku**->**Dodaj usługę** Aby dodać usługę do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego. Następnie należy wpisać identyfikator URI (adres punktu końcowego) usługi do dodania. Adres usługi może być adresem mex lub WSDL.  
+ Kliknij przycisk **pliku**->**Dodaj usługę** do dodawania usługi do klienta testowego WCF. Następnie należy wpisać identyfikator URI (adres punktu końcowego) usługi do dodania. Adres usługi może być adresem mex lub WSDL.  
   
- Możesz także znaleźć listę punktów końcowych 10 ostatnio dodane usług w **ostatnie usług** podmenu. Jeśli zostanie wybrana jedna z nich, określona usługa jest dodawany do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego.  
+ Możesz także znaleźć listę punktów końcowych 10 ostatnio dodane usług w **ostatnie usług** podmenu. Po wybraniu jednej z nich, określona usługa jest dodawany do klienta testowego WCF.  
   
  Użytkownik może również kliknij prawym przyciskiem myszy korzeń drzewa usługi **Moje projekty usług**i wybierz **Dodaj usługę** uzyskanie takiego samego wyniku.  
   
  Podczas proxy generowania, kompilowania binarnego lub wywołania usługi elementów menu, które obsługuje dodawania usługi są wyłączone. Wywołania usługi jest niedostępne.  
   
 #### <a name="remove-service"></a>Usunięcie usługi  
- Kliknij prawym przyciskiem myszy element główny usługi usługi można usunąć, a następnie wybierz **Usuń usługi** do usunięcia usługi od [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego.  
+ Kliknij prawym przyciskiem myszy element główny usługi usługi można usunąć, a następnie wybierz **Usuń usługi** do usunięcia usługi od klienta testowego WCF.  
   
  Podczas proxy generowania, kompilowania binarnego lub wywołania usługi elementów menu, które obsługuje usuwanie usługi są wyłączone. Wywołania usługi jest niedostępne.  
   
 #### <a name="refresh-service"></a>Odśwież usługi  
- Jeśli zmiany do usługi podczas [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego jest uruchomiona, i chcesz upewnij się, że [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] implementację klienta testowego dla tej usługi jest aktualny, kliknij prawym przyciskiem myszy element główny usługi, usługi, a następnie wybierz **odświeżania Usługa**. Należy pamiętać, że po odświeżeniu stan usługi jest resetowany.  
+ Zmianie do usługi podczas klienta testowego WCF jest uruchomiona, i chcesz upewnij się, że implementacja klienta testowego WCF dla tej usługi jest aktualny, kliknij prawym przyciskiem myszy usługę, a następnie wybierz katalog główny usługi **odświeżania usługi**. Należy pamiętać, że po odświeżeniu stan usługi jest resetowany.  
   
  Podczas proxy generowania, kompilowania binarnego lub wywołania usługi elementów menu, które obsługują odświeżanie usługi są wyłączone. Wywołania usługi jest niedostępne.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Lokalizacja plików wygenerowanych przez klienta testowego  
- Domyślnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] magazynów klienta testowego wygenerowanych plików kodu i Konfiguracja klienta w folderze "%appdata%\Local\temp\Test projektów klienckich". Ten folder jest usuwany po [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zamyka klienta testowego. Jeśli plik konfiguracji zostanie zmodyfikowany w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego i **zawsze Generuj konfiguracji podczas uruchamiania usługi** opcja jest wyłączona, zmodyfikowany plik zostanie skopiowany do folderu "W pamięci podręcznej konfiguracji" w obszarze "Moje Documents\Test Projekty Documents\Test klienta projektów klienckich"z pliku XML (metadanych adresów do nazwy pliku) mapowania jako indeks.  
+ Domyślnie magazynów klienta testowego WCF wygenerowanych plików kodu i Konfiguracja klienta w folderze "%appdata%\Local\temp\Test projektów klienckich". Ten folder jest usuwany po zamknięciu klienta testowego WCF. Jeśli plik konfiguracji zostanie zmodyfikowany w kliencie testowym WCF i **zawsze Generuj konfiguracji podczas uruchamiania usługi** opcja jest wyłączona, zmodyfikowany plik zostanie skopiowany do folderu "W pamięci podręcznej konfiguracji" w obszarze "Moje Documents\Test projektów klienckich Projektów klienckich Documents\Test"z pliku XML (metadanych adresów do nazwy pliku) mapowania jako indeks.  
   
- Można również uruchomić [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego w wierszu polecenia, użyj `/ProjectPath` przełącznika, aby określić nową ścieżkę odpowiednie do przechowywania plików wygenerowanych lub użyj `/RestoreProjectPath` przełącznik, aby przywrócić domyślną lokalizację. Składnia jest następująca:  
+ Można również uruchomić klienta testowego WCF w wierszu polecenia, użyj `/ProjectPath` przełącznika, aby określić nową ścieżkę odpowiednie do przechowywania plików wygenerowanych lub użyj `/RestoreProjectPath` przełącznik, aby przywrócić domyślną lokalizację. Składnia jest następująca:  
   
  `wcfTestClient.exe /ProjectPath [desired location]`  
   
- Uruchomienie tego polecenia nie można otworzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego. Do lokalizacji folderu zostanie zmieniona. To polecenie można uruchomić czy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego jest uruchomiona lub nie. Nowa lokalizacja jest stosowany podczas [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uruchomieniu klienta testowego. Informacje o lokalizacji mogą zostać zapisane w rejestrze lub w pliku WcfTestClient.exe.option w folderze "%appdata%\Local\temp\Test projektów klienckich".  
+ Uruchomienie tego polecenia nie jest otwierany klienta testowego WCF. Do lokalizacji folderu zostanie zmieniona. Czy klienta testowego WCF jest uruchomiona lub nie można uruchomić tego polecenia. Nowa lokalizacja jest stosowana po ponownym uruchomieniu klienta testowego WCF. Informacje o lokalizacji mogą zostać zapisane w rejestrze lub w pliku WcfTestClient.exe.option w folderze "%appdata%\Local\temp\Test projektów klienckich".  
   
 ## <a name="features-supported-by-wcf-test-client"></a>Funkcje obsługiwane przez klienta testowego WCF  
- Poniżej przedstawiono listę funkcji obsługiwanych przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego:  
+ Poniżej przedstawiono listę funkcji obsługiwanych przez klienta testowego WCF:  
   
 -   Wywołania usługi: Żądanie/odpowiedź, a komunikat jednokierunkowy.  
   
@@ -145,7 +145,7 @@ Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) je
   
 -   Serializacja XML.  
   
- Poniżej przedstawiono listę funkcji nie są obsługiwane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego:  
+ Poniżej przedstawiono listę funkcji nie są obsługiwane przez klienta testowego WCF:  
   
 -   Typy: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, typy, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejs, w tym pokrewny <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu i <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> typów i ADO.NET <xref:System.Data.DataTable> typu.  
   
@@ -158,11 +158,11 @@ Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) je
 -   Powiązania: WSFederationbinding, wszelkie kontekst powiązania i powiązanie Https, WebHttpbinding (obsługi wiadomości odpowiedzi Json).  
   
 ## <a name="closing-wcf-test-client"></a>Zamykanie klienta testowego WCF  
- Możesz zamknąć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego w następujący sposób:  
+ Możesz zamknąć klienta testowego WCF w następujący sposób:  
   
--   Na **pliku** menu, kliknij przycisk **zakończenia**. Alternatywnie w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego głównego okna, kliknij przycisk **Zamknij**. Oba te akcje też zamknąć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie i Zatrzymaj debugowanie programu Visual Studio przetwarzać, jeśli [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego została uruchomiona przez program Visual Studio.  
+-   Na **pliku** menu, kliknij przycisk **zakończenia**. Alternatywnie w głównym oknie klienta testowego WCF, kliknij przycisk **Zamknij**. Zarówno z tych akcji również zamknięte Host automatycznie usługi WCF i zatrzymać proces debugowania programu Visual Studio, jeśli klienta testowego WCF została uruchomiona przez program Visual Studio.  
   
--   Kliknij prawym przyciskiem myszy **Host usługi WCF** ikonę w obszarze powiadomień, a następnie kliknij przycisk **zakończenia.** To kończy pracę zarówno [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego i powoduje zatrzymanie debugowania programu Visual Studio procesu.  
+-   Kliknij prawym przyciskiem myszy **Host usługi WCF** ikonę w obszarze powiadomień, a następnie kliknij przycisk **zakończenia.** Zamyka klienta testowego WCF i hostów automatycznie usługi WCF i zatrzymuje programu Visual Studio debugowanie procesu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

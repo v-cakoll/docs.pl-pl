@@ -7,11 +7,11 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca0f78239e6e259ec5bd75e9f93af5c3a4b7adf1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Tworzenie i wdrażanie usług danych WCF
 Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby uzyskać więcej ogólnych informacji o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], zobacz [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) i [omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -75,7 +75,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
 -   Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.  
   
--   Podczas debugowania usługi danych można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwości w <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu dla klasy usługi danych do `true`. Aby uzyskać więcej informacji, zobacz wpis [debugowania usługi danych WCF](http://go.microsoft.com/fwlink/?LinkId=201868). Można również włączyć śledzenie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do wyświetlania wyjątków zgłoszonych w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+-   Podczas debugowania usługi danych można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwości w <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu dla klasy usługi danych do `true`. Aby uzyskać więcej informacji, zobacz wpis [debugowania usługi danych WCF](http://go.microsoft.com/fwlink/?LinkId=201868). Można również włączyć śledzenie w programie WCF, aby wyświetlić wyjątków zgłoszonych w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Usługi danych jest zwykle opracowany jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt aplikacji, ale można również utworzyć należy Usługa danych jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt witryny sieci Web w programie Visual Studio. Informacje o różnicach między tymi dwoma typami projektów, zobacz [NIB: projekty aplikacji sieci Web i projektów witryny sieci Web w programie Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
@@ -116,7 +116,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
 -   Podczas wdrażania usługi danych, który używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy bazy danych programu SQL Server, może być również konieczne propagację struktury danych, danych, lub wdrożenie zarówno z danymi usługi. Visual Studio może automatycznie tworzyć skrypty (pliki SQL), aby to zrobić w docelowej bazie danych, i te skrypty może być uwzględniony w pakiecie wdrożeniowym sieci Web z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [NIB: porady: Wdrażanie bazy danych z projektu aplikacji sieci Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Aby uzyskać [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web, można to zrobić pomocą **Kreator publikowania bazy danych** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [wdrażania bazy danych przy użyciu Kreatora publikowania bazy danych](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Ponieważ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonych w programie IIS w systemie Windows Server. Aby uzyskać więcej informacji o korzystaniu z programu Windows Server AppFabric do monitorowania usługi danych, zobacz wpis [śledzenia usług danych WCF za pomocą programu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Ponieważ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje Podstawowa implementacja WCF, Windows Server AppFabric służy do monitorowania usługi danych wdrożonych w programie IIS w systemie Windows Server. Aby uzyskać więcej informacji o korzystaniu z programu Windows Server AppFabric do monitorowania usługi danych, zobacz wpis [śledzenia usług danych WCF za pomocą programu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

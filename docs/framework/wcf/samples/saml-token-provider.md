@@ -2,22 +2,22 @@
 title: Dostawca tokenów SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>Dostawca tokenów SAML
-W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy tokenu SAML. Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest dostarczany z domyślnym dostawcy tokenu Menedżera poświadczeń. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
+W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy tokenu SAML. Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. Usługi WCF jest dostarczany z domyślnego dostawcy tokenu Menedżera poświadczeń. Usługi WCF jest także dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
   
 -   Jeśli masz Magazyn poświadczeń, które tych dostawców tokenu nie może pracować z.  
   
--   Jeśli chcesz udostępnić własny niestandardowy mechanizm do przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje o tym, kiedy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework klienta używa poświadczeń.  
+-   Jeśli chcesz udostępnić własny niestandardowy mechanizm do przekształcania poświadczenia z punktu, gdy użytkownik podaje szczegóły, aby podczas framework klienta WCF używa poświadczeń.  
   
 -   Jeśli tworzysz niestandardowy token.  
   
- Ten przykład przedstawia sposób tworzenia niestandardowego dostawcę tokenów, który umożliwia tokenu SAML uzyskany poza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework klienta do użycia.  
+ Ten przykład przedstawia sposób tworzenia niestandardowego dostawcę tokenów, który umożliwia tokenu SAML uzyskany poza framework klienta WCF do użycia.  
   
  Krótko mówiąc, w tym przykładzie przedstawiono poniżej:  
   
@@ -25,7 +25,7 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
   
 -   Jak tokenu SAML mogą być przekazywane do poświadczeń klienta.  
   
--   Jak tokenu SAML są dostarczane do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework klienta.  
+-   Jak struktura klienta WCF zapewnia tokenu SAML.  
   
 -   Jak serwer jest uwierzytelniany przez klienta przy użyciu certyfikat X.509.  
   
@@ -110,7 +110,7 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
 </system.serviceModel>  
 ```  
   
- Poniższe kroki pokazują, jak utworzyć niestandardowego dostawcę tokenu SAML i ich integracji z programem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: Struktura zabezpieczeń:  
+ Poniższe kroki pokazują, jak utworzyć niestandardowego dostawcę tokenu SAML i zintegrować ją z programem WCF: Struktura zabezpieczeń:  
   
 1.  Pisanie niestandardowych dostawcy tokenu SAML.  
   

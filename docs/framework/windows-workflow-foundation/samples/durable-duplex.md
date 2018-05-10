@@ -2,11 +2,11 @@
 title: Niezawodna komunikacja dwukierunkowa
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>Niezawodna komunikacja dwukierunkowa
 W tym przykładzie pokazano, jak instalowanie i konfigurowanie trwałe dupleksu wiadomości programu exchange przy użyciu działań obsługi wiadomości w systemie Windows Workflow Foundation (WF). Exchange trwałe komunikat dupleksu jest dwukierunkowe wiadomości programu exchange, która ma miejsce w długim okresie czasu. Okres istnienia wymiany komunikatów może być dłuższy niż okres istnienia kanał komunikacyjny i okresem istnienia w pamięci wystąpień usługi.  
@@ -41,7 +41,7 @@ W tym przykładzie pokazano, jak instalowanie i konfigurowanie trwałe dupleksu 
 >  Powiązanie używane przez ten przykład nie jest bezpieczne. W przypadku wdrażania aplikacji, należy skonfigurować wiązania na podstawie wymagań zabezpieczeń aplikacji.  
   
 > [!NOTE]
->  Kolejki używane w tym przykładzie nie są transakcyjne. Dla przykładu, który pokazuje, jak skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wymiany przy użyciu kolejki transakcji, zobacz [MSMQ Activation](../../../../docs/framework/wcf/samples/msmq-activation.md) próbki.  
+>  Kolejki używane w tym przykładzie nie są transakcyjne. Dla przykładu, który pokazuje, jak skonfigurować przy użyciu kolejki transakcji wymiany wiadomości WCF, zobacz [MSMQ Activation](../../../../docs/framework/wcf/samples/msmq-activation.md) próbki.  
   
  Komunikat wysyłany przez Service1.xamlx do Service2.xamlx są wysyłane przy użyciu punktu końcowego klienta z adresem Service2.xamlx i niestandardowego powiązania zdefiniowane wcześniej. Wywołanie zwrotne z Service2.xamlx do Service1.xamlx są wysyłane przy użyciu punktu końcowego klienta z żadnego jawnie skonfigurowanego adresu, ponieważ adres jest pobierana z kontekstu wywołania zwrotnego wysyłane przez Service1.xamlx. Poniższy przykładowy kod definiuje punkty końcowe klienta.  
   

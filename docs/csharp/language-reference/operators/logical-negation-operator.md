@@ -1,4 +1,4 @@
-﻿---
+---
 title: '! Operator (odwołanie w C#)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,10 +15,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>! Operator (odwołanie w C#)
-Operator logiczny negacji (`!`) jest operatorem jednoargumentowym, który neguje swój argument operacji. Jest zdefiniowany dla typu `bool` i zwraca wartosc `true` tylko wtedy, gdy argument operacji jest `false`. 
+Operator logiczny negacji (`!`) jest operatorem jednoargumentowym, który neguje swój argument operacji. Jest zdefiniowany dla typu `bool` i zwraca wartość `true` tylko wtedy, gdy argument operacji jest `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Typy definiowane przez uzytkownika moga przeciazac operator `!` (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
+ Typy definiowane przez użytkownika mogą przeciążać operator `!` (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/CSharp/logical-negation-operator_1.cs)]  

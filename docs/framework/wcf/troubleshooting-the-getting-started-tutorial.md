@@ -2,11 +2,11 @@
 title: Rozwiązywanie problemów z samouczkiem dotyczącym wprowadzenia
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 863e9dd1253624c025e830f589068068cb996413
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Rozwiązywanie problemów z samouczkiem dotyczącym wprowadzenia
 W tym temacie wymieniono najczęściej występujących problemów podczas pracy za pośrednictwem Samouczek wprowadzający i sposobu ich rozwiązania.  
@@ -31,7 +31,7 @@ W tym temacie wymieniono najczęściej występujących problemów podczas pracy 
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Próba uruchomienia aplikacji usługi: HTTP nie może zarejestrować adresu URL http://+:8000/ServiceModelSamples/Service/. Proces nie ma praw dostępu do tej przestrzeni nazw.  
- Proces obsługujący [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi musi być uruchamiane z uprawnieniami administracyjnymi. Jeśli używasz usługi z wewnątrz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] należy uruchomić [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] jako Administrator. Kliknij tak zrobić **Start**, kliknij prawym przyciskiem myszy [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] i wybierz **Uruchom jako Administrator**. Jeśli używasz usługi w wierszu polecenia należy uruchomić wpisz w wierszu polecenia z uprawnieniami administratora w podobny sposób. Kliknij przycisk **Start**, kliknij prawym przyciskiem myszy **wiersza polecenia** i wybierz **Uruchom jako Administrator**.  
+ Proces, który jest hostem usługi WCF musi być uruchamiane z uprawnieniami administracyjnymi. Jeśli używasz usługi z wewnątrz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] należy uruchomić [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] jako Administrator. Kliknij tak zrobić **Start**, kliknij prawym przyciskiem myszy [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] i wybierz **Uruchom jako Administrator**. Jeśli używasz usługi w wierszu polecenia należy uruchomić wpisz w wierszu polecenia z uprawnieniami administratora w podobny sposób. Kliknij przycisk **Start**, kliknij prawym przyciskiem myszy **wiersza polecenia** i wybierz **Uruchom jako Administrator**.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Podjęto próbę użycia narzędzia Svcutil.exe: "svcutil" nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy.  

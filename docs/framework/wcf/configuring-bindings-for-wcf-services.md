@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurowanie powiązań dla usług WCF (Windows Communication Foundation)
 Podczas tworzenia aplikacji, ma często mają być odroczone decyzje administratora po wdrożeniu aplikacji. Na przykład często istnieje żaden sposób uzyskać z wyprzedzeniem, co adres usługi lub identyfikator URI (Uniform Resource), będzie. Zamiast kodować adres, zaleca się pozwalają administratorowi zrobić po utworzeniu usługi. Tego rodzaju elastyczności odbywa się za pośrednictwem konfiguracji.  
@@ -39,9 +39,9 @@ Podczas tworzenia aplikacji, ma często mają być odroczone decyzje administrat
   
  Na przykład określenie [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) wskazuje element do obsługi protokołu HTTP jako transportu dla punktu końcowego. Ten element jest używany do przesyłania się punkt końcowy w czasie wykonywania, gdy jest otwarty przy użyciu tego punktu końcowego usługi.  
   
- Istnieją dwa rodzaje powiązań: wstępnie zdefiniowanych i niestandardowych. Wstępnie zdefiniowanych powiązań kombinację przydatne elementy, które są używane w typowych scenariuszy. Dla listy wstępnie zdefiniowanych powiązań typy, które [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] udostępnia, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). Jeśli żadna kolekcja wstępnie zdefiniowanych powiązania ma poprawne kombinacja funkcji, które wymaga aplikacji usługi, można utworzyć powiązania niestandardowe, aby spełnić wymagania aplikacji. Aby uzyskać więcej informacji dotyczących powiązań niestandardowych, zobacz [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Istnieją dwa rodzaje powiązań: wstępnie zdefiniowanych i niestandardowych. Wstępnie zdefiniowanych powiązań kombinację przydatne elementy, które są używane w typowych scenariuszy. Dla listy typów wstępnie zdefiniowanych powiązań, które zapewnia usługi WCF, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). Jeśli żadna kolekcja wstępnie zdefiniowanych powiązania ma poprawne kombinacja funkcji, które wymaga aplikacji usługi, można utworzyć powiązania niestandardowe, aby spełnić wymagania aplikacji. Aby uzyskać więcej informacji dotyczących powiązań niestandardowych, zobacz [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
- Cztery następujące przykłady przedstawiają najbardziej typowe konfiguracje powiązania, używany do konfigurowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi.  
+ Cztery następujące przykłady przedstawiają najbardziej typowe konfiguracje powiązania, używany do konfigurowania usługi WCF.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Określający typ powiązania punktu końcowego  
  Pierwszym przykładzie przedstawiono sposób określić punkt końcowy skonfigurowany adres, kontrakt i powiązania.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń
 W tym temacie pokazano, jak utworzyć wystawcy uwierzytelnienia tokenu zabezpieczeń niestandardowych oraz jak zintegrować ją z Menedżer tokenów zabezpieczających niestandardowych. Wystawcę uwierzytelnienia tokenów zabezpieczających sprawdza poprawność zawartości tokenu zabezpieczającego dostarczane z komunikatu przychodzącego. Jeśli weryfikacja zakończy się powodzeniem, serwer uwierzytelniający zwraca kolekcję <xref:System.IdentityModel.Policy.IAuthorizationPolicy> obiektów, po obliczeniu zwraca zestaw oświadczeń.  
@@ -33,7 +33,7 @@ W tym temacie pokazano, jak utworzyć wystawcy uwierzytelnienia tokenu zabezpiec
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- Poprzedni kod zwraca kolekcję zasad autoryzacji w <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> metody. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie ma publicznego implementację tego interfejsu. Poniższa procedura pokazuje, jak w tym celu do własnych wymagań.  
+ Poprzedni kod zwraca kolekcję zasad autoryzacji w <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> metody. Usługi WCF nie zawiera publicznej implementację tego interfejsu. Poniższa procedura pokazuje, jak w tym celu do własnych wymagań.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Do tworzenia niestandardowych zasad autoryzacji  
   
@@ -43,7 +43,7 @@ W tym temacie pokazano, jak utworzyć wystawcy uwierzytelnienia tokenu zabezpiec
   
 3.  Implementowanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> właściwości tylko do odczytu. Ta właściwość musi zwracać wystawcę zestawów oświadczeń, które są uzyskiwane z tokenu. Wystawca tokenu lub urząd, który jest odpowiedzialny za sprawdzanie poprawności tokenu zawartość powinna odpowiadać tym wystawcą. W poniższym przykładzie użyto Oświadczenie wystawcy przekazany do tej klasy z wystawcę uwierzytelnienia tokenów zabezpieczających niestandardowego utworzonego w poprzedniej procedurze. Wystawca uwierzytelnienia tokenu zabezpieczeń niestandardowych korzysta z zestawu oświadczeń dostarczane przez system (zwrócony przez <xref:System.IdentityModel.Claims.ClaimSet.System%2A> właściwości) do reprezentowania wystawca token nazwy użytkownika.  
   
-4.  Implementowanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metody. Ta metoda powoduje wypełnienie wystąpienia <xref:System.IdentityModel.Policy.EvaluationContext> klasy (przekazany jako argument) z oświadczeń, które są oparte na zawartość tokenu zabezpieczeń przychodzących. Metoda zwraca `true` po zakończeniu z oceną. W przypadku wdrożenia zależy od obecności innych zasad autoryzacji, które znajdują się dodatkowe informacje w kontekście oceny tej metody można powrócić `false` Jeśli wymaganych informacji nie ma jeszcze w kontekście oceny. W takim przypadku [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywoła metodę ponownie po przeprowadzeniu oceny innych zasad autoryzacji generowane komunikatu przychodzącego, jeśli co najmniej jeden z tych zasad autoryzacji zmodyfikowane kontekst oceny.  
+4.  Implementowanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metody. Ta metoda powoduje wypełnienie wystąpienia <xref:System.IdentityModel.Policy.EvaluationContext> klasy (przekazany jako argument) z oświadczeń, które są oparte na zawartość tokenu zabezpieczeń przychodzących. Metoda zwraca `true` po zakończeniu z oceną. W przypadku wdrożenia zależy od obecności innych zasad autoryzacji, które znajdują się dodatkowe informacje w kontekście oceny tej metody można powrócić `false` Jeśli wymaganych informacji nie ma jeszcze w kontekście oceny. W takim przypadku WCF będzie wywoływać metodę ponownie po przeprowadzeniu oceny innych zasad autoryzacji generowane komunikatu przychodzącego, jeśli co najmniej jeden z tych zasad autoryzacji zmodyfikowane kontekst oceny.  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

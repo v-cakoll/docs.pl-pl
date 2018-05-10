@@ -2,11 +2,11 @@
 title: Nagłówki adresów
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: c0e3807aadc18c7737f3a5e354135721cbfccf3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>Nagłówki adresów
 Przykładowy adres nagłówki pokazano, jak klientów można przekazywać parametrów odwołania do usługi przy użyciu usługi Windows Communication Foundation (WCF).  
@@ -14,9 +14,9 @@ Przykładowy adres nagłówki pokazano, jak klientów można przekazywać parame
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Specyfikacja WS-Addressing definiuje pojęcie odwołanie do punktu końcowego sposobów rozwiązania danego punktu końcowego usługi sieci Web. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], odwołania do punktu końcowego są modelowane przy użyciu `EndpointAddress` klasy - `EndpointAddress` jest typem pola adresu `ServiceEndpoint` klasy.  
+ Specyfikacja WS-Addressing definiuje pojęcie odwołanie do punktu końcowego sposobów rozwiązania danego punktu końcowego usługi sieci Web. W programie WCF, odwołania do punktu końcowego są modelowane przy użyciu `EndpointAddress` klasy - `EndpointAddress` jest typem pola adresu `ServiceEndpoint` klasy.  
   
- Część model referencyjny punktu końcowego jest, że każde odwołanie może przenosić niektórych parametrów odwołania, które dodać informacje identyfikacyjne bardzo. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], te parametry odwołania są modelowane jako wystąpienia `AddressHeader` klasy.  
+ Część model referencyjny punktu końcowego jest, że każde odwołanie może przenosić niektórych parametrów odwołania, które dodać informacje identyfikacyjne bardzo. W programie WCF, te parametry odwołania są modelowane jako wystąpienia `AddressHeader` klasy.  
   
  W tym przykładzie klient dodaje parametr odwołania do `EndpointAddress` punktu końcowego klienta. Usługa szuka tego parametru odwołania i używa jej wartość w logice jego operacji usługi "Hello".  
   

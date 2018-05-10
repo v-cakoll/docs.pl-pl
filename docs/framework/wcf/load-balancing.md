@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>Równoważenie obciążenia
-Jest jednym ze sposobów zwiększyć pojemność aplikacji Windows Communication Foundation (WCF) można skalować je przez wdrożenie ich do farmy serwerów z równoważeniem obciążenia. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacje mogą być równoważone za pomocą standardowego obciążenia równoważenia technik, w tym usługi równoważenia obciążenia oprogramowania, takie jak Windows Równoważenie obciążenia sieciowego, a także równoważenie urządzenia obciążenia oparte na sprzęcie.  
+Jest jednym ze sposobów zwiększyć pojemność aplikacji Windows Communication Foundation (WCF) można skalować je przez wdrożenie ich do farmy serwerów z równoważeniem obciążenia. Usługi WCF aplikacje mogą być równoważone za pomocą standardowego obciążenia równoważenia technik, w tym usługi równoważenia obciążenia oprogramowania, takie jak Windows Równoważenie obciążenia sieciowego, a także równoważenie urządzenia obciążenia oparte na sprzęcie.  
   
- W poniższych sekcjach omówiono zagadnienia dotyczące równoważenia obciążenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacje utworzone przy użyciu różnych powiązania dostarczane przez system.  
+ W poniższych sekcjach omówiono zagadnienia dotyczące aplikacji WCF utworzony przy użyciu różnych powiązania dostarczane przez system równoważenia obciążenia.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Równoważenie obciążenia i powiązanie HTTP podstawowe  
- Z punktu widzenia równoważenia obciążenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacje, które komunikują się za pomocą <xref:System.ServiceModel.BasicHttpBinding> nie różnią się od innych typowych HTTP w sieci (statyczne zawartość HTML stron ASP.NET i usługi sieci Web ASMX). [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kanałów, które używają tego powiązania są z założenia bezstanowych, a następnie Zakończ ich połączeń po zamknięciu kanału. W efekcie <xref:System.ServiceModel.BasicHttpBinding> dobrze działa z istniejącymi równoważenia techniki obciążenia HTTP.  
+ Z perspektywy aplikacji WCF, które komunikują się przy użyciu równoważenia obciążenia <xref:System.ServiceModel.BasicHttpBinding> nie różnią się od innych typowych HTTP w sieci (statyczne zawartość HTML stron ASP.NET i usługi sieci Web ASMX). Kanały WCF, które używają tego powiązania są z założenia bezstanowych, a następnie Zakończ ich połączeń po zamknięciu kanału. W efekcie <xref:System.ServiceModel.BasicHttpBinding> dobrze działa z istniejącymi równoważenia techniki obciążenia HTTP.  
   
  Domyślnie <xref:System.ServiceModel.BasicHttpBinding> wysyła nagłówka połączenia HTTP w wiadomości z `Keep-Alive` wartość, która umożliwia klientom nawiązanie połączenia trwałe do usług, które je obsługują. Ta konfiguracja zapewnia rozszerzoną przepływności, ponieważ wcześniej ustanowione, że połączenia mogą być ponownie używane do wysyłania kolejnych komunikatów na tym samym serwerze. Jednak ponownego użycia połączenia może spowodować klientów staną się silnie skojarzony z określonego serwera w farmie z równoważeniem obciążenia, co zmniejsza skuteczności równoważenia obciążenia okrężnego. Jeśli to zachowanie jest niepożądane, HTTP `Keep-Alive` można wyłączyć na serwerze przy użyciu <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> właściwości o <xref:System.ServiceModel.Channels.CustomBinding> lub zdefiniowanej przez użytkownika <xref:System.ServiceModel.Channels.Binding>. Poniższy przykład pokazuje, jak to zrobić przy użyciu konfiguracji.  
   

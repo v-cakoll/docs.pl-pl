@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75657786135fd13222c6c7edd5acfa122cc72e52
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Narzędzie edytora konfiguracji (SvcConfigEditor.exe)
-Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEditor.exe) umożliwia administratorów i deweloperów, tworzenie i modyfikowanie ustawień konfiguracji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług przy użyciu graficznego interfejsu użytkownika. Z tego narzędzia można zarządzać ustawieniami dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powiązania zachowania, usług i diagnostyki bez konieczności bezpośredniego edytowania plików XML konfiguracji.  
+Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEditor.exe) umożliwia administratorów i deweloperów, tworzenie i modyfikowanie ustawień konfiguracji dla usług WCF za pomocą graficznego interfejsu użytkownika. Z tego narzędzia można zarządzać ustawieniami dla wiązania WCF, zachowania, usług i diagnostyki bez konieczności bezpośredniego edytowania plików XML konfiguracji.  
   
  Edytor konfiguracji usługi znajdują się w folderze C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin.  
   
 ## <a name="the-wcf-configuration-editor"></a>Edytor konfiguracji usługi WCF  
- Edytor konfiguracji usługi jest dostarczany za pomocą kreatora, który przeprowadzi Cię przez kroki konfigurowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi lub klienta. Zdecydowanie zaleca się bezpośrednio za pomocą Kreatora zamiast edytora.  
+ Edytor konfiguracji usługi jest dostarczany za pomocą kreatora, który przeprowadzi Cię przez kroki konfigurowania klienta lub usługi WCF. Zdecydowanie zaleca się bezpośrednio za pomocą Kreatora zamiast edytora.  
   
- Jeśli masz już pewne pliki konfiguracyjne, które są zgodne ze schematem System.Configuration standardowe, można zarządzać ustawienia specyficzne dla powiązania, zachowanie, usług i diagnostyki przy użyciu interfejsu użytkownika. Edytor konfiguracji usługi umożliwia zarządzanie ustawieniami dla istniejących [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plików konfiguracji oraz pliki wykonywalne, usług COM + i usług hostowanych w sieci Web. Podczas otwierania hostowanych w sieci Web usługi z usługi konfiguracji edytora, zarówno usługę własnych konfiguracji i sekcje dziedziczone konfiguracje węzłów górnego poziomu są wyświetlane.  
+ Jeśli masz już pewne pliki konfiguracyjne, które są zgodne ze schematem System.Configuration standardowe, można zarządzać ustawienia specyficzne dla powiązania, zachowanie, usług i diagnostyki przy użyciu interfejsu użytkownika. Edytor konfiguracji usługi umożliwia zarządzanie ustawieniami istniejące pliki konfiguracji usługi WCF, a także pliki wykonywalne, usług COM + i usług hostowanych w sieci Web. Podczas otwierania hostowanych w sieci Web usługi z usługi konfiguracji edytora, zarówno usługę własnych konfiguracji i sekcje dziedziczone konfiguracje węzłów górnego poziomu są wyświetlane.  
   
- Ponieważ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ustawienia konfiguracyjne znajdują się w `<system.serviceModel>` sekcji pliku konfiguracji, Edytor działa wyłącznie na zawartość tego elementu i nie dostępu do innych elementów w tym samym pliku. Można przejść do istniejących plików konfiguracyjnych bezpośrednio lub możesz wybrać zestaw, który zawiera usługę, katalog wirtualny lub usług COM +. Edytor ładuje plik konfiguracji dla określonej usługi i zezwala użytkownikowi na dodawanie nowych elementów albo edytowania istniejących elementów zagnieżdżonych w `<system.serviceModel>` sekcji pliku konfiguracji.  
+ Ponieważ ustawienia konfiguracji usługi WCF znajdują się w `<system.serviceModel>` sekcji pliku konfiguracji, Edytor działa wyłącznie na zawartość tego elementu i nie dostępu do innych elementów w tym samym pliku. Można przejść do istniejących plików konfiguracyjnych bezpośrednio lub możesz wybrać zestaw, który zawiera usługę, katalog wirtualny lub usług COM +. Edytor ładuje plik konfiguracji dla określonej usługi i zezwala użytkownikowi na dodawanie nowych elementów albo edytowania istniejących elementów zagnieżdżonych w `<system.serviceModel>` sekcji pliku konfiguracji.  
   
  Edytor obsługuje funkcję IntelliSense i wymusza zgodność schematu. Dane wyjściowe jest gwarantowana zgodne ze schematem pliku konfiguracji i poprawna składniowo danych wartości. Jednak Edytor nie gwarantuje, że plik konfiguracji jest semantycznie nieprawidłowy. Innymi słowy edytor nie gwarantuje, że plik konfiguracji można pracować z usługą, który konfiguruje.  
   
@@ -45,7 +45,7 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
   
  C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- Po uruchomieniu edytora konfiguracji usługi można użyć **plik i Otwórz** menu do przeglądania dla usługi lub zestawu, którymi chcesz zarządzać. Można otworzyć plików konfiguracyjnych bezpośrednio, wyszukaj [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM+ usługi i pliki konfiguracyjne otwarty dla usług hostowanych w sieci Web.  
+ Po uruchomieniu edytora konfiguracji usługi można użyć **plik i Otwórz** menu do przeglądania dla usługi lub zestawu, którymi chcesz zarządzać. Można otworzyć konfiguracji plików bezpośrednio, Przeglądaj w poszukiwaniu usług WCF /COM+ i otwierać pliki konfiguracji dla usług hostowanych w sieci Web.  
   
  Interfejs użytkownika edytora konfiguracji usługi jest podzielona na następujące obszary:  
   
@@ -57,7 +57,7 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
   
 ### <a name="opening-a-configuration-file"></a>Otwieranie pliku konfiguracji  
   
-1.  Uruchom Edytor konfiguracji usługi przy użyciu okna polecenia, aby przejść do Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] lokalizacja instalacji, a następnie wpisz `SvcConfigEditor.exe`.  
+1.  Uruchom Edytor konfiguracji usługi za pomocą okna polecenia przejdź do lokalizacji instalacji usługi WCF, a następnie wpisz `SvcConfigEditor.exe`.  
   
 2.  Z **pliku** menu, wybierz opcję **Otwórz** i wybierz typ pliku, w którym chcesz zarządzać.  
   
@@ -208,7 +208,7 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 3.  Wybierz element rozszerzenia powiązania, który chcesz edytować. Ustawienia elementu są wyświetlane w okienku po prawej stronie, na którym można edytować.  
   
 ### <a name="diagnostics"></a>Diagnostyka  
- **Diagnostyki** węzeł zawiera wszystkie ustawienia diagnostyki w pliku konfiguracji. Umożliwia ona włączyć liczniki wydajności lub wyłączyć, włączyć lub wyłączyć Instrumentacji zarządzania Windows (WMI), skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] śledzenie i skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] rejestrowanie komunikatów. Ustawienia w **diagnostyki** odpowiadają węzeł <`system.diagnostics`> sekcji, i `<diagnostics>` sekcji `<system.serviceModel>` w pliku konfiguracji.  
+ **Diagnostyki** węzeł zawiera wszystkie ustawienia diagnostyki w pliku konfiguracji. Dzięki temu można włączyć liczniki wydajności lub wyłączyć, włączyć lub wyłączyć Instrumentacji zarządzania Windows (WMI), Konfigurowanie śledzenia WCF i skonfigurować rejestrowanie komunikatów usługi WCF. Ustawienia w **diagnostyki** odpowiadają węzeł <`system.diagnostics`> sekcji, i `<diagnostics>` sekcji `<system.serviceModel>` w pliku konfiguracji.  
   
  Po kliknięciu **diagnostyki** węzła, można wyświetlić lub wykonać zadania na diagnostyki **na stronie Podsumowanie** w **okienka szczegółów**.  
   
@@ -225,18 +225,18 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 2.  Aby włączyć dostawcy usługi WMI, kliknij **włączyć dostawcy WMI** łącza.  
   
 #### <a name="enabling-wcf-tracing"></a>Włączanie śledzenia WCF  
- Można utworzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] śledzenia plików z właściwościami standardowe lub skonfigurować niestandardowy plik śledzenia.  
+ Można utworzyć pliku śledzenia WCF z właściwościami standardowe lub skonfigurować niestandardowy plik śledzenia.  
   
 1.  Kliknij przycisk **diagnostyki** węzła.  
   
 2.  Kliknij przycisk **włączyć śledzenie**.  
   
-3.  Kliknij przycisk **poziom śledzenia** łącze, aby dostosować poziom śledzenia. Istnieją sześciu poziomy śledzenia: Wyłącz krytyczny, błąd, ostrzeżenie, informacje i pełne. **Śledzenie działania** i **propagację działania** opcji umożliwiają korzystanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] działania funkcji śledzenia.  
+3.  Kliknij przycisk **poziom śledzenia** łącze, aby dostosować poziom śledzenia. Istnieją sześciu poziomy śledzenia: Wyłącz krytyczny, błąd, ostrzeżenie, informacje i pełne. **Śledzenie działania** i **propagację działania** opcji umożliwiają korzystanie z funkcji śledzenia WCF działania.  
   
 4.  Kliknij nazwę odbiornika śledzenia, aby określić plik śledzenia i opcje.  
   
 #### <a name="enabling-wcf-logging"></a>Włączanie rejestrowania programu WCF  
- Można utworzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] śledzenia plików z właściwościami standardowe lub skonfigurować niestandardowy plik śledzenia.  
+ Można utworzyć pliku śledzenia WCF z właściwościami standardowe lub skonfigurować niestandardowy plik śledzenia.  
   
 1.  Kliknij przycisk **diagnostyki** węzła.  
   
@@ -316,7 +316,7 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
  Ta sekcja umożliwia ustawienie domyślnego typ powiązania dla różnych protokołów, takich jak http, tcp, usługi MSMQ lub net.pipe za pośrednictwem zdefiniowanego mapowania między schematami protokołu adresu i możliwe powiązania. Można również dodać nowe mapowania do innych protokołów.  
   
 #### <a name="extensions"></a>Rozszerzenia  
- Nowe powiązanie rozszerzenia, rozszerzenia elementu powiązania, rozszerzenia standardowego punktu końcowego i rozszerzenia zachowanie może być zarejestrowany do użycia w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] konfiguracji. Rozszerzenia są pary nazwa/typu. Nazwa definiuje nazwę rozszerzenia w konfiguracji, podczas gdy typ implementuje rozszerzenia. Istnieją cztery typy rozszerzeń:  
+ Nowe rozszerzenia powiązania, rozszerzenia elementu powiązania, rozszerzenia standardowego punktu końcowego i zachowania rozszerzeń można zarejestrować do użytku w konfiguracji usługi WCF. Rozszerzenia są pary nazwa/typu. Nazwa definiuje nazwę rozszerzenia w konfiguracji, podczas gdy typ implementuje rozszerzenia. Istnieją cztery typy rozszerzeń:  
   
 -   Rozszerzenia powiązania Definiowanie typu cały powiązania. Przykład: `basicHttpBinding`.  
   
@@ -326,7 +326,7 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
   
 -   Zachowanie elementu rozszerzenia zdefiniować element zachowania. Przykład: `clientVia`.  
   
- Rozszerzenia, które zostały zarejestrowane w konfiguracji można używać jak każdy inny [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] składnika tego samego typu.  
+ Rozszerzenia, które zostały zarejestrowane w konfiguracji może służyć podobnie jak inne składnika WCF tego samego typu.  
   
 ##### <a name="adding-a-new-extension"></a>Dodawanie nowych rozszerzeń  
  Wybierz jeden z węzłów rozszerzenia w węzłach zaawansowane:  
@@ -343,11 +343,11 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
  W tej sekcji można zdefiniować ustawienia wystąpienia usługi Środowisko hostingu.  
   
 ### <a name="creating-a-configuration-file-using-the-wizard"></a>Tworzenie pliku konfiguracji za pomocą Kreatora  
- Jednym ze sposobów tworzenia nowego pliku konfiguracji jest za pomocą Kreatora nowej Element usługi. Kreator odnajdzie typy zainstalowanej usługi i inne elementy zgodne z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] na komputerze, w tym modelu COM + i -internetowej katalogów wirtualnych i ładuje je w celu udostępnienia Tworzenie konfiguracji bardziej uproszczone.  
+ Jednym ze sposobów tworzenia nowego pliku konfiguracji jest za pomocą Kreatora nowej Element usługi. Kreator znajduje typy zainstalowanej usługi i inne elementy zgodne z programem WCF na komputerze, w tym modelu COM + i -internetowej katalogów wirtualnych i ładuje je w celu udostępnienia Tworzenie konfiguracji bardziej usprawnić.  
   
 #### <a name="creating-a-configuration-file"></a>Tworzenie pliku konfiguracji  
   
-1.  Uruchom Edytor konfiguracji usługi przy użyciu okna polecenia, aby przejść do Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] lokalizacja instalacji, a następnie wpisz `SvcConfigEditor.exe`.  
+1.  Uruchom Edytor konfiguracji usługi za pomocą okna polecenia przejdź do lokalizacji instalacji usługi WCF, a następnie wpisz `SvcConfigEditor.exe`.  
   
 2.  Z **pliku** menu, wybierz opcję **Otwórz** i kliknij przycisk **plik wykonywalny**, **usług COM +**, lub **usługi WebHosted**w zależności od typu pliku konfiguracji, który chcesz utworzyć.  
   
@@ -370,7 +370,7 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
   
 2.  Na pierwszej stronie wybierz aplikacji COM + z drzewa. Nie można odnaleźć aplikacji COM + w drzewie, sprawdź, czy jest zainstalowany w usługach składowych i zarejestrowane w globalnej pamięci podręcznej zestawów (GAC).  
   
-3.  Na następnej stronie Wybierz metody, które chcesz uwidocznić jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług. Obsługiwane metody w aplikacji COM + są wyświetlane i domyślnie zaznaczone.  
+3.  Na następnej stronie Wybierz metody, które chcesz uwidocznić jako usługi WCF. Obsługiwane metody w aplikacji COM + są wyświetlane i domyślnie zaznaczone.  
   
 4.  Wybierz metodę obsługi.  
   
@@ -390,6 +390,6 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
     >  Można również bezpośrednio otworzyć i edytować plik konfiguracji, który zawiera kontrakty COM.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Plik konfiguracji usługi generowane przez Edytor konfiguracji nie jest gwarantowana do zabezpieczenia. Zapoznaj się z [zabezpieczeń](../../../docs/framework/wcf/feature-details/security.md) dokumentacji, aby dowiedzieć się, jak zabezpieczyć Twoje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług.  
+ Plik konfiguracji usługi generowane przez Edytor konfiguracji nie jest gwarantowana do zabezpieczenia. Zapoznaj się z [zabezpieczeń](../../../docs/framework/wcf/feature-details/security.md) dokumentacji, aby dowiedzieć się, jak zabezpieczyć swoje usługi WCF.  
   
- Ponadto edytora konfiguracji mogą służyć tylko do odczytu i zapisu prawidłową [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] elementy konfiguracji. Narzędzie ignoruje elementów schematu zgodne, zdefiniowane przez użytkownika. On również nie będzie podejmował Usuń te elementy z konfiguracji plików lub określić ich wpływu na znany [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] elementów. Jest odpowiedzialny za użytkownika do określenia, czy te elementy stanowiących zagrożenie dla aplikacji lub systemu.
+ Ponadto edytora konfiguracji można używać tylko do odczytu i zapisu prawidłowe elementy konfiguracji usługi WCF. Narzędzie ignoruje elementów schematu zgodne, zdefiniowane przez użytkownika. On również zrezygnować Usuń te elementy z konfiguracji plików lub określić ich wpływu na znanych elementów WCF. Jest odpowiedzialny za użytkownika do określenia, czy te elementy stanowiących zagrożenie dla aplikacji lub systemu.

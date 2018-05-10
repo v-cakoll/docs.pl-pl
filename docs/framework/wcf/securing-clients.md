@@ -6,17 +6,17 @@ helpviewer_keywords:
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfbe1fcce8a3b860e88dae4f5af43adfedbe9890
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W systemie Windows Communication Foundation (WCF), usługa nakazują wymagania dotyczące zabezpieczeń dla klientów. To, że usługa określa, jakie tryb zabezpieczeń, aby używać, i określa, czy klient musi dostarczyć poświadczenia. Zabezpieczanie klientów, w związku z tym, proces jest prosty: używanie metadanych uzyskane z usługi (jeśli jest publikowany) i kompilacji klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga to, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie opisano proces bardziej szczegółowo. Aby uzyskać więcej informacji o tworzeniu Usługa bezpiecznego, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Usługa określa zabezpieczeń  
- Domyślnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powiązania ma włączone funkcje zabezpieczeń. (Wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding>.) W związku z tym jeśli usługa została utworzona przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], istnieje duże prawdopodobieństwo, że będzie implementowany zabezpieczeń, aby zapewnić uwierzytelnianie, poufność i integralność. W takim przypadku metadanych, który udostępnia usługi wskaże, co wymaga, aby ustanowić kanał bezpiecznej komunikacji. Jeśli metadane usługi nie ma żadnych wymagań dotyczących zabezpieczeń, nie istnieje sposób nałożyć schemat zabezpieczeń, takich jak Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, w usłudze. Jeśli jednak usługa wymaga klienta podać poświadczenia, następnie deweloperowi klienta, narzędzia wdrażania lub administrator musisz podać poświadczenia rzeczywiste używanego przez klienta do samodzielnego uwierzytelnienia usługi.  
+ Domyślnie powiązań WCF mają włączone funkcje zabezpieczeń. (Wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding>.) W związku z tym jeśli usługa została utworzona przy użyciu usługi WCF, istnieje duże prawdopodobieństwo, że będzie implementowany zabezpieczeń, aby zapewnić uwierzytelnianie, poufność i integralność. W takim przypadku metadanych, który udostępnia usługi wskaże, co wymaga, aby ustanowić kanał bezpiecznej komunikacji. Jeśli metadane usługi nie ma żadnych wymagań dotyczących zabezpieczeń, nie istnieje sposób nałożyć schemat zabezpieczeń, takich jak Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, w usłudze. Jeśli jednak usługa wymaga klienta podać poświadczenia, następnie deweloperowi klienta, narzędzia wdrażania lub administrator musisz podać poświadczenia rzeczywiste używanego przez klienta do samodzielnego uwierzytelnienia usługi.  
   
 ## <a name="obtaining-metadata"></a>Uzyskiwanie metadanych  
  Podczas tworzenia klienta, pierwszym krokiem jest uzyskać metadanych dla usługi klienta będą komunikować się z. Można to zrobić na dwa sposoby. Po pierwsze, jeśli usługa publikuje punktu końcowego metadanych programu exchange (MEX) lub udostępnia metadanych za pośrednictwem protokołu HTTP lub HTTPS, można pobrać przy użyciu metadanych [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), zarówno generująca pliki kodu dla klienta, a także plik konfiguracji. (Aby uzyskać więcej informacji na temat korzystania z narzędzia, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Jeśli usługa nie jest publikowany punktu końcowego MEX i również nie powoduje jego metadanych dostępne za pośrednictwem protokołu HTTP lub HTTPS, należy skontaktuj się z autorem usługi dokumentacji, które opisują wymagania dotyczące zabezpieczeń i metadanych.  

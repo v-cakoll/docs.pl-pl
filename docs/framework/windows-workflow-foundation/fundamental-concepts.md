@@ -2,11 +2,11 @@
 title: Windows podstawowych koncepcji przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 8ffa1bd1cdcc0347691032885fb929784045bf8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5306f8616086835373bc52bdd8195564441b8b7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows podstawowych koncepcji przepływu pracy
 Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] używa pojęcia, które mogą być nowe dla niektórych deweloperów. W tym temacie opisano niektóre z pojęć i ich implementacji.  
@@ -51,7 +51,7 @@ Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes
  Działania uzyskania dostępu do środowiska uruchomieniowego przepływu pracy przy użyciu odpowiednich <xref:System.Activities.ActivityContext> pochodnej klasy, takich jak <xref:System.Activities.NativeActivityContext> lub <xref:System.Activities.CodeActivityContext>. Używają to rozpoznawania argumentów i zmienne, do planowania działań podrzędnych i do innych celów.  
   
 ## <a name="services"></a>Usługi  
- Przepływy pracy umożliwiają fizyczne do wdrożenia i uzyskiwać dostęp do usług luźno połączonych, przy użyciu działań komunikacji. Działania obsługi komunikatów są tworzone [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] i to podstawowy mechanizm używany do pobierania danych do i z przepływu pracy. Można utworzyć działania obsługi wiadomości ze sobą w celu modelowania dowolnego rodzaju wymiany komunikatów, które mają. Aby uzyskać więcej informacji, zobacz zobacz [wiadomości działania](../../../docs/framework/wcf/feature-details/messaging-activities.md). Usługi przepływu pracy są obsługiwane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. Aby uzyskać więcej informacji, zobacz [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Aby uzyskać więcej informacji na temat usług przepływu pracy zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Przepływy pracy umożliwiają fizyczne do wdrożenia i uzyskiwać dostęp do usług luźno połączonych, przy użyciu działań komunikacji. Działania obsługi komunikatów są tworzone na WCF i to podstawowy mechanizm używany do pobierania danych do i z przepływu pracy. Można utworzyć działania obsługi wiadomości ze sobą w celu modelowania dowolnego rodzaju wymiany komunikatów, które mają. Aby uzyskać więcej informacji, zobacz zobacz [wiadomości działania](../../../docs/framework/wcf/feature-details/messaging-activities.md). Usługi przepływu pracy są obsługiwane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. Aby uzyskać więcej informacji, zobacz [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Aby uzyskać więcej informacji na temat usług przepływu pracy zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Przepływy pracy zwalniania i długotrwałe trwałości,  
  Windows Workflow upraszcza tworzenie programów czynnych długotrwałe zapewniając:  

@@ -2,11 +2,11 @@
 title: Używanie liczników wydajności
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>Używanie liczników wydajności
 W tym przykładzie przedstawiono sposób dostępu do liczników wydajności systemu Windows Communication Foundation (WCF) oraz sposobu tworzenia liczników wydajności zdefiniowanych przez użytkownika. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ W tym przykładzie przedstawiono sposób dostępu do liczników wydajności syst
   
  To zadanie można również wykonać za pomocą [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Jeśli liczniki wydajności są włączone, cały zestaw [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] liczniki wydajności są włączone dla usługi. .NET Framework automatycznie przechowuje dane dotyczące wydajności na trzech poziomach: `ServiceModelService`, `ServiceModelEndpoint` i `ServiceModelOperation`. Każda z tych poziomów ma liczniki wydajności, takich jak "Wywołania", "Wywołania na sekundę" i "Zabezpieczenia wywołania nieautoryzowane".  
+ Jeśli liczniki wydajności są włączone, cały zestaw liczników wydajności usługi WCF jest włączone dla usługi. .NET Framework automatycznie przechowuje dane dotyczące wydajności na trzech poziomach: `ServiceModelService`, `ServiceModelEndpoint` i `ServiceModelOperation`. Każda z tych poziomów ma liczniki wydajności, takich jak "Wywołania", "Wywołania na sekundę" i "Zabezpieczenia wywołania nieautoryzowane".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
   
@@ -47,10 +47,10 @@ W tym przykładzie przedstawiono sposób dostępu do liczników wydajności syst
   
 2.  Usuń liczniki wydajności, które są wyświetlane, zaznaczając je i naciskając klawisz Delete.  
   
-3.  Dodaj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] liczniki prawym przyciskiem myszy okienko Wykres i wybierając **Dodaj liczniki**. W **Dodaj liczniki** okno dialogowe, wybierz opcję **ServiceModelOperation 3.0.0.0 ServiceModelEndpoint 3.0.0.0 i ServiceModelService 3.0.0.0** w obiekcie wydajności listy rozwijanej pola listy. Wybierz liczniki, które mają być wyświetlane na liście.  
+3.  Dodaj liczniki WCF prawym przyciskiem myszy okienko Wykres i wybierając **Dodaj liczniki**. W **Dodaj liczniki** okno dialogowe, wybierz opcję **ServiceModelOperation 3.0.0.0 ServiceModelEndpoint 3.0.0.0 i ServiceModelService 3.0.0.0** w obiekcie wydajności listy rozwijanej pola listy. Wybierz liczniki, które mają być wyświetlane na liście.  
   
     > [!NOTE]
-    >  Istnieją nie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] liczniki wydajności dla usługi, jeśli istnieją nie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi działające na komputerze.  
+    >  Nie ma żadnych liczniki wydajności programu WCF dla usługi, jeśli nie są żadne usługi WCF uruchomionej na komputerze.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Aby włączyć liczniki za pomocą edytora konfiguracji  
   

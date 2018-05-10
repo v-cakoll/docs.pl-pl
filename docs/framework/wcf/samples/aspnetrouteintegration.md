@@ -2,25 +2,25 @@
 title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 671857b0ace2e18f0dac7fd8033a20f3af889c8b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 W tym przykładzie pokazano, jak udostępniać usługi Windows Communication Foundation (WCF) REST przy użyciu tras platformy ASP.NET. [Podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) przykładowe pokazuje siebie wersję tego scenariusza i implementacji usługi szczegółowo omówiono. Ten temat koncentruje się na funkcji integracji ASP.NET. Aby uzyskać więcej informacji o routingu platformy ASP.NET, zobacz <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Usługi udostępnia kolekcję klientów w sposób zasobów ukierunkowane/REST. Podobnie jak opartego na protokole SOAP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, usługi mogą być hostowane w programie ASP.NET przy użyciu pliku svc. Jednak to często nie jest preferowane w przypadku scenariuszy HTTP ponieważ wymaga ona o .svc w adresie URL dla usługi. Ponadto wymaga wdrażanie pliku svc wraz z biblioteki usługi. Ograniczenia te można uniknąć przez usługę przy użyciu tras platformy ASP.NET, jak przedstawiono w przykładach w tym przykładzie.  
+ Usługi WCF udostępnia kolekcję klientów w sposób zasobów ukierunkowane/REST. Podobnie jak usługi WCF opartego na protokole SOAP usługi mogą być hostowane w programie ASP.NET przy użyciu pliku svc. Jednak to często nie jest preferowane w przypadku scenariuszy HTTP ponieważ wymaga ona o .svc w adresie URL dla usługi. Ponadto wymaga wdrażanie pliku svc wraz z biblioteki usługi. Ograniczenia te można uniknąć przez usługę przy użyciu tras platformy ASP.NET, jak przedstawiono w przykładach w tym przykładzie.  
   
  Przykład hostuje usługę w programie ASP.NET, dodając <xref:System.ServiceModel.Activation.ServiceRoute> w pliku Global.asax. <xref:System.ServiceModel.Activation.ServiceRoute> Określa typ usługi ("Usługa" w tym przypadku), typ fabryki hostów usług dla usługi (<xref:System.ServiceModel.Activation.WebServiceHostFactory> w takim przypadku) i HTTP podstawowy adres usługi ("~ / klientów w tym przypadku).  
   
- Oprócz tego przykładu zawiera plik Web.config, który dodaje <xref:System.Web.Routing.UrlRoutingModule> (Aby włączyć trasy ASP.NET) i obejmuje konfigurację usługi. W szczególności konfiguruje konfiguracji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi z domyślną <xref:System.ServiceModel.Description.WebHttpEndpoint> mający <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> ustawienie `true`. W związku z tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury tworzy automatyczne strona pomocy HTML oparte na `http://localhost/Customers/help` udostępniająca informacje dotyczące sposobu tworzenia HTTP żądania do usługi oraz sposób dostępu odpowiedzi HTTP usługi — na przykład przykładem Szczegóły klienta znajdują się w pliku XML i JSON.  
+ Oprócz tego przykładu zawiera plik Web.config, który dodaje <xref:System.Web.Routing.UrlRoutingModule> (Aby włączyć trasy ASP.NET) i obejmuje konfigurację usługi. W szczególności konfiguracji konfiguruje usługi WCF z domyślną <xref:System.ServiceModel.Description.WebHttpEndpoint> mający <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> ustawienie `true`. W związku z tym infrastruktura WCF tworzy automatyczne strona pomocy HTML oparte na `http://localhost/Customers/help` udostępniająca informacje dotyczące sposobu tworzenia HTTP żądania do usługi oraz sposób dostępu odpowiedzi HTTP usługi — na przykład przykładem klienta szczegółowe informacje znajdują się w pliku XML i JSON.  
   
  Udostępnianie kolekcji klienta (i bardziej ogólnie wszystkich zasobów) w ten sposób umożliwia klientowi interakcję z usługą w jednolity sposób, przy użyciu identyfikatorów URI i HTTP `GET`, `PUT`, `DELETE` i `POST`.  
   
- Program.CS w projekcie klienta pokazano, jak takiego klienta mogą być tworzone za pomocą <xref:System.Net.HttpWebRequest>. Należy pamiętać, że jest to po prostu jednokierunkowej dostępu do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fabryki kanałów i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (takich jak [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki i [automatycznego wyboru formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md) przykładowe) pokazują, jak używać tych klas do komunikowania się z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+ Program.CS w projekcie klienta pokazano, jak takiego klienta mogą być tworzone za pomocą <xref:System.Net.HttpWebRequest>. Należy pamiętać, że jest tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak fabryki kanałów WCF i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (takich jak [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki i [automatycznego wyboru formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md) przykładowe) pokazują, jak używać tych klas do komunikowania się z usługą WCF.  
   
  W tym przykładzie składa się z 3 projektów:  
   

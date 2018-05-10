@@ -2,24 +2,24 @@
 title: Usługi routingu
 ms.date: 03/30/2017
 ms.assetid: 9a430b4c-46eb-4d15-afbc-8834f0e985ab
-ms.openlocfilehash: 1060a64d5b56e4b06b9004f85502a83869af4434
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ffb9cc79905c7064e99f7d4c13e714cdd1bde
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="routing-services"></a>Usługi routingu
 Ta sekcja zawiera przykłady, które prezentują sposób użycia Router Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Program Hello World z usługą routingu](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
- Pokazuje, jak używać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Router.  
+ Pokazuje, jak używać routera WCF.  
   
  [Mostkowanie i obsługa błędów](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)  
- Pokazuje, jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mostkowania komunikacji między klientem a usługą, która użyć różnych powiązania jest używana usługa routingu.  
+ Pokazuje używania usługi routingu WCF mostkowania komunikacji między klientem a usługą, która użyć różnych powiązania.  
   
  [Zaawansowane filtry](../../../../docs/framework/wcf/samples/advanced-filters.md)  
- Pokazuje, jak dostosować standardowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbki Kalkulator do komunikowania się przy użyciu usługi routingu.  
+ Pokazuje, jak dostosować próbki Kalkulator WCF wzorcowej do komunikowania się przy użyciu usługi routingu.  
   
  [Dynamiczna ponowna konfiguracja](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)  
  Pokazuje, jak usługa routingu można dynamicznie tak skonfigurować, w czasie wykonywania.  

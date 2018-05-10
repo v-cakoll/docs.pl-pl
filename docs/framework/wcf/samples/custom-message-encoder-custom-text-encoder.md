@@ -2,11 +2,11 @@
 title: 'Niestandardowy koder komunikatów: Niestandardowy koder tekstu'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 975cfd44834ed31a5d723fdca0fe467cba63e68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Niestandardowy koder komunikatów: Niestandardowy koder tekstu
 W tym przykładzie pokazano, jak wdrożyć tekst niestandardowy koder komunikatów, za pomocą usługi Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ W tym przykładzie pokazano, jak wdrożyć tekst niestandardowy koder komunikat�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje tylko kodowania UTF-8, UTF-16 i Big Endean Unicode. Tekst niestandardowy koder komunikatów w tym przykładzie obsługuje wszystkie obsługiwane platformy kodowanie znaków, które mogą być wymagane ze względu na współdziałanie. Próbka składa się z konsoli programu klienckiego (.exe), Usługa biblioteki (.dll), obsługiwane przez usługi Internet Information Services (IIS) i tekst biblioteki kodera wiadomości (.dll). Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź. Kontrakt jest definiowana za pomocą `ICalculator` interfejsu, który udostępnia operacji matematycznych (Dodawanie, odjąć mnożenia i dzielenia). Klient wysyła żądań synchronicznych operacji matematycznych danego i odpowiedzi usługi z wynikiem. Zarówno klient, jak i usługa używa `CustomTextMessageEncoder` zamiast domyślnej <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> Programu WCF obsługuje tylko kodowania UTF-8, UTF-16 i Big Endean Unicode. Tekst niestandardowy koder komunikatów w tym przykładzie obsługuje wszystkie obsługiwane platformy kodowanie znaków, które mogą być wymagane ze względu na współdziałanie. Próbka składa się z konsoli programu klienckiego (.exe), Usługa biblioteki (.dll), obsługiwane przez usługi Internet Information Services (IIS) i tekst biblioteki kodera wiadomości (.dll). Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź. Kontrakt jest definiowana za pomocą `ICalculator` interfejsu, który udostępnia operacji matematycznych (Dodawanie, odjąć mnożenia i dzielenia). Klient wysyła żądań synchronicznych operacji matematycznych danego i odpowiedzi usługi z wynikiem. Zarówno klient, jak i usługa używa `CustomTextMessageEncoder` zamiast domyślnej <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
   
  Implementacji niestandardowego kodera składa się z fabryki kodera wiadomości, kodera wiadomości, kodowanie elementu powiązania i konfiguracji obsługi wiadomości i pokazano poniżej:  
   
@@ -47,7 +47,7 @@ W tym przykładzie pokazano, jak wdrożyć tekst niestandardowy koder komunikat�
 4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Fabryka kodera wiadomości i koder komunikatów  
- Gdy <xref:System.ServiceModel.ServiceHost> lub klient otworzyć kanału, składnik czasu projektowania `CustomTextMessageBindingElement` tworzy `CustomTextMessageEncoderFactory`. Tworzy fabrykę `CustomTextMessageEncoder`. Koder komunikatów działa zarówno w trybie przesyłania strumieniowego i tryb buforowany. Używa <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> do odczytu i zapisu wiadomości odpowiednio. Zamiast zoptymalizowane czytników XML i autorzy z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługują tylko UTF-8, UTF-16, jak i Unicode Big-Endean tych czytników i zapisywania obsługuje wszystkie obsługiwane platformy kodowania.  
+ Gdy <xref:System.ServiceModel.ServiceHost> lub klient otworzyć kanału, składnik czasu projektowania `CustomTextMessageBindingElement` tworzy `CustomTextMessageEncoderFactory`. Tworzy fabrykę `CustomTextMessageEncoder`. Koder komunikatów działa zarówno w trybie przesyłania strumieniowego i tryb buforowany. Używa <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> do odczytu i zapisu wiadomości odpowiednio. Zamiast zoptymalizowane czytniki XML i modułów zapisywania WCF, które obsługują tylko UTF-8, UTF-16 i Unicode Big-Endean te czytelników i zapisywania obsługuje kodowanie wszystkie obsługiwane platformy.  
   
  Poniższy przykład kodu pokazuje CustomTextMessageEncoder.  
   
@@ -190,11 +190,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>Element powiązania kodowania komunikatu  
- Elementy można konfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu w czasie wykonywania. Aby użyć niestandardowy koder komunikatów w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikację, wymagany jest element powiązania tworzącą fabryki kodera wiadomości z odpowiednimi ustawieniami na odpowiednim poziomie w stosie czasu wykonywania.  
+ Elementy wiązania umożliwiają konfigurowanie usługi WCF stosu czasu wykonywania. Aby użyć niestandardowy koder komunikatów w aplikacji WCF, wymagany jest element powiązania tworzącą fabryki kodera wiadomości z odpowiednimi ustawieniami na odpowiednim poziomie w stosie czasu wykonywania.  
   
- `CustomTextMessageBindingElement` Pochodną <xref:System.ServiceModel.Channels.BindingElement> klasa podstawowa i dziedziczy <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> klasy. Dzięki temu innych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składniki rozpoznanie tego elementu powiązania jako powiązanie element kodowania komunikatu. Implementacja <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> Zwraca wystąpienie klasy pasującej fabryki kodera wiadomości z odpowiednimi ustawieniami.  
+ `CustomTextMessageBindingElement` Pochodną <xref:System.ServiceModel.Channels.BindingElement> klasa podstawowa i dziedziczy <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> klasy. Dzięki temu inne składniki usługi WCF do rozpoznania tego elementu powiązania jako element powiązania kodowania komunikatu. Implementacja <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> Zwraca wystąpienie klasy pasującej fabryki kodera wiadomości z odpowiednimi ustawieniami.  
   
- `CustomTextMessageBindingElement` Udostępnia ustawienia dla `MessageVersion`, `ContentType`, i `Encoding` za pośrednictwem właściwości. Koder obsługuje zarówno Soap11Addressing i Soap12Addressing1 wersji. Wartość domyślna to Soap11Addressing1. Wartość domyślna `ContentType` jest "text/xml". `Encoding` Właściwości można ustawić kodowanie znaków żądaną wartość. Przykładowe klient i usługa używa kodowania znaków ISO 8859-1 (Latin1), który nie jest obsługiwany przez <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ `CustomTextMessageBindingElement` Udostępnia ustawienia dla `MessageVersion`, `ContentType`, i `Encoding` za pośrednictwem właściwości. Koder obsługuje zarówno Soap11Addressing i Soap12Addressing1 wersji. Wartość domyślna to Soap11Addressing1. Wartość domyślna `ContentType` jest "text/xml". `Encoding` Właściwości można ustawić kodowanie znaków żądaną wartość. Przykładowe klient i usługa używa kodowania znaków ISO 8859-1 (Latin1), który nie jest obsługiwany przez <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> usługi WCF.  
   
  Poniższy kod przedstawia sposób programowo Utwórz powiązanie, używając tekst niestandardowy koder komunikatów.  
   

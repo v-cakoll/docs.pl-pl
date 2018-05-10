@@ -2,11 +2,11 @@
 title: Zaawansowane wybieranie formatu
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-format-selection"></a>Zaawansowane wybieranie formatu
 W tym przykładzie pokazano, jak rozszerzanie modelu programowania REST Windows Communication Foundation (WCF) do obsługi nowych formatów odpowiedzi wychodzącej. Ponadto próbki używa szablonu T4 do zwracania odpowiedzi jako strony XHTML, prezentacja implementowania styl widoku modelu programowania.  
@@ -18,7 +18,7 @@ W tym przykładzie pokazano, jak rozszerzanie modelu programowania REST Windows 
   
  Format odpowiedzi zwrócona przez usługę wynika najpierw `format` parametr ciągu zapytania, a drugiego przez nagłówek HTTP zaakceptować dostarczone z żądaniem. Jeśli wartość `format` parametr ciągu zapytania jest jednym z powyższych formatów, a następnie odpowiedź jest zwracana w tym formacie. Jeśli `format` ciąg zapytania nie jest obecne, a następnie usługa iterację elementów nagłówka Accept z żądania i zwraca format pierwszego typu zawartości, która obsługuje usługę.  
   
- Zwracany typ operacji jest warto zauważyć. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST model programowania tylko natywnie obsługuje formaty odpowiedzi XML i JSON, gdy operacja zwraca typ inny niż <xref:System.ServiceModel.Channels.Message>. Jednak przy użyciu <xref:System.ServiceModel.Channels.Message> jako typ zwracany dewelopera ma pełną kontrolę nad jak powinien być sformatowany treści komunikatu.  
+ Zwracany typ operacji jest warto zauważyć. REST usługi WCF model programowania tylko natywnie obsługuje formaty odpowiedzi XML i JSON, gdy operacja zwraca typ inny niż <xref:System.ServiceModel.Channels.Message>. Jednak przy użyciu <xref:System.ServiceModel.Channels.Message> jako typ zwracany dewelopera ma pełną kontrolę nad jak powinien być sformatowany treści komunikatu.  
   
  W przykładzie użyto <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> i <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> metody odpowiednio serializować listy ciągów do wiadomości XML, JSON i ATOM. Format odpowiedzi jpeg <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> metoda jest używana i jest zapisywany obraz do strumienia. Odpowiedź XHTML <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> jest używana wraz ze wstępnie przetworzonych szablonu T4, który składa się z plikiem .TT — i plik CS wygenerowany automatycznie. Plik .TT — umożliwia deweloperom zapisu odpowiedzi w formularzu szablonu, który zawiera zmienne i kontrolowanie struktury. Aby uzyskać więcej informacji na temat T4 zobacz [generowania artefaktów przez przy użyciu szablonów tekstowych](http://go.microsoft.com/fwlink/?LinkId=166023).  
   

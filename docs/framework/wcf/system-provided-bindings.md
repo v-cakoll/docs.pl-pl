@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a8e9fd8f0e2c906f14556fcdccd7ef0d3c8033
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="system-provided-bindings"></a>Powiązania dostarczane przez system
 Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i określić sposób nawiązywania połączenia z punktem końcowym. Powiązanie zawiera następujące elementy:  
@@ -30,7 +30,7 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
 >  Nigdy nie używaj kontrakty dwukierunkowe z powiązaniami, które nie obsługują zabezpieczeń lub mają wyłączony do momentu zabezpieczania danych za pomocą innych środków zabezpieczeń.  
   
 ## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
- Następujące powiązań dostarczanych z programem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Następujące powiązania składnikiem usługi WCF.  
   
 |Powiązanie|Element konfiguracji|Opis|  
 |-------------|---------------------------|-----------------|  
@@ -40,14 +40,14 @@ Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i okre
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługuje protokół WS-Federation, która umożliwia organizacjom, które znajdują się w Federacji, aby wydajnie uwierzytelniania i autoryzacji użytkowników.|  
 |<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding >|Powiązanie przeznaczony do używania protokołu HTTP lub protokołu WebSocket usług używającej kodowanie binarne domyślnie.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|Bezpiecznego powiązania przeznaczony do używania protokołu HTTP lub protokołu WebSocket usług używającej kodowanie binarne domyślnie.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Bezpieczne, niezawodne i zoptymalizowane powiązanie, które jest odpowiednie dla komunikacji na komputerze między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Zakolejkowane powiązanie, które jest odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między aplikacjami WCF.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji na komputerze między aplikacjami WCF.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Zakolejkowane powiązanie, które jest odpowiednie dla komunikacji między komputerami między aplikacjami WCF.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Powiązanie, które umożliwia bezpieczne, wiele komunikacji maszyny.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i istniejące aplikacje usługi kolejkowania komunikatów.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji między komputerami między aplikacja WCF i istniejących aplikacji z usługą MSMQ.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<Obiekt basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Powiązanie, które jest odpowiednie dla komunikacji z zgodność profilu WS-Basic usług sieci Web umożliwiającą plików cookie protokołu HTTP używanego do wymiany kontekstu.|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji, które umożliwia nagłówki SOAP używanego do wymiany kontekstu.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Wiązanie używane do konfigurowania punktów końcowych dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług, które są dostępne za pośrednictwem żądania HTTP zamiast na wiadomości SOAP sieci Web.|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między aplikacjami WCF, który umożliwia nagłówki SOAP używanego do wymiany kontekstu.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Wiązanie używane do konfigurowania punktów końcowych dla usług sieci Web WCF, które są dostępne za pośrednictwem żądania HTTP zamiast na wiadomości SOAP.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Bezpieczny i |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|Wiązanie używane podczas wysyłania serii proste wiadomości do wielu klientów jednocześnie.|  
   
  W poniższej tabeli przedstawiono funkcje każdego powiązania dostarczane przez system. Powiązania znajdują się w kolumnach tabeli; funkcje są wyświetlane w wierszach i opisane w drugiej tabeli. Poniższa tabela zawiera klucz, skróty powiązanie użyte. Aby wybrać powiązanie, określić kolumnę, która spełnia wszystkie potrzebne funkcje wiersza.  

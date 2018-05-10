@@ -5,24 +5,24 @@ helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-ms.openlocfilehash: 93c0411c8d261e40bd4e8f1cd11d8a51d4f0edb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="conceptual-overview"></a>Omówienie pojęć
 Ten temat zawiera podsumowanie informacji o systemie Windows Communication Foundation (WCF) systemu i klasy, które obsługuje jej użycia do obsługi komunikatów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- Krótki przegląd [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Krótki przegląd WCF.  
   
  [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)  
- Omówienie głównych pojęć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] model programowania.  
+ Omówienie głównych założeniach modelu programowania usług WCF.  
   
  [Architektura WCF (Windows Communication Foundation)](../../../docs/framework/wcf/architecture.md)  
- Graficzna reprezentacja [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] architektury.  
+ Graficzna reprezentacja architektury usługi WCF.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  

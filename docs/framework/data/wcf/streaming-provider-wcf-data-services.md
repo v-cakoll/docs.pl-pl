@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (usługi danych WCF)
 Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane binarne może reprezentować strumienie audio i wideo, obrazów, plików dokumentów lub binarne nośników innych typów. Kiedy jednostki w modelu danych obejmuje co najmniej jednej właściwości binarnych, Usługa danych zwraca to dane binarne zakodowane jako base-64 wewnątrz wpis w odpowiedzi źródła danych. Ponieważ ładowanie i serializacji dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, niezależnie od podmiotu, do którego należy. Jest to osiągane przez rozdzielić danych binarnych z jednostki jeden lub więcej strumieni danych.  
@@ -79,12 +79,12 @@ Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane bina
  Aby uzyskać ogólne informacje o sposobie tworzenia usługi danych, zobacz [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Włączanie dużych strumienie binarne w środowisku macierzystym  
- Podczas tworzenia usługi danych w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web Windows Communication Foundation (WCF) służy do implementacji protokołu HTTP. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ogranicza rozmiar wiadomości HTTP do tylko 65 KB. Aby można było do strumienia dużych danych binarnych do i z usług danych, należy również skonfigurować aplikacji sieci Web, aby włączyć duże pliki binarne i użyć strumieni transferu. W tym celu należy dodać następujące opcje w `<configuration />` elementu plik Web.config:  
+ Podczas tworzenia usługi danych w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web Windows Communication Foundation (WCF) służy do implementacji protokołu HTTP. Domyślnie program WCF ogranicza rozmiar wiadomości HTTP do tylko 65 KB. Aby można było do strumienia dużych danych binarnych do i z usług danych, należy również skonfigurować aplikacji sieci Web, aby włączyć duże pliki binarne i użyć strumieni transferu. W tym celu należy dodać następujące opcje w `<configuration />` elementu plik Web.config:  
   
   
   
 > [!NOTE]
->  Należy użyć <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> tryb transferu, aby upewnić się, że dane binarne w komunikatów żądań i odpowiedzi są przesyłane strumieniowo i nie jest buforowana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+>  Należy użyć <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> tryb transferu, aby upewnić się, czy dane binarne w komunikatów żądań i odpowiedzi są przesyłane strumieniowo i nie jest buforowana przez usługę WCF.  
   
  Aby uzyskać więcej informacji, zobacz [przesyłania strumieniowego transferu wiadomości](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) i [przydziały dla transportu](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

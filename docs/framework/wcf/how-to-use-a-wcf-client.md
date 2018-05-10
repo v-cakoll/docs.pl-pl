@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79431588e27b02a40d5898929f1bdf644c8a79cd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Instrukcje: Używanie klienta programu Windows Communication Foundation
 Jest to ostatnich sześciu zadania wymagane do tworzenia podstawowej aplikacji Windows Communication Foundation (WCF). Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
   
- Gdy utworzono i skonfigurowano serwer proxy usług Windows Communication Foundation (WCF), można utworzyć wystąpienia klienta i aplikacja kliencka można skompilować i używany do komunikacji z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. W tym temacie opisano procedury tworzenia wystąpienia i przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta. Procedura ta nie trzy czynności:  
+ Gdy utworzono i skonfigurowano serwer proxy usług Windows Communication Foundation (WCF), można utworzyć wystąpienia klienta i aplikacja kliencka można skompilować i używany do komunikacji z usługą WCF. W tym temacie opisano procedury tworzenia wystąpienia i za pomocą klienta WCF. Procedura ta nie trzy czynności:  
   
-1.  Tworzy wystąpienie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta.  
+1.  Tworzy wystąpienie klienta WCF.  
   
 2.  Wywołania operacji usługi z wygenerowany serwer proxy.  
   

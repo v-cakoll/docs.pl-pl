@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 1aa540d084e9b11cc7a355db02047705f55ea4be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03a9580bee6308ef53c7d2bc6e9dbe619c2048f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
 W tej sekcji opisano, co zrobić, aplikacje klienckie, jak skonfigurować, tworzenie i używanie klienta usługi Windows Communication Foundation (WCF) i zabezpieczania aplikacji klienckich.  
   
 ## <a name="using-wcf-client-objects"></a>Przy użyciu obiektów klienta WCF  
- Aplikacja kliencka zarządzanych aplikacji, która używa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientom komunikowanie się z inną aplikację. Aby utworzyć aplikację klienta dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi wymaga wykonania następujących czynności:  
+ Aplikacja kliencka jest zarządzanej aplikacji, które używa klienta WCF do komunikowania się z inną aplikację. Można utworzyć klienta aplikacji dla usługi WCF wymaga wykonania następujących czynności:  
   
 1.  Uzyskaj kontraktu usługi, powiązania oraz informacji o adresie dla punktu końcowego usługi.  
   
-2.  Utwórz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta przy użyciu tych informacji.  
+2.  Tworzenie klienta WCF za pomocą tych informacji.  
   
 3.  Wywoływanie operacji.  
   
-4.  Zamknij [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta.  
+4.  Zamknij obiekt klienta WCF.  
   
  W poniższych sekcjach omówiono konfigurowanie tych kroków i podaj krótkie instrukcje na następujące zagadnienia:  
   
@@ -40,26 +40,26 @@ W tej sekcji opisano, co zrobić, aplikacje klienckie, jak skonfigurować, tworz
 -   Wywoływanie usług za pomocą kanałów klienta.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Uzyskaj kontraktu usługi, powiązań i adresów  
- W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], usług i klientów kontrakty modelu przy użyciu atrybutów zarządzanych, interfejsów i metod. Aby połączyć się z usługi aplikacji klienta, należy uzyskać informacje o typie kontraktu usługi. Zwykle, możesz to zrobić przy użyciu [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), co spowoduje pobranie metadanych z usługi, konwertuje je do pliku kodu źródłowego zarządzanych w wybranym języku i tworzy klienta plik konfiguracji aplikacji, którego można użyć do skonfigurowania programu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta. Na przykład, jeśli zamierzasz utworzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta do wywołania `MyCalculatorService`, i dowiedzieć się, że metadanych dla tej usługi jest publikowany w `http://computerName/MyCalculatorService/Service.svc?wsdl`, następnie Poniższy przykładowy kod przedstawia sposób umożliwia uzyskanie Svcutil.exe `ClientCode.vb` plik, który zawiera usługę kontraktu w kodzie zarządzanym.  
+ W programie WCF usług i klientów modelu kontrakty przy użyciu atrybutów zarządzanych, interfejsów i metod. Aby połączyć się z usługi aplikacji klienta, należy uzyskać informacje o typie kontraktu usługi. Zwykle, możesz to zrobić przy użyciu [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), co spowoduje pobranie metadanych z usługi, konwertuje je do pliku kodu źródłowego zarządzanych w wybranym języku i tworzy klienta pliku konfiguracji aplikacji, którego można użyć do skonfigurowania obiektu klienta WCF. Na przykład, jeśli zamierzasz utworzyć obiekt klienta WCF do wywoływania `MyCalculatorService`, wiadomo, że metadanych dla tej usługi jest publikowany w `http://computerName/MyCalculatorService/Service.svc?wsdl`, następnie Poniższy przykładowy kod przedstawia sposób umożliwia uzyskanie Svcutil.exe `ClientCode.vb` pliku zawiera kontraktu usługi w kodzie zarządzanym.  
   
 ```  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
- Ten kod kontraktu można kompilować albo do aplikacji klienckiej lub do innego zestawu, który aplikacja kliencka można następnie użyć do utworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta. Plik konfiguracji umożliwia konfigurowanie obiektu klienta, aby poprawnie połączyć się z usługą.  
+ Można albo skompilowanie tego kodu kontraktu do aplikacji klienckiej lub do innego zestawu, który aplikacja kliencka można następnie użyć do utworzenia obiektu klienta WCF. Plik konfiguracji umożliwia konfigurowanie obiektu klienta, aby poprawnie połączyć się z usługą.  
   
  Na przykład ten proces zobacz [porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Aby uzyskać więcej informacji o umowach, zobacz [kontrakty](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 ## <a name="create-a-wcf-client-object"></a>Utworzony obiekt klienta WCF  
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta jest lokalny obiekt, który reprezentuje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi w postaci klient może używać do komunikowania się z usługi zdalnej. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] typy klientów implementacji usługi docelowej kontraktu, dlatego podczas należy utworzyć i skonfigurować je, następnie za pomocą obiektu klienta bezpośrednio do wywołania operacji usługi. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Uruchom Konwertuje czas metodę wywołania do wiadomości, wysyła je z usługą nasłuchuje odpowiedzi i zwraca tych wartości [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta jako wartości zwracane lub `out` lub `ref` parametrów.  
+ Klient WCF jest lokalny obiekt, który reprezentuje usługi WCF w formularz, który klient może używać do komunikowania się z usługi zdalnej. Typy klienta WCF implementacji usługi docelowej kontraktu, dlatego podczas należy utworzyć i skonfigurować je, następnie za pomocą obiektu klienta bezpośrednio do wywołania operacji usługi. Usługi WCF, czas wykonywania konwertuje wywołania metody do wiadomości, wysyła je do usługi nasłuchuje odpowiedzi i zwraca tych wartości do obiektu klienta WCF jako wartości zwracane lub `out` lub `ref` parametrów.  
   
- Można również użyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiekty kanału klienta do nawiązywania połączeń z i korzystania z usług. Aby uzyskać więcej informacji, zobacz [Architektura klienta WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
+ Umożliwia także obiekty kanału klienta WCF do nawiązywania połączeń z i korzystania z usług. Aby uzyskać więcej informacji, zobacz [Architektura klienta WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 #### <a name="creating-a-new-wcf-object"></a>Tworzenie nowego obiektu WCF  
  Aby zilustrować stosowania <xref:System.ServiceModel.ClientBase%601> klasy, załóżmy następujące kontraktu usługi simple został wygenerowany z aplikacją usługi.  
   
 > [!NOTE]
->  Jeśli używasz programu Visual Studio, aby utworzyć użytkownika [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta, obiekty są ładowane automatycznie do przeglądarki obiektów podczas dodawania odwołania do usługi do projektu.  
+>  Jeśli używasz programu Visual Studio można utworzyć klienta WCF, obiekty są ładowane automatycznie do przeglądarki obiektów podczas dodawania odwołania do usługi do projektu.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
@@ -69,10 +69,10 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Ta klasa można tworzyć jako obiekt lokalny przy użyciu jednego z konstruktorów, skonfigurowane i następnie używany do łączenia się z usługą typu `ISampleService`.  
   
- Zalecane jest utworzenie użytkownika [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta, obiekt i używać go i zamknij go wewnątrz bloku try/catch pojedynczego. Nie należy używać `using` instrukcji (`Using` w języku Visual Basic), ponieważ może maskować wyjątki w trybach niektórych awarii. Aby uzyskać więcej informacji, zobacz następujące sekcje w tym także w [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Zaleca się, czy tworzenie obiektu klienta WCF pierwszy, a następnie go używać i zamknij je wewnątrz bloku try/catch pojedynczego. Nie należy używać `using` instrukcji (`Using` w języku Visual Basic), ponieważ może maskować wyjątki w trybach niektórych awarii. Aby uzyskać więcej informacji, zobacz następujące sekcje w tym także w [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Adresy, powiązania i kontrakty  
- Aby można było utworzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta, należy skonfigurować obiekt klienta. W szczególności musi mieć usługi *punktu końcowego* do użycia. Punkt końcowy jest kombinacją kontraktu usługi, powiązanie i adres. (Aby uzyskać więcej informacji dotyczących punktów końcowych, zobacz [punkty końcowe: adresy, wiązania i kontrakty](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Zazwyczaj tych informacji znajduje się w [ \<punktu końcowego >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) elementu w pliku konfiguracji aplikacji klienta, takie jak narzędzia Svcutil.exe generuje i ładowane automatycznie podczas tworzenia klienta obiekt. Zarówno [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienckich typy mają także przeciążenia, które umożliwiają programowe określenie tych informacji.  
+ Przed utworzeniem obiektu klienta WCF, należy skonfigurować obiekt klienta. W szczególności musi mieć usługi *punktu końcowego* do użycia. Punkt końcowy jest kombinacją kontraktu usługi, powiązanie i adres. (Aby uzyskać więcej informacji dotyczących punktów końcowych, zobacz [punkty końcowe: adresy, wiązania i kontrakty](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Zazwyczaj tych informacji znajduje się w [ \<punktu końcowego >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) elementu w pliku konfiguracji aplikacji klienta, takie jak narzędzia Svcutil.exe generuje i ładowane automatycznie podczas tworzenia klienta obiekt. Oba typy klienta WCF ma także przeciążenia, które umożliwiają programowe określenie tych informacji.  
   
  Na przykład plik konfiguracji wygenerowany dla `ISampleService` używany w poprzednim przykłady zawiera następujące informacje punktu końcowego.  
   
@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Ten plik konfiguracji określa punkt końcowy docelowego w `<client>` elementu. Aby uzyskać więcej informacji o używaniu wiele docelowych punktów końcowych, zobacz <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> konstruktorów.  
   
 ## <a name="calling-operations"></a>Podczas wywoływania operacji  
- Po obiektu klienta utworzony i skonfigurowany, Utwórz bloku try/catch, wywoływania operacji w taki sam sposób, jak gdyby lokalnych i Zamknij obiekt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta. Gdy aplikacja klient wywołuje pierwszej operacji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] automatycznie otwiera odpowiadającego kanału i kanału źródłowego jest zamknięty, gdy obiekt zostanie odtworzony. (, Można również jawnie otwarcia i zamknięcia kanału przed lub po wywołaniem innych operacji.)  
+ Po obiekt klienta utworzony i skonfigurowany, utworzyć bloku try/catch, wywoływania operacji w taki sam sposób jak gdyby obiektu były lokalne i zamknąć obiektu klienta WCF. Gdy aplikacja klient wywołuje pierwszą operacją, WCF automatycznie otwiera kanału źródłowego i kanału źródłowego jest zamknięty, gdy obiekt zostanie odtworzony. (, Można również jawnie otwarcia i zamknięcia kanału przed lub po wywołaniem innych operacji.)  
   
  Na przykład, jeśli masz następujące kontraktu usługi:  
   
@@ -126,7 +126,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Tworząc można wywołać operacji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta i wywołanie jego metody, jak pokazano w poniższym przykładzie kodu. Należy pamiętać, że otwierania, wywołania i zamykania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta obiekt występuje w bloku try/catch pojedynczego. Aby uzyskać więcej informacji, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) i [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Należy wywołać operacji poprzez utworzenie obiektu klienta WCF i wywołanie jego metody, jak w poniższym przykładzie kodu pokazano. Należy pamiętać, że otwierania, wywołania i zamykania obiektu klienta WCF występuje w bloku try/catch pojedynczego. Aby uzyskać więcej informacji, zobacz [dostęp do usług za pomocą klienta WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) i [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -136,7 +136,7 @@ End Interface
 ## <a name="configuring-and-securing-clients"></a>Konfigurowanie i Zabezpieczanie klientów  
  Konfigurowanie klienta rozpoczyna się od ładowania wymagane informacje o punkcie końcowym docelowego dla obiektu klienta lub kanału, zwykle z pliku konfiguracji, mimo że można również obciążenia tych informacji programowo przy użyciu klienta konstruktory i właściwości. Jednak dodatkowe czynności konfiguracyjne są wymagane do włączenia pewnych zachowanie klienta i w różnych scenariuszach zabezpieczeń.  
   
- Na przykład wymagania dotyczące zabezpieczeń dla kontraktów usług są zadeklarowane w interfejsu kontraktu usługi, a jeśli Svcutil.exe utworzony plik konfiguracji, ten plik zawiera zwykle powiązanie, które może obsłużyć wymagania dotyczące zabezpieczeń usługi. W niektórych przypadkach, jednak więcej zabezpieczeń może być wymagana konfiguracja, takie jak Konfigurowanie poświadczeń klienta. Aby uzyskać pełne informacje o konfiguracji zabezpieczeń dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów, zobacz [Zabezpieczanie klientów](../../../docs/framework/wcf/securing-clients.md).  
+ Na przykład wymagania dotyczące zabezpieczeń dla kontraktów usług są zadeklarowane w interfejsu kontraktu usługi, a jeśli Svcutil.exe utworzony plik konfiguracji, ten plik zawiera zwykle powiązanie, które może obsłużyć wymagania dotyczące zabezpieczeń usługi. W niektórych przypadkach, jednak więcej zabezpieczeń może być wymagana konfiguracja, takie jak Konfigurowanie poświadczeń klienta. Aby uzyskać pełne informacje o konfiguracji zabezpieczeń dla klientów usługi WCF, zobacz [Zabezpieczanie klientów](../../../docs/framework/wcf/securing-clients.md).  
   
  Ponadto niektóre niestandardowymi modyfikacjami można włączyć w aplikacjach klienckich, takich jak niestandardowe zachowania czasu wykonywania. Aby uzyskać więcej informacji o sposobie konfigurowania zachowania klientów niestandardowych, zobacz [Konfigurowanie zachowań klienta](../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
@@ -147,11 +147,11 @@ End Interface
   
 -   Implementowanie klasy kontrakt wywołania zwrotnego.  
   
--   Tworzenie wystąpienia klasy implementacji kontraktu wywołania zwrotnego i umożliwia tworzenie <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> obiekt przekazywany do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] konstruktora klienta.  
+-   Tworzenie wystąpienia klasy implementacji kontraktu wywołania zwrotnego i umożliwia utworzenie <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> obiekt przekazywany do konstruktora klienta WCF.  
   
 -   Wywołanie operacji i obsługi operacji wywołania zwrotne.  
   
- Dupleks [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta obiektów funkcji, takich jak ich odpowiedniki obsługującej, z wyjątkiem, że udostępniają funkcje niezbędne do obsługi wywołań zwrotnych, łącznie z konfiguracji usługi wywołania zwrotnego.  
+ Funkcja obiektów klienta WCF dupleksu, takich jak ich odpowiedniki obsługującej, z wyjątkiem, że udostępniają funkcje niezbędne do obsługi wywołań zwrotnych, łącznie z konfiguracji usługi wywołania zwrotnego.  
   
  Na przykład można kontrolować różne aspekty zachowania w czasie wykonywania obiektu wywołania zwrotnego przy użyciu właściwości <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> atrybutu dla klasy wywołania zwrotnego. Innym przykładem jest użycie <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> klasy, aby umożliwić powrót informacji o wyjątkach do usług, które wywołują obiektu wywołania zwrotnego. Aby uzyskać więcej informacji, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md). Dla kompletnego przykładu, zobacz [dupleksu](../../../docs/framework/wcf/samples/duplex.md).  
   
@@ -168,7 +168,7 @@ End Interface
  Jak są nazywane operacji jest całkowicie zależy deweloperowi klienta. Jest to spowodowane wiadomości, które tworzą operacji mogą być mapowane do metod synchroniczna lub asynchroniczna wyrażone w kodzie zarządzanym. W związku z tym, jeśli chcesz skompilować klienta, który wywołuje asynchronicznie operacje, można Svcutil.exe do generowania kodu klienta asynchronicznych za pomocą `/async` opcji. Aby uzyskać więcej informacji, zobacz [porady: wywołania operacji usługi asynchronicznie](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Wywoływanie usług za pomocą kanałów klienta WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] rozszerzenie klienta typy <xref:System.ServiceModel.ClientBase%601>, które pochodzi z <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interfejs do udostępnienia źródłowy system kanału. Usługi można wywołać za pomocą kontraktu usługi docelowej z <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> klasy. Aby uzyskać więcej informacji, zobacz [Architektura klienta WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
+ Typy klienta WCF rozszerzać <xref:System.ServiceModel.ClientBase%601>, które pochodzi z <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interfejs do udostępnienia źródłowy system kanału. Usługi można wywołać za pomocą kontraktu usługi docelowej z <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> klasy. Aby uzyskać więcej informacji, zobacz [Architektura klienta WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

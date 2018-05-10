@@ -2,11 +2,11 @@
 title: Niestandardowy host usługi
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: c081858d57d9575a616c7c057047b0593a177f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c02ceb114a5346ea2a851f711f1ab9b50373cb75
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 W tym przykładzie przedstawiono sposób użycia niestandardowego pochodną <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania. Metoda ta umożliwia wielokrotnego użytku sposobem konfigurowania wielu usług w typowy sposób. Próbka przedstawiono również sposób użycia <xref:System.ServiceModel.Activation.ServiceHostFactory> klasy do użycia niestandardowego elementu ServiceHost w środowisku macierzystym Internet Information Services (IIS) lub usługi aktywacji procesów systemu Windows (WAS).  
@@ -121,7 +121,7 @@ host.Open();
  Nasze hosta niestandardowego nadal odczytuje konfiguracji punktu końcowego usługi z pliku konfiguracji aplikacji, tak jakby było użyliśmy domyślne <xref:System.ServiceModel.ServiceHost> klasy do obsługi usługi. Jednak ponieważ dodaliśmy logiki można włączyć publikowania wewnątrz naszego hosta niestandardowego metadanych, firma Microsoft nie jest już jawnie włączyć zachowanie publikowania w konfiguracji metadanych. Takie podejście charakteryzuje się różne korzyści podczas tworzenia aplikacji, która zawiera kilka usług i chcesz włączyć publikowanie metadanych na każdym z nich, bez konieczności samodzielnego pisania te same elementy konfiguracji.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Przy użyciu niestandardowych ServiceHost w usługach IIS lub WAS  
- W scenariuszach hosta samodzielnego przy użyciu hosta niestandardowego usługi jest proste, ponieważ jest kod aplikacji ostatecznie odpowiedzialną za tworzenie i otwieranie wystąpienie hosta usługi. W usługach IIS lub WAS hosting środowiska, jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury dynamicznie tworzenia wystąpienia usługi hosta w odpowiedzi na wiadomości przychodzących. Hosty usługi niestandardowej można także w tym środowisku hostingu, ale wymagają dodatkowy kod w formularzu elementu ServiceHostFactory. Poniższy kod przedstawia pochodną <xref:System.ServiceModel.Activation.ServiceHostFactory> zwracająca wystąpienia klasy Nasze niestandardowe `SelfDescribingServiceHost`.  
+ W scenariuszach hosta samodzielnego przy użyciu hosta niestandardowego usługi jest proste, ponieważ jest kod aplikacji ostatecznie odpowiedzialną za tworzenie i otwieranie wystąpienie hosta usługi. W usługach IIS lub WAS Środowisko hostingu jednak infrastruktura WCF jest dynamicznie tworzenia wystąpienia usługi hosta w odpowiedzi na wiadomości przychodzących. Hosty usługi niestandardowej można także w tym środowisku hostingu, ale wymagają dodatkowy kod w formularzu elementu ServiceHostFactory. Poniższy kod przedstawia pochodną <xref:System.ServiceModel.Activation.ServiceHostFactory> zwracająca wystąpienia klasy Nasze niestandardowe `SelfDescribingServiceHost`.  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -150,7 +150,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- W tym miejscu dodano dodatkowe `Factory` atrybutu `@ServiceHost` dyrektywy i przekazany CLR wpisz nazwę fabryki niestandardowych jako wartość atrybutu. Gdy usługi IIS lub WAS odbiera komunikat dla tej usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hosting infrastruktury najpierw tworzy wystąpienie elementu ServiceHostFactory, a następnie utworzyć przez wywołanie metody wystąpienia sam host usługi `ServiceHostFactory.CreateServiceHost()`.  
+ W tym miejscu dodano dodatkowe `Factory` atrybutu `@ServiceHost` dyrektywy i przekazany CLR wpisz nazwę fabryki niestandardowych jako wartość atrybutu. Gdy usługi IIS lub WAS odbiera komunikat dla tej usługi, infrastruktura WCF hostingu najpierw tworzy wystąpienie elementu ServiceHostFactory i następnie utworzyć przez wywołanie metody wystąpienia sam host usługi `ServiceHostFactory.CreateServiceHost()`.  
   
 ## <a name="running-the-sample"></a>Uruchomiona próbki  
  Mimo że w tym przykładzie zapewnienia pełnej funkcjonalności klienta i wdrożenia usługi, punkt próbki jest pokazano, jak zmienić zachowanie środowiska wykonawczego usługi przy użyciu hosta niestandardowego., wykonaj następujące czynności:  

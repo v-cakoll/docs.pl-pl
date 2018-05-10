@@ -2,11 +2,11 @@
 title: Rozwiązywanie problemów z aplikacją za pomocą śledzenia
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 7613ff24161fd7dc159838fb232e2fc6742ab1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Rozwiązywanie problemów z aplikacją za pomocą śledzenia
 Ta sekcja zawiera różne tematy, które opisują sposób umożliwia śledzenie Rozwiązywanie problemów z aplikacją.  
@@ -19,13 +19,13 @@ Ta sekcja zawiera różne tematy, które opisują sposób umożliwia śledzenie 
  W tym artykule opisano, jak można użyć narzędzia podglądu śledzenia usługi do wyświetlania, korelowania i analizowania danych śledzenia.  
   
  [Ważne ślady](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- Lista śladów głównych emitowane przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Lista śladów głównych emitowane przez usługę WCF.  
   
  [Debugowanie na kliencie](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  Umożliwia klientom debugowania aplikacji.  
   
  [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- Opisuje śladów używany dla E2E [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] scenariusze, na przykład, odpowiedzi żądania wsHttp synchroniczne i asynchroniczne żądań jednokierunkowe TCP.  
+ Opis używany w scenariuszach E2E WCF, na przykład dane śledzenia, żądania wsHttp synchronicznej odpowiedzi i żądań asynchronicznych jednokierunkowe TCP.  
   
  [Emitowanie danych śledzenia elementu User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  Opisuje sposób emitowanie danych śledzenia w kodzie użytkownika, w którym można utworzyć aktywnego danych instrumentacji do użycia później w celu diagnostyki i w korelacji z danych śledzenia WCF.  

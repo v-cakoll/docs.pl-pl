@@ -2,11 +2,11 @@
 title: Śledzenie za pomocą pliku tekstowego
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Śledzenie za pomocą pliku tekstowego
 W tym przykładzie pokazano, jak rozszerzyć śledzenia w systemie Windows Workflow Foundation (WF) przez utworzenie uczestnika śledzenia niestandardowych. Klasy .NET Framework, które odbierają rekordy śledzenia z środowiska uruchomieniowego, ponieważ są one emitowane się uczestników śledzenia. Można utworzyć uczestnika śledzenia do transportu zdarzenia śledzenia do niezależnie od docelowego jest wymagane dla danego scenariusza. Na przykład uczestnika śledzenia funkcji ETW (zdarzenia śledzenia dla systemu Windows) jest dostarczana jako część [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Uczestnik śledzenia w tym przykładzie zapisuje rekordy w formacie XML w pliku tekstowym.  
@@ -17,7 +17,7 @@ W tym przykładzie pokazano, jak rozszerzyć śledzenia w systemie Windows Workf
 |Class|Opis|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> służy do definiowania sekcji konfiguracji używane do konfigurowania tego uczestnika tekstu pliku śledzenia. Dzięki temu użytkownicy mogą określić miejsce docelowe pliku dziennika przy użyciu standardowe pliki konfiguracji .NET Framework.|  
-|`TextFileTrackingBehavior`|Zachowania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Zezwalaj użytkownikom na iniekcję rozszerzenia w czasie wykonywania. To zachowanie dodaje uczestnika śledzenia do usługi, po uruchomieniu usługi.|  
+|`TextFileTrackingBehavior`|Zachowania w programie WCF Zezwalaj użytkownikom na iniekcję rozszerzenia w czasie wykonywania. To zachowanie dodaje uczestnika śledzenia do usługi, po uruchomieniu usługi.|  
 |`TextFileTrackingParticipant`|Uczestnik śledzenia, który odbiera uczestników śledzenia w czasie wykonywania i zapisuje je w pliku dziennika w formacie XML.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Zachowanie rozszerzenia elementów konfiguracji  

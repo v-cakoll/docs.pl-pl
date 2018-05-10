@@ -2,14 +2,14 @@
 title: Mostkowanie i obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>Mostkowanie i obsługa błędów
-W przykładzie pokazano, jak usługa routingu Windows Communication Foundation (WCF) jest używana mostkowania komunikacji między klientem a usługą, która użyć różnych powiązania. W tym przykładzie również przedstawia sposób użycia usługi tworzenia kopii zapasowych dla scenariuszy trybu failover. Usługa routingu jest [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składnik, który ułatwia obejmują routerem na podstawie zawartości w aplikacji. W tym przykładzie dostosowuje standardowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbki Kalkulator do komunikowania się przy użyciu usługi routingu.  
+W przykładzie pokazano, jak usługa routingu Windows Communication Foundation (WCF) jest używana mostkowania komunikacji między klientem a usługą, która użyć różnych powiązania. W tym przykładzie również przedstawia sposób użycia usługi tworzenia kopii zapasowych dla scenariuszy trybu failover. Usługa routingu jest składnikiem usługi WCF, który ułatwia obejmują routerem na podstawie zawartości w aplikacji. W tym przykładzie dostosowuje próbki Kalkulator WCF wzorcowej do komunikowania się przy użyciu usługi routingu.  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

@@ -5,24 +5,24 @@ helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: 431f62c7de8161d0e687d8f1ee554c6d59ca69b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="building-clients"></a>Kompilowanie klientów
 Tematy w tej sekcji przedstawiają sposób tworzenia i używania klienta usługi Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przegląd klienta programu WCF](../../../docs/framework/wcf/wcf-client-overview.md)  
- Zawiera omówienie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów i jak działają.  
+ Zawiera omówienie klienci WCF i jak działają.  
   
  [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Zawiera opis podstawowych metoda tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obiektu klienta do użycia w aplikacji klienckiej.  
+ Omówiono podstawowe metody tworzenia obiektu klienta WCF do użycia w aplikacji klienckiej.  
   
  [Zabezpieczanie klientów](../../../docs/framework/wcf/securing-clients.md)  
- Opisuje sposób konfigurowania zabezpieczeń [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klientów.  
+ Opisuje sposób konfigurowania zabezpieczeń dla klientów usługi WCF.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.ClientBase%601>  

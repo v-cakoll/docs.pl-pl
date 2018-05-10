@@ -2,11 +2,11 @@
 title: Emitowanie danych śledzenia elementu User-Code
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>Emitowanie danych śledzenia elementu User-Code
 Oprócz włączenia śledzenia w konfiguracji, aby zbieranie danych Instrumentacji generowanych przez Windows Communication Foundation (WCF), można również wysyłać dane śledzenia w kodzie użytkownika. W ten sposób można utworzyć aktywne dane instrumentacji, który można przejrzeć później w celu diagnostyki. W tym temacie opisano, jak to zrobić.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  Jeśli ustawisz `propagateActivity` atrybutu `true` dla `System.ServiceModel` pliki źródłowe śledzenia w konfiguracji klienta i usługi, usługi przetwarzanie żądania Dodaj występuje w to samo działanie jak określono w kliencie. Jeśli usługa definiuje własne działania i transfery, ślady usługi nie są wyświetlane w działaniu propagowane klienta. Zamiast tego pojawią się one w działaniu Skorelowane za transfer śladów do działania, których identyfikator jest propagowana przez klienta.  
   
 > [!NOTE]
->  Jeśli `propagateActivity` atrybut ma ustawioną `true` na klienta i usługi, otoczenia działania w zakresie operacji usługi jest ustawiana przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+>  Jeśli `propagateActivity` atrybut ma ustawioną `true` na klienta i usługi, otoczenia działania w zakresie operacji usługi jest ustawiana przez usługę WCF.  
   
- Można użyć poniższego kodu, aby sprawdzić, czy działanie zostało ustawione w zakresie przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Poniższy kod służy do sprawdzenia, czy działanie został ustawiony w zakresie przez usługę WCF.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ Błędy w obrębie punktów końcowych dla danego żądania są wyświetlane w t
  ![Emituj użytkownika za pomocą podglądu śledzenia&#45;kodu śladów](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Widok wykresu błąd korelacji  
   
- Uzyskanie poprzedniej śladów ustawiliśmy `ActivityTracing` źródeł śledzenia użytkownika i `propagateActivity=true` dla `System.ServiceModel` źródła śledzenia. Firma Microsoft nie określono `ActivityTracing` dla `System.ServiceModel` źródła śledzenia do kodu użytkownika rozprzestrzenianie działania kodu użytkownika. (Jeśli ServiceModel czynność śledzenia jest włączona, identyfikator działania zdefiniowane na komputerze klienckim nie są propagowane do kodu użytkownika usługi; Transfery, jednak skorelowania działania kodu użytkownika klienta i usługi do pośredniego [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] działania.)  
+ Uzyskanie poprzedniej śladów ustawiliśmy `ActivityTracing` źródeł śledzenia użytkownika i `propagateActivity=true` dla `System.ServiceModel` źródła śledzenia. Firma Microsoft nie określono `ActivityTracing` dla `System.ServiceModel` źródła śledzenia do kodu użytkownika rozprzestrzenianie działania kodu użytkownika. (Jeśli ServiceModel czynność śledzenia jest włączona, identyfikator działania zdefiniowane na komputerze klienckim nie są propagowane do kodu użytkownika usługi; Transfery, jednak skorelowania działania kodu użytkownika klienta i usługi do pośrednie działalność WCF.)  
   
  Definiowanie działań i propagowanie identyfikator działania umożliwia firmie Microsoft w celu wykonania bezpośredniego błąd korelacji między punktami końcowymi. W ten sposób można zlokalizować przyczynę błędu szybciej.  
   

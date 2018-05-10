@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: 4990f14178551d9dccaca0f2899d8dbc4416cdc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-wcf"></a>Rozszerzanie architektury WCF
 Windows Communication Foundation (WCF) służy do modyfikowania i rozszerzania składników dokładnie określić czas wykonywania, a rozszerzenie aplikacji usługi. Przejdź w tematach w tej sekcji szczegółowo o architekturze rozszerzalności. Aby uzyskać więcej informacji na temat podstawy programowania, zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -26,10 +26,10 @@ Windows Communication Foundation (WCF) służy do modyfikowania i rozszerzania s
  Warstwie kanału znajduje się poniżej warstwy modelu usług i jest odpowiedzialny za wymiana wiadomości między klientami i usługami. Rozszerzenia kanału można zaimplementować nowych funkcji protokołu, takie jak zabezpieczeń. Rozszerzenia kanał transportu również funkcje, takie jak wdrażanie nowego transportu sieciowego do przenoszenia wiadomości SOAP.  
   
  [Rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md)  
- Zabezpieczenia w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składa się z zabezpieczeń transfer (integralności, poufność i uwierzytelnianie), kontrola dostępu (autoryzacja) i inspekcji. Znaleziono klas w `IdentityModel` przestrzeni nazw są używane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do kontroli dostępu. Omówienie architektury zabezpieczeń służy do tworzenia niestandardowych oświadczenia, aby pomieścić systemów kontroli dostępu niestandardowych.  
+ Zabezpieczenia w programie WCF składa się z przesunięcia zabezpieczeń (integralność, poufność i uwierzytelnianie), kontrola dostępu (autoryzacja) i inspekcji. Znaleziono klas w `IdentityModel` przestrzeni nazw są używane przez usługi WCF do kontroli dostępu. Omówienie architektury zabezpieczeń służy do tworzenia niestandardowych oświadczenia, aby pomieścić systemów kontroli dostępu niestandardowych.  
   
  [Rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] System metadanych to grupa klasy i interfejsy, które reprezentują metadane wymagane do wdrożenia aplikacji usługi. Modyfikowanie lub rozszerzyć klasy lub wdrożenia i skonfigurować interfejsów, aby wyeksportować i zaimportować niestandardowy metadane, takie jak rozszerzenia usługi sieci Web Services Description Language (WSDL) lub niestandardowych asercji WS PolicyAttachments.  
+ System metadanych WCF jest grupą klasy i interfejsy, które reprezentują metadane wymagane do wdrożenia aplikacji usługi. Modyfikowanie lub rozszerzyć klasy lub wdrożenia i skonfigurować interfejsów, aby wyeksportować i zaimportować niestandardowy metadane, takie jak rozszerzenia usługi sieci Web Services Description Language (WSDL) lub niestandardowych asercji WS PolicyAttachments.  
   
  [Rozszerzanie koderów i serializatorów](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Koderów i serializatorów tłumaczenie danych z jednego formularza. Tematy w tej sekcji omówiono sposób rozszerzyć klasy dostarczony, aby spełnić te wymagania.  

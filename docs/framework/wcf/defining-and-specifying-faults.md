@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definiowanie i określanie błędów
 Błąd warunku informacji z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjne przedstawienia błędach SOAP W tym temacie omówiono, kiedy i jak definiowanie zawartości błędów niestandardowych i określ, jakie operacje może zwracać je. Aby uzyskać więcej informacji dotyczących sposobu usługi lub klienta dupleksu może wysyłać te błędy i sposób obsługi tych błędów w aplikacji klienta lub usługi, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -27,7 +27,7 @@ Błąd warunku informacji z usługi do klienta, a w przypadku dupleksowy, od kli
 3.  Oznacz operacje, aby określonych błędach SOAP, które generują one są widoczne dla klientów w języku WSDL.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Zdefiniowanie warunków błędów, które klientów należy wiedzieć o  
- Błędach SOAP są publicznie opisane wiadomości, zawierających informacje o błędzie dla określonej operacji. Ponieważ są one opisane oraz inne komunikaty operacji w języku WSDL, klienci wiedzieć i w związku z tym spodziewać się do obsługi tych błędów podczas wywoływania operacji. Jednak ponieważ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług są zapisywane w kodzie zarządzanym podejmowania decyzji o który błąd warunki w kodzie zarządzanym są do przekonwertowania na błędy i zwracany do klienta zapewnia możliwość oddzielenia warunki błędów i usterki w usłudze z posiadanie błąd konwersacji, z klienta.  
+ Błędach SOAP są publicznie opisane wiadomości, zawierających informacje o błędzie dla określonej operacji. Ponieważ są one opisane oraz inne komunikaty operacji w języku WSDL, klienci wiedzieć i w związku z tym spodziewać się do obsługi tych błędów podczas wywoływania operacji. Jednak ponieważ usług WCF są zapisywane w kodzie zarządzanym podejmowania decyzji o który błąd warunki w kodzie zarządzanym są do przekonwertowania na błędy i zwracany do klienta zapewnia możliwość oddzielnych warunki błędów i usterki w usłudze posiadanie błędu konwersacji z klienta.  
   
  Na przykład następujący przykładowy kod przedstawia operację, która ma dwie liczb całkowitych i zwraca inną liczbę całkowitą. Kilka wyjątków może zostać wygenerowany tutaj, aby podczas projektowania kontrakt błędu, należy określić warunki błędów, które są ważne w przypadku klienta. W takim przypadku usługa powinna wykryć <xref:System.DivideByZeroException?displayProperty=nameWithType> wyjątku.  
   
@@ -84,7 +84,7 @@ End Class
   
  Zgodnie ze standardowego protokołu SOAP usterka może mieć `Action`, `Code`, a `Reason`. `Action` Jest kontrolowany przez <xref:System.ServiceModel.FaultContractAttribute.Action%2A> właściwości. <xref:System.ServiceModel.FaultException.Code%2A> Właściwości i <xref:System.ServiceModel.FaultException.Reason%2A> właściwości są obie właściwości <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> klasy, która jest klasą nadrzędną ogólnego <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>. `Code` Zawiera właściwość <xref:System.ServiceModel.FaultCode.SubCode%2A> elementu członkowskiego.  
   
- Podczas uzyskiwania dostępu do innych niż usług, które generowanie błędów, istnieją pewne ograniczenia. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje tylko błędy z typami szczegółowo opisujący schematu i które są zgodne z kontraktów danych. Na przykład, jak wspomniano powyżej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nie obsługuje usterki, które Użyj atrybutów XML w ich typach szczegółów lub błędów z więcej niż jeden element najwyższego poziomu w sekcji szczegółów.  
+ Podczas uzyskiwania dostępu do innych niż usług, które generowanie błędów, istnieją pewne ograniczenia. WCF obsługuje tylko błędy z typami szczegółowo opisujący schematu i które są zgodne z kontraktów danych. Na przykład jak wspomniano powyżej, usługi WCF nie obsługuje usterki, które Użyj atrybutów XML w ich typach szczegółów lub błędów z więcej niż jeden element najwyższego poziomu w sekcji szczegółów.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.FaultContractAttribute>  

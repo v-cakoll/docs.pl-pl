@@ -2,20 +2,20 @@
 title: Przykład elementu powiązania odnajdywania
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Przykład elementu powiązania odnajdywania
 W tym przykładzie pokazano, jak element powiązania klienta odnajdywania umożliwia odnajdywanie usługi. Ta funkcja umożliwia deweloperom dodać kanałem klienta odnajdywania do ich istniejącego stosu kanału klienta, tworzenie bardzo intuicyjne modelu programowania. Po otwarciu kanału skojarzony adres usługi został rozwiązany za pomocą odnajdywania. W tym przykładzie składa się z następujących projektów:  
   
--   **CalculatorService**: wykrywalny [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+-   **CalculatorService**: wykrywalnej usługi WCF.  
   
--   **CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji klienckiej, która korzysta z kanałem klienta odnajdywania do wyszukiwania i wywołać CalculatorService.  
+-   **CalculatorClient**: A WCF aplikacji klienckiej, która korzysta z kanałem klienta odnajdywania do wyszukiwania i wywołać CalculatorService.  
   
--   **DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji klienckiej, która używa do wyszukiwania i wywołać CalculatorService dynamiczne punktu końcowego.  
+-   **DynamicCalculatorClient**: A WCF klienta aplikacji, która używa dynamicznej punktu końcowego do wyszukiwania i wywołać CalculatorService.  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

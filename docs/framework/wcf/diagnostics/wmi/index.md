@@ -2,19 +2,19 @@
 title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
-Windows Communication Foundation (WCF) udostępnia kontroli danych w czasie wykonywania za pośrednictwem usługi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI).  
+Windows Communication Foundation (WCF) udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy usług WCF Instrumentacji zarządzania Windows (WMI).  
   
 ## <a name="enabling-wmi"></a>Włączanie usługi WMI  
  Usługa WMI stanowi implementację firmy Microsoft w sieci Web-Based Enterprise Management (WBEM) standardowa. Aby uzyskać więcej informacji o zestawie SDK usługi WMI, zobacz [Instrumentacji zarządzania Windows](https://msdn.microsoft.com/library/aa394582.aspx). Technologia WBEM jest branżowy standard jak aplikacje ujawnia Instrumentacji zarządzania do narzędzia do zarządzania zewnętrznego.  
   
- Dostawca WMI jest składnik, który ujawnia Instrumentacji w czasie wykonywania za pośrednictwem interfejsu zgodnego WBEM. Zawiera zestaw obiektów WMI, które mają pary atrybut/wartość. Pary może mieć wiele typów prostych. Narzędzia do zarządzania mogą łączyć się usługi za pomocą interfejsu w czasie wykonywania. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] udostępnia Atrybuty usług, takich jak adresy, powiązania zachowania i odbiorników.  
+ Dostawca WMI jest składnik, który ujawnia Instrumentacji w czasie wykonywania za pośrednictwem interfejsu zgodnego WBEM. Zawiera zestaw obiektów WMI, które mają pary atrybut/wartość. Pary może mieć wiele typów prostych. Narzędzia do zarządzania mogą łączyć się usługi za pomocą interfejsu w czasie wykonywania. Usługa WCF umożliwia atrybuty usług, takich jak adresy, powiązania zachowania i odbiorników.  
   
  W pliku konfiguracyjnym aplikacji można aktywować wbudowanego dostawcy WMI. Jest to zrobić za pomocą `wmiProviderEnabled` atrybutu [ \<diagnostyki >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) w [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sekcji, jak pokazano w następującym przykładowym Konfiguracja.  
   
@@ -38,18 +38,18 @@ Windows Communication Foundation (WCF) udostępnia kontroli danych w czasie wyko
   
  Należy zwrócić uwagę że jeśli nie rejestrowanie komunikatów śledzenia odbiorników dla rejestrowanie komunikatów lub nie `System.ServiceModel` obiektów nasłuchujących śledzenia śledzenia są określone w pliku konfiguracji, żadne zmiany są brane pod efekt, mimo że zmiany są akceptowane przez usługę WMI. Aby uzyskać więcej informacji na temat prawidłowo konfigurowania odpowiednich odbiorników, zobacz [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) i [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Poziom śledzenia wszystkich innych źródeł śledzenia określony w konfiguracji jest skuteczne, podczas uruchamiania aplikacji i nie można zmienić.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] przedstawia `GetOperationCounterInstanceName` metod dla skryptów. Ta metoda zwraca nazwę wystąpienia licznika wydajności w przypadku udostępnienia operacji o nazwie. Dane wejściowe nie są jednak zweryfikować. W związku z tym Jeśli podasz nazwę operacji niepoprawne, zwracana jest nazwa niepoprawny licznik.  
+ Usługa WCF umożliwia `GetOperationCounterInstanceName` metod dla skryptów. Ta metoda zwraca nazwę wystąpienia licznika wydajności w przypadku udostępnienia operacji o nazwie. Dane wejściowe nie są jednak zweryfikować. W związku z tym Jeśli podasz nazwę operacji niepoprawne, zwracana jest nazwa niepoprawny licznik.  
   
- `OutgoingChannel` Właściwość `Service` wystąpienia nie będą uwzględniane kanały otwarte przez usługę, aby połączyć się z inną usługą, w przypadku [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] klienta usługi docelowej nie jest tworzony w `Service` metody.  
+ `OutgoingChannel` Właściwość `Service` wystąpienia nie będą uwzględniane kanały otwarty przez usługę, aby połączyć się z inną usługą, jeśli klient WCF z usługą docelowy nie jest tworzony w `Service` metody.  
   
  **Uwaga** obsługuje tylko WMI <xref:System.TimeSpan> wartość 3 miejsc dziesiętnych. Na przykład, jeśli Usługa ustawia jedną z jej właściwości na <xref:System.TimeSpan.MaxValue>, jego wartość zostanie obcięta po 3 miejsc dziesiętnych, podczas wyświetlania za pomocą usługi WMI.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Ponieważ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dostawcy WMI umożliwia odnajdywanie usług w środowisku, należy zachować wyjątkową ostrożność za udzielanie dostępu do niego. Jeśli zmniejszą domyślnego dostępu tylko do administratora, może zezwolić stron zaufanych mniej dostęp do poufnych danych w danym środowisku. W szczególności jeśli Poluzuj uprawnienia na zdalny dostęp do usługi WMI, zalewania ataków mogą wystąpić. Jeśli proces jest wypełniony nadmiernego żądania usługi WMI, jego wydajność może znacznie mniej wydajna.  
+ Ponieważ dostawca WCF WMI umożliwia odnajdywanie usług w środowisku, należy zachować wyjątkową ostrożność za udzielanie dostępu do niego. Jeśli zmniejszą domyślnego dostępu tylko do administratora, może zezwolić stron zaufanych mniej dostęp do poufnych danych w danym środowisku. W szczególności jeśli Poluzuj uprawnienia na zdalny dostęp do usługi WMI, zalewania ataków mogą wystąpić. Jeśli proces jest wypełniony nadmiernego żądania usługi WMI, jego wydajność może znacznie mniej wydajna.  
   
  Ponadto jeśli zmniejszą uprawnienia dostępu do pliku MOF, Zaufane mniej strony można manipulować zachowanie usługi WMI i alter obiektów, które są ładowane w schemacie WMI. Na przykład pola można usunąć danych o kluczowym znaczeniu jest ukrywane przez administratora lub pola, które nie wypełnić lub spowodować wyjątki są dodawane do pliku.  
   
- Domyślnie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dostawcy WMI przyznaje "Wykonaj metodę", "zapis dostawcy" i "Włącz konto" uprawnień administratora, a "Włącz konto" uprawnień dla platformy ASP.NET, Usługa lokalna i Usługa sieciowa. W szczególności na inną niż[!INCLUDE[wv](../../../../../includes/wv-md.md)] platform, konto ASP.NET ma dostęp do odczytu przestrzeni nazw usługi WMI ServiceModel. Jeśli nie chcesz przyznać odpowiednie uprawnienia do określonej grupy użytkowników, należy albo Dezaktywuj dostawcy usługi WMI (on jest domyślnie wyłączona) lub wyłączyć dostęp do określonej grupy użytkowników.  
+ Domyślnie dostawca WCF WMI zapewnia "Wykonaj metodę", "zapis dostawcy" i "Włącz konto" uprawnień administratora, a "Włącz konto" uprawnień dla platformy ASP.NET, Usługa lokalna i Usługa sieciowa. W szczególności na inną niż[!INCLUDE[wv](../../../../../includes/wv-md.md)] platform, konto ASP.NET ma dostęp do odczytu przestrzeni nazw usługi WMI ServiceModel. Jeśli nie chcesz przyznać odpowiednie uprawnienia do określonej grupy użytkowników, należy albo Dezaktywuj dostawcy usługi WMI (on jest domyślnie wyłączona) lub wyłączyć dostęp do określonej grupy użytkowników.  
   
  Ponadto podczas próby włączenia usługi WMI za pomocą konfiguracji usługi WMI może nie być włączone z powodu niewystarczających użytkownika uprawnień. Jednak brak zdarzenia są zapisywane w dzienniku zdarzeń, aby zarejestrować ten błąd.  
   
@@ -149,7 +149,7 @@ Whoami /user
  Zapewnia to identyfikator SID bieżącego użytkownika, ale nie można użyć tej metody można pobrać identyfikatora SID dla dowolnego użytkownika. Innej metody, aby uzyskać identyfikator SID jest użycie [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) narzędzia z [narzędzi systemu Windows 2000 Resource Kit dla zadań administracyjnych](http://go.microsoft.com/fwlink/?LinkId=178660). To narzędzie porównuje SID dwóch użytkowników (lokalnego lub domeny), a po stronie efekt drukuje dwa identyfikatory SID do wiersza polecenia. Aby uzyskać więcej informacji, zobacz [dobrze znanych identyfikatorów SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzyskiwanie dostępu do wystąpienia obiektu zdalną usługę WMI  
- Jeśli chcesz uzyskać dostęp do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] wystąpienia usługi WMI na komputerze zdalnym, należy włączyć prywatność pakietów narzędzia używane dla dostępu. W poniższej sekcji opisano jak to osiągnąć przy użyciu usługi WMI CIM Studio, Tester oprzyrządowania Instrumentacji zarządzania Windows, jak również .NET SDK 2.0.  
+ Jeśli potrzebujesz dostępu do wystąpień usługi WCF WMI na komputerze zdalnym, należy włączyć prywatność pakietów narzędzia używane dla dostępu. W poniższej sekcji opisano jak to osiągnąć przy użyciu usługi WMI CIM Studio, Tester oprzyrządowania Instrumentacji zarządzania Windows, jak również .NET SDK 2.0.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  Jeśli zainstalowano [narzędzia administracyjne WMI](http://go.microsoft.com/fwlink/?LinkId=95185), można użyć WMI CIM Studio do wystąpień WMI dostępu. Narzędzia znajdują się w folderze  

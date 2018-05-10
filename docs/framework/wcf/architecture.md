@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architektura WCF (Windows Communication Foundation)
 Poniższa ilustracja przedstawia główne warstwy architektury usługi Windows Communication Foundation (WCF).  
@@ -24,7 +24,7 @@ Poniższa ilustracja przedstawia główne warstwy architektury usługi Windows C
  Zasady i powiązania określać warunki wymagane do komunikacji z usługą.  Na przykład powiązanie (co najmniej) określić transportu (na przykład HTTP lub TCP) i kodowania. Zasady zawierają wymagania dotyczące zabezpieczeń i inne warunki, które muszą zostać spełnione, aby komunikować się z usługą.  
   
 ### <a name="service-runtime"></a>Usługi czasu wykonywania  
- Warstwa obsługi usługi zawiera zachowania, które występują tylko podczas bieżącej operacji usługi, to znaczy zachowania środowiska uruchomieniowego usługi. Ograniczanie formantów, ile komunikatów są przetwarzane, które można zmieniać Jeśli wstępnie ustawiony limit zawiera żądanie dla usługi. Zachowanie błąd Określa, jakie występuje, gdy występuje błąd wewnętrzny w usłudze, na przykład, kontrolując, jakie informacje są przekazywane do klienta. (Zbyt dużej ilości informacji zapewnić złośliwy użytkownik korzyści w instalowaniu atak.) Kontroluje zachowanie metadanych wyświetlania metadanych ma zostać udostępnione publicznie. Określa zachowanie wystąpienia może działać jak wiele wystąpień usługi (na przykład pojedyncza określa tylko jedno wystąpienie do przetwarzania wszystkich komunikatów). Zachowanie transakcji umożliwia wycofywanie Operacje transakcyjne, jeśli wystąpi błąd. Zachowania wysyłania jest kontrolę nad jak komunikat jest przetwarzany przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastruktury.  
+ Warstwa obsługi usługi zawiera zachowania, które występują tylko podczas bieżącej operacji usługi, to znaczy zachowania środowiska uruchomieniowego usługi. Ograniczanie formantów, ile komunikatów są przetwarzane, które można zmieniać Jeśli wstępnie ustawiony limit zawiera żądanie dla usługi. Zachowanie błąd Określa, jakie występuje, gdy występuje błąd wewnętrzny w usłudze, na przykład, kontrolując, jakie informacje są przekazywane do klienta. (Zbyt dużej ilości informacji zapewnić złośliwy użytkownik korzyści w instalowaniu atak.) Kontroluje zachowanie metadanych wyświetlania metadanych ma zostać udostępnione publicznie. Określa zachowanie wystąpienia może działać jak wiele wystąpień usługi (na przykład pojedyncza określa tylko jedno wystąpienie do przetwarzania wszystkich komunikatów). Zachowanie transakcji umożliwia wycofywanie Operacje transakcyjne, jeśli wystąpi błąd. Zachowania wysyłania jest kontrolę nad jak komunikat jest przetwarzany przez infrastrukturę programu WCF.  
   
  Rozszerzalność umożliwia dostosowywanie procesów w czasie wykonywania. Na przykład komunikatów inspekcji jest możliwość kontroli części wiadomości i filtrowanie parametr umożliwia predefiniowanych operacje zależności od filtrów działającą w nagłówkach wiadomości.  
   
@@ -42,7 +42,7 @@ Poniższa ilustracja przedstawia główne warstwy architektury usługi Windows C
 ### <a name="hosting-and-activation"></a>Hosting i aktywacji  
  W postaci końcowego usługi jest programem. Podobnie jak inne programy usługa musi zostać uruchomiony w pliku wykonywalnego. Jest to nazywane *hosta samodzielnego* usługi.  
   
- Można też usług *hostowanej*, lub uruchom w pliku wykonywalnym zarządzane przez firmę zewnętrzną, na przykład Windows Activation Service (WAS) lub programu IIS. Umożliwia WAS [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji zostać aktywowana automatycznie podczas wdrażania na komputerze z systemem WAS. Usługi można też ręcznie uruchomić jako pliki wykonywalne (pliki .exe). Usługi można również uruchomić automatycznie jako usługa systemu Windows. Składniki modelu COM + mogą być również obsługiwane jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług.  
+ Można też usług *hostowanej*, lub uruchom w pliku wykonywalnym zarządzane przez firmę zewnętrzną, na przykład Windows Activation Service (WAS) lub programu IIS. BYŁA WCF umożliwia aplikacjom można aktywować automatycznie podczas wdrażania na komputerze z systemem. Usługi można też ręcznie uruchomić jako pliki wykonywalne (pliki .exe). Usługi można również uruchomić automatycznie jako usługa systemu Windows. Składniki modelu COM + mogą być również obsługiwane jako usługi WCF.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

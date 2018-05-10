@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>Surogaty kontraktu danych
 Kontrakt danych *Surogat* jest funkcją zaawansowaną oparty na modelu kontraktu danych. Ta funkcja służy do zastosowania w przypadku dostosowania typu i podstawienia w sytuacjach, w którym użytkownicy chcesz zmienić, jak serializacji typu zdeserializowany lub planowane w metadanych. Sytuacje, w którym mogą być używane surogatu jest gdy kontrakt danych nie został określony dla typów, pól i właściwości nie są oznaczone ikoną z <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu lub użytkownicy mają być dynamicznie utworzyć zmian schematu.  
@@ -133,7 +133,7 @@ Kontrakt danych *Surogat* jest funkcją zaawansowaną oparty na modelu kontraktu
  Metoda jest wywoływana na początku schematu eksportu i importu. Metoda zwraca niestandardowe typy danych używany w schemacie wyeksportowane i zaimportowane. Metoda jest przekazywana <xref:System.Collections.ObjectModel.Collection%601> ( `customDataTypes` parametru), która jest kolekcją typów. Metoda należy dodać dodatkowe znanych typów do tej kolekcji. Znane niestandardowe typy danych są wymagane do włączenia serializacji i deserializacji niestandardowych danych przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>. Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementowanie surogatu  
- Umożliwia surogatu kontraktu danych w ramach [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], należy wykonać kilka specjalnych procedur.  
+ Aby korzystać z surogatu kontraktu danych w ramach usługi WCF, należy wykonać kilka specjalnych procedur.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Aby użyć surogatu serializacji i deserializacji  
  Użyj <xref:System.Runtime.Serialization.DataContractSerializer> do wykonywania serializacji i deserializacji obiektu danych z surogatu. <xref:System.Runtime.Serialization.DataContractSerializer> Jest tworzony przez <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Należy także określić surogatu.  
@@ -174,7 +174,7 @@ Kontrakt danych *Surogat* jest funkcją zaawansowaną oparty na modelu kontraktu
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Aby użyć surogatu eksportu metadanych  
- Domyślnie podczas eksportowania metadanych z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dla usługi, ma zostać wygenerowany schemat zarówno WSDL i XSD. Surogatu musi zostać dodany do składnik odpowiedzialny za generowanie schematu XSD dla typy kontraktu danych, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Aby to zrobić, użyj zachowania, który implementuje <xref:System.ServiceModel.Description.IWsdlExportExtension> do modyfikowania <xref:System.ServiceModel.Description.WsdlExporter>, lub bezpośrednio modyfikować <xref:System.ServiceModel.Description.WsdlExporter> używany do eksportowania metadanych.  
+ Domyślnie podczas eksportowania metadanych z WCF dla usługi schemat zarówno WSDL i XSD ma zostać wygenerowany. Surogatu musi zostać dodany do składnik odpowiedzialny za generowanie schematu XSD dla typy kontraktu danych, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Aby to zrobić, użyj zachowania, który implementuje <xref:System.ServiceModel.Description.IWsdlExportExtension> do modyfikowania <xref:System.ServiceModel.Description.WsdlExporter>, lub bezpośrednio modyfikować <xref:System.ServiceModel.Description.WsdlExporter> używany do eksportowania metadanych.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Aby użyć surogatu eksportu metadanych  
   

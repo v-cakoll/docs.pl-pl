@@ -2,11 +2,11 @@
 title: Powiązania WS
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>Powiązania WS
 Ta sekcja zawiera przykłady ilustrujące powiązania usługi systemu Windows w systemie Windows Communication Foundation (WCF).  
@@ -25,7 +25,7 @@ Ta sekcja zawiera przykłady ilustrujące powiązania usługi systemu Windows w 
  Pokazuje użycie kodowania z WSHttpBinding komunikatu mechanizmu optymalizacji transmisji wiadomości (MTOM).  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- Pokazuje, jak do zaimplementowania typowych usługi i typowego klienta przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Pokazuje, jak do zaimplementowania typowych usługi i typowego klienta przy użyciu programu WCF.  
   
  [Sesja niezawodna WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Pokazuje użycie niezawodnej sesji.  
@@ -34,7 +34,7 @@ Ta sekcja zawiera przykłady ilustrujące powiązania usługi systemu Windows w 
  Pokazuje użycie zabezpieczenia transportowe protokołu SSL z <xref:System.ServiceModel.WSHttpBinding> powiązania.  
   
  [Powiązanie zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- Pokazuje korzystanie z zabezpieczeń wiadomości w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Pokazuje, korzystanie z zabezpieczeń komunikatów w programie WCF.  
   
  [Transport WS z poświadczeniami komunikatu](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  W przykładzie pokazano użycie zabezpieczenia transportowe protokołu SSL w połączeniu z poświadczeniami klienta odbywa się w komunikacie.

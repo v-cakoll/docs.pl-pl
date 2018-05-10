@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródła śledzenia na emitowanie danych śledzenia i poziomy śledzenia zestawu, śledzenie działania zestawu i propagacji do obsługi korelacji śledzenia end-to-end i ustaw obiektów nasłuchujących śledzenia do śledzenia.  
@@ -25,11 +25,11 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
   
 -   Zdarzenia błędu systemu Windows działa funkcja śledzenia. Zobacz [rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] śledzenie jest oparty na <xref:System.Diagnostics>. Aby użyć śledzenia, należy zdefiniować źródła śledzenia w pliku konfiguracji lub w kodzie. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Określa źródło śladu dla każdego [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zestawu. `System.ServiceModel` Źródła śledzenia jest najbardziej ogólnym [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] źródła śledzenia i rejestruje przetwarzania punkty kontrolne w [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosu komunikacji z wprowadzania pozostawienie transportu do wprowadzania/pozostawienia kodu użytkownika. `System.ServiceModel.MessageLogging` Źródło śladu rejestruje wszystkie komunikaty, które przepływać przez system.  
+ Śledzenie WCF jest oparty na <xref:System.Diagnostics>. Aby użyć śledzenia, należy zdefiniować źródła śledzenia w pliku konfiguracji lub w kodzie. Usługi WCF definiuje źródła śledzenia dla każdego zestawu usług WCF. `System.ServiceModel` Źródła śledzenia jest najbardziej ogólnym źródła śledzenia WCF i rejestruje punktów kontrolnych przetwarzania między stosu komunikacji WCF z wprowadzania pozostawienie transportu do wprowadzania/pozostawienia kodu użytkownika. `System.ServiceModel.MessageLogging` Źródło śladu rejestruje wszystkie komunikaty, które przepływać przez system.  
   
- Śledzenie nie jest włączone domyślnie. Aby uaktywnić śledzenie, należy utworzyć odbiornik śledzenia i ustawić poziom śledzenia innych niż "Off" dla źródła śledzenia wybranych w konfiguracji. w przeciwnym razie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] nie generuje żadnych śladów. Jeśli nie określisz odbiornik, śledzenie jest automatycznie wyłączana. Jeśli jest określony odbiornik, ale poziom nie jest określony, "Wyłączone" po ustawieniu poziomu domyślnie, co oznacza emitowanego śladów.  
+ Śledzenie nie jest włączone domyślnie. Aby uaktywnić śledzenie, należy utworzyć odbiornik śledzenia i ustawić poziom śledzenia innych niż "Off" dla źródła śledzenia wybranych w konfiguracji. w przeciwnym razie WCF nie generuje żadnych śladów. Jeśli nie określisz odbiornik, śledzenie jest automatycznie wyłączana. Jeśli jest określony odbiornik, ale poziom nie jest określony, "Wyłączone" po ustawieniu poziomu domyślnie, co oznacza emitowanego śladów.  
   
- Jeśli używasz [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] punktów rozszerzalności takich jak invokers operacja niestandardowa powinien Emituj własne dane śledzenia. To dlatego, jeśli implementuje punkt rozszerzeń [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] może nie są już emitowane standardowe dane śledzenia w domyślnej ścieżce. Jeśli nie implementuje obsługę ręcznego śledzenia przez ślady emisji nie widać oczekiwane dane śledzenia.  
+ Jeśli używasz punkty rozszerzeń WCF, takich jak invokers operacja niestandardowa powinien Emituj własne dane śledzenia. Jest to spowodowane zastosowanie punkcie rozszerzenia WCF można nie są już emitowane standardowe dane śledzenia w domyślnej ścieżce. Jeśli nie implementuje obsługę ręcznego śledzenia przez ślady emisji nie widać oczekiwane dane śledzenia.  
   
  Można skonfigurować śledzenie, edytując plik konfiguracji aplikacji, albo plik Web.config dla aplikacji hostowanych w sieci Web lub Appname.exe.config własnym obsługiwanych aplikacji. Oto przykład takiego edycji. Aby uzyskać więcej informacji na temat tych ustawień zobacz sekcję "Konfigurowanie śledzenia odbiorników można korzystać z śladów".  
   
@@ -52,12 +52,12 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
 ```  
   
 > [!NOTE]
->  Aby edytować plik konfiguracji programu [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi projektu programu Visual Studio, kliknij prawym przyciskiem myszy plik konfiguracji aplikacji — którejkolwiek Web.config dla aplikacji hostowanych w sieci Web lub Appname.exe.config własnym hostowanej aplikacji w  **Eksplorator rozwiązań**. Następnie wybierz pozycję **Edycja konfiguracji WCF** elementu menu kontekstowego. Spowoduje to uruchomienie [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), co umożliwia modyfikowanie ustawień konfiguracyjnych [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług przy użyciu graficznego interfejsu użytkownika.  
+>  Aby edytować plik konfiguracji projektu usługi WCF w programie Visual Studio, kliknij prawym przyciskiem myszy plik konfiguracji aplikacji — albo plik Web.config dla aplikacji hostowanych w sieci Web lub Appname.exe.config własnym hostowanej aplikacji w **Eksploratora rozwiązań** . Następnie wybierz pozycję **Edycja konfiguracji WCF** elementu menu kontekstowego. Spowoduje to uruchomienie [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), co umożliwia modyfikowanie ustawień konfiguracji dla usług WCF za pomocą graficznego interfejsu użytkownika.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurowanie źródeł śledzenia na emitowanie danych śledzenia  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Określa źródło śladu dla każdego zestawu. Wygenerowane w zestawie danych śledzenia są dostępne dla odbiorników zdefiniowane dla tego źródła. Następujące źródła śledzenia są zdefiniowane:  
+ Usługi WCF definiuje źródła śledzenia dla każdego zestawu. Wygenerowane w zestawie danych śledzenia są dostępne dla odbiorników zdefiniowane dla tego źródła. Następujące źródła śledzenia są zdefiniowane:  
   
--   System.ServiceModel: Dzienników wszystkich etapach [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] przetwarzania, gdy odczytać konfiguracji, komunikat jest przetwarzany w transporcie, zabezpieczeń, przetwarzanie wiadomości jest wysyłane w kodzie użytkownika i tak dalej.  
+-   System.ServiceModel: Dzienników wszystkich etapów przetwarzania WCF, po każdej zmianie konfiguracji jest do odczytu, komunikat jest przetwarzany w transporcie, zabezpieczeń, przetwarzanie wiadomości jest wysyłane w kodzie użytkownika i tak dalej.  
   
 -   Używająca elementu System.ServiceModel.MessageLogging jako: Rejestruje wszystkie komunikaty przepływać przez system.  
   
@@ -135,7 +135,7 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
  Aby uzyskać więcej informacji o tworzeniu źródła śledzenia zdefiniowanych przez użytkownika, zobacz [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Konfigurowanie obiektów nasłuchujących śledzenia zużyje śledzenia  
- W czasie wykonywania [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] źródła danych do odbiorników, które przetwarzają dane śledzenia. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zawiera kilka wstępnie zdefiniowanych odbiorników dla <xref:System.Diagnostics>, które różnią się w formacie ich użycia dla danych wyjściowych. Można również dodać niestandardowe odbiornika typów.  
+ W czasie wykonywania WCF źródeł danych śledzenia do odbiorników, które przetwarzają dane. Usługi WCF zawiera kilka wstępnie zdefiniowanych odbiorników dla <xref:System.Diagnostics>, które różnią się w formacie ich użycia dla danych wyjściowych. Można również dodać niestandardowe odbiornika typów.  
   
  Można użyć `add` określić nazwę i typ odbiornik śledzenia ma być używany. W naszym przykładzie konfiguracji, firma Microsoft o nazwie odbiornika `traceListener` i dodać standardowe nasłuchującego śledzenia .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) jako typ chcemy użyć. Możesz dodać dowolną liczbę obiektów nasłuchujących śledzenia dla każdego źródła. Jeśli odbiornik śledzenia emituje śledzenia w pliku, należy określić dane wyjściowe lokalizację i nazwę pliku w pliku konfiguracji. Odbywa się przez ustawienie `initializeData` nazwę pliku dla tego odbiornika. Jeśli nie określisz nazwy pliku, nazwy pliku losowe jest generowany na podstawie typu odbiornika używane. Jeśli <xref:System.Diagnostics.XmlWriterTraceListener> jest używana, jest generowany nazwę pliku bez rozszerzenia. W przypadku zastosowania niestandardowych odbiornika, można również użyć tego atrybutu, aby odebrało danych inicjujących inne niż nazwa pliku. Na przykład można określić identyfikatora bazy danych dla tego atrybutu.  
   
@@ -169,13 +169,13 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
  `activityTracing` Wartość określona dla `switchValue` atrybut służy do włączenia śledzenia działania, który emituje śladów granic działania i transferów w obrębie punktów końcowych.  
   
 > [!NOTE]
->  Jeśli używasz pewnych funkcji rozszerzalności w [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], może spowodować, że <xref:System.NullReferenceException> podczas działania śledzenie jest włączone. Aby rozwiązać ten problem, sprawdź plik konfiguracji aplikacji i upewnij się, że `switchValue` atrybutu źródła śledzenia nie jest ustawiony na `activityTracing`.  
+>  Korzystając z określonych funkcji rozszerzalności w programie WCF, można uzyskać <xref:System.NullReferenceException> podczas działania śledzenie jest włączone. Aby rozwiązać ten problem, sprawdź plik konfiguracji aplikacji i upewnij się, że `switchValue` atrybutu źródła śledzenia nie jest ustawiony na `activityTracing`.  
   
  `propagateActivity` Atrybut wskazuje, czy działanie powinno propagowane do pozostałych punktów końcowych, które uczestniczą w wymianie wiadomości. Ustawiając tę wartość na `true`, możesz pobrać pliki śledzenia wygenerowane przez dwoma punktami końcowymi i obserwować, jak zestaw ślady na jeden punkt końcowy skierowana do zestawu danych śledzenia w innym punktem końcowym.  
   
  Aby uzyskać więcej informacji na temat propagacji i śledzenie działań, zobacz [propagacji](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
- Zarówno `propagateActivity` i `ActivityTracing` wartościami logicznymi dotyczą System.ServiceModel TraceSource. `ActivityTracing` Wartości mają zastosowanie również do dowolnego źródła śledzenia, łącznie z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] lub zdefiniowanej przez użytkownika.  
+ Zarówno `propagateActivity` i `ActivityTracing` wartościami logicznymi dotyczą System.ServiceModel TraceSource. `ActivityTracing` Wartość ma również zastosowanie do dowolnego źródła śledzenia, w tym WCF lub migawek zdefiniowane przez użytkownika.  
   
  Nie można użyć `propagateActivity` atrybut o źródła śledzenia zdefiniowanych przez użytkownika. Dla Propagacja Identyfikatora działania kodu użytkownika, upewnij się, że nie należy ustawiać ServiceModel `ActivityTracing`, przy zachowaniu ServiceModel `propagateActivity` ustawić atrybutu `true`.  
   

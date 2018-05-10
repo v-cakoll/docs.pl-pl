@@ -2,11 +2,11 @@
 title: Rozszerzalność
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>Rozszerzalność
 Ta sekcja zawiera przykłady, które zajmują się rozszerzalności niestandardowe i inne funkcje programu Windows Communication Foundation (WCF).  
@@ -55,10 +55,10 @@ Ta sekcja zawiera przykłady, które zajmują się rozszerzalności niestandardo
  Pokazuje, jak procesy, takie jak serializacji, deserializacji schematu eksportowania i importowania schematu można dostosować za pomocą kontraktu danych dwuskładnikowy klasy.  
   
  [Rozszerzanie kontroli obsługi i raportowania błędów](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Pokazuje, jak rozszerzyć kontrolę obsługi błędów oraz raportowania błędów w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi przy użyciu <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsu.  
+ Pokazuje, jak rozszerzyć kontrolę obsługi błędów i raportowania błędów w usługi WCF za pomocą <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsu.  
   
  [Inspektorzy komunikatów](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Pokazuje, jak wdrożyć i skonfigurować klienta i usługi inspektorzy komunikatów.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Pokazuje, jak nowe typy zawartości do mapowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formatów treści komunikatu.
+ Pokazuje, jak mapować nowe typy zawartości do formatów treści wiadomości WCF.

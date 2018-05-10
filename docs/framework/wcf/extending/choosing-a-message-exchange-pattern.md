@@ -2,11 +2,11 @@
 title: Wybieranie platformy wymiany komunikatów
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Wybieranie platformy wymiany komunikatów
 Pierwszą czynnością przy tworzeniu niestandardowych transportu jest podjęcie decyzji, które *komunikatu wzorce exchange* (lub MEPs) są wymagane dla kanału tworzysz. W tym temacie opisano dostępne opcje oraz omówiono różne wymagania. Jest to pierwsze zadanie na liście zadań rozwoju kanału opisane w [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -47,7 +47,7 @@ Trzy wzorce exchange podstawowe wiadomości. Z góry na dół: datagram, żądan
 >  Dla transportu UDP tylko MEP, która jest obsługiwana jest datagram, ponieważ jest z założenia fire UDP, a zapomnieć protokołu.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sesje i Sessionful kanałów  
- W sieci world istnieją bez połączenia protokołów (na przykład UDP) i nawiązaniem połączenia protokołów (na przykład TCP). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa sesji termin oznacza abstrakcji logiczne typu połączenia. Przekroczono WCF protokoły są podobne do połączeń protokołów sieciowych i Bezsesyjne WCF protokoły są podobne do protokołów sieciowych bez połączenia.  
+ W sieci world istnieją bez połączenia protokołów (na przykład UDP) i nawiązaniem połączenia protokołów (na przykład TCP). Usługi WCF używa sesji termin oznacza abstrakcji logiczne typu połączenia. Przekroczono WCF protokoły są podobne do połączeń protokołów sieciowych i Bezsesyjne WCF protokoły są podobne do protokołów sieciowych bez połączenia.  
   
  W modelu obiektu kanału każdej sesji logicznej manifesty jako wystąpienie podczas zamykania kanału sesji. W związku z tym co nowej sesji, które są tworzone przez klienta i zaakceptowane w usłudze odnosi się do nowego podczas zamykania kanału sesji na każdej stronie. Na poniższym diagramie przedstawiono, w górnej części, struktura Bezsesyjne kanałów i u dołu, struktura zamykania kanałów.  
   

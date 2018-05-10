@@ -2,11 +2,11 @@
 title: 'Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP
 Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) przykład w systemie Windows Communication Foundation (WCF)[rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md). Rozszerza próbki transportu UDP do obsługi przepływu transakcji niestandardowe i pokazuje użycie <xref:System.ServiceModel.Channels.TransactionMessageProperty> właściwości.  
@@ -47,7 +47,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` to metoda pomocnika, która zawiera nową funkcję tokenu propagacji dla bieżącej transakcji z jednostką wiadomości i umieszczenie go w buforze.  
   
- Dla transportu przepływu transakcji niestandardowych, implementacja klienta musi wiedzieć, jakie operacje usługi wymaga przepływu transakcji oraz przekazywanie tych informacji do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Należy również mechanizm przekazywania transakcji użytkownika do warstwy transportowej. W przykładzie użyto "[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inspektorzy komunikatów" Aby uzyskać te informacje. Klienta komunikat Inspektor zaimplementowano, która jest wywoływana `TransactionFlowInspector`, wykonuje następujące zadania:  
+ Dla transportu przepływu transakcji niestandardowych, implementacja klienta musi wiedzieć, jakie operacje usługi wymaga przepływu transakcji oraz przekazywanie tych informacji do usługi WCF. Należy również mechanizm przekazywania transakcji użytkownika do warstwy transportowej. W przykładzie użyto "Inspektorzy komunikatów usługi WCF" Aby uzyskać te informacje. Klienta komunikat Inspektor zaimplementowano, która jest wywoływana `TransactionFlowInspector`, wykonuje następujące zadania:  
   
 -   Określa, czy transakcja musi przepływ działania danej wiadomości (ma to miejsce w `IsTxFlowRequiredForThisOperation()`).  
   

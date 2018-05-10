@@ -2,11 +2,11 @@
 title: Niestandardowy element przechwytujący komunikaty
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-interceptor"></a>Niestandardowy element przechwytujący komunikaty
 W tym przykładzie przedstawiono stosowania modelu rozszerzalności kanału. W szczególności widoczny jest sposób implementuje element niestandardowego powiązania, który tworzy fabryk kanałów i odbiorników kanału do przechwycenia wszystkich wiadomości przychodzących i wychodzących w określonym punkcie w stosie czasu wykonywania. Przykład obejmuje również klienta i serwera, które przedstawiają sposób używania tych niestandardowych fabryki.  
@@ -25,7 +25,7 @@ W tym przykładzie przedstawiono stosowania modelu rozszerzalności kanału. W s
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Przykład opisuje zalecane procedurę tworzenia niestandardowym kanale warstwowych w systemie Windows Communication Foundation (WCF), używając struktura kanału i po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] najlepsze rozwiązania. Kroki, aby utworzyć niestandardowy kanał warstwowego są następujące:  
+ Przykład opisuje zalecane procedurę tworzenia niestandardowym kanale warstwowych w systemie Windows Communication Foundation (WCF), używając struktura kanału i następujące najlepsze rozwiązania w zakresie WCF. Kroki, aby utworzyć niestandardowy kanał warstwowego są następujące:  
   
 1.  Decyzji, które kształtów kanału będzie obsługiwać Twoje fabryki kanału i odbiornika kanałów.  
   

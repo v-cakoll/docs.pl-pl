@@ -1,13 +1,7 @@
 ---
-title: "Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy"
-ms.custom: 
+title: 'Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg w formacie prawidłowy adres e-mail.  
@@ -69,7 +58,7 @@ W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ci�
 |`(?("")("".+?(?<!\\)""@)`|Jeśli pierwszym znakiem jest znak cudzysłowu, zgodne cudzysłów początku następuje co najmniej jedno wystąpienie dowolny znak, następuje końcowy znak cudzysłowu. Końcowy znak cudzysłowu nie musi być poprzedzona znakiem ukośnika odwrotnego (\\). `(?<!` jest na początku potwierdzenia ujemne wybieganie wstecz zerowej szerokości. Ciąg powinien zawierać z znak @ (@).|  
 |<code>&#124;(([0-9a-z]</code>|Jeśli pierwszy znak nie jest znak cudzysłowu, dopasowuje dowolny znak alfabetyczne, od do z i od A do Z (porównanie nie uwzględnia wielkości liter) lub dowolnego znaku numerycznego od 0 do 9.|  
 |`(\.(?!\.))`|Jeśli następny znak jest okres, jest zgodny. Jeśli nie jest to okres, wyszukiwać na następny znak i kontynuować dopasowania. `(?!\.)` to potwierdzenie wyprzedzenia ujemna zerowej szerokości, uniemożliwiający dwóch następujących po sobie kropek znajdujących się w lokalnym części adresu e-mail.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Jeśli następny znak nie jest okres, zgodne dowolny znak słowa lub jeden z następujących znaków:-! #$% "* +=? ^\`{} &#124; ~.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Jeśli następny znak nie jest okres, zgodne dowolny znak słowa lub jeden z następujących znaków:-! #$% "* +=? ^\`{}&#124;~.|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Jest zgodna z wzorcem wyrażenia warunkowe (okres następuje z systemem innym niż okres lub jeden z wielu znaków) zero lub więcej razy.|  
 |`@`|Dopasowanie znaku @.|  
 |`(?<=[0-9a-z])`|Kontynuować dopasowania, jeśli znak poprzedza znaku @ jest od A do Z, do z i od 0 do 9. `(?<=[0-9a-z])` Konstrukcja definiuje potwierdzenia dodatnie wybieganie wstecz zerowej szerokości.|  

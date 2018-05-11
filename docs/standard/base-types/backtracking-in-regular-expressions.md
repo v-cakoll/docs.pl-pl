@@ -1,13 +1,7 @@
 ---
 title: Śledzenie wsteczne w wyrażeniach regularnych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,18 +16,13 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a> Śledzenie wsteczne występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i zwraca aparat wyrażeń regularnych do poprzedniego stanu zapisanego kontynuować jego wyszukiwane dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -66,11 +55,11 @@ ms.lasthandoff: 03/23/2018
 |---------------|-------------------------|------------------------|------------|  
 |1|e|„needing a reed” (indeks 0)|Brak dopasowania.|  
 |2|e|„eeding a reed” (indeks 1)|Możliwe dopasowanie.|  
-|3|e{2}|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
+|3|E{2}|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
 |4|\w|„ding a reed” (indeks 3)|Możliwe dopasowanie.|  
 |5|\b|„ing a reed” (indeks 4)|Możliwe dopasowanie nie powiodło się.|  
 |6|e|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
-|7|e{2}|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
+|7|E{2}|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
 |8|e|„ding a reed” (indeks 3)|Dopasowanie nie powiodło się.|  
 |9|e|„ing a reed” (indeks 4)|Brak dopasowania.|  
 |10|e|„ng a reed” (indeks 5)|Brak dopasowania.|  
@@ -80,7 +69,7 @@ ms.lasthandoff: 03/23/2018
 |14|e|"reed" (indeks 9)|Brak dopasowania.|  
 |15|e|"reed" (indeks 10)|Brak dopasowania.|  
 |16|e|„eed” (indeks 11)|Możliwe dopasowanie.|  
-|17|e{2}|„ed” (indeks 12)|Możliwe dopasowanie.|  
+|17|E{2}|„ed” (indeks 12)|Możliwe dopasowanie.|  
 |18|\w|„d” (indeks 13)|Możliwe dopasowanie.|  
 |19|\b|„” (indeks 14)|Dopasowanie.|  
   

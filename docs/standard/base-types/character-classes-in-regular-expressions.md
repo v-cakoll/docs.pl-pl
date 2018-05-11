@@ -1,13 +1,7 @@
 ---
 title: Klasy znaków w wyrażeniach regularnych
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
-ms.translationtype: HT
+ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 <a name="Top"></a> Klasy znaku definiuje zestaw znaków, jedno z nich może wystąpić w ciągu wejściowego dopasowanie powiodło się. Język wyrażeń regularnych programu .NET obsługuje następujących klas znaków:  
@@ -58,7 +47,7 @@ ms.lasthandoff: 04/18/2018
  .NET obsługuje wyrażenia odejmowania klasy znaku, który umożliwia zdefiniowanie zestawu znaków jako wynik z innej klasy znaku z wyjątkiem jednej klasy znaku. Aby uzyskać więcej informacji, zobacz [odejmowania klasy znaku](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Klasy, które odpowiada znaków według kategorii, takie jak znak [\w](#WordCharacter) odpowiadające znaków wyrazów lub [\p {}](#CategoryOrBlock) odpowiadające kategorii Unicode, zależą od <xref:System.Globalization.CharUnicodeInfo> klasy, aby podać informacje o znaków kategorie.  Począwszy od [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], kategorie znaków są oparte na [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] za pośrednictwem [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], są one oparte na [Unicode Standard, wersja 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Klasy, które odpowiada znaków według kategorii, takie jak znak [\w](#WordCharacter) odpowiadające znaków wyrazów lub [\p{} ](#CategoryOrBlock) odpowiadające kategorii Unicode, zależą od <xref:System.Globalization.CharUnicodeInfo> klasy, aby podać informacje o kategoriach znaków.  Począwszy od [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], kategorie znaków są oparte na [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] za pośrednictwem [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], są one oparte na [Unicode Standard, wersja 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupa znaków dodatnich: [ ]  
@@ -220,7 +209,7 @@ ms.lasthandoff: 04/18/2018
  [Powrót do początku](#Top)  
   
 <a name="NegativeCategoryOrBlock"></a>   
-## <a name="negative-unicode-category-or-unicode-block-p"></a>Ujemna kategoria Unicode lub blok Unicode: \P {}  
+## <a name="negative-unicode-category-or-unicode-block-p"></a>Ujemna kategorii Unicode lub blok Unicode: \P{}  
  W standardzie Unicode każdemu znakowi przypisuje się kategorię ogólną. Na przykład określonego znaku może być wielką literę (reprezentowany przez `Lu` kategorii), cyfry dziesiętne ( `Nd` kategorii), symbol matematyczne ( `Sm` kategorii), lub separator akapitu ( `Zl` kategorii). Określone zestawy znaków w standardzie Unicode zajmują również określony zakres lub blok kolejnych kodów znaku. Na przykład podstawowy zestaw znaków łacińskich można znaleźć w zakresie od \u0000 do \u007F, podczas gdy zestaw znaków arabskich znajduje się w zakresie od \u0600 do \u06FF.  
   
  Konstrukcja wyrażenia regularnego  

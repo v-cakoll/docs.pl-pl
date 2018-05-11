@@ -1,13 +1,7 @@
 ---
-title: "Kwantyfikatory w wyrażeniach regularnych"
-ms.custom: 
+title: Kwantyfikatory w wyrażeniach regularnych
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,30 +14,25 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Kwantyfikatory w wyrażeniach regularnych
 Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi być obecny w danych wejściowych znaleźć dopasowanie.  W poniższej tabeli wymieniono Kwantyfikatory obsługiwany przez platformę .NET.  
   
-|Zachłanne kwantyfikatora|Lazy quantifier|Opis|  
+|Zachłanne kwantyfikatora|Opóźnieniem kwantyfikatora|Opis|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Dopasowuje zero lub więcej razy.|  
 |`+`|`+?`|Dopasowuje jeden lub więcej razy.|  
 |`?`|`??`|Dopasowuje zero lub jeden raz.|  
-|`{` *n* `}`|`{` *n* `}?`|Takie same  *n*  razy.|  
-|`{` *n* `,}`|`{` *n* `,}?`|Zgodne z co najmniej  *n*  razy.|  
-|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Zgodny z  *n*  do *m* razy.|  
+|`{` *N* `}`|`{` *N* `}?`|Takie same *n* razy.|  
+|`{` *N* `,}`|`{` *N* `,}?`|Zgodne z co najmniej *n* razy.|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Zgodny z *n* do *m* razy.|  
   
  Ilości `n` i `m` są stałe całkowite. Zwykle Kwantyfikatory są intensywnie; spowodują one aparat wyrażenia regularnego do dopasowania dowolną liczbę wystąpień konkretnych wzorców, jak to możliwe. Dołączanie `?` znak kwantyfikator sprawia, że opóźnieniem; ta powoduje, że aparat wyrażenia regularnego do dopasowania możliwie jak najmniejszej liczby wystąpień. Pełny opis różnicy między Kwantyfikatory intensywnie i opóźnieniem, zobacz sekcję [ustawienia Greedy i Kwantyfikatory opóźniające](#Greedy) dalszej części tego tematu.  
   
@@ -107,7 +96,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\b`|Kończy na granicy wyrazu.|  
   
 ### <a name="match-exactly-n-times-n"></a>Dopasowuje dokładnie n razy: {n}  
- `{`  *n*  `}` Kwantyfikatora zgodny z poprzednim elementem dokładnie  *n*  razy, gdzie  *n* jest liczbą całkowitą. `{`*n*`}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{`  *n*  `}?`.  
+ `{` *n* `}` kwantyfikatora zgodny z poprzednim elementem dokładnie *n* razy, gdzie *n* jest liczbą całkowitą. `{`*n* `}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{` *n*`}?`.  
   
  Na przykład, wyrażenie regularne `\b\d+\,\d{3}\b` próbuje dopasować granicy word następuje co najmniej jeden cyfr dziesiętnych, następuje trzech cyfr dziesiętnych następuje granic programu word. Poniższy przykład przedstawia tego wyrażenia regularnego.  
   
@@ -125,7 +114,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\b`|Kończy na granicy wyrazu.|  
   
 ### <a name="match-at-least-n-times-n"></a>Dopasowuje co najmniej n razy: {n,}  
- `{`  *n*  `,}` Kwantyfikatora zgodny z poprzednim elementem co najmniej  *n*  razy, gdzie  *n* jest liczbą całkowitą. `{`*n*`,}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{`  *n*  `}?`.  
+ `{` *n* `,}` kwantyfikatora zgodny z poprzednim elementem co najmniej *n* razy, gdzie *n* jest liczbą całkowitą. `{`*n* `,}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{` *n*`}?`.  
   
  Na przykład, wyrażenie regularne `\b\d{2,}\b\D+` próbuje dopasować granicy word następuje co najmniej dwie cyfry następuje granic programu word i cyfra —. Poniższy przykład przedstawia tego wyrażenia regularnego. Wyrażenia regularnego nie powiedzie się dopasować frazę `"7 days"` ponieważ zawiera ona tylko jedną cyfrę, ale pomyślnie odpowiada fraz `"10 weeks and 300 years"`.  
   
@@ -142,7 +131,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\D+`|Zgodne z co najmniej jedną cyfrę z systemem innym niż dziesiętnych.|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>Dopasowanie między czasu n i m: {n, m}  
- `{`  *n*  `,` *m* `}` kwantyfikatora zgodny z poprzednim elementem co najmniej  *n*  godzinach ale nie więcej niż *m* razy, gdzie  *n*  i *m* są liczbami całkowitymi. `{`*n*`,`*m* `}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{`  *n*  `,` *m*`}?`.  
+ `{` *n*`,`*m* `}` kwantyfikatora zgodny z poprzednim elementem co najmniej *n* razy, ale nie więcej niż *m*  razy, gdzie *n* i *m* są liczbami całkowitymi. `{`*n*`,`*m* `}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{` *n*`,`*m* `}?`.  
   
  W poniższym przykładzie, wyrażenie regularne `(00\s){2,4}` próbuje dopasować od dwóch do czterech wystąpień dwóch zero cyfr spację. Należy pamiętać, że końcowa część ciąg wejściowy zawiera ten wzorzec pięć razy zamiast maksymalnie cztery. Jednak początkowego fragmentu tego podciąg (do obszaru i piątej pary zer) odpowiada wzorzec wyrażenia regularnego.  
   
@@ -195,7 +184,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\(??`|Wystąpienie dopasowania zero lub jeden nawiasem otwierającym.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>Odpowiada dokładnie n razy (dopasowanie opóźnieniem): {n}?  
- `{`  *n*  `}?` Kwantyfikatora zgodny z poprzednim elementem dokładnie `n` razy, gdzie  *n*  jest liczbą całkowitą. Jest odpowiednikiem opóźnieniem intensywnie kwantyfikatora `{`  *n*  `}+`.  
+ `{` *n* `}?` kwantyfikatora zgodny z poprzednim elementem dokładnie `n` razy, gdzie *n* jest liczbą całkowitą. Jest odpowiednikiem opóźnieniem intensywnie kwantyfikatora `{` *n*`}+`.  
   
  W poniższym przykładzie, wyrażenie regularne `\b(\w{3,}?\.){2}?\w{3,}?\b` służy do identyfikowania adres witryny sieci Web. Należy pamiętać, że odpowiada "www.microsoft.com" i "msdn.microsoft.com", ale nie zgadza się "MojaWitrynaSieciWeb" lub "mycompany.com".  
   
@@ -212,12 +201,12 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\b`|W celu dopasowania na granicy programu word.|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>Dopasowuje co najmniej n razy (dopasowanie opóźnieniem): {n,}?  
- `{`  *n*  `,}?` Kwantyfikatora zgodny z poprzednim elementem co najmniej `n` razy, gdzie  *n*  jest liczbą całkowitą, ale jako kilka razy możliwe. Jest odpowiednikiem opóźnieniem intensywnie kwantyfikatora `{`  *n*  `,}`.  
+ `{` *n* `,}?` kwantyfikatora zgodny z poprzednim elementem co najmniej `n` razy, gdzie *n* jest liczbą całkowitą, ale jako kilka razy, jak to możliwe. Jest odpowiednikiem opóźnieniem intensywnie kwantyfikatora `{` *n*`,}`.  
   
- Zobacz przykład `{`  *n*  `}?` kwantyfikatora w poprzedniej sekcji ilustrację. Używa wyrażenia regularnego, w tym przykładzie `{`  *n*  `,}` kwantyfikatora odpowiadające ciąg, który ma co najmniej trzy znaki następuje okres.  
+ Zobacz przykład `{` *n* `}?` kwantyfikatora w poprzedniej sekcji ilustrację. Używa wyrażenia regularnego, w tym przykładzie `{` *n* `,}` kwantyfikatora odpowiadające ciąg, który ma co najmniej trzy znaki następuje okres.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>Dopasowania zakresu od n do m razy (dopasowanie opóźnieniem): {n, m}?  
- `{`  *n*  `,` *m* `}?` kwantyfikator dopasowuje poprzedni element między `n` i `m` razy, gdzie  *n*  i *m* są liczbami całkowitymi, ale jako kilka razy, jak to możliwe. Jest odpowiednikiem opóźnieniem intensywnie kwantyfikatora `{`  *n*  `,` *m*`}`.  
+ `{` *n*`,`*m* `}?` kwantyfikator dopasowuje poprzedni element między `n` i `m` razy, gdzie *n* i *m* są liczbami całkowitymi, ale jako kilka razy, jak to możliwe. Jest odpowiednikiem opóźnieniem intensywnie kwantyfikatora `{` *n*`,`*m*`}`.  
   
  W poniższym przykładzie, wyrażenie regularne `\b[A-Z](\w*\s+){1,10}?[.!?]` odpowiada zdania zawierające między wyrazami jednego do dziesięciu. Jest on zgodny wszystkich zdań w ciągu wejściowym, z wyjątkiem jedno zdanie, które zawiera wyrazy, 18.  
   
@@ -261,7 +250,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
  W większości przypadków wyrażeń regularnych z kwantyfikatorami zachłanne i opóźnieniem zwrócić tego samego dopasowań. Najczęściej zwracają różne wyniki, jeśli są używane z symbolem wieloznacznym (`.`) metaznak, który dopasowuje dowolny znak.  
   
 ## <a name="quantifiers-and-empty-matches"></a>Kwantyfikatory i pusty dopasowań  
- Kwantyfikatory `*`, `+`, i `{`  *n*  `,` *m* `}` i ich odpowiedniki opóźnieniem nigdy nie Powtarzaj po pusta Dopasuj, jeśli znaleziono minimalną liczbę przechwytywania. Ta zasada uniemożliwia wprowadzanie nieskończone pętle dopasowań pusty Podwyrażenie po nieskończone maksymalna liczba możliwych grupy przechwytywania lub w jego pobliżu nieskończone Kwantyfikatory.  
+ Kwantyfikatory `*`, `+`, i `{` *n*`,`*m* `}` i ich odpowiedniki opóźnieniem Powtórz nigdy nie po pustą zgodne, kiedy minimum Znaleziono numer przechwytywania. Ta zasada uniemożliwia wprowadzanie nieskończone pętle dopasowań pusty Podwyrażenie po nieskończone maksymalna liczba możliwych grupy przechwytywania lub w jego pobliżu nieskończone Kwantyfikatory.  
   
  Na przykład poniższy kod przedstawia wynik wywołania <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> metody z wzorcem wyrażenia regularnego `(a?)*`, który dopasowuje zero lub jeden "" znak zero lub więcej razy. Należy pamiętać, że pojedynczej grupy przechwytywania przechwytuje każdego "", jak również jako <xref:System.String.Empty?displayProperty=nameWithType>, ale ten nie zostanie odnaleziony drugi odpowiednik pusta, kwantyfikatora przestanie powtarzające się powoduje, że pierwsze dopasowanie puste.  
   

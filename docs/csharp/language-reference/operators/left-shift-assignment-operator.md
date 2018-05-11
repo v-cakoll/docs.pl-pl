@@ -30,7 +30,7 @@ Operator przypisania przesunięcia w lewo.
 x <<= y  
 ```  
   
- Jest wykonane w postaci  
+ jest wykonywane w postaci
   
 ```  
 x = x << y  

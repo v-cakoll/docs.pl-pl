@@ -30,18 +30,18 @@ Operator warunkowy i - AND, (`&&`) wykonuje koniunkcję jego argumentów typu `b
 x && y  
 ```  
   
- Odpowiada operacji  
+ odnosi się do operacji   
   
 ```  
 x & y  
 ```  
   
- Za wyjątkiem tego, że jeśli `x` jest `false`, to `y` nie zostanie ocenione, ponieważ wynikiem operacji będzie `false` niezależnie od tego, jakiej wartości jest `y`. Taki zabieg nazywamy 'skrótem logicznym'.  
+ Z wyjątkiem tego, że jeśli `x` jest `false`, to `y` nie zostanie ocenione, ponieważ wynikiem operacji będzie `false` niezależnie od tego, jaką wartość ma `y`. Taki zabieg nazywamy oceną typu „short-circuit”. 
   
- Operator warunkowy 'AND' nie może być przeciążony, ale przeciążenia zwykłych operatorów logicznych, oraz [true](../../../csharp/language-reference/keywords/true.md) i [false](../../../csharp/language-reference/keywords/false.md) są dopuszczalne z odpowiednimi ograniczeniami.
+ Operator warunkowy 'AND' nie może być przeciążony, ale przeciążenia zwykłych operatorów logicznych oraz [true](../../../csharp/language-reference/keywords/true.md) i [false](../../../csharp/language-reference/keywords/false.md) są dopuszczalne z odpowiednimi ograniczeniami.
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie, drugi blok warunkowy `if` ocenia tylko pierwszy z argumentów operatora `AND`, ponieważ ten zwraca `false`.  
+ W poniższym przykładzie drugi blok warunkowy `if` ocenia tylko pierwszy argumentów operacji `AND`, ponieważ ten zwraca wartość `false`.
   
  [!code-csharp[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
   

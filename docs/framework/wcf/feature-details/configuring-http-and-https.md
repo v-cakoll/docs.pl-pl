@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>Konfigurowanie protokołów HTTP i HTTPS
 Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołu HTTP i HTTPS. Ustawienia HTTP i HTTPS są skonfigurowane przy użyciu usługi Internet Information Services (IIS) lub za pomocą narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w ustawieniach usług IIS HTTP lub HTTPS można skonfigurować w ramach usług IIS (przy użyciu narzędzia inetmgr.exe). Jeśli usługa WCF jest samodzielnie hostowana, ustawienia protokołu HTTP lub HTTPS są konfigurowane za pomocą narzędzia wiersza polecenia.  
@@ -19,7 +19,7 @@ Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołu HTTP 
   
  Podczas uruchamiania [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] automatycznie zainstaluje to narzędzie. Podczas uruchamiania [!INCLUDE[wxp](../../../../includes/wxp-md.md)], możesz pobrać narzędzia z [narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [omówienie tak](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
- Podczas uruchamiania [!INCLUDE[wv](../../../../includes/wv-md.md)]lub Windows 7, te ustawienia można skonfigurować za pomocą narzędzia Netsh.exe.  
+ Podczas uruchamiania [!INCLUDE[wv](../../../../includes/wv-md.md)] lub Windows 7, te ustawienia można skonfigurować za pomocą narzędzia Netsh.exe.  
   
 ## <a name="configuring-namespace-reservations"></a>Konfigurowanie Namespace zastrzeżenia  
  Zastrzeżenia Namespace przypisuje uprawnienia dla części nazw adresu URL HTTP do określonej grupy użytkowników. Zastrzeżenie daje tych użytkowników prawo do tworzenia usług, które nasłuchują na część przestrzeni nazw. Zastrzeżenia są prefiksy URL, co oznacza, że zastrzeżenia obejmuje wszystkie ścieżki podrzędne ścieżki rezerwacji. Zastrzeżenia Namespace zezwolenie na dwa sposoby używania symboli wieloznacznych. W tym artykule opisano w dokumentacji interfejsu API serwera HTTP [kolejność rozpoznawania między oświadczenia przestrzeni nazw, które obejmują symboli wieloznacznych](http://go.microsoft.com/fwlink/?LinkId=94841).  

@@ -1,22 +1,22 @@
 ---
-title: Podnieś i przesunięcie istniejące aplikacje IaaS platformy Azure
+title: Podnieś i przesunięcie istniejące aplikacje .NET Azure IaaS (gotowe infrastruktury chmury)
 description: Modernizacji istniejących aplikacji .NET z chmury Azure i kontenery systemu Windows.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b844373d4ea995b553d9a32ea51997fd664064bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 458b1bd1fc9fc24ce43d0926655fe0767aabc43c
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="lift-and-shift-existing-apps-azure-iaas"></a>Podnieś i przesunięcie istniejące aplikacje IaaS platformy Azure
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Podnieś i przesunięcie istniejące aplikacje .NET Azure IaaS (gotowe infrastruktury chmury)
 
 > Wizja: jako pierwszy krok, aby zmniejszyć z lokalnymi inwestycji i całkowitego kosztu sprzętu i sieci konserwacji, po prostu rehost istniejących aplikacji w chmurze.
 
 Przed przejściem do *jak* Aby przeprowadzić migrację istniejących aplikacji do infrastruktury platformy Azure jako usługa (IaaS) platformy, ważne jest, aby analizować przyczyny *Dlaczego* chcesz przeprowadzić migrację bezpośrednio do IaaS na platformie Azure. Scenariusz na tym poziomie dojrzałości modernizacji jest zasadniczo aby rozpocząć korzystanie z maszyn wirtualnych w chmurze, a nie przechodzić do użyć bieżącej infrastruktury lokalnej.
 
-Jest inny punkt do analizowania *Dlaczego* można przeprowadzić migrację do czystych chmury IaaS, a nie tylko dodanie więcej zaawansowanych usług zarządzanych na platformie Azure. Musisz określić przypadków może wymagać IaaS w pierwszej kolejności.
+Jest inny punkt do analizowania *Dlaczego* można przeprowadzić migrację do czystych chmury IaaS, a nie tylko dodanie więcej zaawansowanych usług zarządzanych na platformie Azure. Określić przypadków może wymagać IaaS w pierwszej kolejności.
 
 Rysunek 2-1 powoduje umieszczenie poziomów modernizacji aplikacje gotowe infrastruktury chmury:
 
@@ -30,17 +30,17 @@ Głównym celem migrację do chmury, nawet na poziomie początkowej IaaS, jest u
 
 Po wprowadzeniu decyzji o przeniesieniu aplikacji w chmurze główną przyczyną Dlaczego możesz wybrać IaaS zamiast bardziej zaawansowane opcje, takie jak PaaS jest po prostu środowiska IaaS będzie bardziej znane. Przeniesienie na podobny do bieżące środowisko, w środowisku lokalnym oferuje niższe nauki, dzięki czemu najszybszy ścieżki do chmury.
 
-Jednak biorąc najszybszy ścieżki do chmury nie oznacza uzyska największe korzyści z o aplikacji w chmurze. Każda organizacja będzie najbardziej znaczących korzyści z migracji chmury poziomach już wprowadzone gotowe do chmury DevOps i PaaS dojrzałości (zoptymalizowana chmury).
+Jednak biorąc najszybszy ścieżki do chmury nie oznacza uzyska największe korzyści z o aplikacji w chmurze. Każda organizacja będzie najbardziej znaczących korzyści z migracji chmury na poziomach już wprowadzone dojrzałości zoptymalizowanych pod kątem chmury oraz Native chmury.
 
-Również stało się widoczne, czy aplikacje są łatwiejsze do modernizacji i ponownego projektowania w przyszłości już działające w chmurze, nawet w przypadku IaaS. Dotyczy to częściowo, ponieważ osiągnięto już migracji danych aplikacji. Ponadto organizacji będzie ma zdobytych umiejętności wymaganych do pracy w chmurze, a wprowadzone zmiany w "Kultura chmury".
+Również stało się widoczne, czy aplikacje są łatwiejsze do modernizacji i w przyszłości rearchitect już działające w chmurze, nawet w przypadku IaaS. Osiągnięto już migracji danych aplikacji. Również organizacji będzie mieć zdobytych umiejętności wymaganych do pracy w chmurze i wprowadzone zmiany w "Kultura chmury".
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Podczas migracji do IaaS zamiast do PaaS
 
-Kolejnych sekcjach omówiono w nim aplikacje DevOps gotowe do chmury, które najczęściej są oparte na różnych platformach PaaS i usług. Te aplikacje zapewniają większości korzyści wynikające z migracji do chmury.
+Kolejnych sekcjach omówiono w nim aplikacje zoptymalizowanych pod kątem chmury, przede wszystkim opartych na różnych platformach PaaS i usług. Te aplikacje zapewniają większości korzyści wynikające z migracji do chmury. 
 
-Jeśli celem jest po prostu przenoszenia istniejących aplikacji w chmurze, najpierw należy zidentyfikować istniejące aplikacje, które wymagają znacznej modyfikacji do uruchamiania w usłudze Azure App Service. Te aplikacje powinny być pierwszym kandydatów.
+Jeśli celem jest po prostu przenoszenia istniejących aplikacji w chmurze, najpierw należy zidentyfikować istniejące aplikacje, które nie wymagają znacznej modyfikacji do uruchamiania w usłudze Azure App Service. Te aplikacje powinny być pierwszym kandydatów do zoptymalizowanych pod kątem chmury. 
 
-Następnie jeśli nie chcesz lub nadal nie można przenieść do kontenerów systemu Windows i orchestrators, takich jak sieć szkieletowa usług Azure lub Kubernetes jeszcze, wówczas gdy używasz zwykły VMs (IaaS).
+Następnie dla tych aplikacji, które nadal nie można przenieść kontenery systemu Windows i PaaS takie jak usługi aplikacji lub orchestrators, takich jak sieć szkieletowa usług Azure migracji tych, które mają zwykły proste maszyn wirtualnych (IaaS). 
 
 Jednak należy pamiętać, że poprawnie konfigurowania, zabezpieczania i obsługi maszyn wirtualnych wymaga znacznie więcej czasu i doświadczenia IT w porównaniu do na platformie Azure przy użyciu usługi PaaS. Planując maszynach wirtualnych platformy Azure, upewnij się, wziąć pod uwagę nakładu rutynowej konserwacji wymagane do stosowania poprawek, aktualizacji i zarządzania środowiskiem maszyny Wirtualnej. Maszyny wirtualne platformy Azure jest IaaS.
 
@@ -54,7 +54,7 @@ Migracja do chmury nie musi być trudne. Jednak w wielu organizacjach mieć trud
 
 - Mapowanie wbudowanych zależności dla odnajdywania wysokiego zaufania aplikacji wielowarstwowych
 
-- Inteligentnego restrukturyzujące do maszyn wirtualnych platformy Azure
+- Inteligentnego określenie prawidłowego rozmiaru do maszyn wirtualnych platformy Azure
 
 - Raportowania z wytycznymi dotyczącymi korygując potencjalnych problemów ze zgodnością
 

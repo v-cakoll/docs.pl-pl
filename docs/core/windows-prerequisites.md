@@ -4,11 +4,11 @@ description: Dowiedz się, w zależności, należy na okien komputera do opracow
 author: JRAlexander
 ms.author: johalex
 ms.date: 04/24/2018
-ms.openlocfilehash: 0f3867e07a9edcb318cd21eb5775219643c416e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -46,7 +46,7 @@ Podczas pracy z wersjami systemu Windows starszych niż Windows 10 i Windows Ser
 * Instalowanie platformy .NET Core za pomocą *.zip* pliku. Może to obejmować serwery kompilacji/CI/CD.
 
 > [!NOTE]
-> *Dla Windows 8.1 i starszych wersjach, lub Windows Server 2012 R2 i wcześniejszych wersjach:* upewnij się, że instalacji systemu Windows jest aktualny i uwzględnia [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) którego można zainstalować za pomocą usługi Windows Update. Jeśli nie zainstalowano tę aktualizację, zostanie wyświetlone wystąpił błąd podczas uruchamiania aplikacji .NET Core, podobnie do następującej: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
+> *Dla Windows 8.1 i starszych wersjach, lub Windows Server 2012 R2 i wcześniejszych wersjach:* upewnij się, że instalacji systemu Windows jest aktualny i uwzględnia [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) którego można zainstalować za pomocą usługi Windows Update. Jeśli nie zainstalowano tę aktualizację, zostanie wyświetlone wystąpił błąd podczas uruchamiania aplikacji .NET Core, takie jak następujące: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Wstępnie wymaganych składników w programie Visual Studio 2017 r.
 

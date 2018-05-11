@@ -1,119 +1,113 @@
 ---
-title: Ciąg interpolacji - C#
-description: Dowiedz się, jak działa interpolacji ciągu w języku C# 6
-author: mgroves
-ms.date: 03/06/2017
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: 5b807429d05fcf59f4bb55c4d2429daa17835fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+title: Ciąg interpolacji w języku C#
+description: Dowiedz się, jak zawiera wyrażenie sformatowane wyniki w wyniku ciąg w języku C# z interpolacji ciągu.
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 3e463ceb0902658107280559b7fb57849beb8153
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation-in-c"></a>Ciąg interpolacji w języku C# #
 
-Ciąg interpolacji jest sposób symbole zastępcze w ciągu zastępuje wartość zmiennej ciągu. Przed C# 6, jest sposób, w tym celu <xref:System.String.Format%2A?displayProperty=nameWithType>. To działanie jest zgoda, ale ponieważ używa numeru symbole zastępcze, może być trudniejsze do odczytu i pełniejsze.
+Ten samouczek przedstawia sposób użycia [ciągu interpolacji](../language-reference/tokens/interpolated.md) sformatowanie i dołączyć wyniki wyrażenia ciągu wynik. Przykładów założono, że czytelnik zna podstawowe pojęcia języka C# i formatowanie typu .NET. Jeśli jesteś nowym użytkownikiem interpolacji ciąg lub formatowania typu .NET, zapoznaj się [szybkiego startu interpolacji interakcyjne ciąg](../quick-starts/interpolated-strings.yml) pierwszy. Aby uzyskać więcej informacji na temat typy formatowania w .NET, zobacz [typy formatowania w .NET](../../standard/base-types/formatting-types.md) tematu.
 
-Inne języki programowania miały interpolacji ciąg wbudowanych w języku jakiś czas. Na przykład w kodzie PHP:
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a>Wprowadzenie
 
-W języku C# 6 koniec zostały tego stylu interpolacji ciągu. Można użyć `$` przed ciąg, aby wskazać, że należy zastąpić zmienne/wyrażenia ich wartości.
+[Ciągu interpolacji](../language-reference/tokens/interpolated.md) funkcji jest oparty na [złożone formatowanie](../../standard/base-types/composite-formatting.md) funkcji i zapewnia bardziej czytelny i wygodne składni zawiera wyrażenie sformatowane wyniki w ciągu wynik.
 
-## <a name="prerequisites"></a>Wymagania wstępne
-Należy skonfigurować komputer z usługami .NET core. Instrukcje instalacji można znaleźć na [.NET Core](https://www.microsoft.com/net/core) strony.
-Można uruchomić tej aplikacji, w systemie Windows, Ubuntu Linux, macOS lub w kontenerze Docker. Należy zainstalować w edytorze kodu dotyczącego elementów ulubionych. Opisy poniżej użyj [Visual Studio Code](https://code.visualstudio.com/) czyli typu open source cross platform edytora. Można jednak użyć dowolnego narzędzia potrafisz.
+Aby zidentyfikować ciąg literału jako ciągu interpolowanym, dołączenie wartości za pomocą `$` symbolu. Można osadzić dowolne prawidłowe C# wyrażenie zwracające wartość w ciągu interpolowanym. W poniższym przykładzie, jak Obliczanie wyrażenia jego wynik jest konwertowana na ciąg i uwzględniona w parametrach wyników:
 
-## <a name="create-the-application"></a>Tworzenie aplikacji
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-Teraz, po zainstalowaniu wszystkich narzędzi, należy utworzyć nową aplikację platformy .NET Core. Aby użyć generatora wiersza polecenia, Utwórz katalog projektu, takie jak `interpolated`i uruchom następujące polecenie w ulubionych powłoki:
+Co w przykładzie powyżej przedstawiono można użyć wyrażenia w ciągu interpolowanym należy ująć w nawiasy klamrowe:
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-To polecenie tworzy projekt .NET Core podstawowe z pliku projektu *interpolated.csproj*i pliku kodu źródłowego, *Program.cs*. Konieczne będzie wykonanie `dotnet restore` do przywrócenia zależności niezbędne do skompilowania tego projektu.
+W czasie kompilacji ciągu interpolowanym zwykle jest przekształcana na <xref:System.String.Format%2A?displayProperty=nameWithType> wywołania metody. Dzięki temu wszystkie możliwości [ciągu formatowania złożonego](../../standard/base-types/composite-formatting.md) dostępne do użycia z również ciągi interpolowane funkcji.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Jak określać ciągu formatu dla interpolowanego wyrażenia
 
-Do wykonania programu, należy użyć `dotnet run`. Powinien zostać wyświetlony "tekst Hello, World" dane wyjściowe do konsoli.
-
-
-
-## <a name="intro-to-string-interpolation"></a>Wprowadzenie do ciągu interpolacji
-
-Z <xref:System.String.Format%2A?displayProperty=nameWithType>, określ "symbole zastępcze" w ciągu, który zastępuje argumentów po ciągu. Przykład:
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-Który dane wyjściowe obejmują "mojej nazwy jest gajów Matt".
-
-W języku C# 6, zamiast `String.Format`, zdefiniuj ciągu interpolowanym dołączając ją z `$` symboli, a następnie za pomocą zmiennych bezpośrednio w ciągu. Przykład:
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-Nie trzeba używać tylko zmienne. Można użyć dowolnego wyrażenia w nawiasach. Przykład:
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-Czy wyjściowy, który:
+Określ ciąg formatu, który jest obsługiwany przez typ wyniku wyrażenia wykonując interpolowanego wyrażenia dwukropka (":"), a ciąg formatu:
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a>Jak działa interpolacji ciągu
+Poniższy przykład przedstawia sposób określić format standardowe i niestandardowe ciągi dla wyrażeń, które powodują powstanie daty i godziny lub wyników liczbowych:
 
-W tle przetłumaczyć tej składni interpolacji ciąg `String.Format` przez kompilator. Tak, możesz zrobić [tego samego typu rzeczy wykonaniu przed z `String.Format` ](../../standard/base-types/formatting-types.md).
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-Na przykład można dodać uzupełniania i formatowania liczbowa:
+Aby uzyskać więcej informacji, zobacz [składnika ciąg formatu](../../standard/base-types/composite-formatting.md#format-string-component) sekcji [złożone formatowanie](../../standard/base-types/composite-formatting.md) tematu. Tej sekcji zamieszczono linki do tematów opisujących ciągi formatujące standardowe i niestandardowe obsługiwane przez typy podstawowe .NET.
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Sterowanie pola szerokości i wyrównania sformatowany interpolowanego wyrażenia
 
-Powyższe czy dane wyjściowe wyglądać mniej więcej tak:
+Określ szerokość pola minimalna i wyrównanie do wyniku wyrażenia sformatowany wykonując interpolowanego wyrażenia za pomocą przecinka (",") i wyrażenie stałe:
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-Jeśli nazwa zmiennej nie zostanie znaleziony, generowany jest błąd kompilacji.
+Jeśli *wyrównanie* wartość jest dodatnia, wyniku wyrażenia sformatowany jest wyrównany do prawej; Jeśli ujemną, jest wyrównany.
 
-Przykład:
+Jeśli trzeba określić wyrównanie i ciąg formatu, uruchom za pomocą składnika wyrównania:
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-Jeśli kompilacja to występują błędy:
- 
-* `Cannot use local variable 'adj' before it is declared` - `adj` nie została zadeklarowana zmienna, do *po* ciągu interpolowanym.
-* `The name 'otheranimal' does not exist in the current context` -zmiennej o nazwie `otheranimal` nawet nigdy nie został zadeklarowany.
+Poniższy przykład przedstawia sposób Określanie wyrównania i używa potoku znaków ("|") do rozdzielenia pól tekstowych:
 
-## <a name="localization-and-internationalization"></a>Lokalizacja i internacjonalizacji
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-Obsługuje ciągu interpolowanym <xref:System.IFormattable?displayProperty=nameWithType> i <xref:System.FormattableString?displayProperty=nameWithType>, które mogą być przydatne w przypadku internacjonalizacji.
+Jako przykład przedstawiono dane wyjściowe, jeśli długość wyniku wyrażenia sformatowany przekracza określony szerokość pola *wyrównanie* wartość jest ignorowana.
 
-Domyślnie w ciągu interpolowanym używa bieżącej kultury. Aby korzystać z inną kulturę, rzutowania w ciągu interpolowanym jako `IFormattable`. Przykład:
+Aby uzyskać więcej informacji, zobacz [składnika wyrównanie](../../standard/base-types/composite-formatting.md#alignment-component) sekcji [złożone formatowanie](../../standard/base-types/composite-formatting.md) tematu.
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>Jak używać sekwencji unikowych w ciągu interpolowanym
 
-## <a name="conclusion"></a>Wniosek 
+Ciągi interpolowane obsługuje wszystkie sekwencje specjalne, które mogą być używane w literałach ciągu zwykłego. Aby uzyskać więcej informacji, zobacz [sekwencji unikowych ciąg](../programming-guide/strings/index.md#string-escape-sequences).
 
-W tym samouczku przedstawiono sposób korzystania z funkcji interpolacji ciągu języka C# 6. Zasadniczo jest bardziej zwięzły sposób zapisywania prosty `String.Format` instrukcji z niektórych zastrzeżenia do bardziej zaawansowanych zastosowań. Aby uzyskać więcej informacji, zobacz [ciągu interpolacji](../../csharp//language-reference/tokens/interpolated.md) tematu.
+Aby zinterpretować sekwencji unikowych jako literału, należy użyć [dosłownego wyrażenia](../language-reference/tokens/verbatim.md) literału ciągu. Rozpoczyna się od ciągu dosłownego wyrażenia interpolowane `$` następuje znak `@` znaków.
+
+Uwzględnienie nawias klamrowy "{" lub "}", w wyniku ciągu, użyj dwa nawiasy klamrowe, "{{" lub "}}". Aby uzyskać więcej informacji, zobacz [anulowanie nawiasów klamrowych](../../standard/base-types/composite-formatting.md#escaping-braces) sekcji [złożone formatowanie](../../standard/base-types/composite-formatting.md) tematu.
+
+Poniższy przykład pokazuje, jak dołączyć nawiasy klamrowe w ciągu wynik i utworzyć dosłownego wyrażenia ciągu interpolowanym:
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Jak używać trójargumentowy operator warunkowy `?:` w wyrażeniu interpolowane
+
+Jako dwukropkiem (":") ma specjalne znaczenie w elemencie z interpolowanego wyrażenia, aby można było używać [operator warunkowy](../language-reference/operators/conditional-operator.md) w wyrażeniu, należy ująć go w nawiasy, jak przedstawiono na poniższym przykładzie:
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>Jak utworzyć ciąg specyficzne dla kultury wynik z interpolacji ciągu
+
+Domyślnie ciągu interpolowanym używa bieżącej kultury, zdefiniowane przez <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> właściwości dla wszystkich operacji formatowania. Użyj niejawna konwersja ciągu interpolowanym do <xref:System.FormattableString?displayProperty=nameWithType> wystąpienia i wywołanie jego <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, aby utworzyć parametry specyficzne dla kultury wynik. Poniższy przykład pokazuje, jak to zrobić:
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+Jak pokazano na przykładzie, można użyć jednego <xref:System.FormattableString> wystąpienie do generowania wielu ciągów wynik dla różnych kultur.
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Jak utworzyć ciąg wynik użyta Niezmienna kultura
+
+Wraz z programem <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> metody, można użyć statycznych <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> metody rozpoznać ciągu interpolowanym jako ciąg wynik <xref:System.Globalization.CultureInfo.InvariantCulture>. Poniższy przykład pokazuje, jak to zrobić:
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a>Wniosek
+
+W tym samouczku opisano typowe scenariusze użycia interpolacji ciągu. Aby uzyskać więcej informacji na temat interpolacji ciągu, zobacz [ciągu interpolacji](../language-reference/tokens/interpolated.md) tematu. Aby uzyskać więcej informacji na temat typy formatowania w .NET, zobacz [typy formatowania w .NET](../../standard/base-types/formatting-types.md) i [złożone formatowanie](../../standard/base-types/composite-formatting.md) tematów.
+
+## <a name="see-also"></a>Zobacz także
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[Ciągi](../programming-guide/strings/index.md)  

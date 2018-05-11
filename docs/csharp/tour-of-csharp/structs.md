@@ -3,11 +3,11 @@ title: C# struktury — samouczek języka C#
 description: Dowiedz się, że typy, o nazwie struktury wartości podstawy języka C#
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: dca21fe5c5f3f97bc067eb79229a608e89c0fcda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>Struktury
 
@@ -23,7 +23,7 @@ Alternatywą jest zapewnienie punktu struktury.
 
 Teraz, zostanie uruchomiony tylko jeden obiekt — jeden dla tablicy — i `Point` wystąpienia są przechowywane w wierszu w tablicy.
 
-Struct — Konstruktorzy są wywoływane z operatora new, ale który nie oznacza, że pamięć jest przydzielane. Zamiast dynamiczne przydzielanie obiektu i zwraca odwołanie do niej konstruktora struktury po prostu zwraca wartość — Struktura (zwykle w tymczasowej lokalizacji na stosie), a ta wartość jest następnie skopiowana niezbędne.
+Struct — Konstruktorzy są wywoływane z `new` operatora, ale nie oznacza, że pamięć jest przydzielane. Zamiast dynamiczne przydzielanie obiektu i zwraca odwołanie do niej konstruktora struktury po prostu zwraca wartość — Struktura (zwykle w tymczasowej lokalizacji na stosie), a ta wartość jest następnie skopiowana niezbędne.
 
 W przypadku klas jest możliwe dwie zmienne odwołać się do tego samego obiektu i w związku z tym możliwe w dla operacji na jedną zmienną, która wpływa na obiekt odwołuje się innej zmiennej. Ze struktury zmienne każdego mają własne kopię danych, a nie jest możliwe w dla operacji na jednym wpłynąć na innych. Na przykład dane wyjściowe, generowane przez następujący fragment kodu zależy od tego, czy punkt znajduje się w klasie lub strukturze.
 

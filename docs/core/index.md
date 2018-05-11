@@ -4,11 +4,11 @@ description: Oprogramowanie .NET core jest implementacją moduły, wysokiej wyda
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 7a2548a177f6e62e9c76c336c6e270a139d9fce0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f413e4efa8b33877917330855f4881c3fbf0854
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-guide"></a>Przewodnik platformy .NET Core
 
@@ -31,14 +31,14 @@ Oprogramowanie .NET core składa się z następujących elementów:
 
 - A [środowiska uruchomieniowego .NET](https://github.com/dotnet/coreclr), który zapewnia system typów, ładowania zestawu, moduł Garbage Collector, interop macierzystego i innych podstawowych usług. 
 - Zestaw [bibliotek platformy](https://github.com/dotnet/corefx), które zapewniają typy pierwotne, typy kompozycji aplikacji i podstawowe narzędzia. 
-- A [zestawu SDK narzędzia](https://github.com/dotnet/cli) i [Kompilatory języka](https://github.com/dotnet/roslyn) umożliwiających środowisko dewelopera podstawowej, dostępne w [.NET Core SDK](sdk.md).
+- A [zestawu SDK narzędzia](https://github.com/dotnet/cli) i Kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [F #](https://github.com/microsoft/visualfsharp)) umożliwiających środowisko dewelopera podstawowej, dostępne w [.NET Core SDK](sdk.md).
 - Host aplikacji "dotnet", który jest używany do uruchamiania aplikacji .NET Core. Wybiera środowiska uruchomieniowego i obsługuje środowisko uruchomieniowe, udostępnia zestaw ładowania zasady i uruchamia aplikację. Tym samym hoście służy również do uruchamiania narzędzia zestawu SDK w podobny sposób.
 
 ### <a name="languages"></a>Języki
 
 Języki C#, VB i F # mogą służyć do pisania aplikacji i bibliotek dla platformy .NET Core. Kompilatory Uruchom na .NET Core, umożliwiając tworzenie dla platformy .NET Core w dowolnym miejscu go uruchamia. Ogólnie rzecz biorąc nie będzie używany kompilatory bezpośrednio, ale pośrednio przy użyciu narzędzia zestawu SDK.
 
-Kompilatory języka C#, VB i F # i narzędzi platformy .NET Core są lub można zintegrować różne edytory tekstów i IDEs, łącznie z programu Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text i Vim wprowadzania programowania .NET Core dostępną opcją w sieci ulubiony element kodowania środowiska i systemu operacyjnego. Integracja ta zostanie podany, w części przez dobrej pracowników z [projektu OmniSharp](http://www.omnisharp.net/).
+Kompilatory języka C#, VB i F # i narzędzi platformy .NET Core są lub można zintegrować różne edytory tekstów i IDEs, łącznie z programu Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text i Vim wprowadzania programowania .NET Core dostępną opcją w sieci ulubiony element kodowania środowiska i systemu operacyjnego. Integracja ta zostanie podany, w części przez dobrej pracowników z [projektu OmniSharp](http://www.omnisharp.net/) i [Ionide](http://ionide.io).
 
 ### <a name="net-apis-and-compatibility"></a>Interfejsów API architektury .NET i zgodności
 

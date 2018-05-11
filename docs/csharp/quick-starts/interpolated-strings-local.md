@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 5af7cf1d0f541661acb23ec2cad4bada5d9e03e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation"></a>Ciąg interpolacji
 
@@ -169,4 +169,4 @@ Zakończono szybkiego startu interpolacji ciągu.
 
 Można kontynuować [listy kolekcji](arrays-and-collections.md) szybkiego startu w środowisku projektowania.
 
-Dowiedz się więcej o interpolacji ciągu w [ciągu interpolacji](../language-reference/tokens/interpolated.md) tematu w odwołanie w C#.
+Aby uzyskać więcej informacji, zobacz [ciągu interpolacji](../language-reference/tokens/interpolated.md) tematu i [ciągu interpolacji w języku C#](../tutorials/string-interpolation.md) samouczka.

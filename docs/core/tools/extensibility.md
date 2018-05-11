@@ -4,11 +4,11 @@ description: Dowiedz się, jak można rozszerzyć narzędzi interfejsu wiersza p
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: 9f1d90b15d70b25c6dfeab5dd013bb9756b37a3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelu rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
 
@@ -20,15 +20,15 @@ Narzędzi interfejsu wiersza polecenia można ją rozszerzyć, przede wszystkim 
 
 1. [Za pomocą pakietów NuGet dla projektu](#per-project-based-extensibility)
 
-  -Projekt narzędzia są dostępne w kontekście projektu, ale pozwalają łatwo instalacji przez Przywracanie.
+   -Projekt narzędzia są dostępne w kontekście projektu, ale pozwalają łatwo instalacji przez Przywracanie.
 
 2. [Za pomocą pakietów NuGet z niestandardowych elementów docelowych](#custom-targets)
 
-  Niestandardowe elementy docelowe pozwalają łatwo rozszerzyć proces kompilacji z niestandardowych zadań.
+   Niestandardowe elementy docelowe pozwalają łatwo rozszerzyć proces kompilacji z niestandardowych zadań.
 
 3. [Za pomocą ścieżki systemu](#path-based-extensibility)
 
-  Narzędzia oparte na ŚCIEŻCE są odpowiednie w ogólne, między projektami narzędzia, której można używać na jednym komputerze.
+   Narzędzia oparte na ŚCIEŻCE są odpowiednie w ogólne, między projektami narzędzia, której można używać na jednym komputerze.
 
 Trzy mechanizmy rozszerzania opisanych powyżej nie są wyłączne. Można użyć jednego lub wszystkich, lub ich kombinacji. Która z nich do pobrania zależy przede wszystkim od cel, który chcesz osiągnąć z rozszerzeniem.
 

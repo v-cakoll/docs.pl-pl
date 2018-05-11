@@ -3,11 +3,11 @@ title: Nowości w języku C# 7.0 — przewodnik C#
 description: Omówienie nowe funkcje dostępne w kolejnych wersji języka C# 7.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 440784edfb93d613f1427be2152cd92ae5566e3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>Nowości w języku C# w wersji 7.0
 
@@ -84,7 +84,7 @@ Pola nie zostaną sprawdzone, a nie można definiować własnych metod
 > Krotki były dostępne przed 7.0 C#, ale zostały nieefektywne i miał Brak obsługi language.
 > Oznacza to, że spójnej kolekcji elementów może być przywoływany tylko jako `Item1`, `Item2` i tak dalej. C# w wersji 7.0 wprowadzono obsługę języka krotek, dzięki czemu semantycznego nazwy pól krotka przy użyciu typów nowe, bardziej wydajne spójnej kolekcji.
 
-Krotka można utworzyć przez przypisanie każdego elementu członkowskiego do wartości:
+Przypisywanie wartości do każdego członka można utworzyć spójnych kolekcji:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -129,7 +129,7 @@ Można też podać podobne deconstruction dla każdego typu w .NET. Jest to real
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-Można wyodrębnić poszczególnych pól, przypisując krotka do `Point`:
+Można wyodrębnić poszczególnych pól, przypisując `Point` do spójnych kolekcji:
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

@@ -9,11 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 55ccabaea4fcb7716378d92964030f7025202e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="event-c-reference"></a>event (odwołanie w C#)
 `event` — Słowo kluczowe służy do deklarowania zdarzenia w klasie wydawcy.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia sposób deklarowanie i wywoływanie zdarzeń, który używa <xref:System.EventHandler> jako podstawowego typu delegowanego. Na przykład kompletny kod, który również pokazano, jak używać ogólnych <xref:System.EventHandler%601> delegować typu i subskrybowanie zdarzeń i utworzyć metoda obsługi zdarzeń, zobacz [porady: publikowanie zdarzeń tej metody Dostosuj wskazówkami dotyczącymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
- [!code-csharp[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
  Zdarzenia są specjalny rodzaj multiemisji delegata, który można wywołać tylko z wewnątrz klasy lub struktury, w którym je zadeklarowano (klasa wydawcy). Jeśli inne klasy lub struktury subskrybować zdarzenia, ich metody obsługi zdarzeń będzie wywoływany, gdy klasa wydawcy wywołuje zdarzenie. Aby uzyskać więcej informacji oraz przykłady kodu, zobacz [zdarzenia](../../../csharp/programming-guide/events/index.md) i [delegatów](../../../csharp/programming-guide/delegates/index.md).  
   

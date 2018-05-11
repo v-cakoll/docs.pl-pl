@@ -1,4 +1,4 @@
----
+﻿---
 title: '&gt;&gt;= — Operator (odwołanie w C#)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,15 +23,15 @@ Operator przypisania przesunięcia w prawo.
 x >>= y  
 ```  
   
- jest szacowana jako  
+ jest wykonywane jako  
   
 ```  
 x = x >> y  
 ```  
   
- z tą różnicą, że `x` jest tylko jeden raz obliczone. [>> Operator](../../../csharp/language-reference/operators/right-shift-operator.md) przewiduje `x` prawej przez wartość określoną w `y`.  
+ z tą różnicą, że `x` jest obliczone tylko raz. [Operator >>](../../../csharp/language-reference/operators/right-shift-operator.md) przesuwa `x` w prawo o liczbę bitów określoną przez `y`.  
   
- >> = — Operator nie może zostać przeciążony bezpośrednio, ale typy danych zdefiniowane przez użytkownika można przeciążać [>> operator](../../../csharp/language-reference/operators/right-shift-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
+ Operatora `>>=` nie można przeciążyć bezpośrednio, ale [operator >>](../../../csharp/language-reference/operators/right-shift-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)) może zostać przeciążony w typach danych zdefiniowanych przez użytkownika.
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#11](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-assignment-operator_1.cs)]  

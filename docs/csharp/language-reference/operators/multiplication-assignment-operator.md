@@ -23,13 +23,13 @@ Operator przypisania mnożenia danych binarnych.
 x *= y  
 ```  
   
- jest równoważne  
+ odpowiada wyrażeniu  
   
 ```  
 x = x * y  
 ```  
   
- z tą różnicą, że `x` jest obliczane tylko jeden raz. [Operator *](../../../csharp/language-reference/operators/multiplication-operator.md) jest zdefiniowany dla typów liczbowych do wykonania mnożenia.  
+ z tą różnicą, że `x` jest obliczany tylko raz. [Operator *](../../../csharp/language-reference/operators/multiplication-operator.md) jest wstępnie zdefiniowany dla typów liczbowych do wykonania mnożenia.  
   
  Operator `*=` nie może zostać przeciążony bezpośrednio, ale typy danych zdefiniowane przez użytkownika mogą przeciążać [operator *](../../../csharp/language-reference/operators/multiplication-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
   

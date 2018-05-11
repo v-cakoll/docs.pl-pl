@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;&lt;= — Operator (odwołanie w C#)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,15 +23,15 @@ Operator przypisania przesunięcia w lewo.
 x <<= y  
 ```  
   
- jest szacowana jako  
+ jest wykonywane w postaci
   
 ```  
 x = x << y  
 ```  
   
- z tą różnicą, że `x` jest tylko jeden raz obliczone. [<< Operator](../../../csharp/language-reference/operators/left-shift-operator.md) przewiduje `x` pozostawionego przez liczbę bitów określony przez `y`.  
+ z tą różnicą, że `x` jest obliczone tylko raz. [Operator <<](../../../csharp/language-reference/operators/left-shift-operator.md) przesuwa `x` w lewo o liczbę bitów określoną przez `y`.  
   
- `<<=` Operator nie może zostać przeciążony bezpośrednio, ale typy danych zdefiniowane przez użytkownika można przeciążać [<< operator](../../../csharp/language-reference/operators/left-shift-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
+ Operatora `<<=` nie można przeciążyć bezpośrednio, ale [ operator <<](../../../csharp/language-reference/operators/left-shift-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)) może zostać przeciążony w typach danych zdefiniowanych przez użytkownika.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#12](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-assignment-operator_1.cs)]  

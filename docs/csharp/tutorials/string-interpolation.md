@@ -1,13 +1,13 @@
 ---
 title: Ciąg interpolacji w języku C#
-description: Dowiedz się, jak zawiera wyrażenie sformatowane wyniki w wyniku ciąg w języku C# z interpolacji ciągu.
+description: Dowiedz się, jak dołączyć wyniki sformatowany wyrażenia ciągu wynik w języku C# z interpolacji ciągu.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 3e463ceb0902658107280559b7fb57849beb8153
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
-ms.translationtype: HT
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="string-interpolation-in-c"></a>Ciąg interpolacji w języku C# #
 
@@ -23,7 +23,7 @@ Aby zidentyfikować ciąg literału jako ciągu interpolowanym, dołączenie war
 
 [!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-Co w przykładzie powyżej przedstawiono można użyć wyrażenia w ciągu interpolowanym należy ująć w nawiasy klamrowe:
+Jak w przykładzie pokazano, można użyć wyrażenia w ciągu interpolowanym, należy ująć w nawiasy klamrowe:
 
 ```
 {<interpolatedExpression>}
@@ -97,7 +97,7 @@ Jak pokazano na przykładzie, można użyć jednego <xref:System.FormattableStri
 
 ## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Jak utworzyć ciąg wynik użyta Niezmienna kultura
 
-Wraz z programem <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> metody, można użyć statycznych <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> metody rozpoznać ciągu interpolowanym jako ciąg wynik <xref:System.Globalization.CultureInfo.InvariantCulture>. Poniższy przykład pokazuje, jak to zrobić:
+Wraz z programem <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> metody, można użyć statycznych <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> metodę, aby rozpoznać ciągu interpolowanym ciąg wynik <xref:System.Globalization.CultureInfo.InvariantCulture>. Poniższy przykład pokazuje, jak to zrobić:
 
 [!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
 

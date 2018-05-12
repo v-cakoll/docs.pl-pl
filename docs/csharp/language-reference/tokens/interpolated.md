@@ -12,11 +12,11 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 7a2e281dfecdb7baeaeb58ad68232bcd7d371595
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
-ms.translationtype: HT
+ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - ciąg interpolacji (odwołanie w C#)
 
@@ -28,7 +28,7 @@ Ciąg interpolacji zapewnia bardziej czytelny i wygodne składni utworzyć ciąg
 
 ## <a name="structure-of-an-interpolated-string"></a>Struktura ciągu interpolowanym
 
-Aby zidentyfikować ciąg literału jako ciągu interpolowanym, dołączenie wartości za pomocą `$` symbolu. Nie może zawierać żadnego odstępu między `$` i `"` zaczynającym się ciąg. To powoduje błąd kompilacji.
+Aby zidentyfikować ciąg literału jako ciągu interpolowanym, dołączenie wartości za pomocą `$` symbolu. Nie może zawierać żadnego odstępu między `$` i `"` zaczynającym się literału ciągu. To powoduje błąd kompilacji.
 
 Struktura element o interpolowanego wyrażenia jest następujący:
 
@@ -36,7 +36,7 @@ Struktura element o interpolowanego wyrażenia jest następujący:
 {<interpolatedExpression>[,<alignment>][:<formatString>]}
 ```
 
-Elementy w nawiasach kwadratowych są opcjonalne. W tabeli poniżej opisano każdy element.
+Elementy w nawiasach kwadratowych są opcjonalne. W poniższej tabeli opisano każdy element:
 
 |Element|Opis|
 |-------------|-----------------|
@@ -54,11 +54,11 @@ Uwzględnienie nawias klamrowy "{" lub "}", w tekście utworzonego przez ciągu 
 
 Jako dwukropkiem (":") ma specjalne znaczenie w elemencie interpolowanego wyrażenia, aby można było używać [operator warunkowy](../operators/conditional-operator.md) w wyrażeniu interpolowane ujmij tego wyrażenia w nawiasach.
 
-W poniższym przykładzie pokazano, jak dołączyć nawiasu klamrowego na ciąg wyniku i sposobu użycia operator warunkowy w wyrażeniu interpolowane:
+W poniższym przykładzie pokazano, jak dołączyć nawiasu klamrowego ciągu wynik i sposobu użycia operator warunkowy w wyrażeniu interpolowane:
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Użyj ciągi interpolowane z Verbatim `$` następuje znak `@` znaków. Aby uzyskać więcej informacji na temat ciągi verbatim zobacz [ciąg](../keywords/string.md) tematu.
+Rozpoczyna się od ciągu dosłownego wyrażenia interpolowane `$` następuje znak `@` znaków. Aby uzyskać więcej informacji na temat ciągi verbatim zobacz [ciąg](../keywords/string.md) i [dosłownego wyrażenia identyfikator](verbatim.md) tematów.
 
 > [!NOTE]
 > `$` Token musi występować przed `@` token w ciągu interpolowanym dosłownego wyrażenia.

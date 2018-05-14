@@ -2,11 +2,11 @@
 title: Komórki odwołań (F#)
 description: 'Dowiedz się, jak F # odwołanie do komórki są lokalizacje magazynu, które umożliwiają tworzenie wartości modyfikowalne z semantykę odwołania.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>Komórki odwołań
 
@@ -81,6 +81,9 @@ Aby uzyskać więcej informacji na temat przekazywane przez odwołanie, zobacz [
 >[!NOTE]
 C# programistów wiedzieć, że ten ref działa inaczej w języku F # niż w języku C#. Na przykład użycie ref, jeśli argument nie ma ten sam efekt w języku F # jak w języku C#.
 
+>[!NOTE]
+`mutable` zmienne, które mogą być automatycznie podwyższony do `'a ref` przechwycona przez zamknięcie; zobacz [wartości](values/index.md).
+
 ## <a name="consuming-c-ref-returns"></a>C# — zużywanie `ref` zwraca
 
 Począwszy od 4.1 F #, będzie można korzystać z `ref` zwraca wygenerowany w języku C#.  Wynik wywołania takie jest `byref<_>` wskaźnika.
@@ -132,3 +135,5 @@ Obecnie nie istnieje sposób do generowania `ref` zwracany w języku F #, który
 [Parametry i argumenty](parameters-and-arguments.md)
 
 [Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)
+
+[Wartości](values/index.md)

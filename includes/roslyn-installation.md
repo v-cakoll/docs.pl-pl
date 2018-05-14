@@ -22,7 +22,7 @@ Opcjonalnie można również należy **Edytor DGML** mają być wyświetlane wyk
 1. Uruchom **Instalator Visual Studio** 
 1. Wybierz **zmodyfikować** 
 1. Wybierz **pojedynczych składników** kartę 
-1. Pole wyboru dla **zestawu SDK platformy kompilatora .NET**. Znajdziesz ją ostatnio w obszarze **kompilatorów kompilacji narzędzia i środowisk uruchomieniowych** sekcji.
+1. Pole wyboru dla **zestawu SDK platformy kompilatora .NET**. Znajdziesz na górze pod **kompilatorów kompilacji narzędzia i środowisk uruchomieniowych** sekcji.
 
 Opcjonalnie można również należy **Edytor DGML** mają być wyświetlane wykresy w Wizualizator:
 

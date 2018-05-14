@@ -2,11 +2,11 @@
 title: Podpisy (F#)
 description: 'Dowiedz się, jak używać plik sygnatury języka F # do przechowywania informacji o publiczne podpisów zestawu F # program elementów, takich jak typy, obszary nazw i modułów.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>Podpisy
 
@@ -64,6 +64,9 @@ Zasady na wartość podpisy są następujące:
 
 
 - Wzorzec parametrów (znanej także jako *argumentów*) sygnatury i implementacji muszą być zgodne.
+
+
+- Jeśli nazwy parametrów w pliku podpisu różnią się od odpowiedniego pliku implementacji, z nazwą w pliku podpisu zostanie użyty, co może spowodować problemy podczas debugowania lub profilowania. Jeśli chcesz otrzymywać powiadomienia o takich niezgodności, Włącz ostrzeżenie 3218 w pliku projektu lub podczas wywoływania kompilator (zobacz `--warnon` w obszarze [— opcje kompilatora](compiler-options.md)).
 
 
 W poniższym przykładzie kodu przedstawiono przykład pliku podpisu z przestrzeni nazw, modułu wartość funkcji i podpisy typu wraz z odpowiednich atrybutów. Przedstawia on również odpowiedniego pliku implementacji.

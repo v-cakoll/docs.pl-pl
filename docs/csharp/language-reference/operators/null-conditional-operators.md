@@ -12,14 +12,16 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 8dde37c41ccd0b172bc9cd08abebec7777861f1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da771fa4a2a89dca308508ea81ef8e0060efa7f0
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operatory warunkowe null ?. oraz ? [] (C# i Visual Basic)
-Wykorzystywane do testowania wystąpienia wartości null przed wykonaniem dostępu elementu członkowskiego (`?.`) lub odwołaniem do indeksu (`?[]`).  Pomagają one w ograniczeniu ilości kodu potrzebnego do sprawdzenia wystąpień wartości null, zwłaszcza dla przypadków zstępujących do struktur danych.  
+Testy wartość lewego operandu na wartość null przed wykonaniem dostępu elementu członkowskiego (`?.`) lub indeks (`?[]`) operację; zwraca `null` Jeśli lewego operandu daje w wyniku `null`. 
+
+Pomagają one w ograniczeniu ilości kodu potrzebnego do sprawdzenia wystąpień wartości null, zwłaszcza dla przypadków zstępujących do struktur danych.  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -33,7 +35,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- Operatory warunkowe wartości null są krótkoobiegowe.  Jeśli jedna z operacji w łańcuchu dostępu zwraca wartość null, dalsze wykonanie łańcucha zostaje przerwane.  W poniższym przykładzie `E` nie jest wykonywane, jeśli `A`, `B` lub `C` zwraca wartość null.
+ Operatory warunkowe null są short-circuiting.  Jeśli jedna z operacji w łańcuchu dostępu zwraca wartość null, dalsze wykonanie łańcucha zostaje przerwane.  W poniższym przykładzie `E` nie jest wykonywane, jeśli `A`, `B` lub `C` zwraca wartość null.
   
 ```csharp
 A?.B?.C?.Do(E);
@@ -45,7 +47,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
- Inne użycie operatorów warunkowych null polega na „wątkowo bezpiecznym” wywołaniu delegatów z mniejszą ilością kodu.   Stary sposób wymaga kodu podobnego do poniższego:  
+ Użyj innego dostępu warunkowego wartości null elementu członkowskiego jest powoływanie delegatów w sposób obsługującej wielowątkowość ze znacznie mniejsza ilość kodu.  Stary sposób wymaga kodu podobnego do poniższego:  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -62,16 +64,14 @@ If handler IsNot Nothing
  Nowy sposób jest znacznie prostszy:  
   
 ```csharp
-PropertyChanged?.Invoke(e)  
+PropertyChanged?.Invoke(…)  
 ```  
 
 ```vb
-PropertyChanged?.Invoke(e)
+PropertyChanged?.Invoke(…)
 ```  
   
- Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby ocenić `PropertyChanged` tylko jeden raz, przechowując wynik w zmiennej tymczasowej.  
-  
- Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje możliwość wywołania delegata warunkowego null za pomocą żadnej z dostępnych składni `PropertyChanged?(e)`.  
+ Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby ocenić `PropertyChanged` tylko jeden raz, przechowując wynik w zmiennej tymczasowej. Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje możliwość wywołania delegata warunkowego null za pomocą żadnej z dostępnych składni `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -82,5 +82,4 @@ PropertyChanged?.Invoke(e)
  [?? (operator łączenie null)](null-conditional-operator.md)  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  
  [Przewodnik programowania w języku Visual Basic](../../../visual-basic/programming-guide/index.md)

@@ -2,11 +2,11 @@
 title: Sumy rozłączne (F#)
 description: 'Dowiedz się, jak używać F # Suma rozłączna Unii.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 
@@ -16,14 +16,16 @@ Sumy rozłączne zapewniają obsługę wartości, które może być jedną z lic
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>Uwagi
-Sumy rozłączne są podobne do typów złożenia w innych językach, ale różnią się. Jako typ union w języku C++ lub typ wariantu w języku Visual Basic danych przechowywanych w wartości nie jest stały; może być jedną z kilku różne opcje. W przeciwieństwie do złożenia w tych językach, jednak wszystkich możliwych opcji podano *identyfikator przypadku*. Identyfikatory przypadku są nazwy dla różnych rodzajów wartości, które mogą być obiekty tego typu; wartości są opcjonalne. Jeśli nie podano wartości, że wielkość liter jest odpowiednikiem wariant wyliczenia. Jeśli istnieją wartości, każda wartość albo może być pojedynczą wartość określonego typu lub spójnej kolekcji, który agreguje wiele pól w tych samych lub różnych typów. Począwszy od F # 3.1 pojedyncze pole można podać nazwę, ale nazwa jest opcjonalny, nawet jeśli są nazywane innych pól w przypadku tego samego.
+Sumy rozłączne są podobne do typów złożenia w innych językach, ale różnią się. Jako typ union w języku C++ lub typ wariantu w języku Visual Basic danych przechowywanych w wartości nie jest stały; może być jedną z kilku różne opcje. W przeciwieństwie do złożenia w tych językach, jednak wszystkich możliwych opcji podano *identyfikator przypadku*. Identyfikatory przypadku są nazwy dla różnych rodzajów wartości, które mogą być obiekty tego typu; wartości są opcjonalne. Jeśli nie podano wartości, że wielkość liter jest odpowiednikiem wariant wyliczenia. Jeśli istnieją wartości, każda wartość albo może być pojedynczą wartość określonego typu lub spójnej kolekcji, który agreguje wiele pól w tych samych lub różnych typów. Pojedyncze pole można podać nazwę, ale nazwa jest opcjonalny, nawet jeśli są nazywane innych pól w przypadku tego samego.
+
+Ułatwienia dostępu dla rozłączne domyślnie `public`.
 
 Na przykład należy wziąć pod uwagę następujące deklaracji typu kształtu.
 

@@ -14,21 +14,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>^ — Operator (odwołanie w C#)
-Binarny `^` operatory są wstępnie zdefiniowane dla typów całkowitych i `bool`. W przypadku typów całkowitych `^` oblicza bitowej OR wyłączne argumentów. Dla `bool` argumentów operacji, `^` oblicza logicznej wyłącznie — lub z argumentów; wynik jest `true` tylko wtedy, gdy jest dokładnie jeden z argumentów `true`.  
+Operatory binarne `^` są wstępnie zdefiniowane dla typów całkowitych i `bool`. W przypadku typów całkowitych `^` oblicza bitową alternatywę rozłączną dla operandu. Dla operacji na zmiennych typu `bool` `^` oblicza alternatywę rozłączną dla jej argumentów. Wynik jest `true` tylko wtedy, gdy dokładnie jeden z argumentów to `true`.  
   
 ## <a name="remarks"></a>Uwagi  
- Typy definiowane przez użytkownika można przeciążać `^` — operator (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)). Operacje na typy całkowite zazwyczaj są dozwolone w wyliczeniu.  
+ Typy definiowane przez użytkownika mogą przeciążać operator `^` — (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)). Operacje na typach całkowitych zazwyczaj są dozwolone na wyliczeniach.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]  
   
- Do obliczenia `0xf8 ^ 0x3f` w poprzednim przykładzie wykonuje bitowej OR wyłączne następujących dwóch wartości binarnych, które odpowiadają wartości szesnastkowe F8 i 3F:  
+ Obliczenie `0xf8 ^ 0x3f` w poprzednim przykładzie powoduje wykonanie bitowej operacji wyłącznej OR na następnych dwóch wartościach binarnych, które odpowiadają wartościom szesnastkowym F8 i 3F:
   
  `1111 1000`  
   
  `0011 1111`  
   
- Wynik OR wyłączne jest `1100 0111`, która jest w formacie szesnastkowym C7.  
+ Wynik alternatywy rozłącznej to `1100 0111`, czyli C7 w formacie szesnastkowym.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  

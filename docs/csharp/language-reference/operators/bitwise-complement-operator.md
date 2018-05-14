@@ -16,7 +16,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>Operator ~ (odwołanie w C#)
-Operator `~` wykonuje operację dopełnienia bitowego na jego operandzie, która powoduje odwrócenie każdego z bitów. Operatory dopełnienia bitowego są wstępnie zdefiniowane dla [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [długi](../../../csharp/language-reference/keywords/long.md), i [ulong](../../../csharp/language-reference/keywords/ulong.md).  
+Operator `~` wykonuje operację dopełnienia bitowego na jego argumencie operacji, która powoduje odwrócenie każdego z bitów. Operatory dopełnienia bitowego są wstępnie zdefiniowane dla następujących typów: [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [długi](../../../csharp/language-reference/keywords/long.md), i [ulong](../../../csharp/language-reference/keywords/ulong.md).
   
 > [!NOTE]
 > Symbol `~` służy również do deklarowania finalizatorów. Aby uzyskać więcej informacji, zobacz [finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md).  

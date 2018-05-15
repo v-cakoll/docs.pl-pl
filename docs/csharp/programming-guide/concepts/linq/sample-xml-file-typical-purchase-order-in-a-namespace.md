@@ -1,26 +1,17 @@
 ---
-title: "Przykładowy plik XML: Typowe zamówienie w Namespace1"
-ms.custom: 
+title: 'Przykładowy plik XML: Typowe zamówienie w Namespace1'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4e85dc10de556f37d63438b4c2d19f52e181efad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="ccfe3-102">Przykładowy plik XML: Typowe zamówienie w Namespace</span><span class="sxs-lookup"><span data-stu-id="ccfe3-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="ccfe3-103">Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="ccfe3-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ccfe3-104">Ten plik jest typowy zakupu.</span><span class="sxs-lookup"><span data-stu-id="ccfe3-104">This file is a typical purchase order.</span></span> <span data-ttu-id="ccfe3-105">Plik XML jest w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="ccfe3-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="f39ef-102">Przykładowy plik XML: Typowe zamówienie w Namespace</span><span class="sxs-lookup"><span data-stu-id="f39ef-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="f39ef-103">Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="f39ef-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f39ef-104">Ten plik jest typowy zakupu.</span><span class="sxs-lookup"><span data-stu-id="f39ef-104">This file is a typical purchase order.</span></span> <span data-ttu-id="f39ef-105">Plik XML jest w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f39ef-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="ccfe3-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="ccfe3-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="f39ef-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="f39ef-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -62,5 +53,5 @@ ms.lasthandoff: 10/18/2017
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ccfe3-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ccfe3-107">See Also</span></span>  
- [<span data-ttu-id="ccfe3-108">Dokumenty XML próbki (LINQ do XML)</span><span class="sxs-lookup"><span data-stu-id="ccfe3-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f39ef-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f39ef-107">See Also</span></span>  
+ [<span data-ttu-id="f39ef-108">Przykładowe dokumenty XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f39ef-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

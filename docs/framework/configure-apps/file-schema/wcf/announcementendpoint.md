@@ -1,32 +1,20 @@
 ---
-title: '&lt;announcementEndpoint&gt;'
-ms.custom: 
+title: '&lt;AnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae03b5d4a82c08978a3456e80428ba6ad8ac532a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ce141d70e17c14facd6aa8560c7b3424a8d9ae8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltannouncementendpointgt"></a><span data-ttu-id="c0265-102">&lt;announcementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="c0265-102">&lt;announcementEndpoint&gt;</span></span>
-<span data-ttu-id="c0265-103">Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem zawiadomieniowym.</span><span class="sxs-lookup"><span data-stu-id="c0265-103">This configuration element defines a standard endpoint with a fixed announcement contract.</span></span> <span data-ttu-id="c0265-104">Usługi można opcjonalnie ogłaszamy jego dostępność, wysyłając wiadomość online i offline powiadomienia, gdy jest otwarty lub zamknięty odpowiednio.</span><span class="sxs-lookup"><span data-stu-id="c0265-104">A service can optionally announce its availability by sending an online and offline announcement message when it is opened or closed respectively.</span></span> <span data-ttu-id="c0265-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usługi określa punktów końcowych powiadomienia w [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element i używa AnnouncementClient przeprowadzić anonsów.</span><span class="sxs-lookup"><span data-stu-id="c0265-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service specifies the announcement endpoints in the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element and uses the AnnouncementClient to perform the announcements.</span></span> <span data-ttu-id="c0265-106">Chcą nasłuchiwania dla anonsu z innej usługi rzeczywiście działa jako klient [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi; w związku z tym należy skonfigurować punktów końcowych powiadomienia dla tego klienta w [ \<usługi >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sekcji.</span><span class="sxs-lookup"><span data-stu-id="c0265-106">A client wishing to listen for the announcement from other service is actually acting as a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service; thus you have to configure the announcement endpoints for that client in the [\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.</span></span>  
+# <a name="ltannouncementendpointgt"></a><span data-ttu-id="19cd3-102">&lt;AnnouncementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="19cd3-102">&lt;announcementEndpoint&gt;</span></span>
+<span data-ttu-id="19cd3-103">Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem zawiadomieniowym.</span><span class="sxs-lookup"><span data-stu-id="19cd3-103">This configuration element defines a standard endpoint with a fixed announcement contract.</span></span> <span data-ttu-id="19cd3-104">Usługi można opcjonalnie ogłaszamy jego dostępność, wysyłając wiadomość online i offline powiadomienia, gdy jest otwarty lub zamknięty odpowiednio.</span><span class="sxs-lookup"><span data-stu-id="19cd3-104">A service can optionally announce its availability by sending an online and offline announcement message when it is opened or closed respectively.</span></span> <span data-ttu-id="19cd3-105">Usługi Windows Communication Foundation (WCF) określa punktów końcowych powiadomienia w [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element i używa AnnouncementClient przeprowadzić anonsów.</span><span class="sxs-lookup"><span data-stu-id="19cd3-105">A Windows Communication Foundation (WCF) service specifies the announcement endpoints in the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element and uses the AnnouncementClient to perform the announcements.</span></span> <span data-ttu-id="19cd3-106">Chcą nasłuchiwania dla anonsu z innej usługi rzeczywiście działa jako klient [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi; w związku z tym należy skonfigurować punktów końcowych powiadomienia dla tego klienta w [ \<usługi >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sekcji.</span><span class="sxs-lookup"><span data-stu-id="19cd3-106">A client wishing to listen for the announcement from other service is actually acting as a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service; thus you have to configure the announcement endpoints for that client in the [\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.</span></span>  
   
-<span data-ttu-id="c0265-107">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c0265-107">\<system.ServiceModel></span></span>  
-<span data-ttu-id="c0265-108">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="c0265-108">\<standardEndpoints></span></span>  
+<span data-ttu-id="19cd3-107">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="19cd3-107">\<system.ServiceModel></span></span>  
+<span data-ttu-id="19cd3-108">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="19cd3-108">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0265-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="c0265-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19cd3-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="19cd3-109">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -40,28 +28,28 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c0265-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="c0265-110">Attributes and Elements</span></span>  
- <span data-ttu-id="c0265-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="c0265-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="19cd3-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="19cd3-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="19cd3-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="19cd3-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c0265-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="c0265-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="19cd3-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="19cd3-112">Attributes</span></span>  
   
-|<span data-ttu-id="c0265-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="c0265-113">Attribute</span></span>|<span data-ttu-id="c0265-114">Opis</span><span class="sxs-lookup"><span data-stu-id="c0265-114">Description</span></span>|  
+|<span data-ttu-id="19cd3-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="19cd3-113">Attribute</span></span>|<span data-ttu-id="19cd3-114">Opis</span><span class="sxs-lookup"><span data-stu-id="19cd3-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c0265-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="c0265-115">discoveryVersion</span></span>|<span data-ttu-id="c0265-116">Ciąg, który określa jeden z dwóch wersji protokołu WS-Discovery.</span><span class="sxs-lookup"><span data-stu-id="c0265-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="c0265-117">Prawidłowe wartości to WSDiscovery11 i WSDiscoveryApril2005.</span><span class="sxs-lookup"><span data-stu-id="c0265-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="c0265-118">Ta wartość jest typu <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span><span class="sxs-lookup"><span data-stu-id="c0265-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
-|<span data-ttu-id="c0265-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="c0265-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="c0265-120">Wartość Timespan określający maksymalną wartość opóźnienia protokołu Discovery będzie czekać przed wysłaniem wiadomości powitania.</span><span class="sxs-lookup"><span data-stu-id="c0265-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="c0265-121">Przed wysłaniem wiadomości będą oczekiwać losowo wartość z zakresu od 0 i wartość tego atrybutu.</span><span class="sxs-lookup"><span data-stu-id="c0265-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="c0265-122">Ten atrybut służy do ustawiania małe, losowe opóźnienie do uniknięcia sieci "burz", gdy sieć trafia i wszystkich usług powróci w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="c0265-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
-|<span data-ttu-id="c0265-123">nazwa</span><span class="sxs-lookup"><span data-stu-id="c0265-123">name</span></span>|<span data-ttu-id="c0265-124">Ciąg określający nazwę Konfiguracja standardowego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="c0265-124">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="c0265-125">Nazwa jest używana w `endpointConfiguration` atrybutu punktu końcowego usługi, aby połączyć standardowy punkt końcowy do konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="c0265-125">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
+|<span data-ttu-id="19cd3-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="19cd3-115">discoveryVersion</span></span>|<span data-ttu-id="19cd3-116">Ciąg, który określa jeden z dwóch wersji protokołu WS-Discovery.</span><span class="sxs-lookup"><span data-stu-id="19cd3-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="19cd3-117">Prawidłowe wartości to WSDiscovery11 i WSDiscoveryApril2005.</span><span class="sxs-lookup"><span data-stu-id="19cd3-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="19cd3-118">Ta wartość jest typu <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span><span class="sxs-lookup"><span data-stu-id="19cd3-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
+|<span data-ttu-id="19cd3-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="19cd3-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="19cd3-120">Wartość Timespan określający maksymalną wartość opóźnienia protokołu Discovery będzie czekać przed wysłaniem wiadomości powitania.</span><span class="sxs-lookup"><span data-stu-id="19cd3-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="19cd3-121">Przed wysłaniem wiadomości będą oczekiwać losowo wartość z zakresu od 0 i wartość tego atrybutu.</span><span class="sxs-lookup"><span data-stu-id="19cd3-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="19cd3-122">Ten atrybut służy do ustawiania małe, losowe opóźnienie do uniknięcia sieci "burz", gdy sieć trafia i wszystkich usług powróci w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="19cd3-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
+|<span data-ttu-id="19cd3-123">nazwa</span><span class="sxs-lookup"><span data-stu-id="19cd3-123">name</span></span>|<span data-ttu-id="19cd3-124">Ciąg określający nazwę Konfiguracja standardowego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="19cd3-124">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="19cd3-125">Nazwa jest używana w `endpointConfiguration` atrybutu punktu końcowego usługi, aby połączyć standardowy punkt końcowy do konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="19cd3-125">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c0265-126">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="c0265-126">Child Elements</span></span>  
- <span data-ttu-id="c0265-127">Brak.</span><span class="sxs-lookup"><span data-stu-id="c0265-127">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="19cd3-126">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="19cd3-126">Child Elements</span></span>  
+ <span data-ttu-id="19cd3-127">Brak.</span><span class="sxs-lookup"><span data-stu-id="19cd3-127">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c0265-128">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="c0265-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="19cd3-128">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="19cd3-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="c0265-129">Element</span><span class="sxs-lookup"><span data-stu-id="c0265-129">Element</span></span>|<span data-ttu-id="c0265-130">Opis</span><span class="sxs-lookup"><span data-stu-id="c0265-130">Description</span></span>|  
+|<span data-ttu-id="19cd3-129">Element</span><span class="sxs-lookup"><span data-stu-id="19cd3-129">Element</span></span>|<span data-ttu-id="19cd3-130">Opis</span><span class="sxs-lookup"><span data-stu-id="19cd3-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c0265-131">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="c0265-131">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="c0265-132">Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowanych punktów końcowych z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.</span><span class="sxs-lookup"><span data-stu-id="c0265-132">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="19cd3-131">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="19cd3-131">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="19cd3-132">Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowanych punktów końcowych z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.</span><span class="sxs-lookup"><span data-stu-id="19cd3-132">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="c0265-133">Przykład</span><span class="sxs-lookup"><span data-stu-id="c0265-133">Example</span></span>  
- <span data-ttu-id="c0265-134">W poniższym przykładzie pokazano nasłuchiwanie komunikaty anonsów za pośrednictwem protokołu http i peernet klienta.</span><span class="sxs-lookup"><span data-stu-id="c0265-134">The following example demonstrates a client listening for announcements messages over http and peernet.</span></span>  
+## <a name="example"></a><span data-ttu-id="19cd3-133">Przykład</span><span class="sxs-lookup"><span data-stu-id="19cd3-133">Example</span></span>  
+ <span data-ttu-id="19cd3-134">W poniższym przykładzie pokazano nasłuchiwanie komunikaty anonsów za pośrednictwem protokołu http i peernet klienta.</span><span class="sxs-lookup"><span data-stu-id="19cd3-134">The following example demonstrates a client listening for announcements messages over http and peernet.</span></span>  
   
 ```xml  
 <services>  
@@ -89,5 +77,5 @@ ms.lasthandoff: 12/22/2017
 </standardEndpoints>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c0265-135">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c0265-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="19cd3-135">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="19cd3-135">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

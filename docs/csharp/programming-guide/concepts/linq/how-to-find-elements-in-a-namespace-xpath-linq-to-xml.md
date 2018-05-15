@@ -1,31 +1,22 @@
 ---
-title: "Porady: znajdowanie elementów w Namespace (XPath-LINQ do XML) (C#)"
-ms.custom: 
+title: 'Porady: znajdowanie elementów w Namespace (XPath-LINQ do XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f1804731a39eebce74a38a4e8b296747e535c0b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5c5c8e20195bf7c676b9df7e9db54e79bbb0ca06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="af85b-102">Porady: znajdowanie elementów w Namespace (XPath-LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="af85b-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="af85b-103">Wyrażenia XPath można znaleźć węzłów w określonej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="af85b-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="af85b-104">Wyrażenia XPath Użyj prefiksy przestrzeni nazw dla określenie obszarów nazw.</span><span class="sxs-lookup"><span data-stu-id="af85b-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="af85b-105">Aby analizować wyrażenie XPath, który zawiera prefiksy przestrzeni nazw, trzeba przekazać do metody XPath, które implementuje obiektu <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="af85b-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="af85b-106">W tym przykładzie użyto <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="af85b-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="6c4cb-102">Porady: znajdowanie elementów w Namespace (XPath-LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="6c4cb-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="6c4cb-103">Wyrażenia XPath można znaleźć węzłów w określonej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="6c4cb-104">Wyrażenia XPath Użyj prefiksy przestrzeni nazw dla określenie obszarów nazw.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="6c4cb-105">Aby analizować wyrażenie XPath, który zawiera prefiksy przestrzeni nazw, trzeba przekazać do metody XPath, które implementuje obiektu <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="6c4cb-106">W tym przykładzie użyto <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- <span data-ttu-id="af85b-107">Wyrażenie XPath jest:</span><span class="sxs-lookup"><span data-stu-id="af85b-107">The XPath expression is:</span></span>  
+ <span data-ttu-id="6c4cb-107">Wyrażenie XPath jest:</span><span class="sxs-lookup"><span data-stu-id="6c4cb-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a><span data-ttu-id="af85b-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="af85b-108">Example</span></span>  
- <span data-ttu-id="af85b-109">Poniższy przykład odczytuje drzewo XML, który zawiera dwie przestrzenie nazw.</span><span class="sxs-lookup"><span data-stu-id="af85b-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="af85b-110">Używa <xref:System.Xml.XmlReader> dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="af85b-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="af85b-111">Następnie pobiera <xref:System.Xml.XmlNameTable> z <xref:System.Xml.XmlReader>i <xref:System.Xml.XmlNamespaceManager> z <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="af85b-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="af85b-112">Używa <xref:System.Xml.XmlNamespaceManager> podczas wybierania elementów.</span><span class="sxs-lookup"><span data-stu-id="af85b-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="6c4cb-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="6c4cb-108">Example</span></span>  
+ <span data-ttu-id="6c4cb-109">Poniższy przykład odczytuje drzewo XML, który zawiera dwie przestrzenie nazw.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="6c4cb-110">Używa <xref:System.Xml.XmlReader> dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="6c4cb-111">Następnie pobiera <xref:System.Xml.XmlNameTable> z <xref:System.Xml.XmlReader>i <xref:System.Xml.XmlNamespaceManager> z <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="6c4cb-112">Używa <xref:System.Xml.XmlNamespaceManager> podczas wybierania elementów.</span><span class="sxs-lookup"><span data-stu-id="6c4cb-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");  
@@ -47,7 +38,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="af85b-113">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="af85b-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="6c4cb-113">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="6c4cb-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -82,5 +73,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="af85b-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="af85b-114">See Also</span></span>  
- [<span data-ttu-id="af85b-115">LINQ do XML dla użytkowników XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="af85b-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="6c4cb-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6c4cb-114">See Also</span></span>  
+ [<span data-ttu-id="6c4cb-115">LINQ do XML dla użytkowników XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="6c4cb-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

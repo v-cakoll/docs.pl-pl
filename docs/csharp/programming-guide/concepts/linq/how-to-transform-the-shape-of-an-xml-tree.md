@@ -1,37 +1,28 @@
 ---
-title: "Porady: Przekształcanie kształtu drzewo XML (C#)"
-ms.custom: 
+title: 'Porady: Przekształcanie kształtu drzewo XML (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fd5b1351f8473aa2a1bd40992095a89fdfc38375
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2c1f5728781a89caa813c2e3cbd822ae711a77e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a><span data-ttu-id="4fa40-102">Porady: Przekształcanie kształtu drzewo XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4fa40-102">How to: Transform the Shape of an XML Tree (C#)</span></span>
-<span data-ttu-id="4fa40-103">*Kształtu* XML dokumentu odwołuje się do nazwy elementu, nazw atrybutów i cechy jej hierarchii.</span><span class="sxs-lookup"><span data-stu-id="4fa40-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a><span data-ttu-id="0a956-102">Porady: Przekształcanie kształtu drzewo XML (C#)</span><span class="sxs-lookup"><span data-stu-id="0a956-102">How to: Transform the Shape of an XML Tree (C#)</span></span>
+<span data-ttu-id="0a956-103">*Kształtu* XML dokumentu odwołuje się do nazwy elementu, nazw atrybutów i cechy jej hierarchii.</span><span class="sxs-lookup"><span data-stu-id="0a956-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
   
- <span data-ttu-id="4fa40-104">Czasami trzeba będzie zmienić kształt dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="4fa40-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="4fa40-105">Może być konieczne na przykład wysłać istniejący dokument XML do innego systemu, który wymaga innego elementu i nazwach atrybutów.</span><span class="sxs-lookup"><span data-stu-id="4fa40-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="4fa40-106">W dokumencie, można przejść, usuwanie i zmiana nazwy elementów jako wymagana, ale przy użyciu konstrukcji funkcjonalności wyniki w bardziej czytelnym i łatwy w obsłudze kodu.</span><span class="sxs-lookup"><span data-stu-id="4fa40-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="4fa40-107">Aby uzyskać więcej informacji na temat konstrukcji funkcjonalności, zobacz [funkcjonalności konstrukcji (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4fa40-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="0a956-104">Czasami trzeba będzie zmienić kształt dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="0a956-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="0a956-105">Może być konieczne na przykład wysłać istniejący dokument XML do innego systemu, który wymaga innego elementu i nazwach atrybutów.</span><span class="sxs-lookup"><span data-stu-id="0a956-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="0a956-106">W dokumencie, można przejść, usuwanie i zmiana nazwy elementów jako wymagana, ale przy użyciu konstrukcji funkcjonalności wyniki w bardziej czytelnym i łatwy w obsłudze kodu.</span><span class="sxs-lookup"><span data-stu-id="0a956-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="0a956-107">Aby uzyskać więcej informacji na temat konstrukcji funkcjonalności, zobacz [funkcjonalności konstrukcji (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0a956-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="4fa40-108">Pierwszym przykładzie zmienia organizacji dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="4fa40-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="4fa40-109">Powoduje przeniesienie złożonych elementów z jednej lokalizacji w drzewie do innego.</span><span class="sxs-lookup"><span data-stu-id="4fa40-109">It moves complex elements from one location in the tree to another.</span></span>  
+ <span data-ttu-id="0a956-108">Pierwszym przykładzie zmienia organizacji dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="0a956-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="0a956-109">Powoduje przeniesienie złożonych elementów z jednej lokalizacji w drzewie do innego.</span><span class="sxs-lookup"><span data-stu-id="0a956-109">It moves complex elements from one location in the tree to another.</span></span>  
   
- <span data-ttu-id="4fa40-110">Drugi przykład w tym temacie tworzy dokument XML z kształtem innego niż dokumentu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="4fa40-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="4fa40-111">Go zmiany wielkości liter nazwy elementów, zmienia nazwę niektóre elementy i pozostawia niektóre elementy z drzewa źródła poza przekształcone drzewa.</span><span class="sxs-lookup"><span data-stu-id="4fa40-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
+ <span data-ttu-id="0a956-110">Drugi przykład w tym temacie tworzy dokument XML z kształtem innego niż dokumentu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="0a956-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="0a956-111">Go zmiany wielkości liter nazwy elementów, zmienia nazwę niektóre elementy i pozostawia niektóre elementy z drzewa źródła poza przekształcone drzewa.</span><span class="sxs-lookup"><span data-stu-id="0a956-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4fa40-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="4fa40-112">Example</span></span>  
- <span data-ttu-id="4fa40-113">Poniższy kod zmienia kształt plik XML przy użyciu wyrażenia osadzonego zapytania.</span><span class="sxs-lookup"><span data-stu-id="4fa40-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
+## <a name="example"></a><span data-ttu-id="0a956-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="0a956-112">Example</span></span>  
+ <span data-ttu-id="0a956-113">Poniższy kod zmienia kształt plik XML przy użyciu wyrażenia osadzonego zapytania.</span><span class="sxs-lookup"><span data-stu-id="0a956-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
   
- <span data-ttu-id="4fa40-114">Dokument XML źródła, w tym przykładzie zawiera `Customers` elementu w obszarze `Root` element, który zawiera wszystkich klientów.</span><span class="sxs-lookup"><span data-stu-id="4fa40-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="4fa40-115">Zawiera także `Orders` elementu w obszarze `Root` element, który zawiera wszystkie zamówienia.</span><span class="sxs-lookup"><span data-stu-id="4fa40-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="4fa40-116">Nowe drzewo XML, w którym zamówień dla każdego klienta są zawarte w tym przykładzie jest tworzony `Orders` w elemencie `Customer` elementu.</span><span class="sxs-lookup"><span data-stu-id="4fa40-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="4fa40-117">Zawiera także oryginalnego dokumentu `CustomerID` element `Order` elementu; spowoduje to element można usunąć z ponownie kształcie dokumentu.</span><span class="sxs-lookup"><span data-stu-id="4fa40-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
+ <span data-ttu-id="0a956-114">Dokument XML źródła, w tym przykładzie zawiera `Customers` elementu w obszarze `Root` element, który zawiera wszystkich klientów.</span><span class="sxs-lookup"><span data-stu-id="0a956-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="0a956-115">Zawiera także `Orders` elementu w obszarze `Root` element, który zawiera wszystkie zamówienia.</span><span class="sxs-lookup"><span data-stu-id="0a956-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="0a956-116">Nowe drzewo XML, w którym zamówień dla każdego klienta są zawarte w tym przykładzie jest tworzony `Orders` w elemencie `Customer` elementu.</span><span class="sxs-lookup"><span data-stu-id="0a956-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="0a956-117">Zawiera także oryginalnego dokumentu `CustomerID` element `Order` elementu; spowoduje to element można usunąć z ponownie kształcie dokumentu.</span><span class="sxs-lookup"><span data-stu-id="0a956-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
   
- <span data-ttu-id="4fa40-118">W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="4fa40-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="0a956-118">W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="0a956-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -57,7 +48,7 @@ XElement newCustOrd =
 Console.WriteLine(newCustOrd);  
 ```  
   
- <span data-ttu-id="4fa40-119">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="4fa40-119">This code produces the following output:</span></span>  
+ <span data-ttu-id="0a956-119">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="0a956-119">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -93,12 +84,12 @@ Console.WriteLine(newCustOrd);
   . . .  
 ```  
   
-## <a name="example"></a><span data-ttu-id="4fa40-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="4fa40-120">Example</span></span>  
- <span data-ttu-id="4fa40-121">W tym przykładzie zmienia nazwę niektóre elementy i konwertuje niektóre atrybuty elementów.</span><span class="sxs-lookup"><span data-stu-id="4fa40-121">This example renames some elements and converts some attributes to elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="0a956-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="0a956-120">Example</span></span>  
+ <span data-ttu-id="0a956-121">W tym przykładzie zmienia nazwę niektóre elementy i konwertuje niektóre atrybuty elementów.</span><span class="sxs-lookup"><span data-stu-id="0a956-121">This example renames some elements and converts some attributes to elements.</span></span>  
   
- <span data-ttu-id="4fa40-122">Kod wywołuje `ConvertAddress`, które zwraca listę <xref:System.Xml.Linq.XElement> obiektów.</span><span class="sxs-lookup"><span data-stu-id="4fa40-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="4fa40-123">Argument do metody jest kwerendę, która określa `Address` złożonego elementu gdzie `Type` atrybut ma wartość `"Shipping"`.</span><span class="sxs-lookup"><span data-stu-id="4fa40-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
+ <span data-ttu-id="0a956-122">Kod wywołuje `ConvertAddress`, które zwraca listę <xref:System.Xml.Linq.XElement> obiektów.</span><span class="sxs-lookup"><span data-stu-id="0a956-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="0a956-123">Argument do metody jest kwerendę, która określa `Address` złożonego elementu gdzie `Type` atrybut ma wartość `"Shipping"`.</span><span class="sxs-lookup"><span data-stu-id="0a956-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
   
- <span data-ttu-id="4fa40-124">W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: typowe zamówienia zakupu (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="4fa40-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="0a956-124">W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: typowe zamówienia zakupu (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="0a956-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  
@@ -131,7 +122,7 @@ static void Main(string[] args)
 }  
 ```  
   
- <span data-ttu-id="4fa40-125">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="4fa40-125">This code produces the following output:</span></span>  
+ <span data-ttu-id="0a956-125">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="0a956-125">This code produces the following output:</span></span>  
   
 ```xml  
 <PO>  
@@ -146,5 +137,5 @@ static void Main(string[] args)
 </PO>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4fa40-126">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4fa40-126">See Also</span></span>  
- [<span data-ttu-id="4fa40-127">Projekcje i przekształcenia (LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4fa40-127">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="0a956-126">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0a956-126">See Also</span></span>  
+ [<span data-ttu-id="0a956-127">Projekcje i przekształcenia (LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0a956-127">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -1,53 +1,41 @@
 ---
-title: "Typ złożony"
-ms.custom: 
+title: Typ złożony
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a7fbdace6403d2f1037beff8fe28d7c934d3174
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8daeac8309434b3c4e090d8e75f2de02d63e8b11
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="complex-type"></a><span data-ttu-id="6bc2e-102">Typ złożony</span><span class="sxs-lookup"><span data-stu-id="6bc2e-102">complex type</span></span>
-<span data-ttu-id="6bc2e-103">A *typu złożonego* szablonem służącym do definiowania właściwości rozbudowane, strukturalnych na [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) lub na inne typy złożone.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="6bc2e-104">Każdy szablon zawiera następujące elementy:</span><span class="sxs-lookup"><span data-stu-id="6bc2e-104">Each template contains the following:</span></span>  
+# <a name="complex-type"></a><span data-ttu-id="40276-102">Typ złożony</span><span class="sxs-lookup"><span data-stu-id="40276-102">complex type</span></span>
+<span data-ttu-id="40276-103">A *typu złożonego* szablonem służącym do definiowania właściwości rozbudowane, strukturalnych na [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) lub na inne typy złożone.</span><span class="sxs-lookup"><span data-stu-id="40276-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="40276-104">Każdy szablon zawiera następujące elementy:</span><span class="sxs-lookup"><span data-stu-id="40276-104">Each template contains the following:</span></span>  
   
--   <span data-ttu-id="6bc2e-105">Unikatowa nazwa.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-105">A unique name.</span></span> <span data-ttu-id="6bc2e-106">(Wymagane)</span><span class="sxs-lookup"><span data-stu-id="6bc2e-106">(Required)</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="6bc2e-107">Nazwa typu złożonego nie może być taka sama jak nazwa typu jednostki w ramach tego samego obszaru nazw.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-107">The name of a complex type cannot be the same as an entity type name within the same namespace.</span></span>  
-  
--   <span data-ttu-id="6bc2e-108">Dane w postaci jednego lub więcej [właściwości](../../../../docs/framework/data/adonet/property.md).</span><span class="sxs-lookup"><span data-stu-id="6bc2e-108">Data in the form of one or more [properties](../../../../docs/framework/data/adonet/property.md).</span></span> <span data-ttu-id="6bc2e-109">(Opcjonalnie).</span><span class="sxs-lookup"><span data-stu-id="6bc2e-109">(Optional.)</span></span>  
+-   <span data-ttu-id="40276-105">Unikatowa nazwa.</span><span class="sxs-lookup"><span data-stu-id="40276-105">A unique name.</span></span> <span data-ttu-id="40276-106">(Wymagane)</span><span class="sxs-lookup"><span data-stu-id="40276-106">(Required)</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="6bc2e-110">Właściwość typu złożonego może być inny typ złożony.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-110">A property of a complex type can be another complex type.</span></span>  
+    >  <span data-ttu-id="40276-107">Nazwa typu złożonego nie może być taka sama jak nazwa typu jednostki w ramach tego samego obszaru nazw.</span><span class="sxs-lookup"><span data-stu-id="40276-107">The name of a complex type cannot be the same as an entity type name within the same namespace.</span></span>  
   
- <span data-ttu-id="6bc2e-111">Typ złożony jest podobny do typu jednostki, w tym typie złożonym może przenosić ładunku danych w formie właściwości typu pierwotnego lub innych typów złożonych.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-111">A complex type is similar to an entity type in that a complex type can carry a data payload in the form of primitive type properties or other complex types.</span></span> <span data-ttu-id="6bc2e-112">Istnieją jednak niektóre podstawowe różnice między typy jednostek i typów złożonych:</span><span class="sxs-lookup"><span data-stu-id="6bc2e-112">However, there are some key differences between complex types and entity types:</span></span>  
+-   <span data-ttu-id="40276-108">Dane w postaci jednego lub więcej [właściwości](../../../../docs/framework/data/adonet/property.md).</span><span class="sxs-lookup"><span data-stu-id="40276-108">Data in the form of one or more [properties](../../../../docs/framework/data/adonet/property.md).</span></span> <span data-ttu-id="40276-109">(Opcjonalnie).</span><span class="sxs-lookup"><span data-stu-id="40276-109">(Optional.)</span></span>  
   
--   <span data-ttu-id="6bc2e-113">Typy złożone nie mają tożsamości i dlatego nie może istnieć niezależnie.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-113">Complex types do not have identities and therefore cannot exist independently.</span></span> <span data-ttu-id="6bc2e-114">Typy złożone może istnieć tylko jako właściwości na typy jednostek i innych typów złożonych.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-114">Complex types can only exist as properties on entity types or other complex types.</span></span>  
+    > [!NOTE]
+    >  <span data-ttu-id="40276-110">Właściwość typu złożonego może być inny typ złożony.</span><span class="sxs-lookup"><span data-stu-id="40276-110">A property of a complex type can be another complex type.</span></span>  
   
--   <span data-ttu-id="6bc2e-115">Typy złożone nie może brać udziału w [skojarzenia](../../../../docs/framework/data/adonet/association-type.md).</span><span class="sxs-lookup"><span data-stu-id="6bc2e-115">Complex types cannot participate in [associations](../../../../docs/framework/data/adonet/association-type.md).</span></span> <span data-ttu-id="6bc2e-116">Żadna końca skojarzenia może być typem złożonym i w związku z tym [właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) nie może być zdefiniowana dla typów złożonych.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-116">Neither end of an association can be a complex type, and therefore [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) cannot be defined on complex types.</span></span>  
+ <span data-ttu-id="40276-111">Typ złożony jest podobny do typu jednostki, w tym typie złożonym może przenosić ładunku danych w formie właściwości typu pierwotnego lub innych typów złożonych.</span><span class="sxs-lookup"><span data-stu-id="40276-111">A complex type is similar to an entity type in that a complex type can carry a data payload in the form of primitive type properties or other complex types.</span></span> <span data-ttu-id="40276-112">Istnieją jednak niektóre podstawowe różnice między typy jednostek i typów złożonych:</span><span class="sxs-lookup"><span data-stu-id="40276-112">However, there are some key differences between complex types and entity types:</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6bc2e-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="6bc2e-117">Example</span></span>  
- <span data-ttu-id="6bc2e-118">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL) w nazwie schematu koncepcyjnego definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-118">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="6bc2e-119">Następujący plik CSDL definiuje typ złożony, adres, z właściwością typu pierwotnego `StreetAddress`, `City`, `StateOrProvince`, `Country`, i `PostalCode`.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-119">The following CSDL defines a complex type, Address, with the primitive type properties `StreetAddress`, `City`, `StateOrProvince`, `Country`, and `PostalCode`.</span></span>  
+-   <span data-ttu-id="40276-113">Typy złożone nie mają tożsamości i dlatego nie może istnieć niezależnie.</span><span class="sxs-lookup"><span data-stu-id="40276-113">Complex types do not have identities and therefore cannot exist independently.</span></span> <span data-ttu-id="40276-114">Typy złożone może istnieć tylko jako właściwości na typy jednostek i innych typów złożonych.</span><span class="sxs-lookup"><span data-stu-id="40276-114">Complex types can only exist as properties on entity types or other complex types.</span></span>  
+  
+-   <span data-ttu-id="40276-115">Typy złożone nie może brać udziału w [skojarzenia](../../../../docs/framework/data/adonet/association-type.md).</span><span class="sxs-lookup"><span data-stu-id="40276-115">Complex types cannot participate in [associations](../../../../docs/framework/data/adonet/association-type.md).</span></span> <span data-ttu-id="40276-116">Żadna końca skojarzenia może być typem złożonym i w związku z tym [właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) nie może być zdefiniowana dla typów złożonych.</span><span class="sxs-lookup"><span data-stu-id="40276-116">Neither end of an association can be a complex type, and therefore [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) cannot be defined on complex types.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="40276-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="40276-117">Example</span></span>  
+ <span data-ttu-id="40276-118">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL) w nazwie schematu koncepcyjnego definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych.</span><span class="sxs-lookup"><span data-stu-id="40276-118">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="40276-119">Następujący plik CSDL definiuje typ złożony, adres, z właściwością typu pierwotnego `StreetAddress`, `City`, `StateOrProvince`, `Country`, i `PostalCode`.</span><span class="sxs-lookup"><span data-stu-id="40276-119">The following CSDL defines a complex type, Address, with the primitive type properties `StreetAddress`, `City`, `StateOrProvince`, `Country`, and `PostalCode`.</span></span>  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
- <span data-ttu-id="6bc2e-120">Aby zdefiniować typu złożonego `Address` (powyżej) jako właściwość typu jednostki, należy zadeklarować typ właściwości w definicji typu jednostki.</span><span class="sxs-lookup"><span data-stu-id="6bc2e-120">To define the complex type `Address` (above) as a property on an entity type, you must declare the property type in the entity type definition.</span></span> <span data-ttu-id="6bc2e-121">Deklaruje następującego pliku CSDL `Address` właściwości jako typ złożony w ramach typu jednostki (wydawcy):</span><span class="sxs-lookup"><span data-stu-id="6bc2e-121">The following CSDL declares the `Address` property as a complex type on an entity type (Publisher):</span></span>  
+ <span data-ttu-id="40276-120">Aby zdefiniować typu złożonego `Address` (powyżej) jako właściwość typu jednostki, należy zadeklarować typ właściwości w definicji typu jednostki.</span><span class="sxs-lookup"><span data-stu-id="40276-120">To define the complex type `Address` (above) as a property on an entity type, you must declare the property type in the entity type definition.</span></span> <span data-ttu-id="40276-121">Deklaruje następującego pliku CSDL `Address` właściwości jako typ złożony w ramach typu jednostki (wydawcy):</span><span class="sxs-lookup"><span data-stu-id="40276-121">The following CSDL declares the `Address` property as a complex type on an entity type (Publisher):</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
-## <a name="see-also"></a><span data-ttu-id="6bc2e-122">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6bc2e-122">See Also</span></span>  
- [<span data-ttu-id="6bc2e-123">Kluczowe założenia modelu danych jednostki</span><span class="sxs-lookup"><span data-stu-id="6bc2e-123">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [<span data-ttu-id="6bc2e-124">Model danych jednostki</span><span class="sxs-lookup"><span data-stu-id="6bc2e-124">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="40276-122">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="40276-122">See Also</span></span>  
+ [<span data-ttu-id="40276-123">Kluczowe założenia modelu danych jednostki</span><span class="sxs-lookup"><span data-stu-id="40276-123">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="40276-124">Model danych jednostki</span><span class="sxs-lookup"><span data-stu-id="40276-124">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -15,15 +15,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>Operator :: (odwołanie w C#)
-Kwalifikator aliasu przestrzeni nazw (`::`) jest używana do odszukania identyfikatorów. Zawsze znajduje się między dwoma identyfikatorów, jak w poniższym przykładzie:  
+Kwalifikator aliasu przestrzeni nazw (`::`) jest używany do wyszukiwania identyfikatorów. Zawsze znajduje się między dwoma identyfikatorami — jak w przykładzie poniżej:
   
  [!code-csharp[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
 ## <a name="remarks"></a>Uwagi  
- Kwalifikator aliasu przestrzeni nazw może być `global`. Wywołuje to wyszukiwanie w globalnej przestrzeni nazw, a nie do aliasu przestrzeni nazw.  
+ Kwalifikator aliasu przestrzeni nazw może mieć wartość `global`. Wywołuje to wyszukiwanie w globalnej przestrzeni nazw, a nie w przestrzeni nazw z aliasem.
   
 ## <a name="for-more-information"></a>Aby uzyskać więcej informacji  
- Przykład sposobu użycia `::` operatora, zobacz sekcję poniżej:  
+ Aby zobaczyć przykład użycia operatora `::`, odwiedź sekcję poniżej:  
   
 -   [Instrukcje: użycie globalnych aliasów przestrzeni nazw](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   

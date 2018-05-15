@@ -1,29 +1,22 @@
 ---
-title: "Implementowanie niestandardowych ponawia próbę połączenia HTTP z wykładniczego wycofywania"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie niestandardowych ponawia próbę połączenia HTTP z wykładniczego wycofywania"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Implementowanie niestandardowych ponawia próbę połączenia HTTP z wykładniczego wycofywania
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie niestandardowych ponawia próbę połączenia HTTP z wykładniczego wycofywania
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 477b77f4c4768ed98f730b0f5360761b0b54b10c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 10751bb74ed648839fabec67ff7a71e458fb2a44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="7448b-104">Implementowanie niestandardowych ponawia próbę połączenia HTTP z wykładniczego wycofywania</span><span class="sxs-lookup"><span data-stu-id="7448b-104">Implementing custom HTTP call retries with exponential backoff</span></span>
+# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="a28a4-103">Implementowanie niestandardowych ponawia próbę połączenia HTTP z wykładniczego wycofywania</span><span class="sxs-lookup"><span data-stu-id="a28a4-103">Implementing custom HTTP call retries with exponential backoff</span></span>
 
-<span data-ttu-id="7448b-105">Aby można było utworzyć mikrousług elastyczne, wymagana jest obsługa możliwe scenariusze błędu HTTP.</span><span class="sxs-lookup"><span data-stu-id="7448b-105">In order to create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="7448b-106">W tym celu można utworzyć własną implementację ponownych prób z wykładniczego wycofywania.</span><span class="sxs-lookup"><span data-stu-id="7448b-106">For that purpose, you could create your own implementation of retries with exponential backoff.</span></span>
+<span data-ttu-id="a28a4-104">Aby można było utworzyć mikrousług elastyczne, wymagana jest obsługa możliwe scenariusze błędu HTTP.</span><span class="sxs-lookup"><span data-stu-id="a28a4-104">In order to create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="a28a4-105">W tym celu można utworzyć własną implementację ponownych prób z wykładniczego wycofywania.</span><span class="sxs-lookup"><span data-stu-id="a28a4-105">For that purpose, you could create your own implementation of retries with exponential backoff.</span></span>
 
-<span data-ttu-id="7448b-107">Oprócz obsługi niedostępności zasobów danych czasowych, wykładniczego wycofywania musi również wziąć pod uwagę, że dostawcy chmury może ograniczyć dostępność zasobów, aby uniknąć przeciążenia użycia.</span><span class="sxs-lookup"><span data-stu-id="7448b-107">In addition to handling temporal resource unavailability, the exponential backoff also needs to take into account that the cloud provider might throttle availability of resources to prevent usage overload.</span></span> <span data-ttu-id="7448b-108">Na przykład szybkie tworzenie zbyt wiele żądań połączenia można wyświetlić jako "odmowa usługi" ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) ataku przez dostawcę chmury.</span><span class="sxs-lookup"><span data-stu-id="7448b-108">For example, creating too many connection requests very quickly might be viewed as a Denial of Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) attack by the cloud provider.</span></span> <span data-ttu-id="7448b-109">W związku z tym należy mechanizm skalowania żądania połączenia Wstecz, gdy napotkał próg pojemności.</span><span class="sxs-lookup"><span data-stu-id="7448b-109">As a result, you need to provide a mechanism to scale back connection requests when a capacity threshold has been encountered.</span></span>
+<span data-ttu-id="a28a4-106">Oprócz obsługi niedostępności zasobów danych czasowych, wykładniczego wycofywania musi również wziąć pod uwagę, że dostawcy chmury może ograniczyć dostępność zasobów, aby uniknąć przeciążenia użycia.</span><span class="sxs-lookup"><span data-stu-id="a28a4-106">In addition to handling temporal resource unavailability, the exponential backoff also needs to take into account that the cloud provider might throttle availability of resources to prevent usage overload.</span></span> <span data-ttu-id="a28a4-107">Na przykład szybkie tworzenie zbyt wiele żądań połączenia można wyświetlić jako "odmowa usługi" ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) ataku przez dostawcę chmury.</span><span class="sxs-lookup"><span data-stu-id="a28a4-107">For example, creating too many connection requests very quickly might be viewed as a Denial of Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) attack by the cloud provider.</span></span> <span data-ttu-id="a28a4-108">W związku z tym należy mechanizm skalowania żądania połączenia Wstecz, gdy napotkał próg pojemności.</span><span class="sxs-lookup"><span data-stu-id="a28a4-108">As a result, you need to provide a mechanism to scale back connection requests when a capacity threshold has been encountered.</span></span>
 
-<span data-ttu-id="7448b-110">Jako początkowa eksploracji można zaimplementować kodu z klasą narzędzie dla wykładniczego wycofywania jak w [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), oraz kod podobnie do następującej (która jest również dostępna w [repozytorium GitHub ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span><span class="sxs-lookup"><span data-stu-id="7448b-110">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following (which is also available on a [GitHub repo](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span></span>
+<span data-ttu-id="a28a4-109">Jako początkowa eksploracji można zaimplementować kodu z klasą narzędzie dla wykładniczego wycofywania jak w [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), oraz kod podobnie do następującej (która jest również dostępna w [repozytorium GitHub ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span><span class="sxs-lookup"><span data-stu-id="a28a4-109">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following (which is also available on a [GitHub repo](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span></span>
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -96,7 +89,7 @@ public struct ExponentialBackoff
 }
 ```
 
-<span data-ttu-id="7448b-111">Przy użyciu tego kodu w kliencie C\# aplikacji (inny mikrousługi klienta interfejsu API sieci Web, aplikacji platformy ASP.NET MVC lub nawet C\# aplikacji platformy Xamarin) jest prosta.</span><span class="sxs-lookup"><span data-stu-id="7448b-111">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="7448b-112">W poniższym przykładzie przedstawiono sposób, przy użyciu klasy HttpClient.</span><span class="sxs-lookup"><span data-stu-id="7448b-112">The following example shows how, using the HttpClient class.</span></span>
+<span data-ttu-id="a28a4-110">Przy użyciu tego kodu w kliencie C\# aplikacji (inny mikrousługi klienta interfejsu API sieci Web, aplikacji platformy ASP.NET MVC lub nawet C\# aplikacji platformy Xamarin) jest prosta.</span><span class="sxs-lookup"><span data-stu-id="a28a4-110">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="a28a4-111">W poniższym przykładzie przedstawiono sposób, przy użyciu klasy HttpClient.</span><span class="sxs-lookup"><span data-stu-id="a28a4-111">The following example shows how, using the HttpClient class.</span></span>
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -119,8 +112,8 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-<span data-ttu-id="7448b-113">Jednak ten kod jest odpowiednie tylko jako Weryfikacja koncepcji.</span><span class="sxs-lookup"><span data-stu-id="7448b-113">However, this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="7448b-114">Następnym temacie wyjaśniono, jak korzystać z bardziej zaawansowane i sprawdzonych bibliotek.</span><span class="sxs-lookup"><span data-stu-id="7448b-114">The next topic explains how to use more sophisticated and proven libraries.</span></span>
+<span data-ttu-id="a28a4-112">Jednak ten kod jest odpowiednie tylko jako Weryfikacja koncepcji.</span><span class="sxs-lookup"><span data-stu-id="a28a4-112">However, this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="a28a4-113">Następnym temacie wyjaśniono, jak korzystać z bardziej zaawansowane i sprawdzonych bibliotek.</span><span class="sxs-lookup"><span data-stu-id="a28a4-113">The next topic explains how to use more sophisticated and proven libraries.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="7448b-115">[Poprzednie] (implement-resilient-entity-framework-core-sql-connections.md) [dalej] (implement-http-call-retries-exponential-backoff-polly.md)</span><span class="sxs-lookup"><span data-stu-id="7448b-115">[Previous] (implement-resilient-entity-framework-core-sql-connections.md) [Next] (implement-http-call-retries-exponential-backoff-polly.md)</span></span>
+<span data-ttu-id="a28a4-114">[Poprzednie] (implement-resilient-entity-framework-core-sql-connections.md) [dalej] (implement-http-call-retries-exponential-backoff-polly.md)</span><span class="sxs-lookup"><span data-stu-id="a28a4-114">[Previous] (implement-resilient-entity-framework-core-sql-connections.md) [Next] (implement-http-call-retries-exponential-backoff-polly.md)</span></span>

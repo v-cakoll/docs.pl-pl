@@ -1,13 +1,7 @@
 ---
 title: Projekt klasy abstrakcyjnej
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - type design guidelines, abstract classes
 - abstract classes, design guidelines
@@ -16,38 +10,33 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a98c40ccc8005789a3a991bfc93deb11786b8943
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 28052cc6848d77acbdf8e9381146ca6fb06c15d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="abstract-class-design"></a><span data-ttu-id="03282-102">Projekt klasy abstrakcyjnej</span><span class="sxs-lookup"><span data-stu-id="03282-102">Abstract Class Design</span></span>
-<span data-ttu-id="03282-103">**X nie** zdefiniuj public lub protected wewnętrzny konstruktorów w typach abstrakcyjnych.</span><span class="sxs-lookup"><span data-stu-id="03282-103">**X DO NOT** define public or protected internal constructors in abstract types.</span></span>  
+# <a name="abstract-class-design"></a><span data-ttu-id="bfb1e-102">Projekt klasy abstrakcyjnej</span><span class="sxs-lookup"><span data-stu-id="bfb1e-102">Abstract Class Design</span></span>
+<span data-ttu-id="bfb1e-103">**X nie** zdefiniuj public lub protected wewnętrzny konstruktorów w typach abstrakcyjnych.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-103">**X DO NOT** define public or protected internal constructors in abstract types.</span></span>  
   
- <span data-ttu-id="03282-104">Konstruktory powinny być publiczne, tylko wtedy, gdy użytkownicy będą musieli tworzyć wystąpienia typu.</span><span class="sxs-lookup"><span data-stu-id="03282-104">Constructors should be public only if users will need to create instances of the type.</span></span> <span data-ttu-id="03282-105">Ponieważ nie można utworzyć wystąpienia typu abstrakcyjnego, typ ogólny z publicznym konstruktorem jest niepoprawnie zaprojektowany i mylące dla użytkowników.</span><span class="sxs-lookup"><span data-stu-id="03282-105">Because you cannot create instances of an abstract type, an abstract type with a public constructor is incorrectly designed and misleading to the users.</span></span>  
+ <span data-ttu-id="bfb1e-104">Konstruktory powinny być publiczne, tylko wtedy, gdy użytkownicy będą musieli tworzyć wystąpienia typu.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-104">Constructors should be public only if users will need to create instances of the type.</span></span> <span data-ttu-id="bfb1e-105">Ponieważ nie można utworzyć wystąpienia typu abstrakcyjnego, typ ogólny z publicznym konstruktorem jest niepoprawnie zaprojektowany i mylące dla użytkowników.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-105">Because you cannot create instances of an abstract type, an abstract type with a public constructor is incorrectly designed and misleading to the users.</span></span>  
   
- <span data-ttu-id="03282-106">**CZY ✓** Definiowanie chronionych lub wewnętrzny konstruktora w klas abstrakcyjnych.</span><span class="sxs-lookup"><span data-stu-id="03282-106">**✓ DO** define a protected or an internal constructor in abstract classes.</span></span>  
+ <span data-ttu-id="bfb1e-106">**CZY ✓** Definiowanie chronionych lub wewnętrzny konstruktora w klas abstrakcyjnych.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-106">**✓ DO** define a protected or an internal constructor in abstract classes.</span></span>  
   
- <span data-ttu-id="03282-107">Konstruktor chroniony jest najczęściej i po prostu umożliwia klasy podstawowej w celu własną inicjowania podczas tworzenia podtypów.</span><span class="sxs-lookup"><span data-stu-id="03282-107">A protected constructor is more common and simply allows the base class to do its own initialization when subtypes are created.</span></span>  
+ <span data-ttu-id="bfb1e-107">Konstruktor chroniony jest najczęściej i po prostu umożliwia klasy podstawowej w celu własną inicjowania podczas tworzenia podtypów.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-107">A protected constructor is more common and simply allows the base class to do its own initialization when subtypes are created.</span></span>  
   
- <span data-ttu-id="03282-108">Wewnętrzny Konstruktor może służyć do ograniczania konkretnych implementacji klasy abstrakcyjnej do zestawu Definiowanie klasy.</span><span class="sxs-lookup"><span data-stu-id="03282-108">An internal constructor can be used to limit concrete implementations of the abstract class to the assembly defining the class.</span></span>  
+ <span data-ttu-id="bfb1e-108">Wewnętrzny Konstruktor może służyć do ograniczania konkretnych implementacji klasy abstrakcyjnej do zestawu Definiowanie klasy.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-108">An internal constructor can be used to limit concrete implementations of the abstract class to the assembly defining the class.</span></span>  
   
- <span data-ttu-id="03282-109">**CZY ✓** Podaj co najmniej jednego typu konkretnego, która dziedziczy po każdej klasy abstrakcyjnej, którą można wysłać.</span><span class="sxs-lookup"><span data-stu-id="03282-109">**✓ DO** provide at least one concrete type that inherits from each abstract class that you ship.</span></span>  
+ <span data-ttu-id="bfb1e-109">**CZY ✓** Podaj co najmniej jednego typu konkretnego, która dziedziczy po każdej klasy abstrakcyjnej, którą można wysłać.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-109">**✓ DO** provide at least one concrete type that inherits from each abstract class that you ship.</span></span>  
   
- <span data-ttu-id="03282-110">Wykonywanie dzięki temu można sprawdzić poprawności projektu klasy abstrakcyjnej.</span><span class="sxs-lookup"><span data-stu-id="03282-110">Doing this helps to validate the design of the abstract class.</span></span> <span data-ttu-id="03282-111">Na przykład <xref:System.IO.FileStream?displayProperty=nameWithType> jest implementacją <xref:System.IO.Stream?displayProperty=nameWithType> klasy abstrakcyjnej.</span><span class="sxs-lookup"><span data-stu-id="03282-111">For example,  <xref:System.IO.FileStream?displayProperty=nameWithType> is an implementation of the <xref:System.IO.Stream?displayProperty=nameWithType> abstract class.</span></span>  
+ <span data-ttu-id="bfb1e-110">Wykonywanie dzięki temu można sprawdzić poprawności projektu klasy abstrakcyjnej.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-110">Doing this helps to validate the design of the abstract class.</span></span> <span data-ttu-id="bfb1e-111">Na przykład <xref:System.IO.FileStream?displayProperty=nameWithType> jest implementacją <xref:System.IO.Stream?displayProperty=nameWithType> klasy abstrakcyjnej.</span><span class="sxs-lookup"><span data-stu-id="bfb1e-111">For example,  <xref:System.IO.FileStream?displayProperty=nameWithType> is an implementation of the <xref:System.IO.Stream?displayProperty=nameWithType> abstract class.</span></span>  
   
- <span data-ttu-id="03282-112">*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="03282-112">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="bfb1e-112">*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="bfb1e-112">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="03282-113">*Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="03282-113">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="bfb1e-113">*Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="bfb1e-113">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03282-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="03282-114">See Also</span></span>  
- [<span data-ttu-id="03282-115">Typy — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="03282-115">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
- [<span data-ttu-id="03282-116">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="03282-116">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="bfb1e-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="bfb1e-114">See Also</span></span>  
+ [<span data-ttu-id="bfb1e-115">Typy — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="bfb1e-115">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="bfb1e-116">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="bfb1e-116">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

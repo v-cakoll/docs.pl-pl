@@ -1,14 +1,6 @@
 ---
 title: Windows Presentation Foundation
-ms.custom: ''
 ms.date: 01/25/2018
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 applies_to:
 - Windows 10
 - Windows 7
@@ -22,23 +14,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-caps.latest.revision: 97
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="41cc7-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="41cc7-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="41cc7-103">Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom ujednolicony model programowania do tworzenia aplikacji klasycznych biznesowych — w systemie Windows.</span><span class="sxs-lookup"><span data-stu-id="41cc7-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="eb586-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="eb586-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="eb586-103">Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom ujednolicony model programowania do tworzenia aplikacji klasycznych biznesowych — w systemie Windows.</span><span class="sxs-lookup"><span data-stu-id="eb586-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="41cc7-104">Utwórz aplikacje klasyczne z technologii Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="41cc7-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="eb586-104">Utwórz aplikacje klasyczne z technologii Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="eb586-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [<span data-ttu-id="41cc7-105">Projektowanie XAML w programie Visual Studio i Blend for Visual Studio</span><span class="sxs-lookup"><span data-stu-id="41cc7-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="eb586-105">Projektowanie XAML w programie Visual Studio i Blend for Visual Studio</span><span class="sxs-lookup"><span data-stu-id="eb586-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="41cc7-106">Pobierz program Visual Studio</span><span class="sxs-lookup"><span data-stu-id="41cc7-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [<span data-ttu-id="eb586-106">Pobierz program Visual Studio</span><span class="sxs-lookup"><span data-stu-id="eb586-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

@@ -1,46 +1,35 @@
 ---
-title: "Obsługa zdarzeń w dokumencie XML przy użyciu XmlNodeChangedEventArgs"
-ms.custom: 
+title: Obsługa zdarzeń w dokumencie XML przy użyciu XmlNodeChangedEventArgs
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 00ed0437f51650cd335d528632f9f0cc14af6422
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="ca252-102">Obsługa zdarzeń w dokumencie XML przy użyciu XmlNodeChangedEventArgs</span><span class="sxs-lookup"><span data-stu-id="ca252-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
-<span data-ttu-id="ca252-103">**XmlNodeChangedEventArgs** hermetyzuje Argumenty przekazane do obsługi zdarzeń zarejestrowane na **XmlDocument** obiektu na potrzeby obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ca252-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="ca252-104">Zdarzenia oraz gdy są one uruchamiane opis znajduje się w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="ca252-104">The events and a description of when they are fired is given in the following table.</span></span>  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="e8dc0-102">Obsługa zdarzeń w dokumencie XML przy użyciu XmlNodeChangedEventArgs</span><span class="sxs-lookup"><span data-stu-id="e8dc0-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
+<span data-ttu-id="e8dc0-103">**XmlNodeChangedEventArgs** hermetyzuje Argumenty przekazane do obsługi zdarzeń zarejestrowane na **XmlDocument** obiektu na potrzeby obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="e8dc0-104">Zdarzenia oraz gdy są one uruchamiane opis znajduje się w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-104">The events and a description of when they are fired is given in the following table.</span></span>  
   
-|<span data-ttu-id="ca252-105">Zdarzenie</span><span class="sxs-lookup"><span data-stu-id="ca252-105">Event</span></span>|<span data-ttu-id="ca252-106">Wywoływane</span><span class="sxs-lookup"><span data-stu-id="ca252-106">Fired</span></span>|  
+|<span data-ttu-id="e8dc0-105">Zdarzenie</span><span class="sxs-lookup"><span data-stu-id="e8dc0-105">Event</span></span>|<span data-ttu-id="e8dc0-106">Wywoływane</span><span class="sxs-lookup"><span data-stu-id="e8dc0-106">Fired</span></span>|  
 |-----------|-----------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="ca252-107">Gdy węzeł należących do bieżący dokument zostanie wstawiony do innego węzła.</span><span class="sxs-lookup"><span data-stu-id="ca252-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="ca252-108">Gdy węzeł należących do bieżącego dokumentu został wstawiony do innego węzła.</span><span class="sxs-lookup"><span data-stu-id="ca252-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="ca252-109">Gdy węzeł należących do tego dokumentu zostanie usunięte z dokumentu.</span><span class="sxs-lookup"><span data-stu-id="ca252-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="ca252-110">Gdy węzeł należących do tego dokumentu została usunięta po swoim obiekcie nadrzędnym.</span><span class="sxs-lookup"><span data-stu-id="ca252-110">When a node belonging to this document has been removed from its parent.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="ca252-111">Jeśli wartość węzła jest zostanie zmieniony.</span><span class="sxs-lookup"><span data-stu-id="ca252-111">When the value of a node is about to be changed.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="ca252-112">Jeśli zmieniono wartość węzła.</span><span class="sxs-lookup"><span data-stu-id="ca252-112">When the value of a node has been changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="e8dc0-107">Gdy węzeł należących do bieżący dokument zostanie wstawiony do innego węzła.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="e8dc0-108">Gdy węzeł należących do bieżącego dokumentu został wstawiony do innego węzła.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="e8dc0-109">Gdy węzeł należących do tego dokumentu zostanie usunięte z dokumentu.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="e8dc0-110">Gdy węzeł należących do tego dokumentu została usunięta po swoim obiekcie nadrzędnym.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-110">When a node belonging to this document has been removed from its parent.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="e8dc0-111">Jeśli wartość węzła jest zostanie zmieniony.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-111">When the value of a node is about to be changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="e8dc0-112">Jeśli zmieniono wartość węzła.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-112">When the value of a node has been changed.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="ca252-113">Jeśli **dokumentu XmlDataDocument** użycie pamięci jest zoptymalizowany do użycia **DataSet** magazynu, **dokumentu XmlDataDocument** może nie wygenerował żadnego z wymienionych powyżej, gdy są zmiany zdarzenia wprowadzone w podstawowych **zestawu danych**.</span><span class="sxs-lookup"><span data-stu-id="ca252-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="ca252-114">Te zdarzenia, należy musi przejść przez cały **XmlDocument** raz, aby użycie pamięci nie jest w pełni zoptymalizowane.</span><span class="sxs-lookup"><span data-stu-id="ca252-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
+>  <span data-ttu-id="e8dc0-113">Jeśli **dokumentu XmlDataDocument** użycie pamięci jest zoptymalizowany do użycia **DataSet** magazynu, **dokumentu XmlDataDocument** może nie wygenerował żadnego z wymienionych powyżej, gdy są zmiany zdarzenia wprowadzone w podstawowych **zestawu danych**.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="e8dc0-114">Te zdarzenia, należy musi przejść przez cały **XmlDocument** raz, aby użycie pamięci nie jest w pełni zoptymalizowane.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
   
- <span data-ttu-id="ca252-115">Poniższy przykład kodu pokazuje sposób definiowanie procedury obsługi zdarzeń i Dodaj program obsługi zdarzeń do zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="ca252-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
+ <span data-ttu-id="e8dc0-115">Poniższy przykład kodu pokazuje sposób definiowanie procedury obsługi zdarzeń i Dodaj program obsługi zdarzeń do zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -83,9 +72,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- <span data-ttu-id="ca252-116">Niektóre operacje XML modelu DOM (Document Object) są złożone operacji, które mogą skutkować wiele zdarzeń jest uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="ca252-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="ca252-117">Na przykład **AppendChild** może także wymagać usunięcia jest dołączany z nadrzędnego poprzedniego węzła.</span><span class="sxs-lookup"><span data-stu-id="ca252-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="ca252-118">W takim przypadku zobacz **NodeRemoved** zdarzenia wywoływane najpierw, a następnie **NodeInserted** zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ca252-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="ca252-119">Operacje, takie jak ustawienie **InnerXml** może skutkować wiele zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ca252-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
+ <span data-ttu-id="e8dc0-116">Niektóre operacje XML modelu DOM (Document Object) są złożone operacji, które mogą skutkować wiele zdarzeń jest uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="e8dc0-117">Na przykład **AppendChild** może także wymagać usunięcia jest dołączany z nadrzędnego poprzedniego węzła.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="e8dc0-118">W takim przypadku zobacz **NodeRemoved** zdarzenia wywoływane najpierw, a następnie **NodeInserted** zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="e8dc0-119">Operacje, takie jak ustawienie **InnerXml** może skutkować wiele zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
   
- <span data-ttu-id="ca252-120">W poniższym przykładzie kodu pokazano tworzenie obsługi zdarzeń i obsługa **NodeInserted** zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ca252-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
+ <span data-ttu-id="e8dc0-120">W poniższym przykładzie kodu pokazano tworzenie obsługi zdarzeń i obsługa **NodeInserted** zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
   
 ```vb  
 Imports System  
@@ -216,7 +205,7 @@ public class Sample
 } // End class   
 ```  
   
- <span data-ttu-id="ca252-121">Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeChangedEventArgs> i <xref:System.Xml.XmlNodeChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="ca252-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
+ <span data-ttu-id="e8dc0-121">Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeChangedEventArgs> i <xref:System.Xml.XmlNodeChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca252-122">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ca252-122">See Also</span></span>  
- [<span data-ttu-id="ca252-123">Model DOM (XML Document Object Model)</span><span class="sxs-lookup"><span data-stu-id="ca252-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="e8dc0-122">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e8dc0-122">See Also</span></span>  
+ [<span data-ttu-id="e8dc0-123">Model DOM (XML Document Object Model)</span><span class="sxs-lookup"><span data-stu-id="e8dc0-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

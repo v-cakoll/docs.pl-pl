@@ -1,0 +1,26 @@
+---
+title: Kiedy należy wdrożyć kontenery systemu Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
+description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows | Kiedy należy wdrożyć kontenery systemu Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
+author: CESARDELATORRE
+ms.author: wiwagn
+ms.date: 04/28/2018
+ms.openlocfilehash: 7472745577f414062b460fd71ab45bae85d7a62e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 05/10/2018
+---
+# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a><span data-ttu-id="7114e-103">Kiedy należy wdrożyć kontenery systemu Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)</span><span class="sxs-lookup"><span data-stu-id="7114e-103">When to deploy Windows Containers to Azure VMs (IaaS cloud)</span></span>
+
+<span data-ttu-id="7114e-104">Jeśli organizacja używa maszynach wirtualnych platformy Azure, nawet jeśli używana jest również kontenery systemu Windows, to nadal zajmowanie IaaS.</span><span class="sxs-lookup"><span data-stu-id="7114e-104">If your organization is using Azure VMs, even if you are also using Windows Containers, you are still dealing with IaaS.</span></span> <span data-ttu-id="7114e-105">Oznacza to tej obsłudze operacje infrastruktury, poprawek systemu operacyjnego maszyny Wirtualnej i złożoności infrastruktury dla aplikacji o wysokiej skalowalności gdy należy wdrożyć na wiele maszyn wirtualnych w infrastrukturze równoważeniem obciążenia.</span><span class="sxs-lookup"><span data-stu-id="7114e-105">That means that dealing with infrastructure operations, VM OS patches, and infrastructure complexity for highly scalable applications when you need to deploy to multiple VMs in a load balanced infrastructure.</span></span> <span data-ttu-id="7114e-106">Główne scenariusze przy użyciu kontenery systemu Windows w maszynie Wirtualnej platformy Azure są:</span><span class="sxs-lookup"><span data-stu-id="7114e-106">The main scenarios for using Windows Containers in an Azure VM are:</span></span>
+
+-   <span data-ttu-id="7114e-107">**Tworzenie/testowanie środowiska**: A maszyna wirtualna w chmurze jest idealne w przypadku projektowania i testowania w chmurze.</span><span class="sxs-lookup"><span data-stu-id="7114e-107">**Dev/test environment**: A VM in the cloud is perfect for development and testing in the cloud.</span></span> <span data-ttu-id="7114e-108">Można szybko utworzyć lub Zatrzymaj środowisko, w zależności od potrzeb.</span><span class="sxs-lookup"><span data-stu-id="7114e-108">You can rapidly create or stop the environment depending on your needs.</span></span>
+
+-   <span data-ttu-id="7114e-109">**Skalowalność małych i średnich musi**: W scenariuszach, w którym mogą być wymagane kilka maszyn wirtualnych do środowiska produkcyjnego, zarządzanie niewielkiej liczby maszyn wirtualnych może być ekonomiczny dopóki nie można przenieść do bardziej zaawansowanych środowisk PaaS, takich jak orchestrators.</span><span class="sxs-lookup"><span data-stu-id="7114e-109">**Small and medium scalability needs**: In scenarios where you might need just a couple of VMs for your production environment, managing a small number of VMs might be affordable until you can move to more advanced PaaS environments, like orchestrators.</span></span>
+
+-   <span data-ttu-id="7114e-110">**Środowisku produkcyjnym z użyciem istniejących narzędzi wdrażania**: użytkownik może przenoszenie ze środowiska lokalnego, w którym zainwestowały w menu Narzędzia, aby złożone wdrożenia maszyn wirtualnych i serwery bez systemu operacyjnego (na przykład Puppet lub podobne narzędzia).</span><span class="sxs-lookup"><span data-stu-id="7114e-110">**Production environment with existing deployment tools**: You might be moving from an on-premises environment in which you have invested in tools to make complex deployments to VMs or bare-metal servers (like Puppet or similar tools).</span></span> <span data-ttu-id="7114e-111">Można przenieść do chmury przy minimalnych zmianach do procedur wdrażania środowiska produkcyjnego, można nadal używać tych narzędzi do wdrażania na maszynach wirtualnych platformy Azure.</span><span class="sxs-lookup"><span data-stu-id="7114e-111">To move to the cloud with minimal changes to production environment deployment procedures, you might continue to use those tools to deploy to Azure VMs.</span></span> <span data-ttu-id="7114e-112">Jednak należy używanie kontenerów Windows jednostką wdrożenia celu usprawnienie obsługi wdrożenia.</span><span class="sxs-lookup"><span data-stu-id="7114e-112">However, you'll want to use Windows Containers as the unit of deployment to improve the deployment experience.</span></span>
+
+>[!div class="step-by-step"]
+<span data-ttu-id="7114e-113">[Poprzednie](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+[dalej](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)</span><span class="sxs-lookup"><span data-stu-id="7114e-113">[Previous](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+[Next](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)</span></span>

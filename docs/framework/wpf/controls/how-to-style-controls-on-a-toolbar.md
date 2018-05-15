@@ -1,33 +1,21 @@
 ---
-title: "Jak zastosować styl do kontrolek na ToolBar"
-ms.custom: 
+title: Jak zastosować styl do kontrolek na ToolBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - styling controls on toolbar [WPF]
 - toolbars [WPF]
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6c2373a9372947b1093c4dcca31f563c2a8bf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc5ac9dd64072c34ff999255a27dd92f311cda0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-style-controls-on-a-toolbar"></a><span data-ttu-id="55314-102">Jak zastosować styl do kontrolek na ToolBar</span><span class="sxs-lookup"><span data-stu-id="55314-102">How to: Style Controls on a ToolBar</span></span>
-<span data-ttu-id="55314-103"><xref:System.Windows.Controls.ToolBar> Definiuje <xref:System.Windows.ResourceKey> obiekty do określania stylu formantów w <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="55314-103">The <xref:System.Windows.Controls.ToolBar> defines <xref:System.Windows.ResourceKey> objects to specify the style of controls within the <xref:System.Windows.Controls.ToolBar>.</span></span>  <span data-ttu-id="55314-104">Do określania stylu formantu w <xref:System.Windows.Controls.ToolBar>ustaw `x:key` atrybut stylu do <xref:System.Windows.ResourceKey> zdefiniowane w <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="55314-104">To style a control in a <xref:System.Windows.Controls.ToolBar>, set the `x:key` attribute of the style to a <xref:System.Windows.ResourceKey> defined in <xref:System.Windows.Controls.ToolBar>.</span></span>  
+# <a name="how-to-style-controls-on-a-toolbar"></a><span data-ttu-id="f7777-102">Jak zastosować styl do kontrolek na ToolBar</span><span class="sxs-lookup"><span data-stu-id="f7777-102">How to: Style Controls on a ToolBar</span></span>
+<span data-ttu-id="f7777-103"><xref:System.Windows.Controls.ToolBar> Definiuje <xref:System.Windows.ResourceKey> obiekty do określania stylu formantów w <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="f7777-103">The <xref:System.Windows.Controls.ToolBar> defines <xref:System.Windows.ResourceKey> objects to specify the style of controls within the <xref:System.Windows.Controls.ToolBar>.</span></span>  <span data-ttu-id="f7777-104">Do określania stylu formantu w <xref:System.Windows.Controls.ToolBar>ustaw `x:key` atrybut stylu do <xref:System.Windows.ResourceKey> zdefiniowane w <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="f7777-104">To style a control in a <xref:System.Windows.Controls.ToolBar>, set the `x:key` attribute of the style to a <xref:System.Windows.ResourceKey> defined in <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
- <span data-ttu-id="55314-105"><xref:System.Windows.Controls.ToolBar> Definiuje następujące <xref:System.Windows.ResourceKey> obiektów:</span><span class="sxs-lookup"><span data-stu-id="55314-105">The <xref:System.Windows.Controls.ToolBar> defines the following <xref:System.Windows.ResourceKey> objects:</span></span>  
+ <span data-ttu-id="f7777-105"><xref:System.Windows.Controls.ToolBar> Definiuje następujące <xref:System.Windows.ResourceKey> obiektów:</span><span class="sxs-lookup"><span data-stu-id="f7777-105">The <xref:System.Windows.Controls.ToolBar> defines the following <xref:System.Windows.ResourceKey> objects:</span></span>  
   
 -   <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
@@ -45,11 +33,11 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
-## <a name="example"></a><span data-ttu-id="55314-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="55314-106">Example</span></span>  
- <span data-ttu-id="55314-107">W poniższym przykładzie zdefiniowano style formantów w <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="55314-107">The following example defines styles for the controls within a <xref:System.Windows.Controls.ToolBar>.</span></span>  
+## <a name="example"></a><span data-ttu-id="f7777-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="f7777-106">Example</span></span>  
+ <span data-ttu-id="f7777-107">W poniższym przykładzie zdefiniowano style formantów w <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="f7777-107">The following example defines styles for the controls within a <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
  [!code-xaml[ToolBar_snip#ToolBarAllStyles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  
 [!code-xaml[ToolBar_snip#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
   
-## <a name="see-also"></a><span data-ttu-id="55314-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="55314-108">See Also</span></span>  
- [<span data-ttu-id="55314-109">Tworzenie szablonów i stylów</span><span class="sxs-lookup"><span data-stu-id="55314-109">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="f7777-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f7777-108">See Also</span></span>  
+ [<span data-ttu-id="f7777-109">Tworzenie szablonów i stylów</span><span class="sxs-lookup"><span data-stu-id="f7777-109">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -1,36 +1,24 @@
 ---
-title: "Porady: Użyj funkcji skalarnej zdefiniowanej przez użytkownika"
-ms.custom: 
+title: 'Porady: Użyj funkcji skalarnej zdefiniowanej przez użytkownika'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0788e70230fa78281d65be9eb6e0f45e58f25806
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3748f7b865de22353c8c0a91aaf52e672455ed38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a><span data-ttu-id="d3761-102">Porady: Użyj funkcji skalarnej zdefiniowanej przez użytkownika</span><span class="sxs-lookup"><span data-stu-id="d3761-102">How to: Use Scalar-Valued User-Defined Functions</span></span>
-<span data-ttu-id="d3761-103">Zdefiniowany w klasie w funkcji zdefiniowanej przez użytkownika przy użyciu metody klienta można mapować <xref:System.Data.Linq.Mapping.FunctionAttribute> atrybutu.</span><span class="sxs-lookup"><span data-stu-id="d3761-103">You can map a client method defined on a class to a user-defined function by using the <xref:System.Data.Linq.Mapping.FunctionAttribute> attribute.</span></span> <span data-ttu-id="d3761-104">Należy pamiętać, że treść metody tworzy wyrażenie, które znajdują się próba wywołania metody i przekazuje tego wyrażenia do <xref:System.Data.Linq.DataContext> tłumaczenia i wykonywania.</span><span class="sxs-lookup"><span data-stu-id="d3761-104">Note that the body of the method constructs an expression that captures the intent of the method call, and passes that expression to the <xref:System.Data.Linq.DataContext> for translation and execution.</span></span>  
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a><span data-ttu-id="4d393-102">Porady: Użyj funkcji skalarnej zdefiniowanej przez użytkownika</span><span class="sxs-lookup"><span data-stu-id="4d393-102">How to: Use Scalar-Valued User-Defined Functions</span></span>
+<span data-ttu-id="4d393-103">Zdefiniowany w klasie w funkcji zdefiniowanej przez użytkownika przy użyciu metody klienta można mapować <xref:System.Data.Linq.Mapping.FunctionAttribute> atrybutu.</span><span class="sxs-lookup"><span data-stu-id="4d393-103">You can map a client method defined on a class to a user-defined function by using the <xref:System.Data.Linq.Mapping.FunctionAttribute> attribute.</span></span> <span data-ttu-id="4d393-104">Należy pamiętać, że treść metody tworzy wyrażenie, które znajdują się próba wywołania metody i przekazuje tego wyrażenia do <xref:System.Data.Linq.DataContext> tłumaczenia i wykonywania.</span><span class="sxs-lookup"><span data-stu-id="4d393-104">Note that the body of the method constructs an expression that captures the intent of the method call, and passes that expression to the <xref:System.Data.Linq.DataContext> for translation and execution.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d3761-105">Bezpośrednie wykonywanie występuje tylko wtedy, gdy funkcja jest wywoływana poza zapytaniem.</span><span class="sxs-lookup"><span data-stu-id="d3761-105">Direct execution occurs only if the function is called outside a query.</span></span> <span data-ttu-id="d3761-106">Aby uzyskać więcej informacji, zobacz [porady: wbudowane funkcje Call User-Defined](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).</span><span class="sxs-lookup"><span data-stu-id="d3761-106">For more information, see [How to: Call User-Defined Functions Inline](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).</span></span>  
+>  <span data-ttu-id="4d393-105">Bezpośrednie wykonywanie występuje tylko wtedy, gdy funkcja jest wywoływana poza zapytaniem.</span><span class="sxs-lookup"><span data-stu-id="4d393-105">Direct execution occurs only if the function is called outside a query.</span></span> <span data-ttu-id="4d393-106">Aby uzyskać więcej informacji, zobacz [porady: wbudowane funkcje Call User-Defined](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).</span><span class="sxs-lookup"><span data-stu-id="4d393-106">For more information, see [How to: Call User-Defined Functions Inline](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d3761-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="d3761-107">Example</span></span>  
- <span data-ttu-id="d3761-108">Następujący kod SQL stanowi funkcji skalarnej zdefiniowanej przez użytkownika `ReverseCustName()`.</span><span class="sxs-lookup"><span data-stu-id="d3761-108">The following SQL code presents a scalar-valued user-defined function `ReverseCustName()`.</span></span>  
+## <a name="example"></a><span data-ttu-id="4d393-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="4d393-107">Example</span></span>  
+ <span data-ttu-id="4d393-108">Następujący kod SQL stanowi funkcji skalarnej zdefiniowanej przez użytkownika `ReverseCustName()`.</span><span class="sxs-lookup"><span data-stu-id="4d393-108">The following SQL code presents a scalar-valued user-defined function `ReverseCustName()`.</span></span>  
   
 ```  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
@@ -43,10 +31,10 @@ BEGIN
 END  
 ```  
   
- <span data-ttu-id="d3761-109">Czy mapy metodę klienta, takich jak dla tego kodu:</span><span class="sxs-lookup"><span data-stu-id="d3761-109">You would map a client method such as the following for this code:</span></span>  
+ <span data-ttu-id="4d393-109">Czy mapy metodę klienta, takich jak dla tego kodu:</span><span class="sxs-lookup"><span data-stu-id="4d393-109">You would map a client method such as the following for this code:</span></span>  
   
  [!code-csharp[DLinqUDFS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#3)]
  [!code-vb[DLinqUDFS#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="d3761-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d3761-110">See Also</span></span>  
- [<span data-ttu-id="d3761-111">Funkcje zdefiniowane przez użytkownika</span><span class="sxs-lookup"><span data-stu-id="d3761-111">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a><span data-ttu-id="4d393-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4d393-110">See Also</span></span>  
+ [<span data-ttu-id="4d393-111">Funkcje zdefiniowane przez użytkownika</span><span class="sxs-lookup"><span data-stu-id="4d393-111">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

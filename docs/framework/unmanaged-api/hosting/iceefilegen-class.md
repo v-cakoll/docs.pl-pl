@@ -1,14 +1,6 @@
 ---
-title: "ICeeFileGen — Klasa"
-ms.custom: 
+title: ICeeFileGen — Klasa
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICeeFileGen
 api_location:
@@ -22,27 +14,23 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 04d0dc0d4ab53c17e818d17aa9c07f94bd05f703
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="8d8f1-102">ICeeFileGen — Klasa</span><span class="sxs-lookup"><span data-stu-id="8d8f1-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="8d8f1-103">Udostępnia funkcje tworzenia natywnych przenośnego (PE) pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="8d8f1-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="8d8f1-104">Interfejs będzie zwykle używane przez kompilatory Generowanie ich skompilowanych danych wyjściowych pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="8d8f1-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="026cc-102">ICeeFileGen — Klasa</span><span class="sxs-lookup"><span data-stu-id="026cc-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="026cc-103">Udostępnia funkcje tworzenia natywnych przenośnego (PE) pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="026cc-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="026cc-104">Interfejs będzie zwykle używane przez kompilatory Generowanie ich skompilowanych danych wyjściowych pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="026cc-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8d8f1-105">`ICeeFileGen`obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="8d8f1-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+>  <span data-ttu-id="026cc-105">`ICeeFileGen` obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="026cc-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="8d8f1-106">Ten interfejs jest przestarzała i zostanie usunięta w przyszłej wersji.</span><span class="sxs-lookup"><span data-stu-id="8d8f1-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="026cc-106">Ten interfejs jest przestarzała i zostanie usunięta w przyszłej wersji.</span><span class="sxs-lookup"><span data-stu-id="026cc-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d8f1-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="8d8f1-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="026cc-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="026cc-107">Syntax</span></span>  
   
 ```  
 class ICeeFileGen {  
@@ -247,12 +235,12 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="8d8f1-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8d8f1-108">Requirements</span></span>  
- <span data-ttu-id="8d8f1-109">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d8f1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="026cc-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="026cc-108">Requirements</span></span>  
+ <span data-ttu-id="026cc-109">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="026cc-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8d8f1-110">**Nagłówek:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="8d8f1-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="026cc-110">**Nagłówek:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="026cc-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="8d8f1-111">**Wersja platformy .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="8d8f1-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="026cc-111">**Wersja platformy .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="026cc-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d8f1-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8d8f1-112">See Also</span></span>  
- [<span data-ttu-id="8d8f1-113">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="8d8f1-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="026cc-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="026cc-112">See Also</span></span>  
+ [<span data-ttu-id="026cc-113">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="026cc-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

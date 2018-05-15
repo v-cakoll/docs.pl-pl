@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedDocument::GetLanguage — Metoda"
-ms.custom: 
+title: ISymUnmanagedDocument::GetLanguage — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument.GetLanguage
 api_location:
@@ -23,34 +15,30 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31fdd2caaf877372fa28693cdc5b09ddf601427c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98c981a10a07d035300349cc8687b3201ed70927
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="892a6-102">ISymUnmanagedDocument::GetLanguage — Metoda</span><span class="sxs-lookup"><span data-stu-id="892a6-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="892a6-103">Pobiera identyfikator języka tego dokumentu</span><span class="sxs-lookup"><span data-stu-id="892a6-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="89a1e-102">ISymUnmanagedDocument::GetLanguage — Metoda</span><span class="sxs-lookup"><span data-stu-id="89a1e-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="89a1e-103">Pobiera identyfikator języka tego dokumentu</span><span class="sxs-lookup"><span data-stu-id="89a1e-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="892a6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="892a6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89a1e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="89a1e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="892a6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="892a6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="89a1e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="89a1e-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="892a6-106">[out] Wskaźnik do zmiennej, która odbiera identyfikator języka.</span><span class="sxs-lookup"><span data-stu-id="892a6-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="89a1e-106">[out] Wskaźnik do zmiennej, która odbiera identyfikator języka.</span><span class="sxs-lookup"><span data-stu-id="89a1e-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="892a6-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="892a6-107">Return Value</span></span>  
- <span data-ttu-id="892a6-108">Wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="892a6-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="89a1e-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="89a1e-107">Return Value</span></span>  
+ <span data-ttu-id="89a1e-108">Wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="89a1e-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="892a6-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="892a6-109">See Also</span></span>  
- [<span data-ttu-id="892a6-110">ISymUnmanagedDocument, interfejs</span><span class="sxs-lookup"><span data-stu-id="892a6-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="89a1e-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="89a1e-109">See Also</span></span>  
+ [<span data-ttu-id="89a1e-110">ISymUnmanagedDocument, interfejs</span><span class="sxs-lookup"><span data-stu-id="89a1e-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

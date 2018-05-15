@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugCodeEnum::Next — Metoda"
-ms.custom: 
+title: ICorDebugCodeEnum::Next — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCodeEnum.Next
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 644ece86-384d-4c63-9fba-52c789616ff7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5dbc7985ebf2fff5fa0c5b524b8d6560f75318d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugcodeenumnext-method"></a><span data-ttu-id="34402-102">ICorDebugCodeEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="34402-102">ICorDebugCodeEnum::Next Method</span></span>
-<span data-ttu-id="34402-103">Pobiera określoną liczbę wystąpień "ICorDebugCode" z wyliczenia, zaczynając od bieżącego położenia.</span><span class="sxs-lookup"><span data-stu-id="34402-103">Gets the specified number of "ICorDebugCode" instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugcodeenumnext-method"></a><span data-ttu-id="d49ec-102">ICorDebugCodeEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="d49ec-102">ICorDebugCodeEnum::Next Method</span></span>
+<span data-ttu-id="d49ec-103">Pobiera określoną liczbę wystąpień "ICorDebugCode" z wyliczenia, zaczynając od bieżącego położenia.</span><span class="sxs-lookup"><span data-stu-id="d49ec-103">Gets the specified number of "ICorDebugCode" instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34402-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="34402-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d49ec-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d49ec-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -49,25 +37,25 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="34402-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="34402-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d49ec-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d49ec-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="34402-106">[in] Liczba `ICorDebugCode` wystąpienia mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="34402-106">[in] The number of `ICorDebugCode` instances to be retrieved.</span></span>  
+ <span data-ttu-id="d49ec-106">[in] Liczba `ICorDebugCode` wystąpienia mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="d49ec-106">[in] The number of `ICorDebugCode` instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="34402-107">[out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugCode` obiektu.</span><span class="sxs-lookup"><span data-stu-id="34402-107">[out] An array of pointers, each of which points to an `ICorDebugCode` object.</span></span>  
+ <span data-ttu-id="d49ec-107">[out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugCode` obiektu.</span><span class="sxs-lookup"><span data-stu-id="d49ec-107">[out] An array of pointers, each of which points to an `ICorDebugCode` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="34402-108">[out] Wskaźnik do liczby `ICorDebugCode` wystąpienia faktycznie zwracane.</span><span class="sxs-lookup"><span data-stu-id="34402-108">[out] A pointer to the number of `ICorDebugCode` instances actually returned.</span></span> <span data-ttu-id="34402-109">Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="34402-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="d49ec-108">[out] Wskaźnik do liczby `ICorDebugCode` wystąpienia faktycznie zwracane.</span><span class="sxs-lookup"><span data-stu-id="d49ec-108">[out] A pointer to the number of `ICorDebugCode` instances actually returned.</span></span> <span data-ttu-id="d49ec-109">Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="d49ec-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="34402-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="34402-110">Requirements</span></span>  
- <span data-ttu-id="34402-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34402-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d49ec-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d49ec-110">Requirements</span></span>  
+ <span data-ttu-id="d49ec-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d49ec-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34402-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34402-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d49ec-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d49ec-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="34402-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34402-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d49ec-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d49ec-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="34402-114">**Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34402-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d49ec-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d49ec-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34402-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="34402-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d49ec-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d49ec-115">See Also</span></span>  
     
  

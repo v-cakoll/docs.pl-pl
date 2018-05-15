@@ -1,10 +1,6 @@
 ---
 title: 'Porady: odwołania do typów .NET z modelu COM'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -18,39 +14,36 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ac4308230f29067f358a45fd7f882abe6e41b96
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 0333cd73240e685b46917d85afe0876532db3fd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-reference-net-types-from-com"></a><span data-ttu-id="6bdb6-102">Porady: odwołania do typów .NET z modelu COM</span><span class="sxs-lookup"><span data-stu-id="6bdb6-102">How to: Reference .NET Types from COM</span></span>
-<span data-ttu-id="6bdb6-103">Z punktu widzenia kodu klienta i serwera różnice między COM i .NET Framework są przede wszystkim niewidoczne.</span><span class="sxs-lookup"><span data-stu-id="6bdb6-103">From the point of view of client and server code, the differences between COM and the .NET Framework are largely invisible.</span></span> <span data-ttu-id="6bdb6-104">Microsoft Visual Basic klientów można wyświetlić obiektu .NET. w przeglądarce obiektów, który udostępnia metody obiektu i składni, właściwości oraz polach dokładnie tak, jakby była innego obiektu COM.</span><span class="sxs-lookup"><span data-stu-id="6bdb6-104">Microsoft Visual Basic clients can view a .NET object in the object browser, which exposes the object methods and syntax, properties, and fields exactly as if it were any other COM object.</span></span>  
+# <a name="how-to-reference-net-types-from-com"></a><span data-ttu-id="87d45-102">Porady: odwołania do typów .NET z modelu COM</span><span class="sxs-lookup"><span data-stu-id="87d45-102">How to: Reference .NET Types from COM</span></span>
+<span data-ttu-id="87d45-103">Z punktu widzenia kodu klienta i serwera różnice między COM i .NET Framework są przede wszystkim niewidoczne.</span><span class="sxs-lookup"><span data-stu-id="87d45-103">From the point of view of client and server code, the differences between COM and the .NET Framework are largely invisible.</span></span> <span data-ttu-id="87d45-104">Microsoft Visual Basic klientów można wyświetlić obiektu .NET. w przeglądarce obiektów, który udostępnia metody obiektu i składni, właściwości oraz polach dokładnie tak, jakby była innego obiektu COM.</span><span class="sxs-lookup"><span data-stu-id="87d45-104">Microsoft Visual Basic clients can view a .NET object in the object browser, which exposes the object methods and syntax, properties, and fields exactly as if it were any other COM object.</span></span>  
   
- <span data-ttu-id="6bdb6-105">Importowanie biblioteki typów jest nieco trudniejsze dla klientów C++, mimo że Eksportowanie metadanych do biblioteki typów COM za pomocą tych samych narzędzi.</span><span class="sxs-lookup"><span data-stu-id="6bdb6-105">The process for importing a type library is slightly more complicated for C++ clients, although you use the same tools to export metadata to a COM type library.</span></span> <span data-ttu-id="6bdb6-106">Aby odwołać elementy członkowskie programu .NET obiektu z niezarządzanego klienta C++, odwołania pliku TLB (realizowane z Tlbexp.exe) z **#import** dyrektywy.</span><span class="sxs-lookup"><span data-stu-id="6bdb6-106">To reference .NET object members from an unmanaged C++ client, reference the TLB file (produced with Tlbexp.exe) with the **#import** directive.</span></span> <span data-ttu-id="6bdb6-107">Podczas odwoływania się do biblioteki typów, z C++, należy określić **raw_interfaces_only —** opcji lub zaimportować definicje w bibliotece klasy podstawowej Mscorlib.tlb.</span><span class="sxs-lookup"><span data-stu-id="6bdb6-107">When referencing a type library from C++, you must either specify the **raw_interfaces_only** option or import the definitions in the base class library, Mscorlib.tlb.</span></span>  
+ <span data-ttu-id="87d45-105">Importowanie biblioteki typów jest nieco trudniejsze dla klientów C++, mimo że Eksportowanie metadanych do biblioteki typów COM za pomocą tych samych narzędzi.</span><span class="sxs-lookup"><span data-stu-id="87d45-105">The process for importing a type library is slightly more complicated for C++ clients, although you use the same tools to export metadata to a COM type library.</span></span> <span data-ttu-id="87d45-106">Aby odwołać elementy członkowskie programu .NET obiektu z niezarządzanego klienta C++, odwołania pliku TLB (realizowane z Tlbexp.exe) z **#import** dyrektywy.</span><span class="sxs-lookup"><span data-stu-id="87d45-106">To reference .NET object members from an unmanaged C++ client, reference the TLB file (produced with Tlbexp.exe) with the **#import** directive.</span></span> <span data-ttu-id="87d45-107">Podczas odwoływania się do biblioteki typów, z C++, należy określić **raw_interfaces_only —** opcji lub zaimportować definicje w bibliotece klasy podstawowej Mscorlib.tlb.</span><span class="sxs-lookup"><span data-stu-id="87d45-107">When referencing a type library from C++, you must either specify the **raw_interfaces_only** option or import the definitions in the base class library, Mscorlib.tlb.</span></span>  
   
-### <a name="to-import-a-library"></a><span data-ttu-id="6bdb6-108">Aby zaimportować bibliotekę</span><span class="sxs-lookup"><span data-stu-id="6bdb6-108">To import a library</span></span>  
+### <a name="to-import-a-library"></a><span data-ttu-id="87d45-108">Aby zaimportować bibliotekę</span><span class="sxs-lookup"><span data-stu-id="87d45-108">To import a library</span></span>  
   
--   <span data-ttu-id="6bdb6-109">Określ **raw_interfaces_only —** opcji **#import** dyrektywy.</span><span class="sxs-lookup"><span data-stu-id="6bdb6-109">Specify the **raw_interfaces_only** option in the **#import** directive.</span></span> <span data-ttu-id="6bdb6-110">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="6bdb6-110">For example:</span></span>  
+-   <span data-ttu-id="87d45-109">Określ **raw_interfaces_only —** opcji **#import** dyrektywy.</span><span class="sxs-lookup"><span data-stu-id="87d45-109">Specify the **raw_interfaces_only** option in the **#import** directive.</span></span> <span data-ttu-id="87d45-110">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="87d45-110">For example:</span></span>  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     <span data-ttu-id="6bdb6-111">—lub—</span><span class="sxs-lookup"><span data-stu-id="6bdb6-111">-or-</span></span>  
+     <span data-ttu-id="87d45-111">—lub—</span><span class="sxs-lookup"><span data-stu-id="87d45-111">-or-</span></span>  
   
--   <span data-ttu-id="6bdb6-112">Include — dyrektywa #import dla Mscorlib.tlb.</span><span class="sxs-lookup"><span data-stu-id="6bdb6-112">Include an #import directive for Mscorlib.tlb.</span></span> <span data-ttu-id="6bdb6-113">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="6bdb6-113">For example:</span></span>  
+-   <span data-ttu-id="87d45-112">Include — dyrektywa #import dla Mscorlib.tlb.</span><span class="sxs-lookup"><span data-stu-id="87d45-112">Include an #import directive for Mscorlib.tlb.</span></span> <span data-ttu-id="87d45-113">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="87d45-113">For example:</span></span>  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6bdb6-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6bdb6-114">See Also</span></span>  
- [<span data-ttu-id="6bdb6-115">Udostępnianie składników .NET Framework modelowi COM</span><span class="sxs-lookup"><span data-stu-id="6bdb6-115">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)  
- [<span data-ttu-id="6bdb6-116">Rejestrowanie zestawów do użycia z modelem COM</span><span class="sxs-lookup"><span data-stu-id="6bdb6-116">Registering Assemblies with COM</span></span>](registering-assemblies-with-com.md)  
- <span data-ttu-id="6bdb6-117">[Wywołanie obiektu .NET.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="6bdb6-117">[Calling a .NET Object](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))</span></span>  
- <span data-ttu-id="6bdb6-118">[Wdrażanie aplikacji na potrzeby dostępu modelu COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="6bdb6-118">[Deploying an Application for COM Access](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))</span></span>
+## <a name="see-also"></a><span data-ttu-id="87d45-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="87d45-114">See Also</span></span>  
+ [<span data-ttu-id="87d45-115">Udostępnianie składników .NET Framework modelowi COM</span><span class="sxs-lookup"><span data-stu-id="87d45-115">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)  
+ [<span data-ttu-id="87d45-116">Rejestrowanie zestawów do użycia z modelem COM</span><span class="sxs-lookup"><span data-stu-id="87d45-116">Registering Assemblies with COM</span></span>](registering-assemblies-with-com.md)  
+ <span data-ttu-id="87d45-117">[Wywołanie obiektu .NET.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="87d45-117">[Calling a .NET Object](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))</span></span>  
+ <span data-ttu-id="87d45-118">[Wdrażanie aplikacji na potrzeby dostępu modelu COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="87d45-118">[Deploying an Application for COM Access](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))</span></span>

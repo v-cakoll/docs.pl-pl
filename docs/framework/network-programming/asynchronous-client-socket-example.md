@@ -1,12 +1,6 @@
 ---
-title: "Przykład gniazda asynchroniczne klienta"
-ms.custom: 
+title: Przykład gniazda asynchroniczne klienta
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,17 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="d2079-102">Przykład gniazda asynchroniczne klienta</span><span class="sxs-lookup"><span data-stu-id="d2079-102">Asynchronous Client Socket Example</span></span>
-<span data-ttu-id="d2079-103">Następujący przykład program tworzy klienta, który łączy się z serwerem.</span><span class="sxs-lookup"><span data-stu-id="d2079-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="d2079-104">Klient jest oparty o asynchroniczne gniazda, dlatego wykonywania aplikacji klienckiej nie został wstrzymany, gdy serwer zwraca odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="d2079-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="d2079-105">Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer w konsoli.</span><span class="sxs-lookup"><span data-stu-id="d2079-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="25991-102">Przykład gniazda asynchroniczne klienta</span><span class="sxs-lookup"><span data-stu-id="25991-102">Asynchronous Client Socket Example</span></span>
+<span data-ttu-id="25991-103">Następujący przykład program tworzy klienta, który łączy się z serwerem.</span><span class="sxs-lookup"><span data-stu-id="25991-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="25991-104">Klient jest oparty o asynchroniczne gniazda, dlatego wykonywania aplikacji klienckiej nie został wstrzymany, gdy serwer zwraca odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="25991-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="25991-105">Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer w konsoli.</span><span class="sxs-lookup"><span data-stu-id="25991-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -331,7 +323,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d2079-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d2079-106">See Also</span></span>  
- [<span data-ttu-id="d2079-107">Przykład asynchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="d2079-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [<span data-ttu-id="d2079-108">Używanie synchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="d2079-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [<span data-ttu-id="d2079-109">Przykłady kodu gniazd</span><span class="sxs-lookup"><span data-stu-id="d2079-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="25991-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="25991-106">See Also</span></span>  
+ [<span data-ttu-id="25991-107">Przykład asynchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="25991-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [<span data-ttu-id="25991-108">Używanie synchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="25991-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="25991-109">Przykłady kodu gniazd</span><span class="sxs-lookup"><span data-stu-id="25991-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

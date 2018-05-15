@@ -1,33 +1,23 @@
 ---
-title: "Niestandardowe programy obsługi tokenu"
-ms.custom: 
+title: Niestandardowe programy obsługi tokenu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 56fb7fcb162025ec05bc1171cb137d445c4dfee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18be4babf7e9cfbfe9ebfb43da6f98a8544b2fe6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="custom-token-handlers"></a><span data-ttu-id="ef32c-102">Niestandardowe programy obsługi tokenu</span><span class="sxs-lookup"><span data-stu-id="ef32c-102">Custom Token Handlers</span></span>
-<span data-ttu-id="ef32c-103">W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są one używane do przetwarzania tokenów.</span><span class="sxs-lookup"><span data-stu-id="ef32c-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="ef32c-104">Temat obejmuje również problemy, co jest niezbędne do utworzenia niestandardowych tokenu obsługi typów tokenu, które nie są obsługiwane w wersji WIF domyślnie.</span><span class="sxs-lookup"><span data-stu-id="ef32c-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  
+# <a name="custom-token-handlers"></a><span data-ttu-id="2473d-102">Niestandardowe programy obsługi tokenu</span><span class="sxs-lookup"><span data-stu-id="2473d-102">Custom Token Handlers</span></span>
+<span data-ttu-id="2473d-103">W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są one używane do przetwarzania tokenów.</span><span class="sxs-lookup"><span data-stu-id="2473d-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="2473d-104">Temat obejmuje również problemy, co jest niezbędne do utworzenia niestandardowych tokenu obsługi typów tokenu, które nie są obsługiwane w wersji WIF domyślnie.</span><span class="sxs-lookup"><span data-stu-id="2473d-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  
   
-## <a name="introduction-to-token-handlers-in-wif"></a><span data-ttu-id="ef32c-105">Wprowadzenie do obsługi tokenu w WIF</span><span class="sxs-lookup"><span data-stu-id="ef32c-105">Introduction to Token Handlers in WIF</span></span>  
- <span data-ttu-id="ef32c-106">WIF zależy od obsługi tokenu zabezpieczeń do tworzenia, odczytu, zapisu i sprawdzania poprawności tokenów dla jednostki uzależnionej aplikacji firmy (RP) lub usługę tokenu zabezpieczającego (STS).</span><span class="sxs-lookup"><span data-stu-id="ef32c-106">WIF relies on security token handlers to create, read, write, and validate tokens for a relying party (RP) application or a security token service (STS).</span></span> <span data-ttu-id="ef32c-107">Programy obsługi tokenu są punkty rozszerzeń dla możesz dodać niestandardowe programu obsługi tokenów w potoku WIF lub dostosować sposób zarządzania w programie istniejącego programu obsługi tokenów tokenów.</span><span class="sxs-lookup"><span data-stu-id="ef32c-107">Token handlers are extensibility points for you to add a custom token handler in the WIF pipeline, or to customize the way that an existing token handler manages tokens.</span></span> <span data-ttu-id="ef32c-108">WIF udostępnia dziewięć obsługi tokenu zabezpieczeń, które mogą zostać zmodyfikowane lub całkowicie zastąpiona w celu zmiany funkcji w razie potrzeby.</span><span class="sxs-lookup"><span data-stu-id="ef32c-108">WIF provides nine built-in security token handlers that can be modified or entirely overridden to change the functionality as necessary.</span></span>  
+## <a name="introduction-to-token-handlers-in-wif"></a><span data-ttu-id="2473d-105">Wprowadzenie do obsługi tokenu w WIF</span><span class="sxs-lookup"><span data-stu-id="2473d-105">Introduction to Token Handlers in WIF</span></span>  
+ <span data-ttu-id="2473d-106">WIF zależy od obsługi tokenu zabezpieczeń do tworzenia, odczytu, zapisu i sprawdzania poprawności tokenów dla jednostki uzależnionej aplikacji firmy (RP) lub usługę tokenu zabezpieczającego (STS).</span><span class="sxs-lookup"><span data-stu-id="2473d-106">WIF relies on security token handlers to create, read, write, and validate tokens for a relying party (RP) application or a security token service (STS).</span></span> <span data-ttu-id="2473d-107">Programy obsługi tokenu są punkty rozszerzeń dla możesz dodać niestandardowe programu obsługi tokenów w potoku WIF lub dostosować sposób zarządzania w programie istniejącego programu obsługi tokenów tokenów.</span><span class="sxs-lookup"><span data-stu-id="2473d-107">Token handlers are extensibility points for you to add a custom token handler in the WIF pipeline, or to customize the way that an existing token handler manages tokens.</span></span> <span data-ttu-id="2473d-108">WIF udostępnia dziewięć obsługi tokenu zabezpieczeń, które mogą zostać zmodyfikowane lub całkowicie zastąpiona w celu zmiany funkcji w razie potrzeby.</span><span class="sxs-lookup"><span data-stu-id="2473d-108">WIF provides nine built-in security token handlers that can be modified or entirely overridden to change the functionality as necessary.</span></span>  
   
-## <a name="built-in-security-token-handlers-in-wif"></a><span data-ttu-id="ef32c-109">Token obsługi zabezpieczeń w WIF</span><span class="sxs-lookup"><span data-stu-id="ef32c-109">Built-In Security Token Handlers in WIF</span></span>  
- <span data-ttu-id="ef32c-110">Dziewięć klasy programu obsługi tokenów zabezpieczeń pochodzących od abstrakcyjna klasa podstawowa zawiera WIF 4.5 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span><span class="sxs-lookup"><span data-stu-id="ef32c-110">WIF 4.5 includes nine security token handler classes that derive from the abstract base class <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span></span>  
+## <a name="built-in-security-token-handlers-in-wif"></a><span data-ttu-id="2473d-109">Token obsługi zabezpieczeń w WIF</span><span class="sxs-lookup"><span data-stu-id="2473d-109">Built-In Security Token Handlers in WIF</span></span>  
+ <span data-ttu-id="2473d-110">Dziewięć klasy programu obsługi tokenów zabezpieczeń pochodzących od abstrakcyjna klasa podstawowa zawiera WIF 4.5 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span><span class="sxs-lookup"><span data-stu-id="2473d-110">WIF 4.5 includes nine security token handler classes that derive from the abstract base class <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span></span>  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -47,14 +37,14 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## <a name="adding-a-custom-token-handler"></a><span data-ttu-id="ef32c-111">Dodawanie niestandardowego programu obsługi tokenów</span><span class="sxs-lookup"><span data-stu-id="ef32c-111">Adding a Custom Token Handler</span></span>  
- <span data-ttu-id="ef32c-112">Niektóre typy tokenów, takie jak proste tokenów sieci Web (SWT) i tokenów sieci Web JSON (JWT) nie mają wbudowanej obsługi tokenu podał WIF.</span><span class="sxs-lookup"><span data-stu-id="ef32c-112">Some token types, such as Simple Web Tokens (SWT) and JSON Web Tokens (JWT) do not have built-in token handlers provided by WIF.</span></span> <span data-ttu-id="ef32c-113">Te typy tokenów i inne osoby, które nie mają wbudowanej obsługi należy wykonać następujące kroki, aby utworzyć niestandardowy program obsługi tokena.</span><span class="sxs-lookup"><span data-stu-id="ef32c-113">For these token types and for others that do not have a built-in handler, you need to perform the following steps to create a custom token handler.</span></span>  
+## <a name="adding-a-custom-token-handler"></a><span data-ttu-id="2473d-111">Dodawanie niestandardowego programu obsługi tokenów</span><span class="sxs-lookup"><span data-stu-id="2473d-111">Adding a Custom Token Handler</span></span>  
+ <span data-ttu-id="2473d-112">Niektóre typy tokenów, takie jak proste tokenów sieci Web (SWT) i tokenów sieci Web JSON (JWT) nie mają wbudowanej obsługi tokenu podał WIF.</span><span class="sxs-lookup"><span data-stu-id="2473d-112">Some token types, such as Simple Web Tokens (SWT) and JSON Web Tokens (JWT) do not have built-in token handlers provided by WIF.</span></span> <span data-ttu-id="2473d-113">Te typy tokenów i inne osoby, które nie mają wbudowanej obsługi należy wykonać następujące kroki, aby utworzyć niestandardowy program obsługi tokena.</span><span class="sxs-lookup"><span data-stu-id="2473d-113">For these token types and for others that do not have a built-in handler, you need to perform the following steps to create a custom token handler.</span></span>  
   
-#### <a name="adding-a-custom-token-handler"></a><span data-ttu-id="ef32c-114">Dodawanie niestandardowego programu obsługi tokenów</span><span class="sxs-lookup"><span data-stu-id="ef32c-114">Adding a custom token handler</span></span>  
+#### <a name="adding-a-custom-token-handler"></a><span data-ttu-id="2473d-114">Dodawanie niestandardowego programu obsługi tokenów</span><span class="sxs-lookup"><span data-stu-id="2473d-114">Adding a custom token handler</span></span>  
   
-1.  <span data-ttu-id="ef32c-115">Utwórz nową klasę, która jest pochodną <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span><span class="sxs-lookup"><span data-stu-id="ef32c-115">Create a new class that derives from <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span></span>  
+1.  <span data-ttu-id="2473d-115">Utwórz nową klasę, która jest pochodną <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span><span class="sxs-lookup"><span data-stu-id="2473d-115">Create a new class that derives from <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span></span>  
   
-2.  <span data-ttu-id="ef32c-116">Zastąp następujące metody i własne implementacji:</span><span class="sxs-lookup"><span data-stu-id="ef32c-116">Override the following methods and provide your own implementation:</span></span>  
+2.  <span data-ttu-id="2473d-116">Zastąp następujące metody i własne implementacji:</span><span class="sxs-lookup"><span data-stu-id="2473d-116">Override the following methods and provide your own implementation:</span></span>  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -68,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  <span data-ttu-id="ef32c-117">Dodaj odwołanie do nowego niestandardowego programu obsługi tokenów w *Web.config* lub *App.config* pliku poziomu  **\<system.identityModel >** sekcja, która dotyczy WIF.</span><span class="sxs-lookup"><span data-stu-id="ef32c-117">Add a reference to the new custom token handler in the *Web.config* or *App.config* file, within the **\<system.identityModel>** section that applies to WIF.</span></span> <span data-ttu-id="ef32c-118">Na przykład następujący kod konfiguracji Określa nowy token program obsługi o nazwie **MyCustomTokenHandler** który znajduje się w **CustomToken** przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="ef32c-118">For example, the following configuration markup specifies a new token handler named **MyCustomTokenHandler** that resides in the **CustomToken** namespace.</span></span>  
+3.  <span data-ttu-id="2473d-117">Dodaj odwołanie do nowego niestandardowego programu obsługi tokenów w *Web.config* lub *App.config* pliku poziomu  **\<system.identityModel >** sekcja, która dotyczy WIF.</span><span class="sxs-lookup"><span data-stu-id="2473d-117">Add a reference to the new custom token handler in the *Web.config* or *App.config* file, within the **\<system.identityModel>** section that applies to WIF.</span></span> <span data-ttu-id="2473d-118">Na przykład następujący kod konfiguracji Określa nowy token program obsługi o nazwie **MyCustomTokenHandler** który znajduje się w **CustomToken** przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2473d-118">For example, the following configuration markup specifies a new token handler named **MyCustomTokenHandler** that resides in the **CustomToken** namespace.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
     </system.identityModel>  
     ```  
   
-     <span data-ttu-id="ef32c-119">Należy pamiętać, że jeśli udostępniasz własnego programu obsługi tokenów do obsługi typ tokenu, który ma już wbudowanego programu obsługi tokenów, należy dodać  **\<Usuń >** elementu, aby usunąć domyślny program obsługi i zamiast tego użyj programu obsługi niestandardowej.</span><span class="sxs-lookup"><span data-stu-id="ef32c-119">Note that if you are providing your own token handler to handle a token type that already has a built-in token handler, you need to add a **\<remove>** element to drop the default handler and use your custom handler instead.</span></span> <span data-ttu-id="ef32c-120">Na przykład następująca konfiguracja zastępuje domyślny <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> z niestandardowego programu obsługi tokenów:</span><span class="sxs-lookup"><span data-stu-id="ef32c-120">For example, the following configuration replaces the default <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> with the custom token handler:</span></span>  
+     <span data-ttu-id="2473d-119">Należy pamiętać, że jeśli udostępniasz własnego programu obsługi tokenów do obsługi typ tokenu, który ma już wbudowanego programu obsługi tokenów, należy dodać  **\<Usuń >** elementu, aby usunąć domyślny program obsługi i zamiast tego użyj programu obsługi niestandardowej.</span><span class="sxs-lookup"><span data-stu-id="2473d-119">Note that if you are providing your own token handler to handle a token type that already has a built-in token handler, you need to add a **\<remove>** element to drop the default handler and use your custom handler instead.</span></span> <span data-ttu-id="2473d-120">Na przykład następująca konfiguracja zastępuje domyślny <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> z niestandardowego programu obsługi tokenów:</span><span class="sxs-lookup"><span data-stu-id="2473d-120">For example, the following configuration replaces the default <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> with the custom token handler:</span></span>  
   
     ```xml  
     <system.identityModel>  

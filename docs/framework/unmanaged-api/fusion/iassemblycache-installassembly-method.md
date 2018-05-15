@@ -1,14 +1,6 @@
 ---
-title: "IAssemblyCache::InstallAssembly — Metoda"
-ms.custom: 
+title: IAssemblyCache::InstallAssembly — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyCache.InstallAssembly
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 33c1d269-c85e-4cb1-b0e6-1c510c8fb5fa
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e269d96b28c43918d9913e899db5928c5c73ca96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 726a4ed8ee3d451687e0af671d948eb7648f7f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="8573c-102">IAssemblyCache::InstallAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="8573c-102">IAssemblyCache::InstallAssembly Method</span></span>
-<span data-ttu-id="8573c-103">Instaluje określonego zestawu w globalnej pamięci podręcznej zestawów.</span><span class="sxs-lookup"><span data-stu-id="8573c-103">Installs the specified assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="b0962-102">IAssemblyCache::InstallAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="b0962-102">IAssemblyCache::InstallAssembly Method</span></span>
+<span data-ttu-id="b0962-103">Instaluje określonego zestawu w globalnej pamięci podręcznej zestawów.</span><span class="sxs-lookup"><span data-stu-id="b0962-103">Installs the specified assembly in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8573c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8573c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0962-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b0962-104">Syntax</span></span>  
   
 ```  
 HRESULT InstallAssembly (  
@@ -48,26 +36,26 @@ HRESULT InstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8573c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8573c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b0962-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b0962-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="8573c-106">[in] Flagi zdefiniowane w Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="8573c-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="8573c-107">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="8573c-107">The following values are supported:</span></span>  
+ <span data-ttu-id="b0962-106">[in] Flagi zdefiniowane w Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="b0962-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="b0962-107">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="b0962-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="8573c-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="8573c-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+-   <span data-ttu-id="b0962-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="b0962-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="8573c-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="8573c-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+-   <span data-ttu-id="b0962-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="b0962-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pszManifestFilePath`  
- <span data-ttu-id="8573c-110">[in] Ścieżka do manifestu zestawu do instalacji.</span><span class="sxs-lookup"><span data-stu-id="8573c-110">[in] The path to the manifest for the assembly to install.</span></span>  
+ <span data-ttu-id="b0962-110">[in] Ścieżka do manifestu zestawu do instalacji.</span><span class="sxs-lookup"><span data-stu-id="b0962-110">[in] The path to the manifest for the assembly to install.</span></span>  
   
  `pRefData`  
- <span data-ttu-id="8573c-111">[in] A [fusion_install_reference —](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) struktury, która zawiera dane dotyczące instalacji.</span><span class="sxs-lookup"><span data-stu-id="8573c-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
+ <span data-ttu-id="b0962-111">[in] A [fusion_install_reference —](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) struktury, która zawiera dane dotyczące instalacji.</span><span class="sxs-lookup"><span data-stu-id="b0962-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8573c-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8573c-112">Requirements</span></span>  
- <span data-ttu-id="8573c-113">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8573c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0962-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b0962-112">Requirements</span></span>  
+ <span data-ttu-id="b0962-113">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0962-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8573c-114">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8573c-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b0962-114">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b0962-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="8573c-115">**Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8573c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b0962-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0962-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8573c-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8573c-116">See Also</span></span>  
- [<span data-ttu-id="8573c-117">IAssemblyCache, interfejs</span><span class="sxs-lookup"><span data-stu-id="8573c-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b0962-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="b0962-116">See Also</span></span>  
+ [<span data-ttu-id="b0962-117">IAssemblyCache, interfejs</span><span class="sxs-lookup"><span data-stu-id="b0962-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

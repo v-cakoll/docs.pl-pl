@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugManagedCallback::ExitAppDomain — Metoda"
-ms.custom: 
+title: ICorDebugManagedCallback::ExitAppDomain — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugManagedCallback.ExitAppDomain
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 352ea9b93059237526edad41ec56f200d399a60f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f909eddde182a73709be9ca5cafec6285db46b4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="42584-102">ICorDebugManagedCallback::ExitAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="42584-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
-<span data-ttu-id="42584-103">Powiadamia debuger zakończył domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="42584-103">Notifies the debugger that an application domain has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="c6556-102">ICorDebugManagedCallback::ExitAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="c6556-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
+<span data-ttu-id="c6556-103">Powiadamia debuger zakończył domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c6556-103">Notifies the debugger that an application domain has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42584-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="42584-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6556-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c6556-104">Syntax</span></span>  
   
 ```  
 HRESULT ExitAppDomain (  
@@ -47,21 +35,21 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="42584-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="42584-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c6556-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c6556-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="42584-106">[in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, który zawiera domeny danej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="42584-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
+ <span data-ttu-id="c6556-106">[in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, który zawiera domeny danej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c6556-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="42584-107">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji, który został zakończony.</span><span class="sxs-lookup"><span data-stu-id="42584-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
+ <span data-ttu-id="c6556-107">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji, który został zakończony.</span><span class="sxs-lookup"><span data-stu-id="c6556-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="42584-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="42584-108">Requirements</span></span>  
- <span data-ttu-id="42584-109">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42584-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6556-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c6556-108">Requirements</span></span>  
+ <span data-ttu-id="c6556-109">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6556-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="42584-110">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="42584-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c6556-110">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c6556-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="42584-111">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="42584-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c6556-111">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6556-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="42584-112">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42584-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c6556-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6556-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42584-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="42584-113">See Also</span></span>  
- [<span data-ttu-id="42584-114">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="42584-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c6556-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c6556-113">See Also</span></span>  
+ [<span data-ttu-id="c6556-114">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="c6556-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

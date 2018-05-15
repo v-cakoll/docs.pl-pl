@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugCode3::GetReturnValueLiveOffset — Metoda"
-ms.custom: 
+title: ICorDebugCode3::GetReturnValueLiveOffset — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 dev_langs:
 - cpp
 api_name:
@@ -25,22 +17,18 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5d10d298a031e7146eaf6cf7988538e6f7020136
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c75db784a404298b86ed42692573a509ea56cf9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugcode3getreturnvalueliveoffset-method"></a><span data-ttu-id="d4def-102">ICorDebugCode3::GetReturnValueLiveOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="d4def-102">ICorDebugCode3::GetReturnValueLiveOffset Method</span></span>
-<span data-ttu-id="d4def-103">Określony przesunięcia IL pobiera natywnego przesunięcia gdzie ma zostać umieszczony punkt przerwania, aby debuger można uzyskać wartości zwracanej przez funkcję.</span><span class="sxs-lookup"><span data-stu-id="d4def-103">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>  
+# <a name="icordebugcode3getreturnvalueliveoffset-method"></a><span data-ttu-id="bcc44-102">ICorDebugCode3::GetReturnValueLiveOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="bcc44-102">ICorDebugCode3::GetReturnValueLiveOffset Method</span></span>
+<span data-ttu-id="bcc44-103">Określony przesunięcia IL pobiera natywnego przesunięcia gdzie ma zostać umieszczony punkt przerwania, aby debuger można uzyskać wartości zwracanej przez funkcję.</span><span class="sxs-lookup"><span data-stu-id="bcc44-103">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4def-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d4def-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bcc44-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="bcc44-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetReturnValueLiveOffset(  
@@ -51,44 +39,44 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d4def-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d4def-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bcc44-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="bcc44-105">Parameters</span></span>  
  `ILoffset`  
- <span data-ttu-id="d4def-106">Przesunięciu IL.</span><span class="sxs-lookup"><span data-stu-id="d4def-106">The IL offset.</span></span> <span data-ttu-id="d4def-107">Musi to być witryna wywołania funkcji lub wywołanie funkcji zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="d4def-107">It must be a function call site or the function call will fail.</span></span>  
+ <span data-ttu-id="bcc44-106">Przesunięciu IL.</span><span class="sxs-lookup"><span data-stu-id="bcc44-106">The IL offset.</span></span> <span data-ttu-id="bcc44-107">Musi to być witryna wywołania funkcji lub wywołanie funkcji zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="bcc44-107">It must be a function call site or the function call will fail.</span></span>  
   
  `bufferSize`  
- <span data-ttu-id="d4def-108">Liczba bajtów dostępne do przechowywania `pOffsets`.</span><span class="sxs-lookup"><span data-stu-id="d4def-108">The number of bytes available to store `pOffsets`.</span></span>  
+ <span data-ttu-id="bcc44-108">Liczba bajtów dostępne do przechowywania `pOffsets`.</span><span class="sxs-lookup"><span data-stu-id="bcc44-108">The number of bytes available to store `pOffsets`.</span></span>  
   
  `pFetched`  
- <span data-ttu-id="d4def-109">Wskaźnik do liczba przesunięć faktycznie zwracane.</span><span class="sxs-lookup"><span data-stu-id="d4def-109">A pointer to the number of offsets actually returned.</span></span> <span data-ttu-id="d4def-110">Zwykle, jego wartość wynosi 1, ale pojedynczej instrukcji IL można mapować do wielu `CALL` instrukcje zestawu.</span><span class="sxs-lookup"><span data-stu-id="d4def-110">Usually, its value is 1, but a single IL instruction can map to multiple `CALL` assembly instructions.</span></span>  
+ <span data-ttu-id="bcc44-109">Wskaźnik do liczba przesunięć faktycznie zwracane.</span><span class="sxs-lookup"><span data-stu-id="bcc44-109">A pointer to the number of offsets actually returned.</span></span> <span data-ttu-id="bcc44-110">Zwykle, jego wartość wynosi 1, ale pojedynczej instrukcji IL można mapować do wielu `CALL` instrukcje zestawu.</span><span class="sxs-lookup"><span data-stu-id="bcc44-110">Usually, its value is 1, but a single IL instruction can map to multiple `CALL` assembly instructions.</span></span>  
   
  `pOffsets`  
- <span data-ttu-id="d4def-111">Tablica natywnego przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="d4def-111">An array of native offsets.</span></span> <span data-ttu-id="d4def-112">Zazwyczaj `pOffsets` zawiera pojedynczy przesunięcie, mimo że pojedyncza instrukcja IL można mapować do mapy wiele do wielu `CALL` instrukcje zestawu.</span><span class="sxs-lookup"><span data-stu-id="d4def-112">Typically, `pOffsets` contains a single offset, although a single IL instruction can map to multiple map to multiple `CALL` assembly instructions.</span></span>  
+ <span data-ttu-id="bcc44-111">Tablica natywnego przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="bcc44-111">An array of native offsets.</span></span> <span data-ttu-id="bcc44-112">Zazwyczaj `pOffsets` zawiera pojedynczy przesunięcie, mimo że pojedyncza instrukcja IL można mapować do mapy wiele do wielu `CALL` instrukcje zestawu.</span><span class="sxs-lookup"><span data-stu-id="bcc44-112">Typically, `pOffsets` contains a single offset, although a single IL instruction can map to multiple map to multiple `CALL` assembly instructions.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d4def-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d4def-113">Remarks</span></span>  
- <span data-ttu-id="d4def-114">Ta metoda jest używana wraz z [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) metodę, aby pobrać wartość zwracaną przez metodę, która zwraca typ referencyjny.</span><span class="sxs-lookup"><span data-stu-id="d4def-114">This method is used along with the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value of a method that returns a reference type.</span></span> <span data-ttu-id="d4def-115">Przekazywanie IL przesunięcie do witryny wywołania funkcji, aby ta metoda zwraca co najmniej jednego macierzystego przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="d4def-115">Passing an IL offset to a function call site to this method returns one or more native offsets.</span></span> <span data-ttu-id="d4def-116">Debuger można następnie ustawić punkty przerwania w macierzystym przesunięcia w funkcji.</span><span class="sxs-lookup"><span data-stu-id="d4def-116">The debugger can then set breakpoints on these native offsets in the function.</span></span> <span data-ttu-id="d4def-117">Gdy debuger trafi jednego z punktów przerwania, można następnie przekazać tej samej przesunięciu IL, który został przekazany do tej metody do [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) metody można pobrać wartości zwracanej.</span><span class="sxs-lookup"><span data-stu-id="d4def-117">When the debugger hits one of the breakpoints, you can then pass the same IL offset that you passed to this method to the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value.</span></span> <span data-ttu-id="d4def-118">Debuger należy następnie wyczyść wszystkie punkty przerwania, które go ustawić.</span><span class="sxs-lookup"><span data-stu-id="d4def-118">The debugger should then clear all the breakpoints that it set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bcc44-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bcc44-113">Remarks</span></span>  
+ <span data-ttu-id="bcc44-114">Ta metoda jest używana wraz z [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) metodę, aby pobrać wartość zwracaną przez metodę, która zwraca typ referencyjny.</span><span class="sxs-lookup"><span data-stu-id="bcc44-114">This method is used along with the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value of a method that returns a reference type.</span></span> <span data-ttu-id="bcc44-115">Przekazywanie IL przesunięcie do witryny wywołania funkcji, aby ta metoda zwraca co najmniej jednego macierzystego przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="bcc44-115">Passing an IL offset to a function call site to this method returns one or more native offsets.</span></span> <span data-ttu-id="bcc44-116">Debuger można następnie ustawić punkty przerwania w macierzystym przesunięcia w funkcji.</span><span class="sxs-lookup"><span data-stu-id="bcc44-116">The debugger can then set breakpoints on these native offsets in the function.</span></span> <span data-ttu-id="bcc44-117">Gdy debuger trafi jednego z punktów przerwania, można następnie przekazać tej samej przesunięciu IL, który został przekazany do tej metody do [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) metody można pobrać wartości zwracanej.</span><span class="sxs-lookup"><span data-stu-id="bcc44-117">When the debugger hits one of the breakpoints, you can then pass the same IL offset that you passed to this method to the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value.</span></span> <span data-ttu-id="bcc44-118">Debuger należy następnie wyczyść wszystkie punkty przerwania, które go ustawić.</span><span class="sxs-lookup"><span data-stu-id="bcc44-118">The debugger should then clear all the breakpoints that it set.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="d4def-119">`ICorDebugCode3::GetReturnValueLiveOffset` i [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) metody umożliwiają uzyskanie informacji zwracanej wartości dla typów referencyjnych tylko.</span><span class="sxs-lookup"><span data-stu-id="d4def-119">The `ICorDebugCode3::GetReturnValueLiveOffset` and [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) methods allow you to get return value information for reference types only.</span></span> <span data-ttu-id="d4def-120">Pobieranie informacji o wartości zwracanej z typów wartości (oznacza to, wszystkie typy, które pochodzą z <xref:System.ValueType>) nie jest obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="d4def-120">Retrieving return value information from value types (that is, all types that derive from <xref:System.ValueType>) is not supported.</span></span>  
+>  <span data-ttu-id="bcc44-119">`ICorDebugCode3::GetReturnValueLiveOffset` i [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) metody umożliwiają uzyskanie informacji zwracanej wartości dla typów referencyjnych tylko.</span><span class="sxs-lookup"><span data-stu-id="bcc44-119">The `ICorDebugCode3::GetReturnValueLiveOffset` and [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) methods allow you to get return value information for reference types only.</span></span> <span data-ttu-id="bcc44-120">Pobieranie informacji o wartości zwracanej z typów wartości (oznacza to, wszystkie typy, które pochodzą z <xref:System.ValueType>) nie jest obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="bcc44-120">Retrieving return value information from value types (that is, all types that derive from <xref:System.ValueType>) is not supported.</span></span>  
   
- <span data-ttu-id="d4def-121">Funkcja zwraca `HRESULT` wartości podanych w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="d4def-121">The function returns the `HRESULT` values shown in the following table.</span></span>  
+ <span data-ttu-id="bcc44-121">Funkcja zwraca `HRESULT` wartości podanych w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="bcc44-121">The function returns the `HRESULT` values shown in the following table.</span></span>  
   
-|<span data-ttu-id="d4def-122">`HRESULT`wartość</span><span class="sxs-lookup"><span data-stu-id="d4def-122">`HRESULT` value</span></span>|<span data-ttu-id="d4def-123">Opis</span><span class="sxs-lookup"><span data-stu-id="d4def-123">Description</span></span>|  
+|<span data-ttu-id="bcc44-122">`HRESULT` Wartość</span><span class="sxs-lookup"><span data-stu-id="bcc44-122">`HRESULT` value</span></span>|<span data-ttu-id="bcc44-123">Opis</span><span class="sxs-lookup"><span data-stu-id="bcc44-123">Description</span></span>|  
 |---------------------|-----------------|  
-|`S_OK`|<span data-ttu-id="d4def-124">Powodzenie.</span><span class="sxs-lookup"><span data-stu-id="d4def-124">Success.</span></span>|  
-|`CORDBG_E_INVALID_OPCODE`|<span data-ttu-id="d4def-125">Daną witrynę przesunięcia IL nie jest instrukcja wywołania lub funkcja zwraca `void`.</span><span class="sxs-lookup"><span data-stu-id="d4def-125">The given IL offset site is not a call instruction, or the function returns `void`.</span></span>|  
-|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="d4def-126">Danym przesunięciu IL jest odpowiednie połączenie, ale zwracany typ nie jest obsługiwany dla pobierania wartości zwracanej.</span><span class="sxs-lookup"><span data-stu-id="d4def-126">The given IL offset is a proper call, but the return type is unsupported for getting a return value.</span></span>|  
+|`S_OK`|<span data-ttu-id="bcc44-124">Powodzenie.</span><span class="sxs-lookup"><span data-stu-id="bcc44-124">Success.</span></span>|  
+|`CORDBG_E_INVALID_OPCODE`|<span data-ttu-id="bcc44-125">Daną witrynę przesunięcia IL nie jest instrukcja wywołania lub funkcja zwraca `void`.</span><span class="sxs-lookup"><span data-stu-id="bcc44-125">The given IL offset site is not a call instruction, or the function returns `void`.</span></span>|  
+|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="bcc44-126">Danym przesunięciu IL jest odpowiednie połączenie, ale zwracany typ nie jest obsługiwany dla pobierania wartości zwracanej.</span><span class="sxs-lookup"><span data-stu-id="bcc44-126">The given IL offset is a proper call, but the return type is unsupported for getting a return value.</span></span>|  
   
- <span data-ttu-id="d4def-127">`ICorDebugCode3::GetReturnValueLiveOffset` Metoda jest dostępna tylko na podstawie x86 i systemy AMD64.</span><span class="sxs-lookup"><span data-stu-id="d4def-127">The `ICorDebugCode3::GetReturnValueLiveOffset` method is available only on x86-based and AMD64 systems.</span></span>  
+ <span data-ttu-id="bcc44-127">`ICorDebugCode3::GetReturnValueLiveOffset` Metoda jest dostępna tylko na podstawie x86 i systemy AMD64.</span><span class="sxs-lookup"><span data-stu-id="bcc44-127">The `ICorDebugCode3::GetReturnValueLiveOffset` method is available only on x86-based and AMD64 systems.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4def-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d4def-128">Requirements</span></span>  
- <span data-ttu-id="d4def-129">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4def-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bcc44-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bcc44-128">Requirements</span></span>  
+ <span data-ttu-id="bcc44-129">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bcc44-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4def-130">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4def-130">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bcc44-130">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bcc44-130">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d4def-131">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4def-131">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bcc44-131">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bcc44-131">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d4def-132">**Wersje programu .NET framework:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4def-132">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
+ <span data-ttu-id="bcc44-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcc44-132">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4def-133">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d4def-133">See Also</span></span>  
- [<span data-ttu-id="d4def-134">GetReturnValueForILOffset, metoda</span><span class="sxs-lookup"><span data-stu-id="d4def-134">GetReturnValueForILOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)  
- [<span data-ttu-id="d4def-135">ICorDebugCode3, interfejs</span><span class="sxs-lookup"><span data-stu-id="d4def-135">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bcc44-133">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="bcc44-133">See Also</span></span>  
+ [<span data-ttu-id="bcc44-134">GetReturnValueForILOffset, metoda</span><span class="sxs-lookup"><span data-stu-id="bcc44-134">GetReturnValueForILOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)  
+ [<span data-ttu-id="bcc44-135">ICorDebugCode3, interfejs</span><span class="sxs-lookup"><span data-stu-id="bcc44-135">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

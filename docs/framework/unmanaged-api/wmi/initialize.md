@@ -1,11 +1,7 @@
 ---
-title: "Initialize — funkcja (niezarządzany wykaz interfejsów API)"
-description: "Funkcję inicjowania wykonuje inicjowania usługi WMI."
+title: Initialize — funkcja (niezarządzany wykaz interfejsów API)
+description: Funkcję inicjowania wykonuje inicjowania usługi WMI.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Initialize
 api_location:
@@ -20,41 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d62d959c5dfeac237abb20b86df87ae07a077dbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01de35a0cd4d359dfba0375a85fbce017e44b9f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="initialize-function"></a><span data-ttu-id="88df7-103">Initialize — funkcja</span><span class="sxs-lookup"><span data-stu-id="88df7-103">Initialize function</span></span>
-<span data-ttu-id="88df7-104">Wykonuje inicjowania usługi WMI.</span><span class="sxs-lookup"><span data-stu-id="88df7-104">Performs WMI initialization.</span></span>  
+# <a name="initialize-function"></a><span data-ttu-id="8bc58-103">Initialize — funkcja</span><span class="sxs-lookup"><span data-stu-id="8bc58-103">Initialize function</span></span>
+<span data-ttu-id="8bc58-104">Wykonuje inicjowania usługi WMI.</span><span class="sxs-lookup"><span data-stu-id="8bc58-104">Performs WMI initialization.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="88df7-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="88df7-105">Syntax</span></span> 
+## <a name="syntax"></a><span data-ttu-id="8bc58-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="8bc58-105">Syntax</span></span> 
 ```  
 HRESULT Initialize(
    [in] boolean bAllowIManagementObjectQI
 ); 
 ```  
-## <a name="parameters"></a><span data-ttu-id="88df7-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="88df7-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="8bc58-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="8bc58-106">Parameters</span></span>
 
 `bAllowIManagementObjectQI`   
-<span data-ttu-id="88df7-107">[in] `true` wskazująca, czy są dozwolone wywołania metody QueryInterface w obiektach WMI; `false` inaczej.</span><span class="sxs-lookup"><span data-stu-id="88df7-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
+<span data-ttu-id="8bc58-107">[in] `true` wskazująca, czy są dozwolone wywołania metody QueryInterface w obiektach WMI; `false` inaczej.</span><span class="sxs-lookup"><span data-stu-id="8bc58-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="88df7-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="88df7-108">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="8bc58-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="8bc58-108">Return value</span></span>
 
-<span data-ttu-id="88df7-109">Funkcja zawsze zwraca wartość `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="88df7-109">The function always returns `S_OK` (0).</span></span>
+<span data-ttu-id="8bc58-109">Funkcja zawsze zwraca wartość `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="8bc58-109">The function always returns `S_OK` (0).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="88df7-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="88df7-110">Requirements</span></span>  
- <span data-ttu-id="88df7-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="88df7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8bc58-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8bc58-110">Requirements</span></span>  
+ <span data-ttu-id="8bc58-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8bc58-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="88df7-112">**Nagłówek:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="88df7-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="8bc58-112">**Nagłówek:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="8bc58-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="88df7-113">**Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="88df7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="8bc58-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8bc58-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88df7-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="88df7-114">See also</span></span>  
-[<span data-ttu-id="88df7-115">Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI</span><span class="sxs-lookup"><span data-stu-id="88df7-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="8bc58-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8bc58-114">See also</span></span>  
+[<span data-ttu-id="8bc58-115">Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI</span><span class="sxs-lookup"><span data-stu-id="8bc58-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

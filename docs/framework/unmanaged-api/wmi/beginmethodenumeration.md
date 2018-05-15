@@ -1,11 +1,7 @@
 ---
-title: "Funkcja BeginMethodEnumeration (niezarządzany wykaz interfejsów API)"
+title: Funkcja BeginMethodEnumeration (niezarządzany wykaz interfejsów API)
 description: Funkcja BeginMethodEnumeration rozpoczyna wyliczenie metody obiektu
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginMethodEnumeration
 api_location:
@@ -20,21 +16,18 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d843c40a8ab0dd1c48a08126b8c7472505a1732
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="beginenumeration-function"></a><span data-ttu-id="07c1c-103">Funkcja Beingenumeration</span><span class="sxs-lookup"><span data-stu-id="07c1c-103">BeginEnumeration function</span></span>
-<span data-ttu-id="07c1c-104">Rozpoczyna się wyliczenia metod dla obiekt.</span><span class="sxs-lookup"><span data-stu-id="07c1c-104">Begins an enumeration of the methods available for the object.</span></span>  
+# <a name="beginenumeration-function"></a><span data-ttu-id="559ef-103">Funkcja Beingenumeration</span><span class="sxs-lookup"><span data-stu-id="559ef-103">BeginEnumeration function</span></span>
+<span data-ttu-id="559ef-104">Rozpoczyna się wyliczenia metod dla obiekt.</span><span class="sxs-lookup"><span data-stu-id="559ef-104">Begins an enumeration of the methods available for the object.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="07c1c-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="07c1c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="559ef-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="559ef-105">Syntax</span></span>  
   
 ``` 
 HRESULT BeginMethodEnumeration (
@@ -44,43 +37,43 @@ HRESULT BeginMethodEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="07c1c-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="07c1c-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="559ef-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="559ef-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="07c1c-107">[in] Ten parametr nie jest używana.</span><span class="sxs-lookup"><span data-stu-id="07c1c-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="559ef-107">[in] Ten parametr nie jest używana.</span><span class="sxs-lookup"><span data-stu-id="559ef-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="07c1c-108">[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="07c1c-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="559ef-108">[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="559ef-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
 
 `lEnumFlags`  
-<span data-ttu-id="07c1c-109">[in] Wartość zero (0) dla wszystkich metod lub flaga, która określa zakres wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="07c1c-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="07c1c-110">Następujące flagi są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="07c1c-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="559ef-109">[in] Wartość zero (0) dla wszystkich metod lub flaga, która określa zakres wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="559ef-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="559ef-110">Następujące flagi są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="559ef-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-<span data-ttu-id="07c1c-111">Stała</span><span class="sxs-lookup"><span data-stu-id="07c1c-111">Constant</span></span>  |<span data-ttu-id="07c1c-112">Wartość</span><span class="sxs-lookup"><span data-stu-id="07c1c-112">Value</span></span>  |<span data-ttu-id="07c1c-113">Opis</span><span class="sxs-lookup"><span data-stu-id="07c1c-113">Description</span></span>  |
+<span data-ttu-id="559ef-111">Stała</span><span class="sxs-lookup"><span data-stu-id="559ef-111">Constant</span></span>  |<span data-ttu-id="559ef-112">Wartość</span><span class="sxs-lookup"><span data-stu-id="559ef-112">Value</span></span>  |<span data-ttu-id="559ef-113">Opis</span><span class="sxs-lookup"><span data-stu-id="559ef-113">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="07c1c-114">0x10</span><span class="sxs-lookup"><span data-stu-id="07c1c-114">0x10</span></span> | <span data-ttu-id="07c1c-115">Ogranicz wyliczenia metod, które są zdefiniowane w samej klasy.</span><span class="sxs-lookup"><span data-stu-id="07c1c-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="07c1c-116">0x20</span><span class="sxs-lookup"><span data-stu-id="07c1c-116">0x20</span></span> | <span data-ttu-id="07c1c-117">Ogranicz wyliczenia właściwości, które są dziedziczone z klas podstawowych.</span><span class="sxs-lookup"><span data-stu-id="07c1c-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="559ef-114">0x10</span><span class="sxs-lookup"><span data-stu-id="559ef-114">0x10</span></span> | <span data-ttu-id="559ef-115">Ogranicz wyliczenia metod, które są zdefiniowane w samej klasy.</span><span class="sxs-lookup"><span data-stu-id="559ef-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="559ef-116">0x20</span><span class="sxs-lookup"><span data-stu-id="559ef-116">0x20</span></span> | <span data-ttu-id="559ef-117">Ogranicz wyliczenia właściwości, które są dziedziczone z klas podstawowych.</span><span class="sxs-lookup"><span data-stu-id="559ef-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="07c1c-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="07c1c-118">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="559ef-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="559ef-118">Return value</span></span>
 
-<span data-ttu-id="07c1c-119">Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="07c1c-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="559ef-119">Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="559ef-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="07c1c-120">Stała</span><span class="sxs-lookup"><span data-stu-id="07c1c-120">Constant</span></span>  |<span data-ttu-id="07c1c-121">Wartość</span><span class="sxs-lookup"><span data-stu-id="07c1c-121">Value</span></span>  |<span data-ttu-id="07c1c-122">Opis</span><span class="sxs-lookup"><span data-stu-id="07c1c-122">Description</span></span>  |
+|<span data-ttu-id="559ef-120">Stała</span><span class="sxs-lookup"><span data-stu-id="559ef-120">Constant</span></span>  |<span data-ttu-id="559ef-121">Wartość</span><span class="sxs-lookup"><span data-stu-id="559ef-121">Value</span></span>  |<span data-ttu-id="559ef-122">Opis</span><span class="sxs-lookup"><span data-stu-id="559ef-122">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="07c1c-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="07c1c-123">0x80041008</span></span> | <span data-ttu-id="07c1c-124">`lEnnumFlags`jest różna od zera i nie jest jednym z określonych flag.</span><span class="sxs-lookup"><span data-stu-id="07c1c-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="07c1c-125">0</span><span class="sxs-lookup"><span data-stu-id="07c1c-125">0</span></span> | <span data-ttu-id="07c1c-126">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="07c1c-126">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="559ef-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="559ef-123">0x80041008</span></span> | <span data-ttu-id="559ef-124">`lEnnumFlags` jest różna od zera i nie jest jednym z określonych flag.</span><span class="sxs-lookup"><span data-stu-id="559ef-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="559ef-125">0</span><span class="sxs-lookup"><span data-stu-id="559ef-125">0</span></span> | <span data-ttu-id="559ef-126">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="559ef-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="07c1c-127">Uwagi</span><span class="sxs-lookup"><span data-stu-id="07c1c-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="559ef-127">Uwagi</span><span class="sxs-lookup"><span data-stu-id="559ef-127">Remarks</span></span>
 
-<span data-ttu-id="07c1c-128">Ta funkcja jest zawijana wywołanie [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) metody.</span><span class="sxs-lookup"><span data-stu-id="07c1c-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="559ef-128">Ta funkcja jest zawijana wywołanie [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) metody.</span><span class="sxs-lookup"><span data-stu-id="559ef-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="07c1c-129">Wywołanie tej metody jest obsługiwana tylko, jeśli bieżący obiekt jest definicją klasy.</span><span class="sxs-lookup"><span data-stu-id="07c1c-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="07c1c-130">Metoda manipulowania nie jest dostępna z [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wskaźników, które wskazują wystąpień.</span><span class="sxs-lookup"><span data-stu-id="07c1c-130">Method manipulation is not available from [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) pointers that point to instances.</span></span> <span data-ttu-id="07c1c-131">Kolejność, w którym są wyliczane metody gwarantuje to niezmiennej dla danego wystąpienia [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).</span><span class="sxs-lookup"><span data-stu-id="07c1c-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).</span></span>
+<span data-ttu-id="559ef-129">Wywołanie tej metody jest obsługiwana tylko, jeśli bieżący obiekt jest definicją klasy.</span><span class="sxs-lookup"><span data-stu-id="559ef-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="559ef-130">Metoda manipulowania nie jest dostępna z [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wskaźników, które wskazują wystąpień.</span><span class="sxs-lookup"><span data-stu-id="559ef-130">Method manipulation is not available from [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) pointers that point to instances.</span></span> <span data-ttu-id="559ef-131">Kolejność, w którym są wyliczane metody gwarantuje to niezmiennej dla danego wystąpienia [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).</span><span class="sxs-lookup"><span data-stu-id="559ef-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="07c1c-132">Wymagania</span><span class="sxs-lookup"><span data-stu-id="07c1c-132">Requirements</span></span>  
- <span data-ttu-id="07c1c-133">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07c1c-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="559ef-132">Wymagania</span><span class="sxs-lookup"><span data-stu-id="559ef-132">Requirements</span></span>  
+ <span data-ttu-id="559ef-133">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="559ef-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="07c1c-134">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="07c1c-134">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="559ef-134">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="559ef-134">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="07c1c-135">**Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="07c1c-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="559ef-135">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="559ef-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07c1c-136">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="07c1c-136">See also</span></span>  
-[<span data-ttu-id="07c1c-137">Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI</span><span class="sxs-lookup"><span data-stu-id="07c1c-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="559ef-136">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="559ef-136">See also</span></span>  
+[<span data-ttu-id="559ef-137">Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI</span><span class="sxs-lookup"><span data-stu-id="559ef-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

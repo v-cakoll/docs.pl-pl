@@ -1,11 +1,7 @@
 ---
-title: "Funkcja WritePropertyValue (niezarządzany wykaz interfejsów API)"
-description: "Funkcja WritePropertyValue zapisuje bajty w właściwości."
+title: Funkcja WritePropertyValue (niezarządzany wykaz interfejsów API)
+description: Funkcja WritePropertyValue zapisuje bajty w właściwości.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - WritePropertyValue
 api_location:
@@ -20,21 +16,18 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7221c9e0f1cb49ab0e27130ce69c0527ba903148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="writepropertyvalue-function"></a><span data-ttu-id="a2f96-103">Funkcja WritePropertyValue</span><span class="sxs-lookup"><span data-stu-id="a2f96-103">WritePropertyValue function</span></span>
-<span data-ttu-id="a2f96-104">Zapisuje określoną liczbę bajtów do właściwości identyfikowany przez dojście właściwości.</span><span class="sxs-lookup"><span data-stu-id="a2f96-104">Writes a specified number of bytes to a property identified by a property handle.</span></span>
+# <a name="writepropertyvalue-function"></a><span data-ttu-id="0f7c4-103">Funkcja WritePropertyValue</span><span class="sxs-lookup"><span data-stu-id="0f7c4-103">WritePropertyValue function</span></span>
+<span data-ttu-id="0f7c4-104">Zapisuje określoną liczbę bajtów do właściwości identyfikowany przez dojście właściwości.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-104">Writes a specified number of bytes to a property identified by a property handle.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="a2f96-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="a2f96-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f7c4-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="0f7c4-105">Syntax</span></span>  
   
 ```  
 HRESULT WritePropertyValue (
@@ -46,47 +39,47 @@ HRESULT WritePropertyValue (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="a2f96-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="a2f96-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0f7c4-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="0f7c4-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="a2f96-107">[in] Ten parametr nie jest używana.</span><span class="sxs-lookup"><span data-stu-id="a2f96-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="0f7c4-107">[in] Ten parametr nie jest używana.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="a2f96-108">[in] Wskaźnik do [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="a2f96-108">[in] A pointer to an [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) instance.</span></span>
+<span data-ttu-id="0f7c4-108">[in] Wskaźnik do [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-108">[in] A pointer to an [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) instance.</span></span>
 
 `lHandle`  
-<span data-ttu-id="a2f96-109">[in] Liczba całkowita, która zawiera dojście, która identyfikuje tę właściwość.</span><span class="sxs-lookup"><span data-stu-id="a2f96-109">[in] An integer that contains the handle that identifies this property.</span></span> <span data-ttu-id="a2f96-110">Dojście można pobranej poprzez wywołanie [GetPropertyHandle](getpropertyhandle.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="a2f96-110">The handle can be retrieved by calling the [GetPropertyHandle](getpropertyhandle.md) function.</span></span>   
+<span data-ttu-id="0f7c4-109">[in] Liczba całkowita, która zawiera dojście, która identyfikuje tę właściwość.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-109">[in] An integer that contains the handle that identifies this property.</span></span> <span data-ttu-id="0f7c4-110">Dojście można pobranej poprzez wywołanie [GetPropertyHandle](getpropertyhandle.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-110">The handle can be retrieved by calling the [GetPropertyHandle](getpropertyhandle.md) function.</span></span>   
 
 `lNumBytes`  
-<span data-ttu-id="a2f96-111">[in] Liczba bajtów zapisywanych właściwości.</span><span class="sxs-lookup"><span data-stu-id="a2f96-111">[in] The number of bytes being written to the property.</span></span> <span data-ttu-id="a2f96-112">Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.</span><span class="sxs-lookup"><span data-stu-id="a2f96-112">See the [Remarks](#remarks) section for more information.</span></span>
+<span data-ttu-id="0f7c4-111">[in] Liczba bajtów zapisywanych właściwości.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-111">[in] The number of bytes being written to the property.</span></span> <span data-ttu-id="0f7c4-112">Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-112">See the [Remarks](#remarks) section for more information.</span></span>
 
 `pHandle`   
-<span data-ttu-id="a2f96-113">[out] Wskaźnik do tablicy typu byte, który zawiera dane.</span><span class="sxs-lookup"><span data-stu-id="a2f96-113">[out] A pointer to the byte array that contains the data.</span></span>
+<span data-ttu-id="0f7c4-113">[out] Wskaźnik do tablicy typu byte, który zawiera dane.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-113">[out] A pointer to the byte array that contains the data.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="a2f96-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a2f96-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="0f7c4-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0f7c4-114">Return value</span></span>
 
-<span data-ttu-id="a2f96-115">Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="a2f96-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="0f7c4-115">Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="0f7c4-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="a2f96-116">Stała</span><span class="sxs-lookup"><span data-stu-id="a2f96-116">Constant</span></span>  |<span data-ttu-id="a2f96-117">Wartość</span><span class="sxs-lookup"><span data-stu-id="a2f96-117">Value</span></span>  |<span data-ttu-id="a2f96-118">Opis</span><span class="sxs-lookup"><span data-stu-id="a2f96-118">Description</span></span>  |
+|<span data-ttu-id="0f7c4-116">Stała</span><span class="sxs-lookup"><span data-stu-id="0f7c4-116">Constant</span></span>  |<span data-ttu-id="0f7c4-117">Wartość</span><span class="sxs-lookup"><span data-stu-id="0f7c4-117">Value</span></span>  |<span data-ttu-id="0f7c4-118">Opis</span><span class="sxs-lookup"><span data-stu-id="0f7c4-118">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="a2f96-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="a2f96-119">0x80041008</span></span> | <span data-ttu-id="a2f96-120">Parametr jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="a2f96-120">A parameter is not valid.</span></span> |
-|`WBEM_E_TYPE_MISMATCH` | <span data-ttu-id="a2f96-121">0x80041005</span><span class="sxs-lookup"><span data-stu-id="a2f96-121">0x80041005</span></span> | <span data-ttu-id="a2f96-122">Wystąpiła niezgodność typów.</span><span class="sxs-lookup"><span data-stu-id="a2f96-122">A type mismatch occurred.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="a2f96-123">0</span><span class="sxs-lookup"><span data-stu-id="a2f96-123">0</span></span> | <span data-ttu-id="a2f96-124">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="a2f96-124">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="0f7c4-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="0f7c4-119">0x80041008</span></span> | <span data-ttu-id="0f7c4-120">Parametr jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-120">A parameter is not valid.</span></span> |
+|`WBEM_E_TYPE_MISMATCH` | <span data-ttu-id="0f7c4-121">0x80041005</span><span class="sxs-lookup"><span data-stu-id="0f7c4-121">0x80041005</span></span> | <span data-ttu-id="0f7c4-122">Wystąpiła niezgodność typów.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-122">A type mismatch occurred.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="0f7c4-123">0</span><span class="sxs-lookup"><span data-stu-id="0f7c4-123">0</span></span> | <span data-ttu-id="0f7c4-124">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-124">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="a2f96-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a2f96-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0f7c4-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0f7c4-125">Remarks</span></span>
 
-<span data-ttu-id="a2f96-126">Ta funkcja jest zawijana wywołanie [IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx) metody.</span><span class="sxs-lookup"><span data-stu-id="a2f96-126">This function wraps a call to the [IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="0f7c4-126">Ta funkcja jest zawijana wywołanie [IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx) metody.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-126">This function wraps a call to the [IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="a2f96-127">Użyj tej funkcji, aby ustawić parametry i wszystkich innych firm innych niż firma`DWORD` lub z systemem innym niż-`QWORD` danych.</span><span class="sxs-lookup"><span data-stu-id="a2f96-127">Use this function to set string and all other non-`DWORD` or non-`QWORD` data.</span></span>
+<span data-ttu-id="0f7c4-127">Użyj tej funkcji, aby ustawić parametry i wszystkich innych firm innych niż firma`DWORD` lub z systemem innym niż-`QWORD` danych.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-127">Use this function to set string and all other non-`DWORD` or non-`QWORD` data.</span></span>
 
-<span data-ttu-id="a2f96-128">Dla typu wartości właściwości `lNumBytes` musi być prawidłowe dane rozmiar określony typ właściwości.</span><span class="sxs-lookup"><span data-stu-id="a2f96-128">For nonstring property values, `lNumBytes` must be the correct data size of the property type specified.</span></span> <span data-ttu-id="a2f96-129">Wartości właściwości ciągu `lNumBytes` musi mieć długość określonego ciągu w bajtach i ciągu musi być parzysta długości w bajtach i znajdować się znakiem null zakończenia.</span><span class="sxs-lookup"><span data-stu-id="a2f96-129">For string property values, `lNumBytes` must be the length of the specified string in bytes, and the string itself must be of an even length in bytes and be followed with a null-termination character.</span></span>
+<span data-ttu-id="0f7c4-128">Dla typu wartości właściwości `lNumBytes` musi być prawidłowe dane rozmiar określony typ właściwości.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-128">For nonstring property values, `lNumBytes` must be the correct data size of the property type specified.</span></span> <span data-ttu-id="0f7c4-129">Wartości właściwości ciągu `lNumBytes` musi mieć długość określonego ciągu w bajtach i ciągu musi być parzysta długości w bajtach i znajdować się znakiem null zakończenia.</span><span class="sxs-lookup"><span data-stu-id="0f7c4-129">For string property values, `lNumBytes` must be the length of the specified string in bytes, and the string itself must be of an even length in bytes and be followed with a null-termination character.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a2f96-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a2f96-130">Requirements</span></span>  
-<span data-ttu-id="a2f96-131">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2f96-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f7c4-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0f7c4-130">Requirements</span></span>  
+<span data-ttu-id="0f7c4-131">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f7c4-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2f96-132">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="a2f96-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="0f7c4-132">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="0f7c4-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="a2f96-133">**Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a2f96-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="0f7c4-133">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0f7c4-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2f96-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a2f96-134">See also</span></span>  
-[<span data-ttu-id="a2f96-135">Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI</span><span class="sxs-lookup"><span data-stu-id="a2f96-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="0f7c4-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0f7c4-134">See also</span></span>  
+[<span data-ttu-id="0f7c4-135">Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI</span><span class="sxs-lookup"><span data-stu-id="0f7c4-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

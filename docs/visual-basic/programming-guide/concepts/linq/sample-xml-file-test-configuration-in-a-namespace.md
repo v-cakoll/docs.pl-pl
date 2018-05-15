@@ -1,27 +1,17 @@
 ---
-title: "Przykładowy plik XML: Przetestować konfigurację w Namespace3"
-ms.custom: 
+title: 'Przykładowy plik XML: Przetestować konfigurację w Namespace3'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 58e0adcad36b42b0dc994a0c878ebd4e069186ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="c29ed-102">Przykładowy plik XML: Przetestować konfigurację w Namespace</span><span class="sxs-lookup"><span data-stu-id="c29ed-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="c29ed-103">Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="c29ed-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c29ed-104">Jest to plik konfiguracji testu.</span><span class="sxs-lookup"><span data-stu-id="c29ed-104">This is a test configuration file.</span></span> <span data-ttu-id="c29ed-105">Plik XML jest w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="c29ed-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="0603f-102">Przykładowy plik XML: Przetestować konfigurację w Namespace</span><span class="sxs-lookup"><span data-stu-id="0603f-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="0603f-103">Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="0603f-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="0603f-104">Jest to plik konfiguracji testu.</span><span class="sxs-lookup"><span data-stu-id="0603f-104">This is a test configuration file.</span></span> <span data-ttu-id="0603f-105">Plik XML jest w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="0603f-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="c29ed-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="c29ed-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="0603f-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="0603f-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -65,5 +55,5 @@ ms.lasthandoff: 10/18/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c29ed-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c29ed-107">See Also</span></span>  
- [<span data-ttu-id="c29ed-108">Dokumenty XML próbki (LINQ do XML)</span><span class="sxs-lookup"><span data-stu-id="c29ed-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="0603f-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0603f-107">See Also</span></span>  
+ [<span data-ttu-id="0603f-108">Przykładowe dokumenty XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0603f-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

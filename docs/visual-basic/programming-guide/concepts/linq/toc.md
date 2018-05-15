@@ -87,7 +87,6 @@
 ## [Instrukcje: kontrolowanie prefiksów przestrzeni nazw (LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [Zakres domyślnych przestrzeni nazw](scope-of-default-namespaces.md)
 ## [Praca z globalnymi przestrzeniami nazw (LINQ to XML)](working-with-global-namespaces-linq-to-xml.md)
-## [Przestrzenie nazw (LINQ to XML)](namespaces-linq-to-xml.md)
 ## [Instrukcje: pisanie zapytań dotyczących kodu XML w przestrzeniach nazw](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [Serializowanie drzew XML](serializing-xml-trees.md)

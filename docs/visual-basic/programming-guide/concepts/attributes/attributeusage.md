@@ -1,25 +1,15 @@
 ---
 title: AttributeUsage (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f358068d00c042a979216cdda51dcc7e07abbc5
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ae162c310511db160806501af895276a4a4bba5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="attributeusage-visual-basic"></a><span data-ttu-id="699b4-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="699b4-102">AttributeUsage (Visual Basic)</span></span>
-<span data-ttu-id="699b4-103">Określa sposób użycia klasy atrybutu niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="699b4-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="699b4-104">`AttributeUsage`jest atrybut, który może odnosić się do definicji atrybutu niestandardowego do kontrolowania, jak można zastosować nowego atrybutu.</span><span class="sxs-lookup"><span data-stu-id="699b4-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="699b4-105">Po zastosowaniu jawnie, domyślne ustawienia następującą postać:</span><span class="sxs-lookup"><span data-stu-id="699b4-105">The default settings look like this when applied explicitly:</span></span>  
+# <a name="attributeusage-visual-basic"></a><span data-ttu-id="536c3-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="536c3-102">AttributeUsage (Visual Basic)</span></span>
+<span data-ttu-id="536c3-103">Określa sposób użycia klasy atrybutu niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="536c3-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="536c3-104">`AttributeUsage` jest atrybut, który może odnosić się do definicji atrybutu niestandardowego do kontrolowania, jak można zastosować nowego atrybutu.</span><span class="sxs-lookup"><span data-stu-id="536c3-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="536c3-105">Po zastosowaniu jawnie, domyślne ustawienia następującą postać:</span><span class="sxs-lookup"><span data-stu-id="536c3-105">The default settings look like this when applied explicitly:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -30,9 +20,9 @@ Class NewAttribute
 End Class  
 ```  
   
- <span data-ttu-id="699b4-106">W tym przykładzie `NewAttribute` klasa może być stosowane do dowolnej jednostki kodu atrybutu można, ale mogą być stosowane tylko raz do każdej jednostki.</span><span class="sxs-lookup"><span data-stu-id="699b4-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="699b4-107">Zostało ono odziedziczone przez klas pochodnych po zastosowaniu do klasy podstawowej.</span><span class="sxs-lookup"><span data-stu-id="699b4-107">It is inherited by derived classes when applied to a base class.</span></span>  
+ <span data-ttu-id="536c3-106">W tym przykładzie `NewAttribute` klasa może być stosowane do dowolnej jednostki kodu atrybutu można, ale mogą być stosowane tylko raz do każdej jednostki.</span><span class="sxs-lookup"><span data-stu-id="536c3-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="536c3-107">Zostało ono odziedziczone przez klas pochodnych po zastosowaniu do klasy podstawowej.</span><span class="sxs-lookup"><span data-stu-id="536c3-107">It is inherited by derived classes when applied to a base class.</span></span>  
   
- <span data-ttu-id="699b4-108">`AllowMultiple` i `Inherited` argumenty są opcjonalne, dlatego ten kod działa tak samo:</span><span class="sxs-lookup"><span data-stu-id="699b4-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
+ <span data-ttu-id="536c3-108">`AllowMultiple` i `Inherited` argumenty są opcjonalne, dlatego ten kod działa tak samo:</span><span class="sxs-lookup"><span data-stu-id="536c3-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -41,7 +31,7 @@ Class NewAttribute
 End Class  
 ```  
   
- <span data-ttu-id="699b4-109">Pierwszy `AttributeUsage` argument musi być jeden lub więcej elementów <xref:System.AttributeTargets> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="699b4-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="699b4-110">Wiele typów docelowy może odnosić się wraz z operatora OR w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="699b4-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
+ <span data-ttu-id="536c3-109">Pierwszy `AttributeUsage` argument musi być jeden lub więcej elementów <xref:System.AttributeTargets> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="536c3-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="536c3-110">Wiele typów docelowy może odnosić się wraz z operatora OR w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="536c3-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -54,7 +44,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- <span data-ttu-id="699b4-111">Jeśli `AllowMultiple` argument ma wartość `true`, następnie wynikowy atrybut można stosować więcej niż raz do jednej jednostki, takich jak to:</span><span class="sxs-lookup"><span data-stu-id="699b4-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
+ <span data-ttu-id="536c3-111">Jeśli `AllowMultiple` argument ma wartość `true`, następnie wynikowy atrybut można stosować więcej niż raz do jednej jednostki, takich jak to:</span><span class="sxs-lookup"><span data-stu-id="536c3-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -71,9 +61,9 @@ Class Class1
 End Class  
 ```  
   
- <span data-ttu-id="699b4-112">W takim przypadku `MultiUseAttr` może odnosić się wielokrotnie ponieważ `AllowMultiple` ma ustawioną wartość `true`.</span><span class="sxs-lookup"><span data-stu-id="699b4-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="699b4-113">Obu formatów pokazano stosowania wiele atrybutów są prawidłowe.</span><span class="sxs-lookup"><span data-stu-id="699b4-113">Both formats shown for applying multiple attributes are valid.</span></span>  
+ <span data-ttu-id="536c3-112">W takim przypadku `MultiUseAttr` może odnosić się wielokrotnie ponieważ `AllowMultiple` ma ustawioną wartość `true`.</span><span class="sxs-lookup"><span data-stu-id="536c3-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="536c3-113">Obu formatów pokazano stosowania wiele atrybutów są prawidłowe.</span><span class="sxs-lookup"><span data-stu-id="536c3-113">Both formats shown for applying multiple attributes are valid.</span></span>  
   
- <span data-ttu-id="699b4-114">Jeśli `Inherited` ma ustawioną wartość `false`, a następnie ten atrybut nie jest dziedziczone przez klasy, które są pochodnymi klasy, która ma atrybut.</span><span class="sxs-lookup"><span data-stu-id="699b4-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="699b4-115">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="699b4-115">For example:</span></span>  
+ <span data-ttu-id="536c3-114">Jeśli `Inherited` ma ustawioną wartość `false`, a następnie ten atrybut nie jest dziedziczone przez klasy, które są pochodnymi klasy, która ma atrybut.</span><span class="sxs-lookup"><span data-stu-id="536c3-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="536c3-115">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="536c3-115">For example:</span></span>  
   
 ```vb  
 Imports System  
@@ -95,15 +85,15 @@ Class DClass
 End Class  
 ```  
   
- <span data-ttu-id="699b4-116">W takim przypadku `Attr1` nie ma zastosowania do `DClass` za pośrednictwem dziedziczenia.</span><span class="sxs-lookup"><span data-stu-id="699b4-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
+ <span data-ttu-id="536c3-116">W takim przypadku `Attr1` nie ma zastosowania do `DClass` za pośrednictwem dziedziczenia.</span><span class="sxs-lookup"><span data-stu-id="536c3-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="699b4-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="699b4-117">Remarks</span></span>  
- <span data-ttu-id="699b4-118">`AttributeUsage` Jest atrybutem jednorazowy — nie można zastosować w więcej niż raz do tej samej klasy.</span><span class="sxs-lookup"><span data-stu-id="699b4-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="699b4-119">`AttributeUsage`alias jest <xref:System.AttributeUsageAttribute>.</span><span class="sxs-lookup"><span data-stu-id="699b4-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="536c3-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="536c3-117">Remarks</span></span>  
+ <span data-ttu-id="536c3-118">`AttributeUsage` Jest atrybutem jednorazowy — nie można zastosować w więcej niż raz do tej samej klasy.</span><span class="sxs-lookup"><span data-stu-id="536c3-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="536c3-119">`AttributeUsage` alias jest <xref:System.AttributeUsageAttribute>.</span><span class="sxs-lookup"><span data-stu-id="536c3-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
   
- <span data-ttu-id="699b4-120">Aby uzyskać więcej informacji, zobacz [podczas uzyskiwania dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span><span class="sxs-lookup"><span data-stu-id="699b4-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
+ <span data-ttu-id="536c3-120">Aby uzyskać więcej informacji, zobacz [podczas uzyskiwania dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span><span class="sxs-lookup"><span data-stu-id="536c3-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="699b4-121">Przykład</span><span class="sxs-lookup"><span data-stu-id="699b4-121">Example</span></span>  
- <span data-ttu-id="699b4-122">Poniższy przykład ilustruje efekt `Inherited` i `AllowMultiple` argumenty `AttributeUsage` atrybut i jak mogą być wyliczane atrybuty niestandardowe zastosowane do klasy.</span><span class="sxs-lookup"><span data-stu-id="699b4-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
+## <a name="example"></a><span data-ttu-id="536c3-121">Przykład</span><span class="sxs-lookup"><span data-stu-id="536c3-121">Example</span></span>  
+ <span data-ttu-id="536c3-122">Poniższy przykład ilustruje efekt `Inherited` i `AllowMultiple` argumenty `AttributeUsage` atrybut i jak mogą być wyliczane atrybuty niestandardowe zastosowane do klasy.</span><span class="sxs-lookup"><span data-stu-id="536c3-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
   
 ```vb  
 Imports System  
@@ -158,7 +148,7 @@ Public Class TestAttributeUsage
 End Class  
 ```  
   
-## <a name="sample-output"></a><span data-ttu-id="699b4-123">Przykładowe dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="699b4-123">Sample Output</span></span>  
+## <a name="sample-output"></a><span data-ttu-id="536c3-123">Przykładowe dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="536c3-123">Sample Output</span></span>  
   
 ```  
 Attributes on Base Class:  
@@ -170,12 +160,12 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="699b4-124">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="699b4-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="536c3-124">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="536c3-124">See Also</span></span>  
  <xref:System.Attribute>  
  <xref:System.Reflection>  
- [<span data-ttu-id="699b4-125">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="699b4-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
- [<span data-ttu-id="699b4-126">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="699b4-126">Attributes</span></span>](../../../../standard/attributes/index.md)  
- [<span data-ttu-id="699b4-127">Odbicie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="699b4-127">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [<span data-ttu-id="699b4-128">Atrybuty (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="699b4-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
- [<span data-ttu-id="699b4-129">Tworzenie atrybutów niestandardowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="699b4-129">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [<span data-ttu-id="699b4-130">Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="699b4-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [<span data-ttu-id="536c3-125">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="536c3-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="536c3-126">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="536c3-126">Attributes</span></span>](../../../../standard/attributes/index.md)  
+ [<span data-ttu-id="536c3-127">Odbicie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="536c3-127">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="536c3-128">Atrybuty (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="536c3-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
+ [<span data-ttu-id="536c3-129">Tworzenie atrybutów niestandardowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="536c3-129">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [<span data-ttu-id="536c3-130">Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="536c3-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

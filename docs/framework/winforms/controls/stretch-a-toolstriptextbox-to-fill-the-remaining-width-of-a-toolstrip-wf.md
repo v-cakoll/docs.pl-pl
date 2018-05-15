@@ -1,13 +1,6 @@
 ---
-title: "Porady: rozciąganie ToolStripTextBox w celu uzupełnienia szerokości ToolStrip (Formularze systemu Windows)"
-ms.custom: 
+title: 'Porady: rozciąganie ToolStripTextBox w celu uzupełnienia szerokości ToolStrip (Formularze systemu Windows)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,35 +8,30 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ddf17a9e96389abd23c860380613ac492b9ab134
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd58cbd109b8e3dd04c6a284dc6926e95830fb61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a><span data-ttu-id="c566d-102">Porady: rozciąganie ToolStripTextBox w celu uzupełnienia szerokości ToolStrip (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="c566d-102">How to: Stretch a ToolStripTextBox to Fill the Remaining Width of a ToolStrip (Windows Forms)</span></span>
-<span data-ttu-id="c566d-103">Podczas ustawiania <xref:System.Windows.Forms.ToolStrip.Stretch%2A> właściwość <xref:System.Windows.Forms.ToolStrip> formant `true`, formantu wypełnia jego kontenera od końca do końca i zmienia rozmiar w przypadku jego kontenera zmienia rozmiar.</span><span class="sxs-lookup"><span data-stu-id="c566d-103">When you set the <xref:System.Windows.Forms.ToolStrip.Stretch%2A> property of a <xref:System.Windows.Forms.ToolStrip> control to `true`, the control fills its container from end to end, and resizes when its container resizes.</span></span> <span data-ttu-id="c566d-104">Ta konfiguracja może być przydatne do rozciągania elementu w formancie, takich jak <xref:System.Windows.Forms.ToolStripTextBox>, w celu wypełnienia dostępnego miejsca, jak i rozmiaru, gdy zmienia rozmiar formantu.</span><span class="sxs-lookup"><span data-stu-id="c566d-104">In this configuration, you may find it useful to stretch an item in the control, such as a <xref:System.Windows.Forms.ToolStripTextBox>, to fill the available space and to resize when the control resizes.</span></span> <span data-ttu-id="c566d-105">Rozciąganie ten jest przydatne, na przykład, jeśli chcesz osiągnąć wygląd i zachowanie jest podobne do paska adresu w programie Microsoft® Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="c566d-105">This stretching is useful, for example, if you want to achieve appearance and behavior similar to the address bar in Microsoft® Internet Explorer.</span></span>  
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a><span data-ttu-id="826f7-102">Porady: rozciąganie ToolStripTextBox w celu uzupełnienia szerokości ToolStrip (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="826f7-102">How to: Stretch a ToolStripTextBox to Fill the Remaining Width of a ToolStrip (Windows Forms)</span></span>
+<span data-ttu-id="826f7-103">Podczas ustawiania <xref:System.Windows.Forms.ToolStrip.Stretch%2A> właściwość <xref:System.Windows.Forms.ToolStrip> formant `true`, formantu wypełnia jego kontenera od końca do końca i zmienia rozmiar w przypadku jego kontenera zmienia rozmiar.</span><span class="sxs-lookup"><span data-stu-id="826f7-103">When you set the <xref:System.Windows.Forms.ToolStrip.Stretch%2A> property of a <xref:System.Windows.Forms.ToolStrip> control to `true`, the control fills its container from end to end, and resizes when its container resizes.</span></span> <span data-ttu-id="826f7-104">Ta konfiguracja może być przydatne do rozciągania elementu w formancie, takich jak <xref:System.Windows.Forms.ToolStripTextBox>, w celu wypełnienia dostępnego miejsca, jak i rozmiaru, gdy zmienia rozmiar formantu.</span><span class="sxs-lookup"><span data-stu-id="826f7-104">In this configuration, you may find it useful to stretch an item in the control, such as a <xref:System.Windows.Forms.ToolStripTextBox>, to fill the available space and to resize when the control resizes.</span></span> <span data-ttu-id="826f7-105">Rozciąganie ten jest przydatne, na przykład, jeśli chcesz osiągnąć wygląd i zachowanie jest podobne do paska adresu w programie Microsoft® Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="826f7-105">This stretching is useful, for example, if you want to achieve appearance and behavior similar to the address bar in Microsoft® Internet Explorer.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c566d-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="c566d-106">Example</span></span>  
- <span data-ttu-id="c566d-107">W poniższym przykładzie kodu przedstawiono klasę pochodzącą od <xref:System.Windows.Forms.ToolStripTextBox> o nazwie `ToolStripSpringTextBox`.</span><span class="sxs-lookup"><span data-stu-id="c566d-107">The following code example provides a class derived from <xref:System.Windows.Forms.ToolStripTextBox> called `ToolStripSpringTextBox`.</span></span> <span data-ttu-id="c566d-108">Ta klasa zastępuje <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> metodę obliczania dostępności szerokość elementu nadrzędnego <xref:System.Windows.Forms.ToolStrip> kontrolować, po odjęciu łączna szerokość wszystkie inne elementy.</span><span class="sxs-lookup"><span data-stu-id="c566d-108">This class overrides the <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> method to calculate the available width of the parent <xref:System.Windows.Forms.ToolStrip> control after the combined width of all other items has been subtracted.</span></span> <span data-ttu-id="c566d-109">W tym przykładzie kodu udostępnia również <xref:System.Windows.Forms.Form> klasy i `Program` klasy, aby zademonstrować nowe zachowanie.</span><span class="sxs-lookup"><span data-stu-id="c566d-109">This code example also provides a <xref:System.Windows.Forms.Form> class and a `Program` class to demonstrate the new behavior.</span></span>  
+## <a name="example"></a><span data-ttu-id="826f7-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="826f7-106">Example</span></span>  
+ <span data-ttu-id="826f7-107">W poniższym przykładzie kodu przedstawiono klasę pochodzącą od <xref:System.Windows.Forms.ToolStripTextBox> o nazwie `ToolStripSpringTextBox`.</span><span class="sxs-lookup"><span data-stu-id="826f7-107">The following code example provides a class derived from <xref:System.Windows.Forms.ToolStripTextBox> called `ToolStripSpringTextBox`.</span></span> <span data-ttu-id="826f7-108">Ta klasa zastępuje <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> metodę obliczania dostępności szerokość elementu nadrzędnego <xref:System.Windows.Forms.ToolStrip> kontrolować, po odjęciu łączna szerokość wszystkie inne elementy.</span><span class="sxs-lookup"><span data-stu-id="826f7-108">This class overrides the <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> method to calculate the available width of the parent <xref:System.Windows.Forms.ToolStrip> control after the combined width of all other items has been subtracted.</span></span> <span data-ttu-id="826f7-109">W tym przykładzie kodu udostępnia również <xref:System.Windows.Forms.Form> klasy i `Program` klasy, aby zademonstrować nowe zachowanie.</span><span class="sxs-lookup"><span data-stu-id="826f7-109">This code example also provides a <xref:System.Windows.Forms.Form> class and a `Program` class to demonstrate the new behavior.</span></span>  
   
  [!code-csharp[ToolStripSpringTextBox#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c566d-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="c566d-110">Compiling the Code</span></span>  
- <span data-ttu-id="c566d-111">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="c566d-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="826f7-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="826f7-110">Compiling the Code</span></span>  
+ <span data-ttu-id="826f7-111">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="826f7-111">This example requires:</span></span>  
   
--   <span data-ttu-id="c566d-112">Odwołania do zestawów systemu, System.Drawing i System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="c566d-112">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="826f7-112">Odwołania do zestawów systemu, System.Drawing i System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="826f7-112">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c566d-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c566d-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="826f7-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="826f7-113">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ToolStripTextBox>  
  <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="c566d-114">ToolStrip, kontrolka — architektura</span><span class="sxs-lookup"><span data-stu-id="c566d-114">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [<span data-ttu-id="c566d-115">Instrukcje: użycie właściwości Spring interaktywnie w kontrolce StatusStrip</span><span class="sxs-lookup"><span data-stu-id="c566d-115">How to: Use the Spring Property Interactively in a StatusStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+ [<span data-ttu-id="826f7-114">ToolStrip, kontrolka — architektura</span><span class="sxs-lookup"><span data-stu-id="826f7-114">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [<span data-ttu-id="826f7-115">Instrukcje: użycie właściwości Spring interaktywnie w kontrolce StatusStrip</span><span class="sxs-lookup"><span data-stu-id="826f7-115">How to: Use the Spring Property Interactively in a StatusStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

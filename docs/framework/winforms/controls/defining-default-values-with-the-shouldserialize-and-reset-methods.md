@@ -1,14 +1,6 @@
 ---
 title: Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +8,25 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a><span data-ttu-id="5ac56-102">Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset</span><span class="sxs-lookup"><span data-stu-id="5ac56-102">Defining Default Values with the ShouldSerialize and Reset Methods</span></span>
-<span data-ttu-id="5ac56-103">`ShouldSerialize` i `Reset` są opcjonalne metody, które można podać dla właściwości, jeśli właściwość nie ma wartości domyślnej proste.</span><span class="sxs-lookup"><span data-stu-id="5ac56-103">`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value.</span></span> <span data-ttu-id="5ac56-104">Jeśli właściwość ma wartość domyślną proste, należy zastosować <xref:System.ComponentModel.DefaultValueAttribute> i zamiast tego Podaj wartość domyślną do konstruktora klasy atrybutu.</span><span class="sxs-lookup"><span data-stu-id="5ac56-104">If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead.</span></span> <span data-ttu-id="5ac56-105">Jedną z tych mechanizmów zapewnia następujące funkcje w Projektancie:</span><span class="sxs-lookup"><span data-stu-id="5ac56-105">Either of these mechanisms enables the following features in the designer:</span></span>  
+# <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a><span data-ttu-id="0c459-102">Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset</span><span class="sxs-lookup"><span data-stu-id="0c459-102">Defining Default Values with the ShouldSerialize and Reset Methods</span></span>
+<span data-ttu-id="0c459-103">`ShouldSerialize` i `Reset` są opcjonalne metody, które można podać dla właściwości, jeśli właściwość nie ma wartości domyślnej proste.</span><span class="sxs-lookup"><span data-stu-id="0c459-103">`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value.</span></span> <span data-ttu-id="0c459-104">Jeśli właściwość ma wartość domyślną proste, należy zastosować <xref:System.ComponentModel.DefaultValueAttribute> i zamiast tego Podaj wartość domyślną do konstruktora klasy atrybutu.</span><span class="sxs-lookup"><span data-stu-id="0c459-104">If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead.</span></span> <span data-ttu-id="0c459-105">Jedną z tych mechanizmów zapewnia następujące funkcje w Projektancie:</span><span class="sxs-lookup"><span data-stu-id="0c459-105">Either of these mechanisms enables the following features in the designer:</span></span>  
   
--   <span data-ttu-id="5ac56-106">Właściwość umożliwia oznaczenia wizualne w przeglądarce właściwości, jeśli został on zmodyfikowany ze swojej wartości domyślnej.</span><span class="sxs-lookup"><span data-stu-id="5ac56-106">The property provides visual indication in the property browser if it has been modified from its default value.</span></span>  
+-   <span data-ttu-id="0c459-106">Właściwość umożliwia oznaczenia wizualne w przeglądarce właściwości, jeśli został on zmodyfikowany ze swojej wartości domyślnej.</span><span class="sxs-lookup"><span data-stu-id="0c459-106">The property provides visual indication in the property browser if it has been modified from its default value.</span></span>  
   
--   <span data-ttu-id="5ac56-107">Użytkownik może kliknąć prawym przyciskiem myszy na właściwość i wybierz **zresetować** Aby przywrócić wartość domyślną właściwości.</span><span class="sxs-lookup"><span data-stu-id="5ac56-107">The user can right-click on the property and choose **Reset** to restore the property to its default value.</span></span>  
+-   <span data-ttu-id="0c459-107">Użytkownik może kliknąć prawym przyciskiem myszy na właściwość i wybierz **zresetować** Aby przywrócić wartość domyślną właściwości.</span><span class="sxs-lookup"><span data-stu-id="0c459-107">The user can right-click on the property and choose **Reset** to restore the property to its default value.</span></span>  
   
--   <span data-ttu-id="5ac56-108">Projektant generuje kod większą wydajność.</span><span class="sxs-lookup"><span data-stu-id="5ac56-108">The designer generates more efficient code.</span></span>  
+-   <span data-ttu-id="0c459-108">Projektant generuje kod większą wydajność.</span><span class="sxs-lookup"><span data-stu-id="0c459-108">The designer generates more efficient code.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="5ac56-109">Zastosuj albo <xref:System.ComponentModel.DefaultValueAttribute> lub podaj `Reset` *PropertyName* i `ShouldSerialize` *PropertyName* metody.</span><span class="sxs-lookup"><span data-stu-id="5ac56-109">Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods.</span></span> <span data-ttu-id="5ac56-110">Nie należy używać jednocześnie.</span><span class="sxs-lookup"><span data-stu-id="5ac56-110">Do not use both.</span></span>  
+    >  <span data-ttu-id="0c459-109">Zastosuj albo <xref:System.ComponentModel.DefaultValueAttribute> lub podaj `Reset` *PropertyName* i `ShouldSerialize` *PropertyName* metody.</span><span class="sxs-lookup"><span data-stu-id="0c459-109">Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods.</span></span> <span data-ttu-id="0c459-110">Nie należy używać jednocześnie.</span><span class="sxs-lookup"><span data-stu-id="0c459-110">Do not use both.</span></span>  
   
- <span data-ttu-id="5ac56-111">`Reset` *PropertyName* — metoda ustawia właściwość na wartość domyślną, jak pokazano w następującego fragmentu kodu.</span><span class="sxs-lookup"><span data-stu-id="5ac56-111">The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.</span></span>  
+ <span data-ttu-id="0c459-111">`Reset` *PropertyName* — metoda ustawia właściwość na wartość domyślną, jak pokazano w następującego fragmentu kodu.</span><span class="sxs-lookup"><span data-stu-id="0c459-111">The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.</span></span>  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -55,9 +41,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="5ac56-112">Jeśli nie ma właściwości `Reset` metody, nie jest oznaczony atrybutem <xref:System.ComponentModel.DefaultValueAttribute>i nie ma wartości domyślnej podana w jego deklaracji `Reset` opcji dla tej właściwości jest wyłączona w menu skrótów **właściwości** okna Projektant formularzy systemu Windows w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5ac56-112">If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in Visual Studio.</span></span>  
+>  <span data-ttu-id="0c459-112">Jeśli nie ma właściwości `Reset` metody, nie jest oznaczony atrybutem <xref:System.ComponentModel.DefaultValueAttribute>i nie ma wartości domyślnej podana w jego deklaracji `Reset` opcji dla tej właściwości jest wyłączona w menu skrótów **właściwości** okna Projektant formularzy systemu Windows w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="0c459-112">If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in Visual Studio.</span></span>  
   
- <span data-ttu-id="5ac56-113">Użyj projektantów, takiego jak Visual Studio `ShouldSerialize` *PropertyName* metodę, aby sprawdzić, czy właściwość zmienił się z jej wartości domyślnej i napisać kod do formularza tylko wtedy, gdy właściwość zostanie zmieniona, dzięki czemu efektywniejsze kodu Generowanie.</span><span class="sxs-lookup"><span data-stu-id="5ac56-113">Designers such as Visual Studio use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation.</span></span> <span data-ttu-id="5ac56-114">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="5ac56-114">For example:</span></span>  
+ <span data-ttu-id="0c459-113">Użyj projektantów, takiego jak Visual Studio `ShouldSerialize` *PropertyName* metodę, aby sprawdzić, czy właściwość zmienił się z jej wartości domyślnej i napisać kod do formularza tylko wtedy, gdy właściwość zostanie zmieniona, dzięki czemu efektywniejsze kodu Generowanie.</span><span class="sxs-lookup"><span data-stu-id="0c459-113">Designers such as Visual Studio use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation.</span></span> <span data-ttu-id="0c459-114">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="0c459-114">For example:</span></span>  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -75,7 +61,7 @@ public bool ShouldSerializeMyFont() {
 }  
 ```  
   
- <span data-ttu-id="5ac56-115">Pełny przykład kodu jest zgodna.</span><span class="sxs-lookup"><span data-stu-id="5ac56-115">A complete code example follows.</span></span>  
+ <span data-ttu-id="0c459-115">Pełny przykład kodu jest zgodna.</span><span class="sxs-lookup"><span data-stu-id="0c459-115">A complete code example follows.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -154,9 +140,9 @@ public class MyControl : Control {
 }  
 ```  
   
- <span data-ttu-id="5ac56-116">W tym przypadku nawet wtedy, gdy dostęp do wartości zmiennej prywatnej `MyFont` właściwość jest `null`, nie są wyświetlane w przeglądarce właściwości `null`; zamiast tego wyświetlana <xref:System.Windows.Forms.Control.Font%2A> właściwości elementu nadrzędnego, jeśli nie jest `null`, lub wartość domyślną <xref:System.Windows.Forms.Control.Font%2A> wartość zdefiniowana w <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="5ac56-116">In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="5ac56-117">W związku z tym domyślna wartość `MyFont` nie wystarczy można ustawić, a <xref:System.ComponentModel.DefaultValueAttribute> nie można zastosować do tej właściwości.</span><span class="sxs-lookup"><span data-stu-id="5ac56-117">Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property.</span></span> <span data-ttu-id="5ac56-118">Zamiast tego `ShouldSerialize` i `Reset` metody musi być zaimplementowana dla `MyFont` właściwości.</span><span class="sxs-lookup"><span data-stu-id="5ac56-118">Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.</span></span>  
+ <span data-ttu-id="0c459-116">W tym przypadku nawet wtedy, gdy dostęp do wartości zmiennej prywatnej `MyFont` właściwość jest `null`, nie są wyświetlane w przeglądarce właściwości `null`; zamiast tego wyświetlana <xref:System.Windows.Forms.Control.Font%2A> właściwości elementu nadrzędnego, jeśli nie jest `null`, lub wartość domyślną <xref:System.Windows.Forms.Control.Font%2A> wartość zdefiniowana w <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="0c459-116">In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="0c459-117">W związku z tym domyślna wartość `MyFont` nie wystarczy można ustawić, a <xref:System.ComponentModel.DefaultValueAttribute> nie można zastosować do tej właściwości.</span><span class="sxs-lookup"><span data-stu-id="0c459-117">Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property.</span></span> <span data-ttu-id="0c459-118">Zamiast tego `ShouldSerialize` i `Reset` metody musi być zaimplementowana dla `MyFont` właściwości.</span><span class="sxs-lookup"><span data-stu-id="0c459-118">Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ac56-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5ac56-119">See Also</span></span>  
- [<span data-ttu-id="5ac56-120">Właściwości kontrolek formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5ac56-120">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [<span data-ttu-id="5ac56-121">Definiowanie właściwości</span><span class="sxs-lookup"><span data-stu-id="5ac56-121">Defining a Property</span></span>](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [<span data-ttu-id="5ac56-122">Zdarzenia zmiany właściwości</span><span class="sxs-lookup"><span data-stu-id="5ac56-122">Property-Changed Events</span></span>](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a><span data-ttu-id="0c459-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0c459-119">See Also</span></span>  
+ [<span data-ttu-id="0c459-120">Właściwości kontrolek formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0c459-120">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [<span data-ttu-id="0c459-121">Definiowanie właściwości</span><span class="sxs-lookup"><span data-stu-id="0c459-121">Defining a Property</span></span>](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ [<span data-ttu-id="0c459-122">Zdarzenia zmiany właściwości</span><span class="sxs-lookup"><span data-stu-id="0c459-122">Property-Changed Events</span></span>](../../../../docs/framework/winforms/controls/property-changed-events.md)

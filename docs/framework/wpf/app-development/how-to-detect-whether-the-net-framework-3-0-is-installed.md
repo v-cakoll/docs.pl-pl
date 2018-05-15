@@ -1,40 +1,26 @@
 ---
 title: Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09de427980ecfb515b8d341d0d7833b878140286
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="4c21e-102">Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="4c21e-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="4c21e-103">Zanim administratorzy mogą wdrażać aplikacje platformy Microsoft .NET Framework w systemie, ich muszą potwierdzić występuje środowiska uruchomieniowego .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4c21e-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="4c21e-104">Ten temat zawiera skrypt napisany w języku HTML/JavaScript umożliwiają administratorom czy programu .NET Framework jest obecne w systemie.</span><span class="sxs-lookup"><span data-stu-id="4c21e-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="f32a7-102">Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="f32a7-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="f32a7-103">Zanim administratorzy mogą wdrażać aplikacje platformy Microsoft .NET Framework w systemie, ich muszą potwierdzić występuje środowiska uruchomieniowego .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f32a7-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="f32a7-104">Ten temat zawiera skrypt napisany w języku HTML/JavaScript umożliwiają administratorom czy programu .NET Framework jest obecne w systemie.</span><span class="sxs-lookup"><span data-stu-id="f32a7-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4c21e-105">Aby uzyskać szczegółowe informacje na temat instalowania, wdrażanie i wykrywanie programu Microsoft .NET Framework, można znaleźć w omówieniu w [wdrażania programu Microsoft .NET Framework w wersji 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="4c21e-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+>  <span data-ttu-id="f32a7-105">Aby uzyskać szczegółowe informacje na temat instalowania, wdrażanie i wykrywanie programu Microsoft .NET Framework, można znaleźć w omówieniu w [wdrażania programu Microsoft .NET Framework w wersji 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="f32a7-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="4c21e-106">Wykryj ciąg agenta użytkownika ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="4c21e-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="4c21e-107">Po zainstalowaniu programu .NET Framework MSI dodaje ".NET CLR" oraz numer wersji na ciąg agenta użytkownika.</span><span class="sxs-lookup"><span data-stu-id="4c21e-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="4c21e-108">W poniższym przykładzie przedstawiono skrypt osadzony w to prosta strona HTML.</span><span class="sxs-lookup"><span data-stu-id="4c21e-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="4c21e-109">Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy .NET Framework jest zainstalowana i wyświetla komunikat o stanie w wynikach wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="4c21e-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="f32a7-106">Wykryj ciąg agenta użytkownika ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="f32a7-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="f32a7-107">Po zainstalowaniu programu .NET Framework MSI dodaje ".NET CLR" oraz numer wersji na ciąg agenta użytkownika.</span><span class="sxs-lookup"><span data-stu-id="f32a7-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="f32a7-108">W poniższym przykładzie przedstawiono skrypt osadzony w to prosta strona HTML.</span><span class="sxs-lookup"><span data-stu-id="f32a7-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="f32a7-109">Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy .NET Framework jest zainstalowana i wyświetla komunikat o stanie w wynikach wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="f32a7-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
 ```  
 <HTML>  
@@ -126,13 +112,13 @@ ms.lasthandoff: 04/27/2018
 </HTML>  
 ```  
   
- <span data-ttu-id="4c21e-110">Jeśli wyszukiwania dla wersji ".NET CLR" zakończy się pomyślnie, zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="4c21e-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="f32a7-110">Jeśli wyszukiwania dla wersji ".NET CLR" zakończy się pomyślnie, zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="f32a7-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="4c21e-111">W przeciwnym razie zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="4c21e-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="f32a7-111">W przeciwnym razie zostanie wyświetlony następujący typ komunikatu o stanie:</span><span class="sxs-lookup"><span data-stu-id="f32a7-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

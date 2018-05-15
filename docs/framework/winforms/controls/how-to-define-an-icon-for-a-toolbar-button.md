@@ -1,13 +1,6 @@
 ---
-title: "Porady: określanie ikony dla przycisku ToolBar"
-ms.custom: 
+title: 'Porady: określanie ikony dla przycisku ToolBar'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,34 +13,29 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f7550fdc76cb3a025d8233ec538d38f23f9226a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a><span data-ttu-id="d72db-102">Porady: określanie ikony dla przycisku ToolBar</span><span class="sxs-lookup"><span data-stu-id="d72db-102">How to: Define an Icon for a ToolBar Button</span></span>
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a><span data-ttu-id="d192f-102">Porady: określanie ikony dla przycisku ToolBar</span><span class="sxs-lookup"><span data-stu-id="d192f-102">How to: Define an Icon for a ToolBar Button</span></span>
 > [!NOTE]
->  <span data-ttu-id="d72db-103"><xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.</span><span class="sxs-lookup"><span data-stu-id="d72db-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="d192f-103"><xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.</span><span class="sxs-lookup"><span data-stu-id="d192f-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="d72db-104"><xref:System.Windows.Forms.ToolBar>przyciski będą mogli wyświetlać ikony w nich ułatwiający identyfikację przez użytkowników.</span><span class="sxs-lookup"><span data-stu-id="d72db-104"><xref:System.Windows.Forms.ToolBar> buttons are able to display icons within them for easy identification by users.</span></span> <span data-ttu-id="d72db-105">Jest to osiągane przez dodanie obrazów do [składnika ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) składnik, a następnie kojarząc <xref:System.Windows.Forms.ImageList> składnik o <xref:System.Windows.Forms.ToolBar> formantu.</span><span class="sxs-lookup"><span data-stu-id="d72db-105">This is achieved through adding images to the [ImageList Component](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) component and then associating the <xref:System.Windows.Forms.ImageList> component with the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+ <span data-ttu-id="d192f-104"><xref:System.Windows.Forms.ToolBar> przyciski będą mogli wyświetlać ikony w nich ułatwiający identyfikację przez użytkowników.</span><span class="sxs-lookup"><span data-stu-id="d192f-104"><xref:System.Windows.Forms.ToolBar> buttons are able to display icons within them for easy identification by users.</span></span> <span data-ttu-id="d192f-105">Jest to osiągane przez dodanie obrazów do [składnika ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) składnik, a następnie kojarząc <xref:System.Windows.Forms.ImageList> składnik o <xref:System.Windows.Forms.ToolBar> formantu.</span><span class="sxs-lookup"><span data-stu-id="d192f-105">This is achieved through adding images to the [ImageList Component](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) component and then associating the <xref:System.Windows.Forms.ImageList> component with the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a><span data-ttu-id="d72db-106">Aby ustawić programowo ikony dla przycisku paska narzędzi</span><span class="sxs-lookup"><span data-stu-id="d72db-106">To set an icon for a toolbar button programmatically</span></span>  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a><span data-ttu-id="d192f-106">Aby ustawić programowo ikony dla przycisku paska narzędzi</span><span class="sxs-lookup"><span data-stu-id="d192f-106">To set an icon for a toolbar button programmatically</span></span>  
   
-1.  <span data-ttu-id="d72db-107">W procedurze tworzenia wystąpienia <xref:System.Windows.Forms.ImageList> składnika i <xref:System.Windows.Forms.ToolBar> formantu.</span><span class="sxs-lookup"><span data-stu-id="d72db-107">In a procedure, instantiate an <xref:System.Windows.Forms.ImageList> component and a <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1.  <span data-ttu-id="d192f-107">W procedurze tworzenia wystąpienia <xref:System.Windows.Forms.ImageList> składnika i <xref:System.Windows.Forms.ToolBar> formantu.</span><span class="sxs-lookup"><span data-stu-id="d192f-107">In a procedure, instantiate an <xref:System.Windows.Forms.ImageList> component and a <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-2.  <span data-ttu-id="d72db-108">W tej samej procedury, przypisz obraz <xref:System.Windows.Forms.ImageList> składnika.</span><span class="sxs-lookup"><span data-stu-id="d72db-108">In the same procedure, assign an image to the <xref:System.Windows.Forms.ImageList> component.</span></span>  
+2.  <span data-ttu-id="d192f-108">W tej samej procedury, przypisz obraz <xref:System.Windows.Forms.ImageList> składnika.</span><span class="sxs-lookup"><span data-stu-id="d192f-108">In the same procedure, assign an image to the <xref:System.Windows.Forms.ImageList> component.</span></span>  
   
-3.  <span data-ttu-id="d72db-109">W tej samej procedury, Przypisz <xref:System.Windows.Forms.ImageList> formant <xref:System.Windows.Forms.ToolBar> kontroli i przypisać <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> właściwości przycisków poszczególnych narzędzi.</span><span class="sxs-lookup"><span data-stu-id="d72db-109">In the same procedure, assign the <xref:System.Windows.Forms.ImageList> control to the <xref:System.Windows.Forms.ToolBar> control and assign the <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> property of the individual toolbar buttons.</span></span>  
+3.  <span data-ttu-id="d192f-109">W tej samej procedury, Przypisz <xref:System.Windows.Forms.ImageList> formant <xref:System.Windows.Forms.ToolBar> kontroli i przypisać <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> właściwości przycisków poszczególnych narzędzi.</span><span class="sxs-lookup"><span data-stu-id="d192f-109">In the same procedure, assign the <xref:System.Windows.Forms.ImageList> control to the <xref:System.Windows.Forms.ToolBar> control and assign the <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> property of the individual toolbar buttons.</span></span>  
   
-     <span data-ttu-id="d72db-110">W poniższym przykładzie kodu, ścieżka ustawiona dla lokalizacji obrazu jest **Moje dokumenty** folderu.</span><span class="sxs-lookup"><span data-stu-id="d72db-110">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="d72db-111">Tej operacji, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu.</span><span class="sxs-lookup"><span data-stu-id="d72db-111">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="d72db-112">To umożliwia użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="d72db-112">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="d72db-113">W poniższym przykładzie założono formularza z <xref:System.Windows.Forms.PictureBox> kontroli już dodany.</span><span class="sxs-lookup"><span data-stu-id="d72db-113">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
+     <span data-ttu-id="d192f-110">W poniższym przykładzie kodu, ścieżka ustawiona dla lokalizacji obrazu jest **Moje dokumenty** folderu.</span><span class="sxs-lookup"><span data-stu-id="d192f-110">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="d192f-111">Tej operacji, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu.</span><span class="sxs-lookup"><span data-stu-id="d192f-111">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="d192f-112">To umożliwia użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="d192f-112">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="d192f-113">W poniższym przykładzie założono formularza z <xref:System.Windows.Forms.PictureBox> kontroli już dodany.</span><span class="sxs-lookup"><span data-stu-id="d192f-113">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
-     <span data-ttu-id="d72db-114">Wykonując powyższe kroki powinien zapisywany kod, podobnie jak poniżej jest wyświetlany w.</span><span class="sxs-lookup"><span data-stu-id="d72db-114">Following the steps above, you should have written code similar to that displayed below.</span></span>  
+     <span data-ttu-id="d192f-114">Wykonując powyższe kroki powinien zapisywany kod, podobnie jak poniżej jest wyświetlany w.</span><span class="sxs-lookup"><span data-stu-id="d192f-114">Following the steps above, you should have written code similar to that displayed below.</span></span>  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -126,8 +114,8 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d72db-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d72db-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d192f-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d192f-115">See Also</span></span>  
  <xref:System.Windows.Forms.ToolBar>  
- [<span data-ttu-id="d72db-116">Instrukcje: zdarzenia wyzwalaczy menu dla przycisków kontrolki Toolbar</span><span class="sxs-lookup"><span data-stu-id="d72db-116">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [<span data-ttu-id="d72db-117">ToolBar, kontrolka</span><span class="sxs-lookup"><span data-stu-id="d72db-117">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- [<span data-ttu-id="d72db-118">ImageList, składnik</span><span class="sxs-lookup"><span data-stu-id="d72db-118">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+ [<span data-ttu-id="d192f-116">Instrukcje: zdarzenia wyzwalaczy menu dla przycisków kontrolki Toolbar</span><span class="sxs-lookup"><span data-stu-id="d192f-116">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [<span data-ttu-id="d192f-117">ToolBar, kontrolka</span><span class="sxs-lookup"><span data-stu-id="d192f-117">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ [<span data-ttu-id="d192f-118">ImageList, składnik</span><span class="sxs-lookup"><span data-stu-id="d192f-118">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

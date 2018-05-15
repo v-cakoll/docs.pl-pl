@@ -1113,7 +1113,7 @@
 # [Przewodnik po strukturze ML.NET](machine-learning/index.md)
 ## [Samouczki](machine-learning/tutorials/index.md)
 ### [Analiza tonacji (klasyfikacja)](machine-learning/tutorials/sentiment-analysis.md)
-### [Prognoza czasu dla taksówek (regresja)](machine-learning/tutorials/taxi-fare.md)
+### [Przewidywanie opłat za taksówki (regresja)](machine-learning/tutorials/taxi-fare.md)
 ## [Zasoby](machine-learning/resources/index.md)
 ### [Glosariusz uczenia maszynowego](machine-learning/resources/glossary.md)
 ### [Podstawy uczenia maszynowego](machine-learning/resources/basics.md)

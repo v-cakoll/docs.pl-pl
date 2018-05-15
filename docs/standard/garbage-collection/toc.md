@@ -4,6 +4,7 @@
 ### [Używanie obiektów implementujących interfejs IDisposable](using-objects.md)
 ## [Odzyskiwanie pamięci](index.md)
 ### [Podstawy dotyczące odzyskiwania pamięci](fundamentals.md)
+### [Sterta obiektów wielkich](large-object-heap.md)
 ### [Odzyskiwanie pamięci i wydajność](performance.md)
 ### [Wywołane kolekcje](induced.md)
 ### [Tryby opóźnienia](latency.md)

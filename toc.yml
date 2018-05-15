@@ -593,3 +593,13 @@
             - name: Tematy pomocy
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
+        - name: Przewodnik po strukturze ML.NET
+          tocHref: /dotnet/machine-learning/
+          topicHref: /dotnet/machine-learning/index
+          items:
+            - name: Resources
+              tocHref: /dotnet/machine-learning/resources/
+              topicHref: /dotnet/machine-learning/resources/index
+            - name: Samouczki
+              tocHref: /dotnet/machine-learning/tutorials/
+              topicHref: /dotnet/machine-learning/tutorials/index

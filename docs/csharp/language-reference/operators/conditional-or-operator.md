@@ -8,11 +8,11 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: ce0834874f9c5b4c5154a798492600d6ac45a4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d22e57d097edb0fe52b604e9c6431e167c410f0b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>Operator || (odwołanie w C#)
 Operator warunkowy OR (`||`) wykonuje logiczne lub z jego `bool` argumentów operacji. Jeśli pierwszy argument operacji daje w wyniku `true`, drugi argument nie jest obliczane. Jeśli pierwszy argument operacji daje w wyniku `false`, drugi — operator określa, czy wyrażenie OR jako całość daje w wyniku `true` lub `false`.  
@@ -20,13 +20,13 @@ Operator warunkowy OR (`||`) wykonuje logiczne lub z jego `bool` argumentów ope
 ## <a name="remarks"></a>Uwagi  
  Operacja  
   
-```  
+```csharp  
 x || y  
 ```  
   
  odnosi się do operacji  
   
-```  
+```csharp  
 x | y  
 ```  
   

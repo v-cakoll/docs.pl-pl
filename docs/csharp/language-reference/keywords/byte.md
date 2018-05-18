@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 71af48f1cbfa82bafdd4888f0985cd88d44976b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="byte-c-reference"></a>byte (odwołanie w C#)
 
@@ -45,27 +45,27 @@ Poniżej przedstawiono kilka przykładów.
   
  Nie można niejawnie przekonwertować-literal liczbowych typów większy rozmiar magazynu do `byte`. Aby uzyskać więcej informacji na magazyn o rozmiarze typów całkowitych zobacz [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md). Należy wziąć pod uwagę, na przykład następujące dwa `byte` zmienne `x` i `y`:  
   
-```  
+```csharp  
 byte x = 10, y = 20;  
 ```  
   
  Następująca instrukcja przypisania spowoduje błąd kompilacji, ponieważ daje w wyniku wyrażenia arytmetycznego po prawej stronie operatora przypisania `int` domyślnie.  
   
-```  
+```csharp  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
  Aby rozwiązać ten problem, należy użyć rzutowanie:  
   
-```  
+```csharp  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
  Możliwe jest, użyj następujących instrukcji, gdzie zmienna docelowa ma ten sam rozmiar magazynu lub większy rozmiar magazynu:  
   
-```  
+```csharp  
 int x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
@@ -73,7 +73,7 @@ long n = x + y;
   
  Ponadto nie jest niejawna konwersja z typów zmiennoprzecinkowych aby `byte`. Na przykład następująca instrukcja generuje błąd kompilatora, chyba że używana jest jawnego rzutowania:  
   
-```  
+```csharp  
 // Error: no implicit conversion from double:  
 byte x = 3.0;   
 // OK: explicit conversion:  
@@ -82,14 +82,14 @@ byte y = (byte)3.0;
   
  Podczas wywoływania metody przeciążane, muszą być używane rzutowanie. Należy wziąć pod uwagę, na przykład następujące przeciążone metody, które używają `byte` i [int](../../../csharp/language-reference/keywords/int.md) parametry:  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
  Przy użyciu `byte` rzutowania gwarantuje, że poprawne typu jest nazywana, na przykład:  
   
-```  
+```csharp  
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the byte parameter:  

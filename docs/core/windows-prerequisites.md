@@ -3,12 +3,12 @@ title: Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 description: Dowiedz się, w zależności, należy na okien komputera do opracowywania i uruchamiania aplikacji .NET Core.
 author: JRAlexander
 ms.author: johalex
-ms.date: 04/24/2018
-ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.date: 05/14/2018
+ms.openlocfilehash: f27070c08755e5b650e32e01011bb7bac669c82d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -28,11 +28,11 @@ Oprogramowanie .NET core jest obsługiwana w następujących wersjach:
 * Windows Server 2008 R2 z dodatkiem SP1 (całego serwera lub Server Core)
 * Windows Server 2012 z dodatkiem SP1 (całego serwera lub Server Core)
 * Windows Server 2012 R2 (całego serwera lub Server Core)
-* Windows Server 2016 (całego serwera, Server Core lub serwerze Nano)
+* Windows Server 2016 lub nowszy (całego serwera, Server Core lub Nano Server)
 
 Zobacz [.NET Core 2.x - obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pełną listę .NET Core 2.x obsługiwanych systemów operacyjnych.
 
-Zobacz [1.x .NET Core obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pełną listę .NET Core 1.x obsługiwanych systemów operacyjnych.
+Zobacz [.NET Core 1.x - obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pełną listę .NET Core 1.x obsługiwanych systemów operacyjnych.
 
 ## <a name="net-core-dependencies"></a>Zależności .NET core
 
@@ -46,7 +46,13 @@ Podczas pracy z wersjami systemu Windows starszych niż Windows 10 i Windows Ser
 * Instalowanie platformy .NET Core za pomocą *.zip* pliku. Może to obejmować serwery kompilacji/CI/CD.
 
 > [!NOTE]
-> *Dla Windows 8.1 i starszych wersjach, lub Windows Server 2012 R2 i wcześniejszych wersjach:* upewnij się, że instalacji systemu Windows jest aktualny i uwzględnia [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) którego można zainstalować za pomocą usługi Windows Update. Jeśli nie zainstalowano tę aktualizację, zostanie wyświetlone wystąpił błąd podczas uruchamiania aplikacji .NET Core, takie jak następujące: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> **Windows 8.1 i starszych wersjach, lub Windows Server 2012 R2 i wcześniejszych wersji:**
+>
+> Upewnij się, że instalacji systemu Windows jest aktualny i uwzględnia [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), które można zainstalować za pomocą usługi Windows Update. Jeśli nie zainstalowano tę aktualizację, podczas uruchamiania aplikacji .NET Core zostanie wyświetlony błąd podobnie do następującej: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+>
+> **W przypadku systemu Windows 7 lub Windows Server 2008 R2:**
+>
+> Oprócz KB2999226, upewnij się, masz również [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) zainstalowane. Jeśli nie zainstalowano tę aktualizację, zostanie wyświetlone błąd podobny do następującego podczas uruchamiania aplikacji .NET Core: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Wstępnie wymaganych składników w programie Visual Studio 2017 r.
 
@@ -96,6 +102,6 @@ Do opracowywania aplikacji 1.x .NET Core w programie Visual Studio, [pobrać i z
 >
 > * Na **pomocy** menu, wybierz **Microsoft Visual Studio**.
 > * W **Microsoft Visual Studio** okna dialogowego, sprawdź numer wersji.
->   * W przypadku aplikacji .NET Core 2.1 Preview 1 programu Visual Studio 2017 wersji 15,6 6 lub nowszy w wersji zapoznawczej.
+>   * W przypadku aplikacji .NET Core 2.1 RC programu Visual Studio 2017 wersji 15.7 lub nowszej.
 >   * W przypadku aplikacji .NET Core 2.0, Visual Studio 2017 wersji 15.3 lub nowszej.
 >   * W przypadku aplikacji .NET Core 1.x Visual Studio 2017 wersji 15,0 lub nowszej.

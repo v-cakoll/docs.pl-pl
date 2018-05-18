@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: 26eab2912923c9fcae1ce930bd5b59a2740d500e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="private-c-reference"></a>private (odwołanie w C#)
 `private` — Słowo kluczowe jest modyfikator dostępu elementu członkowskiego. 
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
   
 Prywatny dostęp jest najbardziej ograniczająca poziom dostępu. Prywatne elementy członkowskie są dostępne tylko w treści klasy lub struktury, w której zostały zgłoszone, jak w poniższym przykładzie:  
   
-```  
+```csharp  
 class Employee  
 {  
     private int i;  

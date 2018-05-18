@@ -1,4 +1,4 @@
-﻿---
+---
 title: by (odwołanie w C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="by-c-reference"></a>by (odwołanie w C#)
-Kontekstowe słowo kluczowe `by` jest używane w klauzuli `group` w wyrażeniu zapytania, co pozwala określić, w jaki sposób powinny zostać zgrupowane zwracane elementy. Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](../../../csharp/language-reference/keywords/group-clause.md).
+Kontekstowe słowo kluczowe `by` jest używane w klauzuli `group` w wyrażeniu zapytania, co pozwala określić, w jaki sposób powinny zostać zgrupowane zwracane elementy. Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono użycie kontekstowego słowa kluczowego `by` w klauzuli `group`, aby sprecyzować, że studenci powinni zostać pogrupowani według pierwszej litery nazwiska.  

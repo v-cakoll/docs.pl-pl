@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: e2524c907781bd3ce618acb0bdd087acb4b10f75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3683b51dfd0ef653ab8bfff6705b96a37e21a10a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="double-c-reference"></a>double (odwołanie w C#)
 `double` — Słowo kluczowe oznacza typu prostego, która przechowuje 64-bitowych wartości zmiennoprzecinkowych. W poniższej tabeli przedstawiono dokładność i zakres przybliżonej `double` typu.  
@@ -23,7 +23,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="literals"></a>Literały  
  Domyślnie rzeczywistym literałem po prawej stronie operatora przypisania jest traktowany jako `double`. Jednak jeśli mają być traktowane jako liczba całkowita z zakresu `double`, należy użyć sufiksu d lub D, na przykład:  
   
-```  
+```csharp  
 double x = 3D;  
 ```  
   

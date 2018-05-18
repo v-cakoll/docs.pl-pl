@@ -5,11 +5,11 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 7407d18c58dd3d12337c6845627d83f02eaf7fa0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (odwołanie w C#)
 W poniższej tabeli przedstawiono typy wbudowane C#, które są aliasy wstępnie zdefiniowanych typów słowa kluczowe w <xref:System> przestrzeni nazw.  
@@ -37,14 +37,14 @@ W poniższej tabeli przedstawiono typy wbudowane C#, które są aliasy wstępnie
   
  Słowa kluczowe typu C# i ich aliasy są wymienne. Na przykład można zadeklarować zmiennej całkowitą przy użyciu jednej z następujących deklaracji:  
   
-```  
+```csharp  
 int x = 123;  
 System.Int32 x = 123;  
 ```  
   
  Aby wyświetlić rzeczywisty typ dla dowolnego typu C#, należy użyć metody systemu `GetType()`. Na przykład następująca instrukcja wyświetla alias systemu, który reprezentuje typ `myVariable`:  
   
-```  
+```csharp  
 Console.WriteLine(myVariable.GetType());  
 ```  
   

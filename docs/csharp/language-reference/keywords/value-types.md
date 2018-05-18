@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (odwołanie w C#)
 Typy wartości obejmują dwie główne kategorie:  
@@ -56,31 +56,31 @@ Typy wartości obejmują dwie główne kategorie:
 ## <a name="initializing-value-types"></a>Inicjowanie typów wartości  
  Zmienne lokalne w języku C# muszą zostać zainicjowane, przed są one używane. Na przykład może zadeklarować zmiennej lokalnej bez inicjowania jak w poniższym przykładzie:  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  Nie można używać go, zanim można go zainicjować. Można zainicjować za pomocą następujących instrukcji:  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  Ta instrukcja jest odpowiednikiem następująca instrukcja:  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  Deklaracji i inicjowania mogą oczywiście ma w tej samej instrukcji, na przykład:  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  — lub —  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  Typy danych zdefiniowane przez użytkownika, za pomocą [nowe](../../../csharp/language-reference/keywords/new.md) do wywołania konstruktora domyślnego. Na przykład następująca instrukcja wywołuje domyślny konstruktor obiektu `Point` struktury:  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

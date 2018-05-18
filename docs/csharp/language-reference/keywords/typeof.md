@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: be79fa4f2cfb1119a50201bf6c18a144726f2f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="typeof-c-reference"></a>typeof (odwołanie w C#)
 Uzywany do uzyskania obiektu `System.Type` dla typu. Wyrazenie `typeof` ma nastepujaca postac:  
   
-```  
+```csharp  
 System.Type type = typeof(int);  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskac typ srodowiska wykonawczego wyrazenia, mozna uzyc metody .NET Framework <xref:System.Object.GetType%2A> — jak w ponizszym przykladzie:  
   
-```  
+```csharp  
 int i = 0;  
 System.Type type = i.GetType();  
 ```  
@@ -32,7 +32,7 @@ System.Type type = i.GetType();
   
  Operatora `typeof` mozna tez uzywac na otwartych typach ogólnych. Typy z wiecej niz jednym parametrem typu musza zawierac odpowiednia liczbe przecinków w specyfikacji. W przykladzie ponizej pokazujemy, jak ustalic, czy zwracanym typem metody jest ogólny typ <xref:System.Collections.Generic.IEnumerable%601>. Zalózmy, ze metoda jest wystapieniem typu MethodInfo:  
   
-```  
+```csharp  
 string s = method.ReturnType.GetInterface  
     (typeof(System.Collections.Generic.IEnumerable<>).FullName);  
 ```  

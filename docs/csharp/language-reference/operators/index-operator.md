@@ -39,7 +39,7 @@ Nawiasy kwadratowe (`[]`) są używane do obsługi tablic, indeksatorów i atryb
   
  [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
- Nawiasy kwadratowe umożliwia indeksu poza wskaźnik:  
+ Nawiasów kwadratowych można użyć do odindeksowania wskaźnika:  
   
  [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   

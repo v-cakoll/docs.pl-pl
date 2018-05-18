@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: bf25ddda2c7e381f0b43798b28179b18338d71cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla klienta kod napisany w języku C#, F # i Visual Basic istnieje widocznej różnicy wywoływanie metody rozszerzenia i metody, które faktycznie są zdefiniowane w typie.  
@@ -29,13 +29,13 @@ Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów 
   
  `WordCount` — Metoda rozszerzenia mogą być wprowadzane do zakresu z tym `using` dyrektywy:  
   
-```  
+```csharp  
 using ExtensionMethods;  
 ```  
   
  A za pomocą poniższej składni można ją wywołać z aplikacji:  
   
-```  
+```csharp  
 string s = "Hello Extension Methods";  
 int i = s.WordCount();  
 ```  
@@ -46,7 +46,7 @@ int i = s.WordCount();
   
  Ogólnie rzecz biorąc, liczba wywołań metod rozszerzenia zazwyczaj jest o wiele większa niż liczba implementacji własnych metod. Metody rozszerzenia są wywoływane przy użyciu składni metody wystąpienia, więc nie jest potrzebna specjalistyczna wiedza, aby móc używać ich z poziomu kodu klienta. Aby włączyć metody rozszerzenia dla określonego typu, po prostu Dodaj `using` dyrektywy dla przestrzeni nazw, w którym zdefiniowano metody. Na przykład, aby używać standardowych operatorów zapytań, dodaj to `using` dyrektywy w kodzie:  
   
-```  
+```csharp  
 using System.Linq;  
 ```  
   

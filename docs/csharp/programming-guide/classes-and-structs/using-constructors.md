@@ -4,11 +4,11 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 80400cc1eae697c931833a5444969a231e23c06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="using-constructors-c-programming-guide"></a>Używanie konstruktorów (Przewodnik programowania w języku C#)
 Gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzona, jest nazywany jego konstruktora. Konstruktory ma taką samą nazwę jak klasy lub struktury i zwykle inicjowania elementów członkowskich danych nowego obiektu.  
@@ -29,7 +29,7 @@ Gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury
   
  Konstruktory [struktury](../../../csharp/language-reference/keywords/struct.md) typy przypominać konstruktorów klasy, ale `structs` nie mogą zawierać jawny Konstruktor domyślny, ponieważ zostało ono określone automatycznie przez kompilator. Ten konstruktor inicjuje wszystkie pola w `struct` do wartości domyślnych. Aby uzyskać więcej informacji, zobacz [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). Jednak ten konstruktor domyślny jest wywoływana tylko jeśli `struct` zostanie uruchomiony z `new`. Na przykład ten kod używa domyślnego konstruktora dla <xref:System.Int32>, dzięki czemu zapewni zainicjowanej liczbę całkowitą:  
   
-```  
+```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  

@@ -2,11 +2,11 @@
 title: Struktury (F#)
 description: 'Dowiedz się więcej o F # struktury, typu obiektu compact często bardziej efektywne niż klasa dla typów z małej ilości danych i zachowania proste.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="structures"></a>Struktury
 
@@ -18,13 +18,13 @@ A *struktury* jest typem obiektu compact, który może być skuteczniejsza niż 
 [ attributes ]
 type [accessibility-modifier] type-name =
     struct
-        type-definition-elements
+        type-definition-elements-and-members
     end
 // or
 [ attributes ]
 [<StructAttribute>]
 type [accessibility-modifier] type-name =
-    type-definition-elements
+    type-definition-elements-and-members
 ```
 
 ## <a name="remarks"></a>Uwagi
@@ -32,7 +32,7 @@ Struktury są *typów wartości*, co oznacza, że są przechowywane bezpośredni
 
 W poprzednich składni są wyświetlane dwa formularze. Pierwszy nie jest lekkie składni, ale mimo to często jest używana, ponieważ, jeśli używasz `struct` i `end` słów kluczowych, można pominąć `StructAttribute` atrybut, który pojawi się w drugim formularzu. Można skrócić `StructAttribute` nieco `Struct`.
 
-*Elementy definicji typu* w poprzednim składni reprezentuje element członkowski deklaracje i definicje. Struktury mogą mieć konstruktorów i modyfikowalne i modyfikować pola, a ich można zadeklarować elementów członkowskich i implementacje interfejsów. Aby uzyskać więcej informacji, zobacz [członków](members/index.md).
+*— Definicja — elementy i-elementy członkowskie typu* w poprzednim składni reprezentuje element członkowski deklaracje i definicje. Struktury mogą mieć konstruktorów i modyfikowalne i modyfikować pola, a ich można zadeklarować elementów członkowskich i implementacje interfejsów. Aby uzyskać więcej informacji, zobacz [członków](members/index.md).
 
 Struktury nie mogą uczestniczyć w dziedziczeniu, nie może zawierać `let` lub `do` powiązań, i nie można rekursywnie zawierać pola własne typu z (chociaż zawierają odwołanie do komórki, odwołujące się do ich własnych typu).
 

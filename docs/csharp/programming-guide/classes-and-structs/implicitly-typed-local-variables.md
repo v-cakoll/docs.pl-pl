@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: a3cb2490247a6e9fdb51b73d405173d29263393c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6c2bae39764e78fad2510bbc8937b0ac790bef5
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalne (Przewodnik programowania w języku C#)
 Zmienne lokalne mogą być deklarowane bez jawnego typu. `var` — Słowo kluczowe nakazuje kompilatorowi do wywnioskowania typu zmienną z wyrażenie po prawej stronie instrukcji inicjowania. Wnioskowany typ może być typem wbudowanym, typu anonimowego, typu zdefiniowanego przez użytkownika lub typ zdefiniowany w bibliotece klas programu .NET Framework. Aby uzyskać więcej informacji dotyczących sposobu inicjowania tablic o `var`, zobacz [niejawnie wpisane tablice](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
@@ -26,19 +26,19 @@ Zmienne lokalne mogą być deklarowane bez jawnego typu. `var` — Słowo kluczo
   
 -   W [dla](../../../csharp/language-reference/keywords/for.md) instrukcji inicjowania.  
   
-    ```  
+    ```csharp  
     for(var x = 1; x < 10; x++)  
     ```  
   
 -   W [foreach](../../../csharp/language-reference/keywords/foreach-in.md) instrukcji inicjowania.  
   
-    ```  
+    ```csharp  
     foreach(var item in list){...}  
     ```  
   
 -   W [przy użyciu](../../../csharp/language-reference/keywords/using-statement.md) instrukcji.  
   
-    ```  
+    ```csharp  
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   

@@ -3,11 +3,11 @@ title: Praca z LINQ
 description: W tym samouczku jest przedstawienie sposobu generowania sekwencji za pomocą LINQ, zapisać metod do użycia w zapytaniach LINQ i rozróżnienia oceny wczesny i opóźnieniem.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="working-with-linq"></a>Praca z LINQ
 
@@ -200,7 +200,7 @@ Uruchom próbkę i zobacz, jak talii Reorganizuje na każdym losowa, dopóki zwr
 
 ## <a name="optimizations"></a>Optymalizacje
 
-Wykonuje próbki zostały już utworzone w do tej pory *w losowo*, gdzie kart górny i dolny nie zmieniają się przy każdym uruchomieniu. Można wprowadzić zmiany, i uruchom *limit losowa*, w którym wszystkie karty 52 zmienić położenie. Dla poza losowa, możesz interleave talii tak, aby pierwszy karty w dolnej połowie staje się pierwszym karty w talii. Oznacza to, że ostatni karty w górnej połowie staje się karty dolnej. To jest tylko jeden wiersz zmiany. Aktualizacja wywołanie losowo, aby zmienić kolejność górny i dolny połowy talii:
+Wykonuje próbki zostały już utworzone w do tej pory *limit losowa*, gdzie kart górny i dolny nie zmieniają się przy każdym uruchomieniu. Można wprowadzić zmiany, i uruchom *w losowo*, w którym wszystkie karty 52 zmienić położenie. Dla w losowa, możesz interleave talii tak, aby pierwszy karty w dolnej połowie staje się pierwszym karty w talii. Oznacza to, że ostatni karty w górnej połowie staje się karty dolnej. To jest tylko jeden wiersz zmiany. Aktualizacja wywołanie losowo, aby zmienić kolejność górny i dolny połowy talii:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -264,13 +264,13 @@ public static void Main(string[] args)
 }
 ```
 
-Należy zauważyć, że nie możesz zalogować się za każdym razem, gdy dostęp zapytania. Możesz zalogować się wyłącznie w przypadku utworzenia oryginalne zapytanie. Program nadal trwa długo do uruchomienia, ale spowoduje to wyświetlenie dlaczego. Po uruchomieniu o cierpliwość systemem zewnętrznego losowo z rejestrowaniem włączona, wrócić do losowa wewnętrzny. Obliczanie leniwe efekty będą nadal wyświetlane. W jednym przebiegu wykonywania kwerend 2592, w tym wszystkie wartości i koloru generacji.
+Należy zauważyć, że nie możesz zalogować się za każdym razem, gdy dostęp zapytania. Możesz zalogować się wyłącznie w przypadku utworzenia oryginalne zapytanie. Program nadal trwa długo do uruchomienia, ale spowoduje to wyświetlenie dlaczego. Po uruchomieniu o cierpliwość systemem wewnętrzny losowo z rejestrowaniem włączona, wrócić do zewnętrznego losowa. Obliczanie leniwe efekty będą nadal wyświetlane. W jednym przebiegu wykonywania kwerend 2592, w tym wszystkie wartości i koloru generacji.
 
 Jest to prosty sposób można zaktualizować tego programu, aby uniknąć wszystkich tych wykonania. Brak metody LINQ `ToArray()` i `ToList()` spowodować zapytania do uruchomienia i odpowiednio zapisane wyniki w tablicy lub na liście. Te metody umożliwiają pamięci podręcznej danych wyników zapytania, zamiast ponownie wykonaj zapytanie źródła.  Dołącz zapytania generujących talii kart z wywołaniem do `ToArray()` i ponownie uruchom zapytanie:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Uruchom ponownie, a wewnętrzny losowa jest do 30 zapytania. Uruchom ponownie, nadając zewnętrzne losowa i zobaczysz ulepszenia podobne. (Go teraz wykonuje zapytania 162).
+Uruchom ponownie, a jest losowa zewnętrzne do 30 zapytania. Uruchom ponownie, nadając wewnętrzny losowa i zobaczysz ulepszenia podobne. (Go teraz wykonuje zapytania 162).
 
 Nie błędnie interpretuje planowanie, który dzielenia na uruchamiać wszystkie zapytania w tym przykładzie. W tym przykładzie jest przeznaczona do Wyróżnij przypadków użycia, w którym obliczanie leniwe może spowodować problemy z wydajnością. Wynika to z każdego nowego rozmieszczenie talii składa się z poprzednim rozmieszczenia. Przy użyciu obliczanie leniwe oznacza, że każda nowa konfiguracja talii składa się z oryginalnego talii, nawet wykonywanie kodu, który skompilowany `startingDeck`. Która powoduje dużą ilość dodatkowej pracy. 
 
@@ -324,4 +324,4 @@ Skompiluj i uruchom ponownie. Dane wyjściowe są nieco bardziej przejrzyste i k
 
 W tym przykładzie pokazano, możesz niektórych metod LINQ, jak utworzyć własne metody, które będą używane łatwo za pomocą LINQ włączone kodu. On również wyświetlał różnice między opóźnieniem i wczesny ocena oraz wpływ, jaki decyzji może mieć na wydajność.
 
-Poznanie nieco technika magician jeden. Magicians Użyj losowa faro, ponieważ można kontrolować, którym przechodzi wszystkie karty w talii. W niektórych lewy magician ma umieść karty u góry talii członka grupy odbiorców i przesuwa kilka razy, wiedząc, gdzie przejdzie do tej karty. Inne Iluzje wymagają talii ustawić określony sposób. Magician ustawi talii przed wykonaniem lewy. Następnie użytkownik będzie losowo talii 5 razy przy użyciu losowego wewnętrzny. Na etapie klika Pokaż wygląd losowe talii, losowo go 3 razy więcej i talii ustawić dokładnie tak jak chce mieć.
+Poznanie nieco technika magician jeden. Magicians Użyj losowa faro, ponieważ można kontrolować, którym przechodzi wszystkie karty w talii. W niektórych lewy magician ma umieść karty u góry talii członka grupy odbiorców i przesuwa kilka razy, wiedząc, gdzie przejdzie do tej karty. Inne Iluzje wymagają talii ustawić określony sposób. Magician ustawi talii przed wykonaniem lewy. Następnie użytkownik będzie losowo talii 5 razy przy użyciu zewnętrznego losowa. Na etapie klika Pokaż wygląd losowe talii, losowo go 3 razy więcej i talii ustawić dokładnie tak jak chce mieć.

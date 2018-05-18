@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="regular-expression-examples"></a>Przykłady wyrażeń regularnych
 Ta sekcja zawiera przykłady kodu, ilustrujące używanie wyrażeń regularnych w typowych zastosowań.  
@@ -35,7 +35,7 @@ Ta sekcja zawiera przykłady kodu, ilustrujące używanie wyrażeń regularnych 
  Przykład wyodrębniania nieprawidłowe znaki inne niż alfanumeryczne z ciągu.  
   
  [Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- Zawiera przykład, w którym można użyć, aby sprawdzić, czy ciąg w formacie prawidłowy adres e-mail.  
+ Przykład która weryfikuje, czy ciąg w formacie prawidłowy adres e-mail.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Text.RegularExpressions>  

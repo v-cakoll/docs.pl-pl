@@ -19,7 +19,7 @@ Operator dekrementacji (`--`) zmniejsza wartość jego argumentu operacji o 1. O
 ## <a name="remarks"></a>Uwagi  
  Typy numeryczne i wyliczenia mają wstępnie zdefiniowane operatory dekrementacji.  
   
- Typy definiowane przez użytkownika można przeciążać `--` — operator (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)). Operacje na typy całkowite zazwyczaj są dozwolone w wyliczeniu.  
+ Typy definiowane przez użytkownika można przeciążać `--` — operator (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)). Operacje na typach całkowitych w wyliczeniach są zazwyczaj dozwolone.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  

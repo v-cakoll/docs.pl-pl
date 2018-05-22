@@ -1,6 +1,6 @@
 ---
 title: -langversion (opcje kompilatora C#)
-ms.date: 07/20/2015
+ms.date: 05/14/2018
 f1_keywords:
 - /langversion
 helpviewer_keywords:
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 523636663744acbbc85a08ebe3535f066e7dc160
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 659932e638cbddd7c22fe7d82c88c0b150ccc84d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opcje kompilatora C#)
 Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się w wybranym specyfikacja języka C#.  
@@ -37,12 +37,13 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
 |5|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 5.0 lub niższy <sup id="TCS5"> [CS5](#FCS5)</sup>|
 |6|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 6.0 lub niższy <sup id="TCS6"> [CS6](#FCS6)</sup>|
 |7|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 7.0 lub niższy <sup id="TCS7"> [CS7](#FCS7)</sup>|
+|7.1|Kompilator akceptuje tylko składnię, która jest dostępna w C# 7.1 lub niższy <sup id="TCS71"> [CS71](#FCS71)</sup>|
+|7.2|Kompilator akceptuje tylko składnię, która jest dostępna w C# 7.2 lub niższy <sup id="TCS72"> [CS72](#FCS72)</sup>|
+|7.3|Kompilator akceptuje tylko składnię, która jest dostępna w C# 7.3 lub niższy <sup id="TCS73"> [CS73](#FCS73)</sup>|
 |najnowsze|Kompilator akceptuje wszystkie składni odpowiedni język, który może obsługiwać. <sup id="TLatest">[najnowsze](#FLatest)</sup>|
+
 <!--- Uncomment and move these above
-|latest| once they're officially released
-|7.1|The compiler accepts only syntax that is included in C# 7.1 or lower <sup id="TCS71">[CS71](#FCS71)</sup>|
-|7.2|The compiler accepts only syntax that is included in C# 7.2 or lower <sup id="TCS71">[CS72](#FCS72)</sup>|
-|8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS71">[CS8](#FCS8)</sup>|
+|8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS8">[CS8](#FCS8)</sup>|
 -->
 
   
@@ -68,23 +69,21 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
  Aby dowiedzieć się, jak ustawić tę opcję kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.  
     
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [Opcje kompilatora C#](index.md)  
  [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)  
  
 ### <a name="c-language-specification"></a>Specyfikacja języka C#
- [Dokumentacja specyfikacja języka C#](../../../csharp/language-reference/language-specification/index.md) : .NET Foundation  
+ [Dokumentacja specyfikacja języka C#](../language-specification/index.md) : .NET Foundation  
  C# 1.0/1.1 [23270:2003 ISO/IEC](https://www.iso.org/standard/36768.html) technologii informatycznych — specyfikacja języka C#: ISO katalogu  
  C# 2.0 [23270:2006 ISO/IEC](https://www.iso.org/standard/42926.html) technologii informatycznych — specyfikacja języka C#: ISO katalogu  
  C# 2.0 [c042926_ISO_IEC_23270_2006 zip (E)](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) 23270:2006 ISO/IEC w formacie PDF: dostępne standardów za darmo ISO  
  C# 3.0 [Specification.doc języka CSharp](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# wersja specyfikacji języka 3.0: Microsoft Corporation  
  C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) ECMA 334 4. w wersji Standard    
- C# w wersji 5.0 [Specification.docx języka CSharp](https://www.microsoft.com/download/details.aspx?id=7029) C# wersja specyfikacji języka 5.0: Microsoft Corporation  
+ C# w wersji 5.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) ECMA 334 5. w wersji Standard  
  C# w wersji 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C# wersja specyfikacji języka 6 - nieoficjalny projekt: .NET Foundation  
- C# (nie jest aktualnie dostępna) 7.0  
+ C# 7.0 lub nowszym (obecnie niedostępne)  
 
 <!--- Uncomment and add to the above when they become officially released
- C# 7.1 (spec is not yet finished)  
- C# 7.2 (spec is not yet finished)  
  C# 8.0 (spec is not yet finished)  
 -->
 
@@ -95,10 +94,11 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
 [↩](#TCS4)<a name="FCS4">CS4</a>: programu Microsoft Visual Studio/kompilacji narzędzia 2010 lub powiązane .net Framework 4.0 kompilatora    
 [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/kompilacji narzędzia 2012 lub powiązane .net Framework 4.5 kompilatora    
 [↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015    
-[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">najnowsze</a>: 2017 narzędzi Microsoft Visual Studio/kompilacji   
+[↩](#TCS7)<a name="FCS7">CS7</a>: 2017 narzędzi Microsoft Visual Studio/kompilacji   
+[↩](#TCS71)<a name="FCS71">CS71</a>: 2017 firmy Microsoft do narzędzi Visual Studio/kompilacji, wersji 15 ustęp 3    
+[↩](#TCS72)<a name="FCS72">CS72</a>: 2017 firmy Microsoft do narzędzi Visual Studio/kompilacji, wersja 15,5 cala    
+[↩](#TCS73)<a name="FCS73">CS73</a>, <a name="FLatest">najnowsze</a>: 2017 firmy Microsoft do narzędzi Visual Studio/kompilacji, wersja 15.7    
 
 <!--- Uncomment and add to the above when they become officially released
-[↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 20??    
-[↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 20??    
-[↩](#TCS8)<a name="FCS71">CS8</a>: Microsoft Visual Studio/Build Tools 20??    
+[↩](#TCS8)<a name="FCS8">CS8</a>: Microsoft Visual Studio/Build Tools 20??    
 -->

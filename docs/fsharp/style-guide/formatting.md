@@ -1,12 +1,12 @@
 ---
-title: 'Wytyczne Formatowani kodu języka F #'
+title: 'Wskazówki dotyczące formatowania kodu języka F #'
 description: 'Dowiedz się wskazówki dotyczące formatowania kodu F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: e5c700ca9ae3968243f11c1237b9e4b26e580dcf
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu języka F #
 
@@ -324,19 +324,10 @@ let function1 arg1 arg2 arg3 arg4 =
 
 ### <a name="formatting-pipeline-operators"></a>Formatowanie operatorów potoku
 
-Potok `|>` powinien pojawiać się na początku wiersza bezpośrednio pod wyrażenie, które są obsługiwane na:
+Potok `|>` operatory powinien znajdować się pod wyrażenia działają na.
 
 ```fsharp
-// OK
-let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
-               |> List.ofArray
-               |> List.map (fun assm -> assm.GetTypes())
-               |> Array.concat
-               |> List.ofArray
-               |> List.map (fun t -> t.GetMethods())
-               |> Array.concat
-
-// OK, but prefer previous
+// Preferred approach
 let methods2 =
     System.AppDomain.CurrentDomain.GetAssemblies()
     |> List.ofArray
@@ -481,6 +472,56 @@ Użyj (camelcase) dla wartości powiązane z modułu prywatne, takie jak następ
 let emailMyBossTheLatestResults =
     ...
 ```
+
+### <a name="use-camelcase-for-parameters"></a>Użyj parametrów (camelcase)
+
+Wszystkie parametry powinien używać (camelcase) zgodnie z konwencją nazewnictwa platformy .NET.
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>Użyj PascalCase dla modułów
+
+Wszystkie moduły (najwyższego poziomu, wewnętrzne, prywatne, zagnieżdżonych) należy używać PascalCase.
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Użyj PascalCase dla deklaracji typu, członków i etykiety
+
+Klasy, interfejsy, struktury, wyliczenia, delegatów, rekordów i rozłączne powinny być wszystkie nazwę z PascalCase. Elementy członkowskie w ramach typy oraz etykiety dla rekordów i rozłączne też używać PascalCase.
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Użyj PascalCase dla konstrukcji wewnętrznej do .NET
+
+Przestrzenie nazw, wyjątki, zdarzeń i projektu /`.dll` nazwy też używać PascalCase. Nie tylko jest to, że zużycie z innymi językami .NET możesz bardziej naturalne dla konsumentów, również jest spójna z konwencji nazewnictwa platformy .NET, które mogą wystąpić.
 
 ### <a name="avoid-underscores-in-names"></a>Unikaj podkreślenia w nazwach
 

@@ -1,17 +1,12 @@
 ---
 title: 'Samouczek: Tworzenie dostawcy typów (F #)'
 description: 'Dowiedz się, jak utworzyć własne dostawcy typów F # w F # 3.0, sprawdzając wielu dostawców typu prostego w celu zilustrowania koncepcji podstawowe.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: cea71a2b71f660971c1b2dde702c9b489be48cee
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: HT
+ms.openlocfilehash: fe2bae8c7836ac46824264f2d5f5fb1e41900407
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -396,7 +391,7 @@ Dla niektórych zastosowaniach wymazanych podanych typów nie jest wymagana. Na 
 
 **Co to są oświadczenia udostępnionego typu?**
 
-- Zestaw obiektów możliwych do wymazanej podany typ są nazywane oświadczeń. W tym przykładzie w tym dokumencie typy oświadczeń wszystkich wymazanej podany `Type1.Type100` są zawsze obiektów typu string.
+- Zestaw obiektów możliwych do wymazanej podany typ są nazywane oświadczeń. W tym przykładzie w tym dokumencie typy oświadczeń wszystkich wymazanej podany `Type1..Type100` są zawsze obiektów typu string.
 
 Wszystkie oświadczenia udostępnionego typu muszą być zgodne z skasowanie podanego typu. (W przeciwnym razie kompilator języka F # zapewni Błąd stosowania typ dostawcy lub zostanie wygenerowany zweryfikowanie kodu platformy .NET, który nie jest prawidłowy. Typ dostawcy nie jest prawidłowy, jeśli zwróci ona kod, który udostępnia reprezentację, który nie jest prawidłowy.)
 

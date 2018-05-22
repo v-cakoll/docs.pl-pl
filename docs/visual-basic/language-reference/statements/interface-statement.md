@@ -1,17 +1,17 @@
 ---
 title: Interface — Instrukcja (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ff9211034438e225494b916045acd07c37810f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Interface — Instrukcja (Visual Basic)
 Deklaruje nazwę interfejsu i wprowadza definicje elementów członkowskich, które obejmuje interfejsu.  
@@ -37,7 +37,7 @@ End Interface
 |Termin|Definicja|  
 |---|---|  
 |`attributelist`|Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcjonalna. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Opcjonalna. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Friend chronionych](../../language-reference/modifiers/protected-friend.md)<br/>- [Prywatne chronione](../../language-reference/modifiers/private-protected.md)<br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`name`|Wymagana. Nazwa tego interfejsu. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcjonalna. Określa, że jest to interfejs generyczny.|  
@@ -121,5 +121,5 @@ End Interface
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

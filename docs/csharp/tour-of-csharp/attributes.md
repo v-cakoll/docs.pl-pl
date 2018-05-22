@@ -3,11 +3,11 @@ title: C# atrybutów — samouczek języka C#
 description: Dowiedz się więcej o deklaratywne programowania w języku C# przy użyciu atrybutów
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: d055f5386d1dddef0b70843a0a5fa6fc04922296
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="attributes"></a>Atrybuty
 
@@ -17,7 +17,7 @@ Poniższy przykład deklaruje `HelpAttribute` atrybut, który można umieścić 
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-Wszystkie klasy atrybutu pochodzi od <xref:System.Attribute> pochodzącymi z biblioteki standardowej klasy podstawowej. Atrybuty można zastosować, zapewniając ich nazw, wraz z żadnych argumentów w nawiasach kwadratowych bezpośrednio przed deklaracją skojarzone. Jeśli nazwa atrybutu kończy się `Attribute`, gdy odwołuje się do atrybutu można pominąć części nazwy. Na przykład `HelpAttribute` atrybut może być używany w następujący sposób.
+Wszystkie klasy atrybutu pochodzi od <xref:System.Attribute> pochodzącymi z biblioteki standardowej klasy podstawowej. Atrybuty można zastosować, zapewniając ich nazw, wraz z żadnych argumentów w nawiasach kwadratowych bezpośrednio przed deklaracją skojarzone. Jeśli nazwa atrybutu kończy się `Attribute`, gdy odwołuje się do atrybutu można pominąć części nazwy. Na przykład `HelpAttribute` można używać w następujący sposób.
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 

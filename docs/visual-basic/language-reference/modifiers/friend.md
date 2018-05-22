@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie zestawu, który zawiera jego deklarację.  
@@ -27,9 +27,10 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
  `Friend` dostęp jest często poziomu preferowany elementom programowania aplikacji i `Friend` jest dostęp domyślny poziom interfejsu, modułu, klasy lub struktury.  
   
  Można użyć `Friend` tylko na poziomie modułu, interfejsem lub przestrzeni nazw. W związku z tym kontekście deklaracji dla `Friend` elementu musi być plikiem źródłowym, przestrzeni nazw, interfejs, modułu, klasy lub struktury; nie może być procedury.  
-  
- Można użyć `Friend` modyfikator w połączeniu z [chronione](../../../visual-basic/language-reference/modifiers/protected.md) modyfikator w tej samej deklaracji. Ta kombinacja przyznaje zarówno `Friend` dostępu i chronionego dostępu na zadeklarowane elementy, dzięki czemu są one dostępne z dowolnej lokalizacji w tym samym zestawie, swojej klasy oraz klas pochodnych. Można określić `Protected Friend` tylko w elementach członkowskich klas.  
-  
+
+> [!NOTE]
+> Można również użyć [Protected Friend](protected-friend.md) modyfikator dostępu, co sprawia, że element członkowski klasy jest dostępny w obrębie klasy, z klasy pochodnej i z tego samego zestawu, w którym klasa jest zdefiniowana. Aby ograniczyć dostęp do elementu członkowskiego z w swojej klasie i klasach pochodnych w tym samym zestawie, należy użyć [prywatne chronione](private-protected.md) modyfikator dostępu.
+
  Porównanie `Friend` i innych modyfikatorów dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Prywatne chronione](./private-protected.md)   
+ [Friend chronionych](./protected-friend.md)   
  [Poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

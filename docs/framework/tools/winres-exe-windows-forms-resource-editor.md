@@ -1,6 +1,6 @@
 ---
 title: Winres.exe (Edytor zasobów formularzy systemu Windows)
-ms.date: 03/30/2017
+ms.date: 05/21/2018
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -12,17 +12,20 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14e90916261250452c1f07e66a46bee400da0428
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Edytor zasobów formularzy systemu Windows)
 Edytor zasobów Windows Forms, Winres.exe, jest narzędziem układu wizualnego, które ułatwia ekspertom lokalizowanie zasobów interfejsu użytkownika Windows Forms używanych przez formularze. Pliki resx lub resources używane jako dane wejściowe do Winres.exe mogą być tworzone przy użyciu środowiska projektowania wizualnego, takiego jak Microsoft Visual Studio. Aby uzyskać informacje na temat wdrażania zasobów w aplikacjach .NET Framework, zobacz [zasobów w aplikacjach pulpitu](../../../docs/framework/resources/index.md).  
   
  To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
+> [!IMPORTANT]
+> Należy ładować i użyj .resx pliki z zaufanych źródeł. Pliki ResX może zawierać kod wykonywalny i powinien być traktowany jako plik wykonywalny (.exe) z punktu widzenia zabezpieczeń.
+
  W wierszu polecenia wpisz następujące polecenie:  
   
 ## <a name="syntax"></a>Składnia  

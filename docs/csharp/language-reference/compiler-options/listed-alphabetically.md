@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1198249afe6933342aea1a05515e6766603ab147
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista kategorii, [C# kompilatora opcje rozbiciu na kategorie](listed-by-category.md).  
@@ -27,7 +27,7 @@ Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista
 |[-baseaddress](baseaddress-compiler-option.md)|Określa adres podstawowy biblioteki, który ma zostać utworzony.|  
 |[-bugreport](bugreport-compiler-option.md)|Tworzy plik "Usterek — raport". Ten plik zostanie wysłana wraz z informacjami awarii, jeśli jest używana z - errorreport: wiersz lub - errorreport: wysyłania.|  
 |[-checked](checked-compiler-option.md)|Umożliwia kompilatorowi Generowanie sprawdzanie nadmiaru dla operacji.|  
-|-checksumalgorithm:\<alg >|Określ algorytm oblicza sumę kontrolną pliku źródłowego, przechowywane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (ustawienie domyślne) lub SHA256.|  
+|-checksumalgorithm:\<alg >|Określa algorytm oblicza sumę kontrolną pliku źródłowego, przechowywane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (ustawienie domyślne) lub SHA256.|  
 |[-codepage](codepage-compiler-option.md)|Określa stronę kodową do używania podczas otwierania plików źródłowych.|  
 |[-debug](debug-compiler-option.md)|Emituje informacje o debugowaniu.|  
 |[-define](define-compiler-option.md)|Definiuje symbole kompilacji warunkowej.|  
@@ -42,13 +42,13 @@ Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista
 |-przyrostowe|Włącza kompilację przyrostową [przestarzały].|  
 |[-keycontainer](keycontainer-compiler-option.md)|Określa kontener klucza o silnej nazwie.|  
 |[-keyfile](keyfile-compiler-option.md)|Określa plik klucza o silnej nazwie.|  
-|[-langversion:\<ciąg >](langversion-compiler-option.md)|Określ tryb wersji języka: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 lub najnowsze |  
+|[-langversion:\<ciąg >](langversion-compiler-option.md)|Określa wersję językową: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |  
 |[-lib](lib-compiler-option.md)|Określa dodatkowe katalogi, w których będą poszukiwane odwołań.|  
 |[-link](link-compiler-option.md)|Udostępnia informacje o typie modelu COM w określonych zestawów do projektu.|  
 |[-linkresource](linkresource-compiler-option.md)|Dołącza określony zasób z tym zestawem.|  
 |[-main](main-compiler-option.md)|Określa typ zawierający punkt wejścia (Ignoruj wszystkie pozostałe możliwe punkty wejścia).|  
 |[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Określa, których typy niepublicznych modułu .netmodule mogą uzyskiwać dostęp do zestawu.|  
-|-modulename:\<ciąg >|Określ nazwę modułu źródła|  
+|-modulename:\<ciąg >|Określa nazwę modułu źródła|  
 |[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, nie można automatycznie dołączyć CSC. Źródło pliku.|  
 |[-nologo](nologo-compiler-option.md)|Pomija komunikat o prawach autorskich kompilatora.|  
 |[-nostdlib](nostdlib-compiler-option.md)|Instruuje kompilator, aby nie odwołanie do biblioteki standardowej (mscorlib.dll).|  
@@ -65,7 +65,7 @@ Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista
 |[-refout](refout-compiler-option.md)|Wygeneruj zestaw odwołania, oprócz podstawowego zestawu.|  
 |[-refonly](refonly-compiler-option.md)|Wygeneruj zestaw odwołania, a nie podstawowy zestaw.|  
 |[-resource](resource-compiler-option.md)|Osadza określonego zasobu.|  
-|zestaw reguł-:\<pliku >|Określ plik zestaw reguł, który powoduje wyłączenie diagnostyczne zależne.|  
+|zestaw reguł-:\<pliku >|Określa plik zestaw reguł, który powoduje wyłączenie diagnostyczne zależne.|  
 |[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, który można użyć pliku wykonywalnego.|  
 |[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z czterech opcji: [-docelowych: appcontainerexe](target-appcontainerexe-compiler-option.md), [— docelowych: exe](target-exe-compiler-option.md), [— docelowa: Biblioteka](target-library-compiler-option.md), [-docelowych: Moduł](target-module-compiler-option.md), [-docelowych: winexe](target-winexe-compiler-option.md), [-docelowych: winmdobj](target-winmdobj-compiler-option.md).|  
 |[-unsafe](unsafe-compiler-option.md)|Umożliwia [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) kodu.|  

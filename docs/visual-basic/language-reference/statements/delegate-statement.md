@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Delegate — Instrukcja
 Można zadeklarować obiektu delegowanego. Delegat jest typem referencyjnym, który odwołuje się do `Shared` metody typu lub metod wystąpień obiektu. Postępowanie z pasujących typów parametru i wróć może służyć do tworzenia wystąpienia tej klasy delegatu. Następnie procedurę później można wywołać za pomocą wystąpienia obiektu delegowanego.  
@@ -28,7 +28,7 @@ Można zadeklarować obiektu delegowanego. Delegat jest typem referencyjnym, kt�
 |Termin|Definicja|  
 |---|---|  
 |`attrlist`|Opcjonalna. Lista atrybutów, które są stosowane do tego obiektu delegowanego. Wiele atrybutów są rozdzielane przecinkami. Musisz ją ująć [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").|  
-|`accessmodifier`|Opcjonalna. Określa, jaki kod mogą uzyskiwać dostęp do obiektu delegowanego. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczny](../../../visual-basic/language-reference/modifiers/public.md). Wszelki kod, który można uzyskać dostępu do elementu, który deklaruje delegata do niego dostęp.<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md). Tylko kod w klasie obiektów delegowanych lub klasy pochodnej do niego dostęp.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Tylko kod w tym samym zestawie mogą uzyskiwać dostęp do obiektu delegowanego.<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md). Tylko kodu w elemencie, który deklaruje delegata do niego dostęp.<br /><br /> Można określić `Protected Friend` Aby włączyć dostęp z kodu w klasie obiektów delegowanych, klasa pochodna lub tego samego zestawu.|  
+|`accessmodifier`|Opcjonalna. Określa, jaki kod mogą uzyskiwać dostęp do obiektu delegowanego. Może to być jeden z następujących elementów:<br /><br /> - [Publiczny](../../../visual-basic/language-reference/modifiers/public.md). Wszelki kod, który można uzyskać dostępu do elementu, który deklaruje delegata do niego dostęp.<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md). Tylko kod w klasie obiektów delegowanych lub klasy pochodnej do niego dostęp.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Tylko kod w tym samym zestawie mogą uzyskiwać dostęp do obiektu delegowanego.<br />- [Prywatne](../../../visual-basic/language-reference/modifiers/private.md). Tylko kodu w elemencie, który deklaruje delegata do niego dostęp.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) tylko kod w klasie obiektów delegowanych, klasa pochodna lub tego samego zestawu można uzyskiwać dostęp do obiektu delegowanego. <br />- [Prywatne chronione](../../language-reference/modifiers/private-protected.md) tylko kod w klasie obiektów delegowanych lub w klasie pochodnej, w tym samym zestawie mogą uzyskiwać dostęp do obiektu delegowanego. |  
 |`Shadows`|Opcjonalna. Wskazuje, że ten delegat programistyczny ponownie deklaruje i ukrywa element programowania o identycznej nazwie lub zbiór elementów przeciążona w klasie podstawowej. Można obserwować dowolny rodzaj elementu zadeklarowany z innego typu.<br /><br /> Element zasłonięty z są niedostępne w klasie pochodnej, któremu, z wyjątkiem z którym przesłaniania element jest niedostępny. Na przykład jeśli `Private` element zasłania element klasy podstawowej, kod, który nie ma uprawnień dostępu do `Private` element uzyskuje dostęp do elementu klasy podstawowej zamiast tego.|  
 |`Sub`|Opcjonalne, ale albo `Sub` lub `Function` musi występować. Deklaruje tej procedury jako pełnomocnik `Sub` procedury, która nie zwraca wartości.|  
 |`Function`|Opcjonalne, ale albo `Sub` lub `Function` musi występować. Deklaruje tej procedury jako pełnomocnik `Function` procedury, która nie zwraca wartości.|  
@@ -70,5 +70,5 @@ Można zadeklarować obiektu delegowanego. Delegat jest typem referencyjnym, kt�
  [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
  [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

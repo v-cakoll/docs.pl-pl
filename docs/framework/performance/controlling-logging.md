@@ -1,28 +1,16 @@
 ---
 title: Kontrolowanie logowania w programie .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90de9dd6bd32eb2142dceb98c142f3c50a0a5691
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58a9c0d02f4a24acc0df4d4a36d65e02f8bb7603
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 Śledzenia zdarzeń systemu Windows (ETW) można użyć do rejestrowania zdarzeń środowiska uruchomieniowego języka wspólnego (CLR). Można tworzyć i przeglądać ślady za pomocą następujących narzędzi:  
@@ -39,7 +27,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- Jeśli nie ma dostawcy CLR, można zainstalować go w systemie Windows Vista i nowszych systemów operacyjnych przy użyciu systemu Windows [Wevtutil](http://go.microsoft.com/fwlink/?LinkID=150915) narzędzia wiersza polecenia. Otwórz okno wiersza polecenia jako administrator. Zmień katalog monitu [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] folderu (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<. NET wersji > \). Ten folder zawiera plik CLR-ETW.man. W wierszu polecenia wpisz następujące polecenie, aby zainstalować dostawcę CLR:  
+ Jeśli nie ma dostawcy CLR, można zainstalować go w systemie Windows Vista i nowszych systemów operacyjnych przy użyciu systemu Windows [Wevtutil](http://go.microsoft.com/fwlink/?LinkID=150915) narzędzia wiersza polecenia. Otwórz okno wiersza polecenia jako administrator. Zmień katalog monitu [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] folderu (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET wersji>\ ). Ten folder zawiera plik CLR-ETW.man. W wierszu polecenia wpisz następujące polecenie, aby zainstalować dostawcę CLR:  
   
  `wevtutil im CLR-ETW.man`  
   
@@ -64,9 +52,9 @@ Provider                                 GUID
   
     -   `-p` Parametr identyfikuje dostawcę identyfikator GUID.  
   
-    -   `0x1CCBD`Określa rodzajów zdarzeń, które zostanie wygenerowany.  
+    -   `0x1CCBD` Określa rodzajów zdarzeń, które zostanie wygenerowany.  
   
-    -   `0x5`Ustawia poziom rejestrowania (w tym przypadku pełne [5]).  
+    -   `0x5` Ustawia poziom rejestrowania (w tym przypadku pełne [5]).  
   
     -   `-ets` Parametr nakazuje Logman należy wysyłać polecenia do sesji śledzenia zdarzeń.  
   

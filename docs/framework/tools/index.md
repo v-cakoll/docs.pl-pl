@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65614d906abc2dec5dc5891b16b595cf9ef9d56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8ec8a5b1f665196fee62a4556e59201f45a6bff
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="net-framework-tools"></a>Narzędzia programu .NET Framework
 Narzędzia programu .NET Framework ułatwiają tworzenie i wdrażanie aplikacji oraz składników współpracujących z programem .NET Framework oraz zarządzanie nimi.  
   
- Większość narzędzi programu .NET Framework, które są opisane w tej sekcji, jest automatycznie instalowana z programem Visual Studio. (Aby uzyskać informacje dotyczące instalacji, zobacz [programu Visual Studio pobiera](http://go.microsoft.com/fwlink/?LinkID=325532).)  
+Większość narzędzi programu .NET Framework, które są opisane w tej sekcji, jest automatycznie instalowana z programem Visual Studio. Aby pobrać program Visual Studio, odwiedź stronę [programu Visual Studio pobiera](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) strony.
   
  Można uruchomić wszystkie narzędzia z wiersza polecenia, z wyjątkiem Assembly Cache Viewer (Shfusion.dll). Należy przejść do Shfusion.dll z Eksploratora plików.  
   

@@ -1,6 +1,6 @@
 ---
 title: Event — Instrukcja
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event — Instrukcja
 Deklaruje zdarzeń zdefiniowanych przez użytkownika.  
@@ -58,7 +58,7 @@ End Event
 |Część|Opis|  
 |---|---|  
 |`attrlist`|Opcjonalna. Lista atrybutów, które są stosowane do tego zdarzenia. Wiele atrybutów są rozdzielane przecinkami. Musisz ją ująć [lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ("`<`"i"`>`").|  
-|`accessmodifier`|Opcjonalna. Określa, jaki kod można uzyskać dostępu do zdarzenia. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczny](../../../visual-basic/language-reference/modifiers/public.md)— kodu, który można uzyskać dostępu do elementu, który deklaruje go do niego dostęp.<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)— tylko do kodu w klasie lub klasy pochodnej do niego dostęp.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— tylko do kodu w skład zestawu do niego dostęp.<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)— tylko kodu w elemencie, który deklaruje go do niego dostęp.<br /><br /> Można określić `Protected Friend` Aby włączyć dostęp z kodu w klasie zdarzenia, klasa pochodna lub tego samego zestawu.|  
+|`accessmodifier`|Opcjonalna. Określa, jaki kod można uzyskać dostępu do zdarzenia. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczny](../../../visual-basic/language-reference/modifiers/public.md)— kodu, który można uzyskać dostępu do elementu, który deklaruje go do niego dostęp.<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)— tylko do kodu w klasie lub klasy pochodnej do niego dostęp.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— tylko do kodu w skład zestawu do niego dostęp.<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)— tylko kodu w elemencie, który deklaruje go do niego dostęp.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-tylko kod w klasie zdarzenia, klasa pochodna lub tego samego zestawu do niego dostęp. <br />- [Prywatne chronione](../../language-reference/modifiers/private-protected.md)-tylko kod w klasie zdarzenia lub klasy pochodnej w skład zestawu do niego dostęp.|  
 |`Shared`|Opcjonalna. Określa, że to zdarzenie nie jest skojarzony z konkretnym wystąpieniem klasy lub struktury.|  
 |`Shadows`|Opcjonalna. Wskazuje, że to zdarzenie programistyczny ponownie deklaruje i ukrywa element programowania o identycznej nazwie lub zbiór elementów przeciążona w klasie podstawowej. Można obserwować dowolny rodzaj elementu zadeklarowany z innego typu.<br /><br /> Element zasłonięty z są niedostępne w klasie pochodnej, któremu, z wyjątkiem z którym przesłaniania element jest niedostępny. Na przykład jeśli `Private` element zasłania element klasy podstawowej, kod, który nie ma uprawnień dostępu do `Private` element uzyskuje dostęp do elementu klasy podstawowej zamiast tego.|  
 |`eventname`|Wymagana. Nazwa zdarzenia; następuje standardowej konwencji nazewnictwa zmiennej.|  
@@ -122,7 +122,7 @@ End Event
  [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)  
  [AddHandler, instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
  [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Uchwyty](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
  [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [Instrukcje: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
  [Instrukcje: deklarowanie zdarzeń niestandardowych w celu unikania blokowania](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  

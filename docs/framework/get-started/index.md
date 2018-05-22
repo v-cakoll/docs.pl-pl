@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>Wprowadzenie do programu .NET Framework
 
@@ -70,7 +70,7 @@ Do tworzenia aplikacji programu .NET Framework lub składników należy wykonać
 
 2. Wybierz język lub języki obsługiwane przez program .NET Framework, która ma być używany do opracowywania aplikacji. Dostępnych jest kilka języków, w tym [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F #](../../fsharp/index.md)i C + +/ CLI firmy Microsoft. (Język programowania, który służy do opracowywania aplikacji dla programu .NET Framework jest zgodna [specyfikacji infrastruktury języka wspólnego (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
-3. Wybierz i zainstaluj rozwoju środowiska do tworzenia aplikacji i który obsługuje z wybranego języka programowania lub języków. Microsoft zintegrowane środowisko programistyczne (IDE) dla aplikacji .NET Framework jest [programu Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532). Jest ona dostępna w numerze wersji.
+3. Wybierz i zainstaluj rozwoju środowiska do tworzenia aplikacji i który obsługuje z wybranego języka programowania lub języków. Microsoft zintegrowane środowisko programistyczne (IDE) dla aplikacji .NET Framework jest [programu Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Jest ona dostępna w numerze wersji.
 
 Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla platformy .NET Framework, zobacz [Podręcznik programowania](../../../docs/framework/development-guide.md).
 

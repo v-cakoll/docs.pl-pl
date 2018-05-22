@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>Klasy (Przewodnik programowania w języku C#)
 A *klasy* jest konstrukcję, która umożliwia tworzenie własnych niestandardowych typów grupując zmienne innych typów, metod i zdarzeń. Klasa jest podobny do planu. Definiuje danych i zachowania typu. Jeśli klasa nie jest zadeklarowane jako statyczne, można utworzyć kod klienta *wystąpień* go. Te wystąpienia są *obiektów* przypisane do zmiennej. Wystąpienie klasy pozostaje w pamięci, dopóki wszystkie odwołania do niego się znaleźć poza zakresem. W tym czasie CLR oznacza je jako kwalifikujący się do wyrzucanie elementów bezużytecznych. Jeśli klasa jest zadeklarowany jako [statycznych](../../../csharp/language-reference/keywords/static.md), nie można utworzyć wystąpień i kod klienta można do niego dostęp tylko za pośrednictwem samej klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statycznych elementów członkowskich klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -83,10 +83,9 @@ Po utworzeniu obiektu na stercie zarządzanej jest przydzielana pamięć, a zmie
   
  Definicje klas może zostać podzielony między plikami z innego źródła. Aby uzyskać więcej informacji, zobacz [klasy częściowe i metody](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   
-## <a name="description"></a>Opis  
- W poniższym przykładzie zdefiniowano publicznego klasę, która zawiera jedno pole, metoda i specjalne metody o nazwie konstruktora. Aby uzyskać więcej informacji, zobacz [konstruktorów](../../../csharp/programming-guide/classes-and-structs/constructors.md). Następnie utworzyć wystąpienia klasy z `new` — słowo kluczowe.  
-  
 ## <a name="example"></a>Przykład  
+ W poniższym przykładzie zdefiniowano klasę publicznej, która zawiera [automatycznie implementowanej właściwości](auto-implemented-properties.md), metody i specjalne metody o nazwie konstruktora. Aby uzyskać więcej informacji, zobacz [właściwości](properties.md), [metody](methods.md), i [konstruktorów](constructors.md) tematów. Wystąpienia klasy są następnie utworzono wystąpienie `new` — słowo kluczowe.  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  

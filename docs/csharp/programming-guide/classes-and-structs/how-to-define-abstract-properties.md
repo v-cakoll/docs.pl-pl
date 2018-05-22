@@ -5,11 +5,11 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: cf4295eea6a257fe053bf889f0c2f3d3fa5bb2a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa9006b6864b9b6b129eed323b0d6d7b29064189
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Porady: definiowanie właściwości abstrakcyjnych (Przewodnik programowania w języku C#)
 Poniższy przykład przedstawia sposób definiowania [abstrakcyjny](../../../csharp/language-reference/keywords/abstract.md) właściwości. Deklaracja właściwości abstrakcyjne nie dostarcza implementację metody dostępu właściwości — deklaruje obsługuje właściwości klasy, ale pozostawia implementacji metody dostępu dla klasy pochodnej. W poniższym przykładzie pokazano sposób implementacji właściwości abstrakcyjne dziedziczona z klasy podstawowej.  
@@ -35,7 +35,7 @@ Poniższy przykład przedstawia sposób definiowania [abstrakcyjny](../../../csh
   
 -   Modyfikatory we właściwości są umieszczane w deklaracji właściwości samej siebie. Na przykład:  
   
-    ```  
+    ```csharp  
     public abstract double Area  
     ```  
   

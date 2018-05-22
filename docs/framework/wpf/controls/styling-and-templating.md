@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Style i tworzenia szablonów odwoływać się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualny i utworzyć spójny wygląd ich produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji przez aplikację, model strong style i tworzenia szablonów jest niezbędne w celu umożliwienia obsługi i udostępnianie wyglądu w ramach i między aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia modelu.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  ![Styl elementu ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- W tym przykładzie prosty fotografii używa stylami i tworzenia szablonów można utworzyć wizualny środowisko użytkownika. Przykład ma dwa <xref:System.Windows.Controls.TextBlock> elementów i <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z listy obrazów. Pełny przykład, zobacz [wprowadzenie do stylów i tworzenia szablonów przykładowa](http://go.microsoft.com/fwlink/?LinkID=160010).  
+ W tym przykładzie prosty fotografii używa stylami i tworzenia szablonów można utworzyć wizualny środowisko użytkownika. Przykład ma dwa <xref:System.Windows.Controls.TextBlock> elementów i <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z listy obrazów. Pełny przykład, zobacz [wprowadzenie do stylów i tworzenia szablonów przykładowa](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>Podstawowe informacje dotyczące stylu  

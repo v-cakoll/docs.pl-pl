@@ -285,7 +285,12 @@
 ### [Rozpoczynanie pracy z programem Visual Studio dla komputerów Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Rozpoczynanie pracy z programem Visual Studio Code i Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Rozpoczynanie pracy z interfejsem wiersza polecenia platformy .NET Core](fsharp/get-started/get-started-command-line.md)
-<!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+## [F# — przewodnik dotyczący stylu](fsharp/style-guide/index.md)
+### [Wskazówki dotyczące formatowania kodu F#](fsharp/style-guide/formatting.md)
+### [C# — konwencje kodowania](fsharp/style-guide/conventions.md)
+### [F# — wytyczne dotyczące projektowania składników](fsharp/style-guide/component-design-guidelines.md)
+
 ## Samouczki
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 ### [Dostawcy typów](fsharp/tutorials/type-providers/index.md)

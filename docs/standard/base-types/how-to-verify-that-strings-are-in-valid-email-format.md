@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg w formacie prawidłowy adres e-mail.  
+
+> [!NOTE]
+>  Firma Microsoft zaleca używanie <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> klasy Sprawdź, czy ciąg w formacie adresu prawidłowy adres e-mail. Aby to zrobić, należy przekazać ciąg adresu e-mail do <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> konstruktora klasy, która zgłasza <xref:System.FormatException> Jeśli ciąg ma nierozpoznany format.  
   
 ## <a name="example"></a>Przykład  
  W przykładzie zdefiniowano `IsValidEmail` metody, która zwraca `true` Jeśli ciąg zawiera prawidłowy adres e-mail i `false` Jeśli nie, ale nie podejmuje żadnych innych akcji.  
@@ -67,9 +70,6 @@ W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ci�
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Jeśli znak znajdujący się @ nie jest otwierający nawias kwadratowy, jeden znak alfanumeryczny dopasowanie z wartością A-Z, a-z lub 0-9, a następnie zero lub więcej wystąpień łącznik, a następnie zero lub jeden znak alfanumeryczny o wartości A-Z, a-z lub 0-9 , a następnie kropki. Ten wzorzec można powtarzać jeden lub więcej razy, a musi następować nazwa domeny najwyższego poziomu.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|Nazwa domeny najwyższego poziomu musi rozpoczynać i kończyć się znakiem alfanumerycznym (a – z, A-Z i 0 – 9). Mogą również obejmować od 0 do 22 znaki ASCII, które są alfanumeryczne i łączniki.|  
 |`$`|Zakończenie dopasowuje koniec ciągu.|  
-  
-> [!NOTE]
->  Zamiast przy użyciu wyrażenia regularnego, aby zweryfikować adres e-mail, możesz użyć <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> klasy. Aby ustalić, czy adres e-mail jest nieprawidłowy, należy przekazać adres e-mail, aby <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> konstruktora klasy.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  `IsValidEmail` i `DomainMapper` metody mogą być zawarte w bibliotece metody narzędziowe wyrażenie regularne lub jako prywatny statyczny lub wystąpienie metody w klasie aplikacji mogą być uwzględnione.  

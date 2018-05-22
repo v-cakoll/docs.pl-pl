@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 157ff544df95740a96cf74fdc740feed7acde7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 10fdea17ca4ac32c1237d991114c40cce62949d1
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj program .NET Framework dla deweloperów
 
@@ -36,7 +36,7 @@ Szybkie linki lub odczytu dalsze szczegółowe informacje, skorzystaj z poniższ
   
 |Wersja programu .NET Framework|Instalacja Developer|Instalacja pakietu redystrybucyjnego|Obsługa platform|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
-|**4.7.2**|[.NET framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=863261)|[Instalator sieci web Centrum pobierania 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Centrum pobierania 4.7.2 Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=863265)|Obejmuje: <br/>Usługa Windows Update 10 kwietnia 2018<br /><br /> Można zainstalować na:<br/> <br/>Aktualizacja spadek twórców systemu Windows 10<br/>Aktualizacja twórców systemu Windows 10 <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Wersja 1709 i starsze wersje systemu Windows Server<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[.NET framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=874338)|[Instalator sieci web Centrum pobierania 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Centrum pobierania 4.7.2 Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=863265)|Obejmuje: <br/>Usługa Windows Update 10 kwietnia 2018<br /><br /> Można zainstalować na:<br/> <br/>Aktualizacja spadek twórców systemu Windows 10<br/>Aktualizacja twórców systemu Windows 10 <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Wersja 1709 i starsze wersje systemu Windows Server<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)|[Pobierz strony 4.7.1 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Strona dla 4.7.1 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=852107)|Obejmuje: <br/>Aktualizacja spadek twórców systemu Windows 10<br/>W systemie Windows Server w wersji 1709<br /><br /> Można zainstalować na:<br/> Aktualizacja twórców systemu Windows 10 <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2016 i starsze wersje<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[NET Framework 4.7 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=825319)|[Strony pobierania Instalatora 4,7 sieci web](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Strony pobierania 4,7 Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=825303)|Obejmuje: <br/>Aktualizacja twórców systemu Windows 10<br /><br /> Można zainstalować na:<br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2016 i starsze wersje<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[NET Framework 4.6.2 z dodatkiem Developer Pack](http://go.microsoft.com/fwlink/?LinkId=780617)|[Pobierz strony 4.6.2 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Strona dla 4.6.2 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=780601)|Obejmuje: <br /> Rocznicowa aktualizacja systemu Windows 10<br /><br /> Można zainstalować na:<br /> Usługa Windows Update 10 listopada <br/> Windows 10 <br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|
@@ -69,7 +69,7 @@ A *targeting pack* umożliwia aplikacji docelowych określonej wersji programu .
 
 Pakiet dewelopera programu .NET Framework 4.5.1 lub 4.5.2, docelowy pakiet dla programu .NET Framework 4.6 i pakiet deweloperów platformy .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1 lub 4.7.2 zapewnia wersji zestawów odwołań dla określonej platformy .NET pakiety językowe, plików i IntelliSense dla programu zintegrowane środowisko programistyczne takiego jak Visual Studio.  Jeśli używasz programu Visual Studio developer pack lub targeting pack dodaje również zainstalowana wersja programu .NET Framework do wyboru docelowego podczas tworzenia nowego projektu.  Wybierz jedną z następujących opcji:  
 
-- [Microsoft .NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=863261)
+- [Microsoft .NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=874338)
 
 - [Microsoft .NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)
 

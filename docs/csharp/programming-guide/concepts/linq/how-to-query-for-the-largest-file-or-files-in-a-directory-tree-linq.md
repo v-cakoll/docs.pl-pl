@@ -1,21 +1,12 @@
 ---
-title: "Porady: zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (C#)"
-ms.custom: 
+title: 'Porady: zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4ab52cc46a7d735ebe60f1d3822d5ae39c2a1234
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 004726c4df1af5a12a411d26c4dc36e1836597ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Porady: zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (C#)
 Ten przykład przedstawia pięć zapytań dotyczących rozmiaru pliku w bajtach:  

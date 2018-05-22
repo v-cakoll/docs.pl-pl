@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opcje kompilatora C# w rozbiciu na kategorie
 Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać alfabetyczną listę, zobacz [C# kompilatora opcje wymienione alfabetycznie](listed-alphabetically.md).  
@@ -30,12 +30,12 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |[-doc](doc-compiler-option.md)|Określa plik XML, których komentarzy do dokumentacji przetworzonych do zapisania.|  
 |[-out](out-compiler-option.md)|Określa plik wyjściowy.|  
 |[-pdb](pdb-compiler-option.md)|Określa nazwę pliku i lokalizację pliku PDB.|  
-|[-platform](platform-compiler-option.md)|Określ platformę danych wyjściowych.|  
-|[-preferreduilang](preferreduilang-compiler-option.md)|Określanie języka danych wyjściowych kompilatora.|  
+|[-platform](platform-compiler-option.md)|Określa platformę danych wyjściowych.|  
+|[-preferreduilang](preferreduilang-compiler-option.md)|Określa język dla danych wyjściowych kompilatora.|  
 |[-refout](refout-compiler-option.md)|Wygeneruj zestaw odwołania, oprócz podstawowego zestawu.|  
 |[-refonly](refonly-compiler-option.md)|Wygeneruj zestaw odwołania, a nie podstawowy zestaw.|  
 |[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z pięciu opcji: [-docelowych: appcontainerexe](target-appcontainerexe-compiler-option.md), [-docelowych: exe](target-exe-compiler-option.md), [— docelowa: Biblioteka](target-library-compiler-option.md), [-docelowych: moduł ](target-module-compiler-option.md), [-docelowych: winexe](target-winexe-compiler-option.md), lub [-docelowych: winmdobj](target-winmdobj-compiler-option.md).|  
-|-modulename:\<ciąg >|Określ nazwę modułu źródła|  
+|-modulename:\<ciąg >|Określa nazwę modułu źródła|  
   
 ### <a name="net-framework-assemblies"></a>Zestawów platformy .NET framework  
   
@@ -91,7 +91,7 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |[-codepage](codepage-compiler-option.md)|Określa stronę kodową do używania wszystkich plików kodu źródłowego w kompilacji.|  
 |[-help](help-compiler-option.md)|Wyświetla listę opcji kompilatora stdout.|  
 |[-highentropyva](highentropyva-compiler-option.md)|Określa, że plik wykonywalny obsługuje randomizacji układu przestrzeni adresowej (ASLR).|  
-|[-langversion](langversion-compiler-option.md)|Określ tryb wersji języka: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 lub najnowsze |  
+|[-langversion](langversion-compiler-option.md)|Określa wersję językową: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |  
 |[-main](main-compiler-option.md)|Określa lokalizację **Main** metody.|  
 |[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, aby nie kompilacji z csc.rsp.|  
 |[-nologo](nologo-compiler-option.md)|Pomija informacje transparentu kompilatora.|  
@@ -100,7 +100,7 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu korzystającego z [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe.|  
 |[-utf8output](utf8output-compiler-option.md)|Wyświetla kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.|  
 |-równoległe [+&#124;—]|Określa, czy używać współbieżnych kompilacji (+).|  
-|-checksumalgorithm:\<alg >|Określ algorytm oblicza sumę kontrolną pliku źródłowego, przechowywane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (ustawienie domyślne) lub SHA256.|  
+|-checksumalgorithm:\<alg >|Określa algorytm oblicza sumę kontrolną pliku źródłowego, przechowywane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (ustawienie domyślne) lub SHA256.|  
   
 ## <a name="obsolete-options"></a>Opcje przestarzałe  
   

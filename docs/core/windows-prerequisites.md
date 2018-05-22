@@ -6,7 +6,7 @@ ms.author: johalex
 ms.date: 05/14/2018
 ms.openlocfilehash: f27070c08755e5b650e32e01011bb7bac669c82d
 ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
 ---

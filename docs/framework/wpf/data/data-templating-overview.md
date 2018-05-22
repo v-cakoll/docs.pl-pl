@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
 Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdefiniowania prezentacja danych. Formantów WPF ma wbudowaną funkcję obsługi dostosowywania prezentacji danych. W tym temacie przedstawiono najpierw sposób definiowania <xref:System.Windows.DataTemplate> , a następnie wprowadza inne funkcje tworzenia szablonów danych, takie jak wyboru szablonów na podstawie niestandardowej logiki i obsługę wyświetlania danych hierarchicznej.  
@@ -132,7 +132,8 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdef
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Co należy w szablonie danych?  
- W poprzednim przykładzie, możemy umieścić wyzwalacza w <xref:System.Windows.DataTemplate> przy użyciu <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> Właściwość. <xref:System.Windows.Setter> Wyzwalacza ustawia wartości właściwości elementu ( <xref:System.Windows.Controls.Border> element) znajduje się w <xref:System.Windows.DataTemplate>. Jednak jeśli właściwości który Twojej `Setters` dotyczy nie są właściwościami elementów, które znajdują się w bieżącej <xref:System.Windows.DataTemplate>, może być odpowiedniejsze można ustawić właściwości, za pomocą <xref:System.Windows.Style> to <xref:System.Windows.Controls.ListBoxItem> klasy (Jeśli jest to powiązania kontrolki — <xref:System.Windows.Controls.ListBox>). Na przykład, jeśli chcesz z <xref:System.Windows.Trigger> do animowania <xref:System.Windows.UIElement.Opacity%2A> wartości elementu, gdy wskaźnik myszy wskazuje element zdefiniujesz Wyzwalacze w ramach <xref:System.Windows.Controls.ListBoxItem> stylu. Na przykład zobacz [wprowadzenie do stylów i tworzenia szablonów przykładowa](http://go.microsoft.com/fwlink/?LinkID=160010).  
+
+W poprzednim przykładzie, możemy umieścić wyzwalacza w <xref:System.Windows.DataTemplate> przy użyciu <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> Właściwość. <xref:System.Windows.Setter> Wyzwalacza ustawia wartości właściwości elementu ( <xref:System.Windows.Controls.Border> element) znajduje się w <xref:System.Windows.DataTemplate>. Jednak jeśli właściwości który Twojej `Setters` dotyczy nie są właściwościami elementów, które znajdują się w bieżącej <xref:System.Windows.DataTemplate>, może być odpowiedniejsze można ustawić właściwości, za pomocą <xref:System.Windows.Style> to <xref:System.Windows.Controls.ListBoxItem> klasy (Jeśli jest to powiązania kontrolki — <xref:System.Windows.Controls.ListBox>). Na przykład, jeśli chcesz z <xref:System.Windows.Trigger> do animowania <xref:System.Windows.UIElement.Opacity%2A> wartości elementu, gdy wskaźnik myszy wskazuje element zdefiniujesz Wyzwalacze w ramach <xref:System.Windows.Controls.ListBoxItem> stylu. Na przykład zobacz [wprowadzenie do stylów i tworzenia szablonów przykładowa](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
   
  Ogólnie rzecz biorąc, należy pamiętać, że <xref:System.Windows.DataTemplate> są stosowane do każdego z wygenerowany <xref:System.Windows.Controls.ListBoxItem> (Aby uzyskać więcej informacji na temat jak i gdzie faktycznie jest stosowane, zobacz <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> strony.). Twoje <xref:System.Windows.DataTemplate> dotyczy tylko z prezentacji i wyglądu obiektów danych. W większości przypadków wszystkie aspekty prezentacji, takie jak jakie elementu wygląda po zaznaczeniu lub jak <xref:System.Windows.Controls.ListBox> określa elementy, nie należą do definicji <xref:System.Windows.DataTemplate>. Na przykład zobacz [stylami i tworzenia szablonów ItemsControl](#DataTemplating_ItemsControl) sekcji.  
   
@@ -164,9 +165,9 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdef
  Z selektorem szablonu w miejscu <xref:System.Windows.Controls.ListBox> pojawi się teraz w następujący sposób:  
   
  ![Zrzut ekranu przedstawiający przykład tworzenia szablonów danych](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- Zakończenie naszych dyskusji w tym przykładzie. Pełny przykład, zobacz [wprowadzenie do danych przykładowych tworzenia szablonów](http://go.microsoft.com/fwlink/?LinkID=160009).  
-  
+
+Zakończenie naszych dyskusji w tym przykładzie. Pełny przykład, zobacz [wprowadzenie do danych przykładowych tworzenia szablonów](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>Style i tworzenia szablonów ItemsControl  
  Mimo że <xref:System.Windows.Controls.ItemsControl> nie jest tylko typ formantu, który można użyć <xref:System.Windows.DataTemplate> , jest to bardzo typowy scenariusz, aby powiązać <xref:System.Windows.Controls.ItemsControl> do kolekcji. W [co należy w szablonie danych](#what_belongs_in_datatemplate) sekcji omówiono który definicji z <xref:System.Windows.DataTemplate> powinien mieć tylko dane z prezentacji danych. Aby dowiedzieć się, gdy nie nadaje się do użycia <xref:System.Windows.DataTemplate> ważne jest, aby poznać inne właściwości stylu i szablon udostępniane przez <xref:System.Windows.Controls.ItemsControl>. Poniższy przykład zaprojektowano w celu zilustrowania funkcja każdego z tych właściwości. <xref:System.Windows.Controls.ItemsControl> w tym przykładzie jest powiązana do tej samej `Tasks` kolekcji, co w poprzednim przykładzie. Pokaz celów, style i szablony, w tym przykładzie są wszystkie zadeklarowane w wierszach.  

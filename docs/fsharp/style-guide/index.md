@@ -2,11 +2,11 @@
 title: 'Przewodnik po stylu F #'
 description: 'Dowiedz się pięć zasadami dobrej kodzie języka F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>Przewodnik po stylu F #
 
@@ -40,8 +40,8 @@ Następujące zasady należy mieć na uwadze za każdym razem zapisu kodzie jęz
 
 ## <a name="next-steps"></a>Następne kroki
 
-[F # formatowania wytyczne](formatting.md) zawierają wskazówki dotyczące formatowania kodu, dzięki czemu jest łatwy do odczytania.
+[Wskazówki dotyczące formatowania kodu języka F #](formatting.md) zawierają wskazówki dotyczące formatowania kodu, dzięki czemu jest łatwy do odczytania.
 
 [F # konwencje kodowania](conventions.md) zawierają wskazówki dla codebases idioms pomagających długoterminowej obsługi większych języka F # programowania w języku F #.
 
-[F # składnika zaleceń dotyczących projektowania](component-design-guidelines.md) jest rozbudowany zestaw wskazówki dotyczące tworzenia F # składniki, takie jak biblioteki.
+[F # składnika zaleceń dotyczących projektowania](component-design-guidelines.md) zawierają wskazówki dotyczące tworzenia F # składniki, takie jak biblioteki.

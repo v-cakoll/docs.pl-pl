@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 Systemy operacyjne i środowiska wykonawcze zwykle zapewnia jakiegoś izolacja pomiędzy aplikacjami. Na przykład system Windows używa procesów do izolowania aplikacji. Izolacja jest niezbędne do zapewnienia, że kod działający w jednej aplikacji nie może niekorzystnie wpłynąć na innych, niezależnych aplikacji.  
@@ -74,11 +74,11 @@ Systemy operacyjne i środowiska wykonawcze zwykle zapewnia jakiegoś izolacja p
   
  Istnieją trzy sposoby wczytywania zestawów jako neutralnych dla domen:  
   
--   <xref:System.LoaderOptimization> nie ładuje zestawów jako neutralnych dla domen, z wyjątkiem zestawu Mscorlib, który zawsze jest ładowany jako neutralny dla domen. To ustawienie jest wywoływana pojedynczej domeny, ponieważ jest ona używana najczęściej, gdy na hoście działa tylko jednej aplikacji w procesie.  
-  
--   <xref:System.LoaderOptimization> wczytuje wszystkie zestawy jako neutralne dla domen. Tego ustawienia należy używać, gdy w procesie istnieje wiele domen aplikacji uruchamiających ten sam kod.  
-  
--   <xref:System.LoaderOptimization> ładuje zestawy o silnych nazwach jako neutralne dla domen, jeśli zestawy i ich obiekty zależne zostały zainstalowane w globalnej pamięć podręcznej zestawów. Inne zestawy są wczytywane i kompilowane dokładnie na czas osobno dla każdej domeny aplikacji, do której zostały wczytane, dlatego można je zwolnić z pamięci procesu. Ustawienie należy stosować w przypadku, gdy w tym samym procesie działa więcej niż jedna aplikacja w tym samym procesie albo jeśli istnieje zbiór zestawów współużytkowanych przez wiele domen aplikacji oraz zestawów, które muszą być zwalniane z pamięci procesu.  
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> nie ładuje zestawów jako neutralnych dla domen, z wyjątkiem zestawu Mscorlib, który zawsze jest ładowany jako neutralny dla domen. To ustawienie jest wywoływana pojedynczej domeny, ponieważ jest ona używana najczęściej, gdy na hoście działa tylko jednej aplikacji w procesie.
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> wczytuje wszystkie zestawy jako neutralne dla domen. Tego ustawienia należy używać, gdy w procesie istnieje wiele domen aplikacji uruchamiających ten sam kod.
+
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> ładuje zestawy o silnych nazwach jako neutralne dla domen, jeśli zestawy i ich obiekty zależne zostały zainstalowane w globalnej pamięć podręcznej zestawów. Inne zestawy są wczytywane i kompilowane dokładnie na czas osobno dla każdej domeny aplikacji, do której zostały wczytane, dlatego można je zwolnić z pamięci procesu. Ustawienie należy stosować w przypadku, gdy w tym samym procesie działa więcej niż jedna aplikacja w tym samym procesie albo jeśli istnieje zbiór zestawów współużytkowanych przez wiele domen aplikacji oraz zestawów, które muszą być zwalniane z pamięci procesu.
   
  Kod kompilowany dokładnie na czas nie może być współużytkowany przez zestawy ładowane w kontekście ich źródła pochodzenia za pomocą metody <xref:System.Reflection.Assembly.LoadFrom%2A> klasy <xref:System.Reflection.Assembly> ani ładowane z obrazów przy użyciu przeciążeń metody <xref:System.Reflection.Assembly.Load%2A>, która określa tablice bajtowe.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 659932e638cbddd7c22fe7d82c88c0b150ccc84d
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
-ms.translationtype: HT
+ms.openlocfilehash: 299ff121bab87482b7cdcaebc8b43cb8a1b559ec
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opcje kompilatora C#)
 Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się w wybranym specyfikacja języka C#.  
@@ -29,8 +29,8 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
   
 |Opcja|Znaczenie|  
 |------------|-------------|  
-|default|Kompilator akceptuje wszystkie składni języka prawidłowe z najnowszej wersji głównych, który może obsługiwać. <sup id="TDefault">[Domyślne](#FDefault)</sup>| 
-|ISO-1|Kompilator akceptuje tylko składni, który znajduje się w 23270:2003 ISO/IEC C# (1.0/1.1) <sup id="TISO1"> [ISO1](#FISO1)</sup>|  
+|default|Kompilator akceptuje wszystkie składni języka prawidłowe z najnowszej wersji głównych, który może obsługiwać.|
+|ISO-1|Kompilator akceptuje tylko składni, który znajduje się w 23270:2003 ISO/IEC C# (1.0/1.2) <sup id="TISO1"> [ISO1](#FISO1)</sup>|  
 |ISO-2|Kompilator akceptuje tylko składni, który znajduje się w 23270:2006 ISO/IEC C# (2.0) <sup id="TISO2"> [ISO2](#FISO2)</sup>|
 |3|Kompilator akceptuje tylko składnię, która jest dostępna w C# 3.0 lub niższy <sup id="TCS3"> [CS3](#FCS3)</sup>|
 |4|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 4.0 lub niższy <sup id="TCS4"> [CS4](#FCS4)</sup>|
@@ -40,7 +40,7 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
 |7.1|Kompilator akceptuje tylko składnię, która jest dostępna w C# 7.1 lub niższy <sup id="TCS71"> [CS71](#FCS71)</sup>|
 |7.2|Kompilator akceptuje tylko składnię, która jest dostępna w C# 7.2 lub niższy <sup id="TCS72"> [CS72](#FCS72)</sup>|
 |7.3|Kompilator akceptuje tylko składnię, która jest dostępna w C# 7.3 lub niższy <sup id="TCS73"> [CS73](#FCS73)</sup>|
-|najnowsze|Kompilator akceptuje wszystkie składni odpowiedni język, który może obsługiwać. <sup id="TLatest">[najnowsze](#FLatest)</sup>|
+|najnowsze|Kompilator akceptuje wszystkie składni odpowiedni język, który może obsługiwać.|
 
 <!--- Uncomment and move these above
 |8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS8">[CS8](#FCS8)</sup>|
@@ -73,22 +73,19 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
  [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)  
  
 ### <a name="c-language-specification"></a>Specyfikacja języka C#
- [Dokumentacja specyfikacja języka C#](../language-specification/index.md) : .NET Foundation  
- C# 1.0/1.1 [23270:2003 ISO/IEC](https://www.iso.org/standard/36768.html) technologii informatycznych — specyfikacja języka C#: ISO katalogu  
- C# 2.0 [23270:2006 ISO/IEC](https://www.iso.org/standard/42926.html) technologii informatycznych — specyfikacja języka C#: ISO katalogu  
- C# 2.0 [c042926_ISO_IEC_23270_2006 zip (E)](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) 23270:2006 ISO/IEC w formacie PDF: dostępne standardów za darmo ISO  
- C# 3.0 [Specification.doc języka CSharp](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# wersja specyfikacji języka 3.0: Microsoft Corporation  
- C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) ECMA 334 4. w wersji Standard    
- C# w wersji 5.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) ECMA 334 5. w wersji Standard  
- C# w wersji 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C# wersja specyfikacji języka 6 - nieoficjalny projekt: .NET Foundation  
- C# 7.0 lub nowszym (obecnie niedostępne)  
 
-<!--- Uncomment and add to the above when they become officially released
- C# 8.0 (spec is not yet finished)  
--->
+|Wersja|Łącze|Opis|
+|-------|----|-----------|
+|C# 1.0|[Pobieranie dokumentu](http://download.microsoft.com/download/a/9/e/a9e229b9-fee5-4c3e-8476-917dee385062/csharp%20language%20specification%20v1.0.doc)|C# specyfikacji języka w wersji 1.0: Microsoft Corporation|
+|C# 1.2|[Pobieranie dokumentu](http://download.microsoft.com/download/5/e/5/5e58be0a-b02b-41ac-a4a3-7a22286214ff/csharp%20language%20specification%20v1.2.doc)|C# specyfikacji języka w wersji 1.2: Microsoft Corporation|
+|C# 2.0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/Ecma-334%204th%20edition%20June%202006.pdf)|ECMA-334 4. w wersji Standard|
+|C# 3.0|[Pobieranie dokumentu](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# specyfikacji języka w wersji 3.0: Microsoft Corporation|
+|C# W WERSJI 5.0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf)|ECMA-334 5. w wersji Standard|
+|C# W WERSJI 6.0|[Link](../language-specification/index.md)|C# specyfikacji języka w wersji 6 - nieoficjalny projektu: Foundation .NET|
+|C# 7.0 lub nowszym||Nie jest obecnie dostępna|
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Wersja minimalna kompilatora potrzebnych do obsługi wszystkich funkcji języka   
-[↩](#TDefault)<a name="FDefault">domyślne</a>, <a name="FISO1">ISO1</a>: .net programu Microsoft Visual Studio/Build Tools 2002 lub powiązane .net Framework 1.0 kompilatora     
+[↩](#TISO1)<a name="FISO1">ISO1</a>: .net programu Microsoft Visual Studio/Build Tools 2002 lub powiązane .net Framework 1.0 kompilatora     
 [↩](#TISO2)<a name="FISO2">ISO2</a>: program Microsoft Visual Studio/kompilacji narzędzia 2005 lub powiązane .net Framework 2.0 kompilatora    
 [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/kompilacji narzędzia 2008 lub powiązane .net Framework 3.5 kompilatora    
 [↩](#TCS4)<a name="FCS4">CS4</a>: programu Microsoft Visual Studio/kompilacji narzędzia 2010 lub powiązane .net Framework 4.0 kompilatora    
@@ -97,7 +94,7 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
 [↩](#TCS7)<a name="FCS7">CS7</a>: 2017 narzędzi Microsoft Visual Studio/kompilacji   
 [↩](#TCS71)<a name="FCS71">CS71</a>: 2017 firmy Microsoft do narzędzi Visual Studio/kompilacji, wersji 15 ustęp 3    
 [↩](#TCS72)<a name="FCS72">CS72</a>: 2017 firmy Microsoft do narzędzi Visual Studio/kompilacji, wersja 15,5 cala    
-[↩](#TCS73)<a name="FCS73">CS73</a>, <a name="FLatest">najnowsze</a>: 2017 firmy Microsoft do narzędzi Visual Studio/kompilacji, wersja 15.7    
+[↩](#TCS73)<a name="FCS73">CS73</a>: 2017 firmy Microsoft do narzędzi Visual Studio/kompilacji, wersja 15.7    
 
 <!--- Uncomment and add to the above when they become officially released
 [↩](#TCS8)<a name="FCS8">CS8</a>: Microsoft Visual Studio/Build Tools 20??    

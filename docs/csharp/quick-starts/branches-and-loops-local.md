@@ -3,11 +3,11 @@ title: Samouczek gałęzie i pętli - C# lokalnego poradniki Szybki Start
 description: W tym Szybki Start dotyczące gałęzi i pętle pisania kodu C#, aby eksplorować składni języka, obsługującego warunkowych gałęzi i pętli do wykonywania instrukcji wielokrotnie.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="branches-and-loops"></a>Gałęzie i pętli
 
@@ -39,7 +39,7 @@ int b = 3;
 Typ `dotnet run` ponownie. Ponieważ odpowiedź jest mniejsza niż 10, nic nie jest wydrukowane. **Warunku** jesteś testowania ma wartość false. Nie masz żadnych kod do wykonania, ponieważ został zapisany tylko jedną z możliwych gałęzi dla `if` instrukcji: gałąź prawdy.
 
 > [!TIP]
-> Ci poznać platformę C# (lub dowolnego języka programowania), należy podjąć błędów podczas pisania kodu. Kompilator znajdzie i raportów o błędach. Należy dokładnie przejrzeć dane wyjściowe błędów i kod, który wygenerował błąd. Błąd compler zwykle może pomóc w znalezieniu problem.
+> Ci poznać platformę C# (lub dowolnego języka programowania), należy podjąć błędów podczas pisania kodu. Kompilator znajdzie i raportów o błędach. Należy dokładnie przejrzeć dane wyjściowe błędów i kod, który wygenerował błąd. Błąd kompilatora zwykle może pomóc w znalezieniu problem.
 
 W tym przykładzie pierwsze pokazano możliwości `if` i typów logicznych. A *logiczna* jest zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. C# definiuje specjalny typ `bool` dla zmienne typu Boolean. `if` Instrukcji sprawdza wartość `bool`. Jeśli wartość jest `true`, instrukcji następującej `if` wykonuje. W przeciwnym razie zostanie pominięte.
 

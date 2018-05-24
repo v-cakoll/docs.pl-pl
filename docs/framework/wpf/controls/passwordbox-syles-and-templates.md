@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: a5002aa9596eb45ad92ef67ebc599efac32e94b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebc496b1b2558d8b2e310e6977ee27a82a4a8896
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="passwordbox-syles-and-templates"></a>PasswordBox — Style i szablony
 W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.PasswordBox> formantu. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> umożliwiają unikatowego wyglądu formantu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -48,7 +48,7 @@ W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.Pass
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Pełny przykład, zobacz [style próbki ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ Pełny przykład, zobacz [style próbki ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FrameworkElement.Style%2A>  

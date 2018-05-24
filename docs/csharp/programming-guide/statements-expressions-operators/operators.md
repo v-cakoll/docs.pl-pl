@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 W języku C# *operator* jest element program, który jest stosowany do co najmniej jeden *operandy* w wyrażenia lub instrukcji. Operatory, które mają jeden operand, takich jak operator inkrementacji (`++`) lub `new`, są określane jako *jednoargumentowy* operatorów. Operatory, które przyjmują dwóch argumentów operacji, takich jak operatory arytmetyczne (`+`,`-`,`*`,`/`), są określane jako *binarne* operatorów. Jeden operator, operator warunkowy (`?:`), ma trzy operandy i jest jedyny operator trójargumentowy w języku C#.  
@@ -114,7 +114,7 @@ W języku C# *operator* jest element program, który jest stosowany do co najmni
 |OR logiczne|x [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) y|Bitowe OR dla wartości całkowitych, logiczne OR dla wartości binarnych|  
 |AND warunkowe|x [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|  
 |OR warunkowe|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|  
-|Łączenie wartości null|x [?](../../../csharp/language-reference/operators/null-conditional-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|  
+|Łączenie wartości null|x [?](../../../csharp/language-reference/operators/null-coalescing-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|  
 |Warunkowe|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|Wynikiem jest wartość y, gdy wartość x jest równa true, lub z, gdy wartość x jest równa false|  
   
  **Przypisanie i operatory anonimowe**  

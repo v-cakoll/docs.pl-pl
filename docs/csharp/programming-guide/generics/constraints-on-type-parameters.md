@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (C# przewodnik programowania w języku)
 
@@ -18,7 +18,7 @@ Ograniczenia informuje kompilator o możliwościach, które musi mieć argument 
 
 |Ograniczenia|Opis|
 |----------------|-----------------|
-|`where T: struct`|Argument typu musi być typem wartości. Wszystkie wartości typu z wyjątkiem <xref:System.Nullable> można określić. Aby uzyskać więcej informacji, zobacz [przy użyciu typów dopuszczających wartości zerowe](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|Argument typu musi być typem wartości. Wszystkie wartości typu z wyjątkiem <xref:System.Nullable> można określić. Aby uzyskać więcej informacji, zobacz [przy użyciu typów dopuszczających wartości zerowe](../nullable-types/using-nullable-types.md).|
 |`where T : class`|Argument typu musi być typem referencyjnym. To ograniczenie ma zastosowanie również do klasy, interfejsu, delegata lub typ tablicy.|
 |`where T : unmanaged`|Argument typu nie może być typem referencyjnym i nie może zawierać żadnych elementów członkowskich typu odwołania na dowolnym poziomie zagnieżdżenia.|
 |`where T : new()`|Typ argumentu musi mieć publicznego konstruktora bez parametrów. Gdy jest używany z innymi ograniczeniami `new()` ograniczenie musi być określony jako ostatni.|

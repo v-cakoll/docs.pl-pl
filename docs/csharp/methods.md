@@ -3,13 +3,13 @@ title: Metody — przewodnik C#
 description: Przegląd metod, parametrów metod i wartości zwracane — metoda
 author: rpetrusha
 ms.author: ronpet
-ms.date: 10/26/2016
+ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 6a99ccc0157b044eb1a9ed7189de94ca69225d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="methods"></a>Metody #
 
@@ -80,7 +80,7 @@ Można wywołać metody za pomocą obu argumentów pozycyjnych i argumentami naz
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>Dziedziczona i przesłoniętej metody ##
+ ## <a name="inherited-and-overridden-methods"></a>Dziedziczona i przesłoniętej metody ##
 
 Oprócz elementów członkowskich, które są jawnie zdefiniowane w typie typ dziedziczy elementów członkowskich zdefiniowanych w jej klas podstawowych. Ponieważ wszystkie typy w systemie typ zarządzany dziedziczy pośrednio ani bezpośrednio po <xref:System.Object> klasa, wszystkie typy dziedziczy jej elementów członkowskich, takich jak <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, i <xref:System.Object.ToString>. W poniższym przykładzie zdefiniowano `Person` klasy, tworzy dwa `Person` obiekty i wywołuje `Person.Equals` metodę, aby sprawdzić, czy dwa obiekty są równe. `Equals` Metody, jednak nie jest zdefiniowany w `Person` klasy; został on odziedziczony po <xref:System.Object>.
 
@@ -258,7 +258,7 @@ Po zaznaczeniu metodę o [async](language-reference/keywords/async.md) modyfikat
 > [!NOTE]
 > Metoda asynchroniczna zwraca do obiektu wywołującego po napotkaniu pierwszego oczekiwano obiekt, który nie został jeszcze ukończony lub pobiera na końcu metody asynchronicznej cokolwiek nastąpi najpierw.
 
-Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, lub `void`. `void` Zwracany typ jest używany głównie w celu definiowania metod obsługi zdarzeń, gdy `void` zwracany typ jest wymagany. Metoda asynchroniczna zwracająca `void` nie jest oczekiwane, a obiekt wywołujący metody zwracające typ void nie może przechwytywać wyjątki, które metoda zgłasza. C# 7.0, po wydaniu, ułatwi to ograniczenie, aby umożliwić metody asynchronicznej [do zwrócenia dowolnego typu zadania przypominającej](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, lub `void`. `void` Zwracany typ jest używany głównie w celu definiowania metod obsługi zdarzeń, gdy `void` zwracany typ jest wymagany. Metoda asynchroniczna zwracająca `void` nie jest oczekiwane, a obiekt wywołujący metody zwracające typ void nie może przechwytywać wyjątki, które metoda zgłasza. Począwszy od C# 7.0, może mieć metody asynchronicznej [dowolnego typu zwracanego typu zadania](./whats-new/csharp-7.md#generalized-async-return-types).
 
 W poniższym przykładzie `DelayAsync` jest to metoda asynchroniczna, która zawiera instrukcję return, która zwraca liczbę całkowitą. Ponieważ jest to metoda asynchroniczna, jego deklaracji metody musi mieć typ zwracany `Task<int>`. Ponieważ typ zwracany jest `Task<int>`, oceny `await` wyrażenie w `DoSomethingAsync` tworzy całkowitą w następujący sposób `int result = await delayTask` pokazuje instrukcji.
 

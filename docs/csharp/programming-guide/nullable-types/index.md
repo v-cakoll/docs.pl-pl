@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 10a2d4ab248276d9fdbe9d2bba40ccdd02a77408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcff492f420a60a41b373bf9042ed0c2d66d0446
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="nullable-types-c-programming-guide"></a>Typy dopuszczające wartości zerowe (Przewodnik programowania w języku C#)
 Typy dopuszczające wartości null są wystąpieniami klasy <xref:System.Nullable%601?displayProperty=nameWithType> struktury. Typ dopuszczający wartość null może reprezentować poprawny zakres wartości dla jego typem podstawowym wartości, a także dodatkowe `null` wartość. Na przykład `Nullable<Int32>`, wyraźnym "Dopuszcza wartości null z Int32," można przypisać wartości od -2147483648 do 2147483647 lub można go przypisać `null` wartość. A `Nullable<bool>` można przypisać wartości [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), lub [null](../../../csharp/language-reference/keywords/null.md). Możliwość przypisania `null` do typów liczbowych i logicznych jest szczególnie przydatne podczas mamy do czynienia z bazami danych i inne typy danych, które zawierają elementy, które nie może być przypisana wartość. Na przykład polem w bazie danych można zapisać wartości `true` lub `false`, lub może być niezdefiniowana. 
@@ -51,7 +51,7 @@ Aby uzyskać więcej przykładów, zobacz [przy użyciu typów dopuszczających 
   
 -   [Konwersja boxing typów dopuszczających wartości null](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
   
--   [??, operator](../../../csharp/language-reference/operators/null-conditional-operator.md)  
+-   [??, operator](../../../csharp/language-reference/operators/null-coalescing-operator.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

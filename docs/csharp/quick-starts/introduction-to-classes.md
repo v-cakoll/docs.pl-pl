@@ -3,11 +3,11 @@ title: Wprowadzenie do samouczka klasy - C# lokalnego poradniki Szybki Start
 description: Utwórz pierwszy program C# i eksplorowanie obiektowej pojęcia
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5d3363a34fb684985b3b060dce2784090f25a1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a951c84396e187b5ef1a832705b7722f818c990b
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="introduction-to-classes"></a>Wprowadzenie do klas
 
@@ -72,7 +72,7 @@ namespace classes
 
 Przed przejściem, Spójrzmy na został skompilowany.  `namespace` Deklaracji umożliwia organizację kodu. Ta opcja szybkiego startu jest stosunkowo mały, więc będzie umieścić cały kod w jednym obszarze nazw. 
 
-`public class BankAccount` definiuje klasę lub typ tworzony. Wszystkie elementy wewnątrz `{` i `}` następujący klasy deklaracji definiuje zachowanie klasy. Istnieje pięć ***członków*** z `BankAccount` klasy. Pierwsze trzy są ***właściwości***. Właściwości elementów danych i może mieć kod, który wymusza sprawdzania poprawności lub inne zasady. Ostatnie dwa są ***metody***. Metody są bloki kodu tego administracją jednej funkcji. Odczytywanie nazwy wszystkich członków powinien podać informacji wystarczających lub innego projektanta zrozumieć, co oznacza klasy.
+`public class BankAccount` definiuje klasę lub typ tworzony. Wszystkie elementy wewnątrz `{` i `}` następujący klasy deklaracji definiuje zachowanie klasy. Istnieje pięć ***członków*** z `BankAccount` klasy. Pierwsze trzy są ***właściwości***. Właściwości elementów danych i może mieć kod, który wymusza sprawdzania poprawności lub inne zasady. Ostatnie dwa są ***metody***. Bloki kodu, wykonujących jednej funkcji są metody. Odczytywanie nazwy wszystkich członków powinien podać informacji wystarczających lub innego projektanta zrozumieć, co oznacza klasy.
 
 ## <a name="open-a-new-account"></a>Otwórz nowe konto
 

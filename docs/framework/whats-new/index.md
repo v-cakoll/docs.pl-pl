@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b1e54aa8a9751a01e8856a3e9e71d63b55772f2c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
@@ -657,8 +657,6 @@ End Class
 | Nazwa                                 | Wartość                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Klasyfikacja musi wynosić od 1 do 10. | Uwaga la ętre doit obejmują entre 1 et 10. |
-
- Ten plik można następnie
 
  Ponadto lokalizacja adnotacji danych jest otwarty. Deweloperzy można dodać własne dostawcy lokalizatora ciąg zaimplementowanie <xref:System.Web.Globalization.IStringLocalizerProvider> interfejs do przechowywania lokalizacja ciągu w innym innych niż w pliku zasobu.
 
@@ -1488,7 +1486,7 @@ SqlClient automatycznie udostępnia teraz szybsze połączenia do grupy dostępn
 
 - **Obsługa kodu strony kodowania**
 
-      [!INCLUDE[net_core](../../../includes/net-core-md.md)] primarily supports the Unicode encodings and by default provides limited support for code page encodings. You can add support for code page encodings available in the .NET Framework but unsupported in [!INCLUDE[net_core](../../../includes/net-core-md.md)] by registering code page encodings with the <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> method. For more information, see <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] przede wszystkim obsługuje kodowania Unicode i domyślnie zapewnia ograniczoną obsługę kodu strony kodowania. Można dodać obsługę dla kodu strony kodowań dostępnych w programie .NET Framework, ale jest nieobsługiwany w [!INCLUDE[net_core](../../../includes/net-core-md.md)] rejestrując kodowania strony kodu z <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji, zobacz <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 

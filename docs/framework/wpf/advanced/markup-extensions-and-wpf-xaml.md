@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącznie z ich składni reguł, cel i model obiektów klasy źródłowej je. Rozszerzenia znaczników są funkcją ogólne języka XAML i stosowania usługi XAML .NET. W tym temacie szczegółowo w szczególności rozszerzenia znaczników do użycia w WPF XAML.  
@@ -64,7 +64,7 @@ W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącz
   
 -   `RelativeSource` zawiera informacje o źródle <xref:System.Windows.Data.Binding> który Przejdź kilka możliwych relacji drzewa obiektów czasu wykonywania. Zapewnia to specjalne sourcing dla powiązań, które są w szablonach wielokrotnego użytku lub tworzony kodu bez pełnej znajomości otaczającego drzewa obiektów. Aby uzyskać więcej informacji, zobacz [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
--   `TemplateBinding` Umożliwia szablon formantu użyć wartości dla właściwości opartego na szablonie, które pochodzą z właściwości zdefiniowane przez model obiektu klasy, który będzie używany przez szablon. Innymi słowy właściwości w definicji szablonu mogą uzyskiwać dostęp do kontekstu, który istnieje tylko po zastosowaniu tego szablonu. Aby uzyskać więcej informacji, zobacz [rozszerzenie znacznika TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Aby uzyskać więcej informacji na praktyczne wykorzystanie `TemplateBinding`, zobacz [style próbki ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+-   `TemplateBinding` Umożliwia szablon formantu użyć wartości dla właściwości opartego na szablonie, które pochodzą z właściwości zdefiniowane przez model obiektu klasy, który będzie używany przez szablon. Innymi słowy właściwości w definicji szablonu mogą uzyskiwać dostęp do kontekstu, który istnieje tylko po zastosowaniu tego szablonu. Aby uzyskać więcej informacji, zobacz [rozszerzenie znacznika TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Aby uzyskać więcej informacji na praktyczne wykorzystanie `TemplateBinding`, zobacz [style próbki ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` obsługuje stosunkowo zaawansowanym scenariuszu przetwarzania obrazów. Aby uzyskać więcej informacji, zobacz [ColorConvertedBitmap — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
   

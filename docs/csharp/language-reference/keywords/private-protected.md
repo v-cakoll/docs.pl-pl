@@ -2,14 +2,17 @@
 title: prywatne chronione (odwołanie w C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="private-protected-c-reference"></a>prywatne chronione (odwołanie w C#)
 `private protected` Kombinacja słów kluczowych jest modyfikator dostępu elementu członkowskiego. Prywatny chroniony element członkowski jest dostępny przez typy pochodzące z zawierający klasy, ale tylko w obrębie zawierający go zestaw. Porównanie `private protected` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). 
+
+> [!NOTE]
+> `private protected` Modyfikator dostępu jest nieprawidłowy w języku C# wersji 7.2 lub nowszej.
    
 ## <a name="example"></a>Przykład  
  Prywatny chroniony element członkowski klasy podstawowej jest dostępny z typów pochodnych w zawierający go zestaw, tylko wtedy, gdy statycznych typu zmiennej typu klasy pochodnej. Rozważmy na przykład następujący segment kodu:  

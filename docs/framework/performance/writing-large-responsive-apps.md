@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takich jak pliki lub bazy danych. Te wskazówki pochodzi z ponowne zapisywanie C# i Visual Basic kompilatory w kodzie zarządzanym i ten artykuł zawiera kilka przykładów rzeczywistych kompilatora C#.  
@@ -433,7 +433,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Ten kod zmienia typ `cachedResult` do `Task<SyntaxTree>` i wykorzystuje `async` funkcji Pomocnik, która przechowuje oryginalny kod z `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` używa teraz [null operatora łączącego](~/docs/csharp/language-reference/operators/null-conditional-operator.md) do zwrócenia `cachedResult` Jeśli nie ma wartości null.  Jeśli `cachedResult` ma wartość null, następnie `GetSyntaxTreeAsync()` wywołania `GetSyntaxTreeUncachedAsync()` i buforuje wynik.  Zwróć uwagę, że `GetSyntaxTreeAsync()` nie await wywołanie `GetSyntaxTreeUncachedAsync()` jako kod normalnie.  Nie używa await oznacza że w przypadku `GetSyntaxTreeUncachedAsync()` zwraca jego <xref:System.Threading.Tasks.Task> obiektu `GetSyntaxTreeAsync()` natychmiast zwraca <xref:System.Threading.Tasks.Task>.  Teraz jest buforowanego zestawu wyników <xref:System.Threading.Tasks.Task>, więc nie nie przydziału do zwrócenia wyniku pamięci podręcznej.  
+ Ten kod zmienia typ `cachedResult` do `Task<SyntaxTree>` i wykorzystuje `async` funkcji Pomocnik, która przechowuje oryginalny kod z `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` używa teraz [null operatora łączącego](../../csharp/language-reference/operators/null-coalescing-operator.md) do zwrócenia `cachedResult` Jeśli nie ma wartości null.  Jeśli `cachedResult` ma wartość null, następnie `GetSyntaxTreeAsync()` wywołania `GetSyntaxTreeUncachedAsync()` i buforuje wynik.  Zwróć uwagę, że `GetSyntaxTreeAsync()` nie await wywołanie `GetSyntaxTreeUncachedAsync()` jako kod normalnie.  Nie używa await oznacza że w przypadku `GetSyntaxTreeUncachedAsync()` zwraca jego <xref:System.Threading.Tasks.Task> obiektu `GetSyntaxTreeAsync()` natychmiast zwraca <xref:System.Threading.Tasks.Task>.  Teraz jest buforowanego zestawu wyników <xref:System.Threading.Tasks.Task>, więc nie nie przydziału do zwrócenia wyniku pamięci podręcznej.  
   
 ### <a name="additional-considerations"></a>Dodatkowe uwagi  
  Oto kilka punktów więcej o potencjalnych problemach w dużych aplikacji lub aplikacji, które przetwarzają dużą ilość danych.  

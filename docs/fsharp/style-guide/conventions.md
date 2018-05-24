@@ -2,11 +2,11 @@
 title: 'Konwencje kodowania F #'
 description: 'Informacje ogólne wytyczne i idioms podczas zapisywania w kodzie języka F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>Konwencje kodowania F #
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 W języku F #, ma znaczenie kolejności zgłoszeń, łącznie z `open` instrukcje. Jest to w przeciwieństwie do języka C#, gdzie efekt `using` i `using static` jest niezależna od kolejności tych instrukcji w pliku.
 
-W języku F # ponieważ elementy otwarte w zakresie można obserwować innym już istnieje. Oznacza to, że zmiana kolejności `open` instrukcje może zmienić znaczenie kodu. W związku z tym sortowanie alfanumerycznie (lub pseudorandomly) zwykle nie jest zalecane, co najmniej Generowanie inaczej, które mogą wymagać.
+W języku F # elementy otwarte w zakresie można w tle innych jeszcze nie istnieje. Oznacza to, że zmiana kolejności `open` instrukcje może zmienić znaczenie kodu. W rezultacie, wszystkie dowolnego sortowanie wszystkich `open` instrukcje (na przykład alfanumerycznie) zwykle nie jest zalecane, co najmniej Generowanie inaczej, które mogą wymagać.
 
 Zamiast tego zaleca się je posortować [topologically](https://en.wikipedia.org/wiki/Topological_sorting); oznacza to, że kolejność Twojej `open` instrukcje w kolejności, w jakiej _warstwy_ systemu są zdefiniowane. Podczas sortowania w różnych warstwach topologiczne alfanumeryczne mogą być również uwzględnione.
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 Należy pamiętać, że podział wiersza oddziela topologiczne warstwy z każdej warstwy sortowane alfanumerycznie później. Kod zostanie prawidłowo organizuje bez przypadkowo przesłanianie wartości.
@@ -154,7 +152,9 @@ Istnieje wiele razy podczas inicjowania wartość może mieć efekty uboczne, ta
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -162,7 +162,9 @@ module MyApi =
 
 To jest często dobrym pomysłem kilku powodów:
 
-Po pierwsze ułatwia samego interfejsu API zależna stanu udostępnionego. Na przykład wiele wątków wywołujący może próby uzyskania dostępu do `dep3` wartość (i nie jest bezpieczne wątkowo). Po drugie wypycha konfigurację aplikacji do samej bazy kodu. To jest trudne w utrzymaniu dla większych codebases.
+Po pierwsze, konfiguracji aplikacji zostanie przypisany do codebase z `dep1` i `dep2`. To jest trudne w utrzymaniu w się, że codebases większy.
+
+Drugi, statycznie zainicjowane danych nie może zawierać wartości, które nie są bezpieczne dla wątków, jeśli sam składnika będzie używać wiele wątków. Jest to wyraźnie naruszone przez `dep3`.
 
 Na koniec inicjowania modułu kompiluje w konstruktorze statycznym kompilacji całej jednostki. W przypadku błędu podczas inicjowania let granica wartości w module, manifesty go jako `TypeInitializationException` który następnie jest buforowana przez cały czas ich istnienia aplikacji. Może to być trudne do diagnozowania. Zazwyczaj jest wyjątek wewnętrzny, który można spróbować przyczyny o, ale jeśli nie ma, to nie ma żadnych informuje jest główną przyczynę.
 
@@ -318,7 +320,7 @@ Typy, takich jak `Result<'Success, 'Error>` są odpowiednie dla podstawowe opera
 
 ## <a name="partial-application-and-point-free-programming"></a>Aplikacja częściowa i bez punktu programowania
 
-F # obsługuje aplikacja częściowa i w związku z tym różne sposoby program w stylu bez punktu. Może to być przydatne do ponownego użycia kodu w module lub wykonania elementu, ale zazwyczaj nie jest element zostać udostępniona publicznie. Ogólnie rzecz biorąc bez punktu programowania nie jest mocy w i samego siebie i można dodać kognitywnych dużą przeszkodę dla osób, które nie są zanurzony w stylu. Bez punktu programowania w języku F # jest podstawowy dla dobrze przeszkolone mathematician, ale może być trudne dla użytkowników, którzy nie są jeszcze znane z lambda calculus.
+F # obsługuje aplikacja częściowa i w związku z tym różne sposoby program w stylu bez punktu. Może to być przydatne do ponownego użycia kodu w module lub wykonania elementu, ale zazwyczaj nie jest element zostać udostępniona publicznie. Ogólnie rzecz biorąc bez punktu programowania nie jest mocy w i samego siebie i można dodać kognitywnych dużą przeszkodę dla osób, które nie są zanurzony w stylu.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Nie należy używać aplikacja częściowa i currying w publicznych interfejsach API
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Style i tworzenia szablonów odwoływać się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualny i utworzyć spójny wygląd ich produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji przez aplikację, model strong style i tworzenia szablonów jest niezbędne w celu umożliwienia obsługi i udostępnianie wyglądu w ramach i między aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia modelu.  
@@ -28,10 +28,8 @@ ms.lasthandoff: 05/15/2018
   
  To omówienie koncentruje się na aspektach stylami i tworzenia szablonów, aplikacji i nie omówiono w nim żadnych koncepcji powiązania danych. Aby uzyskać informacje dotyczące powiązania danych, zobacz [omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Ponadto jest zrozumieć zasoby, które są co włączyć style i szablony zostanie ponownie. Aby uzyskać więcej informacji o zasobach, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
-  
- 
-  
+ Ponadto jest zrozumieć zasoby, które są co włączyć style i szablony zostanie ponownie. Aby uzyskać więcej informacji o zasobach, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Style i przykładowe tworzenia szablonów  
  Przykłady kodu, używany w tym omówieniu są oparte na próbkę proste fotografii pokazano na poniższej ilustracji:  
@@ -183,9 +181,9 @@ ms.lasthandoff: 05/15/2018
   
  Słowniki zasobów można zdefiniować jako pojedyncze pliki, które umożliwiają ponownie wykorzystać motyw dla wielu aplikacji. Można również utworzyć swappable motywów przez zdefiniowanie wielu słowniki zasobów, które zapewniają te same typy zasobów, ale o różnych wartościach. Ponowne definiowanie te style oraz innych zasobów na poziomie aplikacji jest zalecane podejście do ujęć aplikacji.  
   
- Aby udostępnić zestaw zasobów, w tym w aplikacjach, style i szablony, można utworzyć [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików i zdefiniuj <xref:System.Windows.ResourceDictionary>. Na przykład Spójrz na poniższej ilustracji, który zawiera część [style próbki ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041):  
-  
- ![Kontrolowanie przykłady szablonu](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ Aby udostępnić zestaw zasobów, w tym w aplikacjach, style i szablony, można utworzyć [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików i zdefiniuj <xref:System.Windows.ResourceDictionary>. Na przykład Spójrz na poniższej ilustracji, który zawiera część [style próbki ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating):
+
+![Kontrolowanie przykłady szablonu](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  Jeśli przyjrzymy się [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki z przykładu, można zauważyć, że wszystkie pliki mają następujące:  
   

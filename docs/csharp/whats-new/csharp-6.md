@@ -3,11 +3,11 @@ title: Nowości w języku C# 6 - przewodnik C#
 description: Dowiedz się nowych funkcji w języku C# w wersji 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="whats-new-in-c-6"></a>Nowości w języku C# 6
 
@@ -351,7 +351,7 @@ Teraz, można również używać ich z <xref:System.Collections.Generic.Dictiona
 
 Ta funkcja oznacza, że asocjacyjnej kontenery mogą być inicjowane przy użyciu składni podobnej do została co w przypadku sekwencji kontenery różne wersje.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>Rozszerzenie `Add` metod w inicjatory kolekcji
+## <a name="extension-add-methods-in-collection-initializers"></a>Rozszerzenie `Add` metod w inicjatory kolekcji
 
 Inny funkcja, która ułatwia inicjowania kolekcji jest możliwość używania *— metoda rozszerzenia* dla `Add` metody. Ta funkcja została dodana do parzystości za pomocą Visual Basic. 
 
@@ -370,10 +370,7 @@ Teraz możesz, ale tylko wtedy, gdy tworzenie metodę rozszerzenia, która mapuj
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-Czynności przy użyciu tej funkcji ma mapowania dowolnej metody dodaje elementy kolekcji do metody o nazwie `Add` tworząc metody rozszerzenia: 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+Czynności przy użyciu tej funkcji ma mapowania dowolnej metody dodaje elementy kolekcji do metody o nazwie `Add` tworząc metody rozszerzenia.
 
 ## <a name="improved-overload-resolution"></a>Rozpoznanie przeciążenia ulepszone
 

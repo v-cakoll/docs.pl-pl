@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; — Element
 Określa, czy zestawy ze źródła zdalnego należy przyznać pełne zaufanie.  
@@ -69,7 +69,7 @@ Określa, czy zestawy ze źródła zdalnego należy przyznać pełne zaufanie.
   
  `enabled` Atrybutu dla tego elementu jest efektywne tylko wtedy, gdy zabezpieczenia dostępu kodu (CAS) jest wyłączona. Domyślnie urzędów certyfikacji zasad jest wyłączone w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] i nowszych wersjach. Jeśli ustawisz `enabled` do `true`, zdalne aplikacje są udzielane pełne zaufanie.  
   
- Jeśli `<loadFromRemoteSources>``enabled` nie jest ustawiony na `true`, jest zwracany wyjątek w następujących warunkach:  
+ Jeśli `<loadFromRemoteSources>` `enabled` nie jest ustawiony na `true`, jest zwracany wyjątek w następujących warunkach:  
   
 -   Zachowanie sandboxing bieżącej domeny różni się od jego zachowanie w [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Wymaga to zasad CAS, które mają zostać wyłączone, a bieżąca domena nie powinien być w trybie piaskownicy.  
   

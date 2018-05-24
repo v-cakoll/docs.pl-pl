@@ -2,11 +2,11 @@
 title: 'F # składnika zaleceń dotyczących projektowania'
 description: 'Dowiedz się wskazówki dotyczące pisania F # składniki przeznaczone do użytku przez inne obiekty wywołujące.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>F # składnika zaleceń dotyczących projektowania
 
@@ -483,7 +483,7 @@ Jednak operacje logiczne kropkowego w tym typie nie są takie same operacje na m
 
 Podczas projektowania biblioteki do użycia z innymi językami .NET, ważne jest, aby stosować się do [zaleceń dotyczących projektowania biblioteki .NET](../../standard/design-guidelines/index.md). W tym dokumencie biblioteki te są oznaczone jako podstawowego bibliotek .NET, a nie F #-ukierunkowane bibliotek, które używają F # konstruuje bez ograniczeń. Projektowanie podstawowego bibliotek .NET oznacza zapewnienie znanego i idiomatyczne interfejsów API zgodne z pozostałą częścią programu .NET Framework, minimalizując użycie języka F #-konstrukcje określonych w publiczny interfejs API. W poniższych sekcjach opisano reguły.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Namespace i Type sesign (dla biblioteki do użycia z innymi językami .NET)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace i typu projektu (dla biblioteki do użycia z innymi językami .NET)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Dotyczą konwencje nazewnictwa .NET publiczny interfejs API składników
 

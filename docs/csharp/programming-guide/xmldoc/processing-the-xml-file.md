@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zostanie oznaczony do generowania dokumentacji. (Informacje o sposobie tagów w kodzie, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Ciąg Identyfikatora unikatowo identyfikuje konstrukcja. Programy, które przetwarzają plik XML można umożliwia zidentyfikowanie odpowiadający mu element .NET Framework metadane/odbicia dotyczy dokumentacji ciąg Identyfikatora.  
@@ -40,7 +40,7 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zosta
   
     -   Typy wewnętrzne (na przykład ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowana nazwa typu odpowiadającego pełna. Na przykład System.Int32 lub System.TypedReference.  
   
-    -   Poprawności elementu ELEMENT_TYPE_PTR jest reprezentowany jako ' *' następujące zmodyfikowanej typu.  
+    -   Poprawności elementu ELEMENT_TYPE_PTR jest reprezentowany jako "\*" po modyfikacji typu.  
   
     -   ELEMENT_TYPE_BYREF jest reprezentowany jako "\@" po modyfikacji typu.  
   
@@ -68,11 +68,11 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zosta
   
 -   W przypadku konwersji operatory tylko (op_Implicit i op_Explicit), zwracana wartość metody są kodowane jako "~" następuje typ zwracany jako zakodowany powyżej.  
   
--   Dla typów ogólnych Nazwa typu będzie następować wstecz znaczników, a następnie liczbę wskazującą liczbę parametrów typu ogólnego.  Na przykład  
+-   Dla typów ogólnych Nazwa typu następuje backtick, a następnie liczbę wskazującą liczbę parametrów typu ogólnego. Na przykład:
   
      ``<member name="T:SampleClass`2">`` jest znacznik typu, który jest zdefiniowany jako `public class SampleClass<T, U>`.  
   
-     Dla metod biorąc typów podstawowych jako parametrów, parametry typu ogólnego są określone jako liczby poprzedzone znakiem Takty Wstecz (na przykład \`0, 1 ").  Każdy liczba reprezentująca liczony od zera tablicy notacji ogólnych parametrów typu.  
+     Pobieranie typów podstawowych jako parametrów metod, parametry typu ogólnego są określone jako liczby poprzedzone znakiem backticks (na przykład \`0,\`1). Każdy liczba reprezentująca liczony od zera tablicy notacji ogólnych parametrów typu.  
   
 ## <a name="examples"></a>Przykłady  
  W poniższych przykładach pokazano, jak identyfikator ciągi dla klasy i jej elementów członkowskich powinien zostać wygenerowany:  

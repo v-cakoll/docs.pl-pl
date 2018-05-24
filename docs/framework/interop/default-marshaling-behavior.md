@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Przekazywanie międzyoperacyjne działa w regułach tego dyktować zachowania danych skojarzonych z parametrami metody przesyłanych między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolowania takich kierowania działań jako przekształcenia typu danych, czy wywoływany można zmienić przekazywania danych i zwracany do obiektu wywołującego te zmiany i w której okolicznościach organizatora zapewnia optymalizacji wydajności.  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- Te same zasady używany do organizowania wartości i odwołań pozwalającą na platformie wywołania wywołania są używane podczas organizowania za pośrednictwem interfejsów COM. Na przykład, gdy wystąpienie klasy `Point` typ wartości jest przekazywany z programu .NET Framework modelowi COM, `Point` jest przekazywany przez wartość. Jeśli `Point` typ wartości jest przekazywana przez odwołanie, wskaźnik do `Point` jest przekazywany na stosie. Organizator międzyoperacyjne nie obsługuje wyższego poziomu pośredni (**punktu \* \*** ) w żadnym kierunku.  
+ Te same zasady używany do organizowania wartości i odwołań pozwalającą na platformie wywołania wywołania są używane podczas organizowania za pośrednictwem interfejsów COM. Na przykład, gdy wystąpienie klasy `Point` typ wartości jest przekazywany z programu .NET Framework modelowi COM, `Point` jest przekazywany przez wartość. Jeśli `Point` typ wartości jest przekazywana przez odwołanie, wskaźnik do `Point` jest przekazywany na stosie. Organizator międzyoperacyjne nie obsługuje wyższego poziomu pośredni (**punktu** \* \*) w żadnym kierunku.  
   
 > [!NOTE]
 >  Struktury o <xref:System.Runtime.InteropServices.LayoutKind> ustawioną wartość wyliczenia **Explicit** nie można używać w modelu COM interop, ponieważ wyeksportowanej biblioteki typów nie express jawny układ.  

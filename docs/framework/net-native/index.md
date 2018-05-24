@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6900bca2bd94f52ea5603c752681163cde52ce19
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilowanie aplikacji z architekturą .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] jest to technologia wstępnej kompilacji umożliwiające tworzenie i wdrażanie aplikacji systemu Windows, która jest dołączana do programu Visual Studio 2015 i nowszych wersjach. Kompiluje automatycznie wersji aplikacji, które są zapisywane w kodu zarządzanego (C# lub Visual Basic), że docelowej platformy .NET Framework i Windows 10 do kodu natywnego.  
@@ -78,7 +78,4 @@ Ale [!INCLUDE[net_native](../../../includes/net-native-md.md)] obejmuje więcej 
   
 -   [Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
   
--   [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [.NET natywnego — często zadawane pytania](http://msdn.microsoft.com/vstudio/dn642499.aspx)
+-   [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

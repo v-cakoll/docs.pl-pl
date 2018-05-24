@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: a4e8434b3e7f945ad002984ad7861c0e103c0cf2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="string-interpolation"></a>Ciąg interpolacji
 
@@ -48,13 +48,13 @@ Poniżej przedstawiono kilka innych przykładów interpolacji ciągu z innych ty
 
 W poprzedniej sekcji interpolacji ciąg jest używany do wstawiania jeden ciąg wewnątrz innego. Wynik wyrażenia interpolowane może być jednak każdego typu danych. Załóżmy obejmują wartości różnych typów danych w ciągu interpolowanym.
 
-W poniższym przykładzie najpierw definiujemy niestandardowego typu danych `Vegetable` mający `Name` [właściwości](../properties.md) i `ToString` metody. Kod klienta można użyć tej metody można uzyskać reprezentację ciągu `Vegetable` wystąpienia. W przykładzie `Vegetable.ToString` metoda zwraca wartość `Name` właściwość, która została zainicjowana w `Vegetable` konstruktora:
+W poniższym przykładzie najpierw definiujemy [klasy](../programming-guide/classes-and-structs/classes.md) — typ danych `Vegetable` mający `Name` [właściwości](../properties.md) i `ToString` [metody](../methods.md), która [zastępuje](../language-reference/keywords/override.md) zachowanie <xref:System.Object.ToString?displayProperty=nameWithType> metody. [ `public` Modyfikator dostępu](../language-reference/keywords/public.md) udostępnia tej metody do dowolnego kod klienta w celu uzyskania reprezentację ciągu `Vegetable` wystąpienia. W przykładzie `Vegetable.ToString` metoda zwraca wartość `Name` właściwość, która została zainicjowana w `Vegetable` [konstruktora](../programming-guide/classes-and-structs/constructors.md):
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Utwórz wystąpienie `Vegetable` typu przy użyciu `new` — słowo kluczowe i podając nazwę parametru konstruktora `Vegetable`:
+Następnie utwórz wystąpienie `Vegetable` przy użyciu [ `new` — słowo kluczowe](../language-reference/keywords/new-operator.md) i podając nazwę parametru konstruktora `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");

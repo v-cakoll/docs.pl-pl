@@ -1,12 +1,12 @@
 ---
 title: Składnia ciągu połączenia
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="connection-string-syntax"></a>Składnia ciągu połączenia
 Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedziczący z <xref:System.Data.Common.DbConnection> oraz specyficznych dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia specyficzne dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które znajdują się w programie .NET Framework.  
@@ -112,11 +112,11 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Nie|Brak|(Domyślnie)|Ignorowane|Szyfrowanie nie występuje.|  
 |Nie|Brak|Tak|(Domyślnie)|Szyfrowanie występuje tylko wtedy, gdy jest możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Nie|Brak|Tak|Tak|Szyfrowanie występuje tylko wtedy, gdy jest możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Tak|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy jest możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Tak|Tak|(Domyślnie)|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy jest możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Tak|Tak|Tak|(Domyślnie)|Szyfrowanie występuje tylko wtedy, gdy jest możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Tak|Tak|Tak|Tak|Szyfrowanie występuje tylko wtedy, gdy jest możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
+|Nie|Brak|Tak|Tak|Szyfrowanie zawsze występuje, ale może używać certyfikatu serwera z podpisem własnym.|  
+|Tak|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia nie powiedzie się.|  
+|Tak|Tak|(Domyślnie)|Ignorowane|Szyfrowanie zawsze występuje, ale może używać certyfikatu serwera z podpisem własnym.|  
+|Tak|Tak|Tak|(Domyślnie)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia nie powiedzie się.|  
+|Tak|Tak|Tak|Tak|Szyfrowanie zawsze występuje, ale może używać certyfikatu serwera z podpisem własnym.|  
   
  Aby uzyskać więcej informacji, zobacz [przy użyciu szyfrowania bez sprawdzania poprawności](http://go.microsoft.com/fwlink/?LinkId=120500) w dokumentacji SQL Server — książki Online.  
   

@@ -1,6 +1,6 @@
 ---
 title: -keycontainer (opcje kompilatora C#)
-ms.date: 07/20/2015
+ms.date: 05/16/2018
 f1_keywords:
 - /keycontainer
 helpviewer_keywords:
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: edb50dafa376abe55fbeeb312ca5bb8f34c83e7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a7b378cad7a1df9249fcbefa28bb9aa9a6a3da4
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (opcje kompilatora C#)
 Określa nazwę kontenera kluczy kryptograficznych.  
@@ -28,7 +28,7 @@ Określa nazwę kontenera kluczy kryptograficznych.
  Nazwa kontenera klucza silnej nazwy.  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy **- keycontainer** jest używana opcja, kompilator tworzy składnik zabezpieczać wstawianie klucza publicznego z kontenera określonej w manifeście zestawu i podpisywania z kluczem prywatnym zestawie końcowym. Aby wygenerować plik klucza, wpisz sn -k `file` w wierszu polecenia. SN -i instaluje pary kluczy do kontenera.  
+ Gdy **- keycontainer** jest używana opcja, kompilator tworzy zabezpieczać składnika. Kompilator wstawia klucza publicznego z kontenera określonej w manifeście zestawu i podpisuje zestawie końcowym z kluczem prywatnym. Aby wygenerować plik klucza, wpisz `sn -k file` w wierszu polecenia. `sn -i` Instaluje pary kluczy do kontenera. Ta opcja nie jest obsługiwana, gdy kompilator uruchamia środowisko CoreCLR. Aby podpisać zestaw podczas kompilowania na środowisko CoreCLR, należy użyć [- keyfile](keyfile-compiler-option.md) opcji.
   
  Jeśli kompilacji z [-docelowych: moduł](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), nazwa pliku klucza jest przechowywana w module i wbudowanej w zestawie podczas kompilowania tego modułu do zestawu z [- addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
@@ -45,5 +45,5 @@ Określa nazwę kontenera kluczy kryptograficznych.
  Programowo dostęp do tej opcji kompilatora z <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [-Keyfile — opcja kompilatora C#](keyfile-compiler-option.md) [opcje kompilatora C#](index.md)  
  [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: a4e8434b3e7f945ad002984ad7861c0e103c0cf2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="string-interpolation"></a>Ciąg interpolacji
 
@@ -93,7 +93,7 @@ Należy pamiętać, że interpolowanego wyrażenia `item` w ciągu interpolowany
 
 - Jeśli interpolowanego wyrażenia `null`, ciąg pusty ("", lub <xref:System.String.Empty?displayProperty=nameWithType>) jest używany.
 
-- Jeśli interpolowanego wyrażenia nie być `null`, zwykle `ToString` wywoływana jest metoda typu wyniku. Można to sprawdzić, aktualizując wykonania `Vegetable.ToString` metody. Być może nawet nie implementuje `ToString` metody, ponieważ niektóre implementacja tej metody ma wszystkie typy danych języka C#. Aby sprawdzić, czy, w komentarz definicję `Vegetable.ToString` metody w tym przykładzie (w tym celu umieść symbol komentarza `//` przed nim). W danych wyjściowych, ciąg "oberżynowego" zostanie zastąpiony przez w pełni kwalifikowaną nazwę typu ("roślinny" w tym przykładzie), który jest domyślnym zachowaniem z <xref:System.Object.ToString?displayProperty=nameWithType> metody. Domyślne zachowanie `ToString` metody dla typu wyliczenia jest zwraca reprezentację ciągu wartość używana w definicji wyliczenia.
+- Jeśli interpolowanego wyrażenia nie być `null`, zwykle `ToString` wywoływana jest metoda typu wyniku. Można to sprawdzić, aktualizując wykonania `Vegetable.ToString` metody. To nie może nawet potrzeby do zaimplementowania `ToString` metody, ponieważ każdy typ ma niektórych implementacja tej metody. Aby to sprawdzić, w komentarz definicję `Vegetable.ToString` metody w tym przykładzie (w tym celu umieść symbol komentarza `//`, przed nim). W danych wyjściowych, ciąg "oberżynowego" zostanie zastąpiony przez w pełni kwalifikowaną nazwę typu ("roślinny" w tym przykładzie), który jest domyślnym zachowaniem z <xref:System.Object.ToString?displayProperty=nameWithType> metody. Domyślne zachowanie `ToString` metodą wartość wyliczenia jest zwraca reprezentację ciągu wartości.
 
 W danych wyjściowych w tym przykładzie Data jest zbyt precyzyjna (cena oberżynowego nie zmienia co sekundę), a wartość ceny nie oznacza jednostkę waluty. W następnej sekcji dowiesz się, jak rozwiązać te problemy kontrolując formatu ciągu reprezentacje wyników wyrażenia.
 

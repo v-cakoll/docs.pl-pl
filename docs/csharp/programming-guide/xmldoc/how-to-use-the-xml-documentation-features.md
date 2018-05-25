@@ -5,69 +5,72 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f1f51040033cf25f7f1aefb04d249e6e028ca3
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Porady: użycie funkcji dokumentacji XML (Przewodnik programowania w języku C#)
 Poniższy przykład zawiera ogólne omówienie typu, który został udokumentowany.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
-  
- **Ten plik XML został wygenerowany z powyższego przykładu kodu.**  
-**\<? wersji xml = "1.0"? >**  
-**\<doc >**  
- **\<zestaw >**  
- **\<nazwa > xmlsample \< /name >**  
- **\</ Assembly >**  
- **\<elementy członkowskie >**  
- **\<Nazwa elementu = "T:SomeClass" >**  
- **\<podsumowania >**  
- **Tutaj należy wstawić poziomu dokumentacji podsumowania klasy.  \< /summary >**  
- **\<Remarks >**  
- **Komentarze dłużej może być skojarzony z typu lub elementu członkowskiego**  
- **za pomocą tagu uwagi \< /remarks >**  
- **\</Member >**  
- **\<element członkowski name="F:SomeClass.m_Name" >**  
- **\<podsumowania >**  
- **Magazyn dla właściwości nazwy \< /summary >**  
- **\</Member >**  
- **\<Nazwa elementu = "M:SomeClass. #ctor" >**  
- **\<Podsumowanie > konstruktora klasy.  \< /summary >**  
- **\</Member >**  
- **\<element członkowski name="M:SomeClass.SomeMethod(System.String)" >**  
- **\<podsumowania >**  
- **Opis SomeMethod.  \< /summary >**  
- **\<param name = "s" > tutaj opis parametru s\</param >**  
- **\<SeeAlso cref="T:System.String" >**  
- **Atrybut cref dowolny znacznik służy do odwołania, typu lub elementu członkowskiego**  
- **i kompilator będzie sprawdzać, czy istnieje odwołanie. \</seealso >**  
- **\</Member >**  
- **\<element członkowski name="M:SomeClass.SomeOtherMethod" >**  
- **\<podsumowania >**  
- **Innej metody.  \< /summary >**  
- **\<Zwraca >**  
- **Za pomocą tagu zwraca opisano zwracanych wyników.  \< /returns >**  
- **\<SeeAlso cref="M:SomeClass.SomeMethod(System.String)" >**  
- **Zwróć uwagę na atrybut cref, aby odwołać określonej metody \</seealso >**  
- **\</Member >**  
- **\<element członkowski name="M:SomeClass.Main(System.String[])" >**  
- **\<podsumowania >**  
- **Punkt wejścia dla aplikacji.**  
- **\</ summary >**  
- **\<param name = "args" > Lista argumentów wiersza polecenia\</param >**  
- **\</Member >**  
- **\<element członkowski name="P:SomeClass.Name" >**  
- **\<podsumowania >**  
- **Nazwa właściwości  \< /summary >**  
- **\<wartość >**  
- **Wartość tagu jest używany do opisu wartość właściwości \< /value >**  
- **\</Member >**  
- **\</members >**  
-**\</ doc >**   
+
+Przykład generuje plik XML z następującą zawartość:
+
+```xml  
+<?xml version="1.0"?>  
+<doc>  
+ <assembly>  
+ <name>xmlsample</name>  
+ </assembly>  
+ <members>  
+ <member name="T:SomeClass">  
+ <summary>  
+ Class level summary documentation goes here.</summary>  
+ <remarks>  
+ Longer comments can be associated with a type or member  
+ through the remarks tag</remarks>  
+ </member>  
+ <member name="F:SomeClass.m_Name">  
+ <summary>  
+ Store for the name property</summary>  
+ </member>  
+ <member name="M:SomeClass.#ctor">  
+ <summary>The class constructor.</summary>  
+ </member>  
+ <member name="M:SomeClass.SomeMethod(System.String)">  
+ <summary>  
+ Description for SomeMethod.</summary>  
+ <param name="s"> Parameter description for s goes here</param>  
+ <seealso cref="T:System.String">  
+ You can use the cref attribute on any tag to reference a type or member  
+ and the compiler will check that the reference exists. </seealso>  
+ </member>  
+ <member name="M:SomeClass.SomeOtherMethod">  
+ <summary>  
+ Some other method. </summary>  
+ <returns>  
+ Return results are described through the returns tag.</returns>  
+ <seealso cref="M:SomeClass.SomeMethod(System.String)">  
+ Notice the use of the cref attribute to reference a specific method </seealso>  
+ </member>  
+ <member name="M:SomeClass.Main(System.String[])">  
+ <summary>  
+ The entry point for the application.  
+ </summary>  
+ <param name="args"> A list of command line arguments</param>  
+ </member>  
+ <member name="P:SomeClass.Name">  
+ <summary>  
+ Name property </summary>  
+ <value>A value tag is used to describe the property value</value>  
+ </member>  
+ </members>  
+</doc>   
+```
+
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby skompilować w przykładzie, wpisz następujące polecenie w wierszu:  
   
@@ -80,7 +83,7 @@ Poniższy przykład zawiera ogólne omówienie typu, który został udokumentowa
   
 -   Dokumentację musi być poprawnie sformułowanym XML. Jeśli plik XML nie jest poprawnie sformułowany, generowania ostrzeżeń i pliku dokumentacji będzie zawierać komentarz z informacją, że wystąpił błąd podczas.  
   
--   Deweloperzy mogą tworzyć własne zestawu tagów. Brak zalecanych zbiór znaczników (patrz sekcja dalsze informacje). Niektóre zalecane znaczniki mają specjalne znaczenie:  
+-   Deweloperzy mogą tworzyć własne zestawu tagów. Jest zalecany zestaw tagi (zobacz [zalecane tagi przeznaczone do komentarzy dokumentacji](recommended-tags-for-documentation-comments.md)). Niektóre zalecane znaczniki mają specjalne znaczenie:  
   
     -   \<Param > tag jest używany do opisywania parametrów. Jeśli używana, kompilator sprawdza, czy parametr istnieje i że wszystkie parametry są opisane w dokumentacji. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie.  
   

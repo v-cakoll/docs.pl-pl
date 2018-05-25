@@ -1,12 +1,12 @@
 ---
 title: Uwierzytelnianie programu SQL Server
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8fc6f17cd008fe24e041c52b4e5ee8fd4d261f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie programu SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i w trybie mieszanym.  
@@ -16,7 +16,7 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
 -   Tryb mieszany obsługuje uwierzytelnianie zarówno przez system Windows i program SQL Server. Pary nazwy i hasła użytkowników są obsługiwane w programie SQL Server.  
   
 > [!IMPORTANT]
->  Firma Microsoft zaleca używanie uwierzytelniania systemu Windows, gdy jest to możliwe. Uwierzytelnianie systemu Windows używa szereg zaszyfrowane wiadomości do uwierzytelniania użytkowników w programie SQL Server. Podczas logowania do programu SQL Server są używane, nazwy logowania programu SQL Server i hasła są przekazywane w sieci, dzięki czemu ich mniej bezpieczne.  
+>  Firma Microsoft zaleca używanie uwierzytelniania systemu Windows, gdy jest to możliwe. Uwierzytelnianie systemu Windows używa szereg zaszyfrowane wiadomości do uwierzytelniania użytkowników w programie SQL Server. Podczas logowania do programu SQL Server są używane, nazwy logowania programu SQL Server i hasła szyfrowane są przekazywane w sieci, dzięki czemu ich mniej bezpieczne.  
   
  Z uwierzytelnianiem systemu Windows użytkownicy są już zalogowany do systemu Windows i nie trzeba oddzielnie logowania do programu SQL Server. Następujące `SqlConnection.ConnectionString` Określa uwierzytelnianie systemu Windows bez konieczności wprowadzania nazwy użytkownika ani hasła.  
   

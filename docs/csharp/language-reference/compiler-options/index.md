@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: a305daee2349341527b529c7556cc6fa84cc9fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-compiler-options"></a>Opcje kompilatora C#
 Kompilator generuje pliki wykonywalne (.exe), bibliotek dołączanych dynamicznie (dll) lub moduły kodu (modułu .netmodule).  
@@ -24,16 +24,16 @@ Kompilator generuje pliki wykonywalne (.exe), bibliotek dołączanych dynamiczni
  W programie Visual Studio możesz ustawić opcje kompilatora w pliku web.config. Aby uzyskać więcej informacji, zobacz [ \<kompilatora > elementu](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+ [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](command-line-building-with-csc-exe.md)  
  Informacje dotyczące tworzenia aplikacji programu Visual C# z wiersza polecenia.  
   
- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  Instrukcje dotyczące uruchamiania vsvars32.bat, aby włączyć kompilacji z wiersza polecenia.  
   
- [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Opcje kompilatora C# w rozbiciu na kategorie](listed-by-category.md)  
  Podzielone na kategorie lista opcji kompilatora.  
   
- [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)  
  Alfabetyczną listę opcji kompilatora.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

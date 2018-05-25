@@ -4,11 +4,11 @@ description: Dowiedz się terminologia pakietów, metapackages i platform.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapackages i platform
 
@@ -96,9 +96,10 @@ Istnieje relacja dwukierunkowego między platform i pakietów. Pierwsza część
 
 Druga część relacji to wybór trwały. Pakiety mogą zawierać zasobów dla wielu struktur. Podane odwołanie do zestawu pakiety i/lub metapackages, platformę są potrzebne, aby określić, którego zasobu należy wybrać, na przykład `net46` lub `netstandard1.3`. Należy wybrać poprawny zasobów. Na przykład `net46` zasobów prawdopodobnie nie był zgodny z programu .NET Framework 4.0 lub .NET Core 1.0.
 
-![Struktura oparta na pakiecie kompozycji](./media/packages/package-framework.png)
 
-Widać tę relację na ilustracji powyżej. *Interfejsu API* elementów docelowych i definiuje *framework*. *Framework* służy do *wybór trwały*. *Zasobów* umożliwia interfejsu API.
+Można wyświetlić tę relację na poniższej ilustracji. *Interfejsu API* elementów docelowych i definiuje *framework*. *Framework* służy do *wybór trwały*. *Zasobów* umożliwia interfejsu API.
+
+![Struktura oparta na pakiecie kompozycji](./media/packages/package-framework.png)
 
 Są dwa podstawowe na podstawie pakietu struktury używane z platformą .NET Core:
 

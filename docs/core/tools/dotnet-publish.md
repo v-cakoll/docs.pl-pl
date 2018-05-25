@@ -4,11 +4,11 @@ description: Polecenie Publikuj dotnet publikuje projektu platformy .NET Core w 
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: 8509f1a721c0b4b4c05d68e0f98f9b856bcc5a8e
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="dotnet-publish"></a>Publikowanie DotNet
 
@@ -90,7 +90,7 @@ Nie wykonać przywracanie niejawne, podczas uruchamiania polecenia.
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, domyślnie *./bin/[configuration]/[framework]/publish/* wdrożenia zależne od framework lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla Samodzielne wdrożenia.
-W przypadku ścieżki względnej do katalogu wyjściowego, generowane jest względną wobec lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
+W przypadku względną ścieżkę do katalogu wyjściowego, generowane jest względną wobec lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
 
 `--self-contained`
 
@@ -129,7 +129,7 @@ Określa jeden lub kilka [target manifestów](../deploying/runtime-store.md) na 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, domyślnie *./bin/[configuration]/[framework]/publish/* wdrożenia zależne od framework lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla Samodzielne wdrożenia.
-W przypadku ścieżki względnej do katalogu wyjściowego, generowane jest względną wobec lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
+W przypadku względną ścieżkę do katalogu wyjściowego, generowane jest względną wobec lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

@@ -7,11 +7,11 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 24d0f1366a8e4309bbfb5b548af7407de50eaf76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testowanie biblioteki klas z platformą .NET Core w Visual Studio 2017 r.
 
@@ -24,12 +24,12 @@ Aby utworzyć jednostkowy projekt testowy, wykonaj następujące czynności:
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. W **Eksploratora rozwiązań**, otwórz menu kontekstowe dla **ClassLibraryProjects** a następnie wybierz węzeł rozwiązania **Dodaj** > **nowy projekt**.
 
-1. W **Dodawanie nowego projektu** okno dialogowe, wybierz opcję **Visual C#** węzła. Następnie wybierz **.NET Core** węzła następuje **jednostkowy projekt testowy (.NET Core)** szablonu projektu. W **nazwa** tekst Wprowadź "StringLibraryTest" jako nazwę projektu. Wybierz **OK** utworzyć jednostkowy projekt testowy.
+1. W **Dodawanie nowego projektu** okno dialogowe, wybierz opcję **Visual C#** węzła. Następnie wybierz **.NET Core** węzła następuje **projekt testowy MSTest (.NET Core)** szablonu projektu. W **nazwa** tekst Wprowadź "StringLibraryTest" jako nazwę projektu. Wybierz **OK** utworzyć jednostkowy projekt testowy.
 
    ![Dodaj okno dialogowe Nowy projekt](./media/testing-library-with-visual-studio/testproject.png)
 
    > [!NOTE]  
-   > Oprócz projektu testu jednostkowego umożliwia także Visual Studio można utworzyć projektu testowego xUnit dla platformy .NET Core.
+   > Oprócz projektu testowego MSTest umożliwia także Visual Studio można utworzyć projektu testowego xUnit dla platformy .NET Core.
 
 1. Visual Studio tworzy projekt i otwiera *UnitTest1.cs* pliku w oknie kodu.
 
@@ -53,12 +53,12 @@ Aby utworzyć jednostkowy projekt testowy, wykonaj następujące czynności:
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. W **Eksploratora rozwiązań**, otwórz menu kontekstowe dla **ClassLibraryProjects** a następnie wybierz węzeł rozwiązania **Dodaj** > **nowy projekt**.
 
-1. W **Dodawanie nowego projektu** okno dialogowe, wybierz opcję **Visual Basic** węzła. Następnie wybierz **.NET Core** węzła następuje **jednostkowy projekt testowy (.NET Core)** szablonu projektu. W **nazwa** tekst Wprowadź "StringLibraryTest" jako nazwę projektu. Wybierz **OK** utworzyć jednostkowy projekt testowy.
+1. W **Dodawanie nowego projektu** okno dialogowe, wybierz opcję **Visual Basic** węzła. Następnie wybierz **.NET Core** węzła następuje **projekt testowy MSTest (.NET Core)** szablonu projektu. W **nazwa** tekst Wprowadź "StringLibraryTest" jako nazwę projektu. Wybierz **OK** utworzyć jednostkowy projekt testowy.
 
    ![Dodaj okno dialogowe Nowy projekt](./media/testing-library-with-visual-studio/vb-testproject.png)
 
    > [!NOTE]  
-   > Oprócz projektu testu jednostkowego umożliwia także Visual Studio można utworzyć projektu testowego xUnit dla platformy .NET Core.
+   > Oprócz projektu testowego MSTest umożliwia także Visual Studio można utworzyć projektu testowego xUnit dla platformy .NET Core.
 
 1. Visual Studio tworzy projekt i otwiera *UnitTest1.vb* pliku w oknie kodu.
 

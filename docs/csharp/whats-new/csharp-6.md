@@ -3,11 +3,11 @@ title: Nowości w języku C# 6 - przewodnik C#
 description: Dowiedz się nowych funkcji w języku C# w wersji 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="whats-new-in-c-6"></a>Nowości w języku C# 6
 
@@ -341,11 +341,11 @@ Szczegóły implementacji dodawania `await` obsługuje wewnątrz `catch` i `fina
 
 ## <a name="index-initializers"></a>Inicjatory indeksu
 
-*Inicjatory indeksu* jest jednym z dwóch funkcje inicjatory kolekcji bardziej spójny. We wcześniejszych wersjach języka C#, można użyć *inicjatory kolekcji* tylko z kolekcjami styl sekwencji:
+*Inicjatory indeksu* jest jednym z dwóch funkcje inicjatory kolekcji bardziej spójny z użyciem indeksu. We wcześniejszych wersjach języka C#, można użyć *inicjatory kolekcji* tylko z kolekcjami styl sekwencji, w tym <xref:System.Collections.Generic.Dictionary%602> przez dodanie nawiasów klamrowych otaczających pary kluczy i wartości:
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#ListInitializer)]
 
-Teraz, można również używać ich z <xref:System.Collections.Generic.Dictionary%602> kolekcje i podobnych typów:
+Teraz można używać ich z <xref:System.Collections.Generic.Dictionary%602> kolekcje i podobnych typów. Nowej składni obsługuje przypisanie do kolekcji przy użyciu indeksu:
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 

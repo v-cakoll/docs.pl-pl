@@ -2,11 +2,11 @@
 title: Jak artykuły (Przewodnik C#)
 description: Kolekcja krótkie wskazówki i przykłady kodu krótkie, ukierunkowanych
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>Jak (C#)
 
@@ -43,9 +43,8 @@ Możesz utworzyć, klasy i struktury do wykonania programu. Te techniki są czę
 Te artykuły ułatwiają pracę z kolekcji danych.
 
 - [Inicjowanie słownika przy użyciu inicjatora kolekcji](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
-- [Dostęp do wszystkich elementów w kolekcji przy użyciu `foreach` ](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).
 
-## <a name="strings"></a>ciągi
+## <a name="working-with-strings"></a>Praca z ciągów
 
 Ciągi to podstawowy typ danych używany do wyświetlania lub modyfikowania tekstu. Te artykuły pokazują typowe rozwiązania z ciągami.
 

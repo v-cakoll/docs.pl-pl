@@ -1,31 +1,34 @@
 ---
 title: Używanie instrukcji foreach z tablicami (Przewodnik programowania w języku C#)
-ms.date: 07/20/2015
+ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: 8511d9dd3b7155d2f6bca229f264071b54ed173b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Używanie instrukcji foreach z tablicami (Przewodnik programowania w języku C#)
-C# są także [foreach](../../../csharp/language-reference/keywords/foreach-in.md) instrukcji. Ta instrukcja oferuje prosty, jasny sposób wykonywania iteracji elementów tablicy lub dowolnej kolekcji, którą można wyliczać. `foreach` Instrukcji przetwarzania elementów w kolejności zwrócony przez typ tablicy lub kolekcji moduł wyliczający, który zazwyczaj znajduje się w elemencie 0th do ostatniego. Na przykład poniższy kod tworzy tablicę `numbers` i iteruje go przy użyciu `foreach` instrukcji:  
-  
- [!code-csharp[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
-  
- Tej samej metody można też używać do wykonywania iteracji elementów w tablicach wielowymiarowych, na przykład:  
-  
- [!code-csharp[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
-  
- Jednak za pomocą tablice wielowymiarowe przy użyciu zagnieżdżoną [dla](../../../csharp/language-reference/keywords/for.md) pętli zapewnia większą kontrolę nad elementów tablicy.  
-  
-## <a name="see-also"></a>Zobacz też  
+
+[Foreach](../../language-reference/keywords/foreach-in.md) instrukcji umożliwia proste, czystej iterowania po elementach tablicy.
+
+Dla tablice jednowymiarowe `foreach` instrukcji przetwarzania elementów w kolejności rosnącej indeksu z indeksem 0 i kończąc indeksu `Length - 1`:
+
+[!code-csharp[csProgGuideArrays#28](./codesnippet/CSharp/using-foreach-with-arrays_1.cs)]
+
+Dla wielowymiarowych tablic elementów jest przesunięta w taki sposób, że indeksy po prawej stronie wymiaru są pierwszy zwiększona, a następnie dalej wymiaru po lewej stronie, i tak dalej do lewej strony:
+
+[!code-csharp[csProgGuideArrays#29](./codesnippet/CSharp/using-foreach-with-arrays_2.cs)]
+
+Jednak za pomocą tablice wielowymiarowe przy użyciu zagnieżdżoną [dla](../../language-reference/keywords/for.md) pętli zapewnia większą kontrolę nad w kolejności przetwarzania elementów tablicy.
+
+## <a name="see-also"></a>Zobacz także  
  <xref:System.Array>  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Tablice](../../../csharp/programming-guide/arrays/index.md)  
- [Tablice jednowymiarowe](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Tablice wielowymiarowe](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Tablice nieregularne](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+ [Przewodnik programowania w języku C#](../index.md)  
+ [Tablice](index.md)  
+ [Tablice jednowymiarowe](single-dimensional-arrays.md)  
+ [Tablice wielowymiarowe](multidimensional-arrays.md)  
+ [Tablice nieregularne](jagged-arrays.md)

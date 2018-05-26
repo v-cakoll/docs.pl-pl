@@ -2,11 +2,11 @@
 title: Rekordy (F#)
 description: 'Dowiedz się, jak F # rekordów reprezentują proste agreguje nazwanych wartości, opcjonalnie z elementami członkowskimi.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5bd1f76937bf5839b7da5cae7dea578747ec9b99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="records"></a>Rekordy
 
@@ -16,15 +16,15 @@ Rejestruje reprezentują proste agreguje nazwanych wartości, opcjonalnie z elem
 
 ```fsharp
 [ attributes ]
-type [accessibility-modifier] typename = {
-    [ mutable ] label1 : type1;
-    [ mutable ] label2 : type2;
-    ...
-}
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
     [ member-list ]
 ```
 
 ## <a name="remarks"></a>Uwagi
+
 W poprzednich składni *typename* jest nazwa typu rekordu *label1* i *label2* nazwy wartości, nazywane są *etykiety*, i *type1* i *type2* typy tych wartości. *Lista elementów członkowskich* jest opcjonalna lista elementów członkowskich typu.  Można użyć `[<Struct>]` atrybutu, aby utworzyć rekord struktury, a nie rekordu, który jest typem referencyjnym.
 
 Poniżej przedstawiono kilka przykładów.
@@ -48,6 +48,7 @@ Etykiety najbardziej ostatnio deklarowanego typu pierwszeństwo wcześniej zadek
 Metody mogą być definiowane dla typów rekordów, podobnie jak w przypadku typu klasy.
 
 ## <a name="creating-records-by-using-record-expressions"></a>Tworzenie rekordów przy użyciu wyrażenia rekordu
+
 Rekordy można zainicjować za pomocą etykiet, które są zdefiniowane w rekordzie. To wyrażenie jest określany jako *rekordów wyrażenia*. Użyj nawiasów klamrowych ujmij wyrażenie rekordu i użyj średnika jako ogranicznik.
 
 Poniższy przykład przedstawia sposób tworzenia rekordu.
@@ -77,20 +78,19 @@ Nie używaj atrybutu DefaultValue z pola rekordu. Lepszym rozwiązaniem jest zde
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
 type MyRecord =
-{
-    field1 : int
-    field2 : int
-}
+    { Field1 : int
+      Field2 : int }
 
-let defaultRecord1 = { field1 = 0; field2 = 0 }
-let defaultRecord2 = { field1 = 1; field2 = 25 }
+let defaultRecord1 = { Field1 = 0; Field2 = 0 }
+let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 
 // Use the with keyword to populate only a few chosen fields
 // and leave the rest with default values.
-let rr3 = { defaultRecord1 with field2 = 42 }
+let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
 ## <a name="pattern-matching-with-records"></a>Dopasowywanie do wzorca z rekordów
+
 Rekordy można łączyć z dopasowywania do wzorca. Można jawnie określić niektórych pól i podaj zmienne inne pola, które zostaną przypisane, jeśli pasują do. Pokazano to w poniższym przykładzie kodu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
@@ -104,17 +104,25 @@ Point is at (10.000000, 0.000000, -1.000000).
 ```
 
 ## <a name="differences-between-records-and-classes"></a>Różnice między rekordów i klasy
+
 Pola rekordu różnią się od klasy automatycznie są one widoczne jako właściwości, oraz są one używane do tworzenia i kopiowania rekordów. Konstrukcja rekordów również różni się od klasy konstrukcji. W polu Typ rekordu nie można definiować konstruktora. Zamiast tego stosuje składni konstrukcji opisanych w tym temacie. Klasy nie mają bezpośredniego relacji między parametrami konstruktora, pól i właściwości.
 
 Jak typy Unii i struktury rekordów mają semantykę równości strukturalnej. Klasy mają odwołania semantykę równości. W poniższym przykładzie kodu pokazano to.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
+Dane wyjściowe tego kodu jest następujący:
+
+```
+The records are equal.
+```
+
 Jeśli piszesz ten sam kod z klasy obiektów dwóch klas może być nierówne dwóch wartości będzie reprezentować dwóch obiektów na stercie i czy można porównywać tylko adresy (o ile nie zastępuje typu klasy `System.Object.Equals` metody).
 
 Jeśli konieczne odwołanie równości dla rekordów, Dodaj atrybut `[<ReferenceEquality>]` powyżej rekordu.
 
 ## <a name="see-also"></a>Zobacz też
+
 [Typy F#](fsharp-types.md)
 
 [Klasy](classes.md)

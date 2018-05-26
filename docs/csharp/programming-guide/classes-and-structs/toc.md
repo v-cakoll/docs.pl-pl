@@ -47,7 +47,6 @@
 ## [Inicjatory obiektów i kolekcji](object-and-collection-initializers.md)
 ### [Instrukcje: inicjowanie obiektów za pomocą inicjatora obiektów](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Instrukcje: inicjowanie słownika przy użyciu inicjatora kolekcji](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [Instrukcje: uzyskiwanie dostępu do klasy kolekcji za pomocą instrukcji foreach](how-to-access-a-collection-class-with-foreach.md)
 ## [Zagnieżdżone typy](nested-types.md)
 ## [Klasy częściowe i metody](partial-classes-and-methods.md)
 ## [Typy anonimowe](anonymous-types.md)

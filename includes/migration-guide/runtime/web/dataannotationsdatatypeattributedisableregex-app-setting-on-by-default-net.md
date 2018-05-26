@@ -1,0 +1,10 @@
+### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>ustawienie aplikacji "dataAnnotations:dataTypeAttribute:disableRegEx" jest włączone domyślnie w programie .NET Framework 4.7.2
+
+|   |   |
+|---|---|
+|Szczegóły|W programie .NET Framework 4.6.1, ustawienie aplikacji (<code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code>) została wprowadzona umożliwiająca użytkownikom zablokować używanie wyrażeń regularnych w atrybutach typu danych (takich jak <xref:System.ComponentModel.DataAnnotations.EmailAddressAttribute?displayProperty=nameWithType>, <xref:System.ComponentModel.DataAnnotations.UrlAttribute?displayProperty=nameWithType>, i <xref:System.ComponentModel.DataAnnotations.PhoneAttribute?displayProperty=nameWithType>). Pozwala to zmniejszyć luki w zabezpieczeniach takich jak unikanie możliwości ataku typu "odmowa usługi" za pomocą określonych wyrażeń regularnych.<br/>.NET Framework 4.6.1, to ustawienie aplikacji, aby wyłączyć użycie wyrażenia regularnego zostało ustawione na <code>false</code> domyślnie. Uruchomieniem platformy .NET Framework 4.7.2, ten przełącznik konfiguracji jest ustawiony na <code>true</code> domyślnie w celu dalszego ograniczenia bezpiecznego luki w zabezpieczeniach dla aplikacji sieci web, które odnoszą się do platformy .NET Framework 4.7.2 lub nowszym.|
+|Sugestia|Jeśli okaże się, że wyrażeń regularnych w aplikacji sieci web nie działają po uaktualnieniu do wersji .NET Framework 4.7.2, możesz je zaktualizować wartość <code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code> ustawienie <code>false</code> można powrócić do poprzedniej zachowanie.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appsettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot; value=&quot;false&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appsettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|Zakres|Pomocnicza|
+|Wersja|4.7.2|
+|Typ|Środowisko uruchomieniowe|
+

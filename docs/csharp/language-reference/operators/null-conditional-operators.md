@@ -19,23 +19,23 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operatory warunkowe null ?. oraz ? [] (C# i Visual Basic)
-Testy wartość lewego operandu na wartość null przed wykonaniem dostępu elementu członkowskiego (`?.`) lub indeks (`?[]`) operację; zwraca `null` Jeśli lewego operandu daje w wyniku `null`. 
+Testuje czy wartość lewego operandu jest `null` przed próbą dostępu do elementu (`?.`) lub indeksu (`?[]`); zwraca `null` jeśli wartość lewego operandu jest `null`. 
 
-Pomagają one w ograniczeniu ilości kodu potrzebnego do sprawdzenia wystąpień wartości null, zwłaszcza dla przypadków zstępujących do struktur danych.  
+Operatory te pomagają w ograniczeniu ilości kodu potrzebnego do sprawdzenia wystąpień wartości `null`, zwłaszcza dla przypadków zagnieżdżania się w strukturach danych.
   
 ```csharp  
-int? length = customers?.Length; // null if customers is null   
-Customer first = customers?[0];  // null if customers is null  
-int? count = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
+int? liczba_klientow = klienci?.Length; // null jeśli klienci są null   
+Klient pierwszy = klienci?[0];  // null jeśli klienci są null  
+int? liczba_zamowien = klienci?[0]?.Zamowienia?.Count();  // null jeśli klienci, pierwszy klient lub jego zamówienia są null  
 ```  
   
 ```vb  
-Dim length = customers?.Length  ' null if customers is null  
-Dim first as Customer = customers?(0)  ' null if customers is null  
-Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
+Dim liczba_klientow = klienci?.Length  ' null jeśli klienci są null  
+Dim pierwszy as Klient = klienci?(0)  ' null jeśli klienci są null  
+Dim liczba_zamowien as Integer? = klienci?(0)?.Zamowienia?.Count()  ' null jeśli klienci, pierwszy klient lub jego zamówienia są null  
 ```  
   
- Operatory warunkowe null są short-circuiting.  Jeśli jedna z operacji w łańcuchu dostępu zwraca wartość null, dalsze wykonanie łańcucha zostaje przerwane.  W poniższym przykładzie `E` nie jest wykonywane, jeśli `A`, `B` lub `C` zwraca wartość null.
+Operatory warunkowe `null` skracają łańcuch wykonywania operacji. Jeśli jedna z operacji w łańcuchu zwraca wartość `null`, dalsze wykonanie łańcucha zostaje przerwane. W poniższym przykładzie `E` nie jest wykonywane, jeśli `A`, `B` lub `C` zwraca wartość `null`.
   
 ```csharp
 A?.B?.C?.Do(E);
@@ -47,7 +47,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
- Użyj innego dostępu warunkowego wartości null elementu członkowskiego jest powoływanie delegatów w sposób obsługującej wielowątkowość ze znacznie mniejsza ilość kodu.  Stary sposób wymaga kodu podobnego do poniższego:  
+Inne użycie sprawdzania wartości `null` polega na utworzeniu delegatów w sposób bezpieczny dla wywołań wielowątkowych ze znacznie mniejszą ilość kodu. Stary sposób wymaga kodu podobnego do poniższego:  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -61,7 +61,7 @@ If handler IsNot Nothing
     Call handler(…)  
 ```  
   
- Nowy sposób jest znacznie prostszy:  
+Nowy sposób jest znacznie prostszy:  
   
 ```csharp
 PropertyChanged?.Invoke(…)  
@@ -71,7 +71,7 @@ PropertyChanged?.Invoke(…)
 PropertyChanged?.Invoke(…)
 ```  
   
- Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby ocenić `PropertyChanged` tylko jeden raz, przechowując wynik w zmiennej tymczasowej. Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje możliwość wywołania delegata warunkowego null za pomocą żadnej z dostępnych składni `PropertyChanged?(e)`.  
+Nowy sposób jest bezpieczny dla wywołań wielowątkowych, ponieważ kompilator generuje kod, aby sprawdzić stan `PropertyChanged` tylko jeden raz, przechowując wynik w zmiennej tymczasowej. Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje możliwość wywołania delegata warunkowego w inny sposób, np. `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

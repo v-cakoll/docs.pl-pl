@@ -19,20 +19,20 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operatory warunkowe null ?. oraz ? [] (C# i Visual Basic)
-Testuje czy wartość lewego operandu jest `null` przed próbą dostępu do elementu (`?.`) lub indeksu (`?[]`); zwraca `null` jeśli wartość lewego operandu jest `null`. 
+Testuje, czy wartość lewego argumentu operacji to „null”, zanim przeprowadzi operację dostępu do elementu (`?.`) lub indeksowania (`?[]`). Zwraca `null`, jeśli wartość lewego argumentu operacji to `null`.
 
-Operatory te pomagają w ograniczeniu ilości kodu potrzebnego do sprawdzenia wystąpień wartości `null`, zwłaszcza dla przypadków zagnieżdżania się w strukturach danych.
+Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.
   
 ```csharp  
-int? liczba_klientow = klienci?.Length; // null jeśli klienci są null   
-Klient pierwszy = klienci?[0];  // null jeśli klienci są null  
-int? liczba_zamowien = klienci?[0]?.Zamowienia?.Count();  // null jeśli klienci, pierwszy klient lub jego zamówienia są null  
+int? length = customers?.Length; // null if customers is null  
+Customer first = customers?[0]; // null if customers is null 
+int? count = customers?[0]?.Orders?.Count(); // null if customers, the first customer, or Orders is null  
 ```  
   
 ```vb  
-Dim liczba_klientow = klienci?.Length  ' null jeśli klienci są null  
-Dim pierwszy as Klient = klienci?(0)  ' null jeśli klienci są null  
-Dim liczba_zamowien as Integer? = klienci?(0)?.Zamowienia?.Count()  ' null jeśli klienci, pierwszy klient lub jego zamówienia są null  
+Dim length = customers?.Length ' null if customers is null 
+Dim first as Customer = customers?(0) ' null if customers is null 
+Dim count as Integer? = customers?(0)?.Orders?.Count() ' null if customers, the first customer, or Orders is null  
 ```  
   
 Operatory warunkowe `null` skracają łańcuch wykonywania operacji. Jeśli jedna z operacji w łańcuchu zwraca wartość `null`, dalsze wykonanie łańcucha zostaje przerwane. W poniższym przykładzie `E` nie jest wykonywane, jeśli `A`, `B` lub `C` zwraca wartość `null`.
@@ -47,7 +47,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
-Inne użycie sprawdzania wartości `null` polega na utworzeniu delegatów w sposób bezpieczny dla wywołań wielowątkowych ze znacznie mniejszą ilość kodu. Stary sposób wymaga kodu podobnego do poniższego:  
+Inne zastosowanie dostępu do elementu członkowskiego przy użyciu operatora warunkowego `null` polega na wywołaniu delegatów w sposób bezpieczny wątkowo i ze znacznie mniejszą ilością kodu. Stary sposób wymaga kodu podobnego do poniższego: 
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -71,7 +71,7 @@ PropertyChanged?.Invoke(…)
 PropertyChanged?.Invoke(…)
 ```  
   
-Nowy sposób jest bezpieczny dla wywołań wielowątkowych, ponieważ kompilator generuje kod, aby sprawdzić stan `PropertyChanged` tylko jeden raz, przechowując wynik w zmiennej tymczasowej. Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje możliwość wywołania delegata warunkowego w inny sposób, np. `PropertyChanged?(e)`.  
+Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby sprawdzić stan `PropertyChanged` tylko jeden raz, a następnie zapisuje wynik w zmiennej tymczasowej. Metodę `Invoke`trzeba wywołać jawnie, ponieważ nie istnieje składnia `PropertyChanged?(e)` do wywołania delegata przy użyciu operatora warunkowego „null”. 
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

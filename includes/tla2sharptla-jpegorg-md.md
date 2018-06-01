@@ -1,1 +1,0 @@
-<span data-ttu-id="bffdb-101">JPEG</span><span class="sxs-lookup"><span data-stu-id="bffdb-101">JPEG</span></span>

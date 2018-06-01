@@ -1,1 +1,0 @@
-<span data-ttu-id="ac7d0-101">RTF</span><span class="sxs-lookup"><span data-stu-id="ac7d0-101">RTF</span></span>

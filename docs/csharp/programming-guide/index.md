@@ -16,17 +16,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-programming-guide"></a>Podręcznik programowania C#
-Ta sekcja zawiera szczegółowe informacje na temat kluczowych w języku C# funkcji i funkcji dostępne dla C# za pomocą programu .NET Framework.  
+Ta sekcja zawiera szczegółowe informacje o kluczowych właściwościach języka C# oraz o funkcjonalnościach dostępnych w tym języku programowania dzięki platformie .NET Framework.  
   
- Większość w tej sekcji przyjęto założenie, że znasz już coś o C# i ogólne pojęcia dotyczące programowania. Jeśli pełne początkujących programowania lub w języku C#, warto odwiedź [wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interaktywny samouczek, w których jest wymagane nie znajomość programowania.  
+ W większej części tej sekcji przyjęto założenie, że wiesz już nieco o C# i ogólnie o programowaniu. Jeśli jesteś zupełnie początkującym programistą lub początkującym w języku C#, możesz odwiedzić [Wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started). Jest to interaktywny samouczek, w którym nie jest wymagana żadna znajomość programowania.  
   
- Aby uzyskać informacje dotyczące określonego słowa kluczowe, Operatorzy i dyrektywy preprocesora, zobacz [odwołanie w C#](../../csharp/language-reference/index.md). Aby uzyskać informacje o specyfikacji języka C#, zobacz [specyfikacji języka C#](../../csharp/language-reference/language-specification/index.md).  
+ Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz [Dokumentację Języka C#](../../csharp/language-reference/index.md). Aby uzyskać informacje o specyfikacji języka C#, zobacz [Specyfikację Języka C#](../../csharp/language-reference/language-specification/index.md).  
   
 ## <a name="program-sections"></a>Sekcje programu
 
 [Konstrukcja programu C#](../../csharp/programming-guide/inside-a-program/index.md)  
   
-[Main() i argumenty wiersza polecenia](../../csharp/programming-guide/main-and-command-args/index.md)  
+[Main() i argumenty wiersza poleceń](../../csharp/programming-guide/main-and-command-args/index.md)  
  
 ## <a name="language-sections"></a>Sekcje języka  
 [Instrukcje, wyrażenia i operatory](../../csharp/programming-guide/statements-expressions-operators/index.md)  
@@ -39,11 +39,11 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych w języku C# funk
 
  [Typy wyliczeniowe](../../csharp/programming-guide/enumeration-types.md)  
   
- [Delegaci](../../csharp/programming-guide/delegates/index.md)  
+ [Delegaty](../../csharp/programming-guide/delegates/index.md)  
  
  [Tablice](../../csharp/programming-guide/arrays/index.md)  
   
- [Ciągi](../../csharp/programming-guide/strings/index.md)  
+ [Łańcuchy znakowe (Strings)](../../csharp/programming-guide/strings/index.md)  
   
  [Właściwości](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
@@ -82,8 +82,8 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych w języku C# funk
   
  [Współdziałanie](../../csharp/programming-guide/interop/index.md)  
   
- [Odbicie](../../csharp/programming-guide/concepts/reflection.md)  
+ [Refleksja](../../csharp/programming-guide/concepts/reflection.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../csharp/language-reference/index.md)  
+ [Dokumentacja Języka C#](../../csharp/language-reference/index.md)  
  [C#](../../csharp/index.md)

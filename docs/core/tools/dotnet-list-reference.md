@@ -3,12 +3,13 @@ title: polecenie odwołania listy DotNet - .NET Core interfejsu wiersza poleceni
 description: Polecenie dotnet listy odwołania zapewnia to wygodny sposób na liście odwołań projektów.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 24cb1124fc3f8707afe727e6a73d35d5dde39937
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697186"
 ---
 # <a name="dotnet-list-reference"></a>Odwołanie do listy DotNet
 
@@ -16,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="name"></a>Nazwa
 
-`dotnet list reference` -Listy odwołań projektów.
+`dotnet list reference` -Listy odwołania projektu do projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 `PROJECT`
 
-Określa plik projektu, który będzie używany do wyświetlania listy odwołania. Jeśli nie zostanie określony, polecenie będzie szukał bieżący katalog dla pliku projektu.
+Określa plik projektu, który będzie używany do wyświetlania listy odwołania. Jeśli nie zostanie określony, polecenie wyszukuje bieżący katalog dla pliku projektu.
 
 ## <a name="options"></a>Opcje
 

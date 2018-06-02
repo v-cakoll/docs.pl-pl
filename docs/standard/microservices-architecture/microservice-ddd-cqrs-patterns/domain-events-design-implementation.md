@@ -4,11 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697199"
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia domeny: projektowanie i wdrażanie
 
@@ -151,7 +152,7 @@ public abstract class Entity
 
 Jeśli chcesz zgłosić zdarzenie, możesz po prostu dodaj go do zbierania zdarzeń z kodu w dowolnej metody jednostki głównego agregacji.
 
-Poniższy kod, część [kolejność agregate głównego na eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), przedstawiono przykład:
+Poniższy kod, część [kolejność głównego agregacji w eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), przedstawiono przykład:
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
@@ -339,8 +340,8 @@ Jak już wspomniano, należy użyć domeny zdarzeń w celu jawne Implementowanie
 -   **Jimmy Bogard. Lepsze wzorzec zdarzenia domeny**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Łączny skuteczne projektowania część II: Tworzenie agreguje pracy ze sobą**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_artykuły/Vernon\_2011\_2. pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon. Efektywnym projektowaniu agregacji część II: Tworzenie wartości zagregowanych współpracują**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Wzmocnienie domenę: zdarzenia domeny**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *

@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696442"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (odwołanie w C#)
 Instrukcji try-catch składa się z `try` bloku, po której następuje co najmniej jeden `catch` postanowienia Określ obsługę różnych wyjątków.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  Można użyć więcej niż jednej określonej `catch` klauzuli w tej samej instrukcji try-catch. W tym przypadku kolejność `catch` klauzule ważne jest, ponieważ `catch` klauzule są sprawdzane w kolejności. CATCH bardziej szczegółowe wyjątki przed mniej określonych zadań. Kompilator generuje błąd jeśli kolejność się, że Twoje catch blokuje tak, aby nigdy nie można połączyć się z blokiem nowsze.  
   
- Przy użyciu `catch` argumentów jest jednym ze sposobów Filtruj wyjątki mają być obsługiwane.  Umożliwia także wyrażenie predykatu, dalsze badający wyjątku, aby zdecydować, czy do jego obsługi.  Jeśli wyrażenie predykatu zwraca wartość false, jest tworzona wyszukiwania dla programu obsługi.  
+ Przy użyciu `catch` argumentów jest jednym ze sposobów Filtruj wyjątki mają być obsługiwane.  Umożliwia także filtru wyjątków, dalsze badający wyjątku, aby zdecydować, czy do jego obsługi.  Jeśli filtr wyjątku zwraca wartość false, jest tworzona wyszukiwania dla programu obsługi.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Filtry wyjątków są preferowane przechwytywanie i ponowne generowanie (wyjaśniono poniżej), ponieważ stos nieokaleczone pozostaw filtrów.  Nowsze obsługi zrzuty stosu, widać gdzie wyjątek pierwotnie pochodzeniu, a nie tylko ostatnie miejsce, który został wywołany ponownie.  Rejestrowanie zdarzeń użycia wyrażeń filtru wyjątków.  Można utworzyć predykatu funkcję, która zawsze zwraca wartość false, również zapisującego w dzienniku można rejestrować wyjątki, jak komputery przechodzą bez konieczności ich i ponownego zgłoszenia.  
+ Filtry wyjątków są preferowane przechwytywanie i ponowne generowanie (wyjaśniono poniżej), ponieważ stos nieokaleczone pozostaw filtrów.  Nowsze obsługi zrzuty stosu, widać gdzie wyjątek pierwotnie pochodzeniu, a nie tylko ostatnie miejsce, który został wywołany ponownie.  Rejestrowanie zdarzeń użycia wyrażeń filtru wyjątków.  Można utworzyć filtr, który zawsze zwraca wartość false, również zapisującego w dzienniku można rejestrować wyjątki, jak komputery przechodzą bez konieczności ich i ponownego zgłoszenia.  
   
  A [throw](../../../csharp/language-reference/keywords/throw.md) instrukcja może być używana w `catch` bloku, aby można było ponownie zgłosić wyjątek, który zostanie przechwycony przez `catch` instrukcji. Poniższy przykład wyodrębnia informacje o źródle <xref:System.IO.IOException> wyjątek, a następnie zgłasza wyjątek do nadrzędnej metody.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> Istnieje również możliwość Użyj filtru wyjątków, aby uzyskać wynik podobnie często bardziej przejrzysty sposób (a także nie modyfikowanie stosu, jak opisano wcześniej w tym dokumencie). W poniższym przykładzie przedstawiono podobne zachowanie dla wywoływania co w poprzednim przykładzie. Funkcja zwraca `InvalidCastException` powrotem do wywołującego podczas `e.Data` jest `null`.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  Z wewnątrz `try` bloków, zainicjować tylko zmienne, które są zadeklarowane w nim. W przeciwnym razie wyjątek może wystąpić przed zakończeniem wykonywania bloku. Na przykład w poniższym przykładzie kodu zmiennej `n` zainicjowano wewnątrz `try` bloku. Próba użycia tej zmiennej poza `try` blok w `Write(n)` instrukcji wygeneruje błąd kompilatora.  
   
 ```csharp  

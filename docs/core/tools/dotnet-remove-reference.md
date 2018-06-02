@@ -3,12 +3,13 @@ title: polecenie odwołania Usuń DotNet - .NET Core interfejsu wiersza poleceni
 description: Polecenie dotnet Usuń odwołanie zapewnia to wygodny sposób, aby usunąć odwołania projektu do projektu.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 209f1ad62221e8a80efa161354a2c074d74b7c5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: b281b255be7f49a99a6b4928c340cd4fb085f085
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696234"
 ---
 # <a name="dotnet-remove-reference"></a>DotNet Usuń odwołanie
 
@@ -34,7 +35,7 @@ Docelowy plik projektu. Jeśli nie zostanie określony, polecenie wyszukuje w bi
 
 `PROJECT_REFERENCES`
 
-Projekt do projektu (P2P odwołania do usunięcia. Można określić jedną lub wiele projektów. [Wzorce glob](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminali z systemem Unix/Linux.
+Projekt do projektu (P2P) odwołuje się do usunięcia. Można określić jedną lub wiele projektów. [Wzorce glob](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminali z systemem Unix/Linux.
 
 ## <a name="options"></a>Opcje
 

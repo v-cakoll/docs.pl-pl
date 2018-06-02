@@ -8,11 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 299ff121bab87482b7cdcaebc8b43cb8a1b559ec
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 2a9501c883fec7478932b22ea2cdcad70865e0fd
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696289"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opcje kompilatora C#)
 Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się w wybranym specyfikacja języka C#.  
@@ -52,19 +53,11 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
   
  Ponieważ każdy wersji kompilatora C# zawiera rozszerzenia w specyfikacji języka **- langversion** nie daje równoważne funkcje wcześniejszej wersji kompilatora.  
  
- Ponadto podczas aktualizacji wersji języka C# zazwyczaj pokrywa się z głównych .net Framework w wersji, nowej składni i funkcje nie są zawsze związane z danej wersji określonej platformy. Nowe funkcje ostatecznie wymaga nową aktualizację kompilatora wydaną obok poprawki C#, każdej z funkcji ma własną minimalny interfejs API .net lub typowe wymagania środowiska uruchomieniowego języka, które mogą zezwolić na uruchamianie na platformach niższego poziomu przez w tym pakiety NuGet lub innych bibliotek.
+ Ponadto podczas aktualizacji wersji języka C# pokrywają się zazwyczaj z główne wersje .NET Framework, nowej składni i funkcje nie są zawsze związane z danej wersji określonej platformy. Podczas gdy nowe funkcje wymagają ostatecznie nową aktualizację kompilatora wydaną obok poprawki C#, każdej z funkcji ma własną minimalny interfejs API .NET lub typowe wymagania środowiska uruchomieniowego języka, które mogą zezwolenie na uruchamianie na platformach niskiego poziomu, umieszczając w niej Pakiety NuGet lub innych bibliotek.
   
  Niezależnie od tego, który **- langversion** ustawienie używanie użyjesz bieżącą wersję środowiska CLR do utworzenia .exe lub .dll. Jedynym wyjątkiem jest przyjaznych zestawów i [- moduleassemblyname (opcja kompilatora C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), która pracy w obszarze **- langversion: ISO-1**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **właściwości** strony.  
-  
-2.  Kliknij przycisk **kompilacji** strony właściwości.  
-  
-3.  Kliknij przycisk **zaawansowane** przycisku.  
-  
-4.  Modyfikowanie **wersji językowej** właściwości.  
+ 
+ Aby inne sposoby Określ wersję języka C#, zobacz [wybierz wersję języka C#](../configure-language-version.md) tematu.
   
  Aby dowiedzieć się, jak ustawić tę opcję kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.  
     

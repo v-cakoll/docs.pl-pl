@@ -3,11 +3,12 @@ title: Historia języka C# — przewodnik C#
 description: Języka jak wygląda w jego wersje i sposobu jego powstał od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696978"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
@@ -53,7 +54,7 @@ C# w wersji 3.0 pochodzi w późne 2007 oraz programu Visual Studio 2008, ale fa
 
 W retrospect wiele z tych funkcji prawdopodobnie zarówno nieuniknione i nierozdzielne. Wszystkie dopasowania strategicznie. Ogólnie należy uważać, że funkcja killer C# wersji była wyrażenia zapytania, nazywane również zapytania język Language-Integrated (LINQ).
 
-Wyświetl więcej nuanced sprawdza tress wyrażenia, wyrażenia lambda i typy anonimowe jako podstawa, na którym jest tworzony LINQ. Jednak w obu przypadkach C# 3.0 przedstawione Rewolucyjny koncepcji. C# 3.0 zaczęło przygotowawczych służący do włączania C# do hybrydowego obiektowo / funkcjonalności języka.
+Wyświetl więcej nuanced sprawdza drzewa wyrażeń, wyrażenia lambda i typy anonimowe jako podstawa, na którym jest tworzony LINQ. Jednak w obu przypadkach C# 3.0 przedstawione Rewolucyjny koncepcji. C# 3.0 zaczęło przygotowawczych służący do włączania C# do hybrydowego obiektowo / funkcjonalności języka.
 
 W szczególności można teraz zapisać SQL stylu, deklaratywne zapytania do wykonywania operacji w kolekcjach, między innymi. Zamiast zapisywania `for` pętli do obliczenia średniej listy liczb całkowitych, możesz teraz to zrobić tylko jako `list.Average()`. Kombinacja wyrażenia zapytania i metody rozszerzenia wprowadzone wygląda tak, jakby listę liczb całkowitych ma się coraz wiele inteligentny.
 
@@ -98,7 +99,7 @@ W wersjach 3.0 i 5.0 C# było dodać niektóre funkcje ogromnych możliwości w 
 - [Propagator wartości null](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [Interpolacja ciągów](../language-reference/tokens/interpolated.md)
 - [operatorze nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [Inicjatora słownika](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [Inicjatory indeksu](csharp-6.md#index-initializers)
 
 Każda z tych funkcji jest ciekawe w sobie. Jednak ich całkowicie, możesz zobaczyć interesujące wzorca. W tej wersji języka C# wyeliminować standardowego języka aby kodu bardziej zwięzłym i do odczytu. Dlatego wentylatory prostemu kodu, ta wersja językowa zostało ogromnych win.
 

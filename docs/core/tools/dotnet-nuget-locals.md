@@ -3,12 +3,13 @@ title: polecenie zmiennych lokalnych nuget DotNet - .NET Core interfejsu wiersza
 description: Polecenie zmiennych lokalnych nuget dotnet czyści lub wyświetla ich listę zasobów lokalnych NuGet np. pamięci podręcznej żądania http, tymczasowego pamięci podręcznej lub folderu packages globalne dla komputera.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696874"
 ---
 # <a name="dotnet-nuget-locals"></a>Zmienne lokalne nuget DotNet
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Streszczenie
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>Opis
 
@@ -30,14 +34,18 @@ ms.lasthandoff: 05/04/2018
 
 `CACHE_LOCATION`
 
-Jedna z następujących wartości:
+Lokalizacja pamięci podręcznej listy lub wyczyścić. Przyjmuje jeden z następujących wartości:
 
 * `all` — Wskazuje, że określona operacja jest stosowane do wszystkich typów pamięci podręcznej: pamięci podręcznej żądania http, pakiety globalnej pamięci podręcznej i tymczasowego pamięci podręcznej.
-* `http-cache` — Wskazuje, że określona operacja jest stosowane tylko do pamięci podręcznej żądania http. Nie dotyczy innych lokalizacji pamięci podręcznej.
-* `global-packages` — Wskazuje, że określona operacja jest stosowane tylko do pakietów globalnej pamięci podręcznej. Nie dotyczy innych lokalizacji pamięci podręcznej.
-* `temp` — Wskazuje, że określona operacja jest stosowane tylko do tymczasowego pamięci podręcznej. Nie dotyczy innych lokalizacji pamięci podręcznej.
+* `http-cache` — Wskazuje, że określona operacja jest stosowane tylko do pamięci podręcznej żądania http. Nie ma wpływu na innych lokalizacji pamięci podręcznej.
+* `global-packages` — Wskazuje, że określona operacja jest stosowane tylko do pakietów globalnej pamięci podręcznej. Nie ma wpływu na innych lokalizacji pamięci podręcznej.
+* `temp` — Wskazuje, że określona operacja jest stosowane tylko do tymczasowego pamięci podręcznej. Nie ma wpływu na innych lokalizacji pamięci podręcznej.
 
 ## <a name="options"></a>Opcje
+
+`--force-english-output`
+
+Wymusza aplikacji do uruchamiania przy użyciu opartego na język angielski, niezmienna kultura.
 
 `-h|--help`
 
@@ -49,11 +57,7 @@ Usuń zaznaczenie opcji wykonuje operację wyczyść na typ określony w pamięc
 
 `-l|--list`
 
-Opcja lista służy do wyświetlania lokalizacji pamięci podręcznej określonego typu. 
-
-`--force-english-output`
-
-Wiersza polecenia wymusza dane wyjściowe w języku angielskim.
+Opcja lista służy do wyświetlania lokalizacji pamięci podręcznej określonego typu.
 
 ## <a name="examples"></a>Przykłady
 

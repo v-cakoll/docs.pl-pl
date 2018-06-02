@@ -3,12 +3,13 @@ title: polecenie magazynu DotNet
 description: Polecenie "dotnet magazynu" przechowuje określonych zestawów w magazynie pakietów środowiska wykonawczego.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696328"
 ---
 # <a name="dotnet-store"></a>Magazyn DotNet
 
@@ -34,7 +35,7 @@ Określa [platformy docelowej](../../standard/frameworks.md).
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-*Pliku manifestu sklepu pakietu* jest plik XML, który zawiera listę pakietów do przechowywania. Format pliku manifestu jest zgodny z *csproj* format. Tak *csproj* pliku projektu, który odwołuje się do żądanego pakietów można używać z `-m|--manifest` umożliwia przechowywanie zestawów w magazynie pakietów środowiska wykonawczego. Aby określić wiele plików manifestu, należy powtórzyć dla każdego pliku opcji i ścieżka: `--manifest packages1.csproj --manifest packages2.csproj`.
+*Pliku manifestu sklepu pakietu* jest plik XML, który zawiera listę pakietów do przechowywania. Format pliku manifestu jest zgodny z formatem projektu stylu zestawu SDK. Tak, można użyć pliku projektu, odwołujący się odpowiednie pakiety z `-m|--manifest` umożliwia przechowywanie zestawów w magazynie pakietów środowiska wykonawczego. Aby określić wiele plików manifestu, powtórz opcja i ścieżki dla każdego pliku. Na przykład: `--manifest packages1.csproj --manifest packages2.csproj`.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ Przechowywania pakietów określone w *packages.csproj* bez optymalizacji:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md)   
+[Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md)

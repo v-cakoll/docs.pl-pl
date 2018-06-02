@@ -2,11 +2,12 @@
 title: 'Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 535b431fcf8ab5dafa134b8a3c1e2f7eacd6b427
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696510"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)
 Asynchroniczne programy można napisać łatwiejsze i bardziej intuicyjne za pomocą funkcji asynchronicznej/await. Możesz zapisać asynchroniczne kod, który wygląda jak synchroniczne kodu i umożliwić kompilatora obsługiwać funkcje wywołania zwrotnego trudne i kontynuacje, które kod asynchroniczny zazwyczaj pociąga za sobą.  
@@ -15,7 +16,7 @@ Asynchroniczne programy można napisać łatwiejsze i bardziej intuicyjne za pom
   
  W tym przewodniku rozpoczyna się od synchroniczne aplikacji Windows Presentation Foundation (WPF), która sumuje liczbę bajtów w postaci listy witryn sieci Web. Instruktaż następnie konwertuje aplikacji do asynchronicznego rozwiązania przy użyciu nowych funkcji.  
   
- Jeśli nie chcesz tworzyć aplikacje samodzielnie, możesz pobrać "Async próbki: uzyskiwanie dostępu do wskazówki sieci Web (C# i Visual Basic)" z [przykłady kodu dewelopera](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ Jeśli nie chcesz tworzyć aplikacje samodzielnie, możesz pobrać "Async próbki: uzyskiwanie dostępu do wskazówki sieci Web (C# i Visual Basic)" z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
  W tym przewodniku należy wykonać następujące zadania:  
   
@@ -673,7 +674,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykład Async: Uzyskiwanie dostępu do wskazówki sieci Web (C# i Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Przykład Async: Uzyskiwanie dostępu do wskazówki sieci Web (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
  [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  

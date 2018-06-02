@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697121"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Do programu Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje certyfikatu cyfrowego X.509 i sposobu ich używania w programie WCF i zawiera linki do tematów, które opisano te pojęcia dalsze lub które pokazują, jak wykonywać typowe zadania przy użyciu programu WCF i certyfikatów.  
   
- Krótko mówiąc, certyfikat jest częścią *infrastruktury kluczy publicznych* (PKI), która jest system certyfikaty cyfrowe, urzędy certyfikacji i innych urzędów rejestracji, sprawdź, które uwierzytelniają każdej Strony biorącej udział w operacji elektronicznej za pomocą kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty i każdy certyfikat ma zestaw pól, które zawierają dane, takie jak *podmiotu* (do której certyfikat został wystawiony jednostek), dat ważności (gdy certyfikat jest nieprawidłowy), wystawcy ( jednostki, który wystawił certyfikat), a klucz publiczny. W programie WCF, każdej z tych właściwości jest przetwarzany jako <xref:System.IdentityModel.Claims.Claim>, a każde oświadczenie podzielić na dwa typy: tożsamość i w prawo. Aby uzyskać więcej informacji na temat X.509 Zobacz certyfikaty [certyfikatów kluczy publicznych X.509](http://go.microsoft.com/fwlink/?LinkId=209952)uzyskać więcej informacji o oświadczeniami i autoryzacją WCF, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Aby uzyskać więcej informacji dotyczących wdrażania infrastruktury kluczy publicznych, zobacz [systemu Windows Server 2008 R2 — usługi certyfikatów](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Krótko mówiąc, certyfikat jest częścią *infrastruktury kluczy publicznych* (PKI), która jest system certyfikaty cyfrowe, urzędy certyfikacji i innych urzędów rejestracji, sprawdź, które uwierzytelniają każdej Strony biorącej udział w operacji elektronicznej za pomocą kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty i każdy certyfikat ma zestaw pól, które zawierają dane, takie jak *podmiotu* (do której certyfikat został wystawiony jednostek), dat ważności (gdy certyfikat jest nieprawidłowy), wystawcy ( jednostki, który wystawił certyfikat), a klucz publiczny. W programie WCF, każdej z tych właściwości jest przetwarzany jako <xref:System.IdentityModel.Claims.Claim>, a każde oświadczenie podzielić na dwa typy: tożsamość i w prawo. Aby uzyskać więcej informacji na temat X.509 Zobacz certyfikaty [certyfikatów kluczy publicznych X.509](http://go.microsoft.com/fwlink/?LinkId=209952). Aby uzyskać więcej informacji na temat oświadczeń i autoryzacji w programie WCF zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Aby uzyskać więcej informacji dotyczących wdrażania infrastruktury kluczy publicznych, zobacz [systemu Windows Server 2008 R2 — usługi certyfikatów](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
- Podstawową funkcją certyfikat jest uwierzytelnianie tożsamość właściciela certyfikatu do innych użytkowników. Certyfikat zawiera *klucz publiczny* właściciela, gdy właściciel zachowuje klucza prywatnego. Klucz publiczny może służyć do szyfrowania wiadomości wysyłane do właściciela certyfikatu. Tylko właściciel ma dostęp do klucza prywatnego tak tylko właściciel może odszyfrować te wiadomości.  
+ Podstawową funkcją certyfikatu jest uwierzytelnianie tożsamość właściciela certyfikatu do innych użytkowników. Certyfikat zawiera *klucz publiczny* właściciela, gdy właściciel zachowuje klucza prywatnego. Klucz publiczny może służyć do szyfrowania wiadomości wysyłane do właściciela certyfikatu. Tylko właściciel ma dostęp do klucza prywatnego tak tylko właściciel może odszyfrować te wiadomości.  
   
  Certyfikaty muszą być wystawiane przez urząd certyfikacji, który jest często wystawcy certyfikatów innych firm. W domenie systemu Windows jest dołączony urząd certyfikacji który może służyć do wystawiania certyfikatów dla komputerów w domenie.  
   

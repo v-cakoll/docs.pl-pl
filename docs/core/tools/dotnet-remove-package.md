@@ -3,12 +3,13 @@ title: DotNet Usuń polecenie pakietu - .NET Core interfejsu wiersza polecenia
 description: Polecenie pakietu Usuń dotnet zapewnia to wygodny sposób, aby usunąć odwołanie do pakietu NuGet do projektu.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 6a18be1a853119be245623e8fa0a0e44ed819e8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: ed6086bfdfadaa06494c857fc74687f1273af971
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696861"
 ---
 # <a name="dotnet-remove-package"></a>Pakiet Usuń DotNet
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 `PROJECT`
 
-Określa plik projektu. Jeśli nie zostanie określony, polecenie będzie wyszukać bieżącego katalogu.
+Określa plik projektu. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego.
 
 `PACKAGE_NAME`
 

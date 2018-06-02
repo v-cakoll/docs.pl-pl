@@ -3,12 +3,13 @@ title: polecenie wypychania nuget DotNet - .NET Core interfejsu wiersza poleceni
 description: Polecenie wypychania nuget dotnet wypchnięcia pakietu na serwerze i publikuje ją.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 090b11646a81859eeadb5fe9d36b43721fc70a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: c835b1b9d44b9ed12dc0ea4568414a83c926ae4f
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696497"
 ---
 # <a name="dotnet-nuget-push"></a>wypychania nuget DotNet
 
@@ -20,7 +21,25 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Streszczenie
 
-`dotnet nuget push [<ROOT>] [-s|--source] [-ss|--symbol-source] [-t|--timeout] [-k|--api-key] [-sk|--symbol-api-key] [-d|--disable-buffering] [-n|--no-symbols] [--force-english-output] [-h|--help]`
+# <a name="net-core-21tabnetcore21"></a>[Oprogramowanie .NET core 2.1](#tab/netcore21)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+---
 
 ## <a name="description"></a>Opis
 
@@ -34,15 +53,41 @@ Określa ścieżkę pliku do pakietu, który ma zostać przeniesiony.
 
 ## <a name="options"></a>Opcje
 
+# <a name="net-core-21tabnetcore21"></a>[Oprogramowanie .NET core 2.1](#tab/netcore21)
+
+`-d|--disable-buffering`
+
+Wyłącza buforowanie przypadku wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.
+
+`--force-english-output`
+
+Wymusza aplikacji do uruchamiania przy użyciu opartego na język angielski, niezmienna kultura.
+
 `-h|--help`
 
 Drukuje krótkich pomocy dla polecenia.
+
+`-k|--api-key <API_KEY>`
+
+Klucz interfejsu API dla serwera.
+
+`-n|--no-symbols`
+
+Nie push symboli (nawet, jeśli istnieje).
+
+`--no-service-endpoint`
+
+Nie dołącza "interfejsu api w wersji 2/packages" adres URL źródła.
 
 `-s|--source <SOURCE>`
 
 Określa adres URL serwera. Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.
 
-`--symbol-source <SOURCE>`
+`-sk|--symbol-api-key <API_KEY>`
+
+Klucz interfejsu API serwera symboli.
+
+`-ss|--symbol-source <SOURCE>`
 
 Określa adres URL serwera symboli.
 
@@ -50,33 +95,91 @@ Określa adres URL serwera symboli.
 
 Określa limit czasu dla Wypychanie do serwera w sekundach. Wartość domyślna to 300 sekund (5 minut). Określanie 0 (zero sekund) jest stosowana wartość domyślna.
 
-`-k|--api-key <API_KEY>`
-
-Klucz interfejsu API dla serwera.
-
-`--symbol-api-key <API_KEY>`
-
-Klucz interfejsu API serwera symboli.
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-d|--disable-buffering`
 
 Wyłącza buforowanie przypadku wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.
 
+`--force-english-output`
+
+Wymusza aplikacji do uruchamiania przy użyciu opartego na język angielski, niezmienna kultura.
+
+`-h|--help`
+
+Drukuje krótkich pomocy dla polecenia.
+
+`-k|--api-key <API_KEY>`
+
+Klucz interfejsu API dla serwera.
+
 `-n|--no-symbols`
 
 Nie push symboli (nawet, jeśli istnieje).
 
+`-s|--source <SOURCE>`
+
+Określa adres URL serwera. Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+Klucz interfejsu API serwera symboli.
+
+`-ss|--symbol-source <SOURCE>`
+
+Określa adres URL serwera symboli.
+
+`-t|--timeout <TIMEOUT>`
+
+Określa limit czasu dla Wypychanie do serwera w sekundach. Wartość domyślna to 300 sekund (5 minut). Określanie 0 (zero sekund) jest stosowana wartość domyślna.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-d|--disable-buffering`
+
+Wyłącza buforowanie przypadku wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.
+
 `--force-english-output`
 
-Wymusza rejestrowane dane wyjściowe w języku angielskim.
+Wymusza aplikacji do uruchamiania przy użyciu opartego na język angielski, niezmienna kultura.
+
+`-h|--help`
+
+Drukuje krótkich pomocy dla polecenia.
+
+`-k|--api-key <API_KEY>`
+
+Klucz interfejsu API dla serwera.
+
+`-n|--no-symbols`
+
+Nie push symboli (nawet, jeśli istnieje).
+
+`-s|--source <SOURCE>`
+
+Określa adres URL serwera. Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+Klucz interfejsu API serwera symboli.
+
+`-ss|--symbol-source <SOURCE>`
+
+Określa adres URL serwera symboli.
+
+`-t|--timeout <TIMEOUT>`
+
+Określa limit czasu dla Wypychanie do serwera w sekundach. Wartość domyślna to 300 sekund (5 minut). Określanie 0 (zero sekund) jest stosowana wartość domyślna.
+
+---
 
 ## <a name="examples"></a>Przykłady
 
-Wypchnięcia *foo.nupkg* źródłem wypychania domyślne, zapewniając klucz interfejsu API:
+Wypchnięcia *foo.nupkg* źródłem wypychania domyślne, określając klucz interfejsu API:
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-Wypychania *foo.nupkg* do źródła niestandardowego wypychania `http://customsource`, zapewniając klucz interfejsu API:
+Wypychania *foo.nupkg* do źródła niestandardowego wypychania `http://customsource`, określając klucz interfejsu API:
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
@@ -88,7 +191,7 @@ Wypchnięcia *foo.symbols.nupkg* do domyślnego źródła symboli:
 
 `dotnet nuget push foo.symbols.nupkg`
 
-Wypchnięcia *foo.nupkg* w źródle wypychania domyślne Określanie 360 drugi limitu czasu:
+Wypchnięcia *foo.nupkg* w źródle wypychania domyślne Określanie sekundę 360 przekroczenie limitu czasu:
 
 `dotnet nuget push foo.nupkg --timeout 360`
 

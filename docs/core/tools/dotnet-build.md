@@ -3,12 +3,13 @@ title: DotNet kompilacji command - .NET Core interfejsu wiersza polecenia
 description: Dotnet kompilacji polecenie kompilacji projektu i wszystkie jego zależności.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697134"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -40,15 +41,15 @@ dotnet build [-h|--help]
 
 Jeśli projekt zawiera zależności innych firm, takich jak biblioteki z pakietu NuGet, jest rozwiązany z pamięci podręcznej NuGet i nie są dostępne z skompilowanych danych wyjściowych projektu. Z tym pamiętać iloczyn `dotnet build` nie jest gotowa do przeniesienia na inny komputer, aby uruchomić. Dzięki temu nie trzeba zachowanie programu .NET Framework w budynku, który projekt wykonywalny (aplikacja) tworzy dane wyjściowe do uruchomienia na dowolnym komputerze z zainstalowanym programu .NET Framework. Aby podobne możliwości z platformą .NET Core, musisz użyć [publikowania dotnet](dotnet-publish.md) polecenia. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
 
-Kompilowanie wymaga *project.assets.json* pliku, który zawiera listę zależności aplikacji. Podczas tworzenia pliku [ `dotnet restore` ](dotnet-restore.md) jest wykonywana. Bez miejscowej pliku zasobów narzędzia nie można rozpoznać zestawy referencyjne zakończyło się z błędami. Z platformą .NET Core uruchom 1.x zestawu SDK, trzeba było explicitily `dotnet restore` przed uruchomieniem `dotnet build`. Począwszy od platformy .NET Core SDK 2.0, `dotnet restore` uruchamia implicitily po uruchomieniu `dotnet build`. Jeśli chcesz wyłączyć niejawne przywracania podczas wykonywania poleceń kompilacji, można przekazać `--no-restore` opcji.
+Kompilowanie wymaga *project.assets.json* pliku, który zawiera listę zależności aplikacji. Podczas tworzenia pliku [ `dotnet restore` ](dotnet-restore.md) jest wykonywana. Bez miejscowej pliku zasobów narzędzia nie można rozpoznać zestawy referencyjne zakończyło się z błędami. Z platformą .NET Core 1.x zestawu SDK, trzeba uruchomić `dotnet restore` przed uruchomieniem `dotnet build`. Począwszy od platformy .NET Core SDK 2.0, `dotnet restore` uruchamia się domyślnie po uruchomieniu `dotnet build`. Jeśli chcesz wyłączyć niejawne przywracania podczas wykonywania poleceń kompilacji, można przekazać `--no-restore` opcji.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-`dotnet build` korzysta z programu MSBuild w celu skompilowania projektu; w związku z tym obsługuje ona zarówno równoległe, jak i przyrostowe kompilacji. Zapoznaj się [kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds) Aby uzyskać więcej informacji.
+`dotnet build` używa programu MSBuild, aby skompilować projekt, tworzy tak obsługuje zarówno równoległe, jak i przyrostowe. Aby uzyskać więcej informacji, zobacz [kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
 
-Oprócz jego opcje `dotnet build` polecenie akceptuje opcje MSBuild `/p` do ustawiania właściwości lub `/l` do definiowania rejestrator. Dowiedz się więcej o tych opcjach w [dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
+Oprócz jego opcje `dotnet build` polecenie akceptuje opcje MSBuild `/p` do ustawiania właściwości lub `/l` do definiowania rejestrator. Aby uzyskać więcej informacji o tych opcjach, zobacz [dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
-Określa, czy projekt jest wykonywalne, lub nie jest określany przez `<OutputType>` właściwość w pliku projektu. W poniższym przykładzie przedstawiono projekt, który utworzy kodu wykonywalnego:
+Określa, czy projekt jest wykonywalne, lub nie jest określany przez `<OutputType>` właściwość w pliku projektu. W poniższym przykładzie przedstawiono projekt, który spowoduje utworzenie kodu wykonywalnego:
 
 ```xml
 <PropertyGroup>
@@ -56,7 +57,7 @@ Określa, czy projekt jest wykonywalne, lub nie jest określany przez `<OutputTy
 </PropertyGroup>
 ```
 
-Aby można było utworzyć bibliotekę, Pomiń `<OutputType>` właściwości. Główna różnica w skompilowanych danych wyjściowych jest nie zawiera punktów wejścia biblioteki DLL IL dla biblioteki oraz nie może zostać wykonana. 
+Aby można było utworzyć bibliotekę, Pomiń `<OutputType>` właściwości. Główna różnica w skompilowanych danych wyjściowych jest nie zawiera punktów wejścia biblioteki DLL IL dla biblioteki oraz nie może zostać wykonana.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -78,7 +79,7 @@ Kompiluje z określonym [framework](../../standard/frameworks.md). Platformę mu
 
 `--force`
 
- Wymusza wszystkie zależności, które można rozwiązać, nawet jeśli ostatniego przywracanie zakończyło się pomyślnie. Jest to równoważne usuwanie *project.assets.json* pliku.
+Wymusza wszystkie zależności, które można rozwiązać, nawet jeśli ostatniego przywracanie zakończyło się pomyślnie. Określenie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.
 
 `-h|--help`
 
@@ -86,15 +87,15 @@ Drukuje krótkich pomocy dla polecenia.
 
 `--no-dependencies`
 
-Ignoruje odwołuje się do projektu do projektu (P2P) i tylko kompilacje główny projekt określony do kompilacji.
+Ignoruje odwołuje się do projektu do projektu (P2P) i tworzy tylko określonym katalogu głównym projektu.
 
 `--no-incremental`
 
-Oznaczenie kompilacji jako niebezpieczny dla kompilacji przyrostowej. To powoduje wyłączenie kompilacji przyrostowej i wymusza czystą kompilowania wykresu zależności projektu.
+Oznaczenie kompilacji jako niebezpieczny dla kompilacji przyrostowej. Ta flaga wyłącza kompilacji przyrostowej i wymusza czystą kompilowania wykresu zależności projektu.
 
 `--no-restore`
 
-Nie wykonać przywracanie niejawne podczas kompilacji.
+Nie jest wykonywana niejawne przywracania podczas kompilacji.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -128,11 +129,11 @@ Drukuje krótkich pomocy dla polecenia.
 
 `--no-dependencies`
 
-Ignoruje odwołuje się do projektu do projektu (P2P) i tylko kompilacje główny projekt określony do kompilacji.
+Ignoruje odwołuje się do projektu do projektu (P2P) i tworzy tylko określonym katalogu głównym projektu.
 
 `--no-incremental`
 
-Oznaczenie kompilacji jako niebezpieczny dla kompilacji przyrostowej. To powoduje wyłączenie kompilacji przyrostowej i wymusza czystą kompilowania wykresu zależności projektu.
+Oznaczenie kompilacji jako niebezpieczny dla kompilacji przyrostowej. Ta flaga wyłącza kompilacji przyrostowej i wymusza czystą kompilowania wykresu zależności projektu.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

@@ -3,13 +3,14 @@ title: Analizator interfejs API .NET
 description: Dowiedz się, jak analizator interfejsu API platformy .NET mogą pomóc wykrywanie przestarzałe interfejsy API i problemy ze zgodnością platformy.
 author: oliag
 ms.author: mairaw
-ms.date: 01/30/2018
+ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696887"
 ---
 # <a name="net-api-analyzer"></a>Analizator interfejs API .NET
 
@@ -70,11 +71,11 @@ Pomijanie globalnego jest zalecanym sposobem zapewnienia spójności interfejsu 
 
 ## <a name="discovering-cross-platform-issues"></a>Wykrywanie problemów i platform
 
-Podobnie jak przestarzałe interfejsy API, wszystkich interfejsów API, które nie są międzyplatformowa identyfikuje analizatora. Na przykład <xref:System.Console.WindowWidth?displayProperty=nameWithType> działa w systemie Windows, ale nie w systemie Linux i macOS. Identyfikator diagnostyczny jest wyświetlany w obszarze **listy błędów** okna. Można pominąć tego ostrzeżenia, klikając prawym przyciskiem myszy i wybierając **szybkie akcje i Refaktoryzacje**. W odróżnieniu od amortyzacja przypadków, gdy są dostępne dwie opcje (nadal używaj przestarzały element członkowski i pomijanie ostrzeżeń lub nie używać na wszystkich), w tym miejscu Jeśli projektujesz kodu tylko dla niektórych platform, można pominąć wszystkie ostrzeżenia dla innych platform, nie musisz Zaplanuj uruchamianie kodzie. W tym celu wystarczy edytowanie pliku projektu i dodawanie `PlatformCompatIgnore` właściwość, która zawiera listę wszystkich platform, które mają być ignorowane. Dopuszczalne wartości to: `Linux`, `MacOSX`, i `Windows`.
+Podobnie jak przestarzałe interfejsy API, wszystkich interfejsów API, które nie są międzyplatformowa identyfikuje analizatora. Na przykład <xref:System.Console.WindowWidth?displayProperty=nameWithType> działa w systemie Windows, ale nie w systemie Linux i macOS. Identyfikator diagnostyczny jest wyświetlany w obszarze **listy błędów** okna. Można pominąć tego ostrzeżenia, klikając prawym przyciskiem myszy i wybierając **szybkie akcje i Refaktoryzacje**. W odróżnieniu od amortyzacja przypadków, gdy są dostępne dwie opcje (nadal używaj przestarzały element członkowski i pomijanie ostrzeżeń lub nie używać na wszystkich), w tym miejscu Jeśli projektujesz kodu tylko dla niektórych platform, można pominąć wszystkie ostrzeżenia dla innych platform, nie musisz Zaplanuj uruchamianie kodzie. W tym celu wystarczy edytowanie pliku projektu i dodawanie `PlatformCompatIgnore` właściwość, która zawiera listę wszystkich platform, które mają być ignorowane. Dopuszczalne wartości to: `Linux`, `macOS`, i `Windows`.
 
 ```xml
 <PropertyGroup>
-    <PlatformCompatIgnore>Linux;MacOS</PlatformCompatIgnore>
+    <PlatformCompatIgnore>Linux;macOS</PlatformCompatIgnore>
 </PropertyGroup>
 ```
 

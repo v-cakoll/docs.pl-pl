@@ -3,13 +3,13 @@ title: Wymagania wstępne dotyczące platformy .NET Core w systemie Linux
 description: Obsługiwane wersje systemu Linux i zależności platformy .NET Core na tworzenie, wdrażanie i uruchamianie aplikacji .NET Core na maszynach z systemem Linux.
 author: jralexander
 ms.author: johalex
-ms.date: 05/30/2018
-ms.openlocfilehash: 9fcbb6589bf22f7d95ecbb8acb54b2094fc0183d
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/01/2018
+ms.openlocfilehash: 30448d84a8377e27b0606b3bdabdcbac96c048aa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34696562"
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728550"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Linux
 
@@ -27,19 +27,39 @@ W tym artykule opisano zależności niezbędne do tworzenia aplikacji platformy 
 
 Traktuje 2.x .NET core Linux jako jeden system operacyjny. Brak jednej kompilacji systemu Linux (na architektura mikroukładu) dystrybucje systemu Linux obsługiwane.
 
-NET Core 2.x jest obsługiwana w systemie Linux 64-bitowej (`x86_64` lub `amd64`) dystrybucje/wersji:
+**NET Core 2.1**
+
+NET Core 2.1 jest obsługiwana w systemie Linux 64-bitowej (`x86_64` lub `amd64`) dystrybucje/wersji:
+
+
+* Red Hat Enterprise Linux 7, 6
+* CentOS 7
+* Oracle Linux 7
+* Fedora 27
+* Debian 9 8.7 lub nowszymi wersjami
+* Ubuntu 18.04, 17.10, 16.04, 14.04
+* Linux mennic 18, 17
+* openSUSE 42.3 lub nowszej wersji
+* SUSE Linux Enterprise (SLES) 12 z dodatkiem Service Pack 2 lub nowszy
+* Alpine Linux 3.7 lub nowszy
+
+Zobacz [obsługiwane wersje systemu operacyjnego .NET Core 2.0](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pełną listę .NET Core 2.0 obsługiwane systemy operacyjne, dystrybucji i wersji poza wersje obsługi systemu operacyjnego i łącza zasady cyklu pomocy.
+
+**NET Core 2.0**
+
+NET Core 2.0 jest obsługiwana w systemie Linux 64-bitowej (`x86_64` lub `amd64`) dystrybucje/wersji:
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
 * Oracle Linux 7
-* Fedora 27 26
+* Fedora 27
 * Debian 9 8.7 lub nowszymi wersjami
 * Ubuntu 18.04, 17.10, 16.04, 14.04
 * Linux mennic 18, 17
 * openSUSE 42.3 lub nowszej wersji
 * SUSE Linux Enterprise (SLES) 12 z dodatkiem Service Pack 2 lub nowszy
 
-Zobacz [2.x .NET Core obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pełną listę .NET Core 2.x obsługiwanych systemów operacyjnych, dystrybucji i wersji poza wersje obsługi systemu operacyjnego i łącza do zasad cyklu życia.
+Zobacz [obsługiwane wersje systemu operacyjnego .NET Core 2.0](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pełną listę .NET Core 2.0 obsługiwane systemy operacyjne, dystrybucji i wersji poza wersje obsługi systemu operacyjnego i łącza zasady cyklu pomocy.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -120,7 +140,19 @@ Aby zainstalować oprogramowanie .NET Core w obsługiwanych wersjach RHEL:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Aby zapewnić najnowsze informacje o instalacji, należy wykonać [instrukcje Instalator środowiska uruchomieniowego i zestawu SDK 2.x .NET Core](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-current) obsługiwane wersje RHEL.
+**.NET Core 2.0**
+
+ Zainstaluj program .NET Core 2.0 w obsługiwanych wersjach RHEL:
+
+* Środowisko uruchomieniowe platformy .NET core 2.0.8 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.8)
+* Środowisko uruchomieniowe platformy .NET core 2.0.7 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.7)
+* Środowisko uruchomieniowe platformy .NET core 2.0.6 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.6)
+* Środowisko uruchomieniowe platformy .NET core 2.0.5 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.5)
+* .NET core SDK 2.1.200 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.200)
+* .NET core SDK 2.1.105 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.105)
+* .NET core SDK 2.1.103 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.103)
+* .NET core SDK 2.0.3 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.0.3)
+* .NET core SDK 2.0.0 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.0.0)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -152,9 +184,11 @@ Red Hat .NET kanał dostępu do rejestracji Pomoc [rozdział 1 .NET Core 1.1 Get
 
 |Środowisk uruchomieniowych / zestawów SDK          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux mennic 18|Ubuntu 14.04 / Linux mennic 17|
 |-------------------------|----------------|----------------|----------------------------|----------------------------|
+|Środowisko uruchomieniowe platformy .NET core 2.0.8  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.8)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.8)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.8)          |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.8)            |
 |Środowisko uruchomieniowe platformy .NET core 2.0.7  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.7)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.7)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.7)          |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.7)            |
 |Środowisko uruchomieniowe platformy .NET core 2.0.6  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.6)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
 |Środowisko uruchomieniowe platformy .NET core 2.0.5  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.5)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|Oprogramowanie .NET core SDK 2.1.200    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.200)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.200)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.200)            |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.200)            |
 |Oprogramowanie .NET core SDK 2.1.105    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.105)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.105)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.105)            |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.105)            |
 |Oprogramowanie .NET core SDK 2.1.103    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.103)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
 |Oprogramowanie .NET core SDK 2.0.3      |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.3)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
@@ -206,9 +240,11 @@ Aby zainstalować oprogramowanie .NET Core w obsługiwanych wersjach Debian (64 
 
 |Środowisk uruchomieniowych / zestawów SDK          |Debian 9       |Debian 8       |
 |-------------------------|---------------|---------------|
+|Środowisko uruchomieniowe platformy .NET core 2.0.8  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.8)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.8)   |
 |Środowisko uruchomieniowe platformy .NET core 2.0.7  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.7)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.7)   |
 |Środowisko uruchomieniowe platformy .NET core 2.0.6  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
 |Środowisko uruchomieniowe platformy .NET core 2.0.5  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|Oprogramowanie .NET core SDK 2.1.200    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.200)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.200)   |
 |Oprogramowanie .NET core SDK 2.1.105    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
 |Oprogramowanie .NET core SDK 2.1.103    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
 |Oprogramowanie .NET core SDK 2.0.3      |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
@@ -258,9 +294,11 @@ Aby zainstalować oprogramowanie .NET Core w obsługiwanych wersjach Fedora:
 
 |Środowisk uruchomieniowych / zestawów SDK          |Fedora 26 lub nowszy |Fedora 25 lub poprzedniego |
 |-------------------------|-------------------|----------------------|
+|Środowisko uruchomieniowe platformy .NET core 2.0.8  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.8)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.8)           |
 |Środowisko uruchomieniowe platformy .NET core 2.0.7  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.7)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.7)           |
 |Środowisko uruchomieniowe platformy .NET core 2.0.6  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
 |Środowisko uruchomieniowe platformy .NET core 2.0.5  |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|Oprogramowanie .NET core SDK 2.1.200    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.200)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.200)           |
 |Oprogramowanie .NET core SDK 2.1.105    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.105)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.105)           |
 |Oprogramowanie .NET core SDK 2.1.103    |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
 |Oprogramowanie .NET core SDK 2.0.3      |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[Łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
@@ -312,9 +350,11 @@ Do zainstalowania .NET Core dla obsługiwanych CentOS i Oracle Linux dystrybucje
 
 **.NET Core 2.0**
 
-* Środowisko uruchomieniowe platformy .NET core 2.0.7 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
+* Środowisko uruchomieniowe platformy .NET core 2.0.8 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.8)
+* Środowisko uruchomieniowe platformy .NET core 2.0.7 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.7)
 * Środowisko uruchomieniowe platformy .NET core 2.0.6 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
 * Środowisko uruchomieniowe platformy .NET core 2.0.5 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
+* .NET core SDK 2.1.200 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.200)
 * .NET core SDK 2.1.105 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.105)
 * .NET core SDK 2.1.103 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
 * .NET core SDK 2.0.3 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
@@ -359,9 +399,11 @@ Aby zainstalować oprogramowanie .NET Core 2.x dla obsługiwane SUSE Linux Enter
 
 **SUSE Linux Enterprise Server**
 
+* Środowisko uruchomieniowe platformy .NET core 2.0.8 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.8)
 * Środowisko uruchomieniowe platformy .NET core 2.0.7 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.7)
 * Środowisko uruchomieniowe platformy .NET core 2.0.6 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.6)
 * Środowisko uruchomieniowe platformy .NET core 2.0.5 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.5)
+* .NET core SDK 2.1.200 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.200)
 * .NET core SDK 2.1.105 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.105)
 * .NET core SDK 2.1.103 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.103)
 * .NET core SDK 2.0.3 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.3)
@@ -369,6 +411,7 @@ Aby zainstalować oprogramowanie .NET Core 2.x dla obsługiwane SUSE Linux Enter
 
 **openSUSE**
 
+* Środowisko uruchomieniowe platformy .NET core 2.0.8 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.8)
 * Środowisko uruchomieniowe platformy .NET core 2.0.7 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.7)
 * Środowisko uruchomieniowe platformy .NET core 2.0.6 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
 * Środowisko uruchomieniowe platformy .NET core 2.0.5 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
@@ -386,7 +429,6 @@ Aby zainstalować oprogramowanie .NET Core 2.x dla obsługiwane SUSE Linux Enter
 
 * Środowisko uruchomieniowe platformy .NET core 2.1.0 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0)
 * .NET core SDK 2.1.300 [łącze instalacji](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300)
-
 
 **openSUSE**
 
@@ -411,6 +453,16 @@ Aby zainstalować oprogramowanie .NET Core 2.x dla obsługiwane SUSE Linux Enter
 * Zestaw SDK programu .NET core 1.0.1 [łącze instalacji](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-24-x64-binaries)
 
 ---
+
+## <a name="install-net-core-for-supported-alpine-linux-versions-64-bit"></a>Zainstaluj oprogramowanie .NET Core obsługiwane wersje Alpine Linux (64-bitowy)
+
+> [!NOTE]
+> Katalog kontrolowane przez użytkownika jest wymagana dla systemu Linux instaluje system z tar.gz.
+
+Pobierz i postępuj zgodnie z instrukcjami instalacji platformy .NET Core 2.1 obsługiwane wersje Alpine Linux (64-bitowy) z następujących łączy:
+
+* Środowisko uruchomieniowe platformy .NET core 2.1.0 [pobrać łącza](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0)
+* .NET core SDK 2.1.300 [pobrać łącza](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300)
 
 > [!IMPORTANT]
 > Jeśli masz problemy z instalacją .NET Core w obsługiwanych dystrybucji systemu Linux/wersji, poszukaj z zainstalowanych dystrybucje/wersji następujące tematy:

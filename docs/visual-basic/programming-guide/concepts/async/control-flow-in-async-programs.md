@@ -2,11 +2,12 @@
 title: Przepływ sterowania w aplikacjach asynchronicznych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 2de9c00e5094a1c40e64bdf5215157867372be8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728508"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Przepływ sterowania w aplikacjach asynchronicznych (Visual Basic)
 Możesz wpisać i obsługa asynchroniczne programy łatwiej przy użyciu `Async` i `Await` słów kluczowych. Jednak wyniki, może Cię zaskoczył Jeśli nie znasz sposób działania programu. Ślady tego tematu, które przepływu sterowania za pośrednictwem programu async proste do wyświetlenia, gdy formant są przenoszone z jednej metody do innej i jakie informacje są przesyłane za każdym razem.  
@@ -97,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Aby uruchomić przykład, musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
 ### <a name="download-the-program"></a>Pobierz Program  
- Możesz pobrać aplikację dla tego tematu z [próbki Async: przepływ sterowania w aplikacjach asynchronicznych](http://go.microsoft.com/fwlink/?LinkId=255285). Poniższe kroki Otwórz i uruchom program.  
+ Możesz pobrać aplikację dla tego tematu z [próbki Async: przepływ sterowania w aplikacjach asynchronicznych](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Poniższe kroki Otwórz i uruchom program.  
   
 1.  Rozpakuj pobrany plik, a następnie uruchom program Visual Studio.  
   
@@ -361,4 +362,4 @@ Dim contentLength As Integer = Await getLengthTask
  [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Asynchroniczne typy zwracane (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
  [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Przykład Async: Przepływ sterowania w aplikacjach asynchronicznych (C# i Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Przykład Async: Przepływ sterowania w aplikacjach asynchronicznych (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

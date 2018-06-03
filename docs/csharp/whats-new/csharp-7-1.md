@@ -2,17 +2,18 @@
 title: Nowości w języku C# 7.1
 description: Przegląd nowych funkcji w języku C# 7.1.
 ms.date: 08/16/2017
-ms.openlocfilehash: 00baec45d7582d3ac12c7b0865241f5cd8159246
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728657"
 ---
 # <a name="whats-new-in-c-71"></a>Nowości w języku C# 7.1
 
 C# 7.1 to pierwszy punkt wersji języka C#. Umożliwia oznaczanie okresach wydania zwiększona dla języka. Służy nowe funkcje wcześniej, najlepszym rozwiązaniem, gdy każda nowa funkcja jest gotowe. C# 7.1 dodaje możliwość konfigurowania kompilatora do dopasowania określonej wersji języka. Który umożliwia decyzja o uaktualnienie narzędzia decyzja o uaktualnienie wersji językowych.
 
-C# 7.1 dodaje [wybór wersji języka](#language-version-selection) element konfiguracji, trzy nowe funkcje językowe i nowe zachowanie kompilatora.
+C# 7.1 dodaje [wybór wersji języka](../language-reference/configure-language-version.md) element konfiguracji, trzy nowe funkcje językowe i nowe zachowanie kompilatora.
 
 Dostępne są następujące nowe funkcje językowe w tej wersji:
 
@@ -25,51 +26,7 @@ Dostępne są następujące nowe funkcje językowe w tej wersji:
 
 Na koniec kompilator ma dwie opcje `/refout` i `/refonly` tego formantu [odwołania generowanie zestawów](#reference-assembly-generation).
 
-## <a name="language-version-selection"></a>Wybór wersji języka
-
-Kompilator języka C# obsługuje 7.1 C# w programie Visual Studio 2017 wersji 15 ustęp 3 lub .NET Core SDK 2.0. Jednak 7.1 funkcje są domyślnie wyłączone. Aby włączyć funkcje 7.1, musisz zmienić ustawienie wersji języka dla projektu.
-
-W programie Visual Studio, kliknij prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań i wybierz **właściwości**. Wybierz **kompilacji** i wybierz **zaawansowane** przycisku. Na liście rozwijanej wybierz **C# najnowsza wersja pomocnicza (Najnowsza wersja)**, lub wersji **C# 7.1** jak pokazano w następującym obrazu. `latest` Wartość oznacza, że chcesz używać najnowszej wersji pomocniczej na bieżącym komputerze. `C# 7.1` Oznacza, że chcesz używać C# 7.1, nawet po udostępnieniu nowsze wersje pomocnicze.
-
-![Ustawienie wersji językowej](./media/csharp-7-1/advanced-build-settings.png)
-
-Alternatywnie można edytować plik "csproj" i dodawania lub modyfikowania następujące wiersze:
-
-```xml
-<PropertyGroup>
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-```
-
-> [!NOTE]
-> Jeśli używasz programu Visual Studio IDE do aktualizacji plików csproj IDE tworzy osobne węzły dla każdej konfiguracji kompilacji. Będzie zazwyczaj wartość taka sama we wszystkich konfiguracjach kompilacji, ale należy jawnie ustaw dla każdej konfiguracji kompilacji, lub wybierz opcję "Wszystkie konfiguracje" po zmodyfikowaniu tego ustawienia. W pliku csproj, pojawi się następujące:
-
-```xml
-<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-
-<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-```
-
-Prawidłowe ustawienia dla `LangVersion` elementu są:
-
-* `ISO-1`
-* `ISO-2`
-* `3`
-* `4`
-* `5`
-* `6`
-* `7`
-* `7.1`
-* `default`
-* `latest`
-
-Ciągi specjalne `default` i `latest` rozwiązania do najnowszej wersji językowych główne i pomocnicze odpowiednio zainstalowana na maszynie kompilacji.
-
-To ustawienie zapewnia oddzielenie instalowanie nowej wersji zestawu SDK i narzędzia w środowisku projektowania wybór uwzględnienie nowe funkcje językowe w projekcie. Najnowsze narzędzia i zestawu SDK można zainstalować na komputerze kompilacji. Każdy projekt można skonfigurować do korzystania z określonej wersji języka dla jego kompilacji.
+Aby korzystać z najnowszych funkcji w wersji punktu, należy [skonfigurować kompilatora wersji języka](../language-reference/configure-language-version.md) i wybierz wersję.
 
 ## <a name="async-main"></a>Asynchroniczne głównego
 

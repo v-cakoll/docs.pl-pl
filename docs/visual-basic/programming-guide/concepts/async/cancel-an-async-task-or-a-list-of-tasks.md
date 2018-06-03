@@ -2,11 +2,12 @@
 title: Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 74f0c1c4653709497cb264aac18b49f4fee4eefa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2823514bc462f198a43316b40eb05bc1ffed0e72
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728670"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 Można skonfigurować przycisku, który służy do anulowania aplikacji async, jeśli nie chcesz czekać na jego zakończenie. Wykonując poniższe przykłady w tym temacie, można dodać przycisk anulowania do aplikacji, która pobiera zawartość witryny lub listy witryn sieci Web.  
@@ -20,7 +21,7 @@ Można skonfigurować przycisku, który służy do anulowania aplikacji async, j
  W pierwszym przykładzie **anulować** przycisk z zadania jednego pobierania. Jeśli wybierzesz przycisk podczas pobierania zawartości aplikacji, pobieranie zostało anulowane.  
   
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
- Możesz pobrać pełną projekt Windows Presentation Foundation (WPF) z [próbki Async: poprawnie dostrajanie Twoja aplikacja](http://go.microsoft.com/fwlink/?LinkId=255046) , a następnie wykonaj następujące kroki.  
+ Możesz pobrać pełną projekt Windows Presentation Foundation (WPF) z [próbki Async: poprawnie dostrajanie Twoja aplikacja](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , a następnie wykonaj następujące kroki.  
   
 1.  Dekompresja pobranego pliku, a następnie uruchom program Visual Studio.  
   
@@ -138,7 +139,7 @@ Można skonfigurować przycisku, który służy do anulowania aplikacji async, j
  Można rozszerzyć poprzedni przykład, aby anulować wiele zadań można skojarzyć takie same `CancellationTokenSource` wystąpienia z każdego zadania. Jeśli wybierzesz **anulować** przycisku Anuluj wszystkie zadania, które nie są jeszcze ukończone.  
   
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
- Możesz pobrać pełną projekt Windows Presentation Foundation (WPF) z [próbki Async: poprawnie dostrajanie Twoja aplikacja](http://go.microsoft.com/fwlink/?LinkId=255046) , a następnie wykonaj następujące kroki.  
+ Możesz pobrać pełną projekt Windows Presentation Foundation (WPF) z [próbki Async: poprawnie dostrajanie Twoja aplikacja](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , a następnie wykonaj następujące kroki.  
   
 1.  Dekompresja pobranego pliku, a następnie uruchom program Visual Studio.  
   
@@ -249,7 +250,7 @@ Można skonfigurować przycisku, który służy do anulowania aplikacji async, j
 ##  <a name="BKMK_CompleteExamples"></a> Przykłady ukończone  
  Poniższe sekcje zawierają kod dla każdego z poprzednich przykładach. Zwróć uwagę, że musisz dodać odwołanie do <xref:System.Net.Http>.  
   
- Można pobrać projektów z [próbki Async: poprawnie dostrajanie Twoja aplikacja](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Można pobrać projektów z [próbki Async: poprawnie dostrajanie Twoja aplikacja](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Anuluj przykładowe zadania  
  Poniższy kod jest pełny plik MainWindow.xaml.vb na przykład, który anuluje jedno zadanie.  
@@ -458,4 +459,4 @@ End Class
  <xref:System.Threading.CancellationToken>  
  [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Dostrajanie aplikacji Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Próbka asynchronicznych: Dostrajanie aplikacji dokładnej](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Próbka asynchronicznych: Dostrajanie aplikacji dokładnej](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -2,11 +2,12 @@
 title: Zabezpieczanie aplikacji ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 5e4363ada4ebdb94801378bc61139f68085b462d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728605"
 ---
 # <a name="securing-adonet-applications"></a>Zabezpieczanie aplikacji ADO.NET
 Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż unikanie wspólnej kodowania problemów, takich jak nie Walidacja danych wejściowych użytkownika. Aplikacja, która uzyskuje dostęp do danych ma wiele punktów potencjalnych awarii, które osoba atakująca może wykorzystać do pobrania, manipulowania lub zniszczenie poufnych danych. W związku z tym ważne jest zrozumienie wszystkie aspekty zabezpieczeń w procesie modelowania w fazie projektowania aplikacji, w celu jego ostatecznego wdrażaniem i konserwacją bieżących zagrożeń.  
@@ -39,7 +40,7 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż unikanie wspólne
  W tym artykule opisano zabezpieczenia dla aplikacji programu Entity Framework.  
   
  [Zabezpieczenia](../../../../docs/standard/security/index.md)  
- Zawiera łącza do tematów opisujących wszystkie aspekty zabezpieczeń w programie .NET Framework.  
+ Zawiera łącza do tematów opisujących wszystkie aspekty zabezpieczeń w programie .NET.  
   
  [Narzędzia zabezpieczeń](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Narzędzia .NET framework do zabezpieczania i administrowanie zasadami zabezpieczeń.  

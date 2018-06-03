@@ -3,13 +3,13 @@ title: polecenie wypychania nuget DotNet - .NET Core interfejsu wiersza poleceni
 description: Polecenie wypychania nuget dotnet wypchnięcia pakietu na serwerze i publikuje ją.
 author: karann-msft
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: c835b1b9d44b9ed12dc0ea4568414a83c926ae4f
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/01/2018
+ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34696497"
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728579"
 ---
 # <a name="dotnet-nuget-push"></a>wypychania nuget DotNet
 
@@ -77,7 +77,7 @@ Nie push symboli (nawet, jeśli istnieje).
 
 `--no-service-endpoint`
 
-Nie dołącza "interfejsu api w wersji 2/packages" adres URL źródła.
+Nie dołącza "interfejsu api w wersji 2/pakietu" adres URL źródła.
 
 `-s|--source <SOURCE>`
 

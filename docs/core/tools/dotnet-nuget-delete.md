@@ -3,13 +3,13 @@ title: polecenie - .NET Core interfejsu wiersza polecenia delete DotNet nuget
 description: Polecenie dotnet-nuget-delete Usuwa lub unlists pakietu z serwera.
 author: karann-msft
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: a56ddaba72f8e1a76db810231e64993c657e908e
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/01/2018
+ms.openlocfilehash: 1b58136d0bc04947f0a5baba320e5e6b3e45e2f1
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34697245"
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728417"
 ---
 # <a name="dotnet-nuget-delete"></a>Usuń nuget DotNet
 
@@ -71,7 +71,7 @@ Drukuje krótkich pomocy dla polecenia.
 
 Klucz interfejsu API dla serwera.
 
-` --no-service-endpoint` Nie dołącza "interfejsu api w wersji 2/packages" adres URL źródła.
+`--no-service-endpoint` Nie dołącza "interfejsu api w wersji 2/pakietu" adres URL źródła.
 
 `--non-interactive`
 

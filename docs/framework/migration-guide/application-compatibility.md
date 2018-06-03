@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728644"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Zgodność aplikacji w programie .NET Framework
 
@@ -25,7 +26,7 @@ Każda aplikacja jest przeznaczony dla określonej wersji programu .NET Framewor
 * Określenie platformę docelową w pliku projektu.
 * Stosowanie <xref:System.Runtime.Versioning.TargetFrameworkAttribute> do kodu źródłowego.
 
-Uruchomionej na nowszą wersję niż co był przeznaczony quirked zachowanie programu .NET Framework będą używane do naśladować starszą wersję docelową. Innymi słowy aplikacja będzie uruchomić na nowszą wersję Framework, ale działa tak, jakby działa w starszej wersji. Wiele problemów ze zgodnością między wersjami programu .NET Framework, zostały skorygowane przez ten model quirking.
+Uruchomionej na nowszą wersję niż co był przeznaczony quirked zachowanie programu .NET Framework będą używane do naśladować starszą wersję docelową. Innymi słowy aplikacja będzie uruchomić na nowszą wersję Framework, ale działa tak, jakby działa w starszej wersji. Wiele problemów ze zgodnością między wersjami programu .NET Framework, zostały skorygowane przez ten model quirking. Wersja programu .NET Framework odpowiedniej aplikacji określone przez docelową wersję zestawu wpis dla domeny aplikacji działającej w kodzie. Wszystkie dodatkowe zestawy ładowane w tym celu domeny aplikacji tej wersji .NET Framework. Na przykład w przypadku pliku wykonywalnego platformę cele pliku wykonywalnego jest tryb zgodności wszystkie zestawy w tej domenie aplikacji będzie uruchamiana.
 
 ## <a name="runtime-changes"></a>Zmiany środowiska uruchomieniowego
 

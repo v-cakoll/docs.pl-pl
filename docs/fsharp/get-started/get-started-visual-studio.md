@@ -2,11 +2,12 @@
 title: 'Rozpoczynanie pracy z F # w programie Visual Studio'
 description: 'Dowiedz się, jak używać F # za pomocą programu Visual Studio.'
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728537"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Rozpoczynanie pracy z F # w programie Visual Studio
 
@@ -71,58 +72,6 @@ Powinien zostać wyświetlony poniższy wypisywane w oknie konsoli, które tam p
 ```
 
 Gratulacje!  Utworzeniu pierwszego projektu F # w programie Visual Studio, zapisywać funkcja F # drukowane wyników wywołania tej funkcji i uruchom projekt, aby wyświetlać pewnych wyników.
-
-## <a name="using-f-interactive"></a>Przy użyciu interakcyjne F #
-
-Jednym z najlepszych funkcji programu Visual F # narzędzi w programie Visual Studio jest okno interaktywne F #.  Umożliwia ona wysłania kodu do procesu, gdy wywołanie kodu i interakcyjnie zobaczyć wynik.
-
-Aby rozpocząć używanie go, zaznacz `square` funkcji zdefiniowanej w kodzie.  Następnie przytrzymać **Alt** i naciśnij **Enter**.  Wykonuje kod okno interaktywne F #.  Powinny pojawić się F # Interactive okna są wyświetlane następujące w niej:
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-Ta operacja wyświetla tę samą sygnaturę funkcji dla `square` funkcji, który został wcześniej wyświetlony po aktywowany przez funkcję.  Ponieważ `square` jest teraz zdefiniowana w proces narzędzia F # Interactive, można wywołać ją z różnymi wartościami:
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-To wykonuje funkcję, wiąże wynik na nową nazwę `it`i wyświetla typ i wartość `it`.  Należy pamiętać, że należy zakończyć każdego wiersza `;;`.  Jest to, jak F # Interactive wie, po zakończeniu wywołania funkcji.  Istnieje także możliwość zdefiniowania nowych funkcji w F # Interactive:
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-Powyższy kod definiuje nową funkcję, `isOdd`, która przyjmuje `int` i sprawdza, czy jest nieparzysta! Możesz wywołać tę funkcję, aby sprawdzić, jakie zwraca z różnych danych wejściowych.  Można wywołać funkcji w ramach wywołania funkcji:
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-Można również użyć [operatora potoku następny](../language-reference/symbol-and-operator-reference/index.md) do potoku wartość do dwie funkcje:
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-Operator do przodu potoku i inne, znajdują się w kolejnych samouczkach.
-
-Jest to tylko glimpse do czego z F # Interactive. Aby dowiedzieć się więcej, zapoznaj się [interakcyjne programowania w języku F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Następne kroki
 

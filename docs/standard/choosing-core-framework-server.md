@@ -4,11 +4,12 @@ description: Przewodnik w życie .NET należy rozważyć podczas kompilowania ap
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728722"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybór między .NET Core i .NET Framework dla serwera aplikacji
 
@@ -65,7 +66,7 @@ Aby zainstalować aplikacje z zależnościami w różnych wersjach programu .NET
 
 ## <a name="when-to-choose-net-framework"></a>Kiedy należy wybrać .NET Framework
 
-Oprogramowanie .NET core oferuje istotne korzyści dla nowych aplikacji i wzorce aplikacji. Jednak programu .NET Framework jest nadal wybór fizycznych w różnych scenariuszach istniejących i jako taki. .NET Framework nie jest zastępowany przez oprogramowanie .NET Core dla wszystkich aplikacji serwera.
+Oprogramowanie .NET core oferuje istotne korzyści dla nowych aplikacji i wzorce aplikacji. Jednak nadal jest wybór fizycznych w różnych scenariuszach istniejącego programu .NET Framework i jako takie programu .NET Framework nie jest zastępowany przez oprogramowanie .NET Core dla wszystkich aplikacji serwera.
 
 ### <a name="current-net-framework-applications"></a>Bieżące aplikacje .NET Framework
 

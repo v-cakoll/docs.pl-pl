@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728683"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Przykład wyrażenia regularnego: wyszukiwanie wartości HREF
 Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie href = "..." wartości i ich lokalizacji w ciągu.  
@@ -43,9 +44,9 @@ Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie href = "..
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
 |`=`|Zgodne znaku równości.|  
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Pasuje do jednej z następujących bez przypisywanie wynik do przechwyconej grupy:<br /> <ul><li><p>Znak cudzysłowu lub apostrof, a następnie zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof następuje znak cudzysłowu lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li><li><p>Co najmniej jeden z systemem innym niż biały znak. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Pasuje do jednej z następujących bez przypisywanie wynik do przechwyconej grupy:<br /> <ul><li><p>Znak cudzysłowu lub apostrof, a następnie zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof następuje znak cudzysłowu lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li><li><p>Co najmniej jeden z systemem innym niż biały znak. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li></ul>|  
 |`(?<1>[^"']*)`|Przypisz zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof do przechwytywania grupy o nazwie `1`.|  
-|`"(?<1>\S+)`|Przypisz co najmniej jeden z systemem innym niż biały znak do przechwytywania grupy o nazwie `1`.|  
+|`(?<1>\S+)`|Przypisz co najmniej jeden z systemem innym niż biały znak do przechwytywania grupy o nazwie `1`.|  
   
 ## <a name="match-result-class"></a>Dopasuj wynik klasy  
  Wyniki wyszukiwania są przechowywane w <xref:System.Text.RegularExpressions.Match> klasy, która zapewnia dostęp do wszystkich podciągów wyodrębnione podczas wyszukiwania. On również pamięta przeszukiwany ciąg i wyrażenie regularne używane, dlatego może wywołać <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> metodę w celu których ostatnio zakończone innego początkowy wyszukiwania.  

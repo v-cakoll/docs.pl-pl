@@ -12,11 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: ae59cb4d6b812ba956ce55723e034f381db14aa1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e6d299bafff2a5a34a8f0942ba6dc9c25fcdd83
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805740"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
 Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend do języka Visual Basic i udostępnia prosta i skuteczna możliwości podczas pracy z wszystkich typów danych. Zamiast Wysyłanie zapytania do bazy danych w celu przetworzenia lub Praca z inną składnię dla każdego typu danych, które w przypadku wyszukiwania, LINQ wprowadza zapytania jako część języka Visual Basic. Używa ujednoliconego składni niezależnie od typu danych.  
@@ -189,7 +190,7 @@ Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend d
  [Porady: przypisywanie procedur składowanych do wykonywania aktualizacji, wstawienia i usunięcia (Projektanta obiektów relacyjnych)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>Polecane rozdziały książki  
- [Rozdział 17: LINQ](http://go.microsoft.com/fwlink/?LinkId=195277) w [programowania w języku Visual Basic 2008](http://go.microsoft.com/fwlink/?LinkId=195383)  
+ [Rozdział 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) w [programowania w języku Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Zobacz też  
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

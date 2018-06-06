@@ -4,17 +4,18 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805477"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Stosowanie CQRS i CQS podejścia w mikrousługi DDD, w eShopOnContainers
 
 Projekt porządkowania mikrousługi na eShopOnContainers aplikacja referencyjna jest oparta na zasadach CQRS. Jednak używa najprostsza metoda po prostu oddzielanie zapytania z poleceniami i dla obu czynności przy użyciu tej samej bazy danych.
 
-Jest użycia tych wzorców i należy koniecznie zwrócić uwagę, że zapytania są idempotentności: niezależnie od tego, ile razy zapytania system, stan systemu nie spowoduje zmiany można nawet korzystają z modelu danych różnych "odczytów" niż logiki transakcyjnej "zapisy" model domeny, mimo że porządkowania mikrousług używa tej samej bazy danych. Dlatego jest uproszczone podejście CQRS.
+Jest użycia tych wzorców i należy koniecznie zwrócić uwagę, że zapytania są idempotentności: niezależnie od tego, ile razy kwerendy systemu, nie spowoduje zmiany stanu tego systemu. Nawet można użyć modelu danych różnych "odczytów" niż model domeny logiki transakcyjnej "zapisuje", mimo że porządkowania mikrousług używa tej samej bazy danych. Dlatego jest uproszczone podejście CQRS.
 
 Z drugiej strony polecenia, które wyzwolić transakcji i aktualizacji danych, Zmień stan w systemie. Za pomocą polecenia, musisz należy zachować ostrożność podczas dotyczących złożoności i kiedykolwiek zmiana reguł biznesowych. Jest to, gdy chcesz zastosować DDD technik w celu lepszego modelowanego systemu.
 
@@ -46,7 +47,7 @@ Istnieje tylko jedna aplikacja — architektura: Architektura aplikacji systemu 
 -   **Małych Gregowi. CQS vs. CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Małych Gregowi. Dokumenty CQRS**
+-   **Małych Gregowi. CQRS dokumentów**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
 -   **Małych Gregowi. CQRS, zadanie na podstawie UI i źródłem zdarzenia**

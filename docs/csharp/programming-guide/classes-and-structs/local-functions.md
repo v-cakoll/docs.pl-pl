@@ -5,11 +5,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d454621f82e499960af4af16b17ac68f3cb5f70f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 208ac3d4a7b803dd081edfd9f5227a779f7cf211
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805623"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funkcje lokalne (C# przewodnik programowania w języku)
 
@@ -73,7 +74,7 @@ W poniższym przykładzie użyto metody asynchronicznej o nazwie `GetMultipleAsy
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
-Jak robiliśmy z metody iteracyjne, firma Microsoft zrefaktoryzuj kod w tym przykładzie do sprawdzania poprawności przed wywołaniem metody asynchronicznej. Jako dane wyjściowe w poniższym przykładzie przedstawiono <xref:System.ArgumentOutOfRangeException> nie jest ujęte w < x:System.AggregateException >.
+Jak robiliśmy z metody iteracyjne, firma Microsoft zrefaktoryzuj kod w tym przykładzie do sprawdzania poprawności przed wywołaniem metody asynchronicznej. Jako dane wyjściowe w poniższym przykładzie przedstawiono <xref:System.ArgumentOutOfRangeException> nie jest ujęte w <xref:System.AggregateException>.
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 

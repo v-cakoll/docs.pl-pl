@@ -13,11 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 0d426d8cf174a61c724e97b5e7af5c1428679716
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0801b3d2a0e34c1ac28569a164e140010ba36ab7
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805675"
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
 <a name="introduction"></a> Steruje jest mechanizmem wejściowego w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewniające wejściowych obsługi na poziomie semantycznego więcej niż dane wejściowe urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wiele aplikacji.  
@@ -180,7 +181,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="creating-custom-commands"></a>Tworzenie niestandardowych poleceń  
  Polecenia w klasach biblioteki polecenia nie spełniają potrzeb, można utworzyć własne polecenia.  Istnieją dwa sposoby tworzenia poleceń niestandardowych.  Pierwsza to od podstaw uruchamiania i zaimplementować <xref:System.Windows.Input.ICommand> interfejsu.  Inny sposób i częściej podejście jest utworzenie <xref:System.Windows.Input.RoutedCommand> lub <xref:System.Windows.Input.RoutedUICommand>.  
   
- Przykład tworzenia niestandardowego <xref:System.Windows.Input.RoutedCommand>, zobacz [tworzenia niestandardowych przykładu RoutedCommand](http://go.microsoft.com/fwlink/?LinkID=159980).  
+ Przykład tworzenia niestandardowego <xref:System.Windows.Input.RoutedCommand>, zobacz [tworzenia niestandardowych przykładu RoutedCommand](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Input.RoutedCommand>  
@@ -191,4 +192,4 @@ ms.lasthandoff: 05/04/2018
  [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Implementowanie elementu ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
  [Porady: Dodawanie polecenia do elementu menu.](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
- [Tworzenie niestandardowych RoutedCommand przykładu](http://go.microsoft.com/fwlink/?LinkID=159980)
+ [Tworzenie niestandardowych RoutedCommand przykładu](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

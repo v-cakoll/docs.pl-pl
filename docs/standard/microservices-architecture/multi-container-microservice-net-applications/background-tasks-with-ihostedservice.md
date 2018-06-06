@@ -4,11 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb6d412ee91ab8d2c97a4917f23ee914e3fb9068
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805571"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Wykonania zadania w tle w mikrousług IHostedService i klasa BackgroundService
 
@@ -26,7 +27,7 @@ Różnice między `WebHost` i `Host`. A `WebHost` (podstawowa Implementacja klas
 
 A `Host` (podstawowa Implementacja klasy `IHost`), jednak jest nowa w programie .NET Core 2.1 coś. Zasadniczo `Host` służy do podobnych infrastruktury niż masz z `WebHost` (iniekcji zależności usług hostowanych, itp.), ale w takim przypadku po prostu chcesz mieć procesu proste i jaśniejszy jako hosta, z żadnych danych dotyczących MVC , HTTP lub interfejsu API funkcji serwera w sieci web.
 
-W związku z tym można wybrać i Utwórz specjalne proces hosta z IHost do obsługi usług hostowanych i niczego poza, takie mikrousługi, wykonywane tylko dla hostingu `IHostedServices`, lub możesz alternatevely rozszerzyć istniejącą platformy ASP.NET Core `WebHost` , takich jak istniejącej aplikacji interfejsu API platformy ASP.NET Core sieci Web lub MVC. 
+W związku z tym można wybrać i Utwórz specjalne proces hosta z IHost do obsługi usług hostowanych i niczego poza, takie mikrousługi, wykonywane tylko dla hostingu `IHostedServices`, lub też można rozszerzyć istniejące platformy ASP.NET Core `WebHost` , takich jak istniejącej aplikacji interfejsu API platformy ASP.NET Core sieci Web lub MVC. 
 
 Każde podejście jest zalet i wad w zależności od potrzeb biznesowych i skalowalność. Mierzenie jest zasadniczo Jeśli zadania w tle nie mają nic wspólnego z należy używać protokołu HTTP (IWebHost) i IHost, jeśli jest dostępna w programie .NET Core 2.1.
 
@@ -99,7 +100,7 @@ Deweloperzy jesteś odpowiedzialny za obsługę Akcja zatrzymania lub usług po 
 
 Przejdź dalej i tworzenia klasy niestandardowej usługi hostowanej od początku i implementować `IHostedService`, jak należy wykonać, korzystając z programu .NET Core 2.0. 
 
-Jednak ponieważ większość zadań w tle zostanie mają podobne wymagania w zakresie zarządzania tokeny anulowania i innych operacji tipical, .NET Core 2.1 będzie dostarczać wygodną abstrakcyjna klasa podstawowa, który może pochodzić od o nazwie BackgroundService.
+Jednak ponieważ większość zadań w tle zostanie mają podobne wymagania w zakresie zarządzania tokeny anulowania i innymi typowymi operacjami, .NET Core 2.1 będzie dostarczać wygodną abstrakcyjna klasa podstawowa, który może pochodzić od o nazwie BackgroundService.
 
 Klasy zawiera głównego pracy niezbędne do skonfigurowania zadania w tle. Należy pamiętać, że ta klasa rozpocznie się w bibliotece programu .NET Core 2.1, więc nie trzeba go zapisać.
 
@@ -193,7 +194,7 @@ public class GracePeriodManagerService : BackgroundService
             {
                 _logger.LogDebug($"GracePeriod task doing background work.");
 
-                // This eShopOnContainers method is quering a database table 
+                // This eShopOnContainers method is querying a database table 
                 // and publishing events into the Event Bus (RabbitMS / ServiceBus)
                 CheckConfirmedGracePeriodOrders();
 
@@ -211,7 +212,7 @@ public class GracePeriodManagerService : BackgroundService
 }
 ```
 
-W tym przypadku określone dla eShopOnContainers wykonuje metodę aplikacji, która jest quering tabeli bazy danych wyszukiwania zamówień z określonym stanem oraz podczas stosowania zmian, publikowania za pośrednictwem magistrali zdarzeń (na dole mogą zdarzenia integracji za pomocą RabbitMQ lub usługi Azure Service Bus). 
+W tym przypadku określone dla eShopOnContainers wykonuje metodę aplikacji, która sprawdza tabeli bazy danych wyszukiwania zamówień o określonym stanie i po wprowadzeniu zmian jest publikowanie za pośrednictwem magistrali zdarzeń (na dole mogą zdarzenia integracji za pomocą RabbitMQ lub usługi Azure Service Bus). 
 
 Oczywiście można uruchomić żadnych innych firm zadania w tle, zamiast tego.
 

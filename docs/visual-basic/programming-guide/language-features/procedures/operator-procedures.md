@@ -11,11 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 63a16163900f1b4dc7dadef6a227f56b89f4e820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4641ce8509e3111a11ed803d36194d5a301bce
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805714"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedury operatorów (Visual Basic)
 Procedury operatora jest szereg instrukcji, które definiują zachowanie standardowe — operator (takich jak `*`, `<>`, lub `And`) dla klasy lub struktury zdefiniowane. Jest to również *przeładowania operatora*.  
@@ -43,7 +44,7 @@ Procedury operatora jest szereg instrukcji, które definiują zachowanie standar
 ## <a name="declaration-syntax"></a>Składnia deklaracji  
  Składnia deklaracji procedury operatora wygląda następująco:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *typu danych*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *typu danych*  
   
  `' Statements of the operator procedure.`  
   
@@ -67,7 +68,7 @@ Procedury operatora jest szereg instrukcji, które definiują zachowanie standar
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*   `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołanie  
  Następującą strukturę przechowuje wartość całkowita 128-bitowego jako elementy składowe znaczących i znaczącymi bitami. Definiuje `+` operatora, aby dodać dwa `veryLong` wartości oraz generowanie wynikowa `veryLong` wartość.  
@@ -78,7 +79,7 @@ Procedury operatora jest szereg instrukcji, które definiują zachowanie standar
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Aby uzyskać dodatkowe informacje i przykłady, zobacz [przeciążanie operatora w Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
+ Aby uzyskać dodatkowe informacje i przykłady, zobacz [przeciążanie operatora w Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  

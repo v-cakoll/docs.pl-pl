@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: b24b637969ced9b30644abda022db086dc91c1e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e1462c7e0097bb2f04c6833a1bb279611b24133
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805513"
 ---
 # <a name="await-operator-visual-basic"></a>Await — Operator (Visual Basic)
 Należy zastosować `Await` operatora operandu w asynchronicznej metody lub wyrażenia lambda wstrzymania wykonywanie metody do momentu ukończenia zadania oczekiwano. Zadanie reprezentuje pracy w toku.  
@@ -42,7 +43,7 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  Aby uzyskać pełny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbki z [przykłady kodu dewelopera](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409) w witrynie firmy Microsoft. Przykładem jest w projekcie AsyncWalkthrough_HttpClient.  
+>  Aby uzyskać pełny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbki z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) w witrynie firmy Microsoft. Przykładem jest w projekcie AsyncWalkthrough_HttpClient.  
   
  Jeśli `Await` jest stosowany do wyniku wywołania metody, która zwraca `Task(Of TResult)`, typ `Await` wyrażenie jest TResult. Jeśli `Await` jest stosowany do wyniku wywołania metody, która zwraca `Task`, `Await` wyrażenie nie zwraca wartości. Poniższy przykład przedstawia różnicy.  
   

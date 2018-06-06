@@ -5,11 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629d08b60330125a7bb491a58499b5e2bc7d2091
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805688"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego skompilowana do kodu źródłowego aplikacji można wyświetlić przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli kiedykolwiek zmieni się parametry połączenia, aplikacja musi ponownie skompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracyjnym aplikacji.  
@@ -135,8 +136,8 @@ Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemó
   
 |Dostawcy|Opis|  
 |--------------|-----------------|  
-|<!--zz<xref:System.Configuration.RSAProtectedConfigurationProvider>-->`System.Configuration.RSAProtectedConfigurationProvider`|Używa algorytmu szyfrowania RSA do szyfrowania i odszyfrowywania danych. Algorytm RSA może służyć do publicznego klucza szyfrowania i podpisy cyfrowe. Jest także znana jako "klucza publicznego" lub szyfrowanie asymetryczne ponieważ wykorzystuje on dwa różne klucze. Można użyć [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) do szyfrowania sekcji w pliku Web.config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje pliku konfiguracji podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania używanego do szyfrowania i odszyfrowywania zaszyfrowanych sekcje.|  
-|<!--zz<xref:System.Configuration.DPAPIProtectedConfigurationProvider>-->`System.Configuration.DPAPIProtectedConfigurationProvider`|Używa interfejsu API ochrony danych systemu Windows (DPAPI) do szyfrowania sekcji konfiguracyjnych. Używa wbudowanych usług kryptograficznych systemu Windows, a można skonfigurować ochrony komputera lub określonego konta użytkownika. Ochrona komputera jest przydatne w przypadku wielu aplikacji na tym samym serwerze, które są potrzebne do udostępniania informacji. Ochrona określonego konta użytkownika może być stosowana z usług, które działają z określona tożsamość użytkownika, takich jak udostępnione środowiska macierzystego. Każda aplikacja działa w ramach oddzielnego tożsamości, ogranicza dostęp do zasobów, takich jak pliki i baz danych.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Używa algorytmu szyfrowania RSA do szyfrowania i odszyfrowywania danych. Algorytm RSA może służyć do publicznego klucza szyfrowania i podpisy cyfrowe. Jest także znana jako "klucza publicznego" lub szyfrowanie asymetryczne ponieważ wykorzystuje on dwa różne klucze. Można użyć [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) do szyfrowania sekcji w pliku Web.config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje pliku konfiguracji podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania używanego do szyfrowania i odszyfrowywania zaszyfrowanych sekcje.|  
+|<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Używa interfejsu API ochrony danych systemu Windows (DPAPI) do szyfrowania sekcji konfiguracyjnych. Używa wbudowanych usług kryptograficznych systemu Windows, a można skonfigurować ochrony komputera lub określonego konta użytkownika. Ochrona komputera jest przydatne w przypadku wielu aplikacji na tym samym serwerze, które są potrzebne do udostępniania informacji. Ochrona określonego konta użytkownika może być stosowana z usług, które działają z określona tożsamość użytkownika, takich jak udostępnione środowiska macierzystego. Każda aplikacja działa w ramach oddzielnego tożsamości, ogranicza dostęp do zasobów, takich jak pliki i baz danych.|  
   
  Zarówno dostawców oferują silne szyfrowanie danych. Jednak jeśli planujesz używać tego samego pliku konfiguracji zaszyfrowanej na wielu serwerach, takich jak farmy sieci Web, tylko `RsaProtectedConfigurationProvider` umożliwia eksportowanie kluczy szyfrowania używany do szyfrowania danych i zaimportuj je na innym serwerze. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie chronione konfiguracji RSA klucza kontenery](http://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc).  
   

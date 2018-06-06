@@ -12,7 +12,7 @@ ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728355"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne

@@ -2,16 +2,17 @@
 title: 'Porady: modyfikowanie dokumentu pakietu Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 97e754f37580af990b1aaa64f389de5cbce91d60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753396"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Porady: modyfikowanie dokumentu pakietu Office Open XML (Visual Basic)
 W tym temacie przedstawiono przykład otwiera dokumentu pakietu Office Open XML, modyfikuje go i zapisuje go.  
   
- Aby uzyskać więcej informacji dotyczących Office Open XML, zobacz [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Aby uzyskać więcej informacji dotyczących Office Open XML, zobacz [marek oficjalny Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie znajduje pierwszy element akapitu w dokumencie. Go odczytuje tekst z akapitu, a następnie usuwa cały tekst jest uruchamiany w akapitu. Tworzy nowy tekst Uruchom składający się z pierwszym tekst akapitu, który został przekonwertowany na wielkie litery. Następnie serializuje zmienione XML w pakiecie Open XML i zamyka.  

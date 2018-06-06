@@ -15,7 +15,7 @@ ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728592"
 ---
 # <a name="security-in-net"></a>Zabezpieczenia w .NET

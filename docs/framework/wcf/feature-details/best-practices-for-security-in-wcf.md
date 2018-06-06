@@ -9,11 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c1588fa48631aec4e185fd8362a02505aa15e58
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753464"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
 W poniższych sekcjach wymieniono najlepszych rozwiązań, które należy uwzględnić podczas tworzenia bezpiecznego aplikacji przy użyciu usługi Windows Communication Foundation (WCF). Aby uzyskać więcej informacji o zabezpieczeniach, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -32,9 +33,7 @@ W poniższych sekcjach wymieniono najlepszych rozwiązań, które należy uwzgl�
 -   Użycie silniejszych algorytmów kryptograficznych, i  
   
 -   X509 przekazywane większa trudności przy użyciu poświadczeń.  
-  
- Omówienie uwierzytelniania NTLM przekazywania ataków, przejdź do [ http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx ](http://go.microsoft.com/fwlink/?LinkId=109571).  
-  
+   
 ## <a name="always-revert-after-impersonation"></a>Zawsze przywrócić po personifikacji  
  Podczas korzystania z interfejsów API, które umożliwiają personifikacja klienta, pamiętaj powrócić do oryginalnej tożsamości. Na przykład w przypadku korzystania z <xref:System.Security.Principal.WindowsIdentity> i <xref:System.Security.Principal.WindowsImpersonationContext>, użyj C# `using` instrukcji lub Visual Basic`Using` instrukcji, jak pokazano w poniższym kodzie. <xref:System.Security.Principal.WindowsImpersonationContext> Klasa implementuje <xref:System.IDisposable> interfejsu i dlatego środowisko uruchomieniowe języka wspólnego (CLR) automatycznie zostanie przywrócona do oryginalnego tożsamości po kodzie pozostawia `using` bloku.  
   

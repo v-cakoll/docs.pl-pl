@@ -5,10 +5,10 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: b281b255be7f49a99a6b4928c340cd4fb085f085
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34696234"
 ---
 # <a name="dotnet-remove-reference"></a>DotNet Usuń odwołanie

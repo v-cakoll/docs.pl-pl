@@ -2,11 +2,12 @@
 title: Zapisywanie Secure dynamiczne SQL w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753477"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Zapisywanie Secure dynamiczne SQL w programie SQL Server
 Iniekcja kodu SQL to proces, za pomocą którego złośliwy użytkownik wprowadza instrukcji języka Transact-SQL zamiast prawidłowe wartości wejściowe. Dane wejściowe jest przekazywany bezpośrednio do serwera bez sprawdzania poprawności i aplikacja wykonuje przypadkowo wprowadzony kod, ataku może potencjalnie uszkodzić lub spowodować utratę danych.  
@@ -63,8 +64,7 @@ Iniekcja kodu SQL to proces, za pomocą którego złośliwy użytkownik wprowadz
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Procedury składowane](http://go.microsoft.com/fwlink/?LinkId=98233) i [iniekcja kodu SQL](http://go.microsoft.com/fwlink/?LinkId=98234) w dokumentacji SQL Server Books Online|Tematach opisano sposób tworzenia procedury składowane i jak działa iniekcja kodu SQL.|  
-|[Nowe ataki obcięcie SQL oraz sposób ich uniknięcie](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) w witrynie MSDN Magazine.|Opisuje sposób ograniczyć znaków i ciągi, iniekcja kodu SQL i modyfikacji obcięcie ataków.|  
+|[Procedury składowane](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) i [iniekcja kodu SQL](/sql/relational-databases/security/sql-injection) w dokumentacji SQL Server Books Online|Tematach opisano sposób tworzenia procedury składowane i jak działa iniekcja kodu SQL.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

@@ -6,7 +6,7 @@ ms.openlocfilehash: baf18ed4c2a4693f0765358d9f9a56842991cf29
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728342"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Anulowanie pozostałych zadań asynchronicznych po jednym jest pełna (Visual Basic)

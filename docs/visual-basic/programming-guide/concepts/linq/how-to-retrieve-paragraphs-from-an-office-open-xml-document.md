@@ -2,16 +2,17 @@
 title: 'Porady: pobieranie akapitów z dokumentu pakietu Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753315"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Porady: pobieranie akapitów z dokumentu pakietu Office Open XML (Visual Basic)
 W tym temacie przedstawiono przykład otwiera dokumentu pakietu Office Open XML, która pobiera zbiór wszystkich akapitów w dokumencie.  
   
- Aby uzyskać więcej informacji dotyczących Office Open XML, zobacz [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Aby uzyskać więcej informacji dotyczących Office Open XML, zobacz [marek oficjalny Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie zostanie otwarty pakiet Office Open XML, relacje w pakiecie Open XML są używane do wyszukiwania dokumentu i części stylu. Następnie wykonuje zapytanie dokumentu projekcji, Kolekcja typu anonimowego, który zawiera akapitu <xref:System.Xml.Linq.XElement> węzła, nazwa stylu każdego akapitu i tekst każdego akapitu.  

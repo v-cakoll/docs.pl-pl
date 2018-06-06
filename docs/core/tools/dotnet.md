@@ -3,13 +3,13 @@ title: polecenie DotNet - .NET Core interfejsu wiersza polecenia
 description: Informacje o poleceniu dotnet (ogólnego sterownik narzędzi interfejsu wiersza polecenia platformy .NET Core) i jej użycia.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/30/2018
-ms.openlocfilehash: 4087cbc666bb837e6048695a2ebbd6f4821b528a
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
-ms.translationtype: MT
+ms.date: 06/04/2018
+ms.openlocfilehash: 6e9f37dbbf94d56266a7b424601845d4429b4a04
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34696410"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753542"
 ---
 # <a name="dotnet-command"></a>polecenie DotNet
 
@@ -261,13 +261,13 @@ Polecenie | Funkcja
 
 Począwszy od programu .NET Core SDK 2.1.300, szereg narzędzi, które były dostępne tylko na projekt na podstawie przy użyciu `DotnetCliToolReference` są teraz dostępne jako część zestawu SDK .NET Core. Narzędzia te obejmują:
 
-| Narzędzie                                    | Funkcja                                                     |
-| --------------------------------------- | ------------------------------------------------------------ |
-| certyfikaty dla deweloperów                               | Tworzy i którymi zarządza programowanie certyfikatów.                |
-| [EF](/ef/core/miscellaneous/cli/dotnet) | Entity Framework Core narzędzia wiersza polecenia.                    |
-| pamięć podręczna SQL                               | Narzędzia wiersza polecenia pamięci podręcznej programu SQL Server.                         |
-| hasła użytkownika                            | Zarządza programowanie hasła użytkownika.                            |
-| Czujki                                   | Uruchamia obserwatora pliku, który uruchamia polecenie zmianach plików. |
+| Narzędzie                                              | Funkcja                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| certyfikaty dla deweloperów                                         | Tworzy i którymi zarządza programowanie certyfikatów.                |
+| [EF](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core narzędzia wiersza polecenia.                    |
+| pamięć podręczna SQL                                         | Narzędzia wiersza polecenia pamięci podręcznej programu SQL Server.                         |
+| [hasła użytkownika](/aspnet/core/security/app-secrets) | Zarządza programowanie hasła użytkownika.                            |
+| [Czujki](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora pliku, który uruchamia polecenie zmianach plików. |
 
 Aby uzyskać więcej informacji na temat narzędzia wykonania `dotnet <tool-name> --help`.
 

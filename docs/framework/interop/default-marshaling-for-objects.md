@@ -15,6 +15,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312186"
 ---
 # <a name="default-marshaling-for-objects"></a>Domyślny marshaling dla obiektów
 Parametry i pola typu <xref:System.Object?displayProperty=nameWithType> można wyświetlać do kodu niezarządzanego jako jeden z następujących typów:  
@@ -324,9 +325,9 @@ Wariantów przekazywane według wartości i według odwołania
 |----------|--------|-----------------------------|  
 |**Variant***v*|**Obiekt***o*|Nigdy nie|  
 |**Obiekt***o*|**Variant***v*|Nigdy nie|  
-|**Variant*****\*****pv*|**Odwołanie***o*|Zawsze|  
-|**Odwołanie***o*|**Variant*****\*****pv*|Zawsze|  
-|**Variant***v* **(VT_BYREF** *&#124;* **VT_\*)**|**Obiekt***o*|Nigdy nie|  
+|**Variant**  ***\****  *pv*|**Odwołanie***o*|Zawsze|  
+|**Odwołanie***o*|**Variant**  ***\****  *pv*|Zawsze|  
+|**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Obiekt***o*|Nigdy nie|  
 |**Variant***v* **(VT_BYREF** *&#124;* **VT_)**|**Odwołanie***o*|Tylko wtedy, gdy typ nie został zmieniony.|  
   
 ## <a name="see-also"></a>Zobacz też  

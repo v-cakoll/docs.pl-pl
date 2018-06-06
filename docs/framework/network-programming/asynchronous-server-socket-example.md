@@ -16,11 +16,11 @@ ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728404"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="2c87c-102">Przykład gniazda serwera asynchroniczne</span><span class="sxs-lookup"><span data-stu-id="2c87c-102">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="2c87c-103">Następujący przykład program tworzy serwera służącą do odbierania żądań połączeń od klientów.</span><span class="sxs-lookup"><span data-stu-id="2c87c-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="2c87c-104">Serwer został skompilowany za asynchroniczne gniazda wykonywania aplikacji serwera nie jest zawieszony podczas oczekiwania na połączenie z klientem.</span><span class="sxs-lookup"><span data-stu-id="2c87c-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="2c87c-105">Aplikacji odbiera ciąg od klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg do klienta.</span><span class="sxs-lookup"><span data-stu-id="2c87c-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="2c87c-106">Ciąg z klienta musi zawierać ciąg "\<EOF >" która sygnalizuje koniec komunikatu.</span><span class="sxs-lookup"><span data-stu-id="2c87c-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="830a0-102">Przykład gniazda serwera asynchroniczne</span><span class="sxs-lookup"><span data-stu-id="830a0-102">Asynchronous Server Socket Example</span></span>
+<span data-ttu-id="830a0-103">Następujący przykład program tworzy serwera służącą do odbierania żądań połączeń od klientów.</span><span class="sxs-lookup"><span data-stu-id="830a0-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="830a0-104">Serwer został skompilowany za asynchroniczne gniazda wykonywania aplikacji serwera nie jest zawieszony podczas oczekiwania na połączenie z klientem.</span><span class="sxs-lookup"><span data-stu-id="830a0-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="830a0-105">Aplikacji odbiera ciąg od klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg do klienta.</span><span class="sxs-lookup"><span data-stu-id="830a0-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="830a0-106">Ciąg z klienta musi zawierać ciąg "\<EOF >" która sygnalizuje koniec komunikatu.</span><span class="sxs-lookup"><span data-stu-id="830a0-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -292,7 +292,7 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2c87c-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2c87c-107">See Also</span></span>  
- [<span data-ttu-id="2c87c-108">Przykład asynchronicznego gniazda klienta</span><span class="sxs-lookup"><span data-stu-id="2c87c-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- [<span data-ttu-id="2c87c-109">Używanie asynchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="2c87c-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [<span data-ttu-id="2c87c-110">Przykłady kodu gniazd</span><span class="sxs-lookup"><span data-stu-id="2c87c-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="830a0-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="830a0-107">See Also</span></span>  
+ [<span data-ttu-id="830a0-108">Przykład asynchronicznego gniazda klienta</span><span class="sxs-lookup"><span data-stu-id="830a0-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
+ [<span data-ttu-id="830a0-109">Używanie asynchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="830a0-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [<span data-ttu-id="830a0-110">Przykłady kodu gniazd</span><span class="sxs-lookup"><span data-stu-id="830a0-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

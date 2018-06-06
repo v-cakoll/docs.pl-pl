@@ -5,46 +5,46 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: ed6086bfdfadaa06494c857fc74687f1273af971
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34696861"
 ---
-# <a name="dotnet-remove-package"></a><span data-ttu-id="c33da-103">Pakiet Usuń DotNet</span><span class="sxs-lookup"><span data-stu-id="c33da-103">dotnet remove package</span></span>
+# <a name="dotnet-remove-package"></a><span data-ttu-id="7413f-103">Pakiet Usuń DotNet</span><span class="sxs-lookup"><span data-stu-id="7413f-103">dotnet remove package</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="c33da-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="c33da-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="7413f-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="7413f-104">Name</span></span>
 
-<span data-ttu-id="c33da-105">`dotnet remove package` — Usuwa odwołanie do pakietu z pliku projektu.</span><span class="sxs-lookup"><span data-stu-id="c33da-105">`dotnet remove package` - Removes package reference from a project file.</span></span>
+<span data-ttu-id="7413f-105">`dotnet remove package` — Usuwa odwołanie do pakietu z pliku projektu.</span><span class="sxs-lookup"><span data-stu-id="7413f-105">`dotnet remove package` - Removes package reference from a project file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="c33da-106">Streszczenie</span><span class="sxs-lookup"><span data-stu-id="c33da-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="7413f-106">Streszczenie</span><span class="sxs-lookup"><span data-stu-id="7413f-106">Synopsis</span></span>
 
 `dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]`
 
-## <a name="description"></a><span data-ttu-id="c33da-107">Opis</span><span class="sxs-lookup"><span data-stu-id="c33da-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="7413f-107">Opis</span><span class="sxs-lookup"><span data-stu-id="7413f-107">Description</span></span>
 
-<span data-ttu-id="c33da-108">`dotnet remove package` Polecenie zapewnia to wygodny sposób, aby usunąć odwołanie do pakietu NuGet z projektu.</span><span class="sxs-lookup"><span data-stu-id="c33da-108">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
+<span data-ttu-id="7413f-108">`dotnet remove package` Polecenie zapewnia to wygodny sposób, aby usunąć odwołanie do pakietu NuGet z projektu.</span><span class="sxs-lookup"><span data-stu-id="7413f-108">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="c33da-109">Argumenty</span><span class="sxs-lookup"><span data-stu-id="c33da-109">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="7413f-109">Argumenty</span><span class="sxs-lookup"><span data-stu-id="7413f-109">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="c33da-110">Określa plik projektu.</span><span class="sxs-lookup"><span data-stu-id="c33da-110">Specifies the project file.</span></span> <span data-ttu-id="c33da-111">Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego.</span><span class="sxs-lookup"><span data-stu-id="c33da-111">If not specified, the command searches the current directory for one.</span></span>
+<span data-ttu-id="7413f-110">Określa plik projektu.</span><span class="sxs-lookup"><span data-stu-id="7413f-110">Specifies the project file.</span></span> <span data-ttu-id="7413f-111">Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego.</span><span class="sxs-lookup"><span data-stu-id="7413f-111">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-<span data-ttu-id="c33da-112">Odwołanie pakietu do usunięcia.</span><span class="sxs-lookup"><span data-stu-id="c33da-112">The package reference to remove.</span></span>
+<span data-ttu-id="7413f-112">Odwołanie pakietu do usunięcia.</span><span class="sxs-lookup"><span data-stu-id="7413f-112">The package reference to remove.</span></span>
 
-## <a name="options"></a><span data-ttu-id="c33da-113">Opcje</span><span class="sxs-lookup"><span data-stu-id="c33da-113">Options</span></span>
+## <a name="options"></a><span data-ttu-id="7413f-113">Opcje</span><span class="sxs-lookup"><span data-stu-id="7413f-113">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="c33da-114">Drukuje krótkich pomocy dla polecenia.</span><span class="sxs-lookup"><span data-stu-id="c33da-114">Prints out a short help for the command.</span></span>
+<span data-ttu-id="7413f-114">Drukuje krótkich pomocy dla polecenia.</span><span class="sxs-lookup"><span data-stu-id="7413f-114">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="c33da-115">Przykłady</span><span class="sxs-lookup"><span data-stu-id="c33da-115">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="7413f-115">Przykłady</span><span class="sxs-lookup"><span data-stu-id="7413f-115">Examples</span></span>
 
-<span data-ttu-id="c33da-116">Usuwa `Newtonsoft.Json` pakietu NuGet z projektu w bieżącym katalogu:</span><span class="sxs-lookup"><span data-stu-id="c33da-116">Removes `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
+<span data-ttu-id="7413f-116">Usuwa `Newtonsoft.Json` pakietu NuGet z projektu w bieżącym katalogu:</span><span class="sxs-lookup"><span data-stu-id="7413f-116">Removes `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
 
 `dotnet remove package Newtonsoft.Json`

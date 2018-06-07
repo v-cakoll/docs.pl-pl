@@ -17,25 +17,26 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457803"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operatory warunkowe null ?. oraz ? [] (C# i Visual Basic)
-Testuje, czy wartość lewego argumentu operacji to „null”, zanim przeprowadzi operację dostępu do elementu (`?.`) lub indeksowania (`?[]`). Zwraca `null`, jeśli wartość lewego argumentu operacji to `null`.
+Testuje, czy wartość lewego argumentu operacji to „null”, zanim przeprowadzi operację dostępu do elementu (`?.`) lub indeksowania (`?[]`). Zwraca `null`, jeśli wartość lewego argumentu operacji to `null`. 
 
-Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.
+Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.  
   
 ```csharp  
-int? length = customers?.Length; // null if customers is null  
-Customer first = customers?[0]; // null if customers is null 
-int? count = customers?[0]?.Orders?.Count(); // null if customers, the first customer, or Orders is null  
+int? length = customers?.Length; // null if customers is null   
+Customer first = customers?[0];  // null if customers is null  
+int? count = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
 ```  
   
 ```vb  
-Dim length = customers?.Length ' null if customers is null 
-Dim first as Customer = customers?(0) ' null if customers is null 
-Dim count as Integer? = customers?(0)?.Orders?.Count() ' null if customers, the first customer, or Orders is null  
+Dim length = customers?.Length  ' null if customers is null  
+Dim first as Customer = customers?(0)  ' null if customers is null  
+Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
-Operatory warunkowe `null` skracają łańcuch wykonywania operacji. Jeśli jedna z operacji w łańcuchu zwraca wartość `null`, dalsze wykonanie łańcucha zostaje przerwane. W poniższym przykładzie `E` nie jest wykonywane, jeśli `A`, `B` lub `C` zwraca wartość `null`.
+ Operatory warunkowe `null` skracają łańcuch wykonywania operacji.  Jeśli jedna z operacji w łańcuchu zwraca wartość `null`, dalsze wykonanie łańcucha zostaje przerwane.  W poniższym przykładzie `E` nie jest wykonywane, jeśli `A`, `B` lub `C` zwraca wartość `null`.
   
 ```csharp
 A?.B?.C?.Do(E);
@@ -47,7 +48,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
-Inne zastosowanie dostępu do elementu członkowskiego przy użyciu operatora warunkowego `null` polega na wywołaniu delegatów w sposób bezpieczny wątkowo i ze znacznie mniejszą ilością kodu. Stary sposób wymaga kodu podobnego do poniższego: 
+ Inne zastosowanie dostępu do elementu członkowskiego przy użyciu operatora warunkowego `null` polega na wywołaniu delegatów w sposób bezpieczny wątkowo i ze znacznie mniejszą ilością kodu.  Stary sposób wymaga kodu podobnego do poniższego:  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -61,7 +62,7 @@ If handler IsNot Nothing
     Call handler(…)  
 ```  
   
-Nowy sposób jest znacznie prostszy:  
+ Nowy sposób jest znacznie prostszy:  
   
 ```csharp
 PropertyChanged?.Invoke(…)  
@@ -71,7 +72,7 @@ PropertyChanged?.Invoke(…)
 PropertyChanged?.Invoke(…)
 ```  
   
-Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby sprawdzić stan `PropertyChanged` tylko jeden raz, a następnie zapisuje wynik w zmiennej tymczasowej. Metodę `Invoke`trzeba wywołać jawnie, ponieważ nie istnieje składnia `PropertyChanged?(e)` do wywołania delegata przy użyciu operatora warunkowego „null”. 
+ Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby sprawdzić stan `PropertyChanged` tylko jeden raz, a następnie zapisuje wynik w zmiennej tymczasowej. Metodę `Invoke`trzeba wywołać jawnie, ponieważ nie istnieje składnia `PropertyChanged?(e)` do wywołania delegata przy użyciu operatora warunkowego „null”.  
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

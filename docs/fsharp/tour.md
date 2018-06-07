@@ -2,11 +2,12 @@
 title: 'Samouczek języka F #'
 description: 'Sprawdź, czy niektóre główne funkcje programowania ten samouczek z przykładów kodu języka F #.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753490"
 ---
 # <a name="tour-of-f"></a>Samouczek języka F # #
 
@@ -54,11 +55,11 @@ Należy zauważyć, że ponieważ `struct` krotek są typy wartości, nie można
 
 ## <a name="pipelines-and-composition"></a>Potoki i kompozycji
 
-Przekaż w potoku operatory (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) i operatory kompozycji (`>>` i `<<`) są często używane podczas przetwarzania danych w języku F #.  Są to funkcje, które pozwalają na wprowadzenie "potoki" funkcji w sposób elastyczny.  Poniższym przykładzie przedstawiono sposób użytkownik może skorzystać z tych operatorów, aby utworzyć prosty potoku funkcjonalności.
+Takie jak potoku operatory `|>` są często używane podczas przetwarzania danych w języku F #. Są to funkcje, które pozwalają na wprowadzenie "potoki" funkcji w sposób elastyczny. Poniższym przykładzie przedstawiono sposób można korzystać z tych operatorów do tworzenia prostych potoku funkcjonalności:
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-Powyższym przykładzie wprowadzone korzystanie z wielu funkcji języka F #, łącznie z funkcji przetwarzania listy, funkcje najwyższej jakości i [aplikacja częściowa](language-reference/functions/index.md#partial-application-of-arguments).  Chociaż głębokie opis każdego z tych pojęć może stać się nieco zaawansowanych, powinno być jasne, jak łatwo można używać funkcji do przetwarzania danych, tworząc potoków.
+Poprzedni przykład wprowadzone korzystanie z wielu funkcji języka F #, łącznie z funkcji przetwarzania listy, funkcje najwyższej jakości i [aplikacja częściowa](language-reference/functions/index.md#partial-application-of-arguments). Chociaż głębokie opis każdego z tych pojęć może stać się nieco zaawansowanych, powinno być jasne, jak łatwo można używać funkcji do przetwarzania danych, tworząc potoków.
 
 ## <a name="lists-arrays-and-sequences"></a>List, tablic i sekwencji
 

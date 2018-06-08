@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ad143b16689a7d2d858dbadc92b5099f651548cc
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805636"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827342"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Tworzenie aplikacji programu .NET Core obrazy usługi Docker
 
@@ -48,7 +48,7 @@ Podczas tworzenia, tworzenie i uruchamianie aplikacji konteneryzowanych, mamy r�
     * pliki js i CSS
 
 
-Powód, aby uwzględnić `dotnet publish` danych wyjściowych polecenia w obrazie produkcji jest zachowanie jego "rozmiar do minimum.
+Powód, aby uwzględnić `dotnet publish` danych wyjściowych polecenia w obrazie produkcji jest zachowanie jego rozmiar do minimum.
 
 Niektóre obrazy .NET Core Udostępnianie warstw między tagami różnych tak pobieranie najnowszych tag jest stosunkowo lekkie procesu. Jeśli już masz starszą wersję na komputerze, to architektura zmniejsza ilość miejsca na dysku wymagana.
 

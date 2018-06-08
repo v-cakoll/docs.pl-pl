@@ -6,15 +6,16 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: decf906efeebf1723b4c5d6f0c75ba57affe9a98
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 28c8e9bd078e07a185f541214aa5b5ff79018ff5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826997"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed — Instrukcja (odwołanie w C#)
 
-`fixed` Instrukcji uniemożliwia przemieszczanie zmienną ruchomy moduł garbage collector. `fixed` Instrukcji jest dozwolona tylko w [niebezpieczne](unsafe.md) kontekstu. `Fixed` można również utworzyć [stały rozmiar buforów](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+`fixed` Instrukcji uniemożliwia przemieszczanie zmienną ruchomy moduł garbage collector. `fixed` Instrukcji jest dozwolona tylko w [niebezpieczne](unsafe.md) kontekstu. `fixed` można również utworzyć [stały rozmiar buforów](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 `fixed` Instrukcja ustawia wskaźnik zarządzanych zmienną i "numerów PIN" zmiennej podczas wykonywania instrukcji. Wskaźniki do ruchomy zarządzanych zmienne są przydatne tylko w `fixed` kontekstu. Bez `fixed` kontekstu, wyrzucanie elementów bezużytecznych można przenosić zmienne nieprzewidywalny. Kompilator języka C# tylko można przypisać wskaźnik do zmiennej zarządzanych w `fixed` instrukcji.
 
@@ -24,11 +25,11 @@ Wskaźnik można zainicjować za pomocą tablicy, ciąg, buforu o stałym rozmia
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-Począwszy od C# 7.3, `fixed` instrukcji działa na dodatkowe typy poza tablic ciągów, bufory o ustalonym rozmiarze albo niezarządzane zmiennych. Dowolnego typu, który implementuje metodę o nazwie `DangerousGetPinnableReference` może zostać unieruchomiony. `DangerousGetPinnableReference` Musi zwracać `ref` zmienną typu niezarządzanego. Zobacz temat na [typów wskaźnikowych](../../programming-guide/unsafe-code-pointers/pointer-types.md) Aby uzyskać więcej informacji. Typy .NET <xref:System.Span%601?displayProperty=nameWithType> i <xref:System.ReadonlySpan%601?displayProperty=nameWithType> wprowadzone w upewnij .NET Core 2.0 użycia tego wzorca i może zostać unieruchomiony. Przedstawiono to w poniższym przykładzie:
+Począwszy od C# 7.3, `fixed` instrukcji działa na dodatkowe typy poza tablic ciągów, bufory o ustalonym rozmiarze albo niezarządzane zmiennych. Dowolnego typu, który implementuje metodę o nazwie `GetPinnableReference` może zostać unieruchomiony. `GetPinnableReference` Musi zwracać `ref` zmienną typu niezarządzanego. Zobacz temat na [typów wskaźnikowych](../../programming-guide/unsafe-code-pointers/pointer-types.md) Aby uzyskać więcej informacji. Typy .NET <xref:System.Span%601?displayProperty=nameWithType> i <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> wprowadzone w upewnij .NET Core 2.0 użycia tego wzorca i może zostać unieruchomiony. Przedstawiono to w poniższym przykładzie:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Jeśli utworzono typów, które powinny uczestniczyć w tym wzorcu, zobacz <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> przykład implementacja wzorca.
+W przypadku tworzenia typów, które powinny uczestniczyć w tym wzorcu, zobacz <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> przykład implementacja wzorca.
 
 Jeśli są one ten sam typ można zainicjować wielu wskaźniki w jednej instrukcji:
 

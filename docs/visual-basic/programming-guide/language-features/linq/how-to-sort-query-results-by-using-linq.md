@@ -11,18 +11,19 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 260d9e70888e153638d56ce806f9d15cf840389c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40baa1d7ae463b4193e4af5a9b79d29116b179b4
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826909"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Porady: sortowanie wyników zapytania za pomocą LINQ (Visual Basic)
 Zapytanie języku zintegrowanym (LINQ) ułatwia dostęp do bazy danych informacji i wykonywanie zapytań.  
   
  Poniższy przykład pokazuje, jak utworzyć nową aplikację, która wykonuje kwerendy względem bazy danych programu SQL Server i sortujące wyniki według wielu pól przy użyciu `Order By` klauzuli. Porządek sortowania dla każdego pola można kolejności rosnącej lub malejącej. Aby uzyskać więcej informacji, zobacz [klauzula Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie masz przykładowej bazy danych Northwind na komputerze deweloperskim, możesz pobrać go z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) witryny sieci Web. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie ma tej bazy danych na komputerze deweloperskim, można go pobrać z Microsoft Download Center. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

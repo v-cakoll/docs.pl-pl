@@ -1,21 +1,22 @@
 ---
-title: Korzystanie z biblioteki klas z platformą .NET Core w Visual Studio 2017 r.
+title: Korzystanie z biblioteki .NET Standard w Visual Studio 2017 r.
 description: Dowiedz się, jak wywołać elementów członkowskich w bibliotece klas z programu Visual Studio 2017 r.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827316"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Korzystanie z biblioteki klas z platformą .NET Core w Visual Studio 2017 r.
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Korzystanie z biblioteki .NET Standard w Visual Studio 2017 r.
 
-Po utworzeniu biblioteki klas, wykonując kroki opisane w [tworzenia biblioteki klas C# z platformą .NET Core w Visual Studio 2017](./library-with-visual-studio.md) lub [tworzenia biblioteki klas języka Visual Basic z platformą .NET Core w Visual Studio 2017](vb-library-with-visual-studio.md), testowane w [testowanie biblioteki klas z platformą .NET Core w Visual Studio 2017](testing-library-with-visual-studio.md), i wbudowane wersji biblioteki, następnym krokiem jest udostępnić obiekty wywołujące. Można to zrobić na dwa sposoby:
+Po utworzeniu biblioteki klas .NET Standard, wykonując kroki opisane w [tworzenia biblioteki klas C# z platformą .NET Core w Visual Studio 2017](./library-with-visual-studio.md) lub [tworzenia biblioteki klas języka Visual Basic z platformą .NET Core w Visual Studio 2017 r. ](vb-library-with-visual-studio.md), przetestować go w [testowanie biblioteki klas z platformą .NET Core w Visual Studio 2017](testing-library-with-visual-studio.md), i wbudowane wersji biblioteki, następnym krokiem jest udostępnić obiekty wywołujące. Można to zrobić na dwa sposoby:
 
 * Jeśli biblioteki będą używane przez pojedyncze rozwiązanie (na przykład, jeśli jest on składnikiem w pojedynczej dużych aplikacji), można dołączyć ją jako projekt w rozwiązaniu.
 
@@ -48,7 +49,7 @@ Tak samo, jak testy jednostkowe są dołączane do tego samego rozwiązania co b
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   W kodzie użyto [Console.WindowHeight](xref:System.Console.WindowHeight) właściwości, aby określić liczbę wierszy w oknie konsoli. Zawsze, gdy [Console.CursorTop](xref:System.Console.CursorTop) właściwości jest większa lub równa liczbie wierszy w oknie konsoli, kod Czyści okno konsoli i komunikat dla użytkownika.
+   W kodzie użyto `row` zmienną, aby utrzymać licznik wierszy z danymi zapisywanymi w oknie konsoli. Zawsze, gdy jest większa niż lub równa 25, kod Czyści okno konsoli i komunikat dla użytkownika.
 
    Program monituje użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się wielką literę. Gdy użytkownik naciśnie klawisz Enter, bez konieczności wprowadzania ciąg, kończy aplikacji i zamyka okno konsoli.
 
@@ -78,7 +79,7 @@ Tak samo, jak testy jednostkowe są dołączane do tego samego rozwiązania co b
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   W kodzie użyto [Console.WindowHeight](xref:System.Console.WindowHeight) właściwości, aby określić liczbę wierszy w oknie konsoli. Zawsze, gdy [Console.CursorTop](xref:System.Console.CursorTop) właściwości jest większa lub równa liczbie wierszy w oknie konsoli, kod Czyści okno konsoli i komunikat dla użytkownika.
+   W kodzie użyto `row` zmienną, aby utrzymać licznik wierszy z danymi zapisywanymi w oknie konsoli. Zawsze, gdy jest większa niż lub równa 25, kod Czyści okno konsoli i komunikat dla użytkownika.
 
    Program monituje użytkownika o wprowadzenie ciągu. Wskazuje, czy ciąg rozpoczyna się wielką literę. Gdy użytkownik naciśnie klawisz Enter, bez konieczności wprowadzania ciąg, kończy aplikacji i zamyka okno konsoli.
 

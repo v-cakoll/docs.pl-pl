@@ -3,11 +3,12 @@ title: System.Delegate i `delegate` — słowo kluczowe
 description: Więcej informacji na temat klas w programie .NET Framework, które obsługują delegatów oraz sposobu mapowania tych — słowo kluczowe "delegowanie".
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827303"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate i `delegate` — słowo kluczowe
 
@@ -77,10 +78,8 @@ Deweloperzy, które mają być wykorzystywane `List.Sort()` metody trzeba zdefin
 Załóżmy, że chcesz sortować listę ciągów ich długość. Porównanie funkcji mogą być następujące:
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 Metoda jest zadeklarowany jako metoda prywatna. Się. Nie można tej metody jako część publicznego interfejsu. Może nadal służyć jako metodę porównywania po podłączeniu do delegata. Kod wywołujący będą mieli tej metody dołączony do listy docelowej obiektu delegowanego i można do niego dostęp za pośrednictwem tego delegata.

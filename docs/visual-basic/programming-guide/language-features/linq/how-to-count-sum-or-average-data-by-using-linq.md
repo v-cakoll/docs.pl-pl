@@ -15,18 +15,19 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 7c56fadfe722f8aaf236fb68e699c9d4d2889924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4584f8ee8b0a87c2150217b1b9eb0c19bc122487
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827355"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Porady: zliczanie, sumowanie, lub uśrednianie danych za pomocą LINQ (Visual Basic)
 Zapytanie języku zintegrowanym (LINQ) ułatwia dostęp do bazy danych informacji i wykonywanie zapytań.  
   
  Poniższy przykład pokazuje, jak utworzyć nową aplikację, która wykonuje kwerendy względem bazy danych programu SQL Server. Próbki zlicza sumuje i oblicza średnią wyniki za pomocą `Aggregate` i `Group By` klauzul. Aby uzyskać więcej informacji, zobacz [Aggregate — klauzula](../../../../visual-basic/language-reference/queries/aggregate-clause.md) i [grupy przez klauzuli](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie masz przykładowej bazy danych Northwind na komputerze deweloperskim, możesz pobrać go z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) witryny sieci Web. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie ma tej bazy danych na komputerze deweloperskim, można go pobrać z Microsoft Download Center. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

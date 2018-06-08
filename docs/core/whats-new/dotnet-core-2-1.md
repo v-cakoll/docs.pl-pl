@@ -3,13 +3,13 @@ title: Co to jest nowa w programie .NET Core 2.1
 description: Więcej informacji na temat nowych funkcji .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/30/2018
-ms.openlocfilehash: a7e0ae3c65a18376a7648198a43f1272a2bddafd
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/06/2018
+ms.openlocfilehash: 241ac0195e5edcd17ac67ea7ea0fac159af97414
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696458"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826935"
 ---
 # <a name="whats-new-in-net-core-21"></a>Co to jest nowa w programie .NET Core 2.1
 
@@ -19,12 +19,12 @@ ms.locfileid: "34696458"
 - [Przenoszenia do przodu](#roll-forward)
 - [Wdrażanie](#deployment)
 - [Pakiet zgodności systemu Windows](#windows-compatibility-pack)
-- [Ulepszenia kompilatora JIT](#jit-compiler-improvements)
+- [Ulepszenia kompilacji JIT](#jit-compiler-improvements)
 - [Zmiany interfejsu API](#api-changes)
 
 ## <a name="tooling"></a>Narzędzia
 
-Oprogramowanie .NET Core 2.1.300 SDK i narzędzia dołączonego .NET Core 2.1, obejmuje następujące zmiany i udoskonalenia:
+.NET Core 2.1 zestaw SDK (v 2.1.300), narzędzi dołączonego .NET Core 2.1 zawiera następujące zmiany i udoskonalenia:
 
 ### <a name="build-performance-improvements"></a>Ulepszenia wydajności kompilacji
 
@@ -49,7 +49,9 @@ Liczba narzędzia, które były dostępne tylko na projekt na podstawie przy uż
    ```console
    dotnet watch -- --verbose build
    ```
-
+  
+   Uwaga `--` opcję poprzedzającą `--verbose` opcji. Go rozgranicza opcje przekazane bezpośrednio do `dotnet watch` polecenie argumenty, które są przekazywane do elementu podrzędnego `dotnet` procesu. Bez tego `--verbose` opcja ma zastosowanie do `dotnet watch` nie polecenia `dotnet build` polecenia.
+  
    Aby uzyskać więcej informacji, zobacz [opracowanie platformy ASP.NET Core aplikacji przy użyciu czujki dotnet](/aspnet/core/tutorials/dotnet-watch)
 
 - `dotnet dev-certs` generuje i zarządza certyfikaty używane podczas tworzenia aplikacji platformy ASP.NET Core.
@@ -72,26 +74,30 @@ dotnet tool install -g dotnetsay
 
 Po zakończeniu instalacji można uruchomić narzędzie z wiersza polecenia, określając nazwę narzędzia. Aby uzyskać więcej informacji, zobacz [Omówienie narzędzia globalne .NET Core](../tools/global-tools.md).
 
-### <a name="single-source-tool-management-with-the-dotnet-tool-command"></a>Zarządzanie za pomocą narzędzia pojedynczego źródła `dotnet tool` polecenia
+### <a name="tool-management-with-the-dotnet-tool-command"></a>Narzędzie do zarządzania za pomocą `dotnet tool` polecenia
 
-W .NET Core 2.1, użyj wszystkich operacji narzędzia `dotnet tool` polecenia. Dostępne są następujące opcje:
+W .NET Core SDK 2.1 (v 2.1.300), użyj wszystkich operacji narzędzia `dotnet tool` polecenia. Dostępne są następujące opcje:
 
-- `dotnet tool install` Aby zainstalować narzędzie.
+- [`dotnet tool install`](../tools/dotnet-tool-install.md) Aby zainstalować narzędzie.
 
-- `dotnet tool update` Aby odinstalować i ponownie zainstalować narzędzie, które skutecznie aktualizacji.
+- [`dotnet tool update`](../tools/dotnet-tool-update.md) Aby odinstalować i ponownie zainstalować narzędzie, które skutecznie aktualizacji.
 
-- `dotnet tool list` Aby wyświetlić listę aktualnie zainstalowane narzędzia.
+- [`dotnet tool list`](../tools/dotnet-tool-list.md) Aby wyświetlić listę aktualnie zainstalowane narzędzia.
+
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) Aby odinstalować narzędzia aktualnie zainstalowany.
 
 ## <a name="roll-forward"></a>Przenoszenia do przodu
 
-Wszystkie aplikacje .NET Core automatycznemu .NET 2.0 Core przekazywane dalej do najnowszej wersji *wersja pomocnicza* zainstalowanego w systemie. Oznacza to, że jeśli aplikacja została skompilowana przy wersja platformy .NET Core nie jest obecny, aplikacja jest uruchamiana dla najnowszej zainstalowanej wersji pomocniczej. Innymi słowy Jeśli aplikacja jest wbudowana .NET Core 2.0 i .NET Core 2.0 sam nie jest dostępny w systemie hosta, ale jest .NET Core 2.1, aplikacja zostanie uruchomiona przy użyciu zestawu .NET Core 2.1.
+Wszystkie aplikacje .NET Core automatycznemu .NET 2.0 Core przekazywane dalej do najnowszej wersji *wersja pomocnicza* zainstalowanego w systemie. 
+
+Zaczynając .NET Core 2.0, jeśli wersja platformy .NET Core, że aplikacja została skompilowana przy nie jest obecny w czasie wykonywania, aplikacja automatycznie jest uruchamiana dla zainstalowana najnowsza wersja *wersja pomocnicza* programu .NET Core. Innymi słowy Jeśli aplikacja jest wbudowana .NET Core 2.0 z i .NET Core 2.0 nie jest dostępny w systemie hosta, ale .NET Core 2.1, aplikacja zostanie uruchomiona przy użyciu zestawu .NET Core 2.1.
 
 > [!IMPORTANT]
 > To zachowanie przewijaniem do nie ma zastosowania do podglądu wersjach. Nie ma zastosowania główne wersje. Na przykład aplikacji .NET Core 1.0 nie są przekazywane dalej do .NET Core w wersji 2.0 lub .NET Core 2.1.
 
 Można również wyłączyć zbiorczego wersja pomocnicza w jednym z trzech sposobów:
 
-- Ustaw `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` równa 0, zmienna środowiskowa
+- Ustaw `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` zmiennej środowiskowej na wartość 0.
 
 - Dodaj następujący wiersz do pliku runtimeconfig.json:
 
@@ -109,11 +115,11 @@ Można również wyłączyć zbiorczego wersja pomocnicza w jednym z trzech spos
 
 ### <a name="self-contained-application-servicing"></a>Obsługa aplikację autonomiczną
 
-`dotnet publish` teraz publikuje niezależne aplikacji za pomocą wersji środowiska uruchomieniowego obsługiwane. Gdy opublikujesz aplikację autonomiczną przy użyciu zestawu SDK programu .NET Core 2.1, aplikacja zawiera najnowszą wersję środowiska uruchomieniowego obsługiwanych znane przez ten zestaw SDK. Podczas uaktualniania do najnowszej wersji zestawu SDK, będzie publikować przy użyciu najnowszej wersji środowiska uruchomieniowego .NET Core. Dotyczy to dla środowisk uruchomieniowych .NET Core 1.0 i nowszych.
+`dotnet publish` teraz publikuje niezależne aplikacji za pomocą wersji środowiska uruchomieniowego obsługiwane. Gdy opublikujesz aplikację autonomiczną z .NET Core SDK 2.1 (v 2.1.300), aplikacja zawiera najnowszą wersję środowiska uruchomieniowego obsługiwanych znane przez ten zestaw SDK. Podczas uaktualniania do najnowszej wersji zestawu SDK, będzie publikować przy użyciu najnowszej wersji środowiska uruchomieniowego .NET Core. Dotyczy to dla środowisk uruchomieniowych .NET Core 1.0 i nowszych.
 
 Publikowanie niezależne zależy od wersji środowiska uruchomieniowego na NuGet.org. Nie trzeba mieć serwisowanego środowiska uruchomieniowego na tym komputerze.
 
-Przy użyciu zestawu .NET Core 2.0 SDK, niezależne aplikacje są publikowane ze środowiskiem uruchomieniowym platformy .NET Core 2.0.0, chyba że określono inną wersję za pomocą `RuntimeFrameworkVersion` właściwości. Z to nowe zachowanie już nie musisz ustawić tę właściwość, aby wybrać wyższą wersję środowiska uruchomieniowego dla swojej aplikacji. Najłatwiejszy idąc dalej jest zawsze publikowanie za pomocą .NET Core 2.1 SDK.
+Przy użyciu zestawu .NET Core 2.0 SDK, niezależne aplikacje są publikowane ze środowiskiem uruchomieniowym platformy .NET Core 2.0.0, chyba że określono inną wersję za pomocą `RuntimeFrameworkVersion` właściwości. Z to nowe zachowanie już nie musisz ustawić tę właściwość, aby wybrać wyższą wersję środowiska uruchomieniowego dla swojej aplikacji. Najłatwiejszy idąc dalej jest zawsze publikowanie za pomocą .NET Core-SDK 2.1 (v 2.1.300).
 
 ## <a name="windows-compatibility-pack"></a>Pakiet zgodności systemu Windows
 
@@ -121,7 +127,7 @@ Jeśli port istniejącego kodu z programu .NET Framework do platformy .NET Core,
 
 ## <a name="jit-compiler-improvements"></a>Ulepszenia kompilatora JIT
 
-Oprogramowanie .NET core zawiera nową technologią kompilatora JIT o nazwie *kompilacji do warstwy* (znanej także jako *adaptacyjną optymalizacji*) która może znacznie poprawić wydajność.
+Oprogramowanie .NET core zawiera nową technologią kompilatora JIT o nazwie *kompilacji do warstwy* (znanej także jako *adaptacyjną optymalizacji*) która może znacznie poprawić wydajność. Kompilacja warstwowego jest ustawienie opcjonalnych.
 
 Co ważne zadania wykonywane przez kompilator JIT optymalizuje wykonanie kodu. Jednak w przypadku ścieżek kodu rzadko używanych kompilator może poświęcić więcej czasu na Optymalizacja kodu niż środowiska uruchomieniowego spędza uruchamiania zoptymalizowanego kodu. Kompilacja warstwowych wprowadza dwóch etapach w kompilacji JIT:
 
@@ -129,11 +135,23 @@ Co ważne zadania wykonywane przez kompilator JIT optymalizuje wykonanie kodu. J
 
 - A **Druga warstwa**, który generuje zoptymalizowanego kodu dla tych metod, które są często wykonywane. Druga warstwa kompilacji jest wykonywane równolegle na potrzeby zwiększenia wydajności.
 
-Możesz przetestować warstwowych kompilacji z aplikacji .NET Core 2.1, ustawiając zmienną środowiskową następujące:
+Można włączyć do warstwowego kompilacji na dwa sposoby.
 
-```console
-COMPlus_TieredCompilation="1"
-```
+- Aby używać warstwowych kompilacji we wszystkich projektach, które zestaw SDK programu .NET Core 2.1, ustaw zmienną środowiskową następujące:
+
+  ```console
+  COMPlus_TieredCompilation="1"
+  ```
+
+- Aby używać warstwowych kompilacji na podstawie na projekt, Dodaj `<TieredCompilation>` właściwości `<PropertyGroup>` sekcji pliku projektu MSBuild, jak przedstawiono na poniższym przykładzie:
+
+   ```xml
+   <PropertyGroup>
+      <!-- other property definitions -->
+
+      <TieredCompilation>true</TieredCompilation>
+   </PropertyGroup>
+   ```
 
 ## <a name="api-changes"></a>Zmiany interfejsu API
 
@@ -197,10 +215,14 @@ Implementacja sockets wprowadzone w programie .NET Core 2.1 zawiera następując
 
 - Zachowanie spójności na wszystkich platformach .NET Core.
 
-Na podstawie Sockets <xref:System.Net.Http.SocketsHttpHandler> jest domyślna implementacja .NET Core 2.1. Jednak należy skonfigurować aplikację do używania starszej <xref:System.Net.Http.HttpClientHandler> klasy przez wywołanie metody <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> metody:
+<xref:System.Net.Http.SocketsHttpHandler> jest domyślna implementacja .NET Core 2.1. Jednak należy skonfigurować aplikację do używania starszej <xref:System.Net.Http.HttpClientHandler> klasy przez wywołanie metody <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> metody:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+```
+
+```vb
+AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
 ```
 
 Można również użyć środowiska zmiennej, aby zrezygnować z używania gniazda implementacje na podstawie <xref:System.Net.Http.SocketsHttpHandler>. Aby to zrobić, ustaw `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` albo `false` lub równa 0.

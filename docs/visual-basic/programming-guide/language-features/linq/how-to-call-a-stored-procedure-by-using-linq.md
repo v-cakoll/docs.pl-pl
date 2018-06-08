@@ -7,18 +7,19 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 47ff6b354ef10de99cb6ad821e8b67b3f4205022
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8aad85ce3369f84e82100072bccf389b03c38221
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826922"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Porady: wywoływanie procedury przechowywanej za pomocą LINQ (Visual Basic)
 Zapytanie języku zintegrowanym (LINQ) ułatwia dostęp do informacji z bazy danych, łącznie z bazy danych obiektów, takich jak przechowywane procedury.  
   
  Poniższy przykład przedstawia sposób tworzenia aplikacji, która wywołuje procedurę przechowywaną w bazie danych programu SQL Server. Przykład przedstawia sposób wywołania dwie różne procedury przechowywanej w bazie danych. Każdej procedury zwraca wyniki zapytania. Jednej procedury przyjmuje parametry wejściowe i inne procedury nie przyjmuje parametry.  
   
- W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie masz przykładowej bazy danych Northwind na komputerze deweloperskim, możesz pobrać go z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) witryny sieci Web. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie ma tej bazy danych na komputerze deweloperskim, można go pobrać z Microsoft Download Center. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

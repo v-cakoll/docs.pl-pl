@@ -3,11 +3,12 @@ title: Delegaci i zdarzenia
 description: Zobacz, gdzie można znaleźć w dokumentacji programu .NET Core informacji na temat delegaci i zdarzenia.
 ms.date: 06/20/2016
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b802a7aa8ef3e9ab0c05af23186d124dcc07bdb5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826831"
 ---
 # <a name="delegates--events"></a>Delegaci i zdarzenia
 
@@ -45,3 +46,4 @@ W tym temacie zostaną objęte następujące artykuły:
 
     W tym artykule opisano, jak powinna wskazywać między przy użyciu zdarzeń i delegatów w projektach.
  
+Możesz pobrać [próbki delegatów](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) i [przykładowe zdarzenia](https://github.com/dotnet/samples/tree/master/csharp/events) z repozytorium GitHub próbek.

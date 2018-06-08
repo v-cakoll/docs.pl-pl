@@ -5,5 +5,5 @@
 ### [Publikowanie aplikacji Hello world w programie Visual Studio 2017](../../core/tutorials/publishing-with-visual-studio.md)
 ## [Tworzenie biblioteki klas w języku C# i na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
 ### [Testowanie biblioteki klas na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/testing-library-with-visual-studio.md)
-### [Korzystanie z biblioteki klas na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/consuming-library-with-visual-studio.md)
+### [Korzystanie z biblioteki .NET Standard w Visual Studio 2017 r.](../../core/tutorials/consuming-library-with-visual-studio.md)
 ## [Rozpoczynanie pracy z językiem C# i programem Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)

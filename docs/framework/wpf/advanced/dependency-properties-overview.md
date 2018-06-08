@@ -1,7 +1,7 @@
 ---
 title: Przegląd właściwości zależności
 description: Właściwość, która nie jest obsługiwana przez system właściwości WPF jest określany jako właściwość zależności. Ten przegląd zawiera opis systemu właściwość WPF i możliwości właściwości zależności.
-ms.date: 03/30/2017
+ms.date: 06/06/2018
 dev_langs:
 - csharp
 - vb
@@ -14,36 +14,37 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827010"
 ---
 # <a name="dependency-properties-overview"></a>Przegląd właściwości zależności
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia to zestaw usług, których można użyć, aby rozszerzyć funkcjonalność programu [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Zbiorczo te usługi są zwykle nazywane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Właściwość, która nie jest obsługiwana przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu jest znany jako właściwość zależności. Ten przegląd zawiera opis [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu oraz możliwości właściwości zależności. Dotyczy to również sposób użycia istniejącej właściwości zależności w kodzie XAML i w kodzie. To omówienie wprowadza również specjalne aspektów właściwości zależności, takich jak metadanych właściwości zależności oraz sposobu tworzenia własnych właściwości zależności w niestandardowej klasy.
+Windows Presentation Foundation (WPF) zawiera zestaw usług, których można użyć, aby rozszerzyć funkcjonalność typu [właściwości](../../../standard/base-types/common-type-system.md#Properties). Zbiorczo te usługi są zwykle nazywane systemu właściwość WPF. Właściwość, która nie jest obsługiwana przez system właściwości WPF jest określany jako właściwość zależności. Ten przegląd zawiera opis systemu właściwość WPF i możliwości właściwości zależności. Dotyczy to również sposób użycia istniejącej właściwości zależności w kodzie XAML i w kodzie. To omówienie wprowadza również specjalne aspektów właściwości zależności, takich jak metadanych właściwości zależności oraz sposobu tworzenia własnych właściwości zależności w niestandardowej klasy.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-W tym temacie założono, że niektóre podstawową wiedzę na temat [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] i programowanie zorientowane obiektowo. Aby można było wykonać przykłady w tym temacie, należy również zapoznać się [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i wiedzieć, jak napisać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [wskazówki: Moje pierwszą aplikację pulpitu WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+W tym temacie założono, że niektóre podstawową wiedzę na temat system typów .NET i programowanie zorientowane obiektowo. Przed wykonaniem przykłady w tym temacie, należy również poznać XAML i umieć pisać aplikacje WPF. Aby uzyskać więcej informacji, zobacz [wskazówki: Moje pierwszą aplikację pulpitu WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Właściwości zależności i CLR
- W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], właściwości są zwykle widoczne jako [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Na poziomie podstawowym można bezpośredniej interakcji z tymi właściwościami i nigdy nie wiadomo, że są one zaimplementowane jako właściwości zależności. Jednak należy się zapoznać z niektórych lub wszystkich funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu, dzięki czemu można korzystać z tych funkcji.
+ Na platformie WPF, właściwości są zwykle widoczne jako standardowa .NET [właściwości](../../../standard/base-types/common-type-system.md#Properties). Na poziomie podstawowym można bezpośredniej interakcji z tymi właściwościami i nigdy nie wiadomo, że są one zaimplementowane jako właściwości zależności. Jednak należy się zapoznać z niektórych lub wszystkich funkcji w systemie właściwości WPF, dzięki czemu można korzystać z tych funkcji.
 
 Celem właściwości zależności jest zapewnienie sposobem obliczenia wartości właściwości, na podstawie wartości innych danych wejściowych. Te dane wejściowe może zawierać właściwości systemu, takie jak kompozycje i preferencji użytkownika, mechanizmów określenie właściwości just in time, takich jak powiązania danych i animacje/scenorys, szablonów wielokrotnego użytku, takich jak zasoby i style lub znane wartości przy użyciu relacji nadrzędny podrzędny z innymi elementami w drzewie elementu. Ponadto można zaimplementować właściwości zależności niezależne sprawdzania poprawności, wartości domyślne, wywołania zwrotne, które monitorują zmian do innych właściwości oraz systemu, który można przekształcić wartości właściwości na podstawie potencjalnie środowiska uruchomieniowego informacji. Klasy pochodne można również zmienić niektóre określonych właściwości istniejącej właściwości Zastępowanie metadanych właściwości zależności, zamiast zastępowanie rzeczywistego wykonania istniejącej właściwości lub tworzenia nowych właściwości.
 
 Odwołanie do zestawu SDK można określić, która właściwość jest właściwością zależności w obecności sekcji informacje dotyczące właściwości zależności na stronie zarządzane odniesienia dla tej właściwości. Sekcja informacje dotyczące właściwości zależności zawiera łącze do <xref:System.Windows.DependencyProperty> identyfikatora pola dla danej właściwości zależności i zawiera także listę opcji metadanych, które są ustawione dla tej właściwości, według klasy zastąpienie informacji i inne szczegóły.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Właściwości zależności kopii CLR właściwości
-Właściwości zależności i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu na poszerzanie funkcjonalności właściwości zapewniając typu, aby utworzyć kopię zapasową właściwość, jako alternatywnej implementacji standardowego wzorca zapisywania kopii właściwość z polem prywatnych. Nazwa tego typu jest <xref:System.Windows.DependencyProperty>. Ważne typu, który definiuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwość system jest <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiuje klasę podstawową, która można rejestrować i własnej właściwości zależności.
+Właściwości zależności i systemu właściwość WPF rozszerzyć funkcjonalność właściwości, zapewniając typu, aby utworzyć kopię zapasową właściwość, jako alternatywnej implementacji standardowego wzorca zapisywania kopii właściwość z polem prywatnych. Nazwa tego typu jest <xref:System.Windows.DependencyProperty>. Inne ważne Typ definiujący systemu właściwość WPF jest <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiuje klasę podstawową, która można rejestrować i własnej właściwości zależności.
 
-Poniżej znajduje się podsumowanie terminologii, który jest używany w tym [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] dokumentacji Omawiając właściwości zależności:
+Poniższa lista zawiera terminologii, który jest używany z właściwości zależności:
 
 - **Właściwości zależności:** właściwości, która nie jest obsługiwana przez <xref:System.Windows.DependencyProperty>.
 
-- **Identyfikator właściwości zależności:** A <xref:System.Windows.DependencyProperty> wystąpienia, który jest uzyskany jako wartość zwracaną podczas rejestrowania właściwości zależności, a następnie przechowywane jako statyczny element członkowski klasy. Ten identyfikator jest używany jako parametr dla wielu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] który interakcyjnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu.
+- **Identyfikator właściwości zależności:** A <xref:System.Windows.DependencyProperty> wystąpienia, który jest uzyskany jako wartość zwracaną podczas rejestrowania właściwości zależności, a następnie przechowywane jako statyczny element członkowski klasy. Ten identyfikator jest używany jako parametr dla wielu interfejsów API, które interakcji z systemu właściwości WPF.
 
-- **CLR "otoki":** rzeczywiste get i set implementacji dla właściwości. Tych implementacji zastosować identyfikatora właściwości zależności za pomocą w <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> wywołań, zapewniając zapasowy dla właściwości, za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu.
+- **CLR "otoki":** rzeczywiste get i set implementacji dla właściwości. Tych implementacji zastosować identyfikatora właściwości zależności za pomocą w <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> wywołań, zapewniając zapasowy właściwości przy użyciu systemu właściwość WPF.
 
 W poniższym przykładzie zdefiniowano `IsSpinning` właściwości zależności i przedstawia relacje między <xref:System.Windows.DependencyProperty> identyfikator właściwości, aby utworzyć jego kopię zapasową.
 
@@ -56,7 +57,7 @@ Z konwencją nazewnictwa właściwość i jej zapasowy <xref:System.Windows.Depe
 Można ustawić właściwości, albo w kodzie XAML.
 
 ### <a name="setting-property-values-in-xaml"></a>Ustawienie wartości właściwości w języku XAML 
-W poniższym przykładzie XAML Określa kolor tła przycisku kolorem czerwonym. W tym przykładzie przedstawiono wartości prostego ciągu atrybutu XAML w przypadku przekonwertować typu przez parser WPF XAML w przypadku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typu ( <xref:System.Windows.Media.Color>, poprzez <xref:System.Windows.Media.SolidColorBrush>) w wygenerowanym kodzie.
+W poniższym przykładzie XAML Określa kolor tła przycisku kolorem czerwonym. W tym przykładzie przedstawiono sytuacji, gdy wartości prostego ciągu atrybutu XAML są, przekonwertować typu przez parser WPF XAML w WPF typu ( <xref:System.Windows.Media.Color>, poprzez <xref:System.Windows.Media.SolidColorBrush>) w wygenerowanym kodzie.
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
@@ -82,7 +83,7 @@ Możesz także wywołać system właściwości [!INCLUDE[TLA2#tla_api#plural](..
 Właściwości można także ustawić w języku XAML i następnie dostępne w dalszej części kodu za pomocą kodu powiązanego. Aby uzyskać więcej informacji, zobacz [CodeBehind i języka XAML w WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).
 
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Właściwość funkcje udostępniane przez właściwości zależności
-Właściwości zależności zawiera funkcje, które rozszerza funkcjonalność właściwości, a nie właściwością, która nie jest obsługiwana przez pole. Często każdej z takich funkcji reprezentuje lub obsługuje określoną funkcję ogólnych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestaw funkcji:
+Właściwości zależności zawiera funkcje, które rozszerza funkcjonalność właściwości, a nie właściwością, która nie jest obsługiwana przez pole. Często takie funkcje reprezentuje lub obsługuje jeden z następujących funkcji:
 
 - [Zasoby](#resources)
 
@@ -98,7 +99,7 @@ Właściwości zależności zawiera funkcje, które rozszerza funkcjonalność w
 
 - [Integracja projektanta WPF](#wpf-designer-integration)
 
-### <a name="resources"></a>Zasoby
+### <a name="resources"></a>Resources
 Za pomocą odwołań do zasobu można ustawić wartości właściwości zależności. Zasoby są zazwyczaj określana jako `Resources` wartości właściwości elementu głównego strony lub aplikacji (jak najdogodniejszy dostęp do zasobu włączyć te lokalizacje). Poniższy przykład przedstawia sposób definiowania <xref:System.Windows.Media.SolidColorBrush> zasobów.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
@@ -107,7 +108,7 @@ Po zdefiniowaniu jest zasobu, można odwoływać się do zasobu i użyj go, aby 
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-Konkretnego zasobu jest określany jako [DynamicResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) (w języku XAML w WPF, możesz użyć odwołanie statyczne lub dynamiczne zasobów). Aby korzystać z odwołaniem zasobu dynamicznego, możesz musi można ustawienie właściwości zależności, więc w szczególności dynamicznej odwołania użycia zasobów, który został włączony przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Aby uzyskać więcej informacji, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+Konkretnego zasobu jest określany jako [DynamicResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) (w języku XAML w WPF, możesz użyć odwołanie statyczne lub dynamiczne zasobów). Można użyć odwołania do zasobu dynamicznego, na musi być ustawienie do właściwości zależności, więc w szczególności użycie odwołania dynamicznych zasobów obsługujący przez system właściwości WPF. Aby uzyskać więcej informacji, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
 
 > [!NOTE]
 > Zasoby są traktowane jako wartości lokalnej, co oznacza, że jeśli ustawisz wartość innego lokalnego zostanie wyeliminować odwołanie do zasobu. Aby uzyskać więcej informacji, zobacz [pierwszeństwo wartość właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).
@@ -135,7 +136,7 @@ Poniższy przykład tworzy stylu bardzo proste (może zostać zdefiniowany w <xr
 
 Aby uzyskać więcej informacji, zobacz [stylami i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md).
 
-### <a name="animations"></a>Animacji
+### <a name="animations"></a>Animacje
 Można animować właściwości zależności. Gdy animacji są stosowane i jest uruchomiona, wartość animowany działa z wyższym priorytetem niż wartość (na przykład wartości lokalnego), który ma właściwość, w przeciwnym razie.
 
 Animuje w poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> na <xref:System.Windows.Controls.Button> właściwości (technicznie, <xref:System.Windows.Controls.Control.Background%2A> jest animowany przy użyciu składni elementu właściwości, aby określić puste <xref:System.Windows.Media.SolidColorBrush> jako <xref:System.Windows.Controls.Control.Background%2A>, a następnie <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwości tego <xref:System.Windows.Media.SolidColorBrush> jest właściwość, która jest bezpośrednio animowany).
@@ -170,7 +171,7 @@ Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości]
 Formant niestandardowy z właściwościami, które są zaimplementowane jako właściwości zależności będą otrzymywać właściwe [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] obsługuje. Przykładem jest możliwość edytowania właściwości zależności bezpośrednich i dołączone z **właściwości** okna. Aby uzyskać więcej informacji, zobacz [informacje o formancie tworzenia](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Pierwszeństwo wartość właściwości zależności
-Po otrzymaniu wartość właściwości zależności są uzyskiwane potencjalnie wartość, która została ustawiona dla tej właściwości, za pomocą jednego z innych na podstawie właściwości wejść uczestniczących w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Pierwszeństwo wartość właściwości zależności istnieje, aby różne scenariusze dotyczące sposobu właściwości pobierania ich wartości można posługiwać się w sposób przewidywalne.
+Gdy pojawi się wartość właściwości zależności, są potencjalnie uzyskiwania wartość, która została ustawiona dla tej właściwości, za pomocą jednego z innych na podstawie właściwości wejść, które uczestniczą w systemie właściwości WPF. Pierwszeństwo wartość właściwości zależności istnieje, aby różne scenariusze dotyczące sposobu właściwości pobierania ich wartości można posługiwać się w sposób przewidywalne.
 
 Rozważmy następujący przykład. Przykład zawiera styl, który ma zastosowanie do wszystkich przycisków i ich <xref:System.Windows.Controls.Control.Background%2A> właściwości, ale następnie również określa jeden z przycisków lokalnie ustawionej <xref:System.Windows.Controls.Control.Background%2A> wartość.
 
@@ -185,7 +186,7 @@ Zasadniczo dla przycisku pierwszej właściwość jest ustawiona dwa razy, ale m
 Zazwyczaj nie trzeba będzie style Zawsze stosuj i przesłaniać nawet lokalnie ustaw wartość pojedynczego elementu (w przeciwnym wypadku byłoby bardzo trudne do użycia na ogół style lub elementów). W związku z tym wartości, które pochodzą ze stylów działania na niższa część niż lokalnie ustawione wartości. Bardziej szczegółowego listę właściwości zależności i skąd pochodzą może efektywną wartość właściwości zależności, zobacz [pierwszeństwo wartość właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).
 
 > [!NOTE]
-> Istnieje wiele właściwości zdefiniowane na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy, które nie są właściwości zależności. Zasadniczo właściwości zostały zaimplementowane jako właściwości zależności, tylko wtedy, gdy było musi obsługiwać co najmniej jednego ze scenariuszy włączane przez system właściwości: powiązanie, style, animacji, obsługi wartość domyślną, dziedziczenia, danych dołączone do właściwości, lub unieważnienie.
+> Istnieje wiele właściwości, zdefiniowaną dla elementów WPF, które nie są właściwościami zależności. Zasadniczo właściwości zostały zaimplementowane jako właściwości zależności, tylko wtedy, gdy było musi obsługiwać co najmniej jednego ze scenariuszy włączane przez system właściwości: powiązanie, style, animacji, obsługi wartość domyślną, dziedziczenia, danych dołączone do właściwości, lub unieważnienie.
 
 ## <a name="learning-more-about-dependency-properties"></a>Więcej informacji na temat właściwości zależności  
 

@@ -14,19 +14,20 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333274"
 ---
 # <a name="c-programming-guide"></a>Podręcznik programowania C#
-Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework. 
+Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.  
   
- W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Dla początkujących w dziedzinie programowania lub języka C# polecamy interaktywny samouczek [Wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), w którym nie jest wymagana żadna wiedza na temat programowania. 
+ W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Dla początkujących w dziedzinie programowania lub języka C# polecamy interaktywny samouczek [Wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), w którym nie jest wymagana żadna wiedza na temat programowania.   
   
- Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../../csharp/language-reference/index.md). Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](../../csharp/language-reference/language-specification/index.md). 
+ Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../../csharp/language-reference/index.md). Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](../../csharp/language-reference/language-specification/index.md).  
   
 ## <a name="program-sections"></a>Sekcje programu
 
 [Konstrukcja programu C#](../../csharp/programming-guide/inside-a-program/index.md)  
   
-[Main() i argumenty wiersza polecenia](../../csharp/programming-guide/main-and-command-args/index.md)   
+[Main() i argumenty wiersza polecenia](../../csharp/programming-guide/main-and-command-args/index.md)  
  
 ## <a name="language-sections"></a>Sekcje języka  
 [Instrukcje, wyrażenia i operatory](../../csharp/programming-guide/statements-expressions-operators/index.md)  
@@ -43,7 +44,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
  
  [Tablice](../../csharp/programming-guide/arrays/index.md)  
   
- [Ciągi](../../csharp/programming-guide/strings/index.md) 
+ [Ciągi](../../csharp/programming-guide/strings/index.md)  
   
  [Właściwości](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
@@ -85,5 +86,5 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
  [Odbicie](../../csharp/programming-guide/concepts/reflection.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dokumentacja Języka C#](../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../csharp/language-reference/index.md)  
  [C#](../../csharp/index.md)

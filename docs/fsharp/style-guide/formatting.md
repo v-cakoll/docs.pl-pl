@@ -2,11 +2,12 @@
 title: 'Wskazówki dotyczące formatowania kodu języka F #'
 description: 'Dowiedz się wskazówki dotyczące formatowania kodu F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231513"
 ---
 # <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu języka F #
 
@@ -29,6 +30,177 @@ Gdy wymagana jest wcięcie, należy użyć spacje, tabulatory nie. Wymagana jest
 **Zalecamy 4 spacje na wcięcia.**
 
 Inaczej mówiąc, wcięcia programów polega na subiektywne. Zmiany są dozwolone, ale jest pierwszą regułę, należy wykonać *spójności wcięcia*. Wybierz styl ogólnie akceptowanych wcięcia i korzystać z niego systematycznie w całym baza kodu.
+
+## <a name="formatting-blank-lines"></a>Formatowanie puste wiersze
+
+* Oddzielne najwyższego poziomu funkcji i klasy definicji dwa puste wiersze.
+* Definicje metody w klasie są rozdzielone przez pojedynczy pusty wiersz.
+* Dodatkowe puste wiersze może służyć (oszczędnie) do oddzielania grup powiązanych funkcji. Puste wiersze można pominąć między licznych one-liners powiązane (na przykład zestawu zastępczego implementacji).
+* Użyj oszczędnie, pustych wierszy w funkcjach, aby wskazać logiczne sekcje.
+
+## <a name="formatting-comments"></a>Formatowanie komentarzy
+
+Ogólnie rzecz biorąc Preferuj wielu komentarzy o podwójnej precyzji ukośnika przed komentarze bloku stylu uczenia Maszynowego.
+
+```fsharp
+// Prefer this style of comments when you want
+// to express written ideas on multiple lines.
+
+(*
+    ML-style comments are fine, but not a .NET-ism.
+    They are useful when needing to modify multi-line comments, though.
+*)
+```
+
+Komentarzy wewnętrznych powinien wielką literą.
+
+```fsharp
+let f x = x + 1 // Increment by one.
+```
+
+## <a name="naming-conventions"></a>Konwencje nazewnictwa
+
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Użyj wartości powiązane z klasy, powiązane z wyrażenia i powiązane z wzorca i funkcji (camelcase)
+
+Często i zaakceptowane styl F # (camelcase) na potrzeby wszystkich nazw powiązana jako zmienne lokalne lub w dopasowaniach wzorców i definicje funkcji.
+
+```fsharp
+// OK
+let addIAndJ i j = i + j
+
+// Bad
+let addIAndJ I J = I+J
+
+// Bad
+let AddIAndJ i j = i + j
+```
+
+Funkcje wiązaniem lokalnie w klasach też używać (camelcase).
+
+```fsharp
+type MyClass() =
+
+    let doSomething () =
+
+    let firstResult = ...
+
+    let secondResult = ...
+
+    member x.Result = doSomething()
+```
+
+### <a name="use-camelcase-for-module-bound-public-functions"></a>Użyj (camelcase) dla funkcji publicznych powiązanych z modułu
+
+Jeśli funkcja powiązane z modułu jest częścią publiczny interfejs API, korzystała (camelcase):
+
+```fsharp
+module MyAPI =
+    let publicFunctionOne param1 param2 param2 = ...
+
+    let publicFunctionTwo param1 param2 param3 = ...
+```
+
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Użyj wartości powiązane z modułu wewnętrzne i prywatne i funkcji (camelcase)
+
+Użyj (camelcase) dla wartości powiązane z modułu prywatne, takie jak następujące:
+
+* Funkcje ad hoc w skryptach
+
+* Wartości tworzących wewnętrznej implementacji modułu lub typu
+
+```fsharp
+let emailMyBossTheLatestResults =
+    ...
+```
+
+### <a name="use-camelcase-for-parameters"></a>Użyj parametrów (camelcase)
+
+Wszystkie parametry powinien używać (camelcase) zgodnie z konwencją nazewnictwa platformy .NET.
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>Użyj PascalCase dla modułów
+
+Wszystkie moduły (najwyższego poziomu, wewnętrzne, prywatne, zagnieżdżonych) należy używać PascalCase.
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Użyj PascalCase dla deklaracji typu, członków i etykiety
+
+Klasy, interfejsy, struktury, wyliczenia, delegatów, rekordów i rozłączne powinny być wszystkie nazwę z PascalCase. Elementy członkowskie w ramach typy oraz etykiety dla rekordów i rozłączne też używać PascalCase.
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Użyj PascalCase dla konstrukcji wewnętrznej do .NET
+
+Przestrzenie nazw, wyjątki, zdarzeń i projektu /`.dll` nazwy też używać PascalCase. Nie tylko jest to, że zużycie z innymi językami .NET możesz bardziej naturalne dla konsumentów, również jest spójna z konwencji nazewnictwa platformy .NET, które mogą wystąpić.
+
+### <a name="avoid-underscores-in-names"></a>Unikaj podkreślenia w nazwach
+
+W przeszłości niektórych bibliotek języka F # użyto podkreślenia w nazwach. Jednak nie jest już powszechnie zaakceptowaniu częściowo, ponieważ jest ona konflikt z konwencji nazewnictwa platformy .NET. Inaczej mówiąc, niektóre programistów F # przy użyciu podkreślenia znacznie, częściowo przyczyn historycznych, a na uszkodzenia i zakresie jest ważne. Należy jednak pamiętać, że styl jest często disliked przez innych użytkowników, którzy mają wybór o tym, czy z niego korzystać.
+
+Niektóre wyjątki obejmuje współpracy z natywnego składniki, których podkreślenia są bardziej powszechne.
+
+### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów F #
+
+Następujące operatory są zdefiniowane w standardowej biblioteki języka F # i powinna być używana zamiast funkcji definiujący odpowiedniki. Za pomocą tych operatorów jest zalecane, ponieważ sprawia kodu bardziej czytelny i idiomatyczne. Może być przystosowane do różnych idioms deweloperom tła w OCaml lub innych funkcjonalny język programowania. Poniższa lista zawiera podsumowanie zalecane operatory F #.
+
+```fsharp
+x |> f // Forward pipeline
+f >> g // Forward composition
+x |> ignore // Discard away a value
+x + y // Overloaded addition (including string concatenation)
+x - y // Overloaded subtraction
+x * y // Overloaded multiplication
+x / y // Overloaded division
+x % y // Overloaded modulus
+x && y // Lazy/short-cut "and"
+x || y // Lazy/short-cut "or"
+x <<< y // Bitwise left shift
+x >>> y // Bitwise right shift
+x ||| y // Bitwise or, also for working with “flags” enumeration
+x &&& y // Bitwise and, also for working with “flags” enumeration
+x ^^^ y // Bitwise xor, also for working with “flags” enumeration
+```
+
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Należy użyć składni prefiks dla typów ogólnych (`Foo<T>`) zamiast składni przyrostek (`T Foo`)
+
+F # dziedziczy zarówno przyrostek ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks styl .NET (na przykład `list<int>`). Preferowane jest styl .NET, z wyjątkiem cztery określonych typów:
+
+1. F # list, użyj przyrostkowej formy: `int list` zamiast `list<int>`.
+2. F # opcji, należy użyć przyrostkowej formy: `int option` zamiast `option<int>`.
+3. Dla języka F # tablic, użyj składni nazwy `int[]` zamiast `int array` lub `array<int>`.
+4. Komórki odwołań, można użyć `int ref` zamiast `ref<int>` lub `Ref<int>`.
+
+Dla wszystkich innych typów formularz prefiks.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formatowanie Suma rozłączna — deklaracje złożeń
 
@@ -198,7 +370,7 @@ else e4
 
 ### <a name="pattern-matching-constructs"></a>Konstrukcje dopasowania wzorca
 
-Użyj `|` dla każdej klauzuli dopasowania z braku wcięcia. Jeśli wyrażenie jest krótki, można użyć jednego wiersza.
+Użyj `|` dla każdej klauzuli dopasowania z braku wcięcia. Jeśli wyrażenie jest krótki, można rozważyć użycie jednego wiersza, jeśli każdy Podwyrażenie jest również proste.
 
 ```fsharp
 // OK
@@ -212,9 +384,6 @@ match l with
     | { him = x; her = "Posh" } :: tail -> _
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
-
-// OK
-match l with [] -> false | _ :: _ -> true
 ```
 
 Jeśli wyrażenie po prawej stronie strzałkę dopasowania wzorca jest zbyt duży, przenieś go do następującego wiersza, z wcięciami krok z `match` / `|`.
@@ -291,20 +460,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-Argumenty funkcji anonimowej mogą być w następnym wierszu lub z zawieszonego `fun` wierszu argumentu:
+Tym samym wytyczne dotyczą wyrażenia lambda jako argumenty funkcji. Jeżeli treści wyrażenia lambda, treść może mieć innego wiersza, zawiera tylko przez jeden zakres
 
 ```fsharp
-// OK
 let printListWithOffset a list1 =
-    List.iter (fun elem ->
-        printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem -> printfn "%d" (a + elem))
+        list1
 
-// OK, but prefer previous
+// OK if lambda body is long enough
 let printListWithOffset a list1 =
-    List.iter (
-        fun elem ->
-            printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem ->
+            printfn "%d" (a + elem))
+        list1
 ```
+
+Jednak jeśli treści wyrażenia lambda jest więcej niż jeden wiersz, należy wziąć pod uwagę factoring je do oddzielnego funkcja zamiast konstrukcję wielowierszowego stosowane jako pojedynczy argument do funkcji.
 
 ### <a name="formatting-infix-operators"></a>Operatory infiksu formatowania
 
@@ -402,162 +574,3 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
-
-## <a name="formatting-blank-lines"></a>Formatowanie puste wiersze
-
-* Oddzielne najwyższego poziomu funkcji i klasy definicji dwa puste wiersze.
-* Definicje metody w klasie są rozdzielone przez pojedynczy pusty wiersz.
-* Dodatkowe puste wiersze może służyć (oszczędnie) do oddzielania grup powiązanych funkcji. Puste wiersze można pominąć między licznych one-liners powiązane (na przykład zestawu zastępczego implementacji).
-* Użyj oszczędnie, pustych wierszy w funkcjach, aby wskazać logiczne sekcje.
-
-## <a name="formatting-comments"></a>Formatowanie komentarzy
-
-Ogólnie rzecz biorąc Preferuj wielu komentarzy o podwójnej precyzji ukośnika przed komentarze bloku stylu uczenia Maszynowego.
-
-```fsharp
-// Prefer this style of comments when you want
-// to express written ideas on multiple lines.
-
-(*
-    Generally avoid these kinds of comments.
-*)
-```
-
-Komentarzy wewnętrznych powinien wielką literą.
-
-```fsharp
-let f x = x + 1 // Increment by one.
-```
-
-## <a name="naming-conventions"></a>Konwencje nazewnictwa
-
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Użyj wartości powiązane z klasy, powiązane z wyrażenia i powiązane z wzorca i funkcji (camelcase)
-
-Często i zaakceptowane styl F # (camelcase) na potrzeby wszystkich nazw powiązana jako zmienne lokalne lub w dopasowaniach wzorców i definicje funkcji.
-
-```fsharp
-// OK
-let addIAndJ i j = i + j
-
-// Bad
-let addIAndJ I J = I+J
-
-// Bad
-let AddIAndJ i j = i + j
-```
-
-Funkcje wiązaniem lokalnie w klasach też używać (camelcase).
-
-```fsharp
-type MyClass() =
-
-    let doSomething () =
-
-    let firstResult = ...
-
-    let secondResult = ...
-
-    member x.Result = doSomething()
-```
-
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Użyj wartości powiązane z modułu wewnętrzne i prywatne i funkcji (camelcase)
-
-Użyj (camelcase) dla wartości powiązane z modułu prywatne, takie jak następujące:
-
-* Funkcje ad hoc w skryptach
-
-* Wartości tworzących wewnętrznej implementacji modułu lub typu
-
-```fsharp
-let emailMyBossTheLatestResults =
-    ...
-```
-
-### <a name="use-camelcase-for-parameters"></a>Użyj parametrów (camelcase)
-
-Wszystkie parametry powinien używać (camelcase) zgodnie z konwencją nazewnictwa platformy .NET.
-
-```fsharp
-module MyModule =
-    let myFunction paramOne paramTwo = ...
-
-type MyClass() =
-    member this.MyMethod(paramOne, paramTwo) = ...
-```
-
-### <a name="use-pascalcase-for-modules"></a>Użyj PascalCase dla modułów
-
-Wszystkie moduły (najwyższego poziomu, wewnętrzne, prywatne, zagnieżdżonych) należy używać PascalCase.
-
-```fsharp
-module MyTopLevelModule
-
-module Helpers =
-    module private SuperHelpers =
-        ...
-
-    ...
-```
-
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Użyj PascalCase dla deklaracji typu, członków i etykiety
-
-Klasy, interfejsy, struktury, wyliczenia, delegatów, rekordów i rozłączne powinny być wszystkie nazwę z PascalCase. Elementy członkowskie w ramach typy oraz etykiety dla rekordów i rozłączne też używać PascalCase.
-
-```fsharp
-type IMyInterface =
-    abstract Something: int
-
-type MyClass() =
-    member this.MyMethod(x, y) = x + y
-
-type MyRecord = { IntVal: int; StringVal: string }
-
-type SchoolPerson =
-    | Professor
-    | Student
-    | Advisor
-    | Administrator
-```
-
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Użyj PascalCase dla konstrukcji wewnętrznej do .NET
-
-Przestrzenie nazw, wyjątki, zdarzeń i projektu /`.dll` nazwy też używać PascalCase. Nie tylko jest to, że zużycie z innymi językami .NET możesz bardziej naturalne dla konsumentów, również jest spójna z konwencji nazewnictwa platformy .NET, które mogą wystąpić.
-
-### <a name="avoid-underscores-in-names"></a>Unikaj podkreślenia w nazwach
-
-W przeszłości niektórych bibliotek języka F # użyto podkreślenia w nazwach. Jednak nie jest już powszechnie zaakceptowaniu częściowo, ponieważ jest ona konflikt z konwencji nazewnictwa platformy .NET. Inaczej mówiąc, niektóre programistów F # przy użyciu podkreślenia znacznie, częściowo przyczyn historycznych, a na uszkodzenia i zakresie jest ważne. Należy jednak pamiętać, że styl jest często disliked przez innych użytkowników, którzy mają wybór o tym, czy z niego korzystać.
-
-Niektóre wyjątki obejmuje współpracy z natywnego składniki, których podkreślenia są bardziej powszechne.
-
-### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów F #
-
-Następujące operatory są zdefiniowane w standardowej biblioteki języka F # i powinna być używana zamiast funkcji definiujący odpowiedniki. Za pomocą tych operatorów jest zalecane, ponieważ sprawia kodu bardziej czytelny i idiomatyczne. Może być przystosowane do różnych idioms deweloperom tła w OCaml lub innych funkcjonalny język programowania. Poniższa lista zawiera podsumowanie zalecane operatory F #.
-
-```fsharp
-x |> f // Forward pipeline
-f >> g // Forward composition
-x |> ignore // Throwing away a value
-x + y // Overloaded addition (including string concatenation)
-x - y // Overloaded subtraction
-x * y // Overloaded multiplication
-x / y // Overloaded division
-x % y // Overloaded modulus
-x && y // Lazy/short-cut "and"
-x || y // Lazy/short-cut "or"
-x <<< y // Bitwise left shift
-x >>> y // Bitwise right shift
-x ||| y // Bitwise or, also for working with “flags” enumeration
-x &&& y // Bitwise and, also for working with “flags” enumeration
-x ^^^ y // Bitwise xor, also for working with “flags” enumeration
-```
-
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Należy użyć składni prefiks dla typów ogólnych (`Foo<T>`) zamiast składni przyrostek (`T Foo`)
-
-F # dziedziczy zarówno przyrostek ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks styl .NET (na przykład `list<int>`). Preferowane jest styl .NET, z wyjątkiem cztery określonych typów:
-
-1. F # list, użyj przyrostkowej formy: `int list` zamiast `list<int>`.
-2. F # opcji, należy użyć przyrostkowej formy: `int option` zamiast `option<int>`.
-3. Dla języka F # tablic, użyj składni nazwy `int[]` zamiast `int array` lub `array<int>`.
-4. Komórki odwołań, można użyć `int ref` zamiast `ref<int>` lub `Ref<int>`.
-
-Dla wszystkich innych typów formularz prefiks.

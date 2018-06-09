@@ -2,11 +2,12 @@
 title: Moduł weryfikacji certyfikatów X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 3d9aa14af3ded11bcd373f38656763036e83b0bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 911b6db28f89f7a4266ef1b23246020cd0381ada
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231531"
 ---
 # <a name="x509-certificate-validator"></a>Moduł weryfikacji certyfikatów X.509
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego modułu weryfikacji certyfikatów X.509. Jest to przydatne w sytuacjach, gdy żaden z wbudowanych tryby walidacji certyfikatu X.509 nie jest odpowiednią do wymagań aplikacji. W tym przykładzie pokazano usługi, która ma niestandardowego modułu weryfikacji akceptuje własnym wystawionych certyfikatów. Klient używa takiego certyfikatu do uwierzytelnienia w usłudze.  
@@ -148,7 +149,7 @@ W tym przykładzie pokazano, jak do zaimplementowania niestandardowego modułu w
   
  Implementacja klienta ustawia certyfikat klienta do użycia.  
   
-```  
+```csharp
 // Create a client with Certificate endpoint configuration  
 CalculatorClient client = new CalculatorClient("Certificate");  
 try  
@@ -199,7 +200,7 @@ catch (Exception e)
   
  W przykładzie użyto niestandardowego obiektu X509CertificateValidator, aby zweryfikować certyfikaty. Próbka implementuje CustomX509CertificateValidator pochodną <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Zobacz dokumentację <xref:System.IdentityModel.Selectors.X509CertificateValidator> Aby uzyskać więcej informacji. W tym przykładzie niestandardowego modułu sprawdzania poprawności implementuje metodę sprawdzania poprawności do akceptowania dowolny certyfikat X.509 własnym wystawiony zgodnie z poniższym kodem.  
   
-```  
+```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator  
 {  
   public override void Validate ( X509Certificate2 certificate )  
@@ -213,7 +214,7 @@ public class CustomX509CertificateValidator : X509CertificateValidator
   
  Po zaimplementowaniu w kodzie usługi modułu sprawdzania poprawności hosta usługi musi informację o wystąpienia modułu sprawdzania poprawności do użycia. Jest to realizowane przy użyciu następującego kodu.  
   
-```  
+```csharp
 serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.Custom;  
 serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = new CustomX509CertificateValidator();  
 ```  
@@ -257,7 +258,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Następujące wiersze z pliku wsadowego pliku Setup.bat utworzenie certyfikatu serwera do użycia. % Zmienna % nazwa_serwera Określa nazwę serwera. Zmień tę wartość, aby określić nazwę serwera. Wartość domyślna to localhost.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -271,7 +272,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Następujące wiersze w pliku Setup.bat kopii pliku wsadowego certyfikatu serwera do klienta zaufanych osób magazynu. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert.exe nie są jawnie ufa systemu klienta. Jeśli masz już znajdującym się w klienta zaufanego certyfikatu głównego certyfikatu — na przykład Microsoft wystawiony certyfikat — ten krok zapełnianie magazynu certyfikatów klienta przy użyciu certyfikatu serwera nie jest wymagane.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -281,7 +282,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Certyfikat jest przechowywany w magazynie My (osobistych) w lokalizacji w magazynie CurrentUser.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Client cert setup starting  
     echo %USER_NAME%  
@@ -295,7 +296,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Następujące wiersze w pliku wsadowym pliku Setup.bat skopiuj certyfikat klienta w magazynie zaufanych osób. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert.exe nie są jawnie ufa systemu serwera. Jeśli masz już certyfikatu, który jest ścieżką do katalogu głównego w zaufanym certyfikatem głównym — na przykład certyfikat wystawiony Microsoft — ten krok zapełnianie magazynu certyfikatów na serwerze przy użyciu certyfikatu klienta nie jest wymagane.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   

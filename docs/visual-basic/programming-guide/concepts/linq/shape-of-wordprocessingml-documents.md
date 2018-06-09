@@ -2,11 +2,12 @@
 title: Kształt schemat WordprocessingML dokumentów (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 40d1013d5b5c131cc0b83c1b62bff2555ab179a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ff5f0e42336e894f0ee808edb61661c1f850284
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231411"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Kształt schemat WordprocessingML dokumentów (Visual Basic)
 W tym temacie przedstawiono kształtu XML dokumentu schemat WordprocessingML.  
@@ -87,9 +88,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- [Wprowadzenie do formatów pakietu Office (2007) Open XML](http://go.microsoft.com/fwlink/?LinkId=98093)  
+ [Wprowadzenie do formatów pakietu Office (2007) Open XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
- [Omówienie schemat WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094)  
+ [Omówienie schemat WordprocessingML](https://msdn.microsoft.com/en-us/library/aa212812(office.11).aspx)  
   
  [Pakietu Office 2003: Strona pobierania schematy odwołanie XML](http://go.microsoft.com/fwlink/?LinkId=98095)  
   

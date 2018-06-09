@@ -3,11 +3,12 @@ title: Dopasowanie wzorca — przewodnik C#
 description: Dowiedz się więcej o wzorzec dopasowany wyrażenia w języku C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231479"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca #
 
@@ -72,7 +73,7 @@ Te ograniczenia zostały usunięte, a teraz zapisać `switch` instrukcję, używ
 Dopasowanie wzorca `switch` używana składnia znane deweloperom, którzy użyli tradycyjnych stylu języka C `switch` instrukcji. Każdy `case` jest obliczane i wykonywany jest kod poniżej warunek, który odpowiada zmiennej wejściowego. Wykonanie kodu nie może "przechodzić" z jednego wyrażenia case do następnego; Składnia `case` instrukcji wymaga, aby każdy `case` kończyć `break`, `return`, lub `goto`.
 
 > [!NOTE]
-> `goto` Instrukcje, aby przejść do innej etykiety są prawidłowe tylko w wzorcu stałej instrukcji switch klasycznego.
+> `goto` Instrukcje, aby przejść do innej etykiety są prawidłowe tylko dla stałej wzorca (instrukcja switch klasycznego).
 
 Brak ważnych nowe zasady `switch` instrukcji. Ograniczenia dotyczące typu zmiennej w `switch` wyrażenia zostały usunięte.
 Dowolny typ, takich jak `object` w tym przykładzie, może być używany. Wyrażenia case nie są ograniczone do wartości stałych. Usunięcie tego ograniczenia oznacza, że zmiana kolejności `switch` sekcje mogą zmienić zachowanie programu.

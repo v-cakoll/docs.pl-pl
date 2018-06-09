@@ -1,14 +1,15 @@
 ---
 title: Mikrousług .NET. Architektura aplikacji .NET konteneryzowanych
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wstępne
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Mikrousług to moduły i niezależnie do wdrożenia usługi. Kontenery docker (dla systemów Linux i Windows) uprościć wdrażanie i testowanie przez funkcję tworzenia pakietów usługi i jego zależności w pojedynczą jednostkę, który następnie jest uruchamiany w izolowanym środowisku.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/06/2018
+ms.openlocfilehash: 58bb915c825cd69c68b3955573145ae6a1b1a6e4
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231424"
 ---
 ![](./media/cover.png)
 
@@ -26,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399, USA
 
-Copyright © 2017 by Microsoft Corporation
+Copyright © 2018 przez firmę Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć lub przesyłane w jakimkolwiek formularzu, lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
 

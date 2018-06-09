@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231516"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Wskazówki: wyświetlanie danych w formancie DataRepeater (Visual Studio)
 Ten przewodnik zawiera podstawowe scenariusz start zakończenie wyświetlanie powiązanych danych w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu.  
@@ -19,7 +20,7 @@ Ten przewodnik zawiera podstawowe scenariusz start zakończenie wyświetlanie po
 ## <a name="prerequisite"></a>Wymaganie wstępne  
  W tym przewodniku wymaga przykładowej bazy danych Northwind.  
   
- Jeśli nie ma tej bazy danych na komputerze deweloperskim, możesz pobrać go z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Jeśli nie ma tej bazy danych na komputerze deweloperskim, można go pobrać z Microsoft Download Center. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Omówienie  
  Pierwsza część tego przewodnika składa się z czterech głównych zadań:  

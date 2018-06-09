@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231466"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Niestety, nie ma żadnych szczegółów dotyczących tego błędu języka Visual Basic
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Możesz także zapytać innych deweloperów, korzystając z następujących forów:  
   
- [Język Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Język Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Udostępnia forum odpowiedzi na pytania o i ogólnych dyskusjach na składni języka Visual Basic i kompilatora.  
   
- [Visual Basic Interop and Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Visual Basic Interop and Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Udostępnia forum odpowiedzi na pytania dotyczące i problemy związane z uaktualnieniem do programu Visual Basic i Praca z funkcji współdziałania.  
   
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Udostępnia forum odpowiedzi na pytania dotyczące pracy w środowisku Visual Studio.  
   
- [Visual Basic General](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Visual Basic General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Udostępnia forum odpowiedzi na pytania dotyczące i problemy związane z języka Visual Basic, które nie zostały omówione w innych forach.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  

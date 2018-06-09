@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251171"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącznie z ich składni reguł, cel i model obiektów klasy źródłowej je. Rozszerzenia znaczników są funkcją ogólne języka XAML i stosowania usługi XAML .NET. W tym temacie szczegółowo w szczególności rozszerzenia znaczników do użycia w WPF XAML.  
@@ -88,7 +89,7 @@ W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącz
 -   Jeśli pojedynczych rozdzielonych tokenów nie zawierają jakiekolwiek oznaki equals, każdy token jest traktowany jako argument konstruktora. Każdy parametr konstruktora muszą zostać podane jako typ oczekiwany przez tego podpisu, a w prawidłowej kolejności oczekiwany przez ten podpis.  
   
     > [!NOTE]
-    >  Procesor XAML musi wywołać konstruktora, który odpowiada liczba argumentów określona liczba par. Z tego powodu w przypadku wdrażania rozszerzeń znaczników niestandardowych nie udostępniają wiele parametrów o tej samej liczby argumentów. To zachowanie występujące w sposób zachowania procesora XAML, jeśli istnieje więcej niż jedną ścieżkę konstruktora rozszerzenia znaczników z tej samej liczby parametrów nie jest zdefiniowany, ale należy przewidzieć procesora XAML będzie mógł zgłosić wyjątek, użycia, jeśli ta sytuacja występuje w Definicje typu rozszerzenia znaczników.  
+    >  Procesor XAML musi wywołać konstruktora, który odpowiada liczba argumentów określona liczba par. Z tego powodu w przypadku wdrażania rozszerzeń znaczników niestandardowych nie udostępniają wiele konstruktorów z tej samej liczby argumentów. To zachowanie występujące w sposób zachowania procesora XAML, jeśli istnieje więcej niż jedną ścieżkę konstruktora rozszerzenia znaczników z tej samej liczby parametrów nie jest zdefiniowany, ale należy przewidzieć procesora XAML będzie mógł zgłosić wyjątek, użycia, jeśli ta sytuacja występuje w Definicje typu rozszerzenia znaczników.  
   
 -   Gdy osoba rozdzielone tokeny zawierają znaki równości, a następnie procesora XAML najpierw wywołuje konstruktor domyślny dla rozszerzenia znacznika. Następnie każda para nazwa = wartość jest interpretowana jako nazwy właściwości, która istnieje na rozszerzenia znaczników i wartość do przypisania do tej właściwości.  
   

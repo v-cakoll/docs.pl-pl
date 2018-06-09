@@ -1,25 +1,26 @@
 ---
-title: Globalizacja i lokalizacja aplikacji .NET Framework
-ms.date: 03/30/2017
+title: Globalizacja i lokalizacja aplikacji .NET
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251002"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizacja i lokalizacja aplikacji .NET Framework
+# <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizacja aplikacji .NET
 Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), w tym aplikacji, która może być lokalizowany do co najmniej jednego języka, obejmuje trzy kroki: sprawdzenie, lokalizacja i globalizacja.  
   
  [Globalizacja](../../../docs/standard/globalization-localization/globalization.md)  
@@ -37,7 +38,7 @@ Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), 
   
 -   Skutkuje zlokalizowanymi aplikacjami, które są stabilniejsze i zawierają mniej błędów.  
   
- Program .NET Framework oferuje zaawansowaną obsługę dla rozwoju aplikacji gotowych do użycia na całym świecie i aplikacji zlokalizowanych. W szczególności wiele składowych typów w bibliotece klas programu .NET Framework wspiera globalizację, zwracając wartości, które odzwierciedlają konwencje kultury bieżącego użytkownika lub określonej kultury. Program .NET Framework obsługuje także zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.  
+ .NET obsługuje szeroką gamę tworzenie gotowe i zlokalizowanych aplikacji. W szczególności wiele wpisz członków globalizacji platformy .NET klasy biblioteki Pomocy przez zwrócenie wartości, które odzwierciedlać konwencje określonej kultury lub kultury bieżącego użytkownika. .NET obsługuje także zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.  
   
  Aby uzyskać dodatkowe informacje, zobacz [dokumentacji globalizacji](/globalization/).  
   
@@ -51,10 +52,10 @@ Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), 
  [Lokalizacja](../../../docs/standard/globalization-localization/localization.md)  
  Omówienie końcowego etapu tworzenia zlokalizowanych aplikacji, który polega na dostosowywaniu interfejsu użytkownika aplikacji dla określonych regionów lub kultur.  
   
- [Niezależne od kultury operacje na ciągach](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Opis sposobu użycia metod i klas programu .NET Framework, które domyślnie są zależne od kultury w celu uzyskania wyników niezależnych od kultury.  
+ [Operacje na ciągach niezależnych od kultury](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ Informacje dotyczące używania metod .NET i klasy, które są zależne od kultury domyślnie uzyskiwać wyniki, niezależnych od kultury.  
   
- [Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych do wydania](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ [Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowania gotowych do użycia na całym świecie aplikacji ASP.NET.  
   
 ## <a name="reference"></a>Tematy pomocy  

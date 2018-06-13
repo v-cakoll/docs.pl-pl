@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523387"
 ---
 # <a name="networking-in-windows-forms-applications"></a><span data-ttu-id="4de79-102">Sieć w aplikacjach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4de79-102">Networking in Windows Forms Applications</span></span>
 <span data-ttu-id="4de79-103">.NET Framework zawiera klasy służące do wyświetlania stron sieci Web, pobierania zawartości sieci Web, interakcji z pliku transfer protocol (FTP) witryn i korzystanie z usług sieci Web, co ułatwia tworzenie funkcji sieciowych do aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4de79-103">The .NET Framework provides classes for displaying Web pages, downloading Web content, interacting with file transfer protocol (FTP) sites, and consuming Web Services, making it easy to build network functionality into your application.</span></span> <span data-ttu-id="4de79-104">Następujące zasoby pomoże Ci zrozumieć technologii sieciowych programu .NET Framework i sposób ich integracji z formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="4de79-104">The following resources will help you understand the networking technologies of the .NET Framework and how you can integrate them into Windows Forms.</span></span>  

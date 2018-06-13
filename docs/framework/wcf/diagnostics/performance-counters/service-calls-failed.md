@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474210"
 ---
 # <a name="service-calls-failed"></a><span data-ttu-id="5cd89-102">Usługa: Wywołania zakończone niepowodzeniem</span><span class="sxs-lookup"><span data-stu-id="5cd89-102">Service: Calls Failed</span></span>
 <span data-ttu-id="5cd89-103">Nazwa licznika: Wywołania zakończone niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="5cd89-103">Counter Name: Calls Failed.</span></span>  

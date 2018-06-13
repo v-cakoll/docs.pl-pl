@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572973"
 ---
 # <a name="naming-guidelines"></a><span data-ttu-id="3b305-102">Zasady nazewnictwa</span><span class="sxs-lookup"><span data-stu-id="3b305-102">Naming Guidelines</span></span>
 <span data-ttu-id="3b305-103">Po konwencji nazewnictwa do tworzenia struktury spójny zestaw może być znaczący udział w ramach użyteczność.</span><span class="sxs-lookup"><span data-stu-id="3b305-103">Following a consistent set of naming conventions in the development of a framework can be a major contribution to the framework’s usability.</span></span> <span data-ttu-id="3b305-104">Umożliwia on framework ma być używany przez wielu deweloperów powszechnie rozdzielonych projektów.</span><span class="sxs-lookup"><span data-stu-id="3b305-104">It allows the framework to be used by many developers on widely separated projects.</span></span> <span data-ttu-id="3b305-105">Poza spójności formularza nazwy elementów framework łatwe zrozumienie i muszą zawierać funkcję każdego elementu.</span><span class="sxs-lookup"><span data-stu-id="3b305-105">Beyond consistency of form, names of framework elements must be easily understood and must convey the function of each element.</span></span>  

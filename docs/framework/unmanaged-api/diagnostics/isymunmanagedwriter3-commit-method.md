@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428957"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="a3f81-102">ISymUnmanagedWriter3::Commit — Metoda</span><span class="sxs-lookup"><span data-stu-id="a3f81-102">ISymUnmanagedWriter3::Commit Method</span></span>
 <span data-ttu-id="a3f81-103">Zatwierdza zmiany do tej pory zapisywane do strumienia.</span><span class="sxs-lookup"><span data-stu-id="a3f81-103">Commits the changes written so far to the stream.</span></span>  

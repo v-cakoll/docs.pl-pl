@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571400"
 ---
 # <a name="member-design-guidelines"></a><span data-ttu-id="e4db3-102">Wytyczne dotyczące projektowania elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="e4db3-102">Member Design Guidelines</span></span>
 <span data-ttu-id="e4db3-103">Metody, właściwości, zdarzenia, konstruktorów i pól zbiorowo są określane jako elementy członkowskie.</span><span class="sxs-lookup"><span data-stu-id="e4db3-103">Methods, properties, events, constructors, and fields are collectively referred to as members.</span></span> <span data-ttu-id="e4db3-104">Elementy członkowskie są ostatecznie oznacza za pomocą którego funkcji framework jest narażony na użytkowników końcowych RAM.</span><span class="sxs-lookup"><span data-stu-id="e4db3-104">Members are ultimately the means by which framework functionality is exposed to the end users of a framework.</span></span>  

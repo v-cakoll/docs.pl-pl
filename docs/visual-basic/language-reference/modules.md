@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595842"
 ---
 # <a name="modules-visual-basic"></a><span data-ttu-id="e275e-102">Moduły (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e275e-102">Modules (Visual Basic)</span></span>
 <span data-ttu-id="e275e-103">Visual Basic zawiera kilka modułów, które pozwalają uprościć typowe zadania w kodzie, w tym manipulowanie ciągami, wykonywania działań matematycznych, uzyskiwanie informacji o systemie, wykonywania działań plików i katalogów i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="e275e-103">Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on.</span></span> <span data-ttu-id="e275e-104">W poniższej tabeli wymieniono modułów języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e275e-104">The following table lists the modules provided by Visual Basic.</span></span>  

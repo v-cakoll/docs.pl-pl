@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450820"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="7d9d0-102">ICorProfilerCallback::ClassUnloadFinished — Metoda</span><span class="sxs-lookup"><span data-stu-id="7d9d0-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
 <span data-ttu-id="7d9d0-103">Powiadamia profilera klasy zakończenie zwalnianie.</span><span class="sxs-lookup"><span data-stu-id="7d9d0-103">Notifies the profiler that a class has finished unloading.</span></span>  

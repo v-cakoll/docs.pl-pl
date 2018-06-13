@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579577"
 ---
 # <a name="globalization"></a><span data-ttu-id="edc23-102">Globalizacja</span><span class="sxs-lookup"><span data-stu-id="edc23-102">Globalization</span></span>
 <span data-ttu-id="edc23-103">Globalizacja obejmuje projektowanie i tworzenie aplikacji gotowe, który obsługuje interfejsy zlokalizowanych i dane regionalne dla użytkowników w wielu kultur.</span><span class="sxs-lookup"><span data-stu-id="edc23-103">Globalization involves designing and developing a world-ready app that supports localized interfaces and regional data for users in multiple cultures.</span></span> <span data-ttu-id="edc23-104">Przed rozpoczęciem fazy projektowania, należy określić, które kultur aplikacji będzie obsługiwać.</span><span class="sxs-lookup"><span data-stu-id="edc23-104">Before beginning the design phase, you should determine which cultures your app will support.</span></span> <span data-ttu-id="edc23-105">Mimo że aplikacja jest przeznaczony dla jednego kultury lub regionu, jako jego domyślny, można projektować i zapisać go tak, aby łatwo może zostać rozszerzony do użytkowników w innych kultur lub regionach.</span><span class="sxs-lookup"><span data-stu-id="edc23-105">Although an app targets a single culture or region as its default, you can design and write it so that it can easily be extended to users in other cultures or regions.</span></span>  

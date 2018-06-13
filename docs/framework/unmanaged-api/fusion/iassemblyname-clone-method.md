@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428471"
 ---
 # <a name="iassemblynameclone-method"></a><span data-ttu-id="276ab-102">IAssemblyName::Clone — Metoda</span><span class="sxs-lookup"><span data-stu-id="276ab-102">IAssemblyName::Clone Method</span></span>
 <span data-ttu-id="276ab-103">Tworzy kopię pobieżną to [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="276ab-103">Creates a shallow copy of this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  

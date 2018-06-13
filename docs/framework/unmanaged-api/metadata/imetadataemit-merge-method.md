@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444554"
 ---
 # <a name="imetadataemitmerge-method"></a><span data-ttu-id="6702e-102">IMetaDataEmit::Merge — Metoda</span><span class="sxs-lookup"><span data-stu-id="6702e-102">IMetaDataEmit::Merge Method</span></span>
 <span data-ttu-id="6702e-103">Dodaje określony zakres zaimportowane do listy zakresów do scalenia.</span><span class="sxs-lookup"><span data-stu-id="6702e-103">Adds the specified imported scope to the list of scopes to be merged.</span></span>  

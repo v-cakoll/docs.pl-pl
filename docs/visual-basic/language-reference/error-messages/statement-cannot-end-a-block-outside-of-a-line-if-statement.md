@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596687"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a><span data-ttu-id="33782-102">Instrukcja nie może kończyć bloku poza wiersza &#39;Jeśli&#39; — instrukcja</span><span class="sxs-lookup"><span data-stu-id="33782-102">Statement cannot end a block outside of a line &#39;If&#39; statement</span></span>
 <span data-ttu-id="33782-103">Jeden wiersz `If` instrukcji zawiera wiele instrukcji oddzielone dwukropkiem (:), z których jeden jest `End` instrukcji dla bloków sterowania poza jeden wiersz `If`.</span><span class="sxs-lookup"><span data-stu-id="33782-103">A single-line `If` statement contains several statements separated by colons (:), one of which is an `End` statement for a control block outside the single-line `If`.</span></span> <span data-ttu-id="33782-104">Jednowierszowe `If` nie należy używać instrukcji `End If` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="33782-104">Single-line `If` statements do not use the `End If` statement.</span></span>  

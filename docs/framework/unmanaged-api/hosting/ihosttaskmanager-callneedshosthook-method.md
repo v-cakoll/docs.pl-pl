@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444307"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a><span data-ttu-id="1db5a-102">IHostTaskManager::CallNeedsHostHook — Metoda</span><span class="sxs-lookup"><span data-stu-id="1db5a-102">IHostTaskManager::CallNeedsHostHook Method</span></span>
 <span data-ttu-id="1db5a-103">Umożliwia hosta określić, czy środowisko uruchomieniowe języka wspólnego (CLR) może wbudowanego określonego wywołanie funkcji niezarządzanej.</span><span class="sxs-lookup"><span data-stu-id="1db5a-103">Enables the host to specify whether the common language runtime (CLR) can inline the specified call to an unmanaged function.</span></span>  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579850"
 ---
 # <a name="formatting-types-in-net"></a><span data-ttu-id="479fc-102">Typy formatowania w .NET</span><span class="sxs-lookup"><span data-stu-id="479fc-102">Formatting Types in .NET</span></span>
 <a name="Introduction"></a> <span data-ttu-id="479fc-103">Formatowanie to proces konwertowania wystąpienia klasy, struktury lub wyliczenia wartości do reprezentacji ciągu, często, tak aby wynikowy ciąg może być widoczny dla użytkowników lub deserializacji, aby przywrócić oryginalny typ danych.</span><span class="sxs-lookup"><span data-stu-id="479fc-103">Formatting is the process of converting an instance of a class, structure, or enumeration value to its string representation, often so that the resulting string can be displayed to users or deserialized to restore the original data type.</span></span> <span data-ttu-id="479fc-104">Ta konwersja może stanowić wiele wyzwań:</span><span class="sxs-lookup"><span data-stu-id="479fc-104">This conversion can pose a number of challenges:</span></span>  

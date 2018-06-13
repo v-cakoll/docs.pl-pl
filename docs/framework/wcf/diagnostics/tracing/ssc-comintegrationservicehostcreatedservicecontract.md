@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477009"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedservicecontract"></a><span data-ttu-id="e8bed-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span><span class="sxs-lookup"><span data-stu-id="e8bed-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span></span>
 <span data-ttu-id="e8bed-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span><span class="sxs-lookup"><span data-stu-id="e8bed-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span></span>  

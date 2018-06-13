@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448136"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a><span data-ttu-id="a807a-102">IMetaDataImport2::GetMethodSpecProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="a807a-102">IMetaDataImport2::GetMethodSpecProps Method</span></span>
 <span data-ttu-id="a807a-103">Pobiera token podpisu metadanych metody odwołuje się określony element MethodSpec.</span><span class="sxs-lookup"><span data-stu-id="a807a-103">Gets the metadata signature of the method referenced by the specified MethodSpec token.</span></span>  

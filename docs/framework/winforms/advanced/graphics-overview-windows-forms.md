@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521760"
 ---
 # <a name="graphics-overview-windows-forms"></a><span data-ttu-id="35eb6-102">Przegląd grafiki (formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="35eb6-102">Graphics Overview (Windows Forms)</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="35eb6-103"> jest graficzny interfejs urządzenia, umożliwiająca programistom do pisania aplikacji niezależnych od urządzenia.</span><span class="sxs-lookup"><span data-stu-id="35eb6-103"> is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="35eb6-104">Usługi [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] są udostępniane przez zestaw klas zarządzanych.</span><span class="sxs-lookup"><span data-stu-id="35eb6-104">The services of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] are exposed through a set of managed classes.</span></span>  

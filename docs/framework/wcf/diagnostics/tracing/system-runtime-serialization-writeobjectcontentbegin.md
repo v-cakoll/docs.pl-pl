@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478312"
 ---
 # <a name="systemruntimeserializationwriteobjectcontentbegin"></a><span data-ttu-id="507db-102">System.Runtime.Serialization.WriteObjectContentBegin</span><span class="sxs-lookup"><span data-stu-id="507db-102">System.Runtime.Serialization.WriteObjectContentBegin</span></span>
 <span data-ttu-id="507db-103">System.Runtime.Serialization.WriteObjectContentBegin</span><span class="sxs-lookup"><span data-stu-id="507db-103">System.Runtime.Serialization.WriteObjectContentBegin</span></span>  

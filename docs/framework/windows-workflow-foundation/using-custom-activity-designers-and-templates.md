@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518323"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a><span data-ttu-id="f351c-102">Przy użyciu projektantów działań niestandardowych i szablonów</span><span class="sxs-lookup"><span data-stu-id="f351c-102">Using Custom Activity Designers and Templates</span></span>
 <span data-ttu-id="f351c-103">Ta sekcja zawiera tematy dotyczące tworzenia działań niestandardowych projektantów i Szablony działań niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="f351c-103">This section contains topics describing how to create custom activity designers and custom activity templates.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447931"
 ---
 # <a name="imetadataimportresetenum-method"></a><span data-ttu-id="3bafc-102">IMetaDataImport::ResetEnum — Metoda</span><span class="sxs-lookup"><span data-stu-id="3bafc-102">IMetaDataImport::ResetEnum Method</span></span>
 <span data-ttu-id="3bafc-103">Resetuje określonego modułu wyliczającego do określonej pozycji.</span><span class="sxs-lookup"><span data-stu-id="3bafc-103">Resets the specified enumerator to the specified position.</span></span>  

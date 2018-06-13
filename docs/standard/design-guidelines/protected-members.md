@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571088"
 ---
 # <a name="protected-members"></a><span data-ttu-id="9cb1b-102">Chronione elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="9cb1b-102">Protected Members</span></span>
 <span data-ttu-id="9cb1b-103">Chronione elementy członkowskie samodzielnie nie dostarcza żadnych rozszerzalności, ale może wprowadzić bardziej zaawansowanych rozszerzeń przez podklasy.</span><span class="sxs-lookup"><span data-stu-id="9cb1b-103">Protected members by themselves do not provide any extensibility, but they can make extensibility through subclassing more powerful.</span></span> <span data-ttu-id="9cb1b-104">One może służyć do udostępnienia opcje zaawansowane dostosowywanie bez niepotrzebnie komplikując głównego interfejs publiczny.</span><span class="sxs-lookup"><span data-stu-id="9cb1b-104">They can be used to expose advanced customization options without unnecessarily complicating the main public interface.</span></span>  

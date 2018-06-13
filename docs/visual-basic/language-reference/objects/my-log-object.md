@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596024"
 ---
 # <a name="mylog-object"></a><span data-ttu-id="529c4-102">My.Log — Obiekt</span><span class="sxs-lookup"><span data-stu-id="529c4-102">My.Log Object</span></span>
 <span data-ttu-id="529c4-103">Udostępnia właściwości i metody dla zapisywania informacji o zdarzeń i wyjątków na odbiorniki dzienników aplikacji.</span><span class="sxs-lookup"><span data-stu-id="529c4-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  

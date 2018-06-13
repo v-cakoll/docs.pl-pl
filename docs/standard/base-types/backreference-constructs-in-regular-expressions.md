@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574611"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a><span data-ttu-id="d8434-102">Konstrukcje dopasowań w wyrażeniach regularnych</span><span class="sxs-lookup"><span data-stu-id="d8434-102">Backreference Constructs in Regular Expressions</span></span>
 <span data-ttu-id="d8434-103">Odwołania wstecznego zapewnić wygodny sposób identyfikowania powtarzających się znaków lub podciąg ciągu.</span><span class="sxs-lookup"><span data-stu-id="d8434-103">Backreferences provide a convenient way to identify a repeated character or substring within a string.</span></span> <span data-ttu-id="d8434-104">Na przykład jeśli ciąg wejściowy zawiera wiele wystąpień dowolnego podciąg, można odpowiada pierwszego wystąpienia z grupą przechwytywanie, a następnie użyć dopasuje odpowiadające kolejne wystąpienia podciąg.</span><span class="sxs-lookup"><span data-stu-id="d8434-104">For example, if the input string contains multiple occurrences of an arbitrary substring, you can match the first occurrence with a capturing group, and then use a backreference to match subsequent occurrences of the substring.</span></span>  

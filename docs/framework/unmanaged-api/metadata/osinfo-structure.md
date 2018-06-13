@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450053"
 ---
 # <a name="osinfo-structure"></a><span data-ttu-id="686e9-102">OSINFO — Struktura</span><span class="sxs-lookup"><span data-stu-id="686e9-102">OSINFO Structure</span></span>
 <span data-ttu-id="686e9-103">Zawiera szczegółowe informacje dotyczące systemu operacyjnego dla zestawu lub modułu.</span><span class="sxs-lookup"><span data-stu-id="686e9-103">Contains details about the operating system for an assembly or module.</span></span>  

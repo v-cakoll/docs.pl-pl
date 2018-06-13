@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478195"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a><span data-ttu-id="b4944-102">System.ServiceModel.Channels.PeerFloodedMessageNotPropagated</span><span class="sxs-lookup"><span data-stu-id="b4944-102">System.ServiceModel.Channels.PeerFloodedMessageNotPropagated</span></span>
 <span data-ttu-id="b4944-103">Komunikat odebranych przez węzeł równorzędny, ale nie są propagowane do sąsiadów.</span><span class="sxs-lookup"><span data-stu-id="b4944-103">A message was received by the PeerNode, but not propagated to neighbors.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478169"
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a><span data-ttu-id="c3d0b-102">System.ServiceModel.Channels.MsmqPoisonMessageRejected</span><span class="sxs-lookup"><span data-stu-id="c3d0b-102">System.ServiceModel.Channels.MsmqPoisonMessageRejected</span></span>
 <span data-ttu-id="c3d0b-103">Trująca wiadomość została odrzucona.</span><span class="sxs-lookup"><span data-stu-id="c3d0b-103">Poison message rejected.</span></span>  

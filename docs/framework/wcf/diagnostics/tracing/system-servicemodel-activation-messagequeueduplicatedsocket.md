@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476216"
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedsocket"></a><span data-ttu-id="c6e53-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocket</span><span class="sxs-lookup"><span data-stu-id="c6e53-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocket</span></span>
 <span data-ttu-id="c6e53-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocket</span><span class="sxs-lookup"><span data-stu-id="c6e53-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocket</span></span>  

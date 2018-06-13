@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448378"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a><span data-ttu-id="7d350-102">IMetaDataImport2::EnumMethodSpecs — Metoda</span><span class="sxs-lookup"><span data-stu-id="7d350-102">IMetaDataImport2::EnumMethodSpecs Method</span></span>
 <span data-ttu-id="7d350-103">Pobiera moduł wyliczający dla tablicy tokenów MethodSpec skojarzone z określonym MethodDef lub MemberRef token.</span><span class="sxs-lookup"><span data-stu-id="7d350-103">Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.</span></span>  

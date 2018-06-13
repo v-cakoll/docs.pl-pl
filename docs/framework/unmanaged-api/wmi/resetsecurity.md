@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457909"
 ---
 # <a name="resetsecurity-function"></a><span data-ttu-id="9585e-103">Funkcja ResetSecurity</span><span class="sxs-lookup"><span data-stu-id="9585e-103">ResetSecurity function</span></span>
 <span data-ttu-id="9585e-104">Przypisuje token personifikacji dostarczony do bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="9585e-104">Assigns the supplied impersonation token to the current thread.</span></span>   

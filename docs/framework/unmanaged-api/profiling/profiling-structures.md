@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456501"
 ---
 # <a name="profiling-structures"></a><span data-ttu-id="e8fc9-102">Profiling — Struktury</span><span class="sxs-lookup"><span data-stu-id="e8fc9-102">Profiling Structures</span></span>
 <span data-ttu-id="e8fc9-103">W tej sekcji opisano niezarządzane struktury, których używa interfejsu API profilowania.</span><span class="sxs-lookup"><span data-stu-id="e8fc9-103">This section describes the unmanaged structures that the profiling API uses.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448912"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a><span data-ttu-id="69fb2-102">IMetaDataImport::GetMethodProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="69fb2-102">IMetaDataImport::GetMethodProps Method</span></span>
 <span data-ttu-id="69fb2-103">Pobiera metadane skojarzone z metody odwołuje się określony MethodDef token.</span><span class="sxs-lookup"><span data-stu-id="69fb2-103">Gets the metadata associated with the method referenced by the specified MethodDef token.</span></span>  

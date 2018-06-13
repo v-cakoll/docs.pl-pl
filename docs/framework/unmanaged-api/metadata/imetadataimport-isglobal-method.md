@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447801"
 ---
 # <a name="imetadataimportisglobal-method"></a><span data-ttu-id="dc6ad-102">IMetaDataImport::IsGlobal — Metoda</span><span class="sxs-lookup"><span data-stu-id="dc6ad-102">IMetaDataImport::IsGlobal Method</span></span>
 <span data-ttu-id="dc6ad-103">Pobiera wartość wskazującą, czy pola, metody lub typu reprezentowanego przez token określonych metadanych, ma zasięg globalny.</span><span class="sxs-lookup"><span data-stu-id="dc6ad-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  

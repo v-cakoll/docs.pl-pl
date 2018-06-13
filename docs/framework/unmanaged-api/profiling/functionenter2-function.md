@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452393"
 ---
 # <a name="functionenter2-function"></a><span data-ttu-id="f306f-102">FunctionEnter2 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="f306f-102">FunctionEnter2 Function</span></span>
 <span data-ttu-id="f306f-103">Powiadamia profilera, czy formant jest przekazywany do funkcji i zawiera informacje o stosie argumenty ramki i funkcji.</span><span class="sxs-lookup"><span data-stu-id="f306f-103">Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments.</span></span> <span data-ttu-id="f306f-104">Ta funkcja zastępuje [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="f306f-104">This function supersedes the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) function.</span></span>  

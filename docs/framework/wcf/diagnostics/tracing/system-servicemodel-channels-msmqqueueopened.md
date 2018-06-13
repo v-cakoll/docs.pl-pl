@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477479"
 ---
 # <a name="systemservicemodelchannelsmsmqqueueopened"></a><span data-ttu-id="e1a0d-102">System.ServiceModel.Channels.MsmqQueueOpened</span><span class="sxs-lookup"><span data-stu-id="e1a0d-102">System.ServiceModel.Channels.MsmqQueueOpened</span></span>
 <span data-ttu-id="e1a0d-103">System.ServiceModel.Channels.MsmqQueueOpened</span><span class="sxs-lookup"><span data-stu-id="e1a0d-103">System.ServiceModel.Channels.MsmqQueueOpened</span></span>  

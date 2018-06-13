@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515163"
 ---
 # <a name="asynchronous-communication"></a><span data-ttu-id="b0653-102">Komunikacji asynchronicznej</span><span class="sxs-lookup"><span data-stu-id="b0653-102">Asynchronous Communication</span></span>
 <span data-ttu-id="b0653-103">W przykładzie pokazano, jak komunikację między dwóch różnych usług Windows Workflow Foundation (WF) jest wykonywane asynchronicznie domyślnie.</span><span class="sxs-lookup"><span data-stu-id="b0653-103">This sample demonstrates how the communication between two different Windows Workflow Foundation (WF) services is done asynchronously by default.</span></span>  

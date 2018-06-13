@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431991"
 ---
 # <a name="iclrhostbindingpolicymanager-interface"></a><span data-ttu-id="ca894-102">ICLRHostBindingPolicyManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="ca894-102">ICLRHostBindingPolicyManager Interface</span></span>
 <span data-ttu-id="ca894-103">Udostępnia metody dla hosta ocenić bieżące zasady powiązania i komunikować się zmiany zasad dla określonego zestawu.</span><span class="sxs-lookup"><span data-stu-id="ca894-103">Provides methods for the host to evaluate current binding policy and communicate policy changes for a specified assembly.</span></span>  

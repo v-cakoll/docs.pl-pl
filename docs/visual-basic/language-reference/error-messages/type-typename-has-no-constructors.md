@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595036"
 ---
 # <a name="type-39lttypenamegt39-has-no-constructors"></a><span data-ttu-id="82e9c-102">Typ &#39; &lt;typename&gt; &#39; nie ma konstruktorów</span><span class="sxs-lookup"><span data-stu-id="82e9c-102">Type &#39;&lt;typename&gt;&#39; has no constructors</span></span>
 <span data-ttu-id="82e9c-103">Typ nie obsługuje wywołania `Sub New()`.</span><span class="sxs-lookup"><span data-stu-id="82e9c-103">A type does not support a call to `Sub New()`.</span></span> <span data-ttu-id="82e9c-104">Jedną z możliwych przyczyn jest kompilatora uszkodzony lub plik binarny.</span><span class="sxs-lookup"><span data-stu-id="82e9c-104">One possible cause is a corrupted compiler or binary file.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580552"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a><span data-ttu-id="29730-102">Porady: obsługa wyjątków w pętlach równoległych</span><span class="sxs-lookup"><span data-stu-id="29730-102">How to: Handle Exceptions in Parallel Loops</span></span>
 <span data-ttu-id="29730-103"><xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> przeciążenia nie ma żadnych specjalnych mechanizm obsługi wyjątków, które może zostać zgłoszony.</span><span class="sxs-lookup"><span data-stu-id="29730-103">The <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> overloads do not have any special mechanism to handle exceptions that might be thrown.</span></span> <span data-ttu-id="29730-104">W związku z tym są podobne do zwykłych `for` i `foreach` pętli (`For` i `For Each` w języku Visual Basic); wystąpił nieobsługiwany wyjątek powoduje pętli zakończenie natychmiast.</span><span class="sxs-lookup"><span data-stu-id="29730-104">In this respect, they resemble regular `for` and `foreach` loops (`For` and `For Each` in Visual Basic); an unhandled exception causes the loop to terminate immediately.</span></span>  

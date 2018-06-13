@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450635"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="5af1d-102">ICorProfilerCallback::AssemblyLoadFinished — Metoda</span><span class="sxs-lookup"><span data-stu-id="5af1d-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
 <span data-ttu-id="5af1d-103">Powiadamia profilera zakończenie zestawu ładowania.</span><span class="sxs-lookup"><span data-stu-id="5af1d-103">Notifies the profiler that an assembly has finished loading.</span></span>  

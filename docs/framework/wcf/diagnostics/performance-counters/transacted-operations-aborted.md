@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473297"
 ---
 # <a name="transacted-operations-aborted"></a><span data-ttu-id="31f3a-102">Przerwane operacje transakcyjne</span><span class="sxs-lookup"><span data-stu-id="31f3a-102">Transacted Operations Aborted</span></span>
 <span data-ttu-id="31f3a-103">Nazwa licznika: Przerwane operacje transakcyjne.</span><span class="sxs-lookup"><span data-stu-id="31f3a-103">Counter Name: Transacted Operations Aborted.</span></span>  

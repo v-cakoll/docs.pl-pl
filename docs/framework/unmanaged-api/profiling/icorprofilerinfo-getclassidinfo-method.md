@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453688"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a><span data-ttu-id="a6454-102">ICorProfilerInfo::GetClassIDInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="a6454-102">ICorProfilerInfo::GetClassIDInfo Method</span></span>
 <span data-ttu-id="a6454-103">Pobiera element nadrzędny Moduł i token metadanych dla określonej klasy.</span><span class="sxs-lookup"><span data-stu-id="a6454-103">Gets the parent module and the metadata token for the specified class.</span></span>  

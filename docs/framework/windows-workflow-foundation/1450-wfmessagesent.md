@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511202"
 ---
 # <a name="1450---wfmessagesent"></a><span data-ttu-id="23418-102">1450 - WfMessageSent</span><span class="sxs-lookup"><span data-stu-id="23418-102">1450 - WfMessageSent</span></span>
 ## <a name="properties"></a><span data-ttu-id="23418-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="23418-103">Properties</span></span>  

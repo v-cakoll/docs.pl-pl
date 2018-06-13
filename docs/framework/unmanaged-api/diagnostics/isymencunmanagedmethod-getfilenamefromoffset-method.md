@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432659"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="ab321-102">ISymENCUnmanagedMethod::GetFileNameFromOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="ab321-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
 <span data-ttu-id="ab321-103">Pobiera nazwę pliku dla wiersz skojarzony z przesunięciem.</span><span class="sxs-lookup"><span data-stu-id="ab321-103">Gets the file name for the line associated with an offset.</span></span>  

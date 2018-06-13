@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518388"
 ---
 # <a name="absolute-delay"></a><span data-ttu-id="e698e-102">Opóźnienie bezwzględne</span><span class="sxs-lookup"><span data-stu-id="e698e-102">Absolute Delay</span></span>
 <span data-ttu-id="e698e-103">Główne scenariusz dla tego przykładu jest opóźnienia do określonej <xref:System.DateTime> przy użyciu czasomierze trwałe w aplikacji przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="e698e-103">The main scenario for this sample is to delay until a specified <xref:System.DateTime> using durable timers in a workflow application.</span></span> <span data-ttu-id="e698e-104">To jest inny niż przy użyciu wbudowanych <xref:System.Activities.Statements.Delay> działania, jak to tylko umożliwi to opóźnienie dla danego <xref:System.TimeSpan> (lub liczba minut i sekund).</span><span class="sxs-lookup"><span data-stu-id="e698e-104">This is different from using the built-in <xref:System.Activities.Statements.Delay> activity as this will only allow you to delay for a given <xref:System.TimeSpan> (or number of minutes/seconds).</span></span>  

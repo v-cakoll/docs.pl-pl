@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461571"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a><span data-ttu-id="dfa3e-102">ICorProfilerInfo3::GetRuntimeInformation — Metoda</span><span class="sxs-lookup"><span data-stu-id="dfa3e-102">ICorProfilerInfo3::GetRuntimeInformation Method</span></span>
 <span data-ttu-id="dfa3e-103">Zawiera informacje o wersji dotyczące środowisko uruchomieniowe języka wspólnego (CLR), który jest poddawany profilowaniu.</span><span class="sxs-lookup"><span data-stu-id="dfa3e-103">Provides version information about the common language runtime (CLR) that is being profiled.</span></span>  

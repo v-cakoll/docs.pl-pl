@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596876"
 ---
 # <a name="-visual-basic-reference"></a><span data-ttu-id="18148-102">$ (Odwołanie w Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="18148-102">$ (Visual Basic Reference)</span></span>
 

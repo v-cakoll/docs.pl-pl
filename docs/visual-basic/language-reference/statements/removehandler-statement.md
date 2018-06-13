@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597991"
 ---
 # <a name="removehandler-statement"></a><span data-ttu-id="5a940-102">RemoveHandler — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="5a940-102">RemoveHandler Statement</span></span>
 <span data-ttu-id="5a940-103">Usuwa skojarzenie między zdarzeniem i program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="5a940-103">Removes the association between an event and an event handler.</span></span>  

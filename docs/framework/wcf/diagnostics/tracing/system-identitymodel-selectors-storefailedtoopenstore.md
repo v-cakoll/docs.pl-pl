@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476700"
 ---
 # <a name="systemidentitymodelselectorsstorefailedtoopenstore"></a><span data-ttu-id="45814-102">System.IdentityModel.Selectors.StoreFailedToOpenStore</span><span class="sxs-lookup"><span data-stu-id="45814-102">System.IdentityModel.Selectors.StoreFailedToOpenStore</span></span>
 <span data-ttu-id="45814-103">System.IdentityModel.Selectors.StoreFailedToOpenStore</span><span class="sxs-lookup"><span data-stu-id="45814-103">System.IdentityModel.Selectors.StoreFailedToOpenStore</span></span>  

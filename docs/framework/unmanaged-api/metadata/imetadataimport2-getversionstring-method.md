@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448729"
 ---
 # <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="66f32-102">IMetaDataImport2::GetVersionString — Metoda</span><span class="sxs-lookup"><span data-stu-id="66f32-102">IMetaDataImport2::GetVersionString Method</span></span>
 <span data-ttu-id="66f32-103">Pobiera numer wersji środowiska uruchomieniowego, który został użyty do budowania zestawu.</span><span class="sxs-lookup"><span data-stu-id="66f32-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  

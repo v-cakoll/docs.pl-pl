@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766637"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
 Ta sekcja zawiera informacje o język Language-Integrated zapytania (LINQ) standardowych operatorów zapytań obsługiwane i nieobsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Wiele LINQ standardowych operatorów zapytań ma zastąpionej wersji, która akceptuje argument liczby całkowitej. Argument całkowitą odpowiada liczony od zera indeks w sekwencji, że jest on obsługiwany przez, <xref:System.Collections.Generic.IEqualityComparer%601>, lub <xref:System.Collections.Generic.IComparer%601>. Inaczej, te wersje przeciążone LINQ standardowych operatorów zapytań nie są obsługiwane, a następnie podjęto próbę użycia ich spowoduje zgłoszenie wyjątku.  

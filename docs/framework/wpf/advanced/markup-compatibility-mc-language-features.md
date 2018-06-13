@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546572"
 ---
 # <a name="markup-compatibility-mc-language-features"></a><span data-ttu-id="4d176-102">Zgodność znacznikowania (mc:) funkcje językowe</span><span class="sxs-lookup"><span data-stu-id="4d176-102">Markup Compatibility (mc:) Language Features</span></span>
 ## <a name="in-this-section"></a><span data-ttu-id="4d176-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="4d176-103">In This Section</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746426"
 ---
 # <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="cd46d-102">&lt;mailSettings&gt; elementu (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="cd46d-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="cd46d-103">Konfiguruje opcje wysyłania poczty.</span><span class="sxs-lookup"><span data-stu-id="cd46d-103">Configures mail sending options.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544235"
 ---
 # <a name="input-wpf"></a><span data-ttu-id="8ba09-102">Dane wejściowe (WPF)</span><span class="sxs-lookup"><span data-stu-id="8ba09-102">Input (WPF)</span></span>
 <span data-ttu-id="8ba09-103">Windows Presentation Foundation (WPF) obsługuje kilka typów danych wejściowych.</span><span class="sxs-lookup"><span data-stu-id="8ba09-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="8ba09-104">Tych danych wejściowych łącznie z tekstem, touch, mysz, polecenia, fokus, touch, przeciągnij i upuść i elektroniczne pismo odręczne.</span><span class="sxs-lookup"><span data-stu-id="8ba09-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="8ba09-105">W tej sekcji opisano tematów związanych z danych wejściowych na platformie WPF.</span><span class="sxs-lookup"><span data-stu-id="8ba09-105">This section describes topics related to input in WPF.</span></span>  

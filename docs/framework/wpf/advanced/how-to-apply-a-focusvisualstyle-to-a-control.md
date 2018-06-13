@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543735"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a><span data-ttu-id="34678-102">Jak zastosować FocusVisualStyle do formantu</span><span class="sxs-lookup"><span data-stu-id="34678-102">How to: Apply a FocusVisualStyle to a Control</span></span>
 <span data-ttu-id="34678-103">W tym przykładzie przedstawiono sposób tworzenia stylu wizualnego fokusu w zasobach i zastosować go do formantu, za pomocą <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="34678-103">This example shows you how to create a focus visual style in resources and apply the style to a control, using the <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> property.</span></span>  

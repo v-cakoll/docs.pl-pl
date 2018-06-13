@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561953"
 ---
 # <a name="how-to-rotate-an-object"></a><span data-ttu-id="b52ed-102">Jak obrócić obiekt</span><span class="sxs-lookup"><span data-stu-id="b52ed-102">How to: Rotate an Object</span></span>
 <span data-ttu-id="b52ed-103">W tym przykładzie pokazano, jak obiektu.</span><span class="sxs-lookup"><span data-stu-id="b52ed-103">This example shows how to rotate an object.</span></span> <span data-ttu-id="b52ed-104">Najpierw tworzony <xref:System.Windows.Media.RotateTransform> , a następnie określa jego <xref:System.Windows.Media.RotateTransform.Angle%2A> stopni.</span><span class="sxs-lookup"><span data-stu-id="b52ed-104">The example first creates a <xref:System.Windows.Media.RotateTransform> and then specifies its <xref:System.Windows.Media.RotateTransform.Angle%2A> in degrees.</span></span>  

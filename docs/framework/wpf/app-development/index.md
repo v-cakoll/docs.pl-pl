@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548889"
 ---
 # <a name="application-development"></a><span data-ttu-id="99b8f-102">Projektowanie aplikacji</span><span class="sxs-lookup"><span data-stu-id="99b8f-102">Application Development</span></span>
 <a name="introduction"></a> <span data-ttu-id="99b8f-103">Windows Presentation Foundation (WPF) to platforma prezentacji, która umożliwia tworzenie następujących typów aplikacji:</span><span class="sxs-lookup"><span data-stu-id="99b8f-103">Windows Presentation Foundation (WPF) is a presentation framework that can be used to develop the following types of applications:</span></span>  

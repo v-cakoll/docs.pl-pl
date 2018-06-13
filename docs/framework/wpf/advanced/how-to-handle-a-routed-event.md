@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544320"
 ---
 # <a name="how-to-handle-a-routed-event"></a><span data-ttu-id="a6be8-102">Jak obsłużyć zdarzenie trasowane</span><span class="sxs-lookup"><span data-stu-id="a6be8-102">How to: Handle a Routed Event</span></span>
 <span data-ttu-id="a6be8-103">Ten przykład przedstawia sposób propagacji pracy zdarzenia i jak napisać programu obsługi, który może przetwarzać danych kierowanego zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="a6be8-103">This example shows how bubbling events work and how to write a handler that can process the routed event data.</span></span>  

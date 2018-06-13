@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545535"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a><span data-ttu-id="91d9c-102">Inicjalizacja elementów obiektu poza drzewem obiektu</span><span class="sxs-lookup"><span data-stu-id="91d9c-102">Initialization for Object Elements Not in an Object Tree</span></span>
 <span data-ttu-id="91d9c-103">Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inicjowania są odroczone do procesów, które są zwykle oparte na elementu podłączonych do drzewa logicznego lub wizualnego drzewa.</span><span class="sxs-lookup"><span data-stu-id="91d9c-103">Some aspects of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] initialization are deferred to processes that typically rely on that element being connected to either the logical tree or visual tree.</span></span> <span data-ttu-id="91d9c-104">W tym temacie opisano kroki, które mogą być konieczne w celu zainicjowania elementu, który nie jest podłączony do obu drzewa.</span><span class="sxs-lookup"><span data-stu-id="91d9c-104">This topic describes the steps that may be necessary in order to initialize an element that is not connected to either tree.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549607"
 ---
 # <a name="opentype-font-features"></a><span data-ttu-id="6f3c0-102">OpenType funkcje czcionki</span><span class="sxs-lookup"><span data-stu-id="6f3c0-102">OpenType Font Features</span></span>
 <span data-ttu-id="6f3c0-103">W tym temacie omówiono niektóre z kluczowych funkcji usługi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] technologii czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6f3c0-103">This topic provides an overview of some of the key features of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font technology in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  

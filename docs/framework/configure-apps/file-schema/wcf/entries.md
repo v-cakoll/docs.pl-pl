@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746712"
 ---
 # <a name="ltentriesgt"></a><span data-ttu-id="691d6-102">&lt;Wpisy&gt;</span><span class="sxs-lookup"><span data-stu-id="691d6-102">&lt;entries&gt;</span></span>
 <span data-ttu-id="691d6-103">Wpis routingu, które zawierają mapowania między filtrami i docelowymi punktami końcowymi do wysyłania komunikatów do gdy kryteria filtru są spełnione.</span><span class="sxs-lookup"><span data-stu-id="691d6-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

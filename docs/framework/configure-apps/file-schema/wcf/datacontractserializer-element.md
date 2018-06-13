@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752770"
 ---
 # <a name="ltdatacontractserializergt"></a><span data-ttu-id="2878b-102">&lt;dataContractSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="2878b-102">&lt;dataContractSerializer&gt;</span></span>
 <span data-ttu-id="2878b-103">Zawiera dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="2878b-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="2878b-104">Ten element występuje w dwóch różnych hierarchii.</span><span class="sxs-lookup"><span data-stu-id="2878b-104">This element occurs in two different hierarchies.</span></span> <span data-ttu-id="2878b-105">Co znajduje się w poniższej sekcji hierarchii schematu, a druga jest wymieniony w sekcji uwag.</span><span class="sxs-lookup"><span data-stu-id="2878b-105">One is listed the following Schema Hierarchy section and the other is listed in the Remarks section.</span></span>  

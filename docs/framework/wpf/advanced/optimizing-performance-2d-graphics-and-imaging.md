@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549104"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a><span data-ttu-id="3bee0-102">Optymalizacja wydajności: grafika 2D i obrazowanie</span><span class="sxs-lookup"><span data-stu-id="3bee0-102">Optimizing Performance: 2D Graphics and Imaging</span></span>
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="3bee0-103"> oferuje szeroką gamę grafiki 2D oraz obsługi obrazów funkcje, które mogą być optymalizowane do wymagań aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3bee0-103"> provides a wide range of 2D graphics and imaging functionality that can be optimized for your application requirements.</span></span> <span data-ttu-id="3bee0-104">Ten temat zawiera informacje o optymalizacji wydajności w tych obszarach.</span><span class="sxs-lookup"><span data-stu-id="3bee0-104">This topic provides information about performance optimization in those areas.</span></span>  

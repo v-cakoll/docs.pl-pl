@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545974"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a><span data-ttu-id="7e2e5-102">Jak zdalnie przeglądać status drukarek</span><span class="sxs-lookup"><span data-stu-id="7e2e5-102">How to: Remotely Survey the Status of Printers</span></span>
 <span data-ttu-id="7e2e5-103">W danym momencie w średnich i dużych firmach może być wiele drukarek, które nie są pracy z powodu papier lub jest poza papier lub inne problemy sytuacji.</span><span class="sxs-lookup"><span data-stu-id="7e2e5-103">At any given time at medium and large companies there may be multiple printers that are not working due to a paper jam or being out of paper or some other problematic situation.</span></span> <span data-ttu-id="7e2e5-104">Bogaty zestaw właściwości drukarki w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework stanowić sposób wykonywania szybką ankietę stanów drukarek.</span><span class="sxs-lookup"><span data-stu-id="7e2e5-104">The rich set of printer properties exposed in the [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] of Microsoft .NET Framework provide a means for performing a rapid survey of the states of printers.</span></span>  

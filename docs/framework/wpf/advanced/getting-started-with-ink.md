@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546240"
 ---
 # <a name="getting-started-with-ink"></a><span data-ttu-id="fd2d9-102">Wprowadzenie do użycia atramentu</span><span class="sxs-lookup"><span data-stu-id="fd2d9-102">Getting Started with Ink</span></span>
 <span data-ttu-id="fd2d9-103">Włączenie elektroniczne pismo odręczne aplikacji jest łatwiejsze niż kiedykolwiek.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="fd2d9-104">Odręczne powstał z jest następstwem COM i formularze systemu Windows metody programowania do osiągnięcia Pełna integracja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd2d9-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="fd2d9-105">Nie trzeba zainstalować oddzielne zestawy SDK lub bibliotek środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-105">You do not need to install separate SDKs or runtime libraries.</span></span>  

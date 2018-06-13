@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543484"
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a><span data-ttu-id="b560c-102">Jak wykazać formaty danych w obiekcie danych</span><span class="sxs-lookup"><span data-stu-id="b560c-102">How to: List the Data Formats in a Data Object</span></span>
 <span data-ttu-id="b560c-103">W poniższych przykładach pokazano, jak używać <xref:System.Windows.DataObject.GetFormats%2A> przeciążenia metody get tablica ciągów określające każdego format danych jest dostępna w obiekcie danych.</span><span class="sxs-lookup"><span data-stu-id="b560c-103">The following examples show how to use the <xref:System.Windows.DataObject.GetFormats%2A> method overloads get an array of strings denoting each data format that is available in a data object.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552782"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a><span data-ttu-id="5e062-102">Jak użyć niestandardowego menu kontekstowego za pomocą TextBox</span><span class="sxs-lookup"><span data-stu-id="5e062-102">How to: Use a Custom Context Menu with a TextBox</span></span>
 <span data-ttu-id="5e062-103">W tym przykładzie pokazano, jak definiować i wdrażać menu kontekstowe niestandardowych proste <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="5e062-103">This example shows how to define and implement a simple custom context menu for a <xref:System.Windows.Controls.TextBox>.</span></span>  

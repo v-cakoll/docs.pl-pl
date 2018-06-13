@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549062"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a><span data-ttu-id="f4c5b-102">Struktura wejścia ze zdolnością do współpracy Windows Forms i WPF</span><span class="sxs-lookup"><span data-stu-id="f4c5b-102">Windows Forms and WPF Interoperability Input Architecture</span></span>
 <span data-ttu-id="f4c5b-103">Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] musi mieć obu tych technologii przetwarzania wejściowych odpowiedniej klawiatury.</span><span class="sxs-lookup"><span data-stu-id="f4c5b-103">Interoperation between the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requires that both technologies have the appropriate keyboard input processing.</span></span> <span data-ttu-id="f4c5b-104">W tym temacie opisano, jak te technologie zaimplementować klawiatury i przetwarzania umożliwia sprawne współdziałanie w aplikacjach hybrydowego komunikatów.</span><span class="sxs-lookup"><span data-stu-id="f4c5b-104">This topic describes how these technologies implement keyboard and message processing to enable smooth interoperation in hybrid applications.</span></span>  

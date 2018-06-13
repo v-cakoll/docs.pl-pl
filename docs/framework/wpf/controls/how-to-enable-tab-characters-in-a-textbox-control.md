@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550189"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a><span data-ttu-id="07280-102">Jak włączyć znaki karty w formancie TextBox</span><span class="sxs-lookup"><span data-stu-id="07280-102">How to: Enable Tab Characters in a TextBox Control</span></span>
 <span data-ttu-id="07280-103">W tym przykładzie pokazano, jak włączyć akceptacji znaki tabulacji jako normalne danych wejściowych w <xref:System.Windows.Controls.TextBox> formantu.</span><span class="sxs-lookup"><span data-stu-id="07280-103">This example shows how to enable the acceptance of tab characters as normal input in a <xref:System.Windows.Controls.TextBox> control.</span></span>  

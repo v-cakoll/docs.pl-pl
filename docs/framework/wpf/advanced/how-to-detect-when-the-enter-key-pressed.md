@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544748"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a><span data-ttu-id="5381f-102">Jak wykryć kiedy wciśnięto klawisz Enter</span><span class="sxs-lookup"><span data-stu-id="5381f-102">How to: Detect When the Enter Key Pressed</span></span>
 <span data-ttu-id="5381f-103">W tym przykładzie pokazano, jak podczas wykrywania <xref:System.Windows.Input.Key.Enter> naciśnięcia klawisza na klawiaturze.</span><span class="sxs-lookup"><span data-stu-id="5381f-103">This example shows how to detect when the <xref:System.Windows.Input.Key.Enter> key is pressed on the keyboard.</span></span>  

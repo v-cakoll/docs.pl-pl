@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543458"
 ---
 # <a name="globalization-and-localization"></a><span data-ttu-id="ae301-102">Lokalizacja i globalizacja</span><span class="sxs-lookup"><span data-stu-id="ae301-102">Globalization and Localization</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="ae301-103"> zapewnia zaawansowaną obsługę opracowywania aplikacji gotowe.</span><span class="sxs-lookup"><span data-stu-id="ae301-103"> provides extensive support for the development of world-ready applications.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551194"
 ---
 # <a name="combobox"></a><span data-ttu-id="8c77d-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="8c77d-102">ComboBox</span></span>
 <span data-ttu-id="8c77d-103"><xref:System.Windows.Controls.ComboBox> Kontroli zapewnia użytkownikom listę opcji.</span><span class="sxs-lookup"><span data-stu-id="8c77d-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="8c77d-104">Lista jest wyświetlany i ukryta kontrolka rozwija i zwija.</span><span class="sxs-lookup"><span data-stu-id="8c77d-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="8c77d-105">W stanie domyślnym jest zwinięty listy, wyświetlania tylko jednego wyboru.</span><span class="sxs-lookup"><span data-stu-id="8c77d-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="8c77d-106">Użytkownik kliknie przycisk, aby wyświetlić pełną listę opcji.</span><span class="sxs-lookup"><span data-stu-id="8c77d-106">The user clicks a button to see the complete list of options.</span></span>  

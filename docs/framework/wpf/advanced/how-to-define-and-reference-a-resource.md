@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543497"
 ---
 # <a name="how-to-define-and-reference-a-resource"></a><span data-ttu-id="b1602-102">Jak definiować i tworzyć odwołanie do zasobu</span><span class="sxs-lookup"><span data-stu-id="b1602-102">How to: Define and Reference a Resource</span></span>
 <span data-ttu-id="b1602-103">W tym przykładzie pokazano, jak zdefiniować zasobu i odwołaj się przy użyciu atrybutu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b1602-103">This example shows how to define a resource and reference it by using an attribute in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  

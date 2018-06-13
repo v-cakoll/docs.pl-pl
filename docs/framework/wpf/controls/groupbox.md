@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550842"
 ---
 # <a name="groupbox"></a><span data-ttu-id="81c1d-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="81c1d-102">GroupBox</span></span>
 <span data-ttu-id="81c1d-103"><xref:System.Windows.Controls.GroupBox> Formant jest <xref:System.Windows.Controls.HeaderedContentControl> udostępniająca kontener zatytułowana [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] zawartości.</span><span class="sxs-lookup"><span data-stu-id="81c1d-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  

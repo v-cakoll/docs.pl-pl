@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421843"
 ---
 # <a name="icordebugmoduledebugevent-interface"></a><span data-ttu-id="bfa54-102">Interfejs ICorDebugModuleDebugEvent</span><span class="sxs-lookup"><span data-stu-id="bfa54-102">ICorDebugModuleDebugEvent Interface</span></span>
 <span data-ttu-id="bfa54-103">Rozszerza [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interfejs do obsługi zdarzenia na poziomie modułu.</span><span class="sxs-lookup"><span data-stu-id="bfa54-103">Extends the [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interface to support module-level events.</span></span>  

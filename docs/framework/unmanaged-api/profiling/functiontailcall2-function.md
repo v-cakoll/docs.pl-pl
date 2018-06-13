@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452484"
 ---
 # <a name="functiontailcall2-function"></a><span data-ttu-id="634b1-102">FunctionTailcall2 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="634b1-102">FunctionTailcall2 Function</span></span>
 <span data-ttu-id="634b1-103">Powiadamia profilera, że funkcja aktualnie wykonywane ma wykonywać wywołania tail do innej funkcji i zawiera informacje o ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="634b1-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  

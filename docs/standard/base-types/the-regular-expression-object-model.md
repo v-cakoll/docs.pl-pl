@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579863"
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="ec05b-102">Model obiektów wyrażeń regularnych</span><span class="sxs-lookup"><span data-stu-id="ec05b-102">The Regular Expression Object Model</span></span>
 <a name="introduction"></a> <span data-ttu-id="ec05b-103">W tym temacie opisano model obiektów używane w pracy w wyrażeniach regularnych programu .NET.</span><span class="sxs-lookup"><span data-stu-id="ec05b-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="ec05b-104">Ten temat zawiera następujące sekcje:</span><span class="sxs-lookup"><span data-stu-id="ec05b-104">It contains the following sections:</span></span>  

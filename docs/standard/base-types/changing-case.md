@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570546"
 ---
 # <a name="changing-case-in-net"></a><span data-ttu-id="cd95e-102">Zmienianie wielkości liter w .NET</span><span class="sxs-lookup"><span data-stu-id="cd95e-102">Changing Case in .NET</span></span>
 <span data-ttu-id="cd95e-103">Jeśli piszesz aplikację, która akceptuje dane wejściowe użytkownika, nigdy nie można się przypadek, jakie użytkownik będzie służy do wprowadzania danych.</span><span class="sxs-lookup"><span data-stu-id="cd95e-103">If you write an application that accepts input from a user, you can never be sure what case he or she will use to enter the data.</span></span> <span data-ttu-id="cd95e-104">Często mają ciągi, aby mieć prawidłową wielkość spójnie, zwłaszcza w przypadku, gdy są ich wyświetlanie interfejsu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="cd95e-104">Often, you want strings to be cased consistently, particularly if you are displaying them in the user interface.</span></span> <span data-ttu-id="cd95e-105">W poniższej tabeli opisano trzy metody zmiana case.</span><span class="sxs-lookup"><span data-stu-id="cd95e-105">The following table describes three case-changing methods.</span></span> <span data-ttu-id="cd95e-106">Pierwsze dwie metody Udostępnij przeciążenie akceptującego kultury.</span><span class="sxs-lookup"><span data-stu-id="cd95e-106">The first two methods provide an overload that accepts a culture.</span></span>  

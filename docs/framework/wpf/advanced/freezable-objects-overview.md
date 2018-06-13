@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548473"
 ---
 # <a name="freezable-objects-overview"></a><span data-ttu-id="a1e04-102">Przegląd Obiekty Freezable</span><span class="sxs-lookup"><span data-stu-id="a1e04-102">Freezable Objects Overview</span></span>
 <span data-ttu-id="a1e04-103">W tym temacie opisano, jak skutecznie używać i utworzyć <xref:System.Windows.Freezable> obiektów, które dostarczają specjalnych funkcji, które może zwiększyć wydajność aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a1e04-103">This topic describes how to effectively use and create <xref:System.Windows.Freezable> objects, which provide special features that can help improve application performance.</span></span> <span data-ttu-id="a1e04-104">Przykładami obiektu freezable obiektów pędzle, pióra przekształcenia, mają geometrię i animacji.</span><span class="sxs-lookup"><span data-stu-id="a1e04-104">Examples of freezable objects include brushes, pens, transformations, geometries, and animations.</span></span>  

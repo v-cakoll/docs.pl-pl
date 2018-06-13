@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573675"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a><span data-ttu-id="52292-103">Adresowanie Mikrousług oraz rejestr usługi</span><span class="sxs-lookup"><span data-stu-id="52292-103">Microservices addressability and the service registry</span></span>
 

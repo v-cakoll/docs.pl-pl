@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604331"
 ---
 # <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a><span data-ttu-id="87783-102">Nie można utworzyć łącza do pliku zasobów &#39; &lt;filename&gt;&#39;: &lt;komunikat o błędzie&gt;</span><span class="sxs-lookup"><span data-stu-id="87783-102">Unable to link to resource file &#39;&lt;filename&gt;&#39;: &lt;error message&gt;</span></span>
 <span data-ttu-id="87783-103">Kompilator Visual Basic wywołuje konsolidator zestawów (znanej także jako Alink Al.exe), można wygenerować zestawu z manifestu.</span><span class="sxs-lookup"><span data-stu-id="87783-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="87783-104">Konsolidator zgłosił błąd łączenie z natywnego pliku zasobu modelu COM + z zestawu.</span><span class="sxs-lookup"><span data-stu-id="87783-104">The linker has reported an error linking to a native COM+ resource file from the assembly.</span></span>  

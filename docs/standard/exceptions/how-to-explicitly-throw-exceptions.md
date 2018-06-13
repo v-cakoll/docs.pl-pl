@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570350"
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a><span data-ttu-id="df951-102">Jak jawne zgłaszanie wyjątków</span><span class="sxs-lookup"><span data-stu-id="df951-102">How to explicitly throw exceptions</span></span>
 

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634935"
 ---
 # <a name="cannot-call-friend-function-on-object-which-is-not-an-instance-of-defining-class"></a><span data-ttu-id="a95d1-102">Nie można wywołać funkcji zaprzyjaźnionej dla obiektu, który nie jest wystąpieniem klasy definiującej</span><span class="sxs-lookup"><span data-stu-id="a95d1-102">Cannot call friend function on object which is not an instance of defining class</span></span>
 <span data-ttu-id="a95d1-103">Albo próbował wywołać `Friend` procedury klasy lub użytkownik próbował uzyskać dostęp do `Friend` właściwości lub metody międzyprocesowa lub między wątkami.</span><span class="sxs-lookup"><span data-stu-id="a95d1-103">Either you tried to call the `Friend` procedure of a class, or you tried to access a `Friend` property or method either cross-process or cross-thread.</span></span> <span data-ttu-id="a95d1-104">A `Friend` procedury z modułu poza klasą, ale jest częścią projektu, w którym klasa jest zdefiniowana.</span><span class="sxs-lookup"><span data-stu-id="a95d1-104">A `Friend` procedure is callable from a module outside the class, but is part of the project in which the class is defined.</span></span>  

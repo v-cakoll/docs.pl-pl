@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420937"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a><span data-ttu-id="70f31-102">ICorDebugILFrame3::GetReturnValueForILOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="70f31-102">ICorDebugILFrame3::GetReturnValueForILOffset Method</span></span>
 <span data-ttu-id="70f31-103">Pobiera obiekt hermetyzujący wartość zwracaną przez funkcję "ICorDebugValue".</span><span class="sxs-lookup"><span data-stu-id="70f31-103">Gets an "ICorDebugValue" object that encapsulates the return value of a function.</span></span>  

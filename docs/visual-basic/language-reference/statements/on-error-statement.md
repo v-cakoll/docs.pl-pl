@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605098"
 ---
 # <a name="on-error-statement-visual-basic"></a><span data-ttu-id="15fb9-102">On Error — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15fb9-102">On Error Statement (Visual Basic)</span></span>
 <span data-ttu-id="15fb9-103">Włącza procedurę obsługi błędu, i określa lokalizację procedury w ramach procedury; można również wyłączyć procedury obsługi błędów.</span><span class="sxs-lookup"><span data-stu-id="15fb9-103">Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine.</span></span>  

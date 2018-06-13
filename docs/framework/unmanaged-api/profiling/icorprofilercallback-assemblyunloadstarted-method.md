@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450528"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a><span data-ttu-id="e21f4-102">ICorProfilerCallback::AssemblyUnloadStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="e21f4-102">ICorProfilerCallback::AssemblyUnloadStarted Method</span></span>
 <span data-ttu-id="e21f4-103">Powiadamia profiler jest zwalniany zestawu.</span><span class="sxs-lookup"><span data-stu-id="e21f4-103">Notifies the profiler that an assembly is being unloaded.</span></span>  

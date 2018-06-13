@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579681"
 ---
 # <a name="development-workflow-for-docker-apps"></a><span data-ttu-id="8d76d-103">Przepływ pracy tworzenia aplikacji Docker</span><span class="sxs-lookup"><span data-stu-id="8d76d-103">Development workflow for Docker apps</span></span>
 

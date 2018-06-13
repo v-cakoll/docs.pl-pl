@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456686"
 ---
 # <a name="1431---concurrentcallsratio"></a><span data-ttu-id="af878-102">1431 — ConcurrentCallsRatio</span><span class="sxs-lookup"><span data-stu-id="af878-102">1431 - ConcurrentCallsRatio</span></span>
 ## <a name="properties"></a><span data-ttu-id="af878-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="af878-103">Properties</span></span>  

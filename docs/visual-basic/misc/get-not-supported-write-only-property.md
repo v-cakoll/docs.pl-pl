@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636767"
 ---
 # <a name="get-not-supported-write-only-property"></a><span data-ttu-id="89103-102">Pobierz nie jest obsługiwany (właściwość tylko do zapisu)</span><span class="sxs-lookup"><span data-stu-id="89103-102">Get not supported (write-only property)</span></span>
 <span data-ttu-id="89103-103">Nie można odczytać właściwości, ponieważ jest tylko do zapisu.</span><span class="sxs-lookup"><span data-stu-id="89103-103">A property cannot be read because it is write only.</span></span>  

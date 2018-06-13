@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585830"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a><span data-ttu-id="8dd76-102">Uzyskiwanie dostępu do danych w aplikacjach Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8dd76-102">Accessing data in Visual Basic applications</span></span>
 <span data-ttu-id="8dd76-103">Visual Basic zawiera kilka nowych funkcji, aby pomóc w tworzeniu aplikacji, które uzyskują dostęp do danych.</span><span class="sxs-lookup"><span data-stu-id="8dd76-103">Visual Basic includes several new features to assist in developing applications that access data.</span></span> <span data-ttu-id="8dd76-104">Powiązane z danymi formularzy dla aplikacji systemu Windows są tworzone przez przeciąganie elementów z [Data Sources — okno](/visualstudio/data-tools/add-new-data-sources) na formularzu.</span><span class="sxs-lookup"><span data-stu-id="8dd76-104">Data-bound forms for Windows applications are created by dragging items from the [Data Sources Window](/visualstudio/data-tools/add-new-data-sources) onto the form.</span></span> <span data-ttu-id="8dd76-105">Powiązanie formantów danych przez przeciąganie elementów z **Data Sources — okno** na istniejące kontrolki.</span><span class="sxs-lookup"><span data-stu-id="8dd76-105">You bind controls to data by dragging items from the **Data Sources Window** onto existing controls.</span></span>  

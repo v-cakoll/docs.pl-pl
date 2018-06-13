@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548818"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a><span data-ttu-id="8957e-102">Udostępnianie pętli komunikatów pomiędzy Win32 i WPF</span><span class="sxs-lookup"><span data-stu-id="8957e-102">Sharing Message Loops Between Win32 and WPF</span></span>
 <span data-ttu-id="8957e-103">W tym temacie opisano implementowania na współdziałanie z pętli komunikatów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], przy użyciu istniejących komunikatów narażenia pętli w <xref:System.Windows.Threading.Dispatcher> lub przez tworzenie pętli osobnej wiadomości na [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] obok siebie współdziałanie kodu.</span><span class="sxs-lookup"><span data-stu-id="8957e-103">This topic describes how to implement a message loop for interoperation with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], either by using existing message loop exposure in <xref:System.Windows.Threading.Dispatcher> or by creating a separate message loop on the [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] side of your interoperation code.</span></span>  

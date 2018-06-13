@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637921"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="28391-102">Wiersz &lt;numer&gt; nie można analizować przy użyciu bieżącego parametru FieldWidths</span><span class="sxs-lookup"><span data-stu-id="28391-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
 <span data-ttu-id="28391-103">Nie można analizować określonego wiersza, ponieważ jego pól szerokości innych niż określone.</span><span class="sxs-lookup"><span data-stu-id="28391-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471504"
 ---
 # <a name="wasconnectiontimedout"></a><span data-ttu-id="9205f-102">WasConnectionTimedout</span><span class="sxs-lookup"><span data-stu-id="9205f-102">WasConnectionTimedout</span></span>
 <span data-ttu-id="9205f-103">Identyfikator: 163</span><span class="sxs-lookup"><span data-stu-id="9205f-103">Id: 163</span></span>  

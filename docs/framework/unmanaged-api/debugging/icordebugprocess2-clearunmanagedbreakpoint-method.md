@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420498"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a><span data-ttu-id="802e0-102">ICorDebugProcess2::ClearUnmanagedBreakpoint — Metoda</span><span class="sxs-lookup"><span data-stu-id="802e0-102">ICorDebugProcess2::ClearUnmanagedBreakpoint Method</span></span>
 <span data-ttu-id="802e0-103">Usuwa wcześniej ustawiony punkt przerwania pod podanym adresem.</span><span class="sxs-lookup"><span data-stu-id="802e0-103">Removes a previously set breakpoint at the given address.</span></span>  

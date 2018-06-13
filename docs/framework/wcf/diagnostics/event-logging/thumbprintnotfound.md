@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471230"
 ---
 # <a name="thumbprintnotfound"></a><span data-ttu-id="be2f2-102">ThumbPrintNotFound</span><span class="sxs-lookup"><span data-stu-id="be2f2-102">ThumbPrintNotFound</span></span>
 <span data-ttu-id="be2f2-103">Identyfikator: 152</span><span class="sxs-lookup"><span data-stu-id="be2f2-103">Id: 152</span></span>  

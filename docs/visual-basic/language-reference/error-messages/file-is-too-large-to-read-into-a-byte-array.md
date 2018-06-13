@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585928"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="03777-102">Plik jest za duży, aby odczytać z tablicy bajtów</span><span class="sxs-lookup"><span data-stu-id="03777-102">File is too large to read into a byte array</span></span>
 <span data-ttu-id="03777-103">Rozmiar pliku, który próbujesz odczytu tablicy bajtów przekracza 4 GB.</span><span class="sxs-lookup"><span data-stu-id="03777-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="03777-104">`My.Computer.FileSystem.ReadAllBytes` — Metoda nie może odczytać pliku, który przekracza rozmiar.</span><span class="sxs-lookup"><span data-stu-id="03777-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  

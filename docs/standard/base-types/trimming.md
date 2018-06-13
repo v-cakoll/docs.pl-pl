@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569892"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a><span data-ttu-id="7a4df-102">Przycinanie i usuwanie znaków z ciągów w .NET</span><span class="sxs-lookup"><span data-stu-id="7a4df-102">Trimming and Removing Characters from Strings in .NET</span></span>
 <span data-ttu-id="7a4df-103">Jeśli analizy zdanie w poszczególnych wyrazów może być na końcu wyrazy, które mają puste miejsca (nazywane również spacji) na dowolnym jej końcu słowo.</span><span class="sxs-lookup"><span data-stu-id="7a4df-103">If you are parsing a sentence into individual words, you might end up with words that have blank spaces (also called white spaces) on either end of the word.</span></span> <span data-ttu-id="7a4df-104">W takiej sytuacji można użyć jednej z metod przycinania w **System.String** klasę, aby usunąć dowolną liczbę spacji ani innych znaków od określonej pozycji w ciągu.</span><span class="sxs-lookup"><span data-stu-id="7a4df-104">In this situation, you can use one of the trim methods in the **System.String** class to remove any number of spaces or other characters from a specified position in the string.</span></span> <span data-ttu-id="7a4df-105">W poniższej tabeli opisano dostępne metody przycinania.</span><span class="sxs-lookup"><span data-stu-id="7a4df-105">The following table describes the available trim methods.</span></span>  

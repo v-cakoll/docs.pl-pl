@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583854"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="dad71-102">Porady: usuwanie klucza rejestru w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dad71-102">How to: Delete a Registry Key in Visual Basic</span></span>
 <span data-ttu-id="dad71-103"><xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> i <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> metod można usunąć kluczy rejestru.</span><span class="sxs-lookup"><span data-stu-id="dad71-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  

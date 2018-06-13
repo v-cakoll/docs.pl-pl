@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467783"
 ---
 # <a name="wmipropertymissing"></a><span data-ttu-id="71582-102">WmiPropertyMissing</span><span class="sxs-lookup"><span data-stu-id="71582-102">WmiPropertyMissing</span></span>
 <span data-ttu-id="71582-103">Identyfikator: 129</span><span class="sxs-lookup"><span data-stu-id="71582-103">Id: 129</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572125"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a><span data-ttu-id="ba4cf-102">Wybierz dane XML przy użyciu parametrem XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="ba4cf-102">Select XML Data Using XPathNavigator</span></span>
 <span data-ttu-id="ba4cf-103"><xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia zestaw metod używany do wybierania zestawu węzłów w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiekt, za pomocą wyrażenia XPath.</span><span class="sxs-lookup"><span data-stu-id="ba4cf-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods used to select a set of nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath expression.</span></span> <span data-ttu-id="ba4cf-104">Po wybraniu można iteracja wybranego zestawu węzłów.</span><span class="sxs-lookup"><span data-stu-id="ba4cf-104">Once selected, you can iterate over the selected set of nodes.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571664"
 ---
 # <a name="unsealed-classes"></a><span data-ttu-id="2fc12-102">Niezapieczętowanych klas</span><span class="sxs-lookup"><span data-stu-id="2fc12-102">Unsealed Classes</span></span>
 <span data-ttu-id="2fc12-103">Zapieczętowane klasy nie może być dziedziczona z i uniemożliwić ich rozszerzeń.</span><span class="sxs-lookup"><span data-stu-id="2fc12-103">Sealed classes cannot be inherited from, and they prevent extensibility.</span></span> <span data-ttu-id="2fc12-104">Z kolei klasy, które mogą być dziedziczone z są nazywane niezapieczętowanych klas.</span><span class="sxs-lookup"><span data-stu-id="2fc12-104">In contrast, classes that can be inherited from are called unsealed classes.</span></span>  

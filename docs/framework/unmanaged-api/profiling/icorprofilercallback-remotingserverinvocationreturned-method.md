@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451227"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="f6fda-102">ICorProfilerCallback::RemotingServerInvocationReturned — Metoda</span><span class="sxs-lookup"><span data-stu-id="f6fda-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
 <span data-ttu-id="f6fda-103">Powiadamia profilera, proces zostanie zakończony, wywołania metody w odpowiedzi na żądanie wywołania metody zdalnego.</span><span class="sxs-lookup"><span data-stu-id="f6fda-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  

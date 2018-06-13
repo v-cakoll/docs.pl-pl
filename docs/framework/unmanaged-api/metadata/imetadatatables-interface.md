@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451539"
 ---
 # <a name="imetadatatables-interface"></a><span data-ttu-id="fb53c-102">IMetaDataTables — Interfejs</span><span class="sxs-lookup"><span data-stu-id="fb53c-102">IMetaDataTables Interface</span></span>
 <span data-ttu-id="fb53c-103">Udostępnia metody przechowywania i pobierania informacji o metadanych w tabelach.</span><span class="sxs-lookup"><span data-stu-id="fb53c-103">Provides methods for the storage and retrieval of metadata information in tables.</span></span>  

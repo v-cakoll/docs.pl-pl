@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573094"
 ---
 # <a name="virtual-members"></a><span data-ttu-id="bed66-102">Wirtualne elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="bed66-102">Virtual Members</span></span>
 <span data-ttu-id="bed66-103">Wirtualne elementy Członkowskie mogą zostać zastąpione, w związku z tym zmiany zachowania podklasy.</span><span class="sxs-lookup"><span data-stu-id="bed66-103">Virtual members can be overridden, thus changing the behavior of the subclass.</span></span> <span data-ttu-id="bed66-104">Są bardzo podobne do wywołania zwrotne pod względem rozszerzania, które zapewniają, ale są one lepsze pod względem wydajności wykonywania i zmniejszenie zużycia pamięci.</span><span class="sxs-lookup"><span data-stu-id="bed66-104">They are quite similar to callbacks in terms of the extensibility they provide, but they are better in terms of execution performance and memory consumption.</span></span> <span data-ttu-id="bed66-105">Ponadto wirtualne elementy członkowskie możesz bardziej naturalne w scenariuszach wymagających tworzenie specjalny rodzaj istniejącego typu (Specjalizacja).</span><span class="sxs-lookup"><span data-stu-id="bed66-105">Also, virtual members feel more natural in scenarios that require creating a special kind of an existing type (specialization).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471155"
 ---
 # <a name="wasdisconnected"></a><span data-ttu-id="582e8-102">WasDisconnected</span><span class="sxs-lookup"><span data-stu-id="582e8-102">WasDisconnected</span></span>
 <span data-ttu-id="582e8-103">Identyfikator: 162</span><span class="sxs-lookup"><span data-stu-id="582e8-103">Id: 162</span></span>  

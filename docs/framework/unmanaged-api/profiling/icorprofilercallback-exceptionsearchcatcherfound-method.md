@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450606"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="92683-102">ICorProfilerCallback::ExceptionSearchCatcherFound — Metoda</span><span class="sxs-lookup"><span data-stu-id="92683-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
 <span data-ttu-id="92683-103">Powiadamia profilera, że fazy wyszukiwania obsługi wyjątków ma się program obsługi wyjątku, który został zgłoszony.</span><span class="sxs-lookup"><span data-stu-id="92683-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  

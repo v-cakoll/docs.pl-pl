@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471298"
 ---
 # <a name="wmiputinstancefailed"></a><span data-ttu-id="fc9f1-102">WmiPutInstanceFailed</span><span class="sxs-lookup"><span data-stu-id="fc9f1-102">WmiPutInstanceFailed</span></span>
 <span data-ttu-id="fc9f1-103">Identyfikator: 121</span><span class="sxs-lookup"><span data-stu-id="fc9f1-103">Id: 121</span></span>  

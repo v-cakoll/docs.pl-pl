@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450492"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a><span data-ttu-id="f241a-102">ICorProfilerCallback::AppDomainShutdownFinished — Metoda</span><span class="sxs-lookup"><span data-stu-id="f241a-102">ICorProfilerCallback::AppDomainShutdownFinished Method</span></span>
 <span data-ttu-id="f241a-103">Powiadamia profilera, czy został zwolniony z procesu domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f241a-103">Notifies the profiler that an application domain has been unloaded from a process.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493045"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a><span data-ttu-id="7ef83-102">Instrukcje: Zabezpieczanie usługi za pomocą certyfikatu X.509</span><span class="sxs-lookup"><span data-stu-id="7ef83-102">How to: Secure a Service with an X.509 Certificate</span></span>
 <span data-ttu-id="7ef83-103">Zabezpieczanie usługi za pomocą certyfikatu X.509 to technika podstawowe, używanego przez większość powiązania w systemie Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="7ef83-103">Securing a service with an X.509 certificate is a basic technique that most bindings in Windows Communication Foundation (WCF) use.</span></span> <span data-ttu-id="7ef83-104">W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowana usługa za pomocą certyfikatu X.509.</span><span class="sxs-lookup"><span data-stu-id="7ef83-104">This topic walks through the steps of configuring a self-hosted service with an X.509 certificate.</span></span>  

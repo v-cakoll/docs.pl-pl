@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453225"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="8b979-102">ICorProfilerInfo::GetHandleFromThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="8b979-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
 <span data-ttu-id="8b979-103">Identyfikator wątku jest mapowany na dojście wątku Win32.</span><span class="sxs-lookup"><span data-stu-id="8b979-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  

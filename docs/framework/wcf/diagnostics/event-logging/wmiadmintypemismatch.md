@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469132"
 ---
 # <a name="wmiadmintypemismatch"></a><span data-ttu-id="92b22-102">WmiAdminTypeMismatch</span><span class="sxs-lookup"><span data-stu-id="92b22-102">WmiAdminTypeMismatch</span></span>
 <span data-ttu-id="92b22-103">Identyfikator: 128</span><span class="sxs-lookup"><span data-stu-id="92b22-103">Id: 128</span></span>  

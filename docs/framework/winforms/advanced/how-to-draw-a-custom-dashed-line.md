@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521618"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a><span data-ttu-id="6efcf-102">Porady: rysowanie niestandardowej linii kreskowanej</span><span class="sxs-lookup"><span data-stu-id="6efcf-102">How to: Draw a Custom Dashed Line</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="6efcf-103"> dostępnych jest kilka typów kreska, które są wymienione w <xref:System.Drawing.Drawing2D.DashStyle> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="6efcf-103"> provides several dash styles that are listed in the <xref:System.Drawing.Drawing2D.DashStyle> enumeration.</span></span> <span data-ttu-id="6efcf-104">Jeśli te style standard dash nie własnych potrzeb, można utworzyć niestandardowego wzorze.</span><span class="sxs-lookup"><span data-stu-id="6efcf-104">If those standard dash styles do not suit your needs, you can create a custom dash pattern.</span></span>  

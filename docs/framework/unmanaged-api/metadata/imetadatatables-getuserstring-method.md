@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451798"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a><span data-ttu-id="4f59a-102">IMetaDataTables::GetUserString — Metoda</span><span class="sxs-lookup"><span data-stu-id="4f59a-102">IMetaDataTables::GetUserString Method</span></span>
 <span data-ttu-id="4f59a-103">Pobiera ciąg ustalony pod określonym indeksem w kolumnie ciągu w bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="4f59a-103">Gets the hard-coded string at the specified index in the string column in the current scope.</span></span>  

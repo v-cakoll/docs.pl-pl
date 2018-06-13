@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470614"
 ---
 # <a name="protocolstopped"></a><span data-ttu-id="f577d-102">ProtocolStopped</span><span class="sxs-lookup"><span data-stu-id="f577d-102">ProtocolStopped</span></span>
 <span data-ttu-id="f577d-103">Identyfikator: 151</span><span class="sxs-lookup"><span data-stu-id="f577d-103">Id: 151</span></span>  

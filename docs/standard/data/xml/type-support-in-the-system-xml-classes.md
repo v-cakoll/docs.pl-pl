@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569697"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a><span data-ttu-id="e7437-102">Obsługa typu do zestawów System.Xml klas</span><span class="sxs-lookup"><span data-stu-id="e7437-102">Type Support in the System.Xml Classes</span></span>
 <span data-ttu-id="e7437-103">W programie .NET Framework w wersji 2.0 podstawowe klasy XML zostały rozszerzone i obejmują funkcje obsługi typu.</span><span class="sxs-lookup"><span data-stu-id="e7437-103">In the .NET Framework version 2.0, the core XML classes have been enhanced to include type support features.</span></span> <span data-ttu-id="e7437-104"><xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, I <xref:System.Xml.XPath.XPathNavigator> klasy zawierają funkcje obsługi typu, łącznie z możliwością konwersji między typami schematu XML i typowych języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="e7437-104">The <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, and <xref:System.Xml.XPath.XPathNavigator> classes include type support features including the ability to convert between XML Schema types and common language runtime (CLR) types.</span></span>  

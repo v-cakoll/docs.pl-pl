@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452849"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="27c3b-102">IMetaDataTables::GetUserStringHeapSize — Metoda</span><span class="sxs-lookup"><span data-stu-id="27c3b-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
 <span data-ttu-id="27c3b-103">Pobiera rozmiar w bajtach sterty ciągu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="27c3b-103">Gets the size, in bytes, of the user string heap.</span></span>  

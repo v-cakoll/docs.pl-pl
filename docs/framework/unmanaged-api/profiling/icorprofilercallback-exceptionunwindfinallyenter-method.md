@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452234"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a><span data-ttu-id="cda25-102">ICorProfilerCallback::ExceptionUnwindFinallyEnter — Metoda</span><span class="sxs-lookup"><span data-stu-id="cda25-102">ICorProfilerCallback::ExceptionUnwindFinallyEnter Method</span></span>
 <span data-ttu-id="cda25-103">Powiadamia profiler fazy unwind wyjątek wprowadzania Obsługa `finally` klauzuli zawartych w określonej funkcji.</span><span class="sxs-lookup"><span data-stu-id="cda25-103">Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.</span></span>  

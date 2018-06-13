@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602739"
 ---
 # <a name="ltincludegt-visual-basic"></a><span data-ttu-id="eb1d3-102">&lt;obejmują&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb1d3-102">&lt;include&gt; (Visual Basic)</span></span>
 <span data-ttu-id="eb1d3-103">Odwołuje się do innego pliku, który opisuje typy i składniki w kodzie źródłowym.</span><span class="sxs-lookup"><span data-stu-id="eb1d3-103">Refers to another file that describes the types and members in your source code.</span></span>  

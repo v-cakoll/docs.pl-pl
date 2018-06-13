@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471907"
 ---
 # <a name="endpoint-transactions-flowed"></a><span data-ttu-id="6890b-102">Punkt końcowy: Przekazane transakcje</span><span class="sxs-lookup"><span data-stu-id="6890b-102">Endpoint: Transactions Flowed</span></span>
 <span data-ttu-id="6890b-103">Nazwa licznika: Przekazane transakcje.</span><span class="sxs-lookup"><span data-stu-id="6890b-103">Counter Name: Transactions Flowed.</span></span>  

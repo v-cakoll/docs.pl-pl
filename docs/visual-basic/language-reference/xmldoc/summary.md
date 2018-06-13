@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602655"
 ---
 # <a name="ltsummarygt-visual-basic"></a><span data-ttu-id="e1cc7-102">&lt;Podsumowanie&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e1cc7-102">&lt;summary&gt; (Visual Basic)</span></span>
 <span data-ttu-id="e1cc7-103">Określa podsumowanie elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="e1cc7-103">Specifies the summary of the member.</span></span>  

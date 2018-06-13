@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604357"
 ---
 # <a name="xml-document-literal-visual-basic"></a><span data-ttu-id="d6064-102">Literał dokumentu XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d6064-102">XML Document Literal (Visual Basic)</span></span>
 <span data-ttu-id="d6064-103">Literał reprezentujący <xref:System.Xml.Linq.XDocument> obiektu.</span><span class="sxs-lookup"><span data-stu-id="d6064-103">A literal representing an <xref:System.Xml.Linq.XDocument> object.</span></span>  

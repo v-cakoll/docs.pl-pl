@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647699"
 ---
 # <a name="declared-elements-in-visual-basic"></a><span data-ttu-id="7cf34-102">Zadeklarowane elementy w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7cf34-102">Declared Elements in Visual Basic</span></span>
 <span data-ttu-id="7cf34-103">A *zadeklarowany element* jest elementem programowania, która jest zdefiniowana w instrukcji deklaracji.</span><span class="sxs-lookup"><span data-stu-id="7cf34-103">A *declared element* is a programming element that is defined in a declaration statement.</span></span> <span data-ttu-id="7cf34-104">Zadeklarowane elementy obejmują zmienne, stałe, wyliczenia, klasy, struktury, modułów, interfejsów, procedur, parametry procedury, funkcja zwraca, procedura zewnętrzna odwołuje się do, operatory, właściwości, zdarzeń i delegatów.</span><span class="sxs-lookup"><span data-stu-id="7cf34-104">Declared elements include variables, constants, enumerations, classes, structures, modules, interfaces, procedures, procedure parameters, function returns, external procedure references, operators, properties, events, and delegates.</span></span>  

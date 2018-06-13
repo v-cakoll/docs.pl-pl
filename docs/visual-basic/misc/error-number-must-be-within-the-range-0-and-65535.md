@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634486"
 ---
 # <a name="error-number-must-be-within-the-range-0-and-65535"></a><span data-ttu-id="5d7e0-102">Numer błędu musi należeć do zakresu od 0 do 65535</span><span class="sxs-lookup"><span data-stu-id="5d7e0-102">Error number must be within the range 0 and 65535</span></span>
 <span data-ttu-id="5d7e0-103">Numer błędu wypada poza dozwolonym z zakresu od 0 do 65535.</span><span class="sxs-lookup"><span data-stu-id="5d7e0-103">An error number falls outside the allowable of between 0 and 65535.</span></span>  

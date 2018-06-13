@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636503"
 ---
 # <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a><span data-ttu-id="e9e14-102">Identyfikator ustawień regionalnych &#39; &lt;nazwa&gt; &#39; nie jest obsługiwany w tym systemie</span><span class="sxs-lookup"><span data-stu-id="e9e14-102">Locale ID &#39;&lt;name&gt;&#39; is not supported on this system</span></span>
 <span data-ttu-id="e9e14-103">Próbujesz użyć `VbStrConv`, ale system nie obsługuje określonych ustawień regionalnych.</span><span class="sxs-lookup"><span data-stu-id="e9e14-103">You are attempting to use `VbStrConv`, but your system does not support the specified locale.</span></span>  

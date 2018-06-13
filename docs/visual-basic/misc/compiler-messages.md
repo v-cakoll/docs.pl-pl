@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633311"
 ---
 # <a name="visual-basic-compiler-messages"></a><span data-ttu-id="27127-102">Komunikaty kompilatora Visual Basic</span><span class="sxs-lookup"><span data-stu-id="27127-102">Visual Basic Compiler Messages</span></span>
 <span data-ttu-id="27127-103">Ta sekcja zawiera czas kompilacji komunikaty o błędach, które występują w Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="27127-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>

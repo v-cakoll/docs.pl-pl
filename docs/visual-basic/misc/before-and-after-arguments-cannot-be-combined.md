@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636682"
 ---
 # <a name="39before39-and-39after39-arguments-cannot-be-combined"></a><span data-ttu-id="5c410-102">&#39;Przed&#39; i &#39;po&#39; nie można łączyć argumentów</span><span class="sxs-lookup"><span data-stu-id="5c410-102">&#39;Before&#39; and &#39;After&#39; arguments cannot be combined</span></span>
 <span data-ttu-id="5c410-103">Lista argumentów obejmuje zarówno `Before` i `After` argumentów, które wzajemnie się wykluczają.</span><span class="sxs-lookup"><span data-stu-id="5c410-103">An argument list includes both the `Before` and `After` arguments, which are mutually exclusive.</span></span>  

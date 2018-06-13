@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645933"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a><span data-ttu-id="0f54e-102">Usuwanie elementy, atrybuty i węzły z drzewa XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f54e-102">Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="0f54e-103">Drzewo XML można zmodyfikować usunięcie elementów, atrybutów i innych typów węzłów.</span><span class="sxs-lookup"><span data-stu-id="0f54e-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  

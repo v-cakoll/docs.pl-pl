@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471321"
 ---
 # <a name="protocolstopfailure"></a><span data-ttu-id="fe1ee-102">ProtocolStopFailure</span><span class="sxs-lookup"><span data-stu-id="fe1ee-102">ProtocolStopFailure</span></span>
 <span data-ttu-id="fe1ee-103">Identyfikator: 147</span><span class="sxs-lookup"><span data-stu-id="fe1ee-103">Id: 147</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603538"
 ---
 # <a name="sub-expression-visual-basic"></a><span data-ttu-id="1f61b-102">Sub — Wyrażenie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f61b-102">Sub Expression (Visual Basic)</span></span>
 <span data-ttu-id="1f61b-103">Deklaruje parametry i kod, który definiuje procedurę wyrażenia lambda.</span><span class="sxs-lookup"><span data-stu-id="1f61b-103">Declares the parameters and code that define a subroutine lambda expression.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634946"
 ---
 # <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="52bae-102">Plik we/wy dla struktury zawierającej pole &#39; &lt;fieldname&gt; &#39; typu &#39; &lt;typename&gt; &#39; jest nieprawidłowy</span><span class="sxs-lookup"><span data-stu-id="52bae-102">File I/O of a structure with field &#39;&lt;fieldname&gt;&#39; of type &#39;&lt;typename&gt;&#39; is not valid</span></span>
 <span data-ttu-id="52bae-103">Struktury, które próbują zapisać do pliku zawiera nieobsługiwanego typu.</span><span class="sxs-lookup"><span data-stu-id="52bae-103">The structure you are attempting to write to a file contains an unsupported type.</span></span>  

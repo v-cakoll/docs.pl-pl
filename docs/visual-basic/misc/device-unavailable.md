@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634849"
 ---
 # <a name="device-unavailable"></a><span data-ttu-id="c133c-102">Urządzenie jest niedostępne</span><span class="sxs-lookup"><span data-stu-id="c133c-102">Device unavailable</span></span>
 <span data-ttu-id="c133c-103">Utracono połączenie z siecią albo urządzenia, które próbujesz uzyskać dostęp, jest w trybie offline lub nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="c133c-103">Either you have lost your network connection, or the device that you are trying to access is offline or does not exist.</span></span>  

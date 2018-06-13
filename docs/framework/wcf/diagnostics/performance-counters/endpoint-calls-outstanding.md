@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470468"
 ---
 # <a name="endpoint-calls-outstanding"></a><span data-ttu-id="8d595-102">Punkt końcowy: Wywołania oczekujące</span><span class="sxs-lookup"><span data-stu-id="8d595-102">Endpoint: Calls Outstanding</span></span>
 <span data-ttu-id="8d595-103">Nazwa licznika: Wywołania oczekujące</span><span class="sxs-lookup"><span data-stu-id="8d595-103">Counter Name: Calls Outstanding</span></span>  

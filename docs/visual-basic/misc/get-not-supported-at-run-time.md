@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636568"
 ---
 # <a name="get-not-supported-at-run-time"></a><span data-ttu-id="b22b1-102">Get nie jest możliwa w czasie wykonywania</span><span class="sxs-lookup"><span data-stu-id="b22b1-102">Get not supported at run time</span></span>
 <span data-ttu-id="b22b1-103">Próbowano odczytać właściwości w czasie wykonywania, który jest dostępny tylko w czasie projektowania.</span><span class="sxs-lookup"><span data-stu-id="b22b1-103">You tried to read a property at run time that is only accessible at design time.</span></span>  

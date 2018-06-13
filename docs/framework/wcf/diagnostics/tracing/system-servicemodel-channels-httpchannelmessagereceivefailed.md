@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477454"
 ---
 # <a name="systemservicemodelchannelshttpchannelmessagereceivefailed"></a><span data-ttu-id="0c199-102">System.ServiceModel.Channels.HttpChannelMessageReceiveFailed</span><span class="sxs-lookup"><span data-stu-id="0c199-102">System.ServiceModel.Channels.HttpChannelMessageReceiveFailed</span></span>
 <span data-ttu-id="0c199-103">Nie można odebrać wiadomości kanałem HTTP.</span><span class="sxs-lookup"><span data-stu-id="0c199-103">Failed to receive a message over an HTTP channel.</span></span>  

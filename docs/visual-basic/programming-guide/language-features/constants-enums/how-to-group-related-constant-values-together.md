@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646407"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a><span data-ttu-id="959c8-102">Porady: grupowanie związanych wartości stałych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="959c8-102">How to: Group Related Constant Values Together (Visual Basic)</span></span>
 <span data-ttu-id="959c8-103">Wyliczenie to najlepszy sposób, aby grupować powiązane stałe.</span><span class="sxs-lookup"><span data-stu-id="959c8-103">An enumeration is the best way to group related constants together.</span></span> <span data-ttu-id="959c8-104">Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub module.</span><span class="sxs-lookup"><span data-stu-id="959c8-104">You create an enumeration with the `Enum` statement in the declarations section of a class or a module.</span></span> <span data-ttu-id="959c8-105">Aby uzyskać więcej informacji, zobacz [porady: deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).</span><span class="sxs-lookup"><span data-stu-id="959c8-105">For more information, see [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).</span></span>  

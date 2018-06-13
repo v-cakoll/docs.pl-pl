@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633702"
 ---
 # <a name="insufficient-security-permissions-to-set-the-system-date"></a><span data-ttu-id="8015e-102">Uprawnienia zabezpieczeń nie wystarczają do ustawienia daty systemowej</span><span class="sxs-lookup"><span data-stu-id="8015e-102">Insufficient security permissions to set the system date</span></span>
 <span data-ttu-id="8015e-103">Uprawnienia zabezpieczeń nie wystarczają do ustawienia daty systemowej.</span><span class="sxs-lookup"><span data-stu-id="8015e-103">The security permissions are insufficient to set the system date.</span></span>  

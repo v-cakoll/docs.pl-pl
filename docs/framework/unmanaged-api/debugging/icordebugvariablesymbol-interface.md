@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421340"
 ---
 # <a name="icordebugvariablesymbol-interface"></a><span data-ttu-id="6a03c-102">Interfejs ICorDebugVariableSymbol</span><span class="sxs-lookup"><span data-stu-id="6a03c-102">ICorDebugVariableSymbol Interface</span></span>
 <span data-ttu-id="6a03c-103">Pobiera informacje o symbolu debugowania dla zmiennej.</span><span class="sxs-lookup"><span data-stu-id="6a03c-103">Retrieves the debug symbol information for a variable.</span></span>  

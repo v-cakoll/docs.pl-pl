@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412795"
 ---
 # <a name="icordebugenumreset-method"></a><span data-ttu-id="8be56-102">ICorDebugEnum::Reset — Metoda</span><span class="sxs-lookup"><span data-stu-id="8be56-102">ICorDebugEnum::Reset Method</span></span>
 <span data-ttu-id="8be56-103">Przesuwa kursor na początku wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="8be56-103">Moves the cursor to the beginning of the enumeration.</span></span>  

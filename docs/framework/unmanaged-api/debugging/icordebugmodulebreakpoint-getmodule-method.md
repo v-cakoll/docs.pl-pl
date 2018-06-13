@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416156"
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="ee263-102">ICorDebugModuleBreakpoint::GetModule — Metoda</span><span class="sxs-lookup"><span data-stu-id="ee263-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
 <span data-ttu-id="ee263-103">Pobiera wskaźnika interfejsu do "ICorDebugModule", który odwołuje się do modułu, w którym ten punkt przerwania jest ustawiony.</span><span class="sxs-lookup"><span data-stu-id="ee263-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  

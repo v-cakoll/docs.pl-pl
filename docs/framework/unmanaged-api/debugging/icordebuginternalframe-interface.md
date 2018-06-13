@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413829"
 ---
 # <a name="icordebuginternalframe-interface1"></a><span data-ttu-id="704d8-102">ICorDebugInternalFrame Interface1</span><span class="sxs-lookup"><span data-stu-id="704d8-102">ICorDebugInternalFrame Interface1</span></span>
 <span data-ttu-id="704d8-103">Reprezentuje wewnętrzny czasu wykonywania ramki na stosie.</span><span class="sxs-lookup"><span data-stu-id="704d8-103">Represents a runtime-internal frame on the stack.</span></span> <span data-ttu-id="704d8-104">Ten interfejs jest podklasą klasy interfejsu ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="704d8-104">This interface is a subclass of the ICorDebugFrame interface.</span></span>  

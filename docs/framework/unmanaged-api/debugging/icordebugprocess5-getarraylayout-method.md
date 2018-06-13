@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420004"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a><span data-ttu-id="d943e-102">ICorDebugProcess5::GetArrayLayout — Metoda</span><span class="sxs-lookup"><span data-stu-id="d943e-102">ICorDebugProcess5::GetArrayLayout Method</span></span>
 <span data-ttu-id="d943e-103">Zawiera informacje o układzie typów tablicowych.</span><span class="sxs-lookup"><span data-stu-id="d943e-103">Provides information about the layout of array types.</span></span>  

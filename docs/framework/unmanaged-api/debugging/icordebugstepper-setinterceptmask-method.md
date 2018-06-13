@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422688"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a><span data-ttu-id="69ba2-102">ICorDebugStepper::SetInterceptMask — Metoda</span><span class="sxs-lookup"><span data-stu-id="69ba2-102">ICorDebugStepper::SetInterceptMask Method</span></span>
 <span data-ttu-id="69ba2-103">Ustawia wartość, która określa typy kodu, które zostaną wykorzystane do.</span><span class="sxs-lookup"><span data-stu-id="69ba2-103">Sets a value that specifies the types of code that are stepped into.</span></span>  

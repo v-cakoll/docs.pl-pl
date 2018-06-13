@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419533"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a><span data-ttu-id="b7d37-102">Interfejs ICorDebugMutableDataTarget</span><span class="sxs-lookup"><span data-stu-id="b7d37-102">ICorDebugMutableDataTarget Interface</span></span>
 <span data-ttu-id="b7d37-103">Rozszerza [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfejs do obsługi danych modyfikowalne elementy docelowe.</span><span class="sxs-lookup"><span data-stu-id="b7d37-103">Extends the [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interface to support mutable data targets.</span></span>  

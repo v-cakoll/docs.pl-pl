@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415645"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="643c3-102">ICorDebugModule::EnableJITDebugging — Metoda</span><span class="sxs-lookup"><span data-stu-id="643c3-102">ICorDebugModule::EnableJITDebugging Method</span></span>
 <span data-ttu-id="643c3-103">Określa, czy przy użyciu kompilatora just in time (JIT) zachowuje informacji debugowania dla metod w ramach tego modułu.</span><span class="sxs-lookup"><span data-stu-id="643c3-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  

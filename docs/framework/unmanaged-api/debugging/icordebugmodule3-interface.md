@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417918"
 ---
 # <a name="icordebugmodule3-interface"></a><span data-ttu-id="93f81-102">ICorDebugModule3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="93f81-102">ICorDebugModule3 Interface</span></span>
 <span data-ttu-id="93f81-103">Tworzy czytnik symbolu dla modułu dynamicznego.</span><span class="sxs-lookup"><span data-stu-id="93f81-103">Creates a symbol reader for a dynamic module.</span></span>  

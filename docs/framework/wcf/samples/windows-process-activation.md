@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501523"
 ---
 # <a name="windows-process-activation"></a><span data-ttu-id="1420a-102">Aktywacja procesu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="1420a-102">Windows Process Activation</span></span>
 <span data-ttu-id="1420a-103">Ta sekcja zawiera przykłady ilustrujące aktywacji usługi za pośrednictwem protokołów sieciowych.</span><span class="sxs-lookup"><span data-stu-id="1420a-103">This section contains samples that demonstrate service activation through network protocols.</span></span>  

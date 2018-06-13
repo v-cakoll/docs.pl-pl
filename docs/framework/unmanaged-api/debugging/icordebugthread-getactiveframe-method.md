@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420644"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="1f80e-102">ICorDebugThread::GetActiveFrame — Metoda</span><span class="sxs-lookup"><span data-stu-id="1f80e-102">ICorDebugThread::GetActiveFrame Method</span></span>
 <span data-ttu-id="1f80e-103">Pobiera wskaźnika interfejsu do aktywnej ramki (najnowsze) dla tego obiektu ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="1f80e-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  

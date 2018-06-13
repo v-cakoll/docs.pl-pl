@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421078"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="36af7-102">ICorDebugHeapValue3::GetMonitorEventWaitList — Metoda</span><span class="sxs-lookup"><span data-stu-id="36af7-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
 <span data-ttu-id="36af7-103">Udostępnia uporządkowaną listę wątków oczekujących w kolejce na zdarzenie, które jest skojarzone z blokadą monitora.</span><span class="sxs-lookup"><span data-stu-id="36af7-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  

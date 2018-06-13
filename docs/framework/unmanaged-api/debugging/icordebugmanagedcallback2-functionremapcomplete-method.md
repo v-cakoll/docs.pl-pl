@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415444"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a><span data-ttu-id="cf196-102">ICorDebugManagedCallback2::FunctionRemapComplete — Metoda</span><span class="sxs-lookup"><span data-stu-id="cf196-102">ICorDebugManagedCallback2::FunctionRemapComplete Method</span></span>
 <span data-ttu-id="cf196-103">Powiadamia debugera, że wykonanie kodu została przełączona do nowej wersji funkcji edytowany.</span><span class="sxs-lookup"><span data-stu-id="cf196-103">Notifies the debugger that code execution has switched to a new version of an edited function.</span></span>  

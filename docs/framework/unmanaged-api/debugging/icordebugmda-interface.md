@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420969"
 ---
 # <a name="icordebugmda-interface"></a><span data-ttu-id="afb92-102">ICorDebugMDA — Interfejs</span><span class="sxs-lookup"><span data-stu-id="afb92-102">ICorDebugMDA Interface</span></span>
 <span data-ttu-id="afb92-103">Reprezentuje komunikat asystenta zarządzanego debugowania (MDA).</span><span class="sxs-lookup"><span data-stu-id="afb92-103">Represents a managed debugging assistant (MDA) message.</span></span>  

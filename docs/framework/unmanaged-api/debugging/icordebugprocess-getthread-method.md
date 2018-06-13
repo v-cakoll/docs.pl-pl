@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418958"
 ---
 # <a name="icordebugprocessgetthread-method"></a><span data-ttu-id="25a6c-102">ICorDebugProcess::GetThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="25a6c-102">ICorDebugProcess::GetThread Method</span></span>
 <span data-ttu-id="25a6c-103">Pobiera wątku tego procesu, który ma identyfikator wątku. określony system operacyjny (OS)</span><span class="sxs-lookup"><span data-stu-id="25a6c-103">Gets this process's thread that has the specified operating system (OS) thread ID.</span></span>  

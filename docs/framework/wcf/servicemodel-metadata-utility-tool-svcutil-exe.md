@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509154"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a><span data-ttu-id="226fa-102">Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="226fa-102">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>
 <span data-ttu-id="226fa-103">Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowania kodu modelu usługi z dokumentów metadanych i dokumentów metadanych z kodu modelu usługi.</span><span class="sxs-lookup"><span data-stu-id="226fa-103">The ServiceModel Metadata Utility tool is used to generate service model code from metadata documents and metadata documents from service model code.</span></span>  

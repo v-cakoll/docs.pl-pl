@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423679"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="47edb-102">PFN_CLRDataCreateInstance — Wskaźnik funkcji</span><span class="sxs-lookup"><span data-stu-id="47edb-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
 <span data-ttu-id="47edb-103">Punkty do funkcji, która tworzy obiekt interfejs dla elementu określonego obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="47edb-103">Points to a function that creates an interface object for the specified target item.</span></span>  

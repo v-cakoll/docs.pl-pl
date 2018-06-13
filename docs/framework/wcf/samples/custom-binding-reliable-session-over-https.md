@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502950"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a><span data-ttu-id="6ee38-102">Niestandardowe powiązanie niezawodnej sesji przez protokół HTTPS</span><span class="sxs-lookup"><span data-stu-id="6ee38-102">Custom Binding Reliable Session over HTTPS</span></span>
 <span data-ttu-id="6ee38-103">W przykładzie pokazano użycie zabezpieczenia transportowe protokołu SSL z sesji niezawodnej.</span><span class="sxs-lookup"><span data-stu-id="6ee38-103">This sample demonstrates the use of SSL transport security with Reliable Sessions.</span></span> <span data-ttu-id="6ee38-104">Niezawodne sesje implementuje ten protokół WS-niezawodny wiadomości.</span><span class="sxs-lookup"><span data-stu-id="6ee38-104">Reliable Sessions implements the WS-Reliable Messaging protocol.</span></span> <span data-ttu-id="6ee38-105">Tworzenie WS-Security niezawodnej sesji można utworzyć bezpiecznego niezawodnej sesji.</span><span class="sxs-lookup"><span data-stu-id="6ee38-105">You can have a secure reliable session by composing WS-Security over Reliable Sessions.</span></span> <span data-ttu-id="6ee38-106">Jednak czasami, możesz zamiast tego użyć zabezpieczeń transportu HTTP przy użyciu protokołu SSL.</span><span class="sxs-lookup"><span data-stu-id="6ee38-106">But sometimes, you may choose to instead use HTTP transport security with SSL.</span></span>  

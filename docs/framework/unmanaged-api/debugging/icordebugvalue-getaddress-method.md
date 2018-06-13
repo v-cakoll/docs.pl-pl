@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420663"
 ---
 # <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="9a3e2-102">ICorDebugValue::GetAddress — Metoda</span><span class="sxs-lookup"><span data-stu-id="9a3e2-102">ICorDebugValue::GetAddress Method</span></span>
 <span data-ttu-id="9a3e2-103">Pobiera adres tego obiektu "ICorDebugValue", który jest w trakcie debugowania.</span><span class="sxs-lookup"><span data-stu-id="9a3e2-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  

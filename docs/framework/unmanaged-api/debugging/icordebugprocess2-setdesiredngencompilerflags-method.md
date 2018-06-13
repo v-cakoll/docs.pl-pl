@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422704"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a><span data-ttu-id="6eb0e-102">ICorDebugProcess2::SetDesiredNGENCompilerFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="6eb0e-102">ICorDebugProcess2::SetDesiredNGENCompilerFlags Method</span></span>
 <span data-ttu-id="6eb0e-103">Ustawia flagi, które muszą być osadzone prekompilowany obrazu w kolejności środowiska uruchomieniowego do ładowania obrazu do bieżącego procesu.</span><span class="sxs-lookup"><span data-stu-id="6eb0e-103">Sets the flags that must be embedded in a precompiled image in order for the runtime to load that image into the current process.</span></span>  

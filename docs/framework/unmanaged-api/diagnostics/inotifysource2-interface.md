@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424693"
 ---
 # <a name="inotifysource2-interface"></a><span data-ttu-id="9af60-102">INotifySource2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="9af60-102">INotifySource2 Interface</span></span>
 <span data-ttu-id="9af60-103">Deklaruje metody filtry powiadomień.</span><span class="sxs-lookup"><span data-stu-id="9af60-103">Declares a method for setting notification filters.</span></span>  

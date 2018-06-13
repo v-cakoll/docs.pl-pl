@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365894"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do udostępniania danych jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje zarówno Atom i JavaScript Object Notation (JSON) formaty dla źródła danych. Korzystając z źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zawiera standardowe metody do serializowania danych, takich jak jednostki i relacje w formacie XML, który można umieścić w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje właściwości jednostki domyślne mapowanie danych, który znajduje się w jednostkach i elementy Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](http://go.microsoft.com/fwlink/?LinkID=185794).  

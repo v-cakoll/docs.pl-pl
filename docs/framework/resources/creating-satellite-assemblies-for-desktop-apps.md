@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399184"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikacji do wyświetlenia ciągów, obrazy i innych danych przez użytkownika języka i kultury oraz w celu zapewnienia alternatywnych danych, jeśli zasoby dla języka dla użytkownika lub kultury są niedostępne. .NET Framework wykorzystuje model gwiazdy — Aby znaleźć i pobrać zlokalizowanych zasobów. Koncentrator jest główny zestaw zawierający kod wykonywalny niemożliwe do zlokalizowania i zasobów dla kultury pojedynczego, nazywanego zero lub domyślną kulturę. Domyślną kulturę jest kultury rezerwowej dla aplikacji; Jeśli nie są dostępne nie zlokalizowanych zasobów jest używany. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybut do wyznaczenia kultura kultury domyślnej aplikacji. Każdy gwiazdy łączy zestawu satelickiego, który zawiera zasoby dla pojedynczego kultury zlokalizowany, ale nie zawiera żadnego kodu. Ponieważ zestawów satelickich nie są częścią zestawu głównego, można łatwo aktualizacji lub zastąpienia zasobów, które odpowiadają określoną kulturę bez zastępowania główny zestaw aplikacji.  

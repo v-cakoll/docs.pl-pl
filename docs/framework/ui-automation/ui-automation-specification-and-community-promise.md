@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401157"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>Specyfikacja automatyzacji interfejsu użytkownika i obietnica dla społeczności
 Automatyzacja interfejsu użytkownika zapewnia dostęp programistyczny do większości elementów interfejsu użytkownika na pulpicie, włączanie produktów technologii pomocniczej, takich jak czytniki ekranu, aby podać informacje o Interfejsie użytkownika dla użytkowników końcowych i do manipulowania interfejsu użytkownika w sposób innych niż standardowe dane wejściowe .  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387929"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Ograniczenie: PNG ramki w obiektach ikony
 W programie .NET Framework 4.6 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda konwertuje pomyślnie ikony PNG ramek do <xref:System.Drawing.Bitmap> obiektów.  

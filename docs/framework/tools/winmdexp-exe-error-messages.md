@@ -164,6 +164,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407043"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
 Wywołania procesu kompilacji [Winmdexp.exe (Narzędzie systemu Windows Runtime metadanych wyeksportować)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) korzystając  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], więc komunikaty o błędach Winmdexp.exe są **Listy błędów**. Winmdexp.exe działa w module, który jest skompilowana przy użyciu `/target:winmdobj` opcji. Ponieważ wymaga ona modułu skompilowanego jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  

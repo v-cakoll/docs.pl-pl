@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391176"
 ---
 # <a name="managing-connections"></a>Zarządzanie połączeniami
 Aplikacje, które łączą się z zasobami danych przy użyciu protokołu HTTP można używać programu .NET Framework <xref:System.Net.ServicePoint> i <xref:System.Net.ServicePointManager> klasy można zarządzać połączenia z Internetem i pomóc im uzyskać optymalne skalowalność i wydajność.  

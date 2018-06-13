@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540533"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Porady: zapisywanie plików za pomocą składnika SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Składnika umożliwia użytkownikom przeglądać systemu plików i wybierz pliki do zapisania. Okno dialogowe zwraca ścieżkę i nazwę pliku wybranego w oknie dialogowym. Jednak należy napisać kod do faktycznie zapisu plików do dysku.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541060"
 ---
 # <a name="creating-an-ink-input-control"></a>Tworzenie formantu danych wejściowych atramentu
 Można utworzyć niestandardowego formantu który dynamicznie i statycznie renderuje pismo odręczne. Oznacza to renderowania odręczne, jak użytkownik rysuje pociągnięcia, powodując pismo odręczne się pojawiać, aby "przebiegu" z pióra i wyświetlić odręczne po nim jest dodawana do kontrolki, albo za pomocą pióra wklejonych ze Schowka lub załadować z pliku. Aby dynamicznie renderowane odręczne, musisz użyć formantu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Statycznie renderowanie odręczne, konieczne jest przesłonięcie metody zdarzeń pióra (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, i <xref:System.Windows.UIElement.OnStylusUp%2A>) do zbierania <xref:System.Windows.Input.StylusPoint> danych, Utwórz pociągnięć i dodaj je do <xref:System.Windows.Controls.InkPresenter> (która renderuje pismo odręczne na formancie).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387734"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Porada: generowanie zestawów międzyoperacyjnych z bibliotek typów
 [Importer biblioteki typów (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) to narzędzie wiersza polecenia, który konwertuje klasy coclass i interfejsy zawartych w bibliotece typów COM do metadanych. To narzędzie automatycznie tworzy zestaw międzyoperacyjny i przestrzeń nazw dla informacji o typie. Po metadanych klasy jest dostępny, zarządzanych klientów można utworzyć wystąpienia typu COM i wywołanie jego metody, tak jakby był wystąpienia programu .NET. Tlbimp.exe jednocześnie konwertuje biblioteki typów całego metadanych i nie można wygenerować informacji o typie dla podzbioru z typów definiowanych w bibliotece typów.  

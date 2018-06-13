@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540872"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Działanie myszy w formularzach systemu Windows
 Otrzymywanie i obsługę myszą jest ważnym elementem każda aplikacja systemu Windows. Obsługa zdarzeń myszy do wykonywania akcji w aplikacji lub za pomocą myszy informacji o lokalizacji do testowania trafień lub innych działań. Ponadto można zmienić sposób myszą obsługi formantów w aplikacji. W tym temacie opisano te zdarzenia myszy w szczegółów i sposobu uzyskiwania i zmieniać ustawień systemowych myszy. Aby uzyskać więcej informacji na temat danych dostarczonych przy użyciu myszy pojawienia się zdarzenia i kolejność, w którym zdarzenia kliknięcia myszą, zobacz [zdarzenia myszy w formularzach systemu Windows](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  

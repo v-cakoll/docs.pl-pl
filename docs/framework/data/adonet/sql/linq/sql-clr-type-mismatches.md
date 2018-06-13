@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365673"
 ---
 # <a name="sql-clr-type-mismatches"></a>Niezgodność typu SQL CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatyzuje wiele tłumaczenie między model obiektów i SQL Server. Niemniej jednak niektórych sytuacjach uniemożliwiają dokładny tłumaczenia. Te klucza niedopasowania popularne typy środowiska uruchomieniowego (języka wspólnego CLR) języka i typów bazy danych programu SQL Server podsumowano w poniższych sekcjach. Można znaleźć więcej informacji dotyczących mapowania określonego typu i funkcja translacji na [mapowanie typu środowiska CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) i [typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527316"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Rozmieszczanie formantów na formularzach systemu Windows
 Umieszczenie i manipulowanie formantów na formularzach na różne sposoby, można utworzyć interfejsu użytkownika, które są intuicyjne i funkcjonalności dla użytkowników.  

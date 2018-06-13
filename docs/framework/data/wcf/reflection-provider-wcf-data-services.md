@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366011"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Dostawca odbicia (usługi danych WCF)
 Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity Framework [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] mogą uwidaczniać ściśle nie jest zdefiniowany w modelu jednostki na podstawie danych. Dostawca odbicia udostępnia dane klas, które zwracają typów, które implementują <xref:System.Linq.IQueryable%601> interfejsu. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa odbicia do wywnioskowania modelu danych dla tych klas i może dokonywać translacji oparte na adresie zapytań względem zasobów na język kwerendy zintegrowanym (LINQ) — na podstawie zapytań dotyczących narażonych <xref:System.Linq.IQueryable%601> typów.  

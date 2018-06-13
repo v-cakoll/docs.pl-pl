@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365994"
 ---
 # <a name="basic-data-types"></a>Typy danych podstawowych
 Ponieważ LINQ do SQL zapytań przełożyć na języka Transact-SQL przed są wykonywane w programie Microsoft SQL Server. LINQ do SQL obsługuje wiele wbudowanych funkcji nieistniejącego dla typów podstawowych danych programu SQL Server.  

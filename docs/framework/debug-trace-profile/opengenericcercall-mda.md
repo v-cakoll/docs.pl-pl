@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387523"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 `openGenericCERCall` Asystent debugowania zarządzanego został aktywowany do ostrzeżenie, że wykres region (CER) ograniczonego wykonania ze zmiennymi typu ogólnego w metodzie głównego jest przetwarzany w kompilacji JIT lub obrazu macierzystego czas generowania i co najmniej jeden z ogólnych zmienne typu jest typu odwołanie do obiektu.  

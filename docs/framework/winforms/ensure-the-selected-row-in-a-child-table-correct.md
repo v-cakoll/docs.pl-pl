@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539893"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Porady: zapewnienie pozostawania wybranego wiersza w tabeli potomnej w prawidłowym położeniu
 Często po współpracujesz powiązanie danych w formularzach systemu Windows, co jest nazywane nadrzędny/podrzędny lub głównych/szczegółów widoku będą wyświetlane dane. Odnosi się do scenariusz wiązania danych, których dane z tego samego źródła są wyświetlane w dwóch formantów. Zmiana wyboru w jeden formant powoduje danych wyświetlanych w formancie drugi do zmiany. Na przykład pierwszy formant może zawierać listę klientów, a drugi listę zleceń związane z wybranego klienta w pierwszego formantu.  

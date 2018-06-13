@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400071"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Omówienie programu Windows Identity Foundation 4.5
 Program Windows Identity Foundation 4.5 to zestaw klas programu .NET Framework służących do wdrożenia mechanizmu tożsamości opartych na oświadczeniach w aplikacjach. Korzystając z niego, łatwiej możesz czerpać korzyści z aplikacji i usług obsługujących oświadczenia. Programu WIF 4.5 można użyć w dowolnej aplikacji sieci Web lub usłudze sieci Web, która korzysta z programu .NET Framework w wersji 4.5 lub nowszej. Program WIF to tylko jeden element rodziny oprogramowania tożsamości federacyjnych firmy Microsoft, który implementuje wspólną wizję branżową opartą na otwartych standardach. Tożsamości federacyjnych składa się z trzech składników: [usług federacyjnych Active Directory®](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [usługi kontroli dostępu do programu Windows Azure](http://go.microsoft.com/fwlink/?LinkID=247517) (ACS) i WIF. Te trzy elementy tworzą razem jądro nowej, opracowanej przez firmę Microsoft platformy tożsamości i dostępu opartej na oświadczeniach i działającej w chmurze.  

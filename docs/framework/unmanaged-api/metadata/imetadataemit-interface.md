@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449147"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit — Interfejs
 Udostępnia metody do tworzenia, modyfikacji i zapisać metadane dotyczące zestawu w aktualnie określonego zakresu. Metadane można przechowywane w pamięci lub zapisanej na dysku.  

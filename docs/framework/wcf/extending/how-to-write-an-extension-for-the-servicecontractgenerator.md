@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488663"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Instrukcje: Pisanie rozszerzenia dla elementu ServiceContractGenerator
 W tym temacie opisano sposób pisanie rozszerzenia dla <xref:System.ServiceModel.Description.ServiceContractGenerator>. Można to zrobić z zastosowaniem <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> interfejsu na zachowanie operacji lub implementacja <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> interfejsu na zachowanie kontraktu. W tym temacie przedstawiono sposób wykonania <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> interfejsu na zachowanie kontraktu.  

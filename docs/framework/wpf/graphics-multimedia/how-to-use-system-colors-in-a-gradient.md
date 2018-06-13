@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562183"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Jak użyć kolorów systemowych w gradiencie
 Użyj kolorów systemu w gradiencie, należy użyć  *\<SystemColor >* kolorów i  *\<SystemColor >* ColorKey właściwości statycznej <xref:System.Windows.SystemColors> klasy w celu uzyskania Odwołanie do kolorów, gdzie  *\<SystemColor >* jest nazwą koloru żądany system. Użyj  *\<SystemColor >* ColorKey właściwości, gdy chcesz utworzyć odwołanie do dynamicznej aktualizacji automatycznie jako zmian kompozycji systemu. W przeciwnym razie użyj  *\<SystemColor >* kolor właściwości.  

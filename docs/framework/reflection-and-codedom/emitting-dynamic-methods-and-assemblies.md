@@ -14,6 +14,7 @@ ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33848300"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitowanie dynamicznych metod i zestawów
 W tej sekcji opisano zestaw typy zarządzane w <xref:System.Reflection.Emit> przestrzeni nazw, która umożliwia kompilatora lub narzędziu emitowanie metadanych i Microsoft języku pośrednim (MSIL) w czasie wykonywania i opcjonalnie Generowanie pliku przenośny plik wykonywalny (PE) na dysku. Liczba aparatów skryptów i kompilatory są użytkowników podstawowych tego obszaru nazw. W tej sekcji funkcje udostępniane przez <xref:System.Reflection.Emit> przestrzeni nazw jest określana jako odbicia emisji.  

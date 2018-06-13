@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541391"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Renderowanie formantu formularzy systemu Windows
 Renderowanie odwołuje się do procesu tworzenia wizualną reprezentację na ekranie użytkownika. Formularze systemu Windows używa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (nowej bibliotece systemu Windows grafiki) do renderowania. Klasy zarządzane, które zapewniają dostęp do [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw i jego podobszary nazw.  

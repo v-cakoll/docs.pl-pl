@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568813"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Projektowanie aplikacji konsoli w programie .NET Framework
 Aplikacje w programie .NET Framework mogą używać <xref:System.Console?displayProperty=nameWithType> klasy odczytywanie znaków z i zapisywanie znaków do konsoli. Dane z konsoli są odczytywane z Standardowy strumień wejściowy, dane w konsoli są zapisywane do standardowego strumienia wyjściowego, a dane błąd w konsoli są zapisywane do strumienia wyjściowego błąd standardowy. Tych strumieni są automatycznie kojarzone z konsoli po uruchomieniu aplikacji i są widoczne jako <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, i <xref:System.Console.Error%2A> właściwości, odpowiednio.  

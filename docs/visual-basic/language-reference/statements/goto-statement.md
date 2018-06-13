@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604747"
 ---
 # <a name="goto-statement"></a><span data-ttu-id="c6424-102">GoTo — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="c6424-102">GoTo Statement</span></span>
 <span data-ttu-id="c6424-103">Przechodzi bezwarunkowo do określonego wiersza procedury.</span><span class="sxs-lookup"><span data-stu-id="c6424-103">Branches unconditionally to a specified line in a procedure.</span></span>  

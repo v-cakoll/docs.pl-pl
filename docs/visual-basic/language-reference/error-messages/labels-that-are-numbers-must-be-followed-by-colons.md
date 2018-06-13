@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587361"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a><span data-ttu-id="317c8-102">Po etykietach, które są liczbami, muszą następować dwukropki</span><span class="sxs-lookup"><span data-stu-id="317c8-102">Labels that are numbers must be followed by colons</span></span>
 <span data-ttu-id="317c8-103">Numery wierszy są zgodne z regułami inne rodzaje etykiety i musi zawierać dwukropkiem.</span><span class="sxs-lookup"><span data-stu-id="317c8-103">Line numbers follow the same rules as other kinds of labels, and must contain a colon.</span></span>  

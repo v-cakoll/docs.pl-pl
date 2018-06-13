@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640244"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="8a04d-102">Porady: przeanalizować składni ciągu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a04d-102">How to: Parse a String (Visual Basic)</span></span>
 <span data-ttu-id="8a04d-103">W tym temacie przedstawiono sposób tworzenia drzewo XML w języku C#.</span><span class="sxs-lookup"><span data-stu-id="8a04d-103">This topic shows how to create an XML tree in C#.</span></span>  

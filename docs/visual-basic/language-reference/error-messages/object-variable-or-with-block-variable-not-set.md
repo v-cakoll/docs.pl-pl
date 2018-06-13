@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597667"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a><span data-ttu-id="f1d31-102">Zmienna obiektu lub zmienna bloku With nie jest ustawiona</span><span class="sxs-lookup"><span data-stu-id="f1d31-102">Object variable or With block variable not set</span></span>
 <span data-ttu-id="f1d31-103">Odwołuje się do zmiennej nieprawidłowy obiekt.</span><span class="sxs-lookup"><span data-stu-id="f1d31-103">An invalid object variable is being referenced.</span></span>   <span data-ttu-id="f1d31-104">Ten błąd może wystąpić z kilku powodów:</span><span class="sxs-lookup"><span data-stu-id="f1d31-104">This error can occur for several reasons:</span></span>  

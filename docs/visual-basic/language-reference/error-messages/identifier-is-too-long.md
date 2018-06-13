@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586454"
 ---
 # <a name="identifier-is-too-long"></a><span data-ttu-id="2b0e5-102">Identyfikator jest za długi</span><span class="sxs-lookup"><span data-stu-id="2b0e5-102">Identifier is too long</span></span>
 <span data-ttu-id="2b0e5-103">Nazwa lub identyfikator każdego elementu programistycznego jest ograniczona do 1023 znaków.</span><span class="sxs-lookup"><span data-stu-id="2b0e5-103">The name, or identifier, of every programming element is limited to 1023 characters.</span></span> <span data-ttu-id="2b0e5-104">Ponadto w pełni kwalifikowana nazwa nie może przekraczać 1023 znaków.</span><span class="sxs-lookup"><span data-stu-id="2b0e5-104">In addition, a fully qualified name cannot exceed 1023 characters.</span></span> <span data-ttu-id="2b0e5-105">Oznacza to, że cały identyfikator ciągu (`<namespace>.<...>.<namespace>.<class>.<element>`) nie może być dłuższa niż 1023 znaków, włączając operatora dostępu do elementu członkowskiego (`.`) znaków.</span><span class="sxs-lookup"><span data-stu-id="2b0e5-105">This means that the entire identifier string (`<namespace>.<...>.<namespace>.<class>.<element>`) cannot be more than 1023 characters long, including the member-access operator (`.`) characters.</span></span>  

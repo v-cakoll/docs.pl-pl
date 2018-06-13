@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584285"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a><span data-ttu-id="611b7-102">Porady: anulowanie zapytania PLINQ</span><span class="sxs-lookup"><span data-stu-id="611b7-102">How to: Cancel a PLINQ Query</span></span>
 <span data-ttu-id="611b7-103">W poniższych przykładach pokazano dwa sposoby Anulowanie zapytania PLINQ.</span><span class="sxs-lookup"><span data-stu-id="611b7-103">The following examples show two ways to cancel a PLINQ query.</span></span> <span data-ttu-id="611b7-104">Pierwszym przykładzie pokazano, jak można anulować kwerendę, która składa się przede wszystkim z przechodzenie danych.</span><span class="sxs-lookup"><span data-stu-id="611b7-104">The first example shows how to cancel a query that consists mostly of data traversal.</span></span> <span data-ttu-id="611b7-105">Drugim przykładzie pokazano, jak można anulować kwerendę, która zawiera funkcję użytkownika, która jest kosztowna w praktyce.</span><span class="sxs-lookup"><span data-stu-id="611b7-105">The second example shows how to cancel a query that contains a user function that is computationally expensive.</span></span>  

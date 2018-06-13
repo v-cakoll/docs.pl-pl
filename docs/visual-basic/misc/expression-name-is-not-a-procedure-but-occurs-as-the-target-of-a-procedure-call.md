@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637615"
 ---
 # <a name="expression-39ltnamegt39-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a><span data-ttu-id="8107b-102">Wyrażenie &#39; &lt;nazwa&gt; &#39; nie jest procedurą, ale występuje jako element docelowy wywołania procedury</span><span class="sxs-lookup"><span data-stu-id="8107b-102">Expression &#39;&lt;name&gt;&#39; is not a procedure, but occurs as the target of a procedure call</span></span>
 <span data-ttu-id="8107b-103">Wprowadzone wyrażenie, które nie jest procedurą wywołanie procedury.</span><span class="sxs-lookup"><span data-stu-id="8107b-103">You have made a procedure call to an expression that is not a procedure.</span></span>  

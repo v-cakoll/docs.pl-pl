@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803569"
 ---
 # <a name="binding"></a><span data-ttu-id="2f367-102">Powiązanie</span><span class="sxs-lookup"><span data-stu-id="2f367-102">Binding</span></span>
 <span data-ttu-id="2f367-103">Ta sekcja zawiera przykłady ilustrujące przy użyciu atrybutu powiązania elementu punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="2f367-103">This section contains samples that demonstrate using the binding attribute of an endpoint element.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583867"
 ---
 # <a name="array-subscript-expression-missing"></a><span data-ttu-id="7f241-102">Brak wyrażenia indeksu tablicy</span><span class="sxs-lookup"><span data-stu-id="7f241-102">Array subscript expression missing</span></span>
 <span data-ttu-id="7f241-103">Inicjowanie tablicy powoduje, że jeden lub więcej indeksów dolnych, które definiują granice tablicy.</span><span class="sxs-lookup"><span data-stu-id="7f241-103">An array initialization leaves out one or more of the subscripts that define the array bounds.</span></span> <span data-ttu-id="7f241-104">Na przykład instrukcja może zawierać wyrażenia `myArray (5,5,,10)`, który powoduje, że indeks trzecich.</span><span class="sxs-lookup"><span data-stu-id="7f241-104">For example, the statement might contain the expression `myArray (5,5,,10)`, which leaves out the third subscript.</span></span>  

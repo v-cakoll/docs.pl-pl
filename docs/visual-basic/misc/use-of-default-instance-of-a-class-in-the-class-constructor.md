@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638381"
 ---
 # <a name="use-of-default-instance-of-a-class-in-the-class-constructor-could-lead-to-infinite-recursive-call"></a><span data-ttu-id="b7a09-102">Użyj domyślnej wystąpienia klasy w konstruktorze klasy może spowodować nieskończoną rekursję.</span><span class="sxs-lookup"><span data-stu-id="b7a09-102">Use of Default Instance of a class in the class constructor could lead to infinite recursive call</span></span>
 <span data-ttu-id="b7a09-103">Domyślne wystąpienie klasy został użyty w konstruktorze klasy.</span><span class="sxs-lookup"><span data-stu-id="b7a09-103">A default instance of a class has been used in the constructor of the class.</span></span> <span data-ttu-id="b7a09-104">Może to spowodować nieskończoną rekursję, znanej także jako nieskończoną pętlę.</span><span class="sxs-lookup"><span data-stu-id="b7a09-104">This can lead to an infinite recursive call, also known as an infinite loop.</span></span>  

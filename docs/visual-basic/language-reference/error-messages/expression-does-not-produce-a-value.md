@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586660"
 ---
 # <a name="expression-does-not-produce-a-value"></a><span data-ttu-id="13a5e-102">Wyrażenie nie zwraca wartości</span><span class="sxs-lookup"><span data-stu-id="13a5e-102">Expression does not produce a value</span></span>
 <span data-ttu-id="13a5e-103">Próbowano użyć wyrażenia, którego nie tworzy wartości w kontekście zwracające wartość, takie jak wywołania `Sub` w kontekście, w którym `Function` oczekuje.</span><span class="sxs-lookup"><span data-stu-id="13a5e-103">You have tried to use an expression that does not produce a value in a value-producing context, such as calling a `Sub` in a context where a `Function` is expected.</span></span>  

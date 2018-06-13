@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585678"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a><span data-ttu-id="a28db-102">Klasa nie obsługuje automatyzacji lub oczekiwanego interfejsu</span><span class="sxs-lookup"><span data-stu-id="a28db-102">Class does not support Automation or does not support expected interface</span></span>
 <span data-ttu-id="a28db-103">Klasa określona w `GetObject` lub `CreateObject` wywołanie funkcji nie jest uwidaczniana interfejs programowania lub zmienić projekt z dll do .exe, albo na odwrót.</span><span class="sxs-lookup"><span data-stu-id="a28db-103">Either the class you specified in the `GetObject` or `CreateObject` function call has not exposed a programmability interface, or you changed a project from .dll to .exe, or vice versa.</span></span>  

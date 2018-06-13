@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588677"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a><span data-ttu-id="a0223-102">Porady: Odczyt z plików testowych o stałej szerokości w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a0223-102">How to: read from fixed-width text files in Visual Basic</span></span>
 <span data-ttu-id="a0223-103">`TextFieldParser` Obiektu pozwala łatwo i efektywnie przeanalizować strukturyzowanych plików tekstowych, takich jak dzienniki.</span><span class="sxs-lookup"><span data-stu-id="a0223-103">The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.</span></span>  

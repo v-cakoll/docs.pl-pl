@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588304"
 ---
 # <a name="error-creating-assembly-manifest-lterror-messagegt"></a><span data-ttu-id="cff97-102">Wystąpił błąd podczas tworzenia manifestu zestawu: &lt;komunikat o błędzie&gt;</span><span class="sxs-lookup"><span data-stu-id="cff97-102">Error creating assembly manifest: &lt;error message&gt;</span></span>
 <span data-ttu-id="cff97-103">Kompilator Visual Basic wywołuje konsolidator zestawów (znanej także jako Alink Al.exe), można wygenerować zestawu z manifestu.</span><span class="sxs-lookup"><span data-stu-id="cff97-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="cff97-104">Konsolidator zgłosił błąd w fazie emisji wstępnego tworzenia zestawu.</span><span class="sxs-lookup"><span data-stu-id="cff97-104">The linker has reported an error in the pre-emission stage of creating the assembly.</span></span>  

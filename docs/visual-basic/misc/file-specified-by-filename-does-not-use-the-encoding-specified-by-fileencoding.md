@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637450"
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a><span data-ttu-id="1083e-102">Plik określony przez nazwę pliku nie korzysta z kodowaniem określonym przez kodowanie plików</span><span class="sxs-lookup"><span data-stu-id="1083e-102">File specified by FileName does not use the encoding specified by FileEncoding</span></span>
 <span data-ttu-id="1083e-103">Została podjęta próba odczytu z pliku, ale określony kodowanie nie jest używane przez plik.</span><span class="sxs-lookup"><span data-stu-id="1083e-103">An attempt has been made to read from a file, but the specified encoding is not used by the file.</span></span>  

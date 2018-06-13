@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585973"
 ---
 # <a name="bad-record-length"></a><span data-ttu-id="d9796-102">Zła długość rekordu</span><span class="sxs-lookup"><span data-stu-id="d9796-102">Bad record length</span></span>
 <span data-ttu-id="d9796-103">Wśród możliwych przyczyn tego błędu są:</span><span class="sxs-lookup"><span data-stu-id="d9796-103">Among the possible causes of this error are:</span></span>  

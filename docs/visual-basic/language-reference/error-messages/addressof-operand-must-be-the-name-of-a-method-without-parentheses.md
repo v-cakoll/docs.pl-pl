@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583815"
 ---
 # <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a><span data-ttu-id="c6d51-102">&#39;AddressOf&#39; operand musi być nazwą metody (bez nawiasów)</span><span class="sxs-lookup"><span data-stu-id="c6d51-102">&#39;AddressOf&#39; operand must be the name of a method (without parentheses)</span></span>
 <span data-ttu-id="c6d51-103">`AddressOf` Operator tworzy procedury wystąpienia delegata, który odwołuje się do określonej procedury.</span><span class="sxs-lookup"><span data-stu-id="c6d51-103">The `AddressOf` operator creates a procedure delegate instance that references a specific procedure.</span></span> <span data-ttu-id="c6d51-104">Składnia jest następująca:</span><span class="sxs-lookup"><span data-stu-id="c6d51-104">The syntax is as follows.</span></span>  

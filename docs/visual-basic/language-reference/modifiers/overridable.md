@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603772"
 ---
 # <a name="overridable-visual-basic"></a><span data-ttu-id="c6fb9-102">Overridable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6fb9-102">Overridable (Visual Basic)</span></span>
 <span data-ttu-id="c6fb9-103">Określa, że właściwość lub procedura może być zastąpiona przez o identycznej nazwie właściwość lub procedura w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="c6fb9-103">Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.</span></span>  

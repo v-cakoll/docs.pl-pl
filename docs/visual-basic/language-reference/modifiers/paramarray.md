@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597363"
 ---
 # <a name="paramarray-visual-basic"></a><span data-ttu-id="3dd9a-102">ParamArray (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3dd9a-102">ParamArray (Visual Basic)</span></span>
 <span data-ttu-id="3dd9a-103">Określa, że parametr procedury przyjmuje opcjonalną tablicę elementów określonego typu.</span><span class="sxs-lookup"><span data-stu-id="3dd9a-103">Specifies that a procedure parameter takes an optional array of elements of the specified type.</span></span> <span data-ttu-id="3dd9a-104">`ParamArray` może być używany tylko ostatni parametr listy parametrów.</span><span class="sxs-lookup"><span data-stu-id="3dd9a-104">`ParamArray` can be used only on the last parameter of a parameter list.</span></span>  

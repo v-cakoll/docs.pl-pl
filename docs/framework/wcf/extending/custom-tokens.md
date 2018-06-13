@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485368"
 ---
 # <a name="custom-tokens"></a>Tokeny niestandardowe
 Windows Communication Foundation (WCF) obsługuje natywnie certyfikatów X.509, tokenów kontekstów zabezpieczeń biletów Kerberos i tokenach nazwę użytkownika jako poświadczeń, ale jest wystarczająco elastyczny, aby umożliwić użycie niestandardowych poświadczeń.  

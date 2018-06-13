@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340310"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)
 W tym temacie pokazano, jak wdrożyć własne metody rozszerzenia dla dowolnego typu .NET. Kod klienta można użyć metody rozszerzenia Dodawanie odwołania do pliku DLL zawierającego je i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy, który określa przestrzeń nazw, w którym zdefiniowano metody rozszerzenia.  

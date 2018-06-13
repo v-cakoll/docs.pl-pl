@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491329"
 ---
 # <a name="hosting-workflow-services"></a>Hostowanie usług przepływu pracy
 Usługi przepływu pracy musi być hostowany na jej odpowiadanie na przychodzące wiadomości. Usługi przepływu pracy korzystają z infrastruktury obsługi wiadomości WCF i w związku z tym znajdują się w podobny sposób. Jak usługi WCF usług przepływu pracy mogą być hostowane w dowolnej aplikacji zarządzanych, w obszarze usługi Internet Information Services (IIS) lub w obszarze usługi aktywacji procesów systemu Windows (WAS). Ponadto usługi przepływu pracy mogą być hostowane w obszarze AppFabric w systemie Windows Server. Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric zobacz [dokumentacji systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [funkcje hostingu AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), i [pojęcia Hosting AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). Aby uzyskać więcej informacji na temat różnych sposobów host usługi WCF usług zobacz [Hosting usług](../../../../docs/framework/wcf/hosting-services.md).  

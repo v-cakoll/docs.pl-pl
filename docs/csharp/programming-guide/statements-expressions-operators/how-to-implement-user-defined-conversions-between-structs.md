@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339933"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Porady: implementowanie zdefiniowanych przez użytkownika konwersji struktur (Przewodnik programowania w języku C#)
 W tym przykładzie definiuje dwie struktury `RomanNumeral` i `BinaryNumeral`i pokazuje konwersji między nimi.  

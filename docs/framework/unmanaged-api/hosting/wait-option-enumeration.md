@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441932"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION — Wyliczenie
 Zawiera wartości, które wskazują, że akcja hosta może pobierać operacji wymaganej przez wspólne bloki środowiska uruchomieniowego (języka wspólnego CLR) języka.  

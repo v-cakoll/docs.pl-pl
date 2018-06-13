@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337197"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest tekstem. Wewnętrznie, tekst jest przechowywana jako sekwencyjnych kolekcji tylko do odczytu z <xref:System.Char> obiektów. Brak nie przerywa null znak na końcu C# ciąg. w związku z tym ciągu języka C# może zawierać dowolną liczbę osadzonych znaki null ('\0'). <xref:System.String.Length%2A> Właściwości ciągu reprezentuje liczbę `Char` obiekty nie zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punktów kodowych Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  

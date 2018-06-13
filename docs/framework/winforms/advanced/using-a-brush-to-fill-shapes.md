@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523734"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Używanie pędzla do wypełniania kształtów
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> obiekt jest używany do wypełniania wnętrza zamknięty kształt. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Definiuje styl wypełnienia kilka: pełnego koloru, wzorzec kreskowania tekstury obrazu i kolor gradientu.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337694"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Mieszane usterki kodu deklaratywne kodu/Imperatywne (LINQ do XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera różne metody, dzięki którym można bezpośrednio modyfikować drzewo XML. Można dodawać elementów, usuń elementy, zmienić zawartość elementu, dodać atrybuty i itd. Ten interfejs programowania jest opisany w [modyfikowanie drzew XML (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Jeśli użytkownik są iteracji w jednej osi, takie jak <xref:System.Xml.Linq.XContainer.Elements%2A>i modyfikujesz drzewa XML jako iterację osi, można na końcu niektóre dziwne usterki.  

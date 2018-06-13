@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524225"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Porady: rysowanie nieprzezroczystych i półprzezroczystych linii
 W przypadku rysowania linii, należy podać <xref:System.Drawing.Pen> do obiektu <xref:System.Drawing.Graphics.DrawLine%2A> metody <xref:System.Drawing.Graphics> klasy. Jeden z parametrów <xref:System.Drawing.Pen.%23ctor%2A> Konstruktor jest <xref:System.Drawing.Color> obiektu. Rysowanie linii nieprzezroczyste, należy ustawić składnika alfa koloru do 255. Aby narysować półprzezroczystych linii, należy ustawić składnika alfa na wartość od 1 do 254.  

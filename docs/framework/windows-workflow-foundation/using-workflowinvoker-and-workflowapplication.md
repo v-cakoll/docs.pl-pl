@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519629"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication
 Windows Workflow Foundation (WF) zapewnia kilka metod obsługi przepływów pracy. <xref:System.Activities.WorkflowInvoker> zapewnia prostą metodę do wywoływania przepływu pracy, tak, jakby były wywołanie metody i można używać tylko w przypadku przepływów pracy, które nie korzystają z trwałości. <xref:System.Activities.WorkflowApplication> zapewnia bardziej rozbudowane model do wykonywania przepływów pracy, które zawiera powiadomienia o zdarzenia cyklu życia, kontrola wykonywania wznowienie zakładek i trwałości. <xref:System.ServiceModel.Activities.WorkflowServiceHost> zapewnia obsługę działań dotyczących komunikatów i jest używany głównie z usług przepływu pracy. Ten temat stanowi wprowadzenie do przepływu pracy obsługującego z <xref:System.Activities.WorkflowInvoker> i <xref:System.Activities.WorkflowApplication>. Aby uzyskać więcej informacji o przepływach pracy z hostingu <xref:System.ServiceModel.Activities.WorkflowServiceHost>, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md) i [Hosting przegląd usług przepływu pracy](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

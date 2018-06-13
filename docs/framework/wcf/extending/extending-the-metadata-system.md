@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488959"
 ---
 # <a name="extending-the-metadata-system"></a>Rozszerzanie systemu metadanych
 Metadane systemu Windows Communication Foundation (WCF) to grupa klasy i interfejsy, które reprezentują metadane wymagane do wdrożenia aplikacji usługi. Modyfikowanie lub rozszerzyć klasy lub wdrożenia i skonfigurować interfejsów, aby wyeksportować i zaimportować niestandardowy metadane, takie jak rozszerzenia usługi sieci Web Services Description Language (WSDL) lub niestandardowych asercji WS PolicyAttachments.  

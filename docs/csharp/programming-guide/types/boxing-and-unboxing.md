@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336134"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Konwersja boxing i konwersja unboxing (Przewodnik programowania w języku C#)
 Opakowanie jest proces konwersji [typu wartości](../../../csharp/language-reference/keywords/value-types.md) do typu `object` lub do dowolnego typu interfejsu zaimplementowany przez ten typ wartości. Gdy CLR pola typu wartości, opakowuje wartość wewnątrz elementu System.Object i zapisze go na stercie zarządzanej. Rozpakowywanie wyodrębnia typ wartości z obiektu. Opakowanie jest niejawne; Rozpakowywanie jest jawne. Pojęcie boxing i konwersja unboxing źródłową widoku unified C# system typów, w którym wartość dowolnego typu może być traktowana jako obiekt.  

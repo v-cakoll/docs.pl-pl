@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541255"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Przegląd Wyrównanie, marginesy i wypełnienia
 <xref:System.Windows.FrameworkElement> Klasa udostępnia kilka właściwości, które są używane w celu precyzyjnego rozmieszczenia elementów podrzędnych. W tym temacie omówiono cztery z właściwości najważniejszych: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Skutki te właściwości są wziąć pod uwagę, ponieważ stanowią podstawę kontrolowanie położenie elementów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  

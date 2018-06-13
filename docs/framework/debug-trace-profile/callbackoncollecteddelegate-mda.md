@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356359"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 `callbackOnCollectedDelegate` Zarządzany Asystent debugowania (MDA) jest włączone, jeśli delegat jest przekazywane z kodu zarządzanego do kodu niezarządzanego jako wskaźnik funkcji i wywołanie zwrotne jest umieszczona na wskaźnik tej funkcji po bezużytecznych delegata.  

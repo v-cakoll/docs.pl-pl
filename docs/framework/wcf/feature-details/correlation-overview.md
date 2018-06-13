@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493201"
 ---
 # <a name="correlation-overview"></a>Przegląd korelacji
 Korelacja jest mechanizm dotyczących komunikatów usługi przepływu pracy lub stan wystąpienia aplikacji, takich jak odpowiedzi na żądanie początkowej lub identyfikator określonej kolejności stanu utrwalonego kolejność przetwarzania przepływu pracy. Ten temat zawiera przegląd korelacji. W innych tematach w tej sekcji zawierają dodatkowe informacje dla każdego typu korelacji.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519817"
 ---
 # <a name="persistence-participants"></a>Uczestnicy trwałości
 Uczestnika trwałości mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwalane przez hosta aplikacji. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, które służy do tworzenia uczestnika trwałości. Uczestnika trwałości pochodzi z jednego z tych klas, implementuje metody zainteresowań, a następnie dodanie wystąpienia klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może wyglądać dla tych rozszerzeń przepływu pracy po trwałym wystąpienia przepływu pracy i wywołać odpowiednie metody uczestnika trwałości w odpowiednim czasie.  

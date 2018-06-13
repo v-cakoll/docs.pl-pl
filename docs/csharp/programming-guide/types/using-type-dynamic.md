@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336641"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Używanie typu dynamicznego (Przewodnik programowania w języku C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] został wprowadzony nowy typ `dynamic`. Typ jest typ statyczny, ale obiekt typu `dynamic` pomija sprawdzanie typu statycznego. W większości przypadków, funkcje, takie jak ma typ `object`. W czasie kompilacji, element, który jest typu `dynamic` przyjęto, że do żadnej operacji obsługi. W związku z tym nie trzeba mieć na uwadze Określa, czy obiekt wartość pochodzi z interfejsu API modelu COM, z języka dynamicznego, takich jak IronPython, z HTML modelu DOM (Document Object), z odbicia lub w innym miejscu w programie. Jeśli kod jest nieprawidłowy, błędy są przechwytywane w czasie wykonywania.  

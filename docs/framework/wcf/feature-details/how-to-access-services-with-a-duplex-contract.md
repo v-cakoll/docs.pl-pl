@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490155"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Instrukcje: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego
 Jedna z funkcji Windows Communication Foundation (WCF) jest możliwość tworzenia usługi, który korzysta ze wzorca komunikacji dupleksowej. Ten wzorzec umożliwia usługi do komunikacji z klientem za pośrednictwem wywołania zwrotnego. W tym temacie przedstawiono kroki, aby utworzyć klienta WCF w klasie klienta, który implementuje interfejs wywołania zwrotnego.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337876"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Porady: konwertowanie tablicy typu Byte na liczbę całkowitą (Przewodnik programowania w języku C#)
 W tym przykładzie przedstawiono sposób użycia <xref:System.BitConverter> klasy w celu przekonwertowania na tablicę bajtów do [int](../../../csharp/language-reference/keywords/int.md) i z powrotem na tablicę bajtów. Być może trzeba przekonwertować z bajtów z typem danych wbudowanych po przeczytaniu bajtów poza siecią, na przykład. Oprócz [toint32 — (bajtów\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) metody w przykładzie w poniższej tabeli przedstawiono metody <xref:System.BitConverter> klasy, która przekonwertować bajtów (od tablicę bajtów) na inne typy wbudowane.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339043"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Porady: jawne implementowanie elementów dwóch interfejsów (Przewodnik programowania w języku C#)
 Jawne [interfejsu](../../../csharp/language-reference/keywords/interface.md) implementacji umożliwia również programisty do zaimplementowania dwa interfejsy tej samej nazwy elementów członkowskich, które zapewniają każdy element członkowski interfejsu oddzielne implementacji. W tym przykładzie wyświetla rozmiary pola w metryki i jednostki w języku angielskim. Pole [klasy](../../../csharp/language-reference/keywords/class.md) implementuje dwa interfejsy IEnglishDimensions i IMetricDimensions, reprezentujące różne systemy miary. Oba interfejsy mają nazwy identyczne elementu członkowskiego, długość i szerokość.  

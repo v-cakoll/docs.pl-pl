@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544134"
 ---
 # <a name="how-to-use-flow-content-elements"></a>Jak użyć elementów zawartości przepływu
 W poniższym przykładzie pokazano deklaratywne użycie różnych przepływu elementy zawartości i skojarzonych z nimi atrybutów.  Elementy i atrybuty przedstawiono obejmują:  

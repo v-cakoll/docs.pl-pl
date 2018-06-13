@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540966"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Wskazówki: sprawdzanie poprawności danych w formancie DataGridView formularzy systemu Windows
 Po wyświetleniu funkcji zapis danych dla użytkowników, często konieczne sprawdzanie poprawności danych wprowadzonych do formularza. <xref:System.Windows.Forms.DataGridView> Klasa oferuje wygodny sposób sprawdzania poprawności, zanim danych zostanie przekazany do magazynu danych. Sprawdzanie poprawności danych Obsługa <xref:System.Windows.Forms.DataGridView.CellValidating> zdarzenie, które jest wywoływane przez <xref:System.Windows.Forms.DataGridView> podczas zmiany bieżącej komórki.  

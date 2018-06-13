@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338425"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Metody anonimowe (Przewodnik programowania w języku C#)
 W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../../csharp/language-reference/keywords/delegate.md) było jednoczesne używanie [o nazwie metody](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 wprowadzono metody anonimowe i w języku C# 3.0 lub nowszej, wyrażenia lambda zastępują metod anonimowych jako preferowany sposób pisania kodu wbudowanego. Jednak informacje o metodach anonimowy w tym temacie dotyczą również wyrażenia lambda. Istnieje jeden przypadek, w którym metody anonimowej udostępnia funkcje nie znaleziono w wyrażeniach lambda. Metody anonimowe umożliwiają Pomiń listy parametrów. Oznacza to, że metody anonimowej można przekonwertować na delegatów o różnych podpisów. To nie jest możliwe za pomocą wyrażenia lambda. Aby uzyskać więcej informacji, w szczególności o wyrażenia lambda, zobacz [wyrażenia Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  

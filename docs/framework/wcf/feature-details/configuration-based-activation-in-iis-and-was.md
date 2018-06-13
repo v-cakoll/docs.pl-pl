@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488946"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Aktywacja oparta na konfiguracji w usługach IIS i WAS
 Zwykle odnośnie do hostowania usługi Windows Communication Foundation (WCF) w ramach usług Internet Information Services (IIS) ani Usługa aktywacji procesów systemu Windows (WAS), musisz podać pliku svc. W pliku svc zawiera nazwę usługi i opcjonalne niestandardowe usługi fabryka hostów. Ten plik dodatkowe zwiększa możliwości zarządzania obciążenia. Aktywacja oparta na konfiguracji funkcji eliminuje konieczność pliku svc i w związku z tym skojarzone koszty.  

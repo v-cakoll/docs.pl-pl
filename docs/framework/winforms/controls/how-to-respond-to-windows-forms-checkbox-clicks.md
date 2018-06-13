@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539740"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Porady: odpowiadanie na kliknięcia elementu CheckBox formularzy systemu Windows
 Zawsze, gdy użytkownik kliknie formularzy systemu Windows <xref:System.Windows.Forms.CheckBox> kontroli, <xref:System.Windows.Forms.Control.Click> zdarzenie. Można programowanie aplikacji w celu wykonania akcji w zależności od stanu pola wyboru.  

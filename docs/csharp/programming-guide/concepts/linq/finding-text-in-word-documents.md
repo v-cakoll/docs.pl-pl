@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333931"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Wyszukiwanie tekstu w dokumentach programu Word (C#)
 W tym temacie rozszerza poprzednich zapytań do zrobienia czegoś przydatne: Znajdź wszystkie wystąpienia ciągu w dokumencie.  

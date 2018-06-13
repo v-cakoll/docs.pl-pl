@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766624"
 ---
 # <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla tworzenie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również stosować zaleceń dotyczących tworzenia bezpiecznego [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  

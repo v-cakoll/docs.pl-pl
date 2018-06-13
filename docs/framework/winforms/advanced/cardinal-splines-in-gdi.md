@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517968"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Krzywe kardynalne w GDI+
 Kardynalnej krzywej składanej jest sekwencją poszczególnych krzywych przyłączone do formularza krzywej większy. Krzywej składanej jest określona przez tablicę punktów i parametr naprężenia. Kardynalnej krzywej składanej sprawnie przechodzi przez każdego punktu w tablicy; Brak nie ostre narożniki i brak niespodziewane zmian w szczelność krzywej. Na poniższej ilustracji przedstawiono zestaw punktów i kardynalnej krzywej składanej, który przechodzi przez każdego punktu w zestawie.  

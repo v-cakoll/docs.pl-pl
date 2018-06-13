@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488514"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Wywoływanie usługi typu REST z poziomu usługi WCF
 Podczas wywoływania usługi typu REST z regularne usługi WCF (opartego na protokole SOAP), kontekstu operacji na metodzie usługi (zawierający informacje dotyczące żądania przychodzące) przesłania kontekstu, która powinna być używana przez żądania wychodzącego. Powoduje to, że żądania HTTP GET, można zmienić na żądania HTTP POST. Aby wymusić usługi WCF do kontekstu prawo do wywoływania usługi typu REST, Utwórz nową <xref:System.ServiceModel.OperationContextScope> i wywołać usługi typu REST z wewnątrz operacji kontekstu zakresu. W tym temacie opisano sposób tworzenia prostego przykładu, która ilustruje tej metody.  

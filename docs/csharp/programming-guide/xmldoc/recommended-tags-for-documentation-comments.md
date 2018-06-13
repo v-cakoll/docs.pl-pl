@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338481"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Tagi zalecane dla komentarzy do dokumentacji (Przewodnik programowania w języku C#)
 Kompilator języka C# przetwarza komentarze do dokumentacji w kodzie i formatuje je jako kod XML w pliku o nazwie określonej w **/doc** opcji wiersza polecenia. Aby utworzyć końcowego dokumentację na podstawie pliku generowane przez kompilator, można utworzyć niestandardowego narzędzia, lub za pomocą narzędzia, takie jak [Sandcastle](https://github.com/EWSoftware/SHFB).  

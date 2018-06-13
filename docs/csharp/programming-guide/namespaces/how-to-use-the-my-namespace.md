@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332013"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Porady: użycie przestrzeni nazw typu My (Przewodnik programowania w języku C#)
 <xref:Microsoft.VisualBasic.MyServices> Przestrzeni nazw (`My` w języku Visual Basic) udostępnia proste i intuicyjne szereg klas .NET Framework, dzięki któremu można napisać kod, który współdziała z komputera, aplikacji, ustawień, zasobów i tak dalej. Mimo że pierwotnie przeznaczony do użytku z programem Visual Basic `MyServices` przestrzeni nazw mogą być używane w aplikacji C#.  

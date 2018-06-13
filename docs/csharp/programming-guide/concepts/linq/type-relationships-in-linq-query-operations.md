@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339582"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relacje typu w operacjach zapytań LINQ (C#)
 Skutecznie pisać zapytania, należy zrozumieć, jak typy zmiennych w operacji zapytania ukończone wszystkie powiązane ze sobą relacjami. Jeśli znasz te relacje będzie łatwo pojmować [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przykłady i przykładów kodu w dokumentacji. Ponadto będzie zrozumiałe, występujące w tle podczas wpisywania niejawnie za pomocą zmiennych `var`.  

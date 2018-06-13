@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541232"
 ---
 # <a name="varieties-of-custom-controls"></a>Różne typy formantów niestandardowych
 Z programu .NET Framework mogą tworzyć i wdrożyć nowe kontrolki. Można rozszerzyć funkcjonalność kontrolki użytkownika znanych także jako istniejących formantów przez dziedziczenie. Można również napisać formantów niestandardowych, które własnych narysowania.  

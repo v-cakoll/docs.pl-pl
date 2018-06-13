@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447006"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType — Metoda
 Tworzy metadane podpis definicji typu, zwraca `mdTypeDef` token dla tego typu, a następnie określa zdefiniowanego typu elementu członkowskiego typu odwołuje się `tdEncloser` parametru.  

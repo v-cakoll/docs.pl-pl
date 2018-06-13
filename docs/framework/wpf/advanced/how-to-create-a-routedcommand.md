@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544116"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Porady: tworzenie RoutedCommand
 W tym przykładzie przedstawiono sposób tworzenia niestandardowego <xref:System.Windows.Input.RoutedCommand> i implementowania polecenia niestandardowych tworząc <xref:System.Windows.Input.ExecutedRoutedEventHandler> i <xref:System.Windows.Input.CanExecuteRoutedEventHandler> i dołączać do <xref:System.Windows.Input.CommandBinding>.  Aby uzyskać więcej informacji na wydawanie poleceń, zobacz [droższe omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md).  

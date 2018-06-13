@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520162"
 ---
 # <a name="exceptions"></a>Wyjątki
 Przepływy pracy można użyć <xref:System.Activities.Statements.TryCatch> działanie obsługi wyjątków, które są wywoływane podczas wykonywania przepływu pracy. Wyjątki te mogą być obsługiwane lub ich może zostać zgłoszony ponownie przy użyciu <xref:System.Activities.Statements.Rethrow> działania. Działania w <xref:System.Activities.Statements.TryCatch.Finally%2A> sekcji są wykonywane, kiedy albo <xref:System.Activities.Statements.TryCatch.Try%2A> sekcji lub <xref:System.Activities.Statements.TryCatch.Catches%2A> zakończeniu sekcji. Przepływy pracy na użytek <xref:System.Activities.WorkflowApplication> wystąpienia można również użyć <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> program obsługi zdarzeń do obsługi wyjątków, które nie są obsługiwane przez <xref:System.Activities.Statements.TryCatch> działania.  

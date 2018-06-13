@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520071"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Tworzenie asynchroniczne działania WF
 <xref:System.Activities.AsyncCodeActivity> udostępnia klasę podstawową do użycia, że umożliwia pochodnych działań do wykonania operacji asynchronicznych logiki autorów działania. Jest to przydatne dla działań niestandardowych, które należy wykonać zadanie asynchroniczne bez zawierający wątku harmonogramu przepływu pracy i blokuje żadnych działań, które można uruchomić równolegle. Ten temat zawiera omówienie sposobu tworzenia działań niestandardowych asynchronicznych za pomocą <xref:System.Activities.AsyncCodeActivity>.  

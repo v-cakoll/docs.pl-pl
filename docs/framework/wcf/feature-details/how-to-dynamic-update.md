@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493298"
 ---
 # <a name="how-to-dynamic-update"></a>Instrukcje: Aktualizacja dynamiczna
 W tym temacie przedstawiono podstawowe czynności wymagane do tworzenia i dynamicznie Aktualizuj konfigurację routingu. W tym przykładzie początkowej konfiguracji routingu są uzyskiwane z pliku konfiguracji i kieruje komunikaty do usługi Kalkulator regularCalc; jednak jest następnie aktualizowany programowo Aby zmienić docelowy punkt końcowy usługi roundingCalc.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532636"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Porady: udostępnianie właściwości formantów składowych
 Formanty, które tworzą formantu złożonego są nazywane *formanty składników*. Tych kontrolek zwykle są deklarowane jako prywatny, a w związku z tym nie można uzyskać dostępu do tych przez dewelopera. Jeśli chcesz udostępnić użytkownikom przyszłych właściwości tych kontrolek musi ujawniać je użytkownikowi. Właściwość formantu składników jest udostępniana przez tworzenie właściwości formantu użytkownika i używanie `get` i `set` metody dostępu właściwości dokonanie zmiany właściwości prywatnej składowych formantu.  

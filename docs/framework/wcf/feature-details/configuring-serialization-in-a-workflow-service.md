@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488875"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Konfigurowanie serializacji w usłudze przepływu pracy
 Usługi przepływu pracy są usług Windows Communication Foundation (WCF), więc za pomocą opcji <xref:System.Runtime.Serialization.DataContractSerializer> (ustawienie domyślne) lub <xref:System.Xml.Serialization.XmlSerializer>. Podczas zapisywania bez przepływu pracy typu serializatora do użycia usług został określony w kontrakcie usługi lub operacji. Podczas tworzenia usługi przepływu pracy WCF w kodzie braku określenia tych umów, ale raczej są one generowane w czasie wykonywania przez wnioskowania kontraktu. Aby uzyskać więcej informacji na temat wnioskowania kontraktu, zobacz [za pomocą kontraktów w przepływie pracy](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Serializator jest określona za pomocą <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> właściwości. To może można ustawić w projektancie, jak pokazano na poniższej ilustracji.  

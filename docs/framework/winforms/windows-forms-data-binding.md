@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540647"
 ---
 # <a name="windows-forms-data-binding"></a>Powiązywanie danych formularzy systemu Windows
 Powiązanie danych w formularzach systemu Windows zapewnia sposób wyświetlania i wprowadź zmiany do informacji ze źródła danych w kontrolek w formularzu. Można powiązać zarówno źródeł danych tradycyjnych, jak i prawie każdego struktury, która zawiera dane.  

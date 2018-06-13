@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337028"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref — Atrybut (Przewodnik programowania w języku C#)
 `cref` Atrybut w tagu XML dokumentacji oznacza "kodu odwołania." Określa on, że tekst wewnętrzny tagu jest element kodu, takie jak typ, metoda lub właściwość. Dokumentacja narzędzi, takich jak [Sandcastle](https://github.com/EWSoftware/SHFB) użyj `cref` atrybutów w celu automatycznego generowania hiperłącza do strony, której typ lub element członkowski jest udokumentowany.  

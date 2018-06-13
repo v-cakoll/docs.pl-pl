@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520256"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serializacja przepływów pracy i działań do i z XAML
 Oprócz kompilowany do typów, które znajdują się w zestawach definicji przepływu pracy może być Zserializowany w języku XAML. Te definicje serializacji można wykorzystać do edycji lub inspekcję, przekazany do system kompilacji dla kompilacji, i załadować wywołany. Ten temat zawiera omówienie serializacji definicji przepływu pracy oraz pracy z definicji przepływu pracy XAML.  

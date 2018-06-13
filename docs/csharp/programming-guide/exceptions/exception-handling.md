@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337490"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Obsługa wyjątków (Przewodnik programowania w języku C#)
 A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest używany przez programistów C# do kodu partycji, które mogą wpłynąć na wyjątek. Skojarzone [catch](../../../csharp/language-reference/keywords/try-catch.md) bloki są używane do obsługi wyjątków wynikowy. A [koniec](../../../csharp/language-reference/keywords/try-finally.md) blok zawiera kod, który jest uruchomiony niezależnie od tego, czy wyjątek jest zgłaszany `try` bloku, takich jak zwolnienia zasobów przydzielonych w `try` bloku. A `try` blok wymaga co najmniej jednego skojarzone `catch` bloków, lub `finally` bloku lub oba.  

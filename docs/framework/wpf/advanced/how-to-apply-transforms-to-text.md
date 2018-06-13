@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544925"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Jak zastosować przekształcenia do tekstu
 Transformacje można zmienić wyświetlanie tekstu w aplikacji. W poniższych przykładach użyto różnego rodzaju transformacje renderowania wpływ na wyświetlanie tekstu w <xref:System.Windows.Controls.TextBlock> formantu.  

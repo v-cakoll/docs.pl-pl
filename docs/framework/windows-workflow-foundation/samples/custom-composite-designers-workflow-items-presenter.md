@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516526"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Niestandardowe projektantów złożonego - Prezenterze elementy przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Jest typem klucza w WF projektanta modelu programowania umożliwiający edytowanie kolekcję elementów zawartych w niej. W tym przykładzie pokazano, jak zbudować Projektant działań, która udostępnia można edytować kolekcji.  

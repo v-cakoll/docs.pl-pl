@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540907"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderowanie formantów przy użyciu stylów wizualnych
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zapewnia obsługę renderowania kontrolek i innych użytkowników systemu Windows elementy interfejsu użytkownika przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów obsługi w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla formantów renderowania i inne elementy interfejsu użytkownika z aktualnym stylu wizualnym systemu operacyjnego.  

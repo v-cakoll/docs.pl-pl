@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539609"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Porady: testowanie zachowania UserControl w czasie wykonywania
 Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetestować jego zachowania w czasie wykonywania. Można utworzyć projekt oddzielne aplikacji systemu Windows i umieścić formantu w formularzu testu, ale ta procedura jest niewygodne. Sposób szybciej i łatwiej jest użycie **kontener testu UserControl** dostarczane przez program Visual Studio. Ten kontener testowy rozpoczyna się bezpośrednio z projektu biblioteki sterowania systemu Windows.  

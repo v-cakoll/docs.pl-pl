@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490922"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Współdziałanie z dodatkiem Web Services Enhancements 3.0
 Klienci Windows Communication Foundation (WCF) i usługi są zgodny poziom przewodowy z 3.0 rozszerzenia usługi sieci Web dla programu Microsoft .NET (WSE) klientów i usług, gdy WCF klientów i usług, które są skonfigurowane do używania wersji sierpnia 2004 Specyfikacja WS-Addressing.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442150"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK — Wskaźnik funkcji
 Wskazuje funkcji, które powiadamia hosta, który obsługiwać oczekiwania (<xref:System.Threading.WaitHandle>) albo został sygnalizowane lub upłynął limit czasu.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585652"
 ---
 # <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a><span data-ttu-id="b5f09-102">Wystąpił błąd podczas zapisywania tymczasowego pliku zasobów Win32 &#39; &lt;filename&gt;&#39;: &lt;komunikat o błędzie&gt;</span><span class="sxs-lookup"><span data-stu-id="b5f09-102">Error saving temporary Win32 resource file &#39;&lt;filename&gt;&#39;: &lt;error message&gt;</span></span>
 <span data-ttu-id="b5f09-103">Kompilator Visual Basic wywołuje konsolidator zestawów (znanej także jako Alink Al.exe), można wygenerować zestawu z manifestu.</span><span class="sxs-lookup"><span data-stu-id="b5f09-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="b5f09-104">Konsolidator zgłosił błąd uzyskiwania nazwę pliku do użycia podczas zapisywania zasobu w pamięci.</span><span class="sxs-lookup"><span data-stu-id="b5f09-104">The linker reported an error obtaining a file name for use in writing an in-memory resource.</span></span>  

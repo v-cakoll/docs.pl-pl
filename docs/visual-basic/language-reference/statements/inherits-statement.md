@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604344"
 ---
 # <a name="inherits-statement"></a><span data-ttu-id="9bd46-102">Inherits — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="9bd46-102">Inherits Statement</span></span>
 <span data-ttu-id="9bd46-103">Powoduje, że klasy lub interfejsu dziedziczenie atrybutów, zmiennych, właściwości, procedur i zdarzeń z innej klasy lub zestawu interfejsów.</span><span class="sxs-lookup"><span data-stu-id="9bd46-103">Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.</span></span>  

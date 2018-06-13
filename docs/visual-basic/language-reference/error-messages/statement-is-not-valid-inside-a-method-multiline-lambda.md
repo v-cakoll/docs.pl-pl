@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598858"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="cabd2-102">Instrukcja nie jest prawidłowa wewnątrz metody/wielowierszowego wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="cabd2-102">Statement is not valid inside a method/multiline lambda</span></span>
 <span data-ttu-id="cabd2-103">Instrukcja nie jest prawidłowy w ramach `Sub`, `Function`, właściwość `Get`, lub właściwości `Set` procedury.</span><span class="sxs-lookup"><span data-stu-id="cabd2-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="cabd2-104">Niektóre instrukcji można umieścić na poziomie modułu lub klasy.</span><span class="sxs-lookup"><span data-stu-id="cabd2-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="cabd2-105">Inne, takie jak `Option Strict`, musi znajdować się na poziomie przestrzeni nazw i poprzedzać wszystkie inne deklaracje.</span><span class="sxs-lookup"><span data-stu-id="cabd2-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  

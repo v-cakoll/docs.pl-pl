@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604708"
 ---
 # <a name="myresources-object"></a><span data-ttu-id="a5b44-102">My.Resources — Obiekt</span><span class="sxs-lookup"><span data-stu-id="a5b44-102">My.Resources Object</span></span>
 <span data-ttu-id="a5b44-103">Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a5b44-103">Provides properties and classes for accessing the application's resources.</span></span>  

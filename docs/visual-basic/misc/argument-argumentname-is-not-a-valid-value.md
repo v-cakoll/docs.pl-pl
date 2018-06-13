@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600344"
 ---
 # <a name="argument-39ltargumentnamegt39-is-not-a-valid-value"></a><span data-ttu-id="1d8b7-102">Argument &#39; &lt;argumentname&gt; &#39; nie jest prawidłową wartością</span><span class="sxs-lookup"><span data-stu-id="1d8b7-102">Argument &#39;&lt;argumentname&gt;&#39; is not a valid value</span></span>
 <span data-ttu-id="1d8b7-103">Wartość argumentu jest nieprawidłowa.</span><span class="sxs-lookup"><span data-stu-id="1d8b7-103">An argument's value is not valid.</span></span>  

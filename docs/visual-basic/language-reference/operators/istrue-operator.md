@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605150"
 ---
 # <a name="istrue-operator-visual-basic"></a><span data-ttu-id="8fc4f-102">IsTrue — Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fc4f-102">IsTrue Operator (Visual Basic)</span></span>
 <span data-ttu-id="8fc4f-103">Określa, czy wyrażenie jest `True`.</span><span class="sxs-lookup"><span data-stu-id="8fc4f-103">Determines whether an expression is `True`.</span></span>  

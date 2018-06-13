@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604981"
 ---
 # <a name="synclock-statement"></a><span data-ttu-id="03f8f-102">SyncLock — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="03f8f-102">SyncLock Statement</span></span>
 <span data-ttu-id="03f8f-103">Uzyskuje wyłącznej blokady dla blok instrukcji, przed wykonaniem bloku.</span><span class="sxs-lookup"><span data-stu-id="03f8f-103">Acquires an exclusive lock for a statement block before executing the block.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639340"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a><span data-ttu-id="6f6b7-102">Porady: Kwerenda LINQ do XML za pomocą XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f6b7-102">How to: Query LINQ to XML Using XPath (Visual Basic)</span></span>
 <span data-ttu-id="6f6b7-103">W tym temacie przedstawiono metody rozszerzenia, które umożliwiają zapytanie drzewa XML za pomocą wyrażenia XPath.</span><span class="sxs-lookup"><span data-stu-id="6f6b7-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="6f6b7-104">Aby uzyskać szczegółowe informacje o używaniu tych metod rozszerzenia, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6f6b7-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  

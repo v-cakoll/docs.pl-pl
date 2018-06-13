@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603564"
 ---
 # <a name="-operator"></a><span data-ttu-id="d7f08-102">\\= — Operator</span><span class="sxs-lookup"><span data-stu-id="d7f08-102">\\= Operator</span></span>
 <span data-ttu-id="d7f08-103">Dzieli wartość zmiennej lub właściwość przez wartość wyrażenia i przypisuje całkowitą wynik do zmiennej lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="d7f08-103">Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603655"
 ---
 # <a name="addhandler-statement"></a><span data-ttu-id="9b1a1-102">AddHandler — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="9b1a1-102">AddHandler Statement</span></span>
 <span data-ttu-id="9b1a1-103">Kojarzy zdarzenie z obsługi zdarzeń w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="9b1a1-103">Associates an event with an event handler at run time.</span></span>  

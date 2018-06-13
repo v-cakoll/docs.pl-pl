@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640609"
 ---
 # <a name="target-folder-is-a-file"></a><span data-ttu-id="a31aa-102">Folder docelowy jest plikiem</span><span class="sxs-lookup"><span data-stu-id="a31aa-102">Target folder is a file</span></span>
 <span data-ttu-id="a31aa-103">Podczas próby wykonania akcji związanych z folderu są określania pliku.</span><span class="sxs-lookup"><span data-stu-id="a31aa-103">You are specifying a file while attempting to perform a folder-related action.</span></span>  

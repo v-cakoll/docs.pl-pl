@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599193"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a><span data-ttu-id="8c537-102">Wartość argumentu &#39; &lt;pathname&gt; &#39; zawiera znaki, które nie są prawidłowe w nazwie ścieżki</span><span class="sxs-lookup"><span data-stu-id="8c537-102">Argument value &#39;&lt;pathname&gt;&#39; contains characters that are not valid in a path name</span></span>
 <span data-ttu-id="8c537-103">Nazwa ścieżki zawiera jeden lub więcej znaków, które nie są prawidłowe.</span><span class="sxs-lookup"><span data-stu-id="8c537-103">A path name contains one or more characters that are not valid.</span></span>  

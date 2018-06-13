@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599079"
 ---
 # <a name="arguments-are-not-valid"></a><span data-ttu-id="5188c-102">Argumenty są nieprawidłowe</span><span class="sxs-lookup"><span data-stu-id="5188c-102">Arguments are not valid</span></span>
 <span data-ttu-id="5188c-103">Argumenty, które nie są dozwolone jest przekazywany do funkcji lub procedury.</span><span class="sxs-lookup"><span data-stu-id="5188c-103">Arguments that are not valid are being passed to a function or subroutine.</span></span>  

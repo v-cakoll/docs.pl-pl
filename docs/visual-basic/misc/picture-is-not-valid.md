@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638099"
 ---
 # <a name="picture-is-not-valid"></a><span data-ttu-id="a9f9c-102">Obraz nie jest prawidłowy</span><span class="sxs-lookup"><span data-stu-id="a9f9c-102">Picture is not valid</span></span>
 <span data-ttu-id="a9f9c-103">Próbowano przypisać format graficzny niż mapa bitowa, ikona lub Windows metafile do `Picture` właściwości formularza lub kontrolki.</span><span class="sxs-lookup"><span data-stu-id="a9f9c-103">You tried to assign a graphics format other than a bitmap, icon, or Windows metafile to the `Picture` property of a form or control.</span></span>  

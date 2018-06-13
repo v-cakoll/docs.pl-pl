@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602830"
 ---
 # <a name="skip-clause-visual-basic"></a><span data-ttu-id="44fc3-102">Skip — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44fc3-102">Skip Clause (Visual Basic)</span></span>
 <span data-ttu-id="44fc3-103">Pomija określoną liczbę elementów w kolekcji, a następnie zwraca wszystkie pozostałe elementy.</span><span class="sxs-lookup"><span data-stu-id="44fc3-103">Bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  

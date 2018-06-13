@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596233"
 ---
 # <a name="byref-visual-basic"></a><span data-ttu-id="d0fd7-102">ByRef (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0fd7-102">ByRef (Visual Basic)</span></span>
 <span data-ttu-id="d0fd7-103">Określa, że argument jest przekazywany w taki sposób, że wywoływana procedura może zmienić wartość zmiennej bazowy argumentu w wywoływanym kodzie.</span><span class="sxs-lookup"><span data-stu-id="d0fd7-103">Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.</span></span>  

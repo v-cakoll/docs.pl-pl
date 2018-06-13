@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581449"
 ---
 # <a name="how-to-serialize-an-object"></a><span data-ttu-id="8d1f9-102">Porady: szeregowania obiektu</span><span class="sxs-lookup"><span data-stu-id="8d1f9-102">How to: Serialize an Object</span></span>
 <span data-ttu-id="8d1f9-103">Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól.</span><span class="sxs-lookup"><span data-stu-id="8d1f9-103">To serialize an object, first create the object that is to be serialized and set its public properties and fields.</span></span> <span data-ttu-id="8d1f9-104">W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik.</span><span class="sxs-lookup"><span data-stu-id="8d1f9-104">To do this, you must determine the transport format in which the XML stream is to be stored, either as a stream or as a file.</span></span> <span data-ttu-id="8d1f9-105">Na przykład, jeśli strumień XML musi zostać zapisany w postaci stałe, Utwórz <xref:System.IO.FileStream> obiektu.</span><span class="sxs-lookup"><span data-stu-id="8d1f9-105">For example, if the XML stream must be saved in a permanent form, create a <xref:System.IO.FileStream> object.</span></span>  

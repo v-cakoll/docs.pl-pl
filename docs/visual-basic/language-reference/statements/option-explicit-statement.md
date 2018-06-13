@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604604"
 ---
 # <a name="option-explicit-statement-visual-basic"></a><span data-ttu-id="c2316-102">Option Explicit — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2316-102">Option Explicit Statement (Visual Basic)</span></span>
 <span data-ttu-id="c2316-103">Wymusza jawnej deklaracji wszystkich zmiennych w pliku lub zezwala na niejawne deklaracji zmiennych.</span><span class="sxs-lookup"><span data-stu-id="c2316-103">Forces explicit declaration of all variables in a file, or allows implicit declarations of variables.</span></span>  

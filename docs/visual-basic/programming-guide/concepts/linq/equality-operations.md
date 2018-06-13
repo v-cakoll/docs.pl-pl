@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640225"
 ---
 # <a name="equality-operations-visual-basic"></a><span data-ttu-id="15ce0-102">Operacje równości (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15ce0-102">Equality Operations (Visual Basic)</span></span>
 <span data-ttu-id="15ce0-103">Dwie sekwencje, której odpowiednie elementy są takie same i które mają taką samą liczbę elementów są traktowane jako równe.</span><span class="sxs-lookup"><span data-stu-id="15ce0-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  

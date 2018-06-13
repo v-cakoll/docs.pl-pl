@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395963"
 ---
 # <a name="how-to-configure-network-tracing"></a><span data-ttu-id="73172-102">Porady: Konfigurowanie śledzenia sieci</span><span class="sxs-lookup"><span data-stu-id="73172-102">How to: Configure Network Tracing</span></span>
 <span data-ttu-id="73172-103">Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci.</span><span class="sxs-lookup"><span data-stu-id="73172-103">The application or computer configuration file holds the settings that determine the format and content of network traces.</span></span> <span data-ttu-id="73172-104">Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone.</span><span class="sxs-lookup"><span data-stu-id="73172-104">Before performing this procedure, be sure tracing is enabled.</span></span> <span data-ttu-id="73172-105">Aby uzyskać informacje na temat włączania śledzenia, zobacz [umożliwiające śledzenie sieci](../../../docs/framework/network-programming/enabling-network-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="73172-105">For information about enabling tracing, see [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565490"
 ---
 # <a name="timing-events-overview"></a><span data-ttu-id="0be71-102">Przegląd Zdarzenia chronometrażu</span><span class="sxs-lookup"><span data-stu-id="0be71-102">Timing Events Overview</span></span>
 <span data-ttu-id="0be71-103">W tym temacie opisano sposób używania pięciu zdarzenia czasowe na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów.</span><span class="sxs-lookup"><span data-stu-id="0be71-103">This topic describes how to use the five timing events available on <xref:System.Windows.Media.Animation.Timeline> and <xref:System.Windows.Media.Animation.Clock> objects.</span></span>  

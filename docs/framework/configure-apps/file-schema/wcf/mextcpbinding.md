@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754561"
 ---
 # <a name="ltmextcpbindinggt"></a><span data-ttu-id="ebb2b-102">&lt;mexTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="ebb2b-102">&lt;mexTcpBinding&gt;</span></span>
 <span data-ttu-id="ebb2b-103">Określa ustawienia dla powiązania używanego w wymianie wiadomości WS-MetadataExchange (WS-MEX) za pośrednictwem protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="ebb2b-103">Specifies the settings for a binding used for the WS-MetadataExchange (WS-MEX) message exchange over TCP.</span></span>  

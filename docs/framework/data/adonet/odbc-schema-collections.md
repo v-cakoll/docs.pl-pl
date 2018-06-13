@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766650"
 ---
 # <a name="odbc-schema-collections"></a><span data-ttu-id="b7efb-102">Kolekcje schematów ODBC</span><span class="sxs-lookup"><span data-stu-id="b7efb-102">ODBC Schema Collections</span></span>
 <span data-ttu-id="b7efb-103">W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla programu Microsoft SQL Server, Oracle i Microsoft Jet.</span><span class="sxs-lookup"><span data-stu-id="b7efb-103">This section discusses schema collection support for the ODBC drivers for Microsoft SQL Server, Oracle, and Microsoft Jet.</span></span>  

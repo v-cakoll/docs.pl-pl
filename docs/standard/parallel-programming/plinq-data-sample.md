@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590897"
 ---
 # <a name="plinq-data-sample"></a><span data-ttu-id="e8fd0-102">Próbka danych PLINQ</span><span class="sxs-lookup"><span data-stu-id="e8fd0-102">PLINQ Data Sample</span></span>
 <span data-ttu-id="e8fd0-103">Ten przykład zawiera przykładowe dane w formacie CSV, wraz z metod, które przekształcenia go w kolekcji w pamięci klientów, produktów, zleceń i szczegółów zamówienia.</span><span class="sxs-lookup"><span data-stu-id="e8fd0-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="e8fd0-104">Do dalszych eksperymentów z PLINQ, przykłady kodu z niektórych innych tematów należy wkleić kod w tym temacie i wywołać go z `Main` metody.</span><span class="sxs-lookup"><span data-stu-id="e8fd0-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="e8fd0-105">Umożliwia także te dane z zapytania PLINQ.</span><span class="sxs-lookup"><span data-stu-id="e8fd0-105">You can also use this data with your own PLINQ queries.</span></span>  

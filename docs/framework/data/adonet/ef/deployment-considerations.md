@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761262"
 ---
 # <a name="deployment-considerations-entity-framework"></a><span data-ttu-id="d84cd-102">Zagadnienia dotyczące wdrażania (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="d84cd-102">Deployment Considerations (Entity Framework)</span></span>
 <span data-ttu-id="d84cd-103">Ten temat zawiera informacje na temat wdrażania aplikacji, które używają programu Entity Framework ADO.NET dla dostępu do danych.</span><span class="sxs-lookup"><span data-stu-id="d84cd-103">This topic provides information about deploying applications that use the ADO.NET Entity Framework for data access.</span></span> <span data-ttu-id="d84cd-104">Aby uzyskać więcej informacji na temat programu Entity Framework, zobacz [wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span><span class="sxs-lookup"><span data-stu-id="d84cd-104">For more information about the Entity Framework, see [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span></span>  

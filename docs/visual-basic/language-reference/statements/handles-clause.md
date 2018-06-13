@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603720"
 ---
 # <a name="handles-clause-visual-basic"></a><span data-ttu-id="8ee28-102">Handles — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ee28-102">Handles Clause (Visual Basic)</span></span>
 <span data-ttu-id="8ee28-103">Deklaruje, że procedura obsługuje określone zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="8ee28-103">Declares that a procedure handles a specified event.</span></span>  

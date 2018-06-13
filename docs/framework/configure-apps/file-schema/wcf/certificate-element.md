@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749793"
 ---
 # <a name="ltcertificategt-element"></a><span data-ttu-id="d84ae-102">&lt;certificate&gt;, element</span><span class="sxs-lookup"><span data-stu-id="d84ae-102">&lt;certificate&gt; Element</span></span>
 <span data-ttu-id="d84ae-103">Określa certyfikat X.509 do użycia podczas podpisywania i szyfrowania wiadomości dla klientów peer-to-peer.</span><span class="sxs-lookup"><span data-stu-id="d84ae-103">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span>  

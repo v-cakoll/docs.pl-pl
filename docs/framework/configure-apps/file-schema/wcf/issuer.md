@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750560"
 ---
 # <a name="ltissuergt"></a><span data-ttu-id="63d3f-102">&lt;Wystawcy&gt;</span><span class="sxs-lookup"><span data-stu-id="63d3f-102">&lt;issuer&gt;</span></span>
 <span data-ttu-id="63d3f-103">Określa zabezpieczeń tokenu usługi (STS), która wystawia tokeny zabezpieczające.</span><span class="sxs-lookup"><span data-stu-id="63d3f-103">Specifies the Security Token Service (STS) that issues security tokens.</span></span>  

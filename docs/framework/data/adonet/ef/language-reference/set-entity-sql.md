@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763842"
 ---
 # <a name="set-entity-sql"></a><span data-ttu-id="a9e8d-102">ZESTAW (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="a9e8d-102">SET (Entity SQL)</span></span>
 <span data-ttu-id="a9e8d-103">Wyrażenie zestawu jest używana do konwertowania kolekcji obiektów do zestawu przez reaguje nowej kolekcji z wszystkie zduplikowane elementy usunięte.</span><span class="sxs-lookup"><span data-stu-id="a9e8d-103">The SET expression is used to convert a collection of objects into a set by yielding a new collection with all duplicate elements removed.</span></span>  

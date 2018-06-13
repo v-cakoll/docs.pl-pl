@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319172"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="26701-102">Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="26701-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 <span data-ttu-id="26701-103">W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych przecinkami, które mają wspólną wartość, które jest używane jako dopasowany klucz.</span><span class="sxs-lookup"><span data-stu-id="26701-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="26701-104">Ta metoda może być przydatna, jeśli masz połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z pliku innego formatu, który ma do nowego pliku.</span><span class="sxs-lookup"><span data-stu-id="26701-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="26701-105">Można zmodyfikować przykładu do pracy z dowolnego rodzaju strukturalnych tekstu.</span><span class="sxs-lookup"><span data-stu-id="26701-105">You can modify the example to work with any kind of structured text.</span></span>  

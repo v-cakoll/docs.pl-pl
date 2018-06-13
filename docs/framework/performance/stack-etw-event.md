@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396357"
 ---
 # <a name="stack-etw-event"></a><span data-ttu-id="ae358-102">Zdarzenie ETW stosu</span><span class="sxs-lookup"><span data-stu-id="ae358-102">Stack ETW Event</span></span>
 <span data-ttu-id="ae358-103">Zdarzenie stosu stosuje się w połączeniu z innymi zdarzeniami, można wygenerować śladów stosu po wywołaniu zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="ae358-103">The stack event should be used in conjunction with other events to generate stack traces after an event is raised.</span></span> <span data-ttu-id="ae358-104">Jest on rejestrowane, gdy dostawca środowiska uruchomieniowego jest włączony.</span><span class="sxs-lookup"><span data-stu-id="ae358-104">It is logged when the runtime provider is enabled.</span></span> <span data-ttu-id="ae358-105">Jest to zdarzenie bardzo wysokiej częstotliwości, ponieważ jest wywoływane, gdy innego środowiska uruchomieniowego zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="ae358-105">This is a very high frequency event, because it is raised whenever another runtime event is raised.</span></span> <span data-ttu-id="ae358-106">Z tego powodu zaleca się, użyj tego zdarzenia z rozwagą.</span><span class="sxs-lookup"><span data-stu-id="ae358-106">For this reason, we recommend that you use this event with caution.</span></span>  

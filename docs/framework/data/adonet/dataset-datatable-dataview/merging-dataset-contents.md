@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763673"
 ---
 # <a name="merging-dataset-contents"></a><span data-ttu-id="3c627-102">Scalanie zawartości zestawu danych</span><span class="sxs-lookup"><span data-stu-id="3c627-102">Merging DataSet Contents</span></span>
 <span data-ttu-id="3c627-103">Można użyć <xref:System.Data.DataSet.Merge%2A> sposób scalania zawartość <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, lub <xref:System.Data.DataRow> tablicy do istniejącej `DataSet`.</span><span class="sxs-lookup"><span data-stu-id="3c627-103">You can use the <xref:System.Data.DataSet.Merge%2A> method to merge the contents of a <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, or <xref:System.Data.DataRow> array into an existing `DataSet`.</span></span> <span data-ttu-id="3c627-104">Kilka czynników, jak i opcje mają wpływ na sposób nowe dane są scalane istniejące `DataSet`.</span><span class="sxs-lookup"><span data-stu-id="3c627-104">Several factors and options affect how new data is merged into an existing `DataSet`.</span></span>  

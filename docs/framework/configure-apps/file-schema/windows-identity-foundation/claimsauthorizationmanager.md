@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757375"
 ---
 # <a name="ltclaimsauthorizationmanagergt"></a><span data-ttu-id="e7399-102">&lt;claimsAuthorizationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="e7399-102">&lt;claimsAuthorizationManager&gt;</span></span>
 <span data-ttu-id="e7399-103">Rejestruje Menedżera autoryzacji oświadczeń dla oświadczeń przychodzących.</span><span class="sxs-lookup"><span data-stu-id="e7399-103">Registers a claims authorization manager for the incoming claims.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763995"
 ---
 # <a name="order-by-entity-sql"></a><span data-ttu-id="1d219-102">ORDER BY (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="1d219-102">ORDER BY (Entity SQL)</span></span>
 <span data-ttu-id="1d219-103">Określa porządek sortowania używane dla obiektów zwracanych w instrukcji SELECT.</span><span class="sxs-lookup"><span data-stu-id="1d219-103">Specifies the sort order used on objects returned in a SELECT statement.</span></span>  

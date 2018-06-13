@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752923"
 ---
 # <a name="ltcontracttypenamesgt"></a><span data-ttu-id="9573b-102">&lt;contractTypeNames&gt;</span><span class="sxs-lookup"><span data-stu-id="9573b-102">&lt;contractTypeNames&gt;</span></span>
 <span data-ttu-id="9573b-103">Sekcja konfiguracyjna, który określa listę nazw typ kontraktu, które są nazwy kontraktu usługi wyszukane, i kryteria zwykle używana podczas wyszukiwania dla usługi.</span><span class="sxs-lookup"><span data-stu-id="9573b-103">A configuration section that specifies a list of contract type names, which are the contract names of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="9573b-104">Jeśli jest określony więcej niż jedną nazwę kontraktu, odpowie tylko punktów końcowych usługi dopasowania wszystkich umów.</span><span class="sxs-lookup"><span data-stu-id="9573b-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="9573b-105">Należy pamiętać, że w systemie Windows Communication Foundation (WCF), punkt końcowy może obsługiwać tylko jeden kontrakt.</span><span class="sxs-lookup"><span data-stu-id="9573b-105">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  

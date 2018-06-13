@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757908"
 ---
 # <a name="managing-dataviews"></a><span data-ttu-id="6251a-102">Zarządzanie DataViews</span><span class="sxs-lookup"><span data-stu-id="6251a-102">Managing DataViews</span></span>
 <span data-ttu-id="6251a-103">Można użyć <xref:System.Data.DataViewManager> umożliwia zarządzanie ustawieniami widoku wszystkie tabele w <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="6251a-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="6251a-104">Jeśli masz formant, który chcesz powiązać z wieloma tabelami, takie jak siatka która nawiguje relacje, **DataViewManager** jest idealnym rozwiązaniem.</span><span class="sxs-lookup"><span data-stu-id="6251a-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  

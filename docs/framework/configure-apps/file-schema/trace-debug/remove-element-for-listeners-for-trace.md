@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746556"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="b2268-102">&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;śledzenia&gt;</span><span class="sxs-lookup"><span data-stu-id="b2268-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="b2268-103">Usuwa odbiornik z **odbiorników** kolekcji.</span><span class="sxs-lookup"><span data-stu-id="b2268-103">Removes a listener from the **Listeners** collection.</span></span>  

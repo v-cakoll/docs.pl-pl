@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604487"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a><span data-ttu-id="6ac01-102">Imports — Instrukcja (.NET Namespace i Type)</span><span class="sxs-lookup"><span data-stu-id="6ac01-102">Imports Statement (.NET Namespace and Type)</span></span>
 <span data-ttu-id="6ac01-103">Umożliwia wpisz nazwy przywoływanie bez kwalifikacji przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="6ac01-103">Enables type names to be referenced without namespace qualification.</span></span>  

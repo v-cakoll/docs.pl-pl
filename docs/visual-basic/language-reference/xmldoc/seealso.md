@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604682"
 ---
 # <a name="ltseealsogt-visual-basic"></a><span data-ttu-id="1e5e7-102">&lt;SeeAlso&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e5e7-102">&lt;seealso&gt; (Visual Basic)</span></span>
 <span data-ttu-id="1e5e7-103">Określa łącze, które pojawia się w sekcji Zobacz też.</span><span class="sxs-lookup"><span data-stu-id="1e5e7-103">Specifies a link that appears in the See Also section.</span></span>  

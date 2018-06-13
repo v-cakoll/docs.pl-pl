@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749845"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a><span data-ttu-id="60eaa-102">&lt;security&gt; w &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="60eaa-102">&lt;security&gt; of &lt;peerTransport&gt;</span></span>
 <span data-ttu-id="60eaa-103">Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takich jak typ uwierzytelniania i zabezpieczenia używany do transportu wiadomości.</span><span class="sxs-lookup"><span data-stu-id="60eaa-103">Contains the security settings associated with a peer channel, including the type of authentication used and the security used for the message transport.</span></span>  

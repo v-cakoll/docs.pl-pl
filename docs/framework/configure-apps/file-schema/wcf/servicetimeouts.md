@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743475"
 ---
 # <a name="ltservicetimeoutsgt"></a><span data-ttu-id="7928d-102">&lt;serviceTimeouts&gt;</span><span class="sxs-lookup"><span data-stu-id="7928d-102">&lt;serviceTimeouts&gt;</span></span>
 <span data-ttu-id="7928d-103">Określa limit czasu dla usługi.</span><span class="sxs-lookup"><span data-stu-id="7928d-103">Specifies the timeout for a service.</span></span>  

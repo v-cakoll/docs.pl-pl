@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758164"
 ---
 # <a name="connection-events"></a><span data-ttu-id="764d3-102">Zdarzenia połączeń</span><span class="sxs-lookup"><span data-stu-id="764d3-102">Connection Events</span></span>
 <span data-ttu-id="764d3-103">Wszystkich dostawców danych .NET Framework jest **połączenia** obiekty o dwa zdarzenia, których można pobrać komunikaty informacyjne ze źródła danych lub można określić, czy stan **połączenia** ma zmienić.</span><span class="sxs-lookup"><span data-stu-id="764d3-103">All of the .NET Framework data providers have **Connection** objects with two events that you can use to retrieve informational messages from a data source or to determine if the state of a **Connection** has changed.</span></span> <span data-ttu-id="764d3-104">W poniższej tabeli opisano zdarzenia **połączenia** obiektu.</span><span class="sxs-lookup"><span data-stu-id="764d3-104">The following table describes the events of the **Connection** object.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761777"
 ---
 # <a name="between-entity-sql"></a><span data-ttu-id="12b73-102">MIĘDZY (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="12b73-102">BETWEEN (Entity SQL)</span></span>
 <span data-ttu-id="12b73-103">Określa, czy wyrażenie wynikiem jest wartość w określonym zakresie.</span><span class="sxs-lookup"><span data-stu-id="12b73-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="12b73-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Między wyrażenie ma tę samą funkcję co wyrażenia języka Transact-SQL między.</span><span class="sxs-lookup"><span data-stu-id="12b73-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  

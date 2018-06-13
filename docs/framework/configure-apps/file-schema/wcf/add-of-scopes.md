@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745802"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a><span data-ttu-id="1d569-102">&lt;add&gt; w &lt;scopes&gt;</span><span class="sxs-lookup"><span data-stu-id="1d569-102">&lt;add&gt; of &lt;scopes&gt;</span></span>
 <span data-ttu-id="1d569-103">Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.</span><span class="sxs-lookup"><span data-stu-id="1d569-103">Adds a custom scope Uri that can be used to filter service endpoints during query.</span></span>  

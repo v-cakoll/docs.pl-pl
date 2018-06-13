@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760469"
 ---
 # <a name="adding-columns-to-a-datatable"></a><span data-ttu-id="eeb7c-102">Dodawanie kolumn do DataTable</span><span class="sxs-lookup"><span data-stu-id="eeb7c-102">Adding Columns to a DataTable</span></span>
 <span data-ttu-id="eeb7c-103">A <xref:System.Data.DataTable> zawiera kolekcję <xref:System.Data.DataColumn> odwołują się obiekty **kolumn** właściwość tabeli.</span><span class="sxs-lookup"><span data-stu-id="eeb7c-103">A <xref:System.Data.DataTable> contains a collection of <xref:System.Data.DataColumn> objects referenced by the **Columns** property of the table.</span></span> <span data-ttu-id="eeb7c-104">W tej kolekcji kolumn, wraz ze wszystkimi ograniczeniami definiuje schemat lub struktury tabeli.</span><span class="sxs-lookup"><span data-stu-id="eeb7c-104">This collection of columns, along with any constraints, defines the schema, or structure, of the table.</span></span>  

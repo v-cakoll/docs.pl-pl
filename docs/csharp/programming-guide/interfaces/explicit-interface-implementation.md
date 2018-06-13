@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331594"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a><span data-ttu-id="c690c-102">Implementacja interfejsu jawnego (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="c690c-102">Explicit Interface Implementation (C# Programming Guide)</span></span>
 <span data-ttu-id="c690c-103">Jeśli [klasy](../../../csharp/language-reference/keywords/class.md) implementuje dwa interfejsy zawierające element członkowski o tej samej sygnaturze, a następnie wykonania ten element członkowski klasy spowoduje, że oba interfejsy do użycia tego elementu członkowskiego jako ich wdrażania.</span><span class="sxs-lookup"><span data-stu-id="c690c-103">If a [class](../../../csharp/language-reference/keywords/class.md) implements two interfaces that contain a member with the same signature, then implementing that member on the class will cause both interfaces to use that member as their implementation.</span></span> <span data-ttu-id="c690c-104">W poniższym przykładzie wszystkie wywołania do `Paint` wywołanie tej samej metody.</span><span class="sxs-lookup"><span data-stu-id="c690c-104">In the following example, all the calls to `Paint` invoke the same method.</span></span>  

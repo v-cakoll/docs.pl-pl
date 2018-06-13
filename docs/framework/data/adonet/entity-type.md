@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765324"
 ---
 # <a name="entity-type"></a><span data-ttu-id="6d996-102">Typ jednostki</span><span class="sxs-lookup"><span data-stu-id="6d996-102">entity type</span></span>
 <span data-ttu-id="6d996-103">*Typu jednostki* jest podstawowym blokiem opisu struktury danych z modelu danych jednostki (EDM).</span><span class="sxs-lookup"><span data-stu-id="6d996-103">The *entity type* is the fundamental building block for describing the structure of data with the Entity Data Model (EDM).</span></span> <span data-ttu-id="6d996-104">W modelu koncepcyjnym typem jednostki reprezentuje strukturę pojęcia najwyższego poziomu, takie jak klienci lub zamówienia.</span><span class="sxs-lookup"><span data-stu-id="6d996-104">In a conceptual model, an entity type represents the structure of top-level concepts, such as customers or orders.</span></span> <span data-ttu-id="6d996-105">Typ jednostki jest szablon dla wystąpień typów jednostek.</span><span class="sxs-lookup"><span data-stu-id="6d996-105">An entity type is a template for entity type instances.</span></span> <span data-ttu-id="6d996-106">Każdy szablon zawiera następujące informacje:</span><span class="sxs-lookup"><span data-stu-id="6d996-106">Each template contains the following information:</span></span>  

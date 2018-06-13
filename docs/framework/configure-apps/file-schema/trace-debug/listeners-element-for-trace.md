@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748142"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="7e23b-102">&lt;obiekty nasłuchujące&gt; elementu &lt;śledzenia&gt;</span><span class="sxs-lookup"><span data-stu-id="7e23b-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
 <span data-ttu-id="7e23b-103">Określa odbiornika zbiera, magazynów i kieruje komunikaty.</span><span class="sxs-lookup"><span data-stu-id="7e23b-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="7e23b-104">Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="7e23b-104">Listeners direct the tracing output to an appropriate target.</span></span>  

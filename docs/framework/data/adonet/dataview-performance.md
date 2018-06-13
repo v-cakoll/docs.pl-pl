@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762783"
 ---
 # <a name="dataview-performance"></a><span data-ttu-id="19ac1-102">Widok danych wydajności</span><span class="sxs-lookup"><span data-stu-id="19ac1-102">DataView Performance</span></span>
 <span data-ttu-id="19ac1-103">W tym temacie omówiono wydajności korzyści wynikające ze stosowania <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metody <xref:System.Data.DataView> klasy i buforowania <xref:System.Data.DataView> w aplikacji sieci Web.</span><span class="sxs-lookup"><span data-stu-id="19ac1-103">This topic discusses the performance benefits of using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView> class, and of caching a <xref:System.Data.DataView> in a Web application.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397835"
 ---
 # <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="d2d9a-102">Włączanie debugowania dołączania JIT</span><span class="sxs-lookup"><span data-stu-id="d2d9a-102">Enabling JIT-Attach Debugging</span></span>
 <span data-ttu-id="d2d9a-103">Debugowanie dołączania JIT jest hasło używane do opisywania dołączanie debugera do procesu, gdy wystąpią błędy, lub mogą być wyzwalane przez określone metody lub funkcji.</span><span class="sxs-lookup"><span data-stu-id="d2d9a-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  

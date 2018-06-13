@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604077"
 ---
 # <a name="attribute-list-visual-basic"></a><span data-ttu-id="6dfae-102">Lista atrybutów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dfae-102">Attribute List (Visual Basic)</span></span>
 <span data-ttu-id="6dfae-103">Określa atrybuty, które ma zostać zastosowany do zadeklarowany element.</span><span class="sxs-lookup"><span data-stu-id="6dfae-103">Specifies the attributes to be applied to a declared programming element.</span></span> <span data-ttu-id="6dfae-104">Wiele atrybutów są rozdzielane przecinkami.</span><span class="sxs-lookup"><span data-stu-id="6dfae-104">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="6dfae-105">Poniżej przedstawiono składnię jeden atrybut.</span><span class="sxs-lookup"><span data-stu-id="6dfae-105">Following is the syntax for one attribute.</span></span>  

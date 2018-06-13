@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753957"
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a><span data-ttu-id="2a047-102">&lt;add&gt; w &lt;authorizationPolicies&gt;</span><span class="sxs-lookup"><span data-stu-id="2a047-102">&lt;add&gt; of &lt;authorizationPolicies&gt;</span></span>
 <span data-ttu-id="2a047-103">Określa zasady autoryzacji dla transformacji roszczenia.</span><span class="sxs-lookup"><span data-stu-id="2a047-103">Specifies an authorization policy for claim transformation.</span></span>  

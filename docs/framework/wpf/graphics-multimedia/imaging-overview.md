@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566395"
 ---
 # <a name="imaging-overview"></a><span data-ttu-id="c2f49-102">Przegląd Obrazowanie</span><span class="sxs-lookup"><span data-stu-id="c2f49-102">Imaging Overview</span></span>
 <span data-ttu-id="c2f49-103">Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c2f49-103">This topic provides an introduction to the [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)].</span></span> [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]<span data-ttu-id="c2f49-104"> Umożliwia deweloperom wyświetlania, przekształcanie i sformatować obrazów.</span><span class="sxs-lookup"><span data-stu-id="c2f49-104"> enables developers to display, transform, and format images.</span></span>  

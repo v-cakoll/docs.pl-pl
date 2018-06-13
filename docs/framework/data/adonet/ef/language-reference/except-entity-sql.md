@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760209"
 ---
 # <a name="except-entity-sql"></a><span data-ttu-id="4e043-102">Z wyjątkiem (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="4e043-102">EXCEPT (Entity SQL)</span></span>
 <span data-ttu-id="4e043-103">Zwraca kolekcję wszystkie unikatowe wartości w wyrażeniu kwerendy do lewego operandu EXCEPT, które nie są również zwracane w wyrażeniu zapytania z prawej strony argument EXCEPT.</span><span class="sxs-lookup"><span data-stu-id="4e043-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="4e043-104">Wszystkie wyrażenia musi być tego samego typu lub wspólny podstawowej lub pochodny typ jako `expression`.</span><span class="sxs-lookup"><span data-stu-id="4e043-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  

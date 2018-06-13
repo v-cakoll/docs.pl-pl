@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756816"
 ---
 # <a name="complex-type"></a><span data-ttu-id="40276-102">Typ złożony</span><span class="sxs-lookup"><span data-stu-id="40276-102">complex type</span></span>
 <span data-ttu-id="40276-103">A *typu złożonego* szablonem służącym do definiowania właściwości rozbudowane, strukturalnych na [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) lub na inne typy złożone.</span><span class="sxs-lookup"><span data-stu-id="40276-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="40276-104">Każdy szablon zawiera następujące elementy:</span><span class="sxs-lookup"><span data-stu-id="40276-104">Each template contains the following:</span></span>  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592122"
 ---
 # <a name="string-data-type-visual-basic"></a><span data-ttu-id="7791b-102">String — Typ danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7791b-102">String Data Type (Visual Basic)</span></span>
 <span data-ttu-id="7791b-103">Przechowuje sekwencji punktów niepodpisanego kodu (2-bajtowych) 16-bitowych tego zakresu, w wartość z zakresu od 0 do 65535.</span><span class="sxs-lookup"><span data-stu-id="7791b-103">Holds sequences of unsigned 16-bit (2-byte) code points that range in value from 0 through 65535.</span></span> <span data-ttu-id="7791b-104">Każdy *punktem kodu*, lub kod znaku reprezentuje pojedynczy znak Unicode.</span><span class="sxs-lookup"><span data-stu-id="7791b-104">Each *code point*, or character code, represents a single Unicode character.</span></span> <span data-ttu-id="7791b-105">Ciąg może zawierać od 0 do około miliarda dwóch (2 ^ 31) znaków Unicode.</span><span class="sxs-lookup"><span data-stu-id="7791b-105">A string can contain from 0 to approximately two billion (2 ^ 31) Unicode characters.</span></span>  

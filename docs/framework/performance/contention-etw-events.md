@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397523"
 ---
 # <a name="contention-etw-events"></a><span data-ttu-id="33d9d-102">Zdarzenia rywalizacji ETW</span><span class="sxs-lookup"><span data-stu-id="33d9d-102">Contention ETW Events</span></span>
 <span data-ttu-id="33d9d-103">Zdarzenia rywalizacji są wywoływane zawsze, gdy w przypadku konfliktu między <xref:System.Threading.Monitor?displayProperty=nameWithType> blokady lub blokad natywnego używane przez środowisko uruchomieniowe.</span><span class="sxs-lookup"><span data-stu-id="33d9d-103">Contention events are raised whenever there is contention for <xref:System.Threading.Monitor?displayProperty=nameWithType> locks or native locks used by the runtime.</span></span> <span data-ttu-id="33d9d-104">Gdy wątek oczekuje na blokadę, podczas gdy inny wątek posiada blokady wystąpienia rywalizacji.</span><span class="sxs-lookup"><span data-stu-id="33d9d-104">Contention occurs when a thread is waiting for a lock while another thread possesses the lock.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761636"
 ---
 # <a name="collection-entity-sql"></a><span data-ttu-id="0d8b7-102">KOLEKCJA (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="0d8b7-102">COLLECTION (Entity SQL)</span></span>
 <span data-ttu-id="0d8b7-103">KOLEKCJA — słowo kluczowe jest używana tylko w definicji wbudowanej funkcji.</span><span class="sxs-lookup"><span data-stu-id="0d8b7-103">The COLLECTION keyword is only used in the definition of an inline function.</span></span> <span data-ttu-id="0d8b7-104">Funkcje kolekcji są funkcje, które działają na kolekcję wartości i wygenerować skalarne dane wyjściowe.</span><span class="sxs-lookup"><span data-stu-id="0d8b7-104">Collection functions are functions that operate on a collection of values and produce a scalar output.</span></span>  

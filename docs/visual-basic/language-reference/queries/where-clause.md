@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604045"
 ---
 # <a name="where-clause-visual-basic"></a><span data-ttu-id="f3fc1-102">Where — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f3fc1-102">Where Clause (Visual Basic)</span></span>
 <span data-ttu-id="f3fc1-103">Określa warunek filtrowania dla zapytania.</span><span class="sxs-lookup"><span data-stu-id="f3fc1-103">Specifies the filtering condition for a query.</span></span>  

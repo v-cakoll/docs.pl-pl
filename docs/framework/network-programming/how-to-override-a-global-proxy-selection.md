@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393909"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="27a8d-102">Porady: Zastąp wybór globalnych serwera Proxy</span><span class="sxs-lookup"><span data-stu-id="27a8d-102">How to: Override a Global Proxy Selection</span></span>
 <span data-ttu-id="27a8d-103">W tym przykładzie wysyła **WebRequest** do www.contoso.com zastępujący wybór globalnych serwera proxy z serwerem proxy o nazwie `alternateproxy` na porcie 80.</span><span class="sxs-lookup"><span data-stu-id="27a8d-103">This example sends a **WebRequest** to www.contoso.com that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  

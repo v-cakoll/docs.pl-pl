@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604874"
 ---
 # <a name="yield-statement-visual-basic"></a><span data-ttu-id="b3ee5-102">Yield — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3ee5-102">Yield Statement (Visual Basic)</span></span>
 <span data-ttu-id="b3ee5-103">Wysyła następnego elementu kolekcji do `For Each...Next` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="b3ee5-103">Sends the next element of a collection to a `For Each...Next` statement.</span></span>  

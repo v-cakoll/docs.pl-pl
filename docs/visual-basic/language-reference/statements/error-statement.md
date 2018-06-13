@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603889"
 ---
 # <a name="error-statement"></a><span data-ttu-id="13c28-102">Error — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="13c28-102">Error Statement</span></span>
 <span data-ttu-id="13c28-103">Symuluje wystąpienie błędu.</span><span class="sxs-lookup"><span data-stu-id="13c28-103">Simulates the occurrence of an error.</span></span>  

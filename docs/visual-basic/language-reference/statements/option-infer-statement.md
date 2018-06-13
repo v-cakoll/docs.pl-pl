@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605514"
 ---
 # <a name="option-infer-statement"></a><span data-ttu-id="e515a-102">Option Infer — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="e515a-102">Option Infer Statement</span></span>
 <span data-ttu-id="e515a-103">Umożliwia użycie wnioskowania o typie lokalnym przy deklaracji zmiennych.</span><span class="sxs-lookup"><span data-stu-id="e515a-103">Enables the use of local type inference in declaring variables.</span></span>  

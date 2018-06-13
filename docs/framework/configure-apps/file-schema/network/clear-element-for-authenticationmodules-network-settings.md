@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751990"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="58539-102">&lt;Wyczyść&gt; elementu authenticationModules — (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="58539-102">&lt;clear&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="58539-103">Czyści wszystkie moduły uwierzytelniania z aplikacji.</span><span class="sxs-lookup"><span data-stu-id="58539-103">Clears all authentication modules from the application.</span></span>  

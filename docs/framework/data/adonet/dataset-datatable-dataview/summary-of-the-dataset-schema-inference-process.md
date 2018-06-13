@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760274"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a><span data-ttu-id="b48e4-102">Podsumowanie procesu wnioskowania schematu zestawu danych</span><span class="sxs-lookup"><span data-stu-id="b48e4-102">Summary of the DataSet Schema Inference Process</span></span>
 <span data-ttu-id="b48e4-103">Proces wnioskowania najpierw określi, z dokumentu XML, elementy, które będzie można wywnioskować jako tabele.</span><span class="sxs-lookup"><span data-stu-id="b48e4-103">The inference process first determines, from the XML document, which elements will be inferred as tables.</span></span> <span data-ttu-id="b48e4-104">Z pozostałych pliku XML proces wnioskowania określa kolumn dla tych tabel.</span><span class="sxs-lookup"><span data-stu-id="b48e4-104">From the remaining XML, the inference process determines the columns for those tables.</span></span> <span data-ttu-id="b48e4-105">Zagnieżdżone tabele procesu wnioskowania generuje zagnieżdżonych <xref:System.Data.DataRelation> i <xref:System.Data.ForeignKeyConstraint> obiektów.</span><span class="sxs-lookup"><span data-stu-id="b48e4-105">For nested tables, the inference process generates nested <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects.</span></span>  

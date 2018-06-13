@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398082"
 ---
 # <a name="lttypegt-element-net-native"></a><span data-ttu-id="cf56d-102">Element &lt;Type&gt; (architektura .NET Native)</span><span class="sxs-lookup"><span data-stu-id="cf56d-102">&lt;Type&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="cf56d-103">Zastosowanie zasad wykonywania do określonego typu, takich jak klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="cf56d-103">Applies runtime policy to a particular type, such as a class or structure.</span></span>  

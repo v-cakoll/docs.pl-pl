@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762426"
 ---
 # <a name="facet"></a><span data-ttu-id="946f3-102">facet</span><span class="sxs-lookup"><span data-stu-id="946f3-102">facet</span></span>
 <span data-ttu-id="946f3-103">A *aspektu* służy do dodawania szczegółów do definicji właściwości typu pierwotnego.</span><span class="sxs-lookup"><span data-stu-id="946f3-103">A *facet* is used to add detail to a primitive type property definition.</span></span> <span data-ttu-id="946f3-104">A [właściwości](../../../../docs/framework/data/adonet/property.md) definicja zawiera informacje o typie właściwości, ale często konieczne jest bardziej szczegółowo.</span><span class="sxs-lookup"><span data-stu-id="946f3-104">A [property](../../../../docs/framework/data/adonet/property.md) definition contains information about the property type, but often more detail is necessary.</span></span> <span data-ttu-id="946f3-105">Na przykład typ jednostki w modelu koncepcyjnym może mieć właściwość typu `String` wartości, których nie można ustawić na wartość null.</span><span class="sxs-lookup"><span data-stu-id="946f3-105">For example, an entity type in a conceptual model might have a property of type `String` whose value cannot be set to null.</span></span> <span data-ttu-id="946f3-106">Aspekty umożliwiają określenie ten poziom szczegółowości.</span><span class="sxs-lookup"><span data-stu-id="946f3-106">Facets allow you to specify this level of detail.</span></span>  

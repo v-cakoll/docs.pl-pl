@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327161"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a><span data-ttu-id="8c6ef-102">Pobieranie tekstu akapitów (C#)</span><span class="sxs-lookup"><span data-stu-id="8c6ef-102">Retrieving the Text of the Paragraphs (C#)</span></span>
 <span data-ttu-id="8c6ef-103">W tym przykładzie opiera się na poprzednim przykładzie [pobierania akapitów i ich style (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span><span class="sxs-lookup"><span data-stu-id="8c6ef-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="8c6ef-104">W tym przykładzie nowe pobiera tekst każdego akapitu jako ciąg.</span><span class="sxs-lookup"><span data-stu-id="8c6ef-104">This new example retrieves the text of each paragraph as a string.</span></span>  

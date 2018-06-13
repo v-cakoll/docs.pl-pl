@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760830"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a><span data-ttu-id="f33ad-102">Porady: wykonywanie zapytań polimorficzne</span><span class="sxs-lookup"><span data-stu-id="f33ad-102">How to: Execute a Polymorphic Query</span></span>
 <span data-ttu-id="f33ad-103">W tym temacie przedstawiono sposób wykonania polimorficznym [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań przy użyciu [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operatora.</span><span class="sxs-lookup"><span data-stu-id="f33ad-103">This topic shows how to execute a polymorphic [!INCLUDE[esql](../../../../../includes/esql-md.md)] query using the [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operator.</span></span>  

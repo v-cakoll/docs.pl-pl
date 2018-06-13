@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565866"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a><span data-ttu-id="4d3e9-102">Typy konwerterów i rozszerzenia znaczników dla XAML</span><span class="sxs-lookup"><span data-stu-id="4d3e9-102">Type Converters and Markup Extensions for XAML</span></span>
 <span data-ttu-id="4d3e9-103">Typy konwerterów i rozszerzeń znaczników są dwie metody, które systemów typu XAML i zapisywania XAML służy do generowania elementów wykresu obiektu.</span><span class="sxs-lookup"><span data-stu-id="4d3e9-103">Type converters and markup extensions are two techniques that XAML type systems and XAML writers use to generate object graph components.</span></span> <span data-ttu-id="4d3e9-104">Mimo że mają pewne cechy typy konwerterów i rozszerzeń znaczników znajdują się inaczej w strumień węzłów XAML.</span><span class="sxs-lookup"><span data-stu-id="4d3e9-104">Although they share some characteristics, type converters and markup extensions are represented differently in a XAML node stream.</span></span> <span data-ttu-id="4d3e9-105">W tej dokumentacji zestawu, konwertery typu rozszerzenia znaczników i podobne konstrukcje są czasami zbiorczo nazywane konwertery wartości.</span><span class="sxs-lookup"><span data-stu-id="4d3e9-105">In this documentation set, type converters, markup extensions, and similar constructs are sometimes collectively referred to as value converters.</span></span>  

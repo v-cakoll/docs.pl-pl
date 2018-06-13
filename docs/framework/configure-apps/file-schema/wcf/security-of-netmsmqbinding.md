@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750963"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="102ef-102">&lt;security&gt; w &lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="102ef-102">&lt;security&gt; of &lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="102ef-103">Definiuje ustawienia zabezpieczeń dla powiązania usługi MSMQ.</span><span class="sxs-lookup"><span data-stu-id="102ef-103">Defines the security settings for a MSMQ binding.</span></span> <span data-ttu-id="102ef-104">Określa, czy włączono transportu lub zabezpieczeń protokołu SOAP, a jeśli tak, poziomy tryb i ochrony uwierzytelniania są używane.</span><span class="sxs-lookup"><span data-stu-id="102ef-104">It specifies whether transport or SOAP security is enabled and, if so, what authentication mode and protection levels are in use.</span></span>  

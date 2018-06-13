@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760443"
 ---
 # <a name="-divide-entity-sql"></a><span data-ttu-id="3e58b-102">/ (Dzielenie) (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="3e58b-102">/ (Divide) (Entity SQL)</span></span>
 <span data-ttu-id="3e58b-103">Dzieli jedną liczbę przez inny.</span><span class="sxs-lookup"><span data-stu-id="3e58b-103">Divides one number by another.</span></span>  

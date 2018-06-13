@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748896"
 ---
 # <a name="lthttpdigestgt-element"></a><span data-ttu-id="5a763-102">&lt;httpDigest&gt;, element</span><span class="sxs-lookup"><span data-stu-id="5a763-102">&lt;httpDigest&gt; Element</span></span>
 <span data-ttu-id="5a763-103">Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta do usługi.</span><span class="sxs-lookup"><span data-stu-id="5a763-103">Specifies a digest type credential used when authenticating the client to a service.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752458"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a><span data-ttu-id="b8fb4-102">&lt;add&gt; w &lt;issuerChannelBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="b8fb4-102">&lt;add&gt; of &lt;issuerChannelBehaviors&gt;</span></span>
 <span data-ttu-id="b8fb4-103">Dodaje zachowanie punktu końcowego, który będzie używany podczas komunikacji z STS.</span><span class="sxs-lookup"><span data-stu-id="b8fb4-103">Adds an endpoint behavior to be used when communicating with an STS.</span></span>  

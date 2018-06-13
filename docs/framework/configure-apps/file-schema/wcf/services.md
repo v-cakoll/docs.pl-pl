@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749234"
 ---
 # <a name="ltservicesgt"></a><span data-ttu-id="72601-102">&lt;Usługi&gt;</span><span class="sxs-lookup"><span data-stu-id="72601-102">&lt;services&gt;</span></span>
 <span data-ttu-id="72601-103">Usługi są zdefiniowane w `services` sekcji pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="72601-103">Services are defined in the `services` section of the configuration file.</span></span> <span data-ttu-id="72601-104">Każda usługa ma własną `service` sekcji konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="72601-104">Each service has its own `service` configuration section.</span></span>  

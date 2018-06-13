@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749101"
 ---
 # <a name="ltpolicyimportersgt"></a><span data-ttu-id="20dee-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="20dee-102">&lt;policyImporters&gt;</span></span>
 <span data-ttu-id="20dee-103">Ten element konfiguracji określa wszystkich importerów zasad sterujących importem potwierdzeń niestandardowych zasad dotyczących powiązań.</span><span class="sxs-lookup"><span data-stu-id="20dee-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="20dee-104">Każdego elementu podrzędnego <`policyImporter`> używany do wyszukiwania niestandardowych asercji zasad dotyczących powiązanie funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje wymaga potwierdzenia.</span><span class="sxs-lookup"><span data-stu-id="20dee-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  

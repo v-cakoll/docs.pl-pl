@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747957"
 ---
 # <a name="runtime-settings-schema"></a><span data-ttu-id="c9f4d-102">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="c9f4d-102">Runtime Settings Schema</span></span>
 <span data-ttu-id="c9f4d-103">Ustawienia środowiska uruchomieniowego są używane przez środowisko uruchomieniowe języka wspólnego do konfigurowania aplikacji programu .NET Framework obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="c9f4d-103">Runtime settings are used by the common language runtime to configure applications that target the .NET Framework.</span></span>  

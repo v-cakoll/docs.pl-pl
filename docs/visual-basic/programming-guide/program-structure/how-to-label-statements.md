@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650127"
 ---
 # <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="525ca-102">Porady: etykietowanie instrukcji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="525ca-102">How to: Label Statements (Visual Basic)</span></span>
 <span data-ttu-id="525ca-103">Bloki instrukcji składają się z wierszy kodu rozdzielone dwukropkiem.</span><span class="sxs-lookup"><span data-stu-id="525ca-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="525ca-104">Wiersze kodu poprzedzone identyfikujący ciąg lub liczba całkowita są określane jako *etykietą*.</span><span class="sxs-lookup"><span data-stu-id="525ca-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="525ca-105">Etykiety instrukcji są używane do oznaczenia wiersz kodu, aby zidentyfikować go do użytku w instrukcjach takich jak `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="525ca-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>  

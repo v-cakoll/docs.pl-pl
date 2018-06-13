@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803949"
 ---
 # <a name="automatic-format-selection"></a><span data-ttu-id="e7b14-102">Automatyczne wybieranie formatu</span><span class="sxs-lookup"><span data-stu-id="e7b14-102">Automatic Format Selection</span></span>
 <span data-ttu-id="e7b14-103">W tym przykładzie pokazano, jak włączyć automatyczne wybieranie formatu (XML lub JSON) z resztą Windows Communication Foundation (WCF) programowania modelu, a także sposobu jawnie ustawić format w kodzie operacji.</span><span class="sxs-lookup"><span data-stu-id="e7b14-103">This sample demonstrates how to enable automatic format selection (XML or JSON) with the Windows Communication Foundation (WCF) REST programming model, as well as how to explicitly set the format in the operation code.</span></span>  

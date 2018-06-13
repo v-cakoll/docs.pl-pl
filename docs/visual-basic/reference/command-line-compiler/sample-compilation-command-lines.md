@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653666"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a><span data-ttu-id="72164-102">Polecenie kompilacja przykładów — wiersze (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72164-102">Sample compilation command lines (Visual Basic)</span></span>
 <span data-ttu-id="72164-103">Alternatywą wobec kompilowanie programów Visual Basic z poziomu programu Visual Studio można kompilować z poziomu wiersza polecenia, aby utworzyć pliki pliku wykonywalnego (.exe) lub biblioteki dołączanej (dynamicznie dll).</span><span class="sxs-lookup"><span data-stu-id="72164-103">As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655274"
 ---
 # <a name="events-visual-basic"></a><span data-ttu-id="62c57-102">Zdarzenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62c57-102">Events (Visual Basic)</span></span>
 <span data-ttu-id="62c57-103">Projektu programu Visual Studio może wizualizacji jako szereg procedur, które są wykonywane w kolejności, w rzeczywistości większość programów są zdarzeniami — czyli sposób wykonywania jest określany przez zewnętrznego wystąpienia o nazwie *zdarzenia*.</span><span class="sxs-lookup"><span data-stu-id="62c57-103">While you might visualize a Visual Studio project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.</span></span>  

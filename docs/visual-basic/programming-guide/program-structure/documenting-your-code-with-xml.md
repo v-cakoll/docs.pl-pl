@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650504"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a><span data-ttu-id="3cd10-102">Dokumentowanie kodu za pomocą XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3cd10-102">Documenting Your Code with XML (Visual Basic)</span></span>
 <span data-ttu-id="3cd10-103">W języku Visual Basic można udokumentować kod za pomocą XML</span><span class="sxs-lookup"><span data-stu-id="3cd10-103">In Visual Basic, you can document your code using XML</span></span>  

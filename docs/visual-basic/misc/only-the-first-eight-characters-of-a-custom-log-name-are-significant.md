@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639405"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="88d14-102">Tylko pierwszych osiem znaków niestandardowej nazwy dziennika są istotne</span><span class="sxs-lookup"><span data-stu-id="88d14-102">Only the first eight characters of a custom log name are significant</span></span>
 <span data-ttu-id="88d14-103">Podczas sprawdzania dostępności nazwy dziennika zdarzeń unikatowość, uwzględniane są tylko pierwszych osiem znaków.</span><span class="sxs-lookup"><span data-stu-id="88d14-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="88d14-104">Konflikt mogą wynikać z dzienników zdarzeń, które mają ich pierwszych osiem znaków.</span><span class="sxs-lookup"><span data-stu-id="88d14-104">A conflict may result from event logs that share their first eight characters.</span></span>  

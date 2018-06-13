@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647391"
 ---
 # <a name="character-data-types-visual-basic"></a><span data-ttu-id="53124-102">Znaki — Typy danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53124-102">Character Data Types (Visual Basic)</span></span>
 <span data-ttu-id="53124-103">Visual Basic zapewnia *znakowe typy danych* radzenia sobie z znaków drukowalnych i którą można wyświetlić.</span><span class="sxs-lookup"><span data-stu-id="53124-103">Visual Basic provides *character data types* to deal with printable and displayable characters.</span></span> <span data-ttu-id="53124-104">Gdy oba postępowania w przypadku znaków Unicode, `Char` przechowuje pojedynczym znakiem, podczas gdy `String` zawiera nieokreśloną liczbę znaków.</span><span class="sxs-lookup"><span data-stu-id="53124-104">While they both deal with Unicode characters, `Char` holds a single character whereas `String` contains an indefinite number of characters.</span></span>  

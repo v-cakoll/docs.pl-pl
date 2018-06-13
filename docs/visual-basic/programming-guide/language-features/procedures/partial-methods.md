@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651599"
 ---
 # <a name="partial-methods-visual-basic"></a><span data-ttu-id="2c3db-102">Metody częściowe (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c3db-102">Partial Methods (Visual Basic)</span></span>
 <span data-ttu-id="2c3db-103">Metody częściowe umożliwiają deweloperom Wstawianie niestandardowej logiki do kodu.</span><span class="sxs-lookup"><span data-stu-id="2c3db-103">Partial methods enable developers to insert custom logic into code.</span></span> <span data-ttu-id="2c3db-104">Zazwyczaj kod jest częścią klasy wygenerowany przez projektanta.</span><span class="sxs-lookup"><span data-stu-id="2c3db-104">Typically, the code is part of a designer-generated class.</span></span> <span data-ttu-id="2c3db-105">Metody częściowe są zdefiniowane w klasie częściowej utworzonego przez generator kodu, a często są one używane do o tym, że element został zmieniony.</span><span class="sxs-lookup"><span data-stu-id="2c3db-105">Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed.</span></span> <span data-ttu-id="2c3db-106">Umożliwiają one developer do określania zachowania niestandardowego w odpowiedzi na zmianę.</span><span class="sxs-lookup"><span data-stu-id="2c3db-106">They enable the developer to specify custom behavior in response to the change.</span></span>  

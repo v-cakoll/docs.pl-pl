@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633178"
 ---
 # <a name="cannot-rename-with-different-drive"></a><span data-ttu-id="6733a-102">Nie można zmienić nazwy na inny dysk</span><span class="sxs-lookup"><span data-stu-id="6733a-102">Cannot rename with different drive</span></span>
 <span data-ttu-id="6733a-103">`Rename` Instrukcji nie można określić litery dysku w ścieżce.</span><span class="sxs-lookup"><span data-stu-id="6733a-103">The `Rename` statement cannot specify a drive letter in the file path.</span></span>  

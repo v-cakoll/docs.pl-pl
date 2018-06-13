@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650998"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a><span data-ttu-id="8cc2b-102">Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8cc2b-102">How to: Declare and Call a Default Property in Visual Basic</span></span>
 <span data-ttu-id="8cc2b-103">A *domyślna właściwość* jest właściwością klasy lub struktury kodu można uzyskać dostęp bez określania go.</span><span class="sxs-lookup"><span data-stu-id="8cc2b-103">A *default property* is a class or structure property that your code can access without specifying it.</span></span> <span data-ttu-id="8cc2b-104">Podczas wywoływania kodu nazwy klasy lub struktury, ale nie właściwości i kontekst zezwala na dostęp do właściwości, Visual Basic rozpoznaje dostępu do tej klasy lub struktury domyślnej właściwości, jeśli taka istnieje.</span><span class="sxs-lookup"><span data-stu-id="8cc2b-104">When calling code names a class or structure but not a property, and the context allows access to a property, Visual Basic resolves the access to that class or structure's default property if one exists.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807843"
 ---
 # <a name="configuring-message-logging"></a><span data-ttu-id="07d8c-102">Konfigurowanie rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="07d8c-102">Configuring Message Logging</span></span>
 <span data-ttu-id="07d8c-103">W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla różnych scenariuszy.</span><span class="sxs-lookup"><span data-stu-id="07d8c-103">This topic describes how you can configure message logging for different scenarios.</span></span>  

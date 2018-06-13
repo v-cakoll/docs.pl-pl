@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645762"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a><span data-ttu-id="b65aa-102">Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b65aa-102">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>
 <span data-ttu-id="b65aa-103">W tym temacie przedstawiono możliwość serializowania wykresów obiektów, które zawierają odwołania do obiektów typu <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="b65aa-103">This topic introduces the capability of serializing object graphs that contain references to objects of type <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="b65aa-104">Obiekcie tego typu serializacji, <xref:System.Xml.Linq.XElement> implementuje <xref:System.Xml.Serialization.IXmlSerializable> interfejsu.</span><span class="sxs-lookup"><span data-stu-id="b65aa-104">To facility this type of serializing, <xref:System.Xml.Linq.XElement> implements the <xref:System.Xml.Serialization.IXmlSerializable> interface.</span></span>  

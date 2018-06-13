@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645216"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a><span data-ttu-id="98b3d-102">Modyfikowanie elementy, atrybuty i węzłów w drzewie XML</span><span class="sxs-lookup"><span data-stu-id="98b3d-102">Modifying Elements, Attributes, and Nodes in an XML Tree</span></span>
 <span data-ttu-id="98b3d-103">W poniższej tabeli przedstawiono metody i właściwości, które można zmodyfikować elementu, jego elementy podrzędne lub jego atrybuty.</span><span class="sxs-lookup"><span data-stu-id="98b3d-103">The following table summarizes the methods and properties that you can use to modify an element, its child elements, or its attributes.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803003"
 ---
 # <a name="transfer"></a><span data-ttu-id="2eb33-102">Transfer</span><span class="sxs-lookup"><span data-stu-id="2eb33-102">Transfer</span></span>
 <span data-ttu-id="2eb33-103">W tym temacie opisano transfer w modelu śledzenie działania Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="2eb33-103">This topic describes transfer in the Windows Communication Foundation (WCF) activity tracing model.</span></span>  

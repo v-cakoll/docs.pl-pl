@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651703"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a><span data-ttu-id="8a7c3-102">Porady: określanie ciągu skojarzonego z wartością wyliczenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a7c3-102">How to: Determine the String Associated with an Enumeration Value (Visual Basic)</span></span>
 <span data-ttu-id="8a7c3-103"><xref:System.Enum.GetValues%2A> i <xref:System.Enum.GetNames%2A> metody pozwalają określić parametry i wartości skojarzone z elementy członkowskie wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="8a7c3-103">The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803585"
 ---
 # <a name="deploying-services"></a><span data-ttu-id="38f28-102">Wdrażanie usług</span><span class="sxs-lookup"><span data-stu-id="38f28-102">Deploying Services</span></span>
 <span data-ttu-id="38f28-103">W tym temacie opisano, jak można wdrożyć aplikację systemu Windows Communication Foundation (WCF) w środowisku czasu wykonywania.</span><span class="sxs-lookup"><span data-stu-id="38f28-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) application to a run-time environment.</span></span>  

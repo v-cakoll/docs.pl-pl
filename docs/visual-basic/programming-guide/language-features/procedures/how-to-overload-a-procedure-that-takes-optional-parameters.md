@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652899"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a><span data-ttu-id="40bce-102">Porady: przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40bce-102">How to: Overload a Procedure that Takes Optional Parameters (Visual Basic)</span></span>
 <span data-ttu-id="40bce-103">Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametrów, nie można zdefiniować przeciążonego wersji zgodne z żadnym z jego niejawne przeładowania.</span><span class="sxs-lookup"><span data-stu-id="40bce-103">If a procedure has one or more [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameters, you cannot define an overloaded version matching any of its implicit overloads.</span></span> <span data-ttu-id="40bce-104">Aby uzyskać więcej informacji, zobacz "Niejawne Overloads dla parametrów" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="40bce-104">For more information, see "Implicit Overloads for Optional Parameters" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).</span></span>  

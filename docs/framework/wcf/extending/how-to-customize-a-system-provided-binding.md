@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803677"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a><span data-ttu-id="c63cc-102">Porady: dostosowywanie powiązania dostarczane przez System</span><span class="sxs-lookup"><span data-stu-id="c63cc-102">How to: Customize a System-Provided Binding</span></span>
 <span data-ttu-id="c63cc-103">Windows Communication Foundation (WCF) zawiera kilka powiązania dostarczane przez system, które umożliwiają konfigurowanie niektórych właściwości podstawowych elementów powiązania, ale nie wszystkie właściwości.</span><span class="sxs-lookup"><span data-stu-id="c63cc-103">Windows Communication Foundation (WCF) includes several system-provided bindings that allow you to configure some of the properties of the underlying binding elements, but not all of the properties.</span></span> <span data-ttu-id="c63cc-104">W tym temacie przedstawiono sposób ustawiania właściwości do powiązania elementów do tworzenia niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="c63cc-104">This topic demonstrates how to set properties on the binding elements to create a custom binding.</span></span>  

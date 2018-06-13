@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648622"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a><span data-ttu-id="9173a-102">Porady: konwertowanie ciągu do tablicy znaków w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9173a-102">How to: Convert a String to an Array of Characters in Visual Basic</span></span>
 <span data-ttu-id="9173a-103">Czasami jest przydatne do danych o znaki w ciągu i pozycje te znaki w ciągu, na przykład gdy są analizowania parametrów.</span><span class="sxs-lookup"><span data-stu-id="9173a-103">Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string, such as when you are parsing a string.</span></span> <span data-ttu-id="9173a-104">W tym przykładzie pokazano, jak wprowadzasz tablicy znaków w ciągu wywołując ciąg <xref:System.String.ToCharArray%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="9173a-104">This example shows how you can get an array of the characters in a string by calling the string's <xref:System.String.ToCharArray%2A> method.</span></span>  

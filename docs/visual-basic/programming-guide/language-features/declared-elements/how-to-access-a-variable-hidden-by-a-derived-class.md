@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648050"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a><span data-ttu-id="d90fe-102">Porady: dostęp do zmiennej ukrytej przez klasę pochodną (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d90fe-102">How to: Access a Variable Hidden by a Derived Class (Visual Basic)</span></span>
 <span data-ttu-id="d90fe-103">Gdy kod w klasie pochodnej uzyskuje dostęp do zmiennej, kompilator zwykle usuwa odwołania do najbliższej wersji dostępny, oznacza to, że dostępna wersja najmniejszej derivational kroki z poprzednimi wersjami z uzyskiwaniem dostępu do klasy.</span><span class="sxs-lookup"><span data-stu-id="d90fe-103">When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class.</span></span> <span data-ttu-id="d90fe-104">Jeśli zmienna jest zdefiniowana w klasie pochodnej, kod zwykle uzyskuje dostęp do tej definicji.</span><span class="sxs-lookup"><span data-stu-id="d90fe-104">If the variable is defined in the derived class, the code normally accesses that definition.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643193"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a><span data-ttu-id="47cea-102">Porady: znajdowanie elementów podrzędnych o nazwie określonego elementu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47cea-102">How to: Find Descendants with a Specific Element Name (Visual Basic)</span></span>
 <span data-ttu-id="47cea-103">Czasami chcesz znaleźć wszystkich elementów podrzędnych o określonej nazwie.</span><span class="sxs-lookup"><span data-stu-id="47cea-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="47cea-104">Można napisać kod, aby wykonać iterację wszystkich elementów podrzędnych, ale jest łatwiejsze w <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.</span><span class="sxs-lookup"><span data-stu-id="47cea-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  

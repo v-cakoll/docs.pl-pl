@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649230"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a><span data-ttu-id="9ecf1-102">Wywoływanie właściwości lub metody za pomocą nazwy ciągu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9ecf1-102">Calling a Property or Method Using a String Name (Visual Basic)</span></span>
 <span data-ttu-id="9ecf1-103">W większości przypadków może odnajdywać właściwości i metody obiektu w czasie projektowania, a do ich obsługi w kodzie.</span><span class="sxs-lookup"><span data-stu-id="9ecf1-103">In most cases, you can discover the properties and methods of an object at design time, and write code to handle them.</span></span> <span data-ttu-id="9ecf1-104">Jednak w niektórych przypadkach użytkownik może nie wiedzieć o właściwości i metod obiektu z wyprzedzeniem, lub po prostu chcesz elastyczność włączania użytkownika końcowego określić właściwości lub wykonywanie metod w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="9ecf1-104">However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649051"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a><span data-ttu-id="8d12c-102">Porady: wywoływanie procedury, która nie zwraca wartości (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d12c-102">How to: Call a Procedure that Does Not Return a Value (Visual Basic)</span></span>
 <span data-ttu-id="8d12c-103">A `Sub` procedury nie zwraca wartości do wywołującego kodu.</span><span class="sxs-lookup"><span data-stu-id="8d12c-103">A `Sub` procedure does not return a value to the calling code.</span></span> <span data-ttu-id="8d12c-104">Należy wywołać ją jawnie autonomicznej instrukcją wywołującego.</span><span class="sxs-lookup"><span data-stu-id="8d12c-104">You call it explicitly with a stand-alone calling statement.</span></span> <span data-ttu-id="8d12c-105">Nie można wywołać go, używając po prostu swojej nazwy w wyrażeniu.</span><span class="sxs-lookup"><span data-stu-id="8d12c-105">You cannot call it by simply using its name within an expression.</span></span>  

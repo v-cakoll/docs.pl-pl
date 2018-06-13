@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641344"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a><span data-ttu-id="72ce3-102">Parametr TextFieldParser nie obsługuje ograniczników zawierających znaki endline</span><span class="sxs-lookup"><span data-stu-id="72ce3-102">TextFieldParser does not support delimiters that contain endline characters</span></span>
 <span data-ttu-id="72ce3-103">Ogranicznik, który zawiera znak endline zostały podane, ale `TextFieldParser` nie obsługuje ograniczników zawierających znaki endline.</span><span class="sxs-lookup"><span data-stu-id="72ce3-103">A delimiter that contains an endline character has been supplied, but the `TextFieldParser` does not support delimiters that contain endline characters.</span></span>  

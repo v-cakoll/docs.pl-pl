@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641989"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="a9ca9-102">Porady: sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9ca9-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="a9ca9-103">Poniższy przykład przedstawia sposób sortowania wierszy tekstu strukturalnych, takich jak wartości rozdzielanych przecinkami, przez którekolwiek z pól w wierszu.</span><span class="sxs-lookup"><span data-stu-id="a9ca9-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="a9ca9-104">Pole może być określana dynamicznie w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="a9ca9-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="a9ca9-105">Załóżmy, że pola scores.csv reprezentują numer identyfikacyjny Studenta, następuje szereg cztery wyniki testów.</span><span class="sxs-lookup"><span data-stu-id="a9ca9-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  

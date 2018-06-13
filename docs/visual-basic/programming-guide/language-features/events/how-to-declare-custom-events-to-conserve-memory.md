@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647208"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a><span data-ttu-id="c20ab-102">Porady: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c20ab-102">How to: Declare Custom Events To Conserve Memory (Visual Basic)</span></span>
 <span data-ttu-id="c20ab-103">Istnieje kilka okoliczności podczas należy pamiętać, że aplikacja zachować jego użycie pamięci niski.</span><span class="sxs-lookup"><span data-stu-id="c20ab-103">There are several circumstances when it is important that an application keep its memory usage low.</span></span> <span data-ttu-id="c20ab-104">Zdarzeń niestandardowych Zezwalaj aplikacji na używanie pamięci tylko dla zdarzeń, które obsługuje on.</span><span class="sxs-lookup"><span data-stu-id="c20ab-104">Custom events allow the application to use memory only for the events that it handles.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649932"
 ---
 # <a name="visual-basic-limitations"></a><span data-ttu-id="a42ff-102">Ograniczenia Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a42ff-102">Visual Basic Limitations</span></span>
 <span data-ttu-id="a42ff-103">Wcześniejszych wersji programu Visual Basic wymuszane granic w kodzie, takie jak długość nazwy zmiennych, liczba zmiennych dozwolone w modułach i rozmiar modułu.</span><span class="sxs-lookup"><span data-stu-id="a42ff-103">Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size.</span></span> <span data-ttu-id="a42ff-104">W języku Visual Basic .NET te ograniczenia mają zostały rozluźnić, zapewniając większą swobodę w pisania i organizowanie kodu.</span><span class="sxs-lookup"><span data-stu-id="a42ff-104">In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.</span></span>  

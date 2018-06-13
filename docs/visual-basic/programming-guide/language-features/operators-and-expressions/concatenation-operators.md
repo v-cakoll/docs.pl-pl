@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650621"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a><span data-ttu-id="2da75-102">Operatory łączenia w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2da75-102">Concatenation Operators in Visual Basic</span></span>
 <span data-ttu-id="2da75-103">Operatory łączenia dołączenie wielu ciągów w jednym ciągu.</span><span class="sxs-lookup"><span data-stu-id="2da75-103">Concatenation operators join multiple strings into a single string.</span></span> <span data-ttu-id="2da75-104">Istnieją dwa operatory łączenia, `+` i `&`.</span><span class="sxs-lookup"><span data-stu-id="2da75-104">There are two concatenation operators, `+` and `&`.</span></span> <span data-ttu-id="2da75-105">Zarówno przeprowadzenia operacji łączenia podstawowe, jak przedstawiono na poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="2da75-105">Both carry out the basic concatenation operation, as the following example shows.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649399"
 ---
 # <a name="generic-procedures-in-visual-basic"></a><span data-ttu-id="9fd33-102">Procedury ogólne w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9fd33-102">Generic Procedures in Visual Basic</span></span>
 <span data-ttu-id="9fd33-103">A *ogólnego procedury*, nazywany również *Metoda ogólna*, jest to procedura zdefiniowane z co najmniej jeden typ parametru.</span><span class="sxs-lookup"><span data-stu-id="9fd33-103">A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter.</span></span> <span data-ttu-id="9fd33-104">Dzięki temu kod wywołujący dostosować typy danych do jej wymagania dotyczące zawsze wywołuje procedurę.</span><span class="sxs-lookup"><span data-stu-id="9fd33-104">This allows the calling code to tailor the data types to its requirements each time it calls the procedure.</span></span>  

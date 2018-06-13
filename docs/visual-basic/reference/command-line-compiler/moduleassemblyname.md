@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650793"
 ---
 # <a name="-moduleassemblyname"></a><span data-ttu-id="f13dd-102">-moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="f13dd-102">-moduleassemblyname</span></span>
 <span data-ttu-id="f13dd-103">Określa nazwę zestawu, którego częścią ma być ten moduł.</span><span class="sxs-lookup"><span data-stu-id="f13dd-103">Specifies the name of the assembly that this module will be a part of.</span></span>  

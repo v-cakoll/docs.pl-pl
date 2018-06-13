@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637012"
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a><span data-ttu-id="9f578-102">Indeks kolekcji musi należeć do zakresu od 1 do rozmiaru kolekcji</span><span class="sxs-lookup"><span data-stu-id="9f578-102">Collection index must be in the range 1 to the size of the collection</span></span>
 <span data-ttu-id="9f578-103">Wartość Podany indeks znajduje się poza prawidłowym zakresem 1 do rozmiaru kolekcji.</span><span class="sxs-lookup"><span data-stu-id="9f578-103">The supplied index value falls outside the valid range, which is 1 to the size of the collection.</span></span>  

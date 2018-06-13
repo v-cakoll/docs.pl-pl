@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639379"
 ---
 # <a name="39redim39-preserve-operand-cannot-be-nothing"></a><span data-ttu-id="30635-102">&#39;ReDim&#39; Preserve operand nie może być nic</span><span class="sxs-lookup"><span data-stu-id="30635-102">&#39;ReDim&#39; Preserve operand cannot be Nothing</span></span>
 <span data-ttu-id="30635-103">A `ReDim` próbuje użyć instrukcji `Preserve` — słowo kluczowe, aby zmienić wymiaru tablicy, która nie jest ostatni wymiar, ale nie dostarcza prawidłową wartością dla jego argumentu operacji.</span><span class="sxs-lookup"><span data-stu-id="30635-103">A `ReDim` statement attempts to use the `Preserve` keyword to change a dimension of an array that is not the last dimension, but does not supply a valid value for its operand.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639500"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a><span data-ttu-id="4c5ff-102">Należy określić ścieżkę, która znajduje się w bieżącym folderze lub jeden z jego podfoldery</span><span class="sxs-lookup"><span data-stu-id="4c5ff-102">You must specify a path that is under the current folder or one of its sub-folders</span></span>
 <span data-ttu-id="4c5ff-103">Określona ścieżka nie jest w bieżącym katalogu.</span><span class="sxs-lookup"><span data-stu-id="4c5ff-103">The specified path is not under the current directory.</span></span> <span data-ttu-id="4c5ff-104">Może to być wynikiem niepoprawnie podczas analizowania ścieżki do pliku, dostarczając ścieżki względnej.</span><span class="sxs-lookup"><span data-stu-id="4c5ff-104">This may be a result of incorrectly parsing file paths when supplying a relative path.</span></span>  

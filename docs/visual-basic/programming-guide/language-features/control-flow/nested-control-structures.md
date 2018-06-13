@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648075"
 ---
 # <a name="nested-control-structures-visual-basic"></a><span data-ttu-id="c9015-102">Zagnieżdżone struktury sterujące (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9015-102">Nested Control Structures (Visual Basic)</span></span>
 <span data-ttu-id="c9015-103">Możesz na przykład umieścić instrukcji sterowania wewnątrz innych instrukcji sterowania `If...Then...Else` zablokować w `For...Next` pętli.</span><span class="sxs-lookup"><span data-stu-id="c9015-103">You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop.</span></span> <span data-ttu-id="c9015-104">Instrukcji sterowania umieszczony wewnątrz innego instrukcji sterowania jest określany jako *zagnieżdżonych*.</span><span class="sxs-lookup"><span data-stu-id="c9015-104">A control statement placed inside another control statement is said to be *nested*.</span></span>  

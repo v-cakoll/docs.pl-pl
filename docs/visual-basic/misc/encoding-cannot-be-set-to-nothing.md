@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638123"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a><span data-ttu-id="556a6-102">Kodowanie nie można ustawić na wartość Nothing</span><span class="sxs-lookup"><span data-stu-id="556a6-102">Encoding cannot be set to Nothing</span></span>
 <span data-ttu-id="556a6-103">Próba odczytu lub zapisu w pliku nie powiodło się, ponieważ parametr `encoding` została ustawiona jako `Nothing` , ale wymaga prawidłowej wartości.</span><span class="sxs-lookup"><span data-stu-id="556a6-103">An attempt to read from or write to a file has failed because the parameter `encoding` has been set to `Nothing` but requires a valid value.</span></span>  

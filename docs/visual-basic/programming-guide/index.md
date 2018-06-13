@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646542"
 ---
 # <a name="visual-basic-programming-guide"></a><span data-ttu-id="ebed7-102">Przewodnik programowania w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ebed7-102">Visual Basic Programming Guide</span></span>
 <span data-ttu-id="ebed7-103">Podobnie jak w przypadku dowolnego nowoczesny język programowania Visual Basic obsługuje wielu typowych narzędzi programistycznych i elementy języka.</span><span class="sxs-lookup"><span data-stu-id="ebed7-103">As with any modern programming language, Visual Basic supports many common programming constructs and language elements.</span></span> <span data-ttu-id="ebed7-104">Ten przewodnik zawiera opis głównych elementów programowania w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ebed7-104">This guide describes all the major elements of programming with Visual Basic.</span></span>  

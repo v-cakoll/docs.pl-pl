@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649194"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="325f1-102">Porady: kontrolowanie zakresu zmiennej (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="325f1-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
 <span data-ttu-id="325f1-103">Zazwyczaj jest zmienną w *zakres*, czy widoczny dla odwołania w całym regionie ją zadeklarować.</span><span class="sxs-lookup"><span data-stu-id="325f1-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="325f1-104">W niektórych przypadkach zmiennej w *poziom dostępu* mogą mieć wpływ na jego zakres.</span><span class="sxs-lookup"><span data-stu-id="325f1-104">In some cases, the variable's *access level* can influence its scope.</span></span>  

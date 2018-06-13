@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648310"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a><span data-ttu-id="b7596-102">Trwa pobieranie akapitów i ich style (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7596-102">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>
 <span data-ttu-id="b7596-103">W tym przykładzie mamy Napisz zapytanie, które pobiera węzły akapitu z dokumentu schemat WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="b7596-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="b7596-104">Identyfikuje styl każdego akapitu.</span><span class="sxs-lookup"><span data-stu-id="b7596-104">It also identifies the style of each paragraph.</span></span>  

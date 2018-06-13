@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655613"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a><span data-ttu-id="0f017-102">Wskazówki: Przechowywanie obiektu w programie Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f017-102">Walkthrough: Persisting an Object in Visual Studio (Visual Basic)</span></span>
 <span data-ttu-id="0f017-103">Mimo że można ustawić właściwości obiektu do wartości domyślnych w czasie projektowania, wartości wprowadzone w czasie wykonywania zostaną utracone, gdy obiekt zostanie zniszczony.</span><span class="sxs-lookup"><span data-stu-id="0f017-103">Although you can set an object's properties to default values at design time, any values entered at run time are lost when the object is destroyed.</span></span> <span data-ttu-id="0f017-104">Można użyć serializacji do utrwalenia danych obiektu między wystąpieniami, które umożliwia przechowywanie wartości i pobrać je przy następnym uruchomieniu tworzenia wystąpienia obiektu klasy.</span><span class="sxs-lookup"><span data-stu-id="0f017-104">You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.</span></span>  

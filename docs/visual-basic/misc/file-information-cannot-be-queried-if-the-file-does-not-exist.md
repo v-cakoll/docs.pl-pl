@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638487"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a><span data-ttu-id="51d76-102">Nie można żądać informacji o pliku, jeśli plik nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="51d76-102">File information cannot be queried if the file does not exist</span></span>
 <span data-ttu-id="51d76-103">Została podjęta próba zapytania <xref:System.IO.FileInfo> obiektu informacji o pliku, który nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="51d76-103">An attempt has been made to query a <xref:System.IO.FileInfo> object for information about a file that does not exist.</span></span> <span data-ttu-id="51d76-104">Zazwyczaj jest to spowodowane popełniony, dostarczając nazwę pliku.</span><span class="sxs-lookup"><span data-stu-id="51d76-104">Usually this is due to a mistake made when supplying the file name.</span></span>  

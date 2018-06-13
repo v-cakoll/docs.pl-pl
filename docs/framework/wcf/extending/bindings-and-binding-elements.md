@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804628"
 ---
 # <a name="bindings-and-binding-elements"></a><span data-ttu-id="c8cfa-102">Powiązania i elementy powiązań</span><span class="sxs-lookup"><span data-stu-id="c8cfa-102">Bindings and Binding Elements</span></span>
 <span data-ttu-id="c8cfa-103">Powiązania są kolekcjami elementów konfiguracji specjalnych, nazywany *elementów wiązania*, które są oceniane przez środowisko wykonawcze usługi zawsze, gdy klient lub punktu końcowego usługi jest tworzona.</span><span class="sxs-lookup"><span data-stu-id="c8cfa-103">Bindings are collections of special configuration elements, called *binding elements*, which are evaluated by the service runtime whenever a client or service endpoint is being constructed.</span></span> <span data-ttu-id="c8cfa-104">Typ i kolejność elementów powiązania w powiązaniu Określa wybór i kolejność kanały transportu i protokół punktu końcowego kanału stosu.</span><span class="sxs-lookup"><span data-stu-id="c8cfa-104">The type and order of the binding elements within a binding determines the selection and stacking order of the protocol and transport channels in an endpoint's channel stack.</span></span>  

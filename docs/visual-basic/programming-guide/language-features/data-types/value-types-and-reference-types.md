@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651586"
 ---
 # <a name="value-types-and-reference-types"></a><span data-ttu-id="46761-102">Typy wartości i odwołań</span><span class="sxs-lookup"><span data-stu-id="46761-102">Value Types and Reference Types</span></span>
 <span data-ttu-id="46761-103">W języku Visual Basic typy danych są wdrażane na podstawie ich klasyfikacji.</span><span class="sxs-lookup"><span data-stu-id="46761-103">In Visual Basic, data types are implemented based on their classification.</span></span> <span data-ttu-id="46761-104">Typy danych Visual Basic mogą być klasyfikowane w zależności od tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnikiem do danych.</span><span class="sxs-lookup"><span data-stu-id="46761-104">The Visual Basic data types can be classified according to whether a variable of a particular type stores its own data or a pointer to the data.</span></span> <span data-ttu-id="46761-105">Jeśli przechowuje własnych danych jest *typu wartości*; jeśli posiada wskaźnik do danych w pamięci jest *zawierają odwołania do typu*.</span><span class="sxs-lookup"><span data-stu-id="46761-105">If it stores its own data it is a *value type*; if it holds a pointer to data elsewhere in memory it is a *reference type*.</span></span>  

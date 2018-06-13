@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637520"
 ---
 # <a name="drive-39ltdrivenamegt39-not-found"></a><span data-ttu-id="2854f-102">Dysk &#39; &lt;drivename&gt; &#39; nie znaleziono</span><span class="sxs-lookup"><span data-stu-id="2854f-102">Drive &#39;&lt;drivename&gt;&#39; not found</span></span>
 <span data-ttu-id="2854f-103">Nie można odnaleźć dysku.</span><span class="sxs-lookup"><span data-stu-id="2854f-103">The drive cannot be found.</span></span> <span data-ttu-id="2854f-104">Utracono połączenie z siecią albo dysk, którego próbujesz uzyskać dostęp, jest w trybie offline lub nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="2854f-104">Either your network connection has been lost, or the drive you are trying to access is offline or does not exist.</span></span>  

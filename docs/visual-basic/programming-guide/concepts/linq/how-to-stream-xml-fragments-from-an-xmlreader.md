@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643392"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a><span data-ttu-id="5012d-102">Porady: strumienia fragmenty XML z element XmlReader (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5012d-102">How to: Stream XML Fragments from an XmlReader (Visual Basic)</span></span>
 <span data-ttu-id="5012d-103">Podczas przetwarzania dużych plików XML, może nie być możliwe do załadowania całego drzewa XML do pamięci.</span><span class="sxs-lookup"><span data-stu-id="5012d-103">When you have to process large XML files, it might not be feasible to load the whole XML tree into memory.</span></span> <span data-ttu-id="5012d-104">W tym temacie przedstawiono sposób strumienia fragmenty przy użyciu <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="5012d-104">This topic shows how to stream fragments using an <xref:System.Xml.XmlReader>.</span></span>  

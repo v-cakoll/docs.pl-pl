@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649103"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a><span data-ttu-id="00444-102">Vs liczony od zera. Dostęp na podstawie jednego ciągu w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="00444-102">Zero-based vs. One-based String Access in Visual Basic</span></span>
 <span data-ttu-id="00444-103">W tym temacie porównuje jak Visual Basic i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zapewniają dostęp do znaków w ciągu.</span><span class="sxs-lookup"><span data-stu-id="00444-103">This topic compares how Visual Basic and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] provide access to the characters in a string.</span></span> <span data-ttu-id="00444-104">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Zawsze zapewnia liczony od zera dostęp do znaków w ciągu, Visual Basic stanowi liczony od zera i jedynki dostęp, w zależności od funkcji.</span><span class="sxs-lookup"><span data-stu-id="00444-104">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.</span></span>  

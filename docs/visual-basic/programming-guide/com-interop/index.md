@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643585"
 ---
 # <a name="com-interop-visual-basic"></a><span data-ttu-id="552e1-102">COM Interop (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="552e1-102">COM Interop (Visual Basic)</span></span>
 <span data-ttu-id="552e1-103">Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych składników i umożliwia obsługę aplikacji.</span><span class="sxs-lookup"><span data-stu-id="552e1-103">The Component Object Model (COM) allows an object to expose its functionality to other components and to host applications.</span></span> <span data-ttu-id="552e1-104">Większość oprogramowania współczesnych obejmuje obiekty COM.</span><span class="sxs-lookup"><span data-stu-id="552e1-104">Most of today's software includes COM objects.</span></span> <span data-ttu-id="552e1-105">Mimo że zestawy .NET to najlepszy wybór dla nowych aplikacji, w czasie konieczne może być zastosowana obiektów COM.</span><span class="sxs-lookup"><span data-stu-id="552e1-105">Although .NET assemblies are the best choice for new applications, you may at times need to employ COM objects.</span></span> <span data-ttu-id="552e1-106">W tej sekcji opisano niektóre problemy związane z tworzenie i używanie obiektów COM z Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="552e1-106">This section covers some of the issues associated with creating and using COM objects with Visual Basic.</span></span>  

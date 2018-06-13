@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639301"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a><span data-ttu-id="65413-102">Nie można usunąć w dzienniku zdarzeń systemowych</span><span class="sxs-lookup"><span data-stu-id="65413-102">System event log cannot be deleted</span></span>
 <span data-ttu-id="65413-103">Nastąpiła próba można usunąć dziennika zdarzeń systemu, której nie można usunąć.</span><span class="sxs-lookup"><span data-stu-id="65413-103">An attempt has been made to delete the system event log, which cannot be deleted.</span></span> <span data-ttu-id="65413-104">Dziennik systemu śledzi zdarzenia systemowe, takie jak awarie sprzętu i uruchomienia systemu.</span><span class="sxs-lookup"><span data-stu-id="65413-104">The system log tracks system events such as system startup and hardware failures.</span></span>  

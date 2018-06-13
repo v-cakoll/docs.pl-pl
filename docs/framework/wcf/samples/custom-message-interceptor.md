@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806321"
 ---
 # <a name="custom-message-interceptor"></a><span data-ttu-id="72b5d-102">Niestandardowy element przechwytujący komunikaty</span><span class="sxs-lookup"><span data-stu-id="72b5d-102">Custom Message Interceptor</span></span>
 <span data-ttu-id="72b5d-103">W tym przykładzie przedstawiono stosowania modelu rozszerzalności kanału.</span><span class="sxs-lookup"><span data-stu-id="72b5d-103">This sample demonstrates the use of the channel extensibility model.</span></span> <span data-ttu-id="72b5d-104">W szczególności widoczny jest sposób implementuje element niestandardowego powiązania, który tworzy fabryk kanałów i odbiorników kanału do przechwycenia wszystkich wiadomości przychodzących i wychodzących w określonym punkcie w stosie czasu wykonywania.</span><span class="sxs-lookup"><span data-stu-id="72b5d-104">In particular, it shows how to implement a custom binding element that creates channel factories and channel listeners to intercept all incoming and outgoing messages at a particular point in the run-time stack.</span></span> <span data-ttu-id="72b5d-105">Przykład obejmuje również klienta i serwera, które przedstawiają sposób używania tych niestandardowych fabryki.</span><span class="sxs-lookup"><span data-stu-id="72b5d-105">The sample also includes a client and server that demonstrate the use of these custom factories.</span></span>  

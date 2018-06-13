@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646955"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="1b01e-102">Porady: wywoływanie metody delegata (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b01e-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
 <span data-ttu-id="1b01e-103">W tym przykładzie pokazano, jak można skojarzyć metodę z delegata, a następnie wywołać tej metody za pomocą obiektu delegowanego.</span><span class="sxs-lookup"><span data-stu-id="1b01e-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>  

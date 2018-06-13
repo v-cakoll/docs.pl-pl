@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640495"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a><span data-ttu-id="4f596-102">Folder źródłowy i docelowy folder są takie same</span><span class="sxs-lookup"><span data-stu-id="4f596-102">Source folder and target folder are the same</span></span>
 <span data-ttu-id="4f596-103">Została podjęta próba skopiować lub przenieść plik, ale katalog określony źródłowy i katalog docelowy są takie same.</span><span class="sxs-lookup"><span data-stu-id="4f596-103">An attempt has been made to copy or move a file, but the specified source directory and target directory are the same.</span></span> <span data-ttu-id="4f596-104">Może to być wynikiem niepoprawnie podczas analizowania ścieżki do pliku.</span><span class="sxs-lookup"><span data-stu-id="4f596-104">This may be a result of incorrectly parsing a file path.</span></span>  

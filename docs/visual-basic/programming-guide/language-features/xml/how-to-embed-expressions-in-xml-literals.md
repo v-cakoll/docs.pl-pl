@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652272"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a><span data-ttu-id="d5e62-102">Porady: osadzanie wyrażeń w literałach XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5e62-102">How to: Embed Expressions in XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="d5e62-103">Literały XML można łączyć z wyrażenia osadzone, aby utworzyć dokumentu XML, fragment lub element zawartości utworzona w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="d5e62-103">You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time.</span></span> <span data-ttu-id="d5e62-104">W poniższych przykładach pokazano, jak używać wyrażenia osadzone do wypełniania elementu zawartości, atrybuty i nazwy elementów w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="d5e62-104">The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.</span></span>  

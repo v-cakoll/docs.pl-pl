@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650101"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a><span data-ttu-id="ca3f4-102">Porady: określanie, czy dwa obiekty są jednakowe (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca3f4-102">How to: Determine Whether Two Objects Are Identical (Visual Basic)</span></span>
 <span data-ttu-id="ca3f4-103">W języku Visual Basic dwóch odwołań do zmiennych są traktowane jako identyczne, jeśli ich wskaźniki są takie same, to znaczy, jeśli obie zmienne wskazać to samo wystąpienie klasy w pamięci.</span><span class="sxs-lookup"><span data-stu-id="ca3f4-103">In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory.</span></span> <span data-ttu-id="ca3f4-104">Na przykład w aplikacji formularzy systemu Windows, można porównanie, aby określić, czy bieżące wystąpienie (`Me`) jest taka sama jak konkretnego wystąpienia, takich jak `Form2`.</span><span class="sxs-lookup"><span data-stu-id="ca3f4-104">For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651508"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a><span data-ttu-id="2ea91-102">Różnice pomiędzy właściwościami i zmiennymi w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2ea91-102">Differences Between Properties and Variables in Visual Basic</span></span>
 <span data-ttu-id="2ea91-103">Zmienne i właściwości reprezentują wartości, które są dostępne.</span><span class="sxs-lookup"><span data-stu-id="2ea91-103">Variables and properties both represent values that you can access.</span></span> <span data-ttu-id="2ea91-104">Istnieją różnice w pamięci masowej i implementacji.</span><span class="sxs-lookup"><span data-stu-id="2ea91-104">However, there are differences in storage and implementation.</span></span>  

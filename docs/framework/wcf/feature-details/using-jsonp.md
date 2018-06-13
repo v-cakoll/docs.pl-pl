@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497987"
 ---
 # <a name="using-jsonp"></a><span data-ttu-id="fee77-102">Używanie standardu JSONP</span><span class="sxs-lookup"><span data-stu-id="fee77-102">Using JSONP</span></span>
 

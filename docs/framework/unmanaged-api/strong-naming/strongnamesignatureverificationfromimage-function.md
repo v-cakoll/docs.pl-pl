@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458724"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a><span data-ttu-id="9d666-102">StrongNameSignatureVerificationFromImage — Funkcja</span><span class="sxs-lookup"><span data-stu-id="9d666-102">StrongNameSignatureVerificationFromImage Function</span></span>
 <span data-ttu-id="9d666-103">Sprawdza, czy zestaw, który został już zmapowany do pamięci jest nieprawidłowa dla klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="9d666-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  

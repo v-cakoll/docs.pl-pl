@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588109"
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a><span data-ttu-id="b2d17-102">Porady: wyświetlanie formantów niepowiązanych w formancie DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="b2d17-102">How to: Display Unbound Controls in a DataRepeater Control (Visual Studio)</span></span>
 <span data-ttu-id="b2d17-103">Oprócz formanty powiązane, można dodać inne formanty <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, na przykład statyczną etykietę lub obraz jest powtarzany na każdej pozycji w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu.</span><span class="sxs-lookup"><span data-stu-id="b2d17-103">In addition to bound controls, you may want to add other controls to a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, such as a static label or an image that is repeated on each item in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  

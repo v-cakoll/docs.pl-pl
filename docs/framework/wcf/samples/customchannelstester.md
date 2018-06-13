@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499391"
 ---
 # <a name="customchannelstester"></a><span data-ttu-id="84cc3-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="84cc3-102">CustomChannelsTester</span></span>
 <span data-ttu-id="84cc3-103">`CustomChannelsTester` To narzędzie, które służy do testowania implementacjach użytkownika niestandardowym kanale z zestawem kontraktów usług wstępnie zdefiniowane.</span><span class="sxs-lookup"><span data-stu-id="84cc3-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="84cc3-104">Możesz wybrać zestaw kontraktów usług i przekaż go za pomocą pliku XML.</span><span class="sxs-lookup"><span data-stu-id="84cc3-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="84cc3-105">Narzędzie generuje następnie usługi i klienta, który korzysta z implementacji niestandardowego kanału podczas wymiany wiadomości.</span><span class="sxs-lookup"><span data-stu-id="84cc3-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  

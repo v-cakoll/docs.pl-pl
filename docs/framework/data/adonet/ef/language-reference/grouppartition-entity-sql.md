@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760911"
 ---
 # <a name="grouppartition-entity-sql"></a><span data-ttu-id="af0b0-102">GROUPPARTITION (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="af0b0-102">GROUPPARTITION (Entity SQL)</span></span>
 <span data-ttu-id="af0b0-103">Zwraca kolekcję wartości argumentów, które są przewidywane poza bieżącą partycję grupy, do którego odnosi się agregacji.</span><span class="sxs-lookup"><span data-stu-id="af0b0-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="af0b0-104">`GroupPartition` Agregacji jest oparte na grupach agregacji i nie ma opartego na kolekcji formy.</span><span class="sxs-lookup"><span data-stu-id="af0b0-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  

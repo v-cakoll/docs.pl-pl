@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559173"
 ---
 # <a name="how-to-read-metadata-from-a-bitmap"></a><span data-ttu-id="9fd77-102">Jak odczytać metadane z mapy bitowej</span><span class="sxs-lookup"><span data-stu-id="9fd77-102">How to: Read Metadata from a Bitmap</span></span>
 <span data-ttu-id="9fd77-103">Ten przykład przedstawia sposób odczytywania metadanych mapy bitowej przy użyciu języka zapytania metadanych.</span><span class="sxs-lookup"><span data-stu-id="9fd77-103">This example shows how to read bitmap metadata using the metadata query language.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461763"
 ---
 # <a name="profiling-enumerations"></a><span data-ttu-id="2daaf-102">Profilowanie — Wyliczenia</span><span class="sxs-lookup"><span data-stu-id="2daaf-102">Profiling Enumerations</span></span>
 <span data-ttu-id="2daaf-103">W tej sekcji opisano niezarządzane wyliczenia, które używa interfejsu API profilowania.</span><span class="sxs-lookup"><span data-stu-id="2daaf-103">This section describes the unmanaged enumerations that the profiling API uses.</span></span>  

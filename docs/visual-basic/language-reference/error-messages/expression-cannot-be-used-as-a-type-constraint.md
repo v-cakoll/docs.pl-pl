@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588177"
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="f5097-102">&#39;&lt;wyrażenie&gt; &#39; nie można użyć jako ograniczenia typu</span><span class="sxs-lookup"><span data-stu-id="f5097-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
 <span data-ttu-id="f5097-103">Lista ograniczeń zawiera wyrażenie, które nie stanowi prawidłowe ograniczenie parametru typu.</span><span class="sxs-lookup"><span data-stu-id="f5097-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  

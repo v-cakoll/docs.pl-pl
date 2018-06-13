@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764125"
 ---
 # <a name="oftype-entity-sql"></a><span data-ttu-id="e2941-102">OFTYPE (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="e2941-102">OFTYPE (Entity SQL)</span></span>
 <span data-ttu-id="e2941-103">Zwraca kolekcję obiektów z wyrażenia zapytania, który jest określonego typu.</span><span class="sxs-lookup"><span data-stu-id="e2941-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  

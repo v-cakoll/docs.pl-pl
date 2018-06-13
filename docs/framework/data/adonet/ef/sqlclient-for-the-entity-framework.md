@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765090"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a><span data-ttu-id="55a5c-102">SqlClient Entity Framework</span><span class="sxs-lookup"><span data-stu-id="55a5c-102">SqlClient for the Entity Framework</span></span>
 <span data-ttu-id="55a5c-103">W tej sekcji opisano dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient), dzięki czemu Entity Framework do pracy za pośrednictwem programu Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="55a5c-103">This section describes the .NET Framework Data Provider for SQL Server (SqlClient), which enables the Entity Framework to work over Microsoft SQL Server.</span></span>  

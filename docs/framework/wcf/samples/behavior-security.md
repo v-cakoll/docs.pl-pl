@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499522"
 ---
 # <a name="behavior-security"></a><span data-ttu-id="aea80-102">Zabezpieczenia zachowania</span><span class="sxs-lookup"><span data-stu-id="aea80-102">Behavior Security</span></span>
 <span data-ttu-id="aea80-103">Ta sekcja zawiera przykłady ilustrujące konfigurowania zabezpieczeń dla zachowania usługi.</span><span class="sxs-lookup"><span data-stu-id="aea80-103">This section includes samples that demonstrate configuring security for service behaviors.</span></span>  

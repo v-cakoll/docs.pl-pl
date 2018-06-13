@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502377"
 ---
 # <a name="uritemplate-sample"></a><span data-ttu-id="be63c-102">Przykład elementu UriTemplate</span><span class="sxs-lookup"><span data-stu-id="be63c-102">UriTemplate Sample</span></span>
 <span data-ttu-id="be63c-103"><xref:System.UriTemplate> Klasa dostarcza metody do pracy z zestawami identyfikatory URI, które mają wspólną strukturę.</span><span class="sxs-lookup"><span data-stu-id="be63c-103">The <xref:System.UriTemplate> class provides methods for working with sets of URIs that share a common structure.</span></span> <span data-ttu-id="be63c-104">W tym przykładzie przedstawiono następujące podstawowe pojęcia dotyczące `UriTemplate`:</span><span class="sxs-lookup"><span data-stu-id="be63c-104">This sample demonstrates the following key concepts relating to `UriTemplate`:</span></span>  

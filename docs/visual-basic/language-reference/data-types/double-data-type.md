@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590267"
 ---
 # <a name="double-data-type-visual-basic"></a><span data-ttu-id="345a8-102">Double — Typ danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="345a8-102">Double Data Type (Visual Basic)</span></span>
 <span data-ttu-id="345a8-103">Blokad podpisany IEEE 64-bitowych (8-bajtowych) podwójnej precyzji liczb zmiennoprzecinkowych, które mają wartość z zakresu od - 1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych i z 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnie.</span><span class="sxs-lookup"><span data-stu-id="345a8-103">Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.</span></span> <span data-ttu-id="345a8-104">Liczby o podwójnej precyzji przechowywać zbliżenia liczba rzeczywista.</span><span class="sxs-lookup"><span data-stu-id="345a8-104">Double-precision numbers store an approximation of a real number.</span></span>  

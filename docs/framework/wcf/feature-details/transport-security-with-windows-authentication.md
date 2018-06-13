@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498605"
 ---
 # <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="c70b5-102">Zabezpieczenia transportu z uwierzytelnianiem systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c70b5-102">Transport Security with Windows Authentication</span></span>
 <span data-ttu-id="c70b5-103">Poniższy scenariusz przedstawia klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez zabezpieczenia systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="c70b5-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security.</span></span> <span data-ttu-id="c70b5-104">Aby uzyskać więcej informacji na temat programowania w języku, zobacz [porady: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span><span class="sxs-lookup"><span data-stu-id="c70b5-104">For more information about programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  

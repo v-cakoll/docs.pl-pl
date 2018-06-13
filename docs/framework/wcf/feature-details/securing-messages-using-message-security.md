@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498693"
 ---
 # <a name="securing-messages-using-message-security"></a><span data-ttu-id="8f85f-102">Korzystanie z zabezpieczeń komunikatów</span><span class="sxs-lookup"><span data-stu-id="8f85f-102">Securing Messages Using Message Security</span></span>
 <span data-ttu-id="8f85f-103">W tej sekcji omówiono zabezpieczenia wiadomości WCF, używając <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="8f85f-103">This section discusses WCF message security when using <xref:System.ServiceModel.NetMsmqBinding>.</span></span>  

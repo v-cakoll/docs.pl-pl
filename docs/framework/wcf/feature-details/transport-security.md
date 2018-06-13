@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498218"
 ---
 # <a name="transport-security"></a><span data-ttu-id="ca307-102">Zabezpieczenia transportu</span><span class="sxs-lookup"><span data-stu-id="ca307-102">Transport Security</span></span>
 <span data-ttu-id="ca307-103">Zabezpieczenia transportu w systemie Windows Communication Foundation (WCF) zależy od wybrane powiązanie.</span><span class="sxs-lookup"><span data-stu-id="ca307-103">Transport security in Windows Communication Foundation (WCF) depends on the binding selected.</span></span> <span data-ttu-id="ca307-104">Transport, który implementuje powiązania określa mechanizm rzeczywiste zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="ca307-104">The transport that the binding implements determines the actual security mechanism.</span></span> <span data-ttu-id="ca307-105">Tematy w tej sekcji opisano mechanizmy, które są wykonywane i ich opcji.</span><span class="sxs-lookup"><span data-stu-id="ca307-105">The topics in this section explain the mechanisms that are implemented and their options.</span></span>  

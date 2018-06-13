@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559859"
 ---
 # <a name="how-to-seek-a-clock-synchronously"></a><span data-ttu-id="b2b49-102">Jak wyszukać zegar synchronicznie</span><span class="sxs-lookup"><span data-stu-id="b2b49-102">How to: Seek a Clock Synchronously</span></span>
 <span data-ttu-id="b2b49-103">Użyj <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> metody można synchronicznie wyszukiwanie zegarze do określonego punktu.</span><span class="sxs-lookup"><span data-stu-id="b2b49-103">Use the <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> method to seek a clock to a specific point synchronously.</span></span> <span data-ttu-id="b2b49-104">W poniższym przykładzie pokazano zarówno <xref:System.Windows.Media.Animation.ClockController.Seek%2A> i <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> metody <xref:System.Windows.Media.Animation.ClockController>.</span><span class="sxs-lookup"><span data-stu-id="b2b49-104">The following example demonstrates both the <xref:System.Windows.Media.Animation.ClockController.Seek%2A> and <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> methods of a <xref:System.Windows.Media.Animation.ClockController>.</span></span>  

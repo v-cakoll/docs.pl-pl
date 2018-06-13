@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507368"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a><span data-ttu-id="a8eac-102">Odwołania do elementu ServiceDescription i kodu WSDL</span><span class="sxs-lookup"><span data-stu-id="a8eac-102">ServiceDescription and WSDL Reference</span></span>
 <span data-ttu-id="a8eac-103">W tym temacie opisano sposób Windows Communication Foundation (WCF) mapowania sieci Web Services Description Language (WSDL) dokumenty do i z <xref:System.ServiceModel.Description.ServiceDescription> wystąpień.</span><span class="sxs-lookup"><span data-stu-id="a8eac-103">This topic describes how Windows Communication Foundation (WCF) maps Web Services Description Language (WSDL) documents to and from <xref:System.ServiceModel.Description.ServiceDescription> instances.</span></span>  

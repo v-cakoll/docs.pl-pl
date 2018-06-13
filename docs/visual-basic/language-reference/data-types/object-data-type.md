@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591631"
 ---
 # <a name="object-data-type"></a><span data-ttu-id="1f3f8-102">Object — typ danych</span><span class="sxs-lookup"><span data-stu-id="1f3f8-102">Object Data Type</span></span>
 <span data-ttu-id="1f3f8-103">Przechowuje adresy, które odwołują się do obiektów.</span><span class="sxs-lookup"><span data-stu-id="1f3f8-103">Holds addresses that refer to objects.</span></span> <span data-ttu-id="1f3f8-104">Można przypisać do dowolnego typu odwołanie (ciąg, tablic, klasy lub interfejsu) `Object` zmiennej.</span><span class="sxs-lookup"><span data-stu-id="1f3f8-104">You can assign any reference type (string, array, class, or interface) to an `Object` variable.</span></span> <span data-ttu-id="1f3f8-105">`Object` Zmiennej znajdują się dane dowolnego typu wartość (numeryczną, `Boolean`, `Char`, `Date`, struktury lub wyliczenia).</span><span class="sxs-lookup"><span data-stu-id="1f3f8-105">An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).</span></span>  

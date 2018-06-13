@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506470"
 ---
 # <a name="nettcp-port-sharing-sample"></a><span data-ttu-id="d8dce-102">Przykład współużytkowania portów Net.TCP</span><span class="sxs-lookup"><span data-stu-id="d8dce-102">Net.TCP Port Sharing Sample</span></span>
 <span data-ttu-id="d8dce-103">Protokół TCP/IP używa 16-bitową liczbę zwanej portem do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomiona na tym samym komputerze.</span><span class="sxs-lookup"><span data-stu-id="d8dce-103">The TCP/IP protocol uses a 16-bit number, called a port, to differentiate connections to multiple network applications running on the same machine.</span></span> <span data-ttu-id="d8dce-104">Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="d8dce-104">If an application is listening on a port, then all TCP traffic for that port goes to that application.</span></span> <span data-ttu-id="d8dce-105">Inne aplikacje nie może nasłuchiwać na tym porcie w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="d8dce-105">Other applications cannot listen on that port at the same time.</span></span>  

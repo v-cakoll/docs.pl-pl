@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499196"
 ---
 # <a name="workflow-services"></a><span data-ttu-id="194c7-102">Usługi przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="194c7-102">Workflow Services</span></span>
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="194c7-103"> Umożliwia pełne opisanie usługi przepływu pracy na podstawie deklaratywnego w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="194c7-103"> allows you to fully describe a workflow-based service declaratively in XAML.</span></span> <span data-ttu-id="194c7-104">Można zdefiniować przepływu pracy, który implementuje usługi i opisz punkty końcowe udostępnia usługi, wszystkie wyłącznie w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="194c7-104">You can define a workflow that implements your service and describe endpoints the service exposes, all entirely in XAML.</span></span> <span data-ttu-id="194c7-105">Tematy w tej sekcji opisano szczegółowo, model programowania, który obsługuje usługi zapisu deklaratywnie.</span><span class="sxs-lookup"><span data-stu-id="194c7-105">The topics in this section describe, in detail, the programming model that supports writing services declaratively.</span></span>  

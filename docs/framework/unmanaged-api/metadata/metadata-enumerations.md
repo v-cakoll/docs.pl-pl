@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460971"
 ---
 # <a name="metadata-enumerations"></a><span data-ttu-id="e7f35-102">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="e7f35-102">Metadata Enumerations</span></span>
 <span data-ttu-id="e7f35-103">W tej sekcji opisano niezarządzane wyliczenia, które korzysta z metadanych interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="e7f35-103">This section describes the unmanaged enumerations that the metadata API uses.</span></span>  

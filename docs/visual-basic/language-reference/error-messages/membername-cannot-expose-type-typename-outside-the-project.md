@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588096"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a><span data-ttu-id="8d08a-102">&#39;&lt;membername&gt; &#39; nie może ujawnić typu &#39; &lt;typename&gt; &#39; poza projektem za pomocą &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="8d08a-102">&#39;&lt;membername&gt;&#39; cannot expose type &#39;&lt;typename&gt;&#39; outside the project through &lt;containertype&gt; &#39;&lt;containertypename&gt;&#39;</span></span>
 <span data-ttu-id="8d08a-103">Zmienna, parametr procedury lub funkcji, zwracany jest ujawniany poza jego kontenera, ale jest zadeklarowany jako typ, który nie może być wystawiona poza kontenera.</span><span class="sxs-lookup"><span data-stu-id="8d08a-103">A variable, procedure parameter, or function return is exposed outside its container, but it is declared as a type that must not be exposed outside the container.</span></span>  

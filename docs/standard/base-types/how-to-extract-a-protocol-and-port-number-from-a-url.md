@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768479"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a><span data-ttu-id="f3a66-102">Porady: wyodrębnianie protokółu i numeru portu z adresu URL</span><span class="sxs-lookup"><span data-stu-id="f3a66-102">How to: Extract a Protocol and Port Number from a URL</span></span>
 <span data-ttu-id="f3a66-103">Poniższy przykład wyodrębnia protokołem i numerem portu z adresu URL.</span><span class="sxs-lookup"><span data-stu-id="f3a66-103">The following example extracts a protocol and port number from a URL.</span></span>  

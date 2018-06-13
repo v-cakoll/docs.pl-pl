@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576435"
 ---
 # <a name="names-of-namespaces"></a><span data-ttu-id="160cf-102">Nazwy przestrzeni nazw</span><span class="sxs-lookup"><span data-stu-id="160cf-102">Names of Namespaces</span></span>
 <span data-ttu-id="160cf-103">Jako z innych nazw wytycznymi celem w nazwach obszarów nazw jest tworzenie wystarczająco jasno dla programisty od razu wiedzieć, co zawartość obszaru nazw jest prawdopodobnie za pomocą środowiska.</span><span class="sxs-lookup"><span data-stu-id="160cf-103">As with other naming guidelines, the goal when naming namespaces is creating sufficient clarity for the programmer using the framework to immediately know what the content of the namespace is likely to be.</span></span> <span data-ttu-id="160cf-104">Następujący szablon określa zasady nazewnictwa przestrzeni nazw:</span><span class="sxs-lookup"><span data-stu-id="160cf-104">The following template specifies the general rule for naming namespaces:</span></span>  

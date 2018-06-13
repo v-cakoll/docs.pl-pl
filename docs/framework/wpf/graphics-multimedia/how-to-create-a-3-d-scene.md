@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559529"
 ---
 # <a name="how-to-create-a-3-d-scene"></a><span data-ttu-id="93097-102">Jak utworzyć scenę 3-D</span><span class="sxs-lookup"><span data-stu-id="93097-102">How to: Create a 3-D Scene</span></span>
 <span data-ttu-id="93097-103">W tym przykładzie przedstawiono sposób tworzenia 3-obiekt, który wygląda jak arkusz płaskiej papieru, który został obrócony.</span><span class="sxs-lookup"><span data-stu-id="93097-103">This example shows how to create a 3-D object that looks like a flat sheet of paper which has been rotated.</span></span> <span data-ttu-id="93097-104">A <xref:System.Windows.Controls.Viewport3D> wraz z następujące składniki są używane do tworzenia tego prostego sceny 3:</span><span class="sxs-lookup"><span data-stu-id="93097-104">A <xref:System.Windows.Controls.Viewport3D> along with the following components are used to create this simple 3-D scene:</span></span>  

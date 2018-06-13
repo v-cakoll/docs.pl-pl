@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575866"
 ---
 # <a name="induced-collections"></a><span data-ttu-id="a00f6-102">Wywołane kolekcje</span><span class="sxs-lookup"><span data-stu-id="a00f6-102">Induced Collections</span></span>
 <span data-ttu-id="a00f6-103">W większości przypadków moduł garbage collector można określić najlepszy moment na wykonać kolekcji, a należy udostępnić go uruchomić niezależnie.</span><span class="sxs-lookup"><span data-stu-id="a00f6-103">In most cases, the garbage collector can determine the best time to perform a collection, and you should let it run independently.</span></span> <span data-ttu-id="a00f6-104">Istnieje rzadkich sytuacji po wymuszonym kolekcji może zwiększyć wydajność aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a00f6-104">There are rare situations when a forced collection might improve your application's performance.</span></span> <span data-ttu-id="a00f6-105">Wyrzucanie elementów bezużytecznych w tych przypadkach może wywołać przy użyciu <xref:System.GC.Collect%2A?displayProperty=nameWithType> metodę wymuszania wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="a00f6-105">In these cases, you can induce garbage collection by using the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method to force a garbage collection.</span></span>  

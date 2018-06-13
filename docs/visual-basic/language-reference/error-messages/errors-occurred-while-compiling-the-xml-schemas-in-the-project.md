@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588265"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a><span data-ttu-id="a0d14-102">Wystąpiły błędy podczas kompilowania schematów XML w projekcie</span><span class="sxs-lookup"><span data-stu-id="a0d14-102">Errors occurred while compiling the XML schemas in the project</span></span>
 <span data-ttu-id="a0d14-103">Wystąpiły błędy podczas kompilowania schematów XML w projekcie.</span><span class="sxs-lookup"><span data-stu-id="a0d14-103">Errors occurred while compiling the XML schemas in the project.</span></span> <span data-ttu-id="a0d14-104">Z tego powodu narzędzie IntelliSense XML nie jest dostępna.</span><span class="sxs-lookup"><span data-stu-id="a0d14-104">Because of this, XML IntelliSense is not available.</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767053"
 ---
 # <a name="using-annotation-in-queries"></a><span data-ttu-id="84cbe-102">Za pomocą adnotacji w zapytaniach</span><span class="sxs-lookup"><span data-stu-id="84cbe-102">Using Annotation in Queries</span></span>
 <span data-ttu-id="84cbe-103">Adnotacje umożliwiają arbitralnie tag śledzenia rekordów o wartości, które mogą być skonfigurowane po czas kompilacji.</span><span class="sxs-lookup"><span data-stu-id="84cbe-103">Annotations allow you to arbitrarily tag tracking records with a value that can be configured after build time.</span></span> <span data-ttu-id="84cbe-104">Na przykład może być kilka rekordów śledzenia między kilka przepływy pracy, aby być oznaczane "Serwera poczty" == "Poczty serwer1".</span><span class="sxs-lookup"><span data-stu-id="84cbe-104">For example, you might want several tracking records across several workflows to be tagged with "Mail Server" == "Mail Server1".</span></span> <span data-ttu-id="84cbe-105">To ułatwia znalezienie wszystkich rekordów z tym znacznikiem podczas wykonywania zapytania rekordów śledzenia później.</span><span class="sxs-lookup"><span data-stu-id="84cbe-105">This makes it easy to find all records with this tag when querying tracking records later.</span></span>  

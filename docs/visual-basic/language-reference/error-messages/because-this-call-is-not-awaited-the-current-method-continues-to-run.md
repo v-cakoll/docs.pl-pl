@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591437"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a><span data-ttu-id="f0fd4-102">Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania</span><span class="sxs-lookup"><span data-stu-id="f0fd4-102">Because this call is not awaited, the current method continues to run before the call is completed</span></span>
 <span data-ttu-id="f0fd4-103">Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane ukończenia wywołania.</span><span class="sxs-lookup"><span data-stu-id="f0fd4-103">Because this call is not awaited, execution of the current method continues before the call is completed.</span></span> <span data-ttu-id="f0fd4-104">Należy rozważyć zastosowanie operatora "Await" do wyniku wywołania.</span><span class="sxs-lookup"><span data-stu-id="f0fd4-104">Consider applying the 'Await' operator to the result of the call.</span></span>  

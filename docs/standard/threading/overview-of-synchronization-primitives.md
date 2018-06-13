@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592018"
 ---
 # <a name="overview-of-synchronization-primitives"></a><span data-ttu-id="2f73d-102">Przegląd elementów podstawowych synchronizacji</span><span class="sxs-lookup"><span data-stu-id="2f73d-102">Overview of Synchronization Primitives</span></span>
 <a name="top"></a> <span data-ttu-id="2f73d-103">.NET Framework zapewnia szereg elementy podstawowe synchronizacji kontroli interakcji wątków i unikanie wyścigu.</span><span class="sxs-lookup"><span data-stu-id="2f73d-103">The .NET Framework provides a range of synchronization primitives for controlling the interactions of threads and avoiding race conditions.</span></span> <span data-ttu-id="2f73d-104">Te można około podzielone na trzy kategorie: blokowanie sygnalizowania i blokowanego operacji.</span><span class="sxs-lookup"><span data-stu-id="2f73d-104">These can be roughly divided into three categories: locking, signaling, and interlocked operations.</span></span>  

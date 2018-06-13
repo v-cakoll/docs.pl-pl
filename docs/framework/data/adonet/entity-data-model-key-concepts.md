@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765636"
 ---
 # <a name="entity-data-model-key-concepts"></a><span data-ttu-id="0c64a-102">Kluczowe założenia modelu danych jednostki</span><span class="sxs-lookup"><span data-stu-id="0c64a-102">Entity Data Model Key Concepts</span></span>
 <span data-ttu-id="0c64a-103">Do opisania struktury danych modelu danych jednostki (EDM) używa trzech podstawowych pojęć: *typu jednostki*, *typ skojarzenia*, i *właściwości*.</span><span class="sxs-lookup"><span data-stu-id="0c64a-103">The Entity Data Model (EDM) uses three key concepts to describe the structure of data: *entity type*, *association type*, and *property*.</span></span> <span data-ttu-id="0c64a-104">Są to najważniejsze pojęcia związane z opisujące struktury danych w implementacji EDM.</span><span class="sxs-lookup"><span data-stu-id="0c64a-104">These are the most important concepts in describing the structure of data in any implementation of the EDM.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575853"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a><span data-ttu-id="cb430-102">Porady: wyliczanie katalogów i ciągów</span><span class="sxs-lookup"><span data-stu-id="cb430-102">How to: Enumerate Directories and Files</span></span>
 <span data-ttu-id="cb430-103">Można wyliczyć katalogów i plików przy użyciu metody, które zwracają wyliczalny kolekcji ciągów ich nazw.</span><span class="sxs-lookup"><span data-stu-id="cb430-103">You can enumerate directories and files by using methods that return an enumerable collection of strings of their names.</span></span> <span data-ttu-id="cb430-104">Można również użyć metody, które zwracają wyliczalny zbiór <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, lub <xref:System.IO.FileSystemInfo> obiektów.</span><span class="sxs-lookup"><span data-stu-id="cb430-104">You can also use methods that return an enumerable collection of <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, or <xref:System.IO.FileSystemInfo> objects.</span></span> <span data-ttu-id="cb430-105">Kolekcje wyliczalny zapewnić lepszą wydajność niż tablic, podczas pracy z dużych kolekcjach katalogów i plików.</span><span class="sxs-lookup"><span data-stu-id="cb430-105">Enumerable collections provide better performance than arrays when you work with large collections of directories and files.</span></span>  

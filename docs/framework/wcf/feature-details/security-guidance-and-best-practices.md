@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497506"
 ---
 # <a name="security-guidance-and-best-practices"></a><span data-ttu-id="3197f-102">Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania</span><span class="sxs-lookup"><span data-stu-id="3197f-102">Security Guidance and Best Practices</span></span>
 <span data-ttu-id="3197f-103">Tematy w tej sekcji przedstawia wskazówki dotyczące oraz elementów do uwzględnienia podczas tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="3197f-103">The topics in this section present guidance for and items to consider when creating secure Windows Communication Foundation (WCF) applications.</span></span> <span data-ttu-id="3197f-104">Aby uzyskać więcej informacji o systemie Windows Server AppFabric i zabezpieczeniach, zobacz [zabezpieczeń modelu dla systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="3197f-104">For more information about Windows Server AppFabric and security see, [Security Model for Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  

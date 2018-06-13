@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508881"
 ---
 # <a name="transacted-batching"></a><span data-ttu-id="d08ef-102">Obsługa wsadowa w ramach transakcji</span><span class="sxs-lookup"><span data-stu-id="d08ef-102">Transacted Batching</span></span>
 <span data-ttu-id="d08ef-103">W tym przykładzie pokazano, jak partii odczyty transakcyjne przy użyciu usługi kolejkowania komunikatów (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="d08ef-103">This sample demonstrates how to batch transacted reads by using Message Queuing (MSMQ).</span></span> <span data-ttu-id="d08ef-104">Wsadowe transakcyjne jest funkcja optymalizacji wydajności dla odczytów transakcyjnych w kolejce komunikacji.</span><span class="sxs-lookup"><span data-stu-id="d08ef-104">Transacted Batching is a performance optimization feature for transacted reads in queued communication.</span></span>  

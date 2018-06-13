@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588164"
 ---
 # <a name="secure-coding-guidelines"></a><span data-ttu-id="6f1f7-102">Wytyczne dotyczące bezpiecznego programowania</span><span class="sxs-lookup"><span data-stu-id="6f1f7-102">Secure Coding Guidelines</span></span>
 <span data-ttu-id="6f1f7-103">Zabezpieczenia oparte na dowód i zabezpieczenia dostępu kodu zapewniają mechanizmy bardzo zaawansowane, jawnej implementacji zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="6f1f7-103">Evidence-based security and code access security provide very powerful, explicit mechanisms to implement security.</span></span> <span data-ttu-id="6f1f7-104">Większość kodu aplikacji można po prostu użyć infrastruktury wdrożone przez program .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6f1f7-104">Most application code can simply use the infrastructure implemented by the .NET Framework.</span></span> <span data-ttu-id="6f1f7-105">W niektórych przypadkach dodatkowe zabezpieczenia aplikacji jest wymagana, utworzony przez rozszerzanie systemu zabezpieczeń lub przy użyciu nowych metod ad hoc.</span><span class="sxs-lookup"><span data-stu-id="6f1f7-105">In some cases, additional application-specific security is required, built either by extending the security system or by using new ad hoc methods.</span></span>  

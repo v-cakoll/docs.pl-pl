@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590241"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a><span data-ttu-id="62901-102">Wyrażenie jest wartością i dlatego nie może być elementem docelowym przypisania</span><span class="sxs-lookup"><span data-stu-id="62901-102">Expression is a value and therefore cannot be the target of an assignment</span></span>
 <span data-ttu-id="62901-103">Instrukcja podejmuje próbę przypisania wartości dla wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="62901-103">A statement attempts to assign a value to an expression.</span></span> <span data-ttu-id="62901-104">Można przypisać wartość tylko do zapisu zmienną, właściwością lub element tablicy w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="62901-104">You can assign a value only to a writable variable, property, or array element at run time.</span></span> <span data-ttu-id="62901-105">Poniższy przykład przedstawia, jak ten błąd może wystąpić.</span><span class="sxs-lookup"><span data-stu-id="62901-105">The following example illustrates how this error can occur.</span></span>  
